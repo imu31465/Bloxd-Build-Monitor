@@ -1,127 +1,127 @@
 export const id = 229;
 export const ids = [229, 235, 238];
 export const modules = {
-  40069: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => nC,
-      i: () => fC
+  40244: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => yk,
+      h: () => lk
     });
-    var QC = ZC(38507),
-      wC = ZC(39842),
-      bC = ZC(40042),
-      nC = {};
-    class fC {
-      constructor(CC) {
-        this.attachedToElement = !1, this.attached = {}, this.camera = CC, this.checkInputs = () => {}
+    var Xk = Ik(38674),
+      Tk = Ik(40021),
+      ik = Ik(40214),
+      yk = {};
+    class lk {
+      constructor(kk) {
+        this.attachedToElement = !1, this.attached = {}, this.camera = kk, this.checkInputs = () => {}
       }
-      add(CC) {
-        const zC = CC.getSimpleName();
-        this.attached[zC] ? QC.c.Warn("camera input of type " + zC + " already exists on camera") : (this.attached[zC] = CC, CC.camera = this.camera, CC.checkInputs && (this.checkInputs = this._addCheckInputs(CC.checkInputs.bind(CC))), this.attachedToElement && CC.attachControl(this.noPreventDefault))
+      add(kk) {
+        const Fk = kk.getSimpleName();
+        this.attached[Fk] ? Xk.e.Warn("camera input of type " + Fk + " already exists on camera") : (this.attached[Fk] = kk, kk.camera = this.camera, kk.checkInputs && (this.checkInputs = this._addCheckInputs(kk.checkInputs.bind(kk))), this.attachedToElement && kk.attachControl(this.noPreventDefault))
       }
-      remove(CC) {
-        for (const zC in this.attached) {
-          const ZC = this.attached[zC];
-          if (ZC === CC) return ZC.detachControl(), ZC.camera = null, delete this.attached[zC], void this.rebuildInputCheck()
+      remove(kk) {
+        for (const Fk in this.attached) {
+          const Ik = this.attached[Fk];
+          if (Ik === kk) return Ik.detachControl(), Ik.camera = null, delete this.attached[Fk], void this.rebuildInputCheck()
         }
       }
-      removeByType(CC) {
-        for (const zC in this.attached) {
-          const ZC = this.attached[zC];
-          ZC.getClassName() === CC && (ZC.detachControl(), ZC.camera = null, delete this.attached[zC], this.rebuildInputCheck())
+      removeByType(kk) {
+        for (const Fk in this.attached) {
+          const Ik = this.attached[Fk];
+          Ik.getClassName() === kk && (Ik.detachControl(), Ik.camera = null, delete this.attached[Fk], this.rebuildInputCheck())
         }
       }
-      _addCheckInputs(CC) {
-        const zC = this.checkInputs;
+      _addCheckInputs(kk) {
+        const Fk = this.checkInputs;
         return () => {
-          zC(), CC()
+          Fk(), kk()
         }
       }
-      attachInput(CC) {
-        this.attachedToElement && CC.attachControl(this.noPreventDefault)
+      attachInput(kk) {
+        this.attachedToElement && kk.attachControl(this.noPreventDefault)
       }
       attachElement() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         if (!this.attachedToElement) {
-          CC = !bC.d.ForceAttachControlToAlwaysPreventDefault && CC, this.attachedToElement = !0, this.noPreventDefault = CC;
-          for (const zC in this.attached) this.attached[zC].attachControl(CC)
+          kk = !ik.d.ForceAttachControlToAlwaysPreventDefault && kk, this.attachedToElement = !0, this.noPreventDefault = kk;
+          for (const Fk in this.attached) this.attached[Fk].attachControl(kk)
         }
       }
       detachElement() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        for (const zC in this.attached) this.attached[zC].detachControl(), CC && (this.attached[zC].camera = null);
+        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        for (const Fk in this.attached) this.attached[Fk].detachControl(), kk && (this.attached[Fk].camera = null);
         this.attachedToElement = !1
       }
       rebuildInputCheck() {
         this.checkInputs = () => {};
-        for (const CC in this.attached) {
-          const zC = this.attached[CC];
-          zC.checkInputs && (this.checkInputs = this._addCheckInputs(zC.checkInputs.bind(zC)))
+        for (const kk in this.attached) {
+          const Fk = this.attached[kk];
+          Fk.checkInputs && (this.checkInputs = this._addCheckInputs(Fk.checkInputs.bind(Fk)))
         }
       }
       clear() {
         this.attachedToElement && this.detachElement(!0), this.attached = {}, this.attachedToElement = !1, this.checkInputs = () => {}
       }
-      serialize(CC) {
-        const zC = {};
-        for (const ZC in this.attached) {
-          const CC = this.attached[ZC],
-            QC = wC.d.Serialize(CC);
-          zC[CC.getClassName()] = QC
+      serialize(kk) {
+        const Fk = {};
+        for (const Ik in this.attached) {
+          const kk = this.attached[Ik],
+            Xk = Tk.b.Serialize(kk);
+          Fk[kk.getClassName()] = Xk
         }
-        CC.inputsmgr = zC
+        kk.inputsmgr = Fk
       }
-      parse(CC) {
-        const zC = CC.inputsmgr;
-        if (zC) {
+      parse(kk) {
+        const Fk = kk.inputsmgr;
+        if (Fk) {
           this.clear();
-          for (const CC in zC) {
-            const ZC = nC[CC];
-            if (ZC) {
-              const QC = zC[CC],
-                bC = wC.d.Parse((() => new ZC), QC, null);
-              this.add(bC)
+          for (const kk in Fk) {
+            const Ik = yk[kk];
+            if (Ik) {
+              const Xk = Fk[kk],
+                ik = Tk.b.Parse((() => new Ik), Xk, null);
+              this.add(ik)
             }
           }
         } else
-          for (const ZC in this.attached) {
-            const zC = nC[this.attached[ZC].getClassName()];
-            if (zC) {
-              const QC = wC.d.Parse((() => new zC), CC, null);
-              this.remove(this.attached[ZC]), this.add(QC)
+          for (const Ik in this.attached) {
+            const Fk = yk[this.attached[Ik].getClassName()];
+            if (Fk) {
+              const Xk = Tk.b.Parse((() => new Fk), kk, null);
+              this.remove(this.attached[Ik]), this.add(Xk)
             }
           }
       }
     }
   },
-  40076: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => QC.b
+  40252: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Xk.b
     });
-    var QC = ZC(40078);
-    (0, QC.e)()
+    var Xk = Ik(40259);
+    (0, Xk.e)()
   },
-  40078: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => FC,
-      e: () => NC
+  40259: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => Lk,
+      e: () => Zk
     });
-    var QC = ZC(39811),
-      wC = ZC(39818),
-      bC = ZC(36963),
-      nC = ZC(37142),
-      fC = ZC(40084),
-      oC = ZC(40046),
-      qC = ZC(37002);
-    let FC = (() => {
-        var CC;
-        let zC, ZC, oC = fC.c,
-          qC = [],
-          FC = [],
-          WC = [],
-          NC = [];
-        return CC = class extends oC {
-          constructor(CC, zC, ZC, wC) {
-            super(CC, ZC, wC), this.groundColor = (0, QC.n)(this, qC, new nC.e(0, 0, 0)), this.direction = ((0, QC.n)(this, FC), (0, QC.n)(this, WC, void 0)), (0, QC.n)(this, NC), this.direction = zC || bC.r.Up()
+    var Xk = Ik(40003),
+      Tk = Ik(40011),
+      ik = Ik(37153),
+      yk = Ik(37331),
+      lk = Ik(40265),
+      ak = Ik(40218),
+      qk = Ik(37201);
+    let Lk = (() => {
+        var kk;
+        let Fk, Ik, ak = lk.b,
+          qk = [],
+          Lk = [],
+          tk = [],
+          Zk = [];
+        return kk = class extends ak {
+          constructor(kk, Fk, Ik, Tk) {
+            super(kk, Ik, Tk), this.groundColor = (0, Xk.n)(this, qk, new yk.e(0, 0, 0)), this.direction = ((0, Xk.n)(this, Lk), (0, Xk.n)(this, tk, void 0)), (0, Xk.n)(this, Zk), this.direction = Fk || ik.t.Up()
           }
           _buildUniformLayout() {
             this._uniformBuffer.addUniform("vLightData", 4), this._uniformBuffer.addUniform("vLightDiffuse", 4), this._uniformBuffer.addUniform("vLightSpecular", 4), this._uniformBuffer.addUniform("vLightGround", 3), this._uniformBuffer.addUniform("shadowsInfo", 3), this._uniformBuffer.addUniform("depthValues", 2), this._uniformBuffer.create()
@@ -129,499 +129,499 @@ export const modules = {
           getClassName() {
             return "HemisphericLight"
           }
-          setDirectionToTarget(CC) {
-            return this.direction = bC.r.Normalize(CC.subtract(bC.r.Zero())), this.direction
+          setDirectionToTarget(kk) {
+            return this.direction = ik.t.Normalize(kk.subtract(ik.t.Zero())), this.direction
           }
           getShadowGenerator() {
             return null
           }
-          transferToEffect(CC, zC) {
-            const ZC = bC.r.Normalize(this.direction);
-            return this._uniformBuffer.updateFloat4("vLightData", ZC.x, ZC.y, ZC.z, 0, zC), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), zC), this
+          transferToEffect(kk, Fk) {
+            const Ik = ik.t.Normalize(this.direction);
+            return this._uniformBuffer.updateFloat4("vLightData", Ik.x, Ik.y, Ik.z, 0, Fk), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), Fk), this
           }
-          transferToNodeMaterialEffect(CC, zC) {
-            const ZC = bC.r.Normalize(this.direction);
-            return CC.setFloat3(zC, ZC.x, ZC.y, ZC.z), this
+          transferToNodeMaterialEffect(kk, Fk) {
+            const Ik = ik.t.Normalize(this.direction);
+            return kk.setFloat3(Fk, Ik.x, Ik.y, Ik.z), this
           }
           computeWorldMatrix() {
-            return this._worldMatrix || (this._worldMatrix = bC.b.Identity()), this._worldMatrix
+            return this._worldMatrix || (this._worldMatrix = ik.c.Identity()), this._worldMatrix
           }
           getTypeID() {
-            return fC.c.LIGHTTYPEID_HEMISPHERICLIGHT
+            return lk.b.LIGHTTYPEID_HEMISPHERICLIGHT
           }
-          prepareLightSpecificDefines(CC, zC) {
-            CC["HEMILIGHT" + zC] = !0
+          prepareLightSpecificDefines(kk, Fk) {
+            kk["HEMILIGHT" + Fk] = !0
           }
         }, (() => {
-          const bC = "function" === typeof Symbol && Symbol.metadata ? Object.create(oC[Symbol.metadata] ?? null) : void 0;
-          zC = [(0, wC.n)()], ZC = [(0, wC.J)()], (0, QC.j)(null, null, zC, {
+          const ik = "function" === typeof Symbol && Symbol.metadata ? Object.create(ak[Symbol.metadata] ?? null) : void 0;
+          Fk = [(0, Tk.n)()], Ik = [(0, Tk.H)()], (0, Xk.j)(null, null, Fk, {
             kind: "field",
             name: "groundColor",
             static: !1,
             private: !1,
             access: {
-              has: CC => "groundColor" in CC,
-              get: CC => CC.groundColor,
-              set: (CC, zC) => {
-                CC.groundColor = zC
+              has: kk => "groundColor" in kk,
+              get: kk => kk.groundColor,
+              set: (kk, Fk) => {
+                kk.groundColor = Fk
               }
             },
-            metadata: bC
-          }, qC, FC), (0, QC.j)(null, null, ZC, {
+            metadata: ik
+          }, qk, Lk), (0, Xk.j)(null, null, Ik, {
             kind: "field",
             name: "direction",
             static: !1,
             private: !1,
             access: {
-              has: CC => "direction" in CC,
-              get: CC => CC.direction,
-              set: (CC, zC) => {
-                CC.direction = zC
+              has: kk => "direction" in kk,
+              get: kk => kk.direction,
+              set: (kk, Fk) => {
+                kk.direction = Fk
               }
             },
-            metadata: bC
-          }, WC, NC), bC && Object.defineProperty(CC, Symbol.metadata, {
+            metadata: ik
+          }, tk, Zk), ik && Object.defineProperty(kk, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: bC
+            value: ik
           })
-        })(), CC
+        })(), kk
       })(),
-      WC = !1;
+      tk = !1;
 
-    function NC() {
-      WC || (WC = !0, oC.d.AddNodeConstructor("Light_Type_3", ((CC, zC) => () => new FC(CC, bC.r.Zero(), zC))), (0, qC.d)("BABYLON.HemisphericLight", FC))
+    function Zk() {
+      tk || (tk = !0, ak.b.AddNodeConstructor("Light_Type_3", ((kk, Fk) => () => new Lk(kk, ik.t.Zero(), Fk))), (0, qk.f)("BABYLON.HemisphericLight", Lk))
     }
   },
-  37138: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      Color3: () => QC.e,
-      e: () => QC.g
+  37327: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      Color3: () => Xk.e,
+      b: () => Xk.h
     });
-    var QC = ZC(37142);
-    (0, QC.i)()
+    var Xk = Ik(37331);
+    (0, Xk.i)()
   },
-  37590: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => wC
+  37780: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => Tk
     });
-    var QC = ZC(37596);
-    class wC {
-      static GetPlanes(CC) {
-        const zC = [];
-        for (let ZC = 0; ZC < 6; ZC++) zC.push(new QC.d(0, 0, 0, 0));
-        return wC.GetPlanesToRef(CC, zC), zC
+    var Xk = Ik(37785);
+    class Tk {
+      static GetPlanes(kk) {
+        const Fk = [];
+        for (let Ik = 0; Ik < 6; Ik++) Fk.push(new Xk.e(0, 0, 0, 0));
+        return Tk.GetPlanesToRef(kk, Fk), Fk
       }
-      static GetNearPlaneToRef(CC, zC) {
-        const ZC = CC.m;
-        zC.normal.x = ZC[3] + ZC[2], zC.normal.y = ZC[7] + ZC[6], zC.normal.z = ZC[11] + ZC[10], zC.d = ZC[15] + ZC[14], zC.normalize()
+      static GetNearPlaneToRef(kk, Fk) {
+        const Ik = kk.m;
+        Fk.normal.x = Ik[3] + Ik[2], Fk.normal.y = Ik[7] + Ik[6], Fk.normal.z = Ik[11] + Ik[10], Fk.d = Ik[15] + Ik[14], Fk.normalize()
       }
-      static GetFarPlaneToRef(CC, zC) {
-        const ZC = CC.m;
-        zC.normal.x = ZC[3] - ZC[2], zC.normal.y = ZC[7] - ZC[6], zC.normal.z = ZC[11] - ZC[10], zC.d = ZC[15] - ZC[14], zC.normalize()
+      static GetFarPlaneToRef(kk, Fk) {
+        const Ik = kk.m;
+        Fk.normal.x = Ik[3] - Ik[2], Fk.normal.y = Ik[7] - Ik[6], Fk.normal.z = Ik[11] - Ik[10], Fk.d = Ik[15] - Ik[14], Fk.normalize()
       }
-      static GetLeftPlaneToRef(CC, zC) {
-        const ZC = CC.m;
-        zC.normal.x = ZC[3] + ZC[0], zC.normal.y = ZC[7] + ZC[4], zC.normal.z = ZC[11] + ZC[8], zC.d = ZC[15] + ZC[12], zC.normalize()
+      static GetLeftPlaneToRef(kk, Fk) {
+        const Ik = kk.m;
+        Fk.normal.x = Ik[3] + Ik[0], Fk.normal.y = Ik[7] + Ik[4], Fk.normal.z = Ik[11] + Ik[8], Fk.d = Ik[15] + Ik[12], Fk.normalize()
       }
-      static GetRightPlaneToRef(CC, zC) {
-        const ZC = CC.m;
-        zC.normal.x = ZC[3] - ZC[0], zC.normal.y = ZC[7] - ZC[4], zC.normal.z = ZC[11] - ZC[8], zC.d = ZC[15] - ZC[12], zC.normalize()
+      static GetRightPlaneToRef(kk, Fk) {
+        const Ik = kk.m;
+        Fk.normal.x = Ik[3] - Ik[0], Fk.normal.y = Ik[7] - Ik[4], Fk.normal.z = Ik[11] - Ik[8], Fk.d = Ik[15] - Ik[12], Fk.normalize()
       }
-      static GetTopPlaneToRef(CC, zC) {
-        const ZC = CC.m;
-        zC.normal.x = ZC[3] - ZC[1], zC.normal.y = ZC[7] - ZC[5], zC.normal.z = ZC[11] - ZC[9], zC.d = ZC[15] - ZC[13], zC.normalize()
+      static GetTopPlaneToRef(kk, Fk) {
+        const Ik = kk.m;
+        Fk.normal.x = Ik[3] - Ik[1], Fk.normal.y = Ik[7] - Ik[5], Fk.normal.z = Ik[11] - Ik[9], Fk.d = Ik[15] - Ik[13], Fk.normalize()
       }
-      static GetBottomPlaneToRef(CC, zC) {
-        const ZC = CC.m;
-        zC.normal.x = ZC[3] + ZC[1], zC.normal.y = ZC[7] + ZC[5], zC.normal.z = ZC[11] + ZC[9], zC.d = ZC[15] + ZC[13], zC.normalize()
+      static GetBottomPlaneToRef(kk, Fk) {
+        const Ik = kk.m;
+        Fk.normal.x = Ik[3] + Ik[1], Fk.normal.y = Ik[7] + Ik[5], Fk.normal.z = Ik[11] + Ik[9], Fk.d = Ik[15] + Ik[13], Fk.normalize()
       }
-      static GetPlanesToRef(CC, zC) {
-        wC.GetNearPlaneToRef(CC, zC[0]), wC.GetFarPlaneToRef(CC, zC[1]), wC.GetLeftPlaneToRef(CC, zC[2]), wC.GetRightPlaneToRef(CC, zC[3]), wC.GetTopPlaneToRef(CC, zC[4]), wC.GetBottomPlaneToRef(CC, zC[5])
+      static GetPlanesToRef(kk, Fk) {
+        Tk.GetNearPlaneToRef(kk, Fk[0]), Tk.GetFarPlaneToRef(kk, Fk[1]), Tk.GetLeftPlaneToRef(kk, Fk[2]), Tk.GetRightPlaneToRef(kk, Fk[3]), Tk.GetTopPlaneToRef(kk, Fk[4]), Tk.GetBottomPlaneToRef(kk, Fk[5])
       }
-      static IsPointInFrustum(CC, zC) {
-        for (let ZC = 0; ZC < 6; ZC++)
-          if (zC[ZC].dotCoordinate(CC) < 0) return !1;
+      static IsPointInFrustum(kk, Fk) {
+        for (let Ik = 0; Ik < 6; Ik++)
+          if (Fk[Ik].dotCoordinate(kk) < 0) return !1;
         return !0
       }
     }
   },
-  37596: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => wC
+  37785: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Tk
     });
-    var QC = ZC(36963);
-    class wC {
-      constructor(CC, zC, ZC, wC) {
-        this.normal = new QC.r(CC, zC, ZC), this.d = wC
+    var Xk = Ik(37153);
+    class Tk {
+      constructor(kk, Fk, Ik, Tk) {
+        this.normal = new Xk.t(kk, Fk, Ik), this.d = Tk
       }
-      VZC() {
+      iXk() {
         return [this.normal.x, this.normal.y, this.normal.z, this.d]
       }
       clone() {
-        return new wC(this.normal.x, this.normal.y, this.normal.z, this.d)
+        return new Tk(this.normal.x, this.normal.y, this.normal.z, this.d)
       }
       getClassName() {
         return "Plane"
       }
       getHashCode() {
-        let CC = this.normal.getHashCode();
-        return CC = 397 * CC ^ this.d, CC
+        let kk = this.normal.getHashCode();
+        return kk = 397 * kk ^ this.d, kk
       }
       normalize() {
-        const CC = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
-        let zC = 0;
-        return 0 !== CC && (zC = 1 / CC), this.normal.x *= zC, this.normal.y *= zC, this.normal.z *= zC, this.d *= zC, this
+        const kk = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
+        let Fk = 0;
+        return 0 !== kk && (Fk = 1 / kk), this.normal.x *= Fk, this.normal.y *= Fk, this.normal.z *= Fk, this.d *= Fk, this
       }
-      transform(CC) {
-        const zC = wC._TmpMatrix;
-        CC.invertToRef(zC);
-        const ZC = zC.m,
-          QC = this.normal.x,
-          bC = this.normal.y,
-          nC = this.normal.z,
-          fC = this.d,
-          oC = QC * ZC[0] + bC * ZC[1] + nC * ZC[2] + fC * ZC[3],
-          qC = QC * ZC[4] + bC * ZC[5] + nC * ZC[6] + fC * ZC[7],
-          FC = QC * ZC[8] + bC * ZC[9] + nC * ZC[10] + fC * ZC[11],
-          WC = QC * ZC[12] + bC * ZC[13] + nC * ZC[14] + fC * ZC[15];
-        return new wC(oC, qC, FC, WC)
+      transform(kk) {
+        const Fk = Tk._TmpMatrix;
+        kk.invertToRef(Fk);
+        const Ik = Fk.m,
+          Xk = this.normal.x,
+          ik = this.normal.y,
+          yk = this.normal.z,
+          lk = this.d,
+          ak = Xk * Ik[0] + ik * Ik[1] + yk * Ik[2] + lk * Ik[3],
+          qk = Xk * Ik[4] + ik * Ik[5] + yk * Ik[6] + lk * Ik[7],
+          Lk = Xk * Ik[8] + ik * Ik[9] + yk * Ik[10] + lk * Ik[11],
+          tk = Xk * Ik[12] + ik * Ik[13] + yk * Ik[14] + lk * Ik[15];
+        return new Tk(ak, qk, Lk, tk)
       }
-      dotCoordinate(CC) {
-        return this.normal.x * CC.x + this.normal.y * CC.y + this.normal.z * CC.z + this.d
+      dotCoordinate(kk) {
+        return this.normal.x * kk.x + this.normal.y * kk.y + this.normal.z * kk.z + this.d
       }
-      copyFromPoints(CC, zC, ZC) {
-        const QC = zC.x - CC.x,
-          wC = zC.y - CC.y,
-          bC = zC.z - CC.z,
-          nC = ZC.x - CC.x,
-          fC = ZC.y - CC.y,
-          oC = ZC.z - CC.z,
-          qC = wC * oC - bC * fC,
-          FC = bC * nC - QC * oC,
-          WC = QC * fC - wC * nC,
-          NC = Math.sqrt(qC * qC + FC * FC + WC * WC);
-        let MC;
-        return MC = 0 !== NC ? 1 / NC : 0, this.normal.x = qC * MC, this.normal.y = FC * MC, this.normal.z = WC * MC, this.d = -(this.normal.x * CC.x + this.normal.y * CC.y + this.normal.z * CC.z), this
+      copyFromPoints(kk, Fk, Ik) {
+        const Xk = Fk.x - kk.x,
+          Tk = Fk.y - kk.y,
+          ik = Fk.z - kk.z,
+          yk = Ik.x - kk.x,
+          lk = Ik.y - kk.y,
+          ak = Ik.z - kk.z,
+          qk = Tk * ak - ik * lk,
+          Lk = ik * yk - Xk * ak,
+          tk = Xk * lk - Tk * yk,
+          Zk = Math.sqrt(qk * qk + Lk * Lk + tk * tk);
+        let jk;
+        return jk = 0 !== Zk ? 1 / Zk : 0, this.normal.x = qk * jk, this.normal.y = Lk * jk, this.normal.z = tk * jk, this.d = -(this.normal.x * kk.x + this.normal.y * kk.y + this.normal.z * kk.z), this
       }
-      isFrontFacingTo(CC, zC) {
-        return QC.r.Dot(this.normal, CC) <= zC
+      isFrontFacingTo(kk, Fk) {
+        return Xk.t.Dot(this.normal, kk) <= Fk
       }
-      signedDistanceTo(CC) {
-        return QC.r.Dot(CC, this.normal) + this.d
+      signedDistanceTo(kk) {
+        return Xk.t.Dot(kk, this.normal) + this.d
       }
-      static FromArray(CC) {
-        return new wC(CC[0], CC[1], CC[2], CC[3])
+      static FromArray(kk) {
+        return new Tk(kk[0], kk[1], kk[2], kk[3])
       }
-      static FromPoints(CC, zC, ZC) {
-        const QC = new wC(0, 0, 0, 0);
-        return QC.copyFromPoints(CC, zC, ZC), QC
+      static FromPoints(kk, Fk, Ik) {
+        const Xk = new Tk(0, 0, 0, 0);
+        return Xk.copyFromPoints(kk, Fk, Ik), Xk
       }
-      static FromPositionAndNormal(CC, zC) {
-        const ZC = new wC(0, 0, 0, 0);
-        return this.FromPositionAndNormalToRef(CC, zC, ZC)
+      static FromPositionAndNormal(kk, Fk) {
+        const Ik = new Tk(0, 0, 0, 0);
+        return this.FromPositionAndNormalToRef(kk, Fk, Ik)
       }
-      static FromPositionAndNormalToRef(CC, zC, ZC) {
-        return ZC.normal.Av(zC), ZC.normal.normalize(), ZC.d = -CC.dot(ZC.normal), ZC
+      static FromPositionAndNormalToRef(kk, Fk, Ik) {
+        return Ik.normal.kS(Fk), Ik.normal.normalize(), Ik.d = -kk.dot(Ik.normal), Ik
       }
-      static SignedDistanceToPlaneFromPositionAndNormal(CC, zC, ZC) {
-        const wC = -(zC.x * CC.x + zC.y * CC.y + zC.z * CC.z);
-        return QC.r.Dot(ZC, zC) + wC
+      static SignedDistanceToPlaneFromPositionAndNormal(kk, Fk, Ik) {
+        const Tk = -(Fk.x * kk.x + Fk.y * kk.y + Fk.z * kk.z);
+        return Xk.t.Dot(Ik, Fk) + Tk
       }
     }
-    wC._TmpMatrix = QC.b.Identity()
+    Tk._TmpMatrix = Xk.c.Identity()
   },
-  36961: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      Matrix: () => QC.b,
-      Quaternion: () => QC.f,
-      RegisterMathVector: () => QC.g,
-      TmpVectors: () => QC.j,
-      Vector2: () => QC.n,
-      Eg: () => QC.r,
-      Vector4: () => QC.u
+  37144: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      Matrix: () => Xk.c,
+      Quaternion: () => Xk.f,
+      RegisterMathVector: () => Xk.h,
+      TmpVectors: () => Xk.l,
+      Vector2: () => Xk.p,
+      Ge: () => Xk.t,
+      Vector4: () => Xk.u
     });
-    var QC = ZC(36963);
-    (0, QC.g)()
+    var Xk = Ik(37153);
+    (0, Xk.h)()
   },
-  37931: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => QC
+  38099: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Xk
     });
-    class QC {
-      constructor(CC, zC, ZC, QC) {
-        this.x = CC, this.y = zC, this.width = ZC, this.height = QC
+    class Xk {
+      constructor(kk, Fk, Ik, Xk) {
+        this.x = kk, this.y = Fk, this.width = Ik, this.height = Xk
       }
-      toGlobal(CC, zC) {
-        return new QC(this.x * CC, this.y * zC, this.width * CC, this.height * zC)
+      toGlobal(kk, Fk) {
+        return new Xk(this.x * kk, this.y * Fk, this.width * kk, this.height * Fk)
       }
-      toGlobalToRef(CC, zC, ZC) {
-        return ZC.x = this.x * CC, ZC.y = this.y * zC, ZC.width = this.width * CC, ZC.height = this.height * zC, this
+      toGlobalToRef(kk, Fk, Ik) {
+        return Ik.x = this.x * kk, Ik.y = this.y * Fk, Ik.width = this.width * kk, Ik.height = this.height * Fk, this
       }
       clone() {
-        return new QC(this.x, this.y, this.width, this.height)
+        return new Xk(this.x, this.y, this.width, this.height)
       }
     }
   },
-  40219: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => qC
+  40411: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => qk
     });
-    var QC = ZC(36963),
-      wC = ZC(37142),
-      bC = ZC(40224),
-      nC = ZC(40235),
-      fC = ZC(40256);
+    var Xk = Ik(37153),
+      Tk = Ik(37331),
+      ik = Ik(40417),
+      yk = Ik(40427),
+      lk = Ik(40439);
 
-    function oC(CC) {
-      let zC = [0, 1, 2, 0, 2, 3, 4, 5, 6, 4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14, 12, 14, 15, 16, 17, 18, 16, 18, 19, 20, 21, 22, 20, 22, 23];
-      const ZC = [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0],
-        bC = [],
-        oC = CC.width || CC.size || 1,
-        qC = CC.height || CC.size || 1,
-        FC = CC.depth || CC.size || 1,
-        WC = CC.wrap || !1;
-      let NC = void 0 === CC.topBaseAt ? 1 : CC.topBaseAt,
-        MC = void 0 === CC.bottomBaseAt ? 0 : CC.bottomBaseAt;
-      NC = (NC + 4) % 4, MC = (MC + 4) % 4;
-      let gC = [2, 0, 3, 1][NC],
-        SC = [2, 0, 1, 3][MC],
-        pC = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1];
-      if (WC) {
-        zC = [2, 3, 0, 2, 0, 1, 4, 5, 6, 4, 6, 7, 9, 10, 11, 9, 11, 8, 12, 14, 15, 12, 13, 14], pC = [-1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1];
-        let CC = [
+    function ak(kk) {
+      let Fk = [0, 1, 2, 0, 2, 3, 4, 5, 6, 4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14, 12, 14, 15, 16, 17, 18, 16, 18, 19, 20, 21, 22, 20, 22, 23];
+      const Ik = [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0],
+        ik = [],
+        ak = kk.width || kk.size || 1,
+        qk = kk.height || kk.size || 1,
+        Lk = kk.depth || kk.size || 1,
+        tk = kk.wrap || !1;
+      let Zk = void 0 === kk.topBaseAt ? 1 : kk.topBaseAt,
+        jk = void 0 === kk.bottomBaseAt ? 0 : kk.bottomBaseAt;
+      Zk = (Zk + 4) % 4, jk = (jk + 4) % 4;
+      let ek = [2, 0, 3, 1][Zk],
+        wk = [2, 0, 1, 3][jk],
+        Hk = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1];
+      if (tk) {
+        Fk = [2, 3, 0, 2, 0, 1, 4, 5, 6, 4, 6, 7, 9, 10, 11, 9, 11, 8, 12, 14, 15, 12, 13, 14], Hk = [-1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1];
+        let kk = [
             [1, 1, 1],
             [-1, 1, 1],
             [-1, 1, -1],
             [1, 1, -1]
           ],
-          ZC = [
+          Ik = [
             [-1, -1, 1],
             [1, -1, 1],
             [1, -1, -1],
             [-1, -1, -1]
           ];
-        const QC = [17, 18, 19, 16],
-          wC = [22, 23, 20, 21];
-        for (; gC > 0;) CC.unshift(CC.pop()), QC.unshift(QC.pop()), gC--;
-        for (; SC > 0;) ZC.unshift(ZC.pop()), wC.unshift(wC.pop()), SC--;
-        CC = CC.flat(), ZC = ZC.flat(), pC = pC.concat(CC).concat(ZC), zC.push(QC[0], QC[2], QC[3], QC[0], QC[1], QC[2]), zC.push(wC[0], wC[2], wC[3], wC[0], wC[1], wC[2])
+        const Xk = [17, 18, 19, 16],
+          Tk = [22, 23, 20, 21];
+        for (; ek > 0;) kk.unshift(kk.pop()), Xk.unshift(Xk.pop()), ek--;
+        for (; wk > 0;) Ik.unshift(Ik.pop()), Tk.unshift(Tk.pop()), wk--;
+        kk = kk.flat(), Ik = Ik.flat(), Hk = Hk.concat(kk).concat(Ik), Fk.push(Xk[0], Xk[2], Xk[3], Xk[0], Xk[1], Xk[2]), Fk.push(Tk[0], Tk[2], Tk[3], Tk[0], Tk[1], Tk[2])
       }
-      const PC = [oC / 2, qC / 2, FC / 2],
-        GC = pC.reduce(((CC, zC, ZC) => CC.concat(zC * PC[ZC % 3])), []),
-        RC = 0 === CC.sideOrientation ? 0 : CC.sideOrientation || nC.e.DEFAULTSIDE,
-        AC = CC.faceUV || new Array(6),
-        xC = CC.faceColors,
-        JC = [];
-      for (let nC = 0; nC < 6; nC++) void 0 === AC[nC] && (AC[nC] = new QC.u(0, 0, 1, 1)), xC && void 0 === xC[nC] && (xC[nC] = new wC.g(1, 1, 1, 1));
-      for (let QC = 0; QC < 6; QC++)
-        if (bC.push(AC[QC].z, fC.d ? 1 - AC[QC].w : AC[QC].w), bC.push(AC[QC].x, fC.d ? 1 - AC[QC].w : AC[QC].w), bC.push(AC[QC].x, fC.d ? 1 - AC[QC].y : AC[QC].y), bC.push(AC[QC].z, fC.d ? 1 - AC[QC].y : AC[QC].y), xC)
-          for (let CC = 0; CC < 4; CC++) JC.push(xC[QC].r, xC[QC].g, xC[QC].b, xC[QC].a);
-      nC.e._ComputeSides(RC, GC, zC, ZC, bC, CC.frontUVs, CC.backUVs);
-      const IC = new nC.e;
-      if (IC.indices = zC, IC.positions = GC, IC.normals = ZC, IC.uvs = bC, xC) {
-        const CC = RC === nC.e.DOUBLESIDE ? JC.concat(JC) : JC;
-        IC.colors = CC
+      const Jk = [ak / 2, qk / 2, Lk / 2],
+        xk = Hk.reduce(((kk, Fk, Ik) => kk.concat(Fk * Jk[Ik % 3])), []),
+        Pk = 0 === kk.sideOrientation ? 0 : kk.sideOrientation || yk.c.DEFAULTSIDE,
+        Kk = kk.faceUV || new Array(6),
+        Qk = kk.faceColors,
+        sk = [];
+      for (let yk = 0; yk < 6; yk++) void 0 === Kk[yk] && (Kk[yk] = new Xk.u(0, 0, 1, 1)), Qk && void 0 === Qk[yk] && (Qk[yk] = new Tk.h(1, 1, 1, 1));
+      for (let Xk = 0; Xk < 6; Xk++)
+        if (ik.push(Kk[Xk].z, lk.b ? 1 - Kk[Xk].w : Kk[Xk].w), ik.push(Kk[Xk].x, lk.b ? 1 - Kk[Xk].w : Kk[Xk].w), ik.push(Kk[Xk].x, lk.b ? 1 - Kk[Xk].y : Kk[Xk].y), ik.push(Kk[Xk].z, lk.b ? 1 - Kk[Xk].y : Kk[Xk].y), Qk)
+          for (let kk = 0; kk < 4; kk++) sk.push(Qk[Xk].r, Qk[Xk].g, Qk[Xk].b, Qk[Xk].a);
+      yk.c._ComputeSides(Pk, xk, Fk, Ik, ik, kk.frontUVs, kk.backUVs);
+      const Vk = new yk.c;
+      if (Vk.indices = Fk, Vk.positions = xk, Vk.normals = Ik, Vk.uvs = ik, Qk) {
+        const kk = Pk === yk.c.DOUBLESIDE ? sk.concat(sk) : sk;
+        Vk.colors = kk
       }
-      return IC
+      return Vk
     }
 
-    function qC(CC) {
-      let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const QC = new bC.b(CC, ZC);
-      zC.sideOrientation = bC.b._GetDefaultSideOrientation(zC.sideOrientation), QC._originalBuilderSideOrientation = zC.sideOrientation;
-      return oC(zC).applyToMesh(QC, zC.updatable), QC
+    function qk(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const Xk = new ik.b(kk, Ik);
+      Fk.sideOrientation = ik.b._GetDefaultSideOrientation(Fk.sideOrientation), Xk._originalBuilderSideOrientation = Fk.sideOrientation;
+      return ak(Fk).applyToMesh(Xk, Fk.updatable), Xk
     }
-    let FC = !1;
-    FC || (FC = !0, nC.e.CreateBox = oC, bC.b.CreateBox = function(CC, zC) {
-      return qC(CC, {
-        size: zC,
+    let Lk = !1;
+    Lk || (Lk = !0, yk.c.CreateBox = ak, ik.b.CreateBox = function(kk, Fk) {
+      return qk(kk, {
+        size: Fk,
         sideOrientation: arguments.length > 4 ? arguments[4] : void 0,
         updatable: arguments.length > 3 ? arguments[3] : void 0
       }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
     })
   },
-  40281: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => WC
+  40458: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => tk
     });
-    var QC = ZC(36963),
-      wC = ZC(40224),
-      bC = ZC(40235),
-      nC = ZC(40283),
-      fC = ZC(39959),
-      oC = ZC(38507);
+    var Xk = Ik(37153),
+      Tk = Ik(40417),
+      ik = Ik(40427),
+      yk = Ik(40467),
+      lk = Ik(40141),
+      ak = Ik(38674);
 
-    function qC(CC) {
-      const zC = [],
-        ZC = [],
-        QC = CC.lines,
-        wC = CC.colors,
-        nC = [];
-      let fC = 0;
-      for (let bC = 0; bC < QC.length; bC++) {
-        const CC = QC[bC];
-        for (let QC = 0; QC < CC.length; QC++) {
+    function qk(kk) {
+      const Fk = [],
+        Ik = [],
+        Xk = kk.lines,
+        Tk = kk.colors,
+        yk = [];
+      let lk = 0;
+      for (let ik = 0; ik < Xk.length; ik++) {
+        const kk = Xk[ik];
+        for (let Xk = 0; Xk < kk.length; Xk++) {
           const {
-            x: oC,
-            y: qC,
-            z: FC
-          } = CC[QC];
-          if (ZC.push(oC, qC, FC), wC) {
-            const CC = wC[bC],
+            x: ak,
+            y: qk,
+            z: Lk
+          } = kk[Xk];
+          if (Ik.push(ak, qk, Lk), Tk) {
+            const kk = Tk[ik],
               {
-                r: zC,
-                g: ZC,
-                b: fC,
-                a: oC
-              } = CC[QC];
-            nC.push(zC, ZC, fC, oC)
+                r: Fk,
+                g: Ik,
+                b: lk,
+                a: ak
+              } = kk[Xk];
+            yk.push(Fk, Ik, lk, ak)
           }
-          QC > 0 && (zC.push(fC - 1), zC.push(fC)), fC++
+          Xk > 0 && (Fk.push(lk - 1), Fk.push(lk)), lk++
         }
       }
-      const oC = new bC.e;
-      return oC.indices = zC, oC.positions = ZC, wC && (oC.colors = nC), oC
+      const ak = new ik.c;
+      return ak.indices = Fk, ak.positions = Ik, Tk && (ak.colors = yk), ak
     }
 
-    function FC(CC) {
-      const zC = CC.dashSize || 3,
-        ZC = CC.gapSize || 1,
-        wC = CC.dashNb || 200,
-        nC = CC.points,
-        fC = [],
-        oC = [],
-        qC = QC.r.Zero();
-      let FC, WC, NC, MC = 0,
-        gC = 0;
-      for (NC = 0; NC < nC.length - 1; NC++) nC[NC + 1].subtractToRef(nC[NC], qC), MC += qC.length();
-      const SC = MC / wC,
-        pC = zC * SC / (zC + ZC);
-      for (NC = 0; NC < nC.length - 1; NC++) {
-        nC[NC + 1].subtractToRef(nC[NC], qC), FC = Math.floor(qC.length() / SC), qC.normalize();
-        for (let CC = 0; CC < FC; CC++) WC = SC * CC, fC.push(nC[NC].x + WC * qC.x, nC[NC].y + WC * qC.y, nC[NC].z + WC * qC.z), fC.push(nC[NC].x + (WC + pC) * qC.x, nC[NC].y + (WC + pC) * qC.y, nC[NC].z + (WC + pC) * qC.z), oC.push(gC, gC + 1), gC += 2
+    function Lk(kk) {
+      const Fk = kk.dashSize || 3,
+        Ik = kk.gapSize || 1,
+        Tk = kk.dashNb || 200,
+        yk = kk.points,
+        lk = [],
+        ak = [],
+        qk = Xk.t.Zero();
+      let Lk, tk, Zk, jk = 0,
+        ek = 0;
+      for (Zk = 0; Zk < yk.length - 1; Zk++) yk[Zk + 1].subtractToRef(yk[Zk], qk), jk += qk.length();
+      const wk = jk / Tk,
+        Hk = Fk * wk / (Fk + Ik);
+      for (Zk = 0; Zk < yk.length - 1; Zk++) {
+        yk[Zk + 1].subtractToRef(yk[Zk], qk), Lk = Math.floor(qk.length() / wk), qk.normalize();
+        for (let kk = 0; kk < Lk; kk++) tk = wk * kk, lk.push(yk[Zk].x + tk * qk.x, yk[Zk].y + tk * qk.y, yk[Zk].z + tk * qk.z), lk.push(yk[Zk].x + (tk + Hk) * qk.x, yk[Zk].y + (tk + Hk) * qk.y, yk[Zk].z + (tk + Hk) * qk.z), ak.push(ek, ek + 1), ek += 2
       }
-      const PC = new bC.e;
-      return PC.positions = fC, PC.indices = oC, PC
+      const Jk = new ik.c;
+      return Jk.positions = lk, Jk.indices = ak, Jk
     }
 
-    function WC(CC, zC) {
-      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const QC = zC.instance,
-        wC = zC.lines,
-        bC = zC.colors;
-      if (QC) {
-        const CC = QC.getVerticesData(fC.k.PositionKind);
-        let zC, ZC;
-        bC && (zC = QC.getVerticesData(fC.k.ColorKind));
-        let nC = 0,
-          oC = 0;
-        for (let QC = 0; QC < wC.length; QC++) {
-          const fC = wC[QC];
-          for (let wC = 0; wC < fC.length; wC++) CC[nC] = fC[wC].x, CC[nC + 1] = fC[wC].y, CC[nC + 2] = fC[wC].z, bC && zC && (ZC = bC[QC], zC[oC] = ZC[wC].r, zC[oC + 1] = ZC[wC].g, zC[oC + 2] = ZC[wC].b, zC[oC + 3] = ZC[wC].a, oC += 4), nC += 3
+    function tk(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const Xk = Fk.instance,
+        Tk = Fk.lines,
+        ik = Fk.colors;
+      if (Xk) {
+        const kk = Xk.getVerticesData(lk.l.PositionKind);
+        let Fk, Ik;
+        ik && (Fk = Xk.getVerticesData(lk.l.ColorKind));
+        let yk = 0,
+          ak = 0;
+        for (let Xk = 0; Xk < Tk.length; Xk++) {
+          const lk = Tk[Xk];
+          for (let Tk = 0; Tk < lk.length; Tk++) kk[yk] = lk[Tk].x, kk[yk + 1] = lk[Tk].y, kk[yk + 2] = lk[Tk].z, ik && Fk && (Ik = ik[Xk], Fk[ak] = Ik[Tk].r, Fk[ak + 1] = Ik[Tk].g, Fk[ak + 2] = Ik[Tk].b, Fk[ak + 3] = Ik[Tk].a, ak += 4), yk += 3
         }
-        return QC.updateVerticesData(fC.k.PositionKind, CC, !1, !1), bC && zC && QC.updateVerticesData(fC.k.ColorKind, zC, !1, !1), QC.refreshBoundingInfo(), QC
+        return Xk.updateVerticesData(lk.l.PositionKind, kk, !1, !1), ik && Fk && Xk.updateVerticesData(lk.l.ColorKind, Fk, !1, !1), Xk.refreshBoundingInfo(), Xk
       }
-      const oC = !!bC,
-        FC = new nC.c(CC, ZC, null, void 0, void 0, oC, zC.useVertexAlpha, zC.material);
-      return qC(zC).applyToMesh(FC, zC.updatable), FC
+      const ak = !!ik,
+        Lk = new yk.b(kk, Ik, null, void 0, void 0, ak, Fk.useVertexAlpha, Fk.material);
+      return qk(Fk).applyToMesh(Lk, Fk.updatable), Lk
     }
 
-    function NC(CC, zC) {
-      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const QC = zC.colors ? [zC.colors] : null;
-      return WC(CC, {
-        lines: [zC.points],
-        updatable: zC.updatable,
-        instance: zC.instance,
-        colors: QC,
-        useVertexAlpha: zC.useVertexAlpha,
-        material: zC.material
-      }, ZC)
+    function Zk(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const Xk = Fk.colors ? [Fk.colors] : null;
+      return tk(kk, {
+        lines: [Fk.points],
+        updatable: Fk.updatable,
+        instance: Fk.instance,
+        colors: Xk,
+        useVertexAlpha: Fk.useVertexAlpha,
+        material: Fk.material
+      }, Ik)
     }
 
-    function MC(CC, zC) {
-      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const bC = zC.points,
-        fC = zC.instance,
-        qC = zC.gapSize || 1,
-        WC = zC.dashSize || 3;
-      if (fC) {
-        const CC = CC => {
-          const zC = QC.r.Zero(),
-            ZC = CC.length / 6;
-          let wC, nC, oC, qC, FC = 0,
-            WC = 0;
-          for (oC = 0; oC < bC.length - 1; oC++) bC[oC + 1].subtractToRef(bC[oC], zC), FC += zC.length();
-          const NC = FC / ZC,
-            MC = fC._creationDataStorage.dashSize,
-            gC = MC * NC / (MC + fC._creationDataStorage.gapSize);
-          for (oC = 0; oC < bC.length - 1; oC++)
-            for (bC[oC + 1].subtractToRef(bC[oC], zC), wC = Math.floor(zC.length() / NC), zC.normalize(), qC = 0; qC < wC && WC < CC.length;) nC = NC * qC, CC[WC] = bC[oC].x + nC * zC.x, CC[WC + 1] = bC[oC].y + nC * zC.y, CC[WC + 2] = bC[oC].z + nC * zC.z, CC[WC + 3] = bC[oC].x + (nC + gC) * zC.x, CC[WC + 4] = bC[oC].y + (nC + gC) * zC.y, CC[WC + 5] = bC[oC].z + (nC + gC) * zC.z, WC += 6, qC++;
-          for (; WC < CC.length;) CC[WC] = bC[oC].x, CC[WC + 1] = bC[oC].y, CC[WC + 2] = bC[oC].z, WC += 3
+    function jk(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const ik = Fk.points,
+        lk = Fk.instance,
+        qk = Fk.gapSize || 1,
+        tk = Fk.dashSize || 3;
+      if (lk) {
+        const kk = kk => {
+          const Fk = Xk.t.Zero(),
+            Ik = kk.length / 6;
+          let Tk, yk, ak, qk, Lk = 0,
+            tk = 0;
+          for (ak = 0; ak < ik.length - 1; ak++) ik[ak + 1].subtractToRef(ik[ak], Fk), Lk += Fk.length();
+          const Zk = Lk / Ik,
+            jk = lk._creationDataStorage.dashSize,
+            ek = jk * Zk / (jk + lk._creationDataStorage.gapSize);
+          for (ak = 0; ak < ik.length - 1; ak++)
+            for (ik[ak + 1].subtractToRef(ik[ak], Fk), Tk = Math.floor(Fk.length() / Zk), Fk.normalize(), qk = 0; qk < Tk && tk < kk.length;) yk = Zk * qk, kk[tk] = ik[ak].x + yk * Fk.x, kk[tk + 1] = ik[ak].y + yk * Fk.y, kk[tk + 2] = ik[ak].z + yk * Fk.z, kk[tk + 3] = ik[ak].x + (yk + ek) * Fk.x, kk[tk + 4] = ik[ak].y + (yk + ek) * Fk.y, kk[tk + 5] = ik[ak].z + (yk + ek) * Fk.z, tk += 6, qk++;
+          for (; tk < kk.length;) kk[tk] = ik[ak].x, kk[tk + 1] = ik[ak].y, kk[tk + 2] = ik[ak].z, tk += 3
         };
-        return (zC.dashNb || zC.dashSize || zC.gapSize || zC.useVertexAlpha || zC.material) && oC.c.Warn("You have used an option other than points with the instance option. Please be aware that these other options will be ignored."), fC.updateMeshPositions(CC, !1), fC
+        return (Fk.dashNb || Fk.dashSize || Fk.gapSize || Fk.useVertexAlpha || Fk.material) && ak.e.Warn("You have used an option other than points with the instance option. Please be aware that these other options will be ignored."), lk.updateMeshPositions(kk, !1), lk
       }
-      const NC = new nC.c(CC, ZC, null, void 0, void 0, void 0, zC.useVertexAlpha, zC.material);
-      return FC(zC).applyToMesh(NC, zC.updatable), NC._creationDataStorage = new wC.f, NC._creationDataStorage.dashSize = WC, NC._creationDataStorage.gapSize = qC, NC
+      const Zk = new yk.b(kk, Ik, null, void 0, void 0, void 0, Fk.useVertexAlpha, Fk.material);
+      return Lk(Fk).applyToMesh(Zk, Fk.updatable), Zk._creationDataStorage = new Tk.g, Zk._creationDataStorage.dashSize = tk, Zk._creationDataStorage.gapSize = qk, Zk
     }
-    let gC = !1;
-    gC || (gC = !0, bC.e.CreateLineSystem = qC, bC.e.CreateDashedLines = FC, wC.b.CreateLines = function(CC, zC) {
-      return NC(CC, {
-        points: zC,
+    let ek = !1;
+    ek || (ek = !0, ik.c.CreateLineSystem = qk, ik.c.CreateDashedLines = Lk, Tk.b.CreateLines = function(kk, Fk) {
+      return Zk(kk, {
+        points: Fk,
         updatable: arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         instance: arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null
       }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
-    }, wC.b.CreateDashedLines = function(CC, zC, ZC, QC, wC) {
-      return MC(CC, {
-        points: zC,
-        dashSize: ZC,
-        gapSize: QC,
-        dashNb: wC,
+    }, Tk.b.CreateDashedLines = function(kk, Fk, Ik, Xk, Tk) {
+      return jk(kk, {
+        points: Fk,
+        dashSize: Ik,
+        gapSize: Xk,
+        dashNb: Tk,
         updatable: arguments.length > 6 ? arguments[6] : void 0,
         instance: arguments.length > 7 ? arguments[7] : void 0
       }, arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null)
     })
   },
-  40283: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => NC,
-      e: () => SC
+  40467: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => Zk,
+      f: () => wk
     });
-    var QC, wC, bC = ZC(37142),
-      nC = ZC(39959),
-      fC = ZC(40224),
-      oC = ZC(40292),
-      qC = ZC(40110),
-      FC = ZC(40297),
-      WC = ZC(39694);
-    class NC extends fC.b {
-      _isShaderMaterial(CC) {
-        return !!CC && "ShaderMaterial" === CC.getClassName()
+    var Xk, Tk, ik = Ik(37331),
+      yk = Ik(40141),
+      lk = Ik(40417),
+      ak = Ik(40475),
+      qk = Ik(40295),
+      Lk = Ik(40482),
+      tk = Ik(39863);
+    class Zk extends lk.b {
+      _isShaderMaterial(kk) {
+        return !!kk && "ShaderMaterial" === kk.getClassName()
       }
-      constructor(CC) {
-        let zC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          QC = arguments.length > 5 ? arguments[5] : void 0,
-          wC = arguments.length > 6 ? arguments[6] : void 0,
-          fC = arguments.length > 7 ? arguments[7] : void 0;
-        super(CC, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null, zC, arguments.length > 4 ? arguments[4] : void 0), this.useVertexColor = QC, this.useVertexAlpha = wC, this.color = new bC.e(1, 1, 1), this.alpha = 1, this._shaderLanguage = 0, this._ownsMaterial = !1, zC && (this.color = zC.color.clone(), this.alpha = zC.alpha, this.useVertexColor = zC.useVertexColor, this.useVertexAlpha = zC.useVertexAlpha), this.intersectionThreshold = .1;
-        const oC = {
-          attributes: [nC.k.PositionKind],
+      constructor(kk) {
+        let Fk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          Xk = arguments.length > 5 ? arguments[5] : void 0,
+          Tk = arguments.length > 6 ? arguments[6] : void 0,
+          lk = arguments.length > 7 ? arguments[7] : void 0;
+        super(kk, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null, Fk, arguments.length > 4 ? arguments[4] : void 0), this.useVertexColor = Xk, this.useVertexAlpha = Tk, this.color = new ik.e(1, 1, 1), this.alpha = 1, this._shaderLanguage = 0, this._ownsMaterial = !1, Fk && (this.color = Fk.color.clone(), this.alpha = Fk.alpha, this.useVertexColor = Fk.useVertexColor, this.useVertexAlpha = Fk.useVertexAlpha), this.intersectionThreshold = .1;
+        const ak = {
+          attributes: [yk.l.PositionKind],
           uniforms: ["world", "viewProjection"],
           needAlphaBlending: !0,
           defines: [],
           useClipPlane: null,
           shaderLanguage: 0
         };
-        if (this.useVertexAlpha ? oC.defines.push("#define VERTEXALPHA") : oC.needAlphaBlending = !1, this.useVertexColor ? (oC.defines.push("#define VERTEXCOLOR"), oC.attributes.push(nC.k.ColorKind)) : (oC.uniforms.push("color"), this._color4 = new bC.g), fC) this.material = fC;
+        if (this.useVertexAlpha ? ak.defines.push("#define VERTEXALPHA") : ak.needAlphaBlending = !1, this.useVertexColor ? (ak.defines.push("#define VERTEXCOLOR"), ak.attributes.push(yk.l.ColorKind)) : (ak.uniforms.push("color"), this._color4 = new ik.h), lk) this.material = lk;
         else {
-          this.Km().mg().isWebGPU && !NC.ForceGLSL && (this._shaderLanguage = 1), oC.shaderLanguage = this._shaderLanguage, oC.extraInitializationsAsync = async () => {
-            1 === this._shaderLanguage ? await Promise.all([ZC.e(344).then((() => ZC(42355))), ZC.e(350).then((() => ZC(42359)))]) : await Promise.all([ZC.e(326).then((() => ZC(42363))), ZC.e(332).then((() => ZC(42370)))])
+          this.mG().Oe().isWebGPU && !Zk.ForceGLSL && (this._shaderLanguage = 1), ak.shaderLanguage = this._shaderLanguage, ak.extraInitializationsAsync = async () => {
+            1 === this._shaderLanguage ? await Promise.all([Ik.e(344).then((() => Ik(42559))), Ik.e(350).then((() => Ik(42565)))]) : await Promise.all([Ik.e(326).then((() => Ik(42571))), Ik.e(332).then((() => Ik(42574)))])
           };
-          const CC = new FC.r("colorShader", this.Km(), "color", oC, !1);
-          CC.doNotSerialize = !0, this._ownsMaterial = !0, this._setInternalMaterial(CC)
+          const kk = new Lk.q("colorShader", this.mG(), "color", ak, !1);
+          kk.doNotSerialize = !0, this._ownsMaterial = !0, this._setInternalMaterial(kk)
         }
       }
       getClassName() {
@@ -630,193 +630,193 @@ export const modules = {
       get material() {
         return this._internalAbstractMeshDataInfo._material
       }
-      set material(CC) {
-        const zC = this.material;
-        if (zC === CC) return;
-        const ZC = zC && this._ownsMaterial;
-        this._ownsMaterial = !1, this._setInternalMaterial(CC), ZC && zC?.dispose()
+      set material(kk) {
+        const Fk = this.material;
+        if (Fk === kk) return;
+        const Ik = Fk && this._ownsMaterial;
+        this._ownsMaterial = !1, this._setInternalMaterial(kk), Ik && Fk?.dispose()
       }
-      _setInternalMaterial(CC) {
-        this._setMaterial(CC), this.material && (this.material.fillMode = qC.d.LineListDrawMode, this.material.disableLighting = !0)
+      _setInternalMaterial(kk) {
+        this._setMaterial(kk), this.material && (this.material.fillMode = qk.c.LineListDrawMode, this.material.disableLighting = !0)
       }
       get checkCollisions() {
         return !1
       }
-      set checkCollisions(CC) {}
-      _bind(CC, zC) {
+      set checkCollisions(kk) {}
+      _bind(kk, Fk) {
         if (!this._geometry) return this;
-        const ZC = this.isUnIndexed ? null : this._geometry.getIndexBuffer();
-        if (!this._userInstancedBuffersStorage || this.hasThinInstances ? this._geometry._bind(zC, ZC) : this._geometry._bind(zC, ZC, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects), !this.useVertexColor && this._isShaderMaterial(this.material)) {
+        const Ik = this.isUnIndexed ? null : this._geometry.getIndexBuffer();
+        if (!this._userInstancedBuffersStorage || this.hasThinInstances ? this._geometry._bind(Fk, Ik) : this._geometry._bind(Fk, Ik, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects), !this.useVertexColor && this._isShaderMaterial(this.material)) {
           const {
-            r: CC,
-            g: zC,
-            b: ZC
+            r: kk,
+            g: Fk,
+            b: Ik
           } = this.color;
-          this._color4.set(CC, zC, ZC, this.alpha), this.material.setColor4("color", this._color4)
+          this._color4.set(kk, Fk, Ik, this.alpha), this.material.setColor4("color", this._color4)
         }
         return this
       }
-      _draw(CC, zC, ZC) {
+      _draw(kk, Fk, Ik) {
         if (!this._geometry || !this._geometry.getVertexBuffers() || !this._unIndexed && !this._geometry.getIndexBuffer()) return this;
-        const QC = this.Km().mg();
-        return this._unIndexed ? QC.drawArraysType(qC.d.LineListDrawMode, CC.verticesStart, CC.verticesCount, ZC) : QC.drawElementsType(qC.d.LineListDrawMode, CC.indexStart, CC.indexCount, ZC), this
+        const Xk = this.mG().Oe();
+        return this._unIndexed ? Xk.drawArraysType(qk.c.LineListDrawMode, kk.verticesStart, kk.verticesCount, Ik) : Xk.drawElementsType(qk.c.LineListDrawMode, kk.indexStart, kk.indexCount, Ik), this
       }
-      dispose(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        (arguments.length > 2 ? arguments[2] : void 0) || (this._ownsMaterial || zC) && this.material?.dispose(!1, !1, !0), super.dispose(CC)
+      dispose(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        (arguments.length > 2 ? arguments[2] : void 0) || (this._ownsMaterial || Fk) && this.material?.dispose(!1, !1, !0), super.dispose(kk)
       }
-      clone(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          ZC = arguments.length > 2 ? arguments[2] : void 0;
-        if (zC && void 0 === zC._addToSceneRootNodes) {
-          const ZC = zC;
-          return ZC.source = this, new NC(CC, this.Km(), ZC.parent, ZC.source, ZC.doNotCloneChildren)
+      clone(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          Ik = arguments.length > 2 ? arguments[2] : void 0;
+        if (Fk && void 0 === Fk._addToSceneRootNodes) {
+          const Ik = Fk;
+          return Ik.source = this, new Zk(kk, this.mG(), Ik.parent, Ik.source, Ik.doNotCloneChildren)
         }
-        return new NC(CC, this.Km(), zC, this, ZC)
+        return new Zk(kk, this.mG(), Fk, this, Ik)
       }
-      createInstance(CC) {
-        const zC = new MC(CC, this);
-        if (this.ZE) {
-          zC.ZE = {};
-          for (const CC in this.ZE) zC.ZE[CC] = this.ZE[CC]
+      createInstance(kk) {
+        const Fk = new jk(kk, this);
+        if (this.JR) {
+          Fk.JR = {};
+          for (const kk in this.JR) Fk.JR[kk] = this.JR[kk]
         }
-        return zC
+        return Fk
       }
-      serialize(CC) {
-        super.serialize(CC), CC.color = this.color.VZC(), CC.alpha = this.alpha
+      serialize(kk) {
+        super.serialize(kk), kk.color = this.color.iXk(), kk.alpha = this.alpha
       }
-      static Parse(CC, zC) {
-        const ZC = new NC(CC.name, zC);
-        return ZC.color = bC.e.FromArray(CC.color), ZC.alpha = CC.alpha, ZC
+      static Parse(kk, Fk) {
+        const Ik = new Zk(kk.name, Fk);
+        return Ik.color = ik.e.FromArray(kk.color), Ik.alpha = kk.alpha, Ik
       }
     }
-    NC.ForceGLSL = !1;
-    class MC extends oC.c {
-      constructor(CC, zC) {
-        super(CC, zC), this.intersectionThreshold = zC.intersectionThreshold
+    Zk.ForceGLSL = !1;
+    class jk extends ak.d {
+      constructor(kk, Fk) {
+        super(kk, Fk), this.intersectionThreshold = Fk.intersectionThreshold
       }
       getClassName() {
         return "InstancedLinesMesh"
       }
     }
-    let gC = !1;
+    let ek = !1;
 
-    function SC() {
-      gC || (gC = !0, fC.b._LinesMeshParser = (CC, zC) => NC.Parse(CC, zC))
-    }(QC = NC.prototype).enableEdgesRendering ?? (QC.enableEdgesRendering = (0, WC.f)("LinesMesh", "enableEdgesRendering")), (wC = MC.prototype).enableEdgesRendering ?? (wC.enableEdgesRendering = (0, WC.f)("InstancedLinesMesh", "enableEdgesRendering"))
+    function wk() {
+      ek || (ek = !0, lk.b._LinesMeshParser = (kk, Fk) => Zk.Parse(kk, Fk))
+    }(Xk = Zk.prototype).enableEdgesRendering ?? (Xk.enableEdgesRendering = (0, tk.h)("LinesMesh", "enableEdgesRendering")), (Tk = jk.prototype).enableEdgesRendering ?? (Tk.enableEdgesRendering = (0, tk.h)("InstancedLinesMesh", "enableEdgesRendering"))
   },
-  38501: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => bC
+  38666: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => ik
     });
-    var QC = ZC(38507);
-    const wC = (CC, zC, ZC) => CC ? CC.getClassName && "Mesh" === CC.getClassName() ? null : !CC.getClassName || "SubMesh" !== CC.getClassName() && "PhysicsBody" !== CC.getClassName() ? CC.clone ? CC.clone() : Array.isArray(CC) ? CC.slice() : ZC && "object" === typeof CC ? {
-      ...CC
-    } : null : CC.clone(zC) : null;
-    class bC {
-      static DeepCopy(CC, zC, ZC, bC) {
-        let nC = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const fC = function(CC) {
-          const zC = [];
+    var Xk = Ik(38674);
+    const Tk = (kk, Fk, Ik) => kk ? kk.getClassName && "Mesh" === kk.getClassName() ? null : !kk.getClassName || "SubMesh" !== kk.getClassName() && "PhysicsBody" !== kk.getClassName() ? kk.clone ? kk.clone() : Array.isArray(kk) ? kk.slice() : Ik && "object" === typeof kk ? {
+      ...kk
+    } : null : kk.clone(Fk) : null;
+    class ik {
+      static DeepCopy(kk, Fk, Ik, ik) {
+        let yk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const lk = function(kk) {
+          const Fk = [];
           do {
-            const ZC = Object.getOwnPropertyNames(CC);
-            for (const CC of ZC) - 1 === zC.indexOf(CC) && zC.push(CC)
-          } while (CC = Object.getPrototypeOf(CC));
-          return zC
-        }(CC);
-        for (const qC of fC) {
-          if ("_" === qC[0] && (!bC || -1 === bC.indexOf(qC))) continue;
-          if (qC.endsWith("Observable")) continue;
-          if (ZC && -1 !== ZC.indexOf(qC)) continue;
-          const fC = CC[qC],
-            FC = typeof fC;
-          if ("function" !== FC) try {
-            if ("object" === FC)
-              if (fC instanceof Uint8Array) zC[qC] = Uint8Array.from(fC);
-              else if (fC instanceof Array) {
-              if (zC[qC] = [], fC.length > 0)
-                if ("object" == typeof fC[0])
-                  for (let CC = 0; CC < fC.length; CC++) {
-                    const ZC = wC(fC[CC], zC, nC); - 1 === zC[qC].indexOf(ZC) && zC[qC].push(ZC)
-                  } else zC[qC] = fC.slice(0)
-            } else zC[qC] = wC(fC, zC, nC);
-            else zC[qC] = fC
-          } catch (oC) {
-            QC.c.Warn(oC.message)
+            const Ik = Object.getOwnPropertyNames(kk);
+            for (const kk of Ik) - 1 === Fk.indexOf(kk) && Fk.push(kk)
+          } while (kk = Object.getPrototypeOf(kk));
+          return Fk
+        }(kk);
+        for (const qk of lk) {
+          if ("_" === qk[0] && (!ik || -1 === ik.indexOf(qk))) continue;
+          if (qk.endsWith("Observable")) continue;
+          if (Ik && -1 !== Ik.indexOf(qk)) continue;
+          const lk = kk[qk],
+            Lk = typeof lk;
+          if ("function" !== Lk) try {
+            if ("object" === Lk)
+              if (lk instanceof Uint8Array) Fk[qk] = Uint8Array.from(lk);
+              else if (lk instanceof Array) {
+              if (Fk[qk] = [], lk.length > 0)
+                if ("object" == typeof lk[0])
+                  for (let kk = 0; kk < lk.length; kk++) {
+                    const Ik = Tk(lk[kk], Fk, yk); - 1 === Fk[qk].indexOf(Ik) && Fk[qk].push(Ik)
+                  } else Fk[qk] = lk.slice(0)
+            } else Fk[qk] = Tk(lk, Fk, yk);
+            else Fk[qk] = lk
+          } catch (ak) {
+            Xk.e.Warn(ak.message)
           }
         }
       }
     }
   },
-  37731: (CC, zC, ZC) => {
-    function QC() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (CC => {
-        const zC = 16 * Math.random() | 0;
-        return ("x" === CC ? zC : 3 & zC | 8).toString(16)
+  37902: (kk, Fk, Ik) => {
+    function Xk() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (kk => {
+        const Fk = 16 * Math.random() | 0;
+        return ("x" === kk ? Fk : 3 & Fk | 8).toString(16)
       }))
     }
-    ZC.d(zC, {
-      b: () => QC
+    Ik.d(Fk, {
+      e: () => Xk
     })
   },
-  38507: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => QC
+  38674: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Xk
     });
-    class QC {
-      static _CheckLimit(CC, zC) {
-        let ZC = QC._LogLimitOutputs[CC];
-        return ZC ? ZC.current++ : (ZC = {
-          limit: zC,
+    class Xk {
+      static _CheckLimit(kk, Fk) {
+        let Ik = Xk._LogLimitOutputs[kk];
+        return Ik ? Ik.current++ : (Ik = {
+          limit: Fk,
           current: 1
-        }, QC._LogLimitOutputs[CC] = ZC), ZC.current <= ZC.limit
+        }, Xk._LogLimitOutputs[kk] = Ik), Ik.current <= Ik.limit
       }
-      static _GenerateLimitMessage(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const ZC = QC._LogLimitOutputs[CC];
-        if (!ZC || !QC.MessageLimitReached) return;
-        const wC = this._Levels[zC];
-        ZC.current === ZC.limit && QC[wC.name](QC.MessageLimitReached.replace(/%LIMIT%/g, "" + ZC.limit).replace(/%TYPE%/g, wC.name ?? ""))
+      static _GenerateLimitMessage(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const Ik = Xk._LogLimitOutputs[kk];
+        if (!Ik || !Xk.MessageLimitReached) return;
+        const Tk = this._Levels[Fk];
+        Ik.current === Ik.limit && Xk[Tk.name](Xk.MessageLimitReached.replace(/%LIMIT%/g, "" + Ik.limit).replace(/%TYPE%/g, Tk.name ?? ""))
       }
-      static _AddLogEntry(CC) {
-        QC._LogCache = CC + QC._LogCache, QC.OnNewCacheEntry && QC.OnNewCacheEntry(CC)
+      static _AddLogEntry(kk) {
+        Xk._LogCache = kk + Xk._LogCache, Xk.OnNewCacheEntry && Xk.OnNewCacheEntry(kk)
       }
-      static _FormatMessage(CC) {
-        const zC = CC => CC < 10 ? "0" + CC : "" + CC,
-          ZC = new Date;
-        return "[" + zC(ZC.getHours()) + ":" + zC(ZC.getMinutes()) + ":" + zC(ZC.getSeconds()) + "]: " + CC
+      static _FormatMessage(kk) {
+        const Fk = kk => kk < 10 ? "0" + kk : "" + kk,
+          Ik = new Date;
+        return "[" + Fk(Ik.getHours()) + ":" + Fk(Ik.getMinutes()) + ":" + Fk(Ik.getSeconds()) + "]: " + kk
       }
-      static _LogDisabled(CC, zC) {}
+      static _LogDisabled(kk, Fk) {}
       static _LogEnabled() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          zC = arguments.length > 1 ? arguments[1] : void 0,
-          ZC = arguments.length > 2 ? arguments[2] : void 0;
-        const wC = Array.isArray(zC) ? zC[0] : zC;
-        if (void 0 !== ZC && !QC._CheckLimit(wC, ZC)) return;
-        const bC = QC._FormatMessage(wC),
-          nC = this._Levels[CC],
-          fC = Array.isArray(zC) ? zC.slice(1) : [];
-        nC.logFunc && nC.logFunc("BJS - " + bC, ...fC);
-        const oC = `<div style='color:${nC.color}'>${bC}</div><br>`;
-        QC._AddLogEntry(oC), QC._GenerateLimitMessage(wC, CC)
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Fk = arguments.length > 1 ? arguments[1] : void 0,
+          Ik = arguments.length > 2 ? arguments[2] : void 0;
+        const Tk = Array.isArray(Fk) ? Fk[0] : Fk;
+        if (void 0 !== Ik && !Xk._CheckLimit(Tk, Ik)) return;
+        const ik = Xk._FormatMessage(Tk),
+          yk = this._Levels[kk],
+          lk = Array.isArray(Fk) ? Fk.slice(1) : [];
+        yk.logFunc && yk.logFunc("BJS - " + ik, ...lk);
+        const ak = `<div style='color:${yk.color}'>${ik}</div><br>`;
+        Xk._AddLogEntry(ak), Xk._GenerateLimitMessage(Tk, kk)
       }
       static get LogCache() {
-        return QC._LogCache
+        return Xk._LogCache
       }
       static ClearLogCache() {
-        QC._LogCache = "", QC._LogLimitOutputs = {}, QC.errorsCount = 0
+        Xk._LogCache = "", Xk._LogLimitOutputs = {}, Xk.errorsCount = 0
       }
-      static set LogLevels(CC) {
-        QC.Log = QC._LogDisabled, QC.Warn = QC._LogDisabled, QC.Error = QC._LogDisabled;
-        const zC = [QC.MessageLogLevel, QC.WarningLogLevel, QC.ErrorLogLevel];
-        for (const ZC of zC)
-          if ((CC & ZC) === ZC) {
-            const CC = this._Levels[ZC];
-            QC[CC.name] = QC._LogEnabled.bind(QC, ZC)
+      static set LogLevels(kk) {
+        Xk.Log = Xk._LogDisabled, Xk.Warn = Xk._LogDisabled, Xk.Error = Xk._LogDisabled;
+        const Fk = [Xk.MessageLogLevel, Xk.WarningLogLevel, Xk.ErrorLogLevel];
+        for (const Ik of Fk)
+          if ((kk & Ik) === Ik) {
+            const kk = this._Levels[Ik];
+            Xk[kk.name] = Xk._LogEnabled.bind(Xk, Ik)
           }
       }
     }
-    QC.NoneLogLevel = 0, QC.MessageLogLevel = 1, QC.WarningLogLevel = 2, QC.ErrorLogLevel = 4, QC.AllLogLevel = 7, QC.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", QC._LogCache = "", QC._LogLimitOutputs = {}, QC._Levels = [{}, {
+    Xk.NoneLogLevel = 0, Xk.MessageLogLevel = 1, Xk.WarningLogLevel = 2, Xk.ErrorLogLevel = 4, Xk.AllLogLevel = 7, Xk.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Xk._LogCache = "", Xk._LogLimitOutputs = {}, Xk._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -828,15 +828,15 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], QC.errorsCount = 0, QC.Log = QC._LogEnabled.bind(QC, QC.MessageLogLevel), QC.Warn = QC._LogEnabled.bind(QC, QC.WarningLogLevel), QC.Error = QC._LogEnabled.bind(QC, QC.ErrorLogLevel)
+    }], Xk.errorsCount = 0, Xk.Log = Xk._LogEnabled.bind(Xk, Xk.MessageLogLevel), Xk.Warn = Xk._LogEnabled.bind(Xk, Xk.WarningLogLevel), Xk.Error = Xk._LogEnabled.bind(Xk, Xk.ErrorLogLevel)
   },
-  39902: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => QC.g
+  40082: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Xk.f
     });
-    var QC = ZC(39910);
-    (0, QC.e)()
+    var Xk = Ik(40090);
+    (0, Xk.c)()
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

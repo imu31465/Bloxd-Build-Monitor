@@ -1,52 +1,52 @@
 export const id = 250;
 export const ids = [250];
 export const modules = {
-  39626: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      default: () => LC
+  39801: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      default: () => mk
     });
-    ZC(6473);
-    var QC = ZC(48),
-      wC = ZC(39635),
-      bC = ZC(39902),
-      nC = ZC(40031),
-      fC = ZC(40076),
-      oC = ZC(40092),
-      qC = ZC(37138),
-      FC = ZC(36961),
-      WC = ZC(40219),
-      NC = ZC(40281),
-      MC = (ZC(40308), ZC(1169)),
-      gC = ZC(184),
-      SC = ZC(1143),
-      pC = ZC(20),
-      PC = ZC(2734),
-      GC = ZC(1388),
-      RC = ZC(1013),
-      AC = ZC(6466),
-      xC = ZC(6475),
-      JC = ZC(4369),
-      IC = ZC(1056);
-    const iC = 1.2,
-      vC = .2,
-      eC = .0066 * Math.PI / 180,
-      hC = new Set(["Escape", "KeyG"]),
-      KC = {
+    Ik(6462);
+    var Xk = Ik(58),
+      Tk = Ik(39806),
+      ik = Ik(40082),
+      yk = Ik(40201),
+      lk = Ik(40252),
+      ak = Ik(40269),
+      qk = Ik(37327),
+      Lk = Ik(37144),
+      tk = Ik(40411),
+      Zk = Ik(40458),
+      jk = (Ik(40498), Ik(1217)),
+      ek = Ik(187),
+      wk = Ik(1179),
+      Hk = Ik(25),
+      Jk = Ik(2679),
+      xk = Ik(1406),
+      Pk = Ik(1066),
+      Kk = Ik(6459),
+      Qk = Ik(6471),
+      sk = Ik(4430),
+      Vk = Ik(1096);
+    const zk = 1.2,
+      Sk = .2,
+      vk = .0066 * Math.PI / 180,
+      Ek = new Set(["Escape", "KeyG"]),
+      Ok = {
         ArrowLeft: -1,
         ArrowRight: 1
       },
-      YC = "ArrowUp",
-      dC = new Set([...Object.keys(KC), YC, "ArrowDown"]),
-      mC = 32,
-      HC = 1,
-      EC = 10,
-      lC = "F4",
-      XC = "Period",
-      cC = Math.PI / 2 - .001,
-      uC = Math.PI / 6,
-      rC = Math.PI / 6,
-      sC = 1.08,
-      TC = [{
+      nk = "ArrowUp",
+      Gk = new Set([...Object.keys(Ok), nk, "ArrowDown"]),
+      pk = 32,
+      uk = 1,
+      bk = 10,
+      Rk = "F4",
+      Uk = "Period",
+      Ck = Math.PI / 2 - .001,
+      Nk = Math.PI / 6,
+      ck = Math.PI / 6,
+      Wk = 1.08,
+      fk = [{
         name: "X",
         direction: [1, 0, 0],
         colour: "#e5534b"
@@ -59,387 +59,387 @@ export const modules = {
         direction: [0, 0, 1],
         colour: "#539bf5"
       }],
-      aC = 24,
-      tC = 7,
-      DC = 4,
-      jC = .01,
-      yC = 4;
+      Bk = 24,
+      dk = 7,
+      Yk = 4,
+      Ak = .01,
+      gk = 4;
 
-    function LC(CC) {
+    function mk(kk) {
       let {
-        heatmap: zC,
-        scale: ZC,
-        fullyOpaqueFrom: HC,
-        bounds: uC,
-        fitBounds: rC,
-        schematic: sC,
-        controls: TC,
-        onStepTime: aC,
-        onShowAllTime: tC,
-        onTogglePlaying: DC,
-        getReadout: yC = null
-      } = CC;
+        heatmap: Fk,
+        scale: Ik,
+        fullyOpaqueFrom: uk,
+        bounds: Nk,
+        fitBounds: ck,
+        schematic: Wk,
+        controls: fk,
+        onStepTime: Bk,
+        onShowAllTime: dk,
+        onTogglePlaying: Yk,
+        getReadout: gk = null
+      } = kk;
       const {
-        t: LC
-      } = (0, SC.y)(), {
-        clientEscMenuOptions: bz
-      } = (0, pC.k)(["clientEscMenuOptions"]), oz = (0, QC.useRef)(null), qz = (0, QC.useRef)(null), Fz = (0, QC.useRef)(null), Wz = (0, PC.e)(oz), [Nz, Mz] = (0, QC.useState)(!1), [gz, Sz] = (0, QC.useState)(!1), [pz, Pz] = (0, QC.useState)(!0), Gz = (0, QC.useRef)(!1), [Rz, Az] = (0, QC.useState)(!1), xz = gz || !pz && Rz, [Jz, Iz] = (0, QC.useState)(!1), [iz, vz] = (0, QC.useState)(!0), [ez, hz] = (0, QC.useState)(null), Kz = uC.min, [Yz, dz] = (0, QC.useState)(Kz);
-      Yz[0] === Kz[0] && Yz[1] === Kz[1] && Yz[2] === Kz[2] || (dz(Kz), null !== ez && hz({
-        ...ez,
-        position: nz(ez.position, nz(Yz, fz(Kz, -1)))
+        t: mk
+      } = (0, wk.y)(), {
+        clientEscMenuOptions: yF
+      } = (0, Hk.j)(["clientEscMenuOptions"]), qF = (0, Xk.useRef)(null), LF = (0, Xk.useRef)(null), tF = (0, Xk.useRef)(null), ZF = (0, Jk.b)(qF), [jF, eF] = (0, Xk.useState)(!1), [wF, HF] = (0, Xk.useState)(!1), [JF, xF] = (0, Xk.useState)(!0), PF = (0, Xk.useRef)(!1), [KF, QF] = (0, Xk.useState)(!1), sF = wF || !JF && KF, [VF, zF] = (0, Xk.useState)(!1), [SF, oF] = (0, Xk.useState)(!0), [vF, EF] = (0, Xk.useState)(null), OF = Nk.min, [nF, GF] = (0, Xk.useState)(OF);
+      nF[0] === OF[0] && nF[1] === OF[1] && nF[2] === OF[2] || (GF(OF), null !== vF && EF({
+        ...vF,
+        position: lF(vF.position, lF(nF, aF(OF, -1)))
       }));
-      const mz = (0, QC.useMemo)((() => function(CC) {
-          return [CC.max[0] - CC.min[0] + 1, CC.max[1] - CC.min[1] + 1, CC.max[2] - CC.min[2] + 1]
-        }(uC)), [uC]),
-        Hz = (0, QC.useMemo)((() => function(CC, zC) {
-          const ZC = [],
-            QC = [];
-          for (const [wC, bC] of Object.entries(CC.frequencies)) {
-            const CC = Number(wC);
-            for (const [wC, nC] of Object.entries(bC)) {
-              const bC = Number(wC);
-              for (const [wC, fC] of Object.entries(nC)) fC <= 0 || (ZC.push(CC - zC[0], bC - zC[1], Number(wC) - zC[2]), QC.push(fC))
+      const pF = (0, Xk.useMemo)((() => function(kk) {
+          return [kk.max[0] - kk.min[0] + 1, kk.max[1] - kk.min[1] + 1, kk.max[2] - kk.min[2] + 1]
+        }(Nk)), [Nk]),
+        uF = (0, Xk.useMemo)((() => function(kk, Fk) {
+          const Ik = [],
+            Xk = [];
+          for (const [Tk, ik] of Object.entries(kk.frequencies)) {
+            const kk = Number(Tk);
+            for (const [Tk, yk] of Object.entries(ik)) {
+              const ik = Number(Tk);
+              for (const [Tk, lk] of Object.entries(yk)) lk <= 0 || (Ik.push(kk - Fk[0], ik - Fk[1], Number(Tk) - Fk[2]), Xk.push(lk))
             }
           }
           return {
-            positions: Int32Array.from(ZC),
-            values: Float64Array.from(QC),
-            count: QC.length
+            positions: Int32Array.from(Ik),
+            values: Float64Array.from(Xk),
+            count: Xk.length
           }
-        }(zC, Kz)), [zC, Kz]),
-        Ez = iC * bz.cameraFOV / 100,
-        lz = Wz.height > 0 ? Wz.width / Wz.height : 1,
-        Xz = (0, QC.useMemo)((() => function(CC, zC) {
+        }(Fk, OF)), [Fk, OF]),
+        bF = zk * yF.cameraFOV / 100,
+        RF = ZF.height > 0 ? ZF.width / ZF.height : 1,
+        UF = (0, Xk.useMemo)((() => function(kk, Fk) {
           return {
-            min: [CC.min[0] - zC[0], CC.min[1] - zC[1], CC.min[2] - zC[2]],
-            max: [CC.max[0] - zC[0] + 1, CC.max[1] - zC[1] + 1, CC.max[2] - zC[2] + 1]
+            min: [kk.min[0] - Fk[0], kk.min[1] - Fk[1], kk.min[2] - Fk[2]],
+            max: [kk.max[0] - Fk[0] + 1, kk.max[1] - Fk[1] + 1, kk.max[2] - Fk[2] + 1]
           }
-        }(rC, Kz)), [rC, Kz]),
-        cz = Zz(Xz, lz, Ez),
-        uz = null !== ez && void 0 !== ez ? ez : cz,
-        rz = (0, QC.useRef)({
-          fittedView: cz,
-          fieldOfView: Ez,
-          mouseSensitivity: bz.mouseSensitivity,
-          canLock: pz
+        }(ck, OF)), [ck, OF]),
+        CF = XF(UF, RF, bF),
+        NF = null !== vF && void 0 !== vF ? vF : CF,
+        cF = (0, Xk.useRef)({
+          fittedView: CF,
+          fieldOfView: bF,
+          mouseSensitivity: yF.mouseSensitivity,
+          canLock: JF
         });
-      rz.current = {
-        fittedView: cz,
-        fieldOfView: Ez,
-        mouseSensitivity: bz.mouseSensitivity,
-        canLock: pz
+      cF.current = {
+        fittedView: CF,
+        fieldOfView: bF,
+        mouseSensitivity: yF.mouseSensitivity,
+        canLock: JF
       };
-      const sz = (0, QC.useMemo)((() => {
-          if (!xz) return null;
-          const CC = (CC, ZC, QC) => {
-              var wC, bC, nC;
-              return null !== (wC = null === (bC = zC.frequencies[CC + Kz[0]]) || void 0 === bC || null === (nC = bC[ZC + Kz[1]]) || void 0 === nC ? void 0 : nC[QC + Kz[2]]) && void 0 !== wC ? wC : 0
+      const WF = (0, Xk.useMemo)((() => {
+          if (!sF) return null;
+          const kk = (kk, Ik, Xk) => {
+              var Tk, ik, yk;
+              return null !== (Tk = null === (ik = Fk.frequencies[kk + OF[0]]) || void 0 === ik || null === (yk = ik[Ik + OF[1]]) || void 0 === yk ? void 0 : yk[Xk + OF[2]]) && void 0 !== Tk ? Tk : 0
             },
-            QC = function(CC, zC, ZC, QC) {
-              let wC = 0,
-                bC = 1 / 0;
-              for (const WC of [0, 1, 2]) {
-                if (0 === zC[WC]) {
-                  if (CC[WC] < 0 || CC[WC] > ZC[WC]) return null;
+            Xk = function(kk, Fk, Ik, Xk) {
+              let Tk = 0,
+                ik = 1 / 0;
+              for (const tk of [0, 1, 2]) {
+                if (0 === Fk[tk]) {
+                  if (kk[tk] < 0 || kk[tk] > Ik[tk]) return null;
                   continue
                 }
-                const QC = (0 - CC[WC]) / zC[WC],
-                  nC = (ZC[WC] - CC[WC]) / zC[WC];
-                wC = Math.max(wC, Math.min(QC, nC)), bC = Math.min(bC, Math.max(QC, nC))
+                const Xk = (0 - kk[tk]) / Fk[tk],
+                  yk = (Ik[tk] - kk[tk]) / Fk[tk];
+                Tk = Math.max(Tk, Math.min(Xk, yk)), ik = Math.min(ik, Math.max(Xk, yk))
               }
-              if (wC > bC) return null;
-              const nC = [0, 1, 2].map((QC => Math.min(ZC[QC] - 1, Math.max(0, Math.floor(CC[QC] + zC[QC] * wC))))),
-                fC = [0, 1, 2].map((CC => Math.sign(zC[CC]))),
-                oC = [0, 1, 2].map((ZC => {
-                  if (0 === fC[ZC]) return 1 / 0;
-                  return ((fC[ZC] > 0 ? nC[ZC] + 1 : nC[ZC]) - CC[ZC]) / zC[ZC]
+              if (Tk > ik) return null;
+              const yk = [0, 1, 2].map((Xk => Math.min(Ik[Xk] - 1, Math.max(0, Math.floor(kk[Xk] + Fk[Xk] * Tk))))),
+                lk = [0, 1, 2].map((kk => Math.sign(Fk[kk]))),
+                ak = [0, 1, 2].map((Ik => {
+                  if (0 === lk[Ik]) return 1 / 0;
+                  return ((lk[Ik] > 0 ? yk[Ik] + 1 : yk[Ik]) - kk[Ik]) / Fk[Ik]
                 })),
-                qC = [0, 1, 2].map((CC => 0 === fC[CC] ? 1 / 0 : Math.abs(1 / zC[CC])));
-              let FC = null;
+                qk = [0, 1, 2].map((kk => 0 === lk[kk] ? 1 / 0 : Math.abs(1 / Fk[kk])));
+              let Lk = null;
               for (;;) {
-                const CC = QC(nC[0], nC[1], nC[2]);
-                if (CC >= 1) return nC;
-                CC > 0 && (FC = [nC[0], nC[1], nC[2]]);
-                const zC = oC[0] < oC[1] ? oC[0] < oC[2] ? 0 : 2 : oC[1] < oC[2] ? 1 : 2;
-                if (oC[zC] > bC) return FC;
-                if (nC[zC] += fC[zC], oC[zC] += qC[zC], nC[zC] < 0 || nC[zC] >= ZC[zC]) return FC
+                const kk = Xk(yk[0], yk[1], yk[2]);
+                if (kk >= 1) return yk;
+                kk > 0 && (Lk = [yk[0], yk[1], yk[2]]);
+                const Fk = ak[0] < ak[1] ? ak[0] < ak[2] ? 0 : 2 : ak[1] < ak[2] ? 1 : 2;
+                if (ak[Fk] > ik) return Lk;
+                if (yk[Fk] += lk[Fk], ak[Fk] += qk[Fk], yk[Fk] < 0 || yk[Fk] >= Ik[Fk]) return Lk
               }
-            }(uz.position, Cz(uz), mz, ((zC, QC, wC) => (0, AC.y)(CC(zC, QC, wC), ZC, HC)));
-          return null === QC ? null : {
-            x: QC[0] + Kz[0],
-            y: QC[1] + Kz[1],
-            z: QC[2] + Kz[2],
-            value: CC(QC[0], QC[1], QC[2])
+            }(NF.position, FF(NF), pF, ((Fk, Xk, Tk) => (0, Kk.x)(kk(Fk, Xk, Tk), Ik, uk)));
+          return null === Xk ? null : {
+            x: Xk[0] + OF[0],
+            y: Xk[1] + OF[1],
+            z: Xk[2] + OF[2],
+            value: kk(Xk[0], Xk[1], Xk[2])
           }
-        }), [xz, zC, Kz, uz, mz, ZC, HC]),
+        }), [sF, Fk, OF, NF, pF, Ik, uk]),
         {
-          keyHandlers: Tz
-        } = (0, xC.g)({
-          isEnabled: xz,
-          claimedKeyCodes: dC,
-          AN: CC => {
-            hz((zC => function(CC, zC) {
-              const ZC = [Math.sin(CC.heading), 0, Math.cos(CC.heading)],
-                QC = nz(nz(fz(ZC, zC.forward), fz(zz(CC.heading), zC.right)), [0, zC.up, 0]);
+          keyHandlers: fF
+        } = (0, Qk.e)({
+          isEnabled: sF,
+          claimedKeyCodes: Gk,
+          HZ: kk => {
+            EF((Fk => function(kk, Fk) {
+              const Ik = [Math.sin(kk.heading), 0, Math.cos(kk.heading)],
+                Xk = lF(lF(aF(Ik, Fk.forward), aF(IF(kk.heading), Fk.right)), [0, Fk.up, 0]);
               return {
-                ...CC,
-                position: nz(CC.position, QC)
+                ...kk,
+                position: lF(kk.position, Xk)
               }
-            }(null !== zC && void 0 !== zC ? zC : rz.current.fittedView, CC)))
+            }(null !== Fk && void 0 !== Fk ? Fk : cF.current.fittedView, kk)))
           },
-          onZoomChange: Iz
+          onZoomChange: zF
         });
-      (0, QC.useEffect)((() => {
-        const CC = qz.current;
-        if (!CC) return;
-        let zC;
+      (0, Xk.useEffect)((() => {
+        const kk = LF.current;
+        if (!kk) return;
+        let Fk;
         try {
-          zC = function(CC, zC) {
-            const ZC = new wC.d(CC, !0, {
+          Fk = function(kk, Fk) {
+            const Ik = new Tk.c(kk, !0, {
                 stencil: !1
               }, !0),
-              QC = new bC.e(ZC),
-              [MC, gC, SC] = AC.L;
-            QC.clearColor = new qC.e(MC / 255, gC / 255, SC / 255, 1);
-            const pC = new nC.d("Heatmap3DCamera", FC.Eg.Zero(), QC);
-            pC.fov = zC, pC.minZ = .05;
-            const PC = new fC.e("Heatmap3DLight", new FC.Eg(.4, 1, -.6), QC);
-            PC.diffuse = qC.Color3.White(), PC.groundColor = qC.Color3.Black(), PC.specular = qC.Color3.Black();
-            const GC = new oC.StandardMaterial("Heatmap3DCellMaterial", QC);
-            GC.diffuseColor = new qC.Color3(.4, .4, .4), GC.emissiveColor = new qC.Color3(.62, .62, .62), GC.specularColor = qC.Color3.Black();
-            const RC = (0, WC.b)("Heatmap3DCells", {
+              Xk = new ik.c(Ik),
+              [jk, ek, wk] = Kk.S;
+            Xk.clearColor = new qk.b(jk / 255, ek / 255, wk / 255, 1);
+            const Hk = new yk.e("Heatmap3DCamera", Lk.Ge.Zero(), Xk);
+            Hk.fov = Fk, Hk.minZ = .05;
+            const Jk = new lk.d("Heatmap3DLight", new Lk.Ge(.4, 1, -.6), Xk);
+            Jk.diffuse = qk.Color3.White(), Jk.groundColor = qk.Color3.Black(), Jk.specular = qk.Color3.Black();
+            const xk = new ak.StandardMaterial("Heatmap3DCellMaterial", Xk);
+            xk.diffuseColor = new qk.Color3(.4, .4, .4), xk.emissiveColor = new qk.Color3(.62, .62, .62), xk.specularColor = qk.Color3.Black();
+            const Pk = (0, tk.d)("Heatmap3DCells", {
               size: 1
-            }, QC);
-            RC.material = GC, RC.tS = !1, RC.Hg = !0, RC.isVisible = !1;
-            const xC = (0, WC.b)("Heatmap3DTranslucentCells", {
+            }, Xk);
+            Pk.material = xk, Pk.gw = !1, Pk.ne = !0, Pk.isVisible = !1;
+            const Qk = (0, tk.d)("Heatmap3DTranslucentCells", {
               size: 1
-            }, QC);
-            xC.material = GC, xC.hasVertexAlpha = !0, xC.tS = !1, xC.Hg = !0, xC.isVisible = !1;
-            const JC = new oC.StandardMaterial("Heatmap3DSchematicMaterial", QC);
-            JC.diffuseColor = new qC.Color3(.6, .6, .6), JC.emissiveColor = new qC.Color3(.4, .4, .4), JC.specularColor = qC.Color3.Black();
-            const IC = (0, WC.b)("Heatmap3DSchematicBlocks", {
+            }, Xk);
+            Qk.material = xk, Qk.hasVertexAlpha = !0, Qk.gw = !1, Qk.ne = !0, Qk.isVisible = !1;
+            const sk = new ak.StandardMaterial("Heatmap3DSchematicMaterial", Xk);
+            sk.diffuseColor = new qk.Color3(.6, .6, .6), sk.emissiveColor = new qk.Color3(.4, .4, .4), sk.specularColor = qk.Color3.Black();
+            const Vk = (0, tk.d)("Heatmap3DSchematicBlocks", {
               size: 1
-            }, QC);
-            IC.material = JC, IC.tS = !1, IC.Hg = !0, IC.isVisible = !1;
-            const iC = (0, NC.b)("Heatmap3DTarget", {
-              lines: VC([-.52, -.52, -.52], [.52, .52, .52])
-            }, QC);
-            return iC.color = new qC.Color3(.06, .14, .23), iC.renderingGroupId = 1, iC.tS = !1, iC.isVisible = !1, {
-              engine: ZC,
-              sS: QC,
-              camera: pC,
-              cells: RC,
-              translucentCells: xC,
+            }, Xk);
+            Vk.material = sk, Vk.gw = !1, Vk.ne = !0, Vk.isVisible = !1;
+            const zk = (0, Zk.c)("Heatmap3DTarget", {
+              lines: kF([-.52, -.52, -.52], [.52, .52, .52])
+            }, Xk);
+            return zk.color = new qk.Color3(.06, .14, .23), zk.renderingGroupId = 1, zk.gw = !1, zk.isVisible = !1, {
+              engine: Ik,
+              Yw: Xk,
+              camera: Hk,
+              cells: Pk,
+              translucentCells: Qk,
               translucent: {
-                VS: new Float32Array(0),
+                By: new Float32Array(0),
                 colours: new Float32Array(0),
                 count: 0
               },
               translucentSortedFrom: null,
-              schematicBlocks: IC,
-              targetOutline: iC,
+              schematicBlocks: Vk,
+              targetOutline: zk,
               chunkGrid: null,
               chunkGridCentre: null,
               chunkGridOrigin: null,
-              targetFieldOfView: zC,
+              targetFieldOfView: Fk,
               needsRender: !0
             }
-          }(CC, rz.current.fieldOfView)
-        } catch (ZC) {
-          return console.error("Failed to start the 3D heatmap", ZC), void Mz(!0)
+          }(kk, cF.current.fieldOfView)
+        } catch (Ik) {
+          return console.error("Failed to start the 3D heatmap", Ik), void eF(!0)
         }
-        return Fz.current = zC, zC.engine.runRenderLoop((() => {
-          const CC = zC.camera;
-          CC.fov !== zC.targetFieldOfView && (CC.fov += (zC.targetFieldOfView - CC.fov) * (CC.fov > zC.targetFieldOfView ? .3 : .2), Math.abs(zC.targetFieldOfView - CC.fov) < 5e-4 && (CC.fov = zC.targetFieldOfView), zC.needsRender = !0), zC.needsRender && (zC.sS.render(), zC.needsRender = !zC.sS.isReady() || !zC.engine.areAllEffectsReady())
+        return tF.current = Fk, Fk.engine.runRenderLoop((() => {
+          const kk = Fk.camera;
+          kk.fov !== Fk.targetFieldOfView && (kk.fov += (Fk.targetFieldOfView - kk.fov) * (kk.fov > Fk.targetFieldOfView ? .3 : .2), Math.abs(Fk.targetFieldOfView - kk.fov) < 5e-4 && (kk.fov = Fk.targetFieldOfView), Fk.needsRender = !0), Fk.needsRender && (Fk.Yw.render(), Fk.needsRender = !Fk.Yw.isReady() || !Fk.engine.areAllEffectsReady())
         })), () => {
-          Fz.current = null, zC.engine.dispose()
+          tF.current = null, Fk.engine.dispose()
         }
-      }), []), (0, QC.useEffect)((() => {
-        const CC = qz.current;
-        if (!CC) return;
-        const zC = () => {
-            Gz.current = !1, Sz(document.pointerLockElement === CC)
+      }), []), (0, Xk.useEffect)((() => {
+        const kk = LF.current;
+        if (!kk) return;
+        const Fk = () => {
+            PF.current = !1, HF(document.pointerLockElement === kk)
           },
-          ZC = () => {
-            Gz.current && (Gz.current = !1, Pz(!1))
+          Ik = () => {
+            PF.current && (PF.current = !1, xF(!1))
           },
-          QC = zC => {
-            const ZC = !rz.current.canLock && document.activeElement === CC && 0 !== (1 & zC.buttons);
-            if (document.pointerLockElement !== CC && !ZC) return;
-            const QC = rz.current.mouseSensitivity * eC;
-            hz((CC => function(CC, zC, ZC) {
-              const QC = 2 * Math.PI;
+          Xk = Fk => {
+            const Ik = !cF.current.canLock && document.activeElement === kk && 0 !== (1 & Fk.buttons);
+            if (document.pointerLockElement !== kk && !Ik) return;
+            const Xk = cF.current.mouseSensitivity * vk;
+            EF((kk => function(kk, Fk, Ik) {
+              const Xk = 2 * Math.PI;
               return {
-                ...CC,
-                heading: ((CC.heading + zC) % QC + QC) % QC,
-                pitch: Math.max(-cC, Math.min(cC, CC.pitch + ZC))
+                ...kk,
+                heading: ((kk.heading + Fk) % Xk + Xk) % Xk,
+                pitch: Math.max(-Ck, Math.min(Ck, kk.pitch + Ik))
               }
-            }(null !== CC && void 0 !== CC ? CC : rz.current.fittedView, zC.movementX * QC, zC.movementY * QC)))
+            }(null !== kk && void 0 !== kk ? kk : cF.current.fittedView, Fk.movementX * Xk, Fk.movementY * Xk)))
           };
-        return document.addEventListener("pointerlockchange", zC), document.addEventListener("pointerlockerror", ZC), document.addEventListener("pointermove", QC), () => {
-          document.removeEventListener("pointerlockchange", zC), document.removeEventListener("pointerlockerror", ZC), document.removeEventListener("pointermove", QC), document.pointerLockElement === CC && (0, JC.e)()
+        return document.addEventListener("pointerlockchange", Fk), document.addEventListener("pointerlockerror", Ik), document.addEventListener("pointermove", Xk), () => {
+          document.removeEventListener("pointerlockchange", Fk), document.removeEventListener("pointerlockerror", Ik), document.removeEventListener("pointermove", Xk), document.pointerLockElement === kk && (0, sk.d)()
         }
-      }), []), (0, QC.useEffect)((() => {
-        const CC = Fz.current;
-        null !== CC && 0 !== Wz.width && 0 !== Wz.height && (CC.engine.resize(), CC.needsRender = !0)
-      }), [Wz.width, Wz.height]), (0, QC.useEffect)((() => {
-        const CC = Fz.current;
-        null !== CC && (CC.targetFieldOfView = Ez * (Jz ? vC : 1))
-      }), [Ez, Jz]), (0, QC.useEffect)((() => {
-        const CC = Fz.current;
-        null !== CC && function(CC, zC, ZC, QC) {
-          const wC = [],
-            bC = [],
-            nC = [],
-            fC = [];
-          for (let oC = 0; oC < zC.count; oC++) {
-            const CC = zC.values[oC],
-              qC = (0, AC.y)(CC, ZC, QC);
-            if (qC <= 0) continue;
-            const [FC, WC, NC] = (0, AC.q)((0, AC.E)(CC, ZC)), MC = qC >= 1;
-            (MC ? wC : nC).push(zC.positions[3 * oC] + .5, zC.positions[3 * oC + 1] + .5, zC.positions[3 * oC + 2] + .5), (MC ? bC : fC).push(FC / 255, WC / 255, NC / 255, qC)
+      }), []), (0, Xk.useEffect)((() => {
+        const kk = tF.current;
+        null !== kk && 0 !== ZF.width && 0 !== ZF.height && (kk.engine.resize(), kk.needsRender = !0)
+      }), [ZF.width, ZF.height]), (0, Xk.useEffect)((() => {
+        const kk = tF.current;
+        null !== kk && (kk.targetFieldOfView = bF * (VF ? Sk : 1))
+      }), [bF, VF]), (0, Xk.useEffect)((() => {
+        const kk = tF.current;
+        null !== kk && function(kk, Fk, Ik, Xk) {
+          const Tk = [],
+            ik = [],
+            yk = [],
+            lk = [];
+          for (let ak = 0; ak < Fk.count; ak++) {
+            const kk = Fk.values[ak],
+              qk = (0, Kk.x)(kk, Ik, Xk);
+            if (qk <= 0) continue;
+            const [Lk, tk, Zk] = (0, Kk.p)((0, Kk.H)(kk, Ik)), jk = qk >= 1;
+            (jk ? Tk : yk).push(Fk.positions[3 * ak] + .5, Fk.positions[3 * ak + 1] + .5, Fk.positions[3 * ak + 2] + .5), (jk ? ik : lk).push(Lk / 255, tk / 255, Zk / 255, qk)
           }
-          OC(CC.cells, Float32Array.from(wC), Float32Array.from(bC), bC.length / 4), CC.translucent = {
-            VS: Float32Array.from(nC),
-            colours: Float32Array.from(fC),
-            count: fC.length / 4
-          }, CC.translucentSortedFrom = null, kC(CC), CC.needsRender = !0
-        }(CC, Hz, ZC, HC)
-      }), [Hz, ZC, HC]), (0, QC.useEffect)((() => {
-        const CC = Fz.current;
-        null !== CC && function(CC, zC) {
-          CC.chunkGridOrigin = zC, CC.chunkGridCentre = null, BC(CC)
-        }(CC, uC.min)
-      }), [uC]), (0, QC.useEffect)((() => {
-        const CC = Fz.current;
-        null !== CC && function(CC, zC, ZC) {
-          const QC = [],
-            wC = [];
-          if (null !== zC) {
+          Dk(kk.cells, Float32Array.from(Tk), Float32Array.from(ik), ik.length / 4), kk.translucent = {
+            By: Float32Array.from(yk),
+            colours: Float32Array.from(lk),
+            count: lk.length / 4
+          }, kk.translucentSortedFrom = null, Mk(kk), kk.needsRender = !0
+        }(kk, uF, Ik, uk)
+      }), [uF, Ik, uk]), (0, Xk.useEffect)((() => {
+        const kk = tF.current;
+        null !== kk && function(kk, Fk) {
+          kk.chunkGridOrigin = Fk, kk.chunkGridCentre = null, rk(kk)
+        }(kk, Nk.min)
+      }), [Nk]), (0, Xk.useEffect)((() => {
+        const kk = tF.current;
+        null !== kk && function(kk, Fk, Ik) {
+          const Xk = [],
+            Tk = [];
+          if (null !== Fk) {
             const {
-              positions: CC,
-              colours: bC,
-              count: nC
-            } = zC.surface;
-            for (let zC = 0; zC < nC; zC++) {
-              const nC = [CC[3 * zC], CC[3 * zC + 1], CC[3 * zC + 2]];
-              [0, 1, 2].every((CC => nC[CC] >= ZC.min[CC] - mC && nC[CC] <= ZC.max[CC] + mC)) && (QC.push(nC[0] - ZC.min[0] + .5, nC[1] - ZC.min[1] + .5, nC[2] - ZC.min[2] + .5), wC.push(bC[3 * zC] / 255, bC[3 * zC + 1] / 255, bC[3 * zC + 2] / 255, 1))
+              positions: kk,
+              colours: ik,
+              count: yk
+            } = Fk.surface;
+            for (let Fk = 0; Fk < yk; Fk++) {
+              const yk = [kk[3 * Fk], kk[3 * Fk + 1], kk[3 * Fk + 2]];
+              [0, 1, 2].every((kk => yk[kk] >= Ik.min[kk] - pk && yk[kk] <= Ik.max[kk] + pk)) && (Xk.push(yk[0] - Ik.min[0] + .5, yk[1] - Ik.min[1] + .5, yk[2] - Ik.min[2] + .5), Tk.push(ik[3 * Fk] / 255, ik[3 * Fk + 1] / 255, ik[3 * Fk + 2] / 255, 1))
             }
           }
-          OC(CC.schematicBlocks, Float32Array.from(QC), Float32Array.from(wC), wC.length / 4), CC.needsRender = !0
-        }(CC, sC, uC)
-      }), [sC, uC]), (0, QC.useEffect)((() => {
-        const CC = Fz.current;
-        null !== CC && null !== CC.chunkGrid && (CC.chunkGrid.isVisible = iz, CC.needsRender = !0)
-      }), [iz, uC]), (0, QC.useEffect)((() => {
-        const CC = Fz.current;
-        null !== CC && function(CC, zC, ZC) {
+          Dk(kk.schematicBlocks, Float32Array.from(Xk), Float32Array.from(Tk), Tk.length / 4), kk.needsRender = !0
+        }(kk, Wk, Nk)
+      }), [Wk, Nk]), (0, Xk.useEffect)((() => {
+        const kk = tF.current;
+        null !== kk && null !== kk.chunkGrid && (kk.chunkGrid.isVisible = SF, kk.needsRender = !0)
+      }), [SF, Nk]), (0, Xk.useEffect)((() => {
+        const kk = tF.current;
+        null !== kk && function(kk, Fk, Ik) {
           const {
-            camera: QC
-          } = CC;
-          QC.position.set(zC.position[0], zC.position[1], zC.position[2]), QC.rotation.set(zC.pitch, zC.heading, 0);
-          const wC = (EC + 1) * gC.f.Ig * Math.sqrt(3);
-          QC.maxZ = Math.max(wC, Math.hypot(...nz(zC.position, fz(wz({
+            camera: Xk
+          } = kk;
+          Xk.position.set(Fk.position[0], Fk.position[1], Fk.position[2]), Xk.rotation.set(Fk.pitch, Fk.heading, 0);
+          const Tk = (bk + 1) * ek.f.se * Math.sqrt(3);
+          Xk.maxZ = Math.max(Tk, Math.hypot(...lF(Fk.position, aF(iF({
             min: [0, 0, 0],
-            max: ZC
-          }), -1))) + 2 * Math.hypot(...ZC)), BC(CC), kC(CC), CC.needsRender = !0
-        }(CC, uz, mz)
-      }), [uz, mz]), (0, QC.useEffect)((() => {
-        const CC = Fz.current;
-        null !== CC && (CC.targetOutline.isVisible = null !== sz, null !== sz && CC.targetOutline.position.set(sz.x - Kz[0] + .5, sz.y - Kz[1] + .5, sz.z - Kz[2] + .5), CC.needsRender = !0)
-      }), [sz, Kz]);
-      return (0, IC.jsxs)("div", {
+            max: Ik
+          }), -1))) + 2 * Math.hypot(...Ik)), rk(kk), Mk(kk), kk.needsRender = !0
+        }(kk, NF, pF)
+      }), [NF, pF]), (0, Xk.useEffect)((() => {
+        const kk = tF.current;
+        null !== kk && (kk.targetOutline.isVisible = null !== WF, null !== WF && kk.targetOutline.position.set(WF.x - OF[0] + .5, WF.y - OF[1] + .5, WF.z - OF[2] + .5), kk.needsRender = !0)
+      }), [WF, OF]);
+      return (0, Vk.jsxs)("div", {
         className: "StudioHeatmapMap StudioHeatmap3D",
-        ref: oz,
-        children: [(0, IC.jsx)("canvas", {
+        ref: qF,
+        children: [(0, Vk.jsx)("canvas", {
           className: "StudioHeatmapMapCanvas",
-          ref: qz,
+          ref: LF,
           style: {
-            width: `${Wz.width}px`,
-            height: `${Wz.height}px`
+            width: `${ZF.width}px`,
+            height: `${ZF.height}px`
           },
           tabIndex: 0,
-          "aria-label": LC("3D heatmap"),
+          "aria-label": mk("3D heatmap"),
           onClick: () => {
-            const CC = qz.current;
-            if (null === CC) return;
-            if (CC.focus({
+            const kk = LF.current;
+            if (null === kk) return;
+            if (kk.focus({
                 preventScroll: !0
-              }), gz || !pz) return;
-            const zC = CC.requestPointerLock();
-            zC instanceof Promise ? zC.catch((CC => {
-              CC instanceof DOMException && ("WrongDocumentError" === CC.name || "NotSupportedError" === CC.name) && Pz(!1)
-            })) : Gz.current = !0
+              }), wF || !JF) return;
+            const Fk = kk.requestPointerLock();
+            Fk instanceof Promise ? Fk.catch((kk => {
+              kk instanceof DOMException && ("WrongDocumentError" === kk.name || "NotSupportedError" === kk.name) && xF(!1)
+            })) : PF.current = !0
           },
-          ...Tz,
-          onKeyDown: CC => {
-            if (xz && hC.has(CC.code)) return CC.preventDefault(), void(() => {
-              const CC = qz.current;
-              null !== CC && document.pointerLockElement === CC ? (0, JC.e)() : null === CC || void 0 === CC || CC.blur()
+          ...fF,
+          onKeyDown: kk => {
+            if (sF && Ek.has(kk.code)) return kk.preventDefault(), void(() => {
+              const kk = LF.current;
+              null !== kk && document.pointerLockElement === kk ? (0, sk.d)() : null === kk || void 0 === kk || kk.blur()
             })();
-            const zC = KC[CC.code];
-            return xz && void 0 !== zC ? (CC.preventDefault(), void aC(zC)) : xz && (0, xC.d)("replayPlayPause", CC.code) && !(0, xC.d)("Zoom", CC.code) ? (CC.preventDefault(), void(CC.repeat || DC())) : xz && CC.code === YC ? (CC.preventDefault(), void tC()) : xz && CC.code === XC ? (CC.preventDefault(), void hz(null)) : xz && CC.code === lC ? (CC.preventDefault(), void vz((CC => !CC))) : void Tz.onKeyDown(CC)
+            const Fk = Ok[kk.code];
+            return sF && void 0 !== Fk ? (kk.preventDefault(), void Bk(Fk)) : sF && (0, Qk.b)("replayPlayPause", kk.code) && !(0, Qk.b)("Zoom", kk.code) ? (kk.preventDefault(), void(kk.repeat || Yk())) : sF && kk.code === nk ? (kk.preventDefault(), void dk()) : sF && kk.code === Uk ? (kk.preventDefault(), void EF(null)) : sF && kk.code === Rk ? (kk.preventDefault(), void oF((kk => !kk))) : void fF.onKeyDown(kk)
           },
           onFocus: () => {
-            Az(!0)
+            QF(!0)
           },
           onBlur: () => {
-            Az(!1), Tz.onBlur()
+            QF(!1), fF.onBlur()
           }
-        }), Nz && (0, IC.jsx)("div", {
+        }), jF && (0, Vk.jsx)("div", {
           className: "StudioHeatmap3DUnavailable SmallTextLight",
-          children: LC("3D view isn't available in this browser.")
-        }), xz && (0, IC.jsx)("div", {
+          children: mk("3D view isn't available in this browser.")
+        }), sF && (0, Vk.jsx)("div", {
           className: "StudioHeatmap3DCrosshair"
-        }), (0, IC.jsx)("div", {
+        }), (0, Vk.jsx)("div", {
           className: "StudioHeatmap3DCoordinates SmallTextLight",
-          children: uz.position.map(((CC, zC) => (CC + Kz[zC]).toFixed(2))).join(" ")
-        }), iz && (0, IC.jsx)(UC, {
-          heading: uz.heading,
-          pitch: uz.pitch,
-          onViewFrom: CC => {
-            const zC = fz(CC, -1),
-              ZC = 0 === zC[1] ? {
-                heading: Math.atan2(zC[0], zC[2]),
+          children: NF.position.map(((kk, Fk) => (kk + OF[Fk]).toFixed(2))).join(" ")
+        }), SF && (0, Vk.jsx)(hk, {
+          heading: NF.heading,
+          pitch: NF.pitch,
+          onViewFrom: kk => {
+            const Fk = aF(kk, -1),
+              Ik = 0 === Fk[1] ? {
+                heading: Math.atan2(Fk[0], Fk[2]),
                 pitch: 0
               } : {
-                heading: uz.heading,
-                pitch: zC[1] < 0 ? cC : -cC
+                heading: NF.heading,
+                pitch: Fk[1] < 0 ? Ck : -Ck
               };
-            hz(Zz(Xz, lz, Ez, ZC))
+            EF(XF(UF, RF, bF, Ik))
           },
-          onTurn: (CC, zC) => {
-            hz((ZC => function(CC, zC, ZC, QC) {
-              return Qz(CC, zC, {
-                heading: CC.heading + ZC * jC,
-                pitch: Math.max(-cC, Math.min(cC, CC.pitch + QC * jC))
+          onTurn: (kk, Fk) => {
+            EF((Ik => function(kk, Fk, Ik, Xk) {
+              return TF(kk, Fk, {
+                heading: kk.heading + Ik * Ak,
+                pitch: Math.max(-Ck, Math.min(Ck, kk.pitch + Xk * Ak))
               })
-            }(null !== ZC && void 0 !== ZC ? ZC : rz.current.fittedView, wz(Xz), CC, zC)))
+            }(null !== Ik && void 0 !== Ik ? Ik : cF.current.fittedView, iF(UF), kk, Fk)))
           },
           onFlip: () => {
-            hz((CC => function(CC, zC) {
-              return Qz(CC, zC, {
-                heading: CC.heading + Math.PI,
-                pitch: -CC.pitch
+            EF((kk => function(kk, Fk) {
+              return TF(kk, Fk, {
+                heading: kk.heading + Math.PI,
+                pitch: -kk.pitch
               })
-            }(null !== CC && void 0 !== CC ? CC : rz.current.fittedView, wz(Xz))))
+            }(null !== kk && void 0 !== kk ? kk : cF.current.fittedView, iF(UF))))
           }
-        }), null !== sz && (0, IC.jsx)("div", {
+        }), null !== WF && (0, Vk.jsx)("div", {
           className: "StudioHeatmapMapReadout SmallTextLight",
-          children: null === yC ? LC("studio:heatmapBlockReadout", {
-            x: sz.x,
-            y: sz.y,
-            z: sz.z,
-            count: (0, MC.Z)(sz.value)
-          }) : yC(sz.x, sz.y, sz.z, sz.value)
-        }), (0, IC.jsxs)("div", {
+          children: null === gk ? mk("studio:heatmapBlockReadout", {
+            x: WF.x,
+            y: WF.y,
+            z: WF.z,
+            count: (0, jk.Q)(WF.value)
+          }) : gk(WF.x, WF.y, WF.z, WF.value)
+        }), (0, Vk.jsxs)("div", {
           className: "StudioHeatmapMapControls",
-          children: [TC, (0, IC.jsx)(GC.O, {
-            active: null === ez,
+          children: [fk, (0, Vk.jsx)(xk.Q, {
+            active: null === vF,
             onClick: () => {
-              hz(null)
+              EF(null)
             },
-            children: (0, IC.jsx)(RC.c, {
+            children: (0, Vk.jsx)(Pk.e, {
               name: "eye"
             })
           })]
@@ -447,255 +447,255 @@ export const modules = {
       })
     }
 
-    function UC(CC) {
+    function hk(kk) {
       let {
-        heading: zC,
-        pitch: ZC,
-        onViewFrom: wC,
-        onTurn: bC,
-        onFlip: nC
-      } = CC;
+        heading: Fk,
+        pitch: Ik,
+        onViewFrom: Tk,
+        onTurn: ik,
+        onFlip: yk
+      } = kk;
       const {
-        t: fC
-      } = (0, SC.y)(), oC = (0, QC.useRef)(null), qC = Cz({
-        heading: zC,
-        pitch: ZC
-      }), FC = zz(zC), WC = qz(qC, FC), NC = aC + tC + 2, MC = TC.flatMap((CC => [1, -1].map((zC => {
-        const ZC = fz(CC.direction, zC);
+        t: lk
+      } = (0, wk.y)(), ak = (0, Xk.useRef)(null), qk = FF({
+        heading: Fk,
+        pitch: Ik
+      }), Lk = IF(Fk), tk = LF(qk, Lk), Zk = Bk + dk + 2, jk = fk.flatMap((kk => [1, -1].map((Fk => {
+        const Ik = aF(kk.direction, Fk);
         return {
-          ...CC,
-          sign: zC,
-          direction: ZC,
-          endX: NC + oz(ZC, FC) * aC,
-          endY: NC - oz(ZC, WC) * aC,
-          depth: oz(ZC, qC)
+          ...kk,
+          sign: Fk,
+          direction: Ik,
+          endX: Zk + qF(Ik, Lk) * Bk,
+          endY: Zk - qF(Ik, tk) * Bk,
+          depth: qF(Ik, qk)
         }
-      })))).sort(((CC, zC) => zC.depth - CC.depth));
-      return (0, IC.jsxs)("svg", {
+      })))).sort(((kk, Fk) => Fk.depth - kk.depth));
+      return (0, Vk.jsxs)("svg", {
         className: "StudioHeatmap3DGizmo",
-        width: 2 * NC,
-        height: 2 * NC,
+        width: 2 * Zk,
+        height: 2 * Zk,
         "aria-hidden": !0,
-        onPointerDown: CC => {
-          var zC, ZC;
-          CC.currentTarget.setPointerCapture(CC.pointerId);
-          const QC = CC.target,
-            wC = QC.getAttribute("data-end");
-          oC.current = {
-            pointerId: CC.pointerId,
-            x: CC.clientX,
-            y: CC.clientY,
+        onPointerDown: kk => {
+          var Fk, Ik;
+          kk.currentTarget.setPointerCapture(kk.pointerId);
+          const Xk = kk.target,
+            Tk = Xk.getAttribute("data-end");
+          ak.current = {
+            pointerId: kk.pointerId,
+            x: kk.clientX,
+            y: kk.clientY,
             travel: 0,
-            side: null === wC ? null : null !== (zC = null === (ZC = MC[Number(wC)]) || void 0 === ZC ? void 0 : ZC.direction) && void 0 !== zC ? zC : null,
-            isOnMiddle: QC.hasAttribute("data-middle")
+            side: null === Tk ? null : null !== (Fk = null === (Ik = jk[Number(Tk)]) || void 0 === Ik ? void 0 : Ik.direction) && void 0 !== Fk ? Fk : null,
+            isOnMiddle: Xk.hasAttribute("data-middle")
           }
         },
-        onPointerMove: CC => {
-          const zC = oC.current;
-          if (null === zC || zC.pointerId !== CC.pointerId) return;
-          const ZC = CC.clientX - zC.x,
-            QC = CC.clientY - zC.y;
-          zC.x = CC.clientX, zC.y = CC.clientY, zC.travel += Math.abs(ZC) + Math.abs(QC), zC.travel >= yC && bC(ZC, QC)
+        onPointerMove: kk => {
+          const Fk = ak.current;
+          if (null === Fk || Fk.pointerId !== kk.pointerId) return;
+          const Ik = kk.clientX - Fk.x,
+            Xk = kk.clientY - Fk.y;
+          Fk.x = kk.clientX, Fk.y = kk.clientY, Fk.travel += Math.abs(Ik) + Math.abs(Xk), Fk.travel >= gk && ik(Ik, Xk)
         },
-        onPointerUp: CC => {
-          const zC = oC.current;
-          oC.current = null, null === zC || zC.pointerId !== CC.pointerId || zC.travel >= yC || (null !== zC.side ? wC(zC.side) : zC.isOnMiddle && nC())
+        onPointerUp: kk => {
+          const Fk = ak.current;
+          ak.current = null, null === Fk || Fk.pointerId !== kk.pointerId || Fk.travel >= gk || (null !== Fk.side ? Tk(Fk.side) : Fk.isOnMiddle && yk())
         },
         onPointerCancel: () => {
-          oC.current = null
+          ak.current = null
         },
-        children: [MC.map(((CC, zC) => {
-          const ZC = CC.sign > 0;
-          return (0, IC.jsxs)("g", {
-            children: [(0, IC.jsx)("line", {
-              x1: NC,
-              y1: NC,
-              x2: CC.endX,
-              y2: CC.endY,
-              stroke: CC.colour,
-              strokeOpacity: ZC ? 1 : .5,
+        children: [jk.map(((kk, Fk) => {
+          const Ik = kk.sign > 0;
+          return (0, Vk.jsxs)("g", {
+            children: [(0, Vk.jsx)("line", {
+              x1: Zk,
+              y1: Zk,
+              x2: kk.endX,
+              y2: kk.endY,
+              stroke: kk.colour,
+              strokeOpacity: Ik ? 1 : .5,
               strokeWidth: 2,
               strokeLinecap: "round"
-            }), (0, IC.jsx)("circle", {
+            }), (0, Vk.jsx)("circle", {
               className: "StudioHeatmap3DGizmoEnd",
-              "data-end": zC,
-              cx: CC.endX,
-              cy: CC.endY,
-              r: ZC ? tC : tC - 1,
-              fill: CC.colour,
-              fillOpacity: ZC ? 1 : .3,
-              stroke: CC.colour,
-              strokeWidth: ZC ? 0 : 1.5,
-              children: (0, IC.jsx)("title", {
-                children: `${fC("View from")} ${ZC?"+":"\u2212"}${CC.name}`
+              "data-end": Fk,
+              cx: kk.endX,
+              cy: kk.endY,
+              r: Ik ? dk : dk - 1,
+              fill: kk.colour,
+              fillOpacity: Ik ? 1 : .3,
+              stroke: kk.colour,
+              strokeWidth: Ik ? 0 : 1.5,
+              children: (0, Vk.jsx)("title", {
+                children: `${lk("View from")} ${Ik?"+":"\u2212"}${kk.name}`
               })
-            }), ZC && (0, IC.jsx)("text", {
+            }), Ik && (0, Vk.jsx)("text", {
               pointerEvents: "none",
-              x: CC.endX,
-              y: CC.endY,
+              x: kk.endX,
+              y: kk.endY,
               fill: "#151515",
               fontSize: 9,
               fontWeight: "bold",
               textAnchor: "middle",
               dominantBaseline: "central",
-              children: CC.name
+              children: kk.name
             })]
-          }, `${ZC?"+":"-"}${CC.name}`)
-        })), (0, IC.jsx)("circle", {
+          }, `${Ik?"+":"-"}${kk.name}`)
+        })), (0, Vk.jsx)("circle", {
           className: "StudioHeatmap3DGizmoEnd",
           "data-middle": !0,
-          cx: NC,
-          cy: NC,
-          r: DC,
+          cx: Zk,
+          cy: Zk,
+          r: Yk,
           fill: "#d0d0d0",
           fillOpacity: .85,
-          children: (0, IC.jsx)("title", {
-            children: fC("View from the opposite side")
+          children: (0, Vk.jsx)("title", {
+            children: lk("View from the opposite side")
           })
         })]
       })
     }
 
-    function BC(CC) {
-      var zC, ZC, QC;
+    function rk(kk) {
+      var Fk, Ik, Xk;
       const {
-        chunkGridOrigin: wC,
-        camera: bC
-      } = CC;
-      if (null === wC) return;
-      const nC = [bC.position.x, bC.position.y, bC.position.z],
-        fC = [0, 2].map((CC => Math.floor((nC[CC] + wC[CC]) / gC.f.Ig))),
-        oC = CC.chunkGridCentre;
-      if (null !== oC && oC.every(((CC, zC) => CC === fC[zC]))) return;
-      const WC = null === (zC = null === (ZC = CC.chunkGrid) || void 0 === ZC ? void 0 : ZC.isVisible) || void 0 === zC || zC;
-      null === (QC = CC.chunkGrid) || void 0 === QC || QC.dispose();
-      const [MC, SC] = [0, 2].map(((CC, zC) => {
-        const ZC = [];
-        for (let QC = fC[zC] - EC; QC <= fC[zC] + EC + 1; QC++) ZC.push(QC * gC.f.Ig - wC[CC]);
-        return ZC
-      })), pC = -wC[1], PC = [];
-      for (const qC of SC) PC.push([new FC.Eg(MC[0], pC, qC), new FC.Eg(MC[MC.length - 1], pC, qC)]);
-      for (const qC of MC) PC.push([new FC.Eg(qC, pC, SC[0]), new FC.Eg(qC, pC, SC[SC.length - 1])]);
-      const GC = (0, NC.b)("Heatmap3DChunkGrid", {
-        lines: PC
-      }, CC.sS);
-      GC.color = new qC.Color3(.45, .6, .78), GC.tS = !1, GC.isVisible = WC, CC.chunkGrid = GC, CC.chunkGridCentre = fC, CC.needsRender = !0
+        chunkGridOrigin: Tk,
+        camera: ik
+      } = kk;
+      if (null === Tk) return;
+      const yk = [ik.position.x, ik.position.y, ik.position.z],
+        lk = [0, 2].map((kk => Math.floor((yk[kk] + Tk[kk]) / ek.f.se))),
+        ak = kk.chunkGridCentre;
+      if (null !== ak && ak.every(((kk, Fk) => kk === lk[Fk]))) return;
+      const tk = null === (Fk = null === (Ik = kk.chunkGrid) || void 0 === Ik ? void 0 : Ik.isVisible) || void 0 === Fk || Fk;
+      null === (Xk = kk.chunkGrid) || void 0 === Xk || Xk.dispose();
+      const [jk, wk] = [0, 2].map(((kk, Fk) => {
+        const Ik = [];
+        for (let Xk = lk[Fk] - bk; Xk <= lk[Fk] + bk + 1; Xk++) Ik.push(Xk * ek.f.se - Tk[kk]);
+        return Ik
+      })), Hk = -Tk[1], Jk = [];
+      for (const qk of wk) Jk.push([new Lk.Ge(jk[0], Hk, qk), new Lk.Ge(jk[jk.length - 1], Hk, qk)]);
+      for (const qk of jk) Jk.push([new Lk.Ge(qk, Hk, wk[0]), new Lk.Ge(qk, Hk, wk[wk.length - 1])]);
+      const xk = (0, Zk.c)("Heatmap3DChunkGrid", {
+        lines: Jk
+      }, kk.Yw);
+      xk.color = new qk.Color3(.45, .6, .78), xk.gw = !1, xk.isVisible = tk, kk.chunkGrid = xk, kk.chunkGridCentre = lk, kk.needsRender = !0
     }
 
-    function OC(CC, zC, ZC, QC) {
-      CC.E_("matrix", function(CC, zC) {
-        const ZC = new Float32Array(16 * zC);
-        for (let QC = 0; QC < zC; QC++) {
-          const zC = 16 * QC;
-          ZC[zC] = 1, ZC[zC + 5] = 1, ZC[zC + 10] = 1, ZC[zC + 12] = CC[3 * QC], ZC[zC + 13] = CC[3 * QC + 1], ZC[zC + 14] = CC[3 * QC + 2], ZC[zC + 15] = 1
+    function Dk(kk, Fk, Ik, Xk) {
+      kk.K8("matrix", function(kk, Fk) {
+        const Ik = new Float32Array(16 * Fk);
+        for (let Xk = 0; Xk < Fk; Xk++) {
+          const Fk = 16 * Xk;
+          Ik[Fk] = 1, Ik[Fk + 5] = 1, Ik[Fk + 10] = 1, Ik[Fk + 12] = kk[3 * Xk], Ik[Fk + 13] = kk[3 * Xk + 1], Ik[Fk + 14] = kk[3 * Xk + 2], Ik[Fk + 15] = 1
         }
-        return ZC
-      }(zC, QC), 16, !0), CC.E_("color", ZC, 4, !0), CC.isVisible = QC > 0
+        return Ik
+      }(Fk, Xk), 16, !0), kk.K8("color", Ik, 4, !0), kk.isVisible = Xk > 0
     }
 
-    function kC(CC) {
+    function Mk(kk) {
       const {
-        camera: zC,
-        translucent: ZC
-      } = CC, QC = [zC.position.x, zC.position.y, zC.position.z], wC = CC.translucentSortedFrom;
-      if (null !== wC && Math.hypot(QC[0] - wC[0], QC[1] - wC[1], QC[2] - wC[2]) < HC) return;
-      CC.translucentSortedFrom = QC;
-      const bC = new Float64Array(ZC.count),
-        nC = new Uint32Array(ZC.count);
-      for (let qC = 0; qC < ZC.count; qC++) {
-        const CC = ZC.VS[3 * qC] - QC[0],
-          zC = ZC.VS[3 * qC + 1] - QC[1],
-          wC = ZC.VS[3 * qC + 2] - QC[2];
-        bC[qC] = CC * CC + zC * zC + wC * wC, nC[qC] = qC
+        camera: Fk,
+        translucent: Ik
+      } = kk, Xk = [Fk.position.x, Fk.position.y, Fk.position.z], Tk = kk.translucentSortedFrom;
+      if (null !== Tk && Math.hypot(Xk[0] - Tk[0], Xk[1] - Tk[1], Xk[2] - Tk[2]) < uk) return;
+      kk.translucentSortedFrom = Xk;
+      const ik = new Float64Array(Ik.count),
+        yk = new Uint32Array(Ik.count);
+      for (let qk = 0; qk < Ik.count; qk++) {
+        const kk = Ik.By[3 * qk] - Xk[0],
+          Fk = Ik.By[3 * qk + 1] - Xk[1],
+          Tk = Ik.By[3 * qk + 2] - Xk[2];
+        ik[qk] = kk * kk + Fk * Fk + Tk * Tk, yk[qk] = qk
       }
-      nC.sort(((CC, zC) => bC[zC] - bC[CC]));
-      const fC = new Float32Array(3 * ZC.count),
-        oC = new Float32Array(4 * ZC.count);
-      nC.forEach(((CC, zC) => {
-        fC.set(ZC.VS.subarray(3 * CC, 3 * CC + 3), 3 * zC), oC.set(ZC.colours.subarray(4 * CC, 4 * CC + 4), 4 * zC)
-      })), OC(CC.translucentCells, fC, oC, ZC.count), CC.needsRender = !0
+      yk.sort(((kk, Fk) => ik[Fk] - ik[kk]));
+      const lk = new Float32Array(3 * Ik.count),
+        ak = new Float32Array(4 * Ik.count);
+      yk.forEach(((kk, Fk) => {
+        lk.set(Ik.By.subarray(3 * kk, 3 * kk + 3), 3 * Fk), ak.set(Ik.colours.subarray(4 * kk, 4 * kk + 4), 4 * Fk)
+      })), Dk(kk.translucentCells, lk, ak, Ik.count), kk.needsRender = !0
     }
 
-    function VC(CC, zC) {
-      const ZC = (ZC, QC, wC) => new FC.Eg(0 === ZC ? CC[0] : zC[0], 0 === QC ? CC[1] : zC[1], 0 === wC ? CC[2] : zC[2]),
-        QC = [];
-      for (const wC of [0, 1])
-        for (const CC of [0, 1]) QC.push([ZC(0, wC, CC), ZC(1, wC, CC)], [ZC(wC, 0, CC), ZC(wC, 1, CC)], [ZC(wC, CC, 0), ZC(wC, CC, 1)]);
-      return QC
+    function kF(kk, Fk) {
+      const Ik = (Ik, Xk, Tk) => new Lk.Ge(0 === Ik ? kk[0] : Fk[0], 0 === Xk ? kk[1] : Fk[1], 0 === Tk ? kk[2] : Fk[2]),
+        Xk = [];
+      for (const Tk of [0, 1])
+        for (const kk of [0, 1]) Xk.push([Ik(0, Tk, kk), Ik(1, Tk, kk)], [Ik(Tk, 0, kk), Ik(Tk, 1, kk)], [Ik(Tk, kk, 0), Ik(Tk, kk, 1)]);
+      return Xk
     }
 
-    function Cz(CC) {
-      return [Math.sin(CC.heading) * Math.cos(CC.pitch), -Math.sin(CC.pitch), Math.cos(CC.heading) * Math.cos(CC.pitch)]
+    function FF(kk) {
+      return [Math.sin(kk.heading) * Math.cos(kk.pitch), -Math.sin(kk.pitch), Math.cos(kk.heading) * Math.cos(kk.pitch)]
     }
 
-    function zz(CC) {
-      return [Math.cos(CC), 0, -Math.sin(CC)]
+    function IF(kk) {
+      return [Math.cos(kk), 0, -Math.sin(kk)]
     }
 
-    function Zz(CC, zC, ZC) {
-      let QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
-        heading: uC,
-        pitch: rC
+    function XF(kk, Fk, Ik) {
+      let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
+        heading: Nk,
+        pitch: ck
       };
-      const wC = [CC.max[0] - CC.min[0], CC.max[1] - CC.min[1], CC.max[2] - CC.min[2]],
-        bC = Cz(QC),
-        nC = zz(QC.heading),
-        fC = qz(bC, nC),
-        oC = Math.tan(ZC / 2),
-        qC = oC * zC;
-      let FC = 1;
-      for (const WC of [-wC[0] / 2, wC[0] / 2])
-        for (const CC of [-wC[1] / 2, wC[1] / 2])
-          for (const zC of [-wC[2] / 2, wC[2] / 2]) {
-            const ZC = [WC, CC, zC],
-              QC = oz(ZC, bC);
-            FC = Math.max(FC, Math.abs(oz(ZC, nC)) / qC - QC, Math.abs(oz(ZC, fC)) / oC - QC)
+      const Tk = [kk.max[0] - kk.min[0], kk.max[1] - kk.min[1], kk.max[2] - kk.min[2]],
+        ik = FF(Xk),
+        yk = IF(Xk.heading),
+        lk = LF(ik, yk),
+        ak = Math.tan(Ik / 2),
+        qk = ak * Fk;
+      let Lk = 1;
+      for (const tk of [-Tk[0] / 2, Tk[0] / 2])
+        for (const kk of [-Tk[1] / 2, Tk[1] / 2])
+          for (const Fk of [-Tk[2] / 2, Tk[2] / 2]) {
+            const Ik = [tk, kk, Fk],
+              Xk = qF(Ik, ik);
+            Lk = Math.max(Lk, Math.abs(qF(Ik, yk)) / qk - Xk, Math.abs(qF(Ik, lk)) / ak - Xk)
           }
       return {
-        position: nz([CC.min[0] + wC[0] / 2, CC.min[1] + wC[1] / 2, CC.min[2] + wC[2] / 2], fz(bC, -FC * sC)),
-        heading: QC.heading,
-        pitch: QC.pitch
+        position: lF([kk.min[0] + Tk[0] / 2, kk.min[1] + Tk[1] / 2, kk.min[2] + Tk[2] / 2], aF(ik, -Lk * Wk)),
+        heading: Xk.heading,
+        pitch: Xk.pitch
       }
     }
 
-    function Qz(CC, zC, ZC) {
-      const QC = bz(CC),
-        wC = bz(ZC),
-        bC = nz(CC.position, fz(zC, -1)),
-        nC = [0, 1, 2].reduce(((CC, zC) => nz(CC, fz(wC[zC], oz(bC, QC[zC])))), [0, 0, 0]);
+    function TF(kk, Fk, Ik) {
+      const Xk = yF(kk),
+        Tk = yF(Ik),
+        ik = lF(kk.position, aF(Fk, -1)),
+        yk = [0, 1, 2].reduce(((kk, Fk) => lF(kk, aF(Tk[Fk], qF(ik, Xk[Fk])))), [0, 0, 0]);
       return {
-        position: nz(zC, nC),
-        heading: ZC.heading,
-        pitch: ZC.pitch
+        position: lF(Fk, yk),
+        heading: Ik.heading,
+        pitch: Ik.pitch
       }
     }
 
-    function wz(CC) {
-      return fz(nz(CC.min, CC.max), .5)
+    function iF(kk) {
+      return aF(lF(kk.min, kk.max), .5)
     }
 
-    function bz(CC) {
-      const zC = Cz(CC),
-        ZC = zz(CC.heading);
-      return [zC, ZC, qz(zC, ZC)]
+    function yF(kk) {
+      const Fk = FF(kk),
+        Ik = IF(kk.heading);
+      return [Fk, Ik, LF(Fk, Ik)]
     }
 
-    function nz(CC, zC) {
-      return [CC[0] + zC[0], CC[1] + zC[1], CC[2] + zC[2]]
+    function lF(kk, Fk) {
+      return [kk[0] + Fk[0], kk[1] + Fk[1], kk[2] + Fk[2]]
     }
 
-    function fz(CC, zC) {
-      return [CC[0] * zC, CC[1] * zC, CC[2] * zC]
+    function aF(kk, Fk) {
+      return [kk[0] * Fk, kk[1] * Fk, kk[2] * Fk]
     }
 
-    function oz(CC, zC) {
-      return CC[0] * zC[0] + CC[1] * zC[1] + CC[2] * zC[2]
+    function qF(kk, Fk) {
+      return kk[0] * Fk[0] + kk[1] * Fk[1] + kk[2] * Fk[2]
     }
 
-    function qz(CC, zC) {
-      return [CC[1] * zC[2] - CC[2] * zC[1], CC[2] * zC[0] - CC[0] * zC[2], CC[0] * zC[1] - CC[1] * zC[0]]
+    function LF(kk, Fk) {
+      return [kk[1] * Fk[2] - kk[2] * Fk[1], kk[2] * Fk[0] - kk[0] * Fk[2], kk[0] * Fk[1] - kk[1] * Fk[0]]
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

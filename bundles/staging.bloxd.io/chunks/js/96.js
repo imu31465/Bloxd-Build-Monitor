@@ -1,897 +1,897 @@
-/*! For license information please see w4ddu.96.719f4f52.chunk.js.LICENSE.txt */
+/*! For license information please see 31kiid.96.6996c02a.chunk.js.LICENSE.txt */
 export const id = 96;
 export const ids = [96];
 export const modules = {
-  4801: (CC, zC, ZC) => {
-    var QC;
+  4863: (kk, Fk, Ik) => {
+    var Xk;
     ! function() {
-      var wC = function() {
+      var Tk = function() {
         this.init()
       };
-      wC.prototype = {
+      Tk.prototype = {
         init: function() {
-          var CC = this || bC;
-          return CC._counter = 1e3, CC._html5AudioPool = [], CC.html5PoolSize = 10, CC._codecs = {}, CC._howls = [], CC._muted = !1, CC._volume = 1, CC._canPlayEvent = "canplaythrough", CC._navigator = "undefined" !== typeof window && window.navigator ? window.navigator : null, CC.masterGain = null, CC.noAudio = !1, CC.usingWebAudio = !0, CC.autoSuspend = !0, CC.ctx = null, CC.autoUnlock = !0, CC._setup(), CC
+          var kk = this || ik;
+          return kk._counter = 1e3, kk._html5AudioPool = [], kk.html5PoolSize = 10, kk._codecs = {}, kk._howls = [], kk._muted = !1, kk._volume = 1, kk._canPlayEvent = "canplaythrough", kk._navigator = "undefined" !== typeof window && window.navigator ? window.navigator : null, kk.masterGain = null, kk.noAudio = !1, kk.usingWebAudio = !0, kk.autoSuspend = !0, kk.ctx = null, kk.autoUnlock = !0, kk._setup(), kk
         },
-        volume: function(CC) {
-          var zC = this || bC;
-          if (CC = parseFloat(CC), zC.ctx || MC(), "undefined" !== typeof CC && CC >= 0 && CC <= 1) {
-            if (zC._volume = CC, zC._muted) return zC;
-            zC.usingWebAudio && zC.masterGain.gain.setValueAtTime(CC, bC.ctx.currentTime);
-            for (var ZC = 0; ZC < zC._howls.length; ZC++)
-              if (!zC._howls[ZC]._webAudio)
-                for (var QC = zC._howls[ZC]._getSoundIds(), wC = 0; wC < QC.length; wC++) {
-                  var nC = zC._howls[ZC]._soundById(QC[wC]);
-                  nC && nC._node && (nC._node.volume = nC._volume * CC)
+        volume: function(kk) {
+          var Fk = this || ik;
+          if (kk = parseFloat(kk), Fk.ctx || jk(), "undefined" !== typeof kk && kk >= 0 && kk <= 1) {
+            if (Fk._volume = kk, Fk._muted) return Fk;
+            Fk.usingWebAudio && Fk.masterGain.gain.setValueAtTime(kk, ik.ctx.currentTime);
+            for (var Ik = 0; Ik < Fk._howls.length; Ik++)
+              if (!Fk._howls[Ik]._webAudio)
+                for (var Xk = Fk._howls[Ik]._getSoundIds(), Tk = 0; Tk < Xk.length; Tk++) {
+                  var yk = Fk._howls[Ik]._soundById(Xk[Tk]);
+                  yk && yk._node && (yk._node.volume = yk._volume * kk)
                 }
-            return zC
+            return Fk
           }
-          return zC._volume
+          return Fk._volume
         },
-        mute: function(CC) {
-          var zC = this || bC;
-          zC.ctx || MC(), zC._muted = CC, zC.usingWebAudio && zC.masterGain.gain.setValueAtTime(CC ? 0 : zC._volume, bC.ctx.currentTime);
-          for (var ZC = 0; ZC < zC._howls.length; ZC++)
-            if (!zC._howls[ZC]._webAudio)
-              for (var QC = zC._howls[ZC]._getSoundIds(), wC = 0; wC < QC.length; wC++) {
-                var nC = zC._howls[ZC]._soundById(QC[wC]);
-                nC && nC._node && (nC._node.muted = !!CC || nC._muted)
+        mute: function(kk) {
+          var Fk = this || ik;
+          Fk.ctx || jk(), Fk._muted = kk, Fk.usingWebAudio && Fk.masterGain.gain.setValueAtTime(kk ? 0 : Fk._volume, ik.ctx.currentTime);
+          for (var Ik = 0; Ik < Fk._howls.length; Ik++)
+            if (!Fk._howls[Ik]._webAudio)
+              for (var Xk = Fk._howls[Ik]._getSoundIds(), Tk = 0; Tk < Xk.length; Tk++) {
+                var yk = Fk._howls[Ik]._soundById(Xk[Tk]);
+                yk && yk._node && (yk._node.muted = !!kk || yk._muted)
               }
-          return zC
+          return Fk
         },
         stop: function() {
-          for (var CC = this || bC, zC = 0; zC < CC._howls.length; zC++) CC._howls[zC].stop();
-          return CC
+          for (var kk = this || ik, Fk = 0; Fk < kk._howls.length; Fk++) kk._howls[Fk].stop();
+          return kk
         },
         unload: function() {
-          for (var CC = this || bC, zC = CC._howls.length - 1; zC >= 0; zC--) CC._howls[zC].unload();
-          return CC.usingWebAudio && CC.ctx && "undefined" !== typeof CC.ctx.close && (CC.ctx.close(), CC.ctx = null, MC()), CC
+          for (var kk = this || ik, Fk = kk._howls.length - 1; Fk >= 0; Fk--) kk._howls[Fk].unload();
+          return kk.usingWebAudio && kk.ctx && "undefined" !== typeof kk.ctx.close && (kk.ctx.close(), kk.ctx = null, jk()), kk
         },
-        codecs: function(CC) {
-          return (this || bC)._codecs[CC.replace(/^x-/, "")]
+        codecs: function(kk) {
+          return (this || ik)._codecs[kk.replace(/^x-/, "")]
         },
         _setup: function() {
-          var CC = this || bC;
-          if (CC.state = CC.ctx && CC.ctx.state || "suspended", CC._autoSuspend(), !CC.usingWebAudio)
+          var kk = this || ik;
+          if (kk.state = kk.ctx && kk.ctx.state || "suspended", kk._autoSuspend(), !kk.usingWebAudio)
             if ("undefined" !== typeof Audio) try {
-              "undefined" === typeof(new Audio).oncanplaythrough && (CC._canPlayEvent = "canplay")
-            } catch (zC) {
-              CC.noAudio = !0
-            } else CC.noAudio = !0;
+              "undefined" === typeof(new Audio).oncanplaythrough && (kk._canPlayEvent = "canplay")
+            } catch (Fk) {
+              kk.noAudio = !0
+            } else kk.noAudio = !0;
           try {
-            (new Audio).muted && (CC.noAudio = !0)
-          } catch (zC) {}
-          return CC.noAudio || CC._setupCodecs(), CC
+            (new Audio).muted && (kk.noAudio = !0)
+          } catch (Fk) {}
+          return kk.noAudio || kk._setupCodecs(), kk
         },
         _setupCodecs: function() {
-          var CC = this || bC,
-            zC = null;
+          var kk = this || ik,
+            Fk = null;
           try {
-            zC = "undefined" !== typeof Audio ? new Audio : null
-          } catch (FC) {
-            return CC
+            Fk = "undefined" !== typeof Audio ? new Audio : null
+          } catch (Lk) {
+            return kk
           }
-          if (!zC || "function" !== typeof zC.canPlayType) return CC;
-          var ZC = zC.canPlayType("audio/mpeg;").replace(/^no$/, ""),
-            QC = CC._navigator ? CC._navigator.userAgent : "",
-            wC = QC.match(/OPR\/([0-6].)/g),
-            nC = wC && parseInt(wC[0].split("/")[1], 10) < 33,
-            fC = -1 !== QC.indexOf("Safari") && -1 === QC.indexOf("Chrome"),
-            oC = QC.match(/Version\/(.*?) /),
-            qC = fC && oC && parseInt(oC[1], 10) < 15;
-          return CC._codecs = {
-            mp3: !(nC || !ZC && !zC.canPlayType("audio/mp3;").replace(/^no$/, "")),
-            mpeg: !!ZC,
-            opus: !!zC.canPlayType('audio/ogg; codecs="opus"').replace(/^no$/, ""),
-            ogg: !!zC.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/, ""),
-            oga: !!zC.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/, ""),
-            wav: !!(zC.canPlayType('audio/wav; codecs="1"') || zC.canPlayType("audio/wav")).replace(/^no$/, ""),
-            aac: !!zC.canPlayType("audio/aac;").replace(/^no$/, ""),
-            caf: !!zC.canPlayType("audio/x-caf;").replace(/^no$/, ""),
-            m4a: !!(zC.canPlayType("audio/x-m4a;") || zC.canPlayType("audio/m4a;") || zC.canPlayType("audio/aac;")).replace(/^no$/, ""),
-            m4b: !!(zC.canPlayType("audio/x-m4b;") || zC.canPlayType("audio/m4b;") || zC.canPlayType("audio/aac;")).replace(/^no$/, ""),
-            mp4: !!(zC.canPlayType("audio/x-mp4;") || zC.canPlayType("audio/mp4;") || zC.canPlayType("audio/aac;")).replace(/^no$/, ""),
-            weba: !(qC || !zC.canPlayType('audio/webm; codecs="vorbis"').replace(/^no$/, "")),
-            webm: !(qC || !zC.canPlayType('audio/webm; codecs="vorbis"').replace(/^no$/, "")),
-            dolby: !!zC.canPlayType('audio/mp4; codecs="ec-3"').replace(/^no$/, ""),
-            flac: !!(zC.canPlayType("audio/x-flac;") || zC.canPlayType("audio/flac;")).replace(/^no$/, "")
-          }, CC
+          if (!Fk || "function" !== typeof Fk.canPlayType) return kk;
+          var Ik = Fk.canPlayType("audio/mpeg;").replace(/^no$/, ""),
+            Xk = kk._navigator ? kk._navigator.userAgent : "",
+            Tk = Xk.match(/OPR\/([0-6].)/g),
+            yk = Tk && parseInt(Tk[0].split("/")[1], 10) < 33,
+            lk = -1 !== Xk.indexOf("Safari") && -1 === Xk.indexOf("Chrome"),
+            ak = Xk.match(/Version\/(.*?) /),
+            qk = lk && ak && parseInt(ak[1], 10) < 15;
+          return kk._codecs = {
+            mp3: !(yk || !Ik && !Fk.canPlayType("audio/mp3;").replace(/^no$/, "")),
+            mpeg: !!Ik,
+            opus: !!Fk.canPlayType('audio/ogg; codecs="opus"').replace(/^no$/, ""),
+            ogg: !!Fk.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/, ""),
+            oga: !!Fk.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/, ""),
+            wav: !!(Fk.canPlayType('audio/wav; codecs="1"') || Fk.canPlayType("audio/wav")).replace(/^no$/, ""),
+            aac: !!Fk.canPlayType("audio/aac;").replace(/^no$/, ""),
+            caf: !!Fk.canPlayType("audio/x-caf;").replace(/^no$/, ""),
+            m4a: !!(Fk.canPlayType("audio/x-m4a;") || Fk.canPlayType("audio/m4a;") || Fk.canPlayType("audio/aac;")).replace(/^no$/, ""),
+            m4b: !!(Fk.canPlayType("audio/x-m4b;") || Fk.canPlayType("audio/m4b;") || Fk.canPlayType("audio/aac;")).replace(/^no$/, ""),
+            mp4: !!(Fk.canPlayType("audio/x-mp4;") || Fk.canPlayType("audio/mp4;") || Fk.canPlayType("audio/aac;")).replace(/^no$/, ""),
+            weba: !(qk || !Fk.canPlayType('audio/webm; codecs="vorbis"').replace(/^no$/, "")),
+            webm: !(qk || !Fk.canPlayType('audio/webm; codecs="vorbis"').replace(/^no$/, "")),
+            dolby: !!Fk.canPlayType('audio/mp4; codecs="ec-3"').replace(/^no$/, ""),
+            flac: !!(Fk.canPlayType("audio/x-flac;") || Fk.canPlayType("audio/flac;")).replace(/^no$/, "")
+          }, kk
         },
         _unlockAudio: function() {
-          var CC = this || bC;
-          if (!CC._audioUnlocked && CC.ctx) {
-            CC._audioUnlocked = !1, CC.autoUnlock = !1, CC._mobileUnloaded || 44100 === CC.ctx.sampleRate || (CC._mobileUnloaded = !0, CC.unload()), CC._scratchBuffer = CC.ctx.createBuffer(1, 1, 22050);
-            var zC = function(ZC) {
-              for (; CC._html5AudioPool.length < CC.html5PoolSize;) try {
-                var QC = new Audio;
-                QC._unlocked = !0, CC._releaseHtml5Audio(QC)
-              } catch (ZC) {
-                CC.noAudio = !0;
+          var kk = this || ik;
+          if (!kk._audioUnlocked && kk.ctx) {
+            kk._audioUnlocked = !1, kk.autoUnlock = !1, kk._mobileUnloaded || 44100 === kk.ctx.sampleRate || (kk._mobileUnloaded = !0, kk.unload()), kk._scratchBuffer = kk.ctx.createBuffer(1, 1, 22050);
+            var Fk = function(Ik) {
+              for (; kk._html5AudioPool.length < kk.html5PoolSize;) try {
+                var Xk = new Audio;
+                Xk._unlocked = !0, kk._releaseHtml5Audio(Xk)
+              } catch (Ik) {
+                kk.noAudio = !0;
                 break
               }
-              for (var wC = 0; wC < CC._howls.length; wC++)
-                if (!CC._howls[wC]._webAudio)
-                  for (var bC = CC._howls[wC]._getSoundIds(), nC = 0; nC < bC.length; nC++) {
-                    var fC = CC._howls[wC]._soundById(bC[nC]);
-                    fC && fC._node && !fC._node._unlocked && (fC._node._unlocked = !0, fC._node.load())
+              for (var Tk = 0; Tk < kk._howls.length; Tk++)
+                if (!kk._howls[Tk]._webAudio)
+                  for (var ik = kk._howls[Tk]._getSoundIds(), yk = 0; yk < ik.length; yk++) {
+                    var lk = kk._howls[Tk]._soundById(ik[yk]);
+                    lk && lk._node && !lk._node._unlocked && (lk._node._unlocked = !0, lk._node.load())
                   }
-              CC._autoResume();
-              var oC = CC.ctx.createBufferSource();
-              oC.buffer = CC._scratchBuffer, oC.connect(CC.ctx.destination), "undefined" === typeof oC.start ? oC.noteOn(0) : oC.start(0), "function" === typeof CC.ctx.resume && CC.ctx.resume(), oC.onended = function() {
-                oC.disconnect(0), CC._audioUnlocked = !0, document.removeEventListener("touchstart", zC, !0), document.removeEventListener("touchend", zC, !0), document.removeEventListener("click", zC, !0), document.removeEventListener("keydown", zC, !0);
-                for (var ZC = 0; ZC < CC._howls.length; ZC++) CC._howls[ZC]._emit("unlock")
+              kk._autoResume();
+              var ak = kk.ctx.createBufferSource();
+              ak.buffer = kk._scratchBuffer, ak.connect(kk.ctx.destination), "undefined" === typeof ak.start ? ak.noteOn(0) : ak.start(0), "function" === typeof kk.ctx.resume && kk.ctx.resume(), ak.onended = function() {
+                ak.disconnect(0), kk._audioUnlocked = !0, document.removeEventListener("touchstart", Fk, !0), document.removeEventListener("touchend", Fk, !0), document.removeEventListener("click", Fk, !0), document.removeEventListener("keydown", Fk, !0);
+                for (var Ik = 0; Ik < kk._howls.length; Ik++) kk._howls[Ik]._emit("unlock")
               }
             };
-            return document.addEventListener("touchstart", zC, !0), document.addEventListener("touchend", zC, !0), document.addEventListener("click", zC, !0), document.addEventListener("keydown", zC, !0), CC
+            return document.addEventListener("touchstart", Fk, !0), document.addEventListener("touchend", Fk, !0), document.addEventListener("click", Fk, !0), document.addEventListener("keydown", Fk, !0), kk
           }
         },
         _obtainHtml5Audio: function() {
-          var CC = this || bC;
-          if (CC._html5AudioPool.length) return CC._html5AudioPool.pop();
-          var zC = (new Audio).play();
-          return zC && "undefined" !== typeof Promise && (zC instanceof Promise || "function" === typeof zC.then) && zC.catch((function() {
+          var kk = this || ik;
+          if (kk._html5AudioPool.length) return kk._html5AudioPool.pop();
+          var Fk = (new Audio).play();
+          return Fk && "undefined" !== typeof Promise && (Fk instanceof Promise || "function" === typeof Fk.then) && Fk.catch((function() {
             console.warn("HTML5 Audio pool exhausted, returning potentially locked audio object.")
           })), new Audio
         },
-        _releaseHtml5Audio: function(CC) {
-          var zC = this || bC;
-          return CC._unlocked && zC._html5AudioPool.push(CC), zC
+        _releaseHtml5Audio: function(kk) {
+          var Fk = this || ik;
+          return kk._unlocked && Fk._html5AudioPool.push(kk), Fk
         },
         _autoSuspend: function() {
-          var CC = this;
-          if (CC.autoSuspend && CC.ctx && "undefined" !== typeof CC.ctx.suspend && bC.usingWebAudio) {
-            for (var zC = 0; zC < CC._howls.length; zC++)
-              if (CC._howls[zC]._webAudio)
-                for (var ZC = 0; ZC < CC._howls[zC]._sounds.length; ZC++)
-                  if (!CC._howls[zC]._sounds[ZC].kR) return CC;
-            return CC._suspendTimer && clearTimeout(CC._suspendTimer), CC._suspendTimer = setTimeout((function() {
-              if (CC.autoSuspend) {
-                CC._suspendTimer = null, CC.state = "suspending";
-                var zC = function() {
-                  CC.state = "suspended", CC._resumeAfterSuspend && (delete CC._resumeAfterSuspend, CC._autoResume())
+          var kk = this;
+          if (kk.autoSuspend && kk.ctx && "undefined" !== typeof kk.ctx.suspend && ik.usingWebAudio) {
+            for (var Fk = 0; Fk < kk._howls.length; Fk++)
+              if (kk._howls[Fk]._webAudio)
+                for (var Ik = 0; Ik < kk._howls[Fk]._sounds.length; Ik++)
+                  if (!kk._howls[Fk]._sounds[Ik].vx) return kk;
+            return kk._suspendTimer && clearTimeout(kk._suspendTimer), kk._suspendTimer = setTimeout((function() {
+              if (kk.autoSuspend) {
+                kk._suspendTimer = null, kk.state = "suspending";
+                var Fk = function() {
+                  kk.state = "suspended", kk._resumeAfterSuspend && (delete kk._resumeAfterSuspend, kk._autoResume())
                 };
-                CC.ctx.suspend().then(zC, zC)
+                kk.ctx.suspend().then(Fk, Fk)
               }
-            }), 3e4), CC
+            }), 3e4), kk
           }
         },
         _autoResume: function() {
-          var CC = this;
-          if (CC.ctx && "undefined" !== typeof CC.ctx.resume && bC.usingWebAudio) return "running" === CC.state && "interrupted" !== CC.ctx.state && CC._suspendTimer ? (clearTimeout(CC._suspendTimer), CC._suspendTimer = null) : "suspended" === CC.state || "running" === CC.state && "interrupted" === CC.ctx.state ? (CC.ctx.resume().then((function() {
-            CC.state = "running";
-            for (var zC = 0; zC < CC._howls.length; zC++) CC._howls[zC]._emit("resume")
-          })), CC._suspendTimer && (clearTimeout(CC._suspendTimer), CC._suspendTimer = null)) : "suspending" === CC.state && (CC._resumeAfterSuspend = !0), CC
+          var kk = this;
+          if (kk.ctx && "undefined" !== typeof kk.ctx.resume && ik.usingWebAudio) return "running" === kk.state && "interrupted" !== kk.ctx.state && kk._suspendTimer ? (clearTimeout(kk._suspendTimer), kk._suspendTimer = null) : "suspended" === kk.state || "running" === kk.state && "interrupted" === kk.ctx.state ? (kk.ctx.resume().then((function() {
+            kk.state = "running";
+            for (var Fk = 0; Fk < kk._howls.length; Fk++) kk._howls[Fk]._emit("resume")
+          })), kk._suspendTimer && (clearTimeout(kk._suspendTimer), kk._suspendTimer = null)) : "suspending" === kk.state && (kk._resumeAfterSuspend = !0), kk
         }
       };
-      var bC = new wC,
-        nC = function(CC) {
-          CC.src && 0 !== CC.src.length ? this.init(CC) : console.error("An array of source files must be passed with any new Howl.")
+      var ik = new Tk,
+        yk = function(kk) {
+          kk.src && 0 !== kk.src.length ? this.init(kk) : console.error("An array of source files must be passed with any new Howl.")
         };
-      nC.prototype = {
-        init: function(CC) {
-          var zC = this;
-          return bC.ctx || MC(), zC._autoplay = CC.autoplay || !1, zC._format = "string" !== typeof CC.format ? CC.format : [CC.format], zC._html5 = CC.html5 || !1, zC._muted = CC.mute || !1, zC._loop = CC.loop || !1, zC._pool = CC.pool || 5, zC._preload = "boolean" !== typeof CC.preload && "metadata" !== CC.preload || CC.preload, zC._rate = CC.rate || 1, zC._sprite = CC.sprite || {}, zC._src = "string" !== typeof CC.src ? CC.src : [CC.src], zC._volume = void 0 !== CC.volume ? CC.volume : 1, zC._xhr = {
-            method: CC.xhr && CC.xhr.method ? CC.xhr.method : "GET",
-            headers: CC.xhr && CC.xhr.headers ? CC.xhr.headers : null,
-            withCredentials: !(!CC.xhr || !CC.xhr.withCredentials) && CC.xhr.withCredentials
-          }, zC._duration = 0, zC._state = "unloaded", zC._sounds = [], zC._endTimers = {}, zC._queue = [], zC._playLock = !1, zC._onend = CC.onend ? [{
-            Qg: CC.onend
-          }] : [], zC._onfade = CC.onfade ? [{
-            Qg: CC.onfade
-          }] : [], zC._onload = CC.onload ? [{
-            Qg: CC.onload
-          }] : [], zC._onloaderror = CC.onloaderror ? [{
-            Qg: CC.onloaderror
-          }] : [], zC._onplayerror = CC.onplayerror ? [{
-            Qg: CC.onplayerror
-          }] : [], zC._onpause = CC.onpause ? [{
-            Qg: CC.onpause
-          }] : [], zC._onplay = CC.onplay ? [{
-            Qg: CC.onplay
-          }] : [], zC._onstop = CC.onstop ? [{
-            Qg: CC.onstop
-          }] : [], zC._onmute = CC.onmute ? [{
-            Qg: CC.onmute
-          }] : [], zC._onvolume = CC.onvolume ? [{
-            Qg: CC.onvolume
-          }] : [], zC._onrate = CC.onrate ? [{
-            Qg: CC.onrate
-          }] : [], zC._onseek = CC.onseek ? [{
-            Qg: CC.onseek
-          }] : [], zC._onunlock = CC.onunlock ? [{
-            Qg: CC.onunlock
-          }] : [], zC._onresume = [], zC._webAudio = bC.usingWebAudio && !zC._html5, "undefined" !== typeof bC.ctx && bC.ctx && bC.autoUnlock && bC._unlockAudio(), bC._howls.push(zC), zC._autoplay && zC._queue.push({
+      yk.prototype = {
+        init: function(kk) {
+          var Fk = this;
+          return ik.ctx || jk(), Fk._autoplay = kk.autoplay || !1, Fk._format = "string" !== typeof kk.format ? kk.format : [kk.format], Fk._html5 = kk.html5 || !1, Fk._muted = kk.mute || !1, Fk._loop = kk.loop || !1, Fk._pool = kk.pool || 5, Fk._preload = "boolean" !== typeof kk.preload && "metadata" !== kk.preload || kk.preload, Fk._rate = kk.rate || 1, Fk._sprite = kk.sprite || {}, Fk._src = "string" !== typeof kk.src ? kk.src : [kk.src], Fk._volume = void 0 !== kk.volume ? kk.volume : 1, Fk._xhr = {
+            method: kk.xhr && kk.xhr.method ? kk.xhr.method : "GET",
+            headers: kk.xhr && kk.xhr.headers ? kk.xhr.headers : null,
+            withCredentials: !(!kk.xhr || !kk.xhr.withCredentials) && kk.xhr.withCredentials
+          }, Fk._duration = 0, Fk._state = "unloaded", Fk._sounds = [], Fk._endTimers = {}, Fk._queue = [], Fk._playLock = !1, Fk._onend = kk.onend ? [{
+            Ie: kk.onend
+          }] : [], Fk._onfade = kk.onfade ? [{
+            Ie: kk.onfade
+          }] : [], Fk._onload = kk.onload ? [{
+            Ie: kk.onload
+          }] : [], Fk._onloaderror = kk.onloaderror ? [{
+            Ie: kk.onloaderror
+          }] : [], Fk._onplayerror = kk.onplayerror ? [{
+            Ie: kk.onplayerror
+          }] : [], Fk._onpause = kk.onpause ? [{
+            Ie: kk.onpause
+          }] : [], Fk._onplay = kk.onplay ? [{
+            Ie: kk.onplay
+          }] : [], Fk._onstop = kk.onstop ? [{
+            Ie: kk.onstop
+          }] : [], Fk._onmute = kk.onmute ? [{
+            Ie: kk.onmute
+          }] : [], Fk._onvolume = kk.onvolume ? [{
+            Ie: kk.onvolume
+          }] : [], Fk._onrate = kk.onrate ? [{
+            Ie: kk.onrate
+          }] : [], Fk._onseek = kk.onseek ? [{
+            Ie: kk.onseek
+          }] : [], Fk._onunlock = kk.onunlock ? [{
+            Ie: kk.onunlock
+          }] : [], Fk._onresume = [], Fk._webAudio = ik.usingWebAudio && !Fk._html5, "undefined" !== typeof ik.ctx && ik.ctx && ik.autoUnlock && ik._unlockAudio(), ik._howls.push(Fk), Fk._autoplay && Fk._queue.push({
             event: "play",
             action: function() {
-              zC.play()
+              Fk.play()
             }
-          }), zC._preload && "none" !== zC._preload && zC.load(), zC
+          }), Fk._preload && "none" !== Fk._preload && Fk.load(), Fk
         },
         load: function() {
-          var CC = this,
-            zC = null;
-          if (bC.noAudio) CC._emit("loaderror", null, "No audio support.");
+          var kk = this,
+            Fk = null;
+          if (ik.noAudio) kk._emit("loaderror", null, "No audio support.");
           else {
-            "string" === typeof CC._src && (CC._src = [CC._src]);
-            for (var ZC = 0; ZC < CC._src.length; ZC++) {
-              var QC, wC;
-              if (CC._format && CC._format[ZC]) QC = CC._format[ZC];
+            "string" === typeof kk._src && (kk._src = [kk._src]);
+            for (var Ik = 0; Ik < kk._src.length; Ik++) {
+              var Xk, Tk;
+              if (kk._format && kk._format[Ik]) Xk = kk._format[Ik];
               else {
-                if ("string" !== typeof(wC = CC._src[ZC])) {
-                  CC._emit("loaderror", null, "Non-string found in selected audio sources - ignoring.");
+                if ("string" !== typeof(Tk = kk._src[Ik])) {
+                  kk._emit("loaderror", null, "Non-string found in selected audio sources - ignoring.");
                   continue
-                }(QC = /^data:audio\/([^;,]+);/i.exec(wC)) || (QC = /\.([^.]+)$/.exec(wC.split("?", 1)[0])), QC && (QC = QC[1].toLowerCase())
+                }(Xk = /^data:audio\/([^;,]+);/i.exec(Tk)) || (Xk = /\.([^.]+)$/.exec(Tk.split("?", 1)[0])), Xk && (Xk = Xk[1].toLowerCase())
               }
-              if (QC || console.warn('No file extension was found. Consider using the "format" property or specify an extension.'), QC && bC.codecs(QC)) {
-                zC = CC._src[ZC];
+              if (Xk || console.warn('No file extension was found. Consider using the "format" property or specify an extension.'), Xk && ik.codecs(Xk)) {
+                Fk = kk._src[Ik];
                 break
               }
             }
-            if (zC) return CC._src = zC, CC._state = "loading", "https:" === window.location.protocol && "http:" === zC.slice(0, 5) && (CC._html5 = !0, CC._webAudio = !1), new fC(CC), CC._webAudio && qC(CC), CC;
-            CC._emit("loaderror", null, "No codec support for selected audio sources.")
+            if (Fk) return kk._src = Fk, kk._state = "loading", "https:" === window.location.protocol && "http:" === Fk.slice(0, 5) && (kk._html5 = !0, kk._webAudio = !1), new lk(kk), kk._webAudio && qk(kk), kk;
+            kk._emit("loaderror", null, "No codec support for selected audio sources.")
           }
         },
-        play: function(CC, zC) {
-          var ZC = this,
-            QC = null;
-          if ("number" === typeof CC) QC = CC, CC = null;
+        play: function(kk, Fk) {
+          var Ik = this,
+            Xk = null;
+          if ("number" === typeof kk) Xk = kk, kk = null;
           else {
-            if ("string" === typeof CC && "loaded" === ZC._state && !ZC._sprite[CC]) return null;
-            if ("undefined" === typeof CC && (CC = "__default", !ZC._playLock)) {
-              for (var wC = 0, nC = 0; nC < ZC._sounds.length; nC++) ZC._sounds[nC].kR && !ZC._sounds[nC]._ended && (wC++, QC = ZC._sounds[nC]._id);
-              1 === wC ? CC = null : QC = null
+            if ("string" === typeof kk && "loaded" === Ik._state && !Ik._sprite[kk]) return null;
+            if ("undefined" === typeof kk && (kk = "__default", !Ik._playLock)) {
+              for (var Tk = 0, yk = 0; yk < Ik._sounds.length; yk++) Ik._sounds[yk].vx && !Ik._sounds[yk]._ended && (Tk++, Xk = Ik._sounds[yk]._id);
+              1 === Tk ? kk = null : Xk = null
             }
           }
-          var fC = QC ? ZC._soundById(QC) : ZC._inactiveSound();
-          if (!fC) return null;
-          if (QC && !CC && (CC = fC._sprite || "__default"), "loaded" !== ZC._state) {
-            fC._sprite = CC, fC._ended = !1;
-            var oC = fC._id;
-            return ZC._queue.push({
+          var lk = Xk ? Ik._soundById(Xk) : Ik._inactiveSound();
+          if (!lk) return null;
+          if (Xk && !kk && (kk = lk._sprite || "__default"), "loaded" !== Ik._state) {
+            lk._sprite = kk, lk._ended = !1;
+            var ak = lk._id;
+            return Ik._queue.push({
               event: "play",
               action: function() {
-                ZC.play(oC)
+                Ik.play(ak)
               }
-            }), oC
+            }), ak
           }
-          if (QC && !fC.kR) return zC || ZC._loadQueue("play"), fC._id;
-          ZC._webAudio && bC._autoResume();
-          var qC = Math.max(0, fC._seek > 0 ? fC._seek : ZC._sprite[CC][0] / 1e3),
-            FC = Math.max(0, (ZC._sprite[CC][0] + ZC._sprite[CC][1]) / 1e3 - qC),
-            WC = 1e3 * FC / Math.abs(fC._rate),
-            NC = ZC._sprite[CC][0] / 1e3,
-            MC = (ZC._sprite[CC][0] + ZC._sprite[CC][1]) / 1e3;
-          fC._sprite = CC, fC._ended = !1;
-          var gC = function() {
-            fC.kR = !1, fC._seek = qC, fC._start = NC, fC._stop = MC, fC._loop = !(!fC._loop && !ZC._sprite[CC][2])
+          if (Xk && !lk.vx) return Fk || Ik._loadQueue("play"), lk._id;
+          Ik._webAudio && ik._autoResume();
+          var qk = Math.max(0, lk._seek > 0 ? lk._seek : Ik._sprite[kk][0] / 1e3),
+            Lk = Math.max(0, (Ik._sprite[kk][0] + Ik._sprite[kk][1]) / 1e3 - qk),
+            tk = 1e3 * Lk / Math.abs(lk._rate),
+            Zk = Ik._sprite[kk][0] / 1e3,
+            jk = (Ik._sprite[kk][0] + Ik._sprite[kk][1]) / 1e3;
+          lk._sprite = kk, lk._ended = !1;
+          var ek = function() {
+            lk.vx = !1, lk._seek = qk, lk._start = Zk, lk._stop = jk, lk._loop = !(!lk._loop && !Ik._sprite[kk][2])
           };
-          if (!(qC >= MC)) {
-            var SC = fC._node;
-            if (ZC._webAudio) {
-              var pC = function() {
-                ZC._playLock = !1, gC(), ZC._refreshBuffer(fC);
-                var CC = fC._muted || ZC._muted ? 0 : fC._volume;
-                SC.gain.setValueAtTime(CC, bC.ctx.currentTime), fC._playStart = bC.ctx.currentTime, "undefined" === typeof SC.bufferSource.start ? fC._loop ? SC.bufferSource.noteGrainOn(0, qC, 86400) : SC.bufferSource.noteGrainOn(0, qC, FC) : fC._loop ? SC.bufferSource.start(0, qC, 86400) : SC.bufferSource.start(0, qC, FC), WC !== 1 / 0 && (ZC._endTimers[fC._id] = setTimeout(ZC._ended.bind(ZC, fC), WC)), zC || setTimeout((function() {
-                  ZC._emit("play", fC._id), ZC._loadQueue()
+          if (!(qk >= jk)) {
+            var wk = lk._node;
+            if (Ik._webAudio) {
+              var Hk = function() {
+                Ik._playLock = !1, ek(), Ik._refreshBuffer(lk);
+                var kk = lk._muted || Ik._muted ? 0 : lk._volume;
+                wk.gain.setValueAtTime(kk, ik.ctx.currentTime), lk._playStart = ik.ctx.currentTime, "undefined" === typeof wk.bufferSource.start ? lk._loop ? wk.bufferSource.noteGrainOn(0, qk, 86400) : wk.bufferSource.noteGrainOn(0, qk, Lk) : lk._loop ? wk.bufferSource.start(0, qk, 86400) : wk.bufferSource.start(0, qk, Lk), tk !== 1 / 0 && (Ik._endTimers[lk._id] = setTimeout(Ik._ended.bind(Ik, lk), tk)), Fk || setTimeout((function() {
+                  Ik._emit("play", lk._id), Ik._loadQueue()
                 }), 0)
               };
-              "running" === bC.state && "interrupted" !== bC.ctx.state ? pC() : (ZC._playLock = !0, ZC.once("resume", pC), ZC._clearTimer(fC._id))
+              "running" === ik.state && "interrupted" !== ik.ctx.state ? Hk() : (Ik._playLock = !0, Ik.once("resume", Hk), Ik._clearTimer(lk._id))
             } else {
-              var PC = function() {
-                SC.currentTime = qC, SC.muted = fC._muted || ZC._muted || bC._muted || SC.muted, SC.volume = fC._volume * bC.volume(), SC.playbackRate = fC._rate;
+              var Jk = function() {
+                wk.currentTime = qk, wk.muted = lk._muted || Ik._muted || ik._muted || wk.muted, wk.volume = lk._volume * ik.volume(), wk.playbackRate = lk._rate;
                 try {
-                  var QC = SC.play();
-                  if (QC && "undefined" !== typeof Promise && (QC instanceof Promise || "function" === typeof QC.then) ? (ZC._playLock = !0, gC(), QC.then((function() {
-                      ZC._playLock = !1, SC._unlocked = !0, zC ? ZC._loadQueue() : ZC._emit("play", fC._id)
+                  var Xk = wk.play();
+                  if (Xk && "undefined" !== typeof Promise && (Xk instanceof Promise || "function" === typeof Xk.then) ? (Ik._playLock = !0, ek(), Xk.then((function() {
+                      Ik._playLock = !1, wk._unlocked = !0, Fk ? Ik._loadQueue() : Ik._emit("play", lk._id)
                     })).catch((function() {
-                      ZC._playLock = !1, ZC._emit("playerror", fC._id, "Playback was unable to start. This is most commonly an issue on mobile devices and Chrome where playback was not within a user interaction."), fC._ended = !0, fC.kR = !0
-                    }))) : zC || (ZC._playLock = !1, gC(), ZC._emit("play", fC._id)), SC.playbackRate = fC._rate, SC.paused) return void ZC._emit("playerror", fC._id, "Playback was unable to start. This is most commonly an issue on mobile devices and Chrome where playback was not within a user interaction.");
-                  "__default" !== CC || fC._loop ? ZC._endTimers[fC._id] = setTimeout(ZC._ended.bind(ZC, fC), WC) : (ZC._endTimers[fC._id] = function() {
-                    ZC._ended(fC), SC.removeEventListener("ended", ZC._endTimers[fC._id], !1)
-                  }, SC.addEventListener("ended", ZC._endTimers[fC._id], !1))
-                } catch (wC) {
-                  ZC._emit("playerror", fC._id, wC)
+                      Ik._playLock = !1, Ik._emit("playerror", lk._id, "Playback was unable to start. This is most commonly an issue on mobile devices and Chrome where playback was not within a user interaction."), lk._ended = !0, lk.vx = !0
+                    }))) : Fk || (Ik._playLock = !1, ek(), Ik._emit("play", lk._id)), wk.playbackRate = lk._rate, wk.paused) return void Ik._emit("playerror", lk._id, "Playback was unable to start. This is most commonly an issue on mobile devices and Chrome where playback was not within a user interaction.");
+                  "__default" !== kk || lk._loop ? Ik._endTimers[lk._id] = setTimeout(Ik._ended.bind(Ik, lk), tk) : (Ik._endTimers[lk._id] = function() {
+                    Ik._ended(lk), wk.removeEventListener("ended", Ik._endTimers[lk._id], !1)
+                  }, wk.addEventListener("ended", Ik._endTimers[lk._id], !1))
+                } catch (Tk) {
+                  Ik._emit("playerror", lk._id, Tk)
                 }
               };
-              "data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA" === SC.src && (SC.src = ZC._src, SC.load());
-              var GC = window && window.ejecta || !SC.readyState && bC._navigator.isCocoonJS;
-              if (SC.readyState >= 3 || GC) PC();
+              "data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA" === wk.src && (wk.src = Ik._src, wk.load());
+              var xk = window && window.ejecta || !wk.readyState && ik._navigator.isCocoonJS;
+              if (wk.readyState >= 3 || xk) Jk();
               else {
-                ZC._playLock = !0, ZC._state = "loading";
-                var RC = function() {
-                  ZC._state = "loaded", PC(), SC.removeEventListener(bC._canPlayEvent, RC, !1)
+                Ik._playLock = !0, Ik._state = "loading";
+                var Pk = function() {
+                  Ik._state = "loaded", Jk(), wk.removeEventListener(ik._canPlayEvent, Pk, !1)
                 };
-                SC.addEventListener(bC._canPlayEvent, RC, !1), ZC._clearTimer(fC._id)
+                wk.addEventListener(ik._canPlayEvent, Pk, !1), Ik._clearTimer(lk._id)
               }
             }
-            return fC._id
+            return lk._id
           }
-          ZC._ended(fC)
+          Ik._ended(lk)
         },
-        pause: function(CC) {
-          var zC = this;
-          if ("loaded" !== zC._state || zC._playLock) return zC._queue.push({
+        pause: function(kk) {
+          var Fk = this;
+          if ("loaded" !== Fk._state || Fk._playLock) return Fk._queue.push({
             event: "pause",
             action: function() {
-              zC.pause(CC)
+              Fk.pause(kk)
             }
-          }), zC;
-          for (var ZC = zC._getSoundIds(CC), QC = 0; QC < ZC.length; QC++) {
-            zC._clearTimer(ZC[QC]);
-            var wC = zC._soundById(ZC[QC]);
-            if (wC && !wC.kR && (wC._seek = zC.seek(ZC[QC]), wC._rateSeek = 0, wC.kR = !0, zC._stopFade(ZC[QC]), wC._node))
-              if (zC._webAudio) {
-                if (!wC._node.bufferSource) continue;
-                "undefined" === typeof wC._node.bufferSource.stop ? wC._node.bufferSource.noteOff(0) : wC._node.bufferSource.stop(0), zC._cleanBuffer(wC._node)
-              } else isNaN(wC._node.duration) && wC._node.duration !== 1 / 0 || wC._node.pause();
-            arguments[1] || zC._emit("pause", wC ? wC._id : null)
+          }), Fk;
+          for (var Ik = Fk._getSoundIds(kk), Xk = 0; Xk < Ik.length; Xk++) {
+            Fk._clearTimer(Ik[Xk]);
+            var Tk = Fk._soundById(Ik[Xk]);
+            if (Tk && !Tk.vx && (Tk._seek = Fk.seek(Ik[Xk]), Tk._rateSeek = 0, Tk.vx = !0, Fk._stopFade(Ik[Xk]), Tk._node))
+              if (Fk._webAudio) {
+                if (!Tk._node.bufferSource) continue;
+                "undefined" === typeof Tk._node.bufferSource.stop ? Tk._node.bufferSource.noteOff(0) : Tk._node.bufferSource.stop(0), Fk._cleanBuffer(Tk._node)
+              } else isNaN(Tk._node.duration) && Tk._node.duration !== 1 / 0 || Tk._node.pause();
+            arguments[1] || Fk._emit("pause", Tk ? Tk._id : null)
           }
-          return zC
+          return Fk
         },
-        stop: function(CC, zC) {
-          var ZC = this;
-          if ("loaded" !== ZC._state || ZC._playLock) return ZC._queue.push({
+        stop: function(kk, Fk) {
+          var Ik = this;
+          if ("loaded" !== Ik._state || Ik._playLock) return Ik._queue.push({
             event: "stop",
             action: function() {
-              ZC.stop(CC)
+              Ik.stop(kk)
             }
-          }), ZC;
-          for (var QC = ZC._getSoundIds(CC), wC = 0; wC < QC.length; wC++) {
-            ZC._clearTimer(QC[wC]);
-            var bC = ZC._soundById(QC[wC]);
-            bC && (bC._seek = bC._start || 0, bC._rateSeek = 0, bC.kR = !0, bC._ended = !0, ZC._stopFade(QC[wC]), bC._node && (ZC._webAudio ? bC._node.bufferSource && ("undefined" === typeof bC._node.bufferSource.stop ? bC._node.bufferSource.noteOff(0) : bC._node.bufferSource.stop(0), ZC._cleanBuffer(bC._node)) : isNaN(bC._node.duration) && bC._node.duration !== 1 / 0 || (bC._node.currentTime = bC._start || 0, bC._node.pause(), bC._node.duration === 1 / 0 && ZC._clearSound(bC._node))), zC || ZC._emit("stop", bC._id))
+          }), Ik;
+          for (var Xk = Ik._getSoundIds(kk), Tk = 0; Tk < Xk.length; Tk++) {
+            Ik._clearTimer(Xk[Tk]);
+            var ik = Ik._soundById(Xk[Tk]);
+            ik && (ik._seek = ik._start || 0, ik._rateSeek = 0, ik.vx = !0, ik._ended = !0, Ik._stopFade(Xk[Tk]), ik._node && (Ik._webAudio ? ik._node.bufferSource && ("undefined" === typeof ik._node.bufferSource.stop ? ik._node.bufferSource.noteOff(0) : ik._node.bufferSource.stop(0), Ik._cleanBuffer(ik._node)) : isNaN(ik._node.duration) && ik._node.duration !== 1 / 0 || (ik._node.currentTime = ik._start || 0, ik._node.pause(), ik._node.duration === 1 / 0 && Ik._clearSound(ik._node))), Fk || Ik._emit("stop", ik._id))
           }
-          return ZC
+          return Ik
         },
-        mute: function(CC, zC) {
-          var ZC = this;
-          if ("loaded" !== ZC._state || ZC._playLock) return ZC._queue.push({
+        mute: function(kk, Fk) {
+          var Ik = this;
+          if ("loaded" !== Ik._state || Ik._playLock) return Ik._queue.push({
             event: "mute",
             action: function() {
-              ZC.mute(CC, zC)
+              Ik.mute(kk, Fk)
             }
-          }), ZC;
-          if ("undefined" === typeof zC) {
-            if ("boolean" !== typeof CC) return ZC._muted;
-            ZC._muted = CC
+          }), Ik;
+          if ("undefined" === typeof Fk) {
+            if ("boolean" !== typeof kk) return Ik._muted;
+            Ik._muted = kk
           }
-          for (var QC = ZC._getSoundIds(zC), wC = 0; wC < QC.length; wC++) {
-            var nC = ZC._soundById(QC[wC]);
-            nC && (nC._muted = CC, nC._interval && ZC._stopFade(nC._id), ZC._webAudio && nC._node ? nC._node.gain.setValueAtTime(CC ? 0 : nC._volume, bC.ctx.currentTime) : nC._node && (nC._node.muted = !!bC._muted || CC), ZC._emit("mute", nC._id))
+          for (var Xk = Ik._getSoundIds(Fk), Tk = 0; Tk < Xk.length; Tk++) {
+            var yk = Ik._soundById(Xk[Tk]);
+            yk && (yk._muted = kk, yk._interval && Ik._stopFade(yk._id), Ik._webAudio && yk._node ? yk._node.gain.setValueAtTime(kk ? 0 : yk._volume, ik.ctx.currentTime) : yk._node && (yk._node.muted = !!ik._muted || kk), Ik._emit("mute", yk._id))
           }
-          return ZC
+          return Ik
         },
         volume: function() {
-          var CC, zC, ZC, QC = this,
-            wC = arguments;
-          if (0 === wC.length) return QC._volume;
-          if (1 === wC.length || 2 === wC.length && "undefined" === typeof wC[1] ? QC._getSoundIds().indexOf(wC[0]) >= 0 ? zC = parseInt(wC[0], 10) : CC = parseFloat(wC[0]) : wC.length >= 2 && (CC = parseFloat(wC[0]), zC = parseInt(wC[1], 10)), !("undefined" !== typeof CC && CC >= 0 && CC <= 1)) return (ZC = zC ? QC._soundById(zC) : QC._sounds[0]) ? ZC._volume : 0;
-          if ("loaded" !== QC._state || QC._playLock) return QC._queue.push({
+          var kk, Fk, Ik, Xk = this,
+            Tk = arguments;
+          if (0 === Tk.length) return Xk._volume;
+          if (1 === Tk.length || 2 === Tk.length && "undefined" === typeof Tk[1] ? Xk._getSoundIds().indexOf(Tk[0]) >= 0 ? Fk = parseInt(Tk[0], 10) : kk = parseFloat(Tk[0]) : Tk.length >= 2 && (kk = parseFloat(Tk[0]), Fk = parseInt(Tk[1], 10)), !("undefined" !== typeof kk && kk >= 0 && kk <= 1)) return (Ik = Fk ? Xk._soundById(Fk) : Xk._sounds[0]) ? Ik._volume : 0;
+          if ("loaded" !== Xk._state || Xk._playLock) return Xk._queue.push({
             event: "volume",
             action: function() {
-              QC.volume.apply(QC, wC)
+              Xk.volume.apply(Xk, Tk)
             }
-          }), QC;
-          "undefined" === typeof zC && (QC._volume = CC), zC = QC._getSoundIds(zC);
-          for (var nC = 0; nC < zC.length; nC++)(ZC = QC._soundById(zC[nC])) && (ZC._volume = CC, wC[2] || QC._stopFade(zC[nC]), QC._webAudio && ZC._node && !ZC._muted ? ZC._node.gain.setValueAtTime(CC, bC.ctx.currentTime) : ZC._node && !ZC._muted && (ZC._node.volume = CC * bC.volume()), QC._emit("volume", ZC._id));
-          return QC
+          }), Xk;
+          "undefined" === typeof Fk && (Xk._volume = kk), Fk = Xk._getSoundIds(Fk);
+          for (var yk = 0; yk < Fk.length; yk++)(Ik = Xk._soundById(Fk[yk])) && (Ik._volume = kk, Tk[2] || Xk._stopFade(Fk[yk]), Xk._webAudio && Ik._node && !Ik._muted ? Ik._node.gain.setValueAtTime(kk, ik.ctx.currentTime) : Ik._node && !Ik._muted && (Ik._node.volume = kk * ik.volume()), Xk._emit("volume", Ik._id));
+          return Xk
         },
-        fade: function(CC, zC, ZC, QC) {
-          var wC = this;
-          if ("loaded" !== wC._state || wC._playLock) return wC._queue.push({
+        fade: function(kk, Fk, Ik, Xk) {
+          var Tk = this;
+          if ("loaded" !== Tk._state || Tk._playLock) return Tk._queue.push({
             event: "fade",
             action: function() {
-              wC.fade(CC, zC, ZC, QC)
+              Tk.fade(kk, Fk, Ik, Xk)
             }
-          }), wC;
-          CC = Math.min(Math.max(0, parseFloat(CC)), 1), zC = Math.min(Math.max(0, parseFloat(zC)), 1), ZC = parseFloat(ZC), wC.volume(CC, QC);
-          for (var nC = wC._getSoundIds(QC), fC = 0; fC < nC.length; fC++) {
-            var oC = wC._soundById(nC[fC]);
-            if (oC) {
-              if (QC || wC._stopFade(nC[fC]), wC._webAudio && !oC._muted) {
-                var qC = bC.ctx.currentTime,
-                  FC = qC + ZC / 1e3;
-                oC._volume = CC, oC._node.gain.setValueAtTime(CC, qC), oC._node.gain.linearRampToValueAtTime(zC, FC)
+          }), Tk;
+          kk = Math.min(Math.max(0, parseFloat(kk)), 1), Fk = Math.min(Math.max(0, parseFloat(Fk)), 1), Ik = parseFloat(Ik), Tk.volume(kk, Xk);
+          for (var yk = Tk._getSoundIds(Xk), lk = 0; lk < yk.length; lk++) {
+            var ak = Tk._soundById(yk[lk]);
+            if (ak) {
+              if (Xk || Tk._stopFade(yk[lk]), Tk._webAudio && !ak._muted) {
+                var qk = ik.ctx.currentTime,
+                  Lk = qk + Ik / 1e3;
+                ak._volume = kk, ak._node.gain.setValueAtTime(kk, qk), ak._node.gain.linearRampToValueAtTime(Fk, Lk)
               }
-              wC._startFadeInterval(oC, CC, zC, ZC, nC[fC], "undefined" === typeof QC)
+              Tk._startFadeInterval(ak, kk, Fk, Ik, yk[lk], "undefined" === typeof Xk)
             }
           }
-          return wC
+          return Tk
         },
-        _startFadeInterval: function(CC, zC, ZC, QC, wC, bC) {
-          var nC = this,
-            fC = zC,
-            oC = ZC - zC,
-            qC = Math.abs(oC / .01),
-            FC = Math.max(4, qC > 0 ? QC / qC : QC),
-            WC = Date.now();
-          CC._fadeTo = ZC, CC._interval = setInterval((function() {
-            var wC = (Date.now() - WC) / QC;
-            WC = Date.now(), fC += oC * wC, fC = Math.round(100 * fC) / 100, fC = oC < 0 ? Math.max(ZC, fC) : Math.min(ZC, fC), nC._webAudio ? CC._volume = fC : nC.volume(fC, CC._id, !0), bC && (nC._volume = fC), (ZC < zC && fC <= ZC || ZC > zC && fC >= ZC) && (clearInterval(CC._interval), CC._interval = null, CC._fadeTo = null, nC.volume(ZC, CC._id), nC._emit("fade", CC._id))
-          }), FC)
+        _startFadeInterval: function(kk, Fk, Ik, Xk, Tk, ik) {
+          var yk = this,
+            lk = Fk,
+            ak = Ik - Fk,
+            qk = Math.abs(ak / .01),
+            Lk = Math.max(4, qk > 0 ? Xk / qk : Xk),
+            tk = Date.now();
+          kk._fadeTo = Ik, kk._interval = setInterval((function() {
+            var Tk = (Date.now() - tk) / Xk;
+            tk = Date.now(), lk += ak * Tk, lk = Math.round(100 * lk) / 100, lk = ak < 0 ? Math.max(Ik, lk) : Math.min(Ik, lk), yk._webAudio ? kk._volume = lk : yk.volume(lk, kk._id, !0), ik && (yk._volume = lk), (Ik < Fk && lk <= Ik || Ik > Fk && lk >= Ik) && (clearInterval(kk._interval), kk._interval = null, kk._fadeTo = null, yk.volume(Ik, kk._id), yk._emit("fade", kk._id))
+          }), Lk)
         },
-        _stopFade: function(CC) {
-          var zC = this,
-            ZC = zC._soundById(CC);
-          return ZC && ZC._interval && (zC._webAudio && ZC._node.gain.cancelScheduledValues(bC.ctx.currentTime), clearInterval(ZC._interval), ZC._interval = null, zC.volume(ZC._fadeTo, CC), ZC._fadeTo = null, zC._emit("fade", CC)), zC
+        _stopFade: function(kk) {
+          var Fk = this,
+            Ik = Fk._soundById(kk);
+          return Ik && Ik._interval && (Fk._webAudio && Ik._node.gain.cancelScheduledValues(ik.ctx.currentTime), clearInterval(Ik._interval), Ik._interval = null, Fk.volume(Ik._fadeTo, kk), Ik._fadeTo = null, Fk._emit("fade", kk)), Fk
         },
         loop: function() {
-          var CC, zC, ZC, QC = this,
-            wC = arguments;
-          if (0 === wC.length) return QC._loop;
-          if (1 === wC.length) {
-            if ("boolean" !== typeof wC[0]) return !!(ZC = QC._soundById(parseInt(wC[0], 10))) && ZC._loop;
-            CC = wC[0], QC._loop = CC
-          } else 2 === wC.length && (CC = wC[0], zC = parseInt(wC[1], 10));
-          for (var bC = QC._getSoundIds(zC), nC = 0; nC < bC.length; nC++)(ZC = QC._soundById(bC[nC])) && (ZC._loop = CC, QC._webAudio && ZC._node && ZC._node.bufferSource && (ZC._node.bufferSource.loop = CC, CC && (ZC._node.bufferSource.loopStart = ZC._start || 0, ZC._node.bufferSource.loopEnd = ZC._stop, QC.playing(bC[nC]) && (QC.pause(bC[nC], !0), QC.play(bC[nC], !0)))));
-          return QC
+          var kk, Fk, Ik, Xk = this,
+            Tk = arguments;
+          if (0 === Tk.length) return Xk._loop;
+          if (1 === Tk.length) {
+            if ("boolean" !== typeof Tk[0]) return !!(Ik = Xk._soundById(parseInt(Tk[0], 10))) && Ik._loop;
+            kk = Tk[0], Xk._loop = kk
+          } else 2 === Tk.length && (kk = Tk[0], Fk = parseInt(Tk[1], 10));
+          for (var ik = Xk._getSoundIds(Fk), yk = 0; yk < ik.length; yk++)(Ik = Xk._soundById(ik[yk])) && (Ik._loop = kk, Xk._webAudio && Ik._node && Ik._node.bufferSource && (Ik._node.bufferSource.loop = kk, kk && (Ik._node.bufferSource.loopStart = Ik._start || 0, Ik._node.bufferSource.loopEnd = Ik._stop, Xk.playing(ik[yk]) && (Xk.pause(ik[yk], !0), Xk.play(ik[yk], !0)))));
+          return Xk
         },
         rate: function() {
-          var CC, zC, ZC, QC = this,
-            wC = arguments;
-          if (0 === wC.length) zC = QC._sounds[0]._id;
-          else if (1 === wC.length) {
-            QC._getSoundIds().indexOf(wC[0]) >= 0 ? zC = parseInt(wC[0], 10) : CC = parseFloat(wC[0])
-          } else 2 === wC.length && (CC = parseFloat(wC[0]), zC = parseInt(wC[1], 10));
-          if ("number" !== typeof CC) return (ZC = QC._soundById(zC)) ? ZC._rate : QC._rate;
-          if ("loaded" !== QC._state || QC._playLock) return QC._queue.push({
+          var kk, Fk, Ik, Xk = this,
+            Tk = arguments;
+          if (0 === Tk.length) Fk = Xk._sounds[0]._id;
+          else if (1 === Tk.length) {
+            Xk._getSoundIds().indexOf(Tk[0]) >= 0 ? Fk = parseInt(Tk[0], 10) : kk = parseFloat(Tk[0])
+          } else 2 === Tk.length && (kk = parseFloat(Tk[0]), Fk = parseInt(Tk[1], 10));
+          if ("number" !== typeof kk) return (Ik = Xk._soundById(Fk)) ? Ik._rate : Xk._rate;
+          if ("loaded" !== Xk._state || Xk._playLock) return Xk._queue.push({
             event: "rate",
             action: function() {
-              QC.rate.apply(QC, wC)
+              Xk.rate.apply(Xk, Tk)
             }
-          }), QC;
-          "undefined" === typeof zC && (QC._rate = CC), zC = QC._getSoundIds(zC);
-          for (var nC = 0; nC < zC.length; nC++)
-            if (ZC = QC._soundById(zC[nC])) {
-              QC.playing(zC[nC]) && (ZC._rateSeek = QC.seek(zC[nC]), ZC._playStart = QC._webAudio ? bC.ctx.currentTime : ZC._playStart), ZC._rate = CC, QC._webAudio && ZC._node && ZC._node.bufferSource ? ZC._node.bufferSource.playbackRate.setValueAtTime(CC, bC.ctx.currentTime) : ZC._node && (ZC._node.playbackRate = CC);
-              var fC = QC.seek(zC[nC]),
-                oC = 1e3 * ((QC._sprite[ZC._sprite][0] + QC._sprite[ZC._sprite][1]) / 1e3 - fC) / Math.abs(ZC._rate);
-              !QC._endTimers[zC[nC]] && ZC.kR || (QC._clearTimer(zC[nC]), QC._endTimers[zC[nC]] = setTimeout(QC._ended.bind(QC, ZC), oC)), QC._emit("rate", ZC._id)
-            } return QC
+          }), Xk;
+          "undefined" === typeof Fk && (Xk._rate = kk), Fk = Xk._getSoundIds(Fk);
+          for (var yk = 0; yk < Fk.length; yk++)
+            if (Ik = Xk._soundById(Fk[yk])) {
+              Xk.playing(Fk[yk]) && (Ik._rateSeek = Xk.seek(Fk[yk]), Ik._playStart = Xk._webAudio ? ik.ctx.currentTime : Ik._playStart), Ik._rate = kk, Xk._webAudio && Ik._node && Ik._node.bufferSource ? Ik._node.bufferSource.playbackRate.setValueAtTime(kk, ik.ctx.currentTime) : Ik._node && (Ik._node.playbackRate = kk);
+              var lk = Xk.seek(Fk[yk]),
+                ak = 1e3 * ((Xk._sprite[Ik._sprite][0] + Xk._sprite[Ik._sprite][1]) / 1e3 - lk) / Math.abs(Ik._rate);
+              !Xk._endTimers[Fk[yk]] && Ik.vx || (Xk._clearTimer(Fk[yk]), Xk._endTimers[Fk[yk]] = setTimeout(Xk._ended.bind(Xk, Ik), ak)), Xk._emit("rate", Ik._id)
+            } return Xk
         },
         seek: function() {
-          var CC, zC, ZC = this,
-            QC = arguments;
-          if (0 === QC.length) ZC._sounds.length && (zC = ZC._sounds[0]._id);
-          else if (1 === QC.length) {
-            ZC._getSoundIds().indexOf(QC[0]) >= 0 ? zC = parseInt(QC[0], 10) : ZC._sounds.length && (zC = ZC._sounds[0]._id, CC = parseFloat(QC[0]))
-          } else 2 === QC.length && (CC = parseFloat(QC[0]), zC = parseInt(QC[1], 10));
-          if ("undefined" === typeof zC) return 0;
-          if ("number" === typeof CC && ("loaded" !== ZC._state || ZC._playLock)) return ZC._queue.push({
+          var kk, Fk, Ik = this,
+            Xk = arguments;
+          if (0 === Xk.length) Ik._sounds.length && (Fk = Ik._sounds[0]._id);
+          else if (1 === Xk.length) {
+            Ik._getSoundIds().indexOf(Xk[0]) >= 0 ? Fk = parseInt(Xk[0], 10) : Ik._sounds.length && (Fk = Ik._sounds[0]._id, kk = parseFloat(Xk[0]))
+          } else 2 === Xk.length && (kk = parseFloat(Xk[0]), Fk = parseInt(Xk[1], 10));
+          if ("undefined" === typeof Fk) return 0;
+          if ("number" === typeof kk && ("loaded" !== Ik._state || Ik._playLock)) return Ik._queue.push({
             event: "seek",
             action: function() {
-              ZC.seek.apply(ZC, QC)
+              Ik.seek.apply(Ik, Xk)
             }
-          }), ZC;
-          var wC = ZC._soundById(zC);
-          if (wC) {
-            if (!("number" === typeof CC && CC >= 0)) {
-              if (ZC._webAudio) {
-                var nC = ZC.playing(zC) ? bC.ctx.currentTime - wC._playStart : 0,
-                  fC = wC._rateSeek ? wC._rateSeek - wC._seek : 0;
-                return wC._seek + (fC + nC * Math.abs(wC._rate))
+          }), Ik;
+          var Tk = Ik._soundById(Fk);
+          if (Tk) {
+            if (!("number" === typeof kk && kk >= 0)) {
+              if (Ik._webAudio) {
+                var yk = Ik.playing(Fk) ? ik.ctx.currentTime - Tk._playStart : 0,
+                  lk = Tk._rateSeek ? Tk._rateSeek - Tk._seek : 0;
+                return Tk._seek + (lk + yk * Math.abs(Tk._rate))
               }
-              return wC._node.currentTime
+              return Tk._node.currentTime
             }
-            var oC = ZC.playing(zC);
-            oC && ZC.pause(zC, !0), wC._seek = CC, wC._ended = !1, ZC._clearTimer(zC), ZC._webAudio || !wC._node || isNaN(wC._node.duration) || (wC._node.currentTime = CC);
-            var qC = function() {
-              oC && ZC.play(zC, !0), ZC._emit("seek", zC)
+            var ak = Ik.playing(Fk);
+            ak && Ik.pause(Fk, !0), Tk._seek = kk, Tk._ended = !1, Ik._clearTimer(Fk), Ik._webAudio || !Tk._node || isNaN(Tk._node.duration) || (Tk._node.currentTime = kk);
+            var qk = function() {
+              ak && Ik.play(Fk, !0), Ik._emit("seek", Fk)
             };
-            if (oC && !ZC._webAudio) {
-              var FC = function() {
-                ZC._playLock ? setTimeout(FC, 0) : qC()
+            if (ak && !Ik._webAudio) {
+              var Lk = function() {
+                Ik._playLock ? setTimeout(Lk, 0) : qk()
               };
-              setTimeout(FC, 0)
-            } else qC()
+              setTimeout(Lk, 0)
+            } else qk()
           }
-          return ZC
+          return Ik
         },
-        playing: function(CC) {
-          var zC = this;
-          if ("number" === typeof CC) {
-            var ZC = zC._soundById(CC);
-            return !!ZC && !ZC.kR
+        playing: function(kk) {
+          var Fk = this;
+          if ("number" === typeof kk) {
+            var Ik = Fk._soundById(kk);
+            return !!Ik && !Ik.vx
           }
-          for (var QC = 0; QC < zC._sounds.length; QC++)
-            if (!zC._sounds[QC].kR) return !0;
+          for (var Xk = 0; Xk < Fk._sounds.length; Xk++)
+            if (!Fk._sounds[Xk].vx) return !0;
           return !1
         },
-        duration: function(CC) {
-          var zC = this,
-            ZC = zC._duration,
-            QC = zC._soundById(CC);
-          return QC && (ZC = zC._sprite[QC._sprite][1] / 1e3), ZC
+        duration: function(kk) {
+          var Fk = this,
+            Ik = Fk._duration,
+            Xk = Fk._soundById(kk);
+          return Xk && (Ik = Fk._sprite[Xk._sprite][1] / 1e3), Ik
         },
         state: function() {
           return this._state
         },
         unload: function() {
-          for (var CC = this, zC = CC._sounds, ZC = 0; ZC < zC.length; ZC++) zC[ZC].kR || CC.stop(zC[ZC]._id), CC._webAudio || (CC._clearSound(zC[ZC]._node), zC[ZC]._node.removeEventListener("error", zC[ZC]._errorFn, !1), zC[ZC]._node.removeEventListener(bC._canPlayEvent, zC[ZC]._loadFn, !1), zC[ZC]._node.removeEventListener("ended", zC[ZC]._endFn, !1), bC._releaseHtml5Audio(zC[ZC]._node)), delete zC[ZC]._node, CC._clearTimer(zC[ZC]._id);
-          var QC = bC._howls.indexOf(CC);
-          QC >= 0 && bC._howls.splice(QC, 1);
-          var wC = !0;
-          for (ZC = 0; ZC < bC._howls.length; ZC++)
-            if (bC._howls[ZC]._src === CC._src || CC._src.indexOf(bC._howls[ZC]._src) >= 0) {
-              wC = !1;
+          for (var kk = this, Fk = kk._sounds, Ik = 0; Ik < Fk.length; Ik++) Fk[Ik].vx || kk.stop(Fk[Ik]._id), kk._webAudio || (kk._clearSound(Fk[Ik]._node), Fk[Ik]._node.removeEventListener("error", Fk[Ik]._errorFn, !1), Fk[Ik]._node.removeEventListener(ik._canPlayEvent, Fk[Ik]._loadFn, !1), Fk[Ik]._node.removeEventListener("ended", Fk[Ik]._endFn, !1), ik._releaseHtml5Audio(Fk[Ik]._node)), delete Fk[Ik]._node, kk._clearTimer(Fk[Ik]._id);
+          var Xk = ik._howls.indexOf(kk);
+          Xk >= 0 && ik._howls.splice(Xk, 1);
+          var Tk = !0;
+          for (Ik = 0; Ik < ik._howls.length; Ik++)
+            if (ik._howls[Ik]._src === kk._src || kk._src.indexOf(ik._howls[Ik]._src) >= 0) {
+              Tk = !1;
               break
-            } return oC && wC && delete oC[CC._src], bC.noAudio = !1, CC._state = "unloaded", CC._sounds = [], CC = null, null
+            } return ak && Tk && delete ak[kk._src], ik.noAudio = !1, kk._state = "unloaded", kk._sounds = [], kk = null, null
         },
-        on: function(CC, zC, ZC, QC) {
-          var wC = this["_on" + CC];
-          return "function" === typeof zC && wC.push(QC ? {
-            id: ZC,
-            Qg: zC,
-            once: QC
+        on: function(kk, Fk, Ik, Xk) {
+          var Tk = this["_on" + kk];
+          return "function" === typeof Fk && Tk.push(Xk ? {
+            id: Ik,
+            Ie: Fk,
+            once: Xk
           } : {
-            id: ZC,
-            Qg: zC
+            id: Ik,
+            Ie: Fk
           }), this
         },
-        off: function(CC, zC, ZC) {
-          var QC = this,
-            wC = QC["_on" + CC],
-            bC = 0;
-          if ("number" === typeof zC && (ZC = zC, zC = null), zC || ZC)
-            for (bC = 0; bC < wC.length; bC++) {
-              var nC = ZC === wC[bC].id;
-              if (zC === wC[bC].Qg && nC || !zC && nC) {
-                wC.splice(bC, 1);
+        off: function(kk, Fk, Ik) {
+          var Xk = this,
+            Tk = Xk["_on" + kk],
+            ik = 0;
+          if ("number" === typeof Fk && (Ik = Fk, Fk = null), Fk || Ik)
+            for (ik = 0; ik < Tk.length; ik++) {
+              var yk = Ik === Tk[ik].id;
+              if (Fk === Tk[ik].Ie && yk || !Fk && yk) {
+                Tk.splice(ik, 1);
                 break
               }
-            } else if (CC) QC["_on" + CC] = [];
+            } else if (kk) Xk["_on" + kk] = [];
             else {
-              var fC = Object.keys(QC);
-              for (bC = 0; bC < fC.length; bC++) 0 === fC[bC].indexOf("_on") && Array.isArray(QC[fC[bC]]) && (QC[fC[bC]] = [])
-            } return QC
+              var lk = Object.keys(Xk);
+              for (ik = 0; ik < lk.length; ik++) 0 === lk[ik].indexOf("_on") && Array.isArray(Xk[lk[ik]]) && (Xk[lk[ik]] = [])
+            } return Xk
         },
-        once: function(CC, zC, ZC) {
-          return this.on(CC, zC, ZC, 1), this
+        once: function(kk, Fk, Ik) {
+          return this.on(kk, Fk, Ik, 1), this
         },
-        _emit: function(CC, zC, ZC) {
-          for (var QC = this, wC = QC["_on" + CC], bC = wC.length - 1; bC >= 0; bC--) wC[bC].id && wC[bC].id !== zC && "load" !== CC || (setTimeout(function(CC) {
-            CC.call(this, zC, ZC)
-          }.bind(QC, wC[bC].Qg), 0), wC[bC].once && QC.off(CC, wC[bC].Qg, wC[bC].id));
-          return QC._loadQueue(CC), QC
+        _emit: function(kk, Fk, Ik) {
+          for (var Xk = this, Tk = Xk["_on" + kk], ik = Tk.length - 1; ik >= 0; ik--) Tk[ik].id && Tk[ik].id !== Fk && "load" !== kk || (setTimeout(function(kk) {
+            kk.call(this, Fk, Ik)
+          }.bind(Xk, Tk[ik].Ie), 0), Tk[ik].once && Xk.off(kk, Tk[ik].Ie, Tk[ik].id));
+          return Xk._loadQueue(kk), Xk
         },
-        _loadQueue: function(CC) {
-          var zC = this;
-          if (zC._queue.length > 0) {
-            var ZC = zC._queue[0];
-            ZC.event === CC && (zC._queue.shift(), zC._loadQueue()), CC || ZC.action()
+        _loadQueue: function(kk) {
+          var Fk = this;
+          if (Fk._queue.length > 0) {
+            var Ik = Fk._queue[0];
+            Ik.event === kk && (Fk._queue.shift(), Fk._loadQueue()), kk || Ik.action()
           }
-          return zC
+          return Fk
         },
-        _ended: function(CC) {
-          var zC = this,
-            ZC = CC._sprite;
-          if (!zC._webAudio && CC._node && !CC._node.paused && !CC._node.ended && CC._node.currentTime < CC._stop) return setTimeout(zC._ended.bind(zC, CC), 100), zC;
-          var QC = !(!CC._loop && !zC._sprite[ZC][2]);
-          if (zC._emit("end", CC._id), !zC._webAudio && QC && zC.stop(CC._id, !0).play(CC._id), zC._webAudio && QC) {
-            zC._emit("play", CC._id), CC._seek = CC._start || 0, CC._rateSeek = 0, CC._playStart = bC.ctx.currentTime;
-            var wC = 1e3 * (CC._stop - CC._start) / Math.abs(CC._rate);
-            zC._endTimers[CC._id] = setTimeout(zC._ended.bind(zC, CC), wC)
+        _ended: function(kk) {
+          var Fk = this,
+            Ik = kk._sprite;
+          if (!Fk._webAudio && kk._node && !kk._node.paused && !kk._node.ended && kk._node.currentTime < kk._stop) return setTimeout(Fk._ended.bind(Fk, kk), 100), Fk;
+          var Xk = !(!kk._loop && !Fk._sprite[Ik][2]);
+          if (Fk._emit("end", kk._id), !Fk._webAudio && Xk && Fk.stop(kk._id, !0).play(kk._id), Fk._webAudio && Xk) {
+            Fk._emit("play", kk._id), kk._seek = kk._start || 0, kk._rateSeek = 0, kk._playStart = ik.ctx.currentTime;
+            var Tk = 1e3 * (kk._stop - kk._start) / Math.abs(kk._rate);
+            Fk._endTimers[kk._id] = setTimeout(Fk._ended.bind(Fk, kk), Tk)
           }
-          return zC._webAudio && !QC && (CC.kR = !0, CC._ended = !0, CC._seek = CC._start || 0, CC._rateSeek = 0, zC._clearTimer(CC._id), zC._cleanBuffer(CC._node), bC._autoSuspend()), zC._webAudio || QC || zC.stop(CC._id, !0), zC
+          return Fk._webAudio && !Xk && (kk.vx = !0, kk._ended = !0, kk._seek = kk._start || 0, kk._rateSeek = 0, Fk._clearTimer(kk._id), Fk._cleanBuffer(kk._node), ik._autoSuspend()), Fk._webAudio || Xk || Fk.stop(kk._id, !0), Fk
         },
-        _clearTimer: function(CC) {
-          var zC = this;
-          if (zC._endTimers[CC]) {
-            if ("function" !== typeof zC._endTimers[CC]) clearTimeout(zC._endTimers[CC]);
+        _clearTimer: function(kk) {
+          var Fk = this;
+          if (Fk._endTimers[kk]) {
+            if ("function" !== typeof Fk._endTimers[kk]) clearTimeout(Fk._endTimers[kk]);
             else {
-              var ZC = zC._soundById(CC);
-              ZC && ZC._node && ZC._node.removeEventListener("ended", zC._endTimers[CC], !1)
+              var Ik = Fk._soundById(kk);
+              Ik && Ik._node && Ik._node.removeEventListener("ended", Fk._endTimers[kk], !1)
             }
-            delete zC._endTimers[CC]
+            delete Fk._endTimers[kk]
           }
-          return zC
+          return Fk
         },
-        _soundById: function(CC) {
-          for (var zC = this, ZC = 0; ZC < zC._sounds.length; ZC++)
-            if (CC === zC._sounds[ZC]._id) return zC._sounds[ZC];
+        _soundById: function(kk) {
+          for (var Fk = this, Ik = 0; Ik < Fk._sounds.length; Ik++)
+            if (kk === Fk._sounds[Ik]._id) return Fk._sounds[Ik];
           return null
         },
         _inactiveSound: function() {
-          var CC = this;
-          CC._drain();
-          for (var zC = 0; zC < CC._sounds.length; zC++)
-            if (CC._sounds[zC]._ended) return CC._sounds[zC].reset();
-          return new fC(CC)
+          var kk = this;
+          kk._drain();
+          for (var Fk = 0; Fk < kk._sounds.length; Fk++)
+            if (kk._sounds[Fk]._ended) return kk._sounds[Fk].reset();
+          return new lk(kk)
         },
         _drain: function() {
-          var CC = this,
-            zC = CC._pool,
-            ZC = 0,
-            QC = 0;
-          if (!(CC._sounds.length < zC)) {
-            for (QC = 0; QC < CC._sounds.length; QC++) CC._sounds[QC]._ended && ZC++;
-            for (QC = CC._sounds.length - 1; QC >= 0; QC--) {
-              if (ZC <= zC) return;
-              CC._sounds[QC]._ended && (CC._webAudio && CC._sounds[QC]._node && CC._sounds[QC]._node.disconnect(0), CC._sounds.splice(QC, 1), ZC--)
+          var kk = this,
+            Fk = kk._pool,
+            Ik = 0,
+            Xk = 0;
+          if (!(kk._sounds.length < Fk)) {
+            for (Xk = 0; Xk < kk._sounds.length; Xk++) kk._sounds[Xk]._ended && Ik++;
+            for (Xk = kk._sounds.length - 1; Xk >= 0; Xk--) {
+              if (Ik <= Fk) return;
+              kk._sounds[Xk]._ended && (kk._webAudio && kk._sounds[Xk]._node && kk._sounds[Xk]._node.disconnect(0), kk._sounds.splice(Xk, 1), Ik--)
             }
           }
         },
-        _getSoundIds: function(CC) {
-          if ("undefined" === typeof CC) {
-            for (var zC = [], ZC = 0; ZC < this._sounds.length; ZC++) zC.push(this._sounds[ZC]._id);
-            return zC
+        _getSoundIds: function(kk) {
+          if ("undefined" === typeof kk) {
+            for (var Fk = [], Ik = 0; Ik < this._sounds.length; Ik++) Fk.push(this._sounds[Ik]._id);
+            return Fk
           }
-          return [CC]
+          return [kk]
         },
-        _refreshBuffer: function(CC) {
-          return CC._node.bufferSource = bC.ctx.createBufferSource(), CC._node.bufferSource.buffer = oC[this._src], CC._panner ? CC._node.bufferSource.connect(CC._panner) : CC._node.bufferSource.connect(CC._node), CC._node.bufferSource.loop = CC._loop, CC._loop && (CC._node.bufferSource.loopStart = CC._start || 0, CC._node.bufferSource.loopEnd = CC._stop || 0), CC._node.bufferSource.playbackRate.setValueAtTime(CC._rate, bC.ctx.currentTime), this
+        _refreshBuffer: function(kk) {
+          return kk._node.bufferSource = ik.ctx.createBufferSource(), kk._node.bufferSource.buffer = ak[this._src], kk._panner ? kk._node.bufferSource.connect(kk._panner) : kk._node.bufferSource.connect(kk._node), kk._node.bufferSource.loop = kk._loop, kk._loop && (kk._node.bufferSource.loopStart = kk._start || 0, kk._node.bufferSource.loopEnd = kk._stop || 0), kk._node.bufferSource.playbackRate.setValueAtTime(kk._rate, ik.ctx.currentTime), this
         },
-        _cleanBuffer: function(CC) {
-          var zC = bC._navigator && bC._navigator.vendor.indexOf("Apple") >= 0;
-          if (bC._scratchBuffer && CC.bufferSource && (CC.bufferSource.onended = null, CC.bufferSource.disconnect(0), zC)) try {
-            CC.bufferSource.buffer = bC._scratchBuffer
-          } catch (ZC) {}
-          return CC.bufferSource = null, this
+        _cleanBuffer: function(kk) {
+          var Fk = ik._navigator && ik._navigator.vendor.indexOf("Apple") >= 0;
+          if (ik._scratchBuffer && kk.bufferSource && (kk.bufferSource.onended = null, kk.bufferSource.disconnect(0), Fk)) try {
+            kk.bufferSource.buffer = ik._scratchBuffer
+          } catch (Ik) {}
+          return kk.bufferSource = null, this
         },
-        _clearSound: function(CC) {
-          /MSIE |Trident\//.test(bC._navigator && bC._navigator.userAgent) || (CC.src = "data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA")
+        _clearSound: function(kk) {
+          /MSIE |Trident\//.test(ik._navigator && ik._navigator.userAgent) || (kk.src = "data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA")
         }
       };
-      var fC = function(CC) {
-        this._parent = CC, this.init()
+      var lk = function(kk) {
+        this._parent = kk, this.init()
       };
-      fC.prototype = {
+      lk.prototype = {
         init: function() {
-          var CC = this,
-            zC = CC._parent;
-          return CC._muted = zC._muted, CC._loop = zC._loop, CC._volume = zC._volume, CC._rate = zC._rate, CC._seek = 0, CC.kR = !0, CC._ended = !0, CC._sprite = "__default", CC._id = ++bC._counter, zC._sounds.push(CC), CC.create(), CC
+          var kk = this,
+            Fk = kk._parent;
+          return kk._muted = Fk._muted, kk._loop = Fk._loop, kk._volume = Fk._volume, kk._rate = Fk._rate, kk._seek = 0, kk.vx = !0, kk._ended = !0, kk._sprite = "__default", kk._id = ++ik._counter, Fk._sounds.push(kk), kk.create(), kk
         },
         create: function() {
-          var CC = this,
-            zC = CC._parent,
-            ZC = bC._muted || CC._muted || CC._parent._muted ? 0 : CC._volume;
-          return zC._webAudio ? (CC._node = "undefined" === typeof bC.ctx.createGain ? bC.ctx.createGainNode() : bC.ctx.createGain(), CC._node.gain.setValueAtTime(ZC, bC.ctx.currentTime), CC._node.paused = !0, CC._node.connect(bC.masterGain)) : bC.noAudio || (CC._node = bC._obtainHtml5Audio(), CC._errorFn = CC._errorListener.bind(CC), CC._node.addEventListener("error", CC._errorFn, !1), CC._loadFn = CC._loadListener.bind(CC), CC._node.addEventListener(bC._canPlayEvent, CC._loadFn, !1), CC._endFn = CC._endListener.bind(CC), CC._node.addEventListener("ended", CC._endFn, !1), CC._node.src = zC._src, CC._node.preload = !0 === zC._preload ? "auto" : zC._preload, CC._node.volume = ZC * bC.volume(), CC._node.load()), CC
+          var kk = this,
+            Fk = kk._parent,
+            Ik = ik._muted || kk._muted || kk._parent._muted ? 0 : kk._volume;
+          return Fk._webAudio ? (kk._node = "undefined" === typeof ik.ctx.createGain ? ik.ctx.createGainNode() : ik.ctx.createGain(), kk._node.gain.setValueAtTime(Ik, ik.ctx.currentTime), kk._node.paused = !0, kk._node.connect(ik.masterGain)) : ik.noAudio || (kk._node = ik._obtainHtml5Audio(), kk._errorFn = kk._errorListener.bind(kk), kk._node.addEventListener("error", kk._errorFn, !1), kk._loadFn = kk._loadListener.bind(kk), kk._node.addEventListener(ik._canPlayEvent, kk._loadFn, !1), kk._endFn = kk._endListener.bind(kk), kk._node.addEventListener("ended", kk._endFn, !1), kk._node.src = Fk._src, kk._node.preload = !0 === Fk._preload ? "auto" : Fk._preload, kk._node.volume = Ik * ik.volume(), kk._node.load()), kk
         },
         reset: function() {
-          var CC = this,
-            zC = CC._parent;
-          return CC._muted = zC._muted, CC._loop = zC._loop, CC._volume = zC._volume, CC._rate = zC._rate, CC._seek = 0, CC._rateSeek = 0, CC.kR = !0, CC._ended = !0, CC._sprite = "__default", CC._id = ++bC._counter, CC
+          var kk = this,
+            Fk = kk._parent;
+          return kk._muted = Fk._muted, kk._loop = Fk._loop, kk._volume = Fk._volume, kk._rate = Fk._rate, kk._seek = 0, kk._rateSeek = 0, kk.vx = !0, kk._ended = !0, kk._sprite = "__default", kk._id = ++ik._counter, kk
         },
         _errorListener: function() {
-          var CC = this;
-          CC._parent._emit("loaderror", CC._id, CC._node.error ? CC._node.error.code : 0), CC._node.removeEventListener("error", CC._errorFn, !1)
+          var kk = this;
+          kk._parent._emit("loaderror", kk._id, kk._node.error ? kk._node.error.code : 0), kk._node.removeEventListener("error", kk._errorFn, !1)
         },
         _loadListener: function() {
-          var CC = this,
-            zC = CC._parent;
-          zC._duration = Math.ceil(10 * CC._node.duration) / 10, 0 === Object.keys(zC._sprite).length && (zC._sprite = {
-            __default: [0, 1e3 * zC._duration]
-          }), "loaded" !== zC._state && (zC._state = "loaded", zC._emit("load"), zC._loadQueue()), CC._node.removeEventListener(bC._canPlayEvent, CC._loadFn, !1)
+          var kk = this,
+            Fk = kk._parent;
+          Fk._duration = Math.ceil(10 * kk._node.duration) / 10, 0 === Object.keys(Fk._sprite).length && (Fk._sprite = {
+            __default: [0, 1e3 * Fk._duration]
+          }), "loaded" !== Fk._state && (Fk._state = "loaded", Fk._emit("load"), Fk._loadQueue()), kk._node.removeEventListener(ik._canPlayEvent, kk._loadFn, !1)
         },
         _endListener: function() {
-          var CC = this,
-            zC = CC._parent;
-          zC._duration === 1 / 0 && (zC._duration = Math.ceil(10 * CC._node.duration) / 10, zC._sprite.__default[1] === 1 / 0 && (zC._sprite.__default[1] = 1e3 * zC._duration), zC._ended(CC)), CC._node.removeEventListener("ended", CC._endFn, !1)
+          var kk = this,
+            Fk = kk._parent;
+          Fk._duration === 1 / 0 && (Fk._duration = Math.ceil(10 * kk._node.duration) / 10, Fk._sprite.__default[1] === 1 / 0 && (Fk._sprite.__default[1] = 1e3 * Fk._duration), Fk._ended(kk)), kk._node.removeEventListener("ended", kk._endFn, !1)
         }
       };
-      var oC = {},
-        qC = function(CC) {
-          var zC = CC._src;
-          if (oC[zC]) return CC._duration = oC[zC].duration, void NC(CC);
-          if (/^data:[^;]+;base64,/.test(zC)) {
-            for (var ZC = atob(zC.split(",")[1]), QC = new Uint8Array(ZC.length), wC = 0; wC < ZC.length; ++wC) QC[wC] = ZC.charCodeAt(wC);
-            WC(QC.buffer, CC)
+      var ak = {},
+        qk = function(kk) {
+          var Fk = kk._src;
+          if (ak[Fk]) return kk._duration = ak[Fk].duration, void Zk(kk);
+          if (/^data:[^;]+;base64,/.test(Fk)) {
+            for (var Ik = atob(Fk.split(",")[1]), Xk = new Uint8Array(Ik.length), Tk = 0; Tk < Ik.length; ++Tk) Xk[Tk] = Ik.charCodeAt(Tk);
+            tk(Xk.buffer, kk)
           } else {
-            var bC = new XMLHttpRequest;
-            bC.open(CC._xhr.method, zC, !0), bC.withCredentials = CC._xhr.withCredentials, bC.responseType = "arraybuffer", CC._xhr.headers && Object.keys(CC._xhr.headers).forEach((function(zC) {
-              bC.setRequestHeader(zC, CC._xhr.headers[zC])
-            })), bC.onload = function() {
-              var zC = (bC.status + "")[0];
-              "0" === zC || "2" === zC || "3" === zC ? WC(bC.response, CC) : CC._emit("loaderror", null, "Failed loading audio file with status: " + bC.status + ".")
-            }, bC.onerror = function() {
-              CC._webAudio && (CC._html5 = !0, CC._webAudio = !1, CC._sounds = [], delete oC[zC], CC.load())
-            }, FC(bC)
+            var ik = new XMLHttpRequest;
+            ik.open(kk._xhr.method, Fk, !0), ik.withCredentials = kk._xhr.withCredentials, ik.responseType = "arraybuffer", kk._xhr.headers && Object.keys(kk._xhr.headers).forEach((function(Fk) {
+              ik.setRequestHeader(Fk, kk._xhr.headers[Fk])
+            })), ik.onload = function() {
+              var Fk = (ik.status + "")[0];
+              "0" === Fk || "2" === Fk || "3" === Fk ? tk(ik.response, kk) : kk._emit("loaderror", null, "Failed loading audio file with status: " + ik.status + ".")
+            }, ik.onerror = function() {
+              kk._webAudio && (kk._html5 = !0, kk._webAudio = !1, kk._sounds = [], delete ak[Fk], kk.load())
+            }, Lk(ik)
           }
         },
-        FC = function(CC) {
+        Lk = function(kk) {
           try {
-            CC.send()
-          } catch (zC) {
-            CC.onerror()
+            kk.send()
+          } catch (Fk) {
+            kk.onerror()
           }
         },
-        WC = function(CC, zC) {
-          var ZC = function() {
-              zC._emit("loaderror", null, "Decoding audio data failed.")
+        tk = function(kk, Fk) {
+          var Ik = function() {
+              Fk._emit("loaderror", null, "Decoding audio data failed.")
             },
-            QC = function(CC) {
-              CC && zC._sounds.length > 0 ? (oC[zC._src] = CC, NC(zC, CC)) : ZC()
+            Xk = function(kk) {
+              kk && Fk._sounds.length > 0 ? (ak[Fk._src] = kk, Zk(Fk, kk)) : Ik()
             };
-          "undefined" !== typeof Promise && 1 === bC.ctx.decodeAudioData.length ? bC.ctx.decodeAudioData(CC).then(QC).catch(ZC) : bC.ctx.decodeAudioData(CC, QC, ZC)
+          "undefined" !== typeof Promise && 1 === ik.ctx.decodeAudioData.length ? ik.ctx.decodeAudioData(kk).then(Xk).catch(Ik) : ik.ctx.decodeAudioData(kk, Xk, Ik)
         },
-        NC = function(CC, zC) {
-          zC && !CC._duration && (CC._duration = zC.duration), 0 === Object.keys(CC._sprite).length && (CC._sprite = {
-            __default: [0, 1e3 * CC._duration]
-          }), "loaded" !== CC._state && (CC._state = "loaded", CC._emit("load"), CC._loadQueue())
+        Zk = function(kk, Fk) {
+          Fk && !kk._duration && (kk._duration = Fk.duration), 0 === Object.keys(kk._sprite).length && (kk._sprite = {
+            __default: [0, 1e3 * kk._duration]
+          }), "loaded" !== kk._state && (kk._state = "loaded", kk._emit("load"), kk._loadQueue())
         },
-        MC = function() {
-          if (bC.usingWebAudio) {
+        jk = function() {
+          if (ik.usingWebAudio) {
             try {
-              "undefined" !== typeof AudioContext ? bC.ctx = new AudioContext : "undefined" !== typeof webkitAudioContext ? bC.ctx = new webkitAudioContext : bC.usingWebAudio = !1
-            } catch (wC) {
-              bC.usingWebAudio = !1
+              "undefined" !== typeof AudioContext ? ik.ctx = new AudioContext : "undefined" !== typeof webkitAudioContext ? ik.ctx = new webkitAudioContext : ik.usingWebAudio = !1
+            } catch (Tk) {
+              ik.usingWebAudio = !1
             }
-            bC.ctx || (bC.usingWebAudio = !1);
-            var CC = /iP(hone|od|ad)/.test(bC._navigator && bC._navigator.platform),
-              zC = bC._navigator && bC._navigator.appVersion.match(/OS (\d+)_(\d+)_?(\d+)?/),
-              ZC = zC ? parseInt(zC[1], 10) : null;
-            if (CC && ZC && ZC < 9) {
-              var QC = /safari/.test(bC._navigator && bC._navigator.userAgent.toLowerCase());
-              bC._navigator && !QC && (bC.usingWebAudio = !1)
+            ik.ctx || (ik.usingWebAudio = !1);
+            var kk = /iP(hone|od|ad)/.test(ik._navigator && ik._navigator.platform),
+              Fk = ik._navigator && ik._navigator.appVersion.match(/OS (\d+)_(\d+)_?(\d+)?/),
+              Ik = Fk ? parseInt(Fk[1], 10) : null;
+            if (kk && Ik && Ik < 9) {
+              var Xk = /safari/.test(ik._navigator && ik._navigator.userAgent.toLowerCase());
+              ik._navigator && !Xk && (ik.usingWebAudio = !1)
             }
-            bC.usingWebAudio && (bC.masterGain = "undefined" === typeof bC.ctx.createGain ? bC.ctx.createGainNode() : bC.ctx.createGain(), bC.masterGain.gain.setValueAtTime(bC._muted ? 0 : bC._volume, bC.ctx.currentTime), bC.masterGain.connect(bC.ctx.destination)), bC._setup()
+            ik.usingWebAudio && (ik.masterGain = "undefined" === typeof ik.ctx.createGain ? ik.ctx.createGainNode() : ik.ctx.createGain(), ik.masterGain.gain.setValueAtTime(ik._muted ? 0 : ik._volume, ik.ctx.currentTime), ik.masterGain.connect(ik.ctx.destination)), ik._setup()
           }
         };
-      void 0 === (QC = function() {
+      void 0 === (Xk = function() {
         return {
-          Howler: bC,
-          Howl: nC
+          Howler: ik,
+          Howl: yk
         }
-      }.apply(zC, [])) || (CC.exports = QC), zC.Howler = bC, zC.Howl = nC, "undefined" !== typeof ZC.g ? (ZC.g.HowlerGlobal = wC, ZC.g.Howler = bC, ZC.g.Howl = nC, ZC.g.Sound = fC) : "undefined" !== typeof window && (window.HowlerGlobal = wC, window.Howler = bC, window.Howl = nC, window.Sound = fC)
+      }.apply(Fk, [])) || (kk.exports = Xk), Fk.Howler = ik, Fk.Howl = yk, "undefined" !== typeof Ik.g ? (Ik.g.HowlerGlobal = Tk, Ik.g.Howler = ik, Ik.g.Howl = yk, Ik.g.Sound = lk) : "undefined" !== typeof window && (window.HowlerGlobal = Tk, window.Howler = ik, window.Howl = yk, window.Sound = lk)
     }(),
     function() {
-      var CC;
-      HowlerGlobal.prototype._pos = [0, 0, 0], HowlerGlobal.prototype._orientation = [0, 0, -1, 0, 1, 0], HowlerGlobal.prototype.stereo = function(CC) {
-        var zC = this;
-        if (!zC.ctx || !zC.ctx.listener) return zC;
-        for (var ZC = zC._howls.length - 1; ZC >= 0; ZC--) zC._howls[ZC].stereo(CC);
-        return zC
-      }, HowlerGlobal.prototype.pos = function(CC, zC, ZC) {
-        var QC = this;
-        return QC.ctx && QC.ctx.listener ? (zC = "number" !== typeof zC ? QC._pos[1] : zC, ZC = "number" !== typeof ZC ? QC._pos[2] : ZC, "number" !== typeof CC ? QC._pos : (QC._pos = [CC, zC, ZC], "undefined" !== typeof QC.ctx.listener.positionX ? (QC.ctx.listener.positionX.setTargetAtTime(QC._pos[0], Howler.ctx.currentTime, .1), QC.ctx.listener.positionY.setTargetAtTime(QC._pos[1], Howler.ctx.currentTime, .1), QC.ctx.listener.positionZ.setTargetAtTime(QC._pos[2], Howler.ctx.currentTime, .1)) : QC.ctx.listener.setPosition(QC._pos[0], QC._pos[1], QC._pos[2]), QC)) : QC
-      }, HowlerGlobal.prototype.orientation = function(CC, zC, ZC, QC, wC, bC) {
-        var nC = this;
-        if (!nC.ctx || !nC.ctx.listener) return nC;
-        var fC = nC._orientation;
-        return zC = "number" !== typeof zC ? fC[1] : zC, ZC = "number" !== typeof ZC ? fC[2] : ZC, QC = "number" !== typeof QC ? fC[3] : QC, wC = "number" !== typeof wC ? fC[4] : wC, bC = "number" !== typeof bC ? fC[5] : bC, "number" !== typeof CC ? fC : (nC._orientation = [CC, zC, ZC, QC, wC, bC], "undefined" !== typeof nC.ctx.listener.forwardX ? (nC.ctx.listener.forwardX.setTargetAtTime(CC, Howler.ctx.currentTime, .1), nC.ctx.listener.forwardY.setTargetAtTime(zC, Howler.ctx.currentTime, .1), nC.ctx.listener.forwardZ.setTargetAtTime(ZC, Howler.ctx.currentTime, .1), nC.ctx.listener.upX.setTargetAtTime(QC, Howler.ctx.currentTime, .1), nC.ctx.listener.upY.setTargetAtTime(wC, Howler.ctx.currentTime, .1), nC.ctx.listener.upZ.setTargetAtTime(bC, Howler.ctx.currentTime, .1)) : nC.ctx.listener.setOrientation(CC, zC, ZC, QC, wC, bC), nC)
-      }, Howl.prototype.init = (CC = Howl.prototype.init, function(zC) {
-        var ZC = this;
-        return ZC._orientation = zC.orientation || [1, 0, 0], ZC._stereo = zC.stereo || null, ZC._pos = zC.pos || null, ZC._pannerAttr = {
-          coneInnerAngle: "undefined" !== typeof zC.coneInnerAngle ? zC.coneInnerAngle : 360,
-          coneOuterAngle: "undefined" !== typeof zC.coneOuterAngle ? zC.coneOuterAngle : 360,
-          coneOuterGain: "undefined" !== typeof zC.coneOuterGain ? zC.coneOuterGain : 0,
-          distanceModel: "undefined" !== typeof zC.distanceModel ? zC.distanceModel : "inverse",
-          maxDistance: "undefined" !== typeof zC.maxDistance ? zC.maxDistance : 1e4,
-          panningModel: "undefined" !== typeof zC.panningModel ? zC.panningModel : "HRTF",
-          refDistance: "undefined" !== typeof zC.refDistance ? zC.refDistance : 1,
-          rolloffFactor: "undefined" !== typeof zC.rolloffFactor ? zC.rolloffFactor : 1
-        }, ZC._onstereo = zC.onstereo ? [{
-          Qg: zC.onstereo
-        }] : [], ZC._onpos = zC.onpos ? [{
-          Qg: zC.onpos
-        }] : [], ZC._onorientation = zC.onorientation ? [{
-          Qg: zC.onorientation
-        }] : [], CC.call(this, zC)
-      }), Howl.prototype.stereo = function(CC, ZC) {
-        var QC = this;
-        if (!QC._webAudio) return QC;
-        if ("loaded" !== QC._state) return QC._queue.push({
+      var kk;
+      HowlerGlobal.prototype._pos = [0, 0, 0], HowlerGlobal.prototype._orientation = [0, 0, -1, 0, 1, 0], HowlerGlobal.prototype.stereo = function(kk) {
+        var Fk = this;
+        if (!Fk.ctx || !Fk.ctx.listener) return Fk;
+        for (var Ik = Fk._howls.length - 1; Ik >= 0; Ik--) Fk._howls[Ik].stereo(kk);
+        return Fk
+      }, HowlerGlobal.prototype.pos = function(kk, Fk, Ik) {
+        var Xk = this;
+        return Xk.ctx && Xk.ctx.listener ? (Fk = "number" !== typeof Fk ? Xk._pos[1] : Fk, Ik = "number" !== typeof Ik ? Xk._pos[2] : Ik, "number" !== typeof kk ? Xk._pos : (Xk._pos = [kk, Fk, Ik], "undefined" !== typeof Xk.ctx.listener.positionX ? (Xk.ctx.listener.positionX.setTargetAtTime(Xk._pos[0], Howler.ctx.currentTime, .1), Xk.ctx.listener.positionY.setTargetAtTime(Xk._pos[1], Howler.ctx.currentTime, .1), Xk.ctx.listener.positionZ.setTargetAtTime(Xk._pos[2], Howler.ctx.currentTime, .1)) : Xk.ctx.listener.setPosition(Xk._pos[0], Xk._pos[1], Xk._pos[2]), Xk)) : Xk
+      }, HowlerGlobal.prototype.orientation = function(kk, Fk, Ik, Xk, Tk, ik) {
+        var yk = this;
+        if (!yk.ctx || !yk.ctx.listener) return yk;
+        var lk = yk._orientation;
+        return Fk = "number" !== typeof Fk ? lk[1] : Fk, Ik = "number" !== typeof Ik ? lk[2] : Ik, Xk = "number" !== typeof Xk ? lk[3] : Xk, Tk = "number" !== typeof Tk ? lk[4] : Tk, ik = "number" !== typeof ik ? lk[5] : ik, "number" !== typeof kk ? lk : (yk._orientation = [kk, Fk, Ik, Xk, Tk, ik], "undefined" !== typeof yk.ctx.listener.forwardX ? (yk.ctx.listener.forwardX.setTargetAtTime(kk, Howler.ctx.currentTime, .1), yk.ctx.listener.forwardY.setTargetAtTime(Fk, Howler.ctx.currentTime, .1), yk.ctx.listener.forwardZ.setTargetAtTime(Ik, Howler.ctx.currentTime, .1), yk.ctx.listener.upX.setTargetAtTime(Xk, Howler.ctx.currentTime, .1), yk.ctx.listener.upY.setTargetAtTime(Tk, Howler.ctx.currentTime, .1), yk.ctx.listener.upZ.setTargetAtTime(ik, Howler.ctx.currentTime, .1)) : yk.ctx.listener.setOrientation(kk, Fk, Ik, Xk, Tk, ik), yk)
+      }, Howl.prototype.init = (kk = Howl.prototype.init, function(Fk) {
+        var Ik = this;
+        return Ik._orientation = Fk.orientation || [1, 0, 0], Ik._stereo = Fk.stereo || null, Ik._pos = Fk.pos || null, Ik._pannerAttr = {
+          coneInnerAngle: "undefined" !== typeof Fk.coneInnerAngle ? Fk.coneInnerAngle : 360,
+          coneOuterAngle: "undefined" !== typeof Fk.coneOuterAngle ? Fk.coneOuterAngle : 360,
+          coneOuterGain: "undefined" !== typeof Fk.coneOuterGain ? Fk.coneOuterGain : 0,
+          distanceModel: "undefined" !== typeof Fk.distanceModel ? Fk.distanceModel : "inverse",
+          maxDistance: "undefined" !== typeof Fk.maxDistance ? Fk.maxDistance : 1e4,
+          panningModel: "undefined" !== typeof Fk.panningModel ? Fk.panningModel : "HRTF",
+          refDistance: "undefined" !== typeof Fk.refDistance ? Fk.refDistance : 1,
+          rolloffFactor: "undefined" !== typeof Fk.rolloffFactor ? Fk.rolloffFactor : 1
+        }, Ik._onstereo = Fk.onstereo ? [{
+          Ie: Fk.onstereo
+        }] : [], Ik._onpos = Fk.onpos ? [{
+          Ie: Fk.onpos
+        }] : [], Ik._onorientation = Fk.onorientation ? [{
+          Ie: Fk.onorientation
+        }] : [], kk.call(this, Fk)
+      }), Howl.prototype.stereo = function(kk, Ik) {
+        var Xk = this;
+        if (!Xk._webAudio) return Xk;
+        if ("loaded" !== Xk._state) return Xk._queue.push({
           event: "stereo",
           action: function() {
-            QC.stereo(CC, ZC)
+            Xk.stereo(kk, Ik)
           }
-        }), QC;
-        var wC = "undefined" === typeof Howler.ctx.createStereoPanner ? "spatial" : "stereo";
-        if ("undefined" === typeof ZC) {
-          if ("number" !== typeof CC) return QC._stereo;
-          QC._stereo = CC, QC._pos = [CC, 0, 0]
+        }), Xk;
+        var Tk = "undefined" === typeof Howler.ctx.createStereoPanner ? "spatial" : "stereo";
+        if ("undefined" === typeof Ik) {
+          if ("number" !== typeof kk) return Xk._stereo;
+          Xk._stereo = kk, Xk._pos = [kk, 0, 0]
         }
-        for (var bC = QC._getSoundIds(ZC), nC = 0; nC < bC.length; nC++) {
-          var fC = QC._soundById(bC[nC]);
-          if (fC) {
-            if ("number" !== typeof CC) return fC._stereo;
-            fC._stereo = CC, fC._pos = [CC, 0, 0], fC._node && (fC._pannerAttr.panningModel = "equalpower", fC._panner && fC._panner.pan || zC(fC, wC), "spatial" === wC ? "undefined" !== typeof fC._panner.positionX ? (fC._panner.positionX.setValueAtTime(CC, Howler.ctx.currentTime), fC._panner.positionY.setValueAtTime(0, Howler.ctx.currentTime), fC._panner.positionZ.setValueAtTime(0, Howler.ctx.currentTime)) : fC._panner.setPosition(CC, 0, 0) : fC._panner.pan.setValueAtTime(CC, Howler.ctx.currentTime)), QC._emit("stereo", fC._id)
+        for (var ik = Xk._getSoundIds(Ik), yk = 0; yk < ik.length; yk++) {
+          var lk = Xk._soundById(ik[yk]);
+          if (lk) {
+            if ("number" !== typeof kk) return lk._stereo;
+            lk._stereo = kk, lk._pos = [kk, 0, 0], lk._node && (lk._pannerAttr.panningModel = "equalpower", lk._panner && lk._panner.pan || Fk(lk, Tk), "spatial" === Tk ? "undefined" !== typeof lk._panner.positionX ? (lk._panner.positionX.setValueAtTime(kk, Howler.ctx.currentTime), lk._panner.positionY.setValueAtTime(0, Howler.ctx.currentTime), lk._panner.positionZ.setValueAtTime(0, Howler.ctx.currentTime)) : lk._panner.setPosition(kk, 0, 0) : lk._panner.pan.setValueAtTime(kk, Howler.ctx.currentTime)), Xk._emit("stereo", lk._id)
           }
         }
-        return QC
-      }, Howl.prototype.pos = function(CC, ZC, QC, wC) {
-        var bC = this;
-        if (!bC._webAudio) return bC;
-        if ("loaded" !== bC._state) return bC._queue.push({
+        return Xk
+      }, Howl.prototype.pos = function(kk, Ik, Xk, Tk) {
+        var ik = this;
+        if (!ik._webAudio) return ik;
+        if ("loaded" !== ik._state) return ik._queue.push({
           event: "pos",
           action: function() {
-            bC.pos(CC, ZC, QC, wC)
+            ik.pos(kk, Ik, Xk, Tk)
           }
-        }), bC;
-        if (ZC = "number" !== typeof ZC ? 0 : ZC, QC = "number" !== typeof QC ? -.5 : QC, "undefined" === typeof wC) {
-          if ("number" !== typeof CC) return bC._pos;
-          bC._pos = [CC, ZC, QC]
+        }), ik;
+        if (Ik = "number" !== typeof Ik ? 0 : Ik, Xk = "number" !== typeof Xk ? -.5 : Xk, "undefined" === typeof Tk) {
+          if ("number" !== typeof kk) return ik._pos;
+          ik._pos = [kk, Ik, Xk]
         }
-        for (var nC = bC._getSoundIds(wC), fC = 0; fC < nC.length; fC++) {
-          var oC = bC._soundById(nC[fC]);
-          if (oC) {
-            if ("number" !== typeof CC) return oC._pos;
-            oC._pos = [CC, ZC, QC], oC._node && (oC._panner && !oC._panner.pan || zC(oC, "spatial"), "undefined" !== typeof oC._panner.positionX ? (oC._panner.positionX.setValueAtTime(CC, Howler.ctx.currentTime), oC._panner.positionY.setValueAtTime(ZC, Howler.ctx.currentTime), oC._panner.positionZ.setValueAtTime(QC, Howler.ctx.currentTime)) : oC._panner.setPosition(CC, ZC, QC)), bC._emit("pos", oC._id)
+        for (var yk = ik._getSoundIds(Tk), lk = 0; lk < yk.length; lk++) {
+          var ak = ik._soundById(yk[lk]);
+          if (ak) {
+            if ("number" !== typeof kk) return ak._pos;
+            ak._pos = [kk, Ik, Xk], ak._node && (ak._panner && !ak._panner.pan || Fk(ak, "spatial"), "undefined" !== typeof ak._panner.positionX ? (ak._panner.positionX.setValueAtTime(kk, Howler.ctx.currentTime), ak._panner.positionY.setValueAtTime(Ik, Howler.ctx.currentTime), ak._panner.positionZ.setValueAtTime(Xk, Howler.ctx.currentTime)) : ak._panner.setPosition(kk, Ik, Xk)), ik._emit("pos", ak._id)
           }
         }
-        return bC
-      }, Howl.prototype.orientation = function(CC, ZC, QC, wC) {
-        var bC = this;
-        if (!bC._webAudio) return bC;
-        if ("loaded" !== bC._state) return bC._queue.push({
+        return ik
+      }, Howl.prototype.orientation = function(kk, Ik, Xk, Tk) {
+        var ik = this;
+        if (!ik._webAudio) return ik;
+        if ("loaded" !== ik._state) return ik._queue.push({
           event: "orientation",
           action: function() {
-            bC.orientation(CC, ZC, QC, wC)
+            ik.orientation(kk, Ik, Xk, Tk)
           }
-        }), bC;
-        if (ZC = "number" !== typeof ZC ? bC._orientation[1] : ZC, QC = "number" !== typeof QC ? bC._orientation[2] : QC, "undefined" === typeof wC) {
-          if ("number" !== typeof CC) return bC._orientation;
-          bC._orientation = [CC, ZC, QC]
+        }), ik;
+        if (Ik = "number" !== typeof Ik ? ik._orientation[1] : Ik, Xk = "number" !== typeof Xk ? ik._orientation[2] : Xk, "undefined" === typeof Tk) {
+          if ("number" !== typeof kk) return ik._orientation;
+          ik._orientation = [kk, Ik, Xk]
         }
-        for (var nC = bC._getSoundIds(wC), fC = 0; fC < nC.length; fC++) {
-          var oC = bC._soundById(nC[fC]);
-          if (oC) {
-            if ("number" !== typeof CC) return oC._orientation;
-            oC._orientation = [CC, ZC, QC], oC._node && (oC._panner || (oC._pos || (oC._pos = bC._pos || [0, 0, -.5]), zC(oC, "spatial")), "undefined" !== typeof oC._panner.orientationX ? (oC._panner.orientationX.setValueAtTime(CC, Howler.ctx.currentTime), oC._panner.orientationY.setValueAtTime(ZC, Howler.ctx.currentTime), oC._panner.orientationZ.setValueAtTime(QC, Howler.ctx.currentTime)) : oC._panner.setOrientation(CC, ZC, QC)), bC._emit("orientation", oC._id)
+        for (var yk = ik._getSoundIds(Tk), lk = 0; lk < yk.length; lk++) {
+          var ak = ik._soundById(yk[lk]);
+          if (ak) {
+            if ("number" !== typeof kk) return ak._orientation;
+            ak._orientation = [kk, Ik, Xk], ak._node && (ak._panner || (ak._pos || (ak._pos = ik._pos || [0, 0, -.5]), Fk(ak, "spatial")), "undefined" !== typeof ak._panner.orientationX ? (ak._panner.orientationX.setValueAtTime(kk, Howler.ctx.currentTime), ak._panner.orientationY.setValueAtTime(Ik, Howler.ctx.currentTime), ak._panner.orientationZ.setValueAtTime(Xk, Howler.ctx.currentTime)) : ak._panner.setOrientation(kk, Ik, Xk)), ik._emit("orientation", ak._id)
           }
         }
-        return bC
+        return ik
       }, Howl.prototype.pannerAttr = function() {
-        var CC, ZC, QC, wC = this,
-          bC = arguments;
-        if (!wC._webAudio) return wC;
-        if (0 === bC.length) return wC._pannerAttr;
-        if (1 === bC.length) {
-          if ("object" !== typeof bC[0]) return (QC = wC._soundById(parseInt(bC[0], 10))) ? QC._pannerAttr : wC._pannerAttr;
-          CC = bC[0], "undefined" === typeof ZC && (CC.pannerAttr || (CC.pannerAttr = {
-            coneInnerAngle: CC.coneInnerAngle,
-            coneOuterAngle: CC.coneOuterAngle,
-            coneOuterGain: CC.coneOuterGain,
-            distanceModel: CC.distanceModel,
-            maxDistance: CC.maxDistance,
-            refDistance: CC.refDistance,
-            rolloffFactor: CC.rolloffFactor,
-            panningModel: CC.panningModel
-          }), wC._pannerAttr = {
-            coneInnerAngle: "undefined" !== typeof CC.pannerAttr.coneInnerAngle ? CC.pannerAttr.coneInnerAngle : wC._coneInnerAngle,
-            coneOuterAngle: "undefined" !== typeof CC.pannerAttr.coneOuterAngle ? CC.pannerAttr.coneOuterAngle : wC._coneOuterAngle,
-            coneOuterGain: "undefined" !== typeof CC.pannerAttr.coneOuterGain ? CC.pannerAttr.coneOuterGain : wC._coneOuterGain,
-            distanceModel: "undefined" !== typeof CC.pannerAttr.distanceModel ? CC.pannerAttr.distanceModel : wC._distanceModel,
-            maxDistance: "undefined" !== typeof CC.pannerAttr.maxDistance ? CC.pannerAttr.maxDistance : wC._maxDistance,
-            refDistance: "undefined" !== typeof CC.pannerAttr.refDistance ? CC.pannerAttr.refDistance : wC._refDistance,
-            rolloffFactor: "undefined" !== typeof CC.pannerAttr.rolloffFactor ? CC.pannerAttr.rolloffFactor : wC._rolloffFactor,
-            panningModel: "undefined" !== typeof CC.pannerAttr.panningModel ? CC.pannerAttr.panningModel : wC._panningModel
+        var kk, Ik, Xk, Tk = this,
+          ik = arguments;
+        if (!Tk._webAudio) return Tk;
+        if (0 === ik.length) return Tk._pannerAttr;
+        if (1 === ik.length) {
+          if ("object" !== typeof ik[0]) return (Xk = Tk._soundById(parseInt(ik[0], 10))) ? Xk._pannerAttr : Tk._pannerAttr;
+          kk = ik[0], "undefined" === typeof Ik && (kk.pannerAttr || (kk.pannerAttr = {
+            coneInnerAngle: kk.coneInnerAngle,
+            coneOuterAngle: kk.coneOuterAngle,
+            coneOuterGain: kk.coneOuterGain,
+            distanceModel: kk.distanceModel,
+            maxDistance: kk.maxDistance,
+            refDistance: kk.refDistance,
+            rolloffFactor: kk.rolloffFactor,
+            panningModel: kk.panningModel
+          }), Tk._pannerAttr = {
+            coneInnerAngle: "undefined" !== typeof kk.pannerAttr.coneInnerAngle ? kk.pannerAttr.coneInnerAngle : Tk._coneInnerAngle,
+            coneOuterAngle: "undefined" !== typeof kk.pannerAttr.coneOuterAngle ? kk.pannerAttr.coneOuterAngle : Tk._coneOuterAngle,
+            coneOuterGain: "undefined" !== typeof kk.pannerAttr.coneOuterGain ? kk.pannerAttr.coneOuterGain : Tk._coneOuterGain,
+            distanceModel: "undefined" !== typeof kk.pannerAttr.distanceModel ? kk.pannerAttr.distanceModel : Tk._distanceModel,
+            maxDistance: "undefined" !== typeof kk.pannerAttr.maxDistance ? kk.pannerAttr.maxDistance : Tk._maxDistance,
+            refDistance: "undefined" !== typeof kk.pannerAttr.refDistance ? kk.pannerAttr.refDistance : Tk._refDistance,
+            rolloffFactor: "undefined" !== typeof kk.pannerAttr.rolloffFactor ? kk.pannerAttr.rolloffFactor : Tk._rolloffFactor,
+            panningModel: "undefined" !== typeof kk.pannerAttr.panningModel ? kk.pannerAttr.panningModel : Tk._panningModel
           })
-        } else 2 === bC.length && (CC = bC[0], ZC = parseInt(bC[1], 10));
-        for (var nC = wC._getSoundIds(ZC), fC = 0; fC < nC.length; fC++)
-          if (QC = wC._soundById(nC[fC])) {
-            var oC = QC._pannerAttr;
-            oC = {
-              coneInnerAngle: "undefined" !== typeof CC.coneInnerAngle ? CC.coneInnerAngle : oC.coneInnerAngle,
-              coneOuterAngle: "undefined" !== typeof CC.coneOuterAngle ? CC.coneOuterAngle : oC.coneOuterAngle,
-              coneOuterGain: "undefined" !== typeof CC.coneOuterGain ? CC.coneOuterGain : oC.coneOuterGain,
-              distanceModel: "undefined" !== typeof CC.distanceModel ? CC.distanceModel : oC.distanceModel,
-              maxDistance: "undefined" !== typeof CC.maxDistance ? CC.maxDistance : oC.maxDistance,
-              refDistance: "undefined" !== typeof CC.refDistance ? CC.refDistance : oC.refDistance,
-              rolloffFactor: "undefined" !== typeof CC.rolloffFactor ? CC.rolloffFactor : oC.rolloffFactor,
-              panningModel: "undefined" !== typeof CC.panningModel ? CC.panningModel : oC.panningModel
+        } else 2 === ik.length && (kk = ik[0], Ik = parseInt(ik[1], 10));
+        for (var yk = Tk._getSoundIds(Ik), lk = 0; lk < yk.length; lk++)
+          if (Xk = Tk._soundById(yk[lk])) {
+            var ak = Xk._pannerAttr;
+            ak = {
+              coneInnerAngle: "undefined" !== typeof kk.coneInnerAngle ? kk.coneInnerAngle : ak.coneInnerAngle,
+              coneOuterAngle: "undefined" !== typeof kk.coneOuterAngle ? kk.coneOuterAngle : ak.coneOuterAngle,
+              coneOuterGain: "undefined" !== typeof kk.coneOuterGain ? kk.coneOuterGain : ak.coneOuterGain,
+              distanceModel: "undefined" !== typeof kk.distanceModel ? kk.distanceModel : ak.distanceModel,
+              maxDistance: "undefined" !== typeof kk.maxDistance ? kk.maxDistance : ak.maxDistance,
+              refDistance: "undefined" !== typeof kk.refDistance ? kk.refDistance : ak.refDistance,
+              rolloffFactor: "undefined" !== typeof kk.rolloffFactor ? kk.rolloffFactor : ak.rolloffFactor,
+              panningModel: "undefined" !== typeof kk.panningModel ? kk.panningModel : ak.panningModel
             };
-            var qC = QC._panner;
-            qC ? (qC.coneInnerAngle = oC.coneInnerAngle, qC.coneOuterAngle = oC.coneOuterAngle, qC.coneOuterGain = oC.coneOuterGain, qC.distanceModel = oC.distanceModel, qC.maxDistance = oC.maxDistance, qC.refDistance = oC.refDistance, qC.rolloffFactor = oC.rolloffFactor, qC.panningModel = oC.panningModel) : (QC._pos || (QC._pos = wC._pos || [0, 0, -.5]), zC(QC, "spatial"))
-          } return wC
-      }, Sound.prototype.init = function(CC) {
+            var qk = Xk._panner;
+            qk ? (qk.coneInnerAngle = ak.coneInnerAngle, qk.coneOuterAngle = ak.coneOuterAngle, qk.coneOuterGain = ak.coneOuterGain, qk.distanceModel = ak.distanceModel, qk.maxDistance = ak.maxDistance, qk.refDistance = ak.refDistance, qk.rolloffFactor = ak.rolloffFactor, qk.panningModel = ak.panningModel) : (Xk._pos || (Xk._pos = Tk._pos || [0, 0, -.5]), Fk(Xk, "spatial"))
+          } return Tk
+      }, Sound.prototype.init = function(kk) {
         return function() {
-          var zC = this,
-            ZC = zC._parent;
-          zC._orientation = ZC._orientation, zC._stereo = ZC._stereo, zC._pos = ZC._pos, zC._pannerAttr = ZC._pannerAttr, CC.call(this), zC._stereo ? ZC.stereo(zC._stereo) : zC._pos && ZC.pos(zC._pos[0], zC._pos[1], zC._pos[2], zC._id)
+          var Fk = this,
+            Ik = Fk._parent;
+          Fk._orientation = Ik._orientation, Fk._stereo = Ik._stereo, Fk._pos = Ik._pos, Fk._pannerAttr = Ik._pannerAttr, kk.call(this), Fk._stereo ? Ik.stereo(Fk._stereo) : Fk._pos && Ik.pos(Fk._pos[0], Fk._pos[1], Fk._pos[2], Fk._id)
         }
-      }(Sound.prototype.init), Sound.prototype.reset = function(CC) {
+      }(Sound.prototype.init), Sound.prototype.reset = function(kk) {
         return function() {
-          var zC = this,
-            ZC = zC._parent;
-          return zC._orientation = ZC._orientation, zC._stereo = ZC._stereo, zC._pos = ZC._pos, zC._pannerAttr = ZC._pannerAttr, zC._stereo ? ZC.stereo(zC._stereo) : zC._pos ? ZC.pos(zC._pos[0], zC._pos[1], zC._pos[2], zC._id) : zC._panner && (zC._panner.disconnect(0), zC._panner = void 0, ZC._refreshBuffer(zC)), CC.call(this)
+          var Fk = this,
+            Ik = Fk._parent;
+          return Fk._orientation = Ik._orientation, Fk._stereo = Ik._stereo, Fk._pos = Ik._pos, Fk._pannerAttr = Ik._pannerAttr, Fk._stereo ? Ik.stereo(Fk._stereo) : Fk._pos ? Ik.pos(Fk._pos[0], Fk._pos[1], Fk._pos[2], Fk._id) : Fk._panner && (Fk._panner.disconnect(0), Fk._panner = void 0, Ik._refreshBuffer(Fk)), kk.call(this)
         }
       }(Sound.prototype.reset);
-      var zC = function(CC, zC) {
-        "spatial" === (zC = zC || "spatial") ? (CC._panner = Howler.ctx.createPanner(), CC._panner.coneInnerAngle = CC._pannerAttr.coneInnerAngle, CC._panner.coneOuterAngle = CC._pannerAttr.coneOuterAngle, CC._panner.coneOuterGain = CC._pannerAttr.coneOuterGain, CC._panner.distanceModel = CC._pannerAttr.distanceModel, CC._panner.maxDistance = CC._pannerAttr.maxDistance, CC._panner.refDistance = CC._pannerAttr.refDistance, CC._panner.rolloffFactor = CC._pannerAttr.rolloffFactor, CC._panner.panningModel = CC._pannerAttr.panningModel, "undefined" !== typeof CC._panner.positionX ? (CC._panner.positionX.setValueAtTime(CC._pos[0], Howler.ctx.currentTime), CC._panner.positionY.setValueAtTime(CC._pos[1], Howler.ctx.currentTime), CC._panner.positionZ.setValueAtTime(CC._pos[2], Howler.ctx.currentTime)) : CC._panner.setPosition(CC._pos[0], CC._pos[1], CC._pos[2]), "undefined" !== typeof CC._panner.orientationX ? (CC._panner.orientationX.setValueAtTime(CC._orientation[0], Howler.ctx.currentTime), CC._panner.orientationY.setValueAtTime(CC._orientation[1], Howler.ctx.currentTime), CC._panner.orientationZ.setValueAtTime(CC._orientation[2], Howler.ctx.currentTime)) : CC._panner.setOrientation(CC._orientation[0], CC._orientation[1], CC._orientation[2])) : (CC._panner = Howler.ctx.createStereoPanner(), CC._panner.pan.setValueAtTime(CC._stereo, Howler.ctx.currentTime)), CC._panner.connect(CC._node), CC.kR || CC._parent.pause(CC._id, !0).play(CC._id, !0)
+      var Fk = function(kk, Fk) {
+        "spatial" === (Fk = Fk || "spatial") ? (kk._panner = Howler.ctx.createPanner(), kk._panner.coneInnerAngle = kk._pannerAttr.coneInnerAngle, kk._panner.coneOuterAngle = kk._pannerAttr.coneOuterAngle, kk._panner.coneOuterGain = kk._pannerAttr.coneOuterGain, kk._panner.distanceModel = kk._pannerAttr.distanceModel, kk._panner.maxDistance = kk._pannerAttr.maxDistance, kk._panner.refDistance = kk._pannerAttr.refDistance, kk._panner.rolloffFactor = kk._pannerAttr.rolloffFactor, kk._panner.panningModel = kk._pannerAttr.panningModel, "undefined" !== typeof kk._panner.positionX ? (kk._panner.positionX.setValueAtTime(kk._pos[0], Howler.ctx.currentTime), kk._panner.positionY.setValueAtTime(kk._pos[1], Howler.ctx.currentTime), kk._panner.positionZ.setValueAtTime(kk._pos[2], Howler.ctx.currentTime)) : kk._panner.setPosition(kk._pos[0], kk._pos[1], kk._pos[2]), "undefined" !== typeof kk._panner.orientationX ? (kk._panner.orientationX.setValueAtTime(kk._orientation[0], Howler.ctx.currentTime), kk._panner.orientationY.setValueAtTime(kk._orientation[1], Howler.ctx.currentTime), kk._panner.orientationZ.setValueAtTime(kk._orientation[2], Howler.ctx.currentTime)) : kk._panner.setOrientation(kk._orientation[0], kk._orientation[1], kk._orientation[2])) : (kk._panner = Howler.ctx.createStereoPanner(), kk._panner.pan.setValueAtTime(kk._stereo, Howler.ctx.currentTime)), kk._panner.connect(kk._node), kk.vx || kk._parent.pause(kk._id, !0).play(kk._id, !0)
       }
     }()
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

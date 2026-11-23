@@ -1,62 +1,62 @@
 export const id = 358;
 export const ids = [358];
 export const modules = {
-  61016: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      applyLightFoOffset: () => nC,
-      getFloatingOriginOffset: () => wC,
-      lightFoVersion: () => bC,
-      wrapRenderableForFO: () => fC
+  61356: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      applyLightFoOffset: () => yk,
+      getFloatingOriginOffset: () => Tk,
+      lightFoVersion: () => ik,
+      wrapRenderableForFO: () => lk
     });
-    var QC = ZC(41543);
+    var Xk = Ik(41729);
 
-    function wC(CC) {
-      const zC = CC.camera;
-      if (!zC) return {
+    function Tk(kk) {
+      const Fk = kk.camera;
+      if (!Fk) return {
         x: 0,
         y: 0,
         z: 0
       };
-      const ZC = zC.worldMatrix;
+      const Ik = Fk.worldMatrix;
       return {
-        x: ZC[12],
-        y: ZC[13],
-        z: ZC[14]
+        x: Ik[12],
+        y: Ik[13],
+        z: Ik[14]
       }
     }
 
-    function bC(CC) {
-      return CC.camera ? CC.camera.worldMatrixVersion : 0
+    function ik(kk) {
+      return kk.camera ? kk.camera.worldMatrixVersion : 0
     }
 
-    function nC(CC, zC) {
-      const ZC = zC.camera?.worldMatrix;
-      if (!ZC) return;
-      const wC = ZC[12],
-        bC = ZC[13],
-        nC = ZC[14];
-      let fC = 0;
-      for (const oC of zC.lights) {
-        if (fC >= QC.b) break;
-        if (!oC._writeLightUbo) continue;
-        const zC = 4 + 16 * fC,
-          ZC = CC[zC + 3];
-        if (0 === ZC || 2 === ZC) {
-          const ZC = oC.worldMatrix;
-          CC[zC] = ZC[12] - wC, CC[zC + 1] = ZC[13] - bC, CC[zC + 2] = ZC[14] - nC
+    function yk(kk, Fk) {
+      const Ik = Fk.camera?.worldMatrix;
+      if (!Ik) return;
+      const Tk = Ik[12],
+        ik = Ik[13],
+        yk = Ik[14];
+      let lk = 0;
+      for (const ak of Fk.lights) {
+        if (lk >= Xk.b) break;
+        if (!ak._writeLightUbo) continue;
+        const Fk = 4 + 16 * lk,
+          Ik = kk[Fk + 3];
+        if (0 === Ik || 2 === Ik) {
+          const Ik = ak.worldMatrix;
+          kk[Fk] = Ik[12] - Tk, kk[Fk + 1] = Ik[13] - ik, kk[Fk + 2] = Ik[14] - yk
         }
-        fC++
+        lk++
       }
     }
 
-    function fC(CC, zC, ZC) {
-      let QC = -1;
+    function lk(kk, Fk, Ik) {
+      let Xk = -1;
       return () => {
-        const wC = zC.camera ? zC.camera.worldMatrixVersion : -1;
-        wC !== QC && (ZC(), QC = wC), CC()
+        const Tk = Fk.camera ? Fk.camera.worldMatrixVersion : -1;
+        Tk !== Xk && (Ik(), Xk = Tk), kk()
       }
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

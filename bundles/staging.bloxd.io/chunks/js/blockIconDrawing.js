@@ -1,181 +1,181 @@
 export const id = 2;
 export const ids = [2];
 export const modules = {
-  36279: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      drawBlockIcon: () => PC,
-      drawBlockIconUrl: () => GC,
-      getDrawnBlockIcon: () => pC
+  36377: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      drawBlockIcon: () => Jk,
+      drawBlockIconUrl: () => xk,
+      getDrawnBlockIcon: () => Hk
     });
-    var QC = ZC(36288);
-    const wC = {
+    var Xk = Ik(36386);
+    const Tk = {
         boxes: [
           [0, 0, 0, 1, 1, 1]
         ],
         cropFaces: !1
       },
-      bC = {
+      ik = {
         boxes: [
           [0, 0, 0, 1, .5, 1]
         ],
         cropFaces: !1
       },
-      nC = {
+      yk = {
         boxes: [
           [0, 0, 0, 1, .5, 1],
           [0, .5, 0, .5, 1, 1]
         ],
         cropFaces: !0
       };
-    const fC = 1e-6;
+    const lk = 1e-6;
 
-    function oC(CC, zC, ZC, QC) {
+    function ak(kk, Fk, Ik, Xk) {
       let {
-        origin: wC,
-        across: bC,
-        down: nC,
-        texture: oC,
-        rect: [qC, FC, WC, NC],
-        shade: MC
-      } = QC;
-      const gC = bC.x * nC.y - bC.y * nC.x;
-      if (Math.abs(gC) < 1e-9) return;
-      const SC = [wC.x, wC.x + bC.x, wC.x + nC.x, wC.x + bC.x + nC.x],
-        pC = [wC.y, wC.y + bC.y, wC.y + nC.y, wC.y + bC.y + nC.y],
-        PC = Math.max(0, Math.floor(Math.min(...SC))),
-        GC = Math.min(ZC - 1, Math.ceil(Math.max(...SC))),
-        RC = Math.max(0, Math.floor(Math.min(...pC))),
-        AC = Math.min(ZC - 1, Math.ceil(Math.max(...pC)));
-      for (let xC = RC; xC <= AC; xC++)
-        for (let QC = PC; QC <= GC; QC++) {
-          const SC = QC + .5 - wC.x,
-            pC = xC + .5 - wC.y,
-            PC = (SC * nC.y - pC * nC.x) / gC,
-            GC = (bC.x * pC - bC.y * SC) / gC;
-          if (PC < -fC || PC > 1 + fC || GC < -fC || GC > 1 + fC) continue;
-          const RC = xC * ZC + QC;
-          zC[RC] = 1;
-          const AC = qC + Math.min(Math.max(PC, 0), 1) * (WC - qC),
-            JC = FC + Math.min(Math.max(GC, 0), 1) * (NC - FC),
-            IC = Math.min(oC.width - 1, Math.floor(AC * oC.width)),
-            iC = 4 * (Math.min(oC.height - 1, Math.floor(JC * oC.height)) * oC.width + IC),
-            vC = oC.pixels[iC + 3] / 255;
-          if (0 === vC) continue;
-          const eC = 4 * RC,
-            hC = CC[eC + 3] / 255 * (1 - vC),
-            KC = vC + hC;
-          for (let zC = 0; zC < 3; zC++) CC[eC + zC] = (oC.pixels[iC + zC] * MC * vC + CC[eC + zC] * hC) / KC;
-          CC[eC + 3] = 255 * KC
+        origin: Tk,
+        across: ik,
+        down: yk,
+        texture: ak,
+        rect: [qk, Lk, tk, Zk],
+        shade: jk
+      } = Xk;
+      const ek = ik.x * yk.y - ik.y * yk.x;
+      if (Math.abs(ek) < 1e-9) return;
+      const wk = [Tk.x, Tk.x + ik.x, Tk.x + yk.x, Tk.x + ik.x + yk.x],
+        Hk = [Tk.y, Tk.y + ik.y, Tk.y + yk.y, Tk.y + ik.y + yk.y],
+        Jk = Math.max(0, Math.floor(Math.min(...wk))),
+        xk = Math.min(Ik - 1, Math.ceil(Math.max(...wk))),
+        Pk = Math.max(0, Math.floor(Math.min(...Hk))),
+        Kk = Math.min(Ik - 1, Math.ceil(Math.max(...Hk)));
+      for (let Qk = Pk; Qk <= Kk; Qk++)
+        for (let Xk = Jk; Xk <= xk; Xk++) {
+          const wk = Xk + .5 - Tk.x,
+            Hk = Qk + .5 - Tk.y,
+            Jk = (wk * yk.y - Hk * yk.x) / ek,
+            xk = (ik.x * Hk - ik.y * wk) / ek;
+          if (Jk < -lk || Jk > 1 + lk || xk < -lk || xk > 1 + lk) continue;
+          const Pk = Qk * Ik + Xk;
+          Fk[Pk] = 1;
+          const Kk = qk + Math.min(Math.max(Jk, 0), 1) * (tk - qk),
+            sk = Lk + Math.min(Math.max(xk, 0), 1) * (Zk - Lk),
+            Vk = Math.min(ak.width - 1, Math.floor(Kk * ak.width)),
+            zk = 4 * (Math.min(ak.height - 1, Math.floor(sk * ak.height)) * ak.width + Vk),
+            Sk = ak.pixels[zk + 3] / 255;
+          if (0 === Sk) continue;
+          const vk = 4 * Pk,
+            Ek = kk[vk + 3] / 255 * (1 - Sk),
+            Ok = Sk + Ek;
+          for (let Fk = 0; Fk < 3; Fk++) kk[vk + Fk] = (ak.pixels[zk + Fk] * jk * Sk + kk[vk + Fk] * Ek) / Ok;
+          kk[vk + 3] = 255 * Ok
         }
     }
-    var qC = ZC(36291);
-    const FC = new Map,
-      WC = new Map,
-      NC = new Map,
-      MC = new Map;
+    var qk = Ik(36388);
+    const Lk = new Map,
+      tk = new Map,
+      Zk = new Map,
+      jk = new Map;
 
-    function gC(CC, zC, ZC) {
-      return `${zC}|${ZC}|${CC}`
+    function ek(kk, Fk, Ik) {
+      return `${Fk}|${Ik}|${kk}`
     }
 
-    function SC(CC, zC, ZC) {
-      let QC = CC.get(zC);
-      return void 0 === QC && (QC = ZC().catch((ZC => {
-        throw CC.delete(zC), ZC
-      })), CC.set(zC, QC)), QC
+    function wk(kk, Fk, Ik) {
+      let Xk = kk.get(Fk);
+      return void 0 === Xk && (Xk = Ik().catch((Ik => {
+        throw kk.delete(Fk), Ik
+      })), kk.set(Fk, Xk)), Xk
     }
 
-    function pC(CC, zC) {
-      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return WC.get(gC(CC, zC, ZC))
+    function Hk(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return tk.get(ek(kk, Fk, Ik))
     }
 
-    function PC(CC, zC, ZC, QC) {
-      const wC = gC(CC, zC, ZC);
-      return SC(FC, wC, (async () => {
-        const bC = await RC(QC(CC), zC, ZC);
-        return WC.set(wC, bC), bC
+    function Jk(kk, Fk, Ik, Xk) {
+      const Tk = ek(kk, Fk, Ik);
+      return wk(Lk, Tk, (async () => {
+        const ik = await Pk(Xk(kk), Fk, Ik);
+        return tk.set(Tk, ik), ik
       }))
     }
 
-    function GC(CC, zC, ZC, QC) {
-      return SC(NC, gC(CC, zC, ZC), (async () => {
-        var wC;
-        const bC = QC(CC);
-        return null !== (wC = await (0, qC.c)(bC, zC, ZC)) && void 0 !== wC ? wC : (await RC(bC, zC, ZC)).toDataURL()
+    function xk(kk, Fk, Ik, Xk) {
+      return wk(Zk, ek(kk, Fk, Ik), (async () => {
+        var Tk;
+        const ik = Xk(kk);
+        return null !== (Tk = await (0, qk.d)(ik, Fk, Ik)) && void 0 !== Tk ? Tk : (await Pk(ik, Fk, Ik)).toDataURL()
       }))
     }
-    async function RC(CC, zC, ZC) {
+    async function Pk(kk, Fk, Ik) {
       let {
-        top: fC,
-        left: qC,
-        right: FC,
-        itemType: WC
-      } = CC;
-      const [NC, MC, gC] = await Promise.all([AC(fC), AC(qC), AC(FC)]), SC = function(CC, zC, ZC, wC) {
-        const bC = (0, QC.h)(ZC, wC),
-          nC = bC * QC.c.across,
-          fC = bC * QC.c.down,
-          qC = bC * QC.c.up,
-          FC = Math.max(...zC.boxes.map((CC => CC[4]))),
-          WC = ZC / 2,
-          NC = fC + (ZC - fC - fC - FC * qC) / 2,
-          MC = (CC, zC, ZC) => ({
-            x: WC + (CC - ZC) * nC,
-            y: NC - fC + (CC + ZC) * fC + (FC - zC) * qC
+        top: lk,
+        left: qk,
+        right: Lk,
+        itemType: tk
+      } = kk;
+      const [Zk, jk, ek] = await Promise.all([Kk(lk), Kk(qk), Kk(Lk)]), wk = function(kk, Fk, Ik, Tk) {
+        const ik = (0, Xk.i)(Ik, Tk),
+          yk = ik * Xk.c.across,
+          lk = ik * Xk.c.down,
+          qk = ik * Xk.c.up,
+          Lk = Math.max(...Fk.boxes.map((kk => kk[4]))),
+          tk = Ik / 2,
+          Zk = lk + (Ik - lk - lk - Lk * qk) / 2,
+          jk = (kk, Fk, Ik) => ({
+            x: tk + (kk - Ik) * yk,
+            y: Zk - lk + (kk + Ik) * lk + (Lk - Fk) * qk
           }),
-          gC = (CC, ZC, QC, wC, bC, nC) => ({
-            origin: CC,
+          ek = (kk, Ik, Xk, Tk, ik, yk) => ({
+            origin: kk,
             across: {
-              x: ZC.x - CC.x,
-              y: ZC.y - CC.y
+              x: Ik.x - kk.x,
+              y: Ik.y - kk.y
             },
             down: {
-              x: QC.x - CC.x,
-              y: QC.y - CC.y
+              x: Xk.x - kk.x,
+              y: Xk.y - kk.y
             },
-            texture: wC,
-            rect: zC.cropFaces ? bC : [0, 0, 1, 1],
-            shade: nC
+            texture: Tk,
+            rect: Fk.cropFaces ? ik : [0, 0, 1, 1],
+            shade: yk
           }),
-          SC = new Uint8ClampedArray(ZC * ZC * 4),
-          pC = new Uint8Array(ZC * ZC),
-          PC = QC.g;
-        for (const [QC, GC, RC, AC, xC, JC] of zC.boxes) {
-          const zC = gC(MC(AC, xC, JC), MC(AC, xC, RC), MC(AC, GC, JC), CC.right, [1 - JC, 1 - xC, 1 - RC, 1 - GC], PC.right),
-            wC = gC(MC(QC, xC, JC), MC(AC, xC, JC), MC(QC, GC, JC), CC.left, [QC, 1 - xC, AC, 1 - GC], PC.left),
-            bC = gC(MC(QC, xC, RC), MC(AC, xC, RC), MC(QC, xC, JC), CC.top, [QC, RC, AC, JC], PC.top);
-          for (const CC of [zC, wC, bC]) oC(SC, pC, ZC, CC)
+          wk = new Uint8ClampedArray(Ik * Ik * 4),
+          Hk = new Uint8Array(Ik * Ik),
+          Jk = Xk.g;
+        for (const [Xk, xk, Pk, Kk, Qk, sk] of Fk.boxes) {
+          const Fk = ek(jk(Kk, Qk, sk), jk(Kk, Qk, Pk), jk(Kk, xk, sk), kk.right, [1 - sk, 1 - Qk, 1 - Pk, 1 - xk], Jk.right),
+            Tk = ek(jk(Xk, Qk, sk), jk(Kk, Qk, sk), jk(Xk, xk, sk), kk.left, [Xk, 1 - Qk, Kk, 1 - xk], Jk.left),
+            ik = ek(jk(Xk, Qk, Pk), jk(Kk, Qk, Pk), jk(Xk, Qk, sk), kk.top, [Xk, Pk, Kk, sk], Jk.top);
+          for (const kk of [Fk, Tk, ik]) ak(wk, Hk, Ik, kk)
         }
-        return (0, QC.j)(SC, ZC, wC, (CC => 1 === pC[CC])), SC
+        return (0, Xk.k)(wk, Ik, Tk, (kk => 1 === Hk[kk])), wk
       }({
-        top: NC,
-        left: MC,
-        right: gC
-      }, function(CC) {
-        return "SlabBlock" === CC ? bC : "StairsBlock" === CC ? nC : wC
-      }(WC), zC, ZC), pC = document.createElement("canvas");
-      pC.width = zC, pC.height = zC;
-      const PC = pC.getContext("2d");
-      if (!PC) throw new Error("Failed to get 2D context");
-      return PC.putImageData(new ImageData(SC, zC, zC), 0, 0), pC
+        top: Zk,
+        left: jk,
+        right: ek
+      }, function(kk) {
+        return "SlabBlock" === kk ? ik : "StairsBlock" === kk ? yk : Tk
+      }(tk), Fk, Ik), Hk = document.createElement("canvas");
+      Hk.width = Fk, Hk.height = Fk;
+      const Jk = Hk.getContext("2d");
+      if (!Jk) throw new Error("Failed to get 2D context");
+      return Jk.putImageData(new ImageData(wk, Fk, Fk), 0, 0), Hk
     }
 
-    function AC(CC) {
-      return SC(MC, CC, (async () => {
-        const zC = await (0, qC.f)(CC),
-          ZC = document.createElement("canvas");
-        ZC.width = zC.width, ZC.height = zC.height;
-        const QC = ZC.getContext("2d");
-        if (!QC) throw new Error("Failed to get 2D context");
-        return QC.drawImage(zC, 0, 0), {
-          width: zC.width,
-          height: zC.height,
-          pixels: QC.getImageData(0, 0, zC.width, zC.height).data
+    function Kk(kk) {
+      return wk(jk, kk, (async () => {
+        const Fk = await (0, qk.i)(kk),
+          Ik = document.createElement("canvas");
+        Ik.width = Fk.width, Ik.height = Fk.height;
+        const Xk = Ik.getContext("2d");
+        if (!Xk) throw new Error("Failed to get 2D context");
+        return Xk.drawImage(Fk, 0, 0), {
+          width: Fk.width,
+          height: Fk.height,
+          pixels: Xk.getImageData(0, 0, Fk.width, Fk.height).data
         }
       }))
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

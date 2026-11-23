@@ -1,573 +1,542 @@
 export const id = 245;
 export const ids = [245];
 export const modules = {
-  38631: (CC, zC, ZC) => {
-    var QC = {
-      "./cape_cow_cream.png": 27940,
-      "./cape_cow_normal.png": 27949,
-      "./cape_creator_level1.png": 27958,
-      "./cape_creator_level2.png": 27960,
-      "./cape_creator_level3.png": 27965,
-      "./cape_none.png": 27970,
-      "./cape_pig.png": 27978,
-      "./cape_sheep.png": 27981,
-      "./cape_super.png": 27987,
-      "./cape_super_inverted.png": 27996,
-      "./cape_youtuber.png": 28e3
-    };
-
-    function wC(CC) {
-      var zC = bC(CC);
-      return ZC(zC)
-    }
-
-    function bC(CC) {
-      if (!ZC.o(QC, CC)) {
-        var zC = new Error("Cannot find module '" + CC + "'");
-        throw zC.code = "MODULE_NOT_FOUND", zC
-      }
-      return QC[CC]
-    }
-    wC.keys = function() {
-      return Object.keys(QC)
-    }, wC.resolve = bC, CC.exports = wC, wC.id = 38631
-  },
-  41e3: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      openCharacterPreview: () => yC
+  41185: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      openCharacterPreview: () => gk
     });
-    var QC = ZC(37934),
-      wC = ZC(2753),
-      bC = ZC(583),
-      nC = ZC(37023),
-      fC = ZC(2173),
-      oC = ZC(37014),
-      qC = ZC(39635),
-      FC = ZC(39902),
-      WC = ZC(40925),
-      NC = ZC(36961),
-      MC = ZC(40076),
-      gC = ZC(37138),
-      SC = ZC(40092),
-      pC = ZC(40968),
-      PC = ZC(36952),
-      GC = ZC(1169),
-      RC = ZC(2166),
-      AC = ZC(37095),
-      xC = ZC(37201);
-    class JC {
-      constructor(CC, zC) {
-        this.pose = CC, this.nodes = void 0, this.nodes = CC.boneNames.map((CC => zC.get(CC)))
+    var Xk = Ik(38105),
+      Tk = Ik(2700),
+      ik = Ik(612),
+      yk = Ik(37224),
+      lk = Ik(2157),
+      ak = Ik(37215),
+      qk = Ik(39806),
+      Lk = Ik(40082),
+      tk = Ik(41093),
+      Zk = Ik(37144),
+      jk = Ik(40252),
+      ek = Ik(37327),
+      wk = Ik(40269),
+      Hk = Ik(41147),
+      Jk = Ik(37139),
+      xk = Ik(1217),
+      Pk = Ik(2148),
+      Kk = Ik(37293),
+      Qk = Ik(37383);
+    class sk {
+      constructor(kk, Fk) {
+        this.pose = kk, this.nodes = void 0, this.nodes = kk.boneNames.map((kk => Fk.get(kk)))
       }
-      write(CC) {
-        this.pose.pose(CC);
+      write(kk) {
+        this.pose.pose(kk);
         const {
-          rotations: zC
+          rotations: Fk
         } = this.pose;
-        for (let ZC = 0; ZC < this.nodes.length; ZC++) {
-          const CC = 4 * ZC;
-          this.nodes[ZC].rotationQuaternion.set(zC[CC], zC[CC + 1], zC[CC + 2], zC[CC + 3])
+        for (let Ik = 0; Ik < this.nodes.length; Ik++) {
+          const kk = 4 * Ik;
+          this.nodes[Ik].rotationQuaternion.set(Fk[kk], Fk[kk + 1], Fk[kk + 2], Fk[kk + 3])
         }
       }
     }
 
-    function IC(CC) {
-      CC.unfreezeWorldMatrix();
-      for (const zC of CC.getChildren()) IC(zC)
+    function Vk(kk) {
+      kk.unfreezeWorldMatrix();
+      for (const Fk of kk.getChildren()) Vk(Fk)
     }
 
-    function iC(CC, zC) {
-      CC.isVisible = zC;
-      for (const ZC of CC.getChildMeshes()) ZC.isVisible = zC
+    function zk(kk, Fk) {
+      kk.isVisible = Fk;
+      for (const Ik of kk.getChildMeshes()) Ik.isVisible = Fk
     }
-    class vC {
-      constructor(CC, zC, ZC) {
-        this.sS = CC, this.thinInstMgr = zC, this.WH = ZC, this.modelCache = {}, this.attachmentsByType = {}, this.shownBones = [], this.cosmeticNames = {}
+    class Sk {
+      constructor(kk, Fk, Ik) {
+        this.Yw = kk, this.thinInstMgr = Fk, this.Ip = Ik, this.modelCache = {}, this.attachmentsByType = {}, this.shownBones = [], this.cosmeticNames = {}
       }
-      loadModel(CC, zC, ZC) {
-        const QC = (0, AC.e)(CC, zC);
-        return QC in this.modelCache || (this.modelCache[QC] = (async () => {
+      loadModel(kk, Fk, Ik) {
+        const Xk = (0, Kk.f)(kk, Fk);
+        return Xk in this.modelCache || (this.modelCache[Xk] = (async () => {
           try {
-            const QC = await (0, AC.f)(CC, this.sS),
-              wC = new Map;
-            for (const CC of QC.getNodes()) wC.set(CC.name, CC);
-            const bC = (0, AC.b)(null !== zC && void 0 !== zC ? zC : CC, this.sS);
-            (0, AC.i)(QC, bC, {
-              keepTransforms: void 0 !== ZC,
-              onProcessedMesh: CC => {
-                (0, AC.l)(CC), this.sS.zQC(CC, !1), CC.isVisible = !1
+            const Xk = await (0, Kk.j)(kk, this.Yw),
+              Tk = new Map;
+            for (const kk of Xk.getNodes()) Tk.set(kk.name, kk);
+            const ik = (0, Kk.c)(null !== Fk && void 0 !== Fk ? Fk : kk, this.Yw);
+            (0, Kk.l)(Xk, ik, {
+              keepTransforms: void 0 !== Ik,
+              onProcessedMesh: kk => {
+                (0, Kk.p)(kk), this.Yw.lXk(kk, !1), kk.isVisible = !1
               }
             });
-            for (const CC of QC.rootNodes) IC(CC);
-            const nC = void 0 === ZC ? null : (0, xC.d)(ZC, (CC => {
-              var zC, ZC;
-              return null !== (zC = null === (ZC = wC.get(CC)) || void 0 === ZC ? void 0 : ZC.rotationQuaternion) && void 0 !== zC ? zC : null
+            for (const kk of Xk.rootNodes) Vk(kk);
+            const yk = void 0 === Ik ? null : (0, Qk.e)(Ik, (kk => {
+              var Fk, Ik;
+              return null !== (Fk = null === (Ik = Tk.get(kk)) || void 0 === Ik ? void 0 : Ik.rotationQuaternion) && void 0 !== Fk ? Fk : null
             }));
             return {
-              nodesByName: wC,
-              bones: null === nC ? null : new JC(nC, wC)
+              nodesByName: Tk,
+              bones: null === yk ? null : new sk(yk, Tk)
             }
-          } catch (wC) {
-            throw delete this.modelCache[QC], console.error(`Failed to load preview attachment ${QC}:`, wC), wC
+          } catch (Tk) {
+            throw delete this.modelCache[Xk], console.error(`Failed to load preview attachment ${Xk}:`, Tk), Tk
           }
-        })()), this.modelCache[QC]
+        })()), this.modelCache[Xk]
       }
-      async update(CC, zC) {
-        var ZC;
+      async update(kk, Fk) {
+        var Ik;
         const {
-          thinInstMgr: QC,
-          WH: wC
+          thinInstMgr: Xk,
+          Ip: Tk
         } = this;
-        this.cosmeticNames[CC] = zC;
-        const bC = this.attachmentsByType[CC];
-        if (bC)
+        this.cosmeticNames[kk] = Fk;
+        const ik = this.attachmentsByType[kk];
+        if (ik)
           for (const {
-              mesh: fC,
-              destNode: oC,
-              bones: qC
+              mesh: lk,
+              destNode: ak,
+              bones: qk
             }
-            of bC) {
-            null !== qC && (0, GC.qb)(this.shownBones, qC), iC(fC, !1);
-            const CC = QC.getNamedNode(wC, oC);
-            QC.detachTransformNodeIfFound(fC, wC, CC)
+            of ik) {
+            null !== qk && (0, xk.kb)(this.shownBones, qk), zk(lk, !1);
+            const kk = Xk.getNamedNode(Tk, ak);
+            Xk.detachTransformNodeIfFound(lk, Tk, kk)
           }
-        this.attachmentsByType[CC] = [];
-        const nC = (0, RC.j)(CC, zC);
-        if (null !== nC && void 0 !== nC && null !== (ZC = nC.attachments) && void 0 !== ZC && ZC.length)
-          for (const fC of nC.attachments) {
-            let ZC;
+        this.attachmentsByType[kk] = [];
+        const yk = (0, Pk.k)(kk, Fk);
+        if (null !== yk && void 0 !== yk && null !== (Ik = yk.attachments) && void 0 !== Ik && Ik.length)
+          for (const lk of yk.attachments) {
+            let Ik;
             try {
-              ZC = await this.loadModel(fC.modelGlb, fC.texture, fC.animation)
+              Ik = await this.loadModel(lk.modelGlb, lk.texture, lk.animation)
             } catch {
               continue
             }
-            if (this.cosmeticNames[CC] !== zC) return;
-            const bC = ZC.nodesByName.get(fC.modelNode);
-            if (!bC) {
-              console.error(`Preview attachment node ${fC.modelNode} not found in ${fC.modelGlb}`);
+            if (this.cosmeticNames[kk] !== Fk) return;
+            const ik = Ik.nodesByName.get(lk.modelNode);
+            if (!ik) {
+              console.error(`Preview attachment node ${lk.modelNode} not found in ${lk.modelGlb}`);
               continue
             }
-            iC(bC, !0), (0, AC.q)(bC, fC.overlayColour);
-            const nC = QC.getNamedNode(wC, fC.destNode);
-            QC.attachTransformNode(bC, wC, nC), this.attachmentsByType[CC].push({
-              mesh: bC,
-              destNode: fC.destNode,
-              bones: ZC.bones
-            }), null !== ZC.bones && this.shownBones.push(ZC.bones)
+            zk(ik, !0), (0, Kk.v)(ik, lk.overlayColour);
+            const yk = Xk.getNamedNode(Tk, lk.destNode);
+            Xk.attachTransformNode(ik, Tk, yk), this.attachmentsByType[kk].push({
+              mesh: ik,
+              destNode: lk.destNode,
+              bones: Ik.bones
+            }), null !== Ik.bones && this.shownBones.push(Ik.bones)
           }
       }
-      writePoses(CC) {
-        for (const zC of this.shownBones) zC.write(CC)
+      writePoses(kk) {
+        for (const Fk of this.shownBones) Fk.write(kk)
       }
     }
-    var eC = ZC(37032),
-      hC = (ZC(40948), ZC(40308), ZC(40956), ZC(34194));
-    let KC, YC, dC, mC, HC, EC, lC, XC, cC, uC;
-    const rC = document.createElement("canvas");
-    async function sC() {
-      await new Promise((CC => {
+    var vk = Ik(37227),
+      Ek = (Ik(41117), Ik(40498), Ik(41123), Ik(34222));
+    let Ok, nk, Gk, pk, uk, bk, Rk, Uk, Ck, Nk;
+    const ck = document.createElement("canvas");
+    async function Wk() {
+      await new Promise((kk => {
         setTimeout((() => {
-          CC()
+          kk()
         }), 100)
       }))
     }
-    rC.classList.add("CharCustomisationPreviewCanvas");
-    const TC = {};
+    ck.classList.add("CharCustomisationPreviewCanvas");
+    const fk = {};
 
-    function aC(CC, zC) {
-      rC.width = CC, rC.height = zC, KC.resize()
+    function Bk(kk, Fk) {
+      ck.width = kk, ck.height = Fk, Ok.resize()
     }
-    let tC = 0;
-    class DC {
-      constructor(CC, zC) {
-        this.framing = zC, this.ready = uC, this.dev = {
-          canvas: () => rC,
-          isolateHead(CC) {
-            const zC = EC.getNodeNames(lC);
-            for (let ZC = 0; ZC < zC.length; ZC++) "HeadMesh" !== zC[ZC] && "__root__" !== zC[ZC] && "TorsoNode" !== zC[ZC] && EC.setNodeEnabled(lC, ZC, !1);
-            if (CC) {
-              const CC = EC.getNamedNode(lC, "HeadMesh");
-              EC.setNodeDisableColorWrite(lC, CC, !0, (CC => {
-                const zC = new SC.StandardMaterial(`${CC.name}_depthOnly`, CC.Km());
-                return zC.disableColorWrite = !0, zC
+    let dk = 0;
+    class Yk {
+      constructor(kk, Fk) {
+        this.framing = Fk, this.ready = Nk, this.dev = {
+          canvas: () => ck,
+          isolateHead(kk) {
+            const Fk = bk.getNodeNames(Rk);
+            for (let Ik = 0; Ik < Fk.length; Ik++) "HeadMesh" !== Fk[Ik] && "__root__" !== Fk[Ik] && "TorsoNode" !== Fk[Ik] && bk.setNodeEnabled(Rk, Ik, !1);
+            if (kk) {
+              const kk = bk.getNamedNode(Rk, "HeadMesh");
+              bk.setNodeDisableColorWrite(Rk, kk, !0, (kk => {
+                const Fk = new wk.StandardMaterial(`${kk.name}_depthOnly`, kk.mG());
+                return Fk.disableColorWrite = !0, Fk
               }))
             }
-            EC.setPosition(lC, 0, -12, 0)
+            bk.setPosition(Rk, 0, -12, 0)
           }
         }, this.closed = !1, this.resetCamera();
-        const ZC = CC.getBoundingClientRect();
-        aC(ZC.width, ZC.height), tC++, KC.stopRenderLoop(), KC.runRenderLoop((() => {
-          var CC, zC;
-          null === (CC = XC) || void 0 === CC || CC.render(KC.getDeltaTime()), null === (zC = cC) || void 0 === zC || zC.writePoses(performance.now() / 1e3), dC.render()
+        const Ik = kk.getBoundingClientRect();
+        Bk(Ik.width, Ik.height), dk++, Ok.stopRenderLoop(), Ok.runRenderLoop((() => {
+          var kk, Fk;
+          null === (kk = Uk) || void 0 === kk || kk.render(Ok.getDeltaTime()), null === (Fk = Ck) || void 0 === Fk || Fk.writePoses(performance.now() / 1e3), Gk.render()
         }))
       }
       isReady() {
-        return !!mC
+        return !!pk
       }
-      setCosmetic(CC, zC) {
-        ! function(CC, zC) {
-          if (!mC) return;
-          const nC = (0, wC.e)();
-          nC.qY(!1), QC.b.Player.meshApi.updatePlayerCosmetic(nC.qE, lC, CC, zC, !0), "cape" === CC && (zC === bC.h ? HC.IK(!1) : (HC.IK(!0), HC.material.diffuseTexture = new pC.e(ZC(38631)(`./cape_${zC}.png`), HC.Km(), {
+      setCosmetic(kk, Fk) {
+        ! function(kk, Fk) {
+          if (!pk) return;
+          const yk = (0, Tk.e)();
+          yk.sE(!1), Xk.c.Player.meshApi.updatePlayerCosmetic(yk.oR, Rk, kk, Fk, !0), "cape" === kk && (Fk === ik.f ? uk.Av(!1) : (uk.Av(!0), uk.material.diffuseTexture = new Hk.c(Ik(38794)(`./cape_${Fk}.png`), uk.mG(), {
             invertY: !1,
-            samplingMode: pC.e.NEAREST_NEAREST_MIPLINEAR
+            samplingMode: Hk.c.NEAREST_NEAREST_MIPLINEAR
           })));
-          TC[CC] = cC.update(CC, zC)
-        }(CC, zC)
+          fk[kk] = Ck.update(kk, Fk)
+        }(kk, Fk)
       }
-      playEmote(CC) {
-        if (!XC) return;
-        if (!CC) return void XC.stopAnimation(oC.d.Emote);
-        const zC = (0, nC.f)((0, fC.h)(CC).animation);
-        XC.startAnimation(zC, oC.d.Emote, 0, fC.d)
+      playEmote(kk) {
+        if (!Uk) return;
+        if (!kk) return void Uk.stopAnimation(ak.c.Emote);
+        const Fk = (0, yk.i)((0, lk.i)(kk).animation);
+        Uk.startAnimation(Fk, ak.c.Emote, 0, lk.c)
       }
-      async untilDrawn(CC) {
-        if (await sC(), "cape" === CC && HC) {
-          const CC = HC.material,
-            zC = null === CC || void 0 === CC ? void 0 : CC.diffuseTexture;
-          zC && !zC.isReady() && (await new Promise((CC => {
-            zC.onLoadObservable.addOnce((() => {
-              CC()
+      async untilDrawn(kk) {
+        if (await Wk(), "cape" === kk && uk) {
+          const kk = uk.material,
+            Fk = null === kk || void 0 === kk ? void 0 : kk.diffuseTexture;
+          Fk && !Fk.isReady() && (await new Promise((kk => {
+            Fk.onLoadObservable.addOnce((() => {
+              kk()
             }))
-          })), await sC())
+          })), await Wk())
         }
-        TC[CC] && (await TC[CC], await sC()), await dC.whenReadyAsync(), await new Promise((CC => {
-          dC.onAfterRenderObservable.addOnce((() => {
-            CC()
+        fk[kk] && (await fk[kk], await Wk()), await Gk.whenReadyAsync(), await new Promise((kk => {
+          Gk.onAfterRenderObservable.addOnce((() => {
+            kk()
           }))
         }))
       }
-      setOrbit(CC) {
-        jC(CC)
+      setOrbit(kk) {
+        Ak(kk)
       }
       resetCamera() {
-        YC.inertialAlphaOffset = 0, YC.inertialBetaOffset = 0, YC.inertialRadiusOffset = 0, jC(hC.d[this.framing])
+        nk.inertialAlphaOffset = 0, nk.inertialBetaOffset = 0, nk.inertialRadiusOffset = 0, Ak(Ek.c[this.framing])
       }
-      resize(CC, zC) {
-        aC(CC, zC)
+      resize(kk, Fk) {
+        Bk(kk, Fk)
       }
       close() {
-        this.closed || (this.closed = !0, tC--, 0 === tC && KC.stopRenderLoop())
+        this.closed || (this.closed = !0, dk--, 0 === dk && Ok.stopRenderLoop())
       }
     }
 
-    function jC(CC) {
+    function Ak(kk) {
       let {
-        yaw: zC,
-        pitch: ZC,
-        radius: QC,
-        target: wC
-      } = CC;
-      YC.alpha = zC, YC.beta = ZC, QC && (YC.radius = QC), wC && YC.target.set(wC[0], wC[1], wC[2])
+        yaw: Fk,
+        pitch: Ik,
+        radius: Xk,
+        target: Tk
+      } = kk;
+      nk.alpha = Fk, nk.beta = Ik, Xk && (nk.radius = Xk), Tk && nk.target.set(Tk[0], Tk[1], Tk[2])
     }
 
-    function yC(CC, zC) {
-      return CC.appendChild(rC), KC || function() {
-        KC = new qC.d(rC, !0, {
+    function gk(kk, Fk) {
+      return kk.appendChild(ck), Ok || function() {
+        Ok = new qk.c(ck, !0, {
           preserveDrawingBuffer: !0
         });
-        const CC = (0, wC.e)();
-        KC.BZC = CC.Vg.engine.BZC, dC = new FC.e(KC), dC.clearColor = new gC.e(0, 0, 0, 0), dC.ambientColor = new gC.Color3(1, 1, 1), YC = new WC.d("cp", 0, 0, 1, NC.Eg.Zero(), dC), YC.attachControl(rC, !0), YC.panningSensibility = 0, uC = (0, QC.t)("Player", dC, !0).then((zC => {
-          mC = zC.meshApi, HC = zC.capeMesh, EC = CC.Vg.nH;
-          const ZC = 8.33;
-          lC = (0, QC.l)("Player", ZC, !0, !0), EC.setPosition(lC, 0, -8.33, 0);
-          const wC = EC.getNamedNode(lC, "BodyMesh");
-          EC.attachTransformNode(HC, lC, wC), EC.set(lC, "aOpacity", 1), EC.pE(lC, "aOpacity", 1), cC = new vC(dC, EC, lC), XC = new PC.AnimatorState, XC.MN = CC, XC.thinInstMgr = EC, XC.WH = lC, XC.AZC = EC.OZC(lC, 0), XC.modelLifeformType = "Player", XC.nodeNameAliases = (0, eC.b)("Player").nodeNameAliases;
-          const bC = HC.WE().boundingBox;
-          HC.position.y = ((24 - bC.maximum.y + bC.minimum.y) / 2 - 1 / 32) / ZC, HC.position.z = -1 / ZC, HC.rotationQuaternion = null;
-          const nC = Math.PI / 18,
-            fC = bC.maximum.y / ZC;
-          HC.rotation.x = nC;
-          const oC = Math.cos(nC),
-            qC = Math.sin(nC);
-          HC.position.y += fC * (1 - oC) + 0 * qC, HC.position.z -= fC * qC + 0 * (1 - oC);
-          const FC = new SC.StandardMaterial("capeMaterial", HC.Km());
-          HC.material = FC;
-          const WC = new gC.Color3(1, 1, 1);
-          FC.diffuseColor = new gC.Color3, FC.specularColor = new gC.Color3, FC.emissiveColor = new gC.Color3, FC.ambientColor = new gC.Color3, WC.scaleToRef(.43, FC.diffuseColor), WC.scaleToRef(1.75, FC.ambientColor), FC.freeze();
-          const pC = new MC.e("light", new NC.Eg(-.1, 1, -.3), dC);
-          pC.diffuse = new gC.Color3(1, 1, 1), pC.specular = new gC.Color3(1, 1, 1), pC.groundColor = new gC.Color3(.5, .5, .5)
+        const kk = (0, Tk.e)();
+        Ok.IXk = kk.Xw.engine.IXk, Gk = new Lk.c(Ok), Gk.clearColor = new ek.b(0, 0, 0, 0), Gk.ambientColor = new ek.Color3(1, 1, 1), nk = new tk.c("pH", 0, 0, 1, Zk.Ge.Zero(), Gk), nk.attachControl(ck, !0), nk.panningSensibility = 0, Nk = (0, Xk.t)("Player", Gk, !0).then((Fk => {
+          pk = Fk.meshApi, uk = Fk.capeMesh, bk = kk.Xw.kp;
+          const Ik = 8.33;
+          Rk = (0, Xk.k)("Player", Ik, !0, !0), bk.setPosition(Rk, 0, -8.33, 0);
+          const Tk = bk.getNamedNode(Rk, "BodyMesh");
+          bk.attachTransformNode(uk, Rk, Tk), bk.set(Rk, "aOpacity", 1), bk.pR(Rk, "aOpacity", 1), Ck = new Sk(Gk, bk, Rk), Uk = new Jk.AnimatorState, Uk.qZ = kk, Uk.thinInstMgr = bk, Uk.Ip = Rk, Uk.vIk = bk.XXk(Rk, 0), Uk.modelLifeformType = "Player", Uk.nodeNameAliases = (0, vk.e)("Player").nodeNameAliases;
+          const ik = uk.vR().boundingBox;
+          uk.position.y = ((24 - ik.maximum.y + ik.minimum.y) / 2 - 1 / 32) / Ik, uk.position.z = -1 / Ik, uk.rotationQuaternion = null;
+          const yk = Math.PI / 18,
+            lk = ik.maximum.y / Ik;
+          uk.rotation.x = yk;
+          const ak = Math.cos(yk),
+            qk = Math.sin(yk);
+          uk.position.y += lk * (1 - ak) + 0 * qk, uk.position.z -= lk * qk + 0 * (1 - ak);
+          const Lk = new wk.StandardMaterial("capeMaterial", uk.mG());
+          uk.material = Lk;
+          const tk = new ek.Color3(1, 1, 1);
+          Lk.diffuseColor = new ek.Color3, Lk.specularColor = new ek.Color3, Lk.emissiveColor = new ek.Color3, Lk.ambientColor = new ek.Color3, tk.scaleToRef(.43, Lk.diffuseColor), tk.scaleToRef(1.75, Lk.ambientColor), Lk.freeze();
+          const Hk = new jk.d("light", new Zk.Ge(-.1, 1, -.3), Gk);
+          Hk.diffuse = new ek.Color3(1, 1, 1), Hk.specular = new ek.Color3(1, 1, 1), Hk.groundColor = new ek.Color3(.5, .5, .5)
         }))
-      }(), new DC(CC, zC)
+      }(), new Yk(kk, Fk)
     }
   },
-  38623: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => NC
+  38791: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Zk
     });
-    var QC = ZC(37044),
-      wC = ZC(37059),
-      bC = ZC(37301),
-      nC = ZC(37061),
-      fC = ZC(37050);
+    var Xk = Ik(37243),
+      Tk = Ik(37253),
+      ik = Ik(37475),
+      yk = Ik(37255),
+      lk = Ik(37249);
 
-    function oC(CC) {
-      return `\n\t\t\t\t${(0,fC.u)(CC,"mat2","rotate",[{name:"ang",type:"float"}],`\
+    function ak(kk) {
+      return `\n\t\t\t\t${(0,lk.y)(kk,"mat2","rotate",[{name:"ang",type:"float"}],`\
       n\ t\ t\ t\ t\ t$ {
-        (0, fC.w)(CC, "float", "s", "sin(ang)")
+        (0, lk.G)(kk, "float", "s", "sin(ang)")
       }\
       n\ t\ t\ t\ t\ t$ {
-        (0, fC.w)(CC, "float", "c", "cos(ang)")
+        (0, lk.G)(kk, "float", "c", "cos(ang)")
       }\
       n\ t\ t\ t\ t\ treturn $ {
-        (0, fC.l)(CC, "mat2", "c", "s", "-s", "c")
+        (0, lk.m)(kk, "mat2", "c", "s", "-s", "c")
       };\
       n\ t\ t\ t\ t`)}\n\t\t\t`
     }
 
-    function qC(CC, zC) {
-      let ZC = (0, fC.ob)(CC, "skele" + (zC - 1));
-      for (let wC = zC - 2; wC >= 0; wC--) ZC = (0, fC.fb)(CC, `boneIdx == ${wC}`, (0, fC.ob)(CC, `skele${wC}`), ZC);
-      const QC = "bone.yz + rotate(bone.x) * pivot - pivot";
-      return `\n\t\t\t\t${(0,fC.w)(CC,"int","boneIdx",(0,fC.jb)(CC,"BLOXD_CAPE_MAX_Y - positionUpdated.y"))}\n\t\t\t\t${(0,fC.w)(CC,"vec3","bone",ZC)}\n\t\t\t\t${(0,fC.w)(CC,"vec2","pivot",(0,fC.l)(CC,"vec2","0.0",`${(0,fC.wb)(CC,"position")}.z`))}\n\t\t\t\t${(0,fC.S)(CC)?`positionUpdated = vec3f(positionUpdated.x, positionUpdated.yz + (${QC}));`:`positionUpdated.yz += ${QC};`}\n\t\t`
+    function qk(kk, Fk) {
+      let Ik = (0, lk.Mb)(kk, "skele" + (Fk - 1));
+      for (let Tk = Fk - 2; Tk >= 0; Tk--) Ik = (0, lk.yb)(kk, `boneIdx == ${Tk}`, (0, lk.Mb)(kk, `skele${Tk}`), Ik);
+      const Xk = "bone.yz + rotate(bone.x) * pivot - pivot";
+      return `\n\t\t\t\t${(0,lk.G)(kk,"int","boneIdx",(0,lk.Gb)(kk,"BLOXD_CAPE_MAX_Y - positionUpdated.y"))}\n\t\t\t\t${(0,lk.G)(kk,"vec3","bone",Ik)}\n\t\t\t\t${(0,lk.G)(kk,"vec2","pivot",(0,lk.m)(kk,"vec2","0.0",`${(0,lk.Wb)(kk,"position")}.z`))}\n\t\t\t\t${(0,lk.eb)(kk)?`positionUpdated = vec3f(positionUpdated.x, positionUpdated.yz + (${Xk}));`:`positionUpdated.yz += ${Xk};`}\n\t\t`
     }
 
-    function FC(CC) {
-      return `\n\t\t\t\t#ifdef NORMAL\n\t\t\t\tnormalUpdated = ${(0,fC.l)(CC,"vec3","normalUpdated.x","rotate(bone.x) * normalUpdated.yz")};\n\t\t\t\t#endif\n\t\t`
+    function Lk(kk) {
+      return `\n\t\t\t\t#ifdef NORMAL\n\t\t\t\tnormalUpdated = ${(0,lk.m)(kk,"vec3","normalUpdated.x","rotate(bone.x) * normalUpdated.yz")};\n\t\t\t\t#endif\n\t\t`
     }
-    const WC = {
+    const tk = {
         x: 0,
         y: 0,
         z: 0,
-        azC(CC, zC) {
-          return this.x = CC[zC], this.y = CC[zC + 1], this.z = CC[zC + 2], this
+        hFk(kk, Fk) {
+          return this.x = kk[Fk], this.y = kk[Fk + 1], this.z = kk[Fk + 2], this
         }
       },
-      NC = {
+      Zk = {
         name: "Cape",
         className: "CapeMaterialPlugin",
         priority: 200,
-        defines: (CC, zC) => ({
-          ...(0, QC.b)("CAPE"),
-          BLOXD_CAPE_BONES: `${CC}`,
-          BLOXD_CAPE_MAX_Y: (0, wC.vb)(zC)
+        defines: (kk, Fk) => ({
+          ...(0, Xk.b)("CAPE"),
+          BLOXD_CAPE_BONES: `${kk}`,
+          BLOXD_CAPE_MAX_Y: (0, Tk.ob)(Fk)
         }),
-        getUniforms(CC) {
-          return (0, bC.d)(function(CC) {
-            const zC = [];
-            for (let ZC = 0; ZC < CC; ZC++) zC.push({
-              name: `skele${ZC}`,
+        getUniforms(kk) {
+          return (0, ik.e)(function(kk) {
+            const Fk = [];
+            for (let Ik = 0; Ik < kk; Ik++) Fk.push({
+              name: `skele${Ik}`,
               type: "highp vec3"
             });
-            return zC
-          }(this.skeleLen), "vertex", CC)
+            return Fk
+          }(this.skeleLen), "vertex", kk)
         },
-        bind(CC) {
-          for (let zC = 0; zC < this.skeleLen; zC++) CC.updateVector3(`skele${zC}`, WC.azC(this.skele, 3 * zC))
+        bind(kk) {
+          for (let Fk = 0; Fk < this.skeleLen; Fk++) kk.updateVector3(`skele${Fk}`, tk.hFk(this.skele, 3 * Fk))
         },
         uniformsVersion() {
           return this.bonesVersion
         },
-        getCustomCode(CC, zC) {
-          return "vertex" !== CC ? null : {
-            CUSTOM_VERTEX_DEFINITIONS: oC(zC),
-            CUSTOM_VERTEX_UPDATE_POSITION: qC(zC, this.skeleLen),
-            CUSTOM_VERTEX_UPDATE_NORMAL: FC(zC)
+        getCustomCode(kk, Fk) {
+          return "vertex" !== kk ? null : {
+            CUSTOM_VERTEX_DEFINITIONS: ak(Fk),
+            CUSTOM_VERTEX_UPDATE_POSITION: qk(Fk, this.skeleLen),
+            CUSTOM_VERTEX_UPDATE_NORMAL: Lk(Fk)
           }
         }
       };
-    (0, nC.o)(NC)
+    (0, yk.p)(Zk)
   },
-  38517: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => FC,
-      c: () => WC
+  38684: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Lk,
+      d: () => tk
     });
-    var QC = ZC(37044),
-      wC = ZC(37301),
-      bC = ZC(37050),
-      nC = ZC(37061);
-    const fC = "bloxdTextLodBias",
-      oC = [{
-        name: fC,
+    var Xk = Ik(37243),
+      Tk = Ik(37475),
+      ik = Ik(37249),
+      yk = Ik(37255);
+    const lk = "bloxdTextLodBias",
+      ak = [{
+        name: lk,
         type: "float"
       }],
-      qC = "bloxdTextSample",
-      FC = {
+      qk = "bloxdTextSample",
+      Lk = {
         planes: -.5,
         boards: -.5
       },
-      WC = {
+      tk = {
         name: "TextSampler",
         className: "TextSamplerMaterialPlugin",
         priority: 60,
-        defines: () => (0, QC.b)("TEXT_SAMPLER"),
-        getUniforms: CC => (0, wC.d)(oC, "fragment", CC),
-        bind(CC) {
-          CC.updateFloat(fC, this.lodBias)
+        defines: () => (0, Xk.b)("TEXT_SAMPLER"),
+        getUniforms: kk => (0, Tk.e)(ak, "fragment", kk),
+        bind(kk) {
+          kk.updateFloat(lk, this.lodBias)
         },
         uniformsVersion: () => 0,
-        getCustomCode(CC, zC) {
-          if ("fragment" !== CC) return null;
-          const ZC = (0, bC.B)(zC, `vec4 ${qC}(sampler2D s, vec2 uv, float bias)`, `fn ${qC}(t: texture_2d<f32>, ts: sampler, uv: vec2f, bias: f32) -> vec4f`),
-            QC = (0, bC.B)(zC, "texture2D(s, uv, bias)", "textureSampleBias(t, ts, uv, bias)"),
-            wC = `${(0,bC.J)(zC,"vDiffuseUV")} + uvOffset`,
-            nC = (0, bC.B)(zC, `${qC}(diffuseSampler, ${wC}, ${(0,bC.ob)(zC,fC)})`, `${qC}(diffuseSampler, diffuseSamplerSampler, ${wC}, ${(0,bC.ob)(zC,fC)})`);
+        getCustomCode(kk, Fk) {
+          if ("fragment" !== kk) return null;
+          const Ik = (0, ik.K)(Fk, `vec4 ${qk}(sampler2D s, vec2 uv, float bias)`, `fn ${qk}(t: texture_2d<f32>, ts: sampler, uv: vec2f, bias: f32) -> vec4f`),
+            Xk = (0, ik.K)(Fk, "texture2D(s, uv, bias)", "textureSampleBias(t, ts, uv, bias)"),
+            Tk = `${(0,ik.X)(Fk,"vDiffuseUV")} + uvOffset`,
+            yk = (0, ik.K)(Fk, `${qk}(diffuseSampler, ${Tk}, ${(0,ik.Mb)(Fk,lk)})`, `${qk}(diffuseSampler, diffuseSamplerSampler, ${Tk}, ${(0,ik.Mb)(Fk,lk)})`);
           return {
-            CUSTOM_FRAGMENT_DEFINITIONS: `\n\t\t\t\t${ZC} {\n\t\t\t\t\t${(0,bC.w)(zC,"vec4","texel",QC)}\n\t\t\t\t\t// 8-bit premultiplied rounding can put the quotient just over 1; only alpha 0 hits the floor,\n\t\t\t\t\t// where the colour is 0 anyway.\n\t\t\t\t\treturn ${(0,bC.l)(zC,"vec4",`clamp(texel.rgb / max(texel.a, 1.0 / 255.0), ${(0,bC.l)(zC,"vec3","0.0")}, ${(0,bC.l)(zC,"vec3","1.0")})`,"texel.a")};\n\t\t\t\t}\n\t\t\t`,
-            [(0, bC.x)(zC)]: `baseColor = ${nC};`
+            CUSTOM_FRAGMENT_DEFINITIONS: `\n\t\t\t\t${Ik} {\n\t\t\t\t\t${(0,ik.G)(Fk,"vec4","texel",Xk)}\n\t\t\t\t\t// 8-bit premultiplied rounding can put the quotient just over 1; only alpha 0 hits the floor,\n\t\t\t\t\t// where the colour is 0 anyway.\n\t\t\t\t\treturn ${(0,ik.m)(Fk,"vec4",`clamp(texel.rgb / max(texel.a, 1.0 / 255.0), ${(0,ik.m)(Fk,"vec3","0.0")}, ${(0,ik.m)(Fk,"vec3","1.0")})`,"texel.a")};\n\t\t\t\t}\n\t\t\t`,
+            [(0, ik.H)(Fk)]: `baseColor = ${yk};`
           }
         }
       };
-    (0, nC.o)(WC)
+    (0, yk.p)(tk)
   },
-  40956: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      CapeMaterialPlugin: () => AC,
-      HueTintMaterialPlugin: () => xC,
-      LifeformMaterialPlugin: () => JC,
-      OverlayMaterialPlugin: () => IC
+  41123: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      CapeMaterialPlugin: () => Kk,
+      HueTintMaterialPlugin: () => Qk,
+      LifeformMaterialPlugin: () => sk,
+      OverlayMaterialPlugin: () => Vk
     });
-    var QC = ZC(40958),
-      wC = ZC(37849);
-    class bC extends((0, QC.g)(wC.e)) {}(0, QC.i)(wC.e, bC);
-    var nC = ZC(37040);
-    class fC extends((0, QC.g)(nC.f)) {}(0, QC.i)(nC.f, fC);
-    var oC = ZC(37677);
-    class qC extends((0, QC.g)(oC.d)) {}(0, QC.i)(oC.d, qC);
-    var FC = ZC(37290),
-      WC = ZC(40092),
-      NC = ZC(37285);
-    class MC extends((0, QC.g)(NC.d)) {
-      constructor(CC, zC, ZC) {
-        super(CC, zC, ZC), (0, FC.g)(CC)
+    var Xk = Ik(41132),
+      Tk = Ik(38010);
+    class ik extends((0, Xk.g)(Tk.d)) {}(0, Xk.h)(Tk.d, ik);
+    var yk = Ik(37236);
+    class lk extends((0, Xk.g)(yk.f)) {}(0, Xk.h)(yk.f, lk);
+    var ak = Ik(37835);
+    class qk extends((0, Xk.g)(ak.e)) {}(0, Xk.h)(ak.e, qk);
+    var Lk = Ik(37461),
+      tk = Ik(40269),
+      Zk = Ik(37457);
+    class jk extends((0, Xk.g)(Zk.e)) {
+      constructor(kk, Fk, Ik) {
+        super(kk, Fk, Ik), (0, Lk.h)(kk)
       }
-      dispose(CC) {
-        (0, FC.k)(this._material), super.dispose(CC)
+      dispose(kk) {
+        (0, Lk.l)(this._material), super.dispose(kk)
       }
-    }(0, QC.i)(NC.d, MC), (0, NC.f)({
-      disableUnusedSpecularTerm: QC.c,
-      isLightingDisabled: CC => CC instanceof WC.StandardMaterial && CC.disableLighting
+    }(0, Xk.h)(Zk.e, jk), (0, Zk.f)({
+      disableUnusedSpecularTerm: Xk.d,
+      isLightingDisabled: kk => kk instanceof tk.StandardMaterial && kk.disableLighting
     });
-    var gC = ZC(38517);
-    class SC extends((0, QC.g)(gC.c)) {}(0, QC.i)(gC.c, SC);
-    var pC = ZC(38623),
-      PC = ZC(37149),
-      GC = ZC(37973),
-      RC = ZC(37086);
-    class AC extends((0, QC.g)(pC.e)) {}(0, QC.i)(pC.e, AC);
-    class xC extends((0, QC.g)(PC.b)) {}(0, QC.i)(PC.b, xC);
-    class JC extends((0, QC.g)(GC.q)) {}(0, QC.i)(GC.q, JC);
-    class IC extends((0, QC.g)(RC.e)) {}(0, QC.i)(RC.e, IC)
+    var ek = Ik(38684);
+    class wk extends((0, Xk.g)(ek.d)) {}(0, Xk.h)(ek.d, wk);
+    var Hk = Ik(38791),
+      Jk = Ik(37340),
+      xk = Ik(38126),
+      Pk = Ik(37286);
+    class Kk extends((0, Xk.g)(Hk.d)) {}(0, Xk.h)(Hk.d, Kk);
+    class Qk extends((0, Xk.g)(Jk.d)) {}(0, Xk.h)(Jk.d, Qk);
+    class sk extends((0, Xk.g)(xk.m)) {}(0, Xk.h)(xk.m, sk);
+    class Vk extends((0, Xk.g)(Pk.d)) {}(0, Xk.h)(Pk.d, Vk)
   },
-  40958: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => TC,
-      g: () => GC,
-      i: () => LC
+  41132: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => fk,
+      g: () => xk,
+      h: () => mk
     });
-    var QC = ZC(40092),
-      wC = ZC(40963),
-      bC = ZC(40994),
-      nC = ZC(40968),
-      fC = ZC(37648),
-      oC = ZC(37660),
-      qC = ZC(37666),
-      FC = ZC(37670),
-      WC = ZC(37076),
-      NC = ZC(37083),
-      MC = ZC(40970),
-      gC = ZC(37061),
-      SC = ZC(37063),
-      pC = ZC(37050);
+    var Xk = Ik(40269),
+      Tk = Ik(41139),
+      ik = Ik(41178),
+      yk = Ik(41147),
+      lk = Ik(37815),
+      ak = Ik(37821),
+      qk = Ik(37823),
+      Lk = Ik(37829),
+      tk = Ik(37270),
+      Zk = Ik(37277),
+      jk = Ik(41149),
+      ek = Ik(37255),
+      wk = Ik(37259),
+      Hk = Ik(37249);
 
-    function PC(CC, zC) {
-      return Object.assign((function(CC, ZC, QC, wC) {
-        return zC(this.featureState, CC, ZC, QC, wC)
+    function Jk(kk, Fk) {
+      return Object.assign((function(kk, Ik, Xk, Tk) {
+        return Fk(this.featureState, kk, Ik, Xk, Tk)
       }), {
-        Qg: CC
+        Ie: kk
       })
     }
 
-    function GC(CC) {
-      const zC = class extends MC.e {
-          constructor(zC, ZC) {
-            const QC = (0, SC.Y)(zC),
-              wC = QC && (0, SC.x)(QC, CC.name);
-            for (var bC = arguments.length, nC = new Array(bC > 2 ? bC - 2 : 0), fC = 2; fC < bC; fC++) nC[fC - 2] = arguments[fC];
-            super(zC, CC.name, CC.priority, wC ? wC.defines : CC.defines(...nC), !1), this.featureState = void 0, this.featureState = ZC, this._pluginManager._addPlugin(this), this._enable(!0), (0, SC.B)(this._material, CC, this.featureState, this._pluginDefineNames)
+    function xk(kk) {
+      const Fk = class extends jk.d {
+          constructor(Fk, Ik) {
+            const Xk = (0, wk.X)(Fk),
+              Tk = Xk && (0, wk.B)(Xk, kk.name);
+            for (var ik = arguments.length, yk = new Array(ik > 2 ? ik - 2 : 0), lk = 2; lk < ik; lk++) yk[lk - 2] = arguments[lk];
+            super(Fk, kk.name, kk.priority, Tk ? Tk.defines : kk.defines(...yk), !1), this.featureState = void 0, this.featureState = Ik, this._pluginManager._addPlugin(this), this._enable(!0), (0, wk.D)(this._material, kk, this.featureState, this._pluginDefineNames)
           }
           getClassName() {
-            return CC.className
+            return kk.className
           }
-          isCompatible(CC) {
-            return CC === pC.e.GLSL || CC === pC.e.WGSL
+          isCompatible(kk) {
+            return kk === Hk.e.GLSL || kk === Hk.e.WGSL
           }
         },
-        ZC = (0, gC.l)(CC);
-      for (const [QC, wC] of Object.entries(gC.e)) {
-        const bC = CC[QC];
-        if (bC) {
-          const CC = ZC[QC];
-          Object.defineProperty(zC.prototype, wC, {
-            value: PC(bC, CC),
+        Ik = (0, ek.i)(kk);
+      for (const [Xk, Tk] of Object.entries(ek.e)) {
+        const ik = kk[Xk];
+        if (ik) {
+          const kk = Ik[Xk];
+          Object.defineProperty(Fk.prototype, Tk, {
+            value: Jk(ik, kk),
             writable: !0,
             configurable: !0
           })
         }
       }
-      return zC
+      return Fk
     }
-    class RC extends(GC(fC.d)) {}
-    var AC = ZC(39635),
-      xC = ZC(40977);
-    const JC = new WeakMap;
+    class Pk extends(xk(lk.b)) {}
+    var Kk = Ik(39806),
+      Qk = Ik(41155);
+    const sk = new WeakMap;
 
-    function IC(CC, zC, ZC) {
-      let QC = JC.get(ZC);
-      QC || (QC = new Map, JC.set(ZC, QC));
+    function Vk(kk, Fk, Ik) {
+      let Xk = sk.get(Ik);
+      Xk || (Xk = new Map, sk.set(Ik, Xk));
       const {
-        url: wC
-      } = CC;
-      let bC = QC.get(wC);
-      return bC || (bC = async function(CC, zC, ZC) {
-        var QC;
+        url: Tk
+      } = kk;
+      let ik = Xk.get(Tk);
+      return ik || (ik = async function(kk, Fk, Ik) {
+        var Xk;
         const {
-          width: wC,
-          height: bC
-        } = CC.getSize(), fC = Math.round(bC / wC), oC = CC.getInternalTexture(), qC = zC && zC.byteLength === wC * wC * fC * 4 ? zC : null !== (QC = iC.get(oC)) && void 0 !== QC ? QC : CC._readPixelsSync(), FC = new xC.d(qC, wC, wC, fC, AC.d.TEXTUREFORMAT_RGBA, ZC, !0, !1, nC.e.NEAREST_NEAREST_MIPLINEAR);
-        iC.has(oC) || (! function(CC, zC) {
-          const ZC = zC.createRawTexture(new Uint8Array(4), 1, 1, AC.d.TEXTUREFORMAT_RGBA, !1, !1, nC.e.NEAREST_SAMPLINGMODE);
-          CC._hardwareTexture.release(), zC.unbindAllTextures(), ZC._swapAndDie(CC, !1)
-        }(oC, ZC.mg()), iC.set(oC, qC));
-        return FC
-      }(CC, zC, ZC), QC.set(wC, bC), bC.catch((() => {
-        QC.delete(wC)
-      }))), bC
+          width: Tk,
+          height: ik
+        } = kk.getSize(), lk = Math.round(ik / Tk), ak = kk.getInternalTexture(), qk = Fk && Fk.byteLength === Tk * Tk * lk * 4 ? Fk : null !== (Xk = zk.get(ak)) && void 0 !== Xk ? Xk : kk._readPixelsSync(), Lk = new Qk.c(qk, Tk, Tk, lk, Kk.c.TEXTUREFORMAT_RGBA, Ik, !0, !1, yk.c.NEAREST_NEAREST_MIPLINEAR);
+        zk.has(ak) || (! function(kk, Fk) {
+          const Ik = Fk.createRawTexture(new Uint8Array(4), 1, 1, Kk.c.TEXTUREFORMAT_RGBA, !1, !1, yk.c.NEAREST_SAMPLINGMODE);
+          kk._hardwareTexture.release(), Fk.unbindAllTextures(), Ik._swapAndDie(kk, !1)
+        }(ak, Ik.Oe()), zk.set(ak, qk));
+        return Lk
+      }(kk, Fk, Ik), Xk.set(Tk, ik), ik.catch((() => {
+        Xk.delete(Tk)
+      }))), ik
     }
-    const iC = new WeakMap;
-    var vC = ZC(37673);
-    class eC extends(GC(oC.j)) {
-      constructor(CC, zC) {
-        super(CC, zC), zC.textures.forEach(((CC, zC) => {
-          CC.mirror.onLoadObservable.add((CC => {
-            this.setTextureArrayData(CC, zC).catch((CC => {
-              console.error(`Failed to build texture array for atlas ${zC}`, CC)
+    const zk = new WeakMap;
+    var Sk = Ik(37832);
+    class vk extends(xk(ak.l)) {
+      constructor(kk, Fk) {
+        super(kk, Fk), Fk.textures.forEach(((kk, Fk) => {
+          kk.mirror.onLoadObservable.add((kk => {
+            this.setTextureArrayData(kk, Fk).catch((kk => {
+              console.error(`Failed to build texture array for atlas ${Fk}`, kk)
             }))
           }))
-        })), (0, vC.k)(zC, CC.shaderLanguage)
+        })), (0, Sk.h)(Fk, kk.shaderLanguage)
       }
-      async setTextureArrayData(CC, zC) {
-        var ZC, QC;
-        const wC = this.featureState,
+      async setTextureArrayData(kk, Fk) {
+        var Ik, Xk;
+        const Tk = this.featureState,
           {
-            width: bC,
-            height: nC
-          } = CC.getSize(),
-          fC = wC.useWebGL2 ? await IC(CC, null !== (ZC = null === (QC = wC.sources.pixels) || void 0 === QC ? void 0 : QC[zC]) && void 0 !== ZC ? ZC : null, this._material.Km()) : null;
-        (0, vC.d)(this._material, wC, zC, fC, bC, Math.round(nC / bC), this._material.shaderLanguage)
+            width: ik,
+            height: yk
+          } = kk.getSize(),
+          lk = Tk.useWebGL2 ? await Vk(kk, null !== (Ik = null === (Xk = Tk.sources.pixels) || void 0 === Xk ? void 0 : Xk[Fk]) && void 0 !== Ik ? Ik : null, this._material.mG()) : null;
+        (0, Sk.e)(this._material, Tk, Fk, lk, ik, Math.round(yk / ik), this._material.shaderLanguage)
       }
     }
-    var hC = ZC(40985),
-      KC = ZC(40127),
-      YC = ZC(36961),
-      dC = ZC(40988),
-      mC = ZC(40235),
-      HC = ZC(40119),
-      EC = ZC(40946),
-      lC = ZC(37432),
-      XC = ZC(40992);
-    class cC extends hC.c {
+    var Ek = Ik(41158),
+      Ok = Ik(40308),
+      nk = Ik(37144),
+      Gk = Ik(41165),
+      pk = Ik(40427),
+      uk = Ik(40297),
+      bk = Ik(41114),
+      Rk = Ik(37623),
+      Uk = Ik(41170);
+    class Ck extends Ek.c {
       getData() {
         return null
       }
@@ -576,320 +545,351 @@ export const modules = {
         super._rebuild()
       }
     }
-    const uC = {
-      Mesh: dC.e,
-      TransformNode: EC.c,
-      gg: hC.c,
-      VertexBuffer: hC.f,
-      BoundingInfo: KC.d,
-      Eg: YC.Eg,
-      ArenaBuffer: cC,
-      SubMesh: HC.d,
-      VertexData: mC.e,
-      MirroredGeometry: XC.d,
-      meshFromArrays: XC.e,
-      plainMeshFromArrays: XC.f
+    const Nk = {
+      Mesh: Gk.c,
+      TransformNode: bk.b,
+      je: Ek.c,
+      VertexBuffer: Ek.g,
+      BoundingInfo: Ok.d,
+      Ge: nk.Ge,
+      ArenaBuffer: Ck,
+      SubMesh: uk.b,
+      VertexData: pk.c,
+      MirroredGeometry: Uk.c,
+      meshFromArrays: Uk.g,
+      plainMeshFromArrays: Uk.k
     };
-    (0, lC.e)(uC);
-    var rC = ZC(37290);
-    class sC extends(GC(FC.f)) {
-      constructor(CC, zC) {
-        if (super(CC, zC), CC instanceof QC.StandardMaterial && zC.dirLightCount > 0) {
-          const zC = CC,
-            ZC = zC._blockDirtyMechanism;
-          zC._blockDirtyMechanism = !0, CC.disableLighting = !0, zC._blockDirtyMechanism = ZC;
-          const QC = (0, SC.Y)(CC);
-          QC && (QC.disableLighting = !0, (0, SC.W)(QC))
-        }(0, rC.g)(CC)
+    (0, Rk.f)(Nk);
+    var ck = Ik(37461);
+    class Wk extends(xk(Lk.e)) {
+      constructor(kk, Fk) {
+        if (super(kk, Fk), kk instanceof Xk.StandardMaterial && Fk.dirLightCount > 0) {
+          const Fk = kk,
+            Ik = Fk._blockDirtyMechanism;
+          Fk._blockDirtyMechanism = !0, kk.disableLighting = !0, Fk._blockDirtyMechanism = Ik;
+          const Xk = (0, wk.X)(kk);
+          Xk && (Xk.disableLighting = !0, (0, wk.W)(Xk))
+        }(0, ck.h)(kk)
       }
-      dispose(CC) {
-        (0, rC.k)(this._material), super.dispose(CC)
+      dispose(kk) {
+        (0, ck.l)(this._material), super.dispose(kk)
       }
     }
 
-    function TC(CC, zC) {
-      if (!(zC instanceof QC.StandardMaterial) || zC.specularTexture) return;
+    function fk(kk, Fk) {
+      if (!(Fk instanceof Xk.StandardMaterial) || Fk.specularTexture) return;
       const {
-        r: ZC,
-        g: wC,
-        b: bC
-      } = zC.specularColor;
-      0 === ZC && 0 === wC && 0 === bC && (CC.SPECULARTERM = !1)
-    }(0, FC.d)({
-      disableUnusedSpecularTerm: TC
+        r: Ik,
+        g: Tk,
+        b: ik
+      } = Fk.specularColor;
+      0 === Ik && 0 === Tk && 0 === ik && (kk.SPECULARTERM = !1)
+    }(0, Lk.c)({
+      disableUnusedSpecularTerm: fk
     });
-    var aC = ZC(37175),
-      tC = ZC(37450);
-    const DC = new RegExp(`^#define ${qC.e}\\s*$`, "m");
-    class jC extends(GC(qC.g)) {
-      constructor(CC, zC) {
-        super(CC, zC), this.Sg = !1, zC.ditherOnlyWhileFading && (tC.g.add(CC), this.prewarmDitherTwins(CC))
+    var Bk = Ik(37365),
+      dk = Ik(37633);
+    const Yk = new RegExp(`^#define ${qk.d}\\s*$`, "m");
+    class Ak extends(xk(qk.h)) {
+      constructor(kk, Fk) {
+        super(kk, Fk), this.ee = !1, Fk.ditherOnlyWhileFading && (dk.e.add(kk), this.prewarmDitherTwins(kk))
       }
-      prewarmDitherTwins(CC) {
-        const zC = new WeakSet;
-        CC.onEffectCreatedObservable.add((ZC => {
+      prewarmDitherTwins(kk) {
+        const Fk = new WeakSet;
+        kk.onEffectCreatedObservable.add((Ik => {
           let {
-            effect: QC,
-            subMesh: wC
-          } = ZC;
-          if (this.featureState.prewarmingDither || zC.has(QC)) return;
-          zC.add(QC);
-          const bC = null === wC || void 0 === wC ? void 0 : wC.getMesh();
-          bC && !DC.test(QC.defines) && CC.Km().onAfterRenderObservable.addOnce((() => {
-            this.prewarmDither(bC) || zC.delete(QC)
+            effect: Xk,
+            subMesh: Tk
+          } = Ik;
+          if (this.featureState.prewarmingDither || Fk.has(Xk)) return;
+          Fk.add(Xk);
+          const ik = null === Tk || void 0 === Tk ? void 0 : Tk.getMesh();
+          ik && !Yk.test(Xk.defines) && kk.mG().onAfterRenderObservable.addOnce((() => {
+            this.prewarmDither(ik) || Fk.delete(Xk)
           }))
         }))
       }
-      prewarmDither(CC) {
-        if (this.Sg || CC.GJ()) return !1;
-        const zC = new HC.d(0, 0, 0, 0, 0, CC, void 0, !1, !1);
+      prewarmDither(kk) {
+        if (this.ee || kk.Hs()) return !1;
+        const Fk = new uk.b(0, 0, 0, 0, 0, kk, void 0, !1, !1);
         this.featureState.prewarmingDither = !0;
         try {
-          this._material.isReadyForSubMesh(CC, zC)
+          this._material.isReadyForSubMesh(kk, Fk)
         } finally {
           this.featureState.prewarmingDither = !1
         }
-        return null !== zC.effect
+        return null !== Fk.effect
       }
-      dispose(CC) {
-        this.Sg = !0, super.dispose(CC)
+      dispose(kk) {
+        this.ee = !0, super.dispose(kk)
       }
     }
-    const yC = new Map;
+    const gk = new Map;
 
-    function LC(CC, zC) {
-      yC.set(CC, zC)
+    function mk(kk, Fk) {
+      gk.set(kk, Fk)
     }
-    LC(fC.d, RC), LC(oC.j, eC), LC(qC.g, jC), LC(FC.f, sC), (0, WC.c)({
-      create: (CC, zC) => {
-        const ZC = new QC.StandardMaterial(CC.name, zC);
-        return (0, aC.u)(CC, ZC), ZC.detailMap._pluginDefineNames
+    mk(lk.b, Pk), mk(ak.l, vk), mk(qk.h, Ak), mk(Lk.e, Wk), (0, tk.d)({
+      create: (kk, Fk) => {
+        const Ik = new Xk.StandardMaterial(kk.name, Fk);
+        return (0, Bk.q)(kk, Ik), Ik.detailMap._pluginDefineNames
       },
-      write: (CC, zC, ZC) => {
-        (0, aC.X)(CC.mirror, zC, ZC)
+      write: (kk, Fk, Ik) => {
+        (0, Bk.X)(kk.mirror, Fk, Ik)
       },
-      addFeature: (CC, zC, ZC) => {
-        const QC = yC.get(zC.feature);
-        if (!QC) throw new Error(`${zC.feature.name} has no plugin class (registerPluginClass)`);
-        new QC(CC.mirror, zC.state, ...ZC)
+      addFeature: (kk, Fk, Ik) => {
+        const Xk = gk.get(Fk.feature);
+        if (!Xk) throw new Error(`${Fk.feature.name} has no plugin class (registerPluginClass)`);
+        new Xk(kk.mirror, Fk.state, ...Ik)
       },
-      texture: (CC, zC, ZC) => {
+      texture: (kk, Fk, Ik) => {
         let {
-          url: QC,
-          noMipmap: wC,
-          invertY: bC,
-          samplingMode: fC,
-          data: oC,
-          sets: qC
-        } = ZC;
-        if (!oC) {
-          const ZC = new nC.e(QC, zC, wC, bC, fC);
-          return Object.assign(ZC, qC), void(0, NC.L)(CC, ZC)
+          url: Xk,
+          noMipmap: Tk,
+          invertY: ik,
+          samplingMode: lk,
+          data: ak,
+          sets: qk
+        } = Ik;
+        if (!ak) {
+          const Ik = new yk.c(Xk, Fk, Tk, ik, lk);
+          return Object.assign(Ik, qk), void(0, Zk.H)(kk, Ik)
         }
-        const FC = {},
-          WC = new Promise(((CC, zC) => {
-            FC.onLoad = CC, FC.onError = (CC, ZC) => {
-              zC(new Error(`${oC.context}: ${(null===ZC||void 0===ZC?void 0:ZC.message)||CC||"Failed to load texture"}`))
+        const Lk = {},
+          tk = new Promise(((kk, Fk) => {
+            Lk.onLoad = kk, Lk.onError = (kk, Ik) => {
+              Fk(new Error(`${ak.context}: ${(null===Ik||void 0===Ik?void 0:Ik.message)||kk||"Failed to load texture"}`))
             }
           })),
           {
-            mimeType: MC,
-            bytes: gC,
-            label: SC
-          } = oC,
-          pC = {
-            noMipmap: wC,
+            mimeType: jk,
+            bytes: ek,
+            label: wk
+          } = ak,
+          Hk = {
+            noMipmap: Tk,
             invertY: !1,
-            samplingMode: fC,
-            ...FC,
-            mimeType: MC,
+            samplingMode: lk,
+            ...Lk,
+            mimeType: jk,
             loaderOptions: void 0,
             useSRGBBuffer: !1
           },
-          PC = new nC.e(null, zC, pC);
-        aC.w.set(PC, WC), Object.assign(PC, qC), PC.updateURL(QC, gC);
-        const GC = PC.getInternalTexture();
-        GC && (GC.label = SC), CC.uvSet = PC.coordinatesIndex, CC.matrix.set((0, aC.P)(PC)), (0, NC.L)(CC, PC)
+          Jk = new yk.c(null, Fk, Hk);
+        Bk.r.set(Jk, tk), Object.assign(Jk, qk), Jk.updateURL(Xk, ek);
+        const xk = Jk.getInternalTexture();
+        xk && (xk.label = wk), kk.uvSet = Jk.coordinatesIndex, kk.matrix.set((0, Bk.P)(Jk)), (0, Zk.H)(kk, Jk)
       },
-      cube: (CC, zC, ZC) => {
+      cube: (kk, Fk, Ik) => {
         let {
-          rootUrl: QC,
-          files: bC,
-          noMipmap: fC,
-          luminance: oC
-        } = ZC;
+          rootUrl: Xk,
+          files: ik,
+          noMipmap: lk,
+          luminance: ak
+        } = Ik;
         const {
-          samplingMode: qC
-        } = CC.sampler, FC = qC === (0, NC.y)(fC) ? null : () => {
-          (0, aC.L)(WC, qC)
-        }, WC = new wC.c(QC, zC, null, fC, bC, FC, null, (0, NC.u)(oC));
-        WC.coordinatesMode = nC.e.SKYBOX_MODE, (0, NC.L)(CC, WC)
+          samplingMode: qk
+        } = kk.sampler, Lk = qk === (0, Zk.z)(lk) ? null : () => {
+          (0, Bk.O)(tk, qk)
+        }, tk = new Tk.c(Xk, Fk, null, lk, ik, Lk, null, (0, Zk.x)(ak));
+        tk.coordinatesMode = yk.c.SKYBOX_MODE, (0, Zk.H)(kk, tk)
       },
-      canvas: (CC, zC, ZC) => {
+      canvas: (kk, Fk, Ik) => {
         let {
-          width: QC,
-          height: wC,
-          mipmaps: fC,
-          samplingMode: oC,
-          hasAlpha: qC = !1,
-          wrap: FC = nC.e.CLAMP_ADDRESSMODE
-        } = ZC;
-        const WC = new bC.d(zC, {
-          width: QC,
-          height: wC
-        }, CC, fC, oC);
-        WC.hasAlpha = qC, WC.wrapU = FC, WC.wrapV = FC;
-        const NC = (0, aC.C)(WC);
-        return (0, aC.F)(NC, WC), NC
+          width: Xk,
+          height: Tk,
+          mipmaps: lk,
+          samplingMode: ak,
+          hasAlpha: qk = !1,
+          wrap: Lk = yk.c.CLAMP_ADDRESSMODE
+        } = Ik;
+        const tk = new ik.d(Fk, {
+          width: Xk,
+          height: Tk
+        }, kk, lk, ak);
+        tk.hasAlpha = qk, tk.wrapU = Lk, tk.wrapV = Lk;
+        const Zk = (0, Bk.B)(tk);
+        return (0, Bk.E)(Zk, tk), Zk
       }
     })
   },
-  40992: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => FC,
-      e: () => WC,
-      f: () => NC
+  41170: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Lk,
+      g: () => tk,
+      k: () => Zk
     });
-    var QC = ZC(40985),
-      wC = ZC(39882),
-      bC = ZC(40127),
-      nC = ZC(40244),
-      fC = ZC(40988),
-      oC = ZC(40235),
-      qC = ZC(37339);
-    class FC extends nC.c {
+    var Xk = Ik(41158),
+      Tk = Ik(40056),
+      ik = Ik(40308),
+      yk = Ik(40429),
+      lk = Ik(41165),
+      ak = Ik(40427),
+      qk = Ik(37519);
+    class Lk extends yk.d {
       constructor() {
-        super(...arguments), this.model = null, this.onGeometryUpdated = (CC, zC) => {
-          this.releaseUnlessInstanced(zC)
+        super(...arguments), this.model = null, this.onGeometryUpdated = (kk, Fk) => {
+          this.releaseUnlessInstanced(Fk)
         }, this.onLinked = null
       }
-      link(CC) {
-        var zC;
-        (0, qC.n)(CC), this.model = CC, null === (zC = this.onLinked) || void 0 === zC || zC.call(this, CC)
+      link(kk) {
+        var Fk;
+        (0, qk.o)(kk), this.model = kk, null === (Fk = this.onLinked) || void 0 === Fk || Fk.call(this, kk)
       }
       relink() {
         this.release();
-        const CC = [];
-        for (const wC of Object.values(this._vertexBuffers))
-          if (!wC.getIsInstanced()) {
+        const kk = [];
+        for (const Tk of Object.values(this._vertexBuffers))
+          if (!Tk.getIsInstanced()) {
             const {
-              byteOffset: zC,
-              byteStride: ZC,
-              type: QC,
-              normalized: bC
-            } = wC;
-            CC.push({
-              kind: wC.getKind(),
-              data: wC.getData(),
-              offset: zC,
-              stride: ZC,
-              components: wC.getSize(),
-              glType: QC,
-              isNormalized: bC
+              byteOffset: Fk,
+              byteStride: Ik,
+              type: Xk,
+              normalized: ik
+            } = Tk;
+            kk.push({
+              kind: Tk.getKind(),
+              data: Tk.getData(),
+              offset: Fk,
+              stride: Ik,
+              components: Tk.getSize(),
+              glType: Xk,
+              isNormalized: ik
             })
-          } const zC = this._indices.length ? this._indices : null,
+          } const Fk = this._indices.length ? this._indices : null,
           {
-            minimum: ZC,
-            maximum: QC
+            minimum: Ik,
+            maximum: Xk
           } = this.extend;
-        this.link(new qC.f(CC, zC, this.getTotalVertices(), new Float64Array(ZC.VZC()), new Float64Array(QC.VZC())))
+        this.link(new qk.h(kk, Fk, this.getTotalVertices(), new Float64Array(Ik.iXk()), new Float64Array(Xk.iXk())))
       }
-      copy(CC) {
-        if (!this.model) return super.copy(CC);
-        const zC = new FC(CC, this.Km()),
-          ZC = this.CQC(void 0, !0);
-        ZC && zC.setIndices(ZC);
-        let nC = !1;
-        for (const bC in this._vertexBuffers) {
-          const CC = this._vertexBuffers[bC],
-            ZC = CC.getData();
-          if (!ZC) continue;
-          const fC = CC.getSize(),
+      copy(kk) {
+        if (!this.model) return super.copy(kk);
+        const Fk = new Lk(kk, this.mG()),
+          Ik = this.yXk(void 0, !0);
+        Ik && Fk.setIndices(Ik);
+        let yk = !1;
+        for (const ik in this._vertexBuffers) {
+          const kk = this._vertexBuffers[ik],
+            Ik = kk.getData();
+          if (!Ik) continue;
+          const lk = kk.getSize(),
             {
-              type: oC,
-              byteOffset: qC,
-              byteStride: FC,
-              normalized: WC
-            } = CC;
-          nC ||= CC.isUpdatable();
-          const NC = CC.getIsInstanced() ? (ZC instanceof Array ? 4 * ZC.length : ZC.byteLength) / FC : this.getTotalVertices(),
-            MC = (0, wC.o)(ZC, fC, oC, qC, FC, NC, !0),
-            gC = {
-              updatable: CC.isUpdatable(),
-              stride: fC,
-              type: oC,
-              normalized: WC,
+              type: ak,
+              byteOffset: qk,
+              byteStride: Lk,
+              normalized: tk
+            } = kk;
+          yk ||= kk.isUpdatable();
+          const Zk = kk.getIsInstanced() ? (Ik instanceof Array ? 4 * Ik.length : Ik.byteLength) / Lk : this.getTotalVertices(),
+            jk = (0, Tk.l)(Ik, lk, ak, qk, Lk, Zk, !0),
+            ek = {
+              updatable: kk.isUpdatable(),
+              stride: lk,
+              type: ak,
+              normalized: tk,
               takeBufferOwnership: !0,
-              instanced: CC.getIsInstanced()
+              instanced: kk.getIsInstanced()
             };
-          zC.setVerticesBuffer(new QC.f(this.mg(), MC, bC, gC), NC)
+          Fk.setVerticesBuffer(new Xk.g(this.Oe(), jk, ik, ek), Zk)
         }
-        return zC._updatable = nC, zC._boundingInfo = new bC.d(this.extend.minimum, this.extend.maximum), zC.relink(), zC
+        return Fk._updatable = yk, Fk._boundingInfo = new ik.d(this.extend.minimum, this.extend.maximum), Fk.relink(), Fk
       }
-      static mergeMeshes(CC, zC, ZC, QC, wC, bC) {
-        const oC = CC[0].Km(),
-          qC = new fC.e(CC[0].name + "_merged", oC),
-          WC = new FC(nC.c.RandomId(), oC, void 0, !1, qC);
+      static mergeMeshes(kk, Fk, Ik, Xk, Tk, ik) {
+        const ak = kk[0].mG(),
+          qk = new lk.c(kk[0].name + "_merged", ak),
+          tk = new Lk(yk.d.RandomId(), ak, void 0, !1, qk);
         try {
-          if (!fC.e.MergeMeshes(CC, zC, ZC, qC, wC, bC)) return qC.dispose(), null
-        } catch (NC) {
-          throw qC.dispose(), NC
+          if (!lk.c.MergeMeshes(kk, Fk, Ik, qk, Tk, ik)) return qk.dispose(), null
+        } catch (Zk) {
+          throw qk.dispose(), Zk
         }
-        return WC.relink(), qC
+        return tk.relink(), qk
       }
-      removeVerticesData(CC) {
-        this.releaseUnlessInstanced(CC), super.removeVerticesData(CC)
+      removeVerticesData(kk) {
+        this.releaseUnlessInstanced(kk), super.removeVerticesData(kk)
       }
       dispose() {
         this.release(), super.dispose()
       }
-      releaseUnlessInstanced(CC) {
-        var zC;
-        CC && null !== (zC = this.getVertexBuffer(CC)) && void 0 !== zC && zC.getIsInstanced() || this.release()
+      releaseUnlessInstanced(kk) {
+        var Fk;
+        kk && null !== (Fk = this.getVertexBuffer(kk)) && void 0 !== Fk && Fk.getIsInstanced() || this.release()
       }
       release() {
-        this.model && ((0, qC.x)(this.model), this.model = null)
+        this.model && ((0, qk.u)(this.model), this.model = null)
       }
     }
 
-    function WC(CC, zC, ZC) {
-      let QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new fC.e(CC, ZC);
-      const wC = (0, qC.j)(zC),
+    function tk(kk, Fk, Ik) {
+      let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new lk.c(kk, Ik);
+      const Tk = (0, qk.l)(Fk),
         {
-          positions: bC,
-          normals: WC,
-          uvs: NC,
-          indices: MC,
-          named: gC = {}
-        } = zC,
-        SC = new oC.e;
-      SC.positions = bC, SC.normals = null !== WC && void 0 !== WC ? WC : null, SC.uvs = null !== NC && void 0 !== NC ? NC : null, SC.indices = MC;
-      const pC = new FC(nC.c.RandomId(), ZC, SC, !1, QC);
+          positions: ik,
+          normals: tk,
+          uvs: Zk,
+          indices: jk,
+          named: ek = {}
+        } = Fk,
+        wk = new ak.c;
+      wk.positions = ik, wk.normals = null !== tk && void 0 !== tk ? tk : null, wk.uvs = null !== Zk && void 0 !== Zk ? Zk : null, wk.indices = jk;
+      const Hk = new Lk(yk.d.RandomId(), Ik, wk, !1, Xk);
       for (const {
-          kind: nC,
-          components: fC
+          kind: yk,
+          components: lk
         }
-        of wC.vertexAttributes) nC in gC && QC.setVerticesData(nC, gC[nC], !1, fC);
-      return pC.link(wC), QC
+        of Tk.vertexAttributes) yk in ek && Xk.setVerticesData(yk, ek[yk], !1, lk);
+      return Hk.link(Tk), Xk
     }
 
-    function NC(CC, zC, ZC) {
-      let QC = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      const wC = new fC.e(CC, ZC),
+    function Zk(kk, Fk, Ik) {
+      let Xk = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      const Tk = new lk.c(kk, Ik),
         {
-          positions: bC,
-          normals: nC,
-          uvs: qC,
-          indices: FC
-        } = zC;
-      return Object.assign(new oC.e, {
-        positions: bC,
-        normals: nC,
-        uvs: qC,
-        indices: FC
-      }).applyToMesh(wC, QC), wC
+          positions: ik,
+          normals: yk,
+          uvs: qk,
+          indices: Lk
+        } = Fk;
+      return Object.assign(new ak.c, {
+        positions: ik,
+        normals: yk,
+        uvs: qk,
+        indices: Lk
+      }).applyToMesh(Tk, Xk), Tk
     }
+  },
+  38794: (kk, Fk, Ik) => {
+    var Xk = {
+      "./cape_cow_cream.png": 27940,
+      "./cape_cow_normal.png": 27944,
+      "./cape_creator_level1.png": 27950,
+      "./cape_creator_level2.png": 27955,
+      "./cape_creator_level3.png": 27963,
+      "./cape_none.png": 27967,
+      "./cape_pig.png": 27974,
+      "./cape_sheep.png": 27983,
+      "./cape_super.png": 27992,
+      "./cape_super_inverted.png": 27994,
+      "./cape_youtuber.png": 28002
+    };
+
+    function Tk(kk) {
+      var Fk = ik(kk);
+      return Ik(Fk)
+    }
+
+    function ik(kk) {
+      if (!Ik.o(Xk, kk)) {
+        var Fk = new Error("Cannot find module '" + kk + "'");
+        throw Fk.code = "MODULE_NOT_FOUND", Fk
+      }
+      return Xk[kk]
+    }
+    Tk.keys = function() {
+      return Object.keys(Xk)
+    }, Tk.resolve = ik, kk.exports = Tk, Tk.id = 38794
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

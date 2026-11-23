@@ -1,4 +1,4 @@
-Bloxd build update — 2026-11-24T00:51 JST (bloxd.io=w4ddu.56408518, staging.bloxd.io=w4ddu.56408518)
+Bloxd build update — 2026-11-24T07:07 JST (bloxd.io=31kiid.1299b0d6, staging.bloxd.io=31kiid.1299b0d6)
 
 Bundle files use stable Webpack paths; original CDN names and hashes remain in .monitor-state.json.
 Fixed reports: [Added](changes/added.md) · [Removed](changes/removed.md) · [Changed](changes/changed.md) · [Build History](HISTORY.md)
@@ -7,52 +7,48 @@ Readable per-file diff: [changes/changed.md](changes/changed.md)
 
 | Environment | Previous Build | Current Build | Added | Removed | Changed | Size Delta | GitHub Diff |
 |---|---|---|---:|---:|---:|---:|---|
-| bloxd.io | `3lwmg.ecbaa066` | `w4ddu.56408518` | [556](changes/added.md) | [441](changes/removed.md) | [43182](changes/changed.md) | -1.23 MB | [Compare](https://github.com/imu31465/Bloxd-Build-Monitor/compare/1ddacc4f3827558ee9acb28b4b2ba5477962441f...build/bloxd.io/w4ddu.56408518) · [Snapshot](https://github.com/imu31465/Bloxd-Build-Monitor/tree/build/bloxd.io/w4ddu.56408518) |
-| staging.bloxd.io | `3lwmg.ecbaa066` | `w4ddu.56408518` | [556](changes/added.md) | [441](changes/removed.md) | [43182](changes/changed.md) | -1.23 MB | [Compare](https://github.com/imu31465/Bloxd-Build-Monitor/compare/1ddacc4f3827558ee9acb28b4b2ba5477962441f...build/staging.bloxd.io/w4ddu.56408518) · [Snapshot](https://github.com/imu31465/Bloxd-Build-Monitor/tree/build/staging.bloxd.io/w4ddu.56408518) |
+| bloxd.io | `w4ddu.56408518` | `31kiid.1299b0d6` | [263](changes/added.md) | [241](changes/removed.md) | [59279](changes/changed.md) | +15.37 KB | [Compare](https://github.com/imu31465/Bloxd-Build-Monitor/compare/0470041672eab75b6463e6d6cbd8d374cd65561c...build/bloxd.io/31kiid.1299b0d6) · [Snapshot](https://github.com/imu31465/Bloxd-Build-Monitor/tree/build/bloxd.io/31kiid.1299b0d6) |
+| staging.bloxd.io | `w4ddu.56408518` | `31kiid.1299b0d6` | [263](changes/added.md) | [241](changes/removed.md) | [59279](changes/changed.md) | +15.37 KB | [Compare](https://github.com/imu31465/Bloxd-Build-Monitor/compare/0470041672eab75b6463e6d6cbd8d374cd65561c...build/staging.bloxd.io/31kiid.1299b0d6) · [Snapshot](https://github.com/imu31465/Bloxd-Build-Monitor/tree/build/staging.bloxd.io/31kiid.1299b0d6) |
 
-## bloxd.io — 3lwmg.ecbaa066 → w4ddu.56408518
+## bloxd.io — w4ddu.56408518 → 31kiid.1299b0d6
 
 ```diff
-- Files: 441 files
-+ Files: 443 files (changed 401, added 14, removed 12, unchanged 28)
-- Total size: 47.37 MB
-+ Total size: 46.14 MB (-1.23 MB)
-+ Diff items (2-char JS identifiers filtered): Added 556, Removed 441, Changed 43182
+- Files: 443 files
++ Files: 443 files (changed 393, added 0, removed 0, unchanged 50)
+- Total size: 46.14 MB
++ Total size: 46.15 MB (+15.37 KB)
++ Diff items (2-char JS identifiers filtered): Added 263, Removed 241, Changed 59279
 + Largest changes:
-+ chunks/js/298.js increased 5.42 MB (b8584d8b → b2c6cdac)
-- chunks/js/297.js decreased 5.42 MB (39d45c30 → 498c4668)
-- chunks/js/188.js decreased 2.60 MB (97522911 → 46eb3bb4)
-+ chunks/js/186.js increased 2.60 MB (5ae65169 → 382af325)
-- chunks/js/209.js decreased 1.38 MB (b78f1756 → a901901e)
-+ chunks/js/230.js increased 814.10 KB (34dea092 → bbc48589)
-- chunks/js/228.js decreased 776.78 KB (54cef7b4 → 1e166b87)
-+ chunks/js/206.js increased 678.85 KB (c22c8df7 → 9295e72f)
-- chunks/js/292.js decreased 665.58 KB (e197dd4d → 6d2ece7e)
-+ chunks/js/197.js increased 648.21 KB (259b1466 → 4f0764cf)
-+ Added files: chunks/css/156.css, chunks/css/190.css, chunks/css/195.css, chunks/css/200.css, chunks/css/214.css, chunks/css/220.css, chunks/css/243.css, chunks/css/245.css (+6 more)
-- Removed files: chunks/css/155.css, chunks/css/159.css, chunks/css/192.css, chunks/css/199.css, chunks/css/202.css, chunks/css/218.css, chunks/css/241.css, chunks/css/271.css (+4 more)
++ chunks/js/119.js increased 31.60 KB (34fd082f → 9581abde)
+- main.js decreased 22.36 KB (56408518 → 1299b0d6)
++ chunks/js/85.js increased 18.28 KB (6733cfdd → cfe943b9)
+- chunks/js/225.js decreased 14.77 KB (b277eb8e → 76b966da)
+- chunks/js/242.js decreased 3.65 KB (2e32347d → 8f29fbe6)
++ chunks/js/wasmPlay.js increased 2.93 KB (ba13418c → ba24abd0)
++ chunks/js/92.js increased 2.19 KB (2f57d36e → 513e3e5e)
++ chunks/js/worldgenWorker.js increased 452 B (d63d6a16 → 375f2f92)
++ chunks/js/211.js increased 366 B (e3cd47c2 → b8c0beaf)
++ chunks/js/meshWorkerLoader.js increased 277 B (6d21ba04 → b732bb4a)
 ```
 
 
-## staging.bloxd.io — 3lwmg.ecbaa066 → w4ddu.56408518
+## staging.bloxd.io — w4ddu.56408518 → 31kiid.1299b0d6
 
 ```diff
-- Files: 441 files
-+ Files: 443 files (changed 401, added 14, removed 12, unchanged 28)
-- Total size: 47.37 MB
-+ Total size: 46.14 MB (-1.23 MB)
-+ Diff items (2-char JS identifiers filtered): Added 556, Removed 441, Changed 43182
+- Files: 443 files
++ Files: 443 files (changed 393, added 0, removed 0, unchanged 50)
+- Total size: 46.14 MB
++ Total size: 46.15 MB (+15.37 KB)
++ Diff items (2-char JS identifiers filtered): Added 263, Removed 241, Changed 59279
 + Largest changes:
-+ chunks/js/298.js increased 5.42 MB (b8584d8b → b2c6cdac)
-- chunks/js/297.js decreased 5.42 MB (39d45c30 → 498c4668)
-- chunks/js/188.js decreased 2.60 MB (97522911 → 46eb3bb4)
-+ chunks/js/186.js increased 2.60 MB (5ae65169 → 382af325)
-- chunks/js/209.js decreased 1.38 MB (b78f1756 → a901901e)
-+ chunks/js/230.js increased 814.10 KB (34dea092 → bbc48589)
-- chunks/js/228.js decreased 776.78 KB (54cef7b4 → 1e166b87)
-+ chunks/js/206.js increased 678.85 KB (c22c8df7 → 9295e72f)
-- chunks/js/292.js decreased 665.58 KB (e197dd4d → 6d2ece7e)
-+ chunks/js/197.js increased 648.21 KB (259b1466 → 4f0764cf)
-+ Added files: chunks/css/156.css, chunks/css/190.css, chunks/css/195.css, chunks/css/200.css, chunks/css/214.css, chunks/css/220.css, chunks/css/243.css, chunks/css/245.css (+6 more)
-- Removed files: chunks/css/155.css, chunks/css/159.css, chunks/css/192.css, chunks/css/199.css, chunks/css/202.css, chunks/css/218.css, chunks/css/241.css, chunks/css/271.css (+4 more)
++ chunks/js/119.js increased 31.60 KB (34fd082f → 9581abde)
+- main.js decreased 22.36 KB (56408518 → 1299b0d6)
++ chunks/js/85.js increased 18.28 KB (6733cfdd → cfe943b9)
+- chunks/js/225.js decreased 14.77 KB (b277eb8e → 76b966da)
+- chunks/js/242.js decreased 3.65 KB (2e32347d → 8f29fbe6)
++ chunks/js/wasmPlay.js increased 2.93 KB (ba13418c → ba24abd0)
++ chunks/js/92.js increased 2.19 KB (2f57d36e → 513e3e5e)
++ chunks/js/worldgenWorker.js increased 452 B (d63d6a16 → 375f2f92)
++ chunks/js/211.js increased 366 B (e3cd47c2 → b8c0beaf)
++ chunks/js/meshWorkerLoader.js increased 277 B (6d21ba04 → b732bb4a)
 ```

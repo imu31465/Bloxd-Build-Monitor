@@ -1,583 +1,583 @@
 export const id = 255;
 export const ids = [255];
 export const modules = {
-  39921: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => bC
+  40099: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => ik
     });
-    var QC = ZC(38507),
-      wC = ZC(37002);
-    class bC {
-      static Instantiate(CC) {
-        if (this.RegisteredExternalClasses && this.RegisteredExternalClasses[CC]) return this.RegisteredExternalClasses[CC];
-        const zC = (0, wC.c)(CC);
-        if (zC) return zC;
-        QC.c.Warn(CC + " not found, you may have missed an import.");
-        const ZC = CC.split(".");
-        let bC = "undefined" !== typeof window ? window : "undefined" !== typeof globalThis ? globalThis : this;
-        for (let QC = 0, wC = ZC.length; QC < wC; QC++) bC = bC[ZC[QC]];
-        return "function" !== typeof bC ? null : bC
+    var Xk = Ik(38674),
+      Tk = Ik(37201);
+    class ik {
+      static Instantiate(kk) {
+        if (this.RegisteredExternalClasses && this.RegisteredExternalClasses[kk]) return this.RegisteredExternalClasses[kk];
+        const Fk = (0, Tk.b)(kk);
+        if (Fk) return Fk;
+        Xk.e.Warn(kk + " not found, you may have missed an import.");
+        const Ik = kk.split(".");
+        let ik = "undefined" !== typeof window ? window : "undefined" !== typeof globalThis ? globalThis : this;
+        for (let Xk = 0, Tk = Ik.length; Xk < Tk; Xk++) ik = ik[Ik[Xk]];
+        return "function" !== typeof ik ? null : ik
       }
     }
-    bC.RegisteredExternalClasses = {}
+    ik.RegisteredExternalClasses = {}
   },
-  39730: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => wC
+  39891: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Tk
     });
-    var QC = ZC(39680);
-    class wC {
+    var Xk = Ik(39850);
+    class Tk {
       static get Now() {
-        return (0, QC.k)() && window.performance && window.performance.now ? window.performance.now() : Date.now()
+        return (0, Xk.j)() && window.performance && window.performance.now ? window.performance.now() : Date.now()
       }
     }
   },
-  39747: (CC, zC, ZC) => {
-    function QC(CC) {
-      let zC = 1;
+  39923: (kk, Fk, Ik) => {
+    function Xk(kk) {
+      let Fk = 1;
       do {
-        zC *= 2
-      } while (zC < CC);
-      return zC === CC
+        Fk *= 2
+      } while (Fk < kk);
+      return Fk === kk
     }
 
-    function wC(CC, zC, ZC) {
-      return CC * (1 - ZC) + zC * ZC
+    function Tk(kk, Fk, Ik) {
+      return kk * (1 - Ik) + Fk * Ik
     }
 
-    function bC(CC) {
-      const zC = nC(CC),
-        ZC = fC(CC);
-      return zC - CC > CC - ZC ? ZC : zC
+    function ik(kk) {
+      const Fk = yk(kk),
+        Ik = lk(kk);
+      return Fk - kk > kk - Ik ? Ik : Fk
     }
 
-    function nC(CC) {
-      return CC--, CC |= CC >> 1, CC |= CC >> 2, CC |= CC >> 4, CC |= CC >> 8, CC |= CC >> 16, ++CC
+    function yk(kk) {
+      return kk--, kk |= kk >> 1, kk |= kk >> 2, kk |= kk >> 4, kk |= kk >> 8, kk |= kk >> 16, ++kk
     }
 
-    function fC(CC) {
-      return CC |= CC >> 1, CC |= CC >> 2, CC |= CC >> 4, CC |= CC >> 8, (CC |= CC >> 16) - (CC >> 1)
+    function lk(kk) {
+      return kk |= kk >> 1, kk |= kk >> 2, kk |= kk >> 4, kk |= kk >> 8, (kk |= kk >> 16) - (kk >> 1)
     }
 
-    function oC(CC, zC) {
-      let ZC;
+    function ak(kk, Fk) {
+      let Ik;
       switch (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 2) {
         case 1:
-          ZC = fC(CC);
+          Ik = lk(kk);
           break;
         case 2:
-          ZC = bC(CC);
+          Ik = ik(kk);
           break;
         default:
-          ZC = nC(CC)
+          Ik = yk(kk)
       }
-      return Math.min(ZC, zC)
+      return Math.min(Ik, Fk)
     }
-    ZC.d(zC, {
-      c: () => fC,
-      e: () => oC,
-      h: () => QC,
-      i: () => wC,
-      j: () => bC
+    Ik.d(Fk, {
+      d: () => lk,
+      g: () => ak,
+      j: () => Xk,
+      l: () => Tk,
+      o: () => ik
     })
   },
-  39913: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => RC,
-      e: () => xC,
-      g: () => PC,
-      i: () => GC
+  40097: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => Pk,
+      e: () => Qk,
+      h: () => Jk,
+      k: () => xk
     });
-    var QC, wC = ZC(36987),
-      bC = ZC(39680),
-      nC = ZC(38507),
-      fC = ZC(38501),
-      oC = ZC(39730),
-      qC = ZC(39694),
-      FC = ZC(39867),
-      WC = ZC(36985),
-      NC = ZC(39865),
-      MC = ZC(39712),
-      gC = ZC(39921),
-      SC = ZC(37731),
-      pC = ZC(39747);
-    class PC {
+    var Xk, Tk = Ik(37187),
+      ik = Ik(39850),
+      yk = Ik(38674),
+      lk = Ik(38666),
+      ak = Ik(39891),
+      qk = Ik(39863),
+      Lk = Ik(40040),
+      tk = Ik(37178),
+      Zk = Ik(40038),
+      jk = Ik(39878),
+      ek = Ik(40099),
+      wk = Ik(37902),
+      Hk = Ik(39923);
+    class Jk {
       static get BaseUrl() {
-        return NC.e.BaseUrl
+        return Zk.h.BaseUrl
       }
-      static set BaseUrl(CC) {
-        NC.e.BaseUrl = CC
+      static set BaseUrl(kk) {
+        Zk.h.BaseUrl = kk
       }
       static get CleanUrl() {
-        return NC.e.CleanUrl
+        return Zk.h.CleanUrl
       }
-      static set CleanUrl(CC) {
-        NC.e.CleanUrl = CC
+      static set CleanUrl(kk) {
+        Zk.h.CleanUrl = kk
       }
-      static IsAbsoluteUrl(CC) {
-        return 0 === CC.indexOf("//") || -1 !== CC.indexOf("://") && (-1 !== CC.indexOf(".") && (-1 !== CC.indexOf("/") && (!(CC.indexOf(":") > CC.indexOf("/")) && (CC.indexOf("://") < CC.indexOf(".") || (0 === CC.indexOf("data:") || 0 === CC.indexOf("blob:"))))))
+      static IsAbsoluteUrl(kk) {
+        return 0 === kk.indexOf("//") || -1 !== kk.indexOf("://") && (-1 !== kk.indexOf(".") && (-1 !== kk.indexOf("/") && (!(kk.indexOf(":") > kk.indexOf("/")) && (kk.indexOf("://") < kk.indexOf(".") || (0 === kk.indexOf("data:") || 0 === kk.indexOf("blob:"))))))
       }
-      static set ScriptBaseUrl(CC) {
-        NC.e.ScriptBaseUrl = CC
+      static set ScriptBaseUrl(kk) {
+        Zk.h.ScriptBaseUrl = kk
       }
       static get ScriptBaseUrl() {
-        return NC.e.ScriptBaseUrl
+        return Zk.h.ScriptBaseUrl
       }
-      static set CDNBaseUrl(CC) {
-        QC.ScriptBaseUrl = CC, QC.AssetBaseUrl = CC
+      static set CDNBaseUrl(kk) {
+        Xk.ScriptBaseUrl = kk, Xk.AssetBaseUrl = kk
       }
-      static set ScriptPreprocessUrl(CC) {
-        NC.e.ScriptPreprocessUrl = CC
+      static set ScriptPreprocessUrl(kk) {
+        Zk.h.ScriptPreprocessUrl = kk
       }
       static get ScriptPreprocessUrl() {
-        return NC.e.ScriptPreprocessUrl
+        return Zk.h.ScriptPreprocessUrl
       }
       static get DefaultRetryStrategy() {
-        return NC.e.DefaultRetryStrategy
+        return Zk.h.DefaultRetryStrategy
       }
-      static set DefaultRetryStrategy(CC) {
-        NC.e.DefaultRetryStrategy = CC
+      static set DefaultRetryStrategy(kk) {
+        Zk.h.DefaultRetryStrategy = kk
       }
       static get CorsBehavior() {
-        return NC.e.CorsBehavior
+        return Zk.h.CorsBehavior
       }
-      static set CorsBehavior(CC) {
-        NC.e.CorsBehavior = CC
+      static set CorsBehavior(kk) {
+        Zk.h.CorsBehavior = kk
       }
       static get UseFallbackTexture() {
-        return WC.c.UseFallbackTexture
+        return tk.e.UseFallbackTexture
       }
-      static set UseFallbackTexture(CC) {
-        WC.c.UseFallbackTexture = CC
+      static set UseFallbackTexture(kk) {
+        tk.e.UseFallbackTexture = kk
       }
       static get RegisteredExternalClasses() {
-        return gC.d.RegisteredExternalClasses
+        return ek.d.RegisteredExternalClasses
       }
-      static set RegisteredExternalClasses(CC) {
-        gC.d.RegisteredExternalClasses = CC
+      static set RegisteredExternalClasses(kk) {
+        ek.d.RegisteredExternalClasses = kk
       }
       static get fallbackTexture() {
-        return WC.c.FallbackTexture
+        return tk.e.FallbackTexture
       }
-      static set fallbackTexture(CC) {
-        WC.c.FallbackTexture = CC
+      static set fallbackTexture(kk) {
+        tk.e.FallbackTexture = kk
       }
-      static FetchToRef(CC, zC, ZC, QC, wC, bC) {
-        const nC = 4 * ((Math.abs(CC) * ZC % ZC | 0) + (Math.abs(zC) * QC % QC | 0) * ZC);
-        bC.r = wC[nC] / 255, bC.g = wC[nC + 1] / 255, bC.b = wC[nC + 2] / 255, bC.a = wC[nC + 3] / 255
+      static FetchToRef(kk, Fk, Ik, Xk, Tk, ik) {
+        const yk = 4 * ((Math.abs(kk) * Ik % Ik | 0) + (Math.abs(Fk) * Xk % Xk | 0) * Ik);
+        ik.r = Tk[yk] / 255, ik.g = Tk[yk + 1] / 255, ik.b = Tk[yk + 2] / 255, ik.a = Tk[yk + 3] / 255
       }
-      static Mix(CC, zC, ZC) {
+      static Mix(kk, Fk, Ik) {
         return 0
       }
-      static Instantiate(CC) {
-        return gC.d.Instantiate(CC)
+      static Instantiate(kk) {
+        return ek.d.Instantiate(kk)
       }
-      static SetImmediate(CC) {
-        MC.d.SetImmediate(CC)
+      static SetImmediate(kk) {
+        jk.d.SetImmediate(kk)
       }
-      static IsExponentOfTwo(CC) {
+      static IsExponentOfTwo(kk) {
         return !0
       }
-      static FloatRound(CC) {
-        return Math.fround(CC)
+      static FloatRound(kk) {
+        return Math.fround(kk)
       }
-      static GetFilename(CC) {
-        const zC = CC.lastIndexOf("/");
-        return zC < 0 ? CC : CC.substring(zC + 1)
+      static GetFilename(kk) {
+        const Fk = kk.lastIndexOf("/");
+        return Fk < 0 ? kk : kk.substring(Fk + 1)
       }
-      static GetFolderPath(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const ZC = CC.lastIndexOf("/");
-        return ZC < 0 ? zC ? CC : "" : CC.substring(0, ZC + 1)
+      static GetFolderPath(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const Ik = kk.lastIndexOf("/");
+        return Ik < 0 ? Fk ? kk : "" : kk.substring(0, Ik + 1)
       }
-      static ToDegrees(CC) {
-        return 180 * CC / Math.PI
+      static ToDegrees(kk) {
+        return 180 * kk / Math.PI
       }
-      static ToRadians(CC) {
-        return CC * Math.PI / 180
+      static ToRadians(kk) {
+        return kk * Math.PI / 180
       }
-      static SmoothAngleChange(CC, zC) {
-        let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .9;
-        const QC = this.ToRadians(CC),
-          wC = this.ToRadians(zC);
-        return this.ToDegrees(Math.atan2((1 - ZC) * Math.sin(wC) + ZC * Math.sin(QC), (1 - ZC) * Math.cos(wC) + ZC * Math.cos(QC)))
+      static SmoothAngleChange(kk, Fk) {
+        let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .9;
+        const Xk = this.ToRadians(kk),
+          Tk = this.ToRadians(Fk);
+        return this.ToDegrees(Math.atan2((1 - Ik) * Math.sin(Tk) + Ik * Math.sin(Xk), (1 - Ik) * Math.cos(Tk) + Ik * Math.cos(Xk)))
       }
-      static MakeArray(CC, zC) {
-        return !0 === zC || void 0 !== CC && null != CC ? Array.isArray(CC) ? CC : [CC] : null
+      static MakeArray(kk, Fk) {
+        return !0 === Fk || void 0 !== kk && null != kk ? Array.isArray(kk) ? kk : [kk] : null
       }
-      static GetPointerPrefix(CC) {
-        return (0, bC.k)() && !window.PointerEvent ? "mouse" : "pointer"
+      static GetPointerPrefix(kk) {
+        return (0, ik.j)() && !window.PointerEvent ? "mouse" : "pointer"
       }
-      static SetCorsBehavior(CC, zC) {
-        (0, NC.v)(CC, zC)
+      static SetCorsBehavior(kk, Fk) {
+        (0, Zk.B)(kk, Fk)
       }
-      static SetReferrerPolicyBehavior(CC, zC) {
-        zC.referrerPolicy = CC
+      static SetReferrerPolicyBehavior(kk, Fk) {
+        Fk.referrerPolicy = kk
       }
       static get PreprocessUrl() {
-        return NC.e.PreprocessUrl
+        return Zk.h.PreprocessUrl
       }
-      static set PreprocessUrl(CC) {
-        NC.e.PreprocessUrl = CC
+      static set PreprocessUrl(kk) {
+        Zk.h.PreprocessUrl = kk
       }
-      static LoadImage(CC, zC, ZC, QC, wC, bC) {
-        return (0, NC.m)(CC, zC, ZC, QC, wC, bC)
+      static LoadImage(kk, Fk, Ik, Xk, Tk, ik) {
+        return (0, Zk.t)(kk, Fk, Ik, Xk, Tk, ik)
       }
-      static LoadFile(CC, zC, ZC, QC, wC, bC) {
-        return (0, NC.i)(CC, zC, ZC, QC, wC, bC)
+      static LoadFile(kk, Fk, Ik, Xk, Tk, ik) {
+        return (0, Zk.p)(kk, Fk, Ik, Xk, Tk, ik)
       }
-      static async LoadFileAsync(CC) {
-        let zC = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        return await new Promise(((ZC, QC) => {
-          (0, NC.i)(CC, (CC => {
-            ZC(CC)
-          }), void 0, void 0, zC, ((CC, zC) => {
-            QC(zC)
+      static async LoadFileAsync(kk) {
+        let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        return await new Promise(((Ik, Xk) => {
+          (0, Zk.p)(kk, (kk => {
+            Ik(kk)
+          }), void 0, void 0, Fk, ((kk, Fk) => {
+            Xk(Fk)
           }))
         }))
       }
-      static GetAssetUrl(CC) {
-        if (!CC) return "";
-        if (QC.AssetBaseUrl && CC.startsWith(QC._DefaultAssetsUrl)) {
-          const zC = QC.AssetBaseUrl.endsWith("/") ? QC.AssetBaseUrl.slice(0, -1) : QC.AssetBaseUrl;
-          return CC.replace(QC._DefaultAssetsUrl, zC)
+      static GetAssetUrl(kk) {
+        if (!kk) return "";
+        if (Xk.AssetBaseUrl && kk.startsWith(Xk._DefaultAssetsUrl)) {
+          const Fk = Xk.AssetBaseUrl.endsWith("/") ? Xk.AssetBaseUrl.slice(0, -1) : Xk.AssetBaseUrl;
+          return kk.replace(Xk._DefaultAssetsUrl, Fk)
         }
-        return CC
+        return kk
       }
-      static GetBabylonScriptURL(CC, zC) {
-        if (!CC) return "";
-        if (CC.startsWith(QC._DefaultCdnUrl))
-          if (QC.ScriptBaseUrl) {
-            const zC = QC.ScriptBaseUrl.endsWith("/") ? QC.ScriptBaseUrl.slice(0, -1) : QC.ScriptBaseUrl;
-            CC = CC.replace(QC._DefaultCdnUrl, zC)
-          } else if (QC._CdnVersion) {
-          const zC = `${QC._DefaultCdnUrl}/v${QC._CdnVersion}`;
-          CC.startsWith(zC) || (CC = CC.replace(QC._DefaultCdnUrl, zC))
+      static GetBabylonScriptURL(kk, Fk) {
+        if (!kk) return "";
+        if (kk.startsWith(Xk._DefaultCdnUrl))
+          if (Xk.ScriptBaseUrl) {
+            const Fk = Xk.ScriptBaseUrl.endsWith("/") ? Xk.ScriptBaseUrl.slice(0, -1) : Xk.ScriptBaseUrl;
+            kk = kk.replace(Xk._DefaultCdnUrl, Fk)
+          } else if (Xk._CdnVersion) {
+          const Fk = `${Xk._DefaultCdnUrl}/v${Xk._CdnVersion}`;
+          kk.startsWith(Fk) || (kk = kk.replace(Xk._DefaultCdnUrl, Fk))
         }
-        return CC = QC.ScriptPreprocessUrl(CC), zC && !QC.IsAbsoluteUrl(CC) && (CC = QC.GetAbsoluteUrl(CC)), CC
+        return kk = Xk.ScriptPreprocessUrl(kk), Fk && !Xk.IsAbsoluteUrl(kk) && (kk = Xk.GetAbsoluteUrl(kk)), kk
       }
-      static LoadBabylonScript(CC, zC, ZC, wC) {
-        CC = QC.GetBabylonScriptURL(CC), QC.LoadScript(CC, zC, ZC)
+      static LoadBabylonScript(kk, Fk, Ik, Tk) {
+        kk = Xk.GetBabylonScriptURL(kk), Xk.LoadScript(kk, Fk, Ik)
       }
-      static async LoadBabylonScriptAsync(CC) {
-        return CC = QC.GetBabylonScriptURL(CC), await QC.LoadScriptAsync(CC)
+      static async LoadBabylonScriptAsync(kk) {
+        return kk = Xk.GetBabylonScriptURL(kk), await Xk.LoadScriptAsync(kk)
       }
-      static _LoadScriptNative(CC, zC, ZC, wC) {
+      static _LoadScriptNative(kk, Fk, Ik, Tk) {
         if (_native) {
           if (arguments.length > 4 && void 0 !== arguments[4] && arguments[4]) {
-            const CC = "Loading a script as an ES module is not supported in Babylon Native";
-            return void ZC?.(CC, new Error(CC))
+            const kk = "Loading a script as an ES module is not supported in Babylon Native";
+            return void Ik?.(kk, new Error(kk))
           }
-          QC.LoadFile(CC, (CC => {
+          Xk.LoadFile(kk, (kk => {
             try {
-              Function(CC).apply(null), zC && zC()
-            } catch (QC) {
-              ZC && ZC("LoadScript Error", QC)
+              Function(kk).apply(null), Fk && Fk()
+            } catch (Xk) {
+              Ik && Ik("LoadScript Error", Xk)
             }
-          }), void 0, void 0, !1, ((CC, zC) => {
-            ZC && ZC("LoadScript Error", zC)
+          }), void 0, void 0, !1, ((kk, Fk) => {
+            Ik && Ik("LoadScript Error", Fk)
           }))
         }
       }
-      static _LoadScriptWeb(CC, zC, ZC, QC) {
-        let wC = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      static _LoadScriptWeb(kk, Fk, Ik, Xk) {
+        let Tk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
         if ("function" === typeof importScripts) {
           try {
-            importScripts(CC), zC && zC()
-          } catch (oC) {
-            ZC?.(`Unable to load script '${CC}' in worker`, oC)
+            importScripts(kk), Fk && Fk()
+          } catch (ak) {
+            Ik?.(`Unable to load script '${kk}' in worker`, ak)
           }
           return
         }
-        if (!(0, bC.k)()) return void ZC?.(`Cannot load script '${CC}' outside of a window or a worker`);
-        const nC = document.getElementsByTagName("head")[0],
-          fC = document.createElement("script");
-        wC ? (fC.setAttribute("type", "module"), fC.innerText = CC) : (fC.setAttribute("type", "text/javascript"), fC.setAttribute("src", CC)), QC && (fC.id = QC), fC.onload = () => {
-          zC && zC()
-        }, fC.onerror = zC => {
-          ZC && ZC(`Unable to load script '${CC}'`, zC)
-        }, nC.appendChild(fC)
+        if (!(0, ik.j)()) return void Ik?.(`Cannot load script '${kk}' outside of a window or a worker`);
+        const yk = document.getElementsByTagName("head")[0],
+          lk = document.createElement("script");
+        Tk ? (lk.setAttribute("type", "module"), lk.innerText = kk) : (lk.setAttribute("type", "text/javascript"), lk.setAttribute("src", kk)), Xk && (lk.id = Xk), lk.onload = () => {
+          Fk && Fk()
+        }, lk.onerror = Fk => {
+          Ik && Ik(`Unable to load script '${kk}'`, Fk)
+        }, yk.appendChild(lk)
       }
-      static async LoadScriptAsync(CC, zC) {
-        return await new Promise(((ZC, QC) => {
-          this.LoadScript(CC, (() => {
-            ZC()
-          }), ((CC, zC) => {
-            QC(zC || new Error(CC))
-          }), zC)
+      static async LoadScriptAsync(kk, Fk) {
+        return await new Promise(((Ik, Xk) => {
+          this.LoadScript(kk, (() => {
+            Ik()
+          }), ((kk, Fk) => {
+            Xk(Fk || new Error(kk))
+          }), Fk)
         }))
       }
-      static ReadFileAsDataURL(CC, zC, ZC) {
-        const QC = new FileReader,
-          bC = {
-            onCompleteObservable: new wC.d,
-            abort: () => QC.abort()
+      static ReadFileAsDataURL(kk, Fk, Ik) {
+        const Xk = new FileReader,
+          ik = {
+            onCompleteObservable: new Tk.e,
+            abort: () => Xk.abort()
           };
-        return QC.onloadend = () => {
-          bC.onCompleteObservable.notifyObservers(bC)
-        }, QC.onload = CC => {
-          zC(CC.target.result)
-        }, QC.onprogress = ZC, QC.readAsDataURL(CC), bC
+        return Xk.onloadend = () => {
+          ik.onCompleteObservable.notifyObservers(ik)
+        }, Xk.onload = kk => {
+          Fk(kk.target.result)
+        }, Xk.onprogress = Ik, Xk.readAsDataURL(kk), ik
       }
-      static ReadFile(CC, zC, ZC, QC, wC) {
-        return (0, NC.o)(CC, zC, ZC, QC, wC)
+      static ReadFile(kk, Fk, Ik, Xk, Tk) {
+        return (0, Zk.w)(kk, Fk, Ik, Xk, Tk)
       }
-      static FileAsURL(CC) {
-        const zC = new Blob([CC]);
-        return window.URL.createObjectURL(zC)
+      static FileAsURL(kk) {
+        const Fk = new Blob([kk]);
+        return window.URL.createObjectURL(Fk)
       }
-      static Format(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-        return CC.toFixed(zC)
+      static Format(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+        return kk.toFixed(Fk)
       }
-      static DeepCopy(CC, zC, ZC, QC) {
-        fC.e.DeepCopy(CC, zC, ZC, QC)
+      static DeepCopy(kk, Fk, Ik, Xk) {
+        lk.c.DeepCopy(kk, Fk, Ik, Xk)
       }
-      static IsEmpty(CC) {
-        for (const zC in CC)
-          if (Object.prototype.hasOwnProperty.call(CC, zC)) return !1;
+      static IsEmpty(kk) {
+        for (const Fk in kk)
+          if (Object.prototype.hasOwnProperty.call(kk, Fk)) return !1;
         return !0
       }
-      static RegisterTopRootEvents(CC, zC) {
-        for (let QC = 0; QC < zC.length; QC++) {
-          const wC = zC[QC];
-          CC.addEventListener(wC.name, wC.handler, !1);
+      static RegisterTopRootEvents(kk, Fk) {
+        for (let Xk = 0; Xk < Fk.length; Xk++) {
+          const Tk = Fk[Xk];
+          kk.addEventListener(Tk.name, Tk.handler, !1);
           try {
-            window.parent && window.parent.addEventListener(wC.name, wC.handler, !1)
-          } catch (ZC) {}
+            window.parent && window.parent.addEventListener(Tk.name, Tk.handler, !1)
+          } catch (Ik) {}
         }
       }
-      static UnregisterTopRootEvents(CC, zC) {
-        for (let QC = 0; QC < zC.length; QC++) {
-          const wC = zC[QC];
-          CC.removeEventListener(wC.name, wC.handler);
+      static UnregisterTopRootEvents(kk, Fk) {
+        for (let Xk = 0; Xk < Fk.length; Xk++) {
+          const Tk = Fk[Xk];
+          kk.removeEventListener(Tk.name, Tk.handler);
           try {
-            CC.parent && CC.parent.removeEventListener(wC.name, wC.handler)
-          } catch (ZC) {}
+            kk.parent && kk.parent.removeEventListener(Tk.name, Tk.handler)
+          } catch (Ik) {}
         }
       }
-      static async DumpFramebuffer(CC, zC, ZC, QC) {
-        throw (0, qC.i)("DumpTools")
+      static async DumpFramebuffer(kk, Fk, Ik, Xk) {
+        throw (0, qk.j)("DumpTools")
       }
-      static DumpData(CC, zC, ZC, QC) {
-        throw (0, qC.i)("DumpTools")
+      static DumpData(kk, Fk, Ik, Xk) {
+        throw (0, qk.j)("DumpTools")
       }
-      static async DumpDataAsync(CC, zC, ZC) {
-        throw (0, qC.i)("DumpTools")
+      static async DumpDataAsync(kk, Fk, Ik) {
+        throw (0, qk.j)("DumpTools")
       }
-      static _IsOffScreenCanvas(CC) {
-        return void 0 !== CC.convertToBlob
+      static _IsOffScreenCanvas(kk) {
+        return void 0 !== kk.convertToBlob
       }
-      static ToBlob(CC, zC) {
-        let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
-          wC = arguments.length > 3 ? arguments[3] : void 0;
-        QC._IsOffScreenCanvas(CC) || CC.toBlob || (CC.toBlob = function(CC, zC, ZC) {
+      static ToBlob(kk, Fk) {
+        let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
+          Tk = arguments.length > 3 ? arguments[3] : void 0;
+        Xk._IsOffScreenCanvas(kk) || kk.toBlob || (kk.toBlob = function(kk, Fk, Ik) {
           setTimeout((() => {
-            const QC = atob(this.toDataURL(zC, ZC).split(",")[1]),
-              wC = QC.length,
-              bC = new Uint8Array(wC);
-            for (let CC = 0; CC < wC; CC++) bC[CC] = QC.charCodeAt(CC);
-            CC(new Blob([bC]))
+            const Xk = atob(this.toDataURL(Fk, Ik).split(",")[1]),
+              Tk = Xk.length,
+              ik = new Uint8Array(Tk);
+            for (let kk = 0; kk < Tk; kk++) ik[kk] = Xk.charCodeAt(kk);
+            kk(new Blob([ik]))
           }))
-        }), QC._IsOffScreenCanvas(CC) ? CC.convertToBlob({
-          type: ZC,
-          quality: wC
-        }).then((CC => zC(CC))) : CC.toBlob((function(CC) {
-          zC(CC)
-        }), ZC, wC)
+        }), Xk._IsOffScreenCanvas(kk) ? kk.convertToBlob({
+          type: Ik,
+          quality: Tk
+        }).then((kk => Fk(kk))) : kk.toBlob((function(kk) {
+          Fk(kk)
+        }), Ik, Tk)
       }
-      static DownloadBlob(CC, zC) {
+      static DownloadBlob(kk, Fk) {
         if ("download" in document.createElement("a")) {
-          if (!zC) {
-            const CC = new Date;
-            zC = "screenshot_" + ((CC.getFullYear() + "-" + (CC.getMonth() + 1)).slice(2) + "-" + CC.getDate() + "_" + CC.getHours() + "-" + ("0" + CC.getMinutes()).slice(-2)) + ".png"
+          if (!Fk) {
+            const kk = new Date;
+            Fk = "screenshot_" + ((kk.getFullYear() + "-" + (kk.getMonth() + 1)).slice(2) + "-" + kk.getDate() + "_" + kk.getHours() + "-" + ("0" + kk.getMinutes()).slice(-2)) + ".png"
           }
-          QC.Download(CC, zC)
-        } else if (CC && "undefined" !== typeof URL) {
-          const zC = URL.createObjectURL(CC),
-            ZC = window.open("");
-          if (!ZC) return;
-          const QC = ZC.document.createElement("img");
-          QC.onload = function() {
-            URL.revokeObjectURL(zC)
-          }, QC.src = zC, ZC.document.body.appendChild(QC)
+          Xk.Download(kk, Fk)
+        } else if (kk && "undefined" !== typeof URL) {
+          const Fk = URL.createObjectURL(kk),
+            Ik = window.open("");
+          if (!Ik) return;
+          const Xk = Ik.document.createElement("img");
+          Xk.onload = function() {
+            URL.revokeObjectURL(Fk)
+          }, Xk.src = Fk, Ik.document.body.appendChild(Xk)
         }
       }
-      static EncodeScreenshotCanvasData(CC, zC) {
-        let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
-          wC = arguments.length > 3 ? arguments[3] : void 0,
-          bC = arguments.length > 4 ? arguments[4] : void 0;
-        if ("string" !== typeof wC && zC) {
-          if (zC) {
-            if (QC._IsOffScreenCanvas(CC)) return void CC.convertToBlob({
-              type: ZC,
-              quality: bC
-            }).then((CC => {
-              const ZC = new FileReader;
-              ZC.readAsDataURL(CC), ZC.onloadend = () => {
-                const CC = ZC.result;
-                zC(CC)
+      static EncodeScreenshotCanvasData(kk, Fk) {
+        let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
+          Tk = arguments.length > 3 ? arguments[3] : void 0,
+          ik = arguments.length > 4 ? arguments[4] : void 0;
+        if ("string" !== typeof Tk && Fk) {
+          if (Fk) {
+            if (Xk._IsOffScreenCanvas(kk)) return void kk.convertToBlob({
+              type: Ik,
+              quality: ik
+            }).then((kk => {
+              const Ik = new FileReader;
+              Ik.readAsDataURL(kk), Ik.onloadend = () => {
+                const kk = Ik.result;
+                Fk(kk)
               }
             }));
-            const wC = CC.toDataURL(ZC, bC);
-            zC(wC)
+            const Tk = kk.toDataURL(Ik, ik);
+            Fk(Tk)
           }
-        } else this.ToBlob(CC, (function(CC) {
-          CC && QC.DownloadBlob(CC, wC), zC && zC("")
-        }), ZC, bC)
+        } else this.ToBlob(kk, (function(kk) {
+          kk && Xk.DownloadBlob(kk, Tk), Fk && Fk("")
+        }), Ik, ik)
       }
-      static Download(CC, zC) {
+      static Download(kk, Fk) {
         if ("undefined" === typeof URL) return;
-        const ZC = window.URL.createObjectURL(CC),
-          QC = document.createElement("a");
-        document.body.appendChild(QC), QC.style.display = "none", QC.href = ZC, QC.download = zC, QC.addEventListener("click", (() => {
-          QC.parentElement && QC.parentElement.removeChild(QC)
-        })), QC.click(), window.URL.revokeObjectURL(ZC)
+        const Ik = window.URL.createObjectURL(kk),
+          Xk = document.createElement("a");
+        document.body.appendChild(Xk), Xk.style.display = "none", Xk.href = Ik, Xk.download = Fk, Xk.addEventListener("click", (() => {
+          Xk.parentElement && Xk.parentElement.removeChild(Xk)
+        })), Xk.click(), window.URL.revokeObjectURL(Ik)
       }
-      static BackCompatCameraNoPreventDefault(CC) {
-        return "boolean" === typeof CC[0] ? CC[0] : "boolean" === typeof CC[1] && CC[1]
+      static BackCompatCameraNoPreventDefault(kk) {
+        return "boolean" === typeof kk[0] ? kk[0] : "boolean" === typeof kk[1] && kk[1]
       }
-      static CreateScreenshot(CC, zC, ZC, QC) {
-        throw (0, qC.i)("ScreenshotTools")
+      static CreateScreenshot(kk, Fk, Ik, Xk) {
+        throw (0, qk.j)("ScreenshotTools")
       }
-      static async CreateScreenshotAsync(CC, zC, ZC) {
-        throw (0, qC.i)("ScreenshotTools")
+      static async CreateScreenshotAsync(kk, Fk, Ik) {
+        throw (0, qk.j)("ScreenshotTools")
       }
-      static CreateScreenshotUsingRenderTarget(CC, zC, ZC, QC) {
-        throw (0, qC.i)("ScreenshotTools")
+      static CreateScreenshotUsingRenderTarget(kk, Fk, Ik, Xk) {
+        throw (0, qk.j)("ScreenshotTools")
       }
-      static async CreateScreenshotUsingRenderTargetAsync(CC, zC, ZC) {
-        throw (0, qC.i)("ScreenshotTools")
+      static async CreateScreenshotUsingRenderTargetAsync(kk, Fk, Ik) {
+        throw (0, qk.j)("ScreenshotTools")
       }
       static RandomId() {
-        return (0, SC.b)()
+        return (0, wk.e)()
       }
-      static IsBase64(CC) {
-        return (0, NC.h)(CC)
+      static IsBase64(kk) {
+        return (0, Zk.o)(kk)
       }
-      static DecodeBase64(CC) {
-        return (0, NC.d)(CC)
+      static DecodeBase64(kk) {
+        return (0, Zk.e)(kk)
       }
       static get errorsCount() {
-        return nC.c.errorsCount
+        return yk.e.errorsCount
       }
-      static Log(CC) {
-        nC.c.Log(CC)
+      static Log(kk) {
+        yk.e.Log(kk)
       }
-      static Warn(CC) {
-        nC.c.Warn(CC)
+      static Warn(kk) {
+        yk.e.Warn(kk)
       }
-      static Error(CC) {
-        nC.c.Error(CC)
+      static Error(kk) {
+        yk.e.Error(kk)
       }
       static get LogCache() {
-        return nC.c.LogCache
+        return yk.e.LogCache
       }
       static ClearLogCache() {
-        nC.c.ClearLogCache()
+        yk.e.ClearLogCache()
       }
-      static set LogLevels(CC) {
-        nC.c.LogLevels = CC
+      static set LogLevels(kk) {
+        yk.e.LogLevels = kk
       }
-      static set PerformanceLogLevel(CC) {
-        (CC & QC.PerformanceUserMarkLogLevel) !== QC.PerformanceUserMarkLogLevel ? (CC & QC.PerformanceConsoleLogLevel) !== QC.PerformanceConsoleLogLevel ? (QC.StartPerformanceCounter = QC._StartPerformanceCounterDisabled, QC.EndPerformanceCounter = QC._EndPerformanceCounterDisabled, _native?.disablePerformanceLogging?.()) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(2), QC.StartPerformanceCounter = QC._StartMarkNative, QC.EndPerformanceCounter = QC._EndMarkNative) : (QC.StartPerformanceCounter = QC._StartPerformanceConsole, QC.EndPerformanceCounter = QC._EndPerformanceConsole) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(1), QC.StartPerformanceCounter = QC._StartMarkNative, QC.EndPerformanceCounter = QC._EndMarkNative) : (QC.StartPerformanceCounter = QC._StartUserMark, QC.EndPerformanceCounter = QC._EndUserMark)
+      static set PerformanceLogLevel(kk) {
+        (kk & Xk.PerformanceUserMarkLogLevel) !== Xk.PerformanceUserMarkLogLevel ? (kk & Xk.PerformanceConsoleLogLevel) !== Xk.PerformanceConsoleLogLevel ? (Xk.StartPerformanceCounter = Xk._StartPerformanceCounterDisabled, Xk.EndPerformanceCounter = Xk._EndPerformanceCounterDisabled, _native?.disablePerformanceLogging?.()) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(2), Xk.StartPerformanceCounter = Xk._StartMarkNative, Xk.EndPerformanceCounter = Xk._EndMarkNative) : (Xk.StartPerformanceCounter = Xk._StartPerformanceConsole, Xk.EndPerformanceCounter = Xk._EndPerformanceConsole) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(1), Xk.StartPerformanceCounter = Xk._StartMarkNative, Xk.EndPerformanceCounter = Xk._EndMarkNative) : (Xk.StartPerformanceCounter = Xk._StartUserMark, Xk.EndPerformanceCounter = Xk._EndUserMark)
       }
-      static _StartPerformanceCounterDisabled(CC, zC) {}
-      static _EndPerformanceCounterDisabled(CC, zC) {}
-      static _StartUserMark(CC) {
-        let zC = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (!QC._Performance) {
-          if (!(0, bC.k)()) return;
-          QC._Performance = window.performance
+      static _StartPerformanceCounterDisabled(kk, Fk) {}
+      static _EndPerformanceCounterDisabled(kk, Fk) {}
+      static _StartUserMark(kk) {
+        let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (!Xk._Performance) {
+          if (!(0, ik.j)()) return;
+          Xk._Performance = window.performance
         }
-        zC && QC._Performance.mark && QC._Performance.mark(CC + "-Begin")
+        Fk && Xk._Performance.mark && Xk._Performance.mark(kk + "-Begin")
       }
-      static _EndUserMark(CC) {
-        (!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && QC._Performance.mark && (QC._Performance.mark(CC + "-End"), QC._Performance.measure(CC, CC + "-Begin", CC + "-End"))
+      static _EndUserMark(kk) {
+        (!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && Xk._Performance.mark && (Xk._Performance.mark(kk + "-End"), Xk._Performance.measure(kk, kk + "-Begin", kk + "-End"))
       }
-      static _StartPerformanceConsole(CC) {
-        let zC = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        zC && (QC._StartUserMark(CC, zC), console.time && console.time(CC))
+      static _StartPerformanceConsole(kk) {
+        let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        Fk && (Xk._StartUserMark(kk, Fk), console.time && console.time(kk))
       }
-      static _EndPerformanceConsole(CC) {
-        let zC = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        zC && (QC._EndUserMark(CC, zC), console.timeEnd(CC))
+      static _EndPerformanceConsole(kk) {
+        let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        Fk && (Xk._EndUserMark(kk, Fk), console.timeEnd(kk))
       }
-      static _StartMarkNative(CC) {
+      static _StartMarkNative(kk) {
         if ((!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && _native?.startPerformanceCounter)
-          if (QC._NativePerformanceCounterHandles.has(CC)) QC.Warn(`Performance counter with name ${CC} is already started.`);
+          if (Xk._NativePerformanceCounterHandles.has(kk)) Xk.Warn(`Performance counter with name ${kk} is already started.`);
           else {
-            const zC = _native.startPerformanceCounter(CC);
-            QC._NativePerformanceCounterHandles.set(CC, zC)
+            const Fk = _native.startPerformanceCounter(kk);
+            Xk._NativePerformanceCounterHandles.set(kk, Fk)
           }
       }
-      static _EndMarkNative(CC) {
+      static _EndMarkNative(kk) {
         if ((!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && _native?.endPerformanceCounter) {
-          const zC = QC._NativePerformanceCounterHandles.get(CC);
-          zC ? (_native.endPerformanceCounter(zC), QC._NativePerformanceCounterHandles.delete(CC)) : QC.Warn(`Performance counter with name ${CC} was not started.`)
+          const Fk = Xk._NativePerformanceCounterHandles.get(kk);
+          Fk ? (_native.endPerformanceCounter(Fk), Xk._NativePerformanceCounterHandles.delete(kk)) : Xk.Warn(`Performance counter with name ${kk} was not started.`)
         }
       }
       static get Now() {
-        return oC.b.Now
+        return ak.d.Now
       }
-      static GetClassName(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          ZC = null;
-        if (!zC && CC.getClassName) ZC = CC.getClassName();
+      static GetClassName(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          Ik = null;
+        if (!Fk && kk.getClassName) Ik = kk.getClassName();
         else {
-          if (CC instanceof Object) {
-            ZC = (zC ? CC : Object.getPrototypeOf(CC)).constructor.__bjsclassName__
+          if (kk instanceof Object) {
+            Ik = (Fk ? kk : Object.getPrototypeOf(kk)).constructor.__bjsclassName__
           }
-          ZC || (ZC = typeof CC)
+          Ik || (Ik = typeof kk)
         }
-        return ZC
+        return Ik
       }
-      static First(CC, zC) {
-        for (const ZC of CC)
-          if (zC(ZC)) return ZC;
+      static First(kk, Fk) {
+        for (const Ik of kk)
+          if (Fk(Ik)) return Ik;
         return null
       }
-      static getFullClassName(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          ZC = null,
-          QC = null;
-        if (!zC && CC.getClassName) ZC = CC.getClassName();
+      static getFullClassName(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          Ik = null,
+          Xk = null;
+        if (!Fk && kk.getClassName) Ik = kk.getClassName();
         else {
-          if (CC instanceof Object) {
-            const wC = zC ? CC : Object.getPrototypeOf(CC);
-            ZC = wC.constructor.__bjsclassName__, QC = wC.constructor.__bjsmoduleName__
+          if (kk instanceof Object) {
+            const Tk = Fk ? kk : Object.getPrototypeOf(kk);
+            Ik = Tk.constructor.__bjsclassName__, Xk = Tk.constructor.__bjsmoduleName__
           }
-          ZC || (ZC = typeof CC)
+          Ik || (Ik = typeof kk)
         }
-        return ZC ? (null != QC ? QC + "." : "") + ZC : null
+        return Ik ? (null != Xk ? Xk + "." : "") + Ik : null
       }
-      static async DelayAsync(CC) {
-        await new Promise((zC => {
+      static async DelayAsync(kk) {
+        await new Promise((Fk => {
           setTimeout((() => {
-            zC()
-          }), CC)
+            Fk()
+          }), kk)
         }))
       }
       static IsSafari() {
-        return !!(0, bC.h)() && /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
+        return !!(0, ik.h)() && /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
       }
     }
 
-    function GC(CC, zC) {
-      return ZC => {
-        ZC.__bjsclassName__ = CC, ZC.__bjsmoduleName__ = null != zC ? zC : null
+    function xk(kk, Fk) {
+      return Ik => {
+        Ik.__bjsclassName__ = kk, Ik.__bjsmoduleName__ = null != Fk ? Fk : null
       }
     }
-    QC = PC, PC.AssetBaseUrl = "", PC.UseCustomRequestHeaders = !1, PC.CustomRequestHeaders = FC.d.CustomRequestHeaders, PC.GetDOMTextContent = bC.e, PC._DefaultCdnUrl = "https://cdn.babylonjs.com", PC._CdnVersion = "9.28.0", PC._DefaultAssetsUrl = "https://assets.babylonjs.com/core", PC.LoadScript = "undefined" === typeof _native ? QC._LoadScriptWeb : QC._LoadScriptNative, PC.GetAbsoluteUrl = "object" === typeof document ? CC => {
-      const zC = document.createElement("a");
-      return zC.href = CC, zC.href
-    } : "function" === typeof URL && "object" === typeof location ? CC => new URL(CC, location.origin).href : () => {
+    Xk = Jk, Jk.AssetBaseUrl = "", Jk.UseCustomRequestHeaders = !1, Jk.CustomRequestHeaders = Lk.b.CustomRequestHeaders, Jk.GetDOMTextContent = ik.c, Jk._DefaultCdnUrl = "https://cdn.babylonjs.com", Jk._CdnVersion = "9.28.0", Jk._DefaultAssetsUrl = "https://assets.babylonjs.com/core", Jk.LoadScript = "undefined" === typeof _native ? Xk._LoadScriptWeb : Xk._LoadScriptNative, Jk.GetAbsoluteUrl = "object" === typeof document ? kk => {
+      const Fk = document.createElement("a");
+      return Fk.href = kk, Fk.href
+    } : "function" === typeof URL && "object" === typeof location ? kk => new URL(kk, location.origin).href : () => {
       throw new Error("Unable to get absolute URL. Override BABYLON.Tools.GetAbsoluteUrl to a custom implementation for the current context.")
-    }, PC.NoneLogLevel = nC.c.NoneLogLevel, PC.MessageLogLevel = nC.c.MessageLogLevel, PC.WarningLogLevel = nC.c.WarningLogLevel, PC.ErrorLogLevel = nC.c.ErrorLogLevel, PC.AllLogLevel = nC.c.AllLogLevel, PC.IsWindowObjectExist = bC.k, PC.PerformanceNoneLogLevel = 0, PC.PerformanceUserMarkLogLevel = 1, PC.PerformanceConsoleLogLevel = 2, PC._NativePerformanceCounterHandles = new Map, PC.StartPerformanceCounter = QC._StartPerformanceCounterDisabled, PC.EndPerformanceCounter = QC._EndPerformanceCounterDisabled;
-    class RC {
-      constructor(CC, zC, ZC) {
-        let QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.iterations = CC, this.index = QC - 1, this._done = !1, this._fn = zC, this._successCallback = ZC
+    }, Jk.NoneLogLevel = yk.e.NoneLogLevel, Jk.MessageLogLevel = yk.e.MessageLogLevel, Jk.WarningLogLevel = yk.e.WarningLogLevel, Jk.ErrorLogLevel = yk.e.ErrorLogLevel, Jk.AllLogLevel = yk.e.AllLogLevel, Jk.IsWindowObjectExist = ik.j, Jk.PerformanceNoneLogLevel = 0, Jk.PerformanceUserMarkLogLevel = 1, Jk.PerformanceConsoleLogLevel = 2, Jk._NativePerformanceCounterHandles = new Map, Jk.StartPerformanceCounter = Xk._StartPerformanceCounterDisabled, Jk.EndPerformanceCounter = Xk._EndPerformanceCounterDisabled;
+    class Pk {
+      constructor(kk, Fk, Ik) {
+        let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.iterations = kk, this.index = Xk - 1, this._done = !1, this._fn = Fk, this._successCallback = Ik
       }
       executeNext() {
         this._done || (this.index + 1 < this.iterations ? (++this.index, this._fn(this)) : this.breakLoop())
@@ -585,33 +585,33 @@ export const modules = {
       breakLoop() {
         this._done = !0, this._successCallback()
       }
-      static Run(CC, zC, ZC) {
-        const QC = new RC(CC, zC, ZC, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0);
-        return QC.executeNext(), QC
+      static Run(kk, Fk, Ik) {
+        const Xk = new Pk(kk, Fk, Ik, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0);
+        return Xk.executeNext(), Xk
       }
-      static SyncAsyncForLoop(CC, zC, ZC, QC, wC) {
-        let bC = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-        return RC.Run(Math.ceil(CC / zC), (QC => {
-          wC && wC() ? QC.breakLoop() : setTimeout((() => {
-            for (let bC = 0; bC < zC; ++bC) {
-              const nC = QC.index * zC + bC;
-              if (nC >= CC) break;
-              if (ZC(nC), wC && wC()) {
-                QC.breakLoop();
+      static SyncAsyncForLoop(kk, Fk, Ik, Xk, Tk) {
+        let ik = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+        return Pk.Run(Math.ceil(kk / Fk), (Xk => {
+          Tk && Tk() ? Xk.breakLoop() : setTimeout((() => {
+            for (let ik = 0; ik < Fk; ++ik) {
+              const yk = Xk.index * Fk + ik;
+              if (yk >= kk) break;
+              if (Ik(yk), Tk && Tk()) {
+                Xk.breakLoop();
                 break
               }
             }
-            QC.executeNext()
-          }), bC)
-        }), QC)
+            Xk.executeNext()
+          }), ik)
+        }), Xk)
       }
     }
-    let AC = !1;
+    let Kk = !1;
 
-    function xC() {
-      AC || (AC = !0, PC.Mix = pC.i, PC.IsExponentOfTwo = pC.h, WC.c.FallbackTexture = "data:image/jpg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QBmRXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAAExAAIAAAAQAAAATgAAAAAAAABgAAAAAQAAAGAAAAABcGFpbnQubmV0IDQuMC41AP/bAEMABAIDAwMCBAMDAwQEBAQFCQYFBQUFCwgIBgkNCw0NDQsMDA4QFBEODxMPDAwSGBITFRYXFxcOERkbGRYaFBYXFv/bAEMBBAQEBQUFCgYGChYPDA8WFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFv/AABEIAQABAAMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APH6KKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76P//Z")
+    function Qk() {
+      Kk || (Kk = !0, Jk.Mix = Hk.l, Jk.IsExponentOfTwo = Hk.j, tk.e.FallbackTexture = "data:image/jpg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QBmRXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAAExAAIAAAAQAAAATgAAAAAAAABgAAAAAQAAAGAAAAABcGFpbnQubmV0IDQuMC41AP/bAEMABAIDAwMCBAMDAwQEBAQFCQYFBQUFCwgIBgkNCw0NDQsMDA4QFBEODxMPDAwSGBITFRYXFxcOERkbGRYaFBYXFv/bAEMBBAQEBQUFCgYGChYPDA8WFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFv/AABEIAQABAAMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APH6KKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76P//Z")
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

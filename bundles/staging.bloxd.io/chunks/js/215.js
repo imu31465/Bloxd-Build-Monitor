@@ -1,132 +1,132 @@
 export const id = 215;
 export const ids = [215];
 export const modules = {
-  36255: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      default: () => iC
+  36365: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      default: () => zk
     });
-    var QC = ZC(1002),
-      wC = ZC.n(QC),
-      bC = ZC(1463),
-      nC = ZC(996),
-      fC = ZC(728),
-      oC = ZC(1143),
-      qC = ZC(1388),
-      FC = ZC(1453),
-      WC = ZC(3509),
-      NC = ZC(1013),
-      MC = ZC(3448),
-      gC = ZC(2563),
-      SC = ZC(1056);
-    const pC = 2;
+    var Xk = Ik(1055),
+      Tk = Ik.n(Xk),
+      ik = Ik(1485),
+      yk = Ik(1048),
+      lk = Ik(768),
+      ak = Ik(1179),
+      qk = Ik(1406),
+      Lk = Ik(1475),
+      tk = Ik(3503),
+      Zk = Ik(1066),
+      jk = Ik(3414),
+      ek = Ik(2513),
+      wk = Ik(1096);
+    const Hk = 2;
 
-    function PC(CC) {
-      return "firstPartyGame" === CC.type ? {
+    function Jk(kk) {
+      return "firstPartyGame" === kk.type ? {
         type: "game",
-        gameNameWithVariation: CC.gameNameWithVariation
+        gameNameWithVariation: kk.gameNameWithVariation
       } : {
         type: "preview",
-        preview: CC.preview
+        preview: kk.preview
       }
     }
 
-    function GC(CC) {
+    function xk(kk) {
       let {
-        game: zC,
-        disabled: ZC,
-        showPlaceholder: QC
-      } = CC;
-      return null !== zC ? (0, SC.jsx)(MC.d, {
-        source: PC(zC),
+        game: Fk,
+        disabled: Ik,
+        showPlaceholder: Xk
+      } = kk;
+      return null !== Fk ? (0, wk.jsx)(jk.c, {
+        source: Jk(Fk),
         gameWidth: "100%",
         useLongRatio: !0,
-        disabled: ZC,
+        disabled: Ik,
         entrySource: "customGamePlace"
-      }) : QC ? (0, SC.jsx)(MC.b, {
+      }) : Xk ? (0, wk.jsx)(jk.b, {
         gameWidth: "100%",
         useLongRatio: !0
       }) : null
     }
 
-    function RC(CC) {
-      var zC;
+    function Pk(kk) {
+      var Fk;
       let {
-        category: ZC,
-        title: QC,
-        tintColour: wC,
-        layout: bC,
-        games: nC,
-        landscape: fC = !1
-      } = CC;
+        category: Ik,
+        title: Xk,
+        tintColour: Tk,
+        layout: ik,
+        games: yk,
+        landscape: lk = !1
+      } = kk;
       const {
-        followsLeader: oC
-      } = (0, gC.g)(), qC = null !== (zC = null === nC || void 0 === nC ? void 0 : nC.slice(0, bC.gameCount)) && void 0 !== zC ? zC : [], WC = {
-        "--custom-game-place-tint": wC
+        followsLeader: ak
+      } = (0, ek.e)(), qk = null !== (Fk = null === yk || void 0 === yk ? void 0 : yk.slice(0, ik.gameCount)) && void 0 !== Fk ? Fk : [], tk = {
+        "--custom-game-place-tint": Tk
       };
-      return (0, SC.jsxs)("div", {
+      return (0, wk.jsxs)("div", {
         className: "CustomGamePlacePanel AnimFadeIn",
-        style: WC,
-        children: [(0, SC.jsx)("h2", {
+        style: tk,
+        children: [(0, wk.jsx)("h2", {
           className: "CustomGamePlacePanelHeading",
-          children: (0, SC.jsxs)(FC.LinkPreserveSearch, {
-            to: `/custom-games/${encodeURIComponent(ZC)}`,
+          children: (0, wk.jsxs)(Lk.LinkPreserveSearch, {
+            to: `/custom-games/${encodeURIComponent(Ik)}`,
             className: "CustomGamePlacePanelTitle SmallTextBold",
-            children: [(0, SC.jsx)("span", {
-              children: QC
-            }), (0, SC.jsx)(NC.c, {
+            children: [(0, wk.jsx)("span", {
+              children: Xk
+            }), (0, wk.jsx)(Zk.e, {
               name: "arrow-up"
             })]
           })
-        }), (0, SC.jsx)("div", {
+        }), (0, wk.jsx)("div", {
           className: "CustomGamePlacePanelGames",
           style: {
-            gridTemplateColumns: `repeat(${fC?bC.columnCount:pC}, ${fC?"var(--custom-game-place-tile-width)":"minmax(0, 1fr)"})`
+            gridTemplateColumns: `repeat(${lk?ik.columnCount:Hk}, ${lk?"var(--custom-game-place-tile-width)":"minmax(0, 1fr)"})`
           },
           children: Array.from({
-            length: bC.gameCount
-          }, ((CC, zC) => {
-            var ZC;
-            return (0, SC.jsx)(GC, {
-              game: null !== (ZC = qC[zC]) && void 0 !== ZC ? ZC : null,
-              disabled: oC,
-              showPlaceholder: !nC
-            }, zC)
+            length: ik.gameCount
+          }, ((kk, Fk) => {
+            var Ik;
+            return (0, wk.jsx)(xk, {
+              game: null !== (Ik = qk[Fk]) && void 0 !== Ik ? Ik : null,
+              disabled: ak,
+              showPlaceholder: !yk
+            }, Fk)
           }))
         })]
       })
     }
 
-    function AC(CC) {
+    function Kk(kk) {
       let {
-        categories: zC
-      } = CC;
+        categories: Fk
+      } = kk;
 
-      function ZC(CC) {
-        const ZC = zC[CC];
-        return (0, SC.jsx)(RC, {
-          ...ZC,
+      function Ik(kk) {
+        const Ik = Fk[kk];
+        return (0, wk.jsx)(Pk, {
+          ...Ik,
           landscape: !0
-        }, ZC.id)
+        }, Ik.id)
       }
-      return (0, SC.jsxs)("div", {
+      return (0, wk.jsxs)("div", {
         className: "CustomGamePlaceMosaic CustomGamePlaceMosaicLandscape AnimFadeIn",
-        children: [(0, SC.jsxs)("div", {
+        children: [(0, wk.jsxs)("div", {
           className: "CustomGamePlaceUpper",
-          children: [(0, SC.jsxs)("div", {
+          children: [(0, wk.jsxs)("div", {
             className: "CustomGamePlaceMain",
-            children: [(0, SC.jsxs)("div", {
+            children: [(0, wk.jsxs)("div", {
               className: "CustomGamePlaceRow",
-              children: [ZC(0), ZC(2)]
-            }), ZC(1)]
-          }), ZC(4)]
-        }), (0, SC.jsxs)("div", {
+              children: [Ik(0), Ik(2)]
+            }), Ik(1)]
+          }), Ik(4)]
+        }), (0, wk.jsxs)("div", {
           className: "CustomGamePlaceRow",
-          children: [ZC(3), ZC(5)]
+          children: [Ik(3), Ik(5)]
         })]
       })
     }
-    const xC = ["section1", "section2", "section3", "section4", "section5", "section6"],
-      JC = {
+    const Qk = ["section1", "section2", "section3", "section4", "section5", "section6"],
+      sk = {
         section1: {
           gameCount: 4,
           columnCount: 2
@@ -152,67 +152,67 @@ export const modules = {
           columnCount: 4
         }
       };
-    var IC = ZC(1072);
+    var Vk = Ik(1103);
 
-    function iC() {
-      var CC;
+    function zk() {
+      var kk;
       const {
-        t: zC
-      } = (0, oC.y)(), ZC = (0, bC.C)(), QC = (0, IC.k)(), NC = (0, WC.d)({
+        t: Fk
+      } = (0, ak.y)(), Ik = (0, ik.A)(), Xk = (0, Vk.h)(), Zk = (0, tk.c)({
         refresh: !0
-      }), MC = ZC.customGamePlace;
-      if (!(0, nC.k)(MC)) return (0, SC.jsx)(FC.NavigatePreserveSearch, {
+      }), jk = Ik.customGamePlace;
+      if (!(0, yk.l)(jk)) return (0, wk.jsx)(Lk.NavigatePreserveSearch, {
         to: "/"
       });
-      const gC = fC.d[MC],
-        pC = nC.d[MC],
-        PC = null !== (CC = null === NC || void 0 === NC ? void 0 : NC[MC]) && void 0 !== CC ? CC : null,
-        GC = [];
-      for (let wC = 0; wC < pC.length; wC++) {
-        var iC;
-        const CC = xC[wC];
-        if (!CC) continue;
-        const ZC = pC[wC];
-        GC.push({
-          id: ZC.id,
-          category: ZC.category,
-          title: zC(ZC.displayTranslationKey),
-          tintColour: ZC.tintColour,
-          layout: JC[CC],
-          games: null !== (iC = null === PC || void 0 === PC ? void 0 : PC[ZC.id]) && void 0 !== iC ? iC : null
+      const ek = lk.e[jk],
+        Hk = yk.e[jk],
+        Jk = null !== (kk = null === Zk || void 0 === Zk ? void 0 : Zk[jk]) && void 0 !== kk ? kk : null,
+        xk = [];
+      for (let Tk = 0; Tk < Hk.length; Tk++) {
+        var zk;
+        const kk = Qk[Tk];
+        if (!kk) continue;
+        const Ik = Hk[Tk];
+        xk.push({
+          id: Ik.id,
+          category: Ik.category,
+          title: Fk(Ik.displayTranslationKey),
+          tintColour: Ik.tintColour,
+          layout: sk[kk],
+          games: null !== (zk = null === Jk || void 0 === Jk ? void 0 : Jk[Ik.id]) && void 0 !== zk ? zk : null
         })
       }
-      return (0, SC.jsxs)("div", {
+      return (0, wk.jsxs)("div", {
         className: "CustomGamePlaceContainer AnimFadeIn",
-        children: [(0, SC.jsx)("div", {
+        children: [(0, wk.jsx)("div", {
           className: "BackgroundImage",
           style: {
-            backgroundImage: `url(/textures/games/${MC}/${gC.largePicture}.png)`
+            backgroundImage: `url(/textures/games/${jk}/${ek.largePicture}.png)`
           }
-        }), (0, SC.jsx)("h1", {
+        }), (0, wk.jsx)("h1", {
           className: "VisuallyHidden",
-          children: zC(gC.title)
-        }), (0, SC.jsx)("div", {
+          children: Fk(ek.title)
+        }), (0, wk.jsx)("div", {
           className: "CustomGamePlaceHeaderContainer",
-          children: (0, SC.jsx)(qC.c, {
-            onClick: () => (0, FC.navigatePreserveSearch)("/"),
-            children: zC("homePage:backToGames")
+          children: (0, wk.jsx)(qk.c, {
+            onClick: () => (0, Lk.navigatePreserveSearch)("/"),
+            children: Fk("homePage:backToGames")
           })
-        }), !QC && (0, SC.jsx)(AC, {
-          categories: GC
-        }), QC && (0, SC.jsx)("div", {
-          className: wC()("CustomGamePlaceMosaic", "CustomGamePlaceMosaicPortrait"),
-          children: GC.map((CC => (0, SC.jsx)(RC, {
-            category: CC.category,
-            title: CC.title,
-            tintColour: CC.tintColour,
-            layout: CC.layout,
-            games: CC.games
-          }, CC.id)))
+        }), !Xk && (0, wk.jsx)(Kk, {
+          categories: xk
+        }), Xk && (0, wk.jsx)("div", {
+          className: Tk()("CustomGamePlaceMosaic", "CustomGamePlaceMosaicPortrait"),
+          children: xk.map((kk => (0, wk.jsx)(Pk, {
+            category: kk.category,
+            title: kk.title,
+            tintColour: kk.tintColour,
+            layout: kk.layout,
+            games: kk.games
+          }, kk.id)))
         })]
       })
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

@@ -1,377 +1,377 @@
 export const id = 80;
 export const ids = [80];
 export const modules = {
-  4674: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => QC,
-      e: () => nC,
-      g: () => pC,
-      h: () => SC,
-      j: () => fC,
-      n: () => wC,
-      p: () => bC,
-      r: () => gC,
-      s: () => MC,
-      u: () => NC
+  4739: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      A: () => Zk,
+      d: () => Xk,
+      h: () => yk,
+      l: () => Hk,
+      n: () => wk,
+      p: () => lk,
+      s: () => Tk,
+      t: () => ik,
+      u: () => ek,
+      w: () => jk
     });
-    const QC = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+    const Xk = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-    function wC(CC) {
+    function Tk(kk) {
       try {
-        return decodeURIComponent(CC.slice(1))
+        return decodeURIComponent(kk.slice(1))
       } catch {
-        return CC.slice(1)
+        return kk.slice(1)
       }
     }
 
-    function bC(CC) {
-      return CC.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+    function ik(kk) {
+      return kk.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
     }
-    const nC = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${QC.source}`, "g");
+    const yk = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${Xk.source}`, "g");
 
-    function fC(CC, zC) {
-      return 2 === CC.length ? zC.replace(/^ (.*) $/, "$1") : zC
-    }
-
-    function oC(CC) {
-      return "" === CC.trim()
+    function lk(kk, Fk) {
+      return 2 === kk.length ? Fk.replace(/^ (.*) $/, "$1") : Fk
     }
 
-    function qC(CC) {
-      const zC = [];
-      for (const ZC of CC.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) zC.length > 0 && zC[zC.length - 1].endsWith("\\") ? zC[zC.length - 1] += `|${ZC}` : zC.push(ZC);
-      return zC.map((CC => CC.trim().replaceAll("\\|", "|")))
+    function ak(kk) {
+      return "" === kk.trim()
     }
-    const FC = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-    function WC(CC) {
-      const zC = [],
-        ZC = [{
+    function qk(kk) {
+      const Fk = [];
+      for (const Ik of kk.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) Fk.length > 0 && Fk[Fk.length - 1].endsWith("\\") ? Fk[Fk.length - 1] += `|${Ik}` : Fk.push(Ik);
+      return Fk.map((kk => kk.trim().replaceAll("\\|", "|")))
+    }
+    const Lk = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+    function tk(kk) {
+      const Fk = [],
+        Ik = [{
           indent: -1,
-          items: zC
+          items: Fk
         }];
-      let QC = null;
-      for (const wC of CC) {
-        const CC = wC.match(FC);
-        if (!CC) {
-          QC && (QC.text += ` ${wC.trim()}`);
+      let Xk = null;
+      for (const Tk of kk) {
+        const kk = Tk.match(Lk);
+        if (!kk) {
+          Xk && (Xk.text += ` ${Tk.trim()}`);
           continue
         }
-        const zC = CC[1].replace(/\t/g, "  ").length;
-        for (; zC <= ZC[ZC.length - 1].indent;) ZC.pop();
-        QC = {
-          text: CC[3].trim(),
+        const Fk = kk[1].replace(/\t/g, "  ").length;
+        for (; Fk <= Ik[Ik.length - 1].indent;) Ik.pop();
+        Xk = {
+          text: kk[3].trim(),
           children: []
-        }, ZC[ZC.length - 1].items.push(QC), ZC.push({
-          indent: zC,
-          items: QC.children
+        }, Ik[Ik.length - 1].items.push(Xk), Ik.push({
+          indent: Fk,
+          items: Xk.children
         })
       }
-      return zC
+      return Fk
     }
 
-    function NC(CC) {
-      const zC = CC.replace(/\r\n/g, "\n").split("\n"),
-        ZC = [];
-      let QC = 0;
-      for (; QC < zC.length;) {
-        const CC = zC[QC];
-        if (oC(CC)) {
-          QC++;
+    function Zk(kk) {
+      const Fk = kk.replace(/\r\n/g, "\n").split("\n"),
+        Ik = [];
+      let Xk = 0;
+      for (; Xk < Fk.length;) {
+        const kk = Fk[Xk];
+        if (ak(kk)) {
+          Xk++;
           continue
         }
-        const wC = CC.match(/^\s*```\s*(\w*)\s*$/);
-        if (wC) {
-          const CC = [];
-          for (QC++; QC < zC.length && !/^\s*```\s*$/.test(zC[QC]);) CC.push(zC[QC]), QC++;
-          QC++, ZC.push({
+        const Tk = kk.match(/^\s*```\s*(\w*)\s*$/);
+        if (Tk) {
+          const kk = [];
+          for (Xk++; Xk < Fk.length && !/^\s*```\s*$/.test(Fk[Xk]);) kk.push(Fk[Xk]), Xk++;
+          Xk++, Ik.push({
             kind: "code",
-            lang: wC[1] || "text",
-            code: CC.join("\n").replace(/\s+$/, "")
+            lang: Tk[1] || "text",
+            code: kk.join("\n").replace(/\s+$/, "")
           });
           continue
         }
-        const nC = CC.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-        if (nC) {
-          const CC = nC[2].trim();
-          ZC.push({
+        const yk = kk.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+        if (yk) {
+          const kk = yk[2].trim();
+          Ik.push({
             kind: "heading",
-            level: nC[1].length,
-            text: CC,
-            anchor: bC(CC)
-          }), QC++;
+            level: yk[1].length,
+            text: kk,
+            anchor: ik(kk)
+          }), Xk++;
           continue
         }
-        if (/^\s*(-{3,}|\*{3,})\s*$/.test(CC)) {
-          ZC.push({
+        if (/^\s*(-{3,}|\*{3,})\s*$/.test(kk)) {
+          Ik.push({
             kind: "rule"
-          }), QC++;
+          }), Xk++;
           continue
         }
-        if (CC.trim().startsWith("|") && QC + 1 < zC.length && /^\s*\|[\s:|-]+\|\s*$/.test(zC[QC + 1])) {
-          const wC = qC(CC),
-            bC = [];
-          for (QC += 2; QC < zC.length && zC[QC].trim().startsWith("|");) bC.push(qC(zC[QC])), QC++;
-          ZC.push({
+        if (kk.trim().startsWith("|") && Xk + 1 < Fk.length && /^\s*\|[\s:|-]+\|\s*$/.test(Fk[Xk + 1])) {
+          const Tk = qk(kk),
+            ik = [];
+          for (Xk += 2; Xk < Fk.length && Fk[Xk].trim().startsWith("|");) ik.push(qk(Fk[Xk])), Xk++;
+          Ik.push({
             kind: "table",
-            header: wC,
-            rows: bC
+            header: Tk,
+            rows: ik
           });
           continue
         }
-        if (CC.startsWith(">")) {
-          const CC = [];
-          for (; QC < zC.length && zC[QC].startsWith(">");) CC.push(zC[QC].replace(/^>\s?/, "")), QC++;
-          ZC.push({
+        if (kk.startsWith(">")) {
+          const kk = [];
+          for (; Xk < Fk.length && Fk[Xk].startsWith(">");) kk.push(Fk[Xk].replace(/^>\s?/, "")), Xk++;
+          Ik.push({
             kind: "quote",
-            blocks: NC(CC.join("\n"))
+            blocks: Zk(kk.join("\n"))
           });
           continue
         }
-        if (FC.test(CC)) {
-          const wC = [],
-            bC = /^\s*\d+\./.test(CC);
-          for (; QC < zC.length && !oC(zC[QC]) && (FC.test(zC[QC]) || /^\s+\S/.test(zC[QC]));) wC.push(zC[QC]), QC++;
-          ZC.push({
+        if (Lk.test(kk)) {
+          const Tk = [],
+            ik = /^\s*\d+\./.test(kk);
+          for (; Xk < Fk.length && !ak(Fk[Xk]) && (Lk.test(Fk[Xk]) || /^\s+\S/.test(Fk[Xk]));) Tk.push(Fk[Xk]), Xk++;
+          Ik.push({
             kind: "list",
-            ordered: bC,
-            items: WC(wC)
+            ordered: ik,
+            items: tk(Tk)
           });
           continue
         }
-        const fC = [];
-        for (; QC < zC.length && !oC(zC[QC]) && !/^\s*```/.test(zC[QC]) && !/^#{1,6}\s/.test(zC[QC]) && !zC[QC].startsWith(">") && !FC.test(zC[QC]) && (!zC[QC].trim().startsWith("|") || 0 !== fC.length);) fC.push(zC[QC].trim()), QC++;
-        0 === fC.length && (fC.push(zC[QC].trim()), QC++), ZC.push({
+        const lk = [];
+        for (; Xk < Fk.length && !ak(Fk[Xk]) && !/^\s*```/.test(Fk[Xk]) && !/^#{1,6}\s/.test(Fk[Xk]) && !Fk[Xk].startsWith(">") && !Lk.test(Fk[Xk]) && (!Fk[Xk].trim().startsWith("|") || 0 !== lk.length);) lk.push(Fk[Xk].trim()), Xk++;
+        0 === lk.length && (lk.push(Fk[Xk].trim()), Xk++), Ik.push({
           kind: "paragraph",
-          text: fC.join(" ")
+          text: lk.join(" ")
         })
       }
-      return ZC
+      return Ik
     }
 
-    function MC(CC) {
-      let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-      const ZC = NC(CC);
-      let QC = "";
-      const wC = [],
-        bC = [],
-        nC = new Map;
-      for (const qC of ZC) {
-        if ("heading" === qC.kind) {
-          var fC;
-          const CC = (null !== (fC = nC.get(qC.anchor)) && void 0 !== fC ? fC : 0) + 1;
-          nC.set(qC.anchor, CC), CC > 1 && (qC.anchor = `${qC.anchor}-${CC}`)
+    function jk(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+      const Ik = Zk(kk);
+      let Xk = "";
+      const Tk = [],
+        ik = [],
+        yk = new Map;
+      for (const qk of Ik) {
+        if ("heading" === qk.kind) {
+          var lk;
+          const kk = (null !== (lk = yk.get(qk.anchor)) && void 0 !== lk ? lk : 0) + 1;
+          yk.set(qk.anchor, kk), kk > 1 && (qk.anchor = `${qk.anchor}-${kk}`)
         }
-        if ("heading" === qC.kind && 1 === qC.level && !QC) {
-          QC = qC.text;
+        if ("heading" === qk.kind && 1 === qk.level && !Xk) {
+          Xk = qk.text;
           continue
         }
-        if ("heading" === qC.kind && qC.level <= zC) {
-          bC.push({
-            heading: qC,
+        if ("heading" === qk.kind && qk.level <= Fk) {
+          ik.push({
+            heading: qk,
             blocks: []
           });
           continue
         }
-        const CC = bC.at(-1);
-        CC ? CC.blocks.push(qC) : wC.push(qC)
+        const kk = ik.at(-1);
+        kk ? kk.blocks.push(qk) : Tk.push(qk)
       }
-      const oC = CC => {
+      const ak = kk => {
         for (;
-          "rule" === (null === (zC = CC.at(-1)) || void 0 === zC ? void 0 : zC.kind);) {
-          var zC;
-          CC.pop()
+          "rule" === (null === (Fk = kk.at(-1)) || void 0 === Fk ? void 0 : Fk.kind);) {
+          var Fk;
+          kk.pop()
         }
       };
-      oC(wC);
-      for (const qC of bC) oC(qC.blocks);
+      ak(Tk);
+      for (const qk of ik) ak(qk.blocks);
       return {
-        title: QC,
-        intro: wC,
-        sections: bC
+        title: Xk,
+        intro: Tk,
+        sections: ik
       }
     }
 
-    function gC(CC) {
+    function ek(kk) {
       return [{
         heading: null,
-        blocks: CC.intro
-      }, ...CC.sections.map((CC => ({
-        heading: CC.heading,
-        blocks: CC.blocks
+        blocks: kk.intro
+      }, ...kk.sections.map((kk => ({
+        heading: kk.heading,
+        blocks: kk.blocks
       })))]
     }
 
-    function SC(CC) {
-      return CC.flatMap((CC => "code" === CC.kind ? [CC] : "quote" === CC.kind ? SC(CC.blocks) : []))
+    function wk(kk) {
+      return kk.flatMap((kk => "code" === kk.kind ? [kk] : "quote" === kk.kind ? wk(kk.blocks) : []))
     }
 
-    function pC(CC) {
-      switch (CC.kind) {
+    function Hk(kk) {
+      switch (kk.kind) {
         case "heading":
         case "paragraph":
-          return CC.text;
+          return kk.text;
         case "code":
-          return CC.code;
+          return kk.code;
         case "table":
-          return [CC.header, ...CC.rows].map((CC => CC.join(" "))).join(" ");
+          return [kk.header, ...kk.rows].map((kk => kk.join(" "))).join(" ");
         case "list": {
-          const zC = CC => CC.map((CC => `${CC.text} ${zC(CC.children)}`)).join(" ");
-          return zC(CC.items)
+          const Fk = kk => kk.map((kk => `${kk.text} ${Fk(kk.children)}`)).join(" ");
+          return Fk(kk.items)
         }
         case "quote":
-          return CC.blocks.map(pC).join(" ");
+          return kk.blocks.map(Hk).join(" ");
         case "rule":
           return ""
       }
     }
   },
-  6499: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => WC,
-      d: () => nC,
-      g: () => fC
+  6491: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => tk,
+      f: () => yk,
+      j: () => lk
     });
-    ZC(6495);
-    var QC = ZC(48),
-      wC = ZC(4674),
-      bC = ZC(1056);
-    const nC = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
+    Ik(6489);
+    var Xk = Ik(58),
+      Tk = Ik(4739),
+      ik = Ik(1096);
+    const yk = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
 
-    function fC(CC, zC) {
-      return CC === zC ? CC : `${CC} (${zC})`
+    function lk(kk, Fk) {
+      return kk === Fk ? kk : `${kk} (${Fk})`
     }
 
-    function oC(CC) {
-      const zC = [];
-      let ZC = 0;
-      for (const QC of CC.matchAll(nC)) {
-        QC.index > ZC && zC.push(CC.slice(ZC, QC.index));
-        const [, wC, nC, oC, qC, FC, WC] = QC;
-        void 0 !== wC ? zC.push(fC(wC, nC)) : void 0 !== oC || void 0 !== qC ? zC.push((0, bC.jsx)("strong", {
-          children: null !== oC && void 0 !== oC ? oC : qC
-        }, QC.index)) : void 0 !== FC ? zC.push((0, bC.jsx)("em", {
-          children: FC
-        }, QC.index)) : zC.push((0, bC.jsx)("code", {
-          children: WC
-        }, QC.index)), ZC = QC.index + QC[0].length
+    function ak(kk) {
+      const Fk = [];
+      let Ik = 0;
+      for (const Xk of kk.matchAll(yk)) {
+        Xk.index > Ik && Fk.push(kk.slice(Ik, Xk.index));
+        const [, Tk, yk, ak, qk, Lk, tk] = Xk;
+        void 0 !== Tk ? Fk.push(lk(Tk, yk)) : void 0 !== ak || void 0 !== qk ? Fk.push((0, ik.jsx)("strong", {
+          children: null !== ak && void 0 !== ak ? ak : qk
+        }, Xk.index)) : void 0 !== Lk ? Fk.push((0, ik.jsx)("em", {
+          children: Lk
+        }, Xk.index)) : Fk.push((0, ik.jsx)("code", {
+          children: tk
+        }, Xk.index)), Ik = Xk.index + Xk[0].length
       }
-      return ZC < CC.length && zC.push(CC.slice(ZC)), zC
+      return Ik < kk.length && Fk.push(kk.slice(Ik)), Fk
     }
 
-    function qC(CC, zC) {
-      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      const QC = CC.map(((CC, zC) => (0, bC.jsxs)("li", {
-        children: [oC(CC.text), CC.children.length > 0 && qC(CC.children, !1)]
-      }, zC)));
-      return zC ? (0, bC.jsx)("ol", {
-        start: ZC,
-        children: QC
-      }) : (0, bC.jsx)("ul", {
-        children: QC
+    function qk(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      const Xk = kk.map(((kk, Fk) => (0, ik.jsxs)("li", {
+        children: [ak(kk.text), kk.children.length > 0 && qk(kk.children, !1)]
+      }, Fk)));
+      return Fk ? (0, ik.jsx)("ol", {
+        start: Ik,
+        children: Xk
+      }) : (0, ik.jsx)("ul", {
+        children: Xk
       })
     }
 
-    function FC(CC, zC) {
-      switch (CC.kind) {
+    function Lk(kk, Fk) {
+      switch (kk.kind) {
         case "heading":
-          return CC.level <= 2 ? (0, bC.jsx)("h3", {
-            children: oC(CC.text)
-          }, zC) : (0, bC.jsx)("h4", {
-            children: oC(CC.text)
-          }, zC);
+          return kk.level <= 2 ? (0, ik.jsx)("h3", {
+            children: ak(kk.text)
+          }, Fk) : (0, ik.jsx)("h4", {
+            children: ak(kk.text)
+          }, Fk);
         case "paragraph":
-          return (0, bC.jsx)("p", {
-            children: oC(CC.text)
-          }, zC);
+          return (0, ik.jsx)("p", {
+            children: ak(kk.text)
+          }, Fk);
         case "list":
-          return (0, bC.jsx)(QC.Fragment, {
-            children: qC(CC.items, CC.ordered)
-          }, zC);
+          return (0, ik.jsx)(Xk.Fragment, {
+            children: qk(kk.items, kk.ordered)
+          }, Fk);
         case "quote":
-          return (0, bC.jsx)("blockquote", {
-            children: CC.blocks.map(((CC, zC) => FC(CC, zC)))
-          }, zC);
+          return (0, ik.jsx)("blockquote", {
+            children: kk.blocks.map(((kk, Fk) => Lk(kk, Fk)))
+          }, Fk);
         case "code":
-          return (0, bC.jsx)("pre", {
-            children: (0, bC.jsx)("code", {
-              children: CC.code
+          return (0, ik.jsx)("pre", {
+            children: (0, ik.jsx)("code", {
+              children: kk.code
             })
-          }, zC);
+          }, Fk);
         case "table":
-          return (0, bC.jsxs)("table", {
-            children: [(0, bC.jsx)("thead", {
-              children: (0, bC.jsx)("tr", {
-                children: CC.header.map(((CC, zC) => (0, bC.jsx)("th", {
-                  children: oC(CC)
-                }, zC)))
+          return (0, ik.jsxs)("table", {
+            children: [(0, ik.jsx)("thead", {
+              children: (0, ik.jsx)("tr", {
+                children: kk.header.map(((kk, Fk) => (0, ik.jsx)("th", {
+                  children: ak(kk)
+                }, Fk)))
               })
-            }), (0, bC.jsx)("tbody", {
-              children: CC.rows.map(((CC, zC) => (0, bC.jsx)("tr", {
-                children: CC.map(((CC, zC) => (0, bC.jsx)("td", {
-                  children: oC(CC)
-                }, zC)))
-              }, zC)))
+            }), (0, ik.jsx)("tbody", {
+              children: kk.rows.map(((kk, Fk) => (0, ik.jsx)("tr", {
+                children: kk.map(((kk, Fk) => (0, ik.jsx)("td", {
+                  children: ak(kk)
+                }, Fk)))
+              }, Fk)))
             })]
-          }, zC);
+          }, Fk);
         case "rule":
-          return (0, bC.jsx)("hr", {}, zC)
+          return (0, ik.jsx)("hr", {}, Fk)
       }
     }
 
-    function WC(CC) {
+    function tk(kk) {
       let {
-        markdown: zC
-      } = CC, ZC = 0;
-      return (0, bC.jsx)("div", {
+        markdown: Fk
+      } = kk, Ik = 0;
+      return (0, ik.jsx)("div", {
         className: "StudioAiAnswerText",
-        children: (0, wC.u)(zC).map(((CC, zC) => {
-          if ("list" !== CC.kind || !CC.ordered) return ZC = 0, FC(CC, zC);
-          const wC = ZC + 1;
-          return ZC += CC.items.length, (0, bC.jsx)(QC.Fragment, {
-            children: qC(CC.items, !0, wC)
-          }, zC)
+        children: (0, Tk.A)(Fk).map(((kk, Fk) => {
+          if ("list" !== kk.kind || !kk.ordered) return Ik = 0, Lk(kk, Fk);
+          const Tk = Ik + 1;
+          return Ik += kk.items.length, (0, ik.jsx)(Xk.Fragment, {
+            children: qk(kk.items, !0, Tk)
+          }, Fk)
         }))
       })
     }
   },
-  6492: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => GC,
-      i: () => RC,
-      f: () => xC,
-      k: () => gC
+  6486: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => xk,
+      h: () => Pk,
+      d: () => Qk,
+      k: () => ek
     });
-    var QC = ZC(1152),
-      wC = ZC(6459),
-      bC = ZC(4804);
-    const nC = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
+    var Xk = Ik(1199),
+      Tk = Ik(6457),
+      ik = Ik(4866);
+    const yk = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
 
-    function fC(CC) {
-      return (0, bC.f)(CC, nC, (zC => !/^my/i.test(zC[0]) || !/follow $/i.test(CC.slice(0, zC.index)))).length > 0
+    function lk(kk) {
+      return (0, ik.e)(kk, yk, (Fk => !/^my/i.test(Fk[0]) || !/follow $/i.test(kk.slice(0, Fk.index)))).length > 0
     }
-    const oC = /\byou(?:r|'re|'ll)?\b/i,
-      qC = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
-      FC = 2;
+    const ak = /\byou(?:r|'re|'ll)?\b/i,
+      qk = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
+      Lk = 2;
 
-    function WC(CC) {
-      return function(CC) {
-        const zC = [];
-        let ZC = !1;
-        for (const QC of CC.split("\n")) {
-          if (/^\s*(```|~~~)/.test(QC)) {
-            ZC = !ZC;
+    function tk(kk) {
+      return function(kk) {
+        const Fk = [];
+        let Ik = !1;
+        for (const Xk of kk.split("\n")) {
+          if (/^\s*(```|~~~)/.test(Xk)) {
+            Ik = !Ik;
             continue
           }
-          if (ZC || /^\s*>/.test(QC)) continue;
-          const CC = QC.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
-          zC.push(...(0, wC.o)(CC))
+          if (Ik || /^\s*>/.test(Xk)) continue;
+          const kk = Xk.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
+          Fk.push(...(0, Tk.n)(kk))
         }
-        return zC
-      }(CC).filter((CC => fC(CC) || qC.test(CC) && !oC.test(CC)))
+        return Fk
+      }(kk).filter((kk => lk(kk) || qk.test(kk) && !ak.test(kk)))
     }
-    const NC = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
-      MC = [{
+    const Zk = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
+      jk = [{
         name: "Qwen3.6-27B",
         temperature: .7,
         reasoningEffort: "none"
@@ -384,317 +384,317 @@ export const modules = {
         temperature: .15
       }];
 
-    function gC(CC) {
-      const zC = MC.findIndex((zC => zC.name === CC));
-      return -1 === zC ? MC.length : zC
+    function ek(kk) {
+      const Fk = jk.findIndex((Fk => Fk.name === kk));
+      return -1 === Fk ? jk.length : Fk
     }
-    const SC = 2500,
-      pC = 12e4;
-    class PC extends Error {
-      constructor(CC) {
-        super(`Studio AI chat ${CC}`), this.reason = CC
+    const wk = 2500,
+      Hk = 12e4;
+    class Jk extends Error {
+      constructor(kk) {
+        super(`Studio AI chat ${kk}`), this.reason = kk
       }
     }
 
-    function GC(CC, zC) {
-      const ZC = new AbortController,
-        QC = () => {
-          ZC.abort()
+    function xk(kk, Fk) {
+      const Ik = new AbortController,
+        Xk = () => {
+          Ik.abort()
         },
-        wC = setTimeout(QC, CC);
-      return null !== zC && void 0 !== zC && zC.aborted && QC(), null === zC || void 0 === zC || zC.addEventListener("abort", QC, {
+        Tk = setTimeout(Xk, kk);
+      return null !== Fk && void 0 !== Fk && Fk.aborted && Xk(), null === Fk || void 0 === Fk || Fk.addEventListener("abort", Xk, {
         once: !0
       }), {
-        signal: ZC.signal,
+        signal: Ik.signal,
         clear: () => {
-          clearTimeout(wC), null === zC || void 0 === zC || zC.removeEventListener("abort", QC)
+          clearTimeout(Tk), null === Fk || void 0 === Fk || Fk.removeEventListener("abort", Xk)
         }
       }
     }
 
-    function RC(CC, zC, ZC) {
-      return new Promise(((wC, bC) => {
-        const nC = new AbortController,
-          fC = () => {
-            nC.abort(), bC((0, QC.g)(ZC))
+    function Pk(kk, Fk, Ik) {
+      return new Promise(((Tk, ik) => {
+        const yk = new AbortController,
+          lk = () => {
+            yk.abort(), ik((0, Xk.e)(Ik))
           };
-        if (null !== ZC && void 0 !== ZC && ZC.aborted) return void fC();
-        null === ZC || void 0 === ZC || ZC.addEventListener("abort", fC, {
+        if (null !== Ik && void 0 !== Ik && Ik.aborted) return void lk();
+        null === Ik || void 0 === Ik || Ik.addEventListener("abort", lk, {
           once: !0
         });
-        const oC = MC.map((() => !1));
-        let qC = null;
-        const FC = MC.map((() => !1)),
-          WC = MC.map((() => !1));
-        MC.forEach(((QC, NC) => {
-          const gC = GC(pC, nC.signal);
-          JC(QC, [{
+        const ak = jk.map((() => !1));
+        let qk = null;
+        const Lk = jk.map((() => !1)),
+          tk = jk.map((() => !1));
+        jk.forEach(((Xk, Zk) => {
+          const ek = xk(Hk, yk.signal);
+          sk(Xk, [{
             role: "user",
-            content: CC
-          }], gC.signal).then((CC => {
-            nC.signal.aborted || ("busy" === CC || "failed" === CC ? (FC[NC] = "busy" === CC, WC[NC] = !0) : null !== CC && (null === qC || NC < qC.rank) && (qC = {
-              rank: NC,
+            content: kk
+          }], ek.signal).then((kk => {
+            yk.signal.aborted || ("busy" === kk || "failed" === kk ? (Lk[Zk] = "busy" === kk, tk[Zk] = !0) : null !== kk && (null === qk || Zk < qk.rank) && (qk = {
+              rank: Zk,
               answer: {
-                text: CC.text,
-                model: QC.name
+                text: kk.text,
+                model: Xk.name
               }
-            }, zC(qC.answer)))
-          }), (CC => {
-            nC.signal.aborted || (WC[NC] = !0, console.warn(`Studio AI: ${QC.name} couldn't be reached`, CC))
+            }, Fk(qk.answer)))
+          }), (kk => {
+            yk.signal.aborted || (tk[Zk] = !0, console.warn(`Studio AI: ${Xk.name} couldn't be reached`, kk))
           })).finally((() => {
-            gC.clear(), oC[NC] = !0, nC.signal.aborted || (() => {
-              var CC, zC;
-              const QC = null !== (CC = null === (zC = qC) || void 0 === zC ? void 0 : zC.rank) && void 0 !== CC ? CC : MC.length;
-              oC.slice(0, QC).includes(!1) || (null === ZC || void 0 === ZC || ZC.removeEventListener("abort", fC), nC.abort(), null !== qC ? wC({
-                ...qC.answer,
-                isFinal: !WC.slice(0, qC.rank).includes(!0)
-              }) : bC(new PC(FC.includes(!0) ? "busy" : "failed")))
+            ek.clear(), ak[Zk] = !0, yk.signal.aborted || (() => {
+              var kk, Fk;
+              const Xk = null !== (kk = null === (Fk = qk) || void 0 === Fk ? void 0 : Fk.rank) && void 0 !== kk ? kk : jk.length;
+              ak.slice(0, Xk).includes(!1) || (null === Ik || void 0 === Ik || Ik.removeEventListener("abort", lk), yk.abort(), null !== qk ? Tk({
+                ...qk.answer,
+                isFinal: !tk.slice(0, qk.rank).includes(!0)
+              }) : ik(new Jk(Lk.includes(!0) ? "busy" : "failed")))
             })()
-          })).catch((CC => {
-            console.error("Studio AI: showing an answer failed", CC)
+          })).catch((kk => {
+            console.error("Studio AI: showing an answer failed", kk)
           }))
         }))
       }))
     }
 
-    function AC(CC) {
-      var zC, ZC;
-      return "length" === (null === CC || void 0 === CC || null === (zC = CC.choices) || void 0 === zC || null === (ZC = zC[0]) || void 0 === ZC ? void 0 : ZC.finish_reason)
+    function Kk(kk) {
+      var Fk, Ik;
+      return "length" === (null === kk || void 0 === kk || null === (Fk = kk.choices) || void 0 === Fk || null === (Ik = Fk[0]) || void 0 === Ik ? void 0 : Ik.finish_reason)
     }
-    async function xC(CC, zC, ZC) {
-      const QC = MC.find((zC => zC.name === CC));
-      if (void 0 === QC) return "failed";
-      const wC = GC(pC, ZC);
+    async function Qk(kk, Fk, Ik) {
+      const Xk = jk.find((Fk => Fk.name === kk));
+      if (void 0 === Xk) return "failed";
+      const Tk = xk(Hk, Ik);
       try {
-        const CC = await JC(QC, zC, wC.signal);
-        return null !== CC && "object" === typeof CC ? CC.isCutOff ? (console.warn(`Studio AI: ${QC.name}'s answer was cut off at the token limit`), null) : {
-          text: CC.text
-        } : CC
+        const kk = await sk(Xk, Fk, Tk.signal);
+        return null !== kk && "object" === typeof kk ? kk.isCutOff ? (console.warn(`Studio AI: ${Xk.name}'s answer was cut off at the token limit`), null) : {
+          text: kk.text
+        } : kk
       } finally {
-        wC.clear()
+        Tk.clear()
       }
     }
-    async function JC(CC, zC, ZC) {
-      const QC = await fetch(NC, {
+    async function sk(kk, Fk, Ik) {
+      const Xk = await fetch(Zk, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          model: CC.name,
-          messages: zC,
-          max_tokens: SC,
-          temperature: CC.temperature,
-          reasoning_effort: CC.reasoningEffort
+          model: kk.name,
+          messages: Fk,
+          max_tokens: wk,
+          temperature: kk.temperature,
+          reasoning_effort: kk.reasoningEffort
         }),
         credentials: "omit",
         referrerPolicy: "no-referrer",
-        signal: ZC
+        signal: Ik
       });
-      if (429 === QC.status) return "busy";
-      if (!QC.ok) return console.warn(`Studio AI: ${CC.name} answered ${QC.status}`), "failed";
-      const wC = await QC.json().catch((() => null)),
-        bC = function(CC) {
-          var zC, ZC, QC;
-          const wC = null === CC || void 0 === CC || null === (zC = CC.choices) || void 0 === zC || null === (ZC = zC[0]) || void 0 === ZC || null === (QC = ZC.message) || void 0 === QC ? void 0 : QC.content;
-          if ("string" !== typeof wC) return null;
-          const bC = wC.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
-          return "" === bC ? null : bC
-        }(wC);
-      return null !== bC && function(CC) {
-        const zC = WC(CC);
-        return zC.length >= FC || zC.some((CC => fC(CC)))
-      }(bC) ? (console.warn(`Studio AI: ${CC.name} thought out loud instead of answering`), "failed") : null === bC ? null : {
-        text: bC,
-        isCutOff: AC(wC)
+      if (429 === Xk.status) return "busy";
+      if (!Xk.ok) return console.warn(`Studio AI: ${kk.name} answered ${Xk.status}`), "failed";
+      const Tk = await Xk.json().catch((() => null)),
+        ik = function(kk) {
+          var Fk, Ik, Xk;
+          const Tk = null === kk || void 0 === kk || null === (Fk = kk.choices) || void 0 === Fk || null === (Ik = Fk[0]) || void 0 === Ik || null === (Xk = Ik.message) || void 0 === Xk ? void 0 : Xk.content;
+          if ("string" !== typeof Tk) return null;
+          const ik = Tk.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+          return "" === ik ? null : ik
+        }(Tk);
+      return null !== ik && function(kk) {
+        const Fk = tk(kk);
+        return Fk.length >= Lk || Fk.some((kk => lk(kk)))
+      }(ik) ? (console.warn(`Studio AI: ${kk.name} thought out loud instead of answering`), "failed") : null === ik ? null : {
+        text: ik,
+        isCutOff: Kk(Tk)
       }
     }
   },
-  6459: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      D: () => pC,
-      G: () => RC,
-      I: () => xC,
-      M: () => GC,
-      P: () => WC,
-      S: () => qC,
-      U: () => MC,
-      b: () => gC,
-      c: () => fC,
-      d: () => nC,
-      h: () => SC,
-      l: () => NC,
-      o: () => FC,
-      r: () => bC,
-      u: () => wC,
-      y: () => AC,
-      z: () => JC
+  6457: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      C: () => Hk,
+      D: () => Pk,
+      G: () => Qk,
+      I: () => xk,
+      L: () => tk,
+      P: () => qk,
+      S: () => jk,
+      b: () => ek,
+      d: () => lk,
+      g: () => yk,
+      k: () => wk,
+      l: () => Zk,
+      n: () => Lk,
+      p: () => ik,
+      t: () => Tk,
+      u: () => Kk,
+      y: () => sk
     });
-    var QC = ZC(4804);
-    const wC = 2e3,
-      bC = 2e4;
+    var Xk = Ik(4866);
+    const Tk = 2e3,
+      ik = 2e4;
 
-    function nC(CC) {
-      return CC.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    function yk(kk) {
+      return kk.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
     }
 
-    function fC(CC) {
-      return CC.replace(/\$/g, "\\$")
+    function lk(kk) {
+      return kk.replace(/\$/g, "\\$")
     }
-    const oC = /[.!?](?=\s|\*|_|$)|\n|$/g;
+    const ak = /[.!?](?=\s|\*|_|$)|\n|$/g;
 
-    function qC(CC, zC) {
-      oC.lastIndex = zC;
-      const ZC = oC.exec(CC);
-      return ZC.index + ZC[0].length
-    }
-
-    function FC(CC) {
-      return (0, QC.z)(CC, /\s+/g, (0, QC.s)(".!?")).flatMap((CC => CC.split("\n")))
+    function qk(kk, Fk) {
+      ak.lastIndex = Fk;
+      const Ik = ak.exec(kk);
+      return Ik.index + Ik[0].length
     }
 
-    function WC(CC, zC) {
-      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : zC;
-      const QC = [...CC.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((CC => CC.index)),
-        wC = QC.filter((CC => CC < zC)),
-        bC = QC.find((CC => CC >= ZC));
-      return [0 === wC.length ? 0 : wC.at(-1) + 1, void 0 === bC ? CC.length : bC + 1]
+    function Lk(kk) {
+      return (0, Xk.u)(kk, /\s+/g, (0, Xk.o)(".!?")).flatMap((kk => kk.split("\n")))
     }
 
-    function NC(CC, zC) {
-      const ZC = CC.charCodeAt(zC - 1);
-      return CC.slice(0, zC > 0 && zC < CC.length && ZC >= 55296 && ZC <= 56319 ? zC - 1 : zC)
+    function tk(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Fk;
+      const Xk = [...kk.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((kk => kk.index)),
+        Tk = Xk.filter((kk => kk < Fk)),
+        ik = Xk.find((kk => kk >= Ik));
+      return [0 === Tk.length ? 0 : Tk.at(-1) + 1, void 0 === ik ? kk.length : ik + 1]
     }
 
-    function MC(CC, zC) {
-      return `${zC}${CC.replace(/\\/g,"\\\\").split(zC).join(`\\${zC}`)}${zC}`
+    function Zk(kk, Fk) {
+      const Ik = kk.charCodeAt(Fk - 1);
+      return kk.slice(0, Fk > 0 && Fk < kk.length && Ik >= 55296 && Ik <= 56319 ? Fk - 1 : Fk)
     }
 
-    function gC(CC) {
-      return CC.charAt(0).toUpperCase() + CC.slice(1)
+    function jk(kk, Fk) {
+      return `${Fk}${kk.replace(/\\/g,"\\\\").split(Fk).join(`\\${Fk}`)}${Fk}`
     }
 
-    function SC(CC) {
-      return Math.round(CC).toLocaleString("en-US")
+    function ek(kk) {
+      return kk.charAt(0).toUpperCase() + kk.slice(1)
     }
 
-    function pC(CC) {
-      return CC.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((CC => "" !== CC))
-    }
-    const PC = 3;
-
-    function GC(CC, zC) {
-      return pC(CC).filter((CC => CC.length >= PC && !/\d/.test(CC))).map((CC => `${CC} ${zC}`))
+    function wk(kk) {
+      return Math.round(kk).toLocaleString("en-US")
     }
 
-    function RC(CC) {
-      return CC.split(/[\s:_]+/).filter((CC => "" !== CC)).map(nC).join("[`:_\\s]+")
+    function Hk(kk) {
+      return kk.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((kk => "" !== kk))
+    }
+    const Jk = 3;
+
+    function xk(kk, Fk) {
+      return Hk(kk).filter((kk => kk.length >= Jk && !/\d/.test(kk))).map((kk => `${kk} ${Fk}`))
     }
 
-    function AC(CC) {
-      return pC(CC.split(".").pop())
+    function Pk(kk) {
+      return kk.split(/[\s:_]+/).filter((kk => "" !== kk)).map(yk).join("[`:_\\s]+")
     }
 
-    function xC(CC) {
-      return CC.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    function Kk(kk) {
+      return Hk(kk.split(".").pop())
     }
 
-    function JC(CC) {
-      let zC = null;
+    function Qk(kk) {
+      return kk.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    }
+
+    function sk(kk) {
+      let Fk = null;
       return () => {
-        const ZC = zC ??= CC();
-        return ZC.catch((() => {
-          zC === ZC && (zC = null)
-        })), ZC
+        const Ik = Fk ??= kk();
+        return Ik.catch((() => {
+          Fk === Ik && (Fk = null)
+        })), Ik
       }
     }
   },
-  4804: (CC, zC, ZC) => {
-    function QC(CC) {
+  4866: (kk, Fk, Ik) => {
+    function Xk(kk) {
       return {
-        notAfter: CC
+        notAfter: kk
       }
     }
-    ZC.d(zC, {
-      d: () => oC,
-      f: () => qC,
-      h: () => fC,
-      l: () => QC,
-      n: () => wC,
-      q: () => bC,
-      s: () => nC,
-      v: () => FC,
-      z: () => WC
+    Ik.d(Fk, {
+      b: () => ak,
+      e: () => qk,
+      g: () => lk,
+      j: () => Xk,
+      l: () => Tk,
+      m: () => ik,
+      o: () => yk,
+      s: () => Lk,
+      u: () => tk
     });
-    const wC = QC("\\w$."),
-      bC = QC("\\w.,");
+    const Tk = Xk("\\w$."),
+      ik = Xk("\\w.,");
 
-    function nC(CC) {
-      return zC => oC(zC, CC)
+    function yk(kk) {
+      return Fk => ak(Fk, kk)
     }
 
-    function fC(CC) {
-      return zC => !CC.test(zC.input.slice(0, zC.index))
+    function lk(kk) {
+      return Fk => !kk.test(Fk.input.slice(0, Fk.index))
     }
 
-    function oC(CC, zC) {
-      return CC.index > 0 && new RegExp(`[${zC}]`).test(CC.input[CC.index - 1])
+    function ak(kk, Fk) {
+      return kk.index > 0 && new RegExp(`[${Fk}]`).test(kk.input[kk.index - 1])
     }
 
-    function qC(CC, zC, ZC) {
-      return function(CC) {
-        return void 0 !== CC && "function" !== typeof CC
-      }(ZC) ? function(CC, zC, ZC) {
-        const QC = zC.flags.replace(/[gy]/g, ""),
-          wC = new RegExp(`[^${ZC}](?:${zC.source})`, `${QC}g`),
-          bC = [],
-          nC = ZC => {
-            const QC = ZC.index + ZC[0].length;
-            return ("" === ZC[0] ? NC(CC, zC, QC) : QC) - 1
+    function qk(kk, Fk, Ik) {
+      return function(kk) {
+        return void 0 !== kk && "function" !== typeof kk
+      }(Ik) ? function(kk, Fk, Ik) {
+        const Xk = Fk.flags.replace(/[gy]/g, ""),
+          Tk = new RegExp(`[^${Ik}](?:${Fk.source})`, `${Xk}g`),
+          ik = [],
+          yk = Ik => {
+            const Xk = Ik.index + Ik[0].length;
+            return ("" === Ik[0] ? Zk(kk, Fk, Xk) : Xk) - 1
           },
-          fC = new RegExp(`(?:${zC.source})`, `${QC}y`).exec(CC);
-        if (fC) {
-          if (bC.push(fC), !zC.global) return bC;
-          wC.lastIndex = nC(fC)
+          lk = new RegExp(`(?:${Fk.source})`, `${Xk}y`).exec(kk);
+        if (lk) {
+          if (ik.push(lk), !Fk.global) return ik;
+          Tk.lastIndex = yk(lk)
         }
-        for (let oC = wC.exec(CC); oC; oC = wC.exec(CC)) {
-          const ZC = NC(CC, zC, oC.index) - oC.index;
-          if (oC[0] = oC[0].slice(ZC), oC.index += ZC, bC.push(oC), !zC.global) break;
-          wC.lastIndex = nC(oC)
+        for (let ak = Tk.exec(kk); ak; ak = Tk.exec(kk)) {
+          const Ik = Zk(kk, Fk, ak.index) - ak.index;
+          if (ak[0] = ak[0].slice(Ik), ak.index += Ik, ik.push(ak), !Fk.global) break;
+          Tk.lastIndex = yk(ak)
         }
-        return bC
-      }(CC, zC, ZC.notAfter) : function(CC, zC, ZC) {
-        const QC = new RegExp(zC.source, `${zC.flags.replace(/[gy]/g,"")}g`),
-          wC = [];
-        for (let bC = QC.exec(CC); bC; bC = QC.exec(CC))
-          if (!ZC || ZC(bC)) {
-            if (wC.push(bC), !zC.global) break;
-            "" === bC[0] && (QC.lastIndex = NC(CC, zC, QC.lastIndex))
-          } else QC.lastIndex = NC(CC, zC, bC.index);
-        return wC
-      }(CC, zC, ZC)
+        return ik
+      }(kk, Fk, Ik.notAfter) : function(kk, Fk, Ik) {
+        const Xk = new RegExp(Fk.source, `${Fk.flags.replace(/[gy]/g,"")}g`),
+          Tk = [];
+        for (let ik = Xk.exec(kk); ik; ik = Xk.exec(kk))
+          if (!Ik || Ik(ik)) {
+            if (Tk.push(ik), !Fk.global) break;
+            "" === ik[0] && (Xk.lastIndex = Zk(kk, Fk, Xk.lastIndex))
+          } else Xk.lastIndex = Zk(kk, Fk, ik.index);
+        return Tk
+      }(kk, Fk, Ik)
     }
 
-    function FC(CC, zC, ZC, QC) {
-      let wC = "",
-        bC = 0;
-      for (const nC of qC(CC, zC, ZC)) wC += CC.slice(bC, nC.index) + QC(nC), bC = nC.index + nC[0].length;
-      return wC + CC.slice(bC)
+    function Lk(kk, Fk, Ik, Xk) {
+      let Tk = "",
+        ik = 0;
+      for (const yk of qk(kk, Fk, Ik)) Tk += kk.slice(ik, yk.index) + Xk(yk), ik = yk.index + yk[0].length;
+      return Tk + kk.slice(ik)
     }
 
-    function WC(CC, zC, ZC) {
-      const QC = [];
-      let wC = 0;
-      for (const bC of qC(CC, zC, ZC)) QC.push(CC.slice(wC, bC.index)), wC = bC.index + bC[0].length;
-      return [...QC, CC.slice(wC)]
+    function tk(kk, Fk, Ik) {
+      const Xk = [];
+      let Tk = 0;
+      for (const ik of qk(kk, Fk, Ik)) Xk.push(kk.slice(Tk, ik.index)), Tk = ik.index + ik[0].length;
+      return [...Xk, kk.slice(Tk)]
     }
 
-    function NC(CC, zC, ZC) {
-      var QC;
-      return ZC + (zC.unicode && (null !== (QC = CC.codePointAt(ZC)) && void 0 !== QC ? QC : 0) > 65535 ? 2 : 1)
+    function Zk(kk, Fk, Ik) {
+      var Xk;
+      return Ik + (Fk.unicode && (null !== (Xk = kk.codePointAt(Ik)) && void 0 !== Xk ? Xk : 0) > 65535 ? 2 : 1)
     }
   },
-  6495: () => {}
+  6489: () => {}
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

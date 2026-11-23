@@ -1,17 +1,17 @@
 export const id = 50;
 export const ids = [50];
 export const modules = {
-  50730: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      startRenderProbe: () => WC
+  50977: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      startRenderProbe: () => tk
     });
-    var QC = ZC(603),
-      wC = ZC(4321),
-      bC = ZC(2800),
-      nC = ZC(4445);
-    const fC = 1e3,
-      oC = 36e5,
-      qC = [{
+    var Xk = Ik(633),
+      Tk = Ik(4367),
+      ik = Ik(2744),
+      yk = Ik(4502);
+    const lk = 1e3,
+      ak = 36e5,
+      qk = [{
         field: "decodeProbe",
         name: "decode probe"
       }, {
@@ -19,32 +19,32 @@ export const modules = {
         name: "particle probe"
       }];
 
-    function FC(CC, zC, ZC) {
-      var wC, bC;
-      return `${CC}; ${ZC?`os ${ZC.os}, gpu ${null!==(wC=ZC.gpuFamily)&&void 0!==wC?wC:"unknown"} ${null!==(bC=ZC.gpuModel)&&void 0!==bC?bC:"unknown"}`:"device unknown"}, version ${QC.e}; ${zC}`
+    function Lk(kk, Fk, Ik) {
+      var Tk, ik;
+      return `${kk}; ${Ik?`os ${Ik.os}, gpu ${null!==(Tk=Ik.gpuFamily)&&void 0!==Tk?Tk:"unknown"} ${null!==(ik=Ik.gpuModel)&&void 0!==ik?ik:"unknown"}`:"device unknown"}, version ${Xk.b}; ${Fk}`
     }
 
-    function WC(CC) {
-      var zC;
-      const ZC = null !== (zC = null === CC || void 0 === CC ? void 0 : CC.backend) && void 0 !== zC ? zC : "none";
-      if ("webgl" !== ZC) {
-        const CC = (0, nC.f)();
+    function tk(kk) {
+      var Fk;
+      const Ik = null !== (Fk = null === kk || void 0 === kk ? void 0 : kk.backend) && void 0 !== Fk ? Fk : "none";
+      if ("webgl" !== Ik) {
+        const kk = (0, yk.g)();
         for (const {
-            field: zC
+            field: Fk
           }
-          of qC) delete CC[zC];
-        return void(0, bC.i)("renderprobe", `decode and particle probes not run: the renderer is ${ZC}, and they read WebGL2's draws`)
+          of qk) delete kk[Fk];
+        return void(0, ik.g)("renderprobe", `decode and particle probes not run: the renderer is ${Ik}, and they read WebGL2's draws`)
       }
-      const QC = (0, nC.f)();
+      const Xk = (0, yk.g)();
       for (const {
-          field: WC,
-          name: NC
+          field: tk,
+          name: Zk
         }
-        of qC)(0, nC.i)(QC, WC, ["1", "pending"], oC, fC).then((CC => {
-        void 0 !== CC && (0, bC.i)("renderprobe", FC(NC, CC, (0, wC.e)(!1)))
+        of qk)(0, yk.h)(Xk, tk, ["1", "pending"], ak, lk).then((kk => {
+        void 0 !== kk && (0, ik.g)("renderprobe", Lk(Zk, kk, (0, Tk.d)(!1)))
       }))
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

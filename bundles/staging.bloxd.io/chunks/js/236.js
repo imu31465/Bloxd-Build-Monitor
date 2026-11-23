@@ -1,571 +1,571 @@
 export const id = 236;
 export const ids = [236];
 export const modules = {
-  40899: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      noaDevTools: () => WC
+  41079: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      noaDevTools: () => tk
     });
-    var QC = ZC(37404),
-      wC = ZC(37394),
-      bC = ZC(2753),
-      nC = ZC(1645),
-      fC = ZC(40805);
+    var Xk = Ik(37592),
+      Tk = Ik(37578),
+      ik = Ik(2700),
+      yk = Ik(1665),
+      lk = Ik(40986);
 
-    function oC(CC) {
+    function ak(kk) {
       const {
-        Vg: zC
-      } = CC, ZC = zC.engine, QC = {
-        width: ZC.getRenderWidth(),
-        height: ZC.getRenderHeight()
+        Xw: Fk
+      } = kk, Ik = Fk.engine, Xk = {
+        width: Ik.getRenderWidth(),
+        height: Ik.getRenderHeight()
       };
       return {
-        canvas: ZC.getRenderingCanvas(),
-        maxTextureSize: ZC.getCaps().maxTextureSize,
-        drawing: () => !CC.kR,
-        resize: (CC, zC) => {
-          ZC.setSize(CC, zC)
+        canvas: Ik.getRenderingCanvas(),
+        maxTextureSize: Ik.getCaps().maxTextureSize,
+        drawing: () => !kk.vx,
+        resize: (kk, Fk) => {
+          Ik.setSize(kk, Fk)
         },
         restoreSize: () => {
-          ZC.setSize(QC.width, QC.height), zC.resize()
+          Ik.setSize(Xk.width, Xk.height), Fk.resize()
         },
-        onFrameDrawn: zC => (CC.on("afterRender", zC), () => {
-          CC.off("afterRender", zC)
+        onFrameDrawn: Fk => (kk.on("afterRender", Fk), () => {
+          kk.off("afterRender", Fk)
         })
       }
     }
-    var qC = ZC(34040);
+    var qk = Ik(34044);
 
-    function FC(CC, zC) {
+    function Lk(kk, Fk) {
       let {
-        width: qC,
-        height: FC,
-        colouring: WC
-      } = zC;
-      const NC = "normals" === WC,
-        MC = "depth" === WC;
-      return new Promise((zC => {
+        width: qk,
+        height: Lk,
+        colouring: tk
+      } = Fk;
+      const Zk = "normals" === tk,
+        jk = "depth" === tk;
+      return new Promise((Fk => {
         try {
-          const gC = (0, bC.e)();
-          if (gC.Vg.CS) return "screenshot" !== CC || null !== WC ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void zC()) : void(0, fC.e)(oC(gC), qC, FC).finally(zC);
-          const SC = gC.Vg.engine,
-            pC = gC.Vg.Km(),
-            PC = qC,
-            GC = FC;
-          Promise.all([Promise.all([ZC.e(254), ZC.e(255), ZC.e(233)]).then((() => ZC(60923))), Promise.all([ZC.e(232), ZC.e(231), ZC.e(254), ZC.e(255), ZC.e(252), ZC.e(256), ZC.e(259), ZC.e(311), ZC.e(237)]).then((() => ZC(60925))), Promise.all([ZC.e(232), ZC.e(231), ZC.e(254), ZC.e(255), ZC.e(252), ZC.e(262), ZC.e(256), ZC.e(264), ZC.e(239)]).then((() => ZC(60929))), ZC.e(352).then((() => ZC(60932))), Promise.all([ZC.e(231), ZC.e(227)]).then((() => ZC(36961))), ZC.e(253).then((() => ZC(60938))), ZC.e(234).then((() => ZC(60944)))]).then((bC => {
+          const ek = (0, ik.e)();
+          if (ek.Xw.Tw) return "screenshot" !== kk || null !== tk ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void Fk()) : void(0, lk.f)(ak(ek), qk, Lk).finally(Fk);
+          const wk = ek.Xw.engine,
+            Hk = ek.Xw.mG(),
+            Jk = qk,
+            xk = Lk;
+          Promise.all([Promise.all([Ik.e(254), Ik.e(255), Ik.e(233)]).then((() => Ik(61268))), Promise.all([Ik.e(232), Ik.e(231), Ik.e(254), Ik.e(255), Ik.e(252), Ik.e(256), Ik.e(259), Ik.e(311), Ik.e(237)]).then((() => Ik(61276))), Promise.all([Ik.e(232), Ik.e(231), Ik.e(254), Ik.e(255), Ik.e(252), Ik.e(262), Ik.e(256), Ik.e(264), Ik.e(239)]).then((() => Ik(61279))), Ik.e(352).then((() => Ik(61282))), Promise.all([Ik.e(231), Ik.e(227)]).then((() => Ik(37144))), Ik.e(253).then((() => Ik(61285))), Ik.e(234).then((() => Ik(61288)))]).then((ik => {
             const {
-              CreateScreenshotUsingRenderTarget: fC
-            } = bC[1], {
-              ShaderMaterial: oC
-            } = bC[2], {
-              ShaderLanguage: qC
-            } = bC[3], {
-              Eg: FC
-            } = bC[4], {
-              registerDevtoolsShader: WC
-            } = bC[6], gC = qC.GLSL, RC = new Map, AC = pC.meshes.filter((CC => CC.material));
-            let xC = !1,
-              JC = null;
+              CreateScreenshotUsingRenderTarget: lk
+            } = ik[1], {
+              ShaderMaterial: ak
+            } = ik[2], {
+              ShaderLanguage: qk
+            } = ik[3], {
+              Ge: Lk
+            } = ik[4], {
+              registerDevtoolsShader: tk
+            } = ik[6], ek = qk.GLSL, Pk = new Map, Kk = Hk.meshes.filter((kk => kk.material));
+            let Qk = !1,
+              sk = null;
 
-            function IC() {
-              var CC;
-              xC && (xC = !1, (0, QC.g)(pC.meshes, !1)), null === (CC = JC) || void 0 === CC || CC(), JC = null, AC.forEach((CC => {
-                const zC = RC.get(CC);
-                zC && (CC.material = zC)
+            function Vk() {
+              var kk;
+              Qk && (Qk = !1, (0, Xk.f)(Hk.meshes, !1)), null === (kk = sk) || void 0 === kk || kk(), sk = null, Kk.forEach((kk => {
+                const Fk = Pk.get(kk);
+                Fk && (kk.material = Fk)
               }))
             }
-            if (NC) {
-              const CC = [],
-                zC = [];
-              AC.forEach((ZC => {
-                const QC = ZC.name.toLowerCase(),
-                  wC = ZC.WE().boundingBox.center,
-                  bC = pC.activeCamera.position.subtract(wC).length();
-                QC.includes("sky") || QC.includes("background") || QC.includes("environment") || bC > 1e3 ? zC.push(ZC) : CC.push(ZC)
-              })), WC("devtoolsNormal", gC);
-              const ZC = new oC("normalMaterial", pC, "devtoolsNormal", {
+            if (Zk) {
+              const kk = [],
+                Fk = [];
+              Kk.forEach((Ik => {
+                const Xk = Ik.name.toLowerCase(),
+                  Tk = Ik.vR().boundingBox.center,
+                  ik = Hk.activeCamera.position.subtract(Tk).length();
+                Xk.includes("sky") || Xk.includes("background") || Xk.includes("environment") || ik > 1e3 ? Fk.push(Ik) : kk.push(Ik)
+              })), tk("devtoolsNormal", ek);
+              const Ik = new ak("normalMaterial", Hk, "devtoolsNormal", {
                 attributes: ["position", "normal"],
                 uniforms: ["worldViewProjection", "world"],
-                shaderLanguage: gC
+                shaderLanguage: ek
               });
-              WC("devtoolsWhite", gC);
-              const QC = new oC("whiteMaterial", pC, "devtoolsWhite", {
+              tk("devtoolsWhite", ek);
+              const Xk = new ak("whiteMaterial", Hk, "devtoolsWhite", {
                 attributes: ["position"],
                 uniforms: ["worldViewProjection"],
-                shaderLanguage: gC
+                shaderLanguage: ek
               });
-              CC.forEach((CC => {
-                RC.set(CC, CC.material), CC.material = ZC
-              })), zC.forEach((CC => {
-                RC.set(CC, CC.material), CC.material = QC
+              kk.forEach((kk => {
+                Pk.set(kk, kk.material), kk.material = Ik
+              })), Fk.forEach((kk => {
+                Pk.set(kk, kk.material), kk.material = Xk
               }))
-            } else if (MC) {
-              WC("devtoolsDepth", gC);
-              const CC = pC.activeCamera.position;
-              let zC = 0,
-                ZC = 1 / 0;
-              AC.forEach((QC => {
-                const wC = QC.name.toLowerCase();
-                if (wC.includes("sky") || wC.includes("background") || wC.includes("environment")) return;
-                const bC = QC.WE().boundingBox.center,
-                  nC = FC.TransformCoordinates(bC, QC.getWorldMatrix()),
-                  fC = CC.subtract(nC).length();
-                fC > 1e3 || (zC = Math.max(zC, fC), ZC = Math.min(ZC, fC))
+            } else if (jk) {
+              tk("devtoolsDepth", ek);
+              const kk = Hk.activeCamera.position;
+              let Fk = 0,
+                Ik = 1 / 0;
+              Kk.forEach((Xk => {
+                const Tk = Xk.name.toLowerCase();
+                if (Tk.includes("sky") || Tk.includes("background") || Tk.includes("environment")) return;
+                const ik = Xk.vR().boundingBox.center,
+                  yk = Lk.TransformCoordinates(ik, Xk.getWorldMatrix()),
+                  lk = kk.subtract(yk).length();
+                lk > 1e3 || (Fk = Math.max(Fk, lk), Ik = Math.min(Ik, lk))
               }));
-              const QC = zC - ZC;
-              zC += .1 * QC, ZC = Math.max(0, ZC - .1 * QC), console.log(`Depth range: min=${ZC.toFixed(2)}, max=${zC.toFixed(2)}, range=${QC.toFixed(2)}`), QC < 1 && (zC = ZC + 10);
-              const wC = new oC("depthMaterial", pC, "devtoolsDepth", {
+              const Xk = Fk - Ik;
+              Fk += .1 * Xk, Ik = Math.max(0, Ik - .1 * Xk), console.log(`Depth range: min=${Ik.toFixed(2)}, max=${Fk.toFixed(2)}, range=${Xk.toFixed(2)}`), Xk < 1 && (Fk = Ik + 10);
+              const Tk = new ak("depthMaterial", Hk, "devtoolsDepth", {
                 attributes: ["position"],
                 uniforms: ["worldViewProjection", "world", "cameraPosition", "maxDepth", "minDepth"],
-                shaderLanguage: gC
+                shaderLanguage: ek
               });
-              wC.setVector3("cameraPosition", CC), wC.setFloat("maxDepth", zC), wC.setFloat("minDepth", ZC), AC.forEach((CC => {
-                RC.set(CC, CC.material), CC.material = wC
+              Tk.setVector3("cameraPosition", kk), Tk.setFloat("maxDepth", Fk), Tk.setFloat("minDepth", Ik), Kk.forEach((kk => {
+                Pk.set(kk, kk.material), kk.material = Tk
               }))
             }
-            if ((0, QC.g)(pC.meshes, !0), xC = !0, "glb" === CC && (JC = (0, wC.c)(pC.meshes)), "screenshot" === CC) {
-              let CC = `bloxd-screenshot-${PC}x${GC}-${Date.now()}.png`;
-              NC ? CC = `bloxd-screenshot-normals-${PC}x${GC}-${Date.now()}.png` : MC && (CC = `bloxd-screenshot-depth-${PC}x${GC}-${Date.now()}.png`), fC(SC, pC.activeCamera, {
-                width: PC,
-                height: GC
-              }, (function(ZC) {
-                IC(), fetch(ZC).then((function(CC) {
-                  return CC.blob()
-                })).then((function(ZC) {
-                  (0, nC.downloadBlob)(ZC, CC), zC()
-                })).catch((function(CC) {
-                  console.error("Error processing screenshot:", CC), zC()
+            if ((0, Xk.f)(Hk.meshes, !0), Qk = !0, "glb" === kk && (sk = (0, Tk.e)(Hk.meshes)), "screenshot" === kk) {
+              let kk = `bloxd-screenshot-${Jk}x${xk}-${Date.now()}.png`;
+              Zk ? kk = `bloxd-screenshot-normals-${Jk}x${xk}-${Date.now()}.png` : jk && (kk = `bloxd-screenshot-depth-${Jk}x${xk}-${Date.now()}.png`), lk(wk, Hk.activeCamera, {
+                width: Jk,
+                height: xk
+              }, (function(Ik) {
+                Vk(), fetch(Ik).then((function(kk) {
+                  return kk.blob()
+                })).then((function(Ik) {
+                  (0, yk.downloadBlob)(Ik, kk), Fk()
+                })).catch((function(kk) {
+                  console.error("Error processing screenshot:", kk), Fk()
                 }))
               }), "image/png", void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, (function() {
-                console.error("Screenshot timed out"), IC(), zC()
+                console.error("Screenshot timed out"), Vk(), Fk()
               }))
             } else {
-              let CC = "sS";
-              NC ? CC = "scene-normals" : MC && (CC = "scene-depth"), NC || MC ? setTimeout((() => {
+              let kk = "Yw";
+              Zk ? kk = "scene-normals" : jk && (kk = "scene-depth"), Zk || jk ? setTimeout((() => {
                 (async function() {
                   const {
-                    StandardMaterial: CC
-                  } = await Promise.all([ZC.e(232), ZC.e(231), ZC.e(254), ZC.e(255), ZC.e(252), ZC.e(262), ZC.e(261), ZC.e(238)]).then((() => ZC(40092))), {
-                    Color3: zC
-                  } = await Promise.all([ZC.e(232), ZC.e(235)]).then((() => ZC(37138))), QC = [], wC = [];
-                  if (AC.forEach((CC => {
-                      const zC = CC.name.toLowerCase(),
-                        ZC = CC.WE().boundingBox.center,
-                        bC = pC.activeCamera.position.subtract(ZC).length();
-                      zC.includes("sky") || zC.includes("background") || zC.includes("environment") || bC > 1e3 ? wC.push(CC) : QC.push(CC)
-                    })), NC) QC.forEach(((ZC, QC) => {
-                    const wC = ZC.getVerticesData("normal");
-                    if (wC) {
-                      const bC = [];
-                      for (let CC = 0; CC < wC.length; CC += 3) {
-                        const zC = Math.abs(wC[CC]),
-                          ZC = Math.abs(wC[CC + 1]),
-                          QC = Math.abs(wC[CC + 2]);
-                        bC.push(zC, ZC, QC, 1)
+                    StandardMaterial: kk
+                  } = await Promise.all([Ik.e(232), Ik.e(231), Ik.e(254), Ik.e(255), Ik.e(252), Ik.e(262), Ik.e(261), Ik.e(238)]).then((() => Ik(40269))), {
+                    Color3: Fk
+                  } = await Promise.all([Ik.e(232), Ik.e(235)]).then((() => Ik(37327))), Xk = [], Tk = [];
+                  if (Kk.forEach((kk => {
+                      const Fk = kk.name.toLowerCase(),
+                        Ik = kk.vR().boundingBox.center,
+                        ik = Hk.activeCamera.position.subtract(Ik).length();
+                      Fk.includes("sky") || Fk.includes("background") || Fk.includes("environment") || ik > 1e3 ? Tk.push(kk) : Xk.push(kk)
+                    })), Zk) Xk.forEach(((Ik, Xk) => {
+                    const Tk = Ik.getVerticesData("normal");
+                    if (Tk) {
+                      const ik = [];
+                      for (let kk = 0; kk < Tk.length; kk += 3) {
+                        const Fk = Math.abs(Tk[kk]),
+                          Ik = Math.abs(Tk[kk + 1]),
+                          Xk = Math.abs(Tk[kk + 2]);
+                        ik.push(Fk, Ik, Xk, 1)
                       }
-                      ZC.setVerticesData("color", bC);
-                      const nC = new CC(`vertexColorMat_${QC}`, pC);
-                      nC.disableLighting = !0, nC.emissiveColor = new zC(1, 1, 1), nC.specularColor = new zC(0, 0, 0), ZC.material = nC
+                      Ik.setVerticesData("color", ik);
+                      const yk = new kk(`vertexColorMat_${Xk}`, Hk);
+                      yk.disableLighting = !0, yk.emissiveColor = new Fk(1, 1, 1), yk.specularColor = new Fk(0, 0, 0), Ik.material = yk
                     }
-                  })), wC.forEach(((ZC, QC) => {
-                    const wC = ZC.getVerticesData("position");
-                    if (wC) {
-                      const bC = [],
-                        nC = wC.length / 3;
-                      for (let CC = 0; CC < nC; CC++) bC.push(1, 1, 1, 1);
-                      ZC.setVerticesData("color", bC);
-                      const fC = new CC(`whiteMat_${QC}`, pC);
-                      fC.disableLighting = !0, fC.emissiveColor = new zC(1, 1, 1), fC.specularColor = new zC(0, 0, 0), ZC.material = fC
+                  })), Tk.forEach(((Ik, Xk) => {
+                    const Tk = Ik.getVerticesData("position");
+                    if (Tk) {
+                      const ik = [],
+                        yk = Tk.length / 3;
+                      for (let kk = 0; kk < yk; kk++) ik.push(1, 1, 1, 1);
+                      Ik.setVerticesData("color", ik);
+                      const lk = new kk(`whiteMat_${Xk}`, Hk);
+                      lk.disableLighting = !0, lk.emissiveColor = new Fk(1, 1, 1), lk.specularColor = new Fk(0, 0, 0), Ik.material = lk
                     }
                   }));
-                  else if (MC) {
-                    const ZC = pC.activeCamera.position;
-                    let wC = 0,
-                      bC = 1 / 0;
-                    QC.forEach((CC => {
-                      const zC = CC.WE().boundingBox.center,
-                        QC = FC.TransformCoordinates(zC, CC.getWorldMatrix()),
-                        nC = ZC.subtract(QC).length();
-                      wC = Math.max(wC, nC), bC = Math.min(bC, nC)
+                  else if (jk) {
+                    const Ik = Hk.activeCamera.position;
+                    let Tk = 0,
+                      ik = 1 / 0;
+                    Xk.forEach((kk => {
+                      const Fk = kk.vR().boundingBox.center,
+                        Xk = Lk.TransformCoordinates(Fk, kk.getWorldMatrix()),
+                        yk = Ik.subtract(Xk).length();
+                      Tk = Math.max(Tk, yk), ik = Math.min(ik, yk)
                     }));
-                    const nC = wC - bC;
-                    wC += .1 * nC, bC = Math.max(0, bC - .1 * nC), nC < 1 && (wC = bC + 10), AC.forEach(((QC, nC) => {
-                      const fC = QC.name.toLowerCase(),
-                        oC = QC.WE().boundingBox.center,
-                        qC = FC.TransformCoordinates(oC, QC.getWorldMatrix()),
-                        WC = ZC.subtract(qC).length();
-                      if (!(fC.includes("sky") || fC.includes("background") || fC.includes("environment") || WC > 1e3)) {
-                        const ZC = 1 - Math.min(Math.max((WC - bC) / (wC - bC), 0), 1),
-                          fC = new CC(`depthMat_${nC}`, pC);
-                        fC.diffuseColor = new zC(ZC, ZC, ZC), fC.specularColor = new zC(0, 0, 0), QC.material = fC
+                    const yk = Tk - ik;
+                    Tk += .1 * yk, ik = Math.max(0, ik - .1 * yk), yk < 1 && (Tk = ik + 10), Kk.forEach(((Xk, yk) => {
+                      const lk = Xk.name.toLowerCase(),
+                        ak = Xk.vR().boundingBox.center,
+                        qk = Lk.TransformCoordinates(ak, Xk.getWorldMatrix()),
+                        tk = Ik.subtract(qk).length();
+                      if (!(lk.includes("sky") || lk.includes("background") || lk.includes("environment") || tk > 1e3)) {
+                        const Ik = 1 - Math.min(Math.max((tk - ik) / (Tk - ik), 0), 1),
+                          lk = new kk(`depthMat_${yk}`, Hk);
+                        lk.diffuseColor = new Fk(Ik, Ik, Ik), lk.specularColor = new Fk(0, 0, 0), Xk.material = lk
                       }
                     }))
                   }
-                })().then((() => Promise.all([ZC.e(232), ZC.e(231), ZC.e(254), ZC.e(255), ZC.e(252), ZC.e(262), ZC.e(256), ZC.e(261), ZC.e(259), ZC.e(251), ZC.e(264), ZC.e(274), ZC.e(311), ZC.e(244), ZC.e(263), ZC.e(230)]).then((() => ZC(60950))))).then((zC => zC.GLTF2Export.GLBAsync(pC, CC))).then((CC => {
-                  IC(), CC.downloadFiles(), zC()
-                })).catch((CC => {
-                  console.error("Error exporting GLB:", CC), IC(), zC()
+                })().then((() => Promise.all([Ik.e(232), Ik.e(231), Ik.e(254), Ik.e(255), Ik.e(252), Ik.e(262), Ik.e(256), Ik.e(261), Ik.e(259), Ik.e(251), Ik.e(264), Ik.e(274), Ik.e(311), Ik.e(244), Ik.e(263), Ik.e(230)]).then((() => Ik(61293))))).then((Fk => Fk.GLTF2Export.GLBAsync(Hk, kk))).then((kk => {
+                  Vk(), kk.downloadFiles(), Fk()
+                })).catch((kk => {
+                  console.error("Error exporting GLB:", kk), Vk(), Fk()
                 }))
-              }), 100) : Promise.all([ZC.e(232), ZC.e(231), ZC.e(254), ZC.e(255), ZC.e(252), ZC.e(262), ZC.e(256), ZC.e(261), ZC.e(259), ZC.e(251), ZC.e(264), ZC.e(274), ZC.e(311), ZC.e(244), ZC.e(263), ZC.e(230)]).then((() => ZC(60950))).then((ZC => {
-                ZC.GLTF2Export.GLBAsync(pC, CC).then((CC => {
-                  IC(), CC.downloadFiles(), zC()
-                })).catch((CC => {
-                  console.error("Error exporting GLB:", CC), IC(), zC()
+              }), 100) : Promise.all([Ik.e(232), Ik.e(231), Ik.e(254), Ik.e(255), Ik.e(252), Ik.e(262), Ik.e(256), Ik.e(261), Ik.e(259), Ik.e(251), Ik.e(264), Ik.e(274), Ik.e(311), Ik.e(244), Ik.e(263), Ik.e(230)]).then((() => Ik(61293))).then((Ik => {
+                Ik.GLTF2Export.GLBAsync(Hk, kk).then((kk => {
+                  Vk(), kk.downloadFiles(), Fk()
+                })).catch((kk => {
+                  console.error("Error exporting GLB:", kk), Vk(), Fk()
                 }))
-              })).catch((CC => {
-                console.error("Error importing serializers:", CC), IC(), zC()
+              })).catch((kk => {
+                console.error("Error importing serializers:", kk), Vk(), Fk()
               }))
             }
-          })).catch((CC => {
-            console.error("Error downloading the scene:", CC), zC()
+          })).catch((kk => {
+            console.error("Error downloading the scene:", kk), Fk()
           }))
-        } catch (gC) {
-          console.error("Error taking screenshot:", gC), zC()
+        } catch (ek) {
+          console.error("Error taking screenshot:", ek), Fk()
         }
       }))
     }
-    const WC = new class {
+    const tk = new class {
       constructor() {
-        this.tools = qC.ALL_DEV_TOOLS
+        this.tools = qk.ALL_DEV_TOOLS
       }
-      downloadScene(CC, zC) {
-        return FC(CC, zC)
+      downloadScene(kk, Fk) {
+        return Lk(kk, Fk)
       }
-      async setAmbientLightIntensity(CC) {
+      async setAmbientLightIntensity(kk) {
         const {
-          Color3: zC
-        } = await Promise.all([ZC.e(232), ZC.e(235)]).then((() => ZC(37138)));
-        (0, bC.e)().Vg.Km().ambientColor = zC.FromArray([CC, CC, CC])
+          Color3: Fk
+        } = await Promise.all([Ik.e(232), Ik.e(235)]).then((() => Ik(37327)));
+        (0, ik.e)().Xw.mG().ambientColor = Fk.FromArray([kk, kk, kk])
       }
-      capturePhoto(CC, zC, ZC) {
-        return function(CC, zC, ZC, QC) {
-          return (0, fC.d)(oC(CC), zC, ZC, QC)
-        }((0, bC.e)(), CC, zC, ZC)
+      capturePhoto(kk, Fk, Ik) {
+        return function(kk, Fk, Ik, Xk) {
+          return (0, lk.c)(ak(kk), Fk, Ik, Xk)
+        }((0, ik.e)(), kk, Fk, Ik)
       }
     }
   },
-  40805: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => fC,
-      e: () => oC
+  40986: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => lk,
+      f: () => ak
     });
-    var QC = ZC(1664);
-    const wC = 33177600,
-      bC = 3e4;
-    let nC = !1;
+    var Xk = Ik(1682);
+    const Tk = 33177600,
+      ik = 3e4;
+    let yk = !1;
 
-    function fC(CC, zC, ZC) {
-      let QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    function lk(kk, Fk, Ik) {
+      let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       const {
-        scale: fC = 1,
-        type: oC = "image/png",
-        quality: qC
-      } = QC;
-      if (!CC.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
-      if (nC) return Promise.reject(new Error("A screenshot is already being taken"));
-      nC = !0;
-      const FC = function(CC, zC, ZC) {
-        const QC = Math.max(1, CC),
-          bC = Math.max(1, zC),
-          nC = Math.min(1, ZC / Math.max(QC, bC), Math.sqrt(wC / (QC * bC)));
+        scale: lk = 1,
+        type: ak = "image/png",
+        quality: qk
+      } = Xk;
+      if (!kk.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
+      if (yk) return Promise.reject(new Error("A screenshot is already being taken"));
+      yk = !0;
+      const Lk = function(kk, Fk, Ik) {
+        const Xk = Math.max(1, kk),
+          ik = Math.max(1, Fk),
+          yk = Math.min(1, Ik / Math.max(Xk, ik), Math.sqrt(Tk / (Xk * ik)));
         return {
-          width: Math.max(1, Math.floor(QC * nC)),
-          height: Math.max(1, Math.floor(bC * nC))
+          width: Math.max(1, Math.floor(Xk * yk)),
+          height: Math.max(1, Math.floor(ik * yk))
         }
-      }(zC, ZC, CC.maxTextureSize);
-      return CC.resize(FC.width, FC.height, fC * FC.width / Math.max(1, zC)), new Promise(((zC, ZC) => {
-        let QC, wC = 2,
-          fC = null;
-        const FC = () => {
-          var zC;
-          nC = !1, null === (zC = fC) || void 0 === zC || zC(), clearTimeout(QC), CC.restoreSize()
+      }(Fk, Ik, kk.maxTextureSize);
+      return kk.resize(Lk.width, Lk.height, lk * Lk.width / Math.max(1, Fk)), new Promise(((Fk, Ik) => {
+        let Xk, Tk = 2,
+          lk = null;
+        const Lk = () => {
+          var Fk;
+          yk = !1, null === (Fk = lk) || void 0 === Fk || Fk(), clearTimeout(Xk), kk.restoreSize()
         };
-        QC = setTimeout((() => {
-          FC(), ZC(new Error("No frame was drawn to capture"))
-        }), bC), fC = CC.onFrameDrawn((() => {
-          if (wC--, wC > 0) return;
+        Xk = setTimeout((() => {
+          Lk(), Ik(new Error("No frame was drawn to capture"))
+        }), ik), lk = kk.onFrameDrawn((() => {
+          if (Tk--, Tk > 0) return;
           const {
-            canvas: QC
-          } = CC, bC = {
-            width: QC.width,
-            height: QC.height
+            canvas: Xk
+          } = kk, ik = {
+            width: Xk.width,
+            height: Xk.height
           };
           try {
-            QC.toBlob((CC => {
-              CC ? zC({
-                blob: CC,
-                ...bC
-              }) : ZC(new Error("The canvas gave no image"))
-            }), oC, qC)
-          } catch (nC) {
-            ZC(nC)
+            Xk.toBlob((kk => {
+              kk ? Fk({
+                blob: kk,
+                ...ik
+              }) : Ik(new Error("The canvas gave no image"))
+            }), ak, qk)
+          } catch (yk) {
+            Ik(yk)
           } finally {
-            FC()
+            Lk()
           }
         }))
       }))
     }
-    async function oC(CC, zC, ZC) {
+    async function ak(kk, Fk, Ik) {
       try {
-        const wC = await fC(CC, zC, ZC);
-        (0, QC.e)(wC.blob, `bloxd-screenshot-${wC.width}x${wC.height}-${Date.now()}.png`)
-      } catch (wC) {
-        console.error("Error taking screenshot:", wC)
+        const Tk = await lk(kk, Fk, Ik);
+        (0, Xk.c)(Tk.blob, `bloxd-screenshot-${Tk.width}x${Tk.height}-${Date.now()}.png`)
+      } catch (Tk) {
+        console.error("Error taking screenshot:", Tk)
       }
     }
   },
-  37404: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => qC,
-      g: () => fC,
-      i: () => nC
+  37592: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => qk,
+      f: () => lk,
+      j: () => yk
     });
-    var QC = ZC(37398),
-      wC = ZC(37408);
-    let bC = 0;
+    var Xk = Ik(37586),
+      Tk = Ik(37600);
+    let ik = 0;
 
-    function nC(CC, zC) {
-      const ZC = CC;
-      ZC._noaFaceGroups = null !== zC && void 0 !== zC ? zC : null, ZC._noaFaceEpoch = -1, ZC._noaFaceMask = -1, ZC._noaFaceCount = -1, ZC._noaFaceMaterial = null;
-      const QC = CC.Zx;
-      QC && 1 === QC.length && (QC[0].indexStart = 0, QC[0].indexCount = CC.getTotalIndices())
+    function yk(kk, Fk) {
+      const Ik = kk;
+      Ik._noaFaceGroups = null !== Fk && void 0 !== Fk ? Fk : null, Ik._noaFaceEpoch = -1, Ik._noaFaceMask = -1, Ik._noaFaceCount = -1, Ik._noaFaceMaterial = null;
+      const Xk = kk.lK;
+      Xk && 1 === Xk.length && (Xk[0].indexStart = 0, Xk[0].indexCount = kk.getTotalIndices())
     }
 
-    function fC(CC, zC) {
-      if (zC) {
-        bC++;
-        for (const zC of CC) {
-          const CC = zC._noaFaceGroups;
-          CC && nC(zC, CC)
+    function lk(kk, Fk) {
+      if (Fk) {
+        ik++;
+        for (const Fk of kk) {
+          const kk = Fk._noaFaceGroups;
+          kk && yk(Fk, kk)
         }
-      } else bC = Math.max(0, bC - 1)
+      } else ik = Math.max(0, ik - 1)
     }
 
-    function oC(CC, zC, ZC) {
-      let wC = -1,
-        bC = 0;
-      for (let nC = 0; nC < QC.d; nC++) {
-        const ZC = CC[nC],
-          fC = CC[nC + 1];
-        fC > ZC && zC & 1 << QC.b[nC] && (wC < 0 && (wC = ZC), bC = fC)
+    function ak(kk, Fk, Ik) {
+      let Tk = -1,
+        ik = 0;
+      for (let yk = 0; yk < Xk.g; yk++) {
+        const Ik = kk[yk],
+          lk = kk[yk + 1];
+        lk > Ik && Fk & 1 << Xk.e[yk] && (Tk < 0 && (Tk = Ik), ik = lk)
       }
-      return wC < 0 ? (ZC[0] = 0, ZC[1] = 0, 0) : (ZC[0] = wC, ZC[1] = bC - wC, bC - wC)
+      return Tk < 0 ? (Ik[0] = 0, Ik[1] = 0, 0) : (Ik[0] = Tk, Ik[1] = ik - Tk, ik - Tk)
     }
-    class qC {
-      constructor(CC, zC) {
-        this.Ig = CC, this.engine = zC, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
+    class qk {
+      constructor(kk, Fk) {
+        this.se = kk, this.engine = Fk, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
       }
-      apply(CC, zC) {
-        if (!zC) return;
-        const ZC = zC.getProjectionMatrix().m,
-          nC = 0 === bC && 0 === ZC[15],
-          fC = zC.globalPosition,
+      apply(kk, Fk) {
+        if (!Fk) return;
+        const Ik = Fk.getProjectionMatrix().m,
+          yk = 0 === ik && 0 === Ik[15],
+          lk = Fk.globalPosition,
           {
-            engine: qC
+            engine: qk
           } = this,
-          FC = nC ? (0, wC.c)(ZC, qC.getRenderWidth(), qC.getRenderHeight()) : 0;
-        fC.x === this.eyeX && fC.y === this.eyeY && fC.z === this.eyeZ && FC === this.focalPx && nC === this.culling || (this.epoch++, this.eyeX = fC.x, this.eyeY = fC.y, this.eyeZ = fC.z, this.focalPx = FC, this.culling = nC);
+          Lk = yk ? (0, Tk.d)(Ik, qk.getRenderWidth(), qk.getRenderHeight()) : 0;
+        lk.x === this.eyeX && lk.y === this.eyeY && lk.z === this.eyeZ && Lk === this.focalPx && yk === this.culling || (this.epoch++, this.eyeX = lk.x, this.eyeY = lk.y, this.eyeZ = lk.z, this.focalPx = Lk, this.culling = yk);
         const {
-          epoch: WC,
-          range: NC
-        } = this, MC = this.Ig / 2, gC = MC * Math.sqrt(3), SC = CC.data, pC = CC.length;
-        let PC = 0;
-        for (let bC = 0; bC < pC; bC++) {
-          const CC = SC[bC],
-            zC = CC._noaFaceGroups;
-          if (zC && (CC._noaFaceEpoch !== WC || CC._noaFaceMaterial !== CC.material)) {
-            CC._noaFaceEpoch = WC, CC._noaFaceMaterial = CC.material;
-            const ZC = CC.Zx,
-              bC = ZC && 1 === ZC.length ? ZC[0] : null;
-            let qC = -1;
-            if (nC && bC && (0, QC.r)(CC.material)) {
-              const ZC = CC.position,
-                QC = fC.x - ZC.x,
-                bC = fC.y - ZC.y,
-                nC = fC.z - ZC.z,
-                oC = QC - MC,
-                WC = bC - MC,
-                NC = nC - MC,
-                SC = Math.sqrt(oC * oC + WC * WC + NC * NC) + gC;
-              qC = (0, wC.i)(zC, QC, bC, nC, (0, wC.e)(SC, FC))
+          epoch: tk,
+          range: Zk
+        } = this, jk = this.se / 2, ek = jk * Math.sqrt(3), wk = kk.data, Hk = kk.length;
+        let Jk = 0;
+        for (let ik = 0; ik < Hk; ik++) {
+          const kk = wk[ik],
+            Fk = kk._noaFaceGroups;
+          if (Fk && (kk._noaFaceEpoch !== tk || kk._noaFaceMaterial !== kk.material)) {
+            kk._noaFaceEpoch = tk, kk._noaFaceMaterial = kk.material;
+            const Ik = kk.lK,
+              ik = Ik && 1 === Ik.length ? Ik[0] : null;
+            let qk = -1;
+            if (yk && ik && (0, Xk.t)(kk.material)) {
+              const Ik = kk.position,
+                Xk = lk.x - Ik.x,
+                ik = lk.y - Ik.y,
+                yk = lk.z - Ik.z,
+                ak = Xk - jk,
+                tk = ik - jk,
+                Zk = yk - jk,
+                wk = Math.sqrt(ak * ak + tk * tk + Zk * Zk) + ek;
+              qk = (0, Tk.m)(Fk, Xk, ik, yk, (0, Tk.h)(wk, Lk))
             }
-            if (bC && qC !== CC._noaFaceMask) {
-              CC._noaFaceMask = qC;
-              let ZC = 0,
-                wC = zC[QC.d]; - 1 !== qC && (wC = oC(zC, qC, NC), ZC = NC[0]), CC._noaFaceCount = wC, bC.indexStart = 6 * ZC, bC.indexCount = 6 * wC, bC.setBoundingInfo(CC.WE())
+            if (ik && qk !== kk._noaFaceMask) {
+              kk._noaFaceMask = qk;
+              let Ik = 0,
+                Tk = Fk[Xk.g]; - 1 !== qk && (Tk = ak(Fk, qk, Zk), Ik = Zk[0]), kk._noaFaceCount = Tk, ik.indexStart = 6 * Ik, ik.indexCount = 6 * Tk, ik.setBoundingInfo(kk.vR())
             }
           }
-          zC && 0 === CC._noaFaceCount || (SC[PC++] = CC)
+          Fk && 0 === kk._noaFaceCount || (wk[Jk++] = kk)
         }
-        CC.length = PC
+        kk.length = Jk
       }
     }
   },
-  37394: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => oC,
-      g: () => fC
+  37578: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => ak,
+      g: () => lk
     });
-    const QC = new WeakSet;
-    let wC = 0;
-    const bC = new Set;
+    const Xk = new WeakSet;
+    let Tk = 0;
+    const ik = new Set;
 
-    function nC(CC, zC) {
-      CC._data = zC
+    function yk(kk, Fk) {
+      kk._data = Fk
     }
 
-    function fC(CC) {
-      var zC, ZC;
-      (null !== (zC = null === (ZC = CC.getBuffer()) || void 0 === ZC ? void 0 : ZC.HW) && void 0 !== zC ? zC : 0) > 0 && (QC.add(CC), 0 === wC ? nC(CC, null) : bC.add(CC))
+    function lk(kk) {
+      var Fk, Ik;
+      (null !== (Fk = null === (Ik = kk.getBuffer()) || void 0 === Ik ? void 0 : Ik.St) && void 0 !== Fk ? Fk : 0) > 0 && (Xk.add(kk), 0 === Tk ? yk(kk, null) : ik.add(kk))
     }
 
-    function oC(CC) {
-      wC++;
-      for (const ZC of function(CC) {
-          const zC = new Set;
-          for (const wC of CC) {
-            const CC = wC.geometry;
-            for (const wC of Object.values(null !== (ZC = null === CC || void 0 === CC ? void 0 : CC.getVertexBuffers()) && void 0 !== ZC ? ZC : {})) {
-              var ZC;
-              const CC = wC.getWrapperBuffer();
-              QC.has(CC) && zC.add(CC)
+    function ak(kk) {
+      Tk++;
+      for (const Ik of function(kk) {
+          const Fk = new Set;
+          for (const Tk of kk) {
+            const kk = Tk.geometry;
+            for (const Tk of Object.values(null !== (Ik = null === kk || void 0 === kk ? void 0 : kk.getVertexBuffers()) && void 0 !== Ik ? Ik : {})) {
+              var Ik;
+              const kk = Tk.getWrapperBuffer();
+              Xk.has(kk) && Fk.add(kk)
             }
           }
-          return zC
-        }(CC)) ZC.getData() || qC(ZC), bC.add(ZC);
-      let zC = !0;
+          return Fk
+        }(kk)) Ik.getData() || qk(Ik), ik.add(Ik);
+      let Fk = !0;
       return () => {
-        if (zC && (zC = !1, wC--, 0 === wC)) {
-          for (const CC of bC) nC(CC, null);
-          bC.clear()
+        if (Fk && (Fk = !1, Tk--, 0 === Tk)) {
+          for (const kk of ik) yk(kk, null);
+          ik.clear()
         }
       }
     }
 
-    function qC(CC) {
-      const zC = CC.getBuffer();
-      if (!zC || !(zC.HW > 0)) return;
-      const ZC = CC._engine,
-        QC = new Uint8Array(zC.HW);
-      ZC.bindArrayBuffer(zC), ZC._gl.getBufferSubData(ZC._gl.ARRAY_BUFFER, 0, QC), ZC._resetVertexBufferBinding(), nC(CC, QC)
+    function qk(kk) {
+      const Fk = kk.getBuffer();
+      if (!Fk || !(Fk.St > 0)) return;
+      const Ik = kk._engine,
+        Xk = new Uint8Array(Fk.St);
+      Ik.bindArrayBuffer(Fk), Ik._gl.getBufferSubData(Ik._gl.ARRAY_BUFFER, 0, Xk), Ik._resetVertexBufferBinding(), yk(kk, Xk)
     }
   },
-  37398: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => nC,
-      d: () => bC,
-      g: () => oC,
-      j: () => QC,
-      k: () => fC,
-      n: () => wC,
-      r: () => qC
+  37586: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => yk,
+      g: () => ik,
+      i: () => ak,
+      l: () => Xk,
+      o: () => lk,
+      p: () => Tk,
+      t: () => qk
     });
-    const QC = 6,
-      wC = [0, 2, 4, 1, 3, 5, 0, 2],
-      bC = 6,
-      nC = [1, 0, 3, 2, 5, 4];
-    for (let FC = bC; FC < wC.length; FC++)
-      if (wC[FC] !== wC[FC - bC]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
-    const fC = wC.length + 1,
-      oC = (() => {
-        const CC = [];
-        for (let zC = 0; zC < bC; zC++) CC[wC[zC]] = zC;
-        return CC
+    const Xk = 6,
+      Tk = [0, 2, 4, 1, 3, 5, 0, 2],
+      ik = 6,
+      yk = [1, 0, 3, 2, 5, 4];
+    for (let Lk = ik; Lk < Tk.length; Lk++)
+      if (Tk[Lk] !== Tk[Lk - ik]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
+    const lk = Tk.length + 1,
+      ak = (() => {
+        const kk = [];
+        for (let Fk = 0; Fk < ik; Fk++) kk[Tk[Fk]] = Fk;
+        return kk
       })();
 
-    function qC(CC) {
-      return !!CC && CC.backFaceCulling && (0 === CC.transparencyMode || 1 === CC.transparencyMode)
+    function qk(kk) {
+      return !!kk && kk.backFaceCulling && (0 === kk.transparencyMode || 1 === kk.transparencyMode)
     }
   },
-  37408: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => fC,
-      e: () => oC,
-      f: () => FC,
-      i: () => qC,
-      k: () => gC
+  37600: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => lk,
+      h: () => ak,
+      l: () => Lk,
+      m: () => qk,
+      n: () => ek
     });
-    var QC = ZC(37398);
-    const wC = 1 / 16,
-      bC = 1 / 64,
-      nC = 2048;
-    QC.j;
+    var Xk = Ik(37586);
+    const Tk = 1 / 16,
+      ik = 1 / 64,
+      yk = 2048;
+    Xk.l;
 
-    function fC(CC, zC, ZC) {
-      return Math.min(Math.abs(CC[0] * zC), Math.abs(CC[5] * ZC)) / 2
+    function lk(kk, Fk, Ik) {
+      return Math.min(Math.abs(kk[0] * Fk), Math.abs(kk[5] * Ik)) / 2
     }
 
-    function oC(CC, zC) {
-      return wC + bC * CC * CC / zC
+    function ak(kk, Fk) {
+      return Tk + ik * kk * kk / Fk
     }
 
-    function qC(CC, zC, ZC, wC, bC) {
-      const nC = QC.k;
-      return FC(CC[nC], CC[nC + 1], CC[nC + 2], CC[nC + 3], CC[nC + 4], CC[nC + 5], zC, ZC, wC, bC)
+    function qk(kk, Fk, Ik, Tk, ik) {
+      const yk = Xk.o;
+      return Lk(kk[yk], kk[yk + 1], kk[yk + 2], kk[yk + 3], kk[yk + 4], kk[yk + 5], Fk, Ik, Tk, ik)
     }
 
-    function FC(CC, zC, ZC, QC, wC, bC, nC, fC, oC, qC) {
-      return (nC <= CC - qC ? 0 : 1) | (nC >= zC + qC ? 0 : 2) | (fC <= ZC - qC ? 0 : 4) | (fC >= QC + qC ? 0 : 8) | (oC <= wC - qC ? 0 : 16) | (oC >= bC + qC ? 0 : 32)
+    function Lk(kk, Fk, Ik, Xk, Tk, ik, yk, lk, ak, qk) {
+      return (yk <= kk - qk ? 0 : 1) | (yk >= Fk + qk ? 0 : 2) | (lk <= Ik - qk ? 0 : 4) | (lk >= Xk + qk ? 0 : 8) | (ak <= Tk - qk ? 0 : 16) | (ak >= ik + qk ? 0 : 32)
     }
-    const WC = (() => {
-        const CC = [];
-        for (let zC = 0; zC < QC.n.length; zC++) {
-          let ZC = 0;
-          for (let wC = zC + 1; wC <= QC.n.length; wC++) {
-            const bC = 1 << QC.n[wC - 1];
-            if (ZC & bC) break;
-            ZC |= bC, CC.push({
-              start: zC,
-              end: wC,
-              tQ: ZC
+    const tk = (() => {
+        const kk = [];
+        for (let Fk = 0; Fk < Xk.p.length; Fk++) {
+          let Ik = 0;
+          for (let Tk = Fk + 1; Tk <= Xk.p.length; Tk++) {
+            const ik = 1 << Xk.p[Tk - 1];
+            if (Ik & ik) break;
+            Ik |= ik, kk.push({
+              start: Fk,
+              end: Tk,
+              YX: Ik
             })
           }
         }
-        return CC
+        return kk
       })(),
-      NC = [];
+      Zk = [];
 
-    function MC(CC, zC) {
-      const ZC = QC.g[zC];
-      return CC[ZC + 1] - CC[ZC]
+    function jk(kk, Fk) {
+      const Ik = Xk.i[Fk];
+      return kk[Ik + 1] - kk[Ik]
     }
 
-    function gC(CC, zC, ZC) {
-      let wC = 0;
-      for (let nC = 0; nC < QC.j; nC++) MC(CC, nC) > 0 && (wC |= 1 << nC);
-      if (0 === (zC &= wC)) return 0;
-      if (zC === wC) return ZC[0] = 0, ZC[1] = CC[QC.d], 1;
-      let bC = null,
-        fC = 1 / 0;
-      for (const qC of function(CC) {
-          let zC = NC[CC];
-          if (zC) return zC;
-          const ZC = new Map,
-            QC = (CC, zC) => {
-              const QC = 4 * CC + zC.length / 2;
-              ZC.has(QC) || ZC.set(QC, {
-                tQ: CC,
-                windows: zC
+    function ek(kk, Fk, Ik) {
+      let Tk = 0;
+      for (let yk = 0; yk < Xk.l; yk++) jk(kk, yk) > 0 && (Tk |= 1 << yk);
+      if (0 === (Fk &= Tk)) return 0;
+      if (Fk === Tk) return Ik[0] = 0, Ik[1] = kk[Xk.g], 1;
+      let ik = null,
+        lk = 1 / 0;
+      for (const qk of function(kk) {
+          let Fk = Zk[kk];
+          if (Fk) return Fk;
+          const Ik = new Map,
+            Xk = (kk, Fk) => {
+              const Xk = 4 * kk + Fk.length / 2;
+              Ik.has(Xk) || Ik.set(Xk, {
+                YX: kk,
+                windows: Fk
               })
             };
-          for (const bC of WC)
-            if ((bC.tQ & CC) === CC && QC(bC.tQ, [bC.start, bC.end]), 0 !== (bC.tQ & CC))
-              for (const zC of WC) zC.start < bC.end || 0 !== (bC.tQ & zC.tQ) || 0 === (zC.tQ & CC) || ((bC.tQ | zC.tQ) & CC) !== CC || QC(bC.tQ | zC.tQ, [bC.start, bC.end, zC.start, zC.end]);
-          const wC = [...ZC.values()];
-          return zC = wC.filter((CC => !wC.some((zC => zC !== CC && (zC.tQ & CC.tQ) === zC.tQ && zC.windows.length <= CC.windows.length)))), NC[CC] = zC, zC
-        }(zC)) {
-        let ZC = (qC.windows.length / 2 - 1) * nC;
-        const oC = qC.tQ & ~zC & wC;
-        for (let zC = 0; zC < QC.j; zC++) oC & 1 << zC && (ZC += MC(CC, zC));
-        ZC < fC && (bC = qC, fC = ZC)
+          for (const ik of tk)
+            if ((ik.YX & kk) === kk && Xk(ik.YX, [ik.start, ik.end]), 0 !== (ik.YX & kk))
+              for (const Fk of tk) Fk.start < ik.end || 0 !== (ik.YX & Fk.YX) || 0 === (Fk.YX & kk) || ((ik.YX | Fk.YX) & kk) !== kk || Xk(ik.YX | Fk.YX, [ik.start, ik.end, Fk.start, Fk.end]);
+          const Tk = [...Ik.values()];
+          return Fk = Tk.filter((kk => !Tk.some((Fk => Fk !== kk && (Fk.YX & kk.YX) === Fk.YX && Fk.windows.length <= kk.windows.length)))), Zk[kk] = Fk, Fk
+        }(Fk)) {
+        let Ik = (qk.windows.length / 2 - 1) * yk;
+        const ak = qk.YX & ~Fk & Tk;
+        for (let Fk = 0; Fk < Xk.l; Fk++) ak & 1 << Fk && (Ik += jk(kk, Fk));
+        Ik < lk && (ik = qk, lk = Ik)
       }
-      const oC = bC.windows;
-      for (let QC = 0; QC < oC.length; QC += 2) {
-        const zC = CC[oC[QC]];
-        ZC[QC] = zC, ZC[QC + 1] = CC[oC[QC + 1]] - zC
+      const ak = ik.windows;
+      for (let Xk = 0; Xk < ak.length; Xk += 2) {
+        const Fk = kk[ak[Xk]];
+        Ik[Xk] = Fk, Ik[Xk + 1] = kk[ak[Xk + 1]] - Fk
       }
-      return oC.length / 2
+      return ak.length / 2
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

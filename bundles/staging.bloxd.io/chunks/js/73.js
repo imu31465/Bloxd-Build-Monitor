@@ -1,11 +1,11 @@
 export const id = 73;
 export const ids = [73];
 export const modules = {
-  36909: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => QC
+  37090: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Xk
     });
-    const QC = {
+    const Xk = {
       "AK-47": {
         gunType: "semi_automatic",
         scopeType: "none",
@@ -524,77 +524,77 @@ export const modules = {
         aimZoomFactor: 2.8
       }
     };
-    for (const wC of Object.values(QC)) wC.msPerRound = 60 / wC.fireRate * 1e3, wC.msPerRoundTouchScreen = void 0 !== wC.fireRateWithHeldTouch ? 60 / wC.fireRateWithHeldTouch * 1e3 : wC.msPerRound, wC.cadenceMs ??= wC.msPerRound, wC.altYVelocityInaccuracy ??= wC.yVelocityInaccuracy, wC.altInaccuracyFromJump ??= wC.inaccuracyFromJump
+    for (const Tk of Object.values(Xk)) Tk.msPerRound = 60 / Tk.fireRate * 1e3, Tk.msPerRoundTouchScreen = void 0 !== Tk.fireRateWithHeldTouch ? 60 / Tk.fireRateWithHeldTouch * 1e3 : Tk.msPerRound, Tk.cadenceMs ??= Tk.msPerRound, Tk.altYVelocityInaccuracy ??= Tk.yVelocityInaccuracy, Tk.altInaccuracyFromJump ??= Tk.inaccuracyFromJump
   },
-  36918: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => nC,
-      f: () => oC,
-      g: () => qC,
-      j: () => FC,
-      m: () => fC,
-      o: () => pC
+  37099: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => yk,
+      e: () => ak,
+      h: () => qk,
+      i: () => Lk,
+      l: () => lk,
+      m: () => Hk
     });
-    var QC = ZC(326),
-      wC = ZC(590),
-      bC = ZC(330);
-    const nC = ["", "|meta|charging2", "|meta|charging3", "|meta|charging4"];
+    var Xk = Ik(337),
+      Tk = Ik(614),
+      ik = Ik(346);
+    const yk = ["", "|meta|charging2", "|meta|charging3", "|meta|charging4"];
 
-    function fC(CC, zC) {
-      return "" === zC ? CC : `${CC} ${zC}`
+    function lk(kk, Fk) {
+      return "" === Fk ? kk : `${kk} ${Fk}`
     }
 
-    function oC(CC, zC, ZC, wC) {
-      const bC = CC.replace((0, QC.ne)(zC.material), (0, QC.ne)(ZC));
-      if (zC.kind === wC || "" === zC.kind) return bC;
-      const nC = (0, QC.ne)(zC.kind);
-      if (!bC.includes(nC)) throw new Error(`Cannot name assets for "${fC(ZC,wC)}": "${bC}" has no "${nC}" to replace`);
-      return bC.replace(nC, (0, QC.ne)(wC))
+    function ak(kk, Fk, Ik, Tk) {
+      const ik = kk.replace((0, Xk.Ce)(Fk.material), (0, Xk.Ce)(Ik));
+      if (Fk.kind === Tk || "" === Fk.kind) return ik;
+      const yk = (0, Xk.Ce)(Fk.kind);
+      if (!ik.includes(yk)) throw new Error(`Cannot name assets for "${lk(Ik,Tk)}": "${ik}" has no "${yk}" to replace`);
+      return ik.replace(yk, (0, Xk.Ce)(Tk))
     }
 
-    function qC(CC) {
-      return CC.creativeKinds ? CC.creativeKinds.flatMap((zC => CC.materials.map((CC => fC(CC, zC))))) : CC.materials.flatMap((zC => CC.kinds.filter((zC => {
-        var ZC;
-        return !(null !== (ZC = CC.hiddenKinds) && void 0 !== ZC && ZC.includes(zC))
-      })).map((CC => fC(zC, CC)))))
+    function qk(kk) {
+      return kk.creativeKinds ? kk.creativeKinds.flatMap((Fk => kk.materials.map((kk => lk(kk, Fk))))) : kk.materials.flatMap((Fk => kk.kinds.filter((Fk => {
+        var Ik;
+        return !(null !== (Ik = kk.hiddenKinds) && void 0 !== Ik && Ik.includes(Fk))
+      })).map((kk => lk(Fk, kk)))))
     }
 
-    function FC(CC, zC) {
-      return CC.flatMap((CC => CC.kinds.includes(zC) ? CC.materials.map((CC => fC(CC, zC))) : []))
+    function Lk(kk, Fk) {
+      return kk.flatMap((kk => kk.kinds.includes(Fk) ? kk.materials.map((kk => lk(kk, Fk))) : []))
     }
-    const WC = {
+    const tk = {
       name: "diamondVariants",
-      materials: bC.n,
-      kinds: bC.j.map((CC => CC.trimStart())),
-      inheritsFrom: CC => ({
+      materials: ik.n,
+      kinds: ik.l.map((kk => kk.trimStart())),
+      inheritsFrom: kk => ({
         material: "Diamond",
-        kind: CC
+        kind: kk
       }),
       hiddenKinds: ["Crossbow Charged"],
       creativeKinds: ["", "Fragment", "Pickaxe", "Axe", "Spade", "Hoe", "Sword", "Bow", "Crossbow", "Spear", "Dagger", "Club", "Mace", "Whip", "Boomerang", "Helmet", "Chestplate", "Gauntlets", "Leggings", "Boots"],
-      description: (CC, zC) => {
-        if ("Fragment" === zC) return {
-          translationKey: "Magmasteel" === CC ? "item:forgeFragmentDescription" : "item:elementalShardDescription"
+      description: (kk, Fk) => {
+        if ("Fragment" === Fk) return {
+          translationKey: "Magmasteel" === kk ? "item:forgeFragmentDescription" : "item:elementalShardDescription"
         }
       }
     };
 
-    function NC(CC) {
+    function Zk(kk) {
       return {
-        translationKey: `item:${(0,QC.ke)(CC)}`
+        translationKey: `item:${(0,Xk.ye)(kk)}`
       }
     }
-    const MC = {
+    const jk = {
         name: "decorativeArmour",
-        materials: bC.d,
-        kinds: wC.b,
-        inheritsFrom: CC => ({
+        materials: ik.h,
+        kinds: Tk.e,
+        inheritsFrom: kk => ({
           material: "Diamond",
-          kind: CC
+          kind: kk
         }),
-        displayName: NC
+        displayName: Zk
       },
-      gC = {
+      ek = {
         name: "keys",
         materials: ["Wooden", "Stone", "Iron", "Gold", "Diamond"],
         kinds: ["Key"],
@@ -604,58 +604,58 @@ export const modules = {
           heldItemScale: 1,
           stackable: !0
         }),
-        displayName: NC
+        displayName: Zk
       },
-      SC = {
+      wk = {
         Staff: "Club",
         Shard: "Fragment"
       },
-      pC = [WC, MC, {
+      Hk = [tk, jk, {
         name: "elemental",
-        materials: bC.p,
-        kinds: ["Shard", "Sword", "Bow", "Crossbow", "Crossbow Charged", "Spear", "Dagger", "Club", "Mace", "Whip", "Staff", ...wC.b],
-        inheritsFrom: CC => {
-          var zC;
+        materials: ik.q,
+        kinds: ["Shard", "Sword", "Bow", "Crossbow", "Crossbow Charged", "Spear", "Dagger", "Club", "Mace", "Whip", "Staff", ...Tk.e],
+        inheritsFrom: kk => {
+          var Fk;
           return {
             material: "Diamond",
-            kind: null !== (zC = SC[CC]) && void 0 !== zC ? zC : CC
+            kind: null !== (Fk = wk[kk]) && void 0 !== Fk ? Fk : kk
           }
         },
         hiddenKinds: ["Crossbow Charged"],
-        displayName: NC,
-        description: (CC, zC) => {
-          if ("Shard" === zC) return {
-            translationKey: "Sanguine" === CC || "Astral" === CC ? "item:forgeFragmentDescription" : "item:elementalShardDescription"
+        displayName: Zk,
+        description: (kk, Fk) => {
+          if ("Shard" === Fk) return {
+            translationKey: "Sanguine" === kk || "Astral" === kk ? "item:forgeFragmentDescription" : "item:elementalShardDescription"
           }
         }
-      }, gC]
+      }, ek]
   },
-  36897: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => NC,
-      e: () => AC,
-      i: () => xC,
-      l: () => RC,
-      m: () => vC,
-      n: () => hC,
-      r: () => IC
+  37079: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Zk,
+      d: () => Kk,
+      e: () => Qk,
+      h: () => Pk,
+      j: () => Sk,
+      n: () => Ek,
+      o: () => Vk
     });
-    var QC = ZC(326),
-      wC = ZC(9239),
-      bC = ZC(4386),
-      nC = ZC(9194),
-      fC = ZC(9217),
-      oC = ZC(36902),
-      qC = ZC(36918),
-      FC = ZC(36926),
-      WC = ZC(36932);
-    const NC = 16,
-      MC = {
+    var Xk = Ik(337),
+      Tk = Ik(9237),
+      ik = Ik(4449),
+      yk = Ik(9183),
+      lk = Ik(9210),
+      ak = Ik(37082),
+      qk = Ik(37099),
+      Lk = Ik(37101),
+      tk = Ik(37109);
+    const Zk = 16,
+      jk = {
         comboWindowMs: 800,
         comboMultipliers: [.5, 2 / 3, 5 / 6, 1],
         backstabAngle: 2 * Math.PI / 3
       },
-      gC = {
+      ek = {
         "Wood Pickaxe": {
           displayName: {
             translationKey: "item:woodPickaxe"
@@ -1178,7 +1178,7 @@ export const modules = {
           weight: 1,
           heldItemScale: 1,
           stackable: !1,
-          ig: [15, 15, 15],
+          Ve: [15, 15, 15],
           spotlightRange: 20,
           spotlightConeAngle: 60,
           firstPersonHeldRotationOffset: [-.34, -.014, .081],
@@ -1197,7 +1197,7 @@ export const modules = {
           heldItemScale: 1,
           stackable: !1,
           armourReduction: .07,
-          ig: [15, 14, 11],
+          Ve: [15, 14, 11],
           spotlightRange: 12,
           spotlightConeAngle: 90
         },
@@ -2579,7 +2579,7 @@ export const modules = {
           heldItemScale: 1,
           stackable: !0
         },
-        ...(0, oC.e)("Bowl of Cranberries", {
+        ...(0, ak.c)("Bowl of Cranberries", {
           displayName: {
             translationKey: "item:bowlOfCranberries"
           },
@@ -2631,7 +2631,7 @@ export const modules = {
           description: {
             translationKey: "item:glowingSoupDescription"
           },
-          ig: [4, 11, 11],
+          Ve: [4, 11, 11],
           rootMetaDesc: "Glowing Soup|meta|charging1"
         },
         "Night Vision Soup": {
@@ -2706,7 +2706,7 @@ export const modules = {
           weight: 1,
           heldItemScale: 1,
           stackable: !1,
-          ig: [12, 7, 2]
+          Ve: [12, 7, 2]
         },
         Boat: {
           displayName: {
@@ -2863,20 +2863,20 @@ export const modules = {
           heldItemScale: 1,
           stackable: !1
         },
-        ...(0, fC.E)((CC => `${CC} Kart`), {
-          displayName: CC => ({
-            translationKey: `item:${(0,QC.ke)(CC)}Kart`
+        ...(0, lk.E)((kk => `${kk} Kart`), {
+          displayName: kk => ({
+            translationKey: `item:${(0,Xk.ye)(kk)}Kart`
           }),
-          textureInfo: CC => `${(0,QC.ne)(CC)}_kart`,
-          heldItemGlb: CC => `${CC} Kart Item`,
+          textureInfo: kk => `${(0,Xk.Ce)(kk)}_kart`,
+          heldItemGlb: kk => `${kk} Kart Item`,
           type: "Item",
           weight: 1,
           heldItemScale: 1,
           stackable: !1
         }),
-        ...(0, fC.E)((CC => `INTERNAL_MESH_${CC} Kart`), {
-          textureInfo: CC => `${(0,QC.ne)(CC)}_kart`,
-          heldItemGlb: CC => `${CC} Kart`,
+        ...(0, lk.E)((kk => `INTERNAL_MESH_${kk} Kart`), {
+          textureInfo: kk => `${(0,Xk.Ce)(kk)}_kart`,
+          heldItemGlb: kk => `${kk} Kart`,
           type: "Item",
           weight: 1,
           heldItemScale: 1,
@@ -3303,7 +3303,7 @@ export const modules = {
           description: "Primary spread shot from Scatter in Heroes v Brainrots",
           secondaryDamage: 8
         },
-        ...(0, oC.i)("Wood Bow", {
+        ...(0, ak.j)("Wood Bow", {
           displayName: {
             translationKey: "item:woodBow"
           },
@@ -3322,7 +3322,7 @@ export const modules = {
           },
           requiresArrow: !0
         }),
-        ...(0, oC.i)("Stone Bow", {
+        ...(0, ak.j)("Stone Bow", {
           displayName: {
             translationKey: "item:stoneBow"
           },
@@ -3341,7 +3341,7 @@ export const modules = {
           },
           requiresArrow: !0
         }),
-        ...(0, oC.i)("Iron Bow", {
+        ...(0, ak.j)("Iron Bow", {
           displayName: {
             translationKey: "item:ironBow"
           },
@@ -3360,7 +3360,7 @@ export const modules = {
           },
           requiresArrow: !0
         }),
-        ...(0, oC.i)("Gold Bow", {
+        ...(0, ak.j)("Gold Bow", {
           displayName: {
             translationKey: "item:goldBow"
           },
@@ -3379,7 +3379,7 @@ export const modules = {
           },
           requiresArrow: !0
         }),
-        ...(0, oC.i)("Diamond Bow", {
+        ...(0, ak.j)("Diamond Bow", {
           displayName: {
             translationKey: "item:diamondBow"
           },
@@ -3398,7 +3398,7 @@ export const modules = {
           },
           requiresArrow: !0
         }),
-        ...(0, oC.i)("Wood Crossbow", {
+        ...(0, ak.j)("Wood Crossbow", {
           displayName: {
             translationKey: "item:woodCrossbow"
           },
@@ -3416,7 +3416,7 @@ export const modules = {
           },
           requiresArrow: !0
         }),
-        ...(0, oC.i)("Stone Crossbow", {
+        ...(0, ak.j)("Stone Crossbow", {
           displayName: {
             translationKey: "item:stoneCrossbow"
           },
@@ -3434,7 +3434,7 @@ export const modules = {
           },
           requiresArrow: !0
         }),
-        ...(0, oC.i)("Iron Crossbow", {
+        ...(0, ak.j)("Iron Crossbow", {
           displayName: {
             translationKey: "item:ironCrossbow"
           },
@@ -3452,7 +3452,7 @@ export const modules = {
           },
           requiresArrow: !0
         }),
-        ...(0, oC.i)("Gold Crossbow", {
+        ...(0, ak.j)("Gold Crossbow", {
           displayName: {
             translationKey: "item:goldCrossbow"
           },
@@ -3470,7 +3470,7 @@ export const modules = {
           },
           requiresArrow: !0
         }),
-        ...(0, oC.i)("Diamond Crossbow", {
+        ...(0, ak.j)("Diamond Crossbow", {
           displayName: {
             translationKey: "item:diamondCrossbow"
           },
@@ -3574,7 +3574,7 @@ export const modules = {
           stackable: !0,
           secondaryDamage: 1
         },
-        ...(0, oC.m)("Compass", {
+        ...(0, ak.n)("Compass", {
           displayName: {
             translationKey: "item:compass"
           },
@@ -5804,61 +5804,61 @@ export const modules = {
           heldItemScale: 1,
           stackable: !0
         },
-        ...(0, oC.o)("AK-47", {
+        ...(0, ak.p)("AK-47", {
           heldItemScale: 2
         }),
-        ...(0, oC.o)("M16", {
+        ...(0, ak.p)("M16", {
           heldItemScale: 2
         }),
-        ...(0, oC.o)("MP40", {
+        ...(0, ak.p)("MP40", {
           heldItemScale: 2.5
         }),
-        ...(0, oC.o)("TAR-21", {
+        ...(0, ak.p)("TAR-21", {
           heldItemScale: 2.5
         }),
-        ...(0, oC.o)("M1911", {
+        ...(0, ak.p)("M1911", {
           heldItemScale: 2
         }),
-        ...(0, oC.o)("One Shot Pistol", {
+        ...(0, ak.p)("One Shot Pistol", {
           heldItemScale: 2,
           heldItemGlb: "M1911",
           textureInfo: "M1911"
         }),
-        ...(0, oC.o)("Double Barrel", {
+        ...(0, ak.p)("Double Barrel", {
           heldItemScale: 2.5,
           textureInfo: "Double-barreled"
         }),
-        ...(0, oC.o)("AWP", {
+        ...(0, ak.p)("AWP", {
           heldItemScale: 3
         }),
-        ...(0, oC.o)("Deagle", {
+        ...(0, ak.p)("Deagle", {
           heldItemScale: 2
         }),
-        ...(0, oC.o)("Striker-12", {
+        ...(0, ak.p)("Striker-12", {
           heldItemScale: 2.5
         }),
-        ...(0, oC.o)("VSR", {
+        ...(0, ak.p)("VSR", {
           heldItemScale: 2.5
         }),
-        ...(0, oC.o)("DMR", {
+        ...(0, ak.p)("DMR", {
           heldItemScale: 2.5
         }),
-        ...(0, oC.o)("Minigun", {
+        ...(0, ak.p)("Minigun", {
           heldItemScale: 3
         }),
-        ...(0, oC.o)("FMR", {
+        ...(0, ak.p)("FMR", {
           heldItemScale: 2
         }),
-        ...(0, oC.o)("SKAR", {
+        ...(0, ak.p)("SKAR", {
           heldItemScale: 2.5
         }),
-        ...(0, oC.o)("Block-19", {
+        ...(0, ak.p)("Block-19", {
           heldItemScale: 2.5
         }),
-        ...(0, oC.o)("Mini Izu", {
+        ...(0, ak.p)("Mini Izu", {
           heldItemScale: 2
         }),
-        ...(0, oC.o)("GPMG", {
+        ...(0, ak.p)("GPMG", {
           heldItemScale: 2.8
         }),
         "Gold Coin": {
@@ -5951,7 +5951,7 @@ export const modules = {
           description: {
             translationKey: "item:iceBridgeDescription"
           },
-          bridgeLength: NC
+          bridgeLength: Zk
         },
         "Maple Planks Bridge": {
           displayName: {
@@ -5965,7 +5965,7 @@ export const modules = {
           description: {
             translationKey: "item:maplePlanksBridgeDescription"
           },
-          bridgeLength: NC
+          bridgeLength: Zk
         },
         "Messy Stone Bridge": {
           displayName: {
@@ -5979,14 +5979,14 @@ export const modules = {
           description: {
             translationKey: "item:messyStoneBridgeDescription"
           },
-          bridgeLength: NC
+          bridgeLength: Zk
         },
-        ...(0, fC.E)((CC => `${CC} Balloon`), {
-          displayName: CC => ({
-            translationKey: `item:${(0,QC.ke)(CC)}Balloon`
+        ...(0, lk.E)((kk => `${kk} Balloon`), {
+          displayName: kk => ({
+            translationKey: `item:${(0,Xk.ye)(kk)}Balloon`
           }),
-          textureInfo: CC => `${(0,QC.ne)(CC)}_balloon`,
-          heldItemGlb: CC => `${CC} Balloon Item`,
+          textureInfo: kk => `${(0,Xk.Ce)(kk)}_balloon`,
+          heldItemGlb: kk => `${kk} Balloon Item`,
           type: "Item",
           weight: 1,
           heldItemScale: 1,
@@ -5995,19 +5995,19 @@ export const modules = {
             translationKey: "item:balloonDescription"
           }
         }),
-        ...(0, fC.E)((CC => `INTERNAL_MESH_${CC} Balloon`), {
-          textureInfo: CC => `${(0,QC.ne)(CC)}_balloon`,
-          heldItemGlb: CC => `${CC} Balloon`,
+        ...(0, lk.E)((kk => `INTERNAL_MESH_${kk} Balloon`), {
+          textureInfo: kk => `${(0,Xk.Ce)(kk)}_balloon`,
+          heldItemGlb: kk => `${kk} Balloon`,
           type: "Item",
           weight: 1,
           heldItemScale: 4,
           stackable: !1
         }),
-        ...(0, fC.E)((CC => `${CC} Popup Tower`), {
-          displayName: CC => ({
-            translationKey: `item:${(0,QC.ke)(CC)}PopupTower`
+        ...(0, lk.E)((kk => `${kk} Popup Tower`), {
+          displayName: kk => ({
+            translationKey: `item:${(0,Xk.ye)(kk)}PopupTower`
           }),
-          textureInfo: CC => `${(0,QC.ne)(CC)}_popup_tower`,
+          textureInfo: kk => `${(0,Xk.Ce)(kk)}_popup_tower`,
           type: "Item",
           weight: 1,
           heldItemScale: 1,
@@ -6016,11 +6016,11 @@ export const modules = {
             translationKey: "item:popupTowerDescription"
           }
         }),
-        ...(0, fC.E)((CC => `${CC} Paintball Gun`), {
-          displayName: CC => ({
-            translationKey: `item:${(0,QC.ke)(CC)}PaintballGun`
+        ...(0, lk.E)((kk => `${kk} Paintball Gun`), {
+          displayName: kk => ({
+            translationKey: `item:${(0,Xk.ye)(kk)}PaintballGun`
           }),
-          textureInfo: CC => `${(0,QC.ne)(CC)}_paintball_gun`,
+          textureInfo: kk => `${(0,Xk.Ce)(kk)}_paintball_gun`,
           type: "FullAuto",
           weight: 1,
           heldItemScale: .5,
@@ -6033,11 +6033,11 @@ export const modules = {
           holdAsAiming: !0,
           hideAimingUI: !0
         }),
-        ...(0, fC.E)((CC => `${CC} Paintball`), {
-          displayName: CC => ({
-            translationKey: `item:${(0,QC.ke)(CC)}Paintball`
+        ...(0, lk.E)((kk => `${kk} Paintball`), {
+          displayName: kk => ({
+            translationKey: `item:${(0,Xk.ye)(kk)}Paintball`
           }),
-          textureInfo: CC => `${(0,QC.ne)(CC)}_paintball`,
+          textureInfo: kk => `${(0,Xk.Ce)(kk)}_paintball`,
           type: "Item",
           weight: 1,
           heldItemScale: 1,
@@ -6046,11 +6046,11 @@ export const modules = {
             translationKey: "item:paintballDescription"
           }
         }),
-        ...(0, fC.E)((CC => `${CC} Heavy Paintball Gun`), {
-          displayName: CC => ({
-            translationKey: `item:${(0,QC.ke)(CC)}HeavyPaintballGun`
+        ...(0, lk.E)((kk => `${kk} Heavy Paintball Gun`), {
+          displayName: kk => ({
+            translationKey: `item:${(0,Xk.ye)(kk)}HeavyPaintballGun`
           }),
-          textureInfo: CC => `${(0,QC.ne)(CC)}_heavy_paintball_gun`,
+          textureInfo: kk => `${(0,Xk.Ce)(kk)}_heavy_paintball_gun`,
           type: "FullAuto",
           weight: 1,
           heldItemScale: 1,
@@ -6063,11 +6063,11 @@ export const modules = {
           holdAsAiming: !0,
           hideAimingUI: !0
         }),
-        ...(0, fC.E)((CC => `${CC} Paintball Explosive Item`), {
-          displayName: CC => ({
-            translationKey: `item:${(0,QC.ke)(CC)}PaintballExplosive`
+        ...(0, lk.E)((kk => `${kk} Paintball Explosive Item`), {
+          displayName: kk => ({
+            translationKey: `item:${(0,Xk.ye)(kk)}PaintballExplosive`
           }),
-          textureInfo: CC => `explosive_paint_${(0,QC.ne)(CC)}`,
+          textureInfo: kk => `explosive_paint_${(0,Xk.Ce)(kk)}`,
           type: "Item",
           weight: 1,
           heldItemScale: 1,
@@ -6076,11 +6076,11 @@ export const modules = {
             translationKey: "item:paintballExplosiveDescription"
           }
         }),
-        ...(0, fC.E)((CC => `${CC} Sticky Paintball Explosive Item`), {
-          displayName: CC => ({
-            translationKey: `item:${(0,QC.ke)(CC)}StickyPaintballExplosive`
+        ...(0, lk.E)((kk => `${kk} Sticky Paintball Explosive Item`), {
+          displayName: kk => ({
+            translationKey: `item:${(0,Xk.ye)(kk)}StickyPaintballExplosive`
           }),
-          textureInfo: CC => `explosive_paint_sticky_${(0,QC.ne)(CC)}`,
+          textureInfo: kk => `explosive_paint_sticky_${(0,Xk.Ce)(kk)}`,
           type: "Item",
           weight: 1,
           heldItemScale: 1,
@@ -6089,11 +6089,11 @@ export const modules = {
             translationKey: "item:stickyPaintballExplosiveDescription"
           }
         }),
-        ...(0, fC.E)((CC => `${CC} Seeking Paintball Explosive Item`), {
-          displayName: CC => ({
-            translationKey: `item:${(0,QC.ke)(CC)}SeekingPaintballExplosive`
+        ...(0, lk.E)((kk => `${kk} Seeking Paintball Explosive Item`), {
+          displayName: kk => ({
+            translationKey: `item:${(0,Xk.ye)(kk)}SeekingPaintballExplosive`
           }),
-          textureInfo: CC => `explosive_paint_seeking_${(0,QC.ne)(CC)}`,
+          textureInfo: kk => `explosive_paint_seeking_${(0,Xk.Ce)(kk)}`,
           type: "Item",
           weight: 1,
           heldItemScale: 1,
@@ -6102,11 +6102,11 @@ export const modules = {
             translationKey: "item:seekingPaintballExplosiveDescription"
           }
         }),
-        ...(0, fC.E)((CC => `${CC} Quick Paintball Explosive Item`), {
-          displayName: CC => ({
-            translationKey: `item:${(0,QC.ke)(CC)}QuickPaintballExplosive`
+        ...(0, lk.E)((kk => `${kk} Quick Paintball Explosive Item`), {
+          displayName: kk => ({
+            translationKey: `item:${(0,Xk.ye)(kk)}QuickPaintballExplosive`
           }),
-          textureInfo: CC => `explosive_paint_quick_${(0,QC.ne)(CC)}`,
+          textureInfo: kk => `explosive_paint_quick_${(0,Xk.Ce)(kk)}`,
           type: "Item",
           weight: 1,
           heldItemScale: 1,
@@ -6115,12 +6115,12 @@ export const modules = {
             translationKey: "item:quickPaintballExplosiveDescription"
           }
         }),
-        ...(0, oC.l)((CC => `${CC} Paint Bow`), {
-          displayName: CC => ({
-            translationKey: `item:${(0,QC.ke)(CC)}PaintBow`
+        ...(0, ak.l)((kk => `${kk} Paint Bow`), {
+          displayName: kk => ({
+            translationKey: `item:${(0,Xk.ye)(kk)}PaintBow`
           }),
-          textureName: CC => `${(0,QC.ne)(CC)}_paint_bow`,
-          rootMetaDesc: CC => `${CC} Paint Bow|meta|charging1`,
+          textureName: kk => `${(0,Xk.Ce)(kk)}_paint_bow`,
+          rootMetaDesc: kk => `${kk} Paint Bow|meta|charging1`,
           type: "Chargeable",
           weight: 1,
           heldItemScale: 1.25,
@@ -6133,7 +6133,7 @@ export const modules = {
           },
           minChargeStateToUse: 0
         }),
-        ...(0, oC.r)(),
+        ...(0, ak.r)(),
         "Mob Catcher": {
           displayName: {
             translationKey: "item:mobCatcher"
@@ -6147,8 +6147,8 @@ export const modules = {
             translationKey: "item:mobCatcherDescription"
           }
         },
-        ...(0, oC.g)(),
-        ...(0, oC.i)("Timed Spike Bomb", {
+        ...(0, ak.g)(),
+        ...(0, ak.j)("Timed Spike Bomb", {
           displayName: {
             translationKey: "item:timedSpikeBomb"
           },
@@ -6318,11 +6318,11 @@ export const modules = {
           },
           secondaryDamage: 15
         },
-        ...(0, fC.E)((CC => `${CC} Firecracker`), {
-          displayName: CC => ({
-            translationKey: `item:${(0,QC.ke)(CC)}Firecracker`
+        ...(0, lk.E)((kk => `${kk} Firecracker`), {
+          displayName: kk => ({
+            translationKey: `item:${(0,Xk.ye)(kk)}Firecracker`
           }),
-          textureInfo: CC => `firecracker_${(0,QC.ne)(CC)}`,
+          textureInfo: kk => `firecracker_${(0,Xk.Ce)(kk)}`,
           type: "Item",
           weight: 1,
           heldItemScale: 1,
@@ -6360,11 +6360,11 @@ export const modules = {
           },
           secondaryDamage: 15
         },
-        ...(0, fC.E)((CC => `${CC} Firecracker Pebble`), {
-          displayName: CC => ({
-            translationKey: `item:${(0,QC.ke)(CC)}FirecrackerPebble`
+        ...(0, lk.E)((kk => `${kk} Firecracker Pebble`), {
+          displayName: kk => ({
+            translationKey: `item:${(0,Xk.ye)(kk)}FirecrackerPebble`
           }),
-          textureInfo: CC => `firecracker_pebble_${(0,QC.ne)(CC)}`,
+          textureInfo: kk => `firecracker_pebble_${(0,Xk.Ce)(kk)}`,
           type: "Item",
           weight: 1,
           heldItemScale: 1,
@@ -8257,7 +8257,7 @@ export const modules = {
           attackCooldownMs: 250,
           knockbackHorizontalScalar: .4,
           knockbackVerticalScalar: .8,
-          comboInfo: MC,
+          comboInfo: jk,
           description: {
             translationKey: "item:daggerDescription"
           },
@@ -8279,7 +8279,7 @@ export const modules = {
           attackCooldownMs: 250,
           knockbackHorizontalScalar: .4,
           knockbackVerticalScalar: .8,
-          comboInfo: MC,
+          comboInfo: jk,
           description: {
             translationKey: "item:daggerDescription"
           },
@@ -8301,7 +8301,7 @@ export const modules = {
           attackCooldownMs: 250,
           knockbackHorizontalScalar: .4,
           knockbackVerticalScalar: .8,
-          comboInfo: MC,
+          comboInfo: jk,
           description: {
             translationKey: "item:daggerDescription"
           },
@@ -8323,7 +8323,7 @@ export const modules = {
           attackCooldownMs: 250,
           knockbackHorizontalScalar: .4,
           knockbackVerticalScalar: .8,
-          comboInfo: MC,
+          comboInfo: jk,
           description: {
             translationKey: "item:daggerDescription"
           },
@@ -8345,7 +8345,7 @@ export const modules = {
           attackCooldownMs: 250,
           knockbackHorizontalScalar: .4,
           knockbackVerticalScalar: .8,
-          comboInfo: MC,
+          comboInfo: jk,
           description: {
             translationKey: "item:daggerDescription"
           },
@@ -8367,7 +8367,7 @@ export const modules = {
           attackCooldownMs: 250,
           knockbackHorizontalScalar: .4,
           knockbackVerticalScalar: .8,
-          comboInfo: MC,
+          comboInfo: jk,
           description: {
             translationKey: "item:daggerDescription"
           },
@@ -9112,7 +9112,7 @@ export const modules = {
           heldItemScale: 1,
           stackable: !0
         },
-        ...(0, oC.k)("Wood Clock", "clock_wood", {
+        ...(0, ak.k)("Wood Clock", "clock_wood", {
           displayName: {
             translationKey: "item:woodClock"
           },
@@ -9124,7 +9124,7 @@ export const modules = {
             translationKey: "item:clockDescription"
           }
         }),
-        ...(0, oC.k)("Gold Clock", "clock_gold", {
+        ...(0, ak.k)("Gold Clock", "clock_gold", {
           displayName: {
             translationKey: "item:goldClock"
           },
@@ -9221,108 +9221,108 @@ export const modules = {
           stackable: !0
         }
       };
-    for (const KC of qC.o)
-      for (const CC of KC.materials)
-        for (const zC of KC.kinds) {
-          var SC, pC, PC, GC;
-          const ZC = null === (SC = KC.inheritsFrom) || void 0 === SC ? void 0 : SC.call(KC, zC),
-            wC = (0, qC.m)(CC, zC);
-          if (gC[wC]) throw new Error(`Item family "${KC.name}" would overwrite the existing item "${wC}"`);
-          const bC = {
-              displayName: null !== (pC = null === (PC = KC.displayName) || void 0 === PC ? void 0 : PC.call(KC, wC)) && void 0 !== pC ? pC : wC
+    for (const Ok of qk.m)
+      for (const kk of Ok.materials)
+        for (const Fk of Ok.kinds) {
+          var wk, Hk, Jk, xk;
+          const Ik = null === (wk = Ok.inheritsFrom) || void 0 === wk ? void 0 : wk.call(Ok, Fk),
+            Tk = (0, qk.l)(kk, Fk);
+          if (ek[Tk]) throw new Error(`Item family "${Ok.name}" would overwrite the existing item "${Tk}"`);
+          const ik = {
+              displayName: null !== (Hk = null === (Jk = Ok.displayName) || void 0 === Jk ? void 0 : Jk.call(Ok, Tk)) && void 0 !== Hk ? Hk : Tk
             },
-            nC = null === (GC = KC.description) || void 0 === GC ? void 0 : GC.call(KC, CC, zC);
-          if (void 0 !== nC && (bC.description = nC), !ZC) {
-            if (!KC.metadata) throw new Error(`Item family "${KC.name}" declares neither inheritsFrom nor metadata`);
-            const CC = (0, QC.ne)(wC);
-            gC[wC] = {
-              ...KC.metadata(zC),
-              ...bC,
-              textureInfo: CC,
-              heldItemGlb: CC
+            yk = null === (xk = Ok.description) || void 0 === xk ? void 0 : xk.call(Ok, kk, Fk);
+          if (void 0 !== yk && (ik.description = yk), !Ik) {
+            if (!Ok.metadata) throw new Error(`Item family "${Ok.name}" declares neither inheritsFrom nor metadata`);
+            const kk = (0, Xk.Ce)(Tk);
+            ek[Tk] = {
+              ...Ok.metadata(Fk),
+              ...ik,
+              textureInfo: kk,
+              heldItemGlb: kk
             };
             continue
           }
-          const fC = (0, qC.m)(ZC.material, ZC.kind);
-          if (!gC[fC]) throw new Error(`Item family "${KC.name}" inherits "${wC}" from "${fC}", which is not registered`);
-          for (const QC of qC.b) {
-            const nC = gC[`${fC}${QC}`];
-            if (!nC) continue;
-            const oC = (0, qC.f)(nC.textureInfo, ZC, CC, zC),
-              FC = {
-                ...nC,
-                ...bC,
-                textureInfo: oC,
-                heldItemGlb: oC
+          const lk = (0, qk.l)(Ik.material, Ik.kind);
+          if (!ek[lk]) throw new Error(`Item family "${Ok.name}" inherits "${Tk}" from "${lk}", which is not registered`);
+          for (const Xk of qk.c) {
+            const yk = ek[`${lk}${Xk}`];
+            if (!yk) continue;
+            const ak = (0, qk.e)(yk.textureInfo, Ik, kk, Fk),
+              Lk = {
+                ...yk,
+                ...ik,
+                textureInfo: ak,
+                heldItemGlb: ak
               };
-            nC.rootMetaDesc && (FC.rootMetaDesc = nC.rootMetaDesc.replace(fC, wC)), gC[`${wC}${QC}`] = FC
+            yk.rootMetaDesc && (Lk.rootMetaDesc = yk.rootMetaDesc.replace(lk, Tk)), ek[`${Tk}${Xk}`] = Lk
           }
         }
-    gC["Cracked Rubellite Pickaxe"] = {
-      ...gC["Rubellite Pickaxe"],
+    ek["Cracked Rubellite Pickaxe"] = {
+      ...ek["Rubellite Pickaxe"],
       displayName: "Cracked Rubellite Pickaxe",
       description: "Ruby calls it cracked, not beaten. A sturdy pickaxe ready for the stubborn stone in her mine.",
       multiplier: 4.75,
       level: 3,
       damage: 24
     };
-    for (const [KC, YC] of [
+    for (const [Ok, nk] of [
         ["Goldheart Engine", "goldheartEngine"],
         ["Deepbite Drill Tip", "deepbiteDrillTip"],
         ["Empty Fuel Cell", "emptyFuelCell"],
         ["Blackfire Fuel Cell", "blackfireFuelCell"]
-      ]) gC[KC] = {
+      ]) ek[Ok] = {
       displayName: {
-        translationKey: `item:${YC}`
+        translationKey: `item:${nk}`
       },
       description: {
-        translationKey: `item:${YC}Description`
+        translationKey: `item:${nk}Description`
       },
       type: "Item",
-      textureInfo: (0, QC.ne)(KC),
+      textureInfo: (0, Xk.Ce)(Ok),
       weight: 1,
       heldItemScale: 1,
       stackable: !0
     };
-    for (const [KC, YC] of [
+    for (const [Ok, nk] of [
         ["Doom Rivet", "doomRivet"],
         ["Doom Crest", "doomCrest"]
-      ]) gC[KC] = {
+      ]) ek[Ok] = {
       displayName: {
-        translationKey: `item:${YC}`
+        translationKey: `item:${nk}`
       },
       description: {
-        translationKey: `item:${YC}Description`
+        translationKey: `item:${nk}Description`
       },
       type: "Item",
-      textureInfo: (0, QC.ne)(KC),
+      textureInfo: (0, Xk.Ce)(Ok),
       weight: 1,
       heldItemScale: 1,
       stackable: !0,
       showInCreativeInven: !1
     };
-    for (const [KC, YC, dC] of [
+    for (const [Ok, nk, Gk] of [
         ["Raw Copper", "rawCopper", "raw_copper"],
         ["Copper Bar", "copperBar", "copper_bar"],
         ["Iron Grit", "ironGrit", "iron_grit"],
         ["Gold Grit", "goldGrit", "gold_grit"],
         ["Copper Grit", "copperGrit", "copper_grit"],
         ["Charcoal", "charcoal", "charcoal"]
-      ]) gC[KC] = {
+      ]) ek[Ok] = {
       displayName: {
-        translationKey: `item:${YC}`
+        translationKey: `item:${nk}`
       },
       description: {
-        translationKey: `item:${YC}Description`
+        translationKey: `item:${nk}Description`
       },
       type: "Item",
-      textureInfo: dC,
+      textureInfo: Gk,
       weight: 1,
       heldItemScale: 1,
       stackable: !0,
       showInCreativeInven: !1
     };
-    gC["Recall Beacon"] = {
+    ek["Recall Beacon"] = {
       displayName: {
         translationKey: "item:recallBeacon"
       },
@@ -9335,7 +9335,7 @@ export const modules = {
       heldItemScale: 1,
       stackable: !1,
       showInCreativeInven: !1
-    }, gC["Iron Hammer"] = {
+    }, ek["Iron Hammer"] = {
       displayName: {
         translationKey: "item:ironHammer"
       },
@@ -9353,25 +9353,25 @@ export const modules = {
       level: 3,
       showInCreativeInven: !1
     };
-    for (const [KC, YC, dC] of [
+    for (const [Ok, nk, Gk] of [
         ["Iron Plate", "ironPlate", "iron_plate"],
         ["Copper Wire", "copperWire", "copper_wire"],
         ["Motor", "motor", "motor"]
-      ]) gC[KC] = {
+      ]) ek[Ok] = {
       displayName: {
-        translationKey: `item:${YC}`
+        translationKey: `item:${nk}`
       },
       description: {
-        translationKey: `item:${YC}Description`
+        translationKey: `item:${nk}Description`
       },
       type: "Item",
-      textureInfo: dC,
+      textureInfo: Gk,
       weight: 1,
       heldItemScale: 1,
       stackable: !0,
       showInCreativeInven: !1
     };
-    for (const [KC, YC, dC] of [
+    for (const [Ok, nk, Gk] of [
         ["Machine Parts", "machineParts", "machine_parts"],
         ["Relay Coil", "relayCoil", "relay_coil"],
         ["Deposit Seed (Copper)", "depositSeedCopper", "deposit_seed_copper"],
@@ -9380,21 +9380,21 @@ export const modules = {
         ["Deposit Seed (Coal)", "depositSeedCoal", "deposit_seed_coal"],
         ["Deposit Seed (Iron)", "depositSeedIron", "deposit_seed_iron"],
         ["Deposit Seed (Stone)", "depositSeedStone", "deposit_seed_stone"]
-      ]) gC[KC] = {
+      ]) ek[Ok] = {
       displayName: {
-        translationKey: `item:${YC}`
+        translationKey: `item:${nk}`
       },
       description: {
-        translationKey: `item:${YC}Description`
+        translationKey: `item:${nk}Description`
       },
       type: "Item",
-      textureInfo: dC,
+      textureInfo: Gk,
       weight: 1,
       heldItemScale: 1,
       stackable: !0,
       showInCreativeInven: !1
     };
-    for (const [KC, YC, dC, mC] of [
+    for (const [Ok, nk, Gk, pk] of [
         ["Steel Bar", "steelBar", "steel_bar", !0],
         ["Gold Plate", "goldPlate", "gold_plate", !0],
         ["Logic Board", "logicBoard", "logic_board", !0],
@@ -9404,21 +9404,21 @@ export const modules = {
         ["Ore Lens", "oreLens", "ore_lens", !1],
         ["Homing Beacon", "homingBeacon", "homing_beacon", !1],
         ["Pull Charm", "pullCharm", "pull_charm", !1]
-      ]) gC[KC] = {
+      ]) ek[Ok] = {
       displayName: {
-        translationKey: `item:${YC}`
+        translationKey: `item:${nk}`
       },
       description: {
-        translationKey: `item:${YC}Description`
+        translationKey: `item:${nk}Description`
       },
       type: "Item",
-      textureInfo: dC,
+      textureInfo: Gk,
       weight: 1,
       heldItemScale: 1,
-      stackable: mC,
+      stackable: pk,
       showInCreativeInven: !1
     };
-    gC["Vein Breaker"] = {
+    ek["Vein Breaker"] = {
       displayName: {
         translationKey: "item:veinBreaker"
       },
@@ -9436,45 +9436,45 @@ export const modules = {
       level: 3,
       showInCreativeInven: !1
     };
-    for (const [KC, YC, dC, mC] of [
+    for (const [Ok, nk, Gk, pk] of [
         ["Voltite Dust", "voltiteDust", "voltite_dust", !0],
         ["Voltite Cell", "voltiteCell", "voltite_cell", !0],
         ["Sky Pack", "skyPack", "sky_pack", !1],
         ["Dusk Moss", "duskMoss", "dusk_moss", !0]
-      ]) gC[KC] = {
+      ]) ek[Ok] = {
       displayName: {
-        translationKey: `item:${YC}`
+        translationKey: `item:${nk}`
       },
       description: {
-        translationKey: `item:${YC}Description`
+        translationKey: `item:${nk}Description`
       },
       type: "Item",
-      textureInfo: dC,
+      textureInfo: Gk,
       weight: 1,
       heldItemScale: 1,
-      stackable: mC,
+      stackable: pk,
       showInCreativeInven: !1
     };
-    for (const [KC, YC, dC] of [
+    for (const [Ok, nk, Gk] of [
         ["Star Alloy", "starAlloy", "star_alloy"],
         ["Moonstone Dust", "moonstoneDust", "moonstone_dust"],
         ["Comet Shard", "cometShard", "comet_shard"],
         ["Comet Core", "cometCore", "comet_core"]
-      ]) gC[KC] = {
+      ]) ek[Ok] = {
       displayName: {
-        translationKey: `item:${YC}`
+        translationKey: `item:${nk}`
       },
       description: {
-        translationKey: `item:${YC}Description`
+        translationKey: `item:${nk}Description`
       },
       type: "Item",
-      textureInfo: dC,
+      textureInfo: Gk,
       weight: 1,
       heldItemScale: 1,
       stackable: !0,
       showInCreativeInven: !1
     };
-    gC["Starbore Drill"] = {
+    ek["Starbore Drill"] = {
       displayName: {
         translationKey: "item:starboreDrill"
       },
@@ -9492,21 +9492,21 @@ export const modules = {
       level: 5,
       showInCreativeInven: !1
     };
-    for (const KC of [2, 3, 4, 5, 6, 7, 8, 9, 10]) gC[`Core Tier ${KC}`] = {
+    for (const Ok of [2, 3, 4, 5, 6, 7, 8, 9, 10]) ek[`Core Tier ${Ok}`] = {
       displayName: {
-        translationKey: `item:coreTier${KC}`
+        translationKey: `item:coreTier${Ok}`
       },
       description: {
-        translationKey: `item:coreTier${KC}Description`
+        translationKey: `item:coreTier${Ok}Description`
       },
       type: "Item",
-      textureInfo: `core_tier_${Math.min(KC,5)}`,
+      textureInfo: `core_tier_${Math.min(Ok,5)}`,
       weight: 1,
       heldItemScale: 1,
       stackable: !0,
       showInCreativeInven: !1
     };
-    gC["Arc Caster"] = {
+    ek["Arc Caster"] = {
       displayName: {
         translationKey: "item:arcCaster"
       },
@@ -9520,53 +9520,53 @@ export const modules = {
       stackable: !1,
       showInCreativeInven: !1
     };
-    for (const [KC, YC] of [
+    for (const [Ok, nk] of [
         ["Helmet", .14],
         ["Chestplate", .25],
         ["Gauntlets", .12],
         ["Leggings", .2],
         ["Boots", .11]
-      ]) gC[`Voltplate ${KC}`] = {
+      ]) ek[`Voltplate ${Ok}`] = {
       displayName: {
-        translationKey: `item:voltplate${KC}`
+        translationKey: `item:voltplate${Ok}`
       },
       description: {
-        translationKey: `item:voltplate${KC}Description`
+        translationKey: `item:voltplate${Ok}Description`
       },
       type: "Armour",
-      textureInfo: `voltplate_${KC.toLowerCase()}`,
+      textureInfo: `voltplate_${Ok.toLowerCase()}`,
       weight: 1,
       heldItemScale: 1,
       stackable: !1,
-      armourReduction: YC,
+      armourReduction: nk,
       showInCreativeInven: !1
     };
-    for (const KC of WC.g)
-      for (const CC of WC.i) {
-        const zC = (0, WC.l)(KC, CC);
-        gC[zC] = {
+    for (const Ok of tk.e)
+      for (const kk of tk.i) {
+        const Fk = (0, tk.m)(Ok, kk);
+        ek[Fk] = {
           displayName: {
-            translationKey: `item:${(0,QC.ke)(zC)}`
+            translationKey: `item:${(0,Xk.ye)(Fk)}`
           },
           description: {
-            translationKey: `item:sword${CC}Description`
+            translationKey: `item:sword${kk}Description`
           },
           type: "Item",
-          textureInfo: (0, QC.ne)(zC),
+          textureInfo: (0, Xk.Ce)(Fk),
           weight: 1,
           heldItemScale: 1,
           stackable: !0,
           showInCreativeInven: !1
         }
       }
-    gC["Moonstone Sword"] = {
-      ...gC["Diamond Sword"],
+    ek["Moonstone Sword"] = {
+      ...ek["Diamond Sword"],
       displayName: {
         translationKey: "item:moonstoneSword"
       },
       textureInfo: "moonstone_sword",
       showInCreativeInven: !1
-    }, gC["Magmaward Fuel"] = {
+    }, ek["Magmaward Fuel"] = {
       displayName: {
         translationKey: "item:magmawardFuel"
       },
@@ -9580,7 +9580,7 @@ export const modules = {
       stackable: !0,
       showInCreativeInven: !1
     };
-    for (const [KC, YC, dC] of [
+    for (const [Ok, nk, Gk] of [
         ["Raw Uranium", "rawUranium", "raw_uranium"],
         ["Uranium Grit", "uraniumGrit", "uranium_grit"],
         ["Uranium Pellet", "uraniumPellet", "uranium_pellet"],
@@ -9594,46 +9594,46 @@ export const modules = {
         ["Focus Lens", "focusLens", "focus_lens"],
         ["Nova Matter", "novaMatter", "nova_matter"],
         ["Deposit Seed (Uranium)", "depositSeedUranium", "deposit_seed_uranium"]
-      ]) gC[KC] = {
+      ]) ek[Ok] = {
       displayName: {
-        translationKey: `item:${YC}`
+        translationKey: `item:${nk}`
       },
       description: {
-        translationKey: `item:${YC}Description`
+        translationKey: `item:${nk}Description`
       },
       type: "Item",
-      textureInfo: dC,
+      textureInfo: Gk,
       weight: 1,
       heldItemScale: 1,
       stackable: !0,
       showInCreativeInven: !1
     };
-    for (const [KC, YC, dC] of [
+    for (const [Ok, nk, Gk] of [
         ["Reactor Blueprint", "reactorBlueprint", "reactor_blueprint"],
         ["Wrench", "wrench", "wrench"],
         ["Advanced Coupler", "advancedCoupler", "advanced_coupler"],
         ["Nova Coupler", "novaCoupler", "nova_upgrade"]
-      ]) gC[KC] = {
+      ]) ek[Ok] = {
       displayName: {
-        translationKey: `item:${YC}`
+        translationKey: `item:${nk}`
       },
       description: {
-        translationKey: `item:${YC}Description`
+        translationKey: `item:${nk}Description`
       },
       type: "Item",
-      textureInfo: dC,
+      textureInfo: Gk,
       weight: 1,
       heldItemScale: 1,
       stackable: !1,
       showInCreativeInven: !1
     };
-    for (const KC of ["Arc Caster", "Power Coupler", "Advanced Coupler", "Nova Coupler"]) gC[KC].firstPersonHeldRotationOffset = gC.Flashlight.firstPersonHeldRotationOffset, gC[KC].thirdPersonHeldRotationOffset = gC.Flashlight.thirdPersonHeldRotationOffset;
-    for (const KC of [11, 12, 13, 14, 15]) gC[`Core Tier ${KC}`] = {
+    for (const Ok of ["Arc Caster", "Power Coupler", "Advanced Coupler", "Nova Coupler"]) ek[Ok].firstPersonHeldRotationOffset = ek.Flashlight.firstPersonHeldRotationOffset, ek[Ok].thirdPersonHeldRotationOffset = ek.Flashlight.thirdPersonHeldRotationOffset;
+    for (const Ok of [11, 12, 13, 14, 15]) ek[`Core Tier ${Ok}`] = {
       displayName: {
-        translationKey: `item:coreTier${KC}`
+        translationKey: `item:coreTier${Ok}`
       },
       description: {
-        translationKey: `item:coreTier${KC}Description`
+        translationKey: `item:coreTier${Ok}Description`
       },
       type: "Item",
       textureInfo: "core_tier_5",
@@ -9642,46 +9642,46 @@ export const modules = {
       stackable: !0,
       showInCreativeInven: !1
     };
-    for (const [KC, YC, dC, mC] of [
+    for (const [Ok, nk, Gk, pk] of [
         ["Jet Chestplate", "jetChestplate", "jetpack", 0],
         ["Nova Jet Chestplate", "novaJetChestplate", "nova_jetpack", .27]
-      ]) gC[KC] = {
+      ]) ek[Ok] = {
       displayName: {
-        translationKey: `item:${YC}`
+        translationKey: `item:${nk}`
       },
       description: {
-        translationKey: `item:${YC}Description`
+        translationKey: `item:${nk}Description`
       },
       type: "Armour",
-      textureInfo: dC,
+      textureInfo: Gk,
       weight: 1,
       heldItemScale: 1,
       stackable: !1,
-      armourReduction: mC,
+      armourReduction: pk,
       showInCreativeInven: !1
     };
-    for (const [KC, YC] of [
+    for (const [Ok, nk] of [
         ["Helmet", .15],
         ["Chestplate", .27],
         ["Gauntlets", .13],
         ["Leggings", .21],
         ["Boots", .12]
-      ]) gC[`Nova ${KC}`] = {
+      ]) ek[`Nova ${Ok}`] = {
       displayName: {
-        translationKey: `item:nova${KC}`
+        translationKey: `item:nova${Ok}`
       },
       description: {
-        translationKey: `item:nova${KC}Description`
+        translationKey: `item:nova${Ok}Description`
       },
       type: "Armour",
-      textureInfo: `nova_${KC.toLowerCase()}`,
+      textureInfo: `nova_${Ok.toLowerCase()}`,
       weight: 1,
       heldItemScale: 1,
       stackable: !1,
-      armourReduction: YC,
+      armourReduction: nk,
       showInCreativeInven: !1
     };
-    gC["Nova Blade"] = {
+    ek["Nova Blade"] = {
       displayName: {
         translationKey: "item:novaBlade"
       },
@@ -9698,7 +9698,7 @@ export const modules = {
       multiplier: 2,
       level: 1,
       showInCreativeInven: !1
-    }, gC["Mob Cage"] = {
+    }, ek["Mob Cage"] = {
       displayName: {
         translationKey: "item:mobCage"
       },
@@ -9712,9 +9712,9 @@ export const modules = {
       stackable: !0,
       showInCreativeInven: !1
     };
-    for (const KC of ["Pig", "Cow", "Sheep", "Deer", "Stag"]) gC[`Caged ${KC}`] = {
+    for (const Ok of ["Pig", "Cow", "Sheep", "Deer", "Stag"]) ek[`Caged ${Ok}`] = {
       displayName: {
-        translationKey: `item:caged${KC}`
+        translationKey: `item:caged${Ok}`
       },
       description: {
         translationKey: "item:cagedMobDescription"
@@ -9726,7 +9726,7 @@ export const modules = {
       stackable: !1,
       showInCreativeInven: !1
     };
-    gC["Nova Multitool"] = {
+    ek["Nova Multitool"] = {
       displayName: {
         translationKey: "item:novaMultitool"
       },
@@ -9743,7 +9743,7 @@ export const modules = {
       multiplier: 1,
       level: 5,
       showInCreativeInven: !1
-    }, gC["Pocket Terminal"] = {
+    }, ek["Pocket Terminal"] = {
       displayName: {
         translationKey: "item:pocketTerminal"
       },
@@ -9759,303 +9759,303 @@ export const modules = {
       firstPersonHeldRotationOffset: [-.53, 1.67, .02],
       thirdPersonHeldRotationOffset: [-Math.PI / 2, 0, 0]
     };
-    for (const [KC, YC, dC, mC] of [
+    for (const [Ok, nk, Gk, pk] of [
         ["Comet Beacon", "cometBeacon", "comet_beacon", !0],
         ["Nova Wrench", "novaWrench", "nova_wrench", !1]
-      ]) gC[KC] = {
+      ]) ek[Ok] = {
       displayName: {
-        translationKey: `item:${YC}`
+        translationKey: `item:${nk}`
       },
       description: {
-        translationKey: `item:${YC}Description`
+        translationKey: `item:${nk}Description`
       },
       type: "Item",
-      textureInfo: dC,
+      textureInfo: Gk,
       weight: 1,
       heldItemScale: 1,
-      stackable: mC,
+      stackable: pk,
       showInCreativeInven: !1
     };
 
-    function RC(CC, zC) {
-      return [...CC, ...(0, qC.j)(qC.o, zC)].map((CC => vC[CC].id))
+    function Pk(kk, Fk) {
+      return [...kk, ...(0, qk.i)(qk.m, Fk)].map((kk => Sk[kk].id))
     }
 
-    function AC(CC) {
-      return CC.split(" ")[0]
+    function Kk(kk) {
+      return kk.split(" ")[0]
     }
-    const xC = .0018;
-    let JC = Object.values(nC.g).reduce(((CC, zC) => Math.max(CC, zC.id)), 0) + 1;
-    for (const KC in gC) gC[KC].id = JC, gC[KC].name = KC, gC[JC] = gC[KC], (0, wC.h)(gC, gC[KC]), ++JC;
-    const IC = {};
-    for (const KC in gC) {
-      var iC;
-      const CC = gC[KC];
-      IC[KC] = null !== (iC = IC[CC.id]) && void 0 !== iC ? iC : new bC.h(CC)
+    const Qk = .0018;
+    let sk = Object.values(yk.g).reduce(((kk, Fk) => Math.max(kk, Fk.id)), 0) + 1;
+    for (const Ok in ek) ek[Ok].id = sk, ek[Ok].name = Ok, ek[sk] = ek[Ok], (0, Tk.i)(ek, ek[Ok]), ++sk;
+    const Vk = {};
+    for (const Ok in ek) {
+      var zk;
+      const kk = ek[Ok];
+      Vk[Ok] = null !== (zk = Vk[kk.id]) && void 0 !== zk ? zk : new ik.f(kk)
     }
-    const vC = {},
-      eC = [nC.g, IC].flatMap(Object.entries);
-    for (const [KC, YC] of eC) vC[KC] = YC, vC[YC.id] = YC;
-    for (const KC of FC.e) {
-      const CC = KC;
-      if (!vC[CC]) throw new Error(`Missing "${CC}" item for vehicle type "${KC}"`)
+    const Sk = {},
+      vk = [yk.g, Vk].flatMap(Object.entries);
+    for (const [Ok, nk] of vk) Sk[Ok] = nk, Sk[nk.id] = nk;
+    for (const Ok of Lk.d) {
+      const kk = Ok;
+      if (!Sk[kk]) throw new Error(`Missing "${kk}" item for vehicle type "${Ok}"`)
     }
-    const hC = {};
-    for (const KC in gC)
-      if ("rock" === gC[KC].harvests) {
-        const CC = gC[KC].level;
-        if (void 0 !== CC && "string" === typeof KC)
-          for (let zC = 0; zC <= CC; zC++) {
-            const ZC = hC[zC];
-            (void 0 === ZC || CC < gC[ZC].level) && (hC[zC] = KC)
+    const Ek = {};
+    for (const Ok in ek)
+      if ("rock" === ek[Ok].harvests) {
+        const kk = ek[Ok].level;
+        if (void 0 !== kk && "string" === typeof Ok)
+          for (let Fk = 0; Fk <= kk; Fk++) {
+            const Ik = Ek[Fk];
+            (void 0 === Ik || kk < ek[Ik].level) && (Ek[Fk] = Ok)
           }
       }
   },
-  36902: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => MC,
-      g: () => pC,
-      i: () => fC,
-      k: () => WC,
-      l: () => NC,
-      m: () => oC,
-      o: () => PC,
-      r: () => gC
+  37082: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => jk,
+      g: () => Hk,
+      j: () => lk,
+      k: () => tk,
+      l: () => Zk,
+      n: () => ak,
+      p: () => Jk,
+      r: () => ek
     });
-    var QC = ZC(326),
-      wC = ZC(597),
-      bC = ZC(9217),
-      nC = ZC(36909);
+    var Xk = Ik(337),
+      Tk = Ik(621),
+      ik = Ik(9210),
+      yk = Ik(37090);
 
-    function fC(CC, zC) {
-      console.assert("meta|charging1" === zC.rootMetaDesc.split("|").slice(1).join("|"), "charging root item .rootMetaDesc must be |meta|charging1");
-      const ZC = {
-        ...zC
+    function lk(kk, Fk) {
+      console.assert("meta|charging1" === Fk.rootMetaDesc.split("|").slice(1).join("|"), "charging root item .rootMetaDesc must be |meta|charging1");
+      const Ik = {
+        ...Fk
       };
-      return delete ZC.rootMetaDesc, {
-        [CC]: {
-          ...zC,
-          textureInfo: zC.textureName
+      return delete Ik.rootMetaDesc, {
+        [kk]: {
+          ...Fk,
+          textureInfo: Fk.textureName
         },
-        [`${CC}|meta|charging2`]: {
-          ...ZC,
-          textureInfo: `${zC.textureName}_charging_2`
+        [`${kk}|meta|charging2`]: {
+          ...Ik,
+          textureInfo: `${Fk.textureName}_charging_2`
         },
-        [`${CC}|meta|charging3`]: {
-          ...ZC,
-          textureInfo: `${zC.textureName}_charging_3`
+        [`${kk}|meta|charging3`]: {
+          ...Ik,
+          textureInfo: `${Fk.textureName}_charging_3`
         },
-        [`${CC}|meta|charging4`]: {
-          ...ZC,
-          textureInfo: `${zC.textureName}_charging_4`
+        [`${kk}|meta|charging4`]: {
+          ...Ik,
+          textureInfo: `${Fk.textureName}_charging_4`
         }
       }
     }
 
-    function oC(CC, zC) {
-      console.assert("meta|dir1" === zC.rootMetaDesc.split("|").slice(1).join("|"), "charging root item .rootMetaDesc must be |meta|dir1");
-      const ZC = {
-        ...zC
+    function ak(kk, Fk) {
+      console.assert("meta|dir1" === Fk.rootMetaDesc.split("|").slice(1).join("|"), "charging root item .rootMetaDesc must be |meta|dir1");
+      const Ik = {
+        ...Fk
       };
-      return delete ZC.rootMetaDesc, {
-        [CC]: {
-          ...zC,
-          heldItemGlb: CC,
-          textureInfo: zC.textureName
+      return delete Ik.rootMetaDesc, {
+        [kk]: {
+          ...Fk,
+          heldItemGlb: kk,
+          textureInfo: Fk.textureName
         },
-        [`${CC}|meta|dir2`]: {
-          ...ZC,
-          displayName: CC,
-          textureInfo: `${zC.textureName}_dir_2`
+        [`${kk}|meta|dir2`]: {
+          ...Ik,
+          displayName: kk,
+          textureInfo: `${Fk.textureName}_dir_2`
         },
-        [`${CC}|meta|dir3`]: {
-          ...ZC,
-          displayName: CC,
-          textureInfo: `${zC.textureName}_dir_3`
+        [`${kk}|meta|dir3`]: {
+          ...Ik,
+          displayName: kk,
+          textureInfo: `${Fk.textureName}_dir_3`
         },
-        [`${CC}|meta|dir4`]: {
-          ...ZC,
-          displayName: CC,
-          textureInfo: `${zC.textureName}_dir_4`
+        [`${kk}|meta|dir4`]: {
+          ...Ik,
+          displayName: kk,
+          textureInfo: `${Fk.textureName}_dir_4`
         },
-        [`${CC}|meta|dir5`]: {
-          ...ZC,
-          displayName: CC,
-          textureInfo: `${zC.textureName}_dir_5`
+        [`${kk}|meta|dir5`]: {
+          ...Ik,
+          displayName: kk,
+          textureInfo: `${Fk.textureName}_dir_5`
         },
-        [`${CC}|meta|dir6`]: {
-          ...ZC,
-          displayName: CC,
-          textureInfo: `${zC.textureName}_dir_6`
+        [`${kk}|meta|dir6`]: {
+          ...Ik,
+          displayName: kk,
+          textureInfo: `${Fk.textureName}_dir_6`
         },
-        [`${CC}|meta|dir7`]: {
-          ...ZC,
-          displayName: CC,
-          textureInfo: `${zC.textureName}_dir_7`
+        [`${kk}|meta|dir7`]: {
+          ...Ik,
+          displayName: kk,
+          textureInfo: `${Fk.textureName}_dir_7`
         },
-        [`${CC}|meta|dir8`]: {
-          ...ZC,
-          displayName: CC,
-          textureInfo: `${zC.textureName}_dir_8`
+        [`${kk}|meta|dir8`]: {
+          ...Ik,
+          displayName: kk,
+          textureInfo: `${Fk.textureName}_dir_8`
         },
-        [`${CC}|meta|dir9`]: {
-          ...ZC,
-          displayName: CC,
-          textureInfo: `${zC.textureName}_dir_9`
+        [`${kk}|meta|dir9`]: {
+          ...Ik,
+          displayName: kk,
+          textureInfo: `${Fk.textureName}_dir_9`
         },
-        [`${CC}|meta|dir10`]: {
-          ...ZC,
-          displayName: CC,
-          textureInfo: `${zC.textureName}_dir_10`
+        [`${kk}|meta|dir10`]: {
+          ...Ik,
+          displayName: kk,
+          textureInfo: `${Fk.textureName}_dir_10`
         },
-        [`${CC}|meta|dir11`]: {
-          ...ZC,
-          displayName: CC,
-          textureInfo: `${zC.textureName}_dir_11`
+        [`${kk}|meta|dir11`]: {
+          ...Ik,
+          displayName: kk,
+          textureInfo: `${Fk.textureName}_dir_11`
         },
-        [`${CC}|meta|dir12`]: {
-          ...ZC,
-          displayName: CC,
-          textureInfo: `${zC.textureName}_dir_12`
+        [`${kk}|meta|dir12`]: {
+          ...Ik,
+          displayName: kk,
+          textureInfo: `${Fk.textureName}_dir_12`
         }
       }
     }
-    const qC = "midday",
-      FC = ["midnight", "late_night", "sunrise", "early_day", qC, "late_day", "sunset", "early_night"].filter((CC => CC !== qC));
+    const qk = "midday",
+      Lk = ["midnight", "late_night", "sunrise", "early_day", qk, "late_day", "sunset", "early_night"].filter((kk => kk !== qk));
 
-    function WC(CC, zC, ZC) {
-      const QC = {
-        [CC]: {
-          ...ZC,
-          heldItemGlb: `${zC}_${qC}`,
-          textureInfo: `${zC}_${qC}`
+    function tk(kk, Fk, Ik) {
+      const Xk = {
+        [kk]: {
+          ...Ik,
+          heldItemGlb: `${Fk}_${qk}`,
+          textureInfo: `${Fk}_${qk}`
         }
       };
-      for (const wC of FC) QC[`${CC}|meta|${wC}`] = {
-        ...ZC,
-        heldItemGlb: `${zC}_${wC}`,
-        textureInfo: `${zC}_${wC}`
+      for (const Tk of Lk) Xk[`${kk}|meta|${Tk}`] = {
+        ...Ik,
+        heldItemGlb: `${Fk}_${Tk}`,
+        textureInfo: `${Fk}_${Tk}`
       };
-      return QC
+      return Xk
     }
 
-    function NC(CC, zC) {
-      const ZC = {},
-        QC = (0, bC.E)(CC, zC);
-      for (const wC in QC) Object.assign(ZC, fC(wC, QC[wC]));
-      return ZC
+    function Zk(kk, Fk) {
+      const Ik = {},
+        Xk = (0, ik.E)(kk, Fk);
+      for (const Tk in Xk) Object.assign(Ik, lk(Tk, Xk[Tk]));
+      return Ik
     }
 
-    function MC(CC, zC, ZC) {
-      console.assert(4 === ZC.length, "Must have 4 textures for bowl fill metadatas");
-      const QC = {
-        ...zC
+    function jk(kk, Fk, Ik) {
+      console.assert(4 === Ik.length, "Must have 4 textures for bowl fill metadatas");
+      const Xk = {
+        ...Fk
       };
-      delete QC.rootMetaDesc, delete QC.textureInfo, delete QC.afterEatenItem;
-      const wC = `Partially Full ${CC}`,
-        bC = `Half Full ${CC}`,
-        nC = `Nearly Full ${CC}`,
-        fC = CC;
+      delete Xk.rootMetaDesc, delete Xk.textureInfo, delete Xk.afterEatenItem;
+      const Tk = `Partially Full ${kk}`,
+        ik = `Half Full ${kk}`,
+        yk = `Nearly Full ${kk}`,
+        lk = kk;
       return {
-        [wC]: {
-          ...zC,
-          textureInfo: ZC[0],
+        [Tk]: {
+          ...Fk,
+          textureInfo: Ik[0],
           afterEatenItem: "Bowl",
-          rootMetaDesc: `${wC}|meta|charging1`
+          rootMetaDesc: `${Tk}|meta|charging1`
         },
-        [bC]: {
-          ...zC,
-          textureInfo: ZC[1],
-          afterEatenItem: wC,
-          rootMetaDesc: `${bC}|meta|charging1`
+        [ik]: {
+          ...Fk,
+          textureInfo: Ik[1],
+          afterEatenItem: Tk,
+          rootMetaDesc: `${ik}|meta|charging1`
         },
-        [nC]: {
-          ...zC,
-          textureInfo: ZC[2],
-          afterEatenItem: bC,
-          rootMetaDesc: `${nC}|meta|charging1`
+        [yk]: {
+          ...Fk,
+          textureInfo: Ik[2],
+          afterEatenItem: ik,
+          rootMetaDesc: `${yk}|meta|charging1`
         },
-        [fC]: {
-          ...zC,
-          textureInfo: ZC[3],
-          afterEatenItem: nC,
-          rootMetaDesc: `${fC}|meta|charging1`
+        [lk]: {
+          ...Fk,
+          textureInfo: Ik[3],
+          afterEatenItem: yk,
+          rootMetaDesc: `${lk}|meta|charging1`
         }
       }
     }
 
-    function gC() {
-      return Object.fromEntries(wC.B.map((CC => {
-        const zC = (0, QC.ke)(CC),
-          ZC = (0, QC.ne)(CC);
-        return [(0, QC.Jb)(CC), {
+    function ek() {
+      return Object.fromEntries(Tk.s.map((kk => {
+        const Fk = (0, Xk.ye)(kk),
+          Ik = (0, Xk.Ce)(kk);
+        return [(0, Xk.ic)(kk), {
           displayName: {
-            translationKey: `item:${zC}SpawnOrb`
+            translationKey: `item:${Fk}SpawnOrb`
           },
           type: "Item",
-          textureInfo: `${ZC}_spawn_orb`,
+          textureInfo: `${Ik}_spawn_orb`,
           weight: 1,
           heldItemScale: 1,
           stackable: !0,
           description: {
-            translationKey: `item:${zC}SpawnOrbDescription`,
+            translationKey: `item:${Fk}SpawnOrbDescription`,
             params: {
-              mob: CC
+              mob: kk
             }
           }
         }]
       })))
     }
-    const SC = {
-      Sheep: wC.t.Sheep,
+    const wk = {
+      Sheep: Tk.q.Sheep,
       "Cave Golem": ["corrupted"],
       "Draugr Zombie": ["flower", "flower2", "mushroom", "vine", "vine2", "corrupted", "corrupted2"],
       "Draugr Huntress": ["chainmail"],
       "Frost Wraith": ["tattered", "frostKing", "accursed"]
     };
 
-    function pC() {
-      return Object.fromEntries(wC.p.flatMap((CC => {
-        const zC = (0, QC.ne)(CC);
-        return wC.t[CC].map((ZC => {
-          var wC;
-          const bC = "default" !== ZC && (null === (wC = SC[CC]) || void 0 === wC ? void 0 : wC.includes(ZC)),
-            nC = bC ? {
-              heldItemGlb: (0, QC.ob)(CC, "default")
+    function Hk() {
+      return Object.fromEntries(Tk.n.flatMap((kk => {
+        const Fk = (0, Xk.Ce)(kk);
+        return Tk.q[kk].map((Ik => {
+          var Tk;
+          const ik = "default" !== Ik && (null === (Tk = wk[kk]) || void 0 === Tk ? void 0 : Tk.includes(Ik)),
+            yk = ik ? {
+              heldItemGlb: (0, Xk.Nb)(kk, "default")
             } : {};
-          return [(0, QC.ob)(CC, ZC), {
+          return [(0, Xk.Nb)(kk, Ik), {
             type: "Item",
-            textureInfo: `caught_${zC}_${bC?"default":ZC}`,
+            textureInfo: `caught_${Fk}_${ik?"default":Ik}`,
             weight: 1,
             heldItemScale: 1,
             stackable: !1,
-            ...nC
+            ...yk
           }]
         }))
       })))
     }
 
-    function PC(CC, zC) {
-      var ZC;
-      const QC = {
+    function Jk(kk, Fk) {
+      var Ik;
+      const Xk = {
         type: "Gun",
-        textureInfo: CC,
+        textureInfo: kk,
         weight: 1,
         stackable: !1,
         keepMetaInChest: !0,
-        ...zC,
-        ...nC.e[CC]
+        ...Fk,
+        ...yk.c[kk]
       };
       return {
-        [CC]: QC,
-        [`${CC}|RequiresAmmo`]: {
-          ...QC,
-          displayName: CC,
-          heldItemGlb: null !== (ZC = QC.heldItemGlb) && void 0 !== ZC ? ZC : CC
+        [kk]: Xk,
+        [`${kk}|RequiresAmmo`]: {
+          ...Xk,
+          displayName: kk,
+          heldItemGlb: null !== (Ik = Xk.heldItemGlb) && void 0 !== Ik ? Ik : kk
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

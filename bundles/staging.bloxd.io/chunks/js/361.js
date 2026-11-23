@@ -1,29 +1,29 @@
 export const id = 361;
 export const ids = [361];
 export const modules = {
-  61027: (CC, zC, ZC) => {
-    function QC(CC, zC) {
-      for (const ZC of CC._frameGraph._tasks)
-        if (ZC?._config && ZC._colorAttachment && (ZC._config.rt === zC.scRT || ZC._config.rst === zC.scRT)) return ZC
+  61363: (kk, Fk, Ik) => {
+    function Xk(kk, Fk) {
+      for (const Ik of kk._frameGraph._tasks)
+        if (Ik?._config && Ik._colorAttachment && (Ik._config.rt === Fk.scRT || Ik._config.rst === Fk.scRT)) return Ik
     }
 
-    function wC(CC, zC) {
-      const ZC = CC._renderingContexts[CC._renderingContexts.length - 1];
-      if (!ZC?._frameGraph) return;
-      const wC = QC(zC, CC);
-      if (!wC) return;
-      if (1 === CC.msaaSamples) return void(wC._config.clr = !1);
-      const bC = wC.enabled;
-      wC._config.clr = !0, wC.enabled = !1, zC._beforeRender.unshift((() => {
-        const zC = QC(ZC, CC),
-          nC = zC?._config.rst === CC.scRT && zC._config.rt._colorView;
-        wC.enabled = !!nC && bC, wC._config.clr = !nC, nC && (wC._colorAttachment.view = nC)
+    function Tk(kk, Fk) {
+      const Ik = kk._renderingContexts[kk._renderingContexts.length - 1];
+      if (!Ik?._frameGraph) return;
+      const Tk = Xk(Fk, kk);
+      if (!Tk) return;
+      if (1 === kk.msaaSamples) return void(Tk._config.clr = !1);
+      const ik = Tk.enabled;
+      Tk._config.clr = !0, Tk.enabled = !1, Fk._beforeRender.unshift((() => {
+        const Fk = Xk(Ik, kk),
+          yk = Fk?._config.rst === kk.scRT && Fk._config.rt._colorView;
+        Tk.enabled = !!yk && ik, Tk._config.clr = !yk, yk && (Tk._colorAttachment.view = yk)
       }))
     }
-    ZC.r(zC), ZC.d(zC, {
-      configureSwapchainOverlayScene: () => wC
+    Ik.r(Fk), Ik.d(Fk, {
+      configureSwapchainOverlayScene: () => Tk
     })
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

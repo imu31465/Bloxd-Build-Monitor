@@ -1,80 +1,80 @@
 export const id = 249;
 export const ids = [249];
 export const modules = {
-  39621: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      playDocsSound: () => fC
+  39792: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      playDocsSound: () => lk
     });
-    var QC = ZC(4797),
-      wC = ZC(36641),
-      bC = ZC(1149);
-    const nC = new Map;
+    var Xk = Ik(4857),
+      Tk = Ik(36772),
+      ik = Ik(1194);
+    const yk = new Map;
 
-    function fC(CC, zC, ZC, fC, oC) {
-      let qC, FC = null,
-        WC = 0,
-        NC = 0;
-      if (zC) qC = new QC.Howl({
-        src: [`${bC.clientSideServerUrls.staticUrl}/sounds/music/${CC}.mp3`],
+    function lk(kk, Fk, Ik, lk, ak) {
+      let qk, Lk = null,
+        tk = 0,
+        Zk = 0;
+      if (Fk) qk = new Xk.Howl({
+        src: [`${ik.clientSideServerUrls.staticUrl}/sounds/music/${kk}.mp3`],
         html5: !0,
-        volume: ZC
+        volume: Ik
       });
       else {
-        var MC;
-        FC = (0, wC.k)(CC);
-        const zC = (0, wC.j)(FC),
-          ZC = null !== (MC = zC.sprite[CC]) && void 0 !== MC ? MC : null;
-        if (!ZC) throw new Error(`Docs sound ${CC} is not in sprite sheet ${FC}`);
-        WC = ZC[0] / 1e3, NC = ZC[1] / 1e3, qC = nC.get(FC), qC || (qC = new QC.Howl({
-          ...zC,
+        var jk;
+        Lk = (0, Tk.j)(kk);
+        const Fk = (0, Tk.g)(Lk),
+          Ik = null !== (jk = Fk.sprite[kk]) && void 0 !== jk ? jk : null;
+        if (!Ik) throw new Error(`Docs sound ${kk} is not in sprite sheet ${Lk}`);
+        tk = Ik[0] / 1e3, Zk = Ik[1] / 1e3, qk = yk.get(Lk), qk || (qk = new Xk.Howl({
+          ...Fk,
           volume: 1
-        }), nC.set(FC, qC))
+        }), yk.set(Lk, qk))
       }
-      const gC = zC ? qC.play() : qC.play(CC);
-      qC.volume(ZC, gC), fC > 0 && qC.seek(WC + fC, gC);
-      const SC = () => zC ? qC.duration() : NC;
-      let pC = !1;
-      const PC = CC => {
-          pC || (pC = !0, qC.off("play", GC, gC), qC.off("end", RC, gC), qC.off("loaderror", xC), qC.off("playerror", AC, gC), zC && qC.unload(), oC.onEnd(CC))
+      const ek = Fk ? qk.play() : qk.play(kk);
+      qk.volume(Ik, ek), lk > 0 && qk.seek(tk + lk, ek);
+      const wk = () => Fk ? qk.duration() : Zk;
+      let Hk = !1;
+      const Jk = kk => {
+          Hk || (Hk = !0, qk.off("play", xk, ek), qk.off("end", Pk, ek), qk.off("loaderror", Qk), qk.off("playerror", Kk, ek), Fk && qk.unload(), ak.onEnd(kk))
         },
-        GC = () => {
-          oC.onPlay(SC())
+        xk = () => {
+          ak.onPlay(wk())
         },
-        RC = () => {
-          PC(!1)
+        Pk = () => {
+          Jk(!1)
         },
-        AC = (zC, ZC) => {
-          console.error(`Could not play docs sound ${CC}`, ZC), PC(!0)
+        Kk = (Fk, Ik) => {
+          console.error(`Could not play docs sound ${kk}`, Ik), Jk(!0)
         },
-        xC = (CC, zC) => {
-          null !== FC && nC.get(FC) === qC && (nC.delete(FC), qC.unload()), AC(CC, zC)
+        Qk = (kk, Fk) => {
+          null !== Lk && yk.get(Lk) === qk && (yk.delete(Lk), qk.unload()), Kk(kk, Fk)
         };
-      return qC.on("play", GC, gC), qC.once("end", RC, gC), qC.once("loaderror", xC), qC.once("playerror", AC, gC), {
+      return qk.on("play", xk, ek), qk.once("end", Pk, ek), qk.once("loaderror", Qk), qk.once("playerror", Kk, ek), {
         pause: () => {
-          qC.pause(gC)
+          qk.pause(ek)
         },
         resume: () => {
-          qC.play(gC)
+          qk.play(ek)
         },
-        seek: CC => {
-          const zC = SC(),
-            ZC = Math.max(CC, 0);
-          qC.seek(WC + (zC > 0 ? Math.min(ZC, zC) : ZC), gC)
+        seek: kk => {
+          const Fk = wk(),
+            Ik = Math.max(kk, 0);
+          qk.seek(tk + (Fk > 0 ? Math.min(Ik, Fk) : Ik), ek)
         },
-        yG: () => {
-          const CC = qC.seek(gC);
-          return "number" === typeof CC ? Math.max(0, CC - WC) : 0
+        OJ: () => {
+          const kk = qk.seek(ek);
+          return "number" === typeof kk ? Math.max(0, kk - tk) : 0
         },
-        getDuration: SC,
-        setVolume: CC => {
-          qC.volume(CC, gC)
+        getDuration: wk,
+        setVolume: kk => {
+          qk.volume(kk, ek)
         },
         stop: () => {
-          pC || (qC.stop(gC), PC(!1))
+          Hk || (qk.stop(ek), Jk(!1))
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

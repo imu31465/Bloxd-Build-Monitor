@@ -1,415 +1,415 @@
 export const id = 99;
 export const ids = [99, 194];
 export const modules = {
-  34033: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      EverythingMenu: () => rf
+  34038: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      EverythingMenu: () => Rl
     });
-    var QC = ZC(48),
-      wC = ZC(1002),
-      bC = ZC.n(wC),
-      nC = ZC(1143),
-      fC = ZC(1013),
-      oC = ZC(1964),
-      qC = ZC(1388),
-      FC = ZC(1072),
-      WC = ZC(1056);
+    var Xk = Ik(58),
+      Tk = Ik(1055),
+      ik = Ik.n(Tk),
+      yk = Ik(1179),
+      lk = Ik(1066),
+      ak = Ik(1997),
+      qk = Ik(1406),
+      Lk = Ik(1103),
+      tk = Ik(1096);
 
-    function NC(CC) {
+    function Zk(kk) {
       let {
-        items: zC,
-        link: ZC,
-        onClick: QC,
-        selectedItemId: wC,
-        className: NC,
-        padStartsOnTab: MC = !0
-      } = CC;
+        items: Fk,
+        link: Ik,
+        onClick: Xk,
+        selectedItemId: Tk,
+        className: Zk,
+        padStartsOnTab: jk = !0
+      } = kk;
       const {
-        t: gC
-      } = (0, nC.y)(), SC = (0, FC.k)(), pC = [];
-      for (const bC of zC) {
-        var PC;
-        const CC = pC[pC.length - 1];
-        var GC;
-        if (CC && CC.title === (null !== (PC = bC.section) && void 0 !== PC ? PC : null)) CC.items.push(bC);
-        else pC.push({
-          title: null !== (GC = bC.section) && void 0 !== GC ? GC : null,
-          items: [bC]
+        t: ek
+      } = (0, yk.y)(), wk = (0, Lk.h)(), Hk = [];
+      for (const ik of Fk) {
+        var Jk;
+        const kk = Hk[Hk.length - 1];
+        var xk;
+        if (kk && kk.title === (null !== (Jk = ik.section) && void 0 !== Jk ? Jk : null)) kk.items.push(ik);
+        else Hk.push({
+          title: null !== (xk = ik.section) && void 0 !== xk ? xk : null,
+          items: [ik]
         })
       }
-      return (0, WC.jsxs)("div", {
-        className: bC()("MenuSideBarBody", NC),
+      return (0, tk.jsxs)("div", {
+        className: ik()("MenuSideBarBody", Zk),
         "data-pad-tabs": "2",
-        children: [pC.map(((CC, zC) => {
-          var ZC;
-          return (0, WC.jsxs)("div", {
+        children: [Hk.map(((kk, Fk) => {
+          var Ik;
+          return (0, tk.jsxs)("div", {
             className: "MenuSideBarSection",
-            children: [CC.title && (0, WC.jsx)("div", {
+            children: [kk.title && (0, tk.jsx)("div", {
               className: "MenuSideBarSectionTitle",
-              children: gC(CC.title)
-            }), CC.items.map((CC => {
-              var zC;
-              const ZC = !!CC.iconElement || !!CC.faIcon;
-              return (0, WC.jsxs)("div", {
+              children: ek(kk.title)
+            }), kk.items.map((kk => {
+              var Fk;
+              const Ik = !!kk.iconElement || !!kk.faIcon;
+              return (0, tk.jsxs)("div", {
                 "data-pad-tab": !0,
-                "data-pad-selected": wC === CC.id ? "true" : void 0,
-                "data-pad-default-focus": MC && wC === CC.id || void 0,
-                className: bC()("MenuSideBarBodyTab", {
-                  ActiveMenuSideBarBodyTab: wC === CC.id
+                "data-pad-selected": Tk === kk.id ? "true" : void 0,
+                "data-pad-default-focus": jk && Tk === kk.id || void 0,
+                className: ik()("MenuSideBarBodyTab", {
+                  ActiveMenuSideBarBodyTab: Tk === kk.id
                 }),
                 onClick: () => {
-                  QC(CC.id)
+                  Xk(kk.id)
                 },
-                children: [ZC && (0, WC.jsx)("div", {
+                children: [Ik && (0, tk.jsx)("div", {
                   className: "MenuSideBarBodyTabIcon",
-                  children: null !== (zC = CC.iconElement) && void 0 !== zC ? zC : (0, WC.jsx)(fC.c, {
-                    name: CC.faIcon
+                  children: null !== (Fk = kk.iconElement) && void 0 !== Fk ? Fk : (0, tk.jsx)(lk.e, {
+                    name: kk.faIcon
                   })
-                }), (!SC || !ZC) && (0, WC.jsx)("div", {
-                  children: gC(CC.title)
-                }), CC.redDot && (0, WC.jsx)(oC.d, {
+                }), (!wk || !Ik) && (0, tk.jsx)("div", {
+                  children: ek(kk.title)
+                }), kk.redDot && (0, tk.jsx)(ak.c, {
                   top: "-0.2rem",
                   right: "-1rem"
                 })]
-              }, CC.id)
+              }, kk.id)
             }))]
-          }, null !== (ZC = CC.title) && void 0 !== ZC ? ZC : zC)
-        })), ZC && (0, WC.jsxs)("div", {
-          ...(0, qC.U)(),
+          }, null !== (Ik = kk.title) && void 0 !== Ik ? Ik : Fk)
+        })), Ik && (0, tk.jsxs)("div", {
+          ...(0, qk.Y)(),
           "data-pad-destructive": !0,
           className: "MenuSideBarBodyTab MenuSideBarLink",
-          onClick: ZC.onClick,
-          children: [(0, WC.jsx)("div", {
+          onClick: Ik.onClick,
+          children: [(0, tk.jsx)("div", {
             className: "MenuSideBarBodyTabIcon",
-            children: (0, WC.jsx)(fC.c, {
-              name: ZC.faIcon
+            children: (0, tk.jsx)(lk.e, {
+              name: Ik.faIcon
             })
-          }), (0, WC.jsx)("div", {
-            children: gC(ZC.title)
-          }), (0, WC.jsx)(fC.c, {
+          }), (0, tk.jsx)("div", {
+            children: ek(Ik.title)
+          }), (0, tk.jsx)(lk.e, {
             name: "arrow-right",
             className: "MenuSideBarLinkArrow"
           })]
         })]
       })
     }
-    var MC = ZC(2997),
-      gC = ZC(1076),
-      SC = ZC(2369),
-      pC = ZC(3099),
-      PC = ZC(77),
-      GC = ZC(1840),
-      RC = ZC(2191),
-      AC = ZC(2197),
-      xC = ZC(1593),
-      JC = ZC(1295),
-      IC = ZC(4942),
-      iC = ZC(20),
-      vC = ZC(34040);
+    var jk = Ik(2936),
+      ek = Ik(1118),
+      wk = Ik(2349),
+      Hk = Ik(3042),
+      Jk = Ik(95),
+      xk = Ik(1875),
+      Pk = Ik(2179),
+      Kk = Ik(2187),
+      Qk = Ik(1617),
+      sk = Ik(1318),
+      Vk = Ik(4983),
+      zk = Ik(25),
+      Sk = Ik(34044);
 
-    function eC(CC) {
+    function vk(kk) {
       let {
-        setApplySettingsCallback: zC
-      } = CC;
+        setApplySettingsCallback: Fk
+      } = kk;
       const {
-        clientEscMenuOptions: ZC
-      } = (0, iC.k)(["clientEscMenuOptions"]), [wC, bC] = (0, QC.useState)(!1), [nC, fC] = (0, QC.useState)(!1), [oC, FC] = (0, QC.useState)(6400), [NC, MC] = (0, QC.useState)(3600), [gC, SC] = (0, QC.useState)(!1), [pC, PC] = (0, QC.useState)(!1);
+        clientEscMenuOptions: Ik
+      } = (0, zk.j)(["clientEscMenuOptions"]), [Tk, ik] = (0, Xk.useState)(!1), [yk, lk] = (0, Xk.useState)(!1), [ak, Lk] = (0, Xk.useState)(6400), [Zk, jk] = (0, Xk.useState)(3600), [ek, wk] = (0, Xk.useState)(!1), [Hk, Jk] = (0, Xk.useState)(!1);
 
-      function GC(CC) {
-        const zC = "screenshot" === CC ? fC : bC;
-        zC(!0);
-        const ZC = gC ? "normals" : pC ? "depth" : null;
-        vC.devTools.downloadScene(CC, {
-          width: oC,
-          height: NC,
-          colouring: ZC
-        }).catch((CC => {
-          console.error("Couldn't download the scene", CC)
+      function xk(kk) {
+        const Fk = "screenshot" === kk ? lk : ik;
+        Fk(!0);
+        const Ik = ek ? "normals" : Hk ? "depth" : null;
+        Sk.devTools.downloadScene(kk, {
+          width: ak,
+          height: Zk,
+          colouring: Ik
+        }).catch((kk => {
+          console.error("Couldn't download the scene", kk)
         })).finally((() => {
-          zC(!1)
+          Fk(!1)
         }))
       }
-      return (0, WC.jsxs)("div", {
+      return (0, tk.jsxs)("div", {
         className: "DeveloperToolsCategory",
-        children: [(0, WC.jsx)(IC.b, {
+        children: [(0, tk.jsx)(Vk.e, {
           label: "Disable Ambient Occlusion",
-          checked: ZC.disableAmbientOcclusion,
-          onClick: CC => {
-            iC.b.setClientEscMenuOptions({
-              disableAmbientOcclusion: CC
-            }), zC((() => IC.h))
+          checked: Ik.disableAmbientOcclusion,
+          onClick: kk => {
+            zk.d.setClientEscMenuOptions({
+              disableAmbientOcclusion: kk
+            }), Fk((() => Vk.m))
           },
           circleInfoText: "Disables ambient occlusion which is the shadow effect that makes corners and crevices darker."
-        }), vC.devTools.supports("ambientLight") && (0, WC.jsx)(IC.f, {
+        }), Sk.devTools.supports("ambientLight") && (0, tk.jsx)(Vk.j, {
           name: "Ambient Lighting Intensity",
           min: 0,
           max: 1,
           step: .01,
-          initValue: ZC.ambientLightIntensity,
-          onChange: CC => {
-            vC.devTools.setAmbientLightIntensity(CC).then((() => {
-              iC.b.setClientEscMenuOptions({
-                ambientLightIntensity: CC
+          initValue: Ik.ambientLightIntensity,
+          onChange: kk => {
+            Sk.devTools.setAmbientLightIntensity(kk).then((() => {
+              zk.d.setClientEscMenuOptions({
+                ambientLightIntensity: kk
               })
-            })).catch((CC => {
-              console.error("Couldn't set the ambient light", CC)
+            })).catch((kk => {
+              console.error("Couldn't set the ambient light", kk)
             }))
           },
           circleInfoText: "Sets the intensity of the white ambient light in the scene. The default is 0.5."
-        }), vC.devTools.supports("weaponRaycasts") && (0, WC.jsx)(IC.b, {
+        }), Sk.devTools.supports("weaponRaycasts") && (0, tk.jsx)(Vk.e, {
           label: "Show Weapon Raycasts",
-          checked: ZC.showWeaponRaycasts,
-          onClick: CC => {
-            iC.b.setClientEscMenuOptions({
-              showWeaponRaycasts: CC
+          checked: Ik.showWeaponRaycasts,
+          onClick: kk => {
+            zk.d.setClientEscMenuOptions({
+              showWeaponRaycasts: kk
             })
           },
           circleInfoText: "Draws debug lines for the raw raycasts used by locally fired weapons."
-        }), vC.devTools.supports("sceneDownload") && (0, WC.jsxs)("div", {
+        }), Sk.devTools.supports("sceneDownload") && (0, tk.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, WC.jsxs)("div", {
+          children: [(0, tk.jsxs)("div", {
             className: "SettingBox WarningBorder",
-            children: [(0, WC.jsx)(IC.b, {
+            children: [(0, tk.jsx)(Vk.e, {
               label: "Apply normal-based coloring",
-              checked: gC,
-              onClick: CC => {
-                SC(CC), CC && PC(!1)
+              checked: ek,
+              onClick: kk => {
+                wk(kk), kk && Jk(!1)
               },
               circleInfoText: "Colors faces based on their normal direction (red=X, green=Y, blue=Z)."
-            }), (0, WC.jsx)(IC.b, {
+            }), (0, tk.jsx)(Vk.e, {
               label: "Apply depth-based coloring",
-              checked: pC,
-              onClick: CC => {
-                PC(CC), CC && SC(!1)
+              checked: Hk,
+              onClick: kk => {
+                Jk(kk), kk && wk(!1)
               },
               circleInfoText: "Colors from white (near) to black (far) based on distance from camera. Only works for screenshot export."
-            }), (0, WC.jsxs)("div", {
+            }), (0, tk.jsxs)("div", {
               className: "SettingBox DeveloperToolsCategoryScreenshotSettings",
-              children: [(0, WC.jsx)("div", {
+              children: [(0, tk.jsx)("div", {
                 className: "SettingLabel",
                 children: "Screenshot size in pixels (width x height)"
-              }), (0, WC.jsx)(xC.c, {
+              }), (0, tk.jsx)(Qk.c, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (CC, zC) => {
-                  const ZC = parseInt(CC) || 6400;
-                  FC(ZC)
+                onValueChange: (kk, Fk) => {
+                  const Ik = parseInt(kk) || 6400;
+                  Lk(Ik)
                 },
                 placeholderText: "width",
                 maxLength: 10,
-                defaultValue: oC.toString()
-              }), (0, WC.jsx)("span", {
+                defaultValue: ak.toString()
+              }), (0, tk.jsx)("span", {
                 children: "X"
-              }), (0, WC.jsx)(xC.c, {
+              }), (0, tk.jsx)(Qk.c, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (CC, zC) => {
-                  const ZC = parseInt(CC) || 3600;
-                  MC(ZC)
+                onValueChange: (kk, Fk) => {
+                  const Ik = parseInt(kk) || 3600;
+                  jk(Ik)
                 },
                 placeholderText: "height",
                 maxLength: 10,
-                defaultValue: NC.toString()
+                defaultValue: Zk.toString()
               })]
-            }), (0, WC.jsxs)("div", {
+            }), (0, tk.jsxs)("div", {
               className: "DeveloperToolsCategoryExportButtons",
-              children: [(0, WC.jsxs)(qC.g, {
+              children: [(0, tk.jsxs)(qk.d, {
                 onClick: () => {
-                  GC("screenshot")
+                  xk("screenshot")
                 },
-                disabled: nC,
-                children: [nC && (0, WC.jsx)(JC.d, {}), "Download Screenshot"]
-              }), (0, WC.jsxs)(qC.g, {
+                disabled: yk,
+                children: [yk && (0, tk.jsx)(sk.c, {}), "Download Screenshot"]
+              }), (0, tk.jsxs)(qk.d, {
                 onClick: () => {
-                  GC("glb")
+                  xk("glb")
                 },
-                disabled: wC,
-                children: [wC && (0, WC.jsx)(JC.d, {}), "Download GLB"]
+                disabled: Tk,
+                children: [Tk && (0, tk.jsx)(sk.c, {}), "Download GLB"]
               })]
             })]
-          }), (0, WC.jsx)("div", {
+          }), (0, tk.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
             children: 'To download GLB of scene with textures you need to "Disable Block Texture Atlas" in graphic settings first (you will need to reload the page to apply the setting).'
           })]
         })]
       })
     }
-    var hC = ZC(113),
-      KC = ZC(1078),
-      YC = ZC(34053),
-      dC = ZC(2999),
-      mC = ZC(1453),
-      HC = ZC(1211),
-      EC = ZC(1178),
-      lC = ZC(3075),
-      XC = ZC(1939),
-      cC = ZC(1439),
-      uC = ZC(326),
-      rC = ZC(2206),
-      sC = ZC(2218),
-      TC = ZC(2685),
-      aC = ZC(1559),
-      tC = ZC(3047),
-      DC = ZC(3023),
-      jC = ZC(3084),
-      yC = ZC(191);
+    var Ek = Ik(129),
+      Ok = Ik(1120),
+      nk = Ik(34051),
+      Gk = Ik(2941),
+      pk = Ik(1475),
+      uk = Ik(1253),
+      bk = Ik(1223),
+      Rk = Ik(3018),
+      Uk = Ik(1963),
+      Ck = Ik(1453),
+      Nk = Ik(337),
+      ck = Ik(2190),
+      Wk = Ik(2207),
+      fk = Ik(2624),
+      Bk = Ik(1585),
+      dk = Ik(2991),
+      Yk = Ik(2969),
+      Ak = Ik(3021),
+      gk = Ik(198);
 
-    function LC(CC) {
+    function mk(kk) {
       const {
-        t: zC,
-        selectedLanguage: ZC
-      } = (0, nC.y)(), {
-        userContext: wC
-      } = (0, gC.e)(), {
-        superRankInfo: bC
-      } = wC, fC = CC && ((0, uC.mc)(bC) || wC.ranksMayChange) && (0, sC.purchasesAllowed)(), {
-        accountId: oC,
-        data: qC
-      } = (0, TC.j)(tC.d, fC);
-      if ((0, QC.useEffect)((() => {
-          if (fC) return tC.d.watchAccount(), aC.d.addRefetchListener("billing", (CC => {
-            "reconnected" === CC ? tC.d.refreshAfterReconnect() : tC.d.refresh()
+        t: Fk,
+        selectedLanguage: Ik
+      } = (0, yk.y)(), {
+        userContext: Tk
+      } = (0, ek.d)(), {
+        superRankInfo: ik
+      } = Tk, lk = kk && ((0, Nk.Fc)(ik) || Tk.ranksMayChange) && (0, Wk.purchasesAllowed)(), {
+        accountId: ak,
+        data: qk
+      } = (0, fk.j)(dk.e, lk);
+      if ((0, Xk.useEffect)((() => {
+          if (lk) return dk.e.watchAccount(), Bk.c.addRefetchListener("billing", (kk => {
+            "reconnected" === kk ? dk.e.refreshAfterReconnect() : dk.e.refresh()
           }))
-        }), [fC]), !fC || !(0, uC.mc)(bC) || null === qC || oC !== wC.whamm) return null;
-      const FC = function(CC, zC, ZC) {
-        const QC = jC.k[(0, jC.d)(jC.k, zC)],
-          wC = void 0 === QC ? void 0 : (0, yC.d)(CC.entitlements, QC.entitlementId);
-        return void 0 === wC || null === wC.expiresAt || (0, DC.h)(wC) <= ZC ? null : wC.willRenew && null === wC.billingIssueDetectedAt ? {
+        }), [lk]), !lk || !(0, Nk.Fc)(ik) || null === qk || ak !== Tk.whamm) return null;
+      const Lk = function(kk, Fk, Ik) {
+        const Xk = Ak.e[(0, Ak.b)(Ak.e, Fk)],
+          Tk = void 0 === Xk ? void 0 : (0, gk.d)(kk.entitlements, Xk.entitlementId);
+        return void 0 === Tk || null === Tk.expiresAt || (0, Yk.f)(Tk) <= Ik ? null : Tk.willRenew && null === Tk.billingIssueDetectedAt ? {
           renews: !0,
-          at: Math.max(wC.expiresAt, ZC)
+          at: Math.max(Tk.expiresAt, Ik)
         } : {
           renews: !1,
-          at: (0, DC.h)(wC)
+          at: (0, Yk.f)(Tk)
         }
-      }(qC, bC.tier, Date.now());
-      if (null === FC) return null;
-      const WC = FC.renews ? "store:renewsOn" : "store:endsOn";
-      return zC(WC, {
-        date: new Date(FC.at).toLocaleDateString((0, nC.m)(ZC.code, WC), {
+      }(qk, ik.tier, Date.now());
+      if (null === Lk) return null;
+      const tk = Lk.renews ? "store:renewsOn" : "store:endsOn";
+      return Fk(tk, {
+        date: new Date(Lk.at).toLocaleDateString((0, yk.l)(Ik.code, tk), {
           year: "numeric",
           month: "short",
           day: "numeric"
         })
       })
     }
-    var UC = ZC(1321),
-      BC = ZC(1160),
-      OC = ZC(4819),
-      kC = ZC(1418),
-      VC = ZC(3590),
-      Cz = ZC(2179);
+    var hk = Ik(1333),
+      rk = Ik(1207),
+      Dk = Ik(4884),
+      Mk = Ik(1432),
+      kF = Ik(3608),
+      FF = Ik(2170);
 
-    function zz(CC) {
+    function IF(kk) {
       let {
-        showing: zC
-      } = CC;
+        showing: Fk
+      } = kk;
       const {
-        t: ZC
-      } = (0, nC.y)(), {
-        data: QC,
-        failed: wC
-      } = (0, TC.j)(VC.c, zC);
-      return 0 === (null === QC || void 0 === QC ? void 0 : QC.length) || null === QC && !wC ? null : (0, WC.jsxs)("div", {
+        t: Ik
+      } = (0, yk.y)(), {
+        data: Xk,
+        failed: Tk
+      } = (0, fk.j)(kF.c, Fk);
+      return 0 === (null === Xk || void 0 === Xk ? void 0 : Xk.length) || null === Xk && !Tk ? null : (0, tk.jsxs)("div", {
         className: "SettingBox AccountSettingsPaymentHistory",
-        children: [(0, WC.jsx)("div", {
+        children: [(0, tk.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: ZC("paymentHistory:title")
-        }), null === QC && wC && (0, WC.jsx)("div", {
+          children: Ik("paymentHistory:title")
+        }), null === Xk && Tk && (0, tk.jsx)("div", {
           className: "AccountSettingsPaymentHistoryError",
-          children: ZC("paymentHistory:loadFailed")
-        }), null !== QC && (0, WC.jsx)("ul", {
+          children: Ik("paymentHistory:loadFailed")
+        }), null !== Xk && (0, tk.jsx)("ul", {
           className: "PaymentHistoryList",
-          children: QC.map((CC => (0, WC.jsxs)("li", {
+          children: Xk.map((kk => (0, tk.jsxs)("li", {
             className: "PaymentHistoryEntry",
-            children: [(0, WC.jsx)(Cz.e, {
-              entry: CC
-            }), (0, WC.jsxs)("div", {
+            children: [(0, tk.jsx)(FF.d, {
+              entry: kk
+            }), (0, tk.jsxs)("div", {
               className: "PaymentHistoryEntryText",
-              children: [(0, WC.jsx)("div", {
-                children: (0, Cz.j)(ZC, CC)
-              }), (0, WC.jsxs)("div", {
+              children: [(0, tk.jsx)("div", {
+                children: (0, FF.g)(Ik, kk)
+              }), (0, tk.jsxs)("div", {
                 className: "PaymentHistoryEntryDate",
-                children: [new Date(CC.at).toLocaleDateString(), "number" === typeof CC.orderId && ` \xb7 ${ZC("paymentHistory:order",{orderId:CC.orderId})}`]
+                children: [new Date(kk.at).toLocaleDateString(), "number" === typeof kk.orderId && ` \xb7 ${Ik("paymentHistory:order",{orderId:kk.orderId})}`]
               })]
             })]
-          }, (0, VC.b)(CC))))
+          }, (0, kF.b)(kk))))
         })]
       })
     }
-    var Zz = ZC(1804),
-      Qz = ZC(1187),
-      wz = ZC(1307),
-      bz = ZC(1724),
-      nz = ZC(1149),
-      fz = ZC(1263),
-      oz = ZC(3016);
-    async function qz() {
+    var XF = Ik(1840),
+      TF = Ik(1234),
+      iF = Ik(1324),
+      yF = Ik(1729),
+      lF = Ik(1194),
+      aF = Ik(1287),
+      qF = Ik(2960);
+    async function LF() {
       try {
-        return function(CC) {
-          const zC = new Map;
+        return function(kk) {
+          const Fk = new Map;
           for (const {
-              store: ZC,
-              status: QC,
-              autoRenewStatus: wC,
-              managementUrl: bC
+              store: Ik,
+              status: Xk,
+              autoRenewStatus: Tk,
+              managementUrl: ik
             }
-            of Object.values(CC.subscriptions)) !(0, DC.k)(ZC) || (0, DC.o)(QC) || "willNotRenew" === wC || zC.has(ZC) || zC.set(ZC, null !== bC && void 0 !== bC ? bC : DC.r[ZC]);
-          return Array.from(zC, (CC => {
-            let [zC, ZC] = CC;
+            of Object.values(kk.subscriptions)) !(0, Yk.g)(Ik) || (0, Yk.i)(Xk) || "willNotRenew" === Tk || Fk.has(Ik) || Fk.set(Ik, null !== ik && void 0 !== ik ? ik : Yk.j[Ik]);
+          return Array.from(Fk, (kk => {
+            let [Fk, Ik] = kk;
             return {
-              store: zC,
-              managementUrl: ZC
+              store: Fk,
+              managementUrl: Ik
             }
           }))
-        }(await (0, bz.n)((0, oz.g)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
-      } catch (CC) {
-        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", CC), null
+        }(await (0, yF.l)((0, qF.h)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
+      } catch (kk) {
+        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", kk), null
       }
     }
-    var Fz = ZC(310),
-      Wz = ZC(2448);
-    const Nz = {
+    var tF = Ik(318),
+      ZF = Ik(2418);
+    const jF = {
       appStore: {
         name: "App Store",
-        ...Fz.Vb.appStore
+        ...tF.bc.appStore
       },
       googlePlay: {
         name: "Google Play",
-        ...Fz.Vb.googlePlay
+        ...tF.bc.googlePlay
       },
       discord: {
         name: "Discord",
-        ...Fz.Vb.discord
+        ...tF.bc.discord
       }
     };
 
-    function Mz(CC) {
+    function eF(kk) {
       let {
-        warning: zC,
-        subscriptions: ZC
-      } = CC;
+        warning: Fk,
+        subscriptions: Ik
+      } = kk;
       const {
-        t: QC
-      } = (0, nC.y)();
-      return null !== ZC && 0 === ZC.length ? (0, WC.jsx)(WC.Fragment, {
-        children: QC(zC)
-      }) : (0, WC.jsxs)("div", {
+        t: Xk
+      } = (0, yk.y)();
+      return null !== Ik && 0 === Ik.length ? (0, tk.jsx)(tk.Fragment, {
+        children: Xk(Fk)
+      }) : (0, tk.jsxs)("div", {
         className: "DeleteAccountSubtitle",
-        children: [QC(zC), null === ZC && (0, WC.jsx)("div", {
+        children: [Xk(Fk), null === Ik && (0, tk.jsx)("div", {
           className: "DeleteAccountSubtitleNote",
-          children: QC("auth:deleteAccountSubscriptionsLoadFailed")
-        }), null !== ZC && (0, WC.jsxs)(WC.Fragment, {
-          children: [(0, WC.jsx)("div", {
+          children: Xk("auth:deleteAccountSubscriptionsLoadFailed")
+        }), null !== Ik && (0, tk.jsxs)(tk.Fragment, {
+          children: [(0, tk.jsx)("div", {
             className: "DeleteAccountSubtitleNote",
-            children: QC("auth:deleteAccountStoreSubscriptions")
-          }), (0, WC.jsx)(Wz.d, {
+            children: Xk("auth:deleteAccountStoreSubscriptions")
+          }), (0, tk.jsx)(ZF.e, {
             className: "DeleteAccountSubtitleLinks",
-            links: ZC.map((CC => {
+            links: Ik.map((kk => {
               let {
-                store: zC,
-                managementUrl: ZC
-              } = CC;
+                store: Fk,
+                managementUrl: Ik
+              } = kk;
               return {
-                ...Nz[zC],
-                url: ZC
+                ...jF[Fk],
+                url: Ik
               }
             }))
           })]
@@ -417,722 +417,722 @@ export const modules = {
       })
     }
 
-    function gz(CC) {
+    function wF(kk) {
       let {
-        showing: zC
-      } = CC;
+        showing: Fk
+      } = kk;
       const {
-        userContext: ZC,
-        isUserContextUpdating: wC
-      } = (0, gC.e)(), {
-        t: bC
-      } = (0, nC.y)(), [fC, oC] = (0, QC.useState)(!1), [FC, NC] = (0, QC.useState)(null), MC = (0, QC.useRef)(zC);
-      (0, QC.useEffect)((() => (MC.current = zC, () => {
-        MC.current = !1
-      })), [zC]);
-      const SC = wC || fC;
-      return (0, WC.jsxs)("div", {
+        userContext: Ik,
+        isUserContextUpdating: Tk
+      } = (0, ek.d)(), {
+        t: ik
+      } = (0, yk.y)(), [lk, ak] = (0, Xk.useState)(!1), [Lk, Zk] = (0, Xk.useState)(null), jk = (0, Xk.useRef)(Fk);
+      (0, Xk.useEffect)((() => (jk.current = Fk, () => {
+        jk.current = !1
+      })), [Fk]);
+      const wk = Tk || lk;
+      return (0, tk.jsxs)("div", {
         className: "AccountSettingsDeleteAccountButtonContainer",
-        children: [(0, WC.jsxs)(qC.I, {
+        children: [(0, tk.jsxs)(qk.G, {
           onClick: async function() {
-            if (!fC) {
-              oC(!0);
+            if (!lk) {
+              ak(!0);
               try {
-                const CC = await async function() {
-                  const [CC, zC] = await Promise.all([(0, Zz.b)(ZC.availableUserContextTypes) ? qz() : [], pz(ZC)]);
-                  if (!MC.current) return Qz.e.ok();
-                  const QC = (0, HC.b)(ZC.getPlayerName(), !PC.featureFlags.canSeeRealPlayerNames);
-                  if (!0 !== await wz.NotificationProvider.showPromptPopup({
+                const kk = await async function() {
+                  const [kk, Fk] = await Promise.all([(0, XF.d)(Ik.availableUserContextTypes) ? LF() : [], JF(Ik)]);
+                  if (!jk.current) return TF.b.ok();
+                  const Xk = (0, uk.e)(Ik.getPlayerName(), !Jk.featureFlags.canSeeRealPlayerNames);
+                  if (!0 !== await iF.NotificationProvider.showPromptPopup({
                       title: "auth:deleteAccountPopupTitleNamed",
                       textOpts: {
                         title: {
-                          playerName: QC
+                          playerName: Xk
                         }
                       },
-                      subtitle: (0, WC.jsx)(Mz, {
-                        warning: Sz(ZC.isLoggedIn(), zC),
-                        subscriptions: CC
+                      subtitle: (0, tk.jsx)(eF, {
+                        warning: HF(Ik.isLoggedIn(), Fk),
+                        subscriptions: kk
                       }),
                       confirmText: "auth:deleteAccount",
                       destructive: !0,
-                      typedConfirm: zC ? bC("auth:deleteAccountTypedConfirm", {
-                        playerName: QC
+                      typedConfirm: Fk ? ik("auth:deleteAccountTypedConfirm", {
+                        playerName: Xk
                       }) : void 0,
                       confirmTooltip: "auth:deleteAccountPopupConfirmTooltip",
                       cancelText: "general:cancel",
                       cancelTooltip: "auth:deleteAccountPopupCancelTooltip"
-                    }).getResult()) return Qz.e.ok();
-                  const wC = await (0, KC.postJsonWithMetricsCookiesAndJsonResponse)(`${nz.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
-                    gameState: iC.b.get("gameState")
+                    }).getResult()) return TF.b.ok();
+                  const Tk = await (0, Ok.postJsonWithMetricsCookiesAndJsonResponse)(`${lF.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
+                    gameState: zk.d.get("gameState")
                   }, {
                     retries: 3
-                  }, ZC.getMetricsCookies());
-                  if (wC.error) return Qz.e.error(wC.error);
-                  (0, hC.e)() && (await fz.h.discordActivity()).exit("User deleted their account");
-                  return (0, KC.forgetStoredGuestAccount)(ZC.whamm), (0, KC.forceGlobalSignOut)(!0), Qz.e.ok()
-                }(), zC = CC.isError() ? CC.asError().message : null;
-                NC(zC)
-              } catch (CC) {
-                console.error("Failed to delete account:", CC), NC(bC("auth:genericDeleteAccountError"))
+                  }, Ik.getMetricsCookies());
+                  if (Tk.error) return TF.b.error(Tk.error);
+                  (0, Ek.e)() && (await aF.i.discordActivity()).exit("User deleted their account");
+                  return (0, Ok.forgetStoredGuestAccount)(Ik.whamm), (0, Ok.forceGlobalSignOut)(!0), TF.b.ok()
+                }(), Fk = kk.isError() ? kk.asError().message : null;
+                Zk(Fk)
+              } catch (kk) {
+                console.error("Failed to delete account:", kk), Zk(ik("auth:genericDeleteAccountError"))
               }
-              oC(!1)
+              ak(!1)
             }
           },
           className: "AccountSettingsDeleteAccountButton",
-          disabled: SC,
-          children: [SC && (0, WC.jsx)("div", {
+          disabled: wk,
+          children: [wk && (0, tk.jsx)("div", {
             className: "DeletingAccountLoader",
-            children: (0, WC.jsx)(JC.d, {})
-          }), bC("auth:deleteAccount")]
-        }), FC && (0, WC.jsx)("div", {
+            children: (0, tk.jsx)(sk.c, {})
+          }), ik("auth:deleteAccount")]
+        }), Lk && (0, tk.jsx)("div", {
           className: "DeleteAccountError",
-          children: FC
+          children: Lk
         })]
       })
     }
 
-    function Sz(CC, zC) {
-      return (0, hC.e)() ? "auth:discordActivityDeleteAccountLossWarning" : CC ? "auth:deleteAccountLossWarning" : zC ? "auth:deleteGuestAccountLossWarning" : "auth:deleteGuestAccountWarning"
+    function HF(kk, Fk) {
+      return (0, Ek.e)() ? "auth:discordActivityDeleteAccountLossWarning" : kk ? "auth:deleteAccountLossWarning" : Fk ? "auth:deleteGuestAccountLossWarning" : "auth:deleteGuestAccountWarning"
     }
-    async function pz(CC) {
+    async function JF(kk) {
       try {
         const {
-          accountCreatedAt: zC
-        } = await (0, bz.n)(cC.d.getPlayerProfile(CC, {
-          lowerCaseName: CC.getPlayerName().toLowerCase()
+          accountCreatedAt: Fk
+        } = await (0, yF.l)(Ck.e.getPlayerProfile(kk, {
+          lowerCaseName: kk.getPlayerName().toLowerCase()
         }), 5e3, "The player's profile got no answer in 5 s");
-        return null !== zC && Date.now() - zC >= 7 * uC.e
-      } catch (zC) {
-        return console.error("Delete Account: loading the account's age failed, so the prompt asks for its name:", zC), !0
+        return null !== Fk && Date.now() - Fk >= 7 * Nk.i
+      } catch (Fk) {
+        return console.error("Delete Account: loading the account's age failed, so the prompt asks for its name:", Fk), !0
       }
     }
-    var Pz = ZC(3535),
-      Gz = ZC(3544),
-      Rz = ZC(3540);
+    var xF = Ik(3533),
+      PF = Ik(3547),
+      KF = Ik(3541);
 
-    function Az(CC) {
+    function QF(kk) {
       let {
-        showing: zC
-      } = CC;
+        showing: Fk
+      } = kk;
       const {
-        t: ZC
-      } = (0, nC.y)(), {
-        data: QC,
-        failed: wC
-      } = (0, TC.j)(Pz.b, zC), bC = null === QC ? null : (0, Pz.c)(QC);
-      return (0, WC.jsxs)("div", {
+        t: Ik
+      } = (0, yk.y)(), {
+        data: Xk,
+        failed: Tk
+      } = (0, fk.j)(xF.b, Fk), ik = null === Xk ? null : (0, xF.d)(Xk);
+      return (0, tk.jsxs)("div", {
         className: "SettingBox BlockedAndIgnoredPlayers",
-        children: [(0, WC.jsx)("div", {
+        children: [(0, tk.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: ZC("settingsMenu:blockedAndIgnoredPlayers")
-        }), null === bC && !wC && (0, WC.jsx)(JC.d, {}), null === bC && wC && (0, WC.jsxs)("div", {
+          children: Ik("settingsMenu:blockedAndIgnoredPlayers")
+        }), null === ik && !Tk && (0, tk.jsx)(sk.c, {}), null === ik && Tk && (0, tk.jsxs)("div", {
           className: "BlockedAndIgnoredPlayersError",
-          children: [ZC("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, WC.jsx)(qC.g, {
+          children: [Ik("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, tk.jsx)(qk.d, {
             className: "SmallTextLight",
             onClick: () => {
-              Pz.b.refresh()
+              xF.b.refresh()
             },
-            children: ZC("general:tryAgain")
+            children: Ik("general:tryAgain")
           })]
-        }), 0 === (null === bC || void 0 === bC ? void 0 : bC.length) && (0, WC.jsx)("div", {
+        }), 0 === (null === ik || void 0 === ik ? void 0 : ik.length) && (0, tk.jsx)("div", {
           className: "BlockedAndIgnoredPlayersEmpty",
-          children: ZC("settingsMenu:noBlockedOrIgnoredPlayers")
-        }), null !== bC && bC.length > 0 && (0, WC.jsx)("ul", {
+          children: Ik("settingsMenu:noBlockedOrIgnoredPlayers")
+        }), null !== ik && ik.length > 0 && (0, tk.jsx)("ul", {
           className: "BlockedAndIgnoredPlayersList",
-          children: bC.map((CC => {
+          children: ik.map((kk => {
             let {
-              name: zC,
-              exclusion: QC
-            } = CC;
-            const wC = Rz.d[QC];
-            return (0, WC.jsxs)("li", {
+              name: Fk,
+              exclusion: Xk
+            } = kk;
+            const Tk = KF.g[Xk];
+            return (0, tk.jsxs)("li", {
               className: "BlockedAndIgnoredPlayer",
-              children: [(0, WC.jsx)("div", {
+              children: [(0, tk.jsx)("div", {
                 className: "BlockedAndIgnoredPlayerName",
-                children: zC
-              }), (0, WC.jsx)(qC.i, {
+                children: Fk
+              }), (0, tk.jsx)(qk.g, {
                 className: "SmallTextLight",
                 onClick: () => {
-                  (0, Gz.g)(wC, zC, {
+                  (0, PF.d)(Tk, Fk, {
                     chatMessage: null
                   })
                 },
-                children: ZC(Rz.e[wC].text)
+                children: Ik(KF.i[Tk].text)
               })]
-            }, zC)
+            }, Fk)
           }))
         })]
       })
     }
-    const xz = (0, QC.memo)((function(CC) {
-      var zC;
+    const sF = (0, Xk.memo)((function(kk) {
+      var Fk;
       let {
-        showing: ZC,
-        inGame: wC
-      } = CC;
+        showing: Ik,
+        inGame: Tk
+      } = kk;
       const {
-        t: oC,
-        selectedLanguage: FC
-      } = (0, nC.y)(), {
-        hideSocialLocationFrom: NC
-      } = (0, iC.k)(["hideSocialLocationFrom"]), SC = (0, MC.b)(), {
-        userContext: pC,
-        isUserContextUpdating: GC
-      } = (0, gC.e)(), [RC, AC] = (0, QC.useState)(null !== (zC = pC.getPlayerName()) && void 0 !== zC ? zC : ""), [vC, eC] = (0, QC.useState)(null), {
-        purchasing: TC,
-        outcome: aC,
-        purchase: tC
-      } = (0, dC.b)("/super-rank-welcome"), DC = (0, uC.Wb)((0, nC.m)(FC.code, "general:timeLeft"), pC.superRankInfo), jC = LC(ZC), yC = DC ? oC("general:timeLeft", {
-        time: DC
-      }) : jC, [VC, Cz] = (0, QC.useState)(!1), [Zz, Qz] = (0, QC.useState)(!1), wz = (0, QC.useRef)(null), bz = (0, QC.useRef)(null), nz = (0, XC.h)({
+        t: ak,
+        selectedLanguage: Lk
+      } = (0, yk.y)(), {
+        hideSocialLocationFrom: Zk
+      } = (0, zk.j)(["hideSocialLocationFrom"]), wk = (0, jk.c)(), {
+        userContext: Hk,
+        isUserContextUpdating: xk
+      } = (0, ek.d)(), [Pk, Kk] = (0, Xk.useState)(null !== (Fk = Hk.getPlayerName()) && void 0 !== Fk ? Fk : ""), [Sk, vk] = (0, Xk.useState)(null), {
+        purchasing: fk,
+        outcome: Bk,
+        purchase: dk
+      } = (0, Gk.d)("/super-rank-welcome"), Yk = (0, Nk.sc)((0, yk.l)(Lk.code, "general:timeLeft"), Hk.superRankInfo), Ak = mk(Ik), gk = Yk ? ak("general:timeLeft", {
+        time: Yk
+      }) : Ak, [kF, FF] = (0, Xk.useState)(!1), [XF, TF] = (0, Xk.useState)(!1), iF = (0, Xk.useRef)(null), yF = (0, Xk.useRef)(null), lF = (0, Uk.g)({
         showProgressUpdateMessage: !0,
         enabled: !0
-      }), fz = null === nz, oz = null !== nz && void 0 !== nz ? nz : [], qz = pC !== KC.NULL_USER_CONTEXT && !pC.isLoggedIn(), Fz = qz && 0 !== (null === nz || void 0 === nz ? void 0 : nz.length), [Wz, Nz] = (0, QC.useState)([]), [Mz, Sz] = (0, QC.useState)(!1), pz = pC.playerHasRank("youtuber"), Pz = (0, QC.useCallback)((() => cC.d.getPlayerProfile(pC, {
-        lowerCaseName: pC.getPlayerName().toLowerCase()
-      }).then((CC => {
-        Nz(CC.socialLinks)
-      })).catch((CC => {
-        console.error("Failed to refresh social links", CC)
-      }))), [pC]);
+      }), aF = null === lF, qF = null !== lF && void 0 !== lF ? lF : [], LF = Hk !== Ok.NULL_USER_CONTEXT && !Hk.isLoggedIn(), tF = LF && 0 !== (null === lF || void 0 === lF ? void 0 : lF.length), [ZF, jF] = (0, Xk.useState)([]), [eF, HF] = (0, Xk.useState)(!1), JF = Hk.playerHasRank("youtuber"), xF = (0, Xk.useCallback)((() => Ck.e.getPlayerProfile(Hk, {
+        lowerCaseName: Hk.getPlayerName().toLowerCase()
+      }).then((kk => {
+        jF(kk.socialLinks)
+      })).catch((kk => {
+        console.error("Failed to refresh social links", kk)
+      }))), [Hk]);
 
-      function Gz(CC) {
-        CC !== RC && ((0, HC.p)(CC) ? (CC = (0, HC.q)(CC), eC(oC("homePage:nameCharacters"))) : eC(null), wz.current && (wz.current.value = CC), AC(CC))
+      function PF(kk) {
+        kk !== Pk && ((0, uk.o)(kk) ? (kk = (0, uk.r)(kk), vk(ak("homePage:nameCharacters"))) : vk(null), iF.current && (iF.current.value = kk), Kk(kk))
       }
-      return (0, QC.useEffect)((() => (!0 === ZC ? (clearInterval(bz.current), bz.current = setInterval(SC, 1e3)) : clearInterval(bz.current), () => {
-        clearInterval(bz.current)
-      })), [ZC, SC]), (0, QC.useEffect)((() => {
-        var CC;
-        AC(null !== (CC = pC.getPlayerName()) && void 0 !== CC ? CC : "")
-      }), [pC]), (0, QC.useEffect)((() => {
-        if (!ZC || !pz || GC) return;
-        let CC = !1;
-        return Sz(!0), Nz([]), cC.d.getPlayerProfile(pC, {
-          lowerCaseName: pC.getPlayerName().toLowerCase()
-        }).then((zC => {
-          CC || Nz(zC.socialLinks)
-        })).catch((CC => {
-          console.error("Failed to load social links", CC)
+      return (0, Xk.useEffect)((() => (!0 === Ik ? (clearInterval(yF.current), yF.current = setInterval(wk, 1e3)) : clearInterval(yF.current), () => {
+        clearInterval(yF.current)
+      })), [Ik, wk]), (0, Xk.useEffect)((() => {
+        var kk;
+        Kk(null !== (kk = Hk.getPlayerName()) && void 0 !== kk ? kk : "")
+      }), [Hk]), (0, Xk.useEffect)((() => {
+        if (!Ik || !JF || xk) return;
+        let kk = !1;
+        return HF(!0), jF([]), Ck.e.getPlayerProfile(Hk, {
+          lowerCaseName: Hk.getPlayerName().toLowerCase()
+        }).then((Fk => {
+          kk || jF(Fk.socialLinks)
+        })).catch((kk => {
+          console.error("Failed to load social links", kk)
         })).finally((() => {
-          CC || Sz(!1)
+          kk || HF(!1)
         })), () => {
-          CC = !0
+          kk = !0
         }
-      }), [ZC, pz, GC, pC]), (0, WC.jsxs)("div", {
-        className: bC()("SettingsMenuRightInner AccountSettings", {
-          AccountSettingsLocked: wC
+      }), [Ik, JF, xk, Hk]), (0, tk.jsxs)("div", {
+        className: ik()("SettingsMenuRightInner AccountSettings", {
+          AccountSettingsLocked: Tk
         }),
-        children: [wC && (0, WC.jsx)("div", {
+        children: [Tk && (0, tk.jsx)("div", {
           className: "AccountSettingsInGameWarning",
-          children: oC("settingsMenu:accountSettingsInGameWarning")
-        }), (0, WC.jsxs)("div", {
+          children: ak("settingsMenu:accountSettingsInGameWarning")
+        }), (0, tk.jsxs)("div", {
           className: "SettingBox SetAccountNameDiv SmallTextLight",
-          children: [(0, WC.jsxs)("div", {
+          children: [(0, tk.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsNameLabel",
-            children: [oC("homePage:discordNamePopupTitle"), (0, WC.jsxs)(mC.LinkPreserveSearch, {
+            children: [ak("homePage:discordNamePopupTitle"), (0, tk.jsxs)(pk.LinkPreserveSearch, {
               className: "AccountSettingsViewProfile",
-              to: (0, EC.g)({
-                name: pC.getPlayerName()
+              to: (0, bk.i)({
+                name: Hk.getPlayerName()
               }),
               onClick: () => {
-                iC.b.set({
+                zk.d.set({
                   openEverythingMenuName: null
                 })
               },
-              children: [(0, WC.jsx)(fC.c, {
+              children: [(0, tk.jsx)(lk.e, {
                 name: "arrow-up-right-from-square"
-              }), " ", oC("profileCard:viewProfile")]
+              }), " ", ak("profileCard:viewProfile")]
             })]
-          }), (0, WC.jsxs)("div", {
+          }), (0, tk.jsxs)("div", {
             className: "EnterAccNameDivWrapper",
             "data-pad-initial-area": !0,
-            children: [(0, WC.jsxs)("div", {
+            children: [(0, tk.jsxs)("div", {
               className: "EnterAccNameInputRow",
-              children: [PC.featureFlags.canChangeName && (0, WC.jsx)(xC.c, {
+              children: [Jk.featureFlags.canChangeName && (0, tk.jsx)(Qk.c, {
                 className: "EnterName",
-                placeholderText: oC("homePage:enterName"),
-                maxLength: HC.i,
-                defaultValue: RC,
-                onValueChange: CC => {
-                  Gz(CC)
+                placeholderText: ak("homePage:enterName"),
+                maxLength: uk.j,
+                defaultValue: Pk,
+                onValueChange: kk => {
+                  PF(kk)
                 },
-                forcedText: VC || !PC.featureFlags.canChangeName ? RC : null,
+                forcedText: kF || !Jk.featureFlags.canChangeName ? Pk : null,
                 blurOnEnter: !0,
-                domRef: wz
-              }), (0, WC.jsx)(qC.g, {
+                domRef: iF
+              }), (0, tk.jsx)(qk.d, {
                 className: "ChooseRandomNameButton",
                 onClick: () => {
-                  Gz((0, HC.e)())
+                  PF((0, uk.g)())
                 },
-                children: (0, WC.jsx)(fC.c, {
+                children: (0, tk.jsx)(lk.e, {
                   name: "dice",
                   className: "ChooseRandomNameIcon"
                 })
-              }), !PC.featureFlags.canChangeName && (0, WC.jsx)("div", {
+              }), !Jk.featureFlags.canChangeName && (0, tk.jsx)("div", {
                 className: "EnterName NoInput",
-                children: (0, HC.b)(RC, !PC.featureFlags.canSeeRealPlayerNames)
+                children: (0, uk.e)(Pk, !Jk.featureFlags.canSeeRealPlayerNames)
               })]
-            }), (0, WC.jsx)(qC.g, {
+            }), (0, tk.jsx)(qk.d, {
               className: "ChooseNameButton",
-              disabled: VC || RC === pC.getPlayerName(),
+              disabled: kF || Pk === Hk.getPlayerName(),
               onClick: () => {
-                RC.length < HC.l ? eC(oC("homePage:changeNameMinLengthError", {
-                  length: HC.l
-                })) : RC.length > HC.i ? eC(oC("homePage:changeNameMaxLengthError", {
-                  length: HC.i
-                })) : (Cz(!0), eC(null), (0, YC.h)(pC, RC).then((CC => {
-                  Cz(!1), "taken" === CC.outcome ? eC(oC("homePage:nameTaken")) : "refused" === CC.outcome ? eC(CC.message) : "failed" === CC.outcome && eC(oC((0, YC.e)(CC.failure)))
+                Pk.length < uk.m ? vk(ak("homePage:changeNameMinLengthError", {
+                  length: uk.m
+                })) : Pk.length > uk.j ? vk(ak("homePage:changeNameMaxLengthError", {
+                  length: uk.j
+                })) : (FF(!0), vk(null), (0, nk.h)(Hk, Pk).then((kk => {
+                  FF(!1), "taken" === kk.outcome ? vk(ak("homePage:nameTaken")) : "refused" === kk.outcome ? vk(kk.message) : "failed" === kk.outcome && vk(ak((0, nk.f)(kk.failure)))
                 })))
               },
-              children: oC("general:choose")
+              children: ak("general:choose")
             })]
-          }), vC && (0, WC.jsx)("div", {
+          }), Sk && (0, tk.jsx)("div", {
             className: "ChooseAccNameError",
-            children: vC
+            children: Sk
           })]
-        }), (0, WC.jsx)(IC.b, {
+        }), (0, tk.jsx)(Vk.e, {
           label: (() => {
-            if ((0, BC.l)(NC)) {
-              const CC = (0, nC.m)(FC.code, "general:timeLeft"),
-                zC = (0, uC.U)(CC, Date.now(), NC + BC.j);
-              return `${oC("settingsMenu:hideSocialLocation")} (${oC("general:timeLeft",{time:zC})})`
+            if ((0, rk.n)(Zk)) {
+              const kk = (0, yk.l)(Lk.code, "general:timeLeft"),
+                Fk = (0, Nk.gb)(kk, Date.now(), Zk + rk.j);
+              return `${ak("settingsMenu:hideSocialLocation")} (${ak("general:timeLeft",{time:Fk})})`
             }
-            return oC("settingsMenu:hideSocialLocation")
+            return ak("settingsMenu:hideSocialLocation")
           })(),
           onClick: () => {
-            const CC = !(0, BC.l)(NC);
-            (0, kC.reportAnalyticsClick)({
+            const kk = !(0, rk.n)(Zk);
+            (0, Mk.reportAnalyticsClick)({
               id: "social.hide_location",
-              value: CC ? "on" : "off"
-            }), Qz(!0), cC.d.setHideSocialLocation(pC, CC).then((() => {
-              iC.b.set({
-                hideSocialLocationFrom: CC ? Date.now() : null
+              value: kk ? "on" : "off"
+            }), TF(!0), Ck.e.setHideSocialLocation(Hk, kk).then((() => {
+              zk.d.set({
+                hideSocialLocationFrom: kk ? Date.now() : null
               })
             })).finally((() => {
-              Qz(!1)
+              TF(!1)
             }))
           },
-          checked: (0, BC.l)(NC),
-          disabled: Zz
-        }), pz && (0, WC.jsxs)("div", {
+          checked: (0, rk.n)(Zk),
+          disabled: XF
+        }), JF && (0, tk.jsxs)("div", {
           className: "SettingBox AccountSettingsSocialLinks",
-          children: [(0, WC.jsx)("div", {
+          children: [(0, tk.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: oC("settingsMenu:socialLinks")
-          }), Mz && (0, WC.jsx)(JC.d, {}), !Mz && (0, WC.jsx)(OC.b, {
-            socialLinks: Wz,
+            children: ak("settingsMenu:socialLinks")
+          }), eF && (0, tk.jsx)(sk.c, {}), !eF && (0, tk.jsx)(Dk.e, {
+            socialLinks: ZF,
             editable: !0,
-            userContext: pC,
-            onLinksUpdated: Pz
+            userContext: Hk,
+            onLinksUpdated: xF
           })]
-        }), (0, WC.jsxs)("div", {
+        }), (0, tk.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, WC.jsx)("div", {
+          children: [(0, tk.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: oC(Fz ? "auth:loginOrSwitchAccount" : "auth:login")
-          }), fz && (0, WC.jsx)(JC.d, {}), !fz && 0 === oz.length && (0, WC.jsx)("div", {
+            children: ak(tF ? "auth:loginOrSwitchAccount" : "auth:login")
+          }), aF && (0, tk.jsx)(sk.c, {}), !aF && 0 === qF.length && (0, tk.jsx)("div", {
             className: "NoLoginOptions",
-            children: oC("auth:noLoginOptions")
-          }), !fz && oz.length > 0 && "crazygames" !== hC.y && (0, WC.jsx)("div", {
+            children: ak("auth:noLoginOptions")
+          }), !aF && qF.length > 0 && "crazygames" !== Ek.v && (0, tk.jsx)("div", {
             className: "AccountSettingsLoginButtons",
-            children: oz
-          }), !fz && oz.length > 0 && "crazygames" === hC.y && (0, WC.jsxs)("div", {
+            children: qF
+          }), !aF && qF.length > 0 && "crazygames" === Ek.v && (0, tk.jsxs)("div", {
             className: "AccountSettingsLoginButtons",
-            children: [oz[0], oz.length > 1 && (0, WC.jsxs)(WC.Fragment, {
-              children: [(0, WC.jsxs)("div", {
+            children: [qF[0], qF.length > 1 && (0, tk.jsxs)(tk.Fragment, {
+              children: [(0, tk.jsxs)("div", {
                 className: "LegacyLoginOptionsHeader",
-                children: [(0, WC.jsx)("span", {
+                children: [(0, tk.jsx)("span", {
                   className: "LegacyLoginOptionsTitle",
-                  children: oC("auth:legacyLoginOptions")
-                }), (0, WC.jsx)(UC.b, {
+                  children: ak("auth:legacyLoginOptions")
+                }), (0, tk.jsx)(hk.c, {
                   className: "LegacyLoginOptionsInfoIcon",
-                  hoverInfo: oC("auth:legacyLoginOptionsInfo")
+                  hoverInfo: ak("auth:legacyLoginOptionsInfo")
                 })]
-              }), (0, WC.jsx)("div", {
+              }), (0, tk.jsx)("div", {
                 className: "LegacyAccountSettingsLoginButtons",
-                children: oz.slice(1)
+                children: qF.slice(1)
               })]
             })]
-          }), PC.featureFlags.useLogin && (null !== pC.loggedInInfo || pC.isLoggedIn()) && (0, WC.jsxs)(WC.Fragment, {
-            children: [(0, WC.jsx)("div", {
+          }), Jk.featureFlags.useLogin && (null !== Hk.loggedInInfo || Hk.isLoggedIn()) && (0, tk.jsxs)(tk.Fragment, {
+            children: [(0, tk.jsx)("div", {
               className: "AccountSettingsLoginDivider"
-            }), (0, WC.jsxs)(qC.I, {
+            }), (0, tk.jsxs)(qk.G, {
               onClick: () => {
-                (0, KC.forceGlobalSignOut)()
+                (0, Ok.forceGlobalSignOut)()
               },
               className: "AccountSettingsSignedInButton",
-              children: [(0, WC.jsx)(fC.c, {
+              children: [(0, tk.jsx)(lk.e, {
                 name: "right-from-bracket"
-              }), oC("auth:signOut")]
+              }), ak("auth:signOut")]
             })]
           })]
-        }), !pC.playerHasRank("super") && (0, sC.purchasesAllowed)() && (0, WC.jsxs)("div", {
+        }), !Hk.playerHasRank("super") && (0, Wk.purchasesAllowed)() && (0, tk.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, WC.jsxs)("div", {
+          children: [(0, tk.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, WC.jsx)(fC.c, {
+            children: [(0, tk.jsx)(lk.e, {
               name: "bolt"
-            }), oC("homePage:superRank")]
-          }), (0, WC.jsxs)("div", {
+            }), ak("homePage:superRank")]
+          }), (0, tk.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [(0, WC.jsxs)(qC.o, {
+            children: [(0, tk.jsxs)(qk.m, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, rC.n)({
+                (0, ck.m)({
                   mode: "self",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, WC.jsx)(fC.c, {
+              children: [(0, tk.jsx)(lk.e, {
                 name: "bolt"
-              }), oC("homePage:getSuperRank")]
-            }), (0, WC.jsxs)(qC.o, {
+              }), ak("homePage:getSuperRank")]
+            }), (0, tk.jsxs)(qk.m, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, rC.n)({
+                (0, ck.m)({
                   mode: "gift",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, WC.jsx)(fC.c, {
+              children: [(0, tk.jsx)(lk.e, {
                 name: "bolt"
-              }), oC("homePage:giftSuperRank")]
+              }), ak("homePage:giftSuperRank")]
             })]
           })]
-        }), pC.playerHasRank("super") && (0, WC.jsxs)("div", {
+        }), Hk.playerHasRank("super") && (0, tk.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, WC.jsxs)("div", {
+          children: [(0, tk.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, WC.jsx)(fC.c, {
+            children: [(0, tk.jsx)(lk.e, {
               name: "bolt"
-            }), oC("homePage:superRank"), yC && (0, WC.jsxs)("div", {
+            }), ak("homePage:superRank"), gk && (0, tk.jsxs)("div", {
               className: "AccountSettingsSuperRankTimeLeft",
-              children: ["(", yC, ")"]
+              children: ["(", gk, ")"]
             })]
-          }), (0, sC.purchasesAllowed)() && (0, WC.jsxs)("div", {
+          }), (0, Wk.purchasesAllowed)() && (0, tk.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [!(0, uC.mc)(pC.superRankInfo) && (0, WC.jsxs)(qC.o, {
+            children: [!(0, Nk.Fc)(Hk.superRankInfo) && (0, tk.jsxs)(qk.m, {
               className: "AccountSettingsSuperRankProlong",
-              loading: TC,
+              loading: fk,
               onClick: () => {
-                tC(lC.g.id, null)
+                dk(Rk.l.id, null)
               },
-              children: [(0, WC.jsx)(fC.c, {
+              children: [(0, tk.jsx)(lk.e, {
                 name: "bolt"
-              }), oC("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
-                days: lC.g.product.days,
-                price: lC.g.price
+              }), ak("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
+                days: Rk.l.product.days,
+                price: Rk.l.price
               })]
-            }), (0, WC.jsxs)(qC.o, {
+            }), (0, tk.jsxs)(qk.m, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, rC.n)({
+                (0, ck.m)({
                   mode: "gift",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, WC.jsx)(fC.c, {
+              children: [(0, tk.jsx)(lk.e, {
                 name: "bolt"
-              }), oC("homePage:giftSuperRank")]
+              }), ak("homePage:giftSuperRank")]
             })]
-          }), aC && (0, WC.jsx)("div", {
+          }), Bk && (0, tk.jsx)("div", {
             className: "AccountSettingsSuperRankProlongError SmallTextBold",
-            children: oC(aC.translationKey)
+            children: ak(Bk.translationKey)
           })]
-        }), (0, WC.jsx)(zz, {
-          showing: ZC
-        }), PC.featureFlags.useSocialFeatures && (0, WC.jsx)(Az, {
-          showing: ZC
-        }), (0, WC.jsxs)("div", {
+        }), (0, tk.jsx)(IF, {
+          showing: Ik
+        }), Jk.featureFlags.useSocialFeatures && (0, tk.jsx)(QF, {
+          showing: Ik
+        }), (0, tk.jsxs)("div", {
           className: "SettingBoxGroup AccountSettingsDeleteAccountGroup",
-          children: [(0, WC.jsxs)("div", {
+          children: [(0, tk.jsxs)("div", {
             className: "SettingBox AccountSettingsDeleteAccount SettingBoxWarning",
-            children: [(0, WC.jsx)("div", {
+            children: [(0, tk.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: oC(Jz(qz, Fz))
-            }), (0, hC.e)() && (0, WC.jsx)("div", {
+              children: ak(VF(LF, tF))
+            }), (0, Ek.e)() && (0, tk.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: oC("auth:discordActivityKickWarning")
-            }), (0, WC.jsx)(gz, {
-              showing: ZC
+              children: ak("auth:discordActivityKickWarning")
+            }), (0, tk.jsx)(wF, {
+              showing: Ik
             })]
-          }), (0, WC.jsx)("div", {
+          }), (0, tk.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: oC(qz ? "auth:deleteGuestAccountWarning" : "auth:deleteAccountLossWarning")
+            children: ak(LF ? "auth:deleteGuestAccountWarning" : "auth:deleteAccountLossWarning")
           })]
         })]
       })
     }));
 
-    function Jz(CC, zC) {
-      return CC ? zC ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
+    function VF(kk, Fk) {
+      return kk ? Fk ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
     }
-    var Iz = ZC(34056),
-      iz = ZC(3113),
-      vz = ZC(1192),
-      ez = ZC(1375),
-      hz = ZC(1877),
-      Kz = ZC(8882),
-      Yz = ZC(34064);
+    var zF = Ik(34058),
+      SF = Ik(3065),
+      oF = Ik(1241),
+      vF = Ik(1395),
+      EF = Ik(1907),
+      OF = Ik(8865),
+      nF = Ik(34062);
 
-    function dz() {
+    function GF() {
       const {
-        t: CC
-      } = (0, nC.y)();
-      return (0, hz.f)("localPlayerAlive") ? (0, WC.jsx)(Kz.b, {
+        t: kk
+      } = (0, yk.y)();
+      return (0, EF.k)("localPlayerAlive") ? (0, tk.jsx)(OF.e, {
         icon: "camera",
-        title: CC("screenshotMode:title"),
-        sub: CC("screenshotMode:entrySub"),
-        onClick: Yz.c
+        title: kk("screenshotMode:title"),
+        sub: kk("screenshotMode:entrySub"),
+        onClick: nF.b
       }) : null
     }
-    var mz = ZC(34069);
-    const Hz = (0, QC.memo)((function(CC) {
+    var pF = Ik(34073);
+    const uF = (0, Xk.memo)((function(kk) {
         let {
-          inGame: zC
-        } = CC;
+          inGame: Fk
+        } = kk;
         const {
-          t: ZC,
-          selectedLanguage: QC
-        } = (0, nC.y)(), {
-          clientEscMenuOptions: wC,
-          showDebugOverlay: bC,
-          isTouchScreen: fC
-        } = (0, iC.k)(["clientEscMenuOptions", "showDebugOverlay", "isTouchScreen"]), oC = (0, SC.h)("hideCoordinates");
-        let qC = "settingsMenu:showCoordinates",
-          FC = "settingsMenu:showChunkCoordinates";
+          t: Ik,
+          selectedLanguage: Xk
+        } = (0, yk.y)(), {
+          clientEscMenuOptions: Tk,
+          showDebugOverlay: ik,
+          isTouchScreen: lk
+        } = (0, zk.j)(["clientEscMenuOptions", "showDebugOverlay", "isTouchScreen"]), ak = (0, wk.j)("hideCoordinates");
+        let qk = "settingsMenu:showCoordinates",
+          Lk = "settingsMenu:showChunkCoordinates";
 
-        function NC(CC) {
-          const zC = new Intl.DisplayNames([CC], {
+        function Zk(kk) {
+          const Fk = new Intl.DisplayNames([kk], {
             type: "language"
-          }).of(CC);
-          return zC.charAt(0).toUpperCase() + zC.slice(1)
+          }).of(kk);
+          return Fk.charAt(0).toUpperCase() + Fk.slice(1)
         }
-        return oC && (qC = "settingsMenu:showCoordinatesHidden", FC = "settingsMenu:showChunkCoordinatesHidden"), (0, WC.jsxs)("div", {
+        return ak && (qk = "settingsMenu:showCoordinatesHidden", Lk = "settingsMenu:showChunkCoordinatesHidden"), (0, tk.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [zC && PC.featureFlags.canUseInviteLinks && (0, WC.jsxs)("div", {
+          children: [Fk && Jk.featureFlags.canUseInviteLinks && (0, tk.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, WC.jsx)("div", {
+            children: [(0, tk.jsx)("div", {
               className: "SettingsMenuInviteHeader",
-              children: ZC("settingsMenu:inviteLink")
-            }), (0, WC.jsx)(Iz.c, {})]
-          }), (0, WC.jsxs)("div", {
+              children: Ik("settingsMenu:inviteLink")
+            }), (0, tk.jsx)(zF.c, {})]
+          }), (0, tk.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, WC.jsx)("div", {
+            children: [(0, tk.jsx)("div", {
               className: "SliderText",
               style: {
                 marginBottom: "10px"
               },
-              children: ZC("settingsMenu:language")
-            }), (0, WC.jsx)(iz.b, {
-              options: Object.entries(nC.h).map((CC => {
-                let [zC, ZC] = CC;
+              children: Ik("settingsMenu:language")
+            }), (0, tk.jsx)(SF.e, {
+              options: Object.entries(yk.i).map((kk => {
+                let [Fk, Ik] = kk;
                 return {
-                  label: (0, WC.jsxs)("div", {
+                  label: (0, tk.jsxs)("div", {
                     className: "SettingsMenuLanguageOption",
-                    children: [(0, WC.jsx)("img", {
-                      src: ZC.flagImg,
+                    children: [(0, tk.jsx)("img", {
+                      src: Ik.flagImg,
                       alt: "flag"
-                    }), (0, WC.jsxs)("span", {
-                      children: [NC(zC), " ", (0, WC.jsxs)("span", {
+                    }), (0, tk.jsxs)("span", {
+                      children: [Zk(Fk), " ", (0, tk.jsxs)("span", {
                         className: "SettingsMenuLanguageOptionCode",
-                        children: ["(", zC, ")"]
+                        children: ["(", Fk, ")"]
                       })]
                     })]
                   }),
-                  value: zC
+                  value: Fk
                 }
               })),
-              value: QC.code,
-              onChange: CC => {
-                vz.h.get().setCurrentLanguage(CC.value)
+              value: Xk.code,
+              onChange: kk => {
+                oF.d.get().setCurrentLanguage(kk.value)
               }
             })]
-          }), zC && fC && (0, mz.b)() && (0, WC.jsx)(dz, {}), !(0, PC.isMobileApp)() && (0, ez.l)() && PC.featureFlags.useForceRotateForceFullscreenOverlay && (0, WC.jsx)(IC.b, {
-            label: ZC("settingsMenu:disableFullscreenMode"),
-            checked: wC.disableFullscreen,
-            onClick: CC => {
-              iC.b.setClientEscMenuOptions({
-                disableFullscreen: CC
+          }), Fk && lk && (0, pF.d)() && (0, tk.jsx)(GF, {}), !(0, Jk.isMobileApp)() && (0, vF.g)() && Jk.featureFlags.useForceRotateForceFullscreenOverlay && (0, tk.jsx)(Vk.e, {
+            label: Ik("settingsMenu:disableFullscreenMode"),
+            checked: Tk.disableFullscreen,
+            onClick: kk => {
+              zk.d.setClientEscMenuOptions({
+                disableFullscreen: kk
               })
             }
-          }), (0, WC.jsx)(IC.b, {
-            label: ZC(qC),
-            checked: wC.showCoordinates,
-            onClick: CC => {
-              iC.b.setClientEscMenuOptions({
-                showCoordinates: CC
+          }), (0, tk.jsx)(Vk.e, {
+            label: Ik(qk),
+            checked: Tk.showCoordinates,
+            onClick: kk => {
+              zk.d.setClientEscMenuOptions({
+                showCoordinates: kk
               })
             },
-            disabled: oC
-          }), (0, WC.jsx)(IC.b, {
-            label: ZC(FC),
-            checked: wC.showChunkCoordinates,
-            onClick: CC => {
-              iC.b.setClientEscMenuOptions({
-                showChunkCoordinates: CC
+            disabled: ak
+          }), (0, tk.jsx)(Vk.e, {
+            label: Ik(Lk),
+            checked: Tk.showChunkCoordinates,
+            onClick: kk => {
+              zk.d.setClientEscMenuOptions({
+                showChunkCoordinates: kk
               })
             },
-            disabled: oC
-          }), (0, WC.jsx)(IC.b, {
-            label: ZC("settingsMenu:showFps"),
-            checked: wC.showFPS,
-            onClick: CC => {
-              iC.b.setClientEscMenuOptions({
-                showFPS: CC
+            disabled: ak
+          }), (0, tk.jsx)(Vk.e, {
+            label: Ik("settingsMenu:showFps"),
+            checked: Tk.showFPS,
+            onClick: kk => {
+              zk.d.setClientEscMenuOptions({
+                showFPS: kk
               })
             }
-          }), (0, WC.jsx)(IC.b, {
-            label: ZC("settingsMenu:disableBunnyHopping"),
-            checked: wC.disableBunnyHopping,
-            onClick: CC => {
-              iC.b.setClientEscMenuOptions({
-                disableBunnyHopping: CC
+          }), (0, tk.jsx)(Vk.e, {
+            label: Ik("settingsMenu:disableBunnyHopping"),
+            checked: Tk.disableBunnyHopping,
+            onClick: kk => {
+              zk.d.setClientEscMenuOptions({
+                disableBunnyHopping: kk
               })
             }
-          }), (0, fz.u)() && (0, WC.jsx)(IC.b, {
-            label: ZC("settingsMenu:showChat"),
-            checked: wC.showChat,
-            onClick: CC => {
-              iC.b.setClientEscMenuOptions({
-                showChat: CC
+          }), (0, aF.v)() && (0, tk.jsx)(Vk.e, {
+            label: Ik("settingsMenu:showChat"),
+            checked: Tk.showChat,
+            onClick: kk => {
+              zk.d.setClientEscMenuOptions({
+                showChat: kk
               })
             }
-          }), (0, WC.jsx)(IC.b, {
-            label: ZC("settingsMenu:showDebugOverlay"),
-            checked: bC,
-            onClick: CC => {
-              iC.b.set({
-                showDebugOverlay: CC
+          }), (0, tk.jsx)(Vk.e, {
+            label: Ik("settingsMenu:showDebugOverlay"),
+            checked: ik,
+            onClick: kk => {
+              zk.d.set({
+                showDebugOverlay: kk
               })
             }
-          }), PC.featureFlags.useSocialFeatures && (0, WC.jsx)(IC.b, {
-            label: ZC("settingsMenu:showFriendOnlineToasts"),
-            checked: wC.showFriendOnlineToasts,
-            onClick: CC => {
-              iC.b.setClientEscMenuOptions({
-                showFriendOnlineToasts: CC
+          }), Jk.featureFlags.useSocialFeatures && (0, tk.jsx)(Vk.e, {
+            label: Ik("settingsMenu:showFriendOnlineToasts"),
+            checked: Tk.showFriendOnlineToasts,
+            onClick: kk => {
+              zk.d.setClientEscMenuOptions({
+                showFriendOnlineToasts: kk
               })
             }
-          }), (0, WC.jsx)(IC.b, {
-            label: ZC("settingsMenu:showNewItemIndicator"),
-            checked: wC.showNewItemIndicator,
-            onClick: CC => {
-              iC.b.setClientEscMenuOptions({
-                showNewItemIndicator: CC
+          }), (0, tk.jsx)(Vk.e, {
+            label: Ik("settingsMenu:showNewItemIndicator"),
+            checked: Tk.showNewItemIndicator,
+            onClick: kk => {
+              zk.d.setClientEscMenuOptions({
+                showNewItemIndicator: kk
               })
             }
           })]
         })
       })),
-      Ez = (0, QC.memo)((function() {
+      bF = (0, Xk.memo)((function() {
         const {
-          t: CC
-        } = (0, nC.y)(), {
-          soundVolume: zC,
-          musicVolume: ZC
-        } = (0, iC.k)(["soundVolume", "musicVolume"]);
-        return (0, WC.jsxs)("div", {
+          t: kk
+        } = (0, yk.y)(), {
+          soundVolume: Fk,
+          musicVolume: Ik
+        } = (0, zk.j)(["soundVolume", "musicVolume"]);
+        return (0, tk.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [(0, WC.jsx)(IC.f, {
-            name: CC("settingsMenu:musicVolume"),
+          children: [(0, tk.jsx)(Vk.j, {
+            name: kk("settingsMenu:musicVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: ZC,
-            onChange: CC => {
-              iC.b.set({
-                musicVolume: Math.round(100 * CC) / 100
+            initValue: Ik,
+            onChange: kk => {
+              zk.d.set({
+                musicVolume: Math.round(100 * kk) / 100
               })
             },
-            format: CC => CC.toFixed(2)
-          }), (0, WC.jsx)(IC.f, {
-            name: CC("settingsMenu:soundEffectsVolume"),
+            format: kk => kk.toFixed(2)
+          }), (0, tk.jsx)(Vk.j, {
+            name: kk("settingsMenu:soundEffectsVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: zC,
-            onChange: CC => {
-              iC.b.set({
-                soundVolume: Math.round(100 * CC) / 100
+            initValue: Fk,
+            onChange: kk => {
+              zk.d.set({
+                soundVolume: Math.round(100 * kk) / 100
               })
             },
-            format: CC => CC.toFixed(2)
+            format: kk => kk.toFixed(2)
           })]
         })
       }));
-    var lz = ZC(676),
-      Xz = ZC(1383),
-      cz = ZC(3600),
-      uz = ZC(34072),
-      rz = ZC(3452);
-    const sz = {
+    var RF = Ik(729),
+      UF = Ik(1402),
+      CF = Ik(3620),
+      NF = Ik(34079),
+      cF = Ik(3428);
+    const WF = {
       app: "notificationSettings:pushTargetsApp",
       browser: "notificationSettings:pushTargetsBrowser",
       msnPlay: "notificationSettings:pushTargetsMsnPlay"
     };
 
-    function Tz() {
+    function fF() {
       const {
-        t: CC
-      } = (0, nC.y)(), zC = (0, rz.e)(), {
-        mobilePushNotificationsCanAsk: ZC
-      } = (0, iC.k)(["mobilePushNotificationsCanAsk"]), [wC, bC] = (0, QC.useState)(null), [fC, oC] = (0, QC.useState)(!1), [FC, NC] = (0, QC.useState)(null), [MC, gC] = (0, QC.useState)(!1), SC = (0, QC.useCallback)((() => {
-        (0, cz.b)().then((CC => {
-          zC.current && (bC(CC), oC(!1))
-        })).catch((CC => {
-          console.error("Failed to load push notification targets:", CC), zC.current && oC(!0)
+        t: kk
+      } = (0, yk.y)(), Fk = (0, cF.d)(), {
+        mobilePushNotificationsCanAsk: Ik
+      } = (0, zk.j)(["mobilePushNotificationsCanAsk"]), [Tk, ik] = (0, Xk.useState)(null), [lk, ak] = (0, Xk.useState)(!1), [Lk, Zk] = (0, Xk.useState)(null), [jk, ek] = (0, Xk.useState)(!1), wk = (0, Xk.useCallback)((() => {
+        (0, CF.c)().then((kk => {
+          Fk.current && (ik(kk), ak(!1))
+        })).catch((kk => {
+          console.error("Failed to load push notification targets:", kk), Fk.current && ak(!0)
         }))
-      }), [zC]), pC = (0, QC.useCallback)((() => {
-        (0, uz.e)().then((CC => {
-          zC.current && NC((() => CC))
+      }), [Fk]), Hk = (0, Xk.useCallback)((() => {
+        (0, NF.f)().then((kk => {
+          Fk.current && Zk((() => kk))
         }))
-      }), [zC]);
-      (0, QC.useEffect)((() => {
-        SC()
-      }), [SC]), (0, QC.useEffect)((() => {
-        pC()
-      }), [pC, ZC]), (0, Xz.c)(cz.f, SC);
-      const PC = null === wC ? [] : Object.keys(sz).filter((CC => wC[CC] > 0));
-      return (0, WC.jsxs)("div", {
+      }), [Fk]);
+      (0, Xk.useEffect)((() => {
+        wk()
+      }), [wk]), (0, Xk.useEffect)((() => {
+        Hk()
+      }), [Hk, Ik]), (0, UF.d)(CF.h, wk);
+      const Jk = null === Tk ? [] : Object.keys(WF).filter((kk => Tk[kk] > 0));
+      return (0, tk.jsxs)("div", {
         className: "SettingBox PushNotificationSettings",
-        children: [(0, WC.jsx)("div", {
+        children: [(0, tk.jsx)("div", {
           className: "SliderText",
-          children: CC("notificationSettings:pushNotifications")
-        }), null === wC && fC && (0, WC.jsx)("div", {
+          children: kk("notificationSettings:pushNotifications")
+        }), null === Tk && lk && (0, tk.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: CC("notificationSettings:pushTargetsLoadFailed")
-        }), null !== wC && 0 === PC.length && (0, WC.jsx)("div", {
+          children: kk("notificationSettings:pushTargetsLoadFailed")
+        }), null !== Tk && 0 === Jk.length && (0, tk.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: CC("notificationSettings:pushTargetsNone")
-        }), PC.length > 0 && (0, WC.jsx)("ul", {
+          children: kk("notificationSettings:pushTargetsNone")
+        }), Jk.length > 0 && (0, tk.jsx)("ul", {
           className: "PushNotificationSettingsTargets",
-          children: PC.map((zC => {
-            var ZC;
-            return (0, WC.jsx)("li", {
-              children: CC(sz[zC], {
-                count: null !== (ZC = null === wC || void 0 === wC ? void 0 : wC[zC]) && void 0 !== ZC ? ZC : 0
+          children: Jk.map((Fk => {
+            var Ik;
+            return (0, tk.jsx)("li", {
+              children: kk(WF[Fk], {
+                count: null !== (Ik = null === Tk || void 0 === Tk ? void 0 : Tk[Fk]) && void 0 !== Ik ? Ik : 0
               })
-            }, zC)
+            }, Fk)
           }))
-        }), null !== FC && (0, WC.jsx)(qC.g, {
+        }), null !== Lk && (0, tk.jsx)(qk.d, {
           className: "PushNotificationSettingsButton",
-          loading: MC,
+          loading: jk,
           onClick: () => {
-            gC(!0), FC().catch((CC => {
-              console.error("Failed to turn on push notifications:", CC)
+            ek(!0), Lk().catch((kk => {
+              console.error("Failed to turn on push notifications:", kk)
             })).finally((() => {
-              zC.current && (gC(!1), pC())
+              Fk.current && (ek(!1), Hk())
             }))
           },
-          children: CC("notificationSettings:pushTurnOn")
+          children: kk("notificationSettings:pushTurnOn")
         })]
       })
     }
-    var az = ZC(2514);
-    const tz = {
+    var BF = Ik(2478);
+    const dF = {
         toastAndTray: {
           label: "notificationSettings:friendRequestsAll",
           info: "notificationSettings:friendRequestsAllInfo"
@@ -1146,7 +1146,7 @@ export const modules = {
           info: "notificationSettings:friendRequestsOffInfo"
         }
       },
-      Dz = {
+      YF = {
         remindersOn: {
           label: "dailyDrop:settingReminders",
           reportAs: "reminders"
@@ -1157,383 +1157,383 @@ export const modules = {
         }
       };
 
-    function jz(CC) {
+    function AF(kk) {
       let {
-        setting: zC,
-        value: ZC
-      } = CC;
+        setting: Fk,
+        value: Ik
+      } = kk;
       const {
-        t: wC
-      } = (0, nC.y)(), fC = (0, rz.e)(), [oC, qC] = (0, QC.useState)(null), [FC, NC] = (0, QC.useState)(!1), [MC, gC] = (0, QC.useState)(null);
-      return (0, QC.useEffect)((() => {
-        "remindersOn" === zC && (0, uz.e)().then((CC => {
-          fC.current && gC((() => CC))
-        }), (CC => {
-          console.error("Couldn't tell whether this device can take push notifications:", CC)
+        t: Tk
+      } = (0, yk.y)(), lk = (0, cF.d)(), [ak, qk] = (0, Xk.useState)(null), [Lk, Zk] = (0, Xk.useState)(!1), [jk, ek] = (0, Xk.useState)(null);
+      return (0, Xk.useEffect)((() => {
+        "remindersOn" === Fk && (0, NF.f)().then((kk => {
+          lk.current && ek((() => kk))
+        }), (kk => {
+          console.error("Couldn't tell whether this device can take push notifications:", kk)
         }))
-      }), [zC, fC]), (0, WC.jsx)(IC.b, {
-        className: bC()({
-          DailyDropSettingFailed: FC
+      }), [Fk, lk]), (0, tk.jsx)(Vk.e, {
+        className: ik()({
+          DailyDropSettingFailed: Lk
         }),
-        label: wC(Dz[zC].label),
-        checked: null !== oC && void 0 !== oC ? oC : ZC,
-        note: FC ? wC("dailyDrop:settingFailed") : void 0,
-        onClick: CC => {
-          null === oC && (qC(CC), NC(!1), CC && null !== MC && MC().catch((CC => {
-            console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", CC)
-          })), (0, az.s)("daily_drop.setting", `${Dz[zC].reportAs}_${CC?"on":"off"}`), (0, az.t)("hidden" === zC ? {
-            hidden: CC
+        label: Tk(YF[Fk].label),
+        checked: null !== ak && void 0 !== ak ? ak : Ik,
+        note: Lk ? Tk("dailyDrop:settingFailed") : void 0,
+        onClick: kk => {
+          null === ak && (qk(kk), Zk(!1), kk && null !== jk && jk().catch((kk => {
+            console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", kk)
+          })), (0, BF.s)("daily_drop.setting", `${YF[Fk].reportAs}_${kk?"on":"off"}`), (0, BF.u)("hidden" === Fk ? {
+            hidden: kk
           } : {
-            remindersOn: CC
-          }).catch((CC => {
-            console.error(`Failed to save the Lucky Skin Block's ${zC} setting:`, CC), fC.current && NC(!0)
+            remindersOn: kk
+          }).catch((kk => {
+            console.error(`Failed to save the Lucky Skin Block's ${Fk} setting:`, kk), lk.current && Zk(!0)
           })).finally((() => {
-            fC.current && qC(null)
+            lk.current && qk(null)
           })))
         }
       })
     }
-    const yz = (0, QC.memo)((function() {
+    const gF = (0, Xk.memo)((function() {
       const {
-        t: CC
-      } = (0, nC.y)(), {
-        clientEscMenuOptions: zC
-      } = (0, iC.k)(["clientEscMenuOptions"]), {
-        userContext: ZC
-      } = (0, gC.e)(), QC = ZC.dailyDrop;
-      return (0, WC.jsxs)("div", {
+        t: kk
+      } = (0, yk.y)(), {
+        clientEscMenuOptions: Fk
+      } = (0, zk.j)(["clientEscMenuOptions"]), {
+        userContext: Ik
+      } = (0, ek.d)(), Xk = Ik.dailyDrop;
+      return (0, tk.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [PC.featureFlags.useSocialFeatures && (0, WC.jsx)(IC.e, {
-          label: CC("notificationSettings:friendRequests"),
-          options: lz.b.map((zC => ({
-            value: zC,
-            label: CC(tz[zC].label)
+        children: [Jk.featureFlags.useSocialFeatures && (0, tk.jsx)(Vk.h, {
+          label: kk("notificationSettings:friendRequests"),
+          options: RF.e.map((Fk => ({
+            value: Fk,
+            label: kk(dF[Fk].label)
           }))),
-          value: zC.friendRequestNotifications,
-          onChange: CC => {
-            iC.b.setClientEscMenuOptions({
-              friendRequestNotifications: CC
+          value: Fk.friendRequestNotifications,
+          onChange: kk => {
+            zk.d.setClientEscMenuOptions({
+              friendRequestNotifications: kk
             })
           },
-          circleInfoText: (0, WC.jsx)("div", {
+          circleInfoText: (0, tk.jsx)("div", {
             className: "NotificationSettingLevelsInfo",
-            children: lz.b.map((zC => (0, WC.jsxs)("div", {
-              children: [(0, WC.jsx)("b", {
-                children: CC(tz[zC].label)
-              }), ": ", CC(tz[zC].info)]
-            }, zC)))
+            children: RF.e.map((Fk => (0, tk.jsxs)("div", {
+              children: [(0, tk.jsx)("b", {
+                children: kk(dF[Fk].label)
+              }), ": ", kk(dF[Fk].info)]
+            }, Fk)))
           })
-        }), null !== QC && (0, WC.jsxs)(WC.Fragment, {
-          children: [(0, WC.jsx)(jz, {
+        }), null !== Xk && (0, tk.jsxs)(tk.Fragment, {
+          children: [(0, tk.jsx)(AF, {
             setting: "remindersOn",
-            value: QC.remindersOn
-          }), (0, WC.jsx)(jz, {
+            value: Xk.remindersOn
+          }), (0, tk.jsx)(AF, {
             setting: "hidden",
-            value: QC.hidden
+            value: Xk.hidden
           })]
-        }), (0, WC.jsx)(Tz, {})]
+        }), (0, tk.jsx)(fF, {})]
       })
     }));
-    var Lz = ZC(4437),
-      Uz = ZC(184),
-      Bz = ZC(296),
-      Oz = ZC(6660),
-      kz = ZC(3432),
-      Vz = ZC(34076),
-      CZ = ZC(600),
-      zZ = ZC(28);
-    var ZZ = ZC(615),
-      QZ = ZC(38),
-      wZ = ZC(4309);
-    const bZ = new Map([
+    var mF = Ik(4495),
+      hF = Ik(187),
+      rF = Ik(309),
+      DF = Ik(6644),
+      MF = Ik(3396),
+      kI = Ik(34083),
+      FI = Ik(628),
+      II = Ik(34);
+    var XI = Ik(646),
+      TI = Ik(41),
+      iI = Ik(4343);
+    const yI = new Map([
       ["chunkHorizAddDist", "horizontal"],
       ["chunkVertAddDist", "vertical"]
     ]);
 
-    function nZ(CC) {
-      return bZ.has(CC) ? GC.gameBridge.lookup("gR", null) : null
+    function lI(kk) {
+      return yI.has(kk) ? xk.gameBridge.lookup("dJ", null) : null
     }
 
-    function fZ(CC) {
-      if (!(0, CZ.H)(iC.b.get("clientEscMenuOptions")[CC])) return iC.b.get("clientEscMenuOptions")[CC];
-      const zC = nZ(CC);
-      return null !== zC ? zC[bZ.get(CC)] : QZ.i.getItem(CC)
+    function aI(kk) {
+      if (!(0, FI.Q)(zk.d.get("clientEscMenuOptions")[kk])) return zk.d.get("clientEscMenuOptions")[kk];
+      const Fk = lI(kk);
+      return null !== Fk ? Fk[yI.get(kk)] : TI.j.getItem(kk)
     }
 
-    function oZ(CC, zC) {
-      if ("useTouchControls" === CC) return void(0, wZ.e)(zC);
-      CC in iC.b.get("clientEscMenuOptions") && iC.b.setClientEscMenuOptions({
-        [CC]: zC
+    function qI(kk, Fk) {
+      if ("useTouchControls" === kk) return void(0, iI.c)(Fk);
+      kk in zk.d.get("clientEscMenuOptions") && zk.d.setClientEscMenuOptions({
+        [kk]: Fk
       });
-      const ZC = nZ(CC);
-      null !== ZC && GC.gameBridge.send("setChunkAddDistance", {
-        ...ZC,
-        [bZ.get(CC)]: zC
-      }), QZ.i.setItem(CC, zC)
+      const Ik = lI(kk);
+      null !== Ik && xk.gameBridge.send("setChunkAddDistance", {
+        ...Ik,
+        [yI.get(kk)]: Fk
+      }), TI.j.setItem(kk, Fk)
     }
-    var qZ = ZC(4346),
-      FZ = ZC(34082),
-      WZ = ZC(34091),
-      NZ = ZC(4428);
+    var LI = Ik(4402),
+      tI = Ik(34091),
+      ZI = Ik(34095),
+      jI = Ik(4491);
 
-    function MZ(CC) {
-      var zC, wC, fC, oC;
+    function eI(kk) {
+      var Fk, Tk, lk, ak;
       let {
-        minChunkAddDist: qC,
-        getValue: FC,
-        onChange: NC,
-        setApplySettingsCallback: MC
-      } = CC;
+        minChunkAddDist: qk,
+        getValue: Lk,
+        onChange: Zk,
+        setApplySettingsCallback: jk
+      } = kk;
       const {
-        t: gC
-      } = (0, nC.y)(), {
-        clientEscMenuOptions: pC
-      } = (0, iC.k)(["clientEscMenuOptions", "showDistantNametags"]), GC = (0, QC.useRef)(FC("showFog")), RC = (0, QC.useRef)(pC.antiAliasing), AC = (0, QC.useRef)(pC.useWebGpu), [xC, JC] = (0, QC.useState)(null), [eC, hC] = (0, QC.useState)((() => (0, kz.e)(PC.featureFlags.settings.canUseShaderPacks))), [KC] = (0, QC.useState)((() => iC.b.isWebGpuDefaultOff())), [YC] = (0, QC.useState)(Bz.k);
-      (0, QC.useEffect)((() => {
-        let CC = !1;
-        return (0, PC.hasUsableWebGpuAdapter)().then((zC => {
-          CC || JC(zC)
-        })), (0, kz.g)(PC.featureFlags.settings.canUseShaderPacks) && (0, Oz.e)().then((async zC => {
-          const QC = null !== zC && await async function(CC) {
+        t: ek
+      } = (0, yk.y)(), {
+        clientEscMenuOptions: Hk
+      } = (0, zk.j)(["clientEscMenuOptions", "showDistantNametags"]), xk = (0, Xk.useRef)(Lk("showFog")), Pk = (0, Xk.useRef)(Hk.antiAliasing), Kk = (0, Xk.useRef)(Hk.useWebGpu), [Qk, sk] = (0, Xk.useState)(null), [vk, Ek] = (0, Xk.useState)((() => (0, MF.h)(Jk.featureFlags.settings.canUseShaderPacks))), [Ok] = (0, Xk.useState)((() => zk.d.isWebGpuDefaultOff())), [nk] = (0, Xk.useState)(rF.l);
+      (0, Xk.useEffect)((() => {
+        let kk = !1;
+        return (0, Jk.hasUsableWebGpuAdapter)().then((Fk => {
+          kk || sk(Fk)
+        })), (0, MF.m)(Jk.featureFlags.settings.canUseShaderPacks) && (0, DF.i)().then((async Fk => {
+          const Xk = null !== Fk && await async function(kk) {
             const [{
-              isShaderPackActive: zC
+              isShaderPackActive: Fk
             }, {
-              loadPageShaderPackCompiler: QC
-            }] = await Promise.all([ZC.e(137).then((() => ZC(6658))), Promise.all([ZC.e(77), ZC.e(133), ZC.e(136)]).then((() => ZC(6609)))]);
-            return zC(CC, await QC())
-          }(zC);
-          CC || hC(QC)
+              loadPageShaderPackCompiler: Xk
+            }] = await Promise.all([Ik.e(137).then((() => Ik(6639))), Promise.all([Ik.e(77), Ik.e(133), Ik.e(136)]).then((() => Ik(6596)))]);
+            return Fk(kk, await Xk())
+          }(Fk);
+          kk || Ek(Xk)
         })), () => {
-          CC = !0
+          kk = !0
         }
       }), []);
-      const dC = function(CC, zC, ZC, QC, wC) {
-          return (0, Vz.b)(ZC, QC) && !0 === zC ? {
+      const Gk = function(kk, Fk, Ik, Xk, Tk) {
+          return (0, kI.c)(Ik, Xk) && !0 === Fk ? {
             translationKey: "settingsMenu:newWebGpuForcedOnByShaderPack",
             checked: !0,
             disabled: !0
           } : {
-            translationKey: !1 !== zC ? "settingsMenu:newWebGpu" : wC ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
-            checked: CC && !1 !== zC,
-            disabled: !0 !== zC
+            translationKey: !1 !== Fk ? "settingsMenu:newWebGpu" : Tk ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
+            checked: kk && !1 !== Fk,
+            disabled: !0 !== Fk
           }
-        }(pC.useWebGpu, xC, eC, KC, YC),
-        mC = (pC.useWebGpu || (0, Vz.b)(eC, KC)) && eC && !0 === xC,
-        HC = (0, SC.h)("lightingOverride"),
-        EC = !(0, CZ.H)(HC);
-      let lC = "settingsMenu:enableLighting";
-      EC && (lC = HC ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
-      const XC = CC => {
-          var zC, ZC, QC;
-          const wC = null !== (zC = CC.showFog) && void 0 !== zC ? zC : FC("showFog"),
-            bC = null !== (ZC = CC.antiAliasing) && void 0 !== ZC ? ZC : pC.antiAliasing,
-            nC = null !== (QC = CC.useWebGpu) && void 0 !== QC ? QC : pC.useWebGpu,
-            fC = !ZZ.z && wC !== GC.current || bC !== RC.current || nC !== AC.current;
-          MC(fC ? () => IC.h : null)
+        }(Hk.useWebGpu, Qk, vk, Ok, nk),
+        pk = (Hk.useWebGpu || (0, kI.c)(vk, Ok)) && vk && !0 === Qk,
+        uk = (0, wk.j)("lightingOverride"),
+        bk = !(0, FI.Q)(uk);
+      let Rk = "settingsMenu:enableLighting";
+      bk && (Rk = uk ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
+      const Uk = kk => {
+          var Fk, Ik, Xk;
+          const Tk = null !== (Fk = kk.showFog) && void 0 !== Fk ? Fk : Lk("showFog"),
+            ik = null !== (Ik = kk.antiAliasing) && void 0 !== Ik ? Ik : Hk.antiAliasing,
+            yk = null !== (Xk = kk.useWebGpu) && void 0 !== Xk ? Xk : Hk.useWebGpu,
+            lk = !XI.x && Tk !== xk.current || ik !== Pk.current || yk !== Kk.current;
+          jk(lk ? () => Vk.m : null)
         },
-        cC = (0, SC.h)("fogChunkDistanceOverride"),
-        uC = (0, SC.h)("fogBlockDistanceOverride"),
-        rC = !(0, CZ.H)(cC) || !(0, CZ.H)(uC),
-        sC = rC ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
-        [TC, aC] = (0, Lz.f)(qC),
-        [tC, DC] = (0, NZ.k)(qC),
-        jC = gC("settingsMenu:chunkLoadDistanceDeviceLimit"),
-        yC = tC < TC,
-        LC = Math.min(null !== (zC = FC("chunkHorizAddDist")) && void 0 !== zC ? zC : qC[0], tC),
-        UC = !rC && function(CC, zC) {
-          return !0 === CC.showFog && CC.fogChunkDistance > zC
-        }(pC, LC);
-      return (0, WC.jsxs)("div", {
+        Ck = (0, wk.j)("fogChunkDistanceOverride"),
+        Nk = (0, wk.j)("fogBlockDistanceOverride"),
+        ck = !(0, FI.Q)(Ck) || !(0, FI.Q)(Nk),
+        Wk = ck ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
+        [fk, Bk] = (0, mF.c)(qk),
+        [dk, Yk] = (0, jI.k)(qk),
+        Ak = ek("settingsMenu:chunkLoadDistanceDeviceLimit"),
+        gk = dk < fk,
+        mk = Math.min(null !== (Fk = Lk("chunkHorizAddDist")) && void 0 !== Fk ? Fk : qk[0], dk),
+        hk = !ck && function(kk, Fk) {
+          return !0 === kk.showFog && kk.fogChunkDistance > Fk
+        }(Hk, mk);
+      return (0, tk.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [(0, WC.jsx)(IC.f, {
-          name: gC("settingsMenu:horizontalChunkLoadDistance"),
-          min: qC[0],
-          max: TC,
-          selectableMax: tC,
-          cappedNote: jC,
+        children: [(0, tk.jsx)(Vk.j, {
+          name: ek("settingsMenu:horizontalChunkLoadDistance"),
+          min: qk[0],
+          max: fk,
+          selectableMax: dk,
+          cappedNote: Ak,
           step: 1,
-          initValue: LC,
-          onChange: CC => {
-            !0 === FC("showFog") && CC < FC("fogChunkDistance") && NC("fogChunkDistance", CC), NC("chunkHorizAddDist", CC), zZ.o.bp("updatedChunkLoadDist")
+          initValue: mk,
+          onChange: kk => {
+            !0 === Lk("showFog") && kk < Lk("fogChunkDistance") && Zk("fogChunkDistance", kk), Zk("chunkHorizAddDist", kk), II.g.GL("updatedChunkLoadDist")
           },
-          circleInfoText: gC("settingsMenu:chunkLoadDistanceInfo")
-        }), (0, WC.jsx)(IC.f, {
-          name: gC("settingsMenu:verticalChunkLoadDistance"),
-          min: qC[1],
-          max: aC,
-          selectableMax: DC,
-          cappedNote: yC ? void 0 : jC,
+          circleInfoText: ek("settingsMenu:chunkLoadDistanceInfo")
+        }), (0, tk.jsx)(Vk.j, {
+          name: ek("settingsMenu:verticalChunkLoadDistance"),
+          min: qk[1],
+          max: Bk,
+          selectableMax: Yk,
+          cappedNote: gk ? void 0 : Ak,
           step: 1,
-          initValue: Math.min(null !== (wC = FC("chunkVertAddDist")) && void 0 !== wC ? wC : qC[1], DC),
-          onChange: CC => {
-            NC("chunkVertAddDist", CC), zZ.o.bp("updatedChunkLoadDist")
+          initValue: Math.min(null !== (Tk = Lk("chunkVertAddDist")) && void 0 !== Tk ? Tk : qk[1], Yk),
+          onChange: kk => {
+            Zk("chunkVertAddDist", kk), II.g.GL("updatedChunkLoadDist")
           },
-          circleInfoText: gC("settingsMenu:chunkLoadDistanceInfo"),
+          circleInfoText: ek("settingsMenu:chunkLoadDistanceInfo"),
           className: "VerticalChunkLoadSlider"
-        }), (0, WC.jsx)(IC.b, {
-          label: gC("settingsMenu:chunkFadeIn"),
-          checked: pC.chunkFadeIn,
-          onClick: CC => {
-            iC.b.setClientEscMenuOptions({
-              chunkFadeIn: CC
+        }), (0, tk.jsx)(Vk.e, {
+          label: ek("settingsMenu:chunkFadeIn"),
+          checked: Hk.chunkFadeIn,
+          onClick: kk => {
+            zk.d.setClientEscMenuOptions({
+              chunkFadeIn: kk
             })
           },
-          circleInfoText: gC("settingsMenu:chunkFadeInInfo")
-        }), vC.devTools.supports("chunkBorders") && (0, WC.jsx)(IC.b, {
-          label: gC("settingsMenu:showChunkBorders"),
-          checked: pC.showChunkBorders,
-          onClick: CC => {
-            iC.b.setClientEscMenuOptions({
-              showChunkBorders: CC
+          circleInfoText: ek("settingsMenu:chunkFadeInInfo")
+        }), Sk.devTools.supports("chunkBorders") && (0, tk.jsx)(Vk.e, {
+          label: ek("settingsMenu:showChunkBorders"),
+          checked: Hk.showChunkBorders,
+          onClick: kk => {
+            zk.d.setClientEscMenuOptions({
+              showChunkBorders: kk
             })
           },
-          circleInfoText: gC("settingsMenu:showChunkBordersInfo")
-        }), (0, WC.jsx)(IC.b, {
-          label: gC(lC),
-          checked: pC.enableLighting,
-          onClick: CC => {
-            iC.b.setClientEscMenuOptions({
-              enableLighting: CC
+          circleInfoText: ek("settingsMenu:showChunkBordersInfo")
+        }), (0, tk.jsx)(Vk.e, {
+          label: ek(Rk),
+          checked: Hk.enableLighting,
+          onClick: kk => {
+            zk.d.setClientEscMenuOptions({
+              enableLighting: kk
             })
           },
-          disabled: EC
-        }), (0, WC.jsxs)("div", {
+          disabled: bk
+        }), (0, tk.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, WC.jsx)(IC.b, {
-            label: gC(sC),
-            checked: pC.showFog,
-            onClick: CC => {
-              XC({
-                showFog: CC
-              }), iC.b.setClientEscMenuOptions({
-                showFog: CC
+          children: [(0, tk.jsx)(Vk.e, {
+            label: ek(Wk),
+            checked: Hk.showFog,
+            onClick: kk => {
+              Uk({
+                showFog: kk
+              }), zk.d.setClientEscMenuOptions({
+                showFog: kk
               })
             },
-            disabled: rC,
-            className: bC()({
-              SettingBoxWarning: UC
+            disabled: ck,
+            className: ik()({
+              SettingBoxWarning: hk
             })
-          }), (0, WC.jsx)(IC.f, {
-            name: gC("settingsMenu:fogChunkDistance"),
-            min: qC[0],
-            max: Uz.f.maxChunkHorizAddDistance,
+          }), (0, tk.jsx)(Vk.j, {
+            name: ek("settingsMenu:fogChunkDistance"),
+            min: qk[0],
+            max: hF.f.maxChunkHorizAddDistance,
             step: 1,
-            initValue: null !== (fC = pC.fogChunkDistance) && void 0 !== fC ? fC : qC[0],
-            onChange: CC => {
-              iC.b.setClientEscMenuOptions({
-                fogChunkDistance: CC
-              }), zZ.o.bp("fogChunkDistanceChanged", CC)
+            initValue: null !== (lk = Hk.fogChunkDistance) && void 0 !== lk ? lk : qk[0],
+            onChange: kk => {
+              zk.d.setClientEscMenuOptions({
+                fogChunkDistance: kk
+              }), II.g.GL("fogChunkDistanceChanged", kk)
             },
-            circleInfoText: gC("settingsMenu:fogChunkDistanceInfo"),
-            disabled: rC || !1 === FC("showFog"),
-            className: bC()({
-              SettingBoxWarning: UC
+            circleInfoText: ek("settingsMenu:fogChunkDistanceInfo"),
+            disabled: ck || !1 === Lk("showFog"),
+            className: ik()({
+              SettingBoxWarning: hk
             })
-          }), UC && (0, WC.jsx)("div", {
+          }), hk && (0, tk.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: gC("settingsMenu:fogChunkDistanceInfo")
+            children: ek("settingsMenu:fogChunkDistanceInfo")
           })]
-        }), !ZZ.z && (0, WC.jsx)(IC.b, {
-          label: gC(mC ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
-          checked: !mC && pC.disableTexAtlas,
-          onClick: CC => {
-            iC.b.setClientEscMenuOptions({
-              disableTexAtlas: CC
+        }), !XI.x && (0, tk.jsx)(Vk.e, {
+          label: ek(pk ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
+          checked: !pk && Hk.disableTexAtlas,
+          onClick: kk => {
+            zk.d.setClientEscMenuOptions({
+              disableTexAtlas: kk
             })
           },
-          circleInfoText: gC("settingsMenu:disableBlockTextureAtlasInfo"),
-          disabled: mC
-        }), (0, WC.jsx)(IC.f, {
-          name: gC("settingsMenu:fieldOfView"),
+          circleInfoText: ek("settingsMenu:disableBlockTextureAtlasInfo"),
+          disabled: pk
+        }), (0, tk.jsx)(Vk.j, {
+          name: ek("settingsMenu:fieldOfView"),
           min: 50,
           max: 160,
           step: 1,
-          initValue: pC.cameraFOV,
-          onChange: CC => {
-            iC.b.setClientEscMenuOptions({
-              cameraFOV: CC
+          initValue: Hk.cameraFOV,
+          onChange: kk => {
+            zk.d.setClientEscMenuOptions({
+              cameraFOV: kk
             })
           }
-        }), (0, WC.jsx)(IC.b, {
-          label: gC("settingsMenu:disableViewBobbing"),
-          checked: pC.disableBobbing,
-          onClick: CC => {
-            iC.b.setClientEscMenuOptions({
-              disableBobbing: CC
+        }), (0, tk.jsx)(Vk.e, {
+          label: ek("settingsMenu:disableViewBobbing"),
+          checked: Hk.disableBobbing,
+          onClick: kk => {
+            zk.d.setClientEscMenuOptions({
+              disableBobbing: kk
             })
           },
-          circleInfoText: gC("settingsMenu:disableViewBobbingInfo")
-        }), (0, WC.jsx)(IC.b, {
-          label: gC("settingsMenu:antiAliasing"),
-          checked: pC.antiAliasing,
-          onClick: CC => {
-            XC({
-              antiAliasing: CC
-            }), (0, qZ.e)("antiAliasing"), iC.b.setClientEscMenuOptions({
-              antiAliasing: CC
+          circleInfoText: ek("settingsMenu:disableViewBobbingInfo")
+        }), (0, tk.jsx)(Vk.e, {
+          label: ek("settingsMenu:antiAliasing"),
+          checked: Hk.antiAliasing,
+          onClick: kk => {
+            Uk({
+              antiAliasing: kk
+            }), (0, LI.i)("antiAliasing"), zk.d.setClientEscMenuOptions({
+              antiAliasing: kk
             })
           },
-          circleInfoText: gC("settingsMenu:antiAliasingInfo")
-        }), (0, WC.jsx)(IC.f, {
-          name: gC("settingsMenu:pixelScale"),
+          circleInfoText: ek("settingsMenu:antiAliasingInfo")
+        }), (0, tk.jsx)(Vk.j, {
+          name: ek("settingsMenu:pixelScale"),
           min: 1,
           max: 8,
           step: 1,
-          initValue: null !== (oC = pC.pixelScale) && void 0 !== oC ? oC : 1,
-          onChange: CC => {
-            (CC !== iC.b.get("clientEscMenuOptions").pixelScale || (0, WZ.p)()) && (0, qZ.e)("pixelScale"), iC.b.setClientEscMenuOptions({
-              pixelScale: CC
+          initValue: null !== (ak = Hk.pixelScale) && void 0 !== ak ? ak : 1,
+          onChange: kk => {
+            (kk !== zk.d.get("clientEscMenuOptions").pixelScale || (0, ZI.n)()) && (0, LI.i)("pixelScale"), zk.d.setClientEscMenuOptions({
+              pixelScale: kk
             })
           },
-          circleInfoText: gC("settingsMenu:pixelScaleInfo"),
-          format: CC => `${CC}x`
-        }), (0, WC.jsx)(IC.b, {
-          label: gC("settingsMenu:pixelSmoothing"),
-          checked: pC.pixelSmoothing,
-          onClick: CC => {
-            iC.b.setClientEscMenuOptions({
-              pixelSmoothing: CC
+          circleInfoText: ek("settingsMenu:pixelScaleInfo"),
+          format: kk => `${kk}x`
+        }), (0, tk.jsx)(Vk.e, {
+          label: ek("settingsMenu:pixelSmoothing"),
+          checked: Hk.pixelSmoothing,
+          onClick: kk => {
+            zk.d.setClientEscMenuOptions({
+              pixelSmoothing: kk
             })
           },
-          circleInfoText: gC("settingsMenu:pixelSmoothingInfo")
-        }), ZZ.z && (0, WC.jsx)(IC.b, {
-          label: gC("settingsMenu:distantNametags"),
-          checked: (0, FZ.c)(),
-          onClick: CC => {
-            iC.b.set({
-              showDistantNametags: CC
+          circleInfoText: ek("settingsMenu:pixelSmoothingInfo")
+        }), XI.x && (0, tk.jsx)(Vk.e, {
+          label: ek("settingsMenu:distantNametags"),
+          checked: (0, tI.b)(),
+          onClick: kk => {
+            zk.d.set({
+              showDistantNametags: kk
             })
           },
-          circleInfoText: gC("settingsMenu:distantNametagsInfo")
-        }), (0, WC.jsx)(IC.b, {
-          label: gC(dC.translationKey),
-          checked: dC.checked,
-          onClick: CC => {
-            XC({
-              useWebGpu: CC
-            }), iC.b.setClientEscMenuOptions({
-              useWebGpu: CC
+          circleInfoText: ek("settingsMenu:distantNametagsInfo")
+        }), (0, tk.jsx)(Vk.e, {
+          label: ek(Gk.translationKey),
+          checked: Gk.checked,
+          onClick: kk => {
+            Uk({
+              useWebGpu: kk
+            }), zk.d.setClientEscMenuOptions({
+              useWebGpu: kk
             })
           },
-          circleInfoText: gC("settingsMenu:newWebGpuInfo"),
-          disabled: dC.disabled
+          circleInfoText: ek("settingsMenu:newWebGpuInfo"),
+          disabled: Gk.disabled
         })]
       })
     }
-    var gZ = ZC(4342),
-      SZ = ZC(8859),
-      pZ = ZC(34107),
-      PZ = ZC(8870),
-      GZ = ZC(34116);
-    const RZ = {
+    var wI = Ik(4395),
+      HI = Ik(8846),
+      JI = Ik(34119),
+      xI = Ik(8860),
+      PI = Ik(34122);
+    const KI = {
         color: 16777215,
         name: "white"
       },
-      AZ = {
+      QI = {
         color: 0,
         name: "black"
       },
-      xZ = [RZ, {
+      sI = [KI, {
         color: 5046092,
         name: "green"
       }, {
@@ -1548,73 +1548,73 @@ export const modules = {
       }, {
         color: 16726843,
         name: "red"
-      }, AZ],
-      JZ = [AZ, RZ];
+      }, QI],
+      VI = [QI, KI];
 
-    function IZ(CC) {
-      return `${CC} px`
+    function zI(kk) {
+      return `${kk} px`
     }
 
-    function iZ(CC) {
-      return `${CC}%`
+    function SI(kk) {
+      return `${kk}%`
     }
 
-    function vZ(CC) {
+    function oI(kk) {
       let {
-        label: zC,
-        value: ZC,
-        swatches: QC,
-        onChange: wC
-      } = CC;
+        label: Fk,
+        value: Ik,
+        swatches: Xk,
+        onChange: Tk
+      } = kk;
       const {
-        t: fC
-      } = (0, nC.y)(), oC = !QC.some((CC => CC.color === ZC));
-      return (0, WC.jsxs)("div", {
+        t: lk
+      } = (0, yk.y)(), ak = !Xk.some((kk => kk.color === Ik));
+      return (0, tk.jsxs)("div", {
         className: "SettingBox CrosshairColorRow",
-        children: [(0, WC.jsx)("div", {
+        children: [(0, tk.jsx)("div", {
           className: "SliderText",
-          children: zC
-        }), (0, WC.jsxs)("div", {
+          children: Fk
+        }), (0, tk.jsxs)("div", {
           className: "CrosshairSwatches",
           role: "radiogroup",
-          "aria-label": zC,
-          children: [QC.map((CC => {
+          "aria-label": Fk,
+          children: [Xk.map((kk => {
             let {
-              color: zC,
-              name: QC
-            } = CC;
-            return (0, WC.jsx)("button", {
+              color: Fk,
+              name: Xk
+            } = kk;
+            return (0, tk.jsx)("button", {
               type: "button",
               role: "radio",
-              "aria-checked": zC === ZC,
-              "aria-label": fC(`crosshairSettings:color_${QC}`),
+              "aria-checked": Fk === Ik,
+              "aria-label": lk(`crosshairSettings:color_${Xk}`),
               "data-pad-focusable": !0,
-              className: bC()("CrosshairSwatch", {
-                Selected: zC === ZC
+              className: ik()("CrosshairSwatch", {
+                Selected: Fk === Ik
               }),
               style: {
-                background: (0, GZ.i)(zC)
+                background: (0, PI.k)(Fk)
               },
               onClick: () => {
-                wC(zC)
+                Tk(Fk)
               }
-            }, zC)
-          })), (0, WC.jsx)("label", {
-            className: bC()("CrosshairSwatch CrosshairSwatchCustom", {
-              Selected: oC
+            }, Fk)
+          })), (0, tk.jsx)("label", {
+            className: ik()("CrosshairSwatch CrosshairSwatchCustom", {
+              Selected: ak
             }),
-            style: oC ? {
-              background: (0, GZ.i)(ZC)
+            style: ak ? {
+              background: (0, PI.k)(Ik)
             } : void 0,
-            title: fC("crosshairSettings:customColor"),
+            title: lk("crosshairSettings:customColor"),
             "data-pad-focusable": !0,
-            children: (0, WC.jsx)("input", {
+            children: (0, tk.jsx)("input", {
               type: "color",
-              "aria-label": fC("crosshairSettings:customColor"),
-              value: (0, GZ.i)(ZC),
-              onChange: CC => {
-                const zC = (0, GZ.n)(CC.target.value);
-                null !== zC && wC(zC)
+              "aria-label": lk("crosshairSettings:customColor"),
+              value: (0, PI.k)(Ik),
+              onChange: kk => {
+                const Fk = (0, PI.q)(kk.target.value);
+                null !== Fk && Tk(Fk)
               }
             })
           })]
@@ -1622,119 +1622,119 @@ export const modules = {
       })
     }
 
-    function eZ(CC) {
+    function vI(kk) {
       let {
-        settings: zC,
-        onChange: ZC
-      } = CC;
+        settings: Fk,
+        onChange: Ik
+      } = kk;
       const {
-        t: QC
-      } = (0, nC.y)(), wC = (CC, QC) => {
-        ZC((0, GZ.u)(zC, CC, QC))
-      }, bC = function(CC, ZC) {
-        let QC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : IZ;
+        t: Xk
+      } = (0, yk.y)(), Tk = (kk, Xk) => {
+        Ik((0, PI.u)(Fk, kk, Xk))
+      }, ik = function(kk, Ik) {
+        let Xk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : zI;
         const {
-          min: bC,
-          max: nC,
-          step: fC
-        } = GZ.c[CC];
-        return (0, WC.jsx)(IC.f, {
-          name: ZC,
-          min: bC,
-          max: nC,
-          step: fC,
-          initValue: zC[CC],
-          format: QC,
-          onChange: zC => {
-            wC(CC, zC)
+          min: ik,
+          max: yk,
+          step: lk
+        } = PI.d[kk];
+        return (0, tk.jsx)(Vk.j, {
+          name: Ik,
+          min: ik,
+          max: yk,
+          step: lk,
+          initValue: Fk[kk],
+          format: Xk,
+          onChange: Fk => {
+            Tk(kk, Fk)
           }
-        }, CC)
-      }, fC = ["lines", "dot", "circle"].filter((CC => zC[CC])), oC = (CC, ZC, QC) => (0, WC.jsx)(IC.b, {
-        label: ZC,
-        checked: zC[CC],
-        disabled: 1 === fC.length && fC[0] === CC,
-        circleInfoText: QC,
-        onClick: zC => {
-          wC(CC, zC)
+        }, kk)
+      }, lk = ["lines", "dot", "circle"].filter((kk => Fk[kk])), ak = (kk, Ik, Xk) => (0, tk.jsx)(Vk.e, {
+        label: Ik,
+        checked: Fk[kk],
+        disabled: 1 === lk.length && lk[0] === kk,
+        circleInfoText: Xk,
+        onClick: Fk => {
+          Tk(kk, Fk)
         }
-      }, CC), qC = "shapes" === zC.style;
-      return (0, WC.jsxs)(WC.Fragment, {
-        children: [(0, WC.jsx)(IC.e, {
-          label: QC("crosshairSettings:style"),
+      }, kk), qk = "shapes" === Fk.style;
+      return (0, tk.jsxs)(tk.Fragment, {
+        children: [(0, tk.jsx)(Vk.h, {
+          label: Xk("crosshairSettings:style"),
           options: [{
             value: "classic",
-            label: QC("crosshairSettings:styleClassic")
+            label: Xk("crosshairSettings:styleClassic")
           }, {
             value: "shapes",
-            label: QC("crosshairSettings:styleShapes")
+            label: Xk("crosshairSettings:styleShapes")
           }],
-          value: zC.style,
-          onChange: CC => {
-            wC("style", CC)
+          value: Fk.style,
+          onChange: kk => {
+            Tk("style", kk)
           }
-        }), (0, WC.jsx)(vZ, {
-          label: QC("crosshairSettings:color"),
-          value: zC.color,
-          swatches: xZ,
-          onChange: CC => {
-            wC("color", CC)
+        }), (0, tk.jsx)(oI, {
+          label: Xk("crosshairSettings:color"),
+          value: Fk.color,
+          swatches: sI,
+          onChange: kk => {
+            Tk("color", kk)
           }
-        }), bC("opacity", QC("crosshairSettings:opacity"), iZ), !qC && bC("size", QC("crosshairSettings:size"), iZ), qC && (0, WC.jsxs)("div", {
+        }), ik("opacity", Xk("crosshairSettings:opacity"), SI), !qk && ik("size", Xk("crosshairSettings:size"), SI), qk && (0, tk.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [oC("lines", QC("crosshairSettings:lines")), zC.lines && bC("lineLength", QC("crosshairSettings:lineLength")), zC.lines && bC("lineThickness", QC("crosshairSettings:lineThickness")), zC.lines && bC("gap", QC("crosshairSettings:gap")), zC.lines && oC("tStyle", QC("crosshairSettings:tStyle"))]
-        }), qC && (0, WC.jsxs)("div", {
+          children: [ak("lines", Xk("crosshairSettings:lines")), Fk.lines && ik("lineLength", Xk("crosshairSettings:lineLength")), Fk.lines && ik("lineThickness", Xk("crosshairSettings:lineThickness")), Fk.lines && ik("gap", Xk("crosshairSettings:gap")), Fk.lines && ak("tStyle", Xk("crosshairSettings:tStyle"))]
+        }), qk && (0, tk.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [oC("dot", QC("crosshairSettings:dot")), zC.dot && bC("dotSize", QC("crosshairSettings:dotSize"))]
-        }), qC && (0, WC.jsxs)("div", {
+          children: [ak("dot", Xk("crosshairSettings:dot")), Fk.dot && ik("dotSize", Xk("crosshairSettings:dotSize"))]
+        }), qk && (0, tk.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [oC("circle", QC("crosshairSettings:circle")), zC.circle && bC("circleRadius", QC("crosshairSettings:circleRadius")), zC.circle && bC("circleThickness", QC("crosshairSettings:circleThickness"))]
-        }), (0, WC.jsxs)("div", {
+          children: [ak("circle", Xk("crosshairSettings:circle")), Fk.circle && ik("circleRadius", Xk("crosshairSettings:circleRadius")), Fk.circle && ik("circleThickness", Xk("crosshairSettings:circleThickness"))]
+        }), (0, tk.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [bC("outline", QC("crosshairSettings:outline"), (CC => CC > 0 ? IZ(CC) : QC("crosshairSettings:off"))), zC.outline > 0 && (0, WC.jsx)(vZ, {
-            label: QC("crosshairSettings:outlineColor"),
-            value: zC.outlineColor,
-            swatches: JZ,
-            onChange: CC => {
-              wC("outlineColor", CC)
+          children: [ik("outline", Xk("crosshairSettings:outline"), (kk => kk > 0 ? zI(kk) : Xk("crosshairSettings:off"))), Fk.outline > 0 && (0, tk.jsx)(oI, {
+            label: Xk("crosshairSettings:outlineColor"),
+            value: Fk.outlineColor,
+            swatches: VI,
+            onChange: kk => {
+              Tk("outlineColor", kk)
             }
           })]
-        }), oC("growOnClick", QC("crosshairSettings:growOnClick")), qC && oC("forGuns", QC("crosshairSettings:forGuns"), QC("crosshairSettings:forGunsInfo"))]
+        }), ak("growOnClick", Xk("crosshairSettings:growOnClick")), qk && ak("forGuns", Xk("crosshairSettings:forGuns"), Xk("crosshairSettings:forGunsInfo"))]
       })
     }
-    var hZ = ZC(60),
-      KZ = ZC(1228),
-      YZ = ZC(12756),
-      dZ = ZC(13888),
-      mZ = ZC(15367),
-      HZ = ZC(15949);
-    const EZ = ["sky", "grass", "stone", "sand", "snow", "night"],
-      lZ = "4rem";
+    var EI = Ik(74),
+      OI = Ik(1263),
+      nI = Ik(12750),
+      GI = Ik(13880),
+      pI = Ik(15338),
+      uI = Ik(15861);
+    const bI = ["sky", "grass", "stone", "sand", "snow", "night"],
+      RI = "4rem";
 
-    function XZ(CC) {
+    function UI(kk) {
       return {
-        backgroundImage: `url(${CC})`,
-        backgroundSize: `${lZ} ${lZ}`,
+        backgroundImage: `url(${kk})`,
+        backgroundSize: `${RI} ${RI}`,
         backgroundRepeat: "repeat",
         imageRendering: "pixelated"
       }
     }
 
-    function cZ(CC) {
+    function CI(kk) {
       return {
         ...(() => {
-          switch (CC) {
+          switch (kk) {
             case "sky":
               return {
                 backgroundImage: "linear-gradient(#3d8fe0 0%, #8cc8f5 45%, #d6eefc 58%, #6fae4a 58.01%, #4f8a33 100%)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
               };
             case "grass":
-              return XZ(YZ);
+              return UI(nI);
             case "stone":
-              return XZ(dZ);
+              return UI(GI);
             case "sand":
-              return XZ(mZ);
+              return UI(pI);
             case "snow":
-              return XZ(HZ);
+              return UI(uI);
             case "night":
               return {
                 backgroundImage: "radial-gradient(circle at 50% 50%, #1e2a4a 0%, #070b16 100vmax)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
@@ -1745,21 +1745,21 @@ export const modules = {
       }
     }
 
-    function uZ(CC) {
+    function NI(kk) {
       return Object.freeze({
-        ...GZ.f,
+        ...PI.f,
         style: "shapes",
         outline: 1,
         lines: !1,
-        ...CC
+        ...kk
       })
     }
-    const rZ = [{
+    const cI = [{
         id: "default",
-        settings: GZ.f
+        settings: PI.f
       }, {
         id: "cross",
-        settings: uZ({
+        settings: NI({
           color: 5046092,
           lines: !0,
           lineLength: 7,
@@ -1768,7 +1768,7 @@ export const modules = {
         })
       }, {
         id: "crossDot",
-        settings: uZ({
+        settings: NI({
           color: 65535,
           lines: !0,
           lineLength: 6,
@@ -1779,13 +1779,13 @@ export const modules = {
         })
       }, {
         id: "dot",
-        settings: uZ({
+        settings: NI({
           dot: !0,
           dotSize: 4
         })
       }, {
         id: "circle",
-        settings: uZ({
+        settings: NI({
           circle: !0,
           circleRadius: 12,
           circleThickness: 1.5,
@@ -1794,7 +1794,7 @@ export const modules = {
         })
       }, {
         id: "tShape",
-        settings: uZ({
+        settings: NI({
           color: 16731391,
           lines: !0,
           lineLength: 7,
@@ -1804,7 +1804,7 @@ export const modules = {
         })
       }, {
         id: "tiny",
-        settings: uZ({
+        settings: NI({
           color: 16776960,
           lines: !0,
           lineLength: 3,
@@ -1813,7 +1813,7 @@ export const modules = {
         })
       }, {
         id: "bold",
-        settings: uZ({
+        settings: NI({
           lines: !0,
           lineLength: 10,
           lineThickness: 3,
@@ -1821,570 +1821,570 @@ export const modules = {
           outline: 1.5
         })
       }],
-      sZ = ["growOnClick", "forGuns"];
-    var TZ = ZC(34118);
+      WI = ["growOnClick", "forGuns"];
+    var fI = Ik(34131);
 
-    function aZ(CC) {
+    function BI(kk) {
       let {
-        label: zC,
-        selected: ZC,
-        onClick: QC,
-        className: wC,
-        style: nC,
-        children: fC
-      } = CC;
-      return (0, WC.jsx)("button", {
+        label: Fk,
+        selected: Ik,
+        onClick: Xk,
+        className: Tk,
+        style: yk,
+        children: lk
+      } = kk;
+      return (0, tk.jsx)("button", {
         type: "button",
         role: "radio",
-        "aria-checked": ZC,
-        title: zC,
-        "aria-label": zC,
+        "aria-checked": Ik,
+        title: Fk,
+        "aria-label": Fk,
         "data-pad-focusable": !0,
-        className: bC()("CrosshairBackdropSwatch", wC, {
-          Selected: ZC
+        className: ik()("CrosshairBackdropSwatch", Tk, {
+          Selected: Ik
         }),
-        style: nC,
-        onClick: QC,
-        children: fC
+        style: yk,
+        onClick: Xk,
+        children: lk
       })
     }
 
-    function tZ(CC) {
+    function dI(kk) {
       let {
-        backdrop: zC,
-        onChange: ZC,
-        game: QC
-      } = CC;
+        backdrop: Fk,
+        onChange: Ik,
+        game: Xk
+      } = kk;
       const {
-        t: wC
-      } = (0, nC.y)();
-      return (0, WC.jsxs)("div", {
+        t: Tk
+      } = (0, yk.y)();
+      return (0, tk.jsxs)("div", {
         className: "CrosshairBackdrops",
         role: "radiogroup",
-        "aria-label": wC("crosshairSettings:background"),
-        children: [QC && (0, WC.jsx)(aZ, {
-          label: wC("crosshairSettings:bg_game"),
-          selected: QC.selected,
-          onClick: QC.onSelect,
+        "aria-label": Tk("crosshairSettings:background"),
+        children: [Xk && (0, tk.jsx)(BI, {
+          label: Tk("crosshairSettings:bg_game"),
+          selected: Xk.selected,
+          onClick: Xk.onSelect,
           className: "CrosshairGameSwatch",
-          children: (0, WC.jsx)(fC.c, {
+          children: (0, tk.jsx)(lk.e, {
             name: "cube"
           })
-        }), EZ.map((CC => (0, WC.jsx)(aZ, {
-          label: wC(`crosshairSettings:bg_${CC}`),
-          selected: !(null !== QC && void 0 !== QC && QC.selected) && CC === zC,
-          style: cZ(CC),
+        }), bI.map((kk => (0, tk.jsx)(BI, {
+          label: Tk(`crosshairSettings:bg_${kk}`),
+          selected: !(null !== Xk && void 0 !== Xk && Xk.selected) && kk === Fk,
+          style: CI(kk),
           onClick: () => {
-            ZC(CC)
+            Ik(kk)
           }
-        }, CC)))]
+        }, kk)))]
       })
     }
 
-    function DZ(CC) {
+    function YI(kk) {
       let {
-        settings: zC,
-        touch: ZC,
-        backdrop: QC,
-        onChange: wC
-      } = CC;
+        settings: Fk,
+        touch: Ik,
+        backdrop: Xk,
+        onChange: Tk
+      } = kk;
       const {
-        t: fC
-      } = (0, nC.y)(), oC = function(CC) {
-        var zC;
-        return null !== (zC = rZ.find((zC => (0, GZ.q)(zC.settings, CC, sZ)))) && void 0 !== zC ? zC : null
-      }(zC);
-      return (0, WC.jsx)("div", {
+        t: lk
+      } = (0, yk.y)(), ak = function(kk) {
+        var Fk;
+        return null !== (Fk = cI.find((Fk => (0, PI.t)(Fk.settings, kk, WI)))) && void 0 !== Fk ? Fk : null
+      }(Fk);
+      return (0, tk.jsx)("div", {
         className: "CrosshairPresets",
         role: "radiogroup",
-        "aria-label": fC("crosshairSettings:presets"),
-        children: rZ.map((CC => {
-          const nC = (null === oC || void 0 === oC ? void 0 : oC.id) === CC.id;
-          return (0, WC.jsxs)("button", {
+        "aria-label": lk("crosshairSettings:presets"),
+        children: cI.map((kk => {
+          const yk = (null === ak || void 0 === ak ? void 0 : ak.id) === kk.id;
+          return (0, tk.jsxs)("button", {
             type: "button",
             role: "radio",
-            "aria-checked": nC,
+            "aria-checked": yk,
             "data-pad-focusable": !0,
-            className: bC()("CrosshairPreset", {
-              Selected: nC
+            className: ik()("CrosshairPreset", {
+              Selected: yk
             }),
             onClick: () => {
-              wC(function(CC, zC) {
+              Tk(function(kk, Fk) {
                 return {
-                  ...zC.settings,
-                  growOnClick: CC.growOnClick,
-                  forGuns: CC.forGuns
+                  ...Fk.settings,
+                  growOnClick: kk.growOnClick,
+                  forGuns: kk.forGuns
                 }
-              }(zC, CC))
+              }(Fk, kk))
             },
-            children: [(0, WC.jsx)("div", {
+            children: [(0, tk.jsx)("div", {
               className: "CrosshairPresetStage",
-              style: cZ(QC),
-              children: (0, WC.jsx)(TZ.d, {
-                settings: CC.settings,
-                touch: ZC,
+              style: CI(Xk),
+              children: (0, tk.jsx)(fI.c, {
+                settings: kk.settings,
+                touch: Ik,
                 inPreview: !0
               })
-            }), (0, WC.jsx)("div", {
+            }), (0, tk.jsx)("div", {
               className: "CrosshairPresetName",
-              children: fC(`crosshairSettings:preset_${CC.id}`)
+              children: lk(`crosshairSettings:preset_${kk.id}`)
             })]
-          }, CC.id)
+          }, kk.id)
         }))
       })
     }
-    var jZ = ZC(1587);
+    var AI = Ik(1611);
 
-    function yZ(CC, zC) {
-      const [ZC, wC] = (0, QC.useState)(!1), bC = () => {
-        wC(!1)
-      }, [nC, fC] = (0, QC.useState)(!1), oC = (0, QC.useRef)({
-        growOnClick: CC.growOnClick,
-        forGuns: CC.forGuns
+    function gI(kk, Fk) {
+      const [Ik, Tk] = (0, Xk.useState)(!1), ik = () => {
+        Tk(!1)
+      }, [yk, lk] = (0, Xk.useState)(!1), ak = (0, Xk.useRef)({
+        growOnClick: kk.growOnClick,
+        forGuns: kk.forGuns
       });
-      (0, QC.useEffect)((() => {
-        const zC = oC.current;
-        oC.current = {
-          growOnClick: CC.growOnClick,
-          forGuns: CC.forGuns
-        }, (CC.growOnClick && !zC.growOnClick || CC.forGuns && !zC.forGuns) && fC(!0)
-      }), [CC.growOnClick, CC.forGuns]), (0, QC.useEffect)((() => {
-        if (!nC) return;
-        const CC = setTimeout((() => {
-          fC(!1)
+      (0, Xk.useEffect)((() => {
+        const Fk = ak.current;
+        ak.current = {
+          growOnClick: kk.growOnClick,
+          forGuns: kk.forGuns
+        }, (kk.growOnClick && !Fk.growOnClick || kk.forGuns && !Fk.forGuns) && lk(!0)
+      }), [kk.growOnClick, kk.forGuns]), (0, Xk.useEffect)((() => {
+        if (!yk) return;
+        const kk = setTimeout((() => {
+          lk(!1)
         }), 600);
         return () => {
-          clearTimeout(CC)
+          clearTimeout(kk)
         }
-      }), [nC]);
-      const qC = ZC || nC;
+      }), [yk]);
+      const qk = Ik || yk;
       return {
         view: {
-          pressed: qC,
-          spread: qC && CC.forGuns && !CC.growOnClick ? 6 : 0
+          pressed: qk,
+          spread: qk && kk.forGuns && !kk.growOnClick ? 6 : 0
         },
         handlers: {
-          onPointerDown: CC => {
-            !CC.target.closest(zC) && (0, jZ.d)(CC.currentTarget, CC.pointerId) && wC(!0)
+          onPointerDown: kk => {
+            !kk.target.closest(Fk) && (0, AI.e)(kk.currentTarget, kk.pointerId) && Tk(!0)
           },
-          onPointerUp: bC,
-          onPointerCancel: bC,
-          onLostPointerCapture: bC
+          onPointerUp: ik,
+          onPointerCancel: ik,
+          onLostPointerCapture: ik
         }
       }
     }
 
-    function LZ(CC) {
+    function mI(kk) {
       let {
-        settings: zC,
-        touch: ZC,
-        backdrop: QC,
-        className: wC,
-        children: nC,
-        label: fC
-      } = CC;
-      const oC = yZ(zC, ".CrosshairStageControls");
-      return (0, WC.jsxs)("div", {
-        className: bC()("CrosshairStage", wC),
-        style: cZ(QC),
-        ...oC.handlers,
-        children: [(0, WC.jsx)("div", {
+        settings: Fk,
+        touch: Ik,
+        backdrop: Xk,
+        className: Tk,
+        children: yk,
+        label: lk
+      } = kk;
+      const ak = gI(Fk, ".CrosshairStageControls");
+      return (0, tk.jsxs)("div", {
+        className: ik()("CrosshairStage", Tk),
+        style: CI(Xk),
+        ...ak.handlers,
+        children: [(0, tk.jsx)("div", {
           className: "CrosshairStageHold",
           role: "img",
-          "aria-label": fC,
-          children: (0, WC.jsx)(TZ.d, {
-            settings: zC,
-            touch: ZC,
+          "aria-label": lk,
+          children: (0, tk.jsx)(fI.c, {
+            settings: Fk,
+            touch: Ik,
             inPreview: !0,
-            ...oC.view
+            ...ak.view
           })
-        }), nC]
+        }), yk]
       })
     }
-    const UZ = "crosshairFullScreen";
+    const hI = "crosshairFullScreen";
 
-    function BZ(CC) {
+    function rI(kk) {
       let {
-        settings: zC,
-        touch: ZC,
-        backdrop: wC,
-        onBackdrop: oC,
-        inGame: FC,
-        onChange: NC,
-        onClose: MC
-      } = CC;
+        settings: Fk,
+        touch: Ik,
+        backdrop: Tk,
+        onBackdrop: ak,
+        inGame: Lk,
+        onChange: Zk,
+        onClose: jk
+      } = kk;
       const {
-        t: gC
-      } = (0, nC.y)(), SC = (0, QC.useRef)(null);
-      (0, KZ.u)("popup", SC, MC),
-      function(CC) {
-        const zC = (0, QC.useRef)(CC);
-        zC.current = CC, (0, QC.useEffect)((() => {
+        t: ek
+      } = (0, yk.y)(), wk = (0, Xk.useRef)(null);
+      (0, OI.t)("popup", wk, jk),
+      function(kk) {
+        const Fk = (0, Xk.useRef)(kk);
+        Fk.current = kk, (0, Xk.useEffect)((() => {
           window.history.pushState({
             ...window.history.state,
-            [UZ]: !0
+            [hI]: !0
           }, "");
-          let CC = !1;
-          const ZC = () => {
-            CC = !0, zC.current()
+          let kk = !1;
+          const Ik = () => {
+            kk = !0, Fk.current()
           };
-          return window.addEventListener("popstate", ZC), () => {
-            var zC;
-            window.removeEventListener("popstate", ZC), !CC && null !== (zC = window.history.state) && void 0 !== zC && zC[UZ] && window.history.back()
+          return window.addEventListener("popstate", Ik), () => {
+            var Fk;
+            window.removeEventListener("popstate", Ik), !kk && null !== (Fk = window.history.state) && void 0 !== Fk && Fk[hI] && window.history.back()
           }
         }), [])
-      }(MC);
-      const pC = (0, QC.useRef)(MC);
-      pC.current = MC, (0, QC.useEffect)((() => {
-        function CC(CC) {
-          "Escape" === CC.key && (CC.stopPropagation(), pC.current())
+      }(jk);
+      const Hk = (0, Xk.useRef)(jk);
+      Hk.current = jk, (0, Xk.useEffect)((() => {
+        function kk(kk) {
+          "Escape" === kk.key && (kk.stopPropagation(), Hk.current())
         }
-        return window.addEventListener("keydown", CC, !0), () => {
-          window.removeEventListener("keydown", CC, !0)
+        return window.addEventListener("keydown", kk, !0), () => {
+          window.removeEventListener("keydown", kk, !0)
         }
       }), []);
-      const PC = yZ(zC, ".CrosshairFullScreenPanel"),
-        [GC, RC] = (0, QC.useState)(!0),
-        AC = GC && FC;
-      (0, QC.useEffect)((() => {
-        if (AC) return iC.b.set({
+      const Jk = gI(Fk, ".CrosshairFullScreenPanel"),
+        [xk, Pk] = (0, Xk.useState)(!0),
+        Kk = xk && Lk;
+      (0, Xk.useEffect)((() => {
+        if (Kk) return zk.d.set({
           crosshairGameView: !0
         }), () => {
-          iC.b.set({
+          zk.d.set({
             crosshairGameView: !1
           })
         }
-      }), [AC]);
-      const [xC, JC] = (0, QC.useState)(!0);
-      return (0, hZ.createPortal)((0, WC.jsxs)("div", {
-        ref: SC,
+      }), [Kk]);
+      const [Qk, sk] = (0, Xk.useState)(!0);
+      return (0, EI.createPortal)((0, tk.jsxs)("div", {
+        ref: wk,
         className: "CrosshairFullScreen",
-        style: AC ? void 0 : cZ(wC),
-        ...PC.handlers,
-        children: [(0, WC.jsx)(TZ.d, {
-          settings: zC,
-          touch: ZC,
+        style: Kk ? void 0 : CI(Tk),
+        ...Jk.handlers,
+        children: [(0, tk.jsx)(fI.c, {
+          settings: Fk,
+          touch: Ik,
           inEditor: !0,
-          ...PC.view
-        }), (0, WC.jsxs)("div", {
-          className: bC()("CrosshairFullScreenPanel", {
-            Collapsed: !xC
+          ...Jk.view
+        }), (0, tk.jsxs)("div", {
+          className: ik()("CrosshairFullScreenPanel", {
+            Collapsed: !Qk
           }),
-          children: [(0, WC.jsxs)("div", {
+          children: [(0, tk.jsxs)("div", {
             className: "CrosshairFullScreenBar",
-            children: [(0, WC.jsx)(tZ, {
-              backdrop: wC,
-              onChange: CC => {
-                RC(!1), oC(CC)
+            children: [(0, tk.jsx)(dI, {
+              backdrop: Tk,
+              onChange: kk => {
+                Pk(!1), ak(kk)
               },
-              game: FC ? {
-                selected: AC,
+              game: Lk ? {
+                selected: Kk,
                 onSelect: () => {
-                  RC(!0)
+                  Pk(!0)
                 }
               } : void 0
-            }), (0, WC.jsx)(qC.O, {
+            }), (0, tk.jsx)(qk.Q, {
               className: "CrosshairPanelToggle",
-              ariaLabel: gC(xC ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
+              ariaLabel: ek(Qk ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
               onClick: () => {
-                JC(!xC)
+                sk(!Qk)
               },
-              children: (0, WC.jsx)(fC.c, {
-                name: xC ? "caret-up" : "pen"
+              children: (0, tk.jsx)(lk.e, {
+                name: Qk ? "caret-up" : "pen"
               })
-            }), (0, WC.jsx)(qC.g, {
+            }), (0, tk.jsx)(qk.d, {
               className: "CrosshairFullScreenDone",
-              onClick: MC,
+              onClick: jk,
               padDefaultFocus: !0,
-              children: gC("crosshairSettings:done")
+              children: ek("crosshairSettings:done")
             })]
-          }), xC && (0, WC.jsxs)("div", {
+          }), Qk && (0, tk.jsxs)("div", {
             className: "CrosshairFullScreenFields",
-            children: [(0, WC.jsx)(DZ, {
-              settings: zC,
-              touch: ZC,
-              backdrop: wC,
-              onChange: NC
-            }), (0, WC.jsx)(eZ, {
-              settings: zC,
-              onChange: NC
+            children: [(0, tk.jsx)(YI, {
+              settings: Fk,
+              touch: Ik,
+              backdrop: Tk,
+              onChange: Zk
+            }), (0, tk.jsx)(vI, {
+              settings: Fk,
+              onChange: Zk
             })]
           })]
         })]
       }), document.body)
     }
-    var OZ = ZC(2659),
-      kZ = ZC(34134);
+    var DI = Ik(2602),
+      MI = Ik(34143);
 
-    function VZ(CC) {
+    function kX(kk) {
       let {
-        settings: zC,
-        onChange: ZC
-      } = CC;
+        settings: Fk,
+        onChange: Ik
+      } = kk;
       const {
-        t: wC
-      } = (0, nC.y)(), oC = (0, kZ.g)(zC), [FC, NC] = (0, OZ.i)(), [MC, gC] = (0, QC.useState)(!1), SC = (0, QC.useRef)(null), [pC, PC] = (0, OZ.i)(), [GC, RC] = (0, QC.useState)(!1);
-      return (0, WC.jsxs)("div", {
+        t: Tk
+      } = (0, yk.y)(), ak = (0, MI.h)(Fk), [Lk, Zk] = (0, DI.g)(), [jk, ek] = (0, Xk.useState)(!1), wk = (0, Xk.useRef)(null), [Hk, Jk] = (0, DI.g)(), [xk, Pk] = (0, Xk.useState)(!1);
+      return (0, tk.jsxs)("div", {
         className: "SettingBox CrosshairShare",
-        children: [(0, WC.jsxs)("div", {
+        children: [(0, tk.jsxs)("div", {
           className: "CrosshairShareRow",
-          children: [(0, WC.jsxs)(qC.O, {
-            className: bC()("CrosshairCopy", {
-              ActiveSecondaryButton: FC
+          children: [(0, tk.jsxs)(qk.Q, {
+            className: ik()("CrosshairCopy", {
+              ActiveSecondaryButton: Lk
             }),
             onClick: () => {
-              (0, OZ.f)(oC, {
+              (0, DI.e)(ak, {
                 useShareSheet: !1,
-                onOutcome: CC => {
-                  gC("failed" === CC), "copied" === CC && NC()
+                onOutcome: kk => {
+                  ek("failed" === kk), "copied" === kk && Zk()
                 }
               })
             },
-            children: [(0, WC.jsx)(fC.c, {
-              name: FC ? "check" : "copy"
-            }), " ", wC(FC ? "general:copied" : "crosshairSettings:copy")]
-          }), (0, WC.jsx)(xC.c, {
+            children: [(0, tk.jsx)(lk.e, {
+              name: Lk ? "check" : "copy"
+            }), " ", Tk(Lk ? "general:copied" : "crosshairSettings:copy")]
+          }), (0, tk.jsx)(Qk.c, {
             className: "CrosshairPaste",
-            domRef: SC,
-            ariaLabel: wC("crosshairSettings:paste"),
-            placeholderText: wC("crosshairSettings:paste"),
-            onValueChange: CC => {
-              const zC = (0, kZ.c)(CC);
-              RC(!zC && CC.trim().length >= kZ.b), zC && (ZC(zC), SC.current.value = "", PC())
+            domRef: wk,
+            ariaLabel: Tk("crosshairSettings:paste"),
+            placeholderText: Tk("crosshairSettings:paste"),
+            onValueChange: kk => {
+              const Fk = (0, MI.f)(kk);
+              Pk(!Fk && kk.trim().length >= MI.e), Fk && (Ik(Fk), wk.current.value = "", Jk())
             }
           })]
-        }), MC && (0, WC.jsx)("input", {
+        }), jk && (0, tk.jsx)("input", {
           className: "CrosshairCode",
           readOnly: !0,
-          value: oC,
-          "aria-label": wC("crosshairSettings:copy"),
-          onFocus: CC => {
-            CC.currentTarget.select()
+          value: ak,
+          "aria-label": Tk("crosshairSettings:copy"),
+          onFocus: kk => {
+            kk.currentTarget.select()
           }
-        }), (0, WC.jsxs)("div", {
+        }), (0, tk.jsxs)("div", {
           "aria-live": "polite",
-          children: [GC && (0, WC.jsx)("div", {
+          children: [xk && (0, tk.jsx)("div", {
             className: "CrosshairShareNote Error",
-            children: wC("crosshairSettings:pasteInvalid")
-          }), pC && !GC && (0, WC.jsx)("div", {
+            children: Tk("crosshairSettings:pasteInvalid")
+          }), Hk && !xk && (0, tk.jsx)("div", {
             className: "CrosshairShareNote",
-            children: wC("crosshairSettings:applied")
+            children: Tk("crosshairSettings:applied")
           })]
         })]
       })
     }
-    var CQ = ZC(34141);
-    let zQ = "sky";
+    var FX = Ik(34148);
+    let IX = "sky";
 
-    function ZQ(CC) {
+    function XX(kk) {
       let {
-        showing: zC
-      } = CC;
+        showing: Fk
+      } = kk;
       const {
-        t: ZC
-      } = (0, nC.y)(), {
-        isTouchScreen: wC,
-        gameState: bC,
-        clientEscMenuOptions: oC
-      } = (0, iC.k)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), FC = (0, CQ.f)(), [NC, MC] = (0, QC.useState)(zQ), gC = CC => {
-        zQ = CC, MC(CC)
-      }, [SC, pC] = (0, QC.useState)(!1);
-      return (0, QC.useEffect)((() => {
-        zC || pC(!1)
-      }), [zC]), (0, WC.jsxs)("div", {
+        t: Ik
+      } = (0, yk.y)(), {
+        isTouchScreen: Tk,
+        gameState: ik,
+        clientEscMenuOptions: ak
+      } = (0, zk.j)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), Lk = (0, FX.f)(), [Zk, jk] = (0, Xk.useState)(IX), ek = kk => {
+        IX = kk, jk(kk)
+      }, [wk, Hk] = (0, Xk.useState)(!1);
+      return (0, Xk.useEffect)((() => {
+        Fk || Hk(!1)
+      }), [Fk]), (0, tk.jsxs)("div", {
         className: "SettingsMenuRightInner CrosshairCategory",
-        children: [(0, WC.jsx)("div", {
+        children: [(0, tk.jsx)("div", {
           className: "CrosshairPreviewSticky",
-          children: (0, WC.jsx)(LZ, {
+          children: (0, tk.jsx)(mI, {
             className: "CrosshairPreviewStage",
-            settings: FC,
-            touch: wC,
-            backdrop: NC,
-            label: ZC("crosshairSettings:preview"),
-            children: (0, WC.jsxs)("div", {
+            settings: Lk,
+            touch: Tk,
+            backdrop: Zk,
+            label: Ik("crosshairSettings:preview"),
+            children: (0, tk.jsxs)("div", {
               className: "CrosshairPreviewBar CrosshairStageControls",
-              children: [(0, WC.jsx)(tZ, {
-                backdrop: NC,
-                onChange: gC
-              }), (0, WC.jsxs)(qC.O, {
+              children: [(0, tk.jsx)(dI, {
+                backdrop: Zk,
+                onChange: ek
+              }), (0, tk.jsxs)(qk.Q, {
                 className: "CrosshairFullScreenButton",
                 onClick: () => {
-                  pC(!0)
+                  Hk(!0)
                 },
-                children: [(0, WC.jsx)(fC.c, {
+                children: [(0, tk.jsx)(lk.e, {
                   name: "expand"
-                }), " ", ZC("crosshairSettings:fullScreen")]
+                }), " ", Ik("crosshairSettings:fullScreen")]
               })]
             })
           })
-        }), (0, WC.jsx)("div", {
+        }), (0, tk.jsx)("div", {
           className: "SettingBox",
-          children: (0, WC.jsx)(DZ, {
-            settings: FC,
-            touch: wC,
-            backdrop: NC,
-            onChange: CQ.d
+          children: (0, tk.jsx)(YI, {
+            settings: Lk,
+            touch: Tk,
+            backdrop: Zk,
+            onChange: FX.e
           })
-        }), (0, WC.jsx)(VZ, {
-          settings: FC,
-          onChange: CQ.d
-        }), wC && (0, WC.jsx)(PZ.d, {
-          note: (0, pZ.h)(wC, oC.touchActionButtons) ? ZC("crosshairSettings:touchNote") : void 0
-        }), (0, WC.jsx)(eZ, {
-          settings: FC,
-          onChange: CQ.d
-        }), SC && (0, WC.jsx)(BZ, {
-          settings: FC,
-          touch: wC,
-          backdrop: NC,
-          onBackdrop: gC,
-          inGame: "inGame" === bC,
-          onChange: CQ.d,
+        }), (0, tk.jsx)(kX, {
+          settings: Lk,
+          onChange: FX.e
+        }), Tk && (0, tk.jsx)(xI.c, {
+          note: (0, JI.d)(Tk, ak.touchActionButtons) ? Ik("crosshairSettings:touchNote") : void 0
+        }), (0, tk.jsx)(vI, {
+          settings: Lk,
+          onChange: FX.e
+        }), wk && (0, tk.jsx)(rI, {
+          settings: Lk,
+          touch: Tk,
+          backdrop: Zk,
+          onBackdrop: ek,
+          inGame: "inGame" === ik,
+          onChange: FX.e,
           onClose: () => {
-            pC(!1)
+            Hk(!1)
           }
         })]
       })
     }
-    var QQ = ZC(8862),
-      wQ = ZC(1350),
-      bQ = ZC(4933),
-      nQ = ZC(34147),
-      fQ = ZC(4219),
-      oQ = ZC(1884),
-      qQ = ZC(685);
-    const FQ = (0, QC.memo)((function() {
+    var TX = Ik(8851),
+      iX = Ik(1368),
+      yX = Ik(4978),
+      lX = Ik(34155),
+      aX = Ik(4246),
+      qX = Ik(1913),
+      LX = Ik(734);
+    const tX = (0, Xk.memo)((function() {
       const {
-        clientEscMenuOptions: CC
-      } = (0, iC.k)(["clientEscMenuOptions"]), {
-        recording: zC,
-        clipping: ZC,
-        hasClipBuffer: wC
-      } = (0, hz.f)("replayRecorder"), nC = (0, hz.e)("connectedGame", (CC => CC.replay)), fC = (0, fQ.n)(), oC = !1 === (0, SC.h)("canRecordReplays");
-      (0, QC.useEffect)((() => {
-        GC.gameBridge.send("setRecorderPrefs", {
-          clipping: CC.enableClipping,
-          clipSeconds: CC.clipDurationSeconds
+        clientEscMenuOptions: kk
+      } = (0, zk.j)(["clientEscMenuOptions"]), {
+        recording: Fk,
+        clipping: Ik,
+        hasClipBuffer: Tk
+      } = (0, EF.k)("replayRecorder"), yk = (0, EF.i)("connectedGame", (kk => kk.replay)), lk = (0, aX.m)(), ak = !1 === (0, wk.j)("canRecordReplays");
+      (0, Xk.useEffect)((() => {
+        xk.gameBridge.send("setRecorderPrefs", {
+          clipping: kk.enableClipping,
+          clipSeconds: kk.clipDurationSeconds
         })
-      }), [CC.enableClipping, CC.clipDurationSeconds]);
-      const FC = fC || nC,
-        NC = !FC && !oC,
-        MC = zC || NC,
-        gC = NC,
-        pC = gC && ZC && !zC;
+      }), [kk.enableClipping, kk.clipDurationSeconds]);
+      const Lk = lk || yk,
+        Zk = !Lk && !ak,
+        jk = Fk || Zk,
+        ek = Zk,
+        Hk = ek && Ik && !Fk;
 
-      function PC() {
-        MC && GC.gameBridge.send("toggleRecording", null)
+      function Jk() {
+        jk && xk.gameBridge.send("toggleRecording", null)
       }
-      return (0, WC.jsxs)("div", {
+      return (0, tk.jsxs)("div", {
         className: "SettingsMenuRightInner ReplayViewerCategory",
-        children: [(0, WC.jsxs)("div", {
+        children: [(0, tk.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, WC.jsx)("div", {
+          children: [(0, tk.jsx)("div", {
             className: "ReplayViewerCategoryRecordingRow",
-            children: zC ? (0, WC.jsxs)(WC.Fragment, {
-              children: [(0, WC.jsxs)(qC.I, {
+            children: Fk ? (0, tk.jsxs)(tk.Fragment, {
+              children: [(0, tk.jsxs)(qk.G, {
                 className: "ReplayViewerCategoryButton",
-                onClick: PC,
-                disabled: !MC,
-                children: [(0, WC.jsx)("span", {
+                onClick: Jk,
+                disabled: !jk,
+                children: [(0, tk.jsx)("span", {
                   children: "Stop Recording"
-                }), (0, WC.jsx)(oQ.b, {
+                }), (0, tk.jsx)(qX.c, {
                   noaAction: "recordGame"
                 })]
-              }), (0, WC.jsx)(nQ.b, {
+              }), (0, tk.jsx)(lX.b, {
                 className: "ReplayViewerCategoryRecordingIndicator"
               })]
-            }) : (0, WC.jsxs)(qC.g, {
+            }) : (0, tk.jsxs)(qk.d, {
               className: "ReplayViewerCategoryButton",
-              onClick: PC,
-              disabled: !MC,
-              children: [(0, WC.jsx)("span", {
+              onClick: Jk,
+              disabled: !jk,
+              children: [(0, tk.jsx)("span", {
                 children: "Start Recording"
-              }), (0, WC.jsx)(oQ.b, {
+              }), (0, tk.jsx)(qX.c, {
                 noaAction: "recordGame"
               })]
             })
-          }), oC && (0, WC.jsx)("div", {
+          }), ak && (0, tk.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Recording is turned off in this game."
-          }), FC && !zC && (0, WC.jsx)("div", {
+          }), Lk && !Fk && (0, tk.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Close Replay Mode to start recording."
           })]
-        }), (0, WC.jsxs)("div", {
+        }), (0, tk.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, WC.jsx)(IC.b, {
+          children: [(0, tk.jsx)(Vk.e, {
             label: "Enable clipping",
-            checked: CC.enableClipping,
-            disabled: !gC,
-            onClick: function(CC) {
-              gC && iC.b.setClientEscMenuOptions({
-                enableClipping: CC
+            checked: kk.enableClipping,
+            disabled: !ek,
+            onClick: function(kk) {
+              ek && zk.d.setClientEscMenuOptions({
+                enableClipping: kk
               })
             },
-            className: bC()({
-              SettingBoxDisabled: !gC
+            className: ik()({
+              SettingBoxDisabled: !ek
             })
-          }), (0, WC.jsx)(IC.f, {
+          }), (0, tk.jsx)(Vk.j, {
             name: "Clip duration (seconds)",
-            min: qQ.i,
-            max: qQ.f,
-            step: qQ.b,
-            initValue: CC.clipDurationSeconds,
-            onChange: function(CC) {
-              iC.b.setClientEscMenuOptions({
-                clipDurationSeconds: CC
+            min: LX.j,
+            max: LX.f,
+            step: LX.b,
+            initValue: kk.clipDurationSeconds,
+            onChange: function(kk) {
+              zk.d.setClientEscMenuOptions({
+                clipDurationSeconds: kk
               })
             },
             circleInfoText: "Longer clip durations use more memory and may affect performance.",
-            disabled: !gC || !CC.enableClipping
+            disabled: !ek || !kk.enableClipping
           })]
-        }), (0, WC.jsxs)("div", {
+        }), (0, tk.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, WC.jsxs)(qC.g, {
+          children: [(0, tk.jsxs)(qk.d, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              pC && GC.gameBridge.send("saveClip", null)
+              Hk && xk.gameBridge.send("saveClip", null)
             },
-            disabled: !pC,
-            children: [(0, WC.jsx)("span", {
+            disabled: !Hk,
+            children: [(0, tk.jsx)("span", {
               children: "Record clip"
-            }), (0, WC.jsx)(oQ.b, {
+            }), (0, tk.jsx)(qX.c, {
               noaAction: "recordClip"
             })]
-          }), CC.enableClipping && !wC && gC && !zC && (0, WC.jsx)("div", {
+          }), kk.enableClipping && !Tk && ek && !Fk && (0, tk.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clip buffer is filling \u2014 play for a moment, then save."
-          }), zC && (0, WC.jsx)("div", {
+          }), Fk && (0, tk.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clipping pauses while a full recording is active."
           })]
-        }), (0, WC.jsxs)("div", {
+        }), (0, tk.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, WC.jsxs)(qC.g, {
+          children: [(0, tk.jsxs)(qk.d, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              (0, fQ.j)(!0), iC.b.set({
+              (0, aX.j)(!0), zk.d.set({
                 openEverythingMenuName: null
               })
             },
-            disabled: fC,
-            children: [(0, WC.jsx)("span", {
+            disabled: lk,
+            children: [(0, tk.jsx)("span", {
               children: "Open Replay Mode"
-            }), (0, WC.jsx)(oQ.b, {
+            }), (0, tk.jsx)(qX.c, {
               noaAction: "replayViewerOpen"
             })]
-          }), fC && (0, WC.jsx)("div", {
+          }), lk && (0, tk.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Replay Mode is already open."
           })]
-        }), (0, WC.jsxs)("div", {
+        }), (0, tk.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, WC.jsx)("div", {
+          children: [(0, tk.jsx)("div", {
             className: "ReplayViewerCategoryTutorialTitle",
             children: "How to use Replay Mode"
-          }), (0, WC.jsx)("iframe", {
+          }), (0, tk.jsx)("iframe", {
             className: "ReplayViewerCategoryTutorial",
             src: "https://www.youtube.com/embed/-FsT0rNSuYA?playsinline=1&rel=0",
             title: "How to use Replay Mode",
@@ -2395,8 +2395,8 @@ export const modules = {
         })]
       })
     }));
-    var WQ = ZC(1806);
-    const NQ = {
+    var ZX = Ik(1844);
+    const jX = {
       account: {
         icon: "fa-solid fa-user",
         displayName: "homePage:account"
@@ -2418,11 +2418,11 @@ export const modules = {
         displayName: "settingsMenu:graphics"
       },
       controls: {
-        icon: () => (0, WC.jsx)("svg", {
+        icon: () => (0, tk.jsx)("svg", {
           className: "svg-inline--fa",
           viewBox: "0 0 640 512",
           "aria-hidden": "true",
-          children: (0, WC.jsx)("path", {
+          children: (0, tk.jsx)("path", {
             fill: "currentColor",
             d: "M256 20H384A36 36 0 0 1 420 56V208A36 36 0 0 1 384 244H256A36 36 0 0 1 220 208V56A36 36 0 0 1 256 20ZM262 166L378 166L320 90ZM36 268H164A36 36 0 0 1 200 304V456A36 36 0 0 1 164 492H36A36 36 0 0 1 0 456V304A36 36 0 0 1 36 268ZM134 438L134 322L58 380ZM256 268H384A36 36 0 0 1 420 304V456A36 36 0 0 1 384 492H256A36 36 0 0 1 220 456V304A36 36 0 0 1 256 268ZM378 346L262 346L320 422ZM476 268H604A36 36 0 0 1 640 304V456A36 36 0 0 1 604 492H476A36 36 0 0 1 440 456V304A36 36 0 0 1 476 268ZM506 322L506 438L582 380Z"
           })
@@ -2441,7 +2441,7 @@ export const modules = {
         icon: "fa-solid fa-folder-image",
         displayName: "settingsMenu:texturePack"
       },
-      zg: {
+      ke: {
         icon: "fa-solid fa-sparkle",
         displayName: "settingsMenu:shaderPack"
       },
@@ -2467,291 +2467,291 @@ export const modules = {
       }
     };
 
-    function MQ() {
-      return Promise.all([ZC.e(77), ZC.e(133), ZC.e(132), ZC.e(129)]).then((() => ZC(40908))).then((CC => ({
-        default: CC.ShaderPackCategory
-      })), (CC => (console.error("Failed to load the shader pack settings", CC), {
-        default: gQ
+    function eX() {
+      return Promise.all([Ik.e(77), Ik.e(133), Ik.e(132), Ik.e(129)]).then((() => Ik(41082))).then((kk => ({
+        default: kk.ShaderPackCategory
+      })), (kk => (console.error("Failed to load the shader pack settings", kk), {
+        default: wX
       })))
     }
 
-    function gQ() {
+    function wX() {
       const {
-        t: CC
-      } = (0, nC.y)();
-      return (0, WC.jsx)("div", {
+        t: kk
+      } = (0, yk.y)();
+      return (0, tk.jsx)("div", {
         className: "SettingsMenuRightInner",
-        children: CC("shaderPack:tabLoadFailed")
+        children: kk("shaderPack:tabLoadFailed")
       })
     }
-    var SQ = ZC(1347);
-    const pQ = (0, QC.lazy)((() => ZC.e(273).then((() => ZC(40893))).then((CC => ({
-        default: CC.BloxdInformation
+    var HX = Ik(1364);
+    const JX = (0, Xk.lazy)((() => Ik.e(273).then((() => Ik(41070))).then((kk => ({
+        default: kk.BloxdInformation
       }))))),
-      PQ = (0, QC.lazy)(MQ);
+      xX = (0, Xk.lazy)(eX);
 
-    function GQ(CC) {
-      return CC ? "general" : "account"
+    function PX(kk) {
+      return kk ? "general" : "account"
     }
-    const RQ = new Map,
-      AQ = (0, QC.memo)((function(CC) {
+    const KX = new Map,
+      QX = (0, Xk.memo)((function(kk) {
         let {
-          show: zC,
-          setBeforeResumeCallback: ZC
-        } = CC;
-        (0, pC.c)();
+          show: Fk,
+          setBeforeResumeCallback: Ik
+        } = kk;
+        (0, Hk.c)();
         const {
-          gameState: wC,
-          openSettingsCategory: bC
-        } = (0, iC.k)(["gameState", "openSettingsCategory"]), {
-          userContext: oC
-        } = (0, gC.e)(), {
-          t: FC
-        } = (0, nC.y)(), xC = (0, MC.b)(), JC = (0, SC.h)("minChunkAddDist"), IC = "inGame" === wC, [vC, KC] = (0, QC.useState)(GQ(IC)), [YC, dC] = (0, QC.useState)(null), [mC, HC] = (0, QC.useState)([]), EC = (0, QC.useRef)(function() {
-          const CC = new Date,
-            zC = 6 * (CC.getMonth() + CC.getDate()) % Fz.v.length;
-          return [...Fz.v, ...Fz.v].slice(zC, zC + 6)
-        }()), lC = (0, QC.useRef)(null), XC = (0, Xz.f)(wQ.i, (0, wQ.d)()), cC = Object.keys(NQ).filter((CC => {
-          switch (CC) {
+          gameState: Tk,
+          openSettingsCategory: ik
+        } = (0, zk.j)(["gameState", "openSettingsCategory"]), {
+          userContext: ak
+        } = (0, ek.d)(), {
+          t: Lk
+        } = (0, yk.y)(), Qk = (0, jk.c)(), sk = (0, wk.j)("minChunkAddDist"), Vk = "inGame" === Tk, [Sk, Ok] = (0, Xk.useState)(PX(Vk)), [nk, Gk] = (0, Xk.useState)(null), [pk, uk] = (0, Xk.useState)([]), bk = (0, Xk.useRef)(function() {
+          const kk = new Date,
+            Fk = 6 * (kk.getMonth() + kk.getDate()) % tF.y.length;
+          return [...tF.y, ...tF.y].slice(Fk, Fk + 6)
+        }()), Rk = (0, Xk.useRef)(null), Uk = (0, UF.f)(iX.i, (0, iX.c)()), Ck = Object.keys(jX).filter((kk => {
+          switch (kk) {
             case "replayViewer":
-              return IC;
+              return Vk;
             case "developerTools":
-              return oC.playerHasRank("developer") || !1;
+              return ak.playerHasRank("developer") || !1;
             case "texturePack":
-              return PC.featureFlags.settings.canChangeTexturePack;
-            case "zg":
-              return PC.featureFlags.settings.canUseShaderPacks;
+              return Jk.featureFlags.settings.canChangeTexturePack;
+            case "ke":
+              return Jk.featureFlags.settings.canUseShaderPacks;
             case "notifications":
-              return PC.featureFlags.useSocialFeatures || null !== oC.dailyDrop;
+              return Jk.featureFlags.useSocialFeatures || null !== ak.dailyDrop;
             case "alternativeDomains":
-              return "crazygames" !== hC.y;
+              return "crazygames" !== Ek.v;
             case "controller":
-              return PC.featureFlags.useControllerSupport && (XC || "controller" === vC);
+              return Jk.featureFlags.useControllerSupport && (Uk || "controller" === Sk);
             default:
               return !0
           }
         }));
-        (0, Xz.c)("toggleFullCoordinateOverlay", (() => {
-          const CC = fZ("showCoordinates") && fZ("showChunkCoordinates") && fZ("showFPS");
-          oZ("showCoordinates", !CC), oZ("showChunkCoordinates", !CC), oZ("showFPS", !CC), xC()
-        })), (0, Xz.c)("updatedChunkLoadDist", (() => {
-          xC()
-        })), (0, QC.useEffect)((() => {
-          if (dC(null), null === iC.b.get("openSettingsCategory")) {
-            const CC = (0, SQ.h)() ? RQ.get(IC) : void 0;
-            KC(CC && cC.includes(CC) ? CC : GQ(IC))
+        (0, UF.d)("toggleFullCoordinateOverlay", (() => {
+          const kk = aI("showCoordinates") && aI("showChunkCoordinates") && aI("showFPS");
+          qI("showCoordinates", !kk), qI("showChunkCoordinates", !kk), qI("showFPS", !kk), Qk()
+        })), (0, UF.d)("updatedChunkLoadDist", (() => {
+          Qk()
+        })), (0, Xk.useEffect)((() => {
+          if (Gk(null), null === zk.d.get("openSettingsCategory")) {
+            const kk = (0, HX.f)() ? KX.get(Vk) : void 0;
+            Ok(kk && Ck.includes(kk) ? kk : PX(Vk))
           }
-        }), [zC]), (0, QC.useEffect)((() => {
-          null !== bC && (KC(bC), RQ.set(IC, bC), iC.b.set({
+        }), [Fk]), (0, Xk.useEffect)((() => {
+          null !== ik && (Ok(ik), KX.set(Vk, ik), zk.d.set({
             openSettingsCategory: null
           }))
-        }), [bC, IC]), (0, QC.useLayoutEffect)((() => {
-          lC.current && (lC.current.scrollTop = 0)
-        }), [vC, zC]), (0, QC.useEffect)((() => {
-          "updateLog" === vC && (0, AC.e)().then(HC)
-        }), [vC]), (0, QC.useEffect)((() => {
-          if ((0, CZ.H)(JC)) return;
-          const [CC, zC] = (0, gZ.h)(), [ZC, QC] = (0, Lz.f)(JC), wC = (0, WQ.c)(JC[0], CC, ZC), bC = (0, WQ.c)(JC[1], zC, QC);
-          GC.gameBridge.send("setChunkAddDistance", {
-            horizontal: wC,
-            vertical: bC
+        }), [ik, Vk]), (0, Xk.useLayoutEffect)((() => {
+          Rk.current && (Rk.current.scrollTop = 0)
+        }), [Sk, Fk]), (0, Xk.useEffect)((() => {
+          "updateLog" === Sk && (0, Kk.d)().then(uk)
+        }), [Sk]), (0, Xk.useEffect)((() => {
+          if ((0, FI.Q)(sk)) return;
+          const [kk, Fk] = (0, wI.e)(), [Ik, Xk] = (0, mF.c)(sk), Tk = (0, ZX.e)(sk[0], kk, Ik), ik = (0, ZX.e)(sk[1], Fk, Xk);
+          xk.gameBridge.send("setChunkAddDistance", {
+            horizontal: Tk,
+            vertical: ik
           })
-        }), [JC]);
-        const uC = (0, QC.useCallback)((async () => {
-          YC && (await YC(), dC(null))
-        }), [YC]);
+        }), [sk]);
+        const Nk = (0, Xk.useCallback)((async () => {
+          nk && (await nk(), Gk(null))
+        }), [nk]);
 
-        function rC() {
-          iC.b.set({
+        function ck() {
+          zk.d.set({
             openEverythingMenuName: null
           })
         }
-        return (0, QC.useEffect)((() => {
-          ZC((() => uC))
-        }), [uC, ZC]), (0, WC.jsxs)("div", {
+        return (0, Xk.useEffect)((() => {
+          Ik((() => Nk))
+        }), [Nk, Ik]), (0, tk.jsxs)("div", {
           className: "SettingsMenu Menu",
-          style: zC ? {} : {
+          style: Fk ? {} : {
             display: "none"
           },
-          children: [(0, WC.jsx)("div", {
+          children: [(0, tk.jsx)("div", {
             className: "MenuSideBar",
-            children: (0, WC.jsx)("div", {
+            children: (0, tk.jsx)("div", {
               className: "MenuSideBarBody",
-              children: (0, WC.jsx)(NC, {
-                items: cC.map((CC => {
-                  const zC = NQ[CC].icon;
+              children: (0, tk.jsx)(Zk, {
+                items: Ck.map((kk => {
+                  const Fk = jX[kk].icon;
                   return {
-                    id: CC,
-                    faIcon: "string" === typeof zC ? zC : void 0,
-                    iconElement: "string" === typeof zC ? void 0 : (0, WC.jsx)(zC, {}),
-                    title: FC(NQ[CC].displayName),
+                    id: kk,
+                    faIcon: "string" === typeof Fk ? Fk : void 0,
+                    iconElement: "string" === typeof Fk ? void 0 : (0, tk.jsx)(Fk, {}),
+                    title: Lk(jX[kk].displayName),
                     redDot: !1
                   }
                 })),
-                selectedItemId: vC,
-                onClick: CC => {
-                  !async function(CC) {
-                    await uC(), KC(CC), RQ.set(IC, CC)
-                  }(CC)
+                selectedItemId: Sk,
+                onClick: kk => {
+                  !async function(kk) {
+                    await Nk(), Ok(kk), KX.set(Vk, kk)
+                  }(kk)
                 }
               })
             })
-          }), (0, WC.jsxs)("div", {
-            ref: lC,
+          }), (0, tk.jsxs)("div", {
+            ref: Rk,
             className: "MenuBody SettingsMenuRight",
-            children: ["account" === vC && (0, WC.jsx)(xz, {
-              showing: zC,
-              inGame: IC
-            }), "general" === vC && (0, WC.jsx)(Hz, {
-              inGame: IC
-            }), "audio" === vC && (0, WC.jsx)(Ez, {}), "notifications" === vC && (0, WC.jsx)(yz, {}), "graphics" === vC && (0, WC.jsx)(MZ, {
-              minChunkAddDist: null !== JC && void 0 !== JC ? JC : [2, 2],
-              getValue: fZ,
-              onChange: oZ,
-              setApplySettingsCallback: dC
-            }), "controls" === vC && (0, WC.jsx)(SZ.e, {}), "crosshair" === vC && (0, WC.jsx)(ZQ, {
-              showing: zC
-            }), "controller" === vC && PC.featureFlags.useControllerSupport && (0, WC.jsx)(QQ.c, {}), PC.featureFlags.settings.canChangeTexturePack && "texturePack" === vC && (0, WC.jsx)(bQ.e, {
-              setApplySettingsCallback: dC
-            }), PC.featureFlags.settings.canUseShaderPacks && "zg" === vC && (0, WC.jsx)(QC.Suspense, {
+            children: ["account" === Sk && (0, tk.jsx)(sF, {
+              showing: Fk,
+              inGame: Vk
+            }), "general" === Sk && (0, tk.jsx)(uF, {
+              inGame: Vk
+            }), "audio" === Sk && (0, tk.jsx)(bF, {}), "notifications" === Sk && (0, tk.jsx)(gF, {}), "graphics" === Sk && (0, tk.jsx)(eI, {
+              minChunkAddDist: null !== sk && void 0 !== sk ? sk : [2, 2],
+              getValue: aI,
+              onChange: qI,
+              setApplySettingsCallback: Gk
+            }), "controls" === Sk && (0, tk.jsx)(HI.d, {}), "crosshair" === Sk && (0, tk.jsx)(XX, {
+              showing: Fk
+            }), "controller" === Sk && Jk.featureFlags.useControllerSupport && (0, tk.jsx)(TX.b, {}), Jk.featureFlags.settings.canChangeTexturePack && "texturePack" === Sk && (0, tk.jsx)(yX.d, {
+              setApplySettingsCallback: Gk
+            }), Jk.featureFlags.settings.canUseShaderPacks && "ke" === Sk && (0, tk.jsx)(Xk.Suspense, {
               fallback: null,
-              children: (0, WC.jsx)(PQ, {
-                setApplySettingsCallback: dC
+              children: (0, tk.jsx)(xX, {
+                setApplySettingsCallback: Gk
               })
-            }), "updateLog" === vC && (0, WC.jsx)("div", {
+            }), "updateLog" === Sk && (0, tk.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, WC.jsx)("div", {
+              children: (0, tk.jsx)("div", {
                 className: "UpdateLogsContainer",
-                children: mC.map(((CC, zC) => (0, WC.jsx)(RC.c, {
-                  updateLog: CC,
-                  index: zC,
-                  close: rC
-                }, zC)))
+                children: pk.map(((kk, Fk) => (0, tk.jsx)(Pk.b, {
+                  updateLog: kk,
+                  index: Fk,
+                  close: ck
+                }, Fk)))
               })
-            }), "information" === vC && (0, WC.jsx)("div", {
+            }), "information" === Sk && (0, tk.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, WC.jsx)(QC.Suspense, {
+              children: (0, tk.jsx)(Xk.Suspense, {
                 fallback: null,
-                children: (0, WC.jsx)(pQ, {})
+                children: (0, tk.jsx)(JX, {})
               })
-            }), "alternativeDomains" === vC && (0, WC.jsxs)("div", {
+            }), "alternativeDomains" === Sk && (0, tk.jsxs)("div", {
               className: "SettingsMenuRightInner",
-              children: [(0, WC.jsx)("div", {
+              children: [(0, tk.jsx)("div", {
                 className: "AlternativeDomainsTitle",
-                children: FC("settingsMenu:unblockedDomainsDescription")
-              }), (0, WC.jsx)("div", {
+                children: Lk("settingsMenu:unblockedDomainsDescription")
+              }), (0, tk.jsx)("div", {
                 className: "AlternativeDomainsList",
-                children: EC.current.map((CC => (0, WC.jsxs)(qC.g, {
+                children: bk.current.map((kk => (0, tk.jsxs)(qk.d, {
                   onClick: () => {
-                    window.open(`https://${CC}`)
+                    window.open(`https://${kk}`)
                   },
-                  children: [(0, WC.jsx)(fC.c, {
+                  children: [(0, tk.jsx)(lk.e, {
                     name: "arrow-up-right-from-square"
-                  }), " ", CC]
-                }, CC)))
+                  }), " ", kk]
+                }, kk)))
               })]
-            }), "replayViewer" === vC && (0, WC.jsx)(FQ, {}), "developerTools" === vC && (0, WC.jsx)("div", {
+            }), "replayViewer" === Sk && (0, tk.jsx)(tX, {}), "developerTools" === Sk && (0, tk.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, WC.jsx)(eC, {
-                setApplySettingsCallback: dC
+              children: (0, tk.jsx)(vk, {
+                setApplySettingsCallback: Gk
               })
-            }), null !== YC && (0, WC.jsx)("div", {
+            }), null !== nk && (0, tk.jsx)("div", {
               className: "SettingsMenuRightFooter",
-              children: (0, WC.jsx)(qC.g, {
+              children: (0, tk.jsx)(qk.d, {
                 className: "SettingsMenuRightFooterButton",
-                onClick: uC,
-                children: FC("general:apply")
+                onClick: Nk,
+                children: Lk("general:apply")
               })
             })]
           })]
         })
       }));
-    var xQ = ZC(2604);
-    const JQ = ["characters", "emote", "skin", "hat", "head", "eyebrows", "eyes", "back", "body", "legs", "shoes", "profileEffect", "cape", "nameColour"],
-      IQ = (0, QC.lazy)((() => Promise.resolve().then((() => ZC(4591))).then((CC => {
-        CC.needGameClientAfterPaint();
-        const zC = CC.matchmakingLibrariesPromise.then((CC => (0, xQ.e)(CC.loadCharacterCustomisationUI(), (CC => CC.CharacterCustomisationUI))));
-        return Promise.all([CC.ensureGameSetup(), zC]).then((CC => {
-          let [, zC] = CC;
-          return zC
+    var sX = Ik(2546);
+    const VX = ["characters", "emote", "skin", "hat", "head", "eyebrows", "eyes", "back", "body", "legs", "shoes", "profileEffect", "cape", "nameColour"],
+      zX = (0, Xk.lazy)((() => Promise.resolve().then((() => Ik(4645))).then((kk => {
+        kk.needGameClientAfterPaint();
+        const Fk = kk.matchmakingLibrariesPromise.then((kk => (0, sX.e)(kk.loadCharacterCustomisationUI(), (kk => kk.CharacterCustomisationUI))));
+        return Promise.all([kk.ensureGameSetup(), Fk]).then((kk => {
+          let [, Fk] = kk;
+          return Fk
         }))
       })))),
-      iQ = "openCustomisationTab";
+      SX = "openCustomisationTab";
 
-    function vQ(CC) {
-      var zC, ZC, wC;
+    function oX(kk) {
+      var Fk, Ik, Tk;
       let {
-        show: bC
-      } = CC;
+        show: ik
+      } = kk;
       const {
-        userContext: nC
-      } = (0, gC.e)(), fC = (0, QC.useRef)(null);
-      var oC, qC;
-      nC !== KC.NULL_USER_CONTEXT && (null === (zC = fC.current) || void 0 === zC ? void 0 : zC.whamm) !== nC.whamm && (fC.current = {
-        whamm: nC.whamm,
-        mountKey: (null !== (oC = null === (qC = fC.current) || void 0 === qC ? void 0 : qC.mountKey) && void 0 !== oC ? oC : -1) + 1
+        userContext: yk
+      } = (0, ek.d)(), lk = (0, Xk.useRef)(null);
+      var ak, qk;
+      yk !== Ok.NULL_USER_CONTEXT && (null === (Fk = lk.current) || void 0 === Fk ? void 0 : Fk.whamm) !== yk.whamm && (lk.current = {
+        whamm: yk.whamm,
+        mountKey: (null !== (ak = null === (qk = lk.current) || void 0 === qk ? void 0 : qk.mountKey) && void 0 !== ak ? ak : -1) + 1
       });
-      const [FC, MC] = (0, QC.useState)("characters");
-      if ((0, Xz.c)(iQ, MC), !bC) return null;
-      const SC = JQ.filter((CC => "cape" !== CC && "nameColour" !== CC || nC.getPlayerRanks().includes("super") || (0, sC.purchasesAllowed)())).map((CC => ({
-        id: CC,
-        faIcon: Fz.E[CC],
-        title: Fz.F[CC],
+      const [Lk, jk] = (0, Xk.useState)("characters");
+      if ((0, UF.d)(SX, jk), !ik) return null;
+      const wk = VX.filter((kk => "cape" !== kk && "nameColour" !== kk || yk.getPlayerRanks().includes("super") || (0, Wk.purchasesAllowed)())).map((kk => ({
+        id: kk,
+        faIcon: tF.H[kk],
+        title: tF.K[kk],
         redDot: !1
       })));
-      return (0, WC.jsxs)("div", {
+      return (0, tk.jsxs)("div", {
         className: "Menu CharCustomisation",
-        children: [(0, WC.jsx)("div", {
+        children: [(0, tk.jsx)("div", {
           className: "MenuSideBar",
-          children: (0, WC.jsx)(NC, {
-            items: SC,
-            selectedItemId: FC,
-            onClick: CC => {
-              MC(CC)
+          children: (0, tk.jsx)(Zk, {
+            items: wk,
+            selectedItemId: Lk,
+            onClick: kk => {
+              jk(kk)
             }
           })
-        }), (0, WC.jsx)("div", {
+        }), (0, tk.jsx)("div", {
           className: "MenuBody",
-          children: (0, WC.jsx)(QC.Suspense, {
-            fallback: (0, WC.jsx)("div", {
+          children: (0, tk.jsx)(Xk.Suspense, {
+            fallback: (0, tk.jsx)("div", {
               className: "CharacterCustomisationLoading",
-              children: (0, WC.jsx)(JC.d, {})
+              children: (0, tk.jsx)(sk.c, {})
             }),
-            children: (0, WC.jsx)(IQ, {
-              selectedTab: FC
-            }, null !== (ZC = null === (wC = fC.current) || void 0 === wC ? void 0 : wC.mountKey) && void 0 !== ZC ? ZC : 0)
+            children: (0, tk.jsx)(zX, {
+              selectedTab: Lk
+            }, null !== (Ik = null === (Tk = lk.current) || void 0 === Tk ? void 0 : Tk.mountKey) && void 0 !== Ik ? Ik : 0)
           })
         })]
       })
     }
-    var eQ = ZC(1401),
-      hQ = ZC(1410),
-      KQ = ZC(34153),
-      YQ = ZC(4469),
-      dQ = ZC(3405),
-      mQ = ZC(3441),
-      HQ = ZC(34173),
-      EQ = ZC(8776),
-      lQ = ZC(34158),
-      XQ = ZC(34165),
-      cQ = ZC(1822),
-      uQ = ZC(1811),
-      rQ = ZC(4847),
-      sQ = ZC(1209),
-      TQ = ZC(1169),
-      aQ = ZC(1584),
-      tQ = ZC(8847),
-      DQ = ZC(2385),
-      jQ = ZC(2394);
+    var vX = Ik(1422),
+      EX = Ik(1426),
+      OX = Ik(34164),
+      nX = Ik(4516),
+      GX = Ik(3358),
+      pX = Ik(3407),
+      uX = Ik(34202),
+      bX = Ik(8752),
+      RX = Ik(34173),
+      UX = Ik(34188),
+      CX = Ik(1864),
+      NX = Ik(1849),
+      cX = Ik(4911),
+      WX = Ik(1248),
+      fX = Ik(1217),
+      BX = Ik(1604),
+      dX = Ik(8825),
+      YX = Ik(2360),
+      AX = Ik(2363);
 
-    function yQ(CC) {
-      return CC ? Object.keys(CC).sort(((zC, ZC) => {
-        var QC, wC, bC, nC;
-        const fC = (null !== (QC = null === (wC = CC[ZC]) || void 0 === wC ? void 0 : wC.sortPriority) && void 0 !== QC ? QC : 0) - (null !== (bC = null === (nC = CC[zC]) || void 0 === nC ? void 0 : nC.sortPriority) && void 0 !== bC ? bC : 0);
-        return 0 !== fC ? fC : zC.localeCompare(ZC)
+    function gX(kk) {
+      return kk ? Object.keys(kk).sort(((Fk, Ik) => {
+        var Xk, Tk, ik, yk;
+        const lk = (null !== (Xk = null === (Tk = kk[Ik]) || void 0 === Tk ? void 0 : Tk.sortPriority) && void 0 !== Xk ? Xk : 0) - (null !== (ik = null === (yk = kk[Fk]) || void 0 === yk ? void 0 : yk.sortPriority) && void 0 !== ik ? ik : 0);
+        return 0 !== lk ? lk : Fk.localeCompare(Ik)
       })) : []
     }
-    const LQ = [{
+    const mX = [{
       threshold: 1e12,
       suffix: "T"
     }, {
@@ -2765,241 +2765,241 @@ export const modules = {
       suffix: "K"
     }];
 
-    function UQ(CC) {
+    function hX(kk) {
       for (const {
-          threshold: zC,
-          suffix: ZC
+          threshold: Fk,
+          suffix: Ik
         }
-        of LQ)
-        if (CC >= zC) {
-          const QC = CC / zC;
-          return QC >= 100 ? `${Math.floor(QC)}${ZC}` : QC >= 10 ? `${QC.toFixed(1).replace(/\.0$/,"")}${ZC}` : `${QC.toFixed(2).replace(/\.?0+$/,"")}${ZC}`
-        } return String(CC)
+        of mX)
+        if (kk >= Fk) {
+          const Xk = kk / Fk;
+          return Xk >= 100 ? `${Math.floor(Xk)}${Ik}` : Xk >= 10 ? `${Xk.toFixed(1).replace(/\.0$/,"")}${Ik}` : `${Xk.toFixed(2).replace(/\.?0+$/,"")}${Ik}`
+        } return String(kk)
     }
-    var BQ = ZC(4971);
-    const OQ = {
+    var rX = Ik(5016);
+    const DX = {
         normal: "0.8em",
         big: "1em"
       },
-      kQ = (0, QC.memo)((function(CC) {
+      MX = (0, Xk.memo)((function(kk) {
         let {
-          item: zC,
-          amount: ZC = 0,
-          size: QC = "normal",
-          tier: wC = null
-        } = CC;
-        return (0, WC.jsx)("div", {
-          className: bC()("SmpSlot", `SmpSlot-${QC}`),
-          children: zC && (0, WC.jsx)(cQ.e, {
-            itemName: zC,
-            amount: ZC > 1 ? ZC : 0,
-            amountFontSize: OQ[QC],
-            enchantmentTier: wC
+          item: Fk,
+          amount: Ik = 0,
+          size: Xk = "normal",
+          tier: Tk = null
+        } = kk;
+        return (0, tk.jsx)("div", {
+          className: ik()("SmpSlot", `SmpSlot-${Xk}`),
+          children: Fk && (0, tk.jsx)(CX.d, {
+            itemName: Fk,
+            amount: Ik > 1 ? Ik : 0,
+            amountFontSize: DX[Xk],
+            enchantmentTier: Tk
           })
         })
       }));
 
-    function VQ(CC) {
+    function kT(kk) {
       let {
-        amount: zC,
-        exact: ZC = !1,
-        className: QC
-      } = CC;
-      return (0, WC.jsxs)("span", {
-        className: bC()("SmpGold", QC),
-        children: [(0, WC.jsx)("span", {
+        amount: Fk,
+        exact: Ik = !1,
+        className: Xk
+      } = kk;
+      return (0, tk.jsxs)("span", {
+        className: ik()("SmpGold", Xk),
+        children: [(0, tk.jsx)("span", {
           className: "SmpCoin",
-          children: (0, WC.jsx)(cQ.e, {
+          children: (0, tk.jsx)(CX.d, {
             itemName: "Gold Coin",
             amount: 0
           })
-        }), ZC ? zC.toLocaleString("en-US") : UQ(zC)]
+        }), Ik ? Fk.toLocaleString("en-US") : hX(Fk)]
       })
     }
 
-    function Cw(CC) {
+    function FT(kk) {
       let {
-        count: zC = 5,
-        grid: ZC = !1
-      } = CC;
-      return (0, WC.jsx)("div", {
-        className: ZC ? "SmpCardGrid" : "SmpList",
+        count: Fk = 5,
+        grid: Ik = !1
+      } = kk;
+      return (0, tk.jsx)("div", {
+        className: Ik ? "SmpCardGrid" : "SmpList",
         "aria-hidden": "true",
         children: Array.from({
-          length: zC
-        }, ((CC, zC) => (0, WC.jsxs)("div", {
-          className: bC()(ZC ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
-          children: [(0, WC.jsx)("div", {
-            className: bC()("SmpSlot", ZC ? "SmpSlot-big" : "SmpSlot-normal")
-          }), (0, WC.jsxs)("div", {
+          length: Fk
+        }, ((kk, Fk) => (0, tk.jsxs)("div", {
+          className: ik()(Ik ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
+          children: [(0, tk.jsx)("div", {
+            className: ik()("SmpSlot", Ik ? "SmpSlot-big" : "SmpSlot-normal")
+          }), (0, tk.jsxs)("div", {
             className: "SmpRowText",
-            children: [(0, WC.jsx)("b", {}), (0, WC.jsx)("small", {})]
-          }), (0, WC.jsx)("div", {
+            children: [(0, tk.jsx)("b", {}), (0, tk.jsx)("small", {})]
+          }), (0, tk.jsx)("div", {
             className: "SmpSkeletonButton"
           })]
-        }, zC)))
+        }, Fk)))
       })
     }
 
-    function zw(CC) {
+    function IT(kk) {
       let {
-        title: zC,
-        children: ZC
-      } = CC;
-      return (0, WC.jsxs)("div", {
+        title: Fk,
+        children: Ik
+      } = kk;
+      return (0, tk.jsxs)("div", {
         className: "SmpEmpty",
-        children: [(0, WC.jsx)("b", {
-          children: zC
-        }), ZC && (0, WC.jsx)("small", {
-          children: ZC
+        children: [(0, tk.jsx)("b", {
+          children: Fk
+        }), Ik && (0, tk.jsx)("small", {
+          children: Ik
         })]
       })
     }
 
-    function Zw(CC) {
+    function XT(kk) {
       let {
-        entry: zC
-      } = CC;
-      return (0, WC.jsx)(zw, {
-        title: (0, WC.jsx)(uQ.e, {
-          text: zC.item.customTitle
+        entry: Fk
+      } = kk;
+      return (0, tk.jsx)(IT, {
+        title: (0, tk.jsx)(NX.c, {
+          text: Fk.item.customTitle
         }),
-        children: (0, WC.jsx)(uQ.e, {
-          text: zC.item.description
+        children: (0, tk.jsx)(NX.c, {
+          text: Fk.item.description
         })
       })
     }
 
-    function Qw(CC) {
-      return (0, WC.jsx)(BQ.b, {
-        ...CC,
-        className: bC()("SmpChoice", CC.className),
+    function TT(kk) {
+      return (0, tk.jsx)(rX.b, {
+        ...kk,
+        className: ik()("SmpChoice", kk.className),
         reselectable: !0
       })
     }
 
-    function ww() {
-      return (0, WC.jsx)("span", {
+    function iT() {
+      return (0, tk.jsx)("span", {
         className: "SmpLoader",
-        children: (0, WC.jsx)(JC.d, {})
+        children: (0, tk.jsx)(sk.c, {})
       })
     }
 
-    function bw(CC) {
+    function yT(kk) {
       let {
-        value: zC,
-        onChange: ZC,
-        min: wC = 1,
-        max: bC,
-        step: nC = 1,
-        label: fC
-      } = CC;
-      const oC = (0, QC.useRef)(null),
-        qC = (0, QC.useRef)(zC);
-      qC.current = zC;
-      const [FC, NC] = (0, QC.useState)(null), MC = CC => Math.max(wC, Math.min(bC, Math.floor(CC))), gC = CC => {
-        const zC = qC.current,
-          QC = "function" === typeof nC ? nC(zC, CC) : nC,
-          wC = MC(zC + QC * CC);
-        qC.current = wC, ZC(wC)
+        value: Fk,
+        onChange: Ik,
+        min: Tk = 1,
+        max: ik,
+        step: yk = 1,
+        label: lk
+      } = kk;
+      const ak = (0, Xk.useRef)(null),
+        qk = (0, Xk.useRef)(Fk);
+      qk.current = Fk;
+      const [Lk, Zk] = (0, Xk.useState)(null), jk = kk => Math.max(Tk, Math.min(ik, Math.floor(kk))), ek = kk => {
+        const Fk = qk.current,
+          Xk = "function" === typeof yk ? yk(Fk, kk) : yk,
+          Tk = jk(Fk + Xk * kk);
+        qk.current = Tk, Ik(Tk)
       };
-      (0, QC.useEffect)((() => {
-        if (null === FC) return;
-        let CC;
-        const zC = () => {
-            NC(null)
+      (0, Xk.useEffect)((() => {
+        if (null === Lk) return;
+        let kk;
+        const Fk = () => {
+            Zk(null)
           },
-          ZC = setTimeout((() => {
-            CC = setInterval((() => {
-              gC(FC);
-              const CC = qC.current;
-              (FC > 0 ? CC >= bC : CC <= wC) && zC()
+          Ik = setTimeout((() => {
+            kk = setInterval((() => {
+              ek(Lk);
+              const kk = qk.current;
+              (Lk > 0 ? kk >= ik : kk <= Tk) && Fk()
             }), 70)
           }), 380);
-        return window.addEventListener("pointerup", zC), window.addEventListener("pointercancel", zC), window.addEventListener("blur", zC), () => {
-          clearTimeout(ZC), clearInterval(CC), window.removeEventListener("pointerup", zC), window.removeEventListener("pointercancel", zC), window.removeEventListener("blur", zC)
+        return window.addEventListener("pointerup", Fk), window.addEventListener("pointercancel", Fk), window.addEventListener("blur", Fk), () => {
+          clearTimeout(Ik), clearInterval(kk), window.removeEventListener("pointerup", Fk), window.removeEventListener("pointercancel", Fk), window.removeEventListener("blur", Fk)
         }
-      }), [FC]), (0, QC.useEffect)((() => {
-        const CC = oC.current;
-        CC && document.activeElement !== CC && CC.value !== String(zC) && (CC.value = String(zC))
-      }), [zC]), (0, QC.useEffect)((() => {
-        const CC = oC.current;
-        if (!CC) return;
-        const zC = () => {
-          CC.value = String(qC.current)
+      }), [Lk]), (0, Xk.useEffect)((() => {
+        const kk = ak.current;
+        kk && document.activeElement !== kk && kk.value !== String(Fk) && (kk.value = String(Fk))
+      }), [Fk]), (0, Xk.useEffect)((() => {
+        const kk = ak.current;
+        if (!kk) return;
+        const Fk = () => {
+          kk.value = String(qk.current)
         };
-        return CC.addEventListener("blur", zC), () => {
-          CC.removeEventListener("blur", zC)
+        return kk.addEventListener("blur", Fk), () => {
+          kk.removeEventListener("blur", Fk)
         }
       }), []);
-      const SC = CC => (0, WC.jsx)("button", {
+      const wk = kk => (0, tk.jsx)("button", {
         type: "button",
         className: "SmpStepButton",
-        "aria-label": `${CC>0?"More":"Less"} ${fC}`,
-        disabled: CC > 0 ? zC >= bC : zC <= wC,
-        onPointerDown: zC => {
-          0 === zC.button && (gC(CC), NC(CC))
+        "aria-label": `${kk>0?"More":"Less"} ${lk}`,
+        disabled: kk > 0 ? Fk >= ik : Fk <= Tk,
+        onPointerDown: Fk => {
+          0 === Fk.button && (ek(kk), Zk(kk))
         },
-        onKeyDown: zC => {
-          "Enter" !== zC.key && " " !== zC.key || gC(CC)
+        onKeyDown: Fk => {
+          "Enter" !== Fk.key && " " !== Fk.key || ek(kk)
         },
-        onContextMenu: CC => {
-          CC.preventDefault()
+        onContextMenu: kk => {
+          kk.preventDefault()
         },
-        children: CC > 0 ? "+" : "\u2212"
+        children: kk > 0 ? "+" : "\u2212"
       });
-      return (0, WC.jsxs)("div", {
+      return (0, tk.jsxs)("div", {
         className: "SmpStepper",
-        children: [SC(-1), (0, WC.jsx)(xC.c, {
+        children: [wk(-1), (0, tk.jsx)(Qk.c, {
           className: "SmpStepperInput",
-          domRef: oC,
-          defaultValue: String(zC),
-          ariaLabel: fC,
+          domRef: ak,
+          defaultValue: String(Fk),
+          ariaLabel: lk,
           type: "text",
           blurOnEnter: !0,
-          onValueChange: CC => {
-            const zC = CC.replace(/[^\d]/g, "");
-            oC.current && zC !== CC && (oC.current.value = zC), "" !== zC && ZC(MC(Number(zC)))
+          onValueChange: kk => {
+            const Fk = kk.replace(/[^\d]/g, "");
+            ak.current && Fk !== kk && (ak.current.value = Fk), "" !== Fk && Ik(jk(Number(Fk)))
           }
-        }), SC(1)]
+        }), wk(1)]
       })
     }
 
-    function nw(CC) {
-      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, CC))) - 1))
+    function lT(kk) {
+      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, kk))) - 1))
     }
-    var fw = ZC(34171),
-      ow = ZC(1183);
-    const qw = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
-    ow.z, uC.sc.length;
+    var aT = Ik(34193),
+      qT = Ik(1231);
+    const LT = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
+    qT.A, Nk.Mc.length;
     new Map;
-    var Fw = ZC(3276);
+    var tT = Ik(3229);
 
-    function Ww(CC, zC) {
-      var ZC;
-      return zC && (null === (ZC = CC[zC]) || void 0 === ZC ? void 0 : ZC.smp) || null
+    function ZT(kk, Fk) {
+      var Ik;
+      return Fk && (null === (Ik = kk[Fk]) || void 0 === Ik ? void 0 : Ik.smp) || null
     }
 
-    function Nw(CC, zC) {
-      const ZC = [];
-      for (const wC of yQ(CC)) {
-        var QC;
-        const bC = CC[wC];
-        (null === (QC = bC.smp) || void 0 === QC ? void 0 : QC.kind) === zC && ZC.push({
-          key: wC,
-          item: bC,
-          meta: bC.smp
+    function jT(kk, Fk) {
+      const Ik = [];
+      for (const Tk of gX(kk)) {
+        var Xk;
+        const ik = kk[Tk];
+        (null === (Xk = ik.smp) || void 0 === Xk ? void 0 : Xk.kind) === Fk && Ik.push({
+          key: Tk,
+          item: ik,
+          meta: ik.smp
         })
       }
-      return ZC
+      return Ik
     }
 
-    function Mw(CC, zC) {
-      var ZC;
-      return null !== (ZC = Nw(CC, zC)[0]) && void 0 !== ZC ? ZC : null
+    function eT(kk, Fk) {
+      var Ik;
+      return null !== (Ik = jT(kk, Fk)[0]) && void 0 !== Ik ? Ik : null
     }
-    const gw = "50% 0% 50% 0%",
-      Sw = [{
+    const wT = "50% 0% 50% 0%",
+      HT = [{
         divisor: 864e5,
         suffix: "d"
       }, {
@@ -3013,746 +3013,746 @@ export const modules = {
         suffix: "s"
       }];
 
-    function pw(CC) {
-      const zC = CC - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
+    function JT(kk) {
+      const Fk = kk - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
       for (const {
-          divisor: ZC,
-          suffix: QC
+          divisor: Ik,
+          suffix: Xk
         }
-        of Sw)
-        if (zC >= ZC) return `${Math.floor(zC/ZC)}${QC}`;
+        of HT)
+        if (Fk >= Ik) return `${Math.floor(Fk/Ik)}${Xk}`;
       return "<1s"
     }
 
-    function Pw(CC) {
-      const zC = CC.map(EQ.f),
-        ZC = [];
-      return zC.forEach(((CC, QC) => {
-        const wC = function(CC) {
-            const zC = CC.match(/\d+/);
-            return zC ? Number(zC[0]) : 0
-          }(CC),
-          bC = QC === zC.length - 1;
-        (bC || 1 === wC || 10 === wC || 100 === wC) && ZC.push({
-          label: CC,
-          quantity: wC,
-          isAll: bC
+    function xT(kk) {
+      const Fk = kk.map(bX.e),
+        Ik = [];
+      return Fk.forEach(((kk, Xk) => {
+        const Tk = function(kk) {
+            const Fk = kk.match(/\d+/);
+            return Fk ? Number(Fk[0]) : 0
+          }(kk),
+          ik = Xk === Fk.length - 1;
+        (ik || 1 === Tk || 10 === Tk || 100 === Tk) && Ik.push({
+          label: kk,
+          quantity: Tk,
+          isAll: ik
         })
-      })), ZC
+      })), Ik
     }
-    let Gw = null;
+    let PT = null;
 
-    function Rw(CC, zC) {
-      const ZC = zC.trim().toLowerCase();
-      if (!ZC) return [];
-      const QC = CC => {
-          if (CC === ZC) return 0;
-          if (CC.startsWith(ZC)) return 1;
-          const zC = CC.indexOf(ZC);
-          return -1 === zC ? -1 : 2 + zC
+    function KT(kk, Fk) {
+      const Ik = Fk.trim().toLowerCase();
+      if (!Ik) return [];
+      const Xk = kk => {
+          if (kk === Ik) return 0;
+          if (kk.startsWith(Ik)) return 1;
+          const Fk = kk.indexOf(Ik);
+          return -1 === Fk ? -1 : 2 + Fk
         },
-        wC = [];
-      for (const fC of CC) {
-        const CC = [QC(fC.lowerLabel), QC(fC.lowerName)].filter((CC => -1 !== CC));
-        CC.length && wC.push({
-          item: fC,
-          rank: Math.min(...CC)
+        Tk = [];
+      for (const lk of kk) {
+        const kk = [Xk(lk.lowerLabel), Xk(lk.lowerName)].filter((kk => -1 !== kk));
+        kk.length && Tk.push({
+          item: lk,
+          rank: Math.min(...kk)
         })
       }
-      if (wC.length > 0) return wC.sort(((CC, zC) => CC.rank - zC.rank)).map((CC => CC.item));
-      const bC = [...ZC],
-        nC = CC => {
-          let zC = 0;
-          for (const ZC of bC) {
-            if (zC = CC.indexOf(ZC, zC), -1 === zC) return !1;
-            zC++
+      if (Tk.length > 0) return Tk.sort(((kk, Fk) => kk.rank - Fk.rank)).map((kk => kk.item));
+      const ik = [...Ik],
+        yk = kk => {
+          let Fk = 0;
+          for (const Ik of ik) {
+            if (Fk = kk.indexOf(Ik, Fk), -1 === Fk) return !1;
+            Fk++
           }
           return !0
         };
-      return CC.filter((CC => nC(CC.lowerLabel) || nC(CC.lowerName)))
+      return kk.filter((kk => yk(kk.lowerLabel) || yk(kk.lowerName)))
     }
 
-    function Aw(CC, zC) {
-      var ZC;
-      return null !== (ZC = null === CC || void 0 === CC ? void 0 : CC[zC]) && void 0 !== ZC ? ZC : zC
+    function QT(kk, Fk) {
+      var Ik;
+      return null !== (Ik = null === kk || void 0 === kk ? void 0 : kk[Fk]) && void 0 !== Ik ? Ik : Fk
     }
 
-    function xw(CC, zC) {
-      const ZC = CC.userInput;
-      return void 0 !== zC && "dropdown" === (null === ZC || void 0 === ZC ? void 0 : ZC.type) && ZC.dropdownOptions.map(EQ.f).includes(zC) ? zC : function(CC) {
-        const zC = CC.userInput;
-        if ("dropdown" !== (null === zC || void 0 === zC ? void 0 : zC.type) || 0 === zC.dropdownOptions.length) return null;
-        const ZC = zC.dropdownOptions.map(EQ.f);
-        return zC.initialValue && ZC.includes(zC.initialValue) ? zC.initialValue : ZC[ZC.length - 1]
-      }(CC)
+    function sT(kk, Fk) {
+      const Ik = kk.userInput;
+      return void 0 !== Fk && "dropdown" === (null === Ik || void 0 === Ik ? void 0 : Ik.type) && Ik.dropdownOptions.map(bX.e).includes(Fk) ? Fk : function(kk) {
+        const Fk = kk.userInput;
+        if ("dropdown" !== (null === Fk || void 0 === Fk ? void 0 : Fk.type) || 0 === Fk.dropdownOptions.length) return null;
+        const Ik = Fk.dropdownOptions.map(bX.e);
+        return Fk.initialValue && Ik.includes(Fk.initialValue) ? Fk.initialValue : Ik[Ik.length - 1]
+      }(kk)
     }
 
-    function Jw(CC) {
-      return void 0 === CC ? "" : JSON.stringify(CC)
+    function VT(kk) {
+      return void 0 === kk ? "" : JSON.stringify(kk)
     }
-    const Iw = (0, QC.createContext)(null);
+    const zT = (0, Xk.createContext)(null);
 
-    function iw() {
-      return (0, QC.useContext)(Iw)
+    function ST() {
+      return (0, Xk.useContext)(zT)
     }
-    var vw = ZC(2691);
-    const ew = (0, QC.memo)((function(CC) {
+    var oT = Ik(2637);
+    const vT = (0, Xk.memo)((function(kk) {
         let {
-          name: zC,
-          label: ZC,
-          onPick: QC
-        } = CC;
-        return (0, WC.jsxs)("button", {
+          name: Fk,
+          label: Ik,
+          onPick: Xk
+        } = kk;
+        return (0, tk.jsxs)("button", {
           type: "button",
           className: "SmpCatalogueTile",
-          title: ZC,
+          title: Ik,
           onClick: () => {
-            QC(zC)
+            Xk(Fk)
           },
-          children: [(0, WC.jsx)(kQ, {
-            item: zC,
+          children: [(0, tk.jsx)(MX, {
+            item: Fk,
             size: "big"
-          }), (0, WC.jsx)("span", {
-            children: ZC
+          }), (0, tk.jsx)("span", {
+            children: Ik
           })]
         })
       })),
-      hw = (0, QC.memo)((function(CC) {
+      ET = (0, Xk.memo)((function(kk) {
         let {
-          items: zC,
-          query: ZC,
-          onPick: wC
-        } = CC;
+          items: Fk,
+          query: Ik,
+          onPick: Tk
+        } = kk;
         const {
-          t: bC
-        } = (0, nC.y)(), [fC, oC] = (0, QC.useState)(new Set), qC = (0, QC.useMemo)((() => function(CC) {
-          const zC = new Map;
-          for (const ZC of CC) {
-            let CC = zC.get(ZC.category);
-            CC || (CC = [], zC.set(ZC.category, CC)), CC.push(ZC)
+          t: ik
+        } = (0, yk.y)(), [lk, ak] = (0, Xk.useState)(new Set), qk = (0, Xk.useMemo)((() => function(kk) {
+          const Fk = new Map;
+          for (const Ik of kk) {
+            let kk = Fk.get(Ik.category);
+            kk || (kk = [], Fk.set(Ik.category, kk)), kk.push(Ik)
           }
-          return [...qw, "other"].filter((CC => zC.has(CC))).map((CC => ({
-            category: CC,
-            items: zC.get(CC)
+          return [...LT, "other"].filter((kk => Fk.has(kk))).map((kk => ({
+            category: kk,
+            items: Fk.get(kk)
           })))
-        }(zC)), [zC]), FC = (0, QC.useMemo)((() => Rw(zC, ZC).slice(0, 60)), [zC, ZC]);
-        return ZC.trim() ? 0 === FC.length ? (0, WC.jsx)(zw, {
-          title: bC("smpShop:noItemsFound", {
-            query: ZC.trim()
+        }(Fk)), [Fk]), Lk = (0, Xk.useMemo)((() => KT(Fk, Ik).slice(0, 60)), [Fk, Ik]);
+        return Ik.trim() ? 0 === Lk.length ? (0, tk.jsx)(IT, {
+          title: ik("smpShop:noItemsFound", {
+            query: Ik.trim()
           }),
-          children: bC("smpShop:tryShorterName")
-        }) : (0, WC.jsx)(vw.e, {
+          children: ik("smpShop:tryShorterName")
+        }) : (0, tk.jsx)(oT.b, {
           lazyLoadedClassName: "SmpCatalogueGrid",
           observerRoot: "SmpBody",
-          rootMargin: gw,
-          observerUpdateDeps: [ZC],
-          children: FC.map((CC => (0, WC.jsx)(ew, {
-            name: CC.name,
-            label: CC.label,
-            onPick: wC
-          }, CC.name)))
-        }) : (0, WC.jsx)(WC.Fragment, {
-          children: qC.map((CC => {
+          rootMargin: wT,
+          observerUpdateDeps: [Ik],
+          children: Lk.map((kk => (0, tk.jsx)(vT, {
+            name: kk.name,
+            label: kk.label,
+            onPick: Tk
+          }, kk.name)))
+        }) : (0, tk.jsx)(tk.Fragment, {
+          children: qk.map((kk => {
             let {
-              category: zC,
-              items: ZC
-            } = CC;
-            const QC = fC.has(zC) || ZC.length <= 48,
-              nC = QC ? ZC : ZC.slice(0, 48);
-            return (0, WC.jsxs)("section", {
+              category: Fk,
+              items: Ik
+            } = kk;
+            const Xk = lk.has(Fk) || Ik.length <= 48,
+              yk = Xk ? Ik : Ik.slice(0, 48);
+            return (0, tk.jsxs)("section", {
               className: "SmpCatalogueSection",
-              children: [(0, WC.jsxs)("h4", {
-                children: [bC("other" === zC ? "smpShop:otherItems" : `creativeInventory:${zC}`), !QC && (0, WC.jsx)("button", {
+              children: [(0, tk.jsxs)("h4", {
+                children: [ik("other" === Fk ? "smpShop:otherItems" : `creativeInventory:${Fk}`), !Xk && (0, tk.jsx)("button", {
                   type: "button",
                   className: "SmpLink",
                   onClick: () => {
-                    oC(new Set([...fC, zC]))
+                    ak(new Set([...lk, Fk]))
                   },
-                  children: bC("smpShop:showAll", {
-                    count: ZC.length
+                  children: ik("smpShop:showAll", {
+                    count: Ik.length
                   })
                 })]
-              }), (0, WC.jsx)(vw.e, {
+              }), (0, tk.jsx)(oT.b, {
                 lazyLoadedClassName: "SmpCatalogueGrid",
                 observerRoot: "SmpBody",
-                rootMargin: gw,
-                observerUpdateDeps: [QC],
-                children: nC.map((CC => (0, WC.jsx)(ew, {
-                  name: CC.name,
-                  label: CC.label,
-                  onPick: wC
-                }, CC.name)))
+                rootMargin: wT,
+                observerUpdateDeps: [Xk],
+                children: yk.map((kk => (0, tk.jsx)(vT, {
+                  name: kk.name,
+                  label: kk.label,
+                  onPick: Tk
+                }, kk.name)))
               })]
-            }, zC)
+            }, Fk)
           }))
         })
       }));
 
-    function Kw(CC, zC) {
+    function OT(kk, Fk) {
       const {
-        searched: ZC,
-        shown: wC,
-        searchFor: bC,
-        loading: nC
-      } = function(CC, zC) {
-        var ZC;
-        const wC = iw(),
-          [bC, nC] = (0, QC.useState)(void 0),
-          fC = (0, QC.useRef)(void 0),
-          oC = (0, QC.useRef)(0),
-          qC = (0, QC.useRef)(void 0),
-          FC = null !== (ZC = null === CC || void 0 === CC ? void 0 : CC.meta.item) && void 0 !== ZC ? ZC : null,
-          WC = !!CC && wC.isPending(CC.key);
-        (0, QC.useEffect)((() => {
-          if (!CC || WC || !zC || void 0 === bC || bC === FC) return;
-          const ZC = bC === fC.current && wC.gaveUpAt(CC.key) > oC.current && qC.current !== bC;
-          (bC !== fC.current || ZC) && wC.act(CC.key, null !== bC && void 0 !== bC ? bC : "*", ZC) && (ZC && (qC.current = bC), fC.current = bC, oC.current = Date.now())
-        }), [CC, WC, zC, bC, FC, wC]);
-        const NC = (0, QC.useCallback)((CC => {
-            fC.current = void 0, qC.current = void 0, nC(CC)
+        searched: Ik,
+        shown: Tk,
+        searchFor: ik,
+        loading: yk
+      } = function(kk, Fk) {
+        var Ik;
+        const Tk = ST(),
+          [ik, yk] = (0, Xk.useState)(void 0),
+          lk = (0, Xk.useRef)(void 0),
+          ak = (0, Xk.useRef)(0),
+          qk = (0, Xk.useRef)(void 0),
+          Lk = null !== (Ik = null === kk || void 0 === kk ? void 0 : kk.meta.item) && void 0 !== Ik ? Ik : null,
+          tk = !!kk && Tk.isPending(kk.key);
+        (0, Xk.useEffect)((() => {
+          if (!kk || tk || !Fk || void 0 === ik || ik === Lk) return;
+          const Ik = ik === lk.current && Tk.gaveUpAt(kk.key) > ak.current && qk.current !== ik;
+          (ik !== lk.current || Ik) && Tk.act(kk.key, null !== ik && void 0 !== ik ? ik : "*", Ik) && (Ik && (qk.current = ik), lk.current = ik, ak.current = Date.now())
+        }), [kk, tk, Fk, ik, Lk, Tk]);
+        const Zk = (0, Xk.useCallback)((kk => {
+            lk.current = void 0, qk.current = void 0, yk(kk)
           }), []),
-          MC = void 0 !== bC && bC !== FC && (WC || fC.current !== bC);
+          jk = void 0 !== ik && ik !== Lk && (tk || lk.current !== ik);
         return {
-          searched: FC,
-          shown: MC ? bC : FC,
-          searchFor: NC,
-          loading: MC || WC || null !== FC && !zC
+          searched: Lk,
+          shown: jk ? ik : Lk,
+          searchFor: Zk,
+          loading: jk || tk || null !== Lk && !Fk
         }
-      }(CC, zC), fC = (0, QC.useMemo)((() => function() {
-        var CC;
-        let zC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-          ZC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-          QC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const wC = `${(0,Fw.d)()}\x1f${zC.join("\x1e")}\x1f${ZC.join("\x1e")}\x1f${JSON.stringify(QC)}`;
-        if ((null === (CC = Gw) || void 0 === CC ? void 0 : CC.key) === wC) return Gw.items;
-        const bC = new Set(ZC),
-          nC = new Set,
-          fC = [],
-          oC = (CC, zC) => {
-            var ZC;
-            if (!CC || nC.has(CC) || bC.has(CC)) return;
-            nC.add(CC);
-            const wC = null !== (ZC = QC[CC]) && void 0 !== ZC ? ZC : CC;
-            fC.push({
-              name: CC,
-              label: wC,
-              lowerLabel: wC.toLowerCase(),
-              lowerName: CC.toLowerCase(),
-              category: zC
+      }(kk, Fk), lk = (0, Xk.useMemo)((() => function() {
+        var kk;
+        let Fk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+          Ik = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
+          Xk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const Tk = `${(0,tT.k)()}\x1f${Fk.join("\x1e")}\x1f${Ik.join("\x1e")}\x1f${JSON.stringify(Xk)}`;
+        if ((null === (kk = PT) || void 0 === kk ? void 0 : kk.key) === Tk) return PT.items;
+        const ik = new Set(Ik),
+          yk = new Set,
+          lk = [],
+          ak = (kk, Fk) => {
+            var Ik;
+            if (!kk || yk.has(kk) || ik.has(kk)) return;
+            yk.add(kk);
+            const Tk = null !== (Ik = Xk[kk]) && void 0 !== Ik ? Ik : kk;
+            lk.push({
+              name: kk,
+              label: Tk,
+              lowerLabel: Tk.toLowerCase(),
+              lowerName: kk.toLowerCase(),
+              category: Fk
             })
           };
-        for (const FC of (0, fw.creativeItemIds)()) {
-          var qC;
-          (0, fw.itemIsDisabled)(FC, !0, !0, !1) || (0, fw.showOnlyInCreativeSearch)(FC) || oC((0, Fw.c)(FC), null !== (qC = (0, fw.creativeCategoryOf)(FC)) && void 0 !== qC ? qC : "other")
+        for (const Lk of (0, aT.creativeItemIds)()) {
+          var qk;
+          (0, aT.itemIsDisabled)(Lk, !0, !0, !1) || (0, aT.showOnlyInCreativeSearch)(Lk) || ak((0, tT.i)(Lk), null !== (qk = (0, aT.creativeCategoryOf)(Lk)) && void 0 !== qk ? qk : "other")
         }
-        for (const FC of zC) oC(FC, "other");
-        return Gw = {
-          key: wC,
-          items: fC
-        }, fC
-      }(null === CC || void 0 === CC ? void 0 : CC.meta.extra, null === CC || void 0 === CC ? void 0 : CC.meta.excluded, null === CC || void 0 === CC ? void 0 : CC.meta.names)), [null === CC || void 0 === CC ? void 0 : CC.meta.extra, null === CC || void 0 === CC ? void 0 : CC.meta.excluded, null === CC || void 0 === CC ? void 0 : CC.meta.names]), [oC, qC] = (0, QC.useState)(""), [FC, WC] = (0, QC.useState)(0), [NC, MC] = (0, QC.useState)("recent"), gC = (0, QC.useCallback)((CC => {
-        qC(""), WC((CC => CC + 1)), bC(CC)
-      }), [bC]), SC = "browse" === NC || "" !== oC.trim();
+        for (const Lk of Fk) ak(Lk, "other");
+        return PT = {
+          key: Tk,
+          items: lk
+        }, lk
+      }(null === kk || void 0 === kk ? void 0 : kk.meta.extra, null === kk || void 0 === kk ? void 0 : kk.meta.excluded, null === kk || void 0 === kk ? void 0 : kk.meta.names)), [null === kk || void 0 === kk ? void 0 : kk.meta.extra, null === kk || void 0 === kk ? void 0 : kk.meta.excluded, null === kk || void 0 === kk ? void 0 : kk.meta.names]), [ak, qk] = (0, Xk.useState)(""), [Lk, tk] = (0, Xk.useState)(0), [Zk, jk] = (0, Xk.useState)("recent"), ek = (0, Xk.useCallback)((kk => {
+        qk(""), tk((kk => kk + 1)), ik(kk)
+      }), [ik]), wk = "browse" === Zk || "" !== ak.trim();
       return {
-        searched: ZC,
-        shown: wC,
-        searchFor: bC,
-        loading: nC,
-        catalogue: fC,
-        names: null === CC || void 0 === CC ? void 0 : CC.meta.names,
-        query: oC,
-        setQuery: qC,
-        searchBoxKey: FC,
-        pickItem: gC,
-        setView: MC,
-        browsing: SC
+        searched: Ik,
+        shown: Tk,
+        searchFor: ik,
+        loading: yk,
+        catalogue: lk,
+        names: null === kk || void 0 === kk ? void 0 : kk.meta.names,
+        query: ak,
+        setQuery: qk,
+        searchBoxKey: Lk,
+        pickItem: ek,
+        setView: jk,
+        browsing: wk
       }
     }
 
-    function Yw(CC) {
+    function nT(kk) {
       let {
-        browser: zC,
-        children: ZC
-      } = CC;
+        browser: Fk,
+        children: Ik
+      } = kk;
       const {
-        t: QC
-      } = (0, nC.y)(), wC = iw();
-      return (0, WC.jsxs)("div", {
+        t: Xk
+      } = (0, yk.y)(), Tk = ST();
+      return (0, tk.jsxs)("div", {
         className: "SmpTopBar",
-        children: [(0, WC.jsx)("div", {
+        children: [(0, tk.jsx)("div", {
           className: "SmpSearch",
-          children: (0, WC.jsx)(xC.c, {
+          children: (0, tk.jsx)(Qk.c, {
             className: "SmpSearchInput",
-            placeholderText: QC("smpShop:searchPlaceholder"),
-            defaultValue: zC.query,
-            onValueChange: CC => {
-              zC.setQuery(CC), zC.searched && CC.trim() && zC.searchFor(null)
+            placeholderText: Xk("smpShop:searchPlaceholder"),
+            defaultValue: Fk.query,
+            onValueChange: kk => {
+              Fk.setQuery(kk), Fk.searched && kk.trim() && Fk.searchFor(null)
             },
             blurOnEnter: !0,
             onEnter: () => {
-              const CC = Rw(zC.catalogue, zC.query)[0];
-              CC ? zC.pickItem(CC.name) : zC.query.trim() && wC.notify(QC("smpShop:noItemsFound", {
-                query: zC.query.trim()
+              const kk = KT(Fk.catalogue, Fk.query)[0];
+              kk ? Fk.pickItem(kk.name) : Fk.query.trim() && Tk.notify(Xk("smpShop:noItemsFound", {
+                query: Fk.query.trim()
               }))
             }
-          }, zC.searchBoxKey)
-        }), ZC]
+          }, Fk.searchBoxKey)
+        }), Ik]
       })
     }
 
-    function dw(CC) {
+    function GT(kk) {
       let {
-        browser: zC,
-        recentLabel: ZC,
-        children: QC
-      } = CC;
+        browser: Fk,
+        recentLabel: Ik,
+        children: Xk
+      } = kk;
       const {
-        t: wC
-      } = (0, nC.y)();
-      return (0, WC.jsxs)("div", {
+        t: Tk
+      } = (0, yk.y)();
+      return (0, tk.jsxs)("div", {
         className: "SmpViewBar",
-        children: [(0, WC.jsx)(Qw, {
+        children: [(0, tk.jsx)(TT, {
           options: [{
             value: "recent",
-            label: ZC
+            label: Ik
           }, {
             value: "browse",
-            label: wC("smpShop:browseItems")
+            label: Tk("smpShop:browseItems")
           }],
-          value: zC.browsing ? "browse" : "recent",
-          onChange: zC.setView,
-          ariaLabel: wC("smpShop:show")
-        }), !zC.browsing && QC]
+          value: Fk.browsing ? "browse" : "recent",
+          onChange: Fk.setView,
+          ariaLabel: Tk("smpShop:show")
+        }), !Fk.browsing && Xk]
       })
     }
 
-    function mw(CC) {
+    function pT(kk) {
       let {
-        item: zC,
-        names: ZC,
-        summary: QC,
-        onBack: wC,
-        children: bC
-      } = CC;
+        item: Fk,
+        names: Ik,
+        summary: Xk,
+        onBack: Tk,
+        children: ik
+      } = kk;
       const {
-        t: fC
-      } = (0, nC.y)();
-      return (0, WC.jsxs)("div", {
+        t: lk
+      } = (0, yk.y)();
+      return (0, tk.jsxs)("div", {
         className: "SmpItemHeader",
-        children: [(0, WC.jsx)(qC.c, {
+        children: [(0, tk.jsx)(qk.c, {
           className: "SmpBackButton",
-          onClick: wC,
-          children: fC("general:back")
-        }), (0, WC.jsx)(kQ, {
-          item: zC,
+          onClick: Tk,
+          children: lk("general:back")
+        }), (0, tk.jsx)(MX, {
+          item: Fk,
           size: "big"
-        }), (0, WC.jsxs)("div", {
+        }), (0, tk.jsxs)("div", {
           className: "SmpItemHeaderText",
-          children: [(0, WC.jsx)("b", {
-            children: Aw(ZC, zC)
-          }), QC && (0, WC.jsx)("small", {
-            children: QC
+          children: [(0, tk.jsx)("b", {
+            children: QT(Ik, Fk)
+          }), Xk && (0, tk.jsx)("small", {
+            children: Xk
           })]
-        }), bC]
+        }), ik]
       })
     }
 
-    function Hw(CC) {
+    function uT(kk) {
       let {
-        browser: zC,
-        className: ZC,
-        action: QC,
-        above: wC,
-        list: nC,
-        summary: fC,
-        recentLabel: oC,
-        listControls: qC,
-        onBack: FC
-      } = CC;
-      return (0, WC.jsxs)("div", {
-        className: bC()("SmpScreen", ZC),
-        children: [(0, WC.jsx)(Yw, {
-          browser: zC,
-          children: QC
-        }), zC.shown && (0, WC.jsx)(mw, {
-          item: zC.shown,
-          names: zC.names,
-          summary: !zC.loading && fC,
+        browser: Fk,
+        className: Ik,
+        action: Xk,
+        above: Tk,
+        list: yk,
+        summary: lk,
+        recentLabel: ak,
+        listControls: qk,
+        onBack: Lk
+      } = kk;
+      return (0, tk.jsxs)("div", {
+        className: ik()("SmpScreen", Ik),
+        children: [(0, tk.jsx)(nT, {
+          browser: Fk,
+          children: Xk
+        }), Fk.shown && (0, tk.jsx)(pT, {
+          item: Fk.shown,
+          names: Fk.names,
+          summary: !Fk.loading && lk,
           onBack: () => {
-            null === FC || void 0 === FC || FC(), zC.searchFor(null)
+            null === Lk || void 0 === Lk || Lk(), Fk.searchFor(null)
           },
-          children: qC
-        }), wC, zC.shown ? nC : (0, WC.jsxs)(WC.Fragment, {
-          children: [(0, WC.jsx)(dw, {
-            browser: zC,
-            recentLabel: oC,
-            children: qC
-          }), zC.browsing ? (0, WC.jsx)(hw, {
-            items: zC.catalogue,
-            query: zC.query,
-            onPick: zC.pickItem
-          }) : nC]
+          children: qk
+        }), Tk, Fk.shown ? yk : (0, tk.jsxs)(tk.Fragment, {
+          children: [(0, tk.jsx)(GT, {
+            browser: Fk,
+            recentLabel: ak,
+            children: qk
+          }), Fk.browsing ? (0, tk.jsx)(ET, {
+            items: Fk.catalogue,
+            query: Fk.query,
+            onPick: Fk.pickItem
+          }) : yk]
         })]
       })
     }
 
-    function Ew(CC, zC) {
-      const ZC = CC.map((CC => {
+    function bT(kk, Fk) {
+      const Ik = kk.map((kk => {
         let {
-          meta: zC
-        } = CC;
-        return zC.pricePerItem
+          meta: Fk
+        } = kk;
+        return Fk.pricePerItem
       }));
-      return "min" === zC ? Math.min(...ZC) : Math.max(...ZC)
+      return "min" === Fk ? Math.min(...Ik) : Math.max(...Ik)
     }
-    var lw = ZC(6572);
-    const Xw = (0, QC.memo)((function(CC) {
-      var zC;
+    var RT = Ik(6566);
+    const UT = (0, Xk.memo)((function(kk) {
+      var Fk;
       const {
-        t: ZC
-      } = (0, nC.y)(), QC = null === CC.seller, wC = CC.quantity * CC.pricePerItem;
-      return (0, WC.jsxs)("div", {
-        className: CC.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
-        children: [(0, WC.jsx)(kQ, {
-          item: CC.item,
-          amount: CC.quantity,
-          size: CC.grid ? "big" : "normal",
-          tier: CC.tier
-        }), (0, WC.jsxs)("div", {
+        t: Ik
+      } = (0, yk.y)(), Xk = null === kk.seller, Tk = kk.quantity * kk.pricePerItem;
+      return (0, tk.jsxs)("div", {
+        className: kk.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
+        children: [(0, tk.jsx)(MX, {
+          item: kk.item,
+          amount: kk.quantity,
+          size: kk.grid ? "big" : "normal",
+          tier: kk.tier
+        }), (0, tk.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, WC.jsx)("b", {
-            children: (0, WC.jsx)(uQ.e, {
-              text: null !== (zC = CC.title) && void 0 !== zC ? zC : `${CC.quantity}x ${CC.item}`
+          children: [(0, tk.jsx)("b", {
+            children: (0, tk.jsx)(NX.c, {
+              text: null !== (Fk = kk.title) && void 0 !== Fk ? Fk : `${kk.quantity}x ${kk.item}`
             })
-          }), (0, WC.jsxs)("small", {
+          }), (0, tk.jsxs)("small", {
             className: "SmpListingFacts",
-            children: [(0, WC.jsx)("span", {
-              children: QC ? ZC("smpShop:you") : (0, WC.jsx)(uQ.e, {
+            children: [(0, tk.jsx)("span", {
+              children: Xk ? Ik("smpShop:you") : (0, tk.jsx)(NX.c, {
                 text: [{
-                  entityName: CC.seller
+                  entityName: kk.seller
                 }]
               })
-            }), (0, WC.jsx)("span", {
-              children: ZC("smpShop:timeLeft", {
-                time: pw(CC.expiresAt)
+            }), (0, tk.jsx)("span", {
+              children: Ik("smpShop:timeLeft", {
+                time: JT(kk.expiresAt)
               })
             })]
           })]
-        }), (0, WC.jsxs)("div", {
+        }), (0, tk.jsxs)("div", {
           className: "SmpRowPrice",
-          children: [(0, WC.jsx)(VQ, {
-            amount: CC.pricePerItem
-          }), (0, WC.jsx)("small", {
-            children: ZC("smpShop:each")
+          children: [(0, tk.jsx)(kT, {
+            amount: kk.pricePerItem
+          }), (0, tk.jsx)("small", {
+            children: Ik("smpShop:each")
           })]
-        }), (0, WC.jsx)(qC.g, {
+        }), (0, tk.jsx)(qk.d, {
           className: "SmpBuyButton",
-          disabled: QC || !CC.canAfford && !CC.busy,
-          loading: CC.busy,
+          disabled: Xk || !kk.canAfford && !kk.busy,
+          loading: kk.busy,
           onClick: () => {
-            CC.onBuy(CC.itemKey)
+            kk.onBuy(kk.itemKey)
           },
-          children: QC ? ZC("smpShop:yours") : (0, WC.jsx)(VQ, {
-            amount: wC
+          children: Xk ? Ik("smpShop:yours") : (0, tk.jsx)(kT, {
+            amount: Tk
           })
         })]
       })
     }));
 
-    function uw(CC) {
+    function CT(kk) {
       let {
-        view: zC,
-        onChange: ZC
-      } = CC;
+        view: Fk,
+        onChange: Ik
+      } = kk;
       const {
-        t: QC
-      } = (0, nC.y)();
-      return (0, WC.jsx)(BQ.b, {
+        t: Xk
+      } = (0, yk.y)();
+      return (0, tk.jsx)(rX.b, {
         className: "SmpChoice SmpViewToggle",
-        ariaLabel: QC("smpShop:layout"),
+        ariaLabel: Xk("smpShop:layout"),
         options: [{
           value: "list",
-          label: (0, WC.jsx)(fC.c, {
+          label: (0, tk.jsx)(lk.e, {
             name: "list"
           }),
-          ariaLabel: QC("smpShop:listView")
+          ariaLabel: Xk("smpShop:listView")
         }, {
           value: "grid",
-          label: (0, WC.jsx)(fC.c, {
+          label: (0, tk.jsx)(lk.e, {
             name: "grid-2"
           }),
-          ariaLabel: QC("smpShop:gridView")
+          ariaLabel: Xk("smpShop:gridView")
         }],
-        value: zC,
-        onChange: ZC
+        value: Fk,
+        onChange: Ik
       })
     }
 
-    function rw(CC) {
+    function NT(kk) {
       let {
-        entries: zC,
-        view: ZC
-      } = CC;
+        entries: Fk,
+        view: Ik
+      } = kk;
       const {
-        t: QC
-      } = (0, nC.y)(), wC = iw(), bC = "grid" === ZC;
-      return (0, WC.jsxs)(WC.Fragment, {
-        children: [!bC && (0, WC.jsxs)("div", {
+        t: Xk
+      } = (0, yk.y)(), Tk = ST(), ik = "grid" === Ik;
+      return (0, tk.jsxs)(tk.Fragment, {
+        children: [!ik && (0, tk.jsxs)("div", {
           className: "SmpColumns",
           "aria-hidden": "true",
-          children: [(0, WC.jsx)("span", {}), (0, WC.jsx)("span", {
-            children: QC("smpShop:columnItem")
-          }), (0, WC.jsx)("span", {
-            children: QC("smpShop:columnPriceEach")
-          }), (0, WC.jsx)("span", {
-            children: QC("smpShop:columnTotal")
+          children: [(0, tk.jsx)("span", {}), (0, tk.jsx)("span", {
+            children: Xk("smpShop:columnItem")
+          }), (0, tk.jsx)("span", {
+            children: Xk("smpShop:columnPriceEach")
+          }), (0, tk.jsx)("span", {
+            children: Xk("smpShop:columnTotal")
           })]
-        }), (0, WC.jsx)(vw.e, {
-          lazyLoadedClassName: bC ? "SmpCardGrid" : "SmpList",
+        }), (0, tk.jsx)(oT.b, {
+          lazyLoadedClassName: ik ? "SmpCardGrid" : "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: gw,
-          observerUpdateDeps: [zC.length],
-          children: zC.map((CC => {
-            var zC, ZC;
+          rootMargin: wT,
+          observerUpdateDeps: [Fk.length],
+          children: Fk.map((kk => {
+            var Fk, Ik;
             let {
-              key: QC,
-              item: nC,
-              meta: fC
-            } = CC;
-            const oC = fC.quantity * fC.pricePerItem;
-            return (0, WC.jsx)(Xw, {
-              itemKey: QC,
-              item: fC.item,
-              title: nC.customTitle,
-              quantity: fC.quantity,
-              pricePerItem: fC.pricePerItem,
-              seller: fC.seller,
-              expiresAt: fC.expiresAt,
-              tier: null !== (zC = null === (ZC = nC.enchant) || void 0 === ZC ? void 0 : ZC.tier) && void 0 !== zC ? zC : null,
-              busy: wC.isPending(QC) || null !== fC.seller && !1 === nC.canBuy,
-              canAfford: wC.canAfford(nC, oC),
-              grid: bC,
-              onBuy: wC.act
-            }, QC)
+              key: Xk,
+              item: yk,
+              meta: lk
+            } = kk;
+            const ak = lk.quantity * lk.pricePerItem;
+            return (0, tk.jsx)(UT, {
+              itemKey: Xk,
+              item: lk.item,
+              title: yk.customTitle,
+              quantity: lk.quantity,
+              pricePerItem: lk.pricePerItem,
+              seller: lk.seller,
+              expiresAt: lk.expiresAt,
+              tier: null !== (Fk = null === (Ik = yk.enchant) || void 0 === Ik ? void 0 : Ik.tier) && void 0 !== Fk ? Fk : null,
+              busy: Tk.isPending(Xk) || null !== lk.seller && !1 === yk.canBuy,
+              canAfford: Tk.canAfford(yk, ak),
+              grid: ik,
+              onBuy: Tk.act
+            }, Xk)
           }))
-        }, ZC)]
+        }, Ik)]
       })
     }
-    const sw = [1, 10, 100],
-      Tw = [1, 10, 100, 999];
+    const cT = [1, 10, 100],
+      WT = [1, 10, 100, 999];
 
-    function aw(CC) {
-      var zC, ZC, wC, oC, FC, NC, MC, gC, SC, pC;
+    function fT(kk) {
+      var Fk, Ik, Tk, ak, Lk, Zk, jk, ek, wk, Hk;
       const {
-        t: PC
-      } = (0, nC.y)(), GC = iw(), {
-        creator: RC,
-        mode: AC
-      } = CC, [JC, IC] = (0, QC.useState)(null !== (zC = null === RC || void 0 === RC ? void 0 : RC.meta.item) && void 0 !== zC ? zC : null), [iC, vC] = (0, QC.useState)(1), [eC, hC] = (0, QC.useState)(0), [KC, YC] = (0, QC.useState)(""), [dC, mC] = (0, QC.useState)(0), HC = (0, QC.useRef)(JC), EC = (0, QC.useRef)(!1), [lC, XC] = (0, QC.useState)(!1), cC = null !== (ZC = null === RC || void 0 === RC ? void 0 : RC.meta.item) && void 0 !== ZC ? ZC : null, uC = null !== (wC = null === RC || void 0 === RC ? void 0 : RC.meta.owned) && void 0 !== wC ? wC : 0;
-      (0, QC.useEffect)((() => {
-        CC.searching || null === cC || cC === HC.current || (HC.current = cC, EC.current = !1, IC(cC), hC(0), vC("list" === AC ? Math.max(1, uC) : 1))
-      }), [cC, CC.searching]);
-      const rC = !!RC && !!JC && RC.meta.item === JC,
-        sC = rC ? RC.meta.owned : null !== (oC = null === (FC = CC.inventory) || void 0 === FC || null === (NC = FC.find((CC => CC.item === JC))) || void 0 === NC ? void 0 : NC.quantity) && void 0 !== oC ? oC : 0,
-        TC = "list" === AC ? Math.max(1, sC) : 45954,
-        aC = null !== (MC = CC.prices[0]) && void 0 !== MC ? MC : null,
-        tC = CC.prices.length ? Math.round(CC.prices.reduce(((CC, zC) => CC + zC), 0) / CC.prices.length) : null,
-        DC = null === (gC = CC.inventory) || void 0 === gC || null === (SC = gC.find((CC => CC.item === JC))) || void 0 === SC ? void 0 : SC.sellPrice;
-      (0, QC.useEffect)((() => {
-        var CC;
-        rC && (vC((CC => "list" === AC ? Math.min(Math.max(1, CC), Math.max(1, sC)) : CC)), EC.current || hC(null !== (CC = null !== aC && void 0 !== aC ? aC : tC) && void 0 !== CC ? CC : Math.max(1, null !== DC && void 0 !== DC ? DC : 1)))
-      }), [rC, sC, JC, aC, tC]);
-      const jC = CC => {
-          EC.current = !0, hC(CC)
+        t: Jk
+      } = (0, yk.y)(), xk = ST(), {
+        creator: Pk,
+        mode: Kk
+      } = kk, [sk, Vk] = (0, Xk.useState)(null !== (Fk = null === Pk || void 0 === Pk ? void 0 : Pk.meta.item) && void 0 !== Fk ? Fk : null), [zk, Sk] = (0, Xk.useState)(1), [vk, Ek] = (0, Xk.useState)(0), [Ok, nk] = (0, Xk.useState)(""), [Gk, pk] = (0, Xk.useState)(0), uk = (0, Xk.useRef)(sk), bk = (0, Xk.useRef)(!1), [Rk, Uk] = (0, Xk.useState)(!1), Ck = null !== (Ik = null === Pk || void 0 === Pk ? void 0 : Pk.meta.item) && void 0 !== Ik ? Ik : null, Nk = null !== (Tk = null === Pk || void 0 === Pk ? void 0 : Pk.meta.owned) && void 0 !== Tk ? Tk : 0;
+      (0, Xk.useEffect)((() => {
+        kk.searching || null === Ck || Ck === uk.current || (uk.current = Ck, bk.current = !1, Vk(Ck), Ek(0), Sk("list" === Kk ? Math.max(1, Nk) : 1))
+      }), [Ck, kk.searching]);
+      const ck = !!Pk && !!sk && Pk.meta.item === sk,
+        Wk = ck ? Pk.meta.owned : null !== (ak = null === (Lk = kk.inventory) || void 0 === Lk || null === (Zk = Lk.find((kk => kk.item === sk))) || void 0 === Zk ? void 0 : Zk.quantity) && void 0 !== ak ? ak : 0,
+        fk = "list" === Kk ? Math.max(1, Wk) : 45954,
+        Bk = null !== (jk = kk.prices[0]) && void 0 !== jk ? jk : null,
+        dk = kk.prices.length ? Math.round(kk.prices.reduce(((kk, Fk) => kk + Fk), 0) / kk.prices.length) : null,
+        Yk = null === (ek = kk.inventory) || void 0 === ek || null === (wk = ek.find((kk => kk.item === sk))) || void 0 === wk ? void 0 : wk.sellPrice;
+      (0, Xk.useEffect)((() => {
+        var kk;
+        ck && (Sk((kk => "list" === Kk ? Math.min(Math.max(1, kk), Math.max(1, Wk)) : kk)), bk.current || Ek(null !== (kk = null !== Bk && void 0 !== Bk ? Bk : dk) && void 0 !== kk ? kk : Math.max(1, null !== Yk && void 0 !== Yk ? Yk : 1)))
+      }), [ck, Wk, sk, Bk, dk]);
+      const Ak = kk => {
+          bk.current = !0, Ek(kk)
         },
-        yC = zC => {
-          var ZC, QC, wC;
-          HC.current = zC, EC.current = !1, XC(!1), YC(""), mC((CC => CC + 1)), IC(zC), hC(0), vC("list" === AC && null !== (ZC = null === (QC = CC.inventory) || void 0 === QC || null === (wC = QC.find((CC => CC.item === zC))) || void 0 === wC ? void 0 : wC.quantity) && void 0 !== ZC ? ZC : 1), (null === RC || void 0 === RC ? void 0 : RC.meta.item) !== zC && CC.onPickItem(zC)
+        gk = Fk => {
+          var Ik, Xk, Tk;
+          uk.current = Fk, bk.current = !1, Uk(!1), nk(""), pk((kk => kk + 1)), Vk(Fk), Ek(0), Sk("list" === Kk && null !== (Ik = null === (Xk = kk.inventory) || void 0 === Xk || null === (Tk = Xk.find((kk => kk.item === Fk))) || void 0 === Tk ? void 0 : Tk.quantity) && void 0 !== Ik ? Ik : 1), (null === Pk || void 0 === Pk ? void 0 : Pk.meta.item) !== Fk && kk.onPickItem(Fk)
         },
-        LC = iC * eC,
-        UC = "list" === AC && null !== RC && void 0 !== RC && RC.meta.fee ? function(CC, zC) {
-          const ZC = Math.max(0, zC - CC.taxFreeAllowance);
-          return Math.ceil(Math.round(ZC * CC.rate * 1e6) / 1e6)
-        }(RC.meta.fee, LC) : 0,
-        BC = !!RC && GC.isPending(RC.key),
-        OC = rC && !CC.searching && iC >= 1 && eC >= 1 && ("order" === AC || sC >= iC) && !BC,
-        kC = !!JC && !rC && !CC.searching && iC >= 1 && eC >= 1,
-        VC = () => {
-          OC ? GC.act(RC.key, `${iC}|${eC}`) : kC && (CC.onPickItem(JC), XC(!0))
+        mk = zk * vk,
+        hk = "list" === Kk && null !== Pk && void 0 !== Pk && Pk.meta.fee ? function(kk, Fk) {
+          const Ik = Math.max(0, Fk - kk.taxFreeAllowance);
+          return Math.ceil(Math.round(Ik * kk.rate * 1e6) / 1e6)
+        }(Pk.meta.fee, mk) : 0,
+        rk = !!Pk && xk.isPending(Pk.key),
+        Dk = ck && !kk.searching && zk >= 1 && vk >= 1 && ("order" === Kk || Wk >= zk) && !rk,
+        Mk = !!sk && !ck && !kk.searching && zk >= 1 && vk >= 1,
+        kF = () => {
+          Dk ? xk.act(Pk.key, `${zk}|${vk}`) : Mk && (kk.onPickItem(sk), Uk(!0))
         };
-      (0, QC.useEffect)((() => {
-        lC && rC && !CC.searching && (XC(!1), VC())
-      }), [lC, rC, CC.searching]);
-      const Cz = !!JC && !rC && (CC.searching || lC),
-        zz = JC ? Aw(CC.names, JC) : "",
-        Zz = (0, QC.useMemo)((() => Rw(CC.catalogue, KC).slice(0, 8)), [CC.catalogue, KC]),
-        Qz = ("list" === AC ? sw.filter((CC => CC < sC)) : Tw).map((CC => ({
-          value: CC,
-          label: String(CC)
+      (0, Xk.useEffect)((() => {
+        Rk && ck && !kk.searching && (Uk(!1), kF())
+      }), [Rk, ck, kk.searching]);
+      const FF = !!sk && !ck && (kk.searching || Rk),
+        IF = sk ? QT(kk.names, sk) : "",
+        XF = (0, Xk.useMemo)((() => KT(kk.catalogue, Ok).slice(0, 8)), [kk.catalogue, Ok]),
+        TF = ("list" === Kk ? cT.filter((kk => kk < Wk)) : WT).map((kk => ({
+          value: kk,
+          label: String(kk)
         })));
-      "list" === AC && sC > 0 && Qz.push({
-        value: sC,
-        label: PC("smpShop:all", {
-          count: sC
+      "list" === Kk && Wk > 0 && TF.push({
+        value: Wk,
+        label: Jk("smpShop:all", {
+          count: Wk
         })
       });
-      const wz = [];
-      return null !== aC && (aC > 1 && wz.push({
-        value: aC - 1,
-        label: PC("smpShop:undercut", {
-          price: UQ(aC - 1)
+      const iF = [];
+      return null !== Bk && (Bk > 1 && iF.push({
+        value: Bk - 1,
+        label: Jk("smpShop:undercut", {
+          price: hX(Bk - 1)
         })
-      }), wz.push({
-        value: aC,
-        label: PC("smpShop:lowest", {
-          price: UQ(aC)
+      }), iF.push({
+        value: Bk,
+        label: Jk("smpShop:lowest", {
+          price: hX(Bk)
         })
-      })), null !== tC && tC !== aC && wz.push({
-        value: tC,
-        label: PC("smpShop:average", {
-          price: UQ(tC)
+      })), null !== dk && dk !== Bk && iF.push({
+        value: dk,
+        label: Jk("smpShop:average", {
+          price: hX(dk)
         })
-      }), (0, WC.jsxs)("div", {
+      }), (0, tk.jsxs)("div", {
         className: "SmpTradeForm",
-        children: [(0, WC.jsxs)("div", {
+        children: [(0, tk.jsxs)("div", {
           className: "SmpTradeFormHead",
-          children: [(0, WC.jsx)("b", {
-            children: PC("list" === AC ? "smpShop:sellOnMarket" : "smpShop:createOrder")
-          }), (0, WC.jsx)("button", {
+          children: [(0, tk.jsx)("b", {
+            children: Jk("list" === Kk ? "smpShop:sellOnMarket" : "smpShop:createOrder")
+          }), (0, tk.jsx)("button", {
             type: "button",
             className: "SmpIconButton",
-            "aria-label": PC("smpShop:close"),
-            onClick: CC.onClose,
-            children: (0, WC.jsx)(fC.c, {
+            "aria-label": Jk("smpShop:close"),
+            onClick: kk.onClose,
+            children: (0, tk.jsx)(lk.e, {
               name: "xmark"
             })
           })]
-        }), "list" === AC && (0, WC.jsx)("div", {
+        }), "list" === Kk && (0, tk.jsx)("div", {
           className: "SmpPicker",
           role: "listbox",
-          children: null !== (pC = CC.inventory) && void 0 !== pC && pC.length ? CC.inventory.map((CC => {
+          children: null !== (Hk = kk.inventory) && void 0 !== Hk && Hk.length ? kk.inventory.map((kk => {
             let {
-              item: zC,
-              quantity: ZC
-            } = CC;
-            return (0, WC.jsx)("button", {
+              item: Fk,
+              quantity: Ik
+            } = kk;
+            return (0, tk.jsx)("button", {
               type: "button",
-              title: zC,
-              className: bC()("SmpPickerSlot", {
-                SmpPickerSlotOn: zC === JC
+              title: Fk,
+              className: ik()("SmpPickerSlot", {
+                SmpPickerSlotOn: Fk === sk
               }),
               onClick: () => {
-                yC(zC)
+                gk(Fk)
               },
-              children: (0, WC.jsx)(kQ, {
-                item: zC,
-                amount: ZC
+              children: (0, tk.jsx)(MX, {
+                item: Fk,
+                amount: Ik
               })
-            }, zC)
-          })) : (0, WC.jsx)("span", {
+            }, Fk)
+          })) : (0, tk.jsx)("span", {
             className: "SmpMuted",
-            children: PC("smpShop:nothingToList")
+            children: Jk("smpShop:nothingToList")
           })
-        }), ("list" === AC || !JC) && (0, WC.jsxs)("div", {
+        }), ("list" === Kk || !sk) && (0, tk.jsxs)("div", {
           className: "SmpItemSearch",
-          children: [(0, WC.jsx)(xC.c, {
+          children: [(0, tk.jsx)(Qk.c, {
             className: "SmpSearchInput",
-            placeholderText: PC("list" === AC ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
-            defaultValue: KC,
-            onValueChange: YC,
+            placeholderText: Jk("list" === Kk ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
+            defaultValue: Ok,
+            onValueChange: nk,
             blurOnEnter: !0,
             onEnter: () => {
-              Zz[0] && yC(Zz[0].name)
+              XF[0] && gk(XF[0].name)
             }
-          }, dC), Zz.length > 0 && (0, WC.jsx)("div", {
+          }, Gk), XF.length > 0 && (0, tk.jsx)("div", {
             className: "SmpPicker",
-            children: Zz.map((CC => {
+            children: XF.map((kk => {
               let {
-                name: zC
-              } = CC;
-              return (0, WC.jsx)("button", {
+                name: Fk
+              } = kk;
+              return (0, tk.jsx)("button", {
                 type: "button",
-                title: zC,
-                className: bC()("SmpPickerSlot", {
-                  SmpPickerSlotOn: zC === JC
+                title: Fk,
+                className: ik()("SmpPickerSlot", {
+                  SmpPickerSlotOn: Fk === sk
                 }),
                 onClick: () => {
-                  yC(zC)
+                  gk(Fk)
                 },
-                children: (0, WC.jsx)(kQ, {
-                  item: zC
+                children: (0, tk.jsx)(MX, {
+                  item: Fk
                 })
-              }, zC)
+              }, Fk)
             }))
           })]
-        }), JC && (0, WC.jsxs)(WC.Fragment, {
-          children: [(0, WC.jsxs)("div", {
+        }), sk && (0, tk.jsxs)(tk.Fragment, {
+          children: [(0, tk.jsxs)("div", {
             className: "SmpPickedName",
-            children: [zz, Cz && (0, WC.jsx)(ww, {})]
-          }), (0, WC.jsxs)("div", {
+            children: [IF, FF && (0, tk.jsx)(iT, {})]
+          }), (0, tk.jsxs)("div", {
             className: "SmpFormGrid",
-            children: [(0, WC.jsxs)("div", {
+            children: [(0, tk.jsxs)("div", {
               className: "SmpField",
-              children: [(0, WC.jsxs)("span", {
-                children: [PC("smpShop:quantity"), "list" === AC && rC && (0, WC.jsx)("small", {
-                  children: PC("smpShop:youHave", {
-                    count: sC
+              children: [(0, tk.jsxs)("span", {
+                children: [Jk("smpShop:quantity"), "list" === Kk && ck && (0, tk.jsx)("small", {
+                  children: Jk("smpShop:youHave", {
+                    count: Wk
                   })
                 })]
-              }), (0, WC.jsx)(bw, {
-                value: iC,
-                onChange: vC,
-                max: TC,
-                label: PC("smpShop:quantity")
-              }), (0, WC.jsx)(Qw, {
-                options: Qz,
-                value: iC,
-                onChange: vC,
-                ariaLabel: PC("smpShop:quantity")
+              }), (0, tk.jsx)(yT, {
+                value: zk,
+                onChange: Sk,
+                max: fk,
+                label: Jk("smpShop:quantity")
+              }), (0, tk.jsx)(TT, {
+                options: TF,
+                value: zk,
+                onChange: Sk,
+                ariaLabel: Jk("smpShop:quantity")
               })]
-            }), (0, WC.jsxs)("div", {
+            }), (0, tk.jsxs)("div", {
               className: "SmpField",
-              children: [(0, WC.jsx)("span", {
-                children: PC("smpShop:pricePerItem")
-              }), (0, WC.jsx)(bw, {
-                value: Math.max(1, eC),
-                onChange: jC,
+              children: [(0, tk.jsx)("span", {
+                children: Jk("smpShop:pricePerItem")
+              }), (0, tk.jsx)(yT, {
+                value: Math.max(1, vk),
+                onChange: Ak,
                 max: 9999999,
-                step: nw,
-                label: PC("smpShop:pricePerItem")
-              }), (0, WC.jsx)(Qw, {
-                options: wz,
-                value: eC,
-                onChange: jC,
-                ariaLabel: PC("smpShop:pricePerItem")
+                step: lT,
+                label: Jk("smpShop:pricePerItem")
+              }), (0, tk.jsx)(TT, {
+                options: iF,
+                value: vk,
+                onChange: Ak,
+                ariaLabel: Jk("smpShop:pricePerItem")
               })]
             })]
-          }), "list" === AC && (0, WC.jsxs)("div", {
+          }), "list" === Kk && (0, tk.jsxs)("div", {
             className: "SmpTradeSummary",
-            children: [(0, WC.jsxs)("span", {
-              children: [PC("smpShop:youGet"), " ", (0, WC.jsx)(VQ, {
-                amount: Math.max(0, LC - UC),
+            children: [(0, tk.jsxs)("span", {
+              children: [Jk("smpShop:youGet"), " ", (0, tk.jsx)(kT, {
+                amount: Math.max(0, mk - hk),
                 exact: !0
               })]
-            }), (0, WC.jsx)("small", {
-              children: UC > 0 ? PC("smpShop:listingFee", {
-                fee: UC.toLocaleString("en-US")
-              }) : PC("smpShop:listingRules")
+            }), (0, tk.jsx)("small", {
+              children: hk > 0 ? Jk("smpShop:listingFee", {
+                fee: hk.toLocaleString("en-US")
+              }) : Jk("smpShop:listingRules")
             })]
-          }), (0, WC.jsx)(qC.t, {
+          }), (0, tk.jsx)(qk.q, {
             className: "SmpSubmit",
-            disabled: !OC && !kC && !BC,
-            loading: BC || Cz || rC && CC.searching,
-            onClick: VC,
-            children: "list" === AC ? PC("smpShop:listButton", {
-              count: iC,
-              item: zz
-            }) : (0, WC.jsxs)(WC.Fragment, {
-              children: [PC("smpShop:orderButton", {
-                count: iC,
-                item: zz
-              }), " ", eC >= 1 && (0, WC.jsx)(VQ, {
-                amount: LC
+            disabled: !Dk && !Mk && !rk,
+            loading: rk || FF || ck && kk.searching,
+            onClick: kF,
+            children: "list" === Kk ? Jk("smpShop:listButton", {
+              count: zk,
+              item: IF
+            }) : (0, tk.jsxs)(tk.Fragment, {
+              children: [Jk("smpShop:orderButton", {
+                count: zk,
+                item: IF
+              }), " ", vk >= 1 && (0, tk.jsx)(kT, {
+                amount: mk
               })]
             })
           })]
@@ -3760,627 +3760,627 @@ export const modules = {
       })
     }
 
-    function tw() {
-      var CC;
+    function BT() {
+      var kk;
       const {
-        t: zC
-      } = (0, nC.y)(), ZC = iw(), wC = null === (CC = ZC.shopInfo[ZC.categoryKey]) || void 0 === CC ? void 0 : CC.items, bC = Mw(wC, "search"), fC = Mw(wC, "creator"), oC = Nw(wC, "enchantedCreator"), FC = Nw(wC, "listing"), NC = Mw(wC, "empty"), MC = Kw(bC, FC.length > 0 || null !== NC), {
-        searched: gC,
-        shown: SC,
-        loading: pC
-      } = MC, [PC, GC] = (0, QC.useState)(!1), [RC, AC] = function() {
-        const [CC, zC] = (0, lw.d)("smpMarketView", "list");
-        return ["grid" === CC ? "grid" : "list", zC]
-      }(), xC = "grid" === RC, JC = (0, QC.useMemo)((() => FC.filter((CC => {
+        t: Fk
+      } = (0, yk.y)(), Ik = ST(), Tk = null === (kk = Ik.shopInfo[Ik.categoryKey]) || void 0 === kk ? void 0 : kk.items, ik = eT(Tk, "search"), lk = eT(Tk, "creator"), ak = jT(Tk, "enchantedCreator"), Lk = jT(Tk, "listing"), Zk = eT(Tk, "empty"), jk = OT(ik, Lk.length > 0 || null !== Zk), {
+        searched: ek,
+        shown: wk,
+        loading: Hk
+      } = jk, [Jk, xk] = (0, Xk.useState)(!1), [Pk, Kk] = function() {
+        const [kk, Fk] = (0, RT.b)("smpMarketView", "list");
+        return ["grid" === kk ? "grid" : "list", Fk]
+      }(), Qk = "grid" === Pk, sk = (0, Xk.useMemo)((() => Lk.filter((kk => {
         let {
-          meta: zC
-        } = CC;
-        return null !== zC.seller && zC.item === gC
-      })).map((CC => {
+          meta: Fk
+        } = kk;
+        return null !== Fk.seller && Fk.item === ek
+      })).map((kk => {
         let {
-          meta: zC
-        } = CC;
-        return zC.pricePerItem
-      })).sort(((CC, zC) => CC - zC))), [FC, gC]), IC = (0, QC.useMemo)((() => {
-        const CC = new Set(MC.catalogue.map((CC => {
+          meta: Fk
+        } = kk;
+        return Fk.pricePerItem
+      })).sort(((kk, Fk) => kk - Fk))), [Lk, ek]), Vk = (0, Xk.useMemo)((() => {
+        const kk = new Set(jk.catalogue.map((kk => {
           let {
-            name: zC
-          } = CC;
-          return zC
+            name: Fk
+          } = kk;
+          return Fk
         })));
-        return function(CC) {
-          for (const zC in CC)
-            if ("sell" === CC[zC].smp) return Nw(CC[zC].items, "sell").filter((CC => {
+        return function(kk) {
+          for (const Fk in kk)
+            if ("sell" === kk[Fk].smp) return jT(kk[Fk].items, "sell").filter((kk => {
               let {
-                item: zC
-              } = CC;
-              return !zC.enchant
-            })).map((CC => {
+                item: Fk
+              } = kk;
+              return !Fk.enchant
+            })).map((kk => {
               let {
-                meta: zC
-              } = CC;
+                meta: Fk
+              } = kk;
               return {
-                item: zC.item,
-                quantity: zC.quantity,
-                sellPrice: zC.pricePerItem
+                item: Fk.item,
+                quantity: Fk.quantity,
+                sellPrice: Fk.pricePerItem
               }
             }));
           return []
-        }(ZC.shopInfo).filter((zC => {
+        }(Ik.shopInfo).filter((Fk => {
           let {
-            item: ZC
-          } = zC;
-          return CC.has(ZC)
+            item: Ik
+          } = Fk;
+          return kk.has(Ik)
         }))
-      }), [ZC.shopInfo, MC.catalogue]);
-      return (0, WC.jsx)(Hw, {
-        browser: MC,
+      }), [Ik.shopInfo, jk.catalogue]);
+      return (0, tk.jsx)(uT, {
+        browser: jk,
         className: "SmpMarketTab",
-        recentLabel: zC("smpShop:recentlyListed"),
-        action: (0, WC.jsx)(qC.t, {
+        recentLabel: Fk("smpShop:recentlyListed"),
+        action: (0, tk.jsx)(qk.q, {
           className: "SmpSellButton",
           onClick: () => {
-            GC((CC => !CC))
+            xk((kk => !kk))
           },
-          children: zC("smpShop:sell")
+          children: Fk("smpShop:sell")
         }),
-        above: PC && (0, WC.jsxs)(WC.Fragment, {
-          children: [(0, WC.jsx)(aw, {
+        above: Jk && (0, tk.jsxs)(tk.Fragment, {
+          children: [(0, tk.jsx)(fT, {
             mode: "list",
-            creator: fC,
-            inventory: IC,
-            catalogue: MC.catalogue,
-            names: MC.names,
-            searching: pC,
-            prices: JC,
-            onPickItem: MC.searchFor,
+            creator: lk,
+            inventory: Vk,
+            catalogue: jk.catalogue,
+            names: jk.names,
+            searching: Hk,
+            prices: sk,
+            onPickItem: jk.searchFor,
             onClose: () => {
-              GC(!1)
+              xk(!1)
             }
-          }), oC.length > 0 && (0, WC.jsx)(Dw, {
-            entries: oC
+          }), ak.length > 0 && (0, tk.jsx)(dT, {
+            entries: ak
           })]
         }),
-        listControls: (0, WC.jsx)(uw, {
-          view: RC,
-          onChange: AC
+        listControls: (0, tk.jsx)(CT, {
+          view: Pk,
+          onChange: Kk
         }),
-        summary: SC && (FC.length > 0 ? zC(1 === FC.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
-          count: FC.length,
-          price: UQ(Ew(FC, "min"))
-        }) : zC("smpShop:noOneSelling", {
-          item: Aw(MC.names, SC)
+        summary: wk && (Lk.length > 0 ? Fk(1 === Lk.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
+          count: Lk.length,
+          price: hX(bT(Lk, "min"))
+        }) : Fk("smpShop:noOneSelling", {
+          item: QT(jk.names, wk)
         })),
-        list: pC ? (0, WC.jsx)(Cw, {
-          grid: xC
-        }) : FC.length > 0 ? (0, WC.jsx)(rw, {
-          entries: FC,
-          view: RC
-        }) : NC ? (0, WC.jsx)(Zw, {
-          entry: NC
-        }) : (0, WC.jsx)(Cw, {
+        list: Hk ? (0, tk.jsx)(FT, {
+          grid: Qk
+        }) : Lk.length > 0 ? (0, tk.jsx)(NT, {
+          entries: Lk,
+          view: Pk
+        }) : Zk ? (0, tk.jsx)(XT, {
+          entry: Zk
+        }) : (0, tk.jsx)(FT, {
           count: 3,
-          grid: xC
+          grid: Qk
         })
       })
     }
 
-    function Dw(CC) {
+    function dT(kk) {
       let {
-        entries: zC
-      } = CC;
+        entries: Fk
+      } = kk;
       const {
-        t: ZC
-      } = (0, nC.y)(), wC = iw(), [bC, fC] = (0, QC.useState)({});
-      return (0, WC.jsx)("div", {
+        t: Ik
+      } = (0, yk.y)(), Tk = ST(), [ik, lk] = (0, Xk.useState)({});
+      return (0, tk.jsx)("div", {
         className: "SmpList",
-        children: zC.map((CC => {
-          var zC, QC, nC;
+        children: Fk.map((kk => {
+          var Fk, Xk, yk;
           let {
-            key: oC,
-            item: FC,
-            meta: NC
-          } = CC;
-          const MC = null !== (zC = bC[oC]) && void 0 !== zC ? zC : 1;
-          return (0, WC.jsxs)("div", {
+            key: ak,
+            item: Lk,
+            meta: Zk
+          } = kk;
+          const jk = null !== (Fk = ik[ak]) && void 0 !== Fk ? Fk : 1;
+          return (0, tk.jsxs)("div", {
             className: "SmpRow",
-            children: [(0, WC.jsx)(kQ, {
-              item: NC.item,
-              amount: NC.quantity,
-              tier: null !== (QC = null === (nC = FC.enchant) || void 0 === nC ? void 0 : nC.tier) && void 0 !== QC ? QC : null
-            }), (0, WC.jsxs)("div", {
+            children: [(0, tk.jsx)(MX, {
+              item: Zk.item,
+              amount: Zk.quantity,
+              tier: null !== (Xk = null === (yk = Lk.enchant) || void 0 === yk ? void 0 : yk.tier) && void 0 !== Xk ? Xk : null
+            }), (0, tk.jsxs)("div", {
               className: "SmpRowText",
-              children: [(0, WC.jsx)("b", {
-                children: (0, WC.jsx)(uQ.e, {
-                  text: FC.customTitle
+              children: [(0, tk.jsx)("b", {
+                children: (0, tk.jsx)(NX.c, {
+                  text: Lk.customTitle
                 })
-              }), (0, WC.jsx)("small", {
-                children: ZC("smpShop:enchantedListing")
+              }), (0, tk.jsx)("small", {
+                children: Ik("smpShop:enchantedListing")
               })]
-            }), (0, WC.jsx)(bw, {
-              value: MC,
-              onChange: CC => {
-                fC({
-                  ...bC,
-                  [oC]: CC
+            }), (0, tk.jsx)(yT, {
+              value: jk,
+              onChange: kk => {
+                lk({
+                  ...ik,
+                  [ak]: kk
                 })
               },
               max: 9999999,
-              step: nw,
-              label: ZC("smpShop:pricePerItem")
-            }), (0, WC.jsxs)(qC.t, {
-              loading: wC.isPending(oC),
+              step: lT,
+              label: Ik("smpShop:pricePerItem")
+            }), (0, tk.jsxs)(qk.q, {
+              loading: Tk.isPending(ak),
               onClick: () => {
-                wC.act(oC, String(MC))
+                Tk.act(ak, String(jk))
               },
-              children: [ZC("smpShop:list"), " ", (0, WC.jsx)(VQ, {
-                amount: MC
+              children: [Ik("smpShop:list"), " ", (0, tk.jsx)(kT, {
+                amount: jk
               })]
             })]
-          }, oC)
+          }, ak)
         }))
       })
     }
-    const jw = (0, QC.memo)((function(CC) {
+    const YT = (0, Xk.memo)((function(kk) {
       let {
-        itemKey: zC,
-        item: ZC,
-        quantity: QC,
-        pricePerItem: wC,
-        tier: nC,
-        selected: fC,
-        onSelect: oC
-      } = CC;
-      return (0, WC.jsxs)("button", {
+        itemKey: Fk,
+        item: Ik,
+        quantity: Xk,
+        pricePerItem: Tk,
+        tier: yk,
+        selected: lk,
+        onSelect: ak
+      } = kk;
+      return (0, tk.jsxs)("button", {
         type: "button",
-        className: bC()("SmpInventorySlot", {
-          SmpInventorySlotOn: fC
+        className: ik()("SmpInventorySlot", {
+          SmpInventorySlotOn: lk
         }),
-        title: ZC,
+        title: Ik,
         onClick: () => {
-          oC(zC)
+          ak(Fk)
         },
-        children: [(0, WC.jsx)(kQ, {
-          item: ZC,
-          amount: QC,
-          tier: nC
-        }), (0, WC.jsx)(VQ, {
-          amount: wC
+        children: [(0, tk.jsx)(MX, {
+          item: Ik,
+          amount: Xk,
+          tier: yk
+        }), (0, tk.jsx)(kT, {
+          amount: Tk
         })]
       })
     }));
 
-    function yw() {
-      var CC;
+    function AT() {
+      var kk;
       const {
-        t: zC
-      } = (0, nC.y)(), ZC = iw(), wC = null === (CC = ZC.shopInfo[ZC.categoryKey]) || void 0 === CC ? void 0 : CC.items, fC = Nw(wC, "sell"), oC = Mw(wC, "empty"), [qC, FC] = (0, QC.useState)(null), [NC, MC] = (0, QC.useState)({}), gC = fC.find((CC => {
+        t: Fk
+      } = (0, yk.y)(), Ik = ST(), Tk = null === (kk = Ik.shopInfo[Ik.categoryKey]) || void 0 === kk ? void 0 : kk.items, lk = jT(Tk, "sell"), ak = eT(Tk, "empty"), [qk, Lk] = (0, Xk.useState)(null), [Zk, jk] = (0, Xk.useState)({}), ek = lk.find((kk => {
         let {
-          key: zC
-        } = CC;
-        return zC === qC
+          key: Fk
+        } = kk;
+        return Fk === qk
       }));
-      return 0 === fC.length ? (0, WC.jsx)("div", {
+      return 0 === lk.length ? (0, tk.jsx)("div", {
         className: "SmpScreen",
-        children: (0, WC.jsx)(zw, {
-          title: oC ? (0, WC.jsx)(uQ.e, {
-            text: oC.item.customTitle
-          }) : zC("smpShop:nothingToSell"),
-          children: oC && (0, WC.jsx)(uQ.e, {
-            text: oC.item.description
+        children: (0, tk.jsx)(IT, {
+          title: ak ? (0, tk.jsx)(NX.c, {
+            text: ak.item.customTitle
+          }) : Fk("smpShop:nothingToSell"),
+          children: ak && (0, tk.jsx)(NX.c, {
+            text: ak.item.description
           })
         })
-      }) : (0, WC.jsxs)("div", {
+      }) : (0, tk.jsxs)("div", {
         className: "SmpScreen SmpInstantSellTab",
-        children: [(0, WC.jsx)("div", {
+        children: [(0, tk.jsx)("div", {
           className: "SmpInventoryGrid",
-          children: fC.map((CC => {
-            var zC, ZC;
+          children: lk.map((kk => {
+            var Fk, Ik;
             let {
-              key: QC,
-              item: wC,
-              meta: bC
-            } = CC;
-            return (0, WC.jsx)(jw, {
-              itemKey: QC,
-              item: bC.item,
-              quantity: bC.quantity,
-              pricePerItem: bC.pricePerItem,
-              tier: null !== (zC = null === (ZC = wC.enchant) || void 0 === ZC ? void 0 : ZC.tier) && void 0 !== zC ? zC : null,
-              selected: QC === qC,
-              onSelect: FC
-            }, QC)
+              key: Xk,
+              item: Tk,
+              meta: ik
+            } = kk;
+            return (0, tk.jsx)(YT, {
+              itemKey: Xk,
+              item: ik.item,
+              quantity: ik.quantity,
+              pricePerItem: ik.pricePerItem,
+              tier: null !== (Fk = null === (Ik = Tk.enchant) || void 0 === Ik ? void 0 : Ik.tier) && void 0 !== Fk ? Fk : null,
+              selected: Xk === qk,
+              onSelect: Lk
+            }, Xk)
           }))
-        }), (0, WC.jsx)("div", {
-          className: bC()("SmpSellBar", {
-            SmpSellBarIdle: !gC
+        }), (0, tk.jsx)("div", {
+          className: ik()("SmpSellBar", {
+            SmpSellBarIdle: !ek
           }),
-          children: gC ? (0, WC.jsx)(Lw, {
-            entry: gC,
-            choice: xw(gC.item, NC[gC.key]),
-            onChoose: CC => {
-              MC({
-                ...NC,
-                [gC.key]: CC
+          children: ek ? (0, tk.jsx)(gT, {
+            entry: ek,
+            choice: sT(ek.item, Zk[ek.key]),
+            onChoose: kk => {
+              jk({
+                ...Zk,
+                [ek.key]: kk
               })
             }
-          }) : (0, WC.jsx)("span", {
+          }) : (0, tk.jsx)("span", {
             className: "SmpMuted",
-            children: zC("smpShop:tapToSell")
+            children: Fk("smpShop:tapToSell")
           })
         })]
       })
     }
 
-    function Lw(CC) {
-      var zC, ZC, QC, wC;
+    function gT(kk) {
+      var Fk, Ik, Xk, Tk;
       let {
-        entry: bC,
-        choice: fC,
-        onChoose: oC
-      } = CC;
+        entry: ik,
+        choice: lk,
+        onChoose: ak
+      } = kk;
       const {
-        t: FC
-      } = (0, nC.y)(), NC = iw(), {
-        key: MC,
-        item: gC,
-        meta: SC
-      } = bC, pC = Pw("dropdown" === (null === (zC = gC.userInput) || void 0 === zC ? void 0 : zC.type) ? gC.userInput.dropdownOptions : []), PC = null === fC ? 0 : -(0, EQ.b)(gC, fC);
-      return (0, WC.jsxs)(WC.Fragment, {
-        children: [(0, WC.jsx)(kQ, {
-          item: SC.item,
-          amount: SC.quantity,
-          tier: null !== (ZC = null === (QC = gC.enchant) || void 0 === QC ? void 0 : QC.tier) && void 0 !== ZC ? ZC : null
-        }), (0, WC.jsxs)("div", {
+        t: Lk
+      } = (0, yk.y)(), Zk = ST(), {
+        key: jk,
+        item: ek,
+        meta: wk
+      } = ik, Hk = xT("dropdown" === (null === (Fk = ek.userInput) || void 0 === Fk ? void 0 : Fk.type) ? ek.userInput.dropdownOptions : []), Jk = null === lk ? 0 : -(0, bX.b)(ek, lk);
+      return (0, tk.jsxs)(tk.Fragment, {
+        children: [(0, tk.jsx)(MX, {
+          item: wk.item,
+          amount: wk.quantity,
+          tier: null !== (Ik = null === (Xk = ek.enchant) || void 0 === Xk ? void 0 : Xk.tier) && void 0 !== Ik ? Ik : null
+        }), (0, tk.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, WC.jsx)("b", {
-            children: (0, WC.jsx)(uQ.e, {
-              text: null !== (wC = gC.customTitle) && void 0 !== wC ? wC : SC.item
+          children: [(0, tk.jsx)("b", {
+            children: (0, tk.jsx)(NX.c, {
+              text: null !== (Tk = ek.customTitle) && void 0 !== Tk ? Tk : wk.item
             })
-          }), (0, WC.jsx)("small", {
-            children: FC("smpShop:sellEach", {
-              count: SC.quantity
+          }), (0, tk.jsx)("small", {
+            children: Lk("smpShop:sellEach", {
+              count: wk.quantity
             })
           })]
-        }), (0, WC.jsx)(Qw, {
-          options: pC.map((CC => {
+        }), (0, tk.jsx)(TT, {
+          options: Hk.map((kk => {
             let {
-              label: zC,
-              quantity: ZC,
-              isAll: QC
-            } = CC;
+              label: Fk,
+              quantity: Ik,
+              isAll: Xk
+            } = kk;
             return {
-              value: zC,
-              label: QC ? FC("smpShop:all", {
-                count: ZC
-              }) : String(ZC)
+              value: Fk,
+              label: Xk ? Lk("smpShop:all", {
+                count: Ik
+              }) : String(Ik)
             }
           })),
-          value: fC,
-          onChange: oC,
-          ariaLabel: FC("smpShop:quantity")
-        }), (0, WC.jsxs)(qC.t, {
-          loading: NC.isPending(MC),
-          disabled: null === fC,
+          value: lk,
+          onChange: ak,
+          ariaLabel: Lk("smpShop:quantity")
+        }), (0, tk.jsxs)(qk.q, {
+          loading: Zk.isPending(jk),
+          disabled: null === lk,
           onClick: () => {
-            NC.act(MC, fC)
+            Zk.act(jk, lk)
           },
-          children: [FC("smpShop:sellButton"), " ", (0, WC.jsx)(VQ, {
-            amount: PC
+          children: [Lk("smpShop:sellButton"), " ", (0, tk.jsx)(kT, {
+            amount: Jk
           })]
         })]
       })
     }
 
-    function Uw() {
-      var CC;
+    function mT() {
+      var kk;
       const {
-        t: zC
-      } = (0, nC.y)(), ZC = iw(), QC = null === (CC = ZC.shopInfo[ZC.categoryKey]) || void 0 === CC ? void 0 : CC.items, wC = Nw(QC, "collect"), bC = Nw(QC, "myListing"), fC = (CC, zC) => ZC.isPending(CC) || !1 === zC.canBuy;
-      return (0, WC.jsxs)("div", {
+        t: Fk
+      } = (0, yk.y)(), Ik = ST(), Xk = null === (kk = Ik.shopInfo[Ik.categoryKey]) || void 0 === kk ? void 0 : kk.items, Tk = jT(Xk, "collect"), ik = jT(Xk, "myListing"), lk = (kk, Fk) => Ik.isPending(kk) || !1 === Fk.canBuy;
+      return (0, tk.jsxs)("div", {
         className: "SmpScreen",
-        children: [(0, WC.jsx)("h3", {
+        children: [(0, tk.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: zC("smpShop:readyToCollect")
-        }), wC.length > 0 ? (0, WC.jsx)("div", {
+          children: Fk("smpShop:readyToCollect")
+        }), Tk.length > 0 ? (0, tk.jsx)("div", {
           className: "SmpList",
-          children: wC.map((CC => {
-            var QC, wC;
+          children: Tk.map((kk => {
+            var Xk, Tk;
             let {
-              key: bC,
-              item: nC,
-              meta: oC
-            } = CC;
-            return (0, WC.jsxs)("div", {
+              key: ik,
+              item: yk,
+              meta: ak
+            } = kk;
+            return (0, tk.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, WC.jsx)(kQ, {
-                item: "sold" === oC.type ? "Gold Coin" : oC.item,
-                amount: "sold" === oC.type ? 0 : oC.quantity,
-                tier: null !== (QC = null === (wC = nC.enchant) || void 0 === wC ? void 0 : wC.tier) && void 0 !== QC ? QC : null
-              }), (0, WC.jsxs)("div", {
+              children: [(0, tk.jsx)(MX, {
+                item: "sold" === ak.type ? "Gold Coin" : ak.item,
+                amount: "sold" === ak.type ? 0 : ak.quantity,
+                tier: null !== (Xk = null === (Tk = yk.enchant) || void 0 === Tk ? void 0 : Tk.tier) && void 0 !== Xk ? Xk : null
+              }), (0, tk.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, WC.jsx)("b", {
-                  children: (0, WC.jsx)(uQ.e, {
-                    text: nC.customTitle
+                children: [(0, tk.jsx)("b", {
+                  children: (0, tk.jsx)(NX.c, {
+                    text: yk.customTitle
                   })
-                }), (0, WC.jsx)("small", {
-                  children: (0, WC.jsx)(uQ.e, {
-                    text: nC.description
+                }), (0, tk.jsx)("small", {
+                  children: (0, tk.jsx)(NX.c, {
+                    text: yk.description
                   })
                 })]
-              }), (0, WC.jsx)(qC.o, {
-                loading: fC(bC, nC),
+              }), (0, tk.jsx)(qk.m, {
+                loading: lk(ik, yk),
                 onClick: () => {
-                  ZC.act(bC)
+                  Ik.act(ik)
                 },
-                children: zC("smpShop:collect")
+                children: Fk("smpShop:collect")
               })]
-            }, bC)
+            }, ik)
           }))
-        }) : (0, WC.jsx)(zw, {
-          title: zC("smpShop:nothingToCollect"),
-          children: zC("smpShop:nothingToCollectHint")
-        }), (0, WC.jsx)("h3", {
+        }) : (0, tk.jsx)(IT, {
+          title: Fk("smpShop:nothingToCollect"),
+          children: Fk("smpShop:nothingToCollectHint")
+        }), (0, tk.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: zC("smpShop:activeListings", {
-            count: bC.length
+          children: Fk("smpShop:activeListings", {
+            count: ik.length
           })
-        }), bC.length > 0 ? (0, WC.jsx)("div", {
+        }), ik.length > 0 ? (0, tk.jsx)("div", {
           className: "SmpList",
-          children: bC.map((CC => {
-            var QC, wC;
+          children: ik.map((kk => {
+            var Xk, Tk;
             let {
-              key: bC,
-              item: nC,
-              meta: oC
-            } = CC;
-            return (0, WC.jsxs)("div", {
+              key: ik,
+              item: yk,
+              meta: ak
+            } = kk;
+            return (0, tk.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, WC.jsx)(kQ, {
-                item: oC.item,
-                amount: oC.quantity,
-                tier: null !== (QC = null === (wC = nC.enchant) || void 0 === wC ? void 0 : wC.tier) && void 0 !== QC ? QC : null
-              }), (0, WC.jsxs)("div", {
+              children: [(0, tk.jsx)(MX, {
+                item: ak.item,
+                amount: ak.quantity,
+                tier: null !== (Xk = null === (Tk = yk.enchant) || void 0 === Tk ? void 0 : Tk.tier) && void 0 !== Xk ? Xk : null
+              }), (0, tk.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, WC.jsx)("b", {
-                  children: (0, WC.jsx)(uQ.e, {
-                    text: nC.customTitle
+                children: [(0, tk.jsx)("b", {
+                  children: (0, tk.jsx)(NX.c, {
+                    text: yk.customTitle
                   })
-                }), (0, WC.jsx)("small", {
-                  children: zC("smpShop:timeLeft", {
-                    time: pw(oC.expiresAt)
+                }), (0, tk.jsx)("small", {
+                  children: Fk("smpShop:timeLeft", {
+                    time: JT(ak.expiresAt)
                   })
                 })]
-              }), (0, WC.jsxs)("div", {
+              }), (0, tk.jsxs)("div", {
                 className: "SmpRowPrice",
-                children: [(0, WC.jsx)(VQ, {
-                  amount: oC.pricePerItem
-                }), (0, WC.jsx)("small", {
-                  children: zC("smpShop:each")
+                children: [(0, tk.jsx)(kT, {
+                  amount: ak.pricePerItem
+                }), (0, tk.jsx)("small", {
+                  children: Fk("smpShop:each")
                 })]
-              }), (0, WC.jsx)(qC.I, {
-                loading: fC(bC, nC),
+              }), (0, tk.jsx)(qk.G, {
+                loading: lk(ik, yk),
                 onClick: () => {
-                  ZC.act(bC)
+                  Ik.act(ik)
                 },
-                children: zC("smpShop:cancel")
+                children: Fk("smpShop:cancel")
               })]
-            }, bC)
+            }, ik)
           }))
-        }) : (0, WC.jsx)(zw, {
-          title: zC("smpShop:noActiveListings"),
-          children: zC("smpShop:noActiveListingsHint")
+        }) : (0, tk.jsx)(IT, {
+          title: Fk("smpShop:noActiveListings"),
+          children: Fk("smpShop:noActiveListingsHint")
         })]
       })
     }
 
-    function Bw(CC) {
+    function hT(kk) {
       let {
-        done: zC,
-        of: ZC
-      } = CC;
-      return (0, WC.jsx)("span", {
+        done: Fk,
+        of: Ik
+      } = kk;
+      return (0, tk.jsx)("span", {
         className: "SmpProgress",
-        children: (0, WC.jsx)("i", {
+        children: (0, tk.jsx)("i", {
           style: {
-            width: `${Math.min(100,zC/Math.max(1,ZC)*100)}%`
+            width: `${Math.min(100,Fk/Math.max(1,Ik)*100)}%`
           }
         })
       })
     }
 
-    function Ow(CC) {
-      var zC, ZC, QC;
+    function rT(kk) {
+      var Fk, Ik, Xk;
       let {
-        entry: wC,
-        choice: bC,
-        onChoose: fC
-      } = CC;
+        entry: Tk,
+        choice: ik,
+        onChoose: lk
+      } = kk;
       const {
-        t: oC
-      } = (0, nC.y)(), FC = iw(), {
-        key: NC,
-        item: MC,
-        meta: gC
-      } = wC, SC = "dropdown" === (null === (zC = MC.userInput) || void 0 === zC ? void 0 : zC.type) ? MC.userInput.dropdownOptions : [], pC = !0 === gC.processing, PC = null !== gC.creator && (gC.owned > 0 || pC), GC = PC && gC.owned > 0 ? Pw(SC) : [], RC = null === bC ? 0 : null !== (ZC = null === (QC = GC.find((CC => CC.label === bC))) || void 0 === QC ? void 0 : QC.quantity) && void 0 !== ZC ? ZC : 0;
-      return (0, WC.jsxs)("div", {
+        t: ak
+      } = (0, yk.y)(), Lk = ST(), {
+        key: Zk,
+        item: jk,
+        meta: ek
+      } = Tk, wk = "dropdown" === (null === (Fk = jk.userInput) || void 0 === Fk ? void 0 : Fk.type) ? jk.userInput.dropdownOptions : [], Hk = !0 === ek.processing, Jk = null !== ek.creator && (ek.owned > 0 || Hk), xk = Jk && ek.owned > 0 ? xT(wk) : [], Pk = null === ik ? 0 : null !== (Ik = null === (Xk = xk.find((kk => kk.label === ik))) || void 0 === Xk ? void 0 : Xk.quantity) && void 0 !== Ik ? Ik : 0;
+      return (0, tk.jsxs)("div", {
         className: "SmpRow SmpOrderRow",
-        children: [(0, WC.jsx)(kQ, {
-          item: gC.item
-        }), (0, WC.jsxs)("div", {
+        children: [(0, tk.jsx)(MX, {
+          item: ek.item
+        }), (0, tk.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, WC.jsx)("b", {
-            children: (0, WC.jsx)(uQ.e, {
-              text: MC.customTitle
+          children: [(0, tk.jsx)("b", {
+            children: (0, tk.jsx)(NX.c, {
+              text: jk.customTitle
             })
-          }), (0, WC.jsxs)("small", {
-            children: [(0, WC.jsx)(VQ, {
-              amount: gC.pricePerItem
-            }), " ", oC("smpShop:each"), " \xb7", " ", null === gC.creator ? oC("smpShop:you") : (0, WC.jsx)(uQ.e, {
+          }), (0, tk.jsxs)("small", {
+            children: [(0, tk.jsx)(kT, {
+              amount: ek.pricePerItem
+            }), " ", ak("smpShop:each"), " \xb7", " ", null === ek.creator ? ak("smpShop:you") : (0, tk.jsx)(NX.c, {
               text: [{
-                entityName: gC.creator
+                entityName: ek.creator
               }]
             })]
-          }), (0, WC.jsx)(Bw, {
-            done: gC.delivered,
-            of: gC.wanted
+          }), (0, tk.jsx)(hT, {
+            done: ek.delivered,
+            of: ek.wanted
           })]
-        }), PC ? (0, WC.jsxs)(WC.Fragment, {
-          children: [(0, WC.jsx)(Qw, {
-            options: GC.map((CC => {
+        }), Jk ? (0, tk.jsxs)(tk.Fragment, {
+          children: [(0, tk.jsx)(TT, {
+            options: xk.map((kk => {
               let {
-                label: zC,
-                quantity: ZC,
-                isAll: QC
-              } = CC;
+                label: Fk,
+                quantity: Ik,
+                isAll: Xk
+              } = kk;
               return {
-                value: zC,
-                label: QC ? oC("smpShop:max", {
-                  count: ZC
-                }) : String(ZC)
+                value: Fk,
+                label: Xk ? ak("smpShop:max", {
+                  count: Ik
+                }) : String(Ik)
               }
             })),
-            value: bC,
-            onChange: fC,
-            ariaLabel: oC("smpShop:quantity")
-          }), (0, WC.jsxs)(qC.t, {
-            loading: FC.isPending(NC) || pC,
-            disabled: null === bC,
+            value: ik,
+            onChange: lk,
+            ariaLabel: ak("smpShop:quantity")
+          }), (0, tk.jsxs)(qk.q, {
+            loading: Lk.isPending(Zk) || Hk,
+            disabled: null === ik,
             onClick: () => {
-              FC.act(NC, bC)
+              Lk.act(Zk, ik)
             },
-            children: [oC("smpShop:deliver"), " ", (0, WC.jsx)(VQ, {
-              amount: RC * gC.pricePerItem
+            children: [ak("smpShop:deliver"), " ", (0, tk.jsx)(kT, {
+              amount: Pk * ek.pricePerItem
             })]
           })]
-        }) : (0, WC.jsx)("span", {
+        }) : (0, tk.jsx)("span", {
           className: "SmpMuted SmpRowNote",
-          children: null === gC.creator ? oC("smpShop:yourOrder") : oC("smpShop:youHave", {
+          children: null === ek.creator ? ak("smpShop:yourOrder") : ak("smpShop:youHave", {
             count: 0
           })
         })]
       })
     }
 
-    function kw() {
-      var CC;
+    function DT() {
+      var kk;
       const {
-        t: zC
-      } = (0, nC.y)(), ZC = iw(), wC = null === (CC = ZC.shopInfo[ZC.categoryKey]) || void 0 === CC ? void 0 : CC.items, bC = Mw(wC, "search"), fC = Mw(wC, "creator"), oC = Nw(wC, "order"), FC = Mw(wC, "empty"), NC = Kw(bC, oC.length > 0 || null !== FC), [MC, gC] = (0, QC.useState)(!1), [SC, pC] = (0, QC.useState)({});
-      return (0, WC.jsx)(Hw, {
-        browser: NC,
-        recentLabel: zC("smpShop:recentOrders"),
-        action: (0, WC.jsx)(qC.t, {
+        t: Fk
+      } = (0, yk.y)(), Ik = ST(), Tk = null === (kk = Ik.shopInfo[Ik.categoryKey]) || void 0 === kk ? void 0 : kk.items, ik = eT(Tk, "search"), lk = eT(Tk, "creator"), ak = jT(Tk, "order"), Lk = eT(Tk, "empty"), Zk = OT(ik, ak.length > 0 || null !== Lk), [jk, ek] = (0, Xk.useState)(!1), [wk, Hk] = (0, Xk.useState)({});
+      return (0, tk.jsx)(uT, {
+        browser: Zk,
+        recentLabel: Fk("smpShop:recentOrders"),
+        action: (0, tk.jsx)(qk.q, {
           onClick: () => {
-            gC((CC => !CC))
+            ek((kk => !kk))
           },
-          children: zC("smpShop:createOrder")
+          children: Fk("smpShop:createOrder")
         }),
-        above: MC && (0, WC.jsx)(aw, {
+        above: jk && (0, tk.jsx)(fT, {
           mode: "order",
-          creator: fC,
-          catalogue: NC.catalogue,
-          names: NC.names,
-          searching: NC.loading,
+          creator: lk,
+          catalogue: Zk.catalogue,
+          names: Zk.names,
+          searching: Zk.loading,
           prices: [],
-          onPickItem: NC.searchFor,
+          onPickItem: Zk.searchFor,
           onClose: () => {
-            gC(!1)
+            ek(!1)
           }
         }),
         onBack: () => {
-          gC(!1)
+          ek(!1)
         },
-        summary: oC.length > 0 && zC(1 === oC.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
-          count: oC.length,
-          price: UQ(Ew(oC, "max"))
+        summary: ak.length > 0 && Fk(1 === ak.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
+          count: ak.length,
+          price: hX(bT(ak, "max"))
         }),
-        list: NC.loading ? (0, WC.jsx)(Cw, {}) : oC.length > 0 ? (0, WC.jsx)(vw.e, {
+        list: Zk.loading ? (0, tk.jsx)(FT, {}) : ak.length > 0 ? (0, tk.jsx)(oT.b, {
           lazyLoadedClassName: "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: gw,
-          observerUpdateDeps: [oC.length],
-          children: oC.map((CC => (0, WC.jsx)(Ow, {
-            entry: CC,
-            choice: xw(CC.item, SC[CC.key]),
-            onChoose: zC => {
-              pC({
-                ...SC,
-                [CC.key]: zC
+          rootMargin: wT,
+          observerUpdateDeps: [ak.length],
+          children: ak.map((kk => (0, tk.jsx)(rT, {
+            entry: kk,
+            choice: sT(kk.item, wk[kk.key]),
+            onChoose: Fk => {
+              Hk({
+                ...wk,
+                [kk.key]: Fk
               })
             }
-          }, CC.key)))
-        }) : FC ? (0, WC.jsx)(Zw, {
-          entry: FC
-        }) : (0, WC.jsx)(Cw, {
+          }, kk.key)))
+        }) : Lk ? (0, tk.jsx)(XT, {
+          entry: Lk
+        }) : (0, tk.jsx)(FT, {
           count: 3
         })
       })
     }
 
-    function Vw() {
-      var CC;
+    function MT() {
+      var kk;
       const {
-        t: zC
-      } = (0, nC.y)(), ZC = iw(), QC = Nw(null === (CC = ZC.shopInfo[ZC.categoryKey]) || void 0 === CC ? void 0 : CC.items, "myOrder");
-      return 0 === QC.length ? (0, WC.jsx)("div", {
+        t: Fk
+      } = (0, yk.y)(), Ik = ST(), Xk = jT(null === (kk = Ik.shopInfo[Ik.categoryKey]) || void 0 === kk ? void 0 : kk.items, "myOrder");
+      return 0 === Xk.length ? (0, tk.jsx)("div", {
         className: "SmpScreen",
-        children: (0, WC.jsx)(zw, {
-          title: zC("smpShop:noOrders"),
-          children: zC("smpShop:noOrdersHint")
+        children: (0, tk.jsx)(IT, {
+          title: Fk("smpShop:noOrders"),
+          children: Fk("smpShop:noOrdersHint")
         })
-      }) : (0, WC.jsx)("div", {
+      }) : (0, tk.jsx)("div", {
         className: "SmpScreen",
-        children: (0, WC.jsx)("div", {
+        children: (0, tk.jsx)("div", {
           className: "SmpList",
-          children: QC.map((CC => {
+          children: Xk.map((kk => {
             let {
-              key: QC,
-              item: wC,
-              meta: bC
-            } = CC;
-            const nC = ZC.isPending(QC) || !1 === wC.canBuy;
-            return (0, WC.jsxs)("div", {
+              key: Xk,
+              item: Tk,
+              meta: ik
+            } = kk;
+            const yk = Ik.isPending(Xk) || !1 === Tk.canBuy;
+            return (0, tk.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, WC.jsx)(kQ, {
-                item: bC.item,
-                amount: bC.collectable
-              }), (0, WC.jsxs)("div", {
+              children: [(0, tk.jsx)(MX, {
+                item: ik.item,
+                amount: ik.collectable
+              }), (0, tk.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, WC.jsx)("b", {
-                  children: (0, WC.jsx)(uQ.e, {
-                    text: wC.customTitle
+                children: [(0, tk.jsx)("b", {
+                  children: (0, tk.jsx)(NX.c, {
+                    text: Tk.customTitle
                   })
-                }), (0, WC.jsxs)("small", {
-                  children: [(0, WC.jsx)(VQ, {
-                    amount: bC.pricePerItem
-                  }), " ", zC("smpShop:each"), bC.collectable > 0 && ` \xb7 ${zC("smpShop:readyCount",{count:bC.collectable})}`]
-                }), (0, WC.jsx)(Bw, {
-                  done: bC.delivered,
-                  of: bC.wanted
+                }), (0, tk.jsxs)("small", {
+                  children: [(0, tk.jsx)(kT, {
+                    amount: ik.pricePerItem
+                  }), " ", Fk("smpShop:each"), ik.collectable > 0 && ` \xb7 ${Fk("smpShop:readyCount",{count:ik.collectable})}`]
+                }), (0, tk.jsx)(hT, {
+                  done: ik.delivered,
+                  of: ik.wanted
                 })]
-              }), bC.collectable > 0 ? (0, WC.jsx)(qC.o, {
-                loading: nC,
+              }), ik.collectable > 0 ? (0, tk.jsx)(qk.m, {
+                loading: yk,
                 onClick: () => {
-                  ZC.act(QC)
+                  Ik.act(Xk)
                 },
-                children: zC("smpShop:collectCount", {
-                  count: bC.collectable
+                children: Fk("smpShop:collectCount", {
+                  count: ik.collectable
                 })
-              }) : (0, WC.jsx)(qC.I, {
-                loading: nC,
+              }) : (0, tk.jsx)(qk.G, {
+                loading: yk,
                 onClick: () => {
-                  ZC.act(QC)
+                  Ik.act(Xk)
                 },
-                children: zC("smpShop:cancel")
+                children: Fk("smpShop:cancel")
               })]
-            }, QC)
+            }, Xk)
           }))
         })
       })
     }
-    const Cb = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
-      zb = {
+    const ki = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
+      Fi = {
         sell: "coins",
         market: "store",
         collect: "backpack",
@@ -4388,775 +4388,775 @@ export const modules = {
         myOrders: "location-check"
       };
 
-    function Zb(CC, zC) {
-      let ZC = !1;
-      const QC = {};
-      for (const wC in CC) zC(wC, CC[wC]) ? QC[wC] = CC[wC] : ZC = !0;
-      return ZC ? QC : CC
+    function Ii(kk, Fk) {
+      let Ik = !1;
+      const Xk = {};
+      for (const Tk in kk) Fk(Tk, kk[Tk]) ? Xk[Tk] = kk[Tk] : Ik = !0;
+      return Ik ? Xk : kk
     }
 
-    function Qb(CC) {
-      var zC, ZC, wC, oC;
+    function Xi(kk) {
+      var Fk, Ik, Tk, ak;
       const {
-        show: qC,
-        shopInfo: FC,
-        selectedCategoryKey: NC
-      } = CC, {
-        t: MC
-      } = (0, nC.y)(), gC = null !== NC && void 0 !== NC ? NC : "", SC = Ww(FC, gC), pC = null === (zC = FC[gC]) || void 0 === zC ? void 0 : zC.items, PC = null !== SC, [GC, RC] = (0, QC.useState)({}), [AC, xC] = (0, QC.useState)([]), [JC, IC] = (0, QC.useState)(!1), [iC, vC] = (0, QC.useState)(null), [, eC] = (0, QC.useState)(0), hC = (0, QC.useRef)(0), KC = (0, QC.useRef)({}), YC = (0, QC.useRef)({
-        items: pC,
-        pending: GC,
-        shopInfo: FC,
-        active: PC,
-        canAfford: CC.canAfford,
-        buy: CC.buy
+        show: qk,
+        shopInfo: Lk,
+        selectedCategoryKey: Zk
+      } = kk, {
+        t: jk
+      } = (0, yk.y)(), ek = null !== Zk && void 0 !== Zk ? Zk : "", wk = ZT(Lk, ek), Hk = null === (Fk = Lk[ek]) || void 0 === Fk ? void 0 : Fk.items, Jk = null !== wk, [xk, Pk] = (0, Xk.useState)({}), [Kk, Qk] = (0, Xk.useState)([]), [sk, Vk] = (0, Xk.useState)(!1), [zk, Sk] = (0, Xk.useState)(null), [, vk] = (0, Xk.useState)(0), Ek = (0, Xk.useRef)(0), Ok = (0, Xk.useRef)({}), nk = (0, Xk.useRef)({
+        items: Hk,
+        pending: xk,
+        shopInfo: Lk,
+        active: Jk,
+        canAfford: kk.canAfford,
+        buy: kk.buy
       });
-      YC.current = {
-        items: pC,
-        pending: GC,
-        shopInfo: FC,
-        active: PC,
-        canAfford: CC.canAfford,
-        buy: CC.buy
+      nk.current = {
+        items: Hk,
+        pending: xk,
+        shopInfo: Lk,
+        active: Jk,
+        canAfford: kk.canAfford,
+        buy: kk.buy
       };
-      const dC = (0, QC.useCallback)((CC => {
-        hC.current++;
-        const zC = hC.current;
-        xC((ZC => [{
-          id: zC,
-          text: CC
-        }, ...ZC].slice(0, 8))), vC(zC)
+      const Gk = (0, Xk.useCallback)((kk => {
+        Ek.current++;
+        const Fk = Ek.current;
+        Qk((Ik => [{
+          id: Fk,
+          text: kk
+        }, ...Ik].slice(0, 8))), Sk(Fk)
       }), []);
-      (0, QC.useEffect)((() => {
-        if (null === iC) return;
-        const CC = setTimeout((() => {
-          vC(null)
+      (0, Xk.useEffect)((() => {
+        if (null === zk) return;
+        const kk = setTimeout((() => {
+          Sk(null)
         }), 3e3);
         return () => {
-          clearTimeout(CC)
+          clearTimeout(kk)
         }
-      }), [iC]), (0, QC.useEffect)((() => {
-        const zC = CC.message;
-        if (!zC) return;
+      }), [zk]), (0, Xk.useEffect)((() => {
+        const Fk = kk.message;
+        if (!Fk) return;
         const {
-          shopInfo: ZC,
-          active: QC,
-          items: wC
-        } = YC.current, bC = null !== zC.categoryKey ? null !== Ww(ZC, zC.categoryKey) : QC;
-        (bC || QC) && dC(zC.text), bC && RC((CC => Zb(CC, (CC => {
-          var zC, ZC;
-          return !Cb.has(null === wC || void 0 === wC || null === (zC = wC[CC]) || void 0 === zC || null === (ZC = zC.smp) || void 0 === ZC ? void 0 : ZC.kind)
+          shopInfo: Ik,
+          active: Xk,
+          items: Tk
+        } = nk.current, ik = null !== Fk.categoryKey ? null !== ZT(Ik, Fk.categoryKey) : Xk;
+        (ik || Xk) && Gk(Fk.text), ik && Pk((kk => Ii(kk, (kk => {
+          var Fk, Ik;
+          return !ki.has(null === Tk || void 0 === Tk || null === (Fk = Tk[kk]) || void 0 === Fk || null === (Ik = Fk.smp) || void 0 === Ik ? void 0 : Ik.kind)
         }))))
-      }), [CC.message, dC]), (0, QC.useEffect)((() => {
-        RC((CC => Zb(CC, ((CC, zC) => Jw(null === pC || void 0 === pC ? void 0 : pC[CC]) === zC.snapshot))))
-      }), [FC, pC]);
-      const mC = Object.keys(GC).length > 0;
-      (0, QC.useEffect)((() => {
-        if (!mC) return;
-        const CC = setInterval((() => {
-          eC((CC => CC + 1));
-          const CC = Date.now(),
+      }), [kk.message, Gk]), (0, Xk.useEffect)((() => {
+        Pk((kk => Ii(kk, ((kk, Fk) => VT(null === Hk || void 0 === Hk ? void 0 : Hk[kk]) === Fk.snapshot))))
+      }), [Lk, Hk]);
+      const pk = Object.keys(xk).length > 0;
+      (0, Xk.useEffect)((() => {
+        if (!pk) return;
+        const kk = setInterval((() => {
+          vk((kk => kk + 1));
+          const kk = Date.now(),
             {
-              pending: zC,
-              items: ZC
-            } = YC.current,
-            QC = Object.keys(zC).filter((ZC => CC - zC[ZC].at >= 12e3));
-          if (0 === QC.length) return;
-          const wC = QC.some((CC => {
-            var QC, wC;
-            return "search" !== (null === ZC || void 0 === ZC || null === (QC = ZC[CC]) || void 0 === QC || null === (wC = QC.smp) || void 0 === wC ? void 0 : wC.kind) || zC[CC].resend
+              pending: Fk,
+              items: Ik
+            } = nk.current,
+            Xk = Object.keys(Fk).filter((Ik => kk - Fk[Ik].at >= 12e3));
+          if (0 === Xk.length) return;
+          const Tk = Xk.some((kk => {
+            var Xk, Tk;
+            return "search" !== (null === Ik || void 0 === Ik || null === (Xk = Ik[kk]) || void 0 === Xk || null === (Tk = Xk.smp) || void 0 === Tk ? void 0 : Tk.kind) || Fk[kk].resend
           }));
-          for (const bC of QC) KC.current[bC] = CC;
-          RC((CC => Zb(CC, (CC => !QC.includes(CC))))), wC && dC(MC("smpShop:noAnswer"))
+          for (const ik of Xk) Ok.current[ik] = kk;
+          Pk((kk => Ii(kk, (kk => !Xk.includes(kk))))), Tk && Gk(jk("smpShop:noAnswer"))
         }), 500);
         return () => {
-          clearInterval(CC)
+          clearInterval(kk)
         }
-      }), [mC]), (0, QC.useEffect)((() => {
-        RC({})
-      }), [gC]), (0, QC.useEffect)((() => {
-        qC || IC(!1)
-      }), [qC]);
-      const HC = (0, QC.useCallback)((function(CC, zC) {
-          let ZC = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      }), [pk]), (0, Xk.useEffect)((() => {
+        Pk({})
+      }), [ek]), (0, Xk.useEffect)((() => {
+        qk || Vk(!1)
+      }), [qk]);
+      const uk = (0, Xk.useCallback)((function(kk, Fk) {
+          let Ik = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
           const {
-            items: QC,
-            pending: wC,
-            canAfford: bC,
-            buy: nC
-          } = YC.current, fC = null === QC || void 0 === QC ? void 0 : QC[CC];
-          if (!fC || CC in wC || !1 === fC.canBuy) return !1;
-          if (!bC(fC, (0, EQ.b)(fC, zC))) return !1;
-          nC(CC, fC, zC);
-          const oC = {
-            snapshot: Jw(fC),
+            items: Xk,
+            pending: Tk,
+            canAfford: ik,
+            buy: yk
+          } = nk.current, lk = null === Xk || void 0 === Xk ? void 0 : Xk[kk];
+          if (!lk || kk in Tk || !1 === lk.canBuy) return !1;
+          if (!ik(lk, (0, bX.b)(lk, Fk))) return !1;
+          yk(kk, lk, Fk);
+          const ak = {
+            snapshot: VT(lk),
             at: Date.now(),
-            resend: ZC
+            resend: Ik
           };
-          return YC.current.pending = {
-            ...YC.current.pending,
-            [CC]: oC
-          }, RC((zC => ({
-            ...zC,
-            [CC]: oC
+          return nk.current.pending = {
+            ...nk.current.pending,
+            [kk]: ak
+          }, Pk((Fk => ({
+            ...Fk,
+            [kk]: ak
           }))), !0
         }), []),
-        EC = (0, QC.useMemo)((() => ({
-          shopInfo: FC,
-          categoryKey: gC,
-          canAfford: CC.canAfford,
-          isPending: CC => CC in GC,
-          gaveUpAt: CC => {
-            var zC;
-            return null !== (zC = KC.current[CC]) && void 0 !== zC ? zC : 0
+        bk = (0, Xk.useMemo)((() => ({
+          shopInfo: Lk,
+          categoryKey: ek,
+          canAfford: kk.canAfford,
+          isPending: kk => kk in xk,
+          gaveUpAt: kk => {
+            var Fk;
+            return null !== (Fk = Ok.current[kk]) && void 0 !== Fk ? Fk : 0
           },
-          act: HC,
-          notify: dC
-        })), [FC, gC, CC.canAfford, GC, HC, dC]),
-        lC = Math.min(...Object.values(GC).map((CC => CC.at))),
-        XC = mC && Date.now() - lC > 1500,
-        cC = AC.length > 1,
-        uC = null !== (ZC = null === (wC = FC[gC]) || void 0 === wC ? void 0 : wC.customTitle) && void 0 !== ZC ? ZC : gC,
-        rC = null === (oC = FC[gC]) || void 0 === oC ? void 0 : oC.description;
-      let sC = null;
-      return "market" === SC ? sC = (0, WC.jsx)(tw, {}) : "sell" === SC ? sC = (0, WC.jsx)(yw, {}) : "collect" === SC ? sC = (0, WC.jsx)(Uw, {}) : "orders" === SC ? sC = (0, WC.jsx)(kw, {}) : "myOrders" === SC && (sC = (0, WC.jsx)(Vw, {})), (0, WC.jsx)(Iw.Provider, {
-        value: EC,
-        children: (0, WC.jsx)("div", {
+          act: uk,
+          notify: Gk
+        })), [Lk, ek, kk.canAfford, xk, uk, Gk]),
+        Rk = Math.min(...Object.values(xk).map((kk => kk.at))),
+        Uk = pk && Date.now() - Rk > 1500,
+        Ck = Kk.length > 1,
+        Nk = null !== (Ik = null === (Tk = Lk[ek]) || void 0 === Tk ? void 0 : Tk.customTitle) && void 0 !== Ik ? Ik : ek,
+        ck = null === (ak = Lk[ek]) || void 0 === ak ? void 0 : ak.description;
+      let Wk = null;
+      return "market" === wk ? Wk = (0, tk.jsx)(BT, {}) : "sell" === wk ? Wk = (0, tk.jsx)(AT, {}) : "collect" === wk ? Wk = (0, tk.jsx)(mT, {}) : "orders" === wk ? Wk = (0, tk.jsx)(DT, {}) : "myOrders" === wk && (Wk = (0, tk.jsx)(MT, {})), (0, tk.jsx)(zT.Provider, {
+        value: bk,
+        children: (0, tk.jsx)("div", {
           className: "SmpShopHost",
-          hidden: !PC,
-          children: (0, WC.jsxs)("div", {
+          hidden: !Jk,
+          children: (0, tk.jsxs)("div", {
             className: "SmpShop",
-            children: [(0, WC.jsx)("header", {
+            children: [(0, tk.jsx)("header", {
               className: "SmpHeader",
-              children: (0, WC.jsxs)("div", {
+              children: (0, tk.jsxs)("div", {
                 className: "SmpHeaderTitle",
-                children: [(0, WC.jsxs)("h2", {
-                  children: [SC && (0, WC.jsx)(fC.c, {
-                    name: zb[SC]
-                  }), MC(uC)]
-                }), rC && (0, WC.jsx)("p", {
-                  children: (0, WC.jsx)(uQ.e, {
-                    text: rC
+                children: [(0, tk.jsxs)("h2", {
+                  children: [wk && (0, tk.jsx)(lk.e, {
+                    name: Fi[wk]
+                  }), jk(Nk)]
+                }), ck && (0, tk.jsx)("p", {
+                  children: (0, tk.jsx)(NX.c, {
+                    text: ck
                   })
                 })]
               })
-            }), (0, WC.jsx)("main", {
+            }), (0, tk.jsx)("main", {
               className: "SmpBody",
               "data-pad-initial-area": !0,
-              children: qC && sC
-            }), (0, WC.jsxs)("button", {
+              children: qk && Wk
+            }), (0, tk.jsxs)("button", {
               type: "button",
-              className: bC()("SmpStatus", {
-                SmpStatusWaiting: mC,
-                SmpStatusFresh: !mC && null !== iC,
-                SmpStatusHasHistory: cC
+              className: ik()("SmpStatus", {
+                SmpStatusWaiting: pk,
+                SmpStatusFresh: !pk && null !== zk,
+                SmpStatusHasHistory: Ck
               }),
               "aria-live": "polite",
-              "aria-expanded": cC ? JC : void 0,
+              "aria-expanded": Ck ? sk : void 0,
               onClick: () => {
-                cC && IC((CC => !CC))
+                Ck && Vk((kk => !kk))
               },
-              children: [mC ? (0, WC.jsxs)("span", {
+              children: [pk ? (0, tk.jsxs)("span", {
                 className: "SmpStatusText",
-                children: [(0, WC.jsx)(ww, {}), MC(XC ? "smpShop:slowConnection" : "smpShop:waiting")]
-              }) : AC[0] ? (0, WC.jsx)("span", {
+                children: [(0, tk.jsx)(iT, {}), jk(Uk ? "smpShop:slowConnection" : "smpShop:waiting")]
+              }) : Kk[0] ? (0, tk.jsx)("span", {
                 className: "SmpStatusText",
-                children: (0, WC.jsx)(uQ.e, {
-                  text: AC[0].text
+                children: (0, tk.jsx)(NX.c, {
+                  text: Kk[0].text
                 })
-              }, AC[0].id) : (0, WC.jsx)("span", {
+              }, Kk[0].id) : (0, tk.jsx)("span", {
                 className: "SmpStatusText SmpMuted",
-                children: MC("smpShop:ready")
-              }), cC && (0, WC.jsx)("small", {
-                children: MC("smpShop:recentMessages", {
-                  count: AC.length
+                children: jk("smpShop:ready")
+              }), Ck && (0, tk.jsx)("small", {
+                children: jk("smpShop:recentMessages", {
+                  count: Kk.length
                 })
               })]
-            }), JC && cC && (0, WC.jsx)("div", {
+            }), sk && Ck && (0, tk.jsx)("div", {
               className: "SmpStatusHistory",
-              children: AC.map((CC => (0, WC.jsx)("div", {
-                children: (0, WC.jsx)(uQ.e, {
-                  text: CC.text
+              children: Kk.map((kk => (0, tk.jsx)("div", {
+                children: (0, tk.jsx)(NX.c, {
+                  text: kk.text
                 })
-              }, CC.id)))
+              }, kk.id)))
             })]
           })
         })
       })
     }
-    class wb {
-      constructor(CC) {
-        this.info = CC
+    class Ti {
+      constructor(kk) {
+        this.info = kk
       }
-      static fromShopInfo(CC) {
-        const zC = {};
-        for (const ZC in CC) {
-          const QC = !0 === CC[ZC].redDot && !0 !== CC[ZC].forceRemoveRedDot;
-          zC[ZC] = {
-            redDot: QC,
+      static fromShopInfo(kk) {
+        const Fk = {};
+        for (const Ik in kk) {
+          const Xk = !0 === kk[Ik].redDot && !0 !== kk[Ik].forceRemoveRedDot;
+          Fk[Ik] = {
+            redDot: Xk,
             items: {}
           };
-          for (const wC in CC[ZC].items) {
-            const QC = CC[ZC].items[wC],
-              bC = !0 === QC.redDot && !0 !== QC.forceRemoveRedDot;
-            zC[ZC].items[wC] = {
-              redDot: bC
+          for (const Tk in kk[Ik].items) {
+            const Xk = kk[Ik].items[Tk],
+              ik = !0 === Xk.redDot && !0 !== Xk.forceRemoveRedDot;
+            Fk[Ik].items[Tk] = {
+              redDot: ik
             }
           }
         }
-        return new wb(zC)
+        return new Ti(Fk)
       }
       anyCategoryHasRedDots() {
-        for (const CC in this.info)
-          if (this.categoryHasRedDot(CC)) return !0;
+        for (const kk in this.info)
+          if (this.categoryHasRedDot(kk)) return !0;
         return !1
       }
-      doesCategoryExist(CC) {
-        return !(0, CZ.H)(this.info[CC])
+      doesCategoryExist(kk) {
+        return !(0, FI.Q)(this.info[kk])
       }
-      categoryHasRedDot(CC) {
-        return !0 === this.info[CC].redDot
+      categoryHasRedDot(kk) {
+        return !0 === this.info[kk].redDot
       }
-      updateCategoryRedDot(CC, zC) {
-        this.info[CC].redDot = zC
+      updateCategoryRedDot(kk, Fk) {
+        this.info[kk].redDot = Fk
       }
-      doesItemExist(CC, zC) {
-        return this.doesCategoryExist(CC) && !(0, CZ.H)(this.info[CC].items[zC])
+      doesItemExist(kk, Fk) {
+        return this.doesCategoryExist(kk) && !(0, FI.Q)(this.info[kk].items[Fk])
       }
-      itemHasRedDot(CC, zC) {
-        return !0 === this.info[CC].items[zC].redDot
+      itemHasRedDot(kk, Fk) {
+        return !0 === this.info[kk].items[Fk].redDot
       }
-      updateItemRedDot(CC, zC, ZC) {
-        this.info[CC].items[zC].redDot = ZC
+      updateItemRedDot(kk, Fk, Ik) {
+        this.info[kk].items[Fk].redDot = Ik
       }
       shallowCopy() {
-        return new wb(this.info)
+        return new Ti(this.info)
       }
     }
 
-    function bb(CC, zC) {
-      return `${CC}\x1f${zC}`
+    function ii(kk, Fk) {
+      return `${kk}\x1f${Fk}`
     }
 
-    function nb(CC, zC) {
-      return !(0, CZ.H)(zC) && !(0, CZ.H)(CC) && zC in CC
+    function yi(kk, Fk) {
+      return !(0, FI.Q)(Fk) && !(0, FI.Q)(kk) && Fk in kk
     }
-    const fb = (0, QC.memo)((function(CC) {
-      var zC, ZC;
+    const li = (0, Xk.memo)((function(kk) {
+      var Fk, Ik;
       let {
-        show: wC
-      } = CC;
-      const nC = (0, hz.e)("players", Mb),
-        fC = (0, hz.e)("players", gb),
-        FC = (0, DQ.e)(),
-        [MC, gC] = (0, QC.useState)({
+        show: Tk
+      } = kk;
+      const yk = (0, EF.i)("players", ji),
+        lk = (0, EF.i)("players", ei),
+        Lk = (0, YX.b)(),
+        [jk, ek] = (0, Xk.useState)({
           shopInfo: {},
           userInputsPerItem: {},
-          redDotInfo: wb.fromShopInfo({}),
+          redDotInfo: Ti.fromShopInfo({}),
           currencyAmounts: {},
           selectedCategoryKey: null,
           onBoughtInfo: null,
           awaitingPurchase: !1
         }),
-        pC = (0, QC.useRef)(""),
-        PC = (0, QC.useRef)(null),
-        RC = (0, QC.useRef)(null),
-        AC = (0, QC.useRef)(0),
-        xC = (0, QC.useRef)(void 0),
-        JC = (0, QC.useRef)(null),
-        IC = (0, QC.useRef)(MC),
-        vC = MC.redDotInfo.anyCategoryHasRedDots(),
-        [eC, KC] = (0, QC.useState)(null),
-        YC = (0, QC.useRef)(!1);
-      let dC = !1,
-        mC = 0,
-        HC = 0;
-      if (MC.currencyAmounts) {
-        for (const CC in MC.currencyAmounts) {
-          var EC;
-          const zC = MC.currencyAmounts[CC];
-          zC.hidden || (mC++, (null === (EC = zC.subtext) || void 0 === EC ? void 0 : EC.length) > 0 && HC++)
+        Hk = (0, Xk.useRef)(""),
+        Jk = (0, Xk.useRef)(null),
+        Pk = (0, Xk.useRef)(null),
+        Kk = (0, Xk.useRef)(0),
+        Qk = (0, Xk.useRef)(void 0),
+        sk = (0, Xk.useRef)(null),
+        Vk = (0, Xk.useRef)(jk),
+        Sk = jk.redDotInfo.anyCategoryHasRedDots(),
+        [vk, Ok] = (0, Xk.useState)(null),
+        nk = (0, Xk.useRef)(!1);
+      let Gk = !1,
+        pk = 0,
+        uk = 0;
+      if (jk.currencyAmounts) {
+        for (const kk in jk.currencyAmounts) {
+          var bk;
+          const Fk = jk.currencyAmounts[kk];
+          Fk.hidden || (pk++, (null === (bk = Fk.subtext) || void 0 === bk ? void 0 : bk.length) > 0 && uk++)
         }
-        dC = mC + HC > 4
-      }(0, QC.useEffect)((() => {
-        zZ.o.bp("showShopIconRedDot", vC, !0)
-      }), [vC]), (0, QC.useEffect)((() => {
-        GC.gameBridge.send("setShopOpen", wC), wC || (clearTimeout(xC.current), gC((CC => CC.awaitingPurchase ? {
-          ...CC,
+        Gk = pk + uk > 4
+      }(0, Xk.useEffect)((() => {
+        II.g.GL("showShopIconRedDot", Sk, !0)
+      }), [Sk]), (0, Xk.useEffect)((() => {
+        xk.gameBridge.send("setShopOpen", Tk), Tk || (clearTimeout(Qk.current), ek((kk => kk.awaitingPurchase ? {
+          ...kk,
           awaitingPurchase: !1
-        } : CC)))
-      }), [wC]), (0, QC.useEffect)((() => () => {
-        GC.gameBridge.send("setShopOpen", !1), clearTimeout(xC.current)
-      }), []), (0, QC.useEffect)((() => {
-        IC.current = MC
-      }), [MC]), (0, QC.useEffect)((() => {
-        if (null === eC) return;
-        return (0, aQ.c)("pointerdown", (CC => {
-          const zC = CC.target;
-          null !== zC && void 0 !== zC && zC.closest(".ShopItem") || KC(null)
+        } : kk)))
+      }), [Tk]), (0, Xk.useEffect)((() => () => {
+        xk.gameBridge.send("setShopOpen", !1), clearTimeout(Qk.current)
+      }), []), (0, Xk.useEffect)((() => {
+        Vk.current = jk
+      }), [jk]), (0, Xk.useEffect)((() => {
+        if (null === vk) return;
+        return (0, BX.d)("pointerdown", (kk => {
+          const Fk = kk.target;
+          null !== Fk && void 0 !== Fk && Fk.closest(".ShopItem") || Ok(null)
         }))
-      }), [eC]);
-      const lC = CC => {
-          gC((zC => ({
-            ...zC,
-            ...CC
+      }), [vk]);
+      const Rk = kk => {
+          ek((Fk => ({
+            ...Fk,
+            ...kk
           })))
         },
-        XC = CC => {
-          var zC;
-          clearTimeout(null === (zC = MC.onBoughtInfo) || void 0 === zC ? void 0 : zC.timeout);
-          const ZC = setTimeout((() => {
-            lC({
+        Uk = kk => {
+          var Fk;
+          clearTimeout(null === (Fk = jk.onBoughtInfo) || void 0 === Fk ? void 0 : Fk.timeout);
+          const Ik = setTimeout((() => {
+            Rk({
               onBoughtInfo: null
             })
           }), 3e3);
-          pC.current = CC, lC({
+          Hk.current = kk, Rk({
             onBoughtInfo: {
-              text: CC,
-              timeout: ZC,
-              categoryKey: PC.current
+              text: kk,
+              timeout: Ik,
+              categoryKey: Jk.current
             }
           })
         },
-        cC = CC => {
+        Ck = kk => {
           const {
-            shopInfo: zC,
-            userInputsPerItem: ZC,
-            redDotInfo: QC,
-            autoSelectCategory: bC
-          } = function(CC, zC, ZC, QC, wC, bC) {
-            if ((0, CZ.H)(CC) || 0 === Object.keys(CC).length) return {
+            shopInfo: Fk,
+            userInputsPerItem: Ik,
+            redDotInfo: Xk,
+            autoSelectCategory: ik
+          } = function(kk, Fk, Ik, Xk, Tk, ik) {
+            if ((0, FI.Q)(kk) || 0 === Object.keys(kk).length) return {
               shopInfo: {},
               userInputsPerItem: {},
-              redDotInfo: wb.fromShopInfo({}),
+              redDotInfo: Ti.fromShopInfo({}),
               autoSelectCategory: null
             };
-            const nC = hC.s[hC.y].adConfig.showRewardedAds,
-              fC = {};
-            let oC = null;
-            for (const pC in CC) {
-              const zC = CC[pC],
-                ZC = {};
-              let QC = !1;
-              for (const CC in zC.items) {
-                const wC = zC.items[CC];
-                (0, EQ.k)(wC, nC) && (ZC[CC] = wC, QC = !0)
+            const yk = Ek.r[Ek.v].adConfig.showRewardedAds,
+              lk = {};
+            let ak = null;
+            for (const Hk in kk) {
+              const Fk = kk[Hk],
+                Ik = {};
+              let Xk = !1;
+              for (const kk in Fk.items) {
+                const Tk = Fk.items[kk];
+                (0, bX.j)(Tk, yk) && (Ik[kk] = Tk, Xk = !0)
               }
-              QC && (fC[pC] = {
-                ...zC,
-                items: ZC
-              }, !0 === zC.autoSelectCategory && (oC = pC))
+              Xk && (lk[Hk] = {
+                ...Fk,
+                items: Ik
+              }, !0 === Fk.autoSelectCategory && (ak = Hk))
             }
-            const qC = {},
-              FC = (CC, zC, QC, nC) => {
-                var fC, oC;
-                const FC = bb(CC, zC),
-                  WC = null !== (fC = ZC[FC]) && void 0 !== fC ? fC : ZC[zC];
-                if (null !== (oC = nC.userInput) && void 0 !== oC && oC.type) switch (nC.userInput.type) {
+            const qk = {},
+              Lk = (kk, Fk, Xk, yk) => {
+                var lk, ak;
+                const Lk = ii(kk, Fk),
+                  tk = null !== (lk = Ik[Lk]) && void 0 !== lk ? lk : Ik[Fk];
+                if (null !== (ak = yk.userInput) && void 0 !== ak && ak.type) switch (yk.userInput.type) {
                   case "dropdown": {
-                    var NC;
-                    const CC = !WC || !nC.userInput.dropdownOptions.some((CC => (0, EQ.f)(CC) === WC)),
-                      zC = nC.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === QC || void 0 === QC || null === (NC = QC.userInput) || void 0 === NC ? void 0 : NC.type) || JSON.stringify(QC.userInput.dropdownOptions) !== JSON.stringify(nC.userInput.dropdownOptions)),
-                      ZC = nC.userInput,
-                      wC = !(0, CZ.H)(ZC.initialValue) && ZC.dropdownOptions.some((CC => (0, EQ.f)(CC) === ZC.initialValue));
-                    var MC;
-                    return void(CC || zC ? wC ? qC[FC] = null !== (MC = nC.userInput.initialValue) && void 0 !== MC ? MC : null : nC.userInput.dropdownOptions.length > 0 ? qC[FC] = (0, EQ.f)(nC.userInput.dropdownOptions[0]) : qC[FC] = null : qC[FC] = WC)
+                    var Zk;
+                    const kk = !tk || !yk.userInput.dropdownOptions.some((kk => (0, bX.e)(kk) === tk)),
+                      Fk = yk.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === Xk || void 0 === Xk || null === (Zk = Xk.userInput) || void 0 === Zk ? void 0 : Zk.type) || JSON.stringify(Xk.userInput.dropdownOptions) !== JSON.stringify(yk.userInput.dropdownOptions)),
+                      Ik = yk.userInput,
+                      Tk = !(0, FI.Q)(Ik.initialValue) && Ik.dropdownOptions.some((kk => (0, bX.e)(kk) === Ik.initialValue));
+                    var jk;
+                    return void(kk || Fk ? Tk ? qk[Lk] = null !== (jk = yk.userInput.initialValue) && void 0 !== jk ? jk : null : yk.userInput.dropdownOptions.length > 0 ? qk[Lk] = (0, bX.e)(yk.userInput.dropdownOptions[0]) : qk[Lk] = null : qk[Lk] = tk)
                   }
                   case "text":
                   case "number":
-                    var gC, SC, pC;
-                    return void((null === QC || void 0 === QC ? void 0 : QC.userInput) !== nC.userInput ? qC[FC] = null !== (gC = null !== (SC = nC.userInput.initialValue) && void 0 !== SC ? SC : WC) && void 0 !== gC ? gC : "" : qC[FC] = null !== (pC = null !== WC && void 0 !== WC ? WC : nC.userInput.initialValue) && void 0 !== pC ? pC : "");
+                    var ek, wk, Hk;
+                    return void((null === Xk || void 0 === Xk ? void 0 : Xk.userInput) !== yk.userInput ? qk[Lk] = null !== (ek = null !== (wk = yk.userInput.initialValue) && void 0 !== wk ? wk : tk) && void 0 !== ek ? ek : "" : qk[Lk] = null !== (Hk = null !== tk && void 0 !== tk ? tk : yk.userInput.initialValue) && void 0 !== Hk ? Hk : "");
                   case "color":
-                    var PC, GC, RC;
-                    return void((null === QC || void 0 === QC ? void 0 : QC.userInput) !== nC.userInput ? qC[FC] = null !== (PC = null !== (GC = nC.userInput.initialValue) && void 0 !== GC ? GC : WC) && void 0 !== PC ? PC : "#000000" : qC[FC] = null !== (RC = null !== WC && void 0 !== WC ? WC : nC.userInput.initialValue) && void 0 !== RC ? RC : "#000000");
+                    var Jk, xk, Pk;
+                    return void((null === Xk || void 0 === Xk ? void 0 : Xk.userInput) !== yk.userInput ? qk[Lk] = null !== (Jk = null !== (xk = yk.userInput.initialValue) && void 0 !== xk ? xk : tk) && void 0 !== Jk ? Jk : "#000000" : qk[Lk] = null !== (Pk = null !== tk && void 0 !== tk ? tk : yk.userInput.initialValue) && void 0 !== Pk ? Pk : "#000000");
                   case "player": {
-                    const CC = (0, EQ.i)(wC, bC, nC.userInput);
-                    return void(WC && CC.includes(WC) ? qC[FC] = WC : qC[FC] = CC.length > 0 ? CC[0] : null)
+                    const kk = (0, bX.f)(Tk, ik, yk.userInput);
+                    return void(tk && kk.includes(tk) ? qk[Lk] = tk : qk[Lk] = kk.length > 0 ? kk[0] : null)
                   }
                 }
               };
-            for (const pC in fC)
-              for (const CC in fC[pC].items) {
-                var WC;
-                const ZC = fC[pC].items[CC];
-                FC(pC, CC, null === (WC = zC[pC]) || void 0 === WC ? void 0 : WC.items[CC], ZC)
+            for (const Hk in lk)
+              for (const kk in lk[Hk].items) {
+                var tk;
+                const Ik = lk[Hk].items[kk];
+                Lk(Hk, kk, null === (tk = Fk[Hk]) || void 0 === tk ? void 0 : tk.items[kk], Ik)
               }
-            const NC = wb.fromShopInfo(fC);
-            for (const pC in fC) {
-              var MC;
-              if (QC.doesCategoryExist(pC)) {
-                (null === (MC = zC[pC]) || void 0 === MC ? void 0 : MC.redDot) === fC[pC].redDot && NC.updateCategoryRedDot(pC, QC.categoryHasRedDot(pC));
-                for (const CC in fC[pC].items) {
-                  var gC, SC;
-                  QC.doesItemExist(pC, CC) && (null === (gC = zC[pC]) || void 0 === gC || null === (SC = gC.items[CC]) || void 0 === SC ? void 0 : SC.redDot) === fC[pC].items[CC].redDot && NC.updateItemRedDot(pC, CC, QC.itemHasRedDot(pC, CC))
+            const Zk = Ti.fromShopInfo(lk);
+            for (const Hk in lk) {
+              var jk;
+              if (Xk.doesCategoryExist(Hk)) {
+                (null === (jk = Fk[Hk]) || void 0 === jk ? void 0 : jk.redDot) === lk[Hk].redDot && Zk.updateCategoryRedDot(Hk, Xk.categoryHasRedDot(Hk));
+                for (const kk in lk[Hk].items) {
+                  var ek, wk;
+                  Xk.doesItemExist(Hk, kk) && (null === (ek = Fk[Hk]) || void 0 === ek || null === (wk = ek.items[kk]) || void 0 === wk ? void 0 : wk.redDot) === lk[Hk].items[kk].redDot && Zk.updateItemRedDot(Hk, kk, Xk.itemHasRedDot(Hk, kk))
                 }
               }
             }
             return {
-              shopInfo: fC,
-              userInputsPerItem: qC,
-              redDotInfo: NC,
-              autoSelectCategory: oC
+              shopInfo: lk,
+              userInputsPerItem: qk,
+              redDotInfo: Zk,
+              autoSelectCategory: ak
             }
-          }(CC, MC.shopInfo, MC.userInputsPerItem, MC.redDotInfo, nC, fC), oC = {
-            shopInfo: zC,
-            userInputsPerItem: ZC,
-            redDotInfo: QC
+          }(kk, jk.shopInfo, jk.userInputsPerItem, jk.redDotInfo, yk, lk), ak = {
+            shopInfo: Fk,
+            userInputsPerItem: Ik,
+            redDotInfo: Xk
           };
-          if (null === bC || wC)
-            if (zC[MC.selectedCategoryKey]) oC.selectedCategoryKey = MC.selectedCategoryKey;
+          if (null === ik || Tk)
+            if (Fk[jk.selectedCategoryKey]) ak.selectedCategoryKey = jk.selectedCategoryKey;
             else {
-              const CC = yQ(zC);
-              oC.selectedCategoryKey = CC.length > 0 ? CC[0] : null
+              const kk = gX(Fk);
+              ak.selectedCategoryKey = kk.length > 0 ? kk[0] : null
             }
-          else oC.selectedCategoryKey = bC;
-          return 0 === Object.keys(zC).length && wC && iC.b.set({
+          else ak.selectedCategoryKey = ik;
+          return 0 === Object.keys(Fk).length && Tk && zk.d.set({
             openEverythingMenuName: null
-          }), oC
+          }), ak
         },
-        rC = (CC, zC, ZC) => {
-          const QC = MC.selectedCategoryKey,
-            wC = bb(QC, CC),
-            bC = null !== ZC && void 0 !== ZC ? ZC : MC.userInputsPerItem[wC],
-            nC = {
-              categoryKey: QC,
-              itemKey: CC,
-              userInput: bC
+        ck = (kk, Fk, Ik) => {
+          const Xk = jk.selectedCategoryKey,
+            Tk = ii(Xk, kk),
+            ik = null !== Ik && void 0 !== Ik ? Ik : jk.userInputsPerItem[Tk],
+            yk = {
+              categoryKey: Xk,
+              itemKey: kk,
+              userInput: ik
             };
-          if (PC.current = QC, zC.isRewardedAd) {
-            if (Date.now() - AC.current < 5e3) return;
-            (0, fz.U)((() => {
-              var ZC, QC, bC;
+          if (Jk.current = Xk, Fk.isRewardedAd) {
+            if (Date.now() - Kk.current < 5e3) return;
+            (0, aF.$)((() => {
+              var Ik, Xk, ik;
               console.log("bought rewarded ad");
-              const fC = nC.categoryKey ? null === (ZC = IC.current.shopInfo[nC.categoryKey]) || void 0 === ZC ? void 0 : ZC.items[CC] : null;
-              if (!fC || !fC.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
-              (null === (QC = zC.userInput) || void 0 === QC ? void 0 : QC.type) === (null === fC || void 0 === fC || null === (bC = fC.userInput) || void 0 === bC ? void 0 : bC.type) ? (nC.userInput = IC.current.userInputsPerItem[wC], GC.gameBridge.send("buyShopItem", nC), zC.onBoughtMessage && XC(zC.onBoughtMessage)) : console.warn("Shop item input type changed, early out")
-            })), AC.current = Date.now()
+              const lk = yk.categoryKey ? null === (Ik = Vk.current.shopInfo[yk.categoryKey]) || void 0 === Ik ? void 0 : Ik.items[kk] : null;
+              if (!lk || !lk.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
+              (null === (Xk = Fk.userInput) || void 0 === Xk ? void 0 : Xk.type) === (null === lk || void 0 === lk || null === (ik = lk.userInput) || void 0 === ik ? void 0 : ik.type) ? (yk.userInput = Vk.current.userInputsPerItem[Tk], xk.gameBridge.send("buyShopItem", yk), Fk.onBoughtMessage && Uk(Fk.onBoughtMessage)) : console.warn("Shop item input type changed, early out")
+            })), Kk.current = Date.now()
           } else {
-            GC.gameBridge.send("buyShopItem", nC), lC({
+            xk.gameBridge.send("buyShopItem", yk), Rk({
               awaitingPurchase: !0
-            }), clearTimeout(xC.current), xC.current = setTimeout((() => {
-              JC.current = null, lC({
+            }), clearTimeout(Qk.current), Qk.current = setTimeout((() => {
+              sk.current = null, Rk({
                 awaitingPurchase: !1
               })
             }), 1e3);
-            const CC = (0, EQ.b)(zC, bC);
-            if (JC.current = null, !isNaN(CC) && nb(MC.currencyAmounts, zC.currency)) {
-              0 !== CC && (JC.current = {
-                currency: zC.currency,
-                amountBefore: MC.currencyAmounts[zC.currency].amount
+            const kk = (0, bX.b)(Fk, ik);
+            if (sk.current = null, !isNaN(kk) && yi(jk.currencyAmounts, Fk.currency)) {
+              0 !== kk && (sk.current = {
+                currency: Fk.currency,
+                amountBefore: jk.currencyAmounts[Fk.currency].amount
               });
-              const ZC = {
-                ...MC.currencyAmounts
+              const Ik = {
+                ...jk.currencyAmounts
               };
-              ZC[zC.currency].amount -= CC, lC({
-                currencyAmounts: ZC
+              Ik[Fk.currency].amount -= kk, Rk({
+                currencyAmounts: Ik
               })
             }
-            zC.onBoughtMessage && XC(zC.onBoughtMessage)
+            Fk.onBoughtMessage && Uk(Fk.onBoughtMessage)
           }
         },
-        sC = (CC, zC) => {
-          if (null === zC || !CC.shopInfo[zC]) return CC;
-          let ZC = CC.redDotInfo;
-          return ZC.categoryHasRedDot(zC) && (ZC.updateCategoryRedDot(zC, !1), ZC = ZC.shallowCopy()), {
-            ...CC,
-            selectedCategoryKey: zC,
-            redDotInfo: ZC
+        Wk = (kk, Fk) => {
+          if (null === Fk || !kk.shopInfo[Fk]) return kk;
+          let Ik = kk.redDotInfo;
+          return Ik.categoryHasRedDot(Fk) && (Ik.updateCategoryRedDot(Fk, !1), Ik = Ik.shallowCopy()), {
+            ...kk,
+            selectedCategoryKey: Fk,
+            redDotInfo: Ik
           }
         },
-        TC = CC => {
-          gC((zC => sC(zC, CC)))
+        fk = kk => {
+          ek((Fk => Wk(Fk, kk)))
         };
-      (0, Xz.c)(tQ.m, (() => {
-        gC((CC => {
-          const zC = (0, tQ.n)(yQ(CC.shopInfo), CC.selectedCategoryKey, (zC => (0, tQ.k)(CC.shopInfo[zC].items)));
-          return zC === CC.selectedCategoryKey ? CC : sC(CC, zC)
+      (0, UF.d)(dX.h, (() => {
+        ek((kk => {
+          const Fk = (0, dX.l)(gX(kk.shopInfo), kk.selectedCategoryKey, (Fk => (0, dX.g)(kk.shopInfo[Fk].items)));
+          return Fk === kk.selectedCategoryKey ? kk : Wk(kk, Fk)
         }))
-      })), (0, Xz.c)("showShopFromServer", (CC => {
+      })), (0, UF.d)("showShopFromServer", (kk => {
         let {
-          toggle: zC,
-          hw: ZC
-        } = CC;
-        ZC && TC(ZC), 0 === Object.keys(MC.shopInfo).length || zC && wC ? iC.b.set({
+          toggle: Fk,
+          ET: Ik
+        } = kk;
+        Ik && fk(Ik), 0 === Object.keys(jk.shopInfo).length || Fk && Tk ? zk.d.set({
           openEverythingMenuName: null
-        }) : iC.b.set({
-          openEverythingMenuName: Fz.o.SHOP
+        }) : zk.d.set({
+          openEverythingMenuName: tF.r.SHOP
         })
-      })), (0, Xz.c)("closeShopOnDamaged", (() => {
-        wC && iC.b.set({
+      })), (0, UF.d)("closeShopOnDamaged", (() => {
+        Tk && zk.d.set({
           openEverythingMenuName: null
         })
-      })), (0, Xz.c)("overShopInfo", (CC => {
-        XC(CC)
-      })), (0, SC.e)("currencyAmounts", (CC => {
-        var zC;
-        const ZC = JC.current;
-        ZC && (null === CC || void 0 === CC || null === (zC = CC[ZC.currency]) || void 0 === zC ? void 0 : zC.amount) === ZC.amountBefore ? lC({
-          currencyAmounts: CC
-        }) : (JC.current = null, lC({
-          currencyAmounts: CC,
+      })), (0, UF.d)("overShopInfo", (kk => {
+        Uk(kk)
+      })), (0, wk.g)("currencyAmounts", (kk => {
+        var Fk;
+        const Ik = sk.current;
+        Ik && (null === kk || void 0 === kk || null === (Fk = kk[Ik.currency]) || void 0 === Fk ? void 0 : Fk.amount) === Ik.amountBefore ? Rk({
+          currencyAmounts: kk
+        }) : (sk.current = null, Rk({
+          currencyAmounts: kk,
           awaitingPurchase: !1
         }))
-      })), (0, SC.e)("shopInfo", (CC => {
-        lC({
-          ...cC(CC),
+      })), (0, wk.g)("shopInfo", (kk => {
+        Rk({
+          ...Ck(kk),
           awaitingPurchase: !1
         })
       }));
-      const aC = (0, QC.useRef)({
-        playerIds: nC,
-        localPlayerId: fC
+      const Bk = (0, Xk.useRef)({
+        playerIds: yk,
+        localPlayerId: lk
       });
-      (0, QC.useEffect)((() => {
-        aC.current.playerIds === nC && aC.current.localPlayerId === fC || (aC.current = {
-          playerIds: nC,
-          localPlayerId: fC
-        }, gC((CC => {
-          const zC = cC(CC.shopInfo);
+      (0, Xk.useEffect)((() => {
+        Bk.current.playerIds === yk && Bk.current.localPlayerId === lk || (Bk.current = {
+          playerIds: yk,
+          localPlayerId: lk
+        }, ek((kk => {
+          const Fk = Ck(kk.shopInfo);
           return {
-            ...CC,
-            ...zC
+            ...kk,
+            ...Fk
           }
         })))
-      }), [nC, fC]);
-      const tC = MC.selectedCategoryKey,
-        DC = (CC, zC) => {
-          var ZC, QC;
-          return (isNaN(zC) || (0, CZ.H)(CC.currency) || nb(MC.currencyAmounts, CC.currency) && zC <= MC.currencyAmounts[CC.currency].amount) && (null === (ZC = CC.canBuy) || void 0 === ZC || ZC) && !(null !== (QC = CC.hidden) && void 0 !== QC && QC)
+      }), [yk, lk]);
+      const dk = jk.selectedCategoryKey,
+        Yk = (kk, Fk) => {
+          var Ik, Xk;
+          return (isNaN(Fk) || (0, FI.Q)(kk.currency) || yi(jk.currencyAmounts, kk.currency) && Fk <= jk.currencyAmounts[kk.currency].amount) && (null === (Ik = kk.canBuy) || void 0 === Ik || Ik) && !(null !== (Xk = kk.hidden) && void 0 !== Xk && Xk)
         },
-        jC = (CC, zC) => {
-          var ZC, QC, wC;
-          const nC = bb(tC, CC),
-            fC = MC.shopInfo[tC].items[CC],
-            FC = MC.userInputsPerItem[nC],
-            NC = (0, EQ.b)(fC, FC),
-            gC = DC(fC, NC),
-            SC = fC.enchant,
-            pC = SC ? (0, uC.db)(null !== (ZC = fC.customTitle) && void 0 !== ZC ? ZC : CC, {
-              colour: uC.bb[SC.tier]
-            }) : null !== (QC = fC.customTitle) && void 0 !== QC ? QC : CC,
-            PC = zC => {
-              const ZC = null !== zC && void 0 !== zC ? zC : FC,
-                QC = void 0 !== zC ? (0, EQ.b)(fC, zC) : NC;
-              DC(fC, QC) && null !== ZC && rC(CC, fC, zC);
-              let wC = MC.redDotInfo;
-              wC.itemHasRedDot(tC, CC) && (wC.updateItemRedDot(tC, CC, !1), wC = wC.shallowCopy()), lC({
-                redDotInfo: wC
+        Ak = (kk, Fk) => {
+          var Ik, Xk, Tk;
+          const yk = ii(dk, kk),
+            lk = jk.shopInfo[dk].items[kk],
+            Lk = jk.userInputsPerItem[yk],
+            Zk = (0, bX.b)(lk, Lk),
+            ek = Yk(lk, Zk),
+            wk = lk.enchant,
+            Hk = wk ? (0, Nk.zb)(null !== (Ik = lk.customTitle) && void 0 !== Ik ? Ik : kk, {
+              colour: Nk.sb[wk.tier]
+            }) : null !== (Xk = lk.customTitle) && void 0 !== Xk ? Xk : kk,
+            Jk = Fk => {
+              const Ik = null !== Fk && void 0 !== Fk ? Fk : Lk,
+                Xk = void 0 !== Fk ? (0, bX.b)(lk, Fk) : Zk;
+              Yk(lk, Xk) && null !== Ik && ck(kk, lk, Fk);
+              let Tk = jk.redDotInfo;
+              Tk.itemHasRedDot(dk, kk) && (Tk.updateItemRedDot(dk, kk, !1), Tk = Tk.shallowCopy()), Rk({
+                redDotInfo: Tk
               })
             };
-          return (0, WC.jsxs)("div", {
-            className: bC()("ShopItem", {
-              ShopItemNoInput: !fC.userInput,
-              ShopItemNoInputCanBuy: !fC.userInput && gC,
-              ShopItemNoInputSelected: fC.isSelected,
-              ShopItemEnchant: !!SC
+          return (0, tk.jsxs)("div", {
+            className: ik()("ShopItem", {
+              ShopItemNoInput: !lk.userInput,
+              ShopItemNoInputCanBuy: !lk.userInput && ek,
+              ShopItemNoInputSelected: lk.isSelected,
+              ShopItemEnchant: !!wk
             }),
-            "data-pad-focusable": !fC.userInput || void 0,
-            "data-pad-unavailable": !fC.userInput && !gC || void 0,
-            "data-pad-repeat": null !== (wC = (0, tQ.c)(fC)) && void 0 !== wC ? wC : void 0,
-            "data-pad-repeat-wait": MC.awaitingPurchase || void 0,
+            "data-pad-focusable": !lk.userInput || void 0,
+            "data-pad-unavailable": !lk.userInput && !ek || void 0,
+            "data-pad-repeat": null !== (Tk = (0, dX.b)(lk)) && void 0 !== Tk ? Tk : void 0,
+            "data-pad-repeat-wait": jk.awaitingPurchase || void 0,
             onClick: () => {
-              if (SC && YC.current) {
-                if (eC !== nC) return void KC(nC);
-                KC(null)
+              if (wk && nk.current) {
+                if (vk !== yk) return void Ok(yk);
+                Ok(null)
               }
-              fC.userInput || PC()
+              lk.userInput || Jk()
             },
-            onPointerDown: CC => {
-              SC && (YC.current = (0, XQ.r)(CC))
+            onPointerDown: kk => {
+              wk && (nk.current = (0, UX.s)(kk))
             },
-            onPointerEnter: CC => {
-              SC && !(0, XQ.r)(CC) && KC(nC)
+            onPointerEnter: kk => {
+              wk && !(0, UX.s)(kk) && Ok(yk)
             },
-            onPointerLeave: CC => {
-              SC && !(0, XQ.r)(CC) && KC((CC => CC === nC ? null : CC))
+            onPointerLeave: kk => {
+              wk && !(0, UX.s)(kk) && Ok((kk => kk === yk ? null : kk))
             },
             style: {
-              zIndex: Object.keys(MC.shopInfo[tC].items).length - zC
+              zIndex: Object.keys(jk.shopInfo[dk].items).length - Fk
             },
-            children: [MC.redDotInfo.itemHasRedDot(tC, CC) && (0, WC.jsx)(oC.d, {
+            children: [jk.redDotInfo.itemHasRedDot(dk, kk) && (0, tk.jsx)(ak.c, {
               top: "-6px",
               right: "-6px"
-            }), fC.badge && (0, WC.jsx)("div", {
+            }), lk.badge && (0, tk.jsx)("div", {
               className: "ShopBadgeContainer",
-              children: (0, WC.jsx)("div", {
-                className: bC()("ShopBadgeMain", fC.badge.type),
-                children: (0, WC.jsx)(uQ.e, {
-                  text: fC.badge.text
+              children: (0, tk.jsx)("div", {
+                className: ik()("ShopBadgeMain", lk.badge.type),
+                children: (0, tk.jsx)(NX.c, {
+                  text: lk.badge.text
                 })
               })
-            }), (0, WC.jsx)("div", {
+            }), (0, tk.jsx)("div", {
               className: "ShopItemLeft",
-              children: fC.image && (0, WC.jsx)(ob, {
-                item: fC,
+              children: lk.image && (0, tk.jsx)(ai, {
+                item: lk,
                 minWidth: 5,
                 minHeight: 4.8
               })
-            }), (0, WC.jsxs)("div", {
+            }), (0, tk.jsxs)("div", {
               className: "ShopItemRight",
-              children: [(0, WC.jsxs)("div", {
+              children: [(0, tk.jsxs)("div", {
                 className: "ShopItemHeader",
-                children: [(0, WC.jsx)("div", {
+                children: [(0, tk.jsx)("div", {
                   className: "ShopItemHeaderTitle",
-                  children: (0, WC.jsx)(uQ.e, {
-                    text: pC
+                  children: (0, tk.jsx)(NX.c, {
+                    text: Hk
                   })
-                }), (0, WC.jsx)("div", {
+                }), (0, tk.jsx)("div", {
                   className: "ShopItemHeaderDescription",
-                  children: (0, WC.jsx)(uQ.e, {
-                    text: fC.description
+                  children: (0, tk.jsx)(NX.c, {
+                    text: lk.description
                   })
                 })]
-              }), fC.userInput && (0, WC.jsxs)("div", {
+              }), lk.userInput && (0, tk.jsxs)("div", {
                 className: "ShopItemInputsContainer",
-                onClick: CC => {
-                  CC.stopPropagation()
+                onClick: kk => {
+                  kk.stopPropagation()
                 },
-                children: [(0, WC.jsx)(Wb, {
-                  item: fC,
-                  currInput: FC,
-                  updateInput: zC => {
-                    ((CC, zC, ZC) => {
-                      const QC = bb(CC, zC),
-                        wC = {
-                          ...MC.userInputsPerItem
+                children: [(0, tk.jsx)(ti, {
+                  item: lk,
+                  currInput: Lk,
+                  updateInput: Fk => {
+                    ((kk, Fk, Ik) => {
+                      const Xk = ii(kk, Fk),
+                        Tk = {
+                          ...jk.userInputsPerItem
                         };
-                      wC[QC] = ZC, lC({
-                        userInputsPerItem: wC
+                      Tk[Xk] = Ik, Rk({
+                        userInputsPerItem: Tk
                       })
-                    })(tC, CC, zC)
+                    })(dk, kk, Fk)
                   },
-                  onSubmit: CC => {
-                    PC(CC)
+                  onSubmit: kk => {
+                    Jk(kk)
                   }
-                }), ("dropdown" !== fC.userInput.type || !fC.userInput.autoSubmit) && (0, WC.jsx)(qC.g, {
+                }), ("dropdown" !== lk.userInput.type || !lk.userInput.autoSubmit) && (0, tk.jsx)(qk.d, {
                   className: "ItemCostButton",
-                  disabled: !gC && null !== FC,
+                  disabled: !ek && null !== Lk,
                   onClick: () => {
-                    PC()
+                    Jk()
                   },
-                  children: (0, WC.jsx)(Fb, {
-                    item: fC,
-                    cost: NC,
-                    currencyAmounts: MC.currencyAmounts
+                  children: (0, tk.jsx)(Li, {
+                    item: lk,
+                    cost: Zk,
+                    currencyAmounts: jk.currencyAmounts
                   })
                 })]
               })]
-            }), !fC.userInput && (0, WC.jsx)("div", {
+            }), !lk.userInput && (0, tk.jsx)("div", {
               className: "ShopItemNoInputCost",
-              children: (0, WC.jsx)(Fb, {
-                item: fC,
-                cost: NC,
-                currencyAmounts: MC.currencyAmounts
+              children: (0, tk.jsx)(Li, {
+                item: lk,
+                cost: Zk,
+                currencyAmounts: jk.currencyAmounts
               })
-            }), SC && eC === nC && (0, WC.jsxs)("div", {
+            }), wk && vk === yk && (0, tk.jsxs)("div", {
               className: "ShopItemEnchantInfo SmallTextBold",
-              children: [(0, WC.jsx)(uQ.e, {
-                text: pC
-              }), (0, WC.jsx)("div", {
+              children: [(0, tk.jsx)(NX.c, {
+                text: Hk
+              }), (0, tk.jsx)("div", {
                 className: "ShopItemEnchantInfoDescription",
-                children: (0, WC.jsx)(uQ.e, {
-                  text: (0, lQ.d)("", SC.enchantments, SC.enchantmentData)
+                children: (0, tk.jsx)(NX.c, {
+                  text: (0, RX.d)("", wk.enchantments, wk.enchantmentData)
                 })
               })]
             })]
-          }, nC)
+          }, yk)
         },
-        yC = function(CC) {
-          for (const zC in CC)
-            if (CC[zC].smp) return !0;
+        gk = function(kk) {
+          for (const Fk in kk)
+            if (kk[Fk].smp) return !0;
           return !1
-        }(MC.shopInfo),
-        LC = Ww(MC.shopInfo, tC);
-      return (0, WC.jsx)(dQ.d, {
+        }(jk.shopInfo),
+        mk = ZT(jk.shopInfo, dk);
+      return (0, tk.jsx)(GX.b, {
         className: "Menu ShopBody",
-        show: wC,
-        children: 0 !== Object.keys(MC.shopInfo).length && (0, WC.jsxs)(WC.Fragment, {
-          children: [(0, WC.jsxs)("div", {
+        show: Tk,
+        children: 0 !== Object.keys(jk.shopInfo).length && (0, tk.jsxs)(tk.Fragment, {
+          children: [(0, tk.jsxs)("div", {
             className: "MenuSideBar",
-            children: [(0, WC.jsx)(NC, {
-              items: yQ(MC.shopInfo).map((CC => {
-                var zC;
+            children: [(0, tk.jsx)(Zk, {
+              items: gX(jk.shopInfo).map((kk => {
+                var Fk;
                 return {
-                  id: CC,
-                  title: null !== (zC = MC.shopInfo[CC].customTitle) && void 0 !== zC ? zC : CC,
-                  redDot: MC.redDotInfo.categoryHasRedDot(CC)
+                  id: kk,
+                  title: null !== (Fk = jk.shopInfo[kk].customTitle) && void 0 !== Fk ? Fk : kk,
+                  redDot: jk.redDotInfo.categoryHasRedDot(kk)
                 }
               })),
-              link: FC ? {
+              link: Lk ? {
                 faIcon: "users-gear",
                 title: "lobbyManageEntry:manageLobby",
                 onClick: () => {
-                  (0, jQ.g)({
-                    page: (0, jQ.e)(),
+                  (0, AX.f)({
+                    page: (0, AX.e)(),
                     source: "shop"
                   })
                 }
               } : void 0,
-              selectedItemId: tC,
-              onClick: TC,
-              padStartsOnTab: (0, tQ.g)(tC)
-            }), (0, WC.jsx)("div", {
+              selectedItemId: dk,
+              onClick: fk,
+              padStartsOnTab: (0, dX.d)(dk)
+            }), (0, tk.jsx)("div", {
               className: "MenuSideBarFooter",
-              children: MC.currencyAmounts && Object.keys(MC.currencyAmounts).map((CC => {
-                var zC;
-                const ZC = MC.currencyAmounts[CC];
-                return ZC.hidden ? null : (0, WC.jsxs)("div", {
-                  className: "ShopCurrencyDiv " + (dC ? "SmallText" : ""),
-                  children: [(0, WC.jsxs)("div", {
+              children: jk.currencyAmounts && Object.keys(jk.currencyAmounts).map((kk => {
+                var Fk;
+                const Ik = jk.currencyAmounts[kk];
+                return Ik.hidden ? null : (0, tk.jsxs)("div", {
+                  className: "ShopCurrencyDiv " + (Gk ? "SmallText" : ""),
+                  children: [(0, tk.jsxs)("div", {
                     className: "ShopCurrencyDetails",
-                    children: [(0, WC.jsx)("div", {
+                    children: [(0, tk.jsx)("div", {
                       className: "ShopCurrencyAmtIcon",
                       style: {
-                        color: ZC.iconColour
+                        color: Ik.iconColour
                       },
-                      children: (0, WC.jsx)(Sb, {
-                        iconName: ZC.icon
+                      children: (0, tk.jsx)(wi, {
+                        iconName: Ik.icon
                       })
-                    }), "\xa0", (0, HQ.d)(ZC.amount, 6)]
-                  }), (null === (zC = ZC.subtext) || void 0 === zC ? void 0 : zC.length) > 0 && (0, WC.jsx)("div", {
+                    }), "\xa0", (0, uX.c)(Ik.amount, 6)]
+                  }), (null === (Fk = Ik.subtext) || void 0 === Fk ? void 0 : Fk.length) > 0 && (0, tk.jsx)("div", {
                     className: "ShopCurrencySubtext",
-                    children: (0, WC.jsx)(uQ.e, {
-                      text: ZC.subtext
+                    children: (0, tk.jsx)(NX.c, {
+                      text: Ik.subtext
                     })
                   })]
-                }, CC)
+                }, kk)
               }))
             })]
-          }), (0, WC.jsxs)("div", {
+          }), (0, tk.jsxs)("div", {
             className: "MenuBody ShopMenuBody",
-            children: [yC && (0, WC.jsx)(Qb, {
-              show: wC,
-              shopInfo: MC.shopInfo,
-              selectedCategoryKey: tC,
-              buy: (CC, zC, ZC) => {
-                rC(CC, zC, ZC)
+            children: [gk && (0, tk.jsx)(Xi, {
+              show: Tk,
+              shopInfo: jk.shopInfo,
+              selectedCategoryKey: dk,
+              buy: (kk, Fk, Ik) => {
+                ck(kk, Fk, Ik)
               },
-              canAfford: DC,
-              message: MC.onBoughtInfo
-            }), null === LC && (0, WC.jsxs)(WC.Fragment, {
-              children: [(0, WC.jsx)("div", {
-                className: bC()("ShopOnBoughtInfo", {
-                  ShopOnBoughtInfoShow: null !== MC.onBoughtInfo
+              canAfford: Yk,
+              message: jk.onBoughtInfo
+            }), null === mk && (0, tk.jsxs)(tk.Fragment, {
+              children: [(0, tk.jsx)("div", {
+                className: ik()("ShopOnBoughtInfo", {
+                  ShopOnBoughtInfoShow: null !== jk.onBoughtInfo
                 }),
-                children: (0, WC.jsx)(uQ.e, {
-                  text: pC.current
+                children: (0, tk.jsx)(NX.c, {
+                  text: Hk.current
                 })
-              }), (0, WC.jsx)("div", {
+              }), (0, tk.jsx)("div", {
                 className: "ShopItemsWrapper",
-                children: (0, WC.jsxs)("div", {
+                children: (0, tk.jsxs)("div", {
                   className: "ShopItemsInner",
-                  children: [(null === (zC = MC.shopInfo[tC]) || void 0 === zC ? void 0 : zC.description) && (0, WC.jsx)("div", {
+                  children: [(null === (Fk = jk.shopInfo[dk]) || void 0 === Fk ? void 0 : Fk.description) && (0, tk.jsx)("div", {
                     className: "ShopCategoryDescription",
-                    children: (0, WC.jsx)(uQ.e, {
-                      text: MC.shopInfo[tC].description
+                    children: (0, tk.jsx)(NX.c, {
+                      text: jk.shopInfo[dk].description
                     })
-                  }), wC && (0, WC.jsx)("div", {
+                  }), Tk && (0, tk.jsx)("div", {
                     className: "ShopItems",
-                    ref: RC,
+                    ref: Pk,
                     "data-pad-initial-area": !0,
-                    children: yQ(null === (ZC = MC.shopInfo[tC]) || void 0 === ZC ? void 0 : ZC.items).map(((CC, zC) => jC(CC, zC)))
+                    children: gX(null === (Ik = jk.shopInfo[dk]) || void 0 === Ik ? void 0 : Ik.items).map(((kk, Fk) => Ak(kk, Fk)))
                   })]
                 })
               })]
@@ -5166,784 +5166,784 @@ export const modules = {
       })
     }));
 
-    function ob(CC) {
+    function ai(kk) {
       let {
-        item: zC,
-        minWidth: ZC,
-        minHeight: QC
-      } = CC;
+        item: Fk,
+        minWidth: Ik,
+        minHeight: Xk
+      } = kk;
       const {
-        image: wC,
-        schematicId: bC,
-        imageColour: nC
-      } = zC;
-      if (bC) return (0, WC.jsx)("div", {
+        image: Tk,
+        schematicId: ik,
+        imageColour: yk
+      } = Fk;
+      if (ik) return (0, tk.jsx)("div", {
         className: "ShopSchematic",
         style: {
-          width: `${ZC}rem`,
-          height: `${QC}rem`
+          width: `${Ik}rem`,
+          height: `${Xk}rem`
         },
-        children: (0, WC.jsx)(rQ.d, {
+        children: (0, tk.jsx)(cX.b, {
           game: {
-            schematicId: bC
+            schematicId: ik
           }
         })
       });
-      var oC, qC;
-      if ((0, cQ.h)(wC)) return (0, WC.jsx)("div", {
+      var ak, qk;
+      if ((0, CX.e)(Tk)) return (0, tk.jsx)("div", {
         className: "ShopBlock",
         style: {
-          minWidth: `${ZC}rem`,
+          minWidth: `${Ik}rem`,
           height: "0",
-          minHeight: `${QC}rem`
+          minHeight: `${Xk}rem`
         },
-        children: (0, WC.jsx)(cQ.e, {
-          itemName: wC,
-          amount: null !== (oC = zC.amount) && void 0 !== oC ? oC : 0,
-          amountFontSize: QC / 4 + "rem",
-          enchantmentTier: null === (qC = zC.enchant) || void 0 === qC ? void 0 : qC.tier
+        children: (0, tk.jsx)(CX.d, {
+          itemName: Tk,
+          amount: null !== (ak = Fk.amount) && void 0 !== ak ? ak : 0,
+          amountFontSize: Xk / 4 + "rem",
+          enchantmentTier: null === (qk = Fk.enchant) || void 0 === qk ? void 0 : qk.tier
         })
       });
-      const FC = wC.slice(-4);
-      return ".jpg" === FC || ".png" === FC ? (0, WC.jsx)(qb, {
-        image: wC,
-        minWidth: ZC
-      }) : (0, WC.jsx)(fC.c, {
-        name: wC,
+      const Lk = Tk.slice(-4);
+      return ".jpg" === Lk || ".png" === Lk ? (0, tk.jsx)(qi, {
+        image: Tk,
+        minWidth: Ik
+      }) : (0, tk.jsx)(lk.e, {
+        name: Tk,
         className: "SelectedItemImage",
         style: {
-          color: nC
+          color: yk
         }
       })
     }
 
-    function qb(CC) {
+    function qi(kk) {
       let {
-        image: zC,
-        minWidth: ZC
-      } = CC;
+        image: Fk,
+        minWidth: Ik
+      } = kk;
       const {
-        gameNameWithVariation: QC
-      } = (0, hz.f)("connectedGame"), wC = zC.endsWith(".jpg");
-      return (0, WC.jsx)("img", {
-        className: bC()({
-          ShopPixelImage: !wC
+        gameNameWithVariation: Xk
+      } = (0, EF.k)("connectedGame"), Tk = Fk.endsWith(".jpg");
+      return (0, tk.jsx)("img", {
+        className: ik()({
+          ShopPixelImage: !Tk
         }),
         style: {
-          width: `${wC?1.6*ZC:ZC}rem`,
+          width: `${Tk?1.6*Ik:Ik}rem`,
           height: "auto",
           fontSize: "1.25rem"
         },
-        src: `/textures/games/${(0,uC.Cb)(QC)}/${zC}`,
-        alt: zC,
+        src: `/textures/games/${(0,Nk.dc)(Xk)}/${Fk}`,
+        alt: Fk,
         draggable: !1
       })
     }
 
-    function Fb(CC) {
+    function Li(kk) {
       let {
-        item: zC,
-        cost: ZC,
-        currencyAmounts: QC
-      } = CC;
-      const wC = !isNaN(ZC) && 0 !== ZC && nb(QC, zC.currency);
-      let bC = null;
-      return zC.buyButtonText ? bC = zC.buyButtonText : wC ? (bC = ZC, zC.sell && (bC = -1 * ZC), bC = bC.toString()) : 0 === ZC ? bC = "Free" : zC.isRewardedAd && (bC = "Watch ad"), (0, CZ.H)(bC) || " " === bC ? null : (0, WC.jsxs)("div", {
+        item: Fk,
+        cost: Ik,
+        currencyAmounts: Xk
+      } = kk;
+      const Tk = !isNaN(Ik) && 0 !== Ik && yi(Xk, Fk.currency);
+      let ik = null;
+      return Fk.buyButtonText ? ik = Fk.buyButtonText : Tk ? (ik = Ik, Fk.sell && (ik = -1 * Ik), ik = ik.toString()) : 0 === Ik ? ik = "Free" : Fk.isRewardedAd && (ik = "Watch ad"), (0, FI.Q)(ik) || " " === ik ? null : (0, tk.jsxs)("div", {
         className: "BuyItemCostAndIcon",
-        children: [wC && (0, WC.jsx)("div", {
+        children: [Tk && (0, tk.jsx)("div", {
           style: {
-            color: QC[zC.currency].iconColour
+            color: Xk[Fk.currency].iconColour
           },
           className: "BuyItemIcon",
-          children: (0, WC.jsx)(Sb, {
-            iconName: QC[zC.currency].icon
+          children: (0, tk.jsx)(wi, {
+            iconName: Xk[Fk.currency].icon
           })
-        }), (0, WC.jsx)("div", {
+        }), (0, tk.jsx)("div", {
           className: "BuyItemCost",
-          children: (0, WC.jsx)(uQ.e, {
-            text: bC
+          children: (0, tk.jsx)(NX.c, {
+            text: ik
           })
         })]
       })
     }
 
-    function Wb(CC) {
+    function ti(kk) {
       let {
-        item: zC,
-        currInput: ZC,
-        updateInput: wC,
-        onSubmit: bC
-      } = CC;
+        item: Fk,
+        currInput: Ik,
+        updateInput: Tk,
+        onSubmit: ik
+      } = kk;
       const {
-        t: fC
-      } = (0, nC.y)(), oC = (0, QC.useRef)(null);
-      if ((0, QC.useEffect)((() => {
-          const CC = oC.current;
-          CC && CC.value !== ZC && document.activeElement !== CC && (CC.value = null !== ZC && void 0 !== ZC ? ZC : "")
-        }), [ZC]), !zC.userInput) return null;
-      let qC = zC.userInput;
-      if (PC.featureFlags.sanitizeShopInput && "text" === zC.userInput.type && (qC = {
+        t: lk
+      } = (0, yk.y)(), ak = (0, Xk.useRef)(null);
+      if ((0, Xk.useEffect)((() => {
+          const kk = ak.current;
+          kk && kk.value !== Ik && document.activeElement !== kk && (kk.value = null !== Ik && void 0 !== Ik ? Ik : "")
+        }), [Ik]), !Fk.userInput) return null;
+      let qk = Fk.userInput;
+      if (Jk.featureFlags.sanitizeShopInput && "text" === Fk.userInput.type && (qk = {
           type: "number",
           placeholderText: "Numbers Only"
-        }), "text" === qC.type || "number" === qC.type) {
-        var FC, NC;
-        console.assert(void 0 !== ZC, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(zC)}`);
-        const CC = "text" === qC.type && qC.wordCharsOnly;
-        return (0, WC.jsx)("div", {
+        }), "text" === qk.type || "number" === qk.type) {
+        var Lk, Zk;
+        console.assert(void 0 !== Ik, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(Fk)}`);
+        const kk = "text" === qk.type && qk.wordCharsOnly;
+        return (0, tk.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputTextWrapper",
-          children: (0, WC.jsx)(xC.c, {
+          children: (0, tk.jsx)(Qk.c, {
             className: "ShopItemUserInputText",
-            placeholderText: fC(qC.placeholderText),
-            defaultValue: ZC,
-            domRef: oC,
-            onValueChange: (zC, ZC) => {
-              !0 === CC && (zC = (0, TQ.nb)(zC)), oC.current.value = zC, wC(zC)
+            placeholderText: lk(qk.placeholderText),
+            defaultValue: Ik,
+            domRef: ak,
+            onValueChange: (Fk, Ik) => {
+              !0 === kk && (Fk = (0, fX.ib)(Fk)), ak.current.value = Fk, Tk(Fk)
             },
-            onEnter: bC,
-            type: qC.type
-          }, (null !== (FC = qC.initialValue) && void 0 !== FC ? FC : "") + (null !== (NC = qC.placeholderText) && void 0 !== NC ? NC : ""))
+            onEnter: ik,
+            type: qk.type
+          }, (null !== (Lk = qk.initialValue) && void 0 !== Lk ? Lk : "") + (null !== (Zk = qk.placeholderText) && void 0 !== Zk ? Zk : ""))
         })
       }
-      if ("dropdown" === qC.type) {
-        console.assert(void 0 !== ZC, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(zC)}`);
-        const CC = qC.autoSubmit;
-        return (0, WC.jsx)("div", {
+      if ("dropdown" === qk.type) {
+        console.assert(void 0 !== Ik, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(Fk)}`);
+        const kk = qk.autoSubmit;
+        return (0, tk.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputDropdown",
-          children: (0, WC.jsx)(iz.b, {
-            options: qC.dropdownOptions.map((CC => (0, EQ.f)(CC))),
-            value: ZC,
-            onChange: zC => {
+          children: (0, tk.jsx)(SF.e, {
+            options: qk.dropdownOptions.map((kk => (0, bX.e)(kk))),
+            value: Ik,
+            onChange: Fk => {
               let {
-                value: ZC
-              } = zC;
-              wC(ZC), CC && bC(ZC)
+                value: Ik
+              } = Fk;
+              Tk(Ik), kk && ik(Ik)
             }
           })
         })
       }
-      return "player" === qC.type ? (0, WC.jsx)(Nb, {
-        userInput: qC,
-        currInput: ZC,
-        updateInput: wC
-      }) : "color" === qC.type ? (0, WC.jsx)("div", {
+      return "player" === qk.type ? (0, tk.jsx)(Zi, {
+        userInput: qk,
+        currInput: Ik,
+        updateInput: Tk
+      }) : "color" === qk.type ? (0, tk.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputColor",
-        children: (0, WC.jsx)("input", {
+        children: (0, tk.jsx)("input", {
           type: "color",
-          value: ZC,
-          onChange: CC => {
-            wC(CC.target.value)
+          value: Ik,
+          onChange: kk => {
+            Tk(kk.target.value)
           }
         })
       }) : null
     }
 
-    function Nb(CC) {
+    function Zi(kk) {
       let {
-        userInput: zC,
-        currInput: ZC,
-        updateInput: QC
-      } = CC;
-      const wC = (0, hz.f)("players"),
-        bC = (0, hz.f)("hiddenPlayerNames"),
-        nC = (0, EQ.i)(wC.ids, wC.localId, zC);
-      return (0, WC.jsx)("div", {
+        userInput: Fk,
+        currInput: Ik,
+        updateInput: Xk
+      } = kk;
+      const Tk = (0, EF.k)("players"),
+        ik = (0, EF.k)("hiddenPlayerNames"),
+        yk = (0, bX.f)(Tk.ids, Tk.localId, Fk);
+      return (0, tk.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputDropdown",
-        children: (0, WC.jsx)(iz.b, {
-          options: nC.map((CC => {
+        children: (0, tk.jsx)(SF.e, {
+          options: yk.map((kk => {
             const {
-              name: zC
-            } = wC.byId[CC];
+              name: Fk
+            } = Tk.byId[kk];
             return {
-              value: CC,
-              label: null === zC ? "" : (0, sQ.g)(zC, bC)
+              value: kk,
+              label: null === Fk ? "" : (0, WX.d)(Fk, ik)
             }
           })),
-          value: ZC,
-          onChange: CC => {
+          value: Ik,
+          onChange: kk => {
             let {
-              value: zC
-            } = CC;
-            QC(zC)
+              value: Fk
+            } = kk;
+            Xk(Fk)
           }
         })
       })
     }
 
-    function Mb(CC) {
+    function ji(kk) {
       let {
-        ids: zC
-      } = CC;
-      return zC
+        ids: Fk
+      } = kk;
+      return Fk
     }
 
-    function gb(CC) {
+    function ei(kk) {
       let {
-        localId: zC
-      } = CC;
-      return zC
+        localId: Fk
+      } = kk;
+      return Fk
     }
 
-    function Sb(CC) {
+    function wi(kk) {
       let {
-        iconName: zC
-      } = CC;
-      return GC.gameBridge.lookup("isItemName", zC) ? (0, WC.jsx)(cQ.e, {
-        itemName: zC,
+        iconName: Fk
+      } = kk;
+      return xk.gameBridge.lookup("isItemName", Fk) ? (0, tk.jsx)(CX.d, {
+        itemName: Fk,
         amount: 1
-      }) : (0, WC.jsx)(fC.c, {
-        name: zC,
+      }) : (0, tk.jsx)(lk.e, {
+        name: Fk,
         className: "2x"
       })
     }
-    var pb = ZC(1557);
-    const Pb = (0, ZC(1357).g)((CC => CC.PadLobbyShortcuts)),
-      Gb = (0, QC.lazy)((() => Promise.resolve().then((() => ZC(4591))).then((CC => ({
-        default: CC.Lobbyleaderboard
+    var Hi = Ik(1580);
+    const Ji = (0, Ik(1375).j)((kk => kk.PadLobbyShortcuts)),
+      xi = (0, Xk.lazy)((() => Promise.resolve().then((() => Ik(4645))).then((kk => ({
+        default: kk.Lobbyleaderboard
       }))))),
-      Rb = (0, QC.lazy)((() => ZC.e(220).then((() => ZC(40915))).then((CC => ({
-        default: CC.LobbyManageView
+      Pi = (0, Xk.lazy)((() => Ik.e(220).then((() => Ik(41084))).then((kk => ({
+        default: kk.LobbyManageView
       })))));
 
-    function Ab(CC) {
+    function Ki(kk) {
       let {
-        show: zC
-      } = CC;
-      return zC ? (0, WC.jsx)(xb, {}) : null
+        show: Fk
+      } = kk;
+      return Fk ? (0, tk.jsx)(Qi, {}) : null
     }
 
-    function xb() {
-      const CC = (0, DQ.e)();
-      return (0, WC.jsxs)(WC.Fragment, {
-        children: [(0, WC.jsx)(Pb, {}), (0, WC.jsxs)(QC.Suspense, {
-          fallback: (0, WC.jsx)("div", {
+    function Qi() {
+      const kk = (0, YX.b)();
+      return (0, tk.jsxs)(tk.Fragment, {
+        children: [(0, tk.jsx)(Ji, {}), (0, tk.jsxs)(Xk.Suspense, {
+          fallback: (0, tk.jsx)("div", {
             className: "CharacterCustomisationLoading",
-            children: (0, WC.jsx)(JC.d, {})
+            children: (0, tk.jsx)(sk.c, {})
           }),
-          children: [CC && (0, WC.jsx)(Rb, {
-            leaderboard: (0, WC.jsx)(Gb, {})
-          }), !CC && (0, WC.jsx)(Gb, {})]
+          children: [kk && (0, tk.jsx)(Pi, {
+            leaderboard: (0, tk.jsx)(xi, {})
+          }), !kk && (0, tk.jsx)(xi, {})]
         })]
       })
     }
-    var Jb = ZC(1493),
-      Ib = ZC(3007),
-      ib = ZC(1645),
-      vb = ZC(3059),
-      eb = ZC(2676),
-      hb = ZC(1434),
-      Kb = ZC(1392),
-      Yb = ZC(2991),
-      db = ZC(3002),
-      mb = ZC(2276);
-    const Hb = "storeRecentGiftRecipients",
-      Eb = new Map;
+    var si = Ik(1515),
+      Vi = Ik(2955),
+      zi = Ik(1665),
+      Si = Ik(3001),
+      oi = Ik(2616),
+      vi = Ik(1451),
+      Ei = Ik(1415),
+      Oi = Ik(2929),
+      ni = Ik(2946),
+      Gi = Ik(2259);
+    const ui = "storeRecentGiftRecipients",
+      bi = new Map;
 
-    function lb() {
+    function Ri() {
       try {
-        const CC = QZ.i.getItem(Hb);
-        return Array.isArray(CC) ? CC.filter((CC => "string" === typeof(null === CC || void 0 === CC ? void 0 : CC.name) && CC.name.length > 0)).map((CC => ({
-          name: CC.name,
-          cosmetics: CC.cosmetics && "object" === typeof CC.cosmetics ? CC.cosmetics : null
+        const kk = TI.j.getItem(ui);
+        return Array.isArray(kk) ? kk.filter((kk => "string" === typeof(null === kk || void 0 === kk ? void 0 : kk.name) && kk.name.length > 0)).map((kk => ({
+          name: kk.name,
+          cosmetics: kk.cosmetics && "object" === typeof kk.cosmetics ? kk.cosmetics : null
         }))) : []
       } catch {
         return []
       }
     }
 
-    function Xb(CC) {
-      var zC;
-      const [ZC, wC] = (0, QC.useState)(""), [bC, nC] = (0, QC.useState)("search"), [fC, oC] = (0, QC.useState)(null), [qC, FC] = (0, QC.useState)(null), WC = (0, QC.useRef)(null), NC = (0, QC.useRef)(null);
-      (0, QC.useEffect)((() => () => {
-        WC.current && clearTimeout(WC.current)
+    function Ui(kk) {
+      var Fk;
+      const [Ik, Tk] = (0, Xk.useState)(""), [ik, yk] = (0, Xk.useState)("search"), [lk, ak] = (0, Xk.useState)(null), [qk, Lk] = (0, Xk.useState)(null), tk = (0, Xk.useRef)(null), Zk = (0, Xk.useRef)(null);
+      (0, Xk.useEffect)((() => () => {
+        tk.current && clearTimeout(tk.current)
       }), []);
-      const MC = null !== (zC = null === fC || void 0 === fC ? void 0 : fC.name) && void 0 !== zC ? zC : null;
+      const jk = null !== (Fk = null === lk || void 0 === lk ? void 0 : lk.name) && void 0 !== Fk ? Fk : null;
 
-      function gC() {
-        WC.current && (clearTimeout(WC.current), WC.current = null)
-      }(0, QC.useEffect)((() => {
-        if (null === MC || CC === KC.NULL_USER_CONTEXT) return;
-        const zC = MC.toLowerCase();
-        if (zC === CC.getPlayerName().toLowerCase()) return void FC({
-          name: MC,
+      function ek() {
+        tk.current && (clearTimeout(tk.current), tk.current = null)
+      }(0, Xk.useEffect)((() => {
+        if (null === jk || kk === Ok.NULL_USER_CONTEXT) return;
+        const Fk = jk.toLowerCase();
+        if (Fk === kk.getPlayerName().toLowerCase()) return void Lk({
+          name: jk,
           result: {
             giftRecipientFound: !1,
             giftRecipientError: "store:giftRecipientIsYou"
           }
         });
-        const ZC = Eb.get(zC);
-        if (ZC) return void FC({
-          name: MC,
-          result: ZC
+        const Ik = bi.get(Fk);
+        if (Ik) return void Lk({
+          name: jk,
+          result: Ik
         });
-        let QC = !1;
-        return async function(CC, zC) {
+        let Xk = !1;
+        return async function(kk, Fk) {
           try {
-            const ZC = await (0, KC.postJsonWithMetricsCookiesAndJsonResponse)(`${nz.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
-              giftRecipientName: zC
+            const Ik = await (0, Ok.postJsonWithMetricsCookiesAndJsonResponse)(`${lF.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
+              giftRecipientName: Fk
             }, {
               retries: 1
-            }, CC.getMetricsCookies());
-            if ("boolean" !== typeof(null === ZC || void 0 === ZC ? void 0 : ZC.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(ZC)}`);
-            return ZC
-          } catch (ZC) {
-            return console.error("Failed to look up gift recipient:", ZC), {
+            }, kk.getMetricsCookies());
+            if ("boolean" !== typeof(null === Ik || void 0 === Ik ? void 0 : Ik.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(Ik)}`);
+            return Ik
+          } catch (Ik) {
+            return console.error("Failed to look up gift recipient:", Ik), {
               giftRecipientFound: !1,
               giftRecipientError: "store:giftRecipientLookupFailed"
             }
           }
-        }(CC, MC).catch((CC => (console.error("Gift recipient lookup failed:", CC), {
+        }(kk, jk).catch((kk => (console.error("Gift recipient lookup failed:", kk), {
           giftRecipientFound: !1,
           giftRecipientError: "store:giftRecipientLookupFailed"
-        }))).then((CC => {
-          !0 !== CC.giftRecipientFound && "store:giftRecipientLookupFailed" === CC.giftRecipientError || Eb.set(zC, CC), QC || FC({
-            name: MC,
-            result: CC
+        }))).then((kk => {
+          !0 !== kk.giftRecipientFound && "store:giftRecipientLookupFailed" === kk.giftRecipientError || bi.set(Fk, kk), Xk || Lk({
+            name: jk,
+            result: kk
           })
         })), () => {
-          QC = !0
+          Xk = !0
         }
-      }), [MC, CC]);
-      const SC = (0, QC.useMemo)((() => {
-        const CC = ZC.trim();
-        if (!CC) return {
+      }), [jk, kk]);
+      const wk = (0, Xk.useMemo)((() => {
+        const kk = Ik.trim();
+        if (!kk) return {
           status: "none"
         };
-        if (!fC || fC.name !== CC || (null === qC || void 0 === qC ? void 0 : qC.name) !== fC.name) return {
+        if (!lk || lk.name !== kk || (null === qk || void 0 === qk ? void 0 : qk.name) !== lk.name) return {
           status: "pending",
-          name: CC
+          name: kk
         };
-        const zC = qC.result;
-        return !1 === zC.giftRecipientFound ? {
+        const Fk = qk.result;
+        return !1 === Fk.giftRecipientFound ? {
           status: "error",
-          name: fC.name,
-          error: zC.giftRecipientError
+          name: lk.name,
+          error: Fk.giftRecipientError
         } : {
           status: "found",
-          name: zC.giftRecipientName,
-          ownedPacks: zC.giftRecipientOwnedPacks,
-          hasSuperRank: zC.giftRecipientHasSuperRank,
-          isSubscriber: zC.giftRecipientIsSubscriber
+          name: Fk.giftRecipientName,
+          ownedPacks: Fk.giftRecipientOwnedPacks,
+          hasSuperRank: Fk.giftRecipientHasSuperRank,
+          isSubscriber: Fk.giftRecipientIsSubscriber
         }
-      }), [ZC, fC, qC]);
-      (0, QC.useEffect)((() => {
-        "found" === SC.status && "typed" === (null === fC || void 0 === fC ? void 0 : fC.source) && NC.current !== SC.name && (NC.current = SC.name, (0, kC.reportAnalyticsClick)({
+      }), [Ik, lk, qk]);
+      (0, Xk.useEffect)((() => {
+        "found" === wk.status && "typed" === (null === lk || void 0 === lk ? void 0 : lk.source) && Zk.current !== wk.name && (Zk.current = wk.name, (0, Mk.reportAnalyticsClick)({
           id: "store.gift_recipient",
           value: "typed"
         }))
-      }), [SC, fC]);
-      const pC = (null === qC || void 0 === qC ? void 0 : qC.name) === (null === fC || void 0 === fC ? void 0 : fC.name) ? null === qC || void 0 === qC ? void 0 : qC.result : null,
-        PC = !0 === (null === pC || void 0 === pC ? void 0 : pC.giftRecipientFound) ? pC.giftRecipientCosmetics : null;
+      }), [wk, lk]);
+      const Hk = (null === qk || void 0 === qk ? void 0 : qk.name) === (null === lk || void 0 === lk ? void 0 : lk.name) ? null === qk || void 0 === qk ? void 0 : qk.result : null,
+        Jk = !0 === (null === Hk || void 0 === Hk ? void 0 : Hk.giftRecipientFound) ? Hk.giftRecipientCosmetics : null;
       return {
-        query: ZC,
-        via: bC,
-        recipient: SC,
-        recipientCosmetics: PC,
-        type: function(CC) {
-          wC(CC), nC("search"), gC();
-          const zC = CC.trim();
-          zC ? WC.current = setTimeout((() => {
-            oC({
-              name: zC,
+        query: Ik,
+        via: ik,
+        recipient: wk,
+        recipientCosmetics: Jk,
+        type: function(kk) {
+          Tk(kk), yk("search"), ek();
+          const Fk = kk.trim();
+          Fk ? tk.current = setTimeout((() => {
+            ak({
+              name: Fk,
               source: "typed"
             })
-          }), 400) : oC(null)
+          }), 400) : ak(null)
         },
-        choose: function(CC, zC) {
-          gC(), wC(CC), nC("typed" === zC ? "search" : "prefilled" === zC ? "prefilled" : "suggestion"), oC({
-            name: CC,
-            source: zC
-          }), "typed" !== zC && "prefilled" !== zC && (0, kC.reportAnalyticsClick)({
+        choose: function(kk, Fk) {
+          ek(), Tk(kk), yk("typed" === Fk ? "search" : "prefilled" === Fk ? "prefilled" : "suggestion"), ak({
+            name: kk,
+            source: Fk
+          }), "typed" !== Fk && "prefilled" !== Fk && (0, Mk.reportAnalyticsClick)({
             id: "store.gift_recipient",
-            value: zC
+            value: Fk
           })
         },
         clear: function() {
-          gC(), wC(""), nC("search"), oC(null)
+          ek(), Tk(""), yk("search"), ak(null)
         },
-        recordGift: function(CC, zC) {
-          ! function(CC) {
-            Eb.delete(CC.toLowerCase())
-          }(CC), FC((ZC => {
-            if (!ZC || ZC.name.toLowerCase() !== CC.toLowerCase() || !0 !== ZC.result.giftRecipientFound || "superRank" === zC) return ZC;
-            const QC = ZC.result.giftRecipientOwnedPacks;
+        recordGift: function(kk, Fk) {
+          ! function(kk) {
+            bi.delete(kk.toLowerCase())
+          }(kk), Lk((Ik => {
+            if (!Ik || Ik.name.toLowerCase() !== kk.toLowerCase() || !0 !== Ik.result.giftRecipientFound || "superRank" === Fk) return Ik;
+            const Xk = Ik.result.giftRecipientOwnedPacks;
             return {
-              ...ZC,
+              ...Ik,
               result: {
-                ...ZC.result,
-                giftRecipientOwnedPacks: QC.includes(zC) ? QC : [...QC, zC]
+                ...Ik.result,
+                giftRecipientOwnedPacks: Xk.includes(Fk) ? Xk : [...Xk, Fk]
               }
             }
           }))
         }
       }
     }
-    var cb = ZC(2272),
-      ub = ZC(4599),
-      rb = ZC(239),
-      sb = ZC(3101);
-    const Tb = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
-    var ab = ZC(2213),
-      tb = ZC(583),
-      Db = ZC(2318),
-      jb = ZC(2575);
+    var Ci = Ik(2255),
+      Ni = Ik(4649),
+      ci = Ik(243),
+      Wi = Ik(3047);
+    const fi = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
+    var Bi = Ik(2199),
+      di = Ik(612),
+      Yi = Ik(2300),
+      Ai = Ik(2525);
 
-    function yb(CC) {
+    function gi(kk) {
       let {
-        cosmetics: zC
-      } = CC;
-      return (0, WC.jsx)("span", {
+        cosmetics: Fk
+      } = kk;
+      return (0, tk.jsx)("span", {
         className: "StoreRecipientAvatar",
-        children: (0, WC.jsx)(Db.c, {
-          cosmetics: zC
+        children: (0, tk.jsx)(Yi.e, {
+          cosmetics: Fk
         })
       })
     }
 
-    function Lb(CC, zC) {
-      var ZC, QC;
-      const wC = null !== (ZC = CC.friend) && void 0 !== ZC ? ZC : {
+    function mi(kk, Fk) {
+      var Ik, Xk;
+      const Tk = null !== (Ik = kk.friend) && void 0 !== Ik ? Ik : {
         isError: !1,
-        name: CC.name,
+        name: kk.name,
         ranks: [],
-        cosmetics: null !== (QC = CC.cosmetics) && void 0 !== QC ? QC : {},
-        nameColour: tb.d,
+        cosmetics: null !== (Xk = kk.cosmetics) && void 0 !== Xk ? Xk : {},
+        nameColour: di.c,
         location: {
           status: "noGamePlayed"
         }
       };
-      return zC ? {
-        ...wC,
-        cosmetics: zC
-      } : wC
+      return Fk ? {
+        ...Tk,
+        cosmetics: Fk
+      } : Tk
     }
 
-    function Ub(CC) {
+    function ri(kk) {
       let {
-        pending: zC
-      } = CC;
-      return (0, WC.jsx)("span", {
+        pending: Fk
+      } = kk;
+      return (0, tk.jsx)("span", {
         className: "StoreRecipientLoader",
-        children: zC && (0, WC.jsx)(JC.d, {})
+        children: Fk && (0, tk.jsx)(sk.c, {})
       })
     }
 
-    function Bb(CC) {
-      var zC;
+    function Di(kk) {
+      var Fk;
       let {
-        selfName: ZC,
-        giftRecipient: wC,
-        suggestionsVersion: oC,
-        pulseSignal: FC,
-        disabled: NC
-      } = CC;
+        selfName: Ik,
+        giftRecipient: Tk,
+        suggestionsVersion: ak,
+        pulseSignal: Lk,
+        disabled: Zk
+      } = kk;
       const {
-        t: MC
-      } = (0, nC.y)(), gC = (0, aC.k)(), SC = (0, QC.useRef)(null), pC = (0, QC.useRef)(null), {
-        query: GC,
-        via: RC,
-        recipient: AC,
-        recipientCosmetics: JC
-      } = wC, IC = (0, mb.m)(GC), iC = (0, QC.useMemo)((() => {
-        const CC = PC.featureFlags.useSocialFeatures ? gC.friends.filter((CC => !CC.isError)) : [];
-        return (0, mb.g)({
-          onlineFriends: (0, aC.f)(CC),
-          recentRecipients: lb(),
-          friends: CC,
-          selfName: ZC,
+        t: jk
+      } = (0, yk.y)(), ek = (0, Bk.j)(), wk = (0, Xk.useRef)(null), Hk = (0, Xk.useRef)(null), {
+        query: xk,
+        via: Pk,
+        recipient: Kk,
+        recipientCosmetics: sk
+      } = Tk, Vk = (0, Gi.q)(xk), zk = (0, Xk.useMemo)((() => {
+        const kk = Jk.featureFlags.useSocialFeatures ? ek.friends.filter((kk => !kk.isError)) : [];
+        return (0, Gi.l)({
+          onlineFriends: (0, Bk.e)(kk),
+          recentRecipients: Ri(),
+          friends: kk,
+          selfName: Ik,
           max: 8
         })
-      }), [gC.friends, ZC, oC]), vC = GC.trim().toLowerCase(), eC = "search" !== RC && vC ? iC.find((CC => CC.name.toLowerCase() === vC)) : void 0, hC = eC && "prefilled" === RC ? [eC, ...iC.filter((CC => CC !== eC))] : iC, KC = "" !== vC && !eC, YC = KC ? GC : "", dC = hC.length > 0;
-      (0, QC.useEffect)((() => {
-        SC.current && SC.current.value !== YC && (SC.current.value = YC)
-      }), [YC]), (0, QC.useEffect)((() => {
-        SC.current && (SC.current.disabled = NC)
-      }), [NC, FC]);
-      const mC = (0, QC.useRef)(0);
+      }), [ek.friends, Ik, ak]), Sk = xk.trim().toLowerCase(), vk = "search" !== Pk && Sk ? zk.find((kk => kk.name.toLowerCase() === Sk)) : void 0, Ek = vk && "prefilled" === Pk ? [vk, ...zk.filter((kk => kk !== vk))] : zk, Ok = "" !== Sk && !vk, nk = Ok ? xk : "", Gk = Ek.length > 0;
+      (0, Xk.useEffect)((() => {
+        wk.current && wk.current.value !== nk && (wk.current.value = nk)
+      }), [nk]), (0, Xk.useEffect)((() => {
+        wk.current && (wk.current.disabled = Zk)
+      }), [Zk, Lk]);
+      const pk = (0, Xk.useRef)(0);
 
-      function EC() {
-        "self" !== IC && (0, kC.reportAnalyticsClick)({
+      function bk() {
+        "self" !== Vk && (0, Mk.reportAnalyticsClick)({
           id: "store.mode",
           value: "self"
-        }), wC.clear()
+        }), Tk.clear()
       }
 
-      function lC(CC) {
-        var zC, ZC;
-        if (NC) return;
-        if (" " === CC.key || "Enter" === CC.key) return CC.preventDefault(), void CC.currentTarget.click();
-        const QC = Array.from(null !== (zC = null === (ZC = pC.current) || void 0 === ZC ? void 0 : ZC.querySelectorAll("[role=radio]")) && void 0 !== zC ? zC : []),
-          wC = QC.indexOf(CC.currentTarget);
-        let bC;
-        "ArrowRight" === CC.key || "ArrowDown" === CC.key ? bC = QC[(wC + 1) % QC.length] : "ArrowLeft" === CC.key || "ArrowUp" === CC.key ? bC = QC[(wC - 1 + QC.length) % QC.length] : "Home" === CC.key ? bC = QC[0] : "End" === CC.key && (bC = QC[QC.length - 1]), bC && (CC.preventDefault(), bC.focus(), bC.click())
-      }(0, QC.useEffect)((() => {
-        var CC;
-        FC > mC.current && !NC && (mC.current = FC, null === (CC = SC.current) || void 0 === CC || CC.focus())
-      }), [FC, NC]);
-      const XC = "self" === IC,
-        cC = null !== (zC = null === eC || void 0 === eC ? void 0 : eC.name) && void 0 !== zC ? zC : null,
-        uC = "error" === AC.status ? AC.error : null,
-        rC = "store:giftRecipientLookupFailed" === uC;
-      return (0, WC.jsxs)("div", {
-        className: bC()("StoreRecipientStrip", {
-          StoreRecipientStripDisabled: NC,
-          StoreRecipientStripNoChips: !dC
+      function Rk(kk) {
+        var Fk, Ik;
+        if (Zk) return;
+        if (" " === kk.key || "Enter" === kk.key) return kk.preventDefault(), void kk.currentTarget.click();
+        const Xk = Array.from(null !== (Fk = null === (Ik = Hk.current) || void 0 === Ik ? void 0 : Ik.querySelectorAll("[role=radio]")) && void 0 !== Fk ? Fk : []),
+          Tk = Xk.indexOf(kk.currentTarget);
+        let ik;
+        "ArrowRight" === kk.key || "ArrowDown" === kk.key ? ik = Xk[(Tk + 1) % Xk.length] : "ArrowLeft" === kk.key || "ArrowUp" === kk.key ? ik = Xk[(Tk - 1 + Xk.length) % Xk.length] : "Home" === kk.key ? ik = Xk[0] : "End" === kk.key && (ik = Xk[Xk.length - 1]), ik && (kk.preventDefault(), ik.focus(), ik.click())
+      }(0, Xk.useEffect)((() => {
+        var kk;
+        Lk > pk.current && !Zk && (pk.current = Lk, null === (kk = wk.current) || void 0 === kk || kk.focus())
+      }), [Lk, Zk]);
+      const Uk = "self" === Vk,
+        Ck = null !== (Fk = null === vk || void 0 === vk ? void 0 : vk.name) && void 0 !== Fk ? Fk : null,
+        Nk = "error" === Kk.status ? Kk.error : null,
+        ck = "store:giftRecipientLookupFailed" === Nk;
+      return (0, tk.jsxs)("div", {
+        className: ik()("StoreRecipientStrip", {
+          StoreRecipientStripDisabled: Zk,
+          StoreRecipientStripNoChips: !Gk
         }),
-        children: [(0, WC.jsx)("span", {
+        children: [(0, tk.jsx)("span", {
           className: "StoreRecipientLabel",
           "aria-hidden": !0,
-          children: MC("store:buyingFor")
-        }), (0, WC.jsxs)("div", {
-          ref: pC,
+          children: jk("store:buyingFor")
+        }), (0, tk.jsxs)("div", {
+          ref: Hk,
           className: "StoreRecipientRadios",
           role: "radiogroup",
-          "aria-label": MC("store:whoIsItFor"),
-          children: [(0, WC.jsxs)("div", {
+          "aria-label": jk("store:whoIsItFor"),
+          children: [(0, tk.jsxs)("div", {
             role: "radio",
             "data-pad-focusable": !0,
-            "aria-checked": XC,
-            tabIndex: NC || !XC && null !== cC ? -1 : 0,
-            className: bC()("StoreRecipientMe", {
-              StoreRecipientChecked: XC
+            "aria-checked": Uk,
+            tabIndex: Zk || !Uk && null !== Ck ? -1 : 0,
+            className: ik()("StoreRecipientMe", {
+              StoreRecipientChecked: Uk
             }),
             onClick: () => {
-              NC || EC()
+              Zk || bk()
             },
-            onKeyDown: lC,
-            children: [(0, WC.jsx)(fC.c, {
+            onKeyDown: Rk,
+            children: [(0, tk.jsx)(lk.e, {
               name: "user"
-            }), " ", MC("store:me")]
-          }), dC && (0, WC.jsx)("div", {
+            }), " ", jk("store:me")]
+          }), Gk && (0, tk.jsx)("div", {
             className: "StoreRecipientChips",
-            children: hC.map((CC => {
-              const zC = CC === eC;
-              return (0, WC.jsx)("div", {
+            children: Ek.map((kk => {
+              const Fk = kk === vk;
+              return (0, tk.jsx)("div", {
                 role: "radio",
                 "data-pad-focusable": !0,
-                "aria-checked": zC,
-                tabIndex: !NC && zC ? 0 : -1,
-                title: CC.name,
-                className: bC()("StoreRecipientChip", {
-                  StoreRecipientChecked: zC
+                "aria-checked": Fk,
+                tabIndex: !Zk && Fk ? 0 : -1,
+                title: kk.name,
+                className: ik()("StoreRecipientChip", {
+                  StoreRecipientChecked: Fk
                 }),
                 onClick: () => {
-                  NC || function(CC) {
-                    "gift" !== IC && (0, kC.reportAnalyticsClick)({
+                  Zk || function(kk) {
+                    "gift" !== Vk && (0, Mk.reportAnalyticsClick)({
                       id: "store.mode",
                       value: "gift"
-                    }), wC.choose(CC.name, CC.kind)
-                  }(CC)
+                    }), Tk.choose(kk.name, kk.kind)
+                  }(kk)
                 },
-                onKeyDown: lC,
-                children: (0, WC.jsx)(jb.f, {
-                  playerSocialPreview: Lb(CC, zC ? JC : null),
+                onKeyDown: Rk,
+                children: (0, tk.jsx)(Ai.g, {
+                  playerSocialPreview: mi(kk, Fk ? sk : null),
                   opensProfileCard: !1,
-                  isFriend: null !== CC.friend,
+                  isFriend: null !== kk.friend,
                   hideFriendBadge: !0,
-                  showLocation: null !== CC.friend,
-                  status: null === CC.friend ? null : void 0,
-                  trailing: zC ? (0, WC.jsx)(Ub, {
-                    pending: "pending" === AC.status
+                  showLocation: null !== kk.friend,
+                  status: null === kk.friend ? null : void 0,
+                  trailing: Fk ? (0, tk.jsx)(ri, {
+                    pending: "pending" === Kk.status
                   }) : void 0
                 })
-              }, CC.name)
+              }, kk.name)
             }))
           })]
-        }), (0, WC.jsxs)("div", {
-          className: bC()("StoreRecipientSearch", {
-            StoreRecipientChecked: KC,
-            StoreRecipientSearchPulse: FC > 0 && !KC,
-            StoreRecipientSearchError: null !== uC && !rC
+        }), (0, tk.jsxs)("div", {
+          className: ik()("StoreRecipientSearch", {
+            StoreRecipientChecked: Ok,
+            StoreRecipientSearchPulse: Lk > 0 && !Ok,
+            StoreRecipientSearchError: null !== Nk && !ck
           }),
           onClick: () => {
-            var CC;
-            null === (CC = SC.current) || void 0 === CC || CC.focus()
+            var kk;
+            null === (kk = wk.current) || void 0 === kk || kk.focus()
           },
-          children: [KC && "found" === AC.status && JC && (0, WC.jsx)(yb, {
-            cosmetics: JC
-          }), !(KC && "found" === AC.status && JC) && (0, WC.jsx)(fC.c, {
+          children: [Ok && "found" === Kk.status && sk && (0, tk.jsx)(gi, {
+            cosmetics: sk
+          }), !(Ok && "found" === Kk.status && sk) && (0, tk.jsx)(lk.e, {
             name: "magnifying-glass",
             className: "StoreRecipientSearchIcon"
-          }), (0, WC.jsx)(xC.c, {
+          }), (0, tk.jsx)(Qk.c, {
             className: "StoreRecipientSearchInput",
-            domRef: SC,
-            placeholderText: MC("store:searchName"),
-            defaultValue: YC,
-            maxLength: HC.i,
-            onValueChange: function(CC) {
-              "gift" !== IC && CC.trim() && (0, kC.reportAnalyticsClick)({
+            domRef: wk,
+            placeholderText: jk("store:searchName"),
+            defaultValue: nk,
+            maxLength: uk.j,
+            onValueChange: function(kk) {
+              "gift" !== Vk && kk.trim() && (0, Mk.reportAnalyticsClick)({
                 id: "store.mode",
                 value: "gift"
-              }), wC.type(CC)
+              }), Tk.type(kk)
             },
             onEnter: () => {
-              var CC;
-              const zC = null === (CC = SC.current) || void 0 === CC ? void 0 : CC.value.trim();
-              zC && wC.choose(zC, "typed")
+              var kk;
+              const Fk = null === (kk = wk.current) || void 0 === kk ? void 0 : kk.value.trim();
+              Fk && Tk.choose(Fk, "typed")
             },
             blurOnEnter: !0
-          }), KC && (0, WC.jsx)(Ub, {
-            pending: "pending" === AC.status
-          }), KC && (0, WC.jsx)("div", {
-            ...(0, qC.U)({
-              disabled: NC
+          }), Ok && (0, tk.jsx)(ri, {
+            pending: "pending" === Kk.status
+          }), Ok && (0, tk.jsx)("div", {
+            ...(0, qk.Y)({
+              disabled: Zk
             }),
-            "aria-label": MC("store:clearRecipient"),
-            title: MC("store:clearRecipient"),
+            "aria-label": jk("store:clearRecipient"),
+            title: jk("store:clearRecipient"),
             className: "StoreRecipientClear",
-            onClick: CC => {
-              CC.stopPropagation(), NC || EC()
+            onClick: kk => {
+              kk.stopPropagation(), Zk || bk()
             },
-            children: (0, WC.jsx)(fC.c, {
+            children: (0, tk.jsx)(lk.e, {
               name: "xmark"
             })
           })]
-        }, FC), uC && (0, WC.jsx)("div", {
-          className: bC()("StoreRecipientPopover", {
-            StoreRecipientPopoverSoft: rC
+        }, Lk), Nk && (0, tk.jsx)("div", {
+          className: ik()("StoreRecipientPopover", {
+            StoreRecipientPopoverSoft: ck
           }),
           role: "status",
-          children: MC(uC)
+          children: jk(Nk)
         })]
       })
     }
-    var Ob = ZC(2268),
-      kb = ZC(2182),
-      Vb = ZC(3529),
-      Cn = ZC(3103),
-      zn = ZC(2224);
-    const Zn = ZC.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
+    var Mi = Ik(2253),
+      ky = Ik(2176),
+      Fy = Ik(3529),
+      Iy = Ik(3053),
+      Xy = Ik(2213);
+    const Ty = Ik.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
 
-    function Qn() {
-      (0, zn.i)(Zn, {
+    function iy() {
+      (0, Xy.d)(Ty, {
         lowPriority: !1
       })
     }
 
-    function wn(CC) {
+    function yy(kk) {
       let {
-        onBack: zC,
-        cta: ZC,
-        recipient: wC,
-        afterCta: bC
-      } = CC;
+        onBack: Fk,
+        cta: Ik,
+        recipient: Tk,
+        afterCta: ik
+      } = kk;
       const {
-        t: oC
-      } = (0, nC.y)(), [FC, NC] = (0, QC.useState)("starting"), MC = (0, QC.useRef)(null), gC = (0, rz.e)(), SC = (0, QC.useRef)(null), pC = (0, QC.useCallback)((() => {
-        const CC = MC.current;
-        null !== CC.error && CC.load();
-        const zC = CC.play();
-        SC.current = zC, zC.catch((CC => {
-          (0, Vb.c)("Failed to play Super Rank video", CC), gC.current && SC.current === zC && NC("failed")
+        t: ak
+      } = (0, yk.y)(), [Lk, Zk] = (0, Xk.useState)("starting"), jk = (0, Xk.useRef)(null), ek = (0, cF.d)(), wk = (0, Xk.useRef)(null), Hk = (0, Xk.useCallback)((() => {
+        const kk = jk.current;
+        null !== kk.error && kk.load();
+        const Fk = kk.play();
+        wk.current = Fk, Fk.catch((kk => {
+          (0, Fy.d)("Failed to play Super Rank video", kk), ek.current && wk.current === Fk && Zk("failed")
         }))
-      }), [gC]);
-      return (0, QC.useEffect)((() => {
-        const CC = MC.current;
-        let zC;
+      }), [ek]);
+      return (0, Xk.useEffect)((() => {
+        const kk = jk.current;
+        let Fk;
 
-        function ZC() {
-          clearTimeout(zC), zC = setTimeout(pC, 3e3)
+        function Ik() {
+          clearTimeout(Fk), Fk = setTimeout(Hk, 3e3)
         }
-        return pC(), CC.addEventListener("ended", ZC), () => {
-          clearTimeout(zC), CC.removeEventListener("ended", ZC)
+        return Hk(), kk.addEventListener("ended", Ik), () => {
+          clearTimeout(Fk), kk.removeEventListener("ended", Ik)
         }
-      }), [pC]), (0, WC.jsxs)("div", {
+      }), [Hk]), (0, tk.jsxs)("div", {
         className: "StoreSuperRankDetail",
-        children: [(0, WC.jsxs)("div", {
+        children: [(0, tk.jsxs)("div", {
           className: "StoreDetailHeader",
-          children: [(0, WC.jsx)(qC.c, {
+          children: [(0, tk.jsx)(qk.c, {
             className: "StoreDetailBackButton",
-            onClick: zC,
+            onClick: Fk,
             padBack: !0,
-            children: oC("general:back")
-          }), (0, WC.jsxs)("div", {
+            children: ak("general:back")
+          }), (0, tk.jsxs)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: [(0, WC.jsx)(fC.c, {
+            children: [(0, tk.jsx)(lk.e, {
               name: "bolt"
-            }), " ", oC("homePage:superRank")]
-          }), wC]
-        }), (0, WC.jsxs)("div", {
+            }), " ", ak("homePage:superRank")]
+          }), Tk]
+        }), (0, tk.jsxs)("div", {
           className: "StoreSuperRankDetailBody",
-          children: [(0, WC.jsxs)("div", {
+          children: [(0, tk.jsxs)("div", {
             className: "StoreSuperRankVideo",
-            children: [(0, WC.jsx)("video", {
-              ref: MC,
-              src: `${nz.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
-              poster: Zn,
+            children: [(0, tk.jsx)("video", {
+              ref: jk,
+              src: `${lF.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
+              poster: Ty,
               muted: !0,
               playsInline: !0,
-              controls: "playing" === FC,
+              controls: "playing" === Lk,
               onPlaying: () => {
-                NC("playing")
+                Zk("playing")
               },
               onError: () => {
-                NC("failed")
+                Zk("failed")
               }
-            }), ("failed" === FC || "loading" === FC) && (0, WC.jsx)("div", {
+            }), ("failed" === Lk || "loading" === Lk) && (0, tk.jsx)("div", {
               className: "StoreSuperRankPlay",
-              children: (0, WC.jsx)(qC.g, {
-                ariaLabel: oC("general:play"),
-                loading: "loading" === FC,
+              children: (0, tk.jsx)(qk.d, {
+                ariaLabel: ak("general:play"),
+                loading: "loading" === Lk,
                 onClick: () => {
-                  NC("loading"), pC()
+                  Zk("loading"), Hk()
                 },
                 touchPressOn: "pointerup",
-                children: (0, WC.jsx)(fC.c, {
+                children: (0, tk.jsx)(lk.e, {
                   name: "play"
                 })
               })
             })]
-          }), (0, WC.jsxs)("div", {
+          }), (0, tk.jsxs)("div", {
             className: "StoreSuperRankDetailSide",
-            children: [(0, WC.jsx)("div", {
+            children: [(0, tk.jsx)("div", {
               className: "StoreSuperRankDetailTable",
-              children: (0, WC.jsx)(Cn.c, {})
-            }), (0, WC.jsxs)("div", {
+              children: (0, tk.jsx)(Iy.e, {})
+            }), (0, tk.jsxs)("div", {
               className: "StoreTileActions",
-              children: [ZC, bC]
+              children: [Ik, ik]
             })]
           })]
         })]
       })
     }
-    var bn = ZC(2595),
-      nn = ZC(3490),
-      fn = ZC(3090),
-      qn = ZC(3092);
-    const Fn = [tb.x.yellow, tb.x.green, tb.x.aqua, tb.x.blue, tb.x.purple, tb.x.red];
+    var ly = Ik(2538),
+      ay = Ik(3482),
+      qy = Ik(3030),
+      Ly = Ik(3034);
+    const ty = [di.t.yellow, di.t.green, di.t.aqua, di.t.blue, di.t.purple, di.t.red];
 
-    function Wn(CC) {
-      return "needsRecipient" === CC || "lookingUp" === CC || "gift" === CC || "recipientOwns" === CC || "recipientSharesOwned" === CC || "recipientSubscribed" === CC
+    function Zy(kk) {
+      return "needsRecipient" === kk || "lookingUp" === kk || "gift" === kk || "recipientOwns" === kk || "recipientSharesOwned" === kk || "recipientSubscribed" === kk
     }
 
-    function Nn(CC) {
+    function jy(kk) {
       const {
-        onKeyDown: zC,
-        ...ZC
-      } = (0, qC.U)();
+        onKeyDown: Fk,
+        ...Ik
+      } = (0, qk.Y)();
       return {
-        ...ZC,
-        "aria-label": CC,
-        onKeyDown: CC => {
-          CC.target === CC.currentTarget && (null === zC || void 0 === zC || zC(CC))
+        ...Ik,
+        "aria-label": kk,
+        onKeyDown: kk => {
+          kk.target === kk.currentTarget && (null === Fk || void 0 === Fk || Fk(kk))
         }
       }
     }
 
-    function Mn(CC) {
+    function ey(kk) {
       let {
-        text: zC
-      } = CC;
-      return (0, WC.jsx)("span", {
+        text: Fk
+      } = kk;
+      return (0, tk.jsx)("span", {
         className: "StoreRainbowText",
-        children: Array.from(zC).map(((CC, zC) => (0, WC.jsx)("span", {
+        children: Array.from(Fk).map(((kk, Fk) => (0, tk.jsx)("span", {
           style: {
-            color: Fn[zC % Fn.length]
+            color: ty[Fk % ty.length]
           },
-          children: CC
-        }, zC)))
+          children: kk
+        }, Fk)))
       })
     }
-    const gn = {
+    const wy = {
       recipientOwns: "store:alreadyOwns",
       sharesOwned: "store:sharesOwned",
       recipientSharesOwned: "store:recipientSharesOwned",
@@ -5951,82 +5951,82 @@ export const modules = {
       recipientSubscribed: "store:recipientSubscribed"
     };
 
-    function Sn(CC) {
+    function Hy(kk) {
       let {
-        state: zC,
-        item: ZC,
-        price: QC,
-        busy: wC,
-        highlight: oC = !1,
-        onAct: FC,
-        onNeedRecipient: NC,
-        onLogin: MC
-      } = CC;
+        state: Fk,
+        item: Ik,
+        price: Xk,
+        busy: Tk,
+        highlight: ak = !1,
+        onAct: Lk,
+        onNeedRecipient: Zk,
+        onLogin: jk
+      } = kk;
       const {
-        t: gC
-      } = (0, nC.y)(), SC = "superRank" === ZC ? lC.g.product.days : null, pC = CC => null === SC ? gC(CC ? "general:gift" : "general:buy") : gC(CC ? "store:giftDays" : "store:buyDays", {
-        days: SC
-      }), PC = (CC, zC) => {
-        const ZC = (0, WC.jsxs)(WC.Fragment, {
-          children: [null === CC && (0, WC.jsx)("span", {
+        t: ek
+      } = (0, yk.y)(), wk = "superRank" === Ik ? Rk.l.product.days : null, Hk = kk => null === wk ? ek(kk ? "general:gift" : "general:buy") : ek(kk ? "store:giftDays" : "store:buyDays", {
+        days: wk
+      }), Jk = (kk, Fk) => {
+        const Ik = (0, tk.jsxs)(tk.Fragment, {
+          children: [null === kk && (0, tk.jsx)("span", {
             className: "StoreCtaLabel StoreCtaLabelPending"
-          }), null !== CC && (0, WC.jsx)("span", {
+          }), null !== kk && (0, tk.jsx)("span", {
             className: "StoreCtaLabel",
-            title: CC,
-            children: CC
+            title: kk,
+            children: kk
           })]
         });
-        return null !== SC ? (0, WC.jsxs)(WC.Fragment, {
-          children: [zC && (0, WC.jsx)("span", {
+        return null !== wk ? (0, tk.jsxs)(tk.Fragment, {
+          children: [Fk && (0, tk.jsx)("span", {
             className: "StoreCtaIcon",
-            children: zC
-          }), ZC, (0, WC.jsxs)("span", {
+            children: Fk
+          }), Ik, (0, tk.jsxs)("span", {
             className: "StoreCtaPrice",
-            children: ["\xb7", (0, WC.jsx)(kb.d, {
-              amount: QC
+            children: ["\xb7", (0, tk.jsx)(ky.b, {
+              amount: Xk
             })]
           })]
-        }) : (0, WC.jsxs)(WC.Fragment, {
-          children: [(0, WC.jsxs)("span", {
+        }) : (0, tk.jsxs)(tk.Fragment, {
+          children: [(0, tk.jsxs)("span", {
             className: "StoreCtaLead",
-            children: [ZC, "\xb7"]
-          }), (0, WC.jsxs)("span", {
+            children: [Ik, "\xb7"]
+          }), (0, tk.jsxs)("span", {
             className: "StoreCtaPrice",
-            children: [zC, (0, WC.jsx)(kb.d, {
-              amount: QC
+            children: [Fk, (0, tk.jsx)(ky.b, {
+              amount: Xk
             })]
           })]
         })
       };
-      let GC;
-      switch (zC) {
+      let xk;
+      switch (Fk) {
         case "pending":
-          GC = (0, WC.jsx)(qC.o, {
+          xk = (0, tk.jsx)(qk.m, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: PC(null)
+            children: Jk(null)
           });
           break;
         case "login":
-          GC = (0, WC.jsx)(qC.o, {
+          xk = (0, tk.jsx)(qk.m, {
             className: "StoreCtaButton",
-            onClick: MC,
-            children: PC(pC(!1))
+            onClick: jk,
+            children: Jk(Hk(!1))
           });
           break;
         case "owned":
-          GC = (0, WC.jsx)(qC.i, {
+          xk = (0, tk.jsx)(qk.g, {
             className: "StoreCtaButton",
             onClick: () => {
-              iC.b.set({
-                openEverythingMenuName: Fz.o.CUSTOMISATION
+              zk.d.set({
+                openEverythingMenuName: tF.r.CUSTOMISATION
               })
             },
-            children: (0, WC.jsxs)("span", {
+            children: (0, tk.jsxs)("span", {
               className: "StoreCtaLabel",
-              children: [(0, WC.jsx)(fC.c, {
+              children: [(0, tk.jsx)(lk.e, {
                 name: "shirt"
-              }), " ", gC("store:equip")]
+              }), " ", ek("store:equip")]
             })
           });
           break;
@@ -6035,206 +6035,206 @@ export const modules = {
         case "recipientSharesOwned":
         case "subscribed":
         case "recipientSubscribed":
-          GC = (0, WC.jsx)(qC.o, {
+          xk = (0, tk.jsx)(qk.m, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: (0, WC.jsx)("span", {
+            children: (0, tk.jsx)("span", {
               className: "StoreCtaLabel",
-              children: gC(gn[zC])
+              children: ek(wy[Fk])
             })
           });
           break;
         case "needsRecipient":
         case "lookingUp":
         case "gift":
-          GC = (0, WC.jsx)(qC.o, {
+          xk = (0, tk.jsx)(qk.m, {
             className: "StoreCtaButton",
-            disabled: "needsRecipient" === zC || null === QC,
-            loading: "lookingUp" === zC || wC,
-            onClick: FC,
+            disabled: "needsRecipient" === Fk || null === Xk,
+            loading: "lookingUp" === Fk || Tk,
+            onClick: Lk,
             analyticsClick: {
               id: "store.gift",
-              value: ZC
+              value: Ik
             },
-            children: PC(pC(!0), mb.b)
+            children: Jk(Hk(!0), Gi.e)
           });
           break;
         case "buy":
         case "recharge":
-          GC = (0, WC.jsx)(qC.o, {
+          xk = (0, tk.jsx)(qk.m, {
             className: "StoreCtaButton",
-            loading: wC,
-            disabled: null === QC,
-            onClick: FC,
+            loading: Tk,
+            disabled: null === Xk,
+            onClick: Lk,
             analyticsClick: {
               id: "store.buy",
-              value: ZC
+              value: Ik
             },
-            children: PC(pC(!1))
+            children: Jk(Hk(!1))
           })
       }
-      return (0, WC.jsx)("div", {
-        className: bC()("StoreCta", {
-          StoreCtaHighlight: oC,
-          StoreCtaLabelFirst: null !== SC
+      return (0, tk.jsx)("div", {
+        className: ik()("StoreCta", {
+          StoreCtaHighlight: ak,
+          StoreCtaLabelFirst: null !== wk
         }),
-        onClick: CC => {
-          CC.stopPropagation(), "needsRecipient" === zC && NC()
+        onClick: kk => {
+          kk.stopPropagation(), "needsRecipient" === Fk && Zk()
         },
-        children: GC
+        children: xk
       })
     }
 
-    function pn() {
+    function Jy() {
       const {
-        t: CC
-      } = (0, nC.y)();
-      return (0, WC.jsxs)("ul", {
+        t: kk
+      } = (0, yk.y)();
+      return (0, tk.jsxs)("ul", {
         className: "StorePerks",
-        children: [(0, WC.jsxs)("li", {
-          children: [(0, WC.jsx)(fC.c, {
+        children: [(0, tk.jsxs)("li", {
+          children: [(0, tk.jsx)(lk.e, {
             name: "check"
-          }), (0, WC.jsx)(Mn, {
-            text: CC("store:colourfulNames")
+          }), (0, tk.jsx)(ey, {
+            text: kk("store:colourfulNames")
           })]
-        }), (0, WC.jsxs)("li", {
-          children: [(0, WC.jsx)(fC.c, {
+        }), (0, tk.jsxs)("li", {
+          children: [(0, tk.jsx)(lk.e, {
             name: "check"
-          }), CC("store:perkCapes")]
-        }), (0, WC.jsxs)("li", {
-          children: [(0, WC.jsx)(fC.c, {
+          }), kk("store:perkCapes")]
+        }), (0, tk.jsxs)("li", {
+          children: [(0, tk.jsx)(lk.e, {
             name: "check"
-          }), CC("store:perkNoAdverts")]
-        }), (0, WC.jsxs)("li", {
-          children: [(0, WC.jsx)(fC.c, {
+          }), kk("store:perkNoAdverts")]
+        }), (0, tk.jsxs)("li", {
+          children: [(0, tk.jsx)(lk.e, {
             name: "check"
-          }), CC("store:perkFriends", {
-            count: (0, BC.b)(["super"])
+          }), kk("store:perkFriends", {
+            count: (0, rk.b)(["super"])
           })]
         })]
       })
     }
 
-    function Pn(CC) {
+    function xy(kk) {
       let {
-        daysLeft: zC,
-        totalDays: ZC,
-        urgent: QC
-      } = CC;
+        daysLeft: Fk,
+        totalDays: Ik,
+        urgent: Xk
+      } = kk;
       const {
-        t: wC
-      } = (0, nC.y)(), fC = ZC > 0 ? Math.min(1, Math.max(.03, zC / ZC)) : 1;
-      return (0, WC.jsxs)("div", {
-        className: bC()("StoreSuperRankMeterArea", {
-          StoreSuperRankMeterUrgent: QC
+        t: Tk
+      } = (0, yk.y)(), lk = Ik > 0 ? Math.min(1, Math.max(.03, Fk / Ik)) : 1;
+      return (0, tk.jsxs)("div", {
+        className: ik()("StoreSuperRankMeterArea", {
+          StoreSuperRankMeterUrgent: Xk
         }),
-        children: [(0, WC.jsx)("span", {
+        children: [(0, tk.jsx)("span", {
           className: "StoreSuperRankDaysLeft",
-          children: 1 === zC ? wC("store:oneDayLeft") : wC("store:daysLeft", {
-            days: zC
+          children: 1 === Fk ? Tk("store:oneDayLeft") : Tk("store:daysLeft", {
+            days: Fk
           })
-        }), (0, WC.jsx)("div", {
+        }), (0, tk.jsx)("div", {
           className: "StoreSuperRankMeter",
-          children: (0, WC.jsx)("i", {
+          children: (0, tk.jsx)("i", {
             style: {
-              width: 100 * fC + "%"
+              width: 100 * lk + "%"
             }
           })
         })]
       })
     }
 
-    function Gn(CC) {
+    function Py(kk) {
       let {
-        state: zC,
-        urgent: ZC,
-        daysLeft: QC,
-        totalDays: wC,
-        recipientHasSuperRank: oC,
-        busy: qC,
-        highlight: FC,
-        onOpen: NC,
-        onAct: MC,
-        onNeedRecipient: gC,
-        onLogin: SC
-      } = CC;
+        state: Fk,
+        urgent: Ik,
+        daysLeft: Xk,
+        totalDays: Tk,
+        recipientHasSuperRank: ak,
+        busy: qk,
+        highlight: Lk,
+        onOpen: Zk,
+        onAct: jk,
+        onNeedRecipient: ek,
+        onLogin: wk
+      } = kk;
       const {
-        t: pC
-      } = (0, nC.y)(), PC = Wn(zC), {
-        days: GC
-      } = lC.g.product, RC = pC("store:recipientHasSuperRank", {
-        giftDays: GC
-      }), AC = LC("subscribed" === zC);
-      return (0, WC.jsxs)("div", {
-        className: bC()("StoreTile StoreSuperRankTile", {
-          StoreTileGift: PC,
-          StoreSuperRankTileUrgent: "recharge" === zC && ZC,
-          StoreSuperRankTileWithChip: oC,
-          StoreSuperRankTileGiftReady: "gift" === zC
+        t: Hk
+      } = (0, yk.y)(), Jk = Zy(Fk), {
+        days: xk
+      } = Rk.l.product, Pk = Hk("store:recipientHasSuperRank", {
+        giftDays: xk
+      }), Kk = mk("subscribed" === Fk);
+      return (0, tk.jsxs)("div", {
+        className: ik()("StoreTile StoreSuperRankTile", {
+          StoreTileGift: Jk,
+          StoreSuperRankTileUrgent: "recharge" === Fk && Ik,
+          StoreSuperRankTileWithChip: ak,
+          StoreSuperRankTileGiftReady: "gift" === Fk
         }),
-        ...Nn(pC("homePage:superRank")),
+        ...jy(Hk("homePage:superRank")),
         "data-store-item": "superRank",
-        onPointerEnter: Qn,
-        onFocus: Qn,
-        onClick: NC,
-        children: [(0, WC.jsx)("div", {
+        onPointerEnter: iy,
+        onFocus: iy,
+        onClick: Zk,
+        children: [(0, tk.jsx)("div", {
           className: "StoreSuperRankArt",
           style: {
-            backgroundImage: `url(${ab.c})`
+            backgroundImage: `url(${Bi.e})`
           }
-        }), PC && (0, WC.jsx)("div", {
+        }), Jk && (0, tk.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, WC.jsxs)("div", {
+        }), (0, tk.jsxs)("div", {
           className: "StoreTileContent",
-          children: [oC && (0, WC.jsx)("span", {
+          children: [ak && (0, tk.jsx)("span", {
             className: "StoreChip StoreChipGift",
-            title: RC,
-            children: RC
-          }), (0, WC.jsxs)("div", {
+            title: Pk,
+            children: Pk
+          }), (0, tk.jsxs)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: [(0, WC.jsx)(fC.c, {
+            children: [(0, tk.jsx)(lk.e, {
               name: "bolt"
-            }), " ", pC("homePage:superRank")]
-          }), PC && (0, WC.jsx)("div", {
+            }), " ", Hk("homePage:superRank")]
+          }), Jk && (0, tk.jsx)("div", {
             className: "StoreTilePitch",
-            children: pC("store:giftPitch", {
-              days: GC
+            children: Hk("store:giftPitch", {
+              days: xk
             })
-          }), "recharge" === zC && (0, WC.jsx)(Pn, {
-            daysLeft: QC,
-            totalDays: wC,
-            urgent: ZC
-          }), AC && (0, WC.jsx)("div", {
+          }), "recharge" === Fk && (0, tk.jsx)(xy, {
+            daysLeft: Xk,
+            totalDays: Tk,
+            urgent: Ik
+          }), Kk && (0, tk.jsx)("div", {
             className: "StoreSuperRankMeterArea",
-            children: (0, WC.jsx)("span", {
+            children: (0, tk.jsx)("span", {
               className: "StoreSuperRankDaysLeft",
-              children: AC
+              children: Kk
             })
-          }), (0, WC.jsx)(pn, {}), (0, WC.jsxs)("div", {
+          }), (0, tk.jsx)(Jy, {}), (0, tk.jsxs)("div", {
             className: "StoreTileActions",
-            children: [(0, WC.jsx)(Sn, {
-              state: zC,
+            children: [(0, tk.jsx)(Hy, {
+              state: Fk,
               item: "superRank",
-              price: lC.g.price,
-              busy: qC,
-              highlight: FC,
-              onAct: MC,
-              onNeedRecipient: gC,
-              onLogin: SC
-            }), "needsRecipient" === zC && (0, WC.jsx)("span", {
+              price: Rk.l.price,
+              busy: qk,
+              highlight: Lk,
+              onAct: jk,
+              onNeedRecipient: ek,
+              onLogin: wk
+            }), "needsRecipient" === Fk && (0, tk.jsx)("span", {
               className: "StoreTileNote StoreTileNoteGift",
-              children: pC("store:pickRecipientFirst")
-            }), "recharge" === zC && ZC && (0, WC.jsx)("span", {
+              children: Hk("store:pickRecipientFirst")
+            }), "recharge" === Fk && Ik && (0, tk.jsx)("span", {
               className: "StoreTileNote StoreSuperRankEnding",
-              children: 1 === QC ? pC("store:endsInOneDay") : pC("store:endsInDays", {
-                days: QC
+              children: 1 === Xk ? Hk("store:endsInOneDay") : Hk("store:endsInDays", {
+                days: Xk
               })
             })]
           })]
         })]
       })
     }
-    const Rn = {
+    const Ky = {
       common: "StorePackTileCommon",
       rare: "StorePackTileRare",
       epic: "StorePackTileEpic",
@@ -6242,405 +6242,405 @@ export const modules = {
       mythic: "StorePackTileMythic"
     };
 
-    function An(CC) {
-      var zC;
+    function Qy(kk) {
+      var Fk;
       let {
-        pack: ZC,
-        state: wC,
-        busy: oC,
-        onOpen: qC,
-        onAct: FC,
-        onNeedRecipient: NC,
-        onLogin: MC
-      } = CC;
+        pack: Ik,
+        state: Tk,
+        busy: ak,
+        onOpen: qk,
+        onAct: Lk,
+        onNeedRecipient: Zk,
+        onLogin: jk
+      } = kk;
       const {
-        t: gC
-      } = (0, nC.y)(), SC = Jb.d[ZC], pC = Yb.g[ZC], PC = (0, ab.k)(ZC), GC = (0, QC.useRef)(null);
-      (0, fn.l)(ZC, GC);
-      const RC = Wn(wC),
-        AC = null !== (zC = SC.displayName) && void 0 !== zC ? zC : ZC,
-        xC = (0, nn.d)((() => {
-          (0, bn.f)();
-          const CC = (0, fn.e)(ZC);
-          void 0 !== CC && (0, zn.i)((0, fn.c)(CC))
+        t: ek
+      } = (0, yk.y)(), wk = si.d[Ik], Hk = Oi.l[Ik], Jk = (0, Bi.n)(Ik), xk = (0, Xk.useRef)(null);
+      (0, qy.p)(Ik, xk);
+      const Pk = Zy(Tk),
+        Kk = null !== (Fk = wk.displayName) && void 0 !== Fk ? Fk : Ik,
+        Qk = (0, ay.b)((() => {
+          (0, ly.e)();
+          const kk = (0, qy.i)(Ik);
+          void 0 !== kk && (0, Xy.d)((0, qy.e)(kk))
         })),
-        [JC] = (0, QC.useState)(sb.k);
-      return (0, WC.jsxs)("div", {
-        className: bC()("StoreTile StorePackTile", Rn[SC.tier], {
-          StorePackTileOwned: "owned" === wC,
-          StorePackTileRecipientOwns: "recipientOwns" === wC,
-          StoreTileGift: RC
+        [sk] = (0, Xk.useState)(Wi.j);
+      return (0, tk.jsxs)("div", {
+        className: ik()("StoreTile StorePackTile", Ky[wk.tier], {
+          StorePackTileOwned: "owned" === Tk,
+          StorePackTileRecipientOwns: "recipientOwns" === Tk,
+          StoreTileGift: Pk
         }),
-        ...Nn(AC),
-        ref: GC,
-        "data-store-item": ZC,
-        onClick: qC,
-        onPointerMove: CC => {
-          "mouse" !== CC.pointerType || 0 === CC.movementX && 0 === CC.movementY || JC || xC.start()
+        ...jy(Kk),
+        ref: xk,
+        "data-store-item": Ik,
+        onClick: qk,
+        onPointerMove: kk => {
+          "mouse" !== kk.pointerType || 0 === kk.movementX && 0 === kk.movementY || sk || Qk.start()
         },
-        onPointerLeave: xC.cancel,
-        children: [pC && (0, WC.jsx)(pC, {}), (0, WC.jsx)("div", {
+        onPointerLeave: Qk.cancel,
+        children: [Hk && (0, tk.jsx)(Hk, {}), (0, tk.jsx)("div", {
           className: "StorePackCharacters",
-          children: PC.map((CC => (0, WC.jsx)("div", {
+          children: Jk.map((kk => (0, tk.jsx)("div", {
             className: "StorePackCharacter",
             style: {
-              backgroundImage: `url(${(0,ab.g)(CC)})`
+              backgroundImage: `url(${(0,Bi.i)(kk)})`
             }
-          }, CC)))
-        }), (0, WC.jsx)("div", {
+          }, kk)))
+        }), (0, tk.jsx)("div", {
           className: "StoreTileScrim"
-        }), RC && (0, WC.jsx)("div", {
+        }), Pk && (0, tk.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, WC.jsxs)("div", {
+        }), (0, tk.jsxs)("div", {
           className: "StoreTileContent",
-          children: [(0, WC.jsx)("div", {
+          children: [(0, tk.jsx)("div", {
             className: "StoreTileTitle",
-            children: AC
-          }), (0, WC.jsxs)("div", {
+            children: Kk
+          }), (0, tk.jsxs)("div", {
             className: "StoreTileMeta",
-            children: [(0, WC.jsx)(qn.e, {
-              tier: SC.tier
-            }), " \xb7 ", gC("store:itemCount", {
-              count: (0, Ob.c)(ZC)
-            }), "owned" === wC && (0, WC.jsxs)("span", {
+            children: [(0, tk.jsx)(Ly.b, {
+              tier: wk.tier
+            }), " \xb7 ", ek("store:itemCount", {
+              count: (0, Mi.f)(Ik)
+            }), "owned" === Tk && (0, tk.jsxs)("span", {
               className: "StoreTileOwned",
-              children: [" \xb7 ", (0, WC.jsx)(fC.c, {
+              children: [" \xb7 ", (0, tk.jsx)(lk.e, {
                 name: "check"
-              }), " ", gC("general:owned")]
+              }), " ", ek("general:owned")]
             })]
-          }), (0, WC.jsx)(Sn, {
-            state: wC,
-            item: ZC,
-            price: (0, lC.d)(ZC),
-            busy: oC,
-            onAct: FC,
-            onNeedRecipient: NC,
-            onLogin: MC
+          }), (0, tk.jsx)(Hy, {
+            state: Tk,
+            item: Ik,
+            price: (0, Rk.g)(Ik),
+            busy: ak,
+            onAct: Lk,
+            onNeedRecipient: Zk,
+            onLogin: jk
           })]
         })]
       })
     }
-    var xn = ZC(3067),
-      Jn = ZC(1484),
-      In = ZC(1394),
-      vn = ZC(3514);
+    var sy = Ik(3004),
+      Vy = Ik(1513),
+      zy = Ik(1420),
+      Sy = Ik(3511);
 
-    function en() {
-      return (0, WC.jsx)("span", {
+    function oy() {
+      return (0, tk.jsx)("span", {
         className: "NewBadge",
         children: "NEW"
       })
     }
-    var hn = ZC(1299),
-      Kn = ZC(1501),
-      Yn = ZC(34185);
+    var vy = Ik(1320),
+      Ey = Ik(1518),
+      Oy = Ik(34218);
 
-    function dn(CC) {
+    function ny(kk) {
       let {
-        character: zC,
-        drawn: ZC,
-        onDrawn: wC
-      } = CC;
-      const nC = (0, QC.useRef)(null),
-        fC = (0, Yn.g)(zC);
-      return (0, WC.jsx)("div", {
-        className: bC()("StoreCharacterLive", {
-          StoreCharacterLiveDrawn: ZC
+        character: Fk,
+        drawn: Ik,
+        onDrawn: Tk
+      } = kk;
+      const yk = (0, Xk.useRef)(null),
+        lk = (0, Oy.f)(Fk);
+      return (0, tk.jsx)("div", {
+        className: ik()("StoreCharacterLive", {
+          StoreCharacterLiveDrawn: Ik
         }),
-        children: (0, WC.jsx)(QC.Suspense, {
+        children: (0, tk.jsx)(Xk.Suspense, {
           fallback: null,
-          children: (0, WC.jsx)(bn.c, {
-            ref: nC,
+          children: (0, tk.jsx)(ly.c, {
+            ref: yk,
             framing: "store",
-            turntableFromYaw: ZC ? fC.yaw : null,
+            turntableFromYaw: Ik ? lk.yaw : null,
             onReady: () => {
-              var CC, ZC;
-              null === (CC = nC.current) || void 0 === CC || CC.setOrbit(fC), null === (ZC = nC.current) || void 0 === ZC || ZC.setAllCosmetics(Kn.b[zC].cosmetics)
+              var kk, Ik;
+              null === (kk = yk.current) || void 0 === kk || kk.setOrbit(lk), null === (Ik = yk.current) || void 0 === Ik || Ik.setAllCosmetics(Ey.c[Fk].cosmetics)
             },
-            onDrawn: wC
+            onDrawn: Tk
           })
         })
       })
     }
-    const mn = {
+    const Gy = {
         common: "StoreCharacterCardCommon",
         rare: "StoreCharacterCardRare",
         epic: "StoreCharacterCardEpic",
         legendary: "StoreCharacterCardLegendary",
         mythic: "StoreCharacterCardMythic"
       },
-      Hn = new Set(["wildSpirits"]);
+      py = new Set(["wildSpirits"]);
 
-    function En(CC) {
-      var zC;
+    function uy(kk) {
+      var Fk;
       let {
-        tile: ZC,
-        design: wC,
-        canGoLive: oC,
-        live: qC,
-        busy: FC,
-        highlight: NC,
-        onLiveStart: MC,
-        onLiveEnd: gC,
-        onOpen: SC,
-        onAct: pC,
-        onNeedRecipient: PC,
-        onLogin: GC
-      } = CC;
+        tile: Ik,
+        design: Tk,
+        canGoLive: ak,
+        live: qk,
+        busy: Lk,
+        highlight: Zk,
+        onLiveStart: jk,
+        onLiveEnd: ek,
+        onOpen: wk,
+        onAct: Hk,
+        onNeedRecipient: Jk,
+        onLogin: xk
+      } = kk;
       const {
-        t: RC
-      } = (0, nC.y)(), {
-        pack: AC,
-        state: xC
-      } = ZC, JC = Jb.d[AC], IC = (0, Jb.e)(AC), iC = (0, ab.i)(AC), vC = Yb.g[iC], eC = Hn.has(iC), {
-        tier: hC
-      } = JC, KC = "legendary" === hC || "mythic" === hC, YC = (0, QC.useRef)(null);
-      (0, hn.c)(YC, "epic" === hC || KC || eC);
-      const [dC, HC] = (0, QC.useState)(!1);
-      return !qC && dC && HC(!1), (0, WC.jsxs)("div", {
-        ref: YC,
-        className: bC()("StoreCharacterCard", `StoreCharacterCard${wC}`, mn[hC], {
-          StoreCharacterCardOwned: "owned" === xC || "recipientOwns" === xC,
-          StoreCharacterCardGift: Wn(xC),
-          StoreCharacterCardItem: void 0 === IC
+        t: Pk
+      } = (0, yk.y)(), {
+        pack: Kk,
+        state: Qk
+      } = Ik, sk = si.d[Kk], Vk = (0, si.e)(Kk), zk = (0, Bi.l)(Kk), Sk = Oi.l[zk], vk = py.has(zk), {
+        tier: Ek
+      } = sk, Ok = "legendary" === Ek || "mythic" === Ek, nk = (0, Xk.useRef)(null);
+      (0, vy.c)(nk, "epic" === Ek || Ok || vk);
+      const [Gk, uk] = (0, Xk.useState)(!1);
+      return !qk && Gk && uk(!1), (0, tk.jsxs)("div", {
+        ref: nk,
+        className: ik()("StoreCharacterCard", `StoreCharacterCard${Tk}`, Gy[Ek], {
+          StoreCharacterCardOwned: "owned" === Qk || "recipientOwns" === Qk,
+          StoreCharacterCardGift: Zy(Qk),
+          StoreCharacterCardItem: void 0 === Vk
         }),
-        onPointerMove: CC => {
-          "mouse" !== CC.pointerType || 0 === CC.movementX && 0 === CC.movementY || !oC || qC || void 0 === IC || MC()
+        onPointerMove: kk => {
+          "mouse" !== kk.pointerType || 0 === kk.movementX && 0 === kk.movementY || !ak || qk || void 0 === Vk || jk()
         },
-        onPointerLeave: gC,
-        children: [(0, WC.jsx)("div", {
+        onPointerLeave: ek,
+        children: [(0, tk.jsx)("div", {
           className: "StoreCharacterBackdrop",
-          children: vC && (0, WC.jsx)(vC, {
+          children: Sk && (0, tk.jsx)(Sk, {
             simple: !0
           })
-        }), KC && (0, WC.jsx)("div", {
+        }), Ok && (0, tk.jsx)("div", {
           className: "StoreCharacterRays"
-        }), (0, WC.jsxs)(mC.LinkPreserveSearch, {
+        }), (0, tk.jsxs)(pk.LinkPreserveSearch, {
           className: "StoreCharacterLink",
-          to: (0, Jn.i)({
+          to: (0, Vy.f)({
             kind: "pack",
-            pack: AC
+            pack: Kk
           }),
-          "data-store-item": AC,
-          onClick: CC => {
-            (0, In.d)(CC) && (CC.preventDefault(), SC())
+          "data-store-item": Kk,
+          onClick: kk => {
+            (0, zy.e)(kk) && (kk.preventDefault(), wk())
           },
-          children: [(0, WC.jsxs)("div", {
+          children: [(0, tk.jsxs)("div", {
             className: "StoreCharacterStage",
-            children: [(0, WC.jsx)("div", {
+            children: [(0, tk.jsx)("div", {
               className: "StoreCharacterHalo"
-            }), (0, WC.jsx)("div", {
-              className: bC()("StoreCharacterFigure", {
-                StoreCharacterFigureCovered: dC
+            }), (0, tk.jsx)("div", {
+              className: ik()("StoreCharacterFigure", {
+                StoreCharacterFigureCovered: Gk
               }),
               style: {
-                backgroundImage: `url(${(0,ab.o)(AC)})`
+                backgroundImage: `url(${(0,Bi.t)(Kk)})`
               }
-            }), qC && void 0 !== IC && (0, WC.jsx)(dn, {
-              character: IC,
-              drawn: dC,
+            }), qk && void 0 !== Vk && (0, tk.jsx)(ny, {
+              character: Vk,
+              drawn: Gk,
               onDrawn: () => {
-                HC(!0)
+                uk(!0)
               }
             })]
-          }), (0, WC.jsx)("div", {
+          }), (0, tk.jsx)("div", {
             className: "StoreCharacterName",
-            children: null !== (zC = JC.displayName) && void 0 !== zC ? zC : AC
-          }), (0, WC.jsx)(qn.e, {
-            tier: hC,
+            children: null !== (Fk = sk.displayName) && void 0 !== Fk ? Fk : Kk
+          }), (0, tk.jsx)(Ly.b, {
+            tier: Ek,
             className: "StoreCharacterTier"
           })]
-        }), (0, WC.jsx)("div", {
+        }), (0, tk.jsx)("div", {
           className: "StoreCharacterScrim"
-        }), eC && (0, WC.jsx)("span", {
+        }), vk && (0, tk.jsx)("span", {
           className: "StoreCharacterNew",
-          children: (0, WC.jsx)(en, {})
-        }), "owned" === xC && (0, WC.jsx)("span", {
+          children: (0, tk.jsx)(oy, {})
+        }), "owned" === Qk && (0, tk.jsx)("span", {
           className: "StoreCharacterOwned",
-          title: RC("general:owned"),
-          "aria-label": RC("general:owned"),
-          children: (0, WC.jsx)(fC.c, {
+          title: Pk("general:owned"),
+          "aria-label": Pk("general:owned"),
+          children: (0, tk.jsx)(lk.e, {
             name: "check"
           })
-        }), (0, WC.jsx)("div", {
+        }), (0, tk.jsx)("div", {
           className: "StoreCharacterPlate",
-          children: (0, WC.jsx)(Sn, {
-            state: xC,
-            item: AC,
-            price: (0, lC.d)(AC),
-            busy: FC,
-            highlight: NC,
-            onAct: pC,
-            onNeedRecipient: PC,
-            onLogin: GC
+          children: (0, tk.jsx)(Hy, {
+            state: Qk,
+            item: Kk,
+            price: (0, Rk.g)(Kk),
+            busy: Lk,
+            highlight: Zk,
+            onAct: Hk,
+            onNeedRecipient: Jk,
+            onLogin: xk
           })
         })]
       })
     }
 
-    function Xn(CC) {
+    function by(kk) {
       let {
-        tiles: zC,
-        busy: ZC,
-        highlightItem: wC,
-        onOpen: bC,
-        onAct: nC,
-        onNeedRecipient: fC,
-        onLogin: oC
-      } = CC;
-      const qC = (0, vn.k)("storeCharacterCardFoil"),
-        FC = (0, vn.k)("storeCharacterCardSpotlight"),
-        NC = qC ? "Foil" : FC ? "Spotlight" : "Showcase",
-        [MC] = (0, QC.useState)(sb.k),
-        [gC, SC] = (0, QC.useState)(null);
-      return (0, WC.jsx)("div", {
+        tiles: Fk,
+        busy: Ik,
+        highlightItem: Tk,
+        onOpen: ik,
+        onAct: yk,
+        onNeedRecipient: lk,
+        onLogin: ak
+      } = kk;
+      const qk = (0, Sy.t)("storeCharacterCardFoil"),
+        Lk = (0, Sy.t)("storeCharacterCardSpotlight"),
+        Zk = qk ? "Foil" : Lk ? "Spotlight" : "Showcase",
+        [jk] = (0, Xk.useState)(Wi.j),
+        [ek, wk] = (0, Xk.useState)(null);
+      return (0, tk.jsx)("div", {
         className: "StoreCharacterGrid",
-        children: zC.map((CC => (0, WC.jsx)(En, {
-          tile: CC,
-          design: NC,
-          canGoLive: !MC,
-          live: gC === CC.pack,
-          busy: ZC,
-          highlight: wC === CC.pack,
+        children: Fk.map((kk => (0, tk.jsx)(uy, {
+          tile: kk,
+          design: Zk,
+          canGoLive: !jk,
+          live: ek === kk.pack,
+          busy: Ik,
+          highlight: Tk === kk.pack,
           onLiveStart: () => {
-            SC(CC.pack)
+            wk(kk.pack)
           },
           onLiveEnd: () => {
-            SC((zC => zC === CC.pack ? null : zC))
+            wk((Fk => Fk === kk.pack ? null : Fk))
           },
           onOpen: () => {
-            bC(CC.pack)
+            ik(kk.pack)
           },
           onAct: () => {
-            nC(CC.pack)
+            yk(kk.pack)
           },
-          onNeedRecipient: fC,
+          onNeedRecipient: lk,
           onLogin: () => {
-            oC(CC.pack)
+            ak(kk.pack)
           }
-        }, CC.pack)))
+        }, kk.pack)))
       })
     }
-    var cn = ZC(34202);
+    var Ry = Ik(34231);
 
-    function un(CC) {
+    function Uy(kk) {
       let {
-        title: zC
-      } = CC;
-      return (0, WC.jsx)("h2", {
+        title: Fk
+      } = kk;
+      return (0, tk.jsx)("h2", {
         className: "StoreSectionDivider",
-        children: (0, WC.jsx)("span", {
+        children: (0, tk.jsx)("span", {
           className: "StoreSectionDividerTitle",
-          children: zC
+          children: Fk
         })
       })
     }
 
-    function rn(CC) {
+    function Cy(kk) {
       let {
-        mountAtOnce: zC,
-        children: ZC
-      } = CC;
-      const wC = (0, QC.useRef)(null),
-        [bC, nC] = (0, QC.useState)(zC),
-        fC = (0, cn.e)();
-      return (0, QC.useLayoutEffect)((() => {
-        const CC = wC.current;
-        CC && CC.getBoundingClientRect().top < CC.parentElement.getBoundingClientRect().bottom && nC(!0)
-      }), []), bC || fC ? (0, WC.jsx)(WC.Fragment, {
-        children: ZC
-      }) : (0, WC.jsx)("div", {
-        ref: wC
+        mountAtOnce: Fk,
+        children: Ik
+      } = kk;
+      const Tk = (0, Xk.useRef)(null),
+        [ik, yk] = (0, Xk.useState)(Fk),
+        lk = (0, Ry.c)();
+      return (0, Xk.useLayoutEffect)((() => {
+        const kk = Tk.current;
+        kk && kk.getBoundingClientRect().top < kk.parentElement.getBoundingClientRect().bottom && yk(!0)
+      }), []), ik || lk ? (0, tk.jsx)(tk.Fragment, {
+        children: Ik
+      }) : (0, tk.jsx)("div", {
+        ref: Tk
       })
     }
 
-    function sn(CC) {
+    function Ny(kk) {
       let {
-        layout: zC,
-        mountAtOnce: ZC,
-        bundleGift: QC,
-        superRankTotalDays: wC,
-        busy: bC,
-        highlightItem: fC,
-        onOpen: oC,
-        onAct: qC,
-        onNeedRecipient: FC,
-        onLogin: NC,
-        dailyDropTile: MC
-      } = CC;
+        layout: Fk,
+        mountAtOnce: Ik,
+        bundleGift: Xk,
+        superRankTotalDays: Tk,
+        busy: ik,
+        highlightItem: lk,
+        onOpen: ak,
+        onAct: qk,
+        onNeedRecipient: Lk,
+        onLogin: Zk,
+        dailyDropTile: jk
+      } = kk;
       const {
-        t: gC
-      } = (0, nC.y)(), SC = zC.packs.filter((CC => void 0 === (0, Jb.e)(CC.pack) && !(0, Jb.h)(CC.pack))), pC = zC.packs.filter((CC => void 0 !== (0, Jb.e)(CC.pack))), PC = zC.packs.filter((CC => (0, Jb.h)(CC.pack)));
-      return (0, WC.jsxs)(WC.Fragment, {
-        children: [(0, WC.jsx)(xn.d, {
+        t: ek
+      } = (0, yk.y)(), wk = Fk.packs.filter((kk => void 0 === (0, si.e)(kk.pack) && !(0, si.i)(kk.pack))), Hk = Fk.packs.filter((kk => void 0 !== (0, si.e)(kk.pack))), Jk = Fk.packs.filter((kk => (0, si.i)(kk.pack)));
+      return (0, tk.jsxs)(tk.Fragment, {
+        children: [(0, tk.jsx)(sy.b, {
           className: "StoreSuperGems",
-          gift: QC,
-          highlightSku: fC,
-          leadingTile: MC
-        }), (0, WC.jsx)(un, {
-          title: gC("store:rank")
-        }), (0, WC.jsx)(Gn, {
-          state: zC.superRank.state,
-          urgent: zC.superRank.urgent,
-          daysLeft: zC.superRankDaysLeft,
-          totalDays: wC,
-          recipientHasSuperRank: zC.recipientHasSuperRank,
-          busy: bC,
-          highlight: "superRank" === fC,
+          gift: Xk,
+          highlightSku: lk,
+          leadingTile: jk
+        }), (0, tk.jsx)(Uy, {
+          title: ek("store:rank")
+        }), (0, tk.jsx)(Py, {
+          state: Fk.superRank.state,
+          urgent: Fk.superRank.urgent,
+          daysLeft: Fk.superRankDaysLeft,
+          totalDays: Tk,
+          recipientHasSuperRank: Fk.recipientHasSuperRank,
+          busy: ik,
+          highlight: "superRank" === lk,
           onOpen: () => {
-            oC("superRank")
+            ak("superRank")
           },
           onAct: () => {
-            qC("superRank")
+            qk("superRank")
           },
-          onNeedRecipient: FC,
+          onNeedRecipient: Lk,
           onLogin: () => {
-            NC("superRank")
+            Zk("superRank")
           }
-        }), (0, WC.jsxs)(rn, {
-          mountAtOnce: ZC,
-          children: [(0, WC.jsx)(un, {
-            title: gC("store:bundles")
-          }), (0, WC.jsx)("div", {
+        }), (0, tk.jsxs)(Cy, {
+          mountAtOnce: Ik,
+          children: [(0, tk.jsx)(Uy, {
+            title: ek("store:bundles")
+          }), (0, tk.jsx)("div", {
             className: "StorePackGrid",
-            children: SC.map((CC => (0, WC.jsx)(An, {
-              pack: CC.pack,
-              state: CC.state,
-              busy: bC,
+            children: wk.map((kk => (0, tk.jsx)(Qy, {
+              pack: kk.pack,
+              state: kk.state,
+              busy: ik,
               onOpen: () => {
-                oC(CC.pack)
+                ak(kk.pack)
               },
               onAct: () => {
-                qC(CC.pack)
+                qk(kk.pack)
               },
-              onNeedRecipient: FC,
+              onNeedRecipient: Lk,
               onLogin: () => {
-                NC(CC.pack)
+                Zk(kk.pack)
               }
-            }, CC.pack)))
-          }), (0, WC.jsxs)(rn, {
-            mountAtOnce: ZC,
-            children: [(0, WC.jsx)(un, {
-              title: gC("store:characters")
-            }), (0, WC.jsx)(Xn, {
-              tiles: pC,
-              busy: bC,
-              highlightItem: fC,
-              onOpen: oC,
-              onAct: qC,
-              onNeedRecipient: FC,
-              onLogin: NC
-            }), PC.length > 0 && (0, WC.jsxs)(WC.Fragment, {
-              children: [(0, WC.jsx)(un, {
-                title: gC("store:premiumItems")
-              }), (0, WC.jsx)(Xn, {
-                tiles: PC,
-                busy: bC,
-                highlightItem: fC,
-                onOpen: oC,
-                onAct: qC,
-                onNeedRecipient: FC,
-                onLogin: NC
+            }, kk.pack)))
+          }), (0, tk.jsxs)(Cy, {
+            mountAtOnce: Ik,
+            children: [(0, tk.jsx)(Uy, {
+              title: ek("store:characters")
+            }), (0, tk.jsx)(by, {
+              tiles: Hk,
+              busy: ik,
+              highlightItem: lk,
+              onOpen: ak,
+              onAct: qk,
+              onNeedRecipient: Lk,
+              onLogin: Zk
+            }), Jk.length > 0 && (0, tk.jsxs)(tk.Fragment, {
+              children: [(0, tk.jsx)(Uy, {
+                title: ek("store:premiumItems")
+              }), (0, tk.jsx)(by, {
+                tiles: Jk,
+                busy: ik,
+                highlightItem: lk,
+                onOpen: ak,
+                onAct: qk,
+                onNeedRecipient: Lk,
+                onLogin: Zk
               })]
             })]
           })]
@@ -6648,422 +6648,422 @@ export const modules = {
       })
     }
 
-    function Tn(CC) {
+    function cy(kk) {
       let {
-        state: zC,
-        mode: ZC,
-        giftName: QC,
-        busy: wC,
-        highlight: bC,
-        purchaseError: fC,
-        onBack: oC,
-        onChooseRecipient: FC,
-        onAct: NC,
-        onLogin: MC
-      } = CC;
+        state: Fk,
+        mode: Ik,
+        giftName: Xk,
+        busy: Tk,
+        highlight: ik,
+        purchaseError: lk,
+        onBack: ak,
+        onChooseRecipient: Lk,
+        onAct: Zk,
+        onLogin: jk
+      } = kk;
       const {
-        t: gC
-      } = (0, nC.y)(), SC = LC("gift" !== ZC);
-      return (0, WC.jsx)(wn, {
-        onBack: oC,
-        recipient: "gift" === ZC && (0, WC.jsxs)(WC.Fragment, {
-          children: [QC && (0, WC.jsxs)("span", {
+        t: ek
+      } = (0, yk.y)(), wk = mk("gift" !== Ik);
+      return (0, tk.jsx)(yy, {
+        onBack: ak,
+        recipient: "gift" === Ik && (0, tk.jsxs)(tk.Fragment, {
+          children: [Xk && (0, tk.jsxs)("span", {
             className: "StoreDetailRecipient",
-            title: gC("store:giftFor", {
-              name: QC
+            title: ek("store:giftFor", {
+              name: Xk
             }),
-            children: [mb.b, " ", gC("store:giftFor", {
-              name: QC
+            children: [Gi.e, " ", ek("store:giftFor", {
+              name: Xk
             })]
-          }), !QC && (0, WC.jsxs)("div", {
-            ...(0, qC.U)(),
+          }), !Xk && (0, tk.jsxs)("div", {
+            ...(0, qk.Y)(),
             className: "StoreDetailRecipient StoreDetailRecipientChoose",
-            onClick: FC,
-            children: [mb.b, " ", gC("store:chooseRecipient")]
+            onClick: Lk,
+            children: [Gi.e, " ", ek("store:chooseRecipient")]
           })]
         }),
-        cta: (0, WC.jsx)(Sn, {
-          state: zC,
+        cta: (0, tk.jsx)(Hy, {
+          state: Fk,
           item: "superRank",
-          price: lC.g.price,
-          busy: wC,
-          highlight: bC,
-          onAct: NC,
-          onNeedRecipient: FC,
-          onLogin: MC
+          price: Rk.l.price,
+          busy: Tk,
+          highlight: ik,
+          onAct: Zk,
+          onNeedRecipient: Lk,
+          onLogin: jk
         }),
-        afterCta: (0, WC.jsxs)(WC.Fragment, {
-          children: [SC && (0, WC.jsx)("span", {
+        afterCta: (0, tk.jsxs)(tk.Fragment, {
+          children: [wk && (0, tk.jsx)("span", {
             className: "StoreTileNote",
-            children: SC
-          }), fC && (0, WC.jsx)("span", {
+            children: wk
+          }), lk && (0, tk.jsx)("span", {
             className: "StoreTileNote StoreTileNoteError",
-            children: gC(fC)
+            children: ek(lk)
           })]
         })
       })
     }
-    var an = ZC(123);
-    const tn = an.l("kind", [an.C({
-      kind: an.r("refused"),
-      heldTierId: an.P(),
-      until: an.y()
-    }), an.C({
-      kind: an.r("refund"),
-      tierId: an.P(),
-      refundedMs: an.y(),
-      forfeitedMs: an.y(),
-      premiumCurrency: an.y()
-    }), an.C({
-      kind: an.r("none")
+    var Wy = Ik(134);
+    const fy = Wy.n("kind", [Wy.C({
+      kind: Wy.w("refused"),
+      heldTierId: Wy.S(),
+      until: Wy.y()
+    }), Wy.C({
+      kind: Wy.w("refund"),
+      tierId: Wy.S(),
+      refundedMs: Wy.y(),
+      forfeitedMs: Wy.y(),
+      premiumCurrency: Wy.y()
+    }), Wy.C({
+      kind: Wy.w("none")
     })]);
-    async function Dn(CC) {
-      const zC = await (0, KC.postJsonWithMetricsCookiesAndJsonResponse)(`${nz.clientSideServerUrls.indexUrl}/index/ranks/subscribe-preview`, {
-        productId: CC
+    async function By(kk) {
+      const Fk = await (0, Ok.postJsonWithMetricsCookiesAndJsonResponse)(`${lF.clientSideServerUrls.indexUrl}/index/ranks/subscribe-preview`, {
+        productId: kk
       }, {
         retries: 1
       });
-      return tn.parse(zC)
+      return fy.parse(Fk)
     }
-    var jn = ZC(3032),
-      yn = ZC(3070);
+    var dy = Ik(2983),
+      Yy = Ik(3013);
 
-    function Ln(CC, zC) {
-      const ZC = Math.max(1, Math.round(zC / uC.e));
-      return [1 === ZC ? `${CC}OneDay` : CC, {
-        days: ZC.toLocaleString()
+    function Ay(kk, Fk) {
+      const Ik = Math.max(1, Math.round(Fk / Nk.i));
+      return [1 === Ik ? `${kk}OneDay` : kk, {
+        days: Ik.toLocaleString()
       }]
     }
 
-    function Un() {
-      return "true" === new URLSearchParams(window.location.search).get("tempSubscription") && (0, sC.purchasesAllowed)() ? (0, WC.jsx)(Bn, {}) : null
+    function gy() {
+      return "true" === new URLSearchParams(window.location.search).get("tempSubscription") && (0, Wk.purchasesAllowed)() ? (0, tk.jsx)(my, {}) : null
     }
 
-    function Bn() {
+    function my() {
       const {
-        t: CC
-      } = (0, nC.y)(), {
-        userContext: zC
-      } = (0, gC.e)(), {
-        purchaseUnderWay: ZC,
-        notice: wC,
-        subscribe: bC
-      } = (0, jn.b)(), [fC, oC] = (0, QC.useState)(null), [FC, NC] = (0, QC.useState)(0), [MC, SC] = (0, QC.useState)(!1), pC = (0, QC.useRef)(!0), PC = zC !== KC.NULL_USER_CONTEXT, GC = null !== fC && fC.loadedFor === zC ? fC.offer : null, RC = null === wC || void 0 === wC ? void 0 : wC.pendingIntentId, AC = (0, QC.useRef)(RC);
+        t: kk
+      } = (0, yk.y)(), {
+        userContext: Fk
+      } = (0, ek.d)(), {
+        purchaseUnderWay: Ik,
+        notice: Tk,
+        subscribe: ik
+      } = (0, dy.e)(), [lk, ak] = (0, Xk.useState)(null), [Lk, Zk] = (0, Xk.useState)(0), [jk, wk] = (0, Xk.useState)(!1), Hk = (0, Xk.useRef)(!0), Jk = Fk !== Ok.NULL_USER_CONTEXT, xk = null !== lk && lk.loadedFor === Fk ? lk.offer : null, Pk = null === Tk || void 0 === Tk ? void 0 : Tk.pendingIntentId, Kk = (0, Xk.useRef)(Pk);
 
-      function xC() {
-        NC((CC => CC + 1))
+      function Qk() {
+        Zk((kk => kk + 1))
       }
-      async function JC(CC) {
-        SC(!1), await bC(CC), pC.current && xC()
+      async function sk(kk) {
+        wk(!1), await ik(kk), Hk.current && Qk()
       }
-      if ((0, QC.useEffect)((() => (pC.current = !0, () => {
-          pC.current = !1
-        })), []), (0, QC.useEffect)((() => {
-          void 0 !== AC.current && void 0 === RC && xC(), AC.current = RC
-        }), [RC]), (0, QC.useEffect)((() => {
-          if (!PC) return;
-          let CC = !1;
-          return SC(!1), async function() {
+      if ((0, Xk.useEffect)((() => (Hk.current = !0, () => {
+          Hk.current = !1
+        })), []), (0, Xk.useEffect)((() => {
+          void 0 !== Kk.current && void 0 === Pk && Qk(), Kk.current = Pk
+        }), [Pk]), (0, Xk.useEffect)((() => {
+          if (!Jk) return;
+          let kk = !1;
+          return wk(!1), async function() {
             const {
-              offering: CC
-            } = await (0, oz.g)().getOfferings("superRankPage"), zC = null === CC || void 0 === CC ? void 0 : CC.packages.find((CC => null !== CC.price));
-            return void 0 === zC ? {
+              offering: kk
+            } = await (0, qF.h)().getOfferings("superRankPage"), Fk = null === kk || void 0 === kk ? void 0 : kk.packages.find((kk => null !== kk.price));
+            return void 0 === Fk ? {
               kind: "unavailable"
             } : {
               kind: "loaded",
-              pkg: zC,
-              preview: await Dn(zC.productId)
+              pkg: Fk,
+              preview: await By(Fk.productId)
             }
-          }().catch((CC => (console.error("Billing: loading the Super Rank subscription or its preview failed:", CC), {
+          }().catch((kk => (console.error("Billing: loading the Super Rank subscription or its preview failed:", kk), {
             kind: "loadFailed"
-          }))).then((ZC => {
-            CC || oC((CC => "loadFailed" === ZC.kind && (null === CC || void 0 === CC ? void 0 : CC.loadedFor) === zC ? CC : {
-              loadedFor: zC,
-              offer: ZC
+          }))).then((Ik => {
+            kk || ak((kk => "loadFailed" === Ik.kind && (null === kk || void 0 === kk ? void 0 : kk.loadedFor) === Fk ? kk : {
+              loadedFor: Fk,
+              offer: Ik
             }))
           })), () => {
-            CC = !0
+            kk = !0
           }
-        }), [zC, PC, FC]), null === GC) return null;
-      if ("loaded" !== GC.kind) return (0, WC.jsx)(yn.f, {
+        }), [Fk, Jk, Lk]), null === xk) return null;
+      if ("loaded" !== xk.kind) return (0, tk.jsx)(Yy.g, {
         notice: {
           kind: "error",
-          key: "unavailable" === GC.kind ? "payments:subscriptionUnavailable" : "payments:subscriptionLoadFailed"
+          key: "unavailable" === xk.kind ? "payments:subscriptionUnavailable" : "payments:subscriptionLoadFailed"
         },
         className: "StoreTempSubscribe SmallTextBold"
       });
       const {
-        pkg: IC,
-        preview: iC
-      } = GC;
-      if ("refused" === iC.kind) return (0, WC.jsx)(yn.f, {
+        pkg: Vk,
+        preview: zk
+      } = xk;
+      if ("refused" === zk.kind) return (0, tk.jsx)(Yy.g, {
         notice: {
           kind: "error",
           key: "payments:subscribeRefusedGemRank",
           values: {
-            date: new Date(iC.until).toLocaleDateString()
+            date: new Date(zk.until).toLocaleDateString()
           }
         },
         className: "StoreTempSubscribe SmallTextBold"
       });
-      const vC = (0, xn.h)(IC.price);
-      if (MC && "refund" === iC.kind) {
+      const Sk = (0, sy.f)(Vk.price);
+      if (jk && "refund" === zk.kind) {
         const {
-          refundedMs: zC,
-          forfeitedMs: QC,
-          premiumCurrency: wC
-        } = iC, bC = QC + (0 === wC ? zC : 0), [nC, fC] = Ln("payments:subscribeRefundsGemRank", zC), [oC, FC] = Ln("payments:subscribeForfeitsGemRank", bC);
-        return (0, WC.jsxs)("div", {
+          refundedMs: Fk,
+          forfeitedMs: Xk,
+          premiumCurrency: Tk
+        } = zk, ik = Xk + (0 === Tk ? Fk : 0), [yk, lk] = Ay("payments:subscribeRefundsGemRank", Fk), [ak, Lk] = Ay("payments:subscribeForfeitsGemRank", ik);
+        return (0, tk.jsxs)("div", {
           className: "StoreTempSubscribe SmallTextBold",
-          children: [(0, WC.jsx)("div", {
-            children: CC("payments:subscribeEndsGemRank")
-          }), wC > 0 && (0, WC.jsx)("div", {
-            children: CC(nC, {
-              ...fC,
-              amount: wC.toLocaleString()
+          children: [(0, tk.jsx)("div", {
+            children: kk("payments:subscribeEndsGemRank")
+          }), Tk > 0 && (0, tk.jsx)("div", {
+            children: kk(yk, {
+              ...lk,
+              amount: Tk.toLocaleString()
             })
-          }), bC > 0 && (0, WC.jsx)("div", {
-            children: CC(oC, FC)
-          }), (0, WC.jsxs)("div", {
+          }), ik > 0 && (0, tk.jsx)("div", {
+            children: kk(ak, Lk)
+          }), (0, tk.jsxs)("div", {
             className: "StoreTempSubscribeButtons",
-            children: [(0, WC.jsx)(qC.i, {
+            children: [(0, tk.jsx)(qk.g, {
               onClick: () => {
-                SC(!1)
+                wk(!1)
               },
-              children: CC("general:cancel")
-            }), (0, WC.jsx)(qC.o, {
+              children: kk("general:cancel")
+            }), (0, tk.jsx)(qk.m, {
               onClick: () => {
-                JC(IC)
+                sk(Vk)
               },
-              loading: ZC,
-              children: CC("payments:subscribeContinue", {
-                price: vC
+              loading: Ik,
+              children: kk("payments:subscribeContinue", {
+                price: Sk
               })
             })]
           })]
         })
       }
-      return (0, WC.jsxs)("div", {
+      return (0, tk.jsxs)("div", {
         className: "StoreTempSubscribe",
-        children: [(0, WC.jsx)(yn.f, {
-          notice: wC,
+        children: [(0, tk.jsx)(Yy.g, {
+          notice: Tk,
           className: "SmallTextBold"
-        }), (0, WC.jsx)(yn.d, {
+        }), (0, tk.jsx)(Yy.b, {
           className: "SmallTextBold"
-        }), (0, WC.jsx)(qC.o, {
+        }), (0, tk.jsx)(qk.m, {
           onClick: () => {
-            "refund" === iC.kind ? SC(!0) : JC(IC)
+            "refund" === zk.kind ? wk(!0) : sk(Vk)
           },
-          disabled: void 0 !== RC,
-          loading: ZC,
-          children: CC("payments:subscribeToSuperRank", {
-            price: vC
+          disabled: void 0 !== Pk,
+          loading: Ik,
+          children: kk("payments:subscribeToSuperRank", {
+            price: Sk
           })
         })]
       })
     }
-    var On = ZC(2537);
+    var hy = Ik(2494);
 
-    function kn(CC) {
+    function ry(kk) {
       let {
-        state: zC,
-        view: ZC,
-        claiming: wC,
-        onOpen: fC
-      } = CC;
+        state: Fk,
+        view: Ik,
+        claiming: Tk,
+        onOpen: lk
+      } = kk;
       const {
-        t: FC
-      } = (0, nC.y)(), NC = (0, QC.useRef)(null), MC = "ready" === ZC.kind;
-      (0, hn.c)(NC, MC);
-      const gC = (0, az.k)(zC);
-      return (0, WC.jsxs)("div", {
-        ref: NC,
-        className: bC()("DailyDropTile", {
-          DailyDropTileReady: MC
+        t: Lk
+      } = (0, yk.y)(), Zk = (0, Xk.useRef)(null), jk = "ready" === Ik.kind;
+      (0, vy.c)(Zk, jk);
+      const ek = (0, BF.i)(Fk);
+      return (0, tk.jsxs)("div", {
+        ref: Zk,
+        className: ik()("DailyDropTile", {
+          DailyDropTileReady: jk
         }),
-        children: [MC && (0, WC.jsx)(oC.d, {
+        children: [jk && (0, tk.jsx)(ak.c, {
           top: "0.25rem",
           right: "0.25rem"
-        }), (0, WC.jsx)("div", {
+        }), (0, tk.jsx)("div", {
           className: "DailyDropTileTitle",
-          children: FC("dailyDrop:name")
-        }), (0, WC.jsxs)("div", {
+          children: Lk("dailyDrop:name")
+        }), (0, tk.jsxs)("div", {
           className: "DailyDropTileArt",
-          children: [(0, WC.jsx)(On.d, {
+          children: [(0, tk.jsx)(hy.b, {
             className: "DailyDropTileBlock"
-          }), (0, WC.jsxs)("div", {
+          }), (0, tk.jsxs)("div", {
             className: "DailyDropTileInfo SmallTextLight",
-            children: [(0, WC.jsx)("span", {
-              children: FC("dailyDrop:collected", {
-                count: zC.collected.length,
-                total: zC.total
+            children: [(0, tk.jsx)("span", {
+              children: Lk("dailyDrop:collected", {
+                count: Fk.collected.length,
+                total: Fk.total
               })
-            }), null !== gC && (0, WC.jsx)("span", {
+            }), null !== ek && (0, tk.jsx)("span", {
               className: "DailyDropTileOdds",
-              children: FC("dailyDrop:odds", {
-                percent: gC.toLocaleString(void 0, {
+              children: Lk("dailyDrop:odds", {
+                percent: ek.toLocaleString(void 0, {
                   maximumFractionDigits: 1
                 })
               })
             })]
           })]
-        }), "ready" === ZC.kind && (0, WC.jsx)(qC.o, {
+        }), "ready" === Ik.kind && (0, tk.jsx)(qk.m, {
           className: "DailyDropTileOpen",
-          onClick: fC,
-          loading: wC,
-          children: FC("dailyDrop:open")
-        }), "waiting" === ZC.kind && (0, WC.jsx)("div", {
+          onClick: lk,
+          loading: Tk,
+          children: Lk("dailyDrop:open")
+        }), "waiting" === Ik.kind && (0, tk.jsx)("div", {
           className: "DailyDropTileWait SmallTextBold",
-          children: FC("dailyDrop:nextIn", {
-            count: ZC.hours
+          children: Lk("dailyDrop:nextIn", {
+            count: Ik.hours
           })
         })]
       })
     }
-    var Vn = ZC(2166);
-    const Cf = 32;
+    var Dy = Ik(2148);
+    const My = 32;
 
-    function zf(CC) {
+    function kl(kk) {
       let {
-        worn: zC,
-        JQ: ZC,
-        IQ: wC,
-        className: oC
-      } = CC;
+        worn: Fk,
+        VX: Ik,
+        zX: Tk,
+        className: ak
+      } = kk;
       const {
-        t: qC
-      } = (0, nC.y)(), FC = (0, QC.useRef)(null), [NC, MC] = (0, QC.useState)(null), [gC, SC] = (0, QC.useState)(!1);
-      async function pC() {
-        var CC;
-        const zC = FC.current;
-        if (!zC) return;
-        const QC = null === (CC = zC.getDevTools()) || void 0 === CC ? void 0 : CC.canvas();
-        let bC = null;
+        t: qk
+      } = (0, yk.y)(), Lk = (0, Xk.useRef)(null), [Zk, jk] = (0, Xk.useState)(null), [ek, wk] = (0, Xk.useState)(!1);
+      async function Hk() {
+        var kk;
+        const Fk = Lk.current;
+        if (!Fk) return;
+        const Xk = null === (kk = Fk.getDevTools()) || void 0 === kk ? void 0 : kk.canvas();
+        let ik = null;
         try {
-          bC = QC ? function(CC) {
-            if (0 === CC.width || 0 === CC.height) return null;
-            const zC = document.createElement("canvas");
-            zC.width = Cf, zC.height = Cf;
-            const ZC = zC.getContext("2d", {
+          ik = Xk ? function(kk) {
+            if (0 === kk.width || 0 === kk.height) return null;
+            const Fk = document.createElement("canvas");
+            Fk.width = My, Fk.height = My;
+            const Ik = Fk.getContext("2d", {
               willReadFrequently: !0
             });
-            if (!ZC) return null;
-            ZC.drawImage(CC, 0, 0, Cf, Cf);
+            if (!Ik) return null;
+            Ik.drawImage(kk, 0, 0, My, My);
             const {
-              data: QC
-            } = ZC.getImageData(0, 0, Cf, Cf);
-            for (let wC = 3; wC < QC.length; wC += 4)
-              if (QC[wC] > 0) return CC.toDataURL("image/png");
+              data: Xk
+            } = Ik.getImageData(0, 0, My, My);
+            for (let Tk = 3; Tk < Xk.length; Tk += 4)
+              if (Xk[Tk] > 0) return kk.toDataURL("image/png");
             return null
-          }(QC) : null
-        } catch (fC) {
-          console.warn("Couldn't read the character preview for the Lucky Skin Block's Before", fC)
+          }(Xk) : null
+        } catch (lk) {
+          console.warn("Couldn't read the character preview for the Lucky Skin Block's Before", lk)
         }
-        null === bC && console.warn("The character preview read back blank: the Lucky Skin Block's Before shows the head"), MC(null === bC ? {
+        null === ik && console.warn("The character preview read back blank: the Lucky Skin Block's Before shows the head"), jk(null === ik ? {
           kind: "head"
         } : {
           kind: "still",
-          src: bC
-        }), zC.updateCosmetic(ZC, wC);
-        const nC = new Promise((CC => {
-          setTimeout(CC, 1e4)
+          src: ik
+        }), Fk.updateCosmetic(Ik, Tk);
+        const yk = new Promise((kk => {
+          setTimeout(kk, 1e4)
         }));
-        await Promise.race([zC.ensureReadyForCapture(ZC), nC]).catch((CC => {
-          console.error("Failed to draw the Lucky Skin Block's piece on the character preview", CC)
-        })), FC.current === zC && SC(!0)
+        await Promise.race([Fk.ensureReadyForCapture(Ik), yk]).catch((kk => {
+          console.error("Failed to draw the Lucky Skin Block's piece on the character preview", kk)
+        })), Lk.current === Fk && wk(!0)
       }
-      return (0, WC.jsxs)("div", {
-        className: bC()("DailyDropRevealFigures", oC),
-        children: [(0, WC.jsxs)("div", {
+      return (0, tk.jsxs)("div", {
+        className: ik()("DailyDropRevealFigures", ak),
+        children: [(0, tk.jsxs)("div", {
           className: "DailyDropRevealFigure",
-          children: [(0, WC.jsxs)("div", {
+          children: [(0, tk.jsxs)("div", {
             className: "DailyDropRevealFigureArt",
-            children: ["still" === (null === NC || void 0 === NC ? void 0 : NC.kind) && (0, WC.jsx)("img", {
+            children: ["still" === (null === Zk || void 0 === Zk ? void 0 : Zk.kind) && (0, tk.jsx)("img", {
               className: "DailyDropRevealBeforeStill",
-              src: NC.src,
+              src: Zk.src,
               alt: "",
               draggable: !1
-            }), "head" === (null === NC || void 0 === NC ? void 0 : NC.kind) && (0, WC.jsx)("div", {
+            }), "head" === (null === Zk || void 0 === Zk ? void 0 : Zk.kind) && (0, tk.jsx)("div", {
               className: "DailyDropRevealBeforeHead",
-              children: (0, WC.jsx)(Db.c, {
-                cosmetics: zC
+              children: (0, tk.jsx)(Yi.e, {
+                cosmetics: Fk
               })
-            }), null === NC && (0, WC.jsx)(JC.d, {})]
-          }), (0, WC.jsx)("span", {
+            }), null === Zk && (0, tk.jsx)(sk.c, {})]
+          }), (0, tk.jsx)("span", {
             className: "DailyDropRevealFigureLabel SmallTextBold",
-            children: qC("dailyDrop:before")
+            children: qk("dailyDrop:before")
           })]
-        }), (0, WC.jsx)(fC.c, {
+        }), (0, tk.jsx)(lk.e, {
           name: "arrow-right",
           className: "DailyDropRevealArrow"
-        }), (0, WC.jsxs)("div", {
+        }), (0, tk.jsxs)("div", {
           className: "DailyDropRevealFigure DailyDropRevealAfter",
-          children: [(0, WC.jsxs)("div", {
+          children: [(0, tk.jsxs)("div", {
             className: "DailyDropRevealFigureArt",
-            children: [(0, WC.jsx)("div", {
-              className: bC()("DailyDropRevealLive", {
-                DailyDropRevealLiveDrawn: gC
+            children: [(0, tk.jsx)("div", {
+              className: ik()("DailyDropRevealLive", {
+                DailyDropRevealLiveDrawn: ek
               }),
-              children: (0, WC.jsx)(QC.Suspense, {
+              children: (0, tk.jsx)(Xk.Suspense, {
                 fallback: null,
-                children: (0, WC.jsx)(bn.c, {
-                  ref: FC,
+                children: (0, tk.jsx)(ly.c, {
+                  ref: Lk,
                   onReady: () => {
-                    var CC, ZC;
-                    null === (CC = FC.current) || void 0 === CC || CC.resetCamera(), null === (ZC = FC.current) || void 0 === ZC || ZC.setAllCosmetics(zC)
+                    var kk, Ik;
+                    null === (kk = Lk.current) || void 0 === kk || kk.resetCamera(), null === (Ik = Lk.current) || void 0 === Ik || Ik.setAllCosmetics(Fk)
                   },
                   onDrawn: () => {
                     requestAnimationFrame((() => {
-                      pC()
+                      Hk()
                     }))
                   }
                 })
               })
-            }), !gC && (0, WC.jsx)(JC.d, {})]
-          }), (0, WC.jsx)("span", {
+            }), !ek && (0, tk.jsx)(sk.c, {})]
+          }), (0, tk.jsx)("span", {
             className: "DailyDropRevealFigureLabel SmallTextBold",
-            children: qC("dailyDrop:after")
+            children: qk("dailyDrop:after")
           })]
         })]
       })
     }
-    var Zf = ZC(1774);
-    const Qf = "dailyDropReminderAsked_";
+    var Fl = Ik(1800);
+    const Il = "dailyDropReminderAsked_";
 
-    function wf(CC) {
-      return async function(CC) {
-        if (CC.remindersOn || (0, iC.e)(iC.b.get("gameState"))) return null;
-        const zC = await KC.userContextManager.getCurrentUserContext(),
-          ZC = Qf + zC.whamm;
-        if (null !== QZ.i.getItem(ZC)) return null;
-        const [QC, wC] = await Promise.all([(0, uz.e)().catch((CC => (console.error("Couldn't tell whether this device can take push notifications:", CC), null))), nf()]);
-        if (null === QC && !wC) return null;
+    function Xl(kk) {
+      return async function(kk) {
+        if (kk.remindersOn || (0, zk.f)(zk.d.get("gameState"))) return null;
+        const Fk = await Ok.userContextManager.getCurrentUserContext(),
+          Ik = Il + Fk.whamm;
+        if (null !== TI.j.getItem(Ik)) return null;
+        const [Xk, Tk] = await Promise.all([(0, NF.f)().catch((kk => (console.error("Couldn't tell whether this device can take push notifications:", kk), null))), il()]);
+        if (null === Xk && !Tk) return null;
         return {
-          askedKey: ZC,
-          requester: QC
+          askedKey: Ik,
+          requester: Xk
         }
-      }(CC).catch((CC => (console.error("Failed to tell whether to ask about Lucky Skin Block reminders:", CC), null)))
+      }(kk).catch((kk => (console.error("Failed to tell whether to ask about Lucky Skin Block reminders:", kk), null)))
     }
 
-    function bf(CC, zC) {
-      QZ.i.setItem(CC.askedKey, !0), (0, az.s)("daily_drop.remind", zC ? "yes" : "no"), zC && async function(CC) {
-        const zC = (0, az.t)({
+    function Tl(kk, Fk) {
+      TI.j.setItem(kk.askedKey, !0), (0, BF.s)("daily_drop.remind", Fk ? "yes" : "no"), Fk && async function(kk) {
+        const Fk = (0, BF.u)({
             remindersOn: !0
           }),
-          ZC = null === CC ? Promise.resolve() : CC(),
-          [QC, wC] = await Promise.allSettled([zC, ZC]);
-        "rejected" === QC.status && console.error("Failed to turn on Lucky Skin Block reminders:", QC.reason);
-        "rejected" === wC.status && console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", wC.reason);
-        "rejected" !== QC.status && "rejected" !== wC.status || Zf.d.showMessage({
+          Ik = null === kk ? Promise.resolve() : kk(),
+          [Xk, Tk] = await Promise.allSettled([Fk, Ik]);
+        "rejected" === Xk.status && console.error("Failed to turn on Lucky Skin Block reminders:", Xk.reason);
+        "rejected" === Tk.status && console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", Tk.reason);
+        "rejected" !== Xk.status && "rejected" !== Tk.status || Fl.e.showMessage({
           translationKey: "dailyDrop:remindFailed"
         })
-      }(CC.requester)
+      }(kk.requester)
     }
 
-    function nf() {
-      return (0, cz.b)().then((CC => CC.app + CC.browser + CC.msnPlay > 0), (CC => (console.error("Couldn't tell where push notifications reach this account:", CC), !0)))
+    function il() {
+      return (0, CF.c)().then((kk => kk.app + kk.browser + kk.msnPlay > 0), (kk => (console.error("Couldn't tell where push notifications reach this account:", kk), !0)))
     }
-    const ff = {
+    const yl = {
         closed: "opening",
         opening: "revealed",
         revealed: "shrinking",
@@ -7071,187 +7071,187 @@ export const modules = {
         equip: "equip",
         remind: "remind"
       },
-      of = {
+      ll = {
         opening: 900,
         shrinking: 700
       };
 
-    function qf(CC) {
+    function al(kk) {
       let {
-        drop: zC,
-        onClose: ZC
-      } = CC;
+        drop: Fk,
+        onClose: Ik
+      } = kk;
       const {
-        t: wC
-      } = (0, nC.y)(), {
-        userContext: oC
-      } = (0, gC.e)(), {
-        state: FC,
-        view: NC
-      } = (0, az.u)(), [MC, SC] = (0, QC.useState)("closed"), [pC] = (0, QC.useState)((() => ({
-        ...oC.getPlayerCosmetics()
-      }))), [PC] = (0, QC.useState)((() => (0, az.n)(zC, pC))), [GC, RC] = (0, QC.useState)(!1), [AC, xC] = (0, QC.useState)(!1), [JC] = (0, QC.useState)((() => null === FC ? Promise.resolve(null) : wf(FC))), [IC, vC] = (0, QC.useState)(null), eC = (0, rz.e)(), {
-        gameState: hC
-      } = (0, iC.k)(["gameState"]);
-      async function KC() {
-        const CC = await JC;
-        eC.current && (null === CC ? ZC() : (vC(CC), SC("remind")))
+        t: Tk
+      } = (0, yk.y)(), {
+        userContext: ak
+      } = (0, ek.d)(), {
+        state: Lk,
+        view: Zk
+      } = (0, BF.w)(), [jk, wk] = (0, Xk.useState)("closed"), [Hk] = (0, Xk.useState)((() => ({
+        ...ak.getPlayerCosmetics()
+      }))), [Jk] = (0, Xk.useState)((() => (0, BF.l)(Fk, Hk))), [xk, Pk] = (0, Xk.useState)(!1), [Kk, Qk] = (0, Xk.useState)(!1), [sk] = (0, Xk.useState)((() => null === Lk ? Promise.resolve(null) : Xl(Lk))), [Vk, Sk] = (0, Xk.useState)(null), vk = (0, cF.d)(), {
+        gameState: Ek
+      } = (0, zk.j)(["gameState"]);
+      async function Ok() {
+        const kk = await sk;
+        vk.current && (null === kk ? Ik() : (Sk(kk), wk("remind")))
       }
 
-      function YC(CC) {
-        null !== IC && bf(IC, CC), ZC()
-      }(0, QC.useEffect)((() => {
-        const CC = of [MC];
-        if (void 0 === CC) return;
-        const zC = setTimeout((() => {
-          SC(ff[MC])
-        }), CC);
+      function nk(kk) {
+        null !== Vk && Tl(Vk, kk), Ik()
+      }(0, Xk.useEffect)((() => {
+        const kk = ll[jk];
+        if (void 0 === kk) return;
+        const Fk = setTimeout((() => {
+          wk(yl[jk])
+        }), kk);
         return () => {
-          clearTimeout(zC)
+          clearTimeout(Fk)
         }
-      }), [MC]);
-      const dC = wC(`dailyDrop:kind_${PC.JQ}`),
-        mC = FC && wC("dailyDrop:collected", {
-          count: FC.collected.length,
-          total: FC.total
+      }), [jk]);
+      const Gk = Tk(`dailyDrop:kind_${Jk.VX}`),
+        pk = Lk && Tk("dailyDrop:collected", {
+          count: Lk.collected.length,
+          total: Lk.total
         }),
-        HC = "revealed" === MC || "shrinking" === MC,
-        EC = "equip" !== MC && "remind" !== MC;
-      return (0, WC.jsx)(YQ.c, {
+        uk = "revealed" === jk || "shrinking" === jk,
+        bk = "equip" !== jk && "remind" !== jk;
+      return (0, tk.jsx)(nX.c, {
         className: "DailyDropRevealScreen",
-        close: "remind" === MC ? () => {
-          YC(!1)
-        } : ZC,
+        close: "remind" === jk ? () => {
+          nk(!1)
+        } : Ik,
         togglePointerLock: !1,
         closeOnPressBackground: !1,
-        children: (0, WC.jsxs)("div", {
-          className: bC()("DailyDropReveal", {
-            DailyDropRevealOpening: "opening" === MC,
-            DailyDropRevealShrinking: "shrinking" === MC,
-            DailyDropRevealFiguresShown: "shrinking" === MC || "equip" === MC || "remind" === MC
+        children: (0, tk.jsxs)("div", {
+          className: ik()("DailyDropReveal", {
+            DailyDropRevealOpening: "opening" === jk,
+            DailyDropRevealShrinking: "shrinking" === jk,
+            DailyDropRevealFiguresShown: "shrinking" === jk || "equip" === jk || "remind" === jk
           }),
-          children: [(0, WC.jsxs)("div", {
+          children: [(0, tk.jsxs)("div", {
             className: "DailyDropRevealStage",
-            children: [(0, WC.jsx)(zf, {
+            children: [(0, tk.jsx)(kl, {
               className: "DailyDropRevealStageFigures",
-              worn: pC,
-              JQ: PC.JQ,
-              IQ: PC.IQ
-            }), ("closed" === MC || "opening" === MC) && (0, WC.jsx)(On.d, {
+              worn: Hk,
+              VX: Jk.VX,
+              zX: Jk.zX
+            }), ("closed" === jk || "opening" === jk) && (0, tk.jsx)(hy.b, {
               className: "DailyDropRevealBlock",
-              open: "opening" === MC
-            }), HC && (0, WC.jsx)("div", {
+              open: "opening" === jk
+            }), uk && (0, tk.jsx)("div", {
               className: "DailyDropRevealPiece",
-              children: (0, WC.jsx)("img", {
-                src: `/textures/charSkins/previews/${(0,Vn.j)(PC.JQ,PC.IQ).previewTex}.png`,
-                alt: dC,
+              children: (0, tk.jsx)("img", {
+                src: `/textures/charSkins/previews/${(0,Dy.k)(Jk.VX,Jk.zX).previewTex}.png`,
+                alt: Gk,
                 draggable: !1
               })
             })]
-          }), EC && (0, WC.jsxs)(WC.Fragment, {
-            children: [(0, WC.jsxs)("div", {
+          }), bk && (0, tk.jsxs)(tk.Fragment, {
+            children: [(0, tk.jsxs)("div", {
               className: "DailyDropRevealCaption",
-              children: [(0, WC.jsx)("div", {
+              children: [(0, tk.jsx)("div", {
                 className: "DailyDropRevealTitle SmallTextBold",
-                children: HC ? dC : wC("dailyDrop:name")
-              }), "closed" === MC && (0, WC.jsx)("div", {
+                children: uk ? Gk : Tk("dailyDrop:name")
+              }), "closed" === jk && (0, tk.jsx)("div", {
                 className: "DailyDropRevealHint SmallTextLight",
-                children: wC("dailyDrop:tapToOpen")
-              }), "revealed" === MC && (0, WC.jsx)("div", {
+                children: Tk("dailyDrop:tapToOpen")
+              }), "revealed" === jk && (0, tk.jsx)("div", {
                 className: "DailyDropRevealHint SmallTextLight",
-                children: wC("dailyDrop:tapToContinue")
+                children: Tk("dailyDrop:tapToContinue")
               })]
-            }), (0, WC.jsx)("button", {
+            }), (0, tk.jsx)("button", {
               type: "button",
               className: "DailyDropRevealTap",
               "data-pad-default-focus": !0,
-              "aria-label": wC("closed" === MC ? "dailyDrop:tapToOpen" : "dailyDrop:tapToContinue"),
+              "aria-label": Tk("closed" === jk ? "dailyDrop:tapToOpen" : "dailyDrop:tapToContinue"),
               onClick: () => {
-                SC(ff[MC])
+                wk(yl[jk])
               }
             })]
-          }), "equip" === MC && (0, WC.jsxs)("div", {
+          }), "equip" === jk && (0, tk.jsxs)("div", {
             className: "DailyDropRevealEquip",
-            children: [(0, WC.jsx)("div", {
+            children: [(0, tk.jsx)("div", {
               className: "DailyDropRevealKind SmallTextLight",
-              children: dC
-            }), (0, WC.jsx)("div", {
+              children: Gk
+            }), (0, tk.jsx)("div", {
               className: "DailyDropRevealQuestion SmallTextBold",
-              children: wC("dailyDrop:equipQuestion")
-            }), (0, WC.jsxs)("div", {
+              children: Tk("dailyDrop:equipQuestion")
+            }), (0, tk.jsxs)("div", {
               className: "DailyDropRevealButtons",
-              children: [(0, WC.jsx)(qC.g, {
+              children: [(0, tk.jsx)(qk.d, {
                 className: "DailyDropRevealButton",
-                disabled: GC,
+                disabled: xk,
                 touchPressOn: "pointerup",
                 onClick: () => {
-                  (0, az.s)("daily_drop.not_now", zC), KC()
+                  (0, BF.s)("daily_drop.not_now", Fk), Ok()
                 },
-                children: wC("dailyDrop:notNow")
-              }), (0, WC.jsx)(qC.g, {
+                children: Tk("dailyDrop:notNow")
+              }), (0, tk.jsx)(qk.d, {
                 className: "DailyDropRevealButton",
-                loading: GC,
+                loading: xk,
                 padDefaultFocus: !0,
                 touchPressOn: "pointerup",
                 onClick: () => {
                   !async function() {
-                    (0, az.s)("daily_drop.equip", zC), RC(!0), xC(!1);
+                    (0, BF.s)("daily_drop.equip", Fk), Pk(!0), Qk(!1);
                     try {
-                      await (0, az.h)(oC, PC.JQ, PC.IQ)
-                    } catch (CC) {
-                      return console.error("Failed to equip the Lucky Skin Block's piece", CC), RC(!1), void xC(!0)
+                      await (0, BF.e)(ak, Jk.VX, Jk.zX)
+                    } catch (kk) {
+                      return console.error("Failed to equip the Lucky Skin Block's piece", kk), Pk(!1), void Qk(!0)
                     }
-                    await KC()
+                    await Ok()
                   }()
                 },
-                children: wC("dailyDrop:equip")
+                children: Tk("dailyDrop:equip")
               })]
-            }), AC && (0, WC.jsx)("div", {
+            }), Kk && (0, tk.jsx)("div", {
               className: "DailyDropRevealError SmallTextBold",
-              children: wC("dailyDrop:equipFailed")
-            }), !(0, iC.e)(hC) && (0, WC.jsxs)("button", {
+              children: Tk("dailyDrop:equipFailed")
+            }), !(0, zk.f)(Ek) && (0, tk.jsxs)("button", {
               type: "button",
               className: "DailyDropRevealCustomise",
-              disabled: GC,
+              disabled: xk,
               onClick: () => {
-                var CC;
-                (0, az.s)("daily_drop.customise", zC), CC = PC.JQ, zZ.o.bp(iQ, CC), iC.b.set({
-                  openEverythingMenuName: Fz.o.CUSTOMISATION
-                }), ZC()
+                var kk;
+                (0, BF.s)("daily_drop.customise", Fk), kk = Jk.VX, II.g.GL(SX, kk), zk.d.set({
+                  openEverythingMenuName: tF.r.CUSTOMISATION
+                }), Ik()
               },
-              children: [wC("dailyDrop:customise"), " ", (0, WC.jsx)(fC.c, {
+              children: [Tk("dailyDrop:customise"), " ", (0, tk.jsx)(lk.e, {
                 name: "arrow-right",
                 className: "DailyDropRevealCustomiseArrow"
               })]
-            }), mC && (0, WC.jsxs)("div", {
+            }), pk && (0, tk.jsxs)("div", {
               className: "DailyDropRevealProgress SmallTextLight",
-              children: [mC, "waiting" === (null === NC || void 0 === NC ? void 0 : NC.kind) && ` \xb7 ${wC("dailyDrop:nextInInline",{count:NC.hours})}`]
+              children: [pk, "waiting" === (null === Zk || void 0 === Zk ? void 0 : Zk.kind) && ` \xb7 ${Tk("dailyDrop:nextInInline",{count:Zk.hours})}`]
             })]
-          }), "remind" === MC && (0, WC.jsxs)("div", {
+          }), "remind" === jk && (0, tk.jsxs)("div", {
             className: "DailyDropRevealEquip",
-            children: [(0, WC.jsx)("div", {
+            children: [(0, tk.jsx)("div", {
               className: "DailyDropRevealQuestion SmallTextBold",
-              children: wC("dailyDrop:remindTitle")
-            }), (0, WC.jsx)("div", {
+              children: Tk("dailyDrop:remindTitle")
+            }), (0, tk.jsx)("div", {
               className: "DailyDropRevealKind SmallTextLight",
-              children: wC("dailyDrop:remindSubtitle")
-            }), (0, WC.jsxs)("div", {
+              children: Tk("dailyDrop:remindSubtitle")
+            }), (0, tk.jsxs)("div", {
               className: "DailyDropRevealButtons",
-              children: [(0, WC.jsx)(qC.g, {
+              children: [(0, tk.jsx)(qk.d, {
                 className: "DailyDropRevealButton",
                 padDefaultFocus: !0,
                 touchPressOn: "pointerup",
                 onClick: () => {
-                  YC(!1)
+                  nk(!1)
                 },
-                children: wC("dailyDrop:remindNo")
-              }), (0, WC.jsx)(qC.g, {
+                children: Tk("dailyDrop:remindNo")
+              }), (0, tk.jsx)(qk.d, {
                 className: "DailyDropRevealButton",
                 touchPressOn: "pointerup",
                 onClick: () => {
-                  YC(!0)
+                  nk(!0)
                 },
-                children: wC("dailyDrop:remindYes")
+                children: Tk("dailyDrop:remindYes")
               })]
             })]
           })]
@@ -7259,669 +7259,669 @@ export const modules = {
       })
     }
 
-    function Ff(CC, zC) {
+    function ql(kk, Fk) {
       const {
-        t: ZC
-      } = (0, nC.y)(), wC = function(CC, zC) {
+        t: Ik
+      } = (0, yk.y)(), Tk = function(kk, Fk) {
         const {
-          state: ZC,
-          view: wC
-        } = (0, az.u)(), [bC, nC] = (0, QC.useState)(!1), [fC, oC] = (0, QC.useState)(!1), [qC, FC] = (0, QC.useState)(null), WC = (0, QC.useRef)(null), NC = (0, QC.useRef)(!1), MC = zC && "ready" === (null === wC || void 0 === wC ? void 0 : wC.kind);
-        (0, QC.useEffect)((() => {
-          CC ? MC && !NC.current && (NC.current = !0, (0, az.s)("daily_drop.shown", "tile")) : NC.current = !1
-        }), [CC, MC]), (0, QC.useEffect)((() => {
-          CC || (PC(), oC(!1))
-        }), [CC]);
-        const gC = CC && null === qC && !(0, az.r)(wC);
-        (0, QC.useEffect)((() => {
-          gC && iC.b.set({
-            openEverythingMenuName: Fz.o.CUSTOMISATION
+          state: Ik,
+          view: Tk
+        } = (0, BF.w)(), [ik, yk] = (0, Xk.useState)(!1), [lk, ak] = (0, Xk.useState)(!1), [qk, Lk] = (0, Xk.useState)(null), tk = (0, Xk.useRef)(null), Zk = (0, Xk.useRef)(!1), jk = Fk && "ready" === (null === Tk || void 0 === Tk ? void 0 : Tk.kind);
+        (0, Xk.useEffect)((() => {
+          kk ? jk && !Zk.current && (Zk.current = !0, (0, BF.s)("daily_drop.shown", "tile")) : Zk.current = !1
+        }), [kk, jk]), (0, Xk.useEffect)((() => {
+          kk || (Jk(), ak(!1))
+        }), [kk]);
+        const ek = kk && null === qk && !(0, BF.r)(Tk);
+        (0, Xk.useEffect)((() => {
+          ek && zk.d.set({
+            openEverythingMenuName: tF.r.CUSTOMISATION
           })
-        }), [gC]);
-        const SC = (0, QC.useRef)(!1),
-          pC = (0, QC.useRef)(CC);
+        }), [ek]);
+        const wk = (0, Xk.useRef)(!1),
+          Hk = (0, Xk.useRef)(kk);
 
-        function PC() {
-          null !== WC.current && (WC.current = null, FC(null))
+        function Jk() {
+          null !== tk.current && (tk.current = null, Lk(null))
         }
-        return pC.current = CC, {
-          state: ZC,
-          view: wC,
-          claiming: bC,
-          claimFailed: fC,
-          reveal: qC,
+        return Hk.current = kk, {
+          state: Ik,
+          view: Tk,
+          claiming: ik,
+          claimFailed: lk,
+          reveal: qk,
           open: async function() {
-            if (!SC.current) {
-              SC.current = !0, nC(!0), oC(!1);
+            if (!wk.current) {
+              wk.current = !0, yk(!0), ak(!1);
               try {
                 const {
-                  state: CC,
-                  drop: zC
-                } = await (0, az.d)();
-                if (null === CC || null === zC) return;
-                if (!pC.current) return;
-                (0, az.s)("daily_drop.open", zC), WC.current = {
-                  state: CC,
-                  drop: zC
-                }, FC(WC.current)
-              } catch (CC) {
-                console.error("Failed to claim the Lucky Skin Block", CC), pC.current && oC(!0)
+                  state: kk,
+                  drop: Fk
+                } = await (0, BF.b)();
+                if (null === kk || null === Fk) return;
+                if (!Hk.current) return;
+                (0, BF.s)("daily_drop.open", Fk), tk.current = {
+                  state: kk,
+                  drop: Fk
+                }, Lk(tk.current)
+              } catch (kk) {
+                console.error("Failed to claim the Lucky Skin Block", kk), Hk.current && ak(!0)
               } finally {
-                SC.current = !1, nC(!1)
+                wk.current = !1, yk(!1)
               }
             }
           },
-          closeReveal: PC
+          closeReveal: Jk
         }
-      }(CC, zC);
+      }(kk, Fk);
       return {
-        shown: (0, az.r)(wC.view) || null !== wC.reveal,
-        tile: wC.state && wC.view && (0, WC.jsx)(kn, {
-          state: wC.state,
-          view: wC.view,
-          claiming: wC.claiming,
-          onOpen: wC.open
+        shown: (0, BF.r)(Tk.view) || null !== Tk.reveal,
+        tile: Tk.state && Tk.view && (0, tk.jsx)(ry, {
+          state: Tk.state,
+          view: Tk.view,
+          claiming: Tk.claiming,
+          onOpen: Tk.open
         }),
-        claimFailed: wC.claimFailed && (0, WC.jsx)("div", {
+        claimFailed: Tk.claimFailed && (0, tk.jsx)("div", {
           className: "StoreNotice StoreNoticeError",
-          children: ZC("dailyDrop:claimFailed")
+          children: Ik("dailyDrop:claimFailed")
         }),
-        reveal: wC.reveal && (0, WC.jsx)(qf, {
-          drop: wC.reveal.drop,
-          onClose: wC.closeReveal
+        reveal: Tk.reveal && (0, tk.jsx)(al, {
+          drop: Tk.reveal.drop,
+          onClose: Tk.closeReveal
         })
       }
     }
 
-    function Wf(CC) {
+    function Ll(kk) {
       let {
-        show: zC
-      } = CC;
-      const ZC = Ff(zC, zC);
-      return zC && ZC.shown ? (0, WC.jsxs)("div", {
+        show: Fk
+      } = kk;
+      const Ik = ql(Fk, Fk);
+      return Fk && Ik.shown ? (0, tk.jsxs)("div", {
         className: "Store StoreDailyDropOnly",
-        children: [ZC.claimFailed, ZC.tile && (0, WC.jsx)("div", {
+        children: [Ik.claimFailed, Ik.tile && (0, tk.jsx)("div", {
           className: "StoreDailyDropOnlyTile",
-          children: ZC.tile
-        }), ZC.reveal]
+          children: Ik.tile
+        }), Ik.reveal]
       }) : null
     }
-    const Nf = {
+    const tl = {
       kind: "board"
     };
-    let Mf = !1;
+    let Zl = !1;
 
-    function gf(CC) {
-      return "found" === CC.status || "error" === CC.status && "store:giftRecipientLookupFailed" === CC.error ? CC.name : null
-    }(0, rC.y)(Ib.prefetchBillingOfferings);
-    const Sf = (0, QC.memo)((function(CC) {
-      var zC;
+    function jl(kk) {
+      return "found" === kk.status || "error" === kk.status && "store:giftRecipientLookupFailed" === kk.error ? kk.name : null
+    }(0, ck.s)(Vi.prefetchBillingOfferings);
+    const el = (0, Xk.memo)((function(kk) {
+      var Fk;
       let {
-        show: wC
-      } = CC;
+        show: Tk
+      } = kk;
       const {
-        t: fC
-      } = (0, nC.y)(), {
-        userContext: oC
-      } = (0, gC.e)(), qC = oC !== KC.NULL_USER_CONTEXT, FC = Xb(oC), [NC, MC] = (0, pC.c)(), {
-        page: SC,
-        urlMode: PC,
-        goTo: GC
-      } = (0, cb.d)(), RC = function(CC) {
-        return "superRank" === CC.kind ? "superRank" : "pack" === CC.kind ? CC.pack : null
-      }(SC), {
-        openEverythingMenuName: AC,
-        gameState: xC
-      } = (0, iC.k)(["openEverythingMenuName", "gameState"]), JC = null !== AC;
-      ! function(CC, zC) {
-        const [wC] = (0, QC.useState)(sb.k), [bC, nC] = (0, QC.useState)(!1);
-        wC && zC && !bC && nC(!0);
-        const fC = (0, SQ.p)(),
-          oC = wC && bC && CC && !fC;
-        (0, QC.useEffect)((() => {
-          if (!oC) return;
-          let CC = null,
-            zC = null,
-            QC = null;
-          const wC = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, oz.g)().purchaseUnderWay,
-            bC = () => {
-              var ZC;
-              null === (ZC = QC) || void 0 === ZC || ZC(), QC = null, null !== CC && (clearTimeout(CC), CC = null), null !== zC && (clearTimeout(zC), zC = null)
+        t: lk
+      } = (0, yk.y)(), {
+        userContext: ak
+      } = (0, ek.d)(), qk = ak !== Ok.NULL_USER_CONTEXT, Lk = Ui(ak), [Zk, jk] = (0, Hk.c)(), {
+        page: wk,
+        urlMode: Jk,
+        goTo: xk
+      } = (0, Ci.h)(), Pk = function(kk) {
+        return "superRank" === kk.kind ? "superRank" : "pack" === kk.kind ? kk.pack : null
+      }(wk), {
+        openEverythingMenuName: Kk,
+        gameState: Qk
+      } = (0, zk.j)(["openEverythingMenuName", "gameState"]), sk = null !== Kk;
+      ! function(kk, Fk) {
+        const [Tk] = (0, Xk.useState)(Wi.j), [ik, yk] = (0, Xk.useState)(!1);
+        Tk && Fk && !ik && yk(!0);
+        const lk = (0, HX.m)(),
+          ak = Tk && ik && kk && !lk;
+        (0, Xk.useEffect)((() => {
+          if (!ak) return;
+          let kk = null,
+            Fk = null,
+            Xk = null;
+          const Tk = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, qF.h)().purchaseUnderWay,
+            ik = () => {
+              var Ik;
+              null === (Ik = Xk) || void 0 === Ik || Ik(), Xk = null, null !== kk && (clearTimeout(kk), kk = null), null !== Fk && (clearTimeout(Fk), Fk = null)
             },
-            nC = () => {
-              (0, ub.o)(!1), (0, ub.n)(!1), bC(), CC = setTimeout((() => {
-                CC = null, QC = (0, rb.e)((() => {
-                  QC = null, wC() ? nC() : ((0, ub.o)(!0), zC = setTimeout((() => {
-                    zC = null, QC = (0, rb.e)((() => {
-                      QC = null, wC() ? nC() : (0, ub.n)(!0)
+            yk = () => {
+              (0, Ni.r)(!1), (0, Ni.o)(!1), ik(), kk = setTimeout((() => {
+                kk = null, Xk = (0, ci.b)((() => {
+                  Xk = null, Tk() ? yk() : ((0, Ni.r)(!0), Fk = setTimeout((() => {
+                    Fk = null, Xk = (0, ci.b)((() => {
+                      Xk = null, Tk() ? yk() : (0, Ni.o)(!0)
                     }))
-                  }), 3e3), Promise.resolve().then((() => ZC(4591))).then((CC => {
-                    CC.startBackgroundGameSetup()
-                  }), (CC => {
-                    console.warn("Background game setup: its chunk failed to load", CC)
+                  }), 3e3), Promise.resolve().then((() => Ik(4645))).then((kk => {
+                    kk.startBackgroundGameSetup()
+                  }), (kk => {
+                    console.warn("Background game setup: its chunk failed to load", kk)
                   })))
                 }))
               }), 2e3)
             };
-          for (const ZC of Tb) window.addEventListener(ZC, nC, {
+          for (const Ik of fi) window.addEventListener(Ik, yk, {
             capture: !0,
             passive: !0
           });
-          return nC(), () => {
-            for (const CC of Tb) window.removeEventListener(CC, nC, {
+          return yk(), () => {
+            for (const kk of fi) window.removeEventListener(kk, yk, {
               capture: !0
             });
-            bC(), (0, ub.o)(!1), (0, ub.n)(!1)
+            ik(), (0, Ni.r)(!1), (0, Ni.o)(!1)
           }
-        }), [oC])
-      }(wC && JC, "pack" === SC.kind);
-      const IC = "landingPage" === xC;
-      (0, QC.useEffect)((() => {
-        JC && (0, Ib.prefetchBillingOfferings)()
-      }), [JC]), (0, QC.useEffect)((() => {
-        JC && !wC && IC && (0, ab.s)()
-      }), [JC, wC, IC]);
-      const [vC, eC] = (0, QC.useState)(0), [hC, YC] = (0, QC.useState)(null), [dC, mC] = (0, QC.useState)(null), [HC, EC] = (0, QC.useState)(null), [XC, cC] = (0, QC.useState)(null), uC = (0, QC.useRef)(null), TC = (0, QC.useRef)(null), aC = (0, QC.useRef)(null), tC = (0, QC.useRef)(!1), DC = (0, rC.C)(), jC = (0, QC.useRef)(0), yC = (0, QC.useRef)(!1);
+        }), [ak])
+      }(Tk && sk, "pack" === wk.kind);
+      const Vk = "landingPage" === Qk;
+      (0, Xk.useEffect)((() => {
+        sk && (0, Vi.prefetchBillingOfferings)()
+      }), [sk]), (0, Xk.useEffect)((() => {
+        sk && !Tk && Vk && (0, Bi.w)()
+      }), [sk, Tk, Vk]);
+      const [Sk, vk] = (0, Xk.useState)(0), [Ek, nk] = (0, Xk.useState)(null), [Gk, pk] = (0, Xk.useState)(null), [uk, bk] = (0, Xk.useState)(null), [Uk, Ck] = (0, Xk.useState)(null), Nk = (0, Xk.useRef)(null), fk = (0, Xk.useRef)(null), Bk = (0, Xk.useRef)(null), dk = (0, Xk.useRef)(!1), Yk = (0, ck.A)(), Ak = (0, Xk.useRef)(0), gk = (0, Xk.useRef)(!1);
 
-      function LC() {
-        eC((CC => CC + 1))
-      }(0, QC.useEffect)((() => {
-        if (wC) {
-          if (Mf = !0, (0, rC.l)(), DC && DC.seq !== jC.current) {
-            var CC;
-            jC.current = DC.seq, "loginResume" !== DC.source && (0, rC.B)();
-            const zC = (0, rC.d)(DC);
-            PC || GC(zC), cC(null !== (CC = DC.highlight) && void 0 !== CC ? CC : null), mC(null), "gift" === DC.mode && DC.giftRecipientName ? FC.choose(DC.giftRecipientName, "prefilled") : "current" !== DC.mode && FC.clear(), "gift" !== DC.mode || DC.giftRecipientName || LC(), (0, kC.reportAnalyticsClick)({
+      function mk() {
+        vk((kk => kk + 1))
+      }(0, Xk.useEffect)((() => {
+        if (Tk) {
+          if (Zl = !0, (0, ck.l)(), Yk && Yk.seq !== Ak.current) {
+            var kk;
+            Ak.current = Yk.seq, "loginResume" !== Yk.source && (0, ck.z)();
+            const Fk = (0, ck.d)(Yk);
+            Jk || xk(Fk), Ck(null !== (kk = Yk.highlight) && void 0 !== kk ? kk : null), pk(null), "gift" === Yk.mode && Yk.giftRecipientName ? Lk.choose(Yk.giftRecipientName, "prefilled") : "current" !== Yk.mode && Lk.clear(), "gift" !== Yk.mode || Yk.giftRecipientName || mk(), (0, Mk.reportAnalyticsClick)({
               id: "store.open",
-              value: DC.source
+              value: Yk.source
             })
-          } else yC.current || (0, kC.reportAnalyticsClick)({
+          } else gk.current || (0, Mk.reportAnalyticsClick)({
             id: "store.open",
             value: "menuTab"
           });
-          yC.current = !0
-        } else yC.current = !1
-      }), [wC, DC]), (0, QC.useEffect)((() => {
-        if (!XC) return;
-        const CC = setTimeout((() => {
-          cC(null)
+          gk.current = !0
+        } else gk.current = !1
+      }), [Tk, Yk]), (0, Xk.useEffect)((() => {
+        if (!Uk) return;
+        const kk = setTimeout((() => {
+          Ck(null)
         }), 4e3);
         return () => {
-          clearTimeout(CC)
+          clearTimeout(kk)
         }
-      }), [XC]), (0, QC.useLayoutEffect)((() => {
-        const CC = uC.current;
-        if (!wC || !CC) return TC.current = null, void(aC.current = null);
-        var zC;
-        if (RC) TC.current = RC, null === (zC = CC.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === zC || zC.focus();
-        else if (TC.current) {
-          const zC = aC.current;
-          null !== zC && (CC.scrollTop = zC);
-          const ZC = CC.querySelector(`[data-store-item="${TC.current}"]`);
-          if (ZC) {
-            const QC = ZC.getBoundingClientRect(),
-              wC = CC.getBoundingClientRect();
-            ZC.focus({
-              preventScroll: null !== zC && QC.bottom > wC.top && QC.top < wC.bottom
+      }), [Uk]), (0, Xk.useLayoutEffect)((() => {
+        const kk = Nk.current;
+        if (!Tk || !kk) return fk.current = null, void(Bk.current = null);
+        var Fk;
+        if (Pk) fk.current = Pk, null === (Fk = kk.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === Fk || Fk.focus();
+        else if (fk.current) {
+          const Fk = Bk.current;
+          null !== Fk && (kk.scrollTop = Fk);
+          const Ik = kk.querySelector(`[data-store-item="${fk.current}"]`);
+          if (Ik) {
+            const Xk = Ik.getBoundingClientRect(),
+              Tk = kk.getBoundingClientRect();
+            Ik.focus({
+              preventScroll: null !== Fk && Xk.bottom > Tk.top && Xk.top < Tk.bottom
             })
           }
-          TC.current = null
+          fk.current = null
         }
-      }), [RC, wC]), (0, QC.useEffect)((() => {
-        mC(null)
-      }), [FC.query]), (0, QC.useEffect)((() => {
-        if (!HC) return;
-        const CC = setTimeout((() => {
-          EC(null)
+      }), [Pk, Tk]), (0, Xk.useEffect)((() => {
+        pk(null)
+      }), [Lk.query]), (0, Xk.useEffect)((() => {
+        if (!uk) return;
+        const kk = setTimeout((() => {
+          bk(null)
         }), 8e3);
         return () => {
-          clearTimeout(CC)
+          clearTimeout(kk)
         }
-      }), [HC]);
-      const UC = oC.superRankInfo,
-        BC = oC.isLoggedIn() || (0, sC.guestsMayBuy)(),
-        OC = oC.getOwnedCosmeticPacks(),
-        VC = (0, mb.m)(FC.query),
-        Cz = (0, mb.f)({
-          mode: VC,
-          loggedIn: qC ? BC : null,
-          superRankInfo: UC,
+      }), [uk]);
+      const hk = ak.superRankInfo,
+        rk = ak.isLoggedIn() || (0, Wk.guestsMayBuy)(),
+        Dk = ak.getOwnedCosmeticPacks(),
+        kF = (0, Gi.q)(Lk.query),
+        FF = (0, Gi.h)({
+          mode: kF,
+          loggedIn: qk ? rk : null,
+          superRankInfo: hk,
           now: Date.now(),
-          ownedPacks: OC,
-          packs: Jb.q,
-          recipient: FC.recipient
+          ownedPacks: Dk,
+          packs: si.s,
+          recipient: Lk.recipient
         });
-      (0, QC.useEffect)((() => {
-        if (!BC || !wC) return;
-        const CC = (0, rC.B)(),
-          zC = CC && (0, mb.i)(CC, Jb.q);
-        CC && zC && ((0, kC.reportAnalyticsClick)({
+      (0, Xk.useEffect)((() => {
+        if (!rk || !Tk) return;
+        const kk = (0, ck.z)(),
+          Fk = kk && (0, Gi.o)(kk, si.s);
+        kk && Fk && ((0, Mk.reportAnalyticsClick)({
           id: "store.login_resume",
-          value: CC.item
-        }), (0, rC.n)(zC))
-      }), [BC, wC]);
-      const zz = (0, mb.q)({
-        superRankDaysLeft: Cz.superRankDaysLeft,
-        openedThisSession: Mf || wC,
-        seenNewItems: (0, rC.k)()
+          value: kk.item
+        }), (0, ck.m)(Fk))
+      }), [rk, Tk]);
+      const IF = (0, Gi.s)({
+        superRankDaysLeft: FF.superRankDaysLeft,
+        openedThisSession: Zl || Tk,
+        seenNewItems: (0, ck.h)()
       });
-      (0, QC.useEffect)((() => {
-        (0, rC.A)(zz)
-      }), [zz]);
-      const Zz = "self" === VC,
-        Qz = Ff(wC, wC && Zz && "board" === SC.kind);
-      if (!wC || !(0, sC.purchasesAllowed)()) return null;
-      const wz = MC > NC && NC <= 700,
-        bz = !wz && MC <= 420,
-        nz = "gift" === VC ? gf(FC.recipient) : null,
-        fz = null !== hC;
+      (0, Xk.useEffect)((() => {
+        (0, ck.w)(IF)
+      }), [IF]);
+      const XF = "self" === kF,
+        TF = ql(Tk, Tk && XF && "board" === wk.kind);
+      if (!Tk || !(0, Wk.purchasesAllowed)()) return null;
+      const iF = jk > Zk && Zk <= 700,
+        yF = !iF && jk <= 420,
+        lF = "gift" === kF ? jl(Lk.recipient) : null,
+        aF = null !== Ek;
 
-      function qz(CC) {
-        (0, vb.b)(CC, "gift" === VC ? FC.query.trim() : null)
+      function LF(kk) {
+        (0, Si.e)(kk, "gift" === kF ? Lk.query.trim() : null)
       }
 
-      function Fz(CC, zC) {
-        (0, kC.reportAnalyticsClick)({
+      function tF(kk, Fk) {
+        (0, Mk.reportAnalyticsClick)({
           id: "store.purchase_done",
-          value: `${zC?"gift":"self"}:${CC}`
-        }), zC && (FC.recordGift(zC.name, CC), Wz(zC))
+          value: `${Fk?"gift":"self"}:${kk}`
+        }), Fk && (Lk.recordGift(Fk.name, kk), ZF(Fk))
       }
 
-      function Wz(CC) {
-        ! function(CC) {
+      function ZF(kk) {
+        ! function(kk) {
           try {
-            QZ.i.setItem(Hb, (0, mb.y)(lb(), CC))
+            TI.j.setItem(ui, (0, Gi.z)(Ri(), kk))
           } catch {}
         }({
-          name: CC.name,
-          cosmetics: CC.cosmetics
-        }), GC(Nf), EC((zC => {
-          var ZC;
+          name: kk.name,
+          cosmetics: kk.cosmetics
+        }), xk(tl), bk((Fk => {
+          var Ik;
           return {
-            name: CC.name,
-            seq: (null !== (ZC = null === zC || void 0 === zC ? void 0 : zC.seq) && void 0 !== ZC ? ZC : 0) + 1
+            name: kk.name,
+            seq: (null !== (Ik = null === Fk || void 0 === Fk ? void 0 : Fk.seq) && void 0 !== Ik ? Ik : 0) + 1
           }
         }))
       }
-      async function Nz(CC) {
-        var zC, ZC;
-        if (tC.current) return;
-        if (!BC) return void qz(CC);
-        mC(null), cC(null);
-        const QC = "gift" === VC ? {
-          name: gf(FC.recipient),
-          cosmetics: FC.recipientCosmetics
+      async function jF(kk) {
+        var Fk, Ik;
+        if (dk.current) return;
+        if (!rk) return void LF(kk);
+        pk(null), Ck(null);
+        const Xk = "gift" === kF ? {
+          name: jl(Lk.recipient),
+          cosmetics: Lk.recipientCosmetics
         } : null;
-        if (QC && !QC.name) return void LC();
-        const wC = "superRank" === CC ? lC.g.id : (0, lC.c)(CC);
-        tC.current = !0;
-        const bC = await (0, db.e)(wC, null !== (zC = null === QC || void 0 === QC ? void 0 : QC.name) && void 0 !== zC ? zC : null);
-        if (tC.current = !1, !bC) return;
-        YC(CC);
-        const nC = await eb.e.purchase(wC, null !== (ZC = null === QC || void 0 === QC ? void 0 : QC.name) && void 0 !== ZC ? ZC : null);
-        YC(null), nC ? mC(nC) : (Fz(CC, QC), QC || (await (0, hb.flushClientAnalyticsEvents)(), (0, ib.refreshWithoutConfirmation)("superRank" === CC ? "/super-rank-welcome" : `/pack-welcome/${CC}`)))
+        if (Xk && !Xk.name) return void mk();
+        const Tk = "superRank" === kk ? Rk.l.id : (0, Rk.e)(kk);
+        dk.current = !0;
+        const ik = await (0, ni.d)(Tk, null !== (Fk = null === Xk || void 0 === Xk ? void 0 : Xk.name) && void 0 !== Fk ? Fk : null);
+        if (dk.current = !1, !ik) return;
+        nk(kk);
+        const yk = await oi.c.purchase(Tk, null !== (Ik = null === Xk || void 0 === Xk ? void 0 : Xk.name) && void 0 !== Ik ? Ik : null);
+        nk(null), yk ? pk(yk) : (tF(kk, Xk), Xk || (await (0, vi.flushClientAnalyticsEvents)(), (0, zi.refreshWithoutConfirmation)("superRank" === kk ? "/super-rank-welcome" : `/pack-welcome/${kk}`)))
       }
-      const Mz = bC()("Store", {
-        StoreGift: "gift" === VC,
-        StorePortrait: wz,
-        StoreCompact: bz
+      const eF = ik()("Store", {
+        StoreGift: "gift" === kF,
+        StorePortrait: iF,
+        StoreCompact: yF
       });
-      if ("pack" === SC.kind) {
-        const CC = SC.pack,
-          zC = Cz.packs.find((zC => zC.pack === CC));
-        return (0, WC.jsx)("div", {
-          ref: uC,
+      if ("pack" === wk.kind) {
+        const kk = wk.pack,
+          Fk = FF.packs.find((Fk => Fk.pack === kk));
+        return (0, tk.jsx)("div", {
+          ref: Nk,
           className: "CosmeticShopContainer",
-          children: (0, WC.jsx)(Yb.d, {
-            pack: CC,
+          children: (0, tk.jsx)(Oi.g, {
+            pack: kk,
             onBack: () => {
-              GC(Nf)
+              xk(tl)
             },
-            onPurchased: zC => {
-              Fz(CC, zC ? {
-                name: zC,
+            onPurchased: Fk => {
+              tF(kk, Fk ? {
+                name: Fk,
                 cosmetics: null
               } : null)
             },
-            giftCta: "gift" === VC && nz && zC && (0, WC.jsxs)(WC.Fragment, {
-              children: [(0, WC.jsx)(Sn, {
-                state: zC.state,
-                item: CC,
-                price: (gz = CC, "superRank" === gz ? lC.g.price : (0, lC.d)(gz)),
-                busy: fz,
+            giftCta: "gift" === kF && lF && Fk && (0, tk.jsxs)(tk.Fragment, {
+              children: [(0, tk.jsx)(Hy, {
+                state: Fk.state,
+                item: kk,
+                price: (wF = kk, "superRank" === wF ? Rk.l.price : (0, Rk.g)(wF)),
+                busy: aF,
                 onAct: () => {
-                  Nz(CC)
+                  jF(kk)
                 },
                 onNeedRecipient: () => {
-                  GC(Nf), LC()
+                  xk(tl), mk()
                 },
                 onLogin: () => {
-                  qz(CC)
+                  LF(kk)
                 },
-                highlight: XC === CC
-              }), dC && (0, WC.jsx)("span", {
+                highlight: Uk === kk
+              }), Gk && (0, tk.jsx)("span", {
                 className: "CosmeticShopGiftError SmallTextBold",
-                children: fC(dC)
+                children: lk(Gk)
               })]
             }),
-            ownedPacks: OC,
-            startAsGift: "gift" === VC,
-            initialGiftRecipient: "gift" === VC ? null !== nz && void 0 !== nz ? nz : FC.query.trim() : "",
-            highlightCta: XC === CC
-          }, CC)
+            ownedPacks: Dk,
+            startAsGift: "gift" === kF,
+            initialGiftRecipient: "gift" === kF ? null !== lF && void 0 !== lF ? lF : Lk.query.trim() : "",
+            highlightCta: Uk === kk
+          }, kk)
         })
       }
-      var gz;
-      return "superRank" === SC.kind ? (0, WC.jsx)("div", {
-        ref: uC,
-        className: bC()(Mz, "StoreDetailView"),
-        children: (0, WC.jsx)(Tn, {
-          state: Cz.superRank.state,
-          mode: VC,
-          giftName: nz,
-          busy: fz,
-          highlight: "superRank" === XC,
-          purchaseError: dC,
+      var wF;
+      return "superRank" === wk.kind ? (0, tk.jsx)("div", {
+        ref: Nk,
+        className: ik()(eF, "StoreDetailView"),
+        children: (0, tk.jsx)(cy, {
+          state: FF.superRank.state,
+          mode: kF,
+          giftName: lF,
+          busy: aF,
+          highlight: "superRank" === Uk,
+          purchaseError: Gk,
           onBack: () => {
-            GC(Nf)
+            xk(tl)
           },
           onChooseRecipient: () => {
-            GC(Nf), LC()
+            xk(tl), mk()
           },
           onAct: () => {
-            Nz("superRank")
+            jF("superRank")
           },
           onLogin: () => {
-            qz("superRank")
+            LF("superRank")
           }
         })
-      }) : (0, WC.jsxs)("div", {
-        ref: uC,
-        className: Mz,
-        onScroll: CC => {
-          aC.current = CC.currentTarget.scrollTop
+      }) : (0, tk.jsxs)("div", {
+        ref: Nk,
+        className: eF,
+        onScroll: kk => {
+          Bk.current = kk.currentTarget.scrollTop
         },
-        children: [(0, WC.jsx)("div", {
+        children: [(0, tk.jsx)("div", {
           className: "StoreTopRow",
-          children: (0, WC.jsx)(Bb, {
-            selfName: qC ? oC.getPlayerName() : "",
-            giftRecipient: FC,
-            suggestionsVersion: null !== (zC = null === HC || void 0 === HC ? void 0 : HC.seq) && void 0 !== zC ? zC : 0,
-            pulseSignal: vC,
-            disabled: fz || !qC
+          children: (0, tk.jsx)(Di, {
+            selfName: qk ? ak.getPlayerName() : "",
+            giftRecipient: Lk,
+            suggestionsVersion: null !== (Fk = null === uk || void 0 === uk ? void 0 : uk.seq) && void 0 !== Fk ? Fk : 0,
+            pulseSignal: Sk,
+            disabled: aF || !qk
           })
-        }), HC && (0, WC.jsxs)("div", {
+        }), uk && (0, tk.jsxs)("div", {
           className: "StoreNotice StoreNoticeGiftSent",
           onClick: () => {
-            EC(null)
+            bk(null)
           },
-          children: [(0, WC.jsx)(Kb.c, {
-            showSignal: HC.seq
-          }), mb.b, " ", fC("store:giftSent", {
-            name: HC.name
+          children: [(0, tk.jsx)(Ei.d, {
+            showSignal: uk.seq
+          }), Gi.e, " ", lk("store:giftSent", {
+            name: uk.name
           })]
-        }, HC.seq), !HC && dC && (0, WC.jsx)("div", {
+        }, uk.seq), !uk && Gk && (0, tk.jsx)("div", {
           className: "StoreNotice StoreNoticeError",
-          children: fC(dC)
-        }), Zz && Qz.claimFailed, (0, WC.jsx)(sn, {
-          layout: Cz,
-          mountAtOnce: null !== TC.current,
-          bundleGift: "gift" === VC ? {
-            recipientName: nz,
-            lookingUp: "pending" === FC.recipient.status,
-            busy: fz,
-            onNeedRecipient: LC,
-            onSent: CC => {
-              (0, kC.reportAnalyticsClick)({
+          children: lk(Gk)
+        }), XF && TF.claimFailed, (0, tk.jsx)(Ny, {
+          layout: FF,
+          mountAtOnce: null !== fk.current,
+          bundleGift: "gift" === kF ? {
+            recipientName: lF,
+            lookingUp: "pending" === Lk.recipient.status,
+            busy: aF,
+            onNeedRecipient: mk,
+            onSent: kk => {
+              (0, Mk.reportAnalyticsClick)({
                 id: "store.purchase_done",
                 value: "gift:superGems"
-              }), Wz({
-                name: CC,
-                cosmetics: FC.recipientCosmetics
+              }), ZF({
+                name: kk,
+                cosmetics: Lk.recipientCosmetics
               })
             }
           } : null,
-          superRankTotalDays: (0, mb.t)(UC),
-          busy: fz,
-          highlightItem: XC,
-          onOpen: function(CC) {
-            (0, kC.reportAnalyticsClick)({
+          superRankTotalDays: (0, Gi.u)(hk),
+          busy: aF,
+          highlightItem: Uk,
+          onOpen: function(kk) {
+            (0, Mk.reportAnalyticsClick)({
               id: "store.item_open",
-              value: CC
-            }), GC((0, rC.h)(CC))
+              value: kk
+            }), xk((0, ck.g)(kk))
           },
-          onAct: Nz,
-          onNeedRecipient: LC,
-          onLogin: qz,
-          dailyDropTile: Zz && Qz.tile
-        }), "gift" !== VC && (0, WC.jsx)(Un, {}), Qz.reveal]
+          onAct: jF,
+          onNeedRecipient: mk,
+          onLogin: LF,
+          dailyDropTile: XF && TF.tile
+        }), "gift" !== kF && (0, tk.jsx)(gy, {}), TF.reveal]
       })
     }));
-    var pf = ZC(2667),
-      Pf = ZC(8844),
-      Gf = ZC(8673),
-      Rf = ZC(2731),
-      Af = ZC(2563),
-      xf = ZC(2624),
-      Jf = ZC(2633),
-      If = ZC(2637),
-      vf = ZC(2718),
-      ef = ZC(2700),
-      hf = ZC(2294),
-      Kf = ZC(2333),
-      Yf = ZC(2321),
-      df = ZC(1930),
-      mf = ZC(2646),
-      Hf = ZC(2340);
+    var wl = Ik(2609),
+      Hl = Ik(8822),
+      Jl = Ik(8637),
+      xl = Ik(2672),
+      Pl = Ik(2513),
+      Kl = Ik(2564),
+      Ql = Ik(2578),
+      sl = Ik(2582),
+      Vl = Ik(2659),
+      zl = Ik(2641),
+      Sl = Ik(2274),
+      ol = Ik(2316),
+      vl = Ik(2302),
+      El = Ik(1961),
+      Ol = Ik(2584),
+      nl = Ik(2324);
 
-    function Ef(CC) {
+    function Gl(kk) {
       let {
-        show: zC
-      } = CC;
-      return zC ? (0, WC.jsx)(lf, {}) : null
+        show: Fk
+      } = kk;
+      return Fk ? (0, tk.jsx)(pl, {}) : null
     }
 
-    function lf() {
+    function pl() {
       const {
-        t: CC
-      } = (0, nC.y)(), {
-        followsLeader: zC
-      } = (0, Af.g)(), {
-        loading: ZC,
-        friends: wC,
-        requests: oC,
-        invites: FC
-      } = (0, aC.k)(), {
-        userContext: NC
-      } = (0, gC.e)(), [MC, SC] = (0, QC.useState)(Hf.m);
-      (0, QC.useEffect)((() => {
-        (0, Hf.e)()
+        t: kk
+      } = (0, yk.y)(), {
+        followsLeader: Fk
+      } = (0, Pl.e)(), {
+        loading: Ik,
+        friends: Tk,
+        requests: ak,
+        invites: Lk
+      } = (0, Bk.j)(), {
+        userContext: Zk
+      } = (0, ek.d)(), [jk, wk] = (0, Xk.useState)(nl.j);
+      (0, Xk.useEffect)((() => {
+        (0, nl.b)()
       }), []);
-      const pC = oC.map((CC => CC.name)),
+      const Hk = ak.map((kk => kk.name)),
         {
-          state: PC,
-          recentRequesters: GC
-        } = (0, ef.p)(),
-        RC = new Map([...("loaded" === PC.status ? PC.recentPlayers : []).map((CC => [CC.preview.name, CC])), ...GC.map((CC => [CC.name, CC]))]),
-        AC = (0, QC.useRef)(null),
-        [IC, iC] = (0, QC.useState)(""),
-        [vC, eC] = (0, QC.useState)("Enter"),
-        [hC, KC] = (0, QC.useState)(null);
+          state: Jk,
+          recentRequesters: xk
+        } = (0, zl.l)(),
+        Pk = new Map([...("loaded" === Jk.status ? Jk.recentPlayers : []).map((kk => [kk.preview.name, kk])), ...xk.map((kk => [kk.name, kk]))]),
+        Kk = (0, Xk.useRef)(null),
+        [Vk, zk] = (0, Xk.useState)(""),
+        [Sk, vk] = (0, Xk.useState)("Enter"),
+        [Ek, Ok] = (0, Xk.useState)(null);
 
-      function YC() {
-        IC && (eC("Loading"), (0, Yf.e)(IC, "social_menu").then((CC => {
-          if (AC.current) switch (CC.kind) {
+      function nk() {
+        Vk && (vk("Loading"), (0, vl.g)(Vk, "social_menu").then((kk => {
+          if (Kk.current) switch (kk.kind) {
             case "sent":
-              eC("Success");
+              vk("Success");
               break;
             case "becameFriends":
-              eC("BecameFriends");
+              vk("BecameFriends");
               break;
             case "failed":
-              KC(CC.message), eC("Error")
+              Ok(kk.message), vk("Error")
           }
         })))
       }
-      return (0, QC.useEffect)((() => {
-        if ("Enter" === vC || "Loading" === vC) return;
-        const CC = setTimeout((() => {
-          AC.current.value = "", iC(""), eC("Enter")
-        }), "Success" === vC ? 1e3 : 4e3);
+      return (0, Xk.useEffect)((() => {
+        if ("Enter" === Sk || "Loading" === Sk) return;
+        const kk = setTimeout((() => {
+          Kk.current.value = "", zk(""), vk("Enter")
+        }), "Success" === Sk ? 1e3 : 4e3);
         return () => {
-          clearTimeout(CC)
+          clearTimeout(kk)
         }
-      }), [vC]), (0, WC.jsx)("div", {
+      }), [Sk]), (0, tk.jsx)("div", {
         className: "SocialMenu",
-        children: (0, WC.jsxs)("div", {
+        children: (0, tk.jsxs)("div", {
           className: "SocialMenuInner",
-          children: [(0, WC.jsxs)("div", {
+          children: [(0, tk.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, WC.jsxs)("div", {
+            children: [(0, tk.jsxs)("div", {
               className: "SocialMenuBox SocialMenuAddFriend",
-              children: [(0, WC.jsx)(If.b, {
-                label: CC("socialBar:addFriend")
-              }), (0, WC.jsxs)("div", {
+              children: [(0, tk.jsx)(sl.b, {
+                label: kk("socialBar:addFriend")
+              }), (0, tk.jsxs)("div", {
                 className: "AddFriendBody",
-                children: [(0, WC.jsxs)("div", {
-                  className: bC()("AddFriendBodyOverlay", {
-                    [`AddFriendBodyOverlay${vC}`]: !0
+                children: [(0, tk.jsxs)("div", {
+                  className: ik()("AddFriendBodyOverlay", {
+                    [`AddFriendBodyOverlay${Sk}`]: !0
                   }),
-                  children: ["Loading" === vC && (0, WC.jsx)(JC.d, {}), "Success" === vC && (0, WC.jsx)(fC.c, {
+                  children: ["Loading" === Sk && (0, tk.jsx)(sk.c, {}), "Success" === Sk && (0, tk.jsx)(lk.e, {
                     name: "check"
-                  }), "BecameFriends" === vC && (0, WC.jsx)(WC.Fragment, {
-                    children: CC("socialBar:nowFriends", {
-                      playerName: IC
+                  }), "BecameFriends" === Sk && (0, tk.jsx)(tk.Fragment, {
+                    children: kk("socialBar:nowFriends", {
+                      playerName: Vk
                     })
-                  }), "Error" === vC && hC && (0, WC.jsx)(WC.Fragment, {
-                    children: CC(hC.translationKey, hC.params)
+                  }), "Error" === Sk && Ek && (0, tk.jsx)(tk.Fragment, {
+                    children: kk(Ek.translationKey, Ek.params)
                   })]
-                }), (0, WC.jsxs)("div", {
+                }), (0, tk.jsxs)("div", {
                   className: "PlayerSearch",
-                  children: [(0, WC.jsx)(xC.c, {
+                  children: [(0, tk.jsx)(Qk.c, {
                     className: "PlayerSearchInput",
-                    placeholderText: CC("socialBar:enterPlayerName"),
-                    domRef: AC,
-                    onValueChange: CC => {
-                      iC((0, HC.q)(CC)), AC.current.value = (0, HC.q)(CC)
+                    placeholderText: kk("socialBar:enterPlayerName"),
+                    domRef: Kk,
+                    onValueChange: kk => {
+                      zk((0, uk.r)(kk)), Kk.current.value = (0, uk.r)(kk)
                     },
                     onEnter: () => {
-                      IC && (0, kC.reportAnalyticsClick)({
+                      Vk && (0, Mk.reportAnalyticsClick)({
                         id: "social.add_friend",
                         value: "social_menu"
-                      }), YC()
+                      }), nk()
                     }
-                  }), (0, WC.jsxs)(qC.g, {
+                  }), (0, tk.jsxs)(qk.d, {
                     className: "PlayerSearchInputButton SmallTextLight",
                     onClick: () => {
-                      YC()
+                      nk()
                     },
                     analyticsClick: {
                       id: "social.add_friend",
                       value: "social_menu"
                     },
-                    children: [(0, WC.jsx)(fC.c, {
+                    children: [(0, tk.jsx)(lk.e, {
                       name: "user-plus"
-                    }), " ", CC("socialBar:sendRequest")]
+                    }), " ", kk("socialBar:sendRequest")]
                   })]
                 })]
-              }), (0, WC.jsx)(mf.b, {
+              }), (0, tk.jsx)(Ol.c, {
                 surface: "social_menu",
                 prefetchOnMount: !0
               })]
-            }), FC.length > 0 && (0, WC.jsxs)("div", {
+            }), Lk.length > 0 && (0, tk.jsxs)("div", {
               className: "SocialMenuBox SocialMenuInvites",
-              children: [(0, WC.jsx)(If.b, {
-                label: CC("socialBar:invites"),
-                meta: FC.length
-              }), FC.map((zC => (0, WC.jsxs)("div", {
+              children: [(0, tk.jsx)(sl.b, {
+                label: kk("socialBar:invites"),
+                meta: Lk.length
+              }), Lk.map((Fk => (0, tk.jsxs)("div", {
                 className: "SocialMenuInvite",
-                children: [(0, WC.jsx)("div", {
+                children: [(0, tk.jsx)("div", {
                   className: "SocialMenuInviteIcon",
-                  children: (0, WC.jsx)(hf.d, {
-                    invite: zC
+                  children: (0, tk.jsx)(Sl.d, {
+                    invite: Fk
                   })
-                }), (0, WC.jsx)("div", {
+                }), (0, tk.jsx)("div", {
                   className: "SocialMenuInviteText",
-                  children: (0, WC.jsx)(hf.g, {
-                    invite: zC
+                  children: (0, tk.jsx)(Sl.f, {
+                    invite: Fk
                   })
-                }), (0, WC.jsx)(qC.o, {
+                }), (0, tk.jsx)(qk.m, {
                   className: "SocialMenuInviteJoin SmallTextLight",
                   onClick: () => {
-                    (0, Kf.d)(zC)
+                    (0, ol.h)(Fk)
                   },
                   analyticsClick: {
                     id: "social.accept_invite",
-                    value: `social_menu:${zC.destination.kind}`
+                    value: `social_menu:${Fk.destination.kind}`
                   },
-                  children: CC("general:join")
-                }), (0, WC.jsx)(UC.d, {
-                  tooltipInner: (0, WC.jsx)(WC.Fragment, {
-                    children: CC("general:decline")
+                  children: kk("general:join")
+                }), (0, tk.jsx)(hk.g, {
+                  tooltipInner: (0, tk.jsx)(tk.Fragment, {
+                    children: kk("general:decline")
                   }),
                   delayShow: 0,
-                  children: (0, WC.jsx)(qC.i, {
+                  children: (0, tk.jsx)(qk.g, {
                     className: "SocialMenuInviteDecline",
-                    padDefaultFocus: "invite" === (null === MC || void 0 === MC ? void 0 : MC.kind) && MC.inviteId === zC.id,
+                    padDefaultFocus: "invite" === (null === jk || void 0 === jk ? void 0 : jk.kind) && jk.inviteId === Fk.id,
                     onClick: () => {
-                      aC.d.declineInvite(zC.id)
+                      Bk.c.declineInvite(Fk.id)
                     },
                     analyticsClick: {
                       id: "social.decline_invite",
-                      value: `social_menu:${zC.destination.kind}`
+                      value: `social_menu:${Fk.destination.kind}`
                     },
-                    children: (0, WC.jsx)(fC.c, {
+                    children: (0, tk.jsx)(lk.e, {
                       name: "xmark"
                     })
                   })
                 })]
-              }, zC.id)))]
-            }), (0, WC.jsxs)("div", {
-              className: bC()("SocialMenuBox SocialMenuRequests", {
-                SocialMenuBoxEmpty: !ZC && 0 === oC.length
+              }, Fk.id)))]
+            }), (0, tk.jsxs)("div", {
+              className: ik()("SocialMenuBox SocialMenuRequests", {
+                SocialMenuBoxEmpty: !Ik && 0 === ak.length
               }),
-              children: [(0, WC.jsx)(If.b, {
-                label: (0, WC.jsxs)(WC.Fragment, {
-                  children: [(0, WC.jsx)(fC.c, {
-                    name: df.d
-                  }), " ", CC("socialBar:requests")]
+              children: [(0, tk.jsx)(sl.b, {
+                label: (0, tk.jsxs)(tk.Fragment, {
+                  children: [(0, tk.jsx)(lk.e, {
+                    name: El.h
+                  }), " ", kk("socialBar:requests")]
                 }),
-                meta: (0, WC.jsxs)(WC.Fragment, {
-                  children: [oC.length, oC.length === BC.n && (0, WC.jsx)("span", {
+                meta: (0, tk.jsxs)(tk.Fragment, {
+                  children: [ak.length, ak.length === rk.o && (0, tk.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: CC("socialBar:limitReached")
+                    children: kk("socialBar:limitReached")
                   })]
                 })
-              }), ZC && (0, WC.jsx)("div", {
+              }), Ik && (0, tk.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, WC.jsx)(JC.d, {})
-              }), !ZC && 0 === oC.length && (0, WC.jsx)("div", {
+                children: (0, tk.jsx)(sk.c, {})
+              }), !Ik && 0 === ak.length && (0, tk.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: CC("socialBar:noFriendRequests")
-              }), !ZC && oC.length > 0 && (0, WC.jsx)("div", {
+                children: kk("socialBar:noFriendRequests")
+              }), !Ik && ak.length > 0 && (0, tk.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, WC.jsx)(vw.e, {
+                children: (0, tk.jsx)(oT.b, {
                   lazyLoadedClassName: "SocialMenuRequestsLazy",
-                  observerUpdateDeps: [oC],
-                  children: oC.map(((zC, ZC) => {
-                    const QC = RC.get(zC.name);
-                    return (0, WC.jsxs)(Jf.f, {
-                      playerSocialPreview: zC,
-                      zIndex: oC.length - ZC,
-                      padDefaultFocus: (0, Hf.k)(MC, zC.name, ZC),
-                      status: QC && (0, WC.jsx)(vf.c, {
-                        gameNameWithVariation: QC.gameNameWithVariation,
-                        isPrivateLobby: QC.isPrivateLobby
+                  observerUpdateDeps: [ak],
+                  children: ak.map(((Fk, Ik) => {
+                    const Xk = Pk.get(Fk.name);
+                    return (0, tk.jsxs)(Ql.e, {
+                      playerSocialPreview: Fk,
+                      zIndex: ak.length - Ik,
+                      padDefaultFocus: (0, nl.g)(jk, Fk.name, Ik),
+                      status: Xk && (0, tk.jsx)(Vl.d, {
+                        gameNameWithVariation: Xk.gameNameWithVariation,
+                        isPrivateLobby: Xk.isPrivateLobby
                       }),
-                      children: [(0, WC.jsx)(UC.d, {
-                        tooltipInner: (0, WC.jsx)(WC.Fragment, {
-                          children: CC("general:accept")
+                      children: [(0, tk.jsx)(hk.g, {
+                        tooltipInner: (0, tk.jsx)(tk.Fragment, {
+                          children: kk("general:accept")
                         }),
                         delayShow: 0,
-                        children: (0, WC.jsx)(qC.g, {
+                        children: (0, tk.jsx)(qk.d, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            SC((0, Hf.i)(pC, ZC)), (0, Yf.d)(zC.name, !0, {
+                            wk((0, nl.c)(Hk, Ik)), (0, vl.f)(Fk.name, !0, {
                               source: "social_menu",
                               announceFriend: !1
                             })
@@ -7930,19 +7930,19 @@ export const modules = {
                             id: "social.accept_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, WC.jsx)(fC.c, {
+                          children: (0, tk.jsx)(lk.e, {
                             name: "check"
                           })
                         })
-                      }), (0, WC.jsx)(UC.d, {
-                        tooltipInner: (0, WC.jsx)(WC.Fragment, {
-                          children: CC("general:decline")
+                      }), (0, tk.jsx)(hk.g, {
+                        tooltipInner: (0, tk.jsx)(tk.Fragment, {
+                          children: kk("general:decline")
                         }),
                         delayShow: 0,
-                        children: (0, WC.jsx)(qC.i, {
+                        children: (0, tk.jsx)(qk.g, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            SC((0, Hf.i)(pC, ZC)), (0, Yf.d)(zC.name, !1, {
+                            wk((0, nl.c)(Hk, Ik)), (0, vl.f)(Fk.name, !1, {
                               source: "social_menu"
                             })
                           },
@@ -7950,62 +7950,62 @@ export const modules = {
                             id: "social.decline_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, WC.jsx)(fC.c, {
+                          children: (0, tk.jsx)(lk.e, {
                             name: "xmark"
                           })
                         })
                       })]
-                    }, `${zC.name}_${zC.isError}`)
+                    }, `${Fk.name}_${Fk.isError}`)
                   }))
                 })
               })]
-            }), (0, WC.jsx)(vf.h, {})]
-          }), (0, WC.jsxs)("div", {
+            }), (0, tk.jsx)(Vl.h, {})]
+          }), (0, tk.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, WC.jsxs)("div", {
+            children: [(0, tk.jsxs)("div", {
               className: "SocialMenuBox SocialMenuParty",
-              children: [(0, WC.jsx)(If.b, {
-                label: CC("socialBar:party")
-              }), (0, WC.jsx)(xf.e, {})]
-            }), (0, WC.jsxs)("div", {
+              children: [(0, tk.jsx)(sl.b, {
+                label: kk("socialBar:party")
+              }), (0, tk.jsx)(Kl.b, {})]
+            }), (0, tk.jsxs)("div", {
               className: "SocialMenuBox SocialMenuFriends",
-              children: [(0, WC.jsx)(If.b, {
-                label: (0, WC.jsxs)(WC.Fragment, {
-                  children: [(0, WC.jsx)(fC.c, {
-                    name: df.b
-                  }), " ", CC("socialBar:friends")]
+              children: [(0, tk.jsx)(sl.b, {
+                label: (0, tk.jsxs)(tk.Fragment, {
+                  children: [(0, tk.jsx)(lk.e, {
+                    name: El.e
+                  }), " ", kk("socialBar:friends")]
                 }),
-                meta: (0, WC.jsxs)(WC.Fragment, {
-                  children: [wC.length, wC.length >= (0, BC.b)(NC.getPlayerRanks()) && (0, WC.jsx)("span", {
+                meta: (0, tk.jsxs)(tk.Fragment, {
+                  children: [Tk.length, Tk.length >= (0, rk.b)(Zk.getPlayerRanks()) && (0, tk.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: CC("socialBar:limitReached")
+                    children: kk("socialBar:limitReached")
                   })]
                 })
-              }), ZC && (0, WC.jsx)("div", {
+              }), Ik && (0, tk.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, WC.jsx)(JC.d, {})
-              }), !ZC && 0 === wC.length && (0, WC.jsx)("div", {
+                children: (0, tk.jsx)(sk.c, {})
+              }), !Ik && 0 === Tk.length && (0, tk.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: CC("socialBar:noFriends")
-              }), !ZC && wC.length > 0 && (0, WC.jsx)("div", {
+                children: kk("socialBar:noFriends")
+              }), !Ik && Tk.length > 0 && (0, tk.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, WC.jsx)(vw.e, {
+                children: (0, tk.jsx)(oT.b, {
                   lazyLoadedClassName: "SocialMenuFriendsLazy",
-                  observerUpdateDeps: [wC],
-                  children: wC.map(((CC, ZC) => (0, WC.jsx)(Jf.f, {
-                    playerSocialPreview: CC,
+                  observerUpdateDeps: [Tk],
+                  children: Tk.map(((kk, Ik) => (0, tk.jsx)(Ql.e, {
+                    playerSocialPreview: kk,
                     isFriend: !0,
                     hideFriendBadge: !0,
-                    onFriendRemoved: CC => {
-                      aC.d.removeFriendFromState(CC)
+                    onFriendRemoved: kk => {
+                      Bk.c.removeFriendFromState(kk)
                     },
-                    zIndex: wC.length - ZC,
-                    children: (0, WC.jsx)(Jf.e, {
-                      friend: CC,
-                      followsLeader: zC,
+                    zIndex: Tk.length - Ik,
+                    children: (0, tk.jsx)(Ql.d, {
+                      friend: kk,
+                      followsLeader: Fk,
                       analyticsSurface: "social_menu"
                     })
-                  }, `${CC.name}_${CC.isError}`)))
+                  }, `${kk.name}_${kk.isError}`)))
                 })
               })]
             })]
@@ -8013,229 +8013,229 @@ export const modules = {
         })
       })
     }
-    var Xf = ZC(2492);
-    const uf = CC => {
+    var ul = Ik(2460);
+    const bl = kk => {
         let {
-          action: zC,
-          padAction: ZC
-        } = CC;
+          action: Fk,
+          padAction: Ik
+        } = kk;
         const {
-          isTouchScreen: QC
-        } = (0, iC.k)(["isTouchScreen"]), wC = (0, SQ.p)();
-        return QC && !wC ? null : (0, WC.jsx)(oQ.b, {
+          isTouchScreen: Xk
+        } = (0, zk.j)(["isTouchScreen"]), Tk = (0, HX.m)();
+        return Xk && !Tk ? null : (0, tk.jsx)(qX.c, {
           className: "EverythingMenuTabKey",
-          noaAction: zC,
+          noaAction: Fk,
           padHidesKey: !0,
-          padMenuShortcut: ZC
+          padMenuShortcut: Ik
         })
       },
-      rf = (0, QC.memo)((function() {
+      Rl = (0, Xk.memo)((function() {
         const {
-          t: CC
-        } = (0, nC.y)(), {
-          gameState: zC,
-          openEverythingMenuName: ZC,
-          initSdkSelectorFinished: wC,
-          crosshairGameView: fC
-        } = (0, iC.k)(["gameState", "openEverythingMenuName", "initSdkSelectorFinished", "crosshairGameView"]), {
-          userContext: oC
-        } = (0, gC.e)(), FC = (0, sC.purchasesAllowed)(), NC = (0, rC.F)(), {
-          view: MC
-        } = (0, az.u)(), SC = "dot" === NC || null === NC && "ready" === (null === MC || void 0 === MC ? void 0 : MC.kind), pC = (CC, zC) => (0, WC.jsx)(uf, {
-          action: CC,
-          padAction: zC
-        }), [GC, RC] = (0, QC.useState)(null), AC = (0, QC.useRef)(null), xC = {
-          ..."inGame" === zC ? {} : (0, qC.U)({
+          t: kk
+        } = (0, yk.y)(), {
+          gameState: Fk,
+          openEverythingMenuName: Ik,
+          initSdkSelectorFinished: Tk,
+          crosshairGameView: lk
+        } = (0, zk.j)(["gameState", "openEverythingMenuName", "initSdkSelectorFinished", "crosshairGameView"]), {
+          userContext: ak
+        } = (0, ek.d)(), Lk = (0, Wk.purchasesAllowed)(), Zk = (0, ck.D)(), {
+          view: jk
+        } = (0, BF.w)(), wk = "dot" === Zk || null === Zk && "ready" === (null === jk || void 0 === jk ? void 0 : jk.kind), Hk = (kk, Fk) => (0, tk.jsx)(bl, {
+          action: kk,
+          padAction: Fk
+        }), [xk, Pk] = (0, Xk.useState)(null), Kk = (0, Xk.useRef)(null), Qk = {
+          ..."inGame" === Fk ? {} : (0, qk.Y)({
             focusOnClick: !1
           }),
-          ...eQ.c
-        }, JC = CC => {
-          const zC = (0, hQ.f)((zC => {
-            (0, qC.R)(zC.currentTarget), iC.b.set({
-              openEverythingMenuName: CC
+          ...vX.e
+        }, sk = kk => {
+          const Fk = (0, EX.d)((Fk => {
+            (0, qk.V)(Fk.currentTarget), zk.d.set({
+              openEverythingMenuName: kk
             })
           }), "pointerup");
           return {
-            ...xC,
-            onPointerDown: CC => {
-              xC.onPointerDown(CC), zC.onPointerDown(CC)
+            ...Qk,
+            onPointerDown: kk => {
+              Qk.onPointerDown(kk), Fk.onPointerDown(kk)
             },
-            onPointerUp: CC => {
-              xC.onPointerUp(CC), zC.onPointerUp(CC)
+            onPointerUp: kk => {
+              Qk.onPointerUp(kk), Fk.onPointerUp(kk)
             },
-            onClick: zC.onClick
+            onClick: Fk.onClick
           }
-        }, IC = null !== ZC, vC = ZC !== Fz.o.COSMETIC_SHOP && !fC;
-        async function eC() {
+        }, Vk = null !== Ik, Sk = Ik !== tF.r.COSMETIC_SHOP && !lk;
+        async function vk() {
           await async function() {
-            if (!GC) return;
-            await GC(), RC(null)
-          }(), iC.b.set({
+            if (!xk) return;
+            await xk(), Pk(null)
+          }(), zk.d.set({
             openEverythingMenuName: null
           })
         }
-        const KC = (0, QC.useRef)(null),
-          YC = (0, QC.useCallback)((() => null !== KC.current && (0, Gf.g)(KC.current)), []);
+        const Ok = (0, Xk.useRef)(null),
+          nk = (0, Xk.useCallback)((() => null !== Ok.current && (0, Jl.g)(Ok.current)), []);
 
-        function dC() {
-          YC() || eC()
-        }(0, QC.useEffect)((() => (0, pb.z)(YC)), [YC]);
-        const mC = (0, QC.useMemo)((() => "inGame" === zC ? {
-          text: CC("settingsMenu:exitGame"),
+        function Gk() {
+          nk() || vk()
+        }(0, Xk.useEffect)((() => (0, Hi.v)(nk)), [nk]);
+        const pk = (0, Xk.useMemo)((() => "inGame" === Fk ? {
+          text: kk("settingsMenu:exitGame"),
           onClick: () => {
-            (0, Pf.c)()
+            (0, Hl.b)()
           }
-        } : (0, hC.e)() ? {
-          text: CC("settingsMenu:exitGame"),
+        } : (0, Ek.e)() ? {
+          text: kk("settingsMenu:exitGame"),
           onClick: () => {
-            fz.h.discordActivity().then((CC => {
-              CC.exit("User exited the game")
+            aF.i.discordActivity().then((kk => {
+              kk.exit("User exited the game")
             }))
           }
-        } : null), [zC, CC]);
-        const HC = (0, WC.jsx)("div", {
+        } : null), [Fk, kk]);
+        const uk = (0, tk.jsx)("div", {
           className: "EverythingMenuCloseButtonClickZone",
-          onClick: dC,
-          children: (0, WC.jsx)(qC.k, {
+          onClick: Gk,
+          children: (0, tk.jsx)(qk.k, {
             className: "EverythingMenuCloseButton"
           })
         });
-        return (0, WC.jsx)(KQ.d, {
-          showing: IC,
+        return (0, tk.jsx)(OX.e, {
+          showing: Vk,
           globallyUniqueKey: "EverythingMenu",
           alwaysMountChildren: !0,
-          keepsMovement: ZC === Fz.o.SHOP,
-          doGameplayStartStopOnShow: "inGame" === zC,
-          children: (0, WC.jsx)(dQ.d, {
+          keepsMovement: Ik === tF.r.SHOP,
+          doGameplayStartStopOnShow: "inGame" === Fk,
+          children: (0, tk.jsx)(GX.b, {
             className: "EverythingMenuContainer",
-            show: IC && !fC,
-            children: (0, WC.jsx)(YQ.c, {
-              close: dC,
+            show: Vk && !lk,
+            children: (0, tk.jsx)(nX.c, {
+              close: Gk,
               togglePointerLock: !1,
-              children: (0, WC.jsxs)("div", {
+              children: (0, tk.jsxs)("div", {
                 className: "EverythingMenu",
-                children: [!(0, pb.l)(ZC) && (0, WC.jsxs)("div", {
+                children: [!(0, Hi.l)(Ik) && (0, tk.jsxs)("div", {
                   className: "EverythingMenuTabList",
-                  children: [(0, WC.jsxs)("div", {
+                  children: [(0, tk.jsxs)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerStart",
-                    children: [mC && (0, WC.jsx)(qC.c, {
+                    children: [pk && (0, tk.jsx)(qk.c, {
                       className: "EverythingMenuBackButton",
                       padDestructive: !0,
                       onClick: () => {
-                        mC.onClick()
+                        pk.onClick()
                       },
-                      children: mC.text
-                    }), IC && FC && (0, WC.jsx)("div", {
-                      ...xC,
+                      children: pk.text
+                    }), Vk && Lk && (0, tk.jsx)("div", {
+                      ...Qk,
                       className: "EverythingMenuWallet",
-                      title: CC("homePage:getPremiumCurrency"),
+                      title: kk("homePage:getPremiumCurrency"),
                       onClick: () => {
-                        (0, rC.n)({
+                        (0, ck.m)({
                           mode: "current",
                           source: "menuWallet"
                         })
                       },
-                      children: (0, WC.jsx)(pf.d, {})
+                      children: (0, tk.jsx)(wl.f, {})
                     })]
-                  }), (0, WC.jsxs)("div", {
+                  }), (0, tk.jsxs)("div", {
                     className: "EverythingMenuTabListInner",
                     "data-pad-tabs": "1",
-                    children: [(0, WC.jsxs)("div", {
-                      ...JC(Fz.o.SETTINGS),
+                    children: [(0, tk.jsxs)("div", {
+                      ...sk(tF.r.SETTINGS),
                       "data-pad-tab": !0,
-                      "data-pad-selected": ZC === Fz.o.SETTINGS ? "true" : void 0,
-                      className: bC()("EverythingMenuTab", {
-                        EverythingMenuTabActive: ZC === Fz.o.SETTINGS
+                      "data-pad-selected": Ik === tF.r.SETTINGS ? "true" : void 0,
+                      className: ik()("EverythingMenuTab", {
+                        EverythingMenuTabActive: Ik === tF.r.SETTINGS
                       }),
-                      children: [CC("general:settings"), pC("OpenSettings", "pause")]
-                    }), (0, WC.jsxs)("div", {
-                      ...JC(Fz.o.CUSTOMISATION),
+                      children: [kk("general:settings"), Hk("OpenSettings", "pause")]
+                    }), (0, tk.jsxs)("div", {
+                      ...sk(tF.r.CUSTOMISATION),
                       "data-pad-tab": !0,
-                      "data-pad-selected": ZC === Fz.o.CUSTOMISATION ? "true" : void 0,
-                      className: bC()("EverythingMenuTab", {
-                        EverythingMenuTabActive: ZC === Fz.o.CUSTOMISATION
+                      "data-pad-selected": Ik === tF.r.CUSTOMISATION ? "true" : void 0,
+                      className: ik()("EverythingMenuTab", {
+                        EverythingMenuTabActive: Ik === tF.r.CUSTOMISATION
                       }),
-                      children: [CC("general:player"), pC("OpenCharacterCustomization")]
-                    }), PC.featureFlags.useSocialFeatures && (0, WC.jsxs)("div", {
-                      ...JC(Fz.o.SOCIAL),
+                      children: [kk("general:player"), Hk("OpenCharacterCustomization")]
+                    }), Jk.featureFlags.useSocialFeatures && (0, tk.jsxs)("div", {
+                      ...sk(tF.r.SOCIAL),
                       "data-pad-tab": !0,
-                      "data-pad-selected": ZC === Fz.o.SOCIAL ? "true" : void 0,
-                      className: bC()("EverythingMenuTab", {
-                        EverythingMenuTabActive: ZC === Fz.o.SOCIAL
+                      "data-pad-selected": Ik === tF.r.SOCIAL ? "true" : void 0,
+                      className: ik()("EverythingMenuTab", {
+                        EverythingMenuTabActive: Ik === tF.r.SOCIAL
                       }),
-                      ...(0, kC.d)({
+                      ...(0, Mk.c)({
                         id: "social.open_menu",
                         value: "menu_tab"
-                      }, ZC === Fz.o.SOCIAL),
-                      children: [CC("socialBar:social"), (0, WC.jsx)(Xf.c, {})]
-                    }), (0, az.r)(MC) && (0, WC.jsxs)("div", {
-                      ...JC(Fz.o.COSMETIC_SHOP),
+                      }, Ik === tF.r.SOCIAL),
+                      children: [kk("socialBar:social"), (0, tk.jsx)(ul.b, {})]
+                    }), (0, BF.r)(jk) && (0, tk.jsxs)("div", {
+                      ...sk(tF.r.COSMETIC_SHOP),
                       "data-pad-tab": !0,
-                      "data-pad-selected": ZC === Fz.o.COSMETIC_SHOP ? "true" : void 0,
-                      className: bC()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
-                        EverythingMenuTabActive: ZC === Fz.o.COSMETIC_SHOP
+                      "data-pad-selected": Ik === tF.r.COSMETIC_SHOP ? "true" : void 0,
+                      className: ik()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
+                        EverythingMenuTabActive: Ik === tF.r.COSMETIC_SHOP
                       }),
-                      children: [(0, WC.jsx)("span", {
+                      children: [(0, tk.jsx)("span", {
                         className: "EverythingMenuTabCosmeticShopText",
-                        children: CC("store:title")
-                      }), "new" === NC && (0, WC.jsx)(en, {}), SC && (0, WC.jsx)("span", {
+                        children: kk("store:title")
+                      }), "new" === Zk && (0, tk.jsx)(oy, {}), wk && (0, tk.jsx)("span", {
                         className: "EverythingMenuTabStoreBadge EverythingMenuTabStoreDot"
                       })]
-                    }), "inGame" === zC && (0, WC.jsxs)("div", {
-                      ...JC(Fz.o.LOBBY_LEADERBOARD),
+                    }), "inGame" === Fk && (0, tk.jsxs)("div", {
+                      ...sk(tF.r.LOBBY_LEADERBOARD),
                       "data-pad-tab": !0,
-                      "data-pad-selected": ZC === Fz.o.LOBBY_LEADERBOARD ? "true" : void 0,
-                      className: bC()("EverythingMenuTab", {
-                        EverythingMenuTabActive: ZC === Fz.o.LOBBY_LEADERBOARD
+                      "data-pad-selected": Ik === tF.r.LOBBY_LEADERBOARD ? "true" : void 0,
+                      className: ik()("EverythingMenuTab", {
+                        EverythingMenuTabActive: Ik === tF.r.LOBBY_LEADERBOARD
                       }),
-                      children: [CC("general:lobby"), pC("OpenLobbyLeaderboard", "leaderboard")]
+                      children: [kk("general:lobby"), Hk("OpenLobbyLeaderboard", "leaderboard")]
                     })]
-                  }), (0, WC.jsx)("div", {
+                  }), (0, tk.jsx)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerEnd",
-                    children: HC
+                    children: uk
                   })]
-                }), (0, pb.l)(ZC) && HC, (0, WC.jsxs)("div", {
-                  ref: KC,
+                }), (0, Hi.l)(Ik) && uk, (0, tk.jsxs)("div", {
+                  ref: Ok,
                   className: "EverythingMenuBody",
                   "data-pad-initial-area": !0,
                   style: {
-                    "--everythingMenuBodyBackgroundOpacity": "inGame" === zC ? "0.85" : "1"
+                    "--everythingMenuBodyBackgroundOpacity": "inGame" === Fk ? "0.85" : "1"
                   },
-                  children: [(0, WC.jsx)(AQ, {
-                    show: ZC === Fz.o.SETTINGS,
-                    setBeforeResumeCallback: RC
-                  }), (0, WC.jsx)(vQ, {
-                    show: ZC === Fz.o.CUSTOMISATION
-                  }), (0, WC.jsx)(QC.Suspense, {
+                  children: [(0, tk.jsx)(QX, {
+                    show: Ik === tF.r.SETTINGS,
+                    setBeforeResumeCallback: Pk
+                  }), (0, tk.jsx)(oX, {
+                    show: Ik === tF.r.CUSTOMISATION
+                  }), (0, tk.jsx)(Xk.Suspense, {
                     fallback: null,
-                    children: (0, WC.jsx)(fb, {
-                      show: ZC === Fz.o.SHOP
+                    children: (0, tk.jsx)(li, {
+                      show: Ik === tF.r.SHOP
                     })
-                  }), (0, WC.jsx)(Ab, {
-                    show: ZC === Fz.o.LOBBY_LEADERBOARD
-                  }), FC && (0, WC.jsx)(Sf, {
-                    show: ZC === Fz.o.COSMETIC_SHOP
-                  }), !FC && (0, WC.jsx)(Wf, {
-                    show: ZC === Fz.o.COSMETIC_SHOP
-                  }), (0, WC.jsx)(Ef, {
-                    show: ZC === Fz.o.SOCIAL
+                  }), (0, tk.jsx)(Ki, {
+                    show: Ik === tF.r.LOBBY_LEADERBOARD
+                  }), Lk && (0, tk.jsx)(el, {
+                    show: Ik === tF.r.COSMETIC_SHOP
+                  }), !Lk && (0, tk.jsx)(Ll, {
+                    show: Ik === tF.r.COSMETIC_SHOP
+                  }), (0, tk.jsx)(Gl, {
+                    show: Ik === tF.r.SOCIAL
                   })]
-                }), !(0, PC.isMobileApp)() && (0, mQ.g)(oC.getPlayerRanks()) && (0, WC.jsx)(dQ.d, {
-                  ref: AC,
+                }), !(0, Jk.isMobileApp)() && (0, pX.d)(ak.getPlayerRanks()) && (0, tk.jsx)(GX.b, {
+                  ref: Kk,
                   className: "EverythingMenuBannerDiv",
-                  show: vC,
+                  show: Sk,
                   "data-pad-hint-bar-avoid": !0,
                   "data-pad-no-step-in": !0,
-                  children: (0, WC.jsx)(Rf.d, {
+                  children: (0, tk.jsx)(xl.e, {
                     info: {
                       adId: 2,
                       adType: "leaderboard",
                       adAlias: "banner_shop"
                     },
                     sizeInfo: {
-                      parentRef: AC
+                      parentRef: Kk
                     },
-                    showing: IC && vC,
+                    showing: Vk && Sk,
                     verticalAlign: "center",
                     horizontalAlign: "center",
                     noFillShowBloxdAdProbability: 1
@@ -8247,135 +8247,135 @@ export const modules = {
         })
       }))
   },
-  34158: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => bC
+  34173: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => ik
     });
-    var QC = ZC(326),
-      wC = ZC(34162);
+    var Xk = Ik(337),
+      Tk = Ik(34180);
 
-    function bC(CC, zC, ZC) {
-      const bC = Object.entries(zC).sort(((CC, zC) => zC[1] - CC[1])),
-        nC = (0, QC.db)(CC);
-      nC.push(CC ? "\n\n" : "\n");
-      for (const [wC, gC] of bC) {
-        var fC, oC, qC;
-        const CC = null !== (fC = null === ZC || void 0 === ZC || null === (oC = ZC[wC]) || void 0 === oC ? void 0 : oC.icon) && void 0 !== fC ? fC : `${wC} Enchantment`;
-        nC.push({
-          icon: CC,
+    function ik(kk, Fk, Ik) {
+      const ik = Object.entries(Fk).sort(((kk, Fk) => Fk[1] - kk[1])),
+        yk = (0, Xk.zb)(kk);
+      yk.push(kk ? "\n\n" : "\n");
+      for (const [Tk, ek] of ik) {
+        var lk, ak, qk;
+        const kk = null !== (lk = null === Ik || void 0 === Ik || null === (ak = Ik[Tk]) || void 0 === ak ? void 0 : ak.icon) && void 0 !== lk ? lk : `${Tk} Enchantment`;
+        yk.push({
+          icon: kk,
           style: {
             fontSize: "1.5rem"
           }
-        }), nC.push({
-          str: `${wC} ${null!==(qC=(0,QC.M)(gC))&&void 0!==qC?qC:gC}\n`
+        }), yk.push({
+          str: `${Tk} ${null!==(qk=(0,Xk.S)(ek))&&void 0!==qk?qk:ek}\n`
         })
       }
-      nC.push({
+      yk.push({
         str: "\n"
       });
-      for (const [QC, gC] of bC) {
-        var FC, WC, NC, MC;
-        const CC = null !== (FC = null === ZC || void 0 === ZC || null === (WC = ZC[QC]) || void 0 === WC ? void 0 : WC.icon) && void 0 !== FC ? FC : `${QC} Enchantment`,
-          zC = null !== (NC = null === ZC || void 0 === ZC || null === (MC = ZC[QC]) || void 0 === MC ? void 0 : MC.description) && void 0 !== NC ? NC : (0, wC.l)(QC);
-        nC.push({
-          icon: CC,
+      for (const [Xk, ek] of ik) {
+        var Lk, tk, Zk, jk;
+        const kk = null !== (Lk = null === Ik || void 0 === Ik || null === (tk = Ik[Xk]) || void 0 === tk ? void 0 : tk.icon) && void 0 !== Lk ? Lk : `${Xk} Enchantment`,
+          Fk = null !== (Zk = null === Ik || void 0 === Ik || null === (jk = Ik[Xk]) || void 0 === jk ? void 0 : jk.description) && void 0 !== Zk ? Zk : (0, Tk.j)(Xk);
+        yk.push({
+          icon: kk,
           style: {
             fontSize: "1.25rem",
             opacity: .75
           }
-        }), nC.push({
-          str: zC,
+        }), yk.push({
+          str: Fk,
           style: {
             fontSize: "0.8em",
             fontWeight: "normal",
             opacity: .75
           }
-        }), nC.push({
+        }), yk.push({
           str: "\n"
         })
       }
-      return nC
+      return yk
     }
   },
-  34165: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => qC,
-      g: () => GC,
-      k: () => pC,
-      m: () => oC,
-      n: () => PC,
-      q: () => FC,
-      r: () => NC,
-      t: () => SC,
-      u: () => WC
+  34188: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => qk,
+      d: () => xk,
+      g: () => Hk,
+      j: () => ak,
+      m: () => Jk,
+      q: () => Lk,
+      s: () => Zk,
+      u: () => wk,
+      w: () => tk
     });
-    var QC = ZC(310),
-      wC = ZC(600),
-      bC = ZC(326),
-      nC = ZC(4172),
-      fC = ZC(34158);
+    var Xk = Ik(318),
+      Tk = Ik(628),
+      ik = Ik(337),
+      yk = Ik(4199),
+      lk = Ik(34173);
 
-    function oC(CC, zC) {
-      var ZC;
+    function ak(kk, Fk) {
+      var Ik;
       let {
-        player: QC,
-        chestOrCreative: wC
-      } = CC;
-      var bC;
-      return zC < QC.length ? null !== (bC = QC[zC]) && void 0 !== bC ? bC : null : null !== (ZC = wC[zC - QC.length]) && void 0 !== ZC ? ZC : null
+        player: Xk,
+        chestOrCreative: Tk
+      } = kk;
+      var ik;
+      return Fk < Xk.length ? null !== (ik = Xk[Fk]) && void 0 !== ik ? ik : null : null !== (Ik = Tk[Fk - Xk.length]) && void 0 !== Ik ? Ik : null
     }
 
-    function qC(CC) {
-      var zC;
-      return null !== (zC = CC.amount) && void 0 !== zC ? zC : 0
+    function qk(kk) {
+      var Fk;
+      return null !== (Fk = kk.amount) && void 0 !== Fk ? Fk : 0
     }
 
-    function FC(CC) {
-      return 0 === CC.button || void 0 === CC.button
+    function Lk(kk) {
+      return 0 === kk.button || void 0 === kk.button
     }
 
-    function WC(CC) {
-      return !!CC.shiftKey
+    function tk(kk) {
+      return !!kk.shiftKey
     }
 
-    function NC(CC) {
-      return "touches" in CC || "touch" === CC.pointerType || "pen" === CC.pointerType
+    function Zk(kk) {
+      return "touches" in kk || "touch" === kk.pointerType || "pen" === kk.pointerType
     }
-    const MC = new Set,
-      gC = 50;
+    const jk = new Set,
+      ek = 50;
 
-    function SC(CC, zC) {
-      var ZC;
-      const QC = null === (ZC = CC[zC]) || void 0 === ZC ? void 0 : ZC.displayName;
-      return (0, wC.H)(QC) ? "string" !== typeof zC ? "" : (!MC.has(zC) && MC.size < gC && (MC.add(zC), console.warn(`No item called "${zC}", so its hover shows the name as given`)), zC) : QC
+    function wk(kk, Fk) {
+      var Ik;
+      const Xk = null === (Ik = kk[Fk]) || void 0 === Ik ? void 0 : Ik.displayName;
+      return (0, Tk.Q)(Xk) ? "string" !== typeof Fk ? "" : (!jk.has(Fk) && jk.size < ek && (jk.add(Fk), console.warn(`No item called "${Fk}", so its hover shows the name as given`)), Fk) : Xk
     }
 
-    function pC(CC, zC, ZC) {
-      var oC, qC, FC, WC, NC, MC, gC, pC, PC, GC, RC, AC, xC, JC;
-      const IC = CC.attributes,
-        iC = null !== (oC = null === (qC = zC[CC.name]) || void 0 === qC ? void 0 : qC.rootName) && void 0 !== oC ? oC : CC.name,
-        vC = null !== (FC = null !== (WC = IC.customDisplayName) && void 0 !== WC ? WC : null === (NC = zC[CC.name]) || void 0 === NC ? void 0 : NC.displayName) && void 0 !== FC ? FC : SC(zC, iC);
-      let eC = vC;
-      const hC = null === (MC = IC.customAttributes) || void 0 === MC ? void 0 : MC.enchantmentTier;
-      hC && (eC = (0, bC.db)(vC, {
-        colour: bC.bb[hC]
+    function Hk(kk, Fk, Ik) {
+      var ak, qk, Lk, tk, Zk, jk, ek, Hk, Jk, xk, Pk, Kk, Qk, sk;
+      const Vk = kk.attributes,
+        zk = null !== (ak = null === (qk = Fk[kk.name]) || void 0 === qk ? void 0 : qk.rootName) && void 0 !== ak ? ak : kk.name,
+        Sk = null !== (Lk = null !== (tk = Vk.customDisplayName) && void 0 !== tk ? tk : null === (Zk = Fk[kk.name]) || void 0 === Zk ? void 0 : Zk.displayName) && void 0 !== Lk ? Lk : wk(Fk, zk);
+      let vk = Sk;
+      const Ek = null === (jk = Vk.customAttributes) || void 0 === jk ? void 0 : jk.enchantmentTier;
+      Ek && (vk = (0, ik.zb)(Sk, {
+        colour: ik.sb[Ek]
       }));
-      const KC = null !== (gC = null !== (pC = null !== (PC = function(CC, zC) {
-        var ZC;
-        if (void 0 === CC || null !== (ZC = zC.customAttributes) && void 0 !== ZC && ZC.author) return CC;
-        const wC = (0, QC.dc)(CC);
-        return wC.every((CC => "string" === typeof CC)) ? CC : wC.map((CC => "string" === typeof CC ? CC : {
-          icon: CC.icon,
+      const Ok = null !== (ek = null !== (Hk = null !== (Jk = function(kk, Fk) {
+        var Ik;
+        if (void 0 === kk || null !== (Ik = Fk.customAttributes) && void 0 !== Ik && Ik.author) return kk;
+        const Tk = (0, Xk.oc)(kk);
+        return Tk.every((kk => "string" === typeof kk)) ? kk : Tk.map((kk => "string" === typeof kk ? kk : {
+          icon: kk.icon,
           style: {
             fontSize: "1.5em"
           }
         }))
-      }(IC.customDescription, IC)) && void 0 !== PC ? PC : null === (GC = zC[CC.name]) || void 0 === GC ? void 0 : GC.description) && void 0 !== pC ? pC : null === (RC = zC[iC]) || void 0 === RC ? void 0 : RC.description) && void 0 !== gC ? gC : "";
-      let YC = KC;
-      if (null !== (AC = IC.customAttributes) && void 0 !== AC && AC.enchantments) YC = (0, fC.d)(KC, IC.customAttributes.enchantments, IC.customAttributes.enchantmentData);
-      else if (ZC[iC]) YC = (0, bC.db)(KC), YC.push({
+      }(Vk.customDescription, Vk)) && void 0 !== Jk ? Jk : null === (xk = Fk[kk.name]) || void 0 === xk ? void 0 : xk.description) && void 0 !== Hk ? Hk : null === (Pk = Fk[zk]) || void 0 === Pk ? void 0 : Pk.description) && void 0 !== ek ? ek : "";
+      let nk = Ok;
+      if (null !== (Kk = Vk.customAttributes) && void 0 !== Kk && Kk.enchantments) nk = (0, lk.d)(Ok, Vk.customAttributes.enchantments, Vk.customAttributes.enchantmentData);
+      else if (Ik[zk]) nk = (0, ik.zb)(Ok), nk.push({
         str: "\n"
-      }), YC.push({
+      }), nk.push({
         str: "Enchantable",
         style: {
           fontSize: "0.8em",
@@ -8383,373 +8383,373 @@ export const modules = {
           opacity: .4
         }
       });
-      else if (null !== (xC = IC.customAttributes) && void 0 !== xC && xC.mobSettings) {
-        var dC, mC;
-        const CC = IC.customAttributes.mobSettings;
-        var HC, EC;
-        if (YC = [], (0, wC.H)(IC.customAttributes.health) || (YC.push({
+      else if (null !== (Qk = Vk.customAttributes) && void 0 !== Qk && Qk.mobSettings) {
+        var Gk, pk;
+        const kk = Vk.customAttributes.mobSettings;
+        var uk, bk;
+        if (nk = [], (0, Tk.Q)(Vk.customAttributes.health) || (nk.push({
             str: "\n"
-          }), YC.push({
+          }), nk.push({
             icon: "Health",
             style: {
               fontSize: "1.5em"
             }
-          }), YC.push({
+          }), nk.push({
             str: " "
-          }), YC.push({
-            str: IC.customAttributes.health.toString()
-          }), (0, wC.H)(CC.maxHealth) || (YC.push({
+          }), nk.push({
+            str: Vk.customAttributes.health.toString()
+          }), (0, Tk.Q)(kk.maxHealth) || (nk.push({
             str: "/"
-          }), YC.push({
-            str: CC.maxHealth.toString()
-          }))), !(0, wC.H)(CC.attackDamage) && CC.attackDamage > 0 && (YC.push({
+          }), nk.push({
+            str: kk.maxHealth.toString()
+          }))), !(0, Tk.Q)(kk.attackDamage) && kk.attackDamage > 0 && (nk.push({
             str: "\n"
-          }), YC.push({
+          }), nk.push({
             icon: "Iron Sword",
             style: {
               fontSize: "1.5em"
             }
-          }), YC.push({
+          }), nk.push({
             str: " "
-          }), YC.push({
-            str: CC.attackDamage.toString()
-          })), !(0, wC.H)(CC.secondaryAttackDamage) && CC.secondaryAttackDamage > 0 && (YC.push({
+          }), nk.push({
+            str: kk.attackDamage.toString()
+          })), !(0, Tk.Q)(kk.secondaryAttackDamage) && kk.secondaryAttackDamage > 0 && (nk.push({
             str: "\n"
-          }), YC.push({
+          }), nk.push({
             icon: "Stone Crossbow",
             style: {
               fontSize: "1.5em"
             }
-          }), YC.push({
+          }), nk.push({
             str: " "
-          }), YC.push({
-            str: CC.secondaryAttackDamage.toString()
-          })), (0, wC.H)(CC.baseRunningSpeed) || (YC.push({
+          }), nk.push({
+            str: kk.secondaryAttackDamage.toString()
+          })), (0, Tk.Q)(kk.baseRunningSpeed) || (nk.push({
             str: "\n"
-          }), YC.push({
+          }), nk.push({
             icon: "Speed",
             style: {
               fontSize: "1.5em"
             }
-          }), YC.push({
+          }), nk.push({
             str: " "
-          }), YC.push({
-            str: CC.baseRunningSpeed.toFixed(2)
-          })), "Saddled" === CC.metaInfo) YC.push({
+          }), nk.push({
+            str: kk.baseRunningSpeed.toFixed(2)
+          })), "Saddled" === kk.metaInfo) nk.push({
           str: "\n"
-        }), YC.push({
+        }), nk.push({
           str: {
             translationKey: "general:has"
           }
-        }), YC.push({
+        }), nk.push({
           str: " "
-        }), YC.push({
-          icon: null !== (HC = null === (EC = CC.tameInfo) || void 0 === EC ? void 0 : EC.saddleItemName) && void 0 !== HC ? HC : "Saddle",
+        }), nk.push({
+          icon: null !== (uk = null === (bk = kk.tameInfo) || void 0 === bk ? void 0 : bk.saddleItemName) && void 0 !== uk ? uk : "Saddle",
           style: {
             fontSize: "1.5em"
           }
         });
-        if (YC.push({
+        if (nk.push({
             str: "\n"
-          }), YC.push({
+          }), nk.push({
             str: "\n"
-          }), CC.petInfo && null !== (dC = CC.tameInfo) && void 0 !== dC && dC.supportsFriendship) {
-          const zC = nC.d.getIconsFromFriendshipPoints(CC.petInfo.friendshipPoints);
-          for (const CC of zC) YC.push({
-            icon: CC,
+          }), kk.petInfo && null !== (Gk = kk.tameInfo) && void 0 !== Gk && Gk.supportsFriendship) {
+          const Fk = yk.e.getIconsFromFriendshipPoints(kk.petInfo.friendshipPoints);
+          for (const kk of Fk) nk.push({
+            icon: kk,
             style: {
               fontSize: "1.5em"
             }
           });
-          YC.push({
+          nk.push({
             str: "\n"
           });
-          const ZC = nC.d.getMobHungerLevel(CC.petInfo.lastFedAt);
-          for (const CC of nC.d.hungerLevelIcons[ZC]) YC.push({
-            icon: CC,
+          const Ik = yk.e.getMobHungerLevel(kk.petInfo.lastFedAt);
+          for (const kk of yk.e.hungerLevelIcons[Ik]) nk.push({
+            icon: kk,
             style: {
               fontSize: "1.5em"
             }
           });
-          YC.push({
+          nk.push({
             str: " "
-          }), YC.push({
-            str: nC.d.hungerLevelTranslations[ZC],
+          }), nk.push({
+            str: yk.e.hungerLevelTranslations[Ik],
             style: {
               fontWeight: "bolder"
             }
           })
         }
-        if (CC.tameInfo && null !== (mC = CC.tameInfo) && void 0 !== mC && mC.supportsFriendship) {
-          var lC, XC;
-          let zC = null !== (lC = CC.tameInfo.likedFoods) && void 0 !== lC ? lC : [];
-          YC.push({
+        if (kk.tameInfo && null !== (pk = kk.tameInfo) && void 0 !== pk && pk.supportsFriendship) {
+          var Rk, Uk;
+          let Fk = null !== (Rk = kk.tameInfo.likedFoods) && void 0 !== Rk ? Rk : [];
+          nk.push({
             str: "\n"
-          }), YC.push({
+          }), nk.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: nC.d.feedTextColours[nC.d.MobFoodType.Superliked]
+              color: yk.e.feedTextColours[yk.e.MobFoodType.Superliked]
             }
-          }), YC.push({
+          }), nk.push({
             str: " "
-          }), null !== (XC = CC.petInfo) && void 0 !== XC && XC.superlikedFoodKnown ? (YC.push({
-            icon: CC.petInfo.superlikedFood,
+          }), null !== (Uk = kk.petInfo) && void 0 !== Uk && Uk.superlikedFoodKnown ? (nk.push({
+            icon: kk.petInfo.superlikedFood,
             style: {
               fontSize: "1.5em"
             }
-          }), zC = zC.filter((zC => zC !== CC.petInfo.superlikedFood))) : YC.push({
+          }), Fk = Fk.filter((Fk => Fk !== kk.petInfo.superlikedFood))) : nk.push({
             icon: "Question Mark",
             style: {
               fontSize: "1.5em"
             }
-          }), YC.push({
+          }), nk.push({
             str: "\n"
-          }), YC.push({
+          }), nk.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: nC.d.feedTextColours[nC.d.MobFoodType.Liked]
+              color: yk.e.feedTextColours[yk.e.MobFoodType.Liked]
             }
-          }), YC.push({
+          }), nk.push({
             str: " "
           });
-          for (const CC of zC) YC.push({
-            icon: CC,
+          for (const kk of Fk) nk.push({
+            icon: kk,
             style: {
               fontSize: "1.5em"
             }
           });
-          YC.push({
+          nk.push({
             str: "\n"
-          }), YC.push({
+          }), nk.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: nC.d.feedTextColours[nC.d.MobFoodType.Neutral]
+              color: yk.e.feedTextColours[yk.e.MobFoodType.Neutral]
             }
-          }), YC.push({
+          }), nk.push({
             str: " "
           });
-          for (const ZC of null !== (cC = CC.tameInfo.neutralFoods) && void 0 !== cC ? cC : []) {
-            var cC;
-            YC.push({
-              icon: ZC,
+          for (const Ik of null !== (Ck = kk.tameInfo.neutralFoods) && void 0 !== Ck ? Ck : []) {
+            var Ck;
+            nk.push({
+              icon: Ik,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
-          YC.push({
+          nk.push({
             str: "\n"
-          }), YC.push({
+          }), nk.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: nC.d.feedTextColours[nC.d.MobFoodType.Disliked]
+              color: yk.e.feedTextColours[yk.e.MobFoodType.Disliked]
             }
-          }), YC.push({
+          }), nk.push({
             str: " "
           });
-          for (const ZC of null !== (uC = CC.tameInfo.dislikedFoods) && void 0 !== uC ? uC : []) {
-            var uC;
-            YC.push({
-              icon: ZC,
+          for (const Ik of null !== (Nk = kk.tameInfo.dislikedFoods) && void 0 !== Nk ? Nk : []) {
+            var Nk;
+            nk.push({
+              icon: Ik,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
         }
-        YC.length > 0 ? (YC.shift(), YC.unshift(...(0, bC.db)(KC))) : YC = (0, bC.db)(KC)
+        nk.length > 0 ? (nk.shift(), nk.unshift(...(0, ik.zb)(Ok))) : nk = (0, ik.zb)(Ok)
       }
       return {
-        name: eC,
-        desc: YC,
-        fontStyle: null !== (JC = IC.customAttributes) && void 0 !== JC && JC.author ? "italic" : "normal"
+        name: vk,
+        desc: nk,
+        fontStyle: null !== (sk = Vk.customAttributes) && void 0 !== sk && sk.author ? "italic" : "normal"
       }
     }
 
-    function PC(CC, zC, ZC, QC) {
-      const wC = oC(CC, ZC),
-        bC = oC(CC, QC);
-      if (!wC) return !1;
-      const nC = zC[wC.name].armourReduction,
-        fC = zC[bC.name].armourReduction;
-      if (fC === nC) {
-        var qC, FC, WC, NC;
-        const CC = null !== (qC = null === (FC = wC.attributes.customAttributes) || void 0 === FC ? void 0 : FC.enchantmentTier) && void 0 !== qC ? qC : "Tier 0",
-          zC = null !== (WC = null === (NC = bC.attributes.customAttributes) || void 0 === NC ? void 0 : NC.enchantmentTier) && void 0 !== WC ? WC : "Tier 0";
-        return parseInt(CC.replace("Tier ", "")) >= parseInt(zC.replace("Tier ", ""))
+    function Jk(kk, Fk, Ik, Xk) {
+      const Tk = ak(kk, Ik),
+        ik = ak(kk, Xk);
+      if (!Tk) return !1;
+      const yk = Fk[Tk.name].armourReduction,
+        lk = Fk[ik.name].armourReduction;
+      if (lk === yk) {
+        var qk, Lk, tk, Zk;
+        const kk = null !== (qk = null === (Lk = Tk.attributes.customAttributes) || void 0 === Lk ? void 0 : Lk.enchantmentTier) && void 0 !== qk ? qk : "Tier 0",
+          Fk = null !== (tk = null === (Zk = ik.attributes.customAttributes) || void 0 === Zk ? void 0 : Zk.enchantmentTier) && void 0 !== tk ? tk : "Tier 0";
+        return parseInt(kk.replace("Tier ", "")) >= parseInt(Fk.replace("Tier ", ""))
       }
-      return nC > fC
+      return yk > lk
     }
 
-    function GC(CC) {
-      let zC;
-      if ("number" === typeof CC) {
-        const ZC = document.querySelector(`[data-inven-idx="${CC}"]`);
-        if (!ZC) return null;
-        zC = ZC.getBoundingClientRect()
-      } else zC = CC.getBoundingClientRect();
+    function xk(kk) {
+      let Fk;
+      if ("number" === typeof kk) {
+        const Ik = document.querySelector(`[data-inven-idx="${kk}"]`);
+        if (!Ik) return null;
+        Fk = Ik.getBoundingClientRect()
+      } else Fk = kk.getBoundingClientRect();
       return {
-        x: zC.left + zC.width / 2,
-        y: zC.top + zC.height / 2
+        x: Fk.left + Fk.width / 2,
+        y: Fk.top + Fk.height / 2
       }
     }
   },
-  34056: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => MC,
-      c: () => gC,
-      e: () => SC
+  34058: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => jk,
+      c: () => ek,
+      d: () => wk
     });
-    var QC = ZC(1388),
-      wC = ZC(48),
-      bC = ZC(1263),
-      nC = ZC(4469),
-      fC = ZC(2302),
-      oC = ZC(1143),
-      qC = ZC(77),
-      FC = ZC(1877),
-      WC = ZC(1295),
-      NC = ZC(1056);
+    var Xk = Ik(1406),
+      Tk = Ik(58),
+      ik = Ik(1287),
+      yk = Ik(4516),
+      lk = Ik(2283),
+      ak = Ik(1179),
+      qk = Ik(95),
+      Lk = Ik(1907),
+      tk = Ik(1318),
+      Zk = Ik(1096);
 
-    function MC(CC) {
+    function jk(kk) {
       let {
-        show: zC,
-        onClose: ZC
-      } = CC;
+        show: Fk,
+        onClose: Ik
+      } = kk;
       const {
-        requestedGameNameWithVariation: QC,
-        lobbyName: wC,
-        shownLobbyName: bC
-      } = (0, FC.f)("connectedGame"), oC = (0, fC.e)(QC, wC, !1);
-      return qC.featureFlags.canUseInviteLinks && (0, NC.jsx)(nC.c, {
-        show: zC,
-        close: ZC,
+        requestedGameNameWithVariation: Xk,
+        lobbyName: Tk,
+        shownLobbyName: ik
+      } = (0, Lk.k)("connectedGame"), ak = (0, lk.b)(Xk, Tk, !1);
+      return qk.featureFlags.canUseInviteLinks && (0, Zk.jsx)(yk.c, {
+        show: Fk,
+        close: Ik,
         padShowsHud: !0,
         togglePointerLock: !1,
         globallyUniqueKey: "InviteLinkBox",
         doGameplayStartStopOnShow: !0,
-        children: (0, NC.jsxs)("div", {
+        children: (0, Zk.jsxs)("div", {
           className: "InviteLinkBox AnimFadeInScaleUp",
-          children: [(0, NC.jsx)("div", {
+          children: [(0, Zk.jsx)("div", {
             className: "InviteLinkBoxHeader SmallTextBold",
             children: "Invite Friends"
-          }), (0, NC.jsxs)("div", {
+          }), (0, Zk.jsxs)("div", {
             className: "InviteLinkBoxDescription SmallTextLight",
-            children: [(0, NC.jsx)("div", {
+            children: [(0, Zk.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: '"Join Lobby Name" Button Info'
-            }), "Game: ", null === oC ? (0, NC.jsx)(WC.d, {}) : oC, (0, NC.jsx)("br", {}), "Lobby Name: ", bC, (0, NC.jsx)("br", {}), (0, NC.jsx)("br", {}), (0, NC.jsx)("br", {}), (0, NC.jsx)("div", {
+            }), "Game: ", null === ak ? (0, Zk.jsx)(tk.c, {}) : ak, (0, Zk.jsx)("br", {}), "Lobby Name: ", ik, (0, Zk.jsx)("br", {}), (0, Zk.jsx)("br", {}), (0, Zk.jsx)("br", {}), (0, Zk.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: "Link"
             })]
-          }), (0, NC.jsx)(gC, {})]
+          }), (0, Zk.jsx)(ek, {})]
         })
       })
     }
 
-    function gC() {
-      var CC;
+    function ek() {
+      var kk;
       const {
-        t: zC
-      } = (0, oC.y)(), ZC = null !== (CC = SC(qC.featureFlags.canUseInviteLinks)) && void 0 !== CC ? CC : "Loading Link...", [bC, nC] = (0, wC.useState)(0), [fC, FC] = (0, wC.useReducer)((CC => CC + 1), 0);
-      return (0, wC.useEffect)((() => {
-        const CC = setTimeout((() => {
-          FC()
+        t: Fk
+      } = (0, ak.y)(), Ik = null !== (kk = wk(qk.featureFlags.canUseInviteLinks)) && void 0 !== kk ? kk : "Loading Link...", [ik, yk] = (0, Tk.useState)(0), [lk, Lk] = (0, Tk.useReducer)((kk => kk + 1), 0);
+      return (0, Tk.useEffect)((() => {
+        const kk = setTimeout((() => {
+          Lk()
         }), 1100);
         return () => {
-          clearTimeout(CC)
+          clearTimeout(kk)
         }
-      }), [bC]), qC.featureFlags.canUseInviteLinks && (0, NC.jsxs)("div", {
+      }), [ik]), qk.featureFlags.canUseInviteLinks && (0, Zk.jsxs)("div", {
         className: "InviteLinkInnerWrapper",
-        children: [(0, NC.jsx)("div", {
+        children: [(0, Zk.jsx)("div", {
           className: "InviteLinkInner",
-          children: ZC
-        }), (0, NC.jsx)(QC.g, {
+          children: Ik
+        }), (0, Zk.jsx)(Xk.d, {
           className: "InviteLinkCopyButton",
           onClick: () => {
-            navigator.clipboard.writeText(ZC).catch((CC => {
-              console.error("Failed to copy invite link:", CC)
-            })), nC(Date.now())
+            navigator.clipboard.writeText(Ik).catch((kk => {
+              console.error("Failed to copy invite link:", kk)
+            })), yk(Date.now())
           },
-          disabled: Date.now() - bC < 1e3,
-          children: Date.now() - bC < 1e3 ? zC("general:copied") : zC("general:copy")
+          disabled: Date.now() - ik < 1e3,
+          children: Date.now() - ik < 1e3 ? Fk("general:copied") : Fk("general:copy")
         })]
       })
     }
 
-    function SC(CC) {
-      const [zC, ZC] = (0, wC.useState)(null);
-      return (0, wC.useEffect)((() => {
-        if (!CC) return;
-        let zC = !0;
-        return (0, bC.v)().then((CC => {
-          zC && ZC(CC)
-        })).catch((CC => {
-          console.error("Failed to get invite link:", CC)
+    function wk(kk) {
+      const [Fk, Ik] = (0, Tk.useState)(null);
+      return (0, Tk.useEffect)((() => {
+        if (!kk) return;
+        let Fk = !0;
+        return (0, ik.x)().then((kk => {
+          Fk && Ik(kk)
+        })).catch((kk => {
+          console.error("Failed to get invite link:", kk)
         })), () => {
-          zC = !1
+          Fk = !1
         }
-      }), [CC]), zC
+      }), [kk]), Fk
     }
   },
-  34147: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => qC
+  34155: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => qk
     });
-    var QC = ZC(48),
-      wC = ZC(1002),
-      bC = ZC.n(wC),
-      nC = ZC(1877),
-      fC = ZC(1056);
+    var Xk = Ik(58),
+      Tk = Ik(1055),
+      ik = Ik.n(Tk),
+      yk = Ik(1907),
+      lk = Ik(1096);
 
-    function oC(CC) {
-      const zC = Math.floor(CC / 3600),
-        ZC = Math.floor(CC % 3600 / 60),
-        QC = Math.floor(CC % 60),
-        wC = `${ZC.toString().padStart(2,"0")}:${QC.toString().padStart(2,"0")}`;
-      return zC > 0 ? `${zC}:${wC}` : wC
+    function ak(kk) {
+      const Fk = Math.floor(kk / 3600),
+        Ik = Math.floor(kk % 3600 / 60),
+        Xk = Math.floor(kk % 60),
+        Tk = `${Ik.toString().padStart(2,"0")}:${Xk.toString().padStart(2,"0")}`;
+      return Fk > 0 ? `${Fk}:${Tk}` : Tk
     }
-    const qC = (0, QC.memo)((function(CC) {
+    const qk = (0, Xk.memo)((function(kk) {
       let {
-        className: zC
-      } = CC;
+        className: Fk
+      } = kk;
       const {
-        recording: ZC,
-        seconds: QC
-      } = (0, nC.f)("replayRecorder");
-      return ZC ? (0, fC.jsxs)("div", {
-        className: bC()("RecordingIndicator", zC),
-        children: [(0, fC.jsx)("span", {
+        recording: Ik,
+        seconds: Xk
+      } = (0, yk.k)("replayRecorder");
+      return Ik ? (0, lk.jsxs)("div", {
+        className: ik()("RecordingIndicator", Fk),
+        children: [(0, lk.jsx)("span", {
           className: "RecordingIndicatorDot"
-        }), (0, fC.jsx)("span", {
+        }), (0, lk.jsx)("span", {
           className: "RecordingIndicatorLabel",
           children: "REC"
-        }), (0, fC.jsx)("span", {
+        }), (0, lk.jsx)("span", {
           className: "RecordingIndicatorTime",
-          children: oC(QC)
+          children: ak(Xk)
         })]
       }) : null
     }))
   },
-  4819: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => pC
+  4884: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Hk
     });
-    var QC = ZC(1002),
-      wC = ZC.n(QC),
-      bC = ZC(4579),
-      nC = ZC(1143),
-      fC = ZC(1013),
-      oC = ZC(1388),
-      qC = ZC(1439),
-      FC = ZC(1307),
-      WC = ZC(2454),
-      NC = ZC(1056);
-    const MC = {
+    var Xk = Ik(1055),
+      Tk = Ik.n(Xk),
+      ik = Ik(4619),
+      yk = Ik(1179),
+      lk = Ik(1066),
+      ak = Ik(1406),
+      qk = Ik(1453),
+      Lk = Ik(1324),
+      tk = Ik(2424),
+      Zk = Ik(1096);
+    const jk = {
       youtube: {
         icon: "youtube",
         color: "#FF0033",
@@ -8777,440 +8777,440 @@ export const modules = {
       }
     };
 
-    function gC(CC) {
+    function ek(kk) {
       let {
-        platform: zC
-      } = CC;
-      const ZC = "youtube" === zC;
-      return (0, NC.jsxs)("span", {
-        className: wC()("PlayerProfileSocialLinkIcon", {
-          PlayerProfileSocialLinkIconYoutube: ZC
+        platform: Fk
+      } = kk;
+      const Ik = "youtube" === Fk;
+      return (0, Zk.jsxs)("span", {
+        className: Tk()("PlayerProfileSocialLinkIcon", {
+          PlayerProfileSocialLinkIconYoutube: Ik
         }),
-        children: [ZC && (0, NC.jsx)(WC.d, {
+        children: [Ik && (0, Zk.jsx)(tk.b, {
           variant: "white"
-        }), !ZC && (0, NC.jsx)(fC.c, {
-          name: MC[zC].icon,
+        }), !Ik && (0, Zk.jsx)(lk.e, {
+          name: jk[Fk].icon,
           kit: "brands"
         })]
       })
     }
 
-    function SC(CC) {
+    function wk(kk) {
       let {
-        platform: zC,
-        link: ZC,
-        editable: QC,
-        userContext: wC,
-        onLinksUpdated: WC
-      } = CC;
+        platform: Fk,
+        link: Ik,
+        editable: Xk,
+        userContext: Tk,
+        onLinksUpdated: tk
+      } = kk;
       const {
-        t: SC
-      } = (0, nC.y)(), pC = MC[zC];
-      if (!ZC && !QC) return null;
+        t: wk
+      } = (0, yk.y)(), Hk = jk[Fk];
+      if (!Ik && !Xk) return null;
 
-      function PC() {
-        var CC;
-        if (!wC || !WC) return;
-        FC.NotificationProvider.showInputPopup({
+      function Jk() {
+        var kk;
+        if (!Tk || !tk) return;
+        Lk.NotificationProvider.showInputPopup({
           title: "homePage:profileSocialLinkEditTitle",
           textOpts: {
             title: {
-              platform: pC.name
+              platform: Hk.name
             }
           },
-          prefixText: bC.s[zC],
+          prefixText: ik.u[Fk],
           placeholderText: "playBloxd",
-          initialValue: null !== (CC = null === ZC || void 0 === ZC ? void 0 : ZC.handle) && void 0 !== CC ? CC : "",
+          initialValue: null !== (kk = null === Ik || void 0 === Ik ? void 0 : Ik.handle) && void 0 !== kk ? kk : "",
           maxLength: 30,
           submitText: "general:save",
-          secondaryButtonText: ZC ? "general:remove" : void 0
-        }).getResult().then((async CC => {
-          if ("notificationTornDown" !== CC && null !== CC) try {
-            "submit" === CC.type ? await qC.d.setSocialLink(wC, zC, CC.value) : await qC.d.clearSocialLink(wC, zC), WC()
-          } catch (ZC) {
-            console.error("Failed to update social link", ZC), FC.NotificationProvider.showAlertPopup({
-              title: ZC.errorMessageForUser,
+          secondaryButtonText: Ik ? "general:remove" : void 0
+        }).getResult().then((async kk => {
+          if ("notificationTornDown" !== kk && null !== kk) try {
+            "submit" === kk.type ? await qk.e.setSocialLink(Tk, Fk, kk.value) : await qk.e.clearSocialLink(Tk, Fk), tk()
+          } catch (Ik) {
+            console.error("Failed to update social link", Ik), Lk.NotificationProvider.showAlertPopup({
+              title: Ik.errorMessageForUser,
               confirmText: "general:ok"
             })
           }
         }))
       }
-      if (ZC) {
-        const CC = `@${ZC.handle}`;
-        return (0, NC.jsxs)("a", {
+      if (Ik) {
+        const kk = `@${Ik.handle}`;
+        return (0, Zk.jsxs)("a", {
           className: "PlayerProfileSocialLink",
           style: {
-            background: pC.color
+            background: Hk.color
           },
-          href: ZC.profileUrl,
+          href: Ik.profileUrl,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: [(0, NC.jsxs)("div", {
+          children: [(0, Zk.jsxs)("div", {
             className: "PlayerProfileSocialLinkMain",
-            children: [(0, NC.jsx)(gC, {
-              platform: zC
-            }), (0, NC.jsx)("span", {
+            children: [(0, Zk.jsx)(ek, {
+              platform: Fk
+            }), (0, Zk.jsx)("span", {
               className: "PlayerProfileSocialLinkText",
-              children: (0, NC.jsx)("span", {
+              children: (0, Zk.jsx)("span", {
                 className: "PlayerProfileSocialLinkName SmallTextBold",
-                children: CC
+                children: kk
               })
             })]
-          }), QC && (0, NC.jsx)("button", {
+          }), Xk && (0, Zk.jsx)("button", {
             type: "button",
             className: "PlayerProfileSocialLinkEditButton",
-            ...(0, oC.U)({
+            ...(0, ak.Y)({
               stopPropagation: !0
             }),
-            onClick: CC => {
-              CC.stopPropagation(), CC.preventDefault(), PC()
+            onClick: kk => {
+              kk.stopPropagation(), kk.preventDefault(), Jk()
             },
-            children: (0, NC.jsx)(fC.c, {
+            children: (0, Zk.jsx)(lk.e, {
               name: "pen-to-square"
             })
-          }), !QC && (0, NC.jsx)("span", {
+          }), !Xk && (0, Zk.jsx)("span", {
             className: "PlayerProfileSocialLinkArrow",
-            children: (0, NC.jsx)(fC.c, {
+            children: (0, Zk.jsx)(lk.e, {
               name: "arrow-up-right-from-square"
             })
           })]
         })
       }
-      return (0, NC.jsxs)("button", {
+      return (0, Zk.jsxs)("button", {
         type: "button",
         className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
         style: {
-          background: pC.color
+          background: Hk.color
         },
-        ...(0, oC.U)(),
+        ...(0, ak.Y)(),
         onClick: () => {
-          PC()
+          Jk()
         },
-        children: [(0, NC.jsx)(gC, {
-          platform: zC
-        }), (0, NC.jsxs)("span", {
+        children: [(0, Zk.jsx)(ek, {
+          platform: Fk
+        }), (0, Zk.jsxs)("span", {
           className: "PlayerProfileSocialLinkText",
-          children: [(0, NC.jsx)("span", {
+          children: [(0, Zk.jsx)("span", {
             className: "PlayerProfileSocialLinkName SmallTextBold",
-            children: pC.name
-          }), (0, NC.jsx)("span", {
+            children: Hk.name
+          }), (0, Zk.jsx)("span", {
             className: "PlayerProfileSocialLinkCount SmallTextLight",
-            children: SC("homePage:profileSocialLinkAdd")
+            children: wk("homePage:profileSocialLinkAdd")
           })]
-        }), (0, NC.jsx)("span", {
+        }), (0, Zk.jsx)("span", {
           className: "PlayerProfileSocialLinkEditButton",
-          children: (0, NC.jsx)(fC.c, {
+          children: (0, Zk.jsx)(lk.e, {
             name: "pen-to-square"
           })
         })]
       })
     }
 
-    function pC(CC) {
+    function Hk(kk) {
       let {
-        socialLinks: zC,
-        editable: ZC = !1,
-        userContext: QC,
-        onLinksUpdated: wC
-      } = CC;
-      if (!ZC && 0 === zC.length) return null;
-      const nC = new Map(zC.map((CC => [CC.platform, CC]))),
-        fC = ZC ? bC.q : zC.map((CC => CC.platform));
-      return (0, NC.jsx)("div", {
+        socialLinks: Fk,
+        editable: Ik = !1,
+        userContext: Xk,
+        onLinksUpdated: Tk
+      } = kk;
+      if (!Ik && 0 === Fk.length) return null;
+      const yk = new Map(Fk.map((kk => [kk.platform, kk]))),
+        lk = Ik ? ik.t : Fk.map((kk => kk.platform));
+      return (0, Zk.jsx)("div", {
         className: "PlayerProfileSocialLinks",
-        children: (0, NC.jsx)("div", {
+        children: (0, Zk.jsx)("div", {
           className: "PlayerProfileSocialLinksList",
-          children: fC.map((CC => (0, NC.jsx)(SC, {
-            platform: CC,
-            link: nC.get(CC),
-            editable: ZC,
-            userContext: QC,
-            onLinksUpdated: wC
-          }, CC)))
+          children: lk.map((kk => (0, Zk.jsx)(wk, {
+            platform: kk,
+            link: yk.get(kk),
+            editable: Ik,
+            userContext: Xk,
+            onLinksUpdated: Tk
+          }, kk)))
         })
       })
     }
   },
-  34153: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => bC
+  34164: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => ik
     });
-    var QC = ZC(4473),
-      wC = ZC(4479);
+    var Xk = Ik(4525),
+      Tk = Ik(4529);
 
-    function bC(CC) {
+    function ik(kk) {
       let {
-        children: zC,
-        showing: ZC,
-        globallyUniqueKey: bC,
-        alwaysMountChildren: nC = !1,
-        doGameplayStartStopOnShow: fC = !0,
-        keepsMovement: oC = !1
-      } = CC;
-      return (0, wC.b)(!0, ZC, bC, oC), (0, QC.d)(fC, ZC), ZC || nC ? zC : null
+        children: Fk,
+        showing: Ik,
+        globallyUniqueKey: ik,
+        alwaysMountChildren: yk = !1,
+        doGameplayStartStopOnShow: lk = !0,
+        keepsMovement: ak = !1
+      } = kk;
+      return (0, Tk.e)(!0, Ik, ik, ak), (0, Xk.b)(lk, Ik), Ik || yk ? Fk : null
     }
   },
-  34202: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => bC
+  34231: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => ik
     });
-    var QC = ZC(48),
-      wC = ZC(3419);
+    var Xk = Ik(58),
+      Tk = Ik(3378);
 
-    function bC() {
-      const [CC, zC] = (0, QC.useState)(!1);
-      return (0, QC.useLayoutEffect)((() => {
-        let CC = !0;
-        return (0, wC.e)().then((() => {
-          CC && zC(!0)
+    function ik() {
+      const [kk, Fk] = (0, Xk.useState)(!1);
+      return (0, Xk.useLayoutEffect)((() => {
+        let kk = !0;
+        return (0, Tk.e)().then((() => {
+          kk && Fk(!0)
         })), () => {
-          CC = !1
+          kk = !1
         }
-      }), []), CC
+      }), []), kk
     }
   },
-  6572: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => bC
+  6566: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => ik
     });
-    var QC = ZC(48),
-      wC = ZC(38);
+    var Xk = Ik(58),
+      Tk = Ik(41);
 
-    function bC(CC, zC) {
-      var ZC;
-      const [bC, nC] = (0, QC.useState)(null !== (ZC = wC.i.getItem(CC)) && void 0 !== ZC ? ZC : zC);
-      return [bC, zC => {
-        wC.i.setItem(CC, zC), nC(zC)
+    function ik(kk, Fk) {
+      var Ik;
+      const [ik, yk] = (0, Xk.useState)(null !== (Ik = Tk.j.getItem(kk)) && void 0 !== Ik ? Ik : Fk);
+      return [ik, Fk => {
+        Tk.j.setItem(kk, Fk), yk(Fk)
       }]
     }
   },
-  34118: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => SC,
-      g: () => gC
+  34131: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => wk,
+      e: () => ek
     });
-    ZC(34125);
-    var QC = ZC(1002),
-      wC = ZC.n(QC),
-      bC = ZC(48),
-      nC = ZC(34116);
+    Ik(34139);
+    var Xk = Ik(1055),
+      Tk = Ik.n(Xk),
+      ik = Ik(58),
+      yk = Ik(34122);
 
-    function fC(CC, zC) {
-      return Math.max(1, Math.round(CC * zC))
+    function lk(kk, Fk) {
+      return Math.max(1, Math.round(kk * Fk))
     }
 
-    function oC(CC, zC) {
-      const ZC = zC * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
-        QC = function(CC, zC) {
-          if (CC.lines) return fC(CC.lineThickness, zC) % 2;
-          if (CC.dot) return fC(CC.dotSize, zC) % 2;
-          return qC(CC, zC) % 2
-        }(CC, zC),
-        wC = FC(CC.lineThickness * ZC, QC),
-        bC = fC(CC.lineLength, ZC),
-        nC = Math.round(CC.gap * ZC),
-        oC = CC.outline > 0 ? fC(CC.outline, ZC) : 0,
-        NC = [];
-      if (CC.lines && (NC.push({
-          x: wC + nC,
+    function ak(kk, Fk) {
+      const Ik = Fk * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
+        Xk = function(kk, Fk) {
+          if (kk.lines) return lk(kk.lineThickness, Fk) % 2;
+          if (kk.dot) return lk(kk.dotSize, Fk) % 2;
+          return qk(kk, Fk) % 2
+        }(kk, Fk),
+        Tk = Lk(kk.lineThickness * Ik, Xk),
+        ik = lk(kk.lineLength, Ik),
+        yk = Math.round(kk.gap * Ik),
+        ak = kk.outline > 0 ? lk(kk.outline, Ik) : 0,
+        Zk = [];
+      if (kk.lines && (Zk.push({
+          x: Tk + yk,
           y: 0,
-          w: bC,
-          h: wC,
+          w: ik,
+          h: Tk,
           arm: "right"
-        }), NC.push({
-          x: -nC - bC,
+        }), Zk.push({
+          x: -yk - ik,
           y: 0,
-          w: bC,
-          h: wC,
+          w: ik,
+          h: Tk,
           arm: "left"
-        }), NC.push({
+        }), Zk.push({
           x: 0,
-          y: wC + nC,
-          w: wC,
-          h: bC,
+          y: Tk + yk,
+          w: Tk,
+          h: ik,
           arm: "down"
-        }), CC.tStyle || NC.push({
+        }), kk.tStyle || Zk.push({
           x: 0,
-          y: -nC - bC,
-          w: wC,
-          h: bC,
+          y: -yk - ik,
+          w: Tk,
+          h: ik,
           arm: "up"
-        }), 0 === nC && NC.push({
+        }), 0 === yk && Zk.push({
           x: 0,
           y: 0,
-          w: wC,
-          h: wC
-        })), CC.dot) {
-        const zC = FC(CC.dotSize * ZC, QC),
-          bC = CC.lines && 0 === nC && CC.dotSize > CC.lineThickness ? Math.max(zC, wC + 2) : zC,
-          fC = (wC - bC) / 2;
-        NC.push({
-          x: fC,
-          y: fC,
-          w: bC,
-          h: bC
+          w: Tk,
+          h: Tk
+        })), kk.dot) {
+        const Fk = Lk(kk.dotSize * Ik, Xk),
+          ik = kk.lines && 0 === yk && kk.dotSize > kk.lineThickness ? Math.max(Fk, Tk + 2) : Fk,
+          lk = (Tk - ik) / 2;
+        Zk.push({
+          x: lk,
+          y: lk,
+          w: ik,
+          h: ik
         })
       }
-      const MC = NC.map((CC => ({
-        ...CC,
-        x: CC.x - oC,
-        y: CC.y - oC,
-        w: CC.w + 2 * oC,
-        h: CC.h + 2 * oC
+      const jk = Zk.map((kk => ({
+        ...kk,
+        x: kk.x - ak,
+        y: kk.y - ak,
+        w: kk.w + 2 * ak,
+        h: kk.h + 2 * ak
       })));
-      let gC = null,
-        SC = null;
-      if (CC.circle) {
-        const zC = fC(CC.circleThickness, ZC),
-          bC = function(CC, zC) {
-            return CC + (CC % 2 === zC ? 0 : 1)
-          }(qC(CC, ZC), QC),
-          nC = (wC - bC) / 2;
-        gC = WC(nC, bC, zC), oC > 0 && (SC = WC(nC - oC, bC + 2 * oC, zC + 2 * oC))
+      let ek = null,
+        wk = null;
+      if (kk.circle) {
+        const Fk = lk(kk.circleThickness, Ik),
+          ik = function(kk, Fk) {
+            return kk + (kk % 2 === Fk ? 0 : 1)
+          }(qk(kk, Ik), Xk),
+          yk = (Tk - ik) / 2;
+        ek = tk(yk, ik, Fk), ak > 0 && (wk = tk(yk - ak, ik + 2 * ak, Fk + 2 * ak))
       }
       return {
-        cell: wC,
-        fills: NC,
-        outlines: oC > 0 ? MC : [],
-        ring: gC,
-        ringOutline: SC
+        cell: Tk,
+        fills: Zk,
+        outlines: ak > 0 ? jk : [],
+        ring: ek,
+        ringOutline: wk
       }
     }
 
-    function qC(CC, zC) {
-      return Math.round(CC.circleRadius * zC * 2 + fC(CC.circleThickness, zC))
+    function qk(kk, Fk) {
+      return Math.round(kk.circleRadius * Fk * 2 + lk(kk.circleThickness, Fk))
     }
 
-    function FC(CC, zC) {
-      return Math.max(2 - zC, 2 * Math.round((CC - zC) / 2) + zC)
+    function Lk(kk, Fk) {
+      return Math.max(2 - Fk, 2 * Math.round((kk - Fk) / 2) + Fk)
     }
 
-    function WC(CC, zC, ZC) {
-      const QC = 2 * ZC >= zC - 1;
+    function tk(kk, Fk, Ik) {
+      const Xk = 2 * Ik >= Fk - 1;
       return {
-        x: CC,
-        y: CC,
-        size: zC,
-        border: Math.min(ZC, Math.floor(zC / 2)),
-        filled: QC
+        x: kk,
+        y: kk,
+        size: Fk,
+        border: Math.min(Ik, Math.floor(Fk / 2)),
+        filled: Xk
       }
     }
-    var NC = ZC(1056);
-    const MC = 1.4;
+    var Zk = Ik(1096);
+    const jk = 1.4;
 
-    function gC(CC, zC) {
-      return CC && zC ? `scale(${MC})` : "scale(1)"
+    function ek(kk, Fk) {
+      return kk && Fk ? `scale(${jk})` : "scale(1)"
     }
 
-    function SC(CC) {
-      return "classic" === CC.settings.style ? (0, NC.jsx)(GC, {
-        ...CC
-      }) : (0, NC.jsx)(vC, {
-        ...CC
+    function wk(kk) {
+      return "classic" === kk.settings.style ? (0, Zk.jsx)(xk, {
+        ...kk
+      }) : (0, Zk.jsx)(Sk, {
+        ...kk
       })
     }
-    const pC = .125;
+    const Hk = .125;
 
-    function PC(CC, zC) {
-      const ZC = {};
-      if (CC.color !== nC.f.color && (ZC.color = (0, nC.i)(CC.color)), CC.opacity !== nC.f.opacity && (ZC.opacity = CC.opacity / 100), CC.outline !== nC.f.outline || CC.outlineColor !== nC.f.outlineColor) {
-        const zC = CC.outline,
-          QC = (0, nC.i)(CC.outlineColor);
-        ZC.textShadow = zC > 0 ? `-${zC}px 0 ${QC}, 0 ${zC}px ${QC}, ${zC}px 0 ${QC}, 0 -${zC}px ${QC}` : "none"
+    function Jk(kk, Fk) {
+      const Ik = {};
+      if (kk.color !== yk.f.color && (Ik.color = (0, yk.k)(kk.color)), kk.opacity !== yk.f.opacity && (Ik.opacity = kk.opacity / 100), kk.outline !== yk.f.outline || kk.outlineColor !== yk.f.outlineColor) {
+        const Fk = kk.outline,
+          Xk = (0, yk.k)(kk.outlineColor);
+        Ik.textShadow = Fk > 0 ? `-${Fk}px 0 ${Xk}, 0 ${Fk}px ${Xk}, ${Fk}px 0 ${Xk}, 0 -${Fk}px ${Xk}` : "none"
       }
-      if (CC.size !== nC.f.size) {
-        const QC = CC.size / 100;
-        ZC.fontSize = zC ? `calc(max(1.3rem, 18px) * ${QC})` : `calc(1.3rem * ${QC})`, ZC.marginTop = `-${pC}em`, ZC.transformOrigin = `50% calc(50% + ${pC}em)`
+      if (kk.size !== yk.f.size) {
+        const Xk = kk.size / 100;
+        Ik.fontSize = Fk ? `calc(max(1.3rem, 18px) * ${Xk})` : `calc(1.3rem * ${Xk})`, Ik.marginTop = `-${Hk}em`, Ik.transformOrigin = `50% calc(50% + ${Hk}em)`
       }
-      return ZC
+      return Ik
     }
 
-    function GC(CC) {
+    function xk(kk) {
       let {
-        settings: zC,
-        touch: ZC,
-        inPreview: QC,
-        inEditor: bC,
-        pressed: nC = !1,
-        pressRef: fC
-      } = CC;
-      return (0, NC.jsx)("div", {
-        className: wC()("Crosshair", {
-          Touch: ZC,
-          CrosshairInPreview: QC,
-          CrosshairInEditor: bC || QC
+        settings: Fk,
+        touch: Ik,
+        inPreview: Xk,
+        inEditor: ik,
+        pressed: yk = !1,
+        pressRef: lk
+      } = kk;
+      return (0, Zk.jsx)("div", {
+        className: Tk()("Crosshair", {
+          Touch: Ik,
+          CrosshairInPreview: Xk,
+          CrosshairInEditor: ik || Xk
         }),
-        ref: fC,
+        ref: lk,
         style: {
-          transform: gC(nC, zC.growOnClick),
-          ...PC(zC, ZC)
+          transform: ek(yk, Fk.growOnClick),
+          ...Jk(Fk, Ik)
         },
         children: "+"
       })
     }
 
-    function RC(CC, zC) {
-      return CC / zC + "px"
+    function Pk(kk, Fk) {
+      return kk / Fk + "px"
     }
 
-    function AC(CC, zC, ZC, QC) {
+    function Kk(kk, Fk, Ik, Xk) {
       return {
-        ...IC(CC, zC, ZC),
-        width: RC(CC.w, ZC),
-        height: RC(CC.h, ZC),
-        background: QC
+        ...Vk(kk, Fk, Ik),
+        width: Pk(kk.w, Ik),
+        height: Pk(kk.h, Ik),
+        background: Xk
       }
     }
 
-    function xC(CC, zC, ZC) {
+    function Qk(kk, Fk, Ik) {
       return {
-        left: RC(CC.x, zC),
-        top: RC(CC.y, zC),
-        width: RC(CC.size, zC),
-        height: RC(CC.size, zC),
-        borderWidth: RC(CC.border, zC),
-        borderColor: ZC,
-        background: CC.filled ? ZC : void 0
+        left: Pk(kk.x, Fk),
+        top: Pk(kk.y, Fk),
+        width: Pk(kk.size, Fk),
+        height: Pk(kk.size, Fk),
+        borderWidth: Pk(kk.border, Fk),
+        borderColor: Ik,
+        background: kk.filled ? Ik : void 0
       }
     }
-    const JC = {
+    const sk = {
       left: [-1, 0],
       right: [1, 0],
       up: [0, -1],
       down: [0, 1]
     };
 
-    function IC(CC, zC, ZC) {
-      const [QC, wC] = CC.arm ? JC[CC.arm] : [0, 0], bC = Math.round(zC * ZC);
+    function Vk(kk, Fk, Ik) {
+      const [Xk, Tk] = kk.arm ? sk[kk.arm] : [0, 0], ik = Math.round(Fk * Ik);
       return {
-        left: RC(CC.x + QC * bC, ZC),
-        top: RC(CC.y + wC * bC, ZC)
+        left: Pk(kk.x + Xk * ik, Ik),
+        top: Pk(kk.y + Tk * ik, Ik)
       }
     }
 
-    function iC(CC) {
-      return CC.arm ? {
-        "data-arm": CC.arm,
-        "data-x": CC.x,
-        "data-y": CC.y
+    function zk(kk) {
+      return kk.arm ? {
+        "data-arm": kk.arm,
+        "data-x": kk.x,
+        "data-y": kk.y
       } : {}
     }
 
-    function vC(CC) {
+    function Sk(kk) {
       let {
-        settings: zC,
-        inPreview: ZC,
-        inEditor: QC,
-        pressed: fC = !1,
-        spread: qC,
-        spreadRef: FC
-      } = CC;
-      const WC = (0, bC.useRef)(null),
+        settings: Fk,
+        inPreview: Ik,
+        inEditor: Xk,
+        pressed: lk = !1,
+        spread: qk,
+        spreadRef: Lk
+      } = kk;
+      const tk = (0, ik.useRef)(null),
         {
-          box: gC,
-          dpr: SC
-        } = function(CC) {
-          const [zC, ZC] = (0, bC.useState)({
+          box: ek,
+          dpr: wk
+        } = function(kk) {
+          const [Fk, Ik] = (0, ik.useState)({
             box: {
               left: 0,
               top: 0,
@@ -9219,200 +9219,200 @@ export const modules = {
             },
             dpr: 1
           });
-          return (0, bC.useLayoutEffect)((() => {
-            const zC = CC.current;
-            if (!zC) return;
-            const QC = () => {
-              const CC = zC.getBoundingClientRect(),
-                QC = window.devicePixelRatio || 1;
-              ZC((zC => zC.dpr === QC && zC.box.left === CC.left && zC.box.top === CC.top && zC.box.width === CC.width && zC.box.height === CC.height ? zC : {
+          return (0, ik.useLayoutEffect)((() => {
+            const Fk = kk.current;
+            if (!Fk) return;
+            const Xk = () => {
+              const kk = Fk.getBoundingClientRect(),
+                Xk = window.devicePixelRatio || 1;
+              Ik((Fk => Fk.dpr === Xk && Fk.box.left === kk.left && Fk.box.top === kk.top && Fk.box.width === kk.width && Fk.box.height === kk.height ? Fk : {
                 box: {
-                  left: CC.left,
-                  top: CC.top,
-                  width: CC.width,
-                  height: CC.height
+                  left: kk.left,
+                  top: kk.top,
+                  width: kk.width,
+                  height: kk.height
                 },
-                dpr: QC
+                dpr: Xk
               }))
             };
-            QC();
-            const wC = new ResizeObserver(QC);
-            return wC.observe(zC), window.addEventListener("resize", QC), window.addEventListener("scroll", QC, !0), () => {
-              wC.disconnect(), window.removeEventListener("resize", QC), window.removeEventListener("scroll", QC, !0)
+            Xk();
+            const Tk = new ResizeObserver(Xk);
+            return Tk.observe(Fk), window.addEventListener("resize", Xk), window.addEventListener("scroll", Xk, !0), () => {
+              Tk.disconnect(), window.removeEventListener("resize", Xk), window.removeEventListener("scroll", Xk, !0)
             }
-          }), [CC]), zC
-        }(WC),
-        pC = (0, bC.useRef)(SC);
-      pC.current = SC;
-      const PC = oC(zC, SC, fC && zC.growOnClick ? MC : 1),
-        GC = function(CC, zC, ZC) {
-          const QC = Math.round((CC.left + CC.width / 2) * ZC - zC / 2),
-            wC = Math.round((CC.top + CC.height / 2) * ZC - zC / 2);
+          }), [kk]), Fk
+        }(tk),
+        Hk = (0, ik.useRef)(wk);
+      Hk.current = wk;
+      const Jk = ak(Fk, wk, lk && Fk.growOnClick ? jk : 1),
+        xk = function(kk, Fk, Ik) {
+          const Xk = Math.round((kk.left + kk.width / 2) * Ik - Fk / 2),
+            Tk = Math.round((kk.top + kk.height / 2) * Ik - Fk / 2);
           return {
-            x: QC / ZC - CC.left,
-            y: wC / ZC - CC.top
+            x: Xk / Ik - kk.left,
+            y: Tk / Ik - kk.top
           }
-        }(gC, PC.cell, SC),
-        RC = (0, nC.i)(zC.color),
-        JC = (0, nC.i)(zC.outlineColor),
-        vC = (0, bC.useRef)(0);
-      (0, bC.useLayoutEffect)((() => {
-        if (FC) return FC.current = CC => {
-          var zC;
-          vC.current = CC, null === (zC = WC.current) || void 0 === zC || zC.querySelectorAll("[data-arm]").forEach((zC => {
-            Object.assign(zC.style, IC(function(CC) {
+        }(ek, Jk.cell, wk),
+        Pk = (0, yk.k)(Fk.color),
+        sk = (0, yk.k)(Fk.outlineColor),
+        Sk = (0, ik.useRef)(0);
+      (0, ik.useLayoutEffect)((() => {
+        if (Lk) return Lk.current = kk => {
+          var Fk;
+          Sk.current = kk, null === (Fk = tk.current) || void 0 === Fk || Fk.querySelectorAll("[data-arm]").forEach((Fk => {
+            Object.assign(Fk.style, Vk(function(kk) {
               return {
-                x: Number(CC.dataset.x),
-                y: Number(CC.dataset.y),
-                arm: CC.dataset.arm
+                x: Number(kk.dataset.x),
+                y: Number(kk.dataset.y),
+                arm: kk.dataset.arm
               }
-            }(zC), CC, pC.current))
+            }(Fk), kk, Hk.current))
           }))
         }, () => {
-          FC.current = null
+          Lk.current = null
         }
-      }), [FC]);
-      const eC = null !== qC && void 0 !== qC ? qC : vC.current;
-      return (0, NC.jsx)("div", {
-        ref: WC,
-        className: wC()("CrosshairShapes", {
-          CrosshairInPreview: ZC,
-          CrosshairInEditor: QC || ZC,
-          CrosshairSpreads: void 0 !== FC
+      }), [Lk]);
+      const vk = null !== qk && void 0 !== qk ? qk : Sk.current;
+      return (0, Zk.jsx)("div", {
+        ref: tk,
+        className: Tk()("CrosshairShapes", {
+          CrosshairInPreview: Ik,
+          CrosshairInEditor: Xk || Ik,
+          CrosshairSpreads: void 0 !== Lk
         }),
-        children: (0, NC.jsx)("div", {
+        children: (0, Zk.jsx)("div", {
           className: "CrosshairShapesOrigin",
           style: {
-            left: GC.x,
-            top: GC.y,
-            opacity: zC.opacity / 100
+            left: xk.x,
+            top: xk.y,
+            opacity: Fk.opacity / 100
           },
-          children: (0, NC.jsxs)("div", {
+          children: (0, Zk.jsxs)("div", {
             className: "CrosshairShapesPress",
-            children: [PC.ringOutline && (0, NC.jsx)("div", {
+            children: [Jk.ringOutline && (0, Zk.jsx)("div", {
               className: "CrosshairRing",
-              style: xC(PC.ringOutline, SC, JC)
-            }), PC.outlines.map(((CC, zC) => (0, NC.jsx)("div", {
+              style: Qk(Jk.ringOutline, wk, sk)
+            }), Jk.outlines.map(((kk, Fk) => (0, Zk.jsx)("div", {
               className: "CrosshairPart",
-              ...iC(CC),
-              style: AC(CC, eC, SC, JC)
-            }, `o${zC}`))), PC.ring && (0, NC.jsx)("div", {
+              ...zk(kk),
+              style: Kk(kk, vk, wk, sk)
+            }, `o${Fk}`))), Jk.ring && (0, Zk.jsx)("div", {
               className: "CrosshairRing",
-              style: xC(PC.ring, SC, RC)
-            }), PC.fills.map(((CC, zC) => (0, NC.jsx)("div", {
+              style: Qk(Jk.ring, wk, Pk)
+            }), Jk.fills.map(((kk, Fk) => (0, Zk.jsx)("div", {
               className: "CrosshairPart",
-              ...iC(CC),
-              style: AC(CC, eC, SC, RC)
-            }, `f${zC}`)))]
+              ...zk(kk),
+              style: Kk(kk, vk, wk, Pk)
+            }, `f${Fk}`)))]
           })
         })
       })
     }
   },
-  34134: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => FC,
-      c: () => pC,
-      g: () => SC
+  34143: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Lk,
+      f: () => Hk,
+      h: () => wk
     });
-    var QC = ZC(34116);
-    const wC = "XH1-",
-      bC = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
-      nC = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
-      fC = ["color", "outlineColor"],
-      oC = 1 + 3 * fC.length + nC.length + 1,
-      qC = Math.ceil(8 * oC / Math.log2(62)),
-      FC = wC.length + qC;
+    var Xk = Ik(34122);
+    const Tk = "XH1-",
+      ik = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
+      yk = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
+      lk = ["color", "outlineColor"],
+      ak = 1 + 3 * lk.length + yk.length + 1,
+      qk = Math.ceil(8 * ak / Math.log2(62)),
+      Lk = Tk.length + qk;
 
-    function WC(CC) {
-      let zC = 90;
-      for (const ZC of CC) zC = 31 * zC + ZC & 255;
-      return zC
+    function tk(kk) {
+      let Fk = 90;
+      for (const Ik of kk) Fk = 31 * Fk + Ik & 255;
+      return Fk
     }
-    const NC = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
-      MC = BigInt(NC.length);
+    const Zk = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+      jk = BigInt(Zk.length);
 
-    function gC(CC, zC) {
-      let ZC = 0n;
-      for (const wC of CC) {
-        const CC = NC.indexOf(wC);
-        if (CC < 0) return null;
-        ZC = ZC * MC + BigInt(CC)
+    function ek(kk, Fk) {
+      let Ik = 0n;
+      for (const Tk of kk) {
+        const kk = Zk.indexOf(Tk);
+        if (kk < 0) return null;
+        Ik = Ik * jk + BigInt(kk)
       }
-      if (ZC >> BigInt(8 * zC) !== 0n) return null;
-      const QC = [];
-      for (let wC = 0; wC < zC; wC++) QC.unshift(Number(0xffn & ZC)), ZC >>= 8n;
-      return QC
+      if (Ik >> BigInt(8 * Fk) !== 0n) return null;
+      const Xk = [];
+      for (let Tk = 0; Tk < Fk; Tk++) Xk.unshift(Number(0xffn & Ik)), Ik >>= 8n;
+      return Xk
     }
 
-    function SC(CC) {
-      let zC = "shapes" === CC.style ? 1 : 0;
-      bC.forEach(((ZC, QC) => {
-        CC[ZC] && (zC |= 1 << QC + 1)
+    function wk(kk) {
+      let Fk = "shapes" === kk.style ? 1 : 0;
+      ik.forEach(((Ik, Xk) => {
+        kk[Ik] && (Fk |= 1 << Xk + 1)
       }));
-      const ZC = [zC];
-      for (const wC of fC) {
-        const zC = (0, QC.g)(wC, CC[wC]);
-        ZC.push(zC >> 16 & 255, zC >> 8 & 255, 255 & zC)
+      const Ik = [Fk];
+      for (const Tk of lk) {
+        const Fk = (0, Xk.g)(Tk, kk[Tk]);
+        Ik.push(Fk >> 16 & 255, Fk >> 8 & 255, 255 & Fk)
       }
-      for (const wC of nC) {
+      for (const Tk of yk) {
         const {
-          min: zC,
-          step: bC
-        } = QC.c[wC];
-        ZC.push(Math.round(((0, QC.g)(wC, CC[wC]) - zC) / bC))
+          min: Fk,
+          step: ik
+        } = Xk.d[Tk];
+        Ik.push(Math.round(((0, Xk.g)(Tk, kk[Tk]) - Fk) / ik))
       }
-      return ZC.push(WC(ZC)), wC + function(CC, zC) {
-        let ZC = 0n;
-        for (const wC of CC) ZC = ZC << 8n | BigInt(wC);
-        let QC = "";
-        for (let wC = 0; wC < zC; wC++) QC = NC[Number(ZC % MC)] + QC, ZC /= MC;
-        return QC
-      }(ZC, qC)
+      return Ik.push(tk(Ik)), Tk + function(kk, Fk) {
+        let Ik = 0n;
+        for (const Tk of kk) Ik = Ik << 8n | BigInt(Tk);
+        let Xk = "";
+        for (let Tk = 0; Tk < Fk; Tk++) Xk = Zk[Number(Ik % jk)] + Xk, Ik /= jk;
+        return Xk
+      }(Ik, qk)
     }
 
-    function pC(CC) {
-      for (const zC of CC.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${qC}})`, "gi"))) {
-        const CC = PC(gC(zC[1], oC));
-        if (CC) return CC
+    function Hk(kk) {
+      for (const Fk of kk.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${qk}})`, "gi"))) {
+        const kk = Jk(ek(Fk[1], ak));
+        if (kk) return kk
       }
       return null
     }
 
-    function PC(CC) {
-      if (!CC || CC.length !== oC || WC(CC.slice(0, -1)) !== CC[CC.length - 1]) return null;
-      const zC = CC[0],
-        ZC = {
-          ...QC.f,
-          style: 1 & zC ? "shapes" : "classic"
+    function Jk(kk) {
+      if (!kk || kk.length !== ak || tk(kk.slice(0, -1)) !== kk[kk.length - 1]) return null;
+      const Fk = kk[0],
+        Ik = {
+          ...Xk.f,
+          style: 1 & Fk ? "shapes" : "classic"
         };
-      bC.forEach(((CC, QC) => {
-        ZC[CC] = 0 !== (zC & 1 << QC + 1)
+      ik.forEach(((kk, Xk) => {
+        Ik[kk] = 0 !== (Fk & 1 << Xk + 1)
       }));
-      let wC = 1;
-      for (const QC of fC) ZC[QC] = CC[wC] << 16 | CC[wC + 1] << 8 | CC[wC + 2], wC += 3;
-      for (const bC of nC) {
+      let Tk = 1;
+      for (const Xk of lk) Ik[Xk] = kk[Tk] << 16 | kk[Tk + 1] << 8 | kk[Tk + 2], Tk += 3;
+      for (const ik of yk) {
         const {
-          min: zC,
-          step: nC
-        } = QC.c[bC];
-        ZC[bC] = (0, QC.g)(bC, zC + CC[wC] * nC), wC++
+          min: Fk,
+          step: yk
+        } = Xk.d[ik];
+        Ik[ik] = (0, Xk.g)(ik, Fk + kk[Tk] * yk), Tk++
       }
-      return ZC
+      return Ik
     }
   },
-  34116: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => QC,
-      f: () => wC,
-      g: () => bC,
-      i: () => qC,
-      m: () => oC,
-      n: () => FC,
-      q: () => fC,
-      u: () => nC
+  34122: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Xk,
+      f: () => Tk,
+      g: () => ik,
+      k: () => qk,
+      n: () => ak,
+      q: () => Lk,
+      t: () => lk,
+      u: () => yk
     });
-    const QC = {
+    const Xk = {
         opacity: {
           min: 5,
           max: 100,
@@ -9469,7 +9469,7 @@ export const modules = {
           step: 1
         }
       },
-      wC = Object.freeze({
+      Tk = Object.freeze({
         style: "classic",
         color: 16777215,
         opacity: 100,
@@ -9490,251 +9490,251 @@ export const modules = {
         forGuns: !1
       });
 
-    function bC(CC, zC) {
-      var ZC;
+    function ik(kk, Fk) {
+      var Ik;
       const {
-        min: bC,
-        max: nC,
-        step: fC
-      } = QC[CC];
-      if (!Number.isFinite(zC)) return wC[CC];
-      const oC = (null !== (ZC = String(fC).split(".")[1]) && void 0 !== ZC ? ZC : "").length,
-        qC = Number((Math.round(zC / fC) * fC).toFixed(oC));
-      return Math.min(nC, Math.max(bC, qC))
+        min: ik,
+        max: yk,
+        step: lk
+      } = Xk[kk];
+      if (!Number.isFinite(Fk)) return Tk[kk];
+      const ak = (null !== (Ik = String(lk).split(".")[1]) && void 0 !== Ik ? Ik : "").length,
+        qk = Number((Math.round(Fk / lk) * lk).toFixed(ak));
+      return Math.min(yk, Math.max(ik, qk))
     }
 
-    function nC(CC, zC, ZC) {
-      const QC = "number" === typeof ZC ? bC(zC, ZC) : ZC;
+    function yk(kk, Fk, Ik) {
+      const Xk = "number" === typeof Ik ? ik(Fk, Ik) : Ik;
       return {
-        ...CC,
-        [zC]: QC
+        ...kk,
+        [Fk]: Xk
       }
     }
 
-    function fC(CC, zC) {
-      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      return Object.keys(wC).every((QC => ZC.includes(QC) || CC[QC] === zC[QC]))
+    function lk(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      return Object.keys(Tk).every((Xk => Ik.includes(Xk) || kk[Xk] === Fk[Xk]))
     }
 
-    function oC(CC) {
-      return fC(CC, wC)
+    function ak(kk) {
+      return lk(kk, Tk)
     }
 
-    function qC(CC) {
-      return `#${CC.toString(16).padStart(6,"0")}`
+    function qk(kk) {
+      return `#${kk.toString(16).padStart(6,"0")}`
     }
 
-    function FC(CC) {
-      const zC = /^#?([0-9a-f]{6})$/i.exec(CC.trim());
-      return zC ? parseInt(zC[1], 16) : null
+    function Lk(kk) {
+      const Fk = /^#?([0-9a-f]{6})$/i.exec(kk.trim());
+      return Fk ? parseInt(Fk[1], 16) : null
     }
   },
-  34141: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => WC,
-      f: () => NC
+  34148: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => tk,
+      f: () => Zk
     });
-    var QC = ZC(48),
-      wC = ZC(38),
-      bC = ZC(34134),
-      nC = ZC(34116);
-    const fC = "crosshairCode";
-    let oC = null;
-    const qC = new Set;
+    var Xk = Ik(58),
+      Tk = Ik(41),
+      ik = Ik(34143),
+      yk = Ik(34122);
+    const lk = "crosshairCode";
+    let ak = null;
+    const qk = new Set;
 
-    function FC() {
-      if (null === oC) {
-        var CC;
-        const zC = wC.i.getItem(fC);
-        oC = null !== (CC = "string" === typeof zC ? (0, bC.c)(zC) : null) && void 0 !== CC ? CC : nC.f
+    function Lk() {
+      if (null === ak) {
+        var kk;
+        const Fk = Tk.j.getItem(lk);
+        ak = null !== (kk = "string" === typeof Fk ? (0, ik.f)(Fk) : null) && void 0 !== kk ? kk : yk.f
       }
-      return oC
+      return ak
     }
 
-    function WC(CC) {
-      oC = CC, (0, nC.m)(CC) ? wC.i.removeItem(fC) : wC.i.setItem(fC, (0, bC.g)(CC));
-      for (const zC of qC) zC()
+    function tk(kk) {
+      ak = kk, (0, yk.n)(kk) ? Tk.j.removeItem(lk) : Tk.j.setItem(lk, (0, ik.h)(kk));
+      for (const Fk of qk) Fk()
     }
 
-    function NC() {
-      const [CC, zC] = (0, QC.useState)(FC);
-      return (0, QC.useEffect)((() => {
-        const CC = () => {
-          zC(FC())
+    function Zk() {
+      const [kk, Fk] = (0, Xk.useState)(Lk);
+      return (0, Xk.useEffect)((() => {
+        const kk = () => {
+          Fk(Lk())
         };
-        return CC(), ZC = CC, qC.add(ZC), () => {
-          qC.delete(ZC)
+        return kk(), Ik = kk, qk.add(Ik), () => {
+          qk.delete(Ik)
         };
-        var ZC
-      }), []), CC
+        var Ik
+      }), []), kk
     }
   },
-  34066: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => wC,
-      i: () => QC
+  34071: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Tk,
+      h: () => Xk
     });
-    const QC = "image/jpeg",
-      wC = "jpg"
+    const Xk = "image/jpeg",
+      Tk = "jpg"
   },
-  34069: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => oC,
-      f: () => qC,
-      j: () => FC
+  34073: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => ak,
+      e: () => qk,
+      f: () => Lk
     });
-    var QC = ZC(1609),
-      wC = ZC(3188),
-      bC = ZC(77),
-      nC = ZC(1664),
-      fC = ZC(34066);
+    var Xk = Ik(1631),
+      Tk = Ik(3147),
+      ik = Ik(95),
+      yk = Ik(1682),
+      lk = Ik(34071);
 
-    function oC() {
-      return !(0, bC.isMobileApp)() || QC.d.supports("photos")
+    function ak() {
+      return !(0, ik.isMobileApp)() || Xk.b.supports("photos")
     }
-    async function qC(CC) {
-      var zC, ZC;
-      if ((0, bC.isMobileApp)()) {
+    async function qk(kk) {
+      var Fk, Ik;
+      if ((0, ik.isMobileApp)()) {
         const {
-          saved: zC
-        } = await QC.d.request("photos.save", {
-          data: await (0, wC.d)(CC),
-          mimeType: fC.i
+          saved: Fk
+        } = await Xk.b.request("photos.save", {
+          data: await (0, Tk.f)(kk),
+          mimeType: lk.h
         });
-        return zC ? "saved" : "denied"
+        return Fk ? "saved" : "denied"
       }
-      return (0, bC.isIOS)() && null !== (zC = (ZC = navigator).canShare) && void 0 !== zC && zC.call(ZC, {
-        files: [CC]
-      }) ? FC(CC) : ((0, nC.e)(CC, CC.name), "saved")
+      return (0, ik.isIOS)() && null !== (Fk = (Ik = navigator).canShare) && void 0 !== Fk && Fk.call(Ik, {
+        files: [kk]
+      }) ? Lk(kk) : ((0, yk.c)(kk, kk.name), "saved")
     }
-    async function FC(CC) {
+    async function Lk(kk) {
       try {
         return await navigator.share({
-          files: [CC]
+          files: [kk]
         }), "shared"
-      } catch (zC) {
-        if (zC instanceof DOMException && "AbortError" === zC.name) return "wZ";
-        if (zC instanceof DOMException && "NotAllowedError" === zC.name) return "needsTap";
-        throw zC
+      } catch (Fk) {
+        if (Fk instanceof DOMException && "AbortError" === Fk.name) return "iI";
+        if (Fk instanceof DOMException && "NotAllowedError" === Fk.name) return "needsTap";
+        throw Fk
       }
     }
   },
-  34064: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => qC,
-      e: () => FC,
-      i: () => WC
+  34062: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => qk,
+      e: () => Lk,
+      h: () => tk
     });
-    var QC = ZC(20),
-      wC = ZC(34040),
-      bC = ZC(1557),
-      nC = ZC(34066);
-    const fC = 8294400,
-      oC = .92;
+    var Xk = Ik(25),
+      Tk = Ik(34044),
+      ik = Ik(1580),
+      yk = Ik(34071);
+    const lk = 8294400,
+      ak = .92;
 
-    function qC() {
-      (0, bC.f)(), QC.b.set({
+    function qk() {
+      (0, ik.g)(), Xk.d.set({
         screenshotMode: !0
       })
     }
 
-    function FC() {
-      QC.b.set({
+    function Lk() {
+      Xk.d.set({
         screenshotMode: !1
       })
     }
-    async function WC() {
+    async function tk() {
       const {
-        width: CC,
-        height: zC,
-        scale: ZC
-      } = function(CC, zC, ZC) {
-        const QC = Math.max(1, CC),
-          wC = Math.max(1, zC),
-          bC = Math.min(Math.max(1, ZC), Math.sqrt(fC / (QC * wC)));
+        width: kk,
+        height: Fk,
+        scale: Ik
+      } = function(kk, Fk, Ik) {
+        const Xk = Math.max(1, kk),
+          Tk = Math.max(1, Fk),
+          ik = Math.min(Math.max(1, Ik), Math.sqrt(lk / (Xk * Tk)));
         return {
-          width: Math.round(QC * bC),
-          height: Math.round(wC * bC),
-          scale: bC
+          width: Math.round(Xk * ik),
+          height: Math.round(Tk * ik),
+          scale: ik
         }
       }(window.innerWidth, window.innerHeight, window.devicePixelRatio), {
-        blob: QC
-      } = await wC.devTools.capturePhoto(CC, zC, {
-        scale: ZC,
-        type: nC.i,
-        quality: oC
+        blob: Xk
+      } = await Tk.devTools.capturePhoto(kk, Fk, {
+        scale: Ik,
+        type: yk.h,
+        quality: ak
       });
-      return new File([QC], function(CC) {
-        const zC = CC => String(CC).padStart(2, "0"),
-          ZC = `${CC.getFullYear()}${zC(CC.getMonth()+1)}${zC(CC.getDate())}`,
-          QC = `${zC(CC.getHours())}${zC(CC.getMinutes())}${zC(CC.getSeconds())}`;
-        return `bloxd-${ZC}-${QC}.${nC.e}`
+      return new File([Xk], function(kk) {
+        const Fk = kk => String(kk).padStart(2, "0"),
+          Ik = `${kk.getFullYear()}${Fk(kk.getMonth()+1)}${Fk(kk.getDate())}`,
+          Xk = `${Fk(kk.getHours())}${Fk(kk.getMinutes())}${Fk(kk.getSeconds())}`;
+        return `bloxd-${Ik}-${Xk}.${yk.d}`
       }(new Date), {
-        type: nC.i
+        type: yk.h
       })
     }
   },
-  34107: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => bC,
-      h: () => wC
+  34119: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => ik,
+      d: () => Tk
     });
-    var QC = ZC(20);
+    var Xk = Ik(25);
 
-    function wC(CC, zC) {
-      return CC && !zC
+    function Tk(kk, Fk) {
+      return kk && !Fk
     }
 
-    function bC() {
-      return wC(QC.b.get("isTouchScreen"), QC.b.get("clientEscMenuOptions").touchActionButtons)
+    function ik() {
+      return Tk(Xk.d.get("isTouchScreen"), Xk.d.get("clientEscMenuOptions").touchActionButtons)
     }
   },
-  34046: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => QC
+  34048: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Xk
     });
-    const QC = new Set(["chunkBorders"])
+    const Xk = new Set(["chunkBorders"])
   },
-  34040: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      ALL_DEV_TOOLS: () => nC,
-      coreDevTools: () => qC,
-      devTools: () => oC
+  34044: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      ALL_DEV_TOOLS: () => yk,
+      coreDevTools: () => qk,
+      devTools: () => ak
     });
-    var QC = ZC(615),
-      wC = ZC(1257),
-      bC = ZC(34046);
-    const nC = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function fC() {
+    var Xk = Ik(646),
+      Tk = Ik(1276),
+      ik = Ik(34048);
+    const yk = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function lk() {
       const {
-        noaDevTools: CC
-      } = await ZC.e(236).then((() => ZC(40899)));
-      return CC
+        noaDevTools: kk
+      } = await Ik.e(236).then((() => Ik(41079)));
+      return kk
     }
-    const oC = new class {
+    const ak = new class {
         constructor() {
-          this.loadHost = fC, this.tools = nC
+          this.loadHost = lk, this.tools = yk
         }
-        setHost(CC) {
-          this.tools = null === CC ? nC : CC.tools, this.loadHost = null === CC ? fC : async () => CC
+        setHost(kk) {
+          this.tools = null === kk ? yk : kk.tools, this.loadHost = null === kk ? lk : async () => kk
         }
-        supports(CC) {
-          return this.tools.has(CC)
+        supports(kk) {
+          return this.tools.has(kk)
         }
-        async downloadScene(CC, zC) {
-          const ZC = await this.loadHost();
-          await ZC.downloadScene(CC, zC)
+        async downloadScene(kk, Fk) {
+          const Ik = await this.loadHost();
+          await Ik.downloadScene(kk, Fk)
         }
-        async setAmbientLightIntensity(CC) {
-          const zC = await this.loadHost();
-          await zC.setAmbientLightIntensity(CC)
+        async setAmbientLightIntensity(kk) {
+          const Fk = await this.loadHost();
+          await Fk.setAmbientLightIntensity(kk)
         }
-        async capturePhoto(CC, zC, ZC) {
-          return (await this.loadHost()).capturePhoto(CC, zC, ZC)
+        async capturePhoto(kk, Fk, Ik) {
+          return (await this.loadHost()).capturePhoto(kk, Fk, Ik)
         }
       },
-      qC = {
-        tools: bC.c,
+      qk = {
+        tools: ik.c,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -9745,121 +9745,121 @@ export const modules = {
           throw new Error("No game is drawing yet")
         }
       };
-    QC.z && oC.setHost(qC), (0, wC.y)((() => {
-      oC.setHost(qC)
+    Xk.x && ak.setHost(qk), (0, Tk.B)((() => {
+      ak.setHost(qk)
     }))
   },
-  34194: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => nC,
-      g: () => wC,
-      i: () => FC
+  34222: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => yk,
+      f: () => Tk,
+      h: () => Lk
     });
-    var QC = ZC(1501);
+    var Xk = Ik(1518);
 
-    function wC(CC) {
-      var zC;
+    function Tk(kk) {
+      var Fk;
       return {
-        ...nC.store,
-        yaw: nC.store.yaw + (null !== (zC = QC.b[CC].previewYaw) && void 0 !== zC ? zC : 0)
+        ...yk.store,
+        yaw: yk.store.yaw + (null !== (Fk = Xk.c[kk].previewYaw) && void 0 !== Fk ? Fk : 0)
       }
     }
-    const bC = {
+    const ik = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      nC = {
-        player: bC,
+      yk = {
+        player: ik,
         store: {
-          ...bC,
+          ...ik,
           radius: 33,
           target: [0, 3.9, 0]
         }
       };
 
-    function fC(CC, zC) {
-      CC instanceof Promise ? CC.then(zC).catch((CC => {
-        console.error("Couldn't open the preview", CC)
-      })) : zC(CC)
+    function lk(kk, Fk) {
+      kk instanceof Promise ? kk.then(Fk).catch((kk => {
+        console.error("Couldn't open the preview", kk)
+      })) : Fk(kk)
     }
-    class oC {
-      constructor(CC) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, fC(CC, (CC => {
-          this.closed ? CC.close() : (this.opened = CC, null !== this.size && CC.resize(this.size.width, this.size.height), null !== this.view && CC.show(this.view))
+    class ak {
+      constructor(kk) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, lk(kk, (kk => {
+          this.closed ? kk.close() : (this.opened = kk, null !== this.size && kk.resize(this.size.width, this.size.height), null !== this.view && kk.show(this.view))
         }))
       }
-      show(CC) {
-        var zC;
-        this.view = CC, null === (zC = this.opened) || void 0 === zC || zC.show(CC)
+      show(kk) {
+        var Fk;
+        this.view = kk, null === (Fk = this.opened) || void 0 === Fk || Fk.show(kk)
       }
-      resize(CC, zC) {
-        var ZC;
+      resize(kk, Fk) {
+        var Ik;
         this.size = {
-          width: CC,
-          height: zC
-        }, null === (ZC = this.opened) || void 0 === ZC || ZC.resize(CC, zC)
+          width: kk,
+          height: Fk
+        }, null === (Ik = this.opened) || void 0 === Ik || Ik.resize(kk, Fk)
       }
       close() {
-        var CC;
-        this.closed = !0, null === (CC = this.opened) || void 0 === CC || CC.close(), this.opened = null
+        var kk;
+        this.closed = !0, null === (kk = this.opened) || void 0 === kk || kk.close(), this.opened = null
       }
     }
-    class qC {
-      constructor(CC) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(CC).then((CC => CC.ready)), fC(CC, (CC => {
-          this.closed ? CC.close() : (this.opened = CC, null !== this.size && CC.resize(this.size.width, this.size.height))
+    class qk {
+      constructor(kk) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(kk).then((kk => kk.ready)), lk(kk, (kk => {
+          this.closed ? kk.close() : (this.opened = kk, null !== this.size && kk.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var CC, zC;
-        return null !== (CC = null === (zC = this.opened) || void 0 === zC ? void 0 : zC.isReady()) && void 0 !== CC && CC
+        var kk, Fk;
+        return null !== (kk = null === (Fk = this.opened) || void 0 === Fk ? void 0 : Fk.isReady()) && void 0 !== kk && kk
       }
-      setCosmetic(CC, zC) {
-        var ZC;
-        null === (ZC = this.opened) || void 0 === ZC || ZC.setCosmetic(CC, zC)
+      setCosmetic(kk, Fk) {
+        var Ik;
+        null === (Ik = this.opened) || void 0 === Ik || Ik.setCosmetic(kk, Fk)
       }
-      playEmote(CC) {
-        var zC;
-        null === (zC = this.opened) || void 0 === zC || zC.playEmote(CC)
+      playEmote(kk) {
+        var Fk;
+        null === (Fk = this.opened) || void 0 === Fk || Fk.playEmote(kk)
       }
-      setOrbit(CC) {
-        var zC;
-        null === (zC = this.opened) || void 0 === zC || zC.setOrbit(CC)
+      setOrbit(kk) {
+        var Fk;
+        null === (Fk = this.opened) || void 0 === Fk || Fk.setOrbit(kk)
       }
       resetCamera() {
-        var CC;
-        null === (CC = this.opened) || void 0 === CC || CC.resetCamera()
+        var kk;
+        null === (kk = this.opened) || void 0 === kk || kk.resetCamera()
       }
-      async untilDrawn(CC) {
-        var zC;
-        await this.ready, await (null === (zC = this.opened) || void 0 === zC ? void 0 : zC.untilDrawn(CC))
+      async untilDrawn(kk) {
+        var Fk;
+        await this.ready, await (null === (Fk = this.opened) || void 0 === Fk ? void 0 : Fk.untilDrawn(kk))
       }
-      resize(CC, zC) {
-        var ZC;
+      resize(kk, Fk) {
+        var Ik;
         this.size = {
-          width: CC,
-          height: zC
-        }, null === (ZC = this.opened) || void 0 === ZC || ZC.resize(CC, zC)
+          width: kk,
+          height: Fk
+        }, null === (Ik = this.opened) || void 0 === Ik || Ik.resize(kk, Fk)
       }
       close() {
-        var CC;
-        this.closed = !0, null === (CC = this.opened) || void 0 === CC || CC.close(), this.opened = null
+        var kk;
+        this.closed = !0, null === (kk = this.opened) || void 0 === kk || kk.close(), this.opened = null
       }
     }
-    const FC = new class {
+    const Lk = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(CC) {
-        this.host = CC
+      setHost(kk) {
+        this.host = kk
       }
-      setDefaultHost(CC) {
-        this.makeDefault = CC
+      setDefaultHost(kk) {
+        this.makeDefault = kk
       }
       current() {
         if (null === this.host) {
@@ -9868,99 +9868,99 @@ export const modules = {
         }
         return this.host
       }
-      openMob(CC) {
-        return new oC(this.current().openMob(CC))
+      openMob(kk) {
+        return new ak(this.current().openMob(kk))
       }
-      openPet(CC) {
-        return new oC(this.current().openPet(CC))
+      openPet(kk) {
+        return new ak(this.current().openPet(kk))
       }
-      openMobLineup(CC) {
-        return new oC(this.current().openMobLineup(CC))
+      openMobLineup(kk) {
+        return new ak(this.current().openMobLineup(kk))
       }
-      openCharacter(CC, zC) {
-        return new qC(this.current().openCharacter(CC, zC))
+      openCharacter(kk, Fk) {
+        return new qk(this.current().openCharacter(kk, Fk))
       }
     }
   },
-  34185: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => QC.d,
-      g: () => QC.g,
-      k: () => QC.i
+  34218: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Xk.c,
+      f: () => Xk.f,
+      h: () => Xk.h
     });
-    var QC = ZC(34194);
-    class wC {
-      constructor(CC) {
-        this.load = CC, this.loaded = null, this.loading = null
+    var Xk = Ik(34222);
+    class Tk {
+      constructor(kk) {
+        this.load = kk, this.loaded = null, this.loading = null
       }
-      run(CC) {
-        return null !== this.loaded ? CC(this.loaded) : (this.loading ??= this.load().then((CC => (this.loaded = CC, CC)), (CC => {
-          throw this.loading = null, CC
-        })), this.loading.then(CC))
+      run(kk) {
+        return null !== this.loaded ? kk(this.loaded) : (this.loading ??= this.load().then((kk => (this.loaded = kk, kk)), (kk => {
+          throw this.loading = null, kk
+        })), this.loading.then(kk))
       }
     }
-    class bC {
+    class ik {
       constructor() {
-        this.mobScene = new wC((() => Promise.all([ZC.e(72), ZC.e(232), ZC.e(231), ZC.e(254), ZC.e(96), ZC.e(255), ZC.e(75), ZC.e(74), ZC.e(252), ZC.e(73), ZC.e(262), ZC.e(256), ZC.e(261), ZC.e(259), ZC.e(251), ZC.e(274), ZC.e(228), ZC.e(244), ZC.e(257), ZC.e(260), ZC.e(77), ZC.e(186), ZC.e(222), ZC.e(95), ZC.e(225), ZC.e(240), ZC.e(120), ZC.e(241), ZC.e(76), ZC.e(119), ZC.e(246)]).then((() => ZC(40923))))), this.characterScene = new wC((() => Promise.all([ZC.e(72), ZC.e(232), ZC.e(231), ZC.e(254), ZC.e(96), ZC.e(255), ZC.e(75), ZC.e(74), ZC.e(252), ZC.e(73), ZC.e(262), ZC.e(256), ZC.e(261), ZC.e(259), ZC.e(251), ZC.e(274), ZC.e(228), ZC.e(244), ZC.e(257), ZC.e(260), ZC.e(77), ZC.e(186), ZC.e(222), ZC.e(95), ZC.e(225), ZC.e(240), ZC.e(120), ZC.e(241), ZC.e(76), ZC.e(119), ZC.e(245)]).then((() => ZC(41e3)))))
+        this.mobScene = new Tk((() => Promise.all([Ik.e(72), Ik.e(232), Ik.e(231), Ik.e(254), Ik.e(96), Ik.e(255), Ik.e(75), Ik.e(74), Ik.e(252), Ik.e(73), Ik.e(262), Ik.e(256), Ik.e(261), Ik.e(259), Ik.e(251), Ik.e(274), Ik.e(228), Ik.e(244), Ik.e(257), Ik.e(260), Ik.e(77), Ik.e(186), Ik.e(222), Ik.e(95), Ik.e(225), Ik.e(240), Ik.e(120), Ik.e(241), Ik.e(76), Ik.e(119), Ik.e(246)]).then((() => Ik(41091))))), this.characterScene = new Tk((() => Promise.all([Ik.e(72), Ik.e(232), Ik.e(231), Ik.e(254), Ik.e(96), Ik.e(255), Ik.e(75), Ik.e(74), Ik.e(252), Ik.e(73), Ik.e(262), Ik.e(256), Ik.e(261), Ik.e(259), Ik.e(251), Ik.e(274), Ik.e(228), Ik.e(244), Ik.e(257), Ik.e(260), Ik.e(77), Ik.e(186), Ik.e(222), Ik.e(95), Ik.e(225), Ik.e(240), Ik.e(120), Ik.e(241), Ik.e(76), Ik.e(119), Ik.e(245)]).then((() => Ik(41185)))))
       }
-      openMob(CC) {
-        return this.mobScene.run((zC => zC.openMobPreview(CC)))
+      openMob(kk) {
+        return this.mobScene.run((Fk => Fk.openMobPreview(kk)))
       }
-      openPet(CC) {
-        return this.mobScene.run((zC => zC.openPetPreview(CC)))
+      openPet(kk) {
+        return this.mobScene.run((Fk => Fk.openPetPreview(kk)))
       }
-      openMobLineup(CC) {
-        return this.mobScene.run((zC => zC.openMobLineupPreview(CC)))
+      openMobLineup(kk) {
+        return this.mobScene.run((Fk => Fk.openMobLineupPreview(kk)))
       }
-      openCharacter(CC, zC) {
-        return this.characterScene.run((ZC => ZC.openCharacterPreview(CC, zC)))
+      openCharacter(kk, Fk) {
+        return this.characterScene.run((Ik => Ik.openCharacterPreview(kk, Fk)))
       }
     }
-    QC.i.setDefaultHost((() => new bC))
+    Xk.h.setDefaultHost((() => new ik))
   },
-  6660: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => wC,
-      e: () => bC
+  6644: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Tk,
+      i: () => ik
     });
-    var QC = ZC(38);
-    const wC = "shaderPack";
-    async function bC() {
-      var CC;
-      let zC = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (CC = await QC.g.getItem(wC, zC)) && void 0 !== CC ? CC : null
+    var Xk = Ik(41);
+    const Tk = "shaderPack";
+    async function ik() {
+      var kk;
+      let Fk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (kk = await Xk.g.getItem(Tk, Fk)) && void 0 !== kk ? kk : null
     }
   },
-  34076: (CC, zC, ZC) => {
-    function QC(CC, zC) {
-      return CC && !zC
+  34083: (kk, Fk, Ik) => {
+    function Xk(kk, Fk) {
+      return kk && !Fk
     }
-    ZC.d(zC, {
-      b: () => QC
+    Ik.d(Fk, {
+      c: () => Xk
     })
   },
-  34102: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => bC
+  34111: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => ik
     });
-    var QC = ZC(1029);
+    var Xk = Ik(1076);
 
-    function wC() {
-      var CC, zC;
-      return null !== (CC = null === (zC = screen.orientation) || void 0 === zC ? void 0 : zC.type) && void 0 !== CC ? CC : innerWidth > innerHeight ? "landscape" : "portrait"
+    function Tk() {
+      var kk, Fk;
+      return null !== (kk = null === (Fk = screen.orientation) || void 0 === Fk ? void 0 : Fk.type) && void 0 !== kk ? kk : innerWidth > innerHeight ? "landscape" : "portrait"
     }
-    const bC = new class {
+    const ik = new class {
       constructor() {
         this.holding = !1, this.heldOrientation = "", this.releaseTimer = void 0, this.longHoldTimer = void 0, this.resizers = new Set, this.releaseWhenShown = () => {
           document.hidden || (document.removeEventListener("visibilitychange", this.releaseWhenShown), this.release())
         }
       }
       isHeld() {
-        return this.holding && wC() !== this.heldOrientation && (this.holding = !1), this.holding
+        return this.holding && Tk() !== this.heldOrientation && (this.holding = !1), this.holding
       }
       hold() {
-        this.heldOrientation = wC(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
-          this.holding && (0, QC.IS)(new Error("Game view size held for 60 s"))
+        this.heldOrientation = Tk(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
+          this.holding && (0, Xk.ow)(new Error("Game view size held for 60 s"))
         }), 6e4)
       }
       release() {
@@ -9968,176 +9968,176 @@ export const modules = {
           if (document.hidden) document.addEventListener("visibilitychange", this.releaseWhenShown);
           else {
             this.holding = !1;
-            for (const CC of this.resizers) CC()
+            for (const kk of this.resizers) kk()
           }
         }), 1e3)
       }
-      heldSizer(CC) {
-        let zC = !1;
+      heldSizer(kk) {
+        let Fk = !1;
         return () => {
-          if (zC && this.isHeld()) return null;
-          const ZC = CC();
-          return zC ||= null !== ZC, ZC
+          if (Fk && this.isHeld()) return null;
+          const Ik = kk();
+          return Fk ||= null !== Ik, Ik
         }
       }
-      onRelease(CC) {
-        return this.resizers.add(CC), () => {
-          this.resizers.delete(CC)
+      onRelease(kk) {
+        return this.resizers.add(kk), () => {
+          this.resizers.delete(kk)
         }
       }
     }
   },
-  34072: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => qC,
-      e: () => WC,
-      f: () => FC
+  34079: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => qk,
+      f: () => tk,
+      i: () => Lk
     });
-    var QC = ZC(20),
-      wC = ZC(1609),
-      bC = ZC(38),
-      nC = ZC(3592);
-    const fC = 2592e5,
-      oC = "notificationOptInLastPromptedAt";
-    async function qC() {
-      var CC;
-      const zC = null !== (CC = bC.i.getItem(oC)) && void 0 !== CC ? CC : 0;
-      return Date.now() - zC < fC ? null : WC()
+    var Xk = Ik(25),
+      Tk = Ik(1631),
+      ik = Ik(41),
+      yk = Ik(3612);
+    const lk = 2592e5,
+      ak = "notificationOptInLastPromptedAt";
+    async function qk() {
+      var kk;
+      const Fk = null !== (kk = ik.j.getItem(ak)) && void 0 !== kk ? kk : 0;
+      return Date.now() - Fk < lk ? null : tk()
     }
 
-    function FC() {
-      bC.i.setItem(oC, Date.now())
+    function Lk() {
+      ik.j.setItem(ak, Date.now())
     }
-    async function WC() {
-      return await wC.d.ready, wC.d.supports("notifications") ? QC.b.get("mobilePushNotificationsCanAsk") ? async () => {
-        wC.d.request("notifications.requestPermission", {}).then((CC => {
+    async function tk() {
+      return await Tk.b.ready, Tk.b.supports("notifications") ? Xk.d.get("mobilePushNotificationsCanAsk") ? async () => {
+        Tk.b.request("notifications.requestPermission", {}).then((kk => {
           let {
-            canAsk: zC
-          } = CC;
-          QC.b.set({
-            mobilePushNotificationsCanAsk: zC
+            canAsk: Fk
+          } = kk;
+          Xk.d.set({
+            mobilePushNotificationsCanAsk: Fk
           })
-        }), (CC => {
-          console.error("The app couldn't ask for push notifications:", CC)
+        }), (kk => {
+          console.error("The app couldn't ask for push notifications:", kk)
         }))
-      }: null: await nC.d.canAsk() ? () => nC.d.requestPermission() : null
+      }: null: await yk.b.canAsk() ? () => yk.b.requestPermission() : null
     }
   },
-  34053: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => GC,
-      e: () => qC,
-      h: () => SC,
-      i: () => gC
+  34051: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => xk,
+      f: () => qk,
+      h: () => wk,
+      l: () => ek
     });
-    var QC = ZC(134),
-      wC = ZC(1211),
-      bC = ZC(1149),
-      nC = ZC(1078),
-      fC = ZC(1642);
-    const oC = {
+    var Xk = Ik(149),
+      Tk = Ik(1253),
+      ik = Ik(1194),
+      yk = Ik(1120),
+      lk = Ik(1658);
+    const ak = {
       offline: "homePage:onboardingNameNoAccount",
       outdated: "general:updatedReloading",
       busy: "homePage:changeNameTooFast",
       server: "homePage:changeNameFailed"
     };
 
-    function qC(CC) {
-      return oC[CC]
+    function qk(kk) {
+      return ak[kk]
     }
 
-    function FC(CC) {
-      return (0, fC.c)(CC) ? "outdated" : CC instanceof QC.d ? 429 === CC.httpCode ? "busy" : "server" : "offline"
+    function Lk(kk) {
+      return (0, lk.d)(kk) ? "outdated" : kk instanceof Xk.b ? 429 === kk.httpCode ? "busy" : "server" : "offline"
     }
 
-    function WC(CC, zC, ZC) {
-      return (0, nC.postJsonWithMetricsCookiesAndJsonResponse)(`${bC.clientSideServerUrls.indexUrl}${zC}`, ZC, {
+    function tk(kk, Fk, Ik) {
+      return (0, yk.postJsonWithMetricsCookiesAndJsonResponse)(`${ik.clientSideServerUrls.indexUrl}${Fk}`, Ik, {
         retries: 3
-      }, CC.getMetricsCookies()).catch((CC => (console.error("Bad response from the server when trying to change name:", zC, CC), {
+      }, kk.getMetricsCookies()).catch((kk => (console.error("Bad response from the server when trying to change name:", Fk, kk), {
         outcome: "failed",
-        failure: FC(CC)
+        failure: Lk(kk)
       })))
     }
 
-    function NC(CC) {
-      return "outcome" in CC && "failed" === CC.outcome
+    function Zk(kk) {
+      return "outcome" in kk && "failed" === kk.outcome
     }
 
-    function MC(CC) {
-      return console.error("Error when trying to get with new name from DB", CC), {
+    function jk(kk) {
+      return console.error("Error when trying to get with new name from DB", kk), {
         outcome: "refused",
-        message: CC
+        message: kk
       }
     }
-    async function gC(CC) {
-      const zC = await WC(CC, "/index/name/random", {});
-      return NC(zC) ? zC : "err" in zC ? MC(zC.err) : (CC.setPlayerName(zC.name), {
+    async function ek(kk) {
+      const Fk = await tk(kk, "/index/name/random", {});
+      return Zk(Fk) ? Fk : "err" in Fk ? jk(Fk.err) : (kk.setPlayerName(Fk.name), {
         outcome: "changed",
-        name: zC.name
+        name: Fk.name
       })
     }
-    async function SC(CC, zC) {
-      const ZC = await WC(CC, "/index/name/update", {
-        name: zC
+    async function wk(kk, Fk) {
+      const Ik = await tk(kk, "/index/name/update", {
+        name: Fk
       });
-      return NC(ZC) ? ZC : "err" in ZC ? MC(ZC.err) : ZC.nameExists ? {
+      return Zk(Ik) ? Ik : "err" in Ik ? jk(Ik.err) : Ik.nameExists ? {
         outcome: "taken"
-      } : (CC.setPlayerName(zC), {
+      } : (kk.setPlayerName(Fk), {
         outcome: "changed",
-        name: zC
+        name: Fk
       })
     }
 
-    function pC(CC, zC) {
-      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
-      const QC = 1 === zC ? 1 : 10 ** (zC - 1),
-        bC = String(QC + Math.floor(ZC() * (10 ** zC - QC)));
-      return `${CC.slice(0,wC.i-zC)}${bC}`
+    function Hk(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
+      const Xk = 1 === Fk ? 1 : 10 ** (Fk - 1),
+        ik = String(Xk + Math.floor(Ik() * (10 ** Fk - Xk)));
+      return `${kk.slice(0,Tk.j-Fk)}${ik}`
     }
-    const PC = [1, 2, 3, 4];
-    async function GC(CC, zC) {
-      const ZC = await SC(CC, zC);
-      if ("taken" !== ZC.outcome) return ZC;
-      for (const QC of PC) {
-        const ZC = pC(zC, QC),
-          wC = await SC(CC, ZC);
-        if ("taken" !== wC.outcome) return wC
+    const Jk = [1, 2, 3, 4];
+    async function xk(kk, Fk) {
+      const Ik = await wk(kk, Fk);
+      if ("taken" !== Ik.outcome) return Ik;
+      for (const Xk of Jk) {
+        const Ik = Hk(Fk, Xk),
+          Tk = await wk(kk, Ik);
+        if ("taken" !== Tk.outcome) return Tk
       }
       return {
         outcome: "taken"
       }
     }
   },
-  34082: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => fC,
-      d: () => oC
+  34091: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => lk,
+      f: () => ak
     });
-    var QC = ZC(20);
-    const wC = 24,
-      bC = "farNametags",
-      nC = 1e5;
+    var Xk = Ik(25);
+    const Tk = 24,
+      ik = "farNametags",
+      yk = 1e5;
 
-    function fC() {
-      var CC;
-      return null === (CC = QC.b.get("showDistantNametags")) || void 0 === CC || CC
+    function lk() {
+      var kk;
+      return null === (kk = Xk.d.get("showDistantNametags")) || void 0 === kk || kk
     }
 
-    function oC() {
-      var CC;
-      return null !== (CC = function() {
-        const CC = new URLSearchParams(window.location.search).get(bC),
-          zC = null === CC || "" === CC ? NaN : Number(CC);
-        return Number.isFinite(zC) && zC >= 0 ? Math.min(zC, nC) : null
-      }()) && void 0 !== CC ? CC : fC() ? 0 : wC
+    function ak() {
+      var kk;
+      return null !== (kk = function() {
+        const kk = new URLSearchParams(window.location.search).get(ik),
+          Fk = null === kk || "" === kk ? NaN : Number(kk);
+        return Number.isFinite(Fk) && Fk >= 0 ? Math.min(Fk, yk) : null
+      }()) && void 0 !== kk ? kk : lk() ? 0 : Tk
     }
   },
-  34173: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => wC,
-      e: () => nC
+  34202: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Tk,
+      d: () => yk
     });
-    const QC = [{
+    const Xk = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -10319,79 +10319,79 @@ export const modules = {
       suffix: "K"
     }];
 
-    function wC(CC) {
-      let zC, ZC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof CC) {
-        if (!Number.isFinite(CC)) return "0";
-        if (Math.abs(CC) < 100) {
-          const zC = CC < 0 ? "-" : "",
-            ZC = Math.abs(CC);
-          return ZC >= 10 ? `${zC}${ZC.toFixed(1).replace(/\.0$/,"")}` : `${zC}${ZC.toFixed(2).replace(/\.?0+$/,"")}`
+    function Tk(kk) {
+      let Fk, Ik = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof kk) {
+        if (!Number.isFinite(kk)) return "0";
+        if (Math.abs(kk) < 100) {
+          const Fk = kk < 0 ? "-" : "",
+            Ik = Math.abs(kk);
+          return Ik >= 10 ? `${Fk}${Ik.toFixed(1).replace(/\.0$/,"")}` : `${Fk}${Ik.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        zC = BigInt(Math.floor(CC))
-      } else zC = CC;
-      const wC = zC < 0n ? -zC : zC,
-        bC = zC < 0n ? "-" : "",
-        nC = wC.toString();
-      if (nC.length <= ZC) return `${bC}${nC}`;
-      const fC = 3 * Math.floor((nC.length - 1) / 3);
-      if (fC < 3) return `${bC}${nC}`;
-      if (fC > 3 * QC.length) {
-        const CC = nC[0],
-          zC = nC.slice(1, 3).replace(/0+$/, "");
-        return `${bC}${zC?`${CC}.${zC}`:CC}e${nC.length-1}`
+        Fk = BigInt(Math.floor(kk))
+      } else Fk = kk;
+      const Tk = Fk < 0n ? -Fk : Fk,
+        ik = Fk < 0n ? "-" : "",
+        yk = Tk.toString();
+      if (yk.length <= Ik) return `${ik}${yk}`;
+      const lk = 3 * Math.floor((yk.length - 1) / 3);
+      if (lk < 3) return `${ik}${yk}`;
+      if (lk > 3 * Xk.length) {
+        const kk = yk[0],
+          Fk = yk.slice(1, 3).replace(/0+$/, "");
+        return `${ik}${Fk?`${kk}.${Fk}`:kk}e${yk.length-1}`
       }
       const {
-        threshold: oC,
-        suffix: qC
-      } = QC[QC.length - fC / 3], FC = wC / oC, WC = Number(1000n * (wC % oC) / oC), NC = Number(FC) + WC / 1e3;
-      let MC;
-      return MC = NC >= 100 ? Math.floor(NC).toString() : NC >= 10 ? NC.toFixed(1).replace(/\.0$/, "") : NC.toFixed(2).replace(/\.?0+$/, ""), `${bC}${MC}${qC}`
+        threshold: ak,
+        suffix: qk
+      } = Xk[Xk.length - lk / 3], Lk = Tk / ak, tk = Number(1000n * (Tk % ak) / ak), Zk = Number(Lk) + tk / 1e3;
+      let jk;
+      return jk = Zk >= 100 ? Math.floor(Zk).toString() : Zk >= 10 ? Zk.toFixed(1).replace(/\.0$/, "") : Zk.toFixed(2).replace(/\.?0+$/, ""), `${ik}${jk}${qk}`
     }
-    const bC = QC.map((CC => {
+    const ik = Xk.map((kk => {
       let {
-        threshold: zC,
-        suffix: ZC
-      } = CC;
+        threshold: Fk,
+        suffix: Ik
+      } = kk;
       return {
-        threshold: Number(zC),
-        suffix: ZC
+        threshold: Number(Fk),
+        suffix: Ik
       }
-    })).filter((CC => {
+    })).filter((kk => {
       let {
-        threshold: zC
-      } = CC;
-      return Number.isFinite(zC)
+        threshold: Fk
+      } = kk;
+      return Number.isFinite(Fk)
     }));
 
-    function nC(CC) {
-      const zC = Math.abs(CC),
-        ZC = CC < 0 ? "-" : "";
+    function yk(kk) {
+      const Fk = Math.abs(kk),
+        Ik = kk < 0 ? "-" : "";
       for (const {
-          threshold: QC,
-          suffix: wC
+          threshold: Xk,
+          suffix: Tk
         }
-        of bC)
-        if (zC >= QC) {
-          const CC = zC / QC;
-          if (CC >= 1e3) return `${ZC}${zC.toExponential(2).replace("e+","e")}`;
-          let bC;
-          return bC = CC >= 100 ? Math.floor(CC).toString() : CC >= 10 ? CC.toFixed(1).replace(/\.0$/, "") : CC.toFixed(2).replace(/\.?0+$/, ""), `${ZC}${bC}${wC}`
-        } return `${ZC}${zC}`
+        of ik)
+        if (Fk >= Xk) {
+          const kk = Fk / Xk;
+          if (kk >= 1e3) return `${Ik}${Fk.toExponential(2).replace("e+","e")}`;
+          let ik;
+          return ik = kk >= 100 ? Math.floor(kk).toString() : kk >= 10 ? kk.toFixed(1).replace(/\.0$/, "") : kk.toFixed(2).replace(/\.?0+$/, ""), `${Ik}${ik}${Tk}`
+        } return `${Ik}${Fk}`
     }
   },
-  34162: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => FC,
-      h: () => NC,
-      i: () => WC,
-      l: () => nC,
-      p: () => qC,
-      t: () => oC
+  34180: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Lk,
+      h: () => Zk,
+      i: () => tk,
+      j: () => yk,
+      n: () => qk,
+      r: () => ak
     });
-    var QC = ZC(326);
-    const wC = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
-      bC = {
+    var Xk = Ik(337);
+    const Tk = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
+      ik = {
         Damage: {
           translationKey: "enchantments:damageDescription"
         },
@@ -10466,13 +10466,13 @@ export const modules = {
         }
       };
 
-    function nC(CC) {
-      var zC;
-      return null !== (zC = bC[CC]) && void 0 !== zC ? zC : {
+    function yk(kk) {
+      var Fk;
+      return null !== (Fk = ik[kk]) && void 0 !== Fk ? Fk : {
         translationKey: ""
       }
     }
-    const fC = {
+    const lk = {
       "Wood Enchanting Table": [{
         min: 1,
         max: 2
@@ -10525,76 +10525,76 @@ export const modules = {
       }]
     };
 
-    function oC(CC) {
-      return wC.includes(CC)
+    function ak(kk) {
+      return Tk.includes(kk)
     }
 
-    function qC(CC) {
-      var zC;
-      return !0 === (null === CC || void 0 === CC || null === (zC = CC.customAttributes) || void 0 === zC ? void 0 : zC.cannotEnchant)
+    function qk(kk) {
+      var Fk;
+      return !0 === (null === kk || void 0 === kk || null === (Fk = kk.customAttributes) || void 0 === Fk ? void 0 : Fk.cannotEnchant)
     }
 
-    function FC(CC, zC) {
+    function Lk(kk, Fk) {
       const {
-        max: ZC
-      } = fC[CC].at(-1);
-      return zC <= ZC
+        max: Ik
+      } = lk[kk].at(-1);
+      return Fk <= Ik
     }
 
-    function WC(CC) {
-      const zC = Math.sin(CC / 80),
-        ZC = CC => {
-          if (CC <= 0) return 0;
-          if (CC > 1) return 1;
-          let zC = 0;
-          const ZC = [1, 7, 21, 35, 35, 21, 7, 1];
-          for (let QC = 0; QC < ZC.length; QC++) {
-            zC += (QC % 2 === 0 ? 1 : -1) * ZC[QC] * Math.pow(CC, 2 + QC) / (2 + QC)
+    function tk(kk) {
+      const Fk = Math.sin(kk / 80),
+        Ik = kk => {
+          if (kk <= 0) return 0;
+          if (kk > 1) return 1;
+          let Fk = 0;
+          const Ik = [1, 7, 21, 35, 35, 21, 7, 1];
+          for (let Xk = 0; Xk < Ik.length; Xk++) {
+            Fk += (Xk % 2 === 0 ? 1 : -1) * Ik[Xk] * Math.pow(kk, 2 + Xk) / (2 + Xk)
           }
-          return 72 * zC
+          return 72 * Fk
         },
-        QC = .3 - .78 * zC,
-        wC = .5 - .78 * zC,
-        bC = .6 - .7 * zC,
-        nC = .8 - .6 * zC;
-      let fC = ZC(QC),
-        oC = ZC(wC) - fC,
-        qC = ZC(bC) - oC - fC,
-        FC = ZC(nC) - qC - oC - fC;
-      QC < .041 && (oC /= 1 - fC, qC /= 1 - fC, FC /= 1 - fC, fC = 0), wC < .041 && (fC /= 1 - oC, qC /= 1 - oC, FC /= 1 - oC, oC = 0), bC < .041 && (fC /= 1 - qC, oC /= 1 - qC, FC /= 1 - qC, qC = 0), nC < .041 && (fC /= 1 - FC, oC /= 1 - FC, qC /= 1 - FC, FC = 0);
+        Xk = .3 - .78 * Fk,
+        Tk = .5 - .78 * Fk,
+        ik = .6 - .7 * Fk,
+        yk = .8 - .6 * Fk;
+      let lk = Ik(Xk),
+        ak = Ik(Tk) - lk,
+        qk = Ik(ik) - ak - lk,
+        Lk = Ik(yk) - qk - ak - lk;
+      Xk < .041 && (ak /= 1 - lk, qk /= 1 - lk, Lk /= 1 - lk, lk = 0), Tk < .041 && (lk /= 1 - ak, qk /= 1 - ak, Lk /= 1 - ak, ak = 0), ik < .041 && (lk /= 1 - qk, ak /= 1 - qk, Lk /= 1 - qk, qk = 0), yk < .041 && (lk /= 1 - Lk, ak /= 1 - Lk, qk /= 1 - Lk, Lk = 0);
       return {
-        commonProb: fC,
-        uncommonProb: oC,
-        rareProb: qC,
-        epicProb: FC,
-        legendaryProb: 1 - (FC + qC + oC + fC)
+        commonProb: lk,
+        uncommonProb: ak,
+        rareProb: qk,
+        epicProb: Lk,
+        legendaryProb: 1 - (Lk + qk + ak + lk)
       }
     }
 
-    function NC(CC, zC) {
+    function Zk(kk, Fk) {
       const {
-        min: ZC,
-        max: wC
-      } = fC[CC][zC], bC = QC.c.sampleUniformIntDistribution(ZC, wC, "includeMax");
+        min: Ik,
+        max: Tk
+      } = lk[kk][Fk], ik = Xk.e.sampleUniformIntDistribution(Ik, Tk, "includeMax");
       return {
-        ...WC(bC),
-        level: bC
+        ...tk(ik),
+        level: ik
       }
     }
   },
-  34125: () => {},
-  12756: CC => {
-    CC.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
+  34139: () => {},
+  12750: kk => {
+    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
   },
-  13888: CC => {
-    CC.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
+  13880: kk => {
+    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
   },
-  15367: CC => {
-    CC.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
+  15338: kk => {
+    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
   },
-  15949: CC => {
-    CC.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
+  15861: kk => {
+    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

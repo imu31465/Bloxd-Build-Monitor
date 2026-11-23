@@ -1,228 +1,228 @@
 export const id = 111;
 export const ids = [111];
 export const modules = {
-  4942: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => gC,
-      e: () => RC,
-      f: () => SC,
-      h: () => GC
+  4983: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => ek,
+      h: () => Pk,
+      j: () => wk,
+      m: () => xk
     });
-    var QC = ZC(48),
-      wC = ZC(4947),
-      bC = ZC(4300),
-      nC = ZC(1321),
-      fC = ZC(4971),
-      oC = ZC(1002),
-      qC = ZC.n(oC),
-      FC = ZC(1307),
-      WC = ZC(1645),
-      NC = ZC(4979),
-      MC = ZC(1056);
+    var Xk = Ik(58),
+      Tk = Ik(4988),
+      ik = Ik(4338),
+      yk = Ik(1333),
+      lk = Ik(5016),
+      ak = Ik(1055),
+      qk = Ik.n(ak),
+      Lk = Ik(1324),
+      tk = Ik(1665),
+      Zk = Ik(5022),
+      jk = Ik(1096);
 
-    function gC(CC) {
+    function ek(kk) {
       let {
-        label: zC,
-        onClick: ZC,
-        checked: QC,
-        circleInfoText: wC,
-        className: fC,
-        disabled: oC,
-        note: FC
-      } = CC;
-      return (0, MC.jsxs)("div", {
-        "aria-disabled": oC || void 0,
+        label: Fk,
+        onClick: Ik,
+        checked: Xk,
+        circleInfoText: Tk,
+        className: lk,
+        disabled: ak,
+        note: Lk
+      } = kk;
+      return (0, jk.jsxs)("div", {
+        "aria-disabled": ak || void 0,
         "data-pad-focusable": !0,
-        className: qC()("SettingBox CheckboxContainer", {
-          [fC]: fC,
-          SettingBoxDisabled: oC
+        className: qk()("SettingBox CheckboxContainer", {
+          [lk]: lk,
+          SettingBoxDisabled: ak
         }),
         onClick: () => {
-          oC || ZC(!QC)
+          ak || Ik(!Xk)
         },
-        children: [(0, MC.jsxs)("div", {
+        children: [(0, jk.jsxs)("div", {
           className: "CheckboxInputAndText",
-          children: [(0, MC.jsx)("label", {
+          children: [(0, jk.jsx)("label", {
             className: "CheckboxClickableLabel",
-            children: (0, MC.jsx)(bC.e, {
+            children: (0, jk.jsx)(ik.d, {
               className: "SettingsCheckbox",
-              checked: QC,
-              disabled: oC,
+              checked: Xk,
+              disabled: ak,
               onChange: () => {}
             })
-          }), (0, MC.jsxs)("div", {
+          }), (0, jk.jsxs)("div", {
             className: "CheckboxText",
-            children: [zC, wC && (0, MC.jsx)("span", {
-              onClick: CC => CC.stopPropagation(),
-              children: (0, MC.jsx)(nC.b, {
+            children: [Fk, Tk && (0, jk.jsx)("span", {
+              onClick: kk => kk.stopPropagation(),
+              children: (0, jk.jsx)(yk.c, {
                 className: "SettingsTextInputCircleInfo",
-                hoverInfo: wC
+                hoverInfo: Tk
               })
             })]
           })]
-        }), FC && (0, MC.jsx)("div", {
+        }), Lk && (0, jk.jsx)("div", {
           className: "SettingNote",
-          children: FC
+          children: Lk
         })]
       })
     }
 
-    function SC(CC) {
+    function wk(kk) {
       let {
-        name: zC,
-        onChange: ZC,
-        min: wC,
-        max: bC,
-        step: fC,
-        initValue: oC,
-        circleInfoText: FC,
-        format: WC,
-        className: NC,
-        padStep: gC,
-        disabled: SC = !1,
-        selectableMax: pC,
-        cappedNote: GC,
-        onChangeComplete: RC
-      } = CC;
-      const [AC, xC] = (0, QC.useState)(oC), JC = (0, QC.useRef)(oC);
-      (0, QC.useEffect)((() => {
-        JC.current = oC, xC(oC)
-      }), [oC]);
-      const IC = void 0 !== pC && pC < bC,
-        iC = IC ? {
-          "--slider-selectable": (pC - wC) / (bC - wC)
+        name: Fk,
+        onChange: Ik,
+        min: Tk,
+        max: ik,
+        step: lk,
+        initValue: ak,
+        circleInfoText: Lk,
+        format: tk,
+        className: Zk,
+        padStep: ek,
+        disabled: wk = !1,
+        selectableMax: Hk,
+        cappedNote: xk,
+        onChangeComplete: Pk
+      } = kk;
+      const [Kk, Qk] = (0, Xk.useState)(ak), sk = (0, Xk.useRef)(ak);
+      (0, Xk.useEffect)((() => {
+        sk.current = ak, Qk(ak)
+      }), [ak]);
+      const Vk = void 0 !== Hk && Hk < ik,
+        zk = Vk ? {
+          "--slider-selectable": (Hk - Tk) / (ik - Tk)
         } : void 0;
-      return (0, MC.jsxs)("div", {
-        className: qC()("SettingBox SettingsSliderDiv", {
-          [NC]: NC,
-          SettingBoxDisabled: SC,
-          SliderCapped: IC
+      return (0, jk.jsxs)("div", {
+        className: qk()("SettingBox SettingsSliderDiv", {
+          [Zk]: Zk,
+          SettingBoxDisabled: wk,
+          SliderCapped: Vk
         }),
-        style: iC,
-        children: [(0, MC.jsxs)("div", {
+        style: zk,
+        children: [(0, jk.jsxs)("div", {
           className: "SliderText",
-          children: [`${zC}: ${WC?WC(AC):AC}`, FC && (0, MC.jsx)(nC.b, {
+          children: [`${Fk}: ${tk?tk(Kk):Kk}`, Lk && (0, jk.jsx)(yk.c, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: FC
+            hoverInfo: Lk
           })]
-        }), (0, MC.jsx)("div", {
+        }), (0, jk.jsx)("div", {
           className: "SliderDiv",
-          children: (0, MC.jsx)(PC, {
-            value: AC,
-            min: wC,
-            max: bC,
-            step: fC,
-            onChange: CC => {
-              if (IC && CC >= pC && AC === pC) return;
-              const zC = IC ? Math.min(CC, pC) : CC;
-              JC.current = zC, xC(zC), ZC(zC)
+          children: (0, jk.jsx)(Jk, {
+            value: Kk,
+            min: Tk,
+            max: ik,
+            step: lk,
+            onChange: kk => {
+              if (Vk && kk >= Hk && Kk === Hk) return;
+              const Fk = Vk ? Math.min(kk, Hk) : kk;
+              sk.current = Fk, Qk(Fk), Ik(Fk)
             },
-            onChangeComplete: RC && (() => {
-              RC(JC.current)
+            onChangeComplete: Pk && (() => {
+              Pk(sk.current)
             }),
-            format: WC,
-            padStep: gC,
-            disabled: SC
+            format: tk,
+            padStep: ek,
+            disabled: wk
           })
-        }), IC && GC && (0, MC.jsx)("div", {
+        }), Vk && xk && (0, jk.jsx)("div", {
           className: "SettingNote",
-          children: GC
+          children: xk
         })]
       })
     }
-    const pC = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+    const Hk = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
-    function PC(CC) {
-      var zC;
+    function Jk(kk) {
+      var Fk;
       let {
-        value: ZC,
-        min: bC,
-        max: nC,
-        step: fC,
-        onChange: oC,
-        orientation: qC,
-        reverse: FC,
-        setIsChanging: WC,
-        tooltip: gC,
-        labels: SC,
-        handleLabel: PC,
-        format: GC,
-        onChangeStart: RC,
-        onChangeComplete: AC,
-        padStep: xC,
-        disabled: JC = !1
-      } = CC;
-      const IC = (0, QC.useRef)(null),
-        iC = (0, QC.useRef)(null);
-      (0, QC.useLayoutEffect)((() => {
-        var CC, zC, ZC;
-        const QC = null !== (CC = null === (zC = IC.current) || void 0 === zC ? void 0 : zC.querySelector(".rangeslider")) && void 0 !== CC ? CC : null;
-        null === QC || void 0 === QC || QC.setAttribute("data-pad-slider", ""), null === QC || void 0 === QC || QC.setAttribute("data-pad-focusable", ""), null === QC || void 0 === QC || null === (ZC = QC.querySelector(".rangeslider__handle")) || void 0 === ZC || ZC.setAttribute("data-pad-slider-handle", ""), iC.current = QC
-      }), []), (0, QC.useLayoutEffect)((() => {
-        var CC, zC;
-        JC ? null === (CC = iC.current) || void 0 === CC || CC.setAttribute("aria-disabled", "true") : null === (zC = iC.current) || void 0 === zC || zC.removeAttribute("aria-disabled")
-      }), [JC]);
-      const vC = (null !== (zC = String(fC).split(".")[1]) && void 0 !== zC ? zC : "").length,
-        eC = CC => {
-          const zC = Number((Math.round((CC - bC) / fC) * fC + bC).toFixed(vC));
-          return Math.min(nC, Math.max(bC, zC))
+        value: Ik,
+        min: ik,
+        max: yk,
+        step: lk,
+        onChange: ak,
+        orientation: qk,
+        reverse: Lk,
+        setIsChanging: tk,
+        tooltip: ek,
+        labels: wk,
+        handleLabel: Jk,
+        format: xk,
+        onChangeStart: Pk,
+        onChangeComplete: Kk,
+        padStep: Qk,
+        disabled: sk = !1
+      } = kk;
+      const Vk = (0, Xk.useRef)(null),
+        zk = (0, Xk.useRef)(null);
+      (0, Xk.useLayoutEffect)((() => {
+        var kk, Fk, Ik;
+        const Xk = null !== (kk = null === (Fk = Vk.current) || void 0 === Fk ? void 0 : Fk.querySelector(".rangeslider")) && void 0 !== kk ? kk : null;
+        null === Xk || void 0 === Xk || Xk.setAttribute("data-pad-slider", ""), null === Xk || void 0 === Xk || Xk.setAttribute("data-pad-focusable", ""), null === Xk || void 0 === Xk || null === (Ik = Xk.querySelector(".rangeslider__handle")) || void 0 === Ik || Ik.setAttribute("data-pad-slider-handle", ""), zk.current = Xk
+      }), []), (0, Xk.useLayoutEffect)((() => {
+        var kk, Fk;
+        sk ? null === (kk = zk.current) || void 0 === kk || kk.setAttribute("aria-disabled", "true") : null === (Fk = zk.current) || void 0 === Fk || Fk.removeAttribute("aria-disabled")
+      }), [sk]);
+      const Sk = (null !== (Fk = String(lk).split(".")[1]) && void 0 !== Fk ? Fk : "").length,
+        vk = kk => {
+          const Fk = Number((Math.round((kk - ik) / lk) * lk + ik).toFixed(Sk));
+          return Math.min(yk, Math.max(ik, Fk))
         },
-        hC = (0, QC.useRef)(AC);
-      hC.current = AC, (0, QC.useEffect)((() => {
-        const CC = IC.current;
-        if (!CC) return;
-        const zC = CC => {
-          var zC;
-          pC.has(CC.key) && (null === (zC = hC.current) || void 0 === zC || zC.call(hC))
+        Ek = (0, Xk.useRef)(Kk);
+      Ek.current = Kk, (0, Xk.useEffect)((() => {
+        const kk = Vk.current;
+        if (!kk) return;
+        const Fk = kk => {
+          var Fk;
+          Hk.has(kk.key) && (null === (Fk = Ek.current) || void 0 === Fk || Fk.call(Ek))
         };
-        return CC.addEventListener("keyup", zC), () => {
-          CC.removeEventListener("keyup", zC)
+        return kk.addEventListener("keyup", Fk), () => {
+          kk.removeEventListener("keyup", Fk)
         }
       }), []);
-      const KC = (0, QC.useRef)(!1);
-      return (0, NC.g)(iC, {
-        adjust: CC => {
-          if (JC) return;
-          const zC = null !== xC && void 0 !== xC ? xC : Math.max(fC, Math.round((nC - bC) / 20 / fC) * fC),
-            QC = eC(ZC + CC * zC * (FC ? -1 : 1));
-          QC !== ZC && (null === RC || void 0 === RC || RC(), oC(QC), null === AC || void 0 === AC || AC())
+      const Ok = (0, Xk.useRef)(!1);
+      return (0, Zk.g)(zk, {
+        adjust: kk => {
+          if (sk) return;
+          const Fk = null !== Qk && void 0 !== Qk ? Qk : Math.max(lk, Math.round((yk - ik) / 20 / lk) * lk),
+            Xk = vk(Ik + kk * Fk * (Lk ? -1 : 1));
+          Xk !== Ik && (null === Pk || void 0 === Pk || Pk(), ak(Xk), null === Kk || void 0 === Kk || Kk())
         },
-        setFraction: CC => {
-          if (JC) return;
-          const zC = eC(bC + (FC ? 1 - CC : CC) * (nC - bC));
-          zC !== ZC && (KC.current || (KC.current = !0, null === RC || void 0 === RC || RC()), oC(zC))
+        setFraction: kk => {
+          if (sk) return;
+          const Fk = vk(ik + (Lk ? 1 - kk : kk) * (yk - ik));
+          Fk !== Ik && (Ok.current || (Ok.current = !0, null === Pk || void 0 === Pk || Pk()), ak(Fk))
         },
         endDrag: () => {
-          KC.current && (KC.current = !1, null === AC || void 0 === AC || AC())
+          Ok.current && (Ok.current = !1, null === Kk || void 0 === Kk || Kk())
         }
-      }), (0, MC.jsx)("div", {
-        ref: IC,
+      }), (0, jk.jsx)("div", {
+        ref: Vk,
         style: {
           display: "contents"
         },
-        children: (0, MC.jsx)(wC.b, {
-          value: ZC,
-          min: bC,
-          max: nC,
-          step: fC,
-          onChange: oC,
-          orientation: qC,
-          reverse: FC,
-          tooltip: gC,
-          labels: SC,
-          handleLabel: PC,
-          format: GC,
+        children: (0, jk.jsx)(Tk.c, {
+          value: Ik,
+          min: ik,
+          max: yk,
+          step: lk,
+          onChange: ak,
+          orientation: qk,
+          reverse: Lk,
+          tooltip: ek,
+          labels: wk,
+          handleLabel: Jk,
+          format: xk,
           onChangeStart: () => {
-            null === RC || void 0 === RC || RC(), null === WC || void 0 === WC || WC(!0)
+            null === Pk || void 0 === Pk || Pk(), null === tk || void 0 === tk || tk(!0)
           },
           onChangeComplete: () => {
-            null === WC || void 0 === WC || WC(!1), null === AC || void 0 === AC || AC()
+            null === tk || void 0 === tk || tk(!1), null === Kk || void 0 === Kk || Kk()
           }
         })
       })
     }
-    async function GC() {
-      const CC = FC.NotificationProvider.showPromptPopup({
+    async function xk() {
+      const kk = Lk.NotificationProvider.showPromptPopup({
         title: "settingsMenu:reloadPagePopupTitle",
         subtitle: "settingsMenu:reloadPagePopupSubtitle",
         confirmText: "settingsMenu:reloadPagePopupConfirm",
@@ -230,454 +230,454 @@ export const modules = {
         cancelText: "general:cancel",
         cancelTooltip: ""
       });
-      !0 === await CC.getResult() && (0, WC.reloadBloxd)()
+      !0 === await kk.getResult() && (0, tk.reloadBloxd)()
     }
 
-    function RC(CC) {
+    function Pk(kk) {
       let {
-        label: zC,
-        options: ZC,
-        value: QC,
-        onChange: wC,
-        circleInfoText: bC
-      } = CC;
-      return (0, MC.jsxs)("div", {
+        label: Fk,
+        options: Ik,
+        value: Xk,
+        onChange: Tk,
+        circleInfoText: ik
+      } = kk;
+      return (0, jk.jsxs)("div", {
         className: "SettingBox SegmentedSettingRow",
-        children: [(0, MC.jsxs)("div", {
+        children: [(0, jk.jsxs)("div", {
           className: "SliderText",
-          children: [zC, bC && (0, MC.jsx)(nC.b, {
+          children: [Fk, ik && (0, jk.jsx)(yk.c, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: bC
+            hoverInfo: ik
           })]
-        }), (0, MC.jsx)(fC.b, {
-          ariaLabel: zC,
-          options: ZC,
-          value: QC,
-          onChange: wC
+        }), (0, jk.jsx)(lk.b, {
+          ariaLabel: Fk,
+          options: Ik,
+          value: Xk,
+          onChange: Tk
         })]
       })
     }
   },
-  6663: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      default: () => UC
+  6646: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      default: () => hk
     });
-    var QC = ZC(48),
-      wC = ZC(1463),
-      bC = ZC(6560),
-      nC = ZC(1169),
-      fC = ZC(326),
-      oC = ZC(1295),
-      qC = ZC(1453),
-      FC = ZC(1388),
-      WC = ZC(1321),
-      NC = ZC(2575),
-      MC = ZC(2718),
-      gC = ZC(4491),
-      SC = ZC(1076),
-      pC = ZC(1439),
-      PC = ZC(77),
-      GC = ZC(1143);
-    const RC = ZC.p + "static/media/bloxdhubLogo.6a6c367af2ad6e6f1eb3.webp";
-    var AC = ZC(1002),
-      xC = ZC.n(AC),
-      JC = ZC(1013),
-      IC = ZC(1307),
-      iC = ZC(6556),
-      vC = ZC(1056);
-    const eC = (0, QC.lazy)((() => Promise.all([ZC.e(107), ZC.e(77), ZC.e(133), ZC.e(132), ZC.e(112), ZC.e(397)]).then((() => ZC(6594))).then((CC => ({
-      default: CC.ShaderPackPublishForm
+    var Xk = Ik(58),
+      Tk = Ik(1485),
+      ik = Ik(6544),
+      yk = Ik(1217),
+      lk = Ik(337),
+      ak = Ik(1318),
+      qk = Ik(1475),
+      Lk = Ik(1406),
+      tk = Ik(1333),
+      Zk = Ik(2525),
+      jk = Ik(2659),
+      ek = Ik(4543),
+      wk = Ik(1118),
+      Hk = Ik(1453),
+      Jk = Ik(95),
+      xk = Ik(1179);
+    const Pk = Ik.p + "static/media/bloxdhubLogo.6a6c367af2ad6e6f1eb3.webp";
+    var Kk = Ik(1055),
+      Qk = Ik.n(Kk),
+      sk = Ik(1066),
+      Vk = Ik(1324),
+      zk = Ik(6541),
+      Sk = Ik(1096);
+    const vk = (0, Xk.lazy)((() => Promise.all([Ik.e(107), Ik.e(77), Ik.e(133), Ik.e(132), Ik.e(112), Ik.e(397)]).then((() => Ik(6582))).then((kk => ({
+      default: kk.ShaderPackPublishForm
     })))));
 
-    function hC(CC) {
+    function Ek(kk) {
       let {
-        details: zC,
-        owner: ZC,
-        onChanged: wC
-      } = CC;
+        details: Fk,
+        owner: Ik,
+        onChanged: Tk
+      } = kk;
       const {
-        t: nC
-      } = (0, GC.y)(), fC = (0, qC.useNavigatePreserveSearch)(), {
-        userContext: WC
-      } = (0, SC.e)(), [NC, MC] = (0, QC.useState)(!1), [gC, PC] = (0, QC.useState)(null), [RC, AC] = (0, QC.useState)(!1), {
-        packId: hC,
-        name: KC,
-        description: YC,
-        live: dC
-      } = zC;
-      async function mC(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wC;
-        MC(!0), PC(null);
+        t: yk
+      } = (0, xk.y)(), lk = (0, qk.useNavigatePreserveSearch)(), {
+        userContext: tk
+      } = (0, wk.d)(), [Zk, jk] = (0, Xk.useState)(!1), [ek, Jk] = (0, Xk.useState)(null), [Pk, Kk] = (0, Xk.useState)(!1), {
+        packId: Ek,
+        name: Ok,
+        description: nk,
+        live: Gk
+      } = Fk;
+      async function pk(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Tk;
+        jk(!0), Jk(null);
         try {
-          await CC(), zC()
-        } catch (ZC) {
-          console.error("Failed to change a shader pack", ZC), PC((0, iC.z)(ZC, nC, "shaderPackListing:ownerActionFailed"))
+          await kk(), Fk()
+        } catch (Ik) {
+          console.error("Failed to change a shader pack", Ik), Jk((0, zk.C)(Ik, yk, "shaderPackListing:ownerActionFailed"))
         } finally {
-          MC(!1)
+          jk(!1)
         }
       }
-      const HC = (0, iC.u)(WC);
-      return (0, vC.jsxs)("section", {
+      const uk = (0, zk.u)(tk);
+      return (0, Sk.jsxs)("section", {
         className: "ShaderPackOwnerPanel",
-        children: [(0, vC.jsx)("h2", {
+        children: [(0, Sk.jsx)("h2", {
           className: "ShaderPackSectionTitle",
-          children: nC("general:manage")
-        }), (0, iC.X)(ZC, !(null === dC || void 0 === dC || !dC.renderId), Date.now(), nC).map((CC => (0, vC.jsxs)("div", {
-          className: xC()("ShaderPackOwnerNotice", {
-            Warning: "warning" === CC.tone
+          children: yk("general:manage")
+        }), (0, zk.Z)(Ik, !(null === Gk || void 0 === Gk || !Gk.renderId), Date.now(), yk).map((kk => (0, Sk.jsxs)("div", {
+          className: Qk()("ShaderPackOwnerNotice", {
+            Warning: "warning" === kk.tone
           }),
-          children: [(0, vC.jsx)(JC.c, {
-            name: "warning" === CC.tone ? "triangle-exclamation" : "circle-info"
-          }), (0, vC.jsxs)("div", {
-            children: [CC.text, CC.detail && (0, vC.jsx)("pre", {
+          children: [(0, Sk.jsx)(sk.e, {
+            name: "warning" === kk.tone ? "triangle-exclamation" : "circle-info"
+          }), (0, Sk.jsxs)("div", {
+            children: [kk.text, kk.detail && (0, Sk.jsx)("pre", {
               className: "ShaderPackOwnerNoticeDetail",
-              children: CC.detail
+              children: kk.detail
             })]
           })]
-        }, CC.text))), zC.ban && (0, vC.jsxs)("div", {
+        }, kk.text))), Fk.ban && (0, Sk.jsxs)("div", {
           className: "ShaderPackOwnerNotice Warning",
-          children: [(0, vC.jsx)(JC.c, {
+          children: [(0, Sk.jsx)(sk.e, {
             name: "ban"
-          }), (0, vC.jsxs)("div", {
-            children: ["Banned by ", zC.ban.byName, " on ", new Date(zC.ban.at).toLocaleString()]
+          }), (0, Sk.jsxs)("div", {
+            children: ["Banned by ", Fk.ban.byName, " on ", new Date(Fk.ban.at).toLocaleString()]
           })]
-        }), gC && (0, vC.jsx)("div", {
+        }), ek && (0, Sk.jsx)("div", {
           className: "ShaderPackOwnerError",
-          children: gC
-        }), (0, vC.jsxs)("div", {
+          children: ek
+        }), (0, Sk.jsxs)("div", {
           className: "ShaderPackOwnerActions",
-          children: [(0, vC.jsxs)(FC.O, {
-            disabled: NC,
+          children: [(0, Sk.jsxs)(Lk.Q, {
+            disabled: Zk,
             onClick: () => {
               !async function() {
-                const CC = await IC.NotificationProvider.showInputPopup({
+                const kk = await Vk.NotificationProvider.showInputPopup({
                   title: "shaderPackListing:renameTitle",
-                  initialValue: KC,
-                  maxLength: bC.y,
+                  initialValue: Ok,
+                  maxLength: ik.C,
                   submitText: "general:save",
-                  validate: CC => CC.trim().length < bC.A ? nC("shaderPackListing:nameTooShort", {
-                    min: String(bC.A)
+                  validate: kk => kk.trim().length < ik.E ? yk("shaderPackListing:nameTooShort", {
+                    min: String(ik.E)
                   }) : null
                 }).getResult();
-                "notificationTornDown" !== CC && "submit" === (null === CC || void 0 === CC ? void 0 : CC.type) && CC.value.trim() !== KC && await mC((() => pC.d.updateShaderPack(WC, {
-                  packId: hC,
-                  name: CC.value.trim()
+                "notificationTornDown" !== kk && "submit" === (null === kk || void 0 === kk ? void 0 : kk.type) && kk.value.trim() !== Ok && await pk((() => Hk.e.updateShaderPack(tk, {
+                  packId: Ek,
+                  name: kk.value.trim()
                 })))
               }()
             },
-            children: [(0, vC.jsx)(JC.c, {
+            children: [(0, Sk.jsx)(sk.e, {
               name: "pen"
-            }), " ", nC("shaderPackListing:rename")]
-          }), (0, vC.jsxs)(FC.O, {
-            disabled: NC,
+            }), " ", yk("shaderPackListing:rename")]
+          }), (0, Sk.jsxs)(Lk.Q, {
+            disabled: Zk,
             onClick: () => {
               !async function() {
-                const CC = await IC.NotificationProvider.showInputPopup({
+                const kk = await Vk.NotificationProvider.showInputPopup({
                   title: "shaderPackListing:editDescription",
-                  initialValue: YC,
-                  maxLength: bC.o,
+                  initialValue: nk,
+                  maxLength: ik.q,
                   multiline: !0,
                   allowEmptySubmit: !0,
                   submitText: "general:save"
                 }).getResult();
-                "notificationTornDown" !== CC && "submit" === (null === CC || void 0 === CC ? void 0 : CC.type) && CC.value.trim() !== YC && await mC((() => pC.d.updateShaderPack(WC, {
-                  packId: hC,
-                  description: CC.value.trim()
+                "notificationTornDown" !== kk && "submit" === (null === kk || void 0 === kk ? void 0 : kk.type) && kk.value.trim() !== nk && await pk((() => Hk.e.updateShaderPack(tk, {
+                  packId: Ek,
+                  description: kk.value.trim()
                 })))
               }()
             },
-            children: [(0, vC.jsx)(JC.c, {
+            children: [(0, Sk.jsx)(sk.e, {
               name: "file-lines"
-            }), " ", nC("shaderPackListing:editDescription")]
-          }), (0, vC.jsxs)(FC.O, {
-            disabled: NC || ZC.isBanned && !ZC.listed,
+            }), " ", yk("shaderPackListing:editDescription")]
+          }), (0, Sk.jsxs)(Lk.Q, {
+            disabled: Zk || Ik.isBanned && !Ik.listed,
             onClick: () => {
-              mC((() => pC.d.updateShaderPack(WC, {
-                packId: hC,
-                listed: !ZC.listed
+              pk((() => Hk.e.updateShaderPack(tk, {
+                packId: Ek,
+                listed: !Ik.listed
               })))
             },
-            children: [(0, vC.jsx)(JC.c, {
-              name: ZC.listed ? "eye-slash" : "eye"
-            }), " ", nC(ZC.listed ? "shaderPackListing:unlist" : "shaderPackListing:relist")]
-          }), !ZC.isBanned && (0, vC.jsxs)(FC.g, {
-            disabled: NC,
+            children: [(0, Sk.jsx)(sk.e, {
+              name: Ik.listed ? "eye-slash" : "eye"
+            }), " ", yk(Ik.listed ? "shaderPackListing:unlist" : "shaderPackListing:relist")]
+          }), !Ik.isBanned && (0, Sk.jsxs)(Lk.d, {
+            disabled: Zk,
             onClick: () => {
-              AC(!RC)
+              Kk(!Pk)
             },
-            children: [(0, vC.jsx)(JC.c, {
+            children: [(0, Sk.jsx)(sk.e, {
               name: "upload"
-            }), " ", nC("shaderPackListing:uploadVersion")]
-          }), (0, vC.jsxs)(FC.K, {
-            disabled: NC || ZC.isBanned,
+            }), " ", yk("shaderPackListing:uploadVersion")]
+          }), (0, Sk.jsxs)(Lk.J, {
+            disabled: Zk || Ik.isBanned,
             onClick: () => {
               !async function() {
-                !0 === await IC.NotificationProvider.showPromptPopup({
+                !0 === await Vk.NotificationProvider.showPromptPopup({
                   title: "shaderPackListing:deleteTitle",
                   subtitle: "shaderPackListing:deleteSubtitle",
                   confirmText: "general:delete",
                   cancelText: "general:cancel",
                   destructive: !0
-                }).getResult() && await mC((() => pC.d.deleteShaderPack(WC, hC)), (() => {
-                  fC(`${iC.W}?section=mine`, {
+                }).getResult() && await pk((() => Hk.e.deleteShaderPack(tk, Ek)), (() => {
+                  lk(`${zk.X}?section=mine`, {
                     replace: !0
                   })
                 }))
               }()
             },
-            children: [(0, vC.jsx)(JC.c, {
+            children: [(0, Sk.jsx)(sk.e, {
               name: "trash-can"
-            }), " ", nC("general:delete")]
-          }), HC && (0, vC.jsxs)(FC.K, {
-            disabled: NC,
+            }), " ", yk("general:delete")]
+          }), uk && (0, Sk.jsxs)(Lk.J, {
+            disabled: Zk,
             onClick: () => {
-              mC((() => pC.d.setShaderPackBanned(WC, hC, !ZC.isBanned)))
+              pk((() => Hk.e.setShaderPackBanned(tk, Ek, !Ik.isBanned)))
             },
-            children: [(0, vC.jsx)(JC.c, {
-              name: ZC.isBanned ? "circle-check" : "ban"
-            }), " ", ZC.isBanned ? "Unban" : "Ban"]
+            children: [(0, Sk.jsx)(sk.e, {
+              name: Ik.isBanned ? "circle-check" : "ban"
+            }), " ", Ik.isBanned ? "Unban" : "Ban"]
           })]
-        }), RC && (0, vC.jsx)(QC.Suspense, {
-          fallback: (0, vC.jsx)(oC.d, {}),
-          children: (0, vC.jsx)(eC, {
+        }), Pk && (0, Sk.jsx)(Xk.Suspense, {
+          fallback: (0, Sk.jsx)(ak.c, {}),
+          children: (0, Sk.jsx)(vk, {
             existing: {
-              packId: hC,
-              name: KC,
-              description: YC
+              packId: Ek,
+              name: Ok,
+              description: nk
             },
             onPublished: () => {
-              AC(!1), wC()
+              Kk(!1), Tk()
             }
           })
         })]
       })
     }
-    var KC = ZC(60),
-      YC = ZC(1806),
-      dC = ZC(1228),
-      mC = ZC(4979),
-      HC = ZC(1149),
-      EC = ZC(6570),
-      lC = ZC(6562),
-      XC = ZC(6580);
+    var Ok = Ik(74),
+      nk = Ik(1844),
+      Gk = Ik(1263),
+      pk = Ik(5022),
+      uk = Ik(1194),
+      bk = Ik(6560),
+      Rk = Ik(6551),
+      Uk = Ik(6569);
 
-    function cC(CC) {
+    function Ck(kk) {
       let {
-        item: zC
-      } = CC;
+        item: Fk
+      } = kk;
       const {
-        t: ZC
-      } = (0, GC.y)(), [wC] = (0, EC.f)(), [nC, fC] = (0, QC.useState)(wC), [oC, qC] = (0, QC.useState)(!1), [FC, WC] = (0, QC.useState)(!1), {
-        s3Url: NC
-      } = HC.clientSideServerUrls, {
-        width: MC,
-        height: gC
-      } = bC.s.large, SC = (0, bC.w)(NC, zC, nC, "large"), {
-        renderVersion: pC
-      } = zC;
-      return (0, vC.jsxs)("div", {
+        t: Ik
+      } = (0, xk.y)(), [Tk] = (0, bk.h)(), [yk, lk] = (0, Xk.useState)(Tk), [ak, qk] = (0, Xk.useState)(!1), [Lk, tk] = (0, Xk.useState)(!1), {
+        s3Url: Zk
+      } = uk.clientSideServerUrls, {
+        width: jk,
+        height: ek
+      } = ik.u.large, wk = (0, ik.y)(Zk, Fk, yk, "large"), {
+        renderVersion: Hk
+      } = Fk;
+      return (0, Sk.jsxs)("div", {
         className: "ShaderPackPreviews",
-        children: [(0, vC.jsx)(XC.c, {
-          selected: nC,
-          onSelect: CC => {
-            fC(CC), qC(!1)
+        children: [(0, Sk.jsx)(Uk.c, {
+          selected: yk,
+          onSelect: kk => {
+            lk(kk), qk(!1)
           },
-          imageUrl: CC => (0, bC.w)(NC, zC, CC, "thumb")
-        }), (0, vC.jsxs)("div", {
+          imageUrl: kk => (0, ik.y)(Zk, Fk, kk, "thumb")
+        }), (0, Sk.jsxs)("div", {
           className: "ShaderPackPreviewStage",
-          children: [!oC && (0, vC.jsxs)("button", {
+          children: [!ak && (0, Sk.jsxs)("button", {
             type: "button",
             className: "ShaderPackPreviewMain",
-            title: null === pC ? void 0 : ZC("shaderPackListing:fullSize"),
-            disabled: null === pC,
+            title: null === Hk ? void 0 : Ik("shaderPackListing:fullSize"),
+            disabled: null === Hk,
             onClick: () => {
-              WC(!0)
+              tk(!0)
             },
-            children: [(0, vC.jsx)("img", {
-              src: SC,
-              width: MC,
-              height: gC,
-              alt: ZC(iC.gb[nC]),
+            children: [(0, Sk.jsx)("img", {
+              src: wk,
+              width: jk,
+              height: ek,
+              alt: Ik(zk.ib[yk]),
               draggable: !1
-            }), (0, vC.jsx)(lC.c, {
-              item: zC
+            }), (0, Sk.jsx)(Rk.d, {
+              item: Fk
             })]
-          }), !oC && null !== pC && (0, vC.jsxs)(TC, {
+          }), !ak && null !== Hk && (0, Sk.jsxs)(fk, {
             side: "Right",
             onClick: () => {
-              qC(!0)
+              qk(!0)
             },
-            children: [(0, vC.jsx)(JC.c, {
+            children: [(0, Sk.jsx)(sk.e, {
               name: "arrows-left-right"
-            }), " ", ZC("shaderPackListing:compare")]
-          }), oC && null !== pC && (0, vC.jsx)(sC, {
-            item: zC,
-            packUrl: SC,
-            baselineUrl: (0, bC.m)(NC, pC, nC, "large")
-          }), oC && (0, vC.jsx)(TC, {
+            }), " ", Ik("shaderPackListing:compare")]
+          }), ak && null !== Hk && (0, Sk.jsx)(Wk, {
+            item: Fk,
+            packUrl: wk,
+            baselineUrl: (0, ik.p)(Zk, Hk, yk, "large")
+          }), ak && (0, Sk.jsx)(fk, {
             side: "Left",
             onClick: () => {
-              qC(!1)
+              qk(!1)
             },
-            children: ZC("shaderPackListing:withPack")
-          }), oC && (0, vC.jsx)(TC, {
+            children: Ik("shaderPackListing:withPack")
+          }), ak && (0, Sk.jsx)(fk, {
             side: "Right",
             onClick: () => {
-              qC(!1)
+              qk(!1)
             },
-            children: ZC("shaderPackListing:withoutPack")
+            children: Ik("shaderPackListing:withoutPack")
           })]
-        }), FC && (0, vC.jsx)(uC, {
-          fullUrl: (0, bC.w)(NC, zC, nC, "full"),
-          largeUrl: SC,
-          alt: ZC(iC.gb[nC]),
+        }), Lk && (0, Sk.jsx)(Nk, {
+          fullUrl: (0, ik.y)(Zk, Fk, yk, "full"),
+          largeUrl: wk,
+          alt: Ik(zk.ib[yk]),
           onClose: () => {
-            WC(!1)
+            tk(!1)
           }
         })]
       })
     }
 
-    function uC(CC) {
+    function Nk(kk) {
       let {
-        fullUrl: zC,
-        largeUrl: ZC,
-        alt: wC,
-        onClose: bC
-      } = CC;
-      const nC = (0, QC.useRef)(null);
-      return (0, dC.u)("popup", nC, bC), (0, QC.useEffect)((() => {
-        function CC(CC) {
-          "Escape" === CC.key && (CC.stopPropagation(), bC())
+        fullUrl: Fk,
+        largeUrl: Ik,
+        alt: Tk,
+        onClose: ik
+      } = kk;
+      const yk = (0, Xk.useRef)(null);
+      return (0, Gk.t)("popup", yk, ik), (0, Xk.useEffect)((() => {
+        function kk(kk) {
+          "Escape" === kk.key && (kk.stopPropagation(), ik())
         }
-        return window.addEventListener("keydown", CC, !0), () => {
-          window.removeEventListener("keydown", CC, !0)
+        return window.addEventListener("keydown", kk, !0), () => {
+          window.removeEventListener("keydown", kk, !0)
         }
-      }), [bC]), (0, KC.createPortal)((0, vC.jsxs)("div", {
-        ref: nC,
+      }), [ik]), (0, Ok.createPortal)((0, Sk.jsxs)("div", {
+        ref: yk,
         className: "ShaderPackFullSize",
-        onClick: bC,
-        children: [(0, vC.jsx)("img", {
+        onClick: ik,
+        children: [(0, Sk.jsx)("img", {
           className: "ShaderPackFullSizeImage",
-          src: zC,
-          alt: wC,
+          src: Fk,
+          alt: Tk,
           draggable: !1,
           style: {
-            backgroundImage: `url(${ZC})`
+            backgroundImage: `url(${Ik})`
           }
-        }), (0, vC.jsx)(FC.k, {
+        }), (0, Sk.jsx)(Lk.k, {
           className: "ShaderPackFullSizeClose",
-          onClick: bC
+          onClick: ik
         })]
       }), document.body)
     }
-    const rC = 5;
+    const ck = 5;
 
-    function sC(CC) {
+    function Wk(kk) {
       let {
-        item: zC,
-        packUrl: ZC,
-        baselineUrl: wC
-      } = CC;
+        item: Fk,
+        packUrl: Ik,
+        baselineUrl: Tk
+      } = kk;
       const {
-        t: nC
-      } = (0, GC.y)(), [fC, oC] = (0, QC.useState)(50), qC = (0, QC.useRef)(!1), FC = (0, QC.useRef)(null), {
-        width: WC,
-        height: NC
-      } = bC.s.large;
+        t: yk
+      } = (0, xk.y)(), [lk, ak] = (0, Xk.useState)(50), qk = (0, Xk.useRef)(!1), Lk = (0, Xk.useRef)(null), {
+        width: tk,
+        height: Zk
+      } = ik.u.large;
 
-      function MC(CC) {
-        oC((zC => (0, YC.c)(zC + CC, 0, 100)))
+      function jk(kk) {
+        ak((Fk => (0, nk.e)(Fk + kk, 0, 100)))
       }
 
-      function gC(CC) {
-        const zC = CC.currentTarget.getBoundingClientRect();
-        oC((0, YC.c)((CC.clientX - zC.left) / zC.width * 100, 0, 100))
+      function ek(kk) {
+        const Fk = kk.currentTarget.getBoundingClientRect();
+        ak((0, nk.e)((kk.clientX - Fk.left) / Fk.width * 100, 0, 100))
       }
-      return (0, mC.g)(FC, {
-        adjust: CC => {
-          MC(CC * rC)
+      return (0, pk.g)(Lk, {
+        adjust: kk => {
+          jk(kk * ck)
         },
-        setFraction: CC => {
-          oC(100 * CC)
+        setFraction: kk => {
+          ak(100 * kk)
         },
         endDrag: () => {}
-      }), (0, vC.jsxs)("div", {
-        ref: FC,
+      }), (0, Sk.jsxs)("div", {
+        ref: Lk,
         className: "ShaderPackCompare",
         "data-pad-slider": "",
         "data-pad-focusable": "",
         role: "slider",
         tabIndex: 0,
-        "aria-label": nC("shaderPackListing:compare"),
+        "aria-label": yk("shaderPackListing:compare"),
         "aria-valuemin": 0,
         "aria-valuemax": 100,
-        "aria-valuenow": Math.round(fC),
+        "aria-valuenow": Math.round(lk),
         style: {
-          "--split": `${fC}%`
+          "--split": `${lk}%`
         },
-        onKeyDown: function(CC) {
-          const zC = "ArrowLeft" === CC.key ? -rC : "ArrowRight" === CC.key ? rC : 0;
-          0 !== zC && (CC.preventDefault(), MC(zC))
+        onKeyDown: function(kk) {
+          const Fk = "ArrowLeft" === kk.key ? -ck : "ArrowRight" === kk.key ? ck : 0;
+          0 !== Fk && (kk.preventDefault(), jk(Fk))
         },
-        onPointerDown: CC => {
-          qC.current = !0, CC.currentTarget.setPointerCapture(CC.pointerId), gC(CC)
+        onPointerDown: kk => {
+          qk.current = !0, kk.currentTarget.setPointerCapture(kk.pointerId), ek(kk)
         },
-        onPointerMove: CC => {
-          qC.current && gC(CC)
+        onPointerMove: kk => {
+          qk.current && ek(kk)
         },
         onPointerUp: () => {
-          qC.current = !1
+          qk.current = !1
         },
         onPointerCancel: () => {
-          qC.current = !1
+          qk.current = !1
         },
-        children: [(0, vC.jsx)("img", {
+        children: [(0, Sk.jsx)("img", {
           className: "ShaderPackCompareBaseline",
-          src: wC,
-          width: WC,
-          height: NC,
+          src: Tk,
+          width: tk,
+          height: Zk,
           alt: "",
           draggable: !1,
           style: {
-            backgroundImage: `url(${ZC})`
+            backgroundImage: `url(${Ik})`
           }
-        }), (0, vC.jsx)("div", {
+        }), (0, Sk.jsx)("div", {
           className: "ShaderPackCompareLine"
-        }), (0, vC.jsx)("img", {
+        }), (0, Sk.jsx)("img", {
           className: "ShaderPackComparePack",
-          src: ZC,
-          width: WC,
-          height: NC,
+          src: Ik,
+          width: tk,
+          height: Zk,
           alt: "",
           draggable: !1
-        }), (0, vC.jsx)(lC.c, {
-          item: zC,
+        }), (0, Sk.jsx)(Rk.d, {
+          item: Fk,
           className: "ShaderPackCompareNotice"
         })]
       })
     }
 
-    function TC(CC) {
+    function fk(kk) {
       let {
-        side: zC,
-        onClick: ZC,
-        children: QC
-      } = CC;
-      return (0, vC.jsx)("button", {
+        side: Fk,
+        onClick: Ik,
+        children: Xk
+      } = kk;
+      return (0, Sk.jsx)("button", {
         type: "button",
-        className: `ShaderPackStageButton ${zC}`,
-        onClick: ZC,
-        children: (0, vC.jsx)("span", {
+        className: `ShaderPackStageButton ${Fk}`,
+        onClick: Ik,
+        children: (0, Sk.jsx)("span", {
           className: "ShaderPackStageButtonFace SmallTextBold",
-          children: QC
+          children: Xk
         })
       })
     }
-    var aC = ZC(4942),
-      tC = ZC(296),
-      DC = ZC(6660);
-    const jC = {
+    var Bk = Ik(4983),
+      dk = Ik(309),
+      Yk = Ik(6644);
+    const Ak = {
       compiler: "shaderPack:compilerUnavailable",
       download: "shaderPackListing:useDownloadFailed",
       apiVersion: "shaderPackListing:useOtherApiVersion",
@@ -686,397 +686,397 @@ export const modules = {
       save: "shaderPack:saveFailed"
     };
 
-    function yC(CC) {
+    function gk(kk) {
       const {
-        userContext: zC
-      } = (0, SC.e)(), [wC, bC] = (0, QC.useState)(null), [nC, fC] = (0, QC.useState)(!1), [oC, qC] = (0, QC.useState)(!1), [FC, WC] = (0, QC.useState)(null), NC = null === CC || void 0 === CC ? void 0 : CC.packId, MC = null === CC || void 0 === CC ? void 0 : CC.sourceHash;
-      return (0, QC.useEffect)((() => {
-        if (fC(!1), WC(null), void 0 === NC) return;
-        let CC = !1;
-        return Promise.all([(0, PC.hasUsableWebGpuAdapter)(), (0, DC.e)()]).then((zC => {
-          let [ZC, QC] = zC;
-          var wC;
-          CC || (bC(ZC), fC((null === QC || void 0 === QC || null === (wC = QC.listing) || void 0 === wC ? void 0 : wC.packId) === NC && QC.listing.sourceHash === MC))
-        })).catch((zC => {
-          console.error("Failed to check whether this shader pack can be used", zC), CC || bC(!1)
+        userContext: Fk
+      } = (0, wk.d)(), [Tk, ik] = (0, Xk.useState)(null), [yk, lk] = (0, Xk.useState)(!1), [ak, qk] = (0, Xk.useState)(!1), [Lk, tk] = (0, Xk.useState)(null), Zk = null === kk || void 0 === kk ? void 0 : kk.packId, jk = null === kk || void 0 === kk ? void 0 : kk.sourceHash;
+      return (0, Xk.useEffect)((() => {
+        if (lk(!1), tk(null), void 0 === Zk) return;
+        let kk = !1;
+        return Promise.all([(0, Jk.hasUsableWebGpuAdapter)(), (0, Yk.i)()]).then((Fk => {
+          let [Ik, Xk] = Fk;
+          var Tk;
+          kk || (ik(Ik), lk((null === Xk || void 0 === Xk || null === (Tk = Xk.listing) || void 0 === Tk ? void 0 : Tk.packId) === Zk && Xk.listing.sourceHash === jk))
+        })).catch((Fk => {
+          console.error("Failed to check whether this shader pack can be used", Fk), kk || ik(!1)
         })), () => {
-          CC = !0
+          kk = !0
         }
-      }), [NC, MC]), {
-        webGpuUsable: wC,
-        inUse: nC,
-        busy: oC,
-        errorKey: FC,
+      }), [Zk, jk]), {
+        webGpuUsable: Tk,
+        inUse: yk,
+        busy: ak,
+        errorKey: Lk,
         use: () => {
-          null !== CC && async function(CC) {
-            qC(!0), WC(null);
+          null !== kk && async function(kk) {
+            qk(!0), tk(null);
             try {
               const {
-                installListedShaderPack: QC
-              } = await Promise.all([ZC.e(77), ZC.e(133), ZC.e(113)]).then((() => ZC(40318))), wC = await QC({
-                packId: CC.packId,
-                sourceHash: CC.sourceHash,
-                name: CC.name,
-                ownerName: CC.ownerName,
-                description: CC.description
+                installListedShaderPack: Xk
+              } = await Promise.all([Ik.e(77), Ik.e(133), Ik.e(113)]).then((() => Ik(40505))), Tk = await Xk({
+                packId: kk.packId,
+                sourceHash: kk.sourceHash,
+                name: kk.name,
+                ownerName: kk.ownerName,
+                description: kk.description
               });
-              if ("failed" === wC.kind) return void WC(jC[wC.reason]);
-              fC(!0), pC.d.recordShaderPackDownload(zC, CC.packId).catch((CC => {
-                console.error("Failed to count a shader pack's download", CC)
-              })), (0, aC.h)()
-            } catch (QC) {
-              console.error("Failed to use the shader pack", QC), WC("shaderPack:unexpectedError")
+              if ("failed" === Tk.kind) return void tk(Ak[Tk.reason]);
+              lk(!0), Hk.e.recordShaderPackDownload(Fk, kk.packId).catch((kk => {
+                console.error("Failed to count a shader pack's download", kk)
+              })), (0, Bk.m)()
+            } catch (Xk) {
+              console.error("Failed to use the shader pack", Xk), tk("shaderPack:unexpectedError")
             } finally {
-              qC(!1)
+              qk(!1)
             }
-          }(CC)
+          }(kk)
         }
       }
     }
 
-    function LC(CC) {
+    function mk(kk) {
       let {
-        packUse: zC
-      } = CC;
+        packUse: Fk
+      } = kk;
       const {
-        t: ZC
-      } = (0, GC.y)(), {
-        webGpuUsable: QC,
-        inUse: wC,
-        busy: bC,
-        errorKey: nC,
-        use: fC
-      } = zC;
-      return (0, vC.jsxs)("div", {
+        t: Ik
+      } = (0, xk.y)(), {
+        webGpuUsable: Xk,
+        inUse: Tk,
+        busy: ik,
+        errorKey: yk,
+        use: lk
+      } = Fk;
+      return (0, Sk.jsxs)("div", {
         className: "ShaderPackUse",
-        children: [(0, vC.jsxs)(FC.o, {
-          disabled: !0 !== QC || wC,
-          loading: bC,
-          onClick: fC,
-          children: [(0, vC.jsx)(JC.c, {
-            name: wC ? "check" : "download"
-          }), " ", ZC(wC ? "shaderPackListing:inUse" : "shaderPackListing:use")]
-        }), !1 === QC && (0, vC.jsx)("div", {
+        children: [(0, Sk.jsxs)(Lk.m, {
+          disabled: !0 !== Xk || Tk,
+          loading: ik,
+          onClick: lk,
+          children: [(0, Sk.jsx)(sk.e, {
+            name: Tk ? "check" : "download"
+          }), " ", Ik(Tk ? "shaderPackListing:inUse" : "shaderPackListing:use")]
+        }), !1 === Xk && (0, Sk.jsx)("div", {
           className: "ShaderPackUseNote",
-          children: ZC((0, tC.k)() ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
-        }), nC && (0, vC.jsx)("div", {
+          children: Ik((0, dk.l)() ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
+        }), yk && (0, Sk.jsx)("div", {
           className: "ShaderPackUseNote Error",
-          children: ZC(nC)
+          children: Ik(yk)
         })]
       })
     }
 
-    function UC() {
-      var CC;
+    function hk() {
+      var kk;
       const {
-        t: zC
-      } = (0, GC.y)(), ZC = (0, qC.useNavigatePreserveSearch)(), {
-        packId: bC
-      } = (0, wC.C)(), {
-        userContext: nC,
-        isUserContextUpdating: fC
-      } = (0, SC.e)(), [WC, NC] = (0, QC.useState)(null), [MC, PC] = (0, QC.useState)(null), [RC, AC] = (0, QC.useState)(0), xC = (0, QC.useRef)(0);
+        t: Fk
+      } = (0, xk.y)(), Ik = (0, qk.useNavigatePreserveSearch)(), {
+        packId: ik
+      } = (0, Tk.A)(), {
+        userContext: yk,
+        isUserContextUpdating: lk
+      } = (0, wk.d)(), [tk, Zk] = (0, Xk.useState)(null), [jk, Jk] = (0, Xk.useState)(null), [Pk, Kk] = (0, Xk.useState)(0), Qk = (0, Xk.useRef)(0);
 
-      function JC() {
-        var CC;
-        null !== (CC = (0, qC.getPreviousLocation)()) && void 0 !== CC && CC.startsWith(iC.W) ? ZC(-1) : ZC(iC.W)
-      }(0, gC.e)(JC), (0, EC.b)(), (0, QC.useEffect)((() => {
-        if (fC || void 0 === bC) return;
-        const CC = ++xC.current;
-        PC(null), pC.d.getShaderPack(nC, bC).then((zC => {
-          xC.current === CC && NC(zC)
-        })).catch((zC => {
-          xC.current === CC && (console.error("Failed to get the shader pack", zC), NC(null), PC({
-            error: zC
+      function sk() {
+        var kk;
+        null !== (kk = (0, qk.getPreviousLocation)()) && void 0 !== kk && kk.startsWith(zk.X) ? Ik(-1) : Ik(zk.X)
+      }(0, ek.b)(sk), (0, bk.c)(), (0, Xk.useEffect)((() => {
+        if (lk || void 0 === ik) return;
+        const kk = ++Qk.current;
+        Jk(null), Hk.e.getShaderPack(yk, ik).then((Fk => {
+          Qk.current === kk && Zk(Fk)
+        })).catch((Fk => {
+          Qk.current === kk && (console.error("Failed to get the shader pack", Fk), Zk(null), Jk({
+            error: Fk
           }))
         }))
-      }), [bC, nC, fC, RC]);
-      const IC = () => {
-          AC((CC => CC + 1))
+      }), [ik, yk, lk, Pk]);
+      const Vk = () => {
+          Kk((kk => kk + 1))
         },
-        eC = (null === WC || void 0 === WC ? void 0 : WC.packId) === bC ? WC : null,
-        KC = (0, EC.j)(),
-        YC = yC(null !== (CC = null === eC || void 0 === eC ? void 0 : eC.live) && void 0 !== CC ? CC : null),
-        dC = null !== eC && void 0 !== eC && eC.live ? (0, vC.jsx)(BC, {
-          item: eC.live,
-          favourites: KC,
-          packUse: YC
+        vk = (null === tk || void 0 === tk ? void 0 : tk.packId) === ik ? tk : null,
+        Ok = (0, bk.i)(),
+        nk = gk(null !== (kk = null === vk || void 0 === vk ? void 0 : vk.live) && void 0 !== kk ? kk : null),
+        Gk = null !== vk && void 0 !== vk && vk.live ? (0, Sk.jsx)(rk, {
+          item: vk.live,
+          favourites: Ok,
+          packUse: nk
         }) : null;
-      return (0, vC.jsxs)("article", {
+      return (0, Sk.jsxs)("article", {
         className: "ShaderPackInformation AnimFadeIn",
-        children: [(0, vC.jsx)(FC.c, {
-          onClick: JC,
-          children: zC("shaderPackListing:backToPacks")
-        }), null === eC && null === MC && (0, vC.jsx)("div", {
+        children: [(0, Sk.jsx)(Lk.c, {
+          onClick: sk,
+          children: Fk("shaderPackListing:backToPacks")
+        }), null === vk && null === jk && (0, Sk.jsx)("div", {
           className: "ShaderPackInformationMessage",
-          children: (0, vC.jsx)(oC.d, {})
-        }), null !== MC && (0, vC.jsxs)("div", {
+          children: (0, Sk.jsx)(ak.c, {})
+        }), null !== jk && (0, Sk.jsxs)("div", {
           className: "ShaderPackInformationMessage",
-          children: [(0, iC.z)(MC.error, zC, "shaderPackListing:loadPackFailed"), (0, vC.jsx)(FC.g, {
-            onClick: IC,
-            children: zC("general:tryAgain")
+          children: [(0, zk.C)(jk.error, Fk, "shaderPackListing:loadPackFailed"), (0, Sk.jsx)(Lk.d, {
+            onClick: Vk,
+            children: Fk("general:tryAgain")
           })]
-        }), null !== eC && null === MC && (0, vC.jsxs)("div", {
+        }), null !== vk && null === jk && (0, Sk.jsxs)("div", {
           className: "ShaderPackInformationBody",
-          children: [(0, vC.jsxs)("header", {
+          children: [(0, Sk.jsxs)("header", {
             className: "ShaderPackInformationHeader",
-            children: [(0, vC.jsx)("h1", {
+            children: [(0, Sk.jsx)("h1", {
               className: "FullyFancyText",
-              children: eC.name
-            }), dC]
-          }), eC.live && (0, vC.jsx)(cC, {
-            item: eC.live
-          }), eC.live && (0, vC.jsx)(OC, {
-            item: eC.live,
-            ownerPreview: eC.ownerPreview,
-            bloxdhubSlug: eC.bloxdhubSlug,
-            actions: dC
-          }), eC.owner && (0, vC.jsx)(hC, {
-            details: eC,
-            owner: eC.owner,
-            onChanged: IC
+              children: vk.name
+            }), Gk]
+          }), vk.live && (0, Sk.jsx)(Ck, {
+            item: vk.live
+          }), vk.live && (0, Sk.jsx)(Dk, {
+            item: vk.live,
+            ownerPreview: vk.ownerPreview,
+            bloxdhubSlug: vk.bloxdhubSlug,
+            actions: Gk
+          }), vk.owner && (0, Sk.jsx)(Ek, {
+            details: vk,
+            owner: vk.owner,
+            onChanged: Vk
           })]
         })]
       })
     }
 
-    function BC(CC) {
+    function rk(kk) {
       let {
-        item: zC,
-        favourites: ZC,
-        packUse: QC
-      } = CC;
-      const wC = ZC.isFavourite(zC.packId);
-      return (0, vC.jsxs)("div", {
+        item: Fk,
+        favourites: Ik,
+        packUse: Xk
+      } = kk;
+      const Tk = Ik.isFavourite(Fk.packId);
+      return (0, Sk.jsxs)("div", {
         className: "ShaderPackInformationActions",
-        children: [PC.featureFlags.settings.canUseShaderPacks && (0, vC.jsx)(LC, {
-          packUse: QC
-        }), (0, vC.jsx)(FC.x, {
+        children: [Jk.featureFlags.settings.canUseShaderPacks && (0, Sk.jsx)(mk, {
+          packUse: Xk
+        }), (0, Sk.jsx)(Lk.t, {
           className: "ShaderPackInformationLike",
           onClick: () => {
-            ZC.toggle(zC.packId)
+            Ik.toggle(Fk.packId)
           },
-          isLiked: !0 === wC,
-          isLoading: null === wC
+          isLiked: !0 === Tk,
+          isLoading: null === Tk
         })]
       })
     }
 
-    function OC(CC) {
+    function Dk(kk) {
       let {
-        item: zC,
-        ownerPreview: ZC,
-        bloxdhubSlug: QC,
-        actions: wC
-      } = CC;
+        item: Fk,
+        ownerPreview: Ik,
+        bloxdhubSlug: Xk,
+        actions: Tk
+      } = kk;
       const {
-        t: fC
-      } = (0, GC.y)(), oC = (0, MC.q)(), FC = null === QC ? null : (0, bC.e)(QC);
-      return (0, vC.jsxs)("div", {
+        t: lk
+      } = (0, xk.y)(), ak = (0, jk.o)(), Lk = null === Xk ? null : (0, ik.e)(Xk);
+      return (0, Sk.jsxs)("div", {
         className: "ShaderPackFacts",
-        children: [zC.description && (0, vC.jsx)("p", {
+        children: [Fk.description && (0, Sk.jsx)("p", {
           className: "ShaderPackDescription",
-          children: zC.description
-        }), (0, vC.jsxs)("div", {
+          children: Fk.description
+        }), (0, Sk.jsxs)("div", {
           className: "ShaderPackFeatureList",
-          children: [(null !== ZC || null !== FC) && (0, vC.jsx)("div", {
+          children: [(null !== Ik || null !== Lk) && (0, Sk.jsx)("div", {
             className: "ShaderPackAuthor",
-            children: null !== ZC ? (0, vC.jsxs)(vC.Fragment, {
-              children: [(0, vC.jsx)(NC.f, {
-                playerSocialPreview: ZC,
+            children: null !== Ik ? (0, Sk.jsxs)(Sk.Fragment, {
+              children: [(0, Sk.jsx)(Zk.g, {
+                playerSocialPreview: Ik,
                 showLocation: !1,
                 linkToProfile: !0
-              }), null !== FC && (0, vC.jsx)("a", {
+              }), null !== Lk && (0, Sk.jsx)("a", {
                 className: "ShaderPackBloxdhubLogo",
-                href: FC,
+                href: Lk,
                 target: "_blank",
                 rel: "noopener noreferrer",
-                children: (0, vC.jsx)("img", {
-                  src: RC,
-                  alt: bC.b
+                children: (0, Sk.jsx)("img", {
+                  src: Pk,
+                  alt: ik.d
                 })
               })]
-            }) : (0, vC.jsxs)("a", {
+            }) : (0, Sk.jsxs)("a", {
               className: "ShaderPackBloxdhubName",
-              href: FC,
+              href: Lk,
               target: "_blank",
               rel: "noopener noreferrer",
-              children: [bC.b, (0, vC.jsx)("img", {
-                src: RC,
+              children: [ik.d, (0, Sk.jsx)("img", {
+                src: Pk,
                 alt: ""
               })]
             })
-          }), iC.B.filter((CC => zC.features.includes(CC))).map((CC => (0, vC.jsx)(qC.LinkPreserveSearch, {
+          }), zk.E.filter((kk => Fk.features.includes(kk))).map((kk => (0, Sk.jsx)(qk.LinkPreserveSearch, {
             className: "ShaderPackFeature",
-            to: (0, iC.M)(CC),
-            children: fC(iC.Q[CC])
-          }, CC)))]
-        }), wC, (0, vC.jsxs)("dl", {
+            to: (0, zk.O)(kk),
+            children: lk(zk.R[kk])
+          }, kk)))]
+        }), Tk, (0, Sk.jsxs)("dl", {
           className: "ShaderPackFactList",
-          children: [(0, vC.jsxs)("div", {
-            children: [(0, vC.jsx)("dt", {
-              children: fC("shaderPackListing:downloads")
-            }), (0, vC.jsx)("dd", {
-              children: (0, nC.Z)(zC.downloads)
+          children: [(0, Sk.jsxs)("div", {
+            children: [(0, Sk.jsx)("dt", {
+              children: lk("shaderPackListing:downloads")
+            }), (0, Sk.jsx)("dd", {
+              children: (0, yk.Q)(Fk.downloads)
             })]
-          }), (0, vC.jsx)(kC, {
-            label: fC("shaderPackListing:updated"),
-            time: zC.listedUpdatedAt,
-            now: oC
-          }), (0, vC.jsx)(kC, {
-            label: fC("shaderPackListing:created"),
-            time: zC.publishedAt,
-            now: oC
-          }), null !== zC.gpuCost && (0, vC.jsxs)("div", {
-            children: [(0, vC.jsx)("dt", {
-              children: fC("shaderPackListing:lag")
-            }), (0, vC.jsx)("dd", {
-              children: fC("shaderPackListing:lagPercent", {
-                percent: String((0, iC.V)(zC.gpuCost))
+          }), (0, Sk.jsx)(Mk, {
+            label: lk("shaderPackListing:updated"),
+            time: Fk.listedUpdatedAt,
+            now: ak
+          }), (0, Sk.jsx)(Mk, {
+            label: lk("shaderPackListing:created"),
+            time: Fk.publishedAt,
+            now: ak
+          }), null !== Fk.gpuCost && (0, Sk.jsxs)("div", {
+            children: [(0, Sk.jsx)("dt", {
+              children: lk("shaderPackListing:lag")
+            }), (0, Sk.jsx)("dd", {
+              children: lk("shaderPackListing:lagPercent", {
+                percent: String((0, zk.W)(Fk.gpuCost))
               })
             })]
-          }), (0, vC.jsxs)("div", {
-            children: [(0, vC.jsx)("dt", {
-              children: fC("shaderPackListing:size")
-            }), (0, vC.jsx)("dd", {
-              children: fC("shaderPackListing:sizeValue", {
-                kilobytes: String((0, iC.S)(zC.sourceBytes))
+          }), (0, Sk.jsxs)("div", {
+            children: [(0, Sk.jsx)("dt", {
+              children: lk("shaderPackListing:size")
+            }), (0, Sk.jsx)("dd", {
+              children: lk("shaderPackListing:sizeValue", {
+                kilobytes: String((0, zk.V)(Fk.sourceBytes))
               })
             })]
-          }), (0, vC.jsxs)("div", {
-            children: [(0, vC.jsx)("dt", {
-              children: fC("shaderPackListing:files")
-            }), (0, vC.jsx)("dd", {
-              children: zC.fileCount
+          }), (0, Sk.jsxs)("div", {
+            children: [(0, Sk.jsx)("dt", {
+              children: lk("shaderPackListing:files")
+            }), (0, Sk.jsx)("dd", {
+              children: Fk.fileCount
             })]
           })]
         })]
       })
     }
 
-    function kC(CC) {
+    function Mk(kk) {
       let {
-        label: zC,
-        time: ZC,
-        now: QC
-      } = CC;
+        label: Fk,
+        time: Ik,
+        now: Xk
+      } = kk;
       const {
-        t: wC,
-        selectedLanguage: bC
-      } = (0, GC.y)(), nC = new Date(ZC);
-      let oC = nC.toLocaleDateString();
-      if (QC - ZC <= 30 * fC.e) {
-        const CC = (0, GC.m)(bC.code, "shaderPackListing:timeAgo");
-        oC = wC("shaderPackListing:timeAgo", {
-          time: (0, fC.U)(CC, ZC, QC)
+        t: Tk,
+        selectedLanguage: ik
+      } = (0, xk.y)(), yk = new Date(Ik);
+      let ak = yk.toLocaleDateString();
+      if (Xk - Ik <= 30 * lk.i) {
+        const kk = (0, xk.l)(ik.code, "shaderPackListing:timeAgo");
+        ak = Tk("shaderPackListing:timeAgo", {
+          time: (0, lk.gb)(kk, Ik, Xk)
         })
       }
-      return (0, vC.jsx)(WC.d, {
-        tooltipInner: nC.toLocaleString(),
-        children: (0, vC.jsxs)("div", {
-          children: [(0, vC.jsx)("dt", {
-            children: zC
-          }), (0, vC.jsx)("dd", {
-            children: oC
+      return (0, Sk.jsx)(tk.g, {
+        tooltipInner: yk.toLocaleString(),
+        children: (0, Sk.jsxs)("div", {
+          children: [(0, Sk.jsx)("dt", {
+            children: Fk
+          }), (0, Sk.jsx)("dd", {
+            children: ak
           })]
         })
       })
     }
   },
-  4971: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => nC
+  5016: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => yk
     });
-    var QC = ZC(1002),
-      wC = ZC.n(QC),
-      bC = ZC(1056);
+    var Xk = Ik(1055),
+      Tk = Ik.n(Xk),
+      ik = Ik(1096);
 
-    function nC(CC) {
+    function yk(kk) {
       let {
-        options: zC,
-        value: ZC,
-        onChange: QC,
-        ariaLabel: nC,
-        className: fC,
-        reselectable: oC = !1,
-        keepsFocus: qC = !1,
-        padTabs: FC
-      } = CC;
-      const WC = void 0 !== FC;
-      return (0, bC.jsx)("div", {
-        className: wC()("SegmentedToggle", fC),
+        options: Fk,
+        value: Ik,
+        onChange: Xk,
+        ariaLabel: yk,
+        className: lk,
+        reselectable: ak = !1,
+        keepsFocus: qk = !1,
+        padTabs: Lk
+      } = kk;
+      const tk = void 0 !== Lk;
+      return (0, ik.jsx)("div", {
+        className: Tk()("SegmentedToggle", lk),
         role: "group",
-        "aria-label": nC,
-        "data-pad-tabs": FC,
-        children: zC.map((CC => {
-          const zC = CC.value === ZC;
-          return (0, bC.jsx)("button", {
+        "aria-label": yk,
+        "data-pad-tabs": Lk,
+        children: Fk.map((kk => {
+          const Fk = kk.value === Ik;
+          return (0, ik.jsx)("button", {
             type: "button",
-            "aria-pressed": zC,
-            "data-pad-tab": WC || void 0,
-            "data-pad-selected": WC && zC ? "true" : void 0,
-            "data-pad-default-focus": WC && zC || void 0,
-            "aria-label": CC.ariaLabel,
-            title: CC.ariaLabel,
-            className: wC()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: zC
+            "aria-pressed": Fk,
+            "data-pad-tab": tk || void 0,
+            "data-pad-selected": tk && Fk ? "true" : void 0,
+            "data-pad-default-focus": tk && Fk || void 0,
+            "aria-label": kk.ariaLabel,
+            title: kk.ariaLabel,
+            className: Tk()("SegmentedToggleOption SmallTextLight", {
+              SegmentedToggleOptionSelected: Fk
             }),
-            onMouseDown: qC ? CC => {
-              CC.preventDefault()
+            onMouseDown: qk ? kk => {
+              kk.preventDefault()
             } : void 0,
             onClick: () => {
-              zC && !oC || QC(CC.value)
+              Fk && !ak || Xk(kk.value)
             },
-            children: CC.label
-          }, CC.value)
+            children: kk.label
+          }, kk.value)
         }))
       })
     }
   },
-  4979: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => bC,
-      g: () => nC
+  5022: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => ik,
+      g: () => yk
     });
-    var QC = ZC(48);
-    const wC = new WeakMap,
-      bC = CC => {
-        var zC;
-        const ZC = CC.closest("[data-pad-slider]");
-        return ZC && null !== (zC = wC.get(ZC)) && void 0 !== zC ? zC : null
+    var Xk = Ik(58);
+    const Tk = new WeakMap,
+      ik = kk => {
+        var Fk;
+        const Ik = kk.closest("[data-pad-slider]");
+        return Ik && null !== (Fk = Tk.get(Ik)) && void 0 !== Fk ? Fk : null
       },
-      nC = (CC, zC) => {
-        const ZC = (0, QC.useRef)(zC);
-        ZC.current = zC, (0, QC.useEffect)((() => {
-          if (CC.current) return ((CC, zC) => (wC.set(CC, zC), () => {
-            wC.get(CC) === zC && wC.delete(CC)
-          }))(CC.current, {
-            adjust: CC => {
-              ZC.current.adjust(CC)
+      yk = (kk, Fk) => {
+        const Ik = (0, Xk.useRef)(Fk);
+        Ik.current = Fk, (0, Xk.useEffect)((() => {
+          if (kk.current) return ((kk, Fk) => (Tk.set(kk, Fk), () => {
+            Tk.get(kk) === Fk && Tk.delete(kk)
+          }))(kk.current, {
+            adjust: kk => {
+              Ik.current.adjust(kk)
             },
-            setFraction: CC => {
-              ZC.current.setFraction(CC)
+            setFraction: kk => {
+              Ik.current.setFraction(kk)
             },
             endDrag: () => {
-              ZC.current.endDrag()
+              Ik.current.endDrag()
             }
           })
-        }), [CC])
+        }), [kk])
       }
   },
-  6660: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => wC,
-      e: () => bC
+  6644: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Tk,
+      i: () => ik
     });
-    var QC = ZC(38);
-    const wC = "shaderPack";
-    async function bC() {
-      var CC;
-      let zC = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (CC = await QC.g.getItem(wC, zC)) && void 0 !== CC ? CC : null
+    var Xk = Ik(41);
+    const Tk = "shaderPack";
+    async function ik() {
+      var kk;
+      let Fk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (kk = await Xk.g.getItem(Tk, Fk)) && void 0 !== kk ? kk : null
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

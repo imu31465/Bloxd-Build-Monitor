@@ -1,179 +1,179 @@
 export const id = 131;
 export const ids = [131];
 export const modules = {
-  41571: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      startHarnessShaderPack: () => WC
+  41745: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      startHarnessShaderPack: () => tk
     });
-    var QC = ZC(6560),
-      wC = ZC(5002),
-      bC = ZC(6646),
-      nC = ZC(6609),
-      fC = ZC(4998),
-      oC = ZC(39051),
-      qC = ZC(6630),
-      FC = ZC(6651);
-    async function WC(CC, zC) {
+    var Xk = Ik(6544),
+      Tk = Ik(5053),
+      ik = Ik(6622),
+      yk = Ik(6596),
+      lk = Ik(5047),
+      ak = Ik(39224),
+      qk = Ik(6611),
+      Lk = Ik(6631);
+    async function tk(kk, Fk) {
       const {
-        stored: ZC,
-        info: WC
-      } = await async function(CC, zC) {
-        const ZC = await async function(CC) {
-          const zC = await fetch(CC);
-          if (!zC.ok) throw new Error(`Couldn't fetch the shader pack at ${CC}: HTTP ${zC.status}`);
-          const ZC = await zC.json();
-          if (!(0, QC.g)(ZC)) throw new Error(`The shader pack at ${CC} isn't a shader pack listing source`);
-          return ZC
-        }(CC);
-        if (!(0, fC.i)(ZC.apiVersion)) throw new Error(`The pack is for shader pack API version ${ZC.apiVersion}; this build runs version ${fC.b}`);
-        const oC = {
+        stored: Ik,
+        info: tk
+      } = await async function(kk, Fk) {
+        const Ik = await async function(kk) {
+          const Fk = await fetch(kk);
+          if (!Fk.ok) throw new Error(`Couldn't fetch the shader pack at ${kk}: HTTP ${Fk.status}`);
+          const Ik = await Fk.json();
+          if (!(0, Xk.j)(Ik)) throw new Error(`The shader pack at ${kk} isn't a shader pack listing source`);
+          return Ik
+        }(kk);
+        if (!(0, lk.i)(Ik.apiVersion)) throw new Error(`The pack is for shader pack API version ${Ik.apiVersion}; this build runs version ${lk.b}`);
+        const ak = {
             manifest: {
-              apiVersion: ZC.apiVersion,
-              name: ZC.name,
-              author: ZC.author,
+              apiVersion: Ik.apiVersion,
+              name: Ik.name,
+              author: Ik.author,
               description: null,
-              keepCircleShadows: !0 === ZC.keepCircleShadows
+              keepCircleShadows: !0 === Ik.keepCircleShadows
             },
-            files: ZC.files,
+            files: Ik.files,
             validation: null
           },
-          WC = {
-            url: CC,
-            name: ZC.name,
+          tk = {
+            url: kk,
+            name: Ik.name,
             features: [],
             errors: [],
             runsInMode: !1
           },
-          NC = (0, wC.s)(ZC.files);
-        if ("string" === typeof NC) return WC.errors = [{
+          Zk = (0, Tk.t)(Ik.files);
+        if ("string" === typeof Zk) return tk.errors = [{
           file: null,
           line: 0,
-          message: NC
+          message: Zk
         }], {
-          stored: oC,
-          info: WC
+          stored: ak,
+          info: tk
         };
-        const MC = await (0, nC.loadPageShaderPackCompiler)();
-        if (!MC) throw new Error("The shader pack compiler couldn't load");
-        const gC = await (0, FC.c)(MC, NC);
-        if (!gC) throw new Error("No WebGPU device could validate the shader pack");
-        if (WC.errors = [...gC.errors], gC.ok) {
-          const CC = MC.K3(NC, (0, qC.shaderPackTextures)());
-          WC.features = (0, wC.r)(CC), WC.runsInMode = (0, bC.m)(CC.variants, zC)
+        const jk = await (0, yk.loadPageShaderPackCompiler)();
+        if (!jk) throw new Error("The shader pack compiler couldn't load");
+        const ek = await (0, Lk.f)(jk, Zk);
+        if (!ek) throw new Error("No WebGPU device could validate the shader pack");
+        if (tk.errors = [...ek.errors], ek.ok) {
+          const kk = jk.N7(Zk, (0, qk.shaderPackTextures)());
+          tk.features = (0, Tk.p)(kk), tk.runsInMode = (0, ik.f)(kk.variants, Fk)
         }
         return {
           stored: {
-            ...oC,
-            validation: gC
+            ...ak,
+            validation: ek
           },
-          info: WC
+          info: tk
         }
-      }(CC, zC), [NC] = WC.errors;
-      if (NC) {
-        const CC = null === NC.file ? "" : `${NC.file}:${NC.line}: `,
-          zC = WC.errors.length > 1 ? ` (${WC.errors.length-1} more)` : "";
+      }(kk, Fk), [Zk] = tk.errors;
+      if (Zk) {
+        const kk = null === Zk.file ? "" : `${Zk.file}:${Zk.line}: `,
+          Fk = tk.errors.length > 1 ? ` (${tk.errors.length-1} more)` : "";
         return {
-          info: WC,
-          problem: `The shader pack doesn't compile: ${CC}${NC.message}${zC}`
+          info: tk,
+          problem: `The shader pack doesn't compile: ${kk}${Zk.message}${Fk}`
         }
       }
-      return WC.runsInMode ? ((0, oC.setHarnessUrlShaderPack)(ZC, zC), {
-        info: WC,
+      return tk.runsInMode ? ((0, ak.setHarnessUrlShaderPack)(Ik, Fk), {
+        info: tk,
         problem: null
       }) : {
-        info: WC,
-        problem: `The shader pack runs nothing in ${zC} mode`
+        info: tk,
+        problem: `The shader pack runs nothing in ${Fk} mode`
       }
     }
   },
-  6658: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      forgetShaderPackActiveHint: () => KC,
-      isOtherApiVersion: () => iC,
-      isShaderPackActive: () => AC,
-      isShaderPackChangePending: () => IC,
-      markShaderPackChangePending: () => JC,
-      pageShaderPackValidationVersion: () => vC,
-      reconcileStoredShaderPackHint: () => hC,
-      removeShaderPack: () => RC,
-      replaceShaderPack: () => pC,
-      saveShaderPack: () => SC,
-      shaderPackNeedsCheck: () => eC,
-      storedPackOutcome: () => xC,
-      storedShaderPackFiles: () => NC,
-      toStoredShaderPack: () => WC
+  6639: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      forgetShaderPackActiveHint: () => Ok,
+      isOtherApiVersion: () => zk,
+      isShaderPackActive: () => Kk,
+      isShaderPackChangePending: () => Vk,
+      markShaderPackChangePending: () => sk,
+      pageShaderPackValidationVersion: () => Sk,
+      reconcileStoredShaderPackHint: () => Ek,
+      removeShaderPack: () => Pk,
+      replaceShaderPack: () => Hk,
+      saveShaderPack: () => wk,
+      shaderPackNeedsCheck: () => vk,
+      storedPackOutcome: () => Qk,
+      storedShaderPackFiles: () => Zk,
+      toStoredShaderPack: () => tk
     });
-    var QC = ZC(5002),
-      wC = ZC(4998),
-      bC = ZC(38),
-      nC = ZC(3432),
-      fC = ZC(6660),
-      oC = ZC(6630);
-    const qC = "shaderPackChangePending";
-    let FC = null;
+    var Xk = Ik(5053),
+      Tk = Ik(5047),
+      ik = Ik(41),
+      yk = Ik(3396),
+      lk = Ik(6644),
+      ak = Ik(6611);
+    const qk = "shaderPackChangePending";
+    let Lk = null;
 
-    function WC(CC, zC, ZC) {
+    function tk(kk, Fk, Ik) {
       return {
-        manifest: CC.manifest,
-        files: (0, QC.w)(CC.files),
-        validation: zC,
-        ...ZC && {
-          listing: ZC
+        manifest: kk.manifest,
+        files: (0, Xk.w)(kk.files),
+        validation: Fk,
+        ...Ik && {
+          listing: Ik
         }
       }
     }
 
-    function NC(CC) {
-      return Object.keys(CC.files).map((zC => ({
-        path: zC,
-        source: CC.files[zC]
+    function Zk(kk) {
+      return Object.keys(kk.files).map((Fk => ({
+        path: Fk,
+        source: kk.files[Fk]
       })))
     }
-    let MC = Promise.resolve();
+    let jk = Promise.resolve();
 
-    function gC(CC) {
-      const zC = MC.then(CC);
-      return MC = zC.catch((() => {})), zC
-    }
-
-    function SC(CC, zC) {
-      return gC((() => PC(CC, zC)))
+    function ek(kk) {
+      const Fk = jk.then(kk);
+      return jk = Fk.catch((() => {})), Fk
     }
 
-    function pC(CC, zC, ZC) {
-      return gC((async () => JSON.stringify(await (0, fC.e)()) === JSON.stringify(CC) && (null === zC ? (await GC(), !0) : PC(zC, ZC))))
-    }
-    async function PC(CC, zC) {
-      const ZC = await bC.g.setItem(fC.c, CC);
-      return ZC && YC(CC, zC), ZC
-    }
-    async function GC() {
-      await bC.g.removeItem(fC.c), bC.i.removeItem(nC.b)
+    function wk(kk, Fk) {
+      return ek((() => Jk(kk, Fk)))
     }
 
-    function RC() {
-      return gC(GC)
+    function Hk(kk, Fk, Ik) {
+      return ek((async () => JSON.stringify(await (0, lk.i)()) === JSON.stringify(kk) && (null === Fk ? (await xk(), !0) : Jk(Fk, Ik))))
+    }
+    async function Jk(kk, Fk) {
+      const Ik = await ik.g.setItem(lk.e, kk);
+      return Ik && nk(kk, Fk), Ik
+    }
+    async function xk() {
+      await ik.g.removeItem(lk.e), ik.j.removeItem(yk.e)
     }
 
-    function AC(CC, zC) {
-      return "active" === xC(CC, zC).kind
+    function Pk() {
+      return ek(xk)
     }
 
-    function xC(CC, zC) {
-      var ZC;
-      return null === CC ? {
+    function Kk(kk, Fk) {
+      return "active" === Qk(kk, Fk).kind
+    }
+
+    function Qk(kk, Fk) {
+      var Ik;
+      return null === kk ? {
         kind: "none",
         reason: "nothingStored"
-      } : iC(CC) ? {
+      } : zk(kk) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (ZC = CC.validation) || void 0 === ZC ? void 0 : ZC.ok) || CC.validation.fromRecheck ? null === zC ? {
+      } : !1 !== (null === (Ik = kk.validation) || void 0 === Ik ? void 0 : Ik.ok) || kk.validation.fromRecheck ? null === Fk ? {
         kind: "none",
         reason: "noCompiler"
-      } : eC(CC, zC) ? {
+      } : vk(kk, Fk) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : CC.validation.ok ? {
+      } : kk.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -184,147 +184,147 @@ export const modules = {
       }
     }
 
-    function JC() {
-      bC.k.setItem(qC, performance.timeOrigin)
+    function sk() {
+      ik.m.setItem(qk, performance.timeOrigin)
     }
 
-    function IC() {
-      return bC.k.getItem(qC) === performance.timeOrigin
+    function Vk() {
+      return ik.m.getItem(qk) === performance.timeOrigin
     }
 
-    function iC(CC) {
-      return !(0, wC.i)(CC.manifest.apiVersion)
+    function zk(kk) {
+      return !(0, Tk.i)(kk.manifest.apiVersion)
     }
 
-    function vC(CC) {
-      return FC ??= CC.Rm((0, oC.shaderPackTextures)()), FC
+    function Sk(kk) {
+      return Lk ??= kk.nG((0, ak.shaderPackTextures)()), Lk
     }
 
-    function eC(CC, zC) {
-      var ZC;
-      return (null === (ZC = CC.validation) || void 0 === ZC ? void 0 : ZC.headerVersion) !== vC(zC)
+    function vk(kk, Fk) {
+      var Ik;
+      return (null === (Ik = kk.validation) || void 0 === Ik ? void 0 : Ik.headerVersion) !== Sk(Fk)
     }
 
-    function hC(CC) {
-      return gC((async () => {
-        YC(await (0, fC.e)(!0), CC)
+    function Ek(kk) {
+      return ek((async () => {
+        nk(await (0, lk.i)(!0), kk)
       }))
     }
 
-    function KC() {
-      return gC((async () => {
-        bC.i.removeItem(nC.b)
+    function Ok() {
+      return ek((async () => {
+        ik.j.removeItem(yk.e)
       }))
     }
 
-    function YC(CC, zC) {
-      AC(CC, zC) ? bC.i.setItem(nC.b, !0) : bC.i.removeItem(nC.b)
+    function nk(kk, Fk) {
+      Kk(kk, Fk) ? ik.j.setItem(yk.e, !0) : ik.j.removeItem(yk.e)
     }
   },
-  6651: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => oC,
-      c: () => fC
+  6631: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => ak,
+      f: () => lk
     });
-    var QC = ZC(6658),
-      wC = ZC(6630),
-      bC = ZC(94);
-    const nC = 100;
-    async function fC(CC, zC) {
-      var ZC;
-      let QC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (ZC = navigator.gpu) && void 0 !== ZC ? ZC : null;
-      const nC = CC.K3(zC, (0, wC.shaderPackTextures)());
-      if (nC.errors.length > 0) return qC(CC, nC.errors, nC.offInStrict);
-      const fC = await async function(CC) {
-        if (!CC) return null;
+    var Xk = Ik(6639),
+      Tk = Ik(6611),
+      ik = Ik(113);
+    const yk = 100;
+    async function lk(kk, Fk) {
+      var Ik;
+      let Xk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (Ik = navigator.gpu) && void 0 !== Ik ? Ik : null;
+      const yk = kk.N7(Fk, (0, Tk.shaderPackTextures)());
+      if (yk.errors.length > 0) return qk(kk, yk.errors, yk.offInStrict);
+      const lk = await async function(kk) {
+        if (!kk) return null;
         try {
-          const zC = await (0, bC.z)(CC);
-          return zC ? await zC.requestDevice() : null
-        } catch (zC) {
-          return console.error("Couldn't get a WebGPU device to validate the shader pack.", zC), null
+          const Fk = await (0, ik.t)(kk);
+          return Fk ? await Fk.requestDevice() : null
+        } catch (Fk) {
+          return console.error("Couldn't get a WebGPU device to validate the shader pack.", Fk), null
         }
-      }(QC);
-      if (!fC) return null;
-      let oC = !1;
-      fC.lost.then((() => {
-        oC = !0
+      }(Xk);
+      if (!lk) return null;
+      let ak = !1;
+      lk.lost.then((() => {
+        ak = !0
       }));
       try {
-        const zC = await Promise.all(nC.validationModules.map((zC => async function(CC, zC, ZC) {
-          zC.pushErrorScope("validation");
-          const QC = zC.createShaderModule({
-              code: ZC.code
+        const Fk = await Promise.all(yk.validationModules.map((Fk => async function(kk, Fk, Ik) {
+          Fk.pushErrorScope("validation");
+          const Xk = Fk.createShaderModule({
+              code: Ik.code
             }),
-            wC = zC.popErrorScope(),
+            Tk = Fk.popErrorScope(),
             {
-              messages: bC
-            } = await QC.getCompilationInfo(),
-            nC = bC.filter((CC => "error" === CC.type)).map((zC => CC.mapValidationMessage(ZC, zC))),
-            fC = await wC;
-          fC && 0 === nC.length && nC.push({
+              messages: ik
+            } = await Xk.getCompilationInfo(),
+            yk = ik.filter((kk => "error" === kk.type)).map((Fk => kk.mapValidationMessage(Ik, Fk))),
+            lk = await Tk;
+          lk && 0 === yk.length && yk.push({
             file: null,
             line: 0,
-            message: fC.message,
-            variants: [ZC.key]
+            message: lk.message,
+            variants: [Ik.key]
           });
-          return nC
-        }(CC, fC, zC))));
-        return oC ? null : qC(CC, CC.rZC(zC.flat()), nC.offInStrict)
-      } catch (FC) {
-        return console.error("Couldn't validate the shader pack on WebGPU.", FC), null
+          return yk
+        }(kk, lk, Fk))));
+        return ak ? null : qk(kk, kk.YIk(Fk.flat()), yk.offInStrict)
+      } catch (Lk) {
+        return console.error("Couldn't validate the shader pack on WebGPU.", Lk), null
       } finally {
-        fC.destroy()
+        lk.destroy()
       }
     }
-    async function oC(CC, zC) {
-      var ZC;
-      if (!(0, QC.shaderPackNeedsCheck)(CC, zC) || (0, QC.isOtherApiVersion)(CC)) return CC;
-      const wC = await fC(zC, (0, QC.storedShaderPackFiles)(CC));
-      if (!wC) return CC;
-      const bC = !1 === (null === (ZC = CC.validation) || void 0 === ZC ? void 0 : ZC.ok) && !CC.validation.fromRecheck,
-        nC = {
-          ...CC,
-          validation: bC ? wC : {
-            ...wC,
+    async function ak(kk, Fk) {
+      var Ik;
+      if (!(0, Xk.shaderPackNeedsCheck)(kk, Fk) || (0, Xk.isOtherApiVersion)(kk)) return kk;
+      const Tk = await lk(Fk, (0, Xk.storedShaderPackFiles)(kk));
+      if (!Tk) return kk;
+      const ik = !1 === (null === (Ik = kk.validation) || void 0 === Ik ? void 0 : Ik.ok) && !kk.validation.fromRecheck,
+        yk = {
+          ...kk,
+          validation: ik ? Tk : {
+            ...Tk,
             fromRecheck: !0
           }
         };
-      return await (0, QC.replaceShaderPack)(CC, nC, zC) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), nC
+      return await (0, Xk.replaceShaderPack)(kk, yk, Fk) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), yk
     }
 
-    function qC(CC, zC, ZC) {
+    function qk(kk, Fk, Ik) {
       return {
-        headerVersion: (0, QC.pageShaderPackValidationVersion)(CC),
-        ok: 0 === zC.length,
-        errors: zC.slice(0, nC),
-        moreErrors: Math.max(0, zC.length - nC),
-        offInStrict: ZC
+        headerVersion: (0, Xk.pageShaderPackValidationVersion)(kk),
+        ok: 0 === Fk.length,
+        errors: Fk.slice(0, yk),
+        moreErrors: Math.max(0, Fk.length - yk),
+        offInStrict: Ik
       }
     }
   },
-  6560: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      A: () => nC,
-      B: () => QC,
-      E: () => NC,
-      G: () => FC,
-      J: () => AC,
-      L: () => WC,
-      P: () => qC,
-      b: () => gC,
-      e: () => pC,
-      f: () => SC,
-      g: () => MC,
-      i: () => RC,
-      m: () => JC,
-      o: () => oC,
-      s: () => wC,
-      w: () => xC,
-      x: () => bC,
-      y: () => fC
+  6544: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      C: () => lk,
+      E: () => yk,
+      I: () => Xk,
+      K: () => Zk,
+      N: () => Lk,
+      P: () => Kk,
+      Q: () => tk,
+      U: () => qk,
+      d: () => ek,
+      e: () => Hk,
+      g: () => wk,
+      j: () => jk,
+      l: () => Pk,
+      p: () => sk,
+      q: () => ak,
+      u: () => Tk,
+      y: () => Qk,
+      z: () => ik
     });
-    const QC = ["forest", "desert", "water", "night", "cave"];
-    const wC = {
+    const Xk = ["forest", "desert", "water", "night", "cave"];
+    const Tk = {
         full: {
           width: 3840,
           height: 2160
@@ -338,49 +338,49 @@ export const modules = {
           height: 360
         }
       },
-      bC = ["popular", "updated", "newest"],
-      nC = 3,
-      fC = 32,
-      oC = 300;
+      ik = ["popular", "updated", "newest"],
+      yk = 3,
+      lk = 32,
+      ak = 300;
 
-    function qC(CC, zC) {
-      return CC.slice(0, zC).replace(/[\uD800-\uDBFF]$/, "")
+    function qk(kk, Fk) {
+      return kk.slice(0, Fk).replace(/[\uD800-\uDBFF]$/, "")
     }
-    const FC = 64,
-      WC = 512,
-      NC = 18e5;
+    const Lk = 64,
+      tk = 512,
+      Zk = 18e5;
 
-    function MC(CC) {
-      const zC = CC,
-        ZC = null === zC || void 0 === zC ? void 0 : zC.files;
-      return "number" === typeof(null === zC || void 0 === zC ? void 0 : zC.apiVersion) && "string" === typeof zC.name && (null === zC.author || "string" === typeof zC.author) && (void 0 === zC.keepCircleShadows || "boolean" === typeof zC.keepCircleShadows) && "object" === typeof ZC && null !== ZC && Object.values(ZC).every((CC => "string" === typeof CC))
+    function jk(kk) {
+      const Fk = kk,
+        Ik = null === Fk || void 0 === Fk ? void 0 : Fk.files;
+      return "number" === typeof(null === Fk || void 0 === Fk ? void 0 : Fk.apiVersion) && "string" === typeof Fk.name && (null === Fk.author || "string" === typeof Fk.author) && (void 0 === Fk.keepCircleShadows || "boolean" === typeof Fk.keepCircleShadows) && "object" === typeof Ik && null !== Ik && Object.values(Ik).every((kk => "string" === typeof kk))
     }
-    const gC = "Bloxdhub",
-      SC = "https://bloxdhub.com/shaders";
+    const ek = "Bloxdhub",
+      wk = "https://bloxdhub.com/shaders";
 
-    function pC(CC) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(CC)}`
+    function Hk(kk) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(kk)}`
     }
-    const PC = "Screenshot generation failed.",
-      GC = "Its screenshots couldn't be generated:";
+    const Jk = "Screenshot generation failed.",
+      xk = "Its screenshots couldn't be generated:";
 
-    function RC(CC) {
-      var zC;
-      return CC === PC || null !== (zC = null === CC || void 0 === CC ? void 0 : CC.startsWith(GC)) && void 0 !== zC && zC
-    }
-
-    function AC(CC, zC) {
-      return `shaderPacks/${CC}/${zC}.json`
+    function Pk(kk) {
+      var Fk;
+      return kk === Jk || null !== (Fk = null === kk || void 0 === kk ? void 0 : kk.startsWith(xk)) && void 0 !== Fk && Fk
     }
 
-    function xC(CC, zC, ZC, QC) {
-      return null === zC.renderId ? JC(CC, zC.baselineVersion, ZC, QC) : `${CC}/${function(CC,zC,ZC,QC){return`shaderPacks/${CC}/${zC}/${ZC}-${QC}.webp`}(zC.packId,zC.renderId,ZC,QC)}`
+    function Kk(kk, Fk) {
+      return `shaderPacks/${kk}/${Fk}.json`
     }
 
-    function JC(CC, zC, ZC, QC) {
-      return `${CC}/${function(CC,zC,ZC){return`shaderPacks/baseline/${CC}/${zC}-${ZC}.webp`}(zC,ZC,QC)}`
+    function Qk(kk, Fk, Ik, Xk) {
+      return null === Fk.renderId ? sk(kk, Fk.baselineVersion, Ik, Xk) : `${kk}/${function(kk,Fk,Ik,Xk){return`shaderPacks/${kk}/${Fk}/${Ik}-${Xk}.webp`}(Fk.packId,Fk.renderId,Ik,Xk)}`
+    }
+
+    function sk(kk, Fk, Ik, Xk) {
+      return `${kk}/${function(kk,Fk,Ik){return`shaderPacks/baseline/${kk}/${Fk}-${Ik}.webp`}(Fk,Ik,Xk)}`
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

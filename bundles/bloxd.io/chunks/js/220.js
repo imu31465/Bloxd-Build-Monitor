@@ -1,80 +1,80 @@
 export const id = 220;
 export const ids = [220];
 export const modules = {
-  40915: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      LobbyManageView: () => Jz
+  41084: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      LobbyManageView: () => VF
     });
-    var QC = ZC(48),
-      wC = ZC(1418),
-      bC = ZC(36882),
-      nC = ZC(2394),
-      fC = ZC(2402),
-      oC = ZC(2369),
-      qC = ZC(36447);
+    var Xk = Ik(58),
+      Tk = Ik(1432),
+      ik = Ik(37056),
+      yk = Ik(2363),
+      lk = Ik(2366),
+      ak = Ik(2349),
+      qk = Ik(36558);
 
-    function FC() {
-      const [CC, zC] = (0, QC.useState)(new Map);
+    function Lk() {
+      const [kk, Fk] = (0, Xk.useState)(new Map);
       return {
-        get: zC => CC.get(zC),
-        hold: (0, QC.useCallback)(((CC, ZC, QC) => {
-          zC((zC => new Map(zC).set(CC, ZC))), QC.then((() => {
-            zC((zC => {
-              const ZC = new Map(zC);
-              return ZC.delete(CC), ZC
+        get: Fk => kk.get(Fk),
+        hold: (0, Xk.useCallback)(((kk, Ik, Xk) => {
+          Fk((Fk => new Map(Fk).set(kk, Ik))), Xk.then((() => {
+            Fk((Fk => {
+              const Ik = new Map(Fk);
+              return Ik.delete(kk), Ik
             }))
           }))
         }), [])
       }
     }
-    var WC = ZC(1002),
-      NC = ZC.n(WC),
-      MC = ZC(1143),
-      gC = ZC(1013),
-      SC = ZC(1295),
-      pC = ZC(2637),
-      PC = ZC(4971),
-      GC = ZC(3419);
-    var RC = ZC(1877),
-      AC = ZC(1388);
+    var tk = Ik(1055),
+      Zk = Ik.n(tk),
+      jk = Ik(1179),
+      ek = Ik(1066),
+      wk = Ik(1318),
+      Hk = Ik(2582),
+      Jk = Ik(5016),
+      xk = Ik(3378);
+    var Pk = Ik(1907),
+      Kk = Ik(1406);
 
-    function xC(CC, zC, ZC) {
-      const QC = CC.filter((CC => CC.name !== zC)),
-        wC = QC.filter((CC => "none" === CC.role)).sort(((CC, zC) => zC.at - CC.at)),
-        bC = QC.filter((CC => "none" !== CC.role)).sort(((CC, zC) => ZC.indexOf(CC.role) - ZC.indexOf(zC.role) || zC.at - CC.at));
-      return [...CC.some((CC => CC.name === zC)) && null !== zC ? [zC] : [], ...[...wC, ...bC].map((CC => CC.name))]
+    function Qk(kk, Fk, Ik) {
+      const Xk = kk.filter((kk => kk.name !== Fk)),
+        Tk = Xk.filter((kk => "none" === kk.role)).sort(((kk, Fk) => Fk.at - kk.at)),
+        ik = Xk.filter((kk => "none" !== kk.role)).sort(((kk, Fk) => Ik.indexOf(kk.role) - Ik.indexOf(Fk.role) || Fk.at - kk.at));
+      return [...kk.some((kk => kk.name === Fk)) && null !== Fk ? [Fk] : [], ...[...Tk, ...ik].map((kk => kk.name))]
     }
 
-    function JC(CC, zC) {
-      const ZC = CC.banned.map((CC => CC.name)),
-        QC = new Set(ZC);
+    function sk(kk, Fk) {
+      const Ik = kk.banned.map((kk => kk.name)),
+        Xk = new Set(Ik);
       return {
-        here: xC(CC.here, zC, CC.roles.map((CC => CC.role))),
-        away: CC.away.filter((CC => !QC.has(CC.name))).map((CC => CC.name)),
-        banned: ZC
+        here: Qk(kk.here, Fk, kk.roles.map((kk => kk.role))),
+        away: kk.away.filter((kk => !Xk.has(kk.name))).map((kk => kk.name)),
+        banned: Ik
       }
     }
 
-    function IC(CC, zC) {
-      const ZC = CC.here.find((CC => CC.name === zC));
-      if (ZC) return {
+    function Vk(kk, Fk) {
+      const Ik = kk.here.find((kk => kk.name === Fk));
+      if (Ik) return {
         section: "here",
-        player: ZC
+        player: Ik
       };
-      const QC = CC.banned.find((CC => CC.name === zC));
-      if (QC) return {
+      const Xk = kk.banned.find((kk => kk.name === Fk));
+      if (Xk) return {
         section: "banned",
-        bannedAt: QC.at
+        bannedAt: Xk.at
       };
-      const wC = CC.away.find((CC => CC.name === zC));
-      return wC ? {
+      const Tk = kk.away.find((kk => kk.name === Fk));
+      return Tk ? {
         section: "away",
-        player: wC
+        player: Tk
       } : {
         section: "gone"
       }
     }
-    const iC = {
+    const zk = {
       gamemode: !1,
       roles: [],
       fixedRole: null,
@@ -82,357 +82,357 @@ export const modules = {
       ban: !1,
       unban: !1
     };
-    var vC = ZC(2633),
-      eC = ZC(36436),
-      hC = ZC(36605),
-      KC = ZC(3113),
-      YC = ZC(326);
+    var Sk = Ik(2578),
+      vk = Ik(36548),
+      Ek = Ik(36727),
+      Ok = Ik(3065),
+      nk = Ik(337);
 
-    function dC(CC, zC, ZC) {
-      return zC.map((zC => {
-        if ("string" === typeof zC) return zC;
-        const QC = "str" in zC ? zC.str : zC;
-        return "string" === typeof QC ? QC : "entityName" in QC ? QC.entityName : "translationKey" in QC ? CC(QC.translationKey, (0, MC.q)(QC.params, ZC)) : ""
+    function Gk(kk, Fk, Ik) {
+      return Fk.map((Fk => {
+        if ("string" === typeof Fk) return Fk;
+        const Xk = "str" in Fk ? Fk.str : Fk;
+        return "string" === typeof Xk ? Xk : "entityName" in Xk ? Xk.entityName : "translationKey" in Xk ? kk(Xk.translationKey, (0, jk.m)(Xk.params, Ik)) : ""
       })).join("")
     }
 
-    function mC(CC, zC, ZC, QC, wC) {
-      return wC - QC < 6e4 ? CC(`${ZC}JustNow`) : CC(ZC, {
-        time: (0, YC.U)((0, MC.m)(zC, ZC), QC, wC)
+    function pk(kk, Fk, Ik, Xk, Tk) {
+      return Tk - Xk < 6e4 ? kk(`${Ik}JustNow`) : kk(Ik, {
+        time: (0, nk.gb)((0, jk.l)(Fk, Ik), Xk, Tk)
       })
     }
-    var HC = ZC(1811),
-      EC = ZC(1593),
-      lC = ZC(1056);
+    var uk = Ik(1849),
+      bk = Ik(1617),
+      Rk = Ik(1096);
 
-    function XC(CC) {
+    function Uk(kk) {
       let {
-        status: zC
-      } = CC;
-      return (0, lC.jsx)("span", {
-        className: NC()("LobbyManageStatus", {
-          LobbyManageStatusRefused: !zC.ok
+        status: Fk
+      } = kk;
+      return (0, Rk.jsx)("span", {
+        className: Zk()("LobbyManageStatus", {
+          LobbyManageStatusRefused: !Fk.ok
         }),
-        children: (0, lC.jsx)(HC.e, {
-          text: zC.text
+        children: (0, Rk.jsx)(uk.c, {
+          text: Fk.text
         })
       })
     }
 
-    function cC(CC) {
+    function Ck(kk) {
       let {
-        names: zC,
-        cap: ZC,
-        filterFrom: wC,
-        moreLabel: bC,
-        reveal: nC = null,
-        renderRow: fC
-      } = CC;
+        names: Fk,
+        cap: Ik,
+        filterFrom: Tk,
+        moreLabel: ik,
+        reveal: yk = null,
+        renderRow: lk
+      } = kk;
       const {
-        t: oC
-      } = (0, MC.y)(), [qC, FC] = (0, QC.useState)(!1), [WC, NC] = (0, QC.useState)(""), SC = qC || null !== nC && zC.indexOf(nC) >= ZC, PC = (SC || zC.length <= ZC) && null !== wC && zC.length > wC, GC = WC.trim().toLowerCase();
-      let RC = SC ? zC : zC.slice(0, ZC);
-      return PC && "" !== GC && (RC = RC.filter((CC => CC.toLowerCase().includes(GC)))), (0, lC.jsxs)(lC.Fragment, {
-        children: [PC && (0, lC.jsx)(EC.c, {
+        t: ak
+      } = (0, jk.y)(), [qk, Lk] = (0, Xk.useState)(!1), [tk, Zk] = (0, Xk.useState)(""), wk = qk || null !== yk && Fk.indexOf(yk) >= Ik, Jk = (wk || Fk.length <= Ik) && null !== Tk && Fk.length > Tk, xk = tk.trim().toLowerCase();
+      let Pk = wk ? Fk : Fk.slice(0, Ik);
+      return Jk && "" !== xk && (Pk = Pk.filter((kk => kk.toLowerCase().includes(xk)))), (0, Rk.jsxs)(Rk.Fragment, {
+        children: [Jk && (0, Rk.jsx)(bk.c, {
           className: "LobbyManageFilter",
-          placeholderText: oC("lobbyManage:findName"),
-          ariaLabel: oC("lobbyManage:findName"),
-          onValueChange: CC => {
-            NC(CC)
+          placeholderText: ak("lobbyManage:findName"),
+          ariaLabel: ak("lobbyManage:findName"),
+          onValueChange: kk => {
+            Zk(kk)
           }
-        }), RC.length > 0 && (0, lC.jsx)("div", {
+        }), Pk.length > 0 && (0, Rk.jsx)("div", {
           className: "PlayerRows",
-          children: RC.map(((CC, zC) => fC(CC, RC.length - zC)))
-        }), !SC && zC.length > ZC && (0, lC.jsx)("div", {
+          children: Pk.map(((kk, Fk) => lk(kk, Pk.length - Fk)))
+        }), !wk && Fk.length > Ik && (0, Rk.jsx)("div", {
           className: "LobbyManageMore",
-          children: (0, lC.jsx)(pC.b, {
-            label: (0, lC.jsxs)(lC.Fragment, {
-              children: [bC, " ", (0, lC.jsx)(gC.c, {
+          children: (0, Rk.jsx)(Hk.b, {
+            label: (0, Rk.jsxs)(Rk.Fragment, {
+              children: [ik, " ", (0, Rk.jsx)(ek.e, {
                 name: "angle-down"
               })]
             }),
             onClick: () => {
-              FC(!0)
+              Lk(!0)
             }
           })
         })]
       })
     }
 
-    function uC(CC) {
+    function Nk(kk) {
       let {
-        value: zC,
-        placeholder: ZC,
-        ariaLabel: wC,
-        maxLength: bC,
-        wide: nC = !1,
-        onSave: fC
-      } = CC;
-      const oC = (0, QC.useRef)(null),
-        [qC, FC] = (0, QC.useState)(0),
-        WC = (0, QC.useRef)(!0),
-        MC = (0, QC.useRef)(null),
-        gC = (0, QC.useRef)({
-          value: zC,
-          onSave: fC
+        value: Fk,
+        placeholder: Ik,
+        ariaLabel: Tk,
+        maxLength: ik,
+        wide: yk = !1,
+        onSave: lk
+      } = kk;
+      const ak = (0, Xk.useRef)(null),
+        [qk, Lk] = (0, Xk.useState)(0),
+        tk = (0, Xk.useRef)(!0),
+        jk = (0, Xk.useRef)(null),
+        ek = (0, Xk.useRef)({
+          value: Fk,
+          onSave: lk
         });
-      gC.current = {
-        value: zC,
-        onSave: fC
+      ek.current = {
+        value: Fk,
+        onSave: lk
       };
-      const SC = () => {
-        const CC = MC.current;
-        MC.current = null, null !== CC && CC !== gC.current.value && gC.current.onSave(CC).then((() => {
-          WC.current && FC((CC => CC + 1))
+      const wk = () => {
+        const kk = jk.current;
+        jk.current = null, null !== kk && kk !== ek.current.value && ek.current.onSave(kk).then((() => {
+          tk.current && Lk((kk => kk + 1))
         }))
       };
-      return (0, QC.useEffect)((() => {
-        null === MC.current && oC.current && (oC.current.value = zC)
-      }), [zC, qC]), (0, QC.useEffect)((() => () => {
-        WC.current = !1, SC()
-      }), []), (0, lC.jsx)("div", {
-        className: NC()("LobbyManageRuleInput", {
-          LobbyManageRuleInputWide: nC
+      return (0, Xk.useEffect)((() => {
+        null === jk.current && ak.current && (ak.current.value = Fk)
+      }), [Fk, qk]), (0, Xk.useEffect)((() => () => {
+        tk.current = !1, wk()
+      }), []), (0, Rk.jsx)("div", {
+        className: Zk()("LobbyManageRuleInput", {
+          LobbyManageRuleInputWide: yk
         }),
-        onBlur: SC,
-        children: (0, lC.jsx)(EC.c, {
-          domRef: oC,
-          defaultValue: zC,
-          placeholderText: ZC,
-          ariaLabel: wC,
-          maxLength: bC,
-          onValueChange: CC => {
-            MC.current = CC
+        onBlur: wk,
+        children: (0, Rk.jsx)(bk.c, {
+          domRef: ak,
+          defaultValue: Fk,
+          placeholderText: Ik,
+          ariaLabel: Tk,
+          maxLength: ik,
+          onValueChange: kk => {
+            jk.current = kk
           },
-          onEnter: SC
+          onEnter: wk
         })
       })
     }
-    const rC = ["mod", "coOwner"],
-      sC = {
+    const ck = ["mod", "coOwner"],
+      Wk = {
         coOwner: "lobbyManage:roleCanCoOwner",
         mod: "lobbyManage:roleCanMod",
         coder: "lobbyManage:roleCanCoder",
         builder: "lobbyManage:roleCanBuilder"
       };
 
-    function TC(CC) {
-      var zC, ZC, bC;
+    function fk(kk) {
+      var Fk, Ik, ik;
       let {
-        name: nC,
-        place: fC,
-        openedIn: oC,
-        isYou: qC,
-        manage: WC,
-        hiddenNames: NC,
-        zIndex: SC
-      } = CC;
+        name: yk,
+        place: lk,
+        openedIn: ak,
+        isYou: qk,
+        manage: tk,
+        hiddenNames: Zk,
+        zIndex: wk
+      } = kk;
       const {
-        t: pC,
-        selectedLanguage: PC
-      } = (0, MC.y)(), [GC, RC] = (0, QC.useState)(null), {
-        state: xC
-      } = WC, JC = `player:${nC}`, IC = function(CC, zC) {
-        if ("banned" === CC.section) return {
-          ...iC,
+        t: Hk,
+        selectedLanguage: Jk
+      } = (0, jk.y)(), [xk, Pk] = (0, Xk.useState)(null), {
+        state: Qk
+      } = tk, sk = `player:${yk}`, Vk = function(kk, Fk) {
+        if ("banned" === kk.section) return {
+          ...zk,
           unban: !0
         };
-        if ("gone" === CC.section) return iC;
+        if ("gone" === kk.section) return zk;
         const {
-          player: ZC
-        } = CC, QC = "here" === CC.section, wC = QC || "none" !== ZC.role ? ZC.can.roles : [];
+          player: Ik
+        } = kk, Xk = "here" === kk.section, Tk = Xk || "none" !== Ik.role ? Ik.can.roles : [];
         return {
-          gamemode: QC && zC && null !== ZC.gamemode && ZC.can.gamemode,
-          roles: wC,
-          fixedRole: 0 === wC.length && "none" !== ZC.role ? ZC.role : null,
-          kick: QC && ZC.can.kick,
-          ban: ZC.can.ban,
+          gamemode: Xk && Fk && null !== Ik.gamemode && Ik.can.gamemode,
+          roles: Tk,
+          fixedRole: 0 === Tk.length && "none" !== Ik.role ? Ik.role : null,
+          kick: Xk && Ik.can.kick,
+          ban: Ik.can.ban,
           unban: !1
         }
-      }(fC, null !== xC.gamemodes), YC = WC.statusOf(JC), HC = WC.isPending(JC), EC = FC(), cC = Date.now(), uC = CC => {
-        var zC, ZC;
-        return null !== (zC = null === (ZC = (CC => xC.roles.find((zC => zC.role === CC)))(CC)) || void 0 === ZC ? void 0 : ZC.label) && void 0 !== zC ? zC : CC
-      }, TC = CC => {
-        const zC = sC[CC];
-        return void 0 === zC ? void 0 : pC(zC)
-      }, aC = "here" === fC.section || "away" === fC.section ? fC.player : null, tC = "here" === fC.section ? fC.player.id : null, {
-        playerSocialPreview: DC,
-        isFriend: jC
-      } = null === tC ? {
-        playerSocialPreview: (0, hC.l)(nC, null),
+      }(lk, null !== Qk.gamemodes), nk = tk.statusOf(sk), uk = tk.isPending(sk), bk = Lk(), Ck = Date.now(), Nk = kk => {
+        var Fk, Ik;
+        return null !== (Fk = null === (Ik = (kk => Qk.roles.find((Fk => Fk.role === kk)))(kk)) || void 0 === Ik ? void 0 : Ik.label) && void 0 !== Fk ? Fk : kk
+      }, fk = kk => {
+        const Fk = Wk[kk];
+        return void 0 === Fk ? void 0 : Hk(Fk)
+      }, Bk = "here" === lk.section || "away" === lk.section ? lk.player : null, dk = "here" === lk.section ? lk.player.id : null, {
+        playerSocialPreview: Yk,
+        isFriend: Ak
+      } = null === dk ? {
+        playerSocialPreview: (0, Ek.j)(yk, null),
         isFriend: !1
-      } : (0, eC.d)(tC, nC), yC = function() {
-        WC.send(...arguments)
-      }, LC = (CC, zC) => {
-        EC.hold("role", CC, WC.send({
+      } : (0, vk.e)(dk, yk), gk = function() {
+        tk.send(...arguments)
+      }, mk = (kk, Fk) => {
+        bk.hold("role", kk, tk.send({
           type: "setRole",
-          name: nC,
-          role: CC
-        }, JC, zC))
+          name: yk,
+          role: kk
+        }, sk, Fk))
       };
-      let UC = null;
-      if ("ban" === (null === GC || void 0 === GC ? void 0 : GC.kind)) UC = pC("lobbyManageEntry:banConfirm", {
-        playerName: nC
+      let hk = null;
+      if ("ban" === (null === xk || void 0 === xk ? void 0 : xk.kind)) hk = Hk("lobbyManageEntry:banConfirm", {
+        playerName: yk
       });
-      else if ("role" === (null === GC || void 0 === GC ? void 0 : GC.kind)) {
-        var BC;
-        UC = `${pC("lobbyManage:roleConfirm",{playerName:nC,role:uC(GC.role)})} ${null!==(BC=TC(GC.role))&&void 0!==BC?BC:""}`
-      } else if (YC) UC = (0, lC.jsx)(XC, {
-        status: YC
+      else if ("role" === (null === xk || void 0 === xk ? void 0 : xk.kind)) {
+        var rk;
+        hk = `${Hk("lobbyManage:roleConfirm",{playerName:yk,role:Nk(xk.role)})} ${null!==(rk=fk(xk.role))&&void 0!==rk?rk:""}`
+      } else if (nk) hk = (0, Rk.jsx)(Uk, {
+        status: nk
       });
-      else if (qC) UC = pC("lobbyManage:you");
-      else if ("here" === fC.section) "none" === fC.player.role && cC - fC.player.at < 6e5 && (UC = mC(pC, PC.code, "lobbyManage:joinedAgo", fC.player.at, cC));
-      else if ("away" === fC.section) {
-        if (fC.player.at > 0) {
-          const CC = "kicked" === fC.player.why ? "lobbyManage:kickedAgo" : "lobbyManage:leftAgo";
-          UC = mC(pC, PC.code, CC, fC.player.at, cC)
+      else if (qk) hk = Hk("lobbyManage:you");
+      else if ("here" === lk.section) "none" === lk.player.role && Ck - lk.player.at < 6e5 && (hk = pk(Hk, Jk.code, "lobbyManage:joinedAgo", lk.player.at, Ck));
+      else if ("away" === lk.section) {
+        if (lk.player.at > 0) {
+          const kk = "kicked" === lk.player.why ? "lobbyManage:kickedAgo" : "lobbyManage:leftAgo";
+          hk = pk(Hk, Jk.code, kk, lk.player.at, Ck)
         }
-      } else "banned" === fC.section ? null !== fC.bannedAt && (UC = mC(pC, PC.code, "lobbyManage:bannedAgo", fC.bannedAt, cC)) : "banned" === oC && (UC = pC("lobbyManageEntry:unbanned"));
-      return (0, lC.jsx)("div", {
+      } else "banned" === lk.section ? null !== lk.bannedAt && (hk = pk(Hk, Jk.code, "lobbyManage:bannedAgo", lk.bannedAt, Ck)) : "banned" === ak && (hk = Hk("lobbyManageEntry:unbanned"));
+      return (0, Rk.jsx)("div", {
         className: "LobbyManagePlayerRow",
-        "data-lobby-manage-row": nC,
-        children: (0, lC.jsxs)(vC.f, {
-          playerSocialPreview: DC,
-          isFriend: jC,
-          status: UC,
-          opensProfileCard: !qC && (0, eC.f)(!0, nC, NC),
-          zIndex: SC,
-          children: [null !== GC && (0, lC.jsxs)("div", {
+        "data-lobby-manage-row": yk,
+        children: (0, Rk.jsxs)(Sk.e, {
+          playerSocialPreview: Yk,
+          isFriend: Ak,
+          status: hk,
+          opensProfileCard: !qk && (0, vk.i)(!0, yk, Zk),
+          zIndex: wk,
+          children: [null !== xk && (0, Rk.jsxs)("div", {
             className: "LobbyManageButtons",
-            children: ["ban" === GC.kind && (0, lC.jsxs)(AC.I, {
+            children: ["ban" === xk.kind && (0, Rk.jsxs)(Kk.G, {
               className: "LobbyManageIconButton SmallTextLight",
               analyticsClick: {
                 id: "lobby_manage.ban",
                 value: "row"
               },
               onClick: () => {
-                RC(null), yC({
+                Pk(null), gk({
                   type: "ban",
-                  name: nC
-                }, JC)
+                  name: yk
+                }, sk)
               },
-              children: [(0, lC.jsx)(gC.c, {
+              children: [(0, Rk.jsx)(ek.e, {
                 name: "gavel"
-              }), (0, lC.jsx)("span", {
+              }), (0, Rk.jsx)("span", {
                 className: "LobbyManageButtonLabel",
-                children: pC("lobbyManageEntry:ban")
+                children: Hk("lobbyManageEntry:ban")
               })]
-            }), "role" === GC.kind && (0, lC.jsx)(AC.g, {
+            }), "role" === xk.kind && (0, Rk.jsx)(Kk.d, {
               className: "LobbyManageIconButton SmallTextLight",
               analyticsClick: {
                 id: "lobby_manage.set_role",
-                value: GC.role
+                value: xk.role
               },
               onClick: () => {
-                RC(null), LC(GC.role)
+                Pk(null), mk(xk.role)
               },
-              children: pC("lobbyManage:makeRole", {
-                role: uC(GC.role)
+              children: Hk("lobbyManage:makeRole", {
+                role: Nk(xk.role)
               })
-            }), (0, lC.jsx)(AC.i, {
+            }), (0, Rk.jsx)(Kk.g, {
               className: "LobbyManageIconButton SmallTextLight",
               onClick: () => {
-                RC(null)
+                Pk(null)
               },
-              children: pC("general:cancel")
+              children: Hk("general:cancel")
             })]
-          }), null === GC && (0, lC.jsxs)(lC.Fragment, {
-            children: [(0, lC.jsxs)("div", {
+          }), null === xk && (0, Rk.jsxs)(Rk.Fragment, {
+            children: [(0, Rk.jsxs)("div", {
               className: "LobbyManageChoices",
-              children: [IC.gamemode && null !== aC && (0, lC.jsx)(KC.b, {
-                options: (null !== (zC = xC.gamemodes) && void 0 !== zC ? zC : []).map((CC => ({
-                  value: CC.value,
-                  label: dC(pC, CC.label, NC)
+              children: [Vk.gamemode && null !== Bk && (0, Rk.jsx)(Ok.e, {
+                options: (null !== (Fk = Qk.gamemodes) && void 0 !== Fk ? Fk : []).map((kk => ({
+                  value: kk.value,
+                  label: Gk(Hk, kk.label, Zk)
                 }))),
-                value: null !== (ZC = EC.get("gamemode")) && void 0 !== ZC ? ZC : aC.gamemode,
-                disabled: HC,
-                onChange: CC => {
-                  (0, wC.reportAnalyticsClick)({
+                value: null !== (Ik = bk.get("gamemode")) && void 0 !== Ik ? Ik : Bk.gamemode,
+                disabled: uk,
+                onChange: kk => {
+                  (0, Tk.reportAnalyticsClick)({
                     id: "lobby_manage.set_gamemode",
-                    value: CC.value
-                  }), EC.hold("gamemode", CC.value, WC.send({
+                    value: kk.value
+                  }), bk.hold("gamemode", kk.value, tk.send({
                     type: "setGamemode",
-                    name: nC,
-                    gamemode: CC.value
-                  }, JC))
+                    name: yk,
+                    gamemode: kk.value
+                  }, sk))
                 }
-              }), IC.roles.length > 0 && null !== aC && (0, lC.jsx)(KC.b, {
-                options: [...xC.roles].reverse().filter((CC => IC.roles.includes(CC.role))).map((CC => ({
-                  value: CC.role,
-                  label: CC.label
+              }), Vk.roles.length > 0 && null !== Bk && (0, Rk.jsx)(Ok.e, {
+                options: [...Qk.roles].reverse().filter((kk => Vk.roles.includes(kk.role))).map((kk => ({
+                  value: kk.role,
+                  label: kk.label
                 }))),
-                value: null !== (bC = EC.get("role")) && void 0 !== bC ? bC : aC.role,
-                disabled: HC,
-                onChange: CC => {
-                  var zC;
-                  (zC = CC.value) !== (null === aC || void 0 === aC ? void 0 : aC.role) && (rC.includes(zC) ? RC({
+                value: null !== (ik = bk.get("role")) && void 0 !== ik ? ik : Bk.role,
+                disabled: uk,
+                onChange: kk => {
+                  var Fk;
+                  (Fk = kk.value) !== (null === Bk || void 0 === Bk ? void 0 : Bk.role) && (ck.includes(Fk) ? Pk({
                     kind: "role",
-                    role: zC
-                  }) : ((0, wC.reportAnalyticsClick)({
+                    role: Fk
+                  }) : ((0, Tk.reportAnalyticsClick)({
                     id: "lobby_manage.set_role",
-                    value: zC
-                  }), LC(zC, TC(zC))))
+                    value: Fk
+                  }), mk(Fk, fk(Fk))))
                 }
-              }), null !== IC.fixedRole && (0, lC.jsx)("div", {
+              }), null !== Vk.fixedRole && (0, Rk.jsx)("div", {
                 className: "LobbyManageChoiceFixed",
-                children: uC(IC.fixedRole)
+                children: Nk(Vk.fixedRole)
               })]
-            }), (0, lC.jsxs)("div", {
+            }), (0, Rk.jsxs)("div", {
               className: "LobbyManageButtons",
-              children: [IC.kick && (0, lC.jsxs)(AC.i, {
+              children: [Vk.kick && (0, Rk.jsxs)(Kk.g, {
                 className: "LobbyManageIconButton SmallTextLight",
-                ariaLabel: `${pC("lobbyManageEntry:kick")} ${nC}`,
-                disabled: HC,
+                ariaLabel: `${Hk("lobbyManageEntry:kick")} ${yk}`,
+                disabled: uk,
                 analyticsClick: {
                   id: "lobby_manage.kick",
                   value: "row"
                 },
                 onClick: () => {
-                  yC({
+                  gk({
                     type: "kick",
-                    name: nC
-                  }, JC)
+                    name: yk
+                  }, sk)
                 },
-                children: [(0, lC.jsx)(gC.c, {
+                children: [(0, Rk.jsx)(ek.e, {
                   name: "person-falling-burst"
-                }), (0, lC.jsx)("span", {
+                }), (0, Rk.jsx)("span", {
                   className: "LobbyManageButtonLabel",
-                  children: pC("lobbyManageEntry:kick")
+                  children: Hk("lobbyManageEntry:kick")
                 })]
-              }), IC.ban && (0, lC.jsxs)(AC.K, {
+              }), Vk.ban && (0, Rk.jsxs)(Kk.J, {
                 className: "LobbyManageOutlineButton SmallTextLight",
-                ariaLabel: `${pC("lobbyManageEntry:ban")} ${nC}`,
-                disabled: HC,
+                ariaLabel: `${Hk("lobbyManageEntry:ban")} ${yk}`,
+                disabled: uk,
                 padDestructive: !0,
                 onClick: () => {
-                  RC({
+                  Pk({
                     kind: "ban"
                   })
                 },
-                children: [(0, lC.jsx)(gC.c, {
+                children: [(0, Rk.jsx)(ek.e, {
                   name: "gavel"
-                }), (0, lC.jsx)("span", {
+                }), (0, Rk.jsx)("span", {
                   className: "LobbyManageButtonLabel",
-                  children: pC("lobbyManageEntry:ban")
+                  children: Hk("lobbyManageEntry:ban")
                 })]
-              }), IC.unban && (0, lC.jsxs)(AC.i, {
+              }), Vk.unban && (0, Rk.jsxs)(Kk.g, {
                 className: "LobbyManageIconButton SmallTextLight",
-                ariaLabel: `${pC("lobbyManageEntry:unban")} ${nC}`,
-                disabled: HC,
+                ariaLabel: `${Hk("lobbyManageEntry:unban")} ${yk}`,
+                disabled: uk,
                 analyticsClick: {
                   id: "lobby_manage.unban"
                 },
                 onClick: () => {
-                  yC({
+                  gk({
                     type: "unban",
-                    name: nC
-                  }, JC)
+                    name: yk
+                  }, sk)
                 },
-                children: [(0, lC.jsx)(gC.c, {
+                children: [(0, Rk.jsx)(ek.e, {
                   name: "user-unlock"
-                }), (0, lC.jsx)("span", {
+                }), (0, Rk.jsx)("span", {
                   className: "LobbyManageButtonLabel",
-                  children: pC("lobbyManageEntry:unban")
+                  children: Hk("lobbyManageEntry:unban")
                 })]
               })]
             })]
@@ -441,783 +441,783 @@ export const modules = {
       })
     }
 
-    function aC(CC) {
-      var zC, ZC, wC, bC;
+    function Bk(kk) {
+      var Fk, Ik, Tk, ik;
       let {
-        manage: nC,
-        focusRequest: fC,
-        onFocused: oC
-      } = CC;
+        manage: yk,
+        focusRequest: lk,
+        onFocused: ak
+      } = kk;
       const {
-        t: qC
-      } = (0, MC.y)(), FC = (0, RC.f)("players"), WC = (0, RC.f)("hiddenPlayerNames"), NC = (0, QC.useRef)(null), {
-        state: SC
-      } = nC, PC = null === FC.localId ? null : null !== (zC = null === (ZC = FC.byId[FC.localId]) || void 0 === ZC ? void 0 : ZC.name) && void 0 !== zC ? zC : null, [GC] = (0, QC.useState)((() => JC(SC, PC))), xC = function(CC, zC, ZC) {
-        const QC = new Set([...CC.here, ...CC.away, ...CC.banned]),
-          wC = JC(zC, ZC),
-          bC = zC => {
-            const ZC = wC[zC].filter((CC => !QC.has(CC)));
-            for (const CC of ZC) QC.add(CC);
-            return [...CC[zC], ...ZC]
+        t: qk
+      } = (0, jk.y)(), Lk = (0, Pk.k)("players"), tk = (0, Pk.k)("hiddenPlayerNames"), Zk = (0, Xk.useRef)(null), {
+        state: wk
+      } = yk, Jk = null === Lk.localId ? null : null !== (Fk = null === (Ik = Lk.byId[Lk.localId]) || void 0 === Ik ? void 0 : Ik.name) && void 0 !== Fk ? Fk : null, [xk] = (0, Xk.useState)((() => sk(wk, Jk))), Qk = function(kk, Fk, Ik) {
+        const Xk = new Set([...kk.here, ...kk.away, ...kk.banned]),
+          Tk = sk(Fk, Ik),
+          ik = Fk => {
+            const Ik = Tk[Fk].filter((kk => !Xk.has(kk)));
+            for (const kk of Ik) Xk.add(kk);
+            return [...kk[Fk], ...Ik]
           };
         return {
-          here: bC("here"),
-          away: bC("away"),
-          banned: bC("banned")
+          here: ik("here"),
+          away: ik("away"),
+          banned: ik("banned")
         }
-      }(GC, SC, PC), [iC, vC] = (0, QC.useState)(!1), eC = function(CC, zC) {
-        return CC.here.filter((CC => CC.name !== zC && "none" === CC.role && CC.can.kick)).length
-      }(SC, PC), hC = nC.statusOf("kickAll");
-      (0, QC.useEffect)((() => {
-        var CC, zC;
-        if (null === fC) return;
-        const ZC = null === (CC = NC.current) || void 0 === CC ? void 0 : CC.querySelector(`[data-lobby-manage-row="${CSS.escape(fC.name)}"]`);
-        null === ZC || void 0 === ZC || ZC.scrollIntoView({
+      }(xk, wk, Jk), [zk, Sk] = (0, Xk.useState)(!1), vk = function(kk, Fk) {
+        return kk.here.filter((kk => kk.name !== Fk && "none" === kk.role && kk.can.kick)).length
+      }(wk, Jk), Ek = yk.statusOf("kickAll");
+      (0, Xk.useEffect)((() => {
+        var kk, Fk;
+        if (null === lk) return;
+        const Ik = null === (kk = Zk.current) || void 0 === kk ? void 0 : kk.querySelector(`[data-lobby-manage-row="${CSS.escape(lk.name)}"]`);
+        null === Ik || void 0 === Ik || Ik.scrollIntoView({
           block: "center"
-        }), null === ZC || void 0 === ZC || null === (zC = ZC.querySelector(".ProfilePreview")) || void 0 === zC || zC.focus({
+        }), null === Ik || void 0 === Ik || null === (Fk = Ik.querySelector(".ProfilePreview")) || void 0 === Fk || Fk.focus({
           preventScroll: !0
-        }), oC(fC.seq)
-      }), [null === fC || void 0 === fC ? void 0 : fC.seq]);
-      const KC = CC => (zC, ZC) => (0, lC.jsx)(TC, {
-        name: zC,
-        place: IC(SC, zC),
-        openedIn: CC,
-        isYou: zC === PC,
-        manage: nC,
-        hiddenNames: WC,
-        zIndex: ZC
-      }, zC);
-      return (0, lC.jsxs)("div", {
-        ref: NC,
+        }), ak(lk.seq)
+      }), [null === lk || void 0 === lk ? void 0 : lk.seq]);
+      const Ok = kk => (Fk, Ik) => (0, Rk.jsx)(fk, {
+        name: Fk,
+        place: Vk(wk, Fk),
+        openedIn: kk,
+        isYou: Fk === Jk,
+        manage: yk,
+        hiddenNames: tk,
+        zIndex: Ik
+      }, Fk);
+      return (0, Rk.jsxs)("div", {
+        ref: Zk,
         className: "LobbyManagePage",
-        children: [xC.here.length > 0 && (0, lC.jsxs)("div", {
+        children: [Qk.here.length > 0 && (0, Rk.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, lC.jsxs)("div", {
+          children: [(0, Rk.jsxs)("div", {
             className: "LobbyManageBoxHeading",
-            children: [(0, lC.jsx)(pC.b, {
-              label: qC("lobbyManage:here"),
-              meta: SC.here.length
-            }), eC >= 2 && !iC && (0, lC.jsxs)(AC.K, {
+            children: [(0, Rk.jsx)(Hk.b, {
+              label: qk("lobbyManage:here"),
+              meta: wk.here.length
+            }), vk >= 2 && !zk && (0, Rk.jsxs)(Kk.J, {
               className: "LobbyManageTitleAction SmallTextLight",
               padDestructive: !0,
-              disabled: nC.isPending("kickAll"),
+              disabled: yk.isPending("kickAll"),
               onClick: () => {
-                vC(!0)
+                Sk(!0)
               },
-              children: [(0, lC.jsx)(gC.c, {
+              children: [(0, Rk.jsx)(ek.e, {
                 name: "person-falling-burst"
-              }), " ", qC("lobbyManage:kickAll")]
+              }), " ", qk("lobbyManage:kickAll")]
             })]
-          }), iC && eC >= 2 && (0, lC.jsxs)("div", {
+          }), zk && vk >= 2 && (0, Rk.jsxs)("div", {
             className: "LobbyManageConfirm",
-            children: [(0, lC.jsx)("span", {
+            children: [(0, Rk.jsx)("span", {
               className: "LobbyManageConfirmText",
-              children: qC("lobbyManage:kickAllConfirm", {
-                count: eC
+              children: qk("lobbyManage:kickAllConfirm", {
+                count: vk
               })
-            }), (0, lC.jsxs)("div", {
+            }), (0, Rk.jsxs)("div", {
               className: "LobbyManageButtons",
-              children: [(0, lC.jsx)(AC.I, {
+              children: [(0, Rk.jsx)(Kk.G, {
                 className: "LobbyManageIconButton SmallTextLight",
                 analyticsClick: {
                   id: "lobby_manage.kick_all"
                 },
                 onClick: () => {
-                  vC(!1), nC.send({
+                  Sk(!1), yk.send({
                     type: "kickAll"
                   }, "kickAll")
                 },
-                children: qC("lobbyManage:kickAll")
-              }), (0, lC.jsx)(AC.i, {
+                children: qk("lobbyManage:kickAll")
+              }), (0, Rk.jsx)(Kk.g, {
                 className: "LobbyManageIconButton SmallTextLight",
                 onClick: () => {
-                  vC(!1)
+                  Sk(!1)
                 },
-                children: qC("general:cancel")
+                children: qk("general:cancel")
               })]
             })]
-          }), hC && (0, lC.jsx)("div", {
+          }), Ek && (0, Rk.jsx)("div", {
             className: "LobbyManageBoxStatus",
-            children: (0, lC.jsx)(XC, {
-              status: hC
+            children: (0, Rk.jsx)(Uk, {
+              status: Ek
             })
-          }), (0, lC.jsx)(cC, {
-            names: xC.here,
-            cap: xC.here.length,
+          }), (0, Rk.jsx)(Ck, {
+            names: Qk.here,
+            cap: Qk.here.length,
             filterFrom: 20,
             moreLabel: "",
-            renderRow: KC("here")
+            renderRow: Ok("here")
           })]
-        }), xC.away.length > 0 && (0, lC.jsxs)("div", {
+        }), Qk.away.length > 0 && (0, Rk.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, lC.jsx)(pC.b, {
-            label: qC("lobbyManage:notHere"),
-            meta: xC.away.length
-          }), (0, lC.jsx)(cC, {
-            names: xC.away,
+          children: [(0, Rk.jsx)(Hk.b, {
+            label: qk("lobbyManage:notHere"),
+            meta: Qk.away.length
+          }), (0, Rk.jsx)(Ck, {
+            names: Qk.away,
             cap: 5,
             filterFrom: null,
-            moreLabel: qC("lobbyManage:allCount", {
-              count: xC.away.length
+            moreLabel: qk("lobbyManage:allCount", {
+              count: Qk.away.length
             }),
-            reveal: null !== (wC = null === fC || void 0 === fC ? void 0 : fC.name) && void 0 !== wC ? wC : null,
-            renderRow: KC("away")
+            reveal: null !== (Tk = null === lk || void 0 === lk ? void 0 : lk.name) && void 0 !== Tk ? Tk : null,
+            renderRow: Ok("away")
           })]
-        }), xC.banned.length > 0 && (0, lC.jsxs)("div", {
+        }), Qk.banned.length > 0 && (0, Rk.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, lC.jsx)(pC.b, {
-            label: qC("lobbyManage:banned"),
-            meta: xC.banned.length
-          }), (0, lC.jsx)(cC, {
-            names: xC.banned,
+          children: [(0, Rk.jsx)(Hk.b, {
+            label: qk("lobbyManage:banned"),
+            meta: Qk.banned.length
+          }), (0, Rk.jsx)(Ck, {
+            names: Qk.banned,
             cap: 5,
             filterFrom: 20,
-            moreLabel: qC("lobbyManage:allCount", {
-              count: xC.banned.length
+            moreLabel: qk("lobbyManage:allCount", {
+              count: Qk.banned.length
             }),
-            reveal: null !== (bC = null === fC || void 0 === fC ? void 0 : fC.name) && void 0 !== bC ? bC : null,
-            renderRow: KC("banned")
+            reveal: null !== (ik = null === lk || void 0 === lk ? void 0 : lk.name) && void 0 !== ik ? ik : null,
+            renderRow: Ok("banned")
           })]
         })]
       })
     }
-    var tC = ZC(4562),
-      DC = ZC(1559),
-      jC = ZC(36584),
-      yC = ZC(36598),
-      LC = ZC(36590),
-      UC = ZC(36588),
-      BC = ZC(36627),
-      OC = ZC(36612),
-      kC = ZC(36620);
+    var dk = Ik(4612),
+      Yk = Ik(1585),
+      Ak = Ik(36707),
+      gk = Ik(36721),
+      mk = Ik(36712),
+      hk = Ik(36710),
+      rk = Ik(36750),
+      Dk = Ik(36733),
+      Mk = Ik(36742);
 
-    function VC(CC) {
-      const zC = new Set;
-      for (const ZC of CC) zC.add(ZC.toLowerCase());
-      return zC
+    function kF(kk) {
+      const Fk = new Set;
+      for (const Ik of kk) Fk.add(Ik.toLowerCase());
+      return Fk
     }
 
-    function Cz(CC) {
-      var zC, ZC;
+    function FF(kk) {
+      var Fk, Ik;
       let {
-        state: wC,
-        lobbyName: bC,
-        listed: nC,
-        isListed: fC,
-        sG: oC,
-        xR: qC,
-        statusOf: FC
-      } = CC;
+        state: Tk,
+        lobbyName: ik,
+        listed: yk,
+        isListed: lk,
+        VJ: ak,
+        mJ: qk,
+        statusOf: Lk
+      } = kk;
       const {
-        t: WC,
-        selectedLanguage: NC
-      } = (0, MC.y)(), gC = (0, DC.k)(), SC = (0, RC.f)("players"), PC = null === SC.localId ? null : null !== (zC = null === (ZC = SC.byId[SC.localId]) || void 0 === ZC ? void 0 : ZC.name) && void 0 !== zC ? zC : null, GC = (0, QC.useMemo)((() => (0, UC.i)(gC.friends, bC, wC.here.map((CC => CC.name)))), [gC.friends, bC, wC.here]), AC = new Map(GC.map((CC => [CC.friend.name.toLowerCase(), CC]))), xC = function(CC) {
+        t: tk,
+        selectedLanguage: Zk
+      } = (0, jk.y)(), ek = (0, Yk.j)(), wk = (0, Pk.k)("players"), Jk = null === wk.localId ? null : null !== (Fk = null === (Ik = wk.byId[wk.localId]) || void 0 === Ik ? void 0 : Ik.name) && void 0 !== Fk ? Fk : null, xk = (0, Xk.useMemo)((() => (0, hk.i)(ek.friends, ik, Tk.here.map((kk => kk.name)))), [ek.friends, ik, Tk.here]), Kk = new Map(xk.map((kk => [kk.friend.name.toLowerCase(), kk]))), Qk = function(kk) {
         let {
-          refused: zC,
-          listed: ZC,
-          here: QC,
-          friends: wC,
-          excluded: bC
-        } = CC;
-        const nC = VC(bC),
-          fC = CC => CC.filter((CC => {
-            const zC = CC.toLowerCase();
-            return !nC.has(zC) && (nC.add(zC), !0)
+          refused: Fk,
+          listed: Ik,
+          here: Xk,
+          friends: Tk,
+          excluded: ik
+        } = kk;
+        const yk = kF(ik),
+          lk = kk => kk.filter((kk => {
+            const Fk = kk.toLowerCase();
+            return !yk.has(Fk) && (yk.add(Fk), !0)
           }));
         return {
           added: [],
-          refused: fC(zC),
-          listed: fC(ZC),
-          suggested: fC([...QC, ...wC])
+          refused: lk(Fk),
+          listed: lk(Ik),
+          suggested: lk([...Xk, ...Tk])
         }
       }({
-        refused: wC.refused.map((CC => CC.name)),
-        listed: nC,
-        here: wC.here.map((CC => CC.name)),
-        friends: GC.flatMap((CC => "here" === CC.place ? [] : [CC.friend.name])),
-        excluded: [...null === PC ? [] : [PC], ...[...wC.here, ...wC.away].flatMap((CC => "none" === CC.role || (0, UC.k)(nC, CC.name) ? [] : [CC.name]))]
-      }), [JC] = (0, QC.useState)(xC), [IC, iC] = (0, QC.useState)([]), vC = function(CC, zC, ZC) {
-        const QC = VC(ZC),
-          wC = VC([...ZC, ...CC.refused, ...CC.listed, ...CC.suggested]),
-          bC = ZC => [...CC[ZC].filter((CC => !QC.has(CC.toLowerCase()))), ...zC[ZC].filter((CC => {
-            const zC = CC.toLowerCase();
-            return !wC.has(zC) && (wC.add(zC), !0)
+        refused: Tk.refused.map((kk => kk.name)),
+        listed: yk,
+        here: Tk.here.map((kk => kk.name)),
+        friends: xk.flatMap((kk => "here" === kk.place ? [] : [kk.friend.name])),
+        excluded: [...null === Jk ? [] : [Jk], ...[...Tk.here, ...Tk.away].flatMap((kk => "none" === kk.role || (0, hk.m)(yk, kk.name) ? [] : [kk.name]))]
+      }), [sk] = (0, Xk.useState)(Qk), [Vk, zk] = (0, Xk.useState)([]), Sk = function(kk, Fk, Ik) {
+        const Xk = kF(Ik),
+          Tk = kF([...Ik, ...kk.refused, ...kk.listed, ...kk.suggested]),
+          ik = Ik => [...kk[Ik].filter((kk => !Xk.has(kk.toLowerCase()))), ...Fk[Ik].filter((kk => {
+            const Fk = kk.toLowerCase();
+            return !Tk.has(Fk) && (Tk.add(Fk), !0)
           }))];
         return {
-          added: [...ZC],
-          refused: bC("refused"),
-          listed: bC("listed"),
-          suggested: bC("suggested")
+          added: [...Ik],
+          refused: ik("refused"),
+          listed: ik("listed"),
+          suggested: ik("suggested")
         }
-      }(JC, xC, IC), KC = (CC, zC) => {
-        var ZC, QC;
-        const bC = CC.toLowerCase(),
-          nC = AC.get(bC),
-          qC = wC.here.find((CC => CC.name.toLowerCase() === bC)),
-          MC = wC.refused.find((CC => CC.name.toLowerCase() === bC)),
-          gC = null !== (ZC = null === FC || void 0 === FC ? void 0 : FC(CC)) && void 0 !== ZC ? ZC : null;
-        let SC = null;
-        gC ? SC = (0, lC.jsx)(XC, {
-          status: gC
-        }) : MC ? SC = mC(WC, NC.code, "lobbyManage:triedToJoinAgo", MC.at, Date.now()) : nC && qC ? SC = WC("lobbyManage:friendHere") : nC ? SC = "online" === nC.place ? WC("lobbyManage:friendOnline") : WC("lobbyManage:friend") : qC && (SC = WC("lobbyManage:hereStatus"));
-        let pC = null !== (QC = null === nC || void 0 === nC ? void 0 : nC.friend) && void 0 !== QC ? QC : (0, hC.l)(CC, null);
-        return !nC && null !== qC && void 0 !== qC && qC.id && (pC = (0, eC.d)(qC.id, qC.name).playerSocialPreview), (0, lC.jsx)(OC.d, {
-          playerSocialPreview: pC,
-          isFriend: void 0 !== nC,
+      }(sk, Qk, Vk), Ok = (kk, Fk) => {
+        var Ik, Xk;
+        const ik = kk.toLowerCase(),
+          yk = Kk.get(ik),
+          qk = Tk.here.find((kk => kk.name.toLowerCase() === ik)),
+          jk = Tk.refused.find((kk => kk.name.toLowerCase() === ik)),
+          ek = null !== (Ik = null === Lk || void 0 === Lk ? void 0 : Lk(kk)) && void 0 !== Ik ? Ik : null;
+        let wk = null;
+        ek ? wk = (0, Rk.jsx)(Uk, {
+          status: ek
+        }) : jk ? wk = pk(tk, Zk.code, "lobbyManage:triedToJoinAgo", jk.at, Date.now()) : yk && qk ? wk = tk("lobbyManage:friendHere") : yk ? wk = "online" === yk.place ? tk("lobbyManage:friendOnline") : tk("lobbyManage:friend") : qk && (wk = tk("lobbyManage:hereStatus"));
+        let Hk = null !== (Xk = null === yk || void 0 === yk ? void 0 : yk.friend) && void 0 !== Xk ? Xk : (0, Ek.j)(kk, null);
+        return !yk && null !== qk && void 0 !== qk && qk.id && (Hk = (0, vk.e)(qk.id, qk.name).playerSocialPreview), (0, Rk.jsx)(Dk.c, {
+          playerSocialPreview: Hk,
+          isFriend: void 0 !== yk,
           hideFriendBadge: !0,
-          status: SC,
-          zIndex: zC,
-          ZN: {
-            on: fC(CC),
-            onChange: zC => {
-              oC(CC, zC)
+          status: wk,
+          zIndex: Fk,
+          Dt: {
+            on: lk(kk),
+            onChange: Fk => {
+              ak(kk, Fk)
             }
           }
-        }, bC)
-      }, YC = [...vC.added, ...vC.refused];
-      return (0, lC.jsxs)("div", {
+        }, ik)
+      }, nk = [...Sk.added, ...Sk.refused];
+      return (0, Rk.jsxs)("div", {
         className: "LobbyManageBox",
-        children: [(0, lC.jsx)(pC.b, {
-          label: WC("worldSocial:whitelist"),
-          meta: nC.length
-        }), (0, lC.jsx)(kC.d, {
-          label: WC("lobbyManage:add"),
+        children: [(0, Rk.jsx)(Hk.b, {
+          label: tk("worldSocial:whitelist"),
+          meta: yk.length
+        }), (0, Rk.jsx)(Mk.b, {
+          label: tk("lobbyManage:add"),
           icon: "user-check",
-          placeholder: WC("socialBar:enterPlayerName"),
-          onSubmit: async CC => {
-            const zC = await qC(CC);
-            return zC.ok && iC((zC => [CC, ...zC])), zC
+          placeholder: tk("socialBar:enterPlayerName"),
+          onSubmit: async kk => {
+            const Fk = await qk(kk);
+            return Fk.ok && zk((Fk => [kk, ...Fk])), Fk
           }
-        }), YC.length > 0 && (0, lC.jsx)("div", {
+        }), nk.length > 0 && (0, Rk.jsx)("div", {
           className: "PlayerRows",
-          children: YC.map(((CC, zC) => KC(CC, YC.length - zC)))
-        }), (0, lC.jsx)(cC, {
-          names: vC.listed,
+          children: nk.map(((kk, Fk) => Ok(kk, nk.length - Fk)))
+        }), (0, Rk.jsx)(Ck, {
+          names: Sk.listed,
           cap: 8,
           filterFrom: 8,
-          moreLabel: WC("lobbyManage:allOnWhitelist", {
-            count: vC.listed.length
+          moreLabel: tk("lobbyManage:allOnWhitelist", {
+            count: Sk.listed.length
           }),
-          renderRow: KC
-        }), (0, lC.jsx)(cC, {
-          names: vC.suggested,
+          renderRow: Ok
+        }), (0, Rk.jsx)(Ck, {
+          names: Sk.suggested,
           cap: 8,
           filterFrom: null,
-          moreLabel: WC("lobbyManage:allCount", {
-            count: vC.suggested.length
+          moreLabel: tk("lobbyManage:allCount", {
+            count: Sk.suggested.length
           }),
-          renderRow: KC
+          renderRow: Ok
         })]
       })
     }
 
-    function zz(CC) {
+    function IF(kk) {
       let {
-        manage: zC,
-        listing: ZC
-      } = CC;
+        manage: Fk,
+        listing: Ik
+      } = kk;
       const {
-        t: QC
-      } = (0, MC.y)(), bC = (CC, ZC) => ((0, wC.reportAnalyticsClick)({
+        t: Xk
+      } = (0, jk.y)(), ik = (kk, Ik) => ((0, Tk.reportAnalyticsClick)({
         id: "lobby_manage.set_listing",
-        value: CC
-      }), zC.send({
+        value: kk
+      }), Fk.send({
         type: "setListing",
-        field: CC,
-        value: ZC
-      }, `listing:${CC}`)), nC = CC => {
-        const ZC = zC.statusOf(`listing:${CC}`);
-        return ZC && !ZC.ok && (0, lC.jsx)("div", {
+        field: kk,
+        value: Ik
+      }, `listing:${kk}`)), yk = kk => {
+        const Ik = Fk.statusOf(`listing:${kk}`);
+        return Ik && !Ik.ok && (0, Rk.jsx)("div", {
           className: "LobbyManageFieldError",
-          children: (0, lC.jsx)(XC, {
-            status: ZC
+          children: (0, Rk.jsx)(Uk, {
+            status: Ik
           })
         })
       };
-      return (0, lC.jsxs)("div", {
+      return (0, Rk.jsxs)("div", {
         className: "LobbyManageBox LobbyManageListing",
-        children: [(0, lC.jsx)(pC.b, {
-          label: QC("lobbyManage:inWorldsList")
-        }), (0, lC.jsxs)("div", {
+        children: [(0, Rk.jsx)(Hk.b, {
+          label: Xk("lobbyManage:inWorldsList")
+        }), (0, Rk.jsxs)("div", {
           className: "LobbyManageRuleRow",
-          children: [(0, lC.jsx)("div", {
+          children: [(0, Rk.jsx)("div", {
             className: "SliderText",
-            children: QC("lobbyManage:description")
-          }), (0, lC.jsx)(uC, {
-            value: ZC.description,
-            ariaLabel: QC("lobbyManage:description"),
+            children: Xk("lobbyManage:description")
+          }), (0, Rk.jsx)(Nk, {
+            value: Ik.description,
+            ariaLabel: Xk("lobbyManage:description"),
             wide: !0,
-            onSave: CC => bC("description", CC)
+            onSave: kk => ik("description", kk)
           })]
-        }), nC("description"), (0, lC.jsxs)("div", {
+        }), yk("description"), (0, Rk.jsxs)("div", {
           className: "LobbyManageRuleRow",
-          children: [(0, lC.jsx)("div", {
+          children: [(0, Rk.jsx)("div", {
             className: "SliderText",
-            children: QC("lobbyManage:emojis")
-          }), (0, lC.jsx)(uC, {
-            value: ZC.emojis,
-            ariaLabel: QC("lobbyManage:emojis"),
-            onSave: CC => bC("emojis", CC)
+            children: Xk("lobbyManage:emojis")
+          }), (0, Rk.jsx)(Nk, {
+            value: Ik.emojis,
+            ariaLabel: Xk("lobbyManage:emojis"),
+            onSave: kk => ik("emojis", kk)
           })]
-        }), nC("emojis"), (0, lC.jsxs)("div", {
+        }), yk("emojis"), (0, Rk.jsxs)("div", {
           className: "LobbyManageRuleRow",
-          children: [(0, lC.jsx)("div", {
+          children: [(0, Rk.jsx)("div", {
             className: "SliderText",
-            children: QC("lobbyManage:colour")
-          }), (0, lC.jsx)(Zz, {
-            value: ZC.colour,
-            ariaLabel: QC("lobbyManage:colour"),
-            onSave: CC => {
-              bC("colour", CC)
+            children: Xk("lobbyManage:colour")
+          }), (0, Rk.jsx)(XF, {
+            value: Ik.colour,
+            ariaLabel: Xk("lobbyManage:colour"),
+            onSave: kk => {
+              ik("colour", kk)
             }
           })]
-        }), nC("colour")]
+        }), yk("colour")]
       })
     }
 
-    function Zz(CC) {
+    function XF(kk) {
       let {
-        value: zC,
-        ariaLabel: ZC,
-        onSave: wC
-      } = CC;
-      const bC = (0, QC.useRef)(null),
-        nC = (0, QC.useRef)({
-          value: zC,
-          onSave: wC
+        value: Fk,
+        ariaLabel: Ik,
+        onSave: Tk
+      } = kk;
+      const ik = (0, Xk.useRef)(null),
+        yk = (0, Xk.useRef)({
+          value: Fk,
+          onSave: Tk
         });
-      nC.current = {
-        value: zC,
-        onSave: wC
+      yk.current = {
+        value: Fk,
+        onSave: Tk
       };
-      const fC = (0, QC.useRef)(null),
-        oC = (0, QC.useRef)(!1),
-        qC = CC => {
-          oC.current && CC.value !== nC.current.value && CC.value !== fC.current && (fC.current = CC.value, nC.current.onSave(CC.value))
+      const lk = (0, Xk.useRef)(null),
+        ak = (0, Xk.useRef)(!1),
+        qk = kk => {
+          ak.current && kk.value !== yk.current.value && kk.value !== lk.current && (lk.current = kk.value, yk.current.onSave(kk.value))
         };
-      return (0, QC.useEffect)((() => {
-        bC.current && document.activeElement !== bC.current && (bC.current.value = zC)
-      }), [zC]), (0, QC.useEffect)((() => {
-        const CC = bC.current,
-          zC = () => {
-            qC(CC)
+      return (0, Xk.useEffect)((() => {
+        ik.current && document.activeElement !== ik.current && (ik.current.value = Fk)
+      }), [Fk]), (0, Xk.useEffect)((() => {
+        const kk = ik.current,
+          Fk = () => {
+            qk(kk)
           };
-        return CC.addEventListener("change", zC), () => {
-          CC.removeEventListener("change", zC), qC(CC)
+        return kk.addEventListener("change", Fk), () => {
+          kk.removeEventListener("change", Fk), qk(kk)
         }
-      }), []), (0, lC.jsx)("input", {
-        ref: bC,
+      }), []), (0, Rk.jsx)("input", {
+        ref: ik,
         type: "color",
         className: "LobbyManageColour",
-        defaultValue: zC,
-        "aria-label": ZC,
+        defaultValue: Fk,
+        "aria-label": Ik,
         onInput: () => {
-          oC.current = !0
+          ak.current = !0
         },
-        onBlur: CC => {
-          qC(CC.currentTarget)
+        onBlur: kk => {
+          qk(kk.currentTarget)
         }
       })
     }
 
-    function Qz(CC) {
+    function TF(kk) {
       let {
-        manage: zC
-      } = CC;
+        manage: Fk
+      } = kk;
       const {
-        lobbyName: ZC,
-        shownLobbyName: QC
-      } = (0, RC.f)("connectedGame");
-      return zC.state.you.canSetVisibility && null !== ZC ? (0, lC.jsx)(bz, {
-        manage: zC,
-        lobbyName: ZC,
-        worldCode: null !== QC && void 0 !== QC ? QC : ZC
-      }, ZC) : (0, lC.jsx)(nz, {
-        manage: zC,
-        lobbyName: null !== ZC && void 0 !== ZC ? ZC : ""
+        lobbyName: Ik,
+        shownLobbyName: Xk
+      } = (0, Pk.k)("connectedGame");
+      return Fk.state.you.canSetVisibility && null !== Ik ? (0, Rk.jsx)(yF, {
+        manage: Fk,
+        lobbyName: Ik,
+        worldCode: null !== Xk && void 0 !== Xk ? Xk : Ik
+      }, Ik) : (0, Rk.jsx)(lF, {
+        manage: Fk,
+        lobbyName: null !== Ik && void 0 !== Ik ? Ik : ""
       })
     }
 
-    function wz(CC) {
-      return CC.map((CC => CC.toLowerCase())).sort().join(",")
+    function iF(kk) {
+      return kk.map((kk => kk.toLowerCase())).sort().join(",")
     }
 
-    function bz(CC) {
-      var zC;
+    function yF(kk) {
+      var Fk;
       let {
-        manage: ZC,
-        lobbyName: bC,
-        worldCode: nC
-      } = CC;
+        manage: Ik,
+        lobbyName: ik,
+        worldCode: yk
+      } = kk;
       const {
-        t: fC
-      } = (0, MC.y)(), {
-        settings: oC,
-        loading: qC,
-        change: FC,
-        retry: WC,
-        refresh: NC
-      } = (0, jC.j)(bC), gC = (0, DC.k)(), {
-        state: PC
-      } = ZC, GC = (0, QC.useRef)(oC);
-      GC.current = oC;
-      const RC = wz(null !== (zC = PC.whitelist) && void 0 !== zC ? zC : []),
-        xC = null !== PC.whitelist;
-      (0, QC.useEffect)((() => {
-        const CC = GC.current;
-        null !== CC && (CC.visibility !== PC.visibility || xC && wz(CC.whitelist) !== RC) && NC()
-      }), [PC.visibility, RC, xC, NC]);
-      const JC = async (CC, zC) => {
-        let ZC = null;
-        return await FC(CC, zC, {
+        t: lk
+      } = (0, jk.y)(), {
+        settings: ak,
+        loading: qk,
+        change: Lk,
+        retry: tk,
+        refresh: Zk
+      } = (0, Ak.g)(ik), ek = (0, Yk.j)(), {
+        state: Jk
+      } = Ik, xk = (0, Xk.useRef)(ak);
+      xk.current = ak;
+      const Pk = iF(null !== (Fk = Jk.whitelist) && void 0 !== Fk ? Fk : []),
+        Qk = null !== Jk.whitelist;
+      (0, Xk.useEffect)((() => {
+        const kk = xk.current;
+        null !== kk && (kk.visibility !== Jk.visibility || Qk && iF(kk.whitelist) !== Pk) && Zk()
+      }), [Jk.visibility, Pk, Qk, Zk]);
+      const sk = async (kk, Fk) => {
+        let Ik = null;
+        return await Lk(kk, Fk, {
           quiet: !0,
-          onAnswer: CC => {
-            ZC = CC
+          onAnswer: kk => {
+            Ik = kk
           }
-        }), ZC
-      }, IC = (CC, zC) => {
-        null !== zC && "error" in zC && ZC.showStatus(CC, {
+        }), Ik
+      }, Vk = (kk, Fk) => {
+        null !== Fk && "error" in Fk && Ik.showStatus(kk, {
           ok: !1,
-          text: [fC(zC.error)]
+          text: [lk(Fk.error)]
         })
-      }, iC = async CC => {
-        if (null === oC || CC === oC.visibility) return;
-        (0, wC.reportAnalyticsClick)({
+      }, zk = async kk => {
+        if (null === ak || kk === ak.visibility) return;
+        (0, Tk.reportAnalyticsClick)({
           id: "lobby_manage.set_mode",
-          value: CC
+          value: kk
         });
-        const zC = "whitelist" === CC ? (0, UC.f)((0, UC.i)(gC.friends, bC, PC.here.map((CC => CC.name))), (0, BC.c)(bC), oC.whitelist) : [],
-          ZC = await JC({
-            setVisibility: CC
-          }, (zC => ({
-            ...zC,
-            visibility: CC
+        const Fk = "whitelist" === kk ? (0, hk.f)((0, hk.i)(ek.friends, ik, Jk.here.map((kk => kk.name))), (0, rk.e)(ik), ak.whitelist) : [],
+          Ik = await sk({
+            setVisibility: kk
+          }, (Fk => ({
+            ...Fk,
+            visibility: kk
           })));
-        IC("mode", ZC), null === ZC || "error" in ZC || await (async CC => {
-          for (const zC of (0, UC.n)(CC, tC.E))
-            if (!await FC({
-                whitelistAdd: zC
-              }, (CC => (0, UC.s)(CC, zC, !0)))) return !1;
+        Vk("mode", Ik), null === Ik || "error" in Ik || await (async kk => {
+          for (const Fk of (0, hk.q)(kk, dk.w))
+            if (!await Lk({
+                whitelistAdd: Fk
+              }, (kk => (0, hk.s)(kk, Fk, !0)))) return !1;
           return !0
-        })(zC)
-      }, vC = (0, QC.useMemo)((() => {
-        var CC;
-        if (null === oC) return [];
-        const zC = null !== (CC = PC.whitelist) && void 0 !== CC ? CC : [];
-        return [...zC.filter((CC => (0, UC.k)(oC.whitelist, CC))), ...oC.whitelist.filter((CC => !(0, UC.k)(zC, CC)))]
-      }), [oC, PC.whitelist]), eC = ZC.statusOf("mode");
-      return (0, lC.jsxs)("div", {
+        })(Fk)
+      }, Sk = (0, Xk.useMemo)((() => {
+        var kk;
+        if (null === ak) return [];
+        const Fk = null !== (kk = Jk.whitelist) && void 0 !== kk ? kk : [];
+        return [...Fk.filter((kk => (0, hk.m)(ak.whitelist, kk))), ...ak.whitelist.filter((kk => !(0, hk.m)(Fk, kk)))]
+      }), [ak, Jk.whitelist]), vk = Ik.statusOf("mode");
+      return (0, Rk.jsxs)("div", {
         className: "LobbyManagePage",
-        children: [(0, lC.jsxs)("div", {
+        children: [(0, Rk.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, lC.jsx)(pC.b, {
-            label: fC("worldSocial:whoCanJoin")
-          }), null === oC && qC && (0, lC.jsx)("div", {
+          children: [(0, Rk.jsx)(Hk.b, {
+            label: lk("worldSocial:whoCanJoin")
+          }), null === ak && qk && (0, Rk.jsx)("div", {
             className: "LobbyManageLoading",
-            children: (0, lC.jsx)(SC.d, {})
-          }), null === oC && !qC && (0, lC.jsx)(AC.i, {
+            children: (0, Rk.jsx)(wk.c, {})
+          }), null === ak && !qk && (0, Rk.jsx)(Kk.g, {
             className: "SmallTextLight",
-            onClick: WC,
-            children: fC("worldSocial:loadFailed")
-          }), null !== oC && (0, lC.jsx)(yC.b, {
-            visibility: oC.visibility,
-            onPick: CC => {
-              iC(CC)
+            onClick: tk,
+            children: lk("worldSocial:loadFailed")
+          }), null !== ak && (0, Rk.jsx)(gk.d, {
+            visibility: ak.visibility,
+            onPick: kk => {
+              zk(kk)
             }
-          }), eC && (0, lC.jsx)("div", {
+          }), vk && (0, Rk.jsx)("div", {
             className: "LobbyManageFieldError",
-            children: (0, lC.jsx)(XC, {
-              status: eC
+            children: (0, Rk.jsx)(Uk, {
+              status: vk
             })
-          }), null !== oC && "private" !== oC.visibility && (0, lC.jsx)(LC.d, {
-            worldCode: nC,
+          }), null !== ak && "private" !== ak.visibility && (0, Rk.jsx)(mk.c, {
+            worldCode: yk,
             message: null
           })]
-        }), "whitelist" === (null === oC || void 0 === oC ? void 0 : oC.visibility) && (0, lC.jsx)(Cz, {
-          state: PC,
-          lobbyName: bC,
-          listed: vC,
-          isListed: CC => (0, UC.k)(oC.whitelist, CC),
-          sG: (CC, zC) => {
-            (0, wC.reportAnalyticsClick)(zC ? {
+        }), "whitelist" === (null === ak || void 0 === ak ? void 0 : ak.visibility) && (0, Rk.jsx)(FF, {
+          state: Jk,
+          lobbyName: ik,
+          listed: Sk,
+          isListed: kk => (0, hk.m)(ak.whitelist, kk),
+          VJ: (kk, Fk) => {
+            (0, Tk.reportAnalyticsClick)(Fk ? {
               id: "lobby_manage.whitelist_add",
-              value: "ZN"
+              value: "Dt"
             } : {
               id: "lobby_manage.whitelist_remove"
-            }), JC(zC ? {
-              whitelistAdd: [CC]
+            }), sk(Fk ? {
+              whitelistAdd: [kk]
             } : {
-              whitelistRemove: CC
-            }, (ZC => (0, UC.s)(ZC, [CC], zC))).then((zC => {
-              IC(`whitelist:${CC.toLowerCase()}`, zC)
+              whitelistRemove: kk
+            }, (Ik => (0, hk.s)(Ik, [kk], Fk))).then((Fk => {
+              Vk(`whitelist:${kk.toLowerCase()}`, Fk)
             }))
           },
-          xR: async CC => {
-            (0, wC.reportAnalyticsClick)({
+          mJ: async kk => {
+            (0, Tk.reportAnalyticsClick)({
               id: "lobby_manage.whitelist_add",
               value: "field"
             });
-            const zC = await JC({
-              whitelistAdd: [CC]
-            }, (zC => (0, UC.s)(zC, [CC], !0)));
-            return null === zC ? {
+            const Fk = await sk({
+              whitelistAdd: [kk]
+            }, (Fk => (0, hk.s)(Fk, [kk], !0)));
+            return null === Fk ? {
               ok: !1,
-              error: fC("worldSocial:changeFailed")
-            } : "error" in zC ? {
+              error: lk("worldSocial:changeFailed")
+            } : "error" in Fk ? {
               ok: !1,
-              error: fC(zC.error)
-            } : (0, UC.k)(zC.notFound, CC) ? {
+              error: lk(Fk.error)
+            } : (0, hk.m)(Fk.notFound, kk) ? {
               ok: !1,
-              error: fC("lobbyManage:noPlayerCalled", {
-                playerName: CC
+              error: lk("lobbyManage:noPlayerCalled", {
+                playerName: kk
               })
             } : {
               ok: !0
             }
           },
-          statusOf: CC => ZC.statusOf(`whitelist:${CC.toLowerCase()}`)
-        }), "public" === (null === oC || void 0 === oC ? void 0 : oC.visibility) && null !== PC.listing && (0, lC.jsx)(zz, {
-          manage: ZC,
-          listing: PC.listing
+          statusOf: kk => Ik.statusOf(`whitelist:${kk.toLowerCase()}`)
+        }), "public" === (null === ak || void 0 === ak ? void 0 : ak.visibility) && null !== Jk.listing && (0, Rk.jsx)(IF, {
+          manage: Ik,
+          listing: Jk.listing
         })]
       })
     }
 
-    function nz(CC) {
-      var zC;
+    function lF(kk) {
+      var Fk;
       let {
-        manage: ZC,
-        lobbyName: QC
-      } = CC;
+        manage: Ik,
+        lobbyName: Xk
+      } = kk;
       const {
-        t: bC
-      } = (0, MC.y)(), {
-        state: nC
-      } = ZC, fC = FC(), oC = null !== (zC = nC.whitelist) && void 0 !== zC ? zC : [];
-      return (0, lC.jsxs)("div", {
+        t: ik
+      } = (0, jk.y)(), {
+        state: yk
+      } = Ik, lk = Lk(), ak = null !== (Fk = yk.whitelist) && void 0 !== Fk ? Fk : [];
+      return (0, Rk.jsxs)("div", {
         className: "LobbyManagePage",
-        children: [(0, lC.jsxs)("div", {
+        children: [(0, Rk.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, lC.jsx)(pC.b, {
-            label: bC("worldSocial:whoCanJoin")
-          }), (0, lC.jsx)("div", {
+          children: [(0, Rk.jsx)(Hk.b, {
+            label: ik("worldSocial:whoCanJoin")
+          }), (0, Rk.jsx)("div", {
             className: "LobbyManageModeText",
-            children: bC(`worldSocial:${nC.visibility}`)
+            children: ik(`worldSocial:${yk.visibility}`)
           })]
-        }), "whitelist" === nC.visibility && nC.you.canEditWhitelist && (0, lC.jsx)(Cz, {
-          state: nC,
-          lobbyName: QC,
-          listed: oC,
-          isListed: CC => {
-            var zC;
-            return null !== (zC = fC.get(CC.toLowerCase())) && void 0 !== zC ? zC : (0, UC.k)(oC, CC)
+        }), "whitelist" === yk.visibility && yk.you.canEditWhitelist && (0, Rk.jsx)(FF, {
+          state: yk,
+          lobbyName: Xk,
+          listed: ak,
+          isListed: kk => {
+            var Fk;
+            return null !== (Fk = lk.get(kk.toLowerCase())) && void 0 !== Fk ? Fk : (0, hk.m)(ak, kk)
           },
-          sG: (CC, zC) => {
-            (0, wC.reportAnalyticsClick)(zC ? {
+          VJ: (kk, Fk) => {
+            (0, Tk.reportAnalyticsClick)(Fk ? {
               id: "lobby_manage.whitelist_add",
-              value: "ZN"
+              value: "Dt"
             } : {
               id: "lobby_manage.whitelist_remove"
             });
-            const QC = CC.toLowerCase();
-            fC.hold(QC, zC, ZC.send(zC ? {
+            const Xk = kk.toLowerCase();
+            lk.hold(Xk, Fk, Ik.send(Fk ? {
               type: "whitelistAdd",
-              names: [CC]
+              names: [kk]
             } : {
               type: "whitelistRemove",
-              name: CC
-            }, `whitelist:${QC}`))
+              name: kk
+            }, `whitelist:${Xk}`))
           },
-          xR: async CC => {
-            (0, wC.reportAnalyticsClick)({
+          mJ: async kk => {
+            (0, Tk.reportAnalyticsClick)({
               id: "lobby_manage.whitelist_add",
               value: "field"
             });
-            const zC = await ZC.send({
+            const Fk = await Ik.send({
               type: "whitelistAdd",
-              names: [CC]
+              names: [kk]
             }, "whitelist-field");
-            return zC.ok ? {
+            return Fk.ok ? {
               ok: !0
             } : {
               ok: !1,
-              error: (0, lC.jsx)(HC.e, {
-                text: zC.message
+              error: (0, Rk.jsx)(uk.c, {
+                text: Fk.message
               })
             }
           },
-          statusOf: CC => ZC.statusOf(`whitelist:${CC.toLowerCase()}`)
-        }), "public" === nC.visibility && null !== nC.listing && (0, lC.jsx)(zz, {
-          manage: ZC,
-          listing: nC.listing
+          statusOf: kk => Ik.statusOf(`whitelist:${kk.toLowerCase()}`)
+        }), "public" === yk.visibility && null !== yk.listing && (0, Rk.jsx)(IF, {
+          manage: Ik,
+          listing: yk.listing
         })]
       })
     }
-    var fz = ZC(4942),
-      oz = ZC(1321);
-    const qz = /[\p{Script_Extensions=Han}\p{Script_Extensions=Hiragana}\p{Script_Extensions=Katakana}\p{Script_Extensions=Hangul}\u{3000}-\u{303F}\u{FF01}-\u{FF60}\u{FFE0}-\u{FFE6}]/u;
-    const Fz = (0, QC.memo)((function(CC) {
-      var zC;
+    var aF = Ik(4983),
+      qF = Ik(1333);
+    const LF = /[\p{Script_Extensions=Han}\p{Script_Extensions=Hiragana}\p{Script_Extensions=Katakana}\p{Script_Extensions=Hangul}\u{3000}-\u{303F}\u{FF01}-\u{FF60}\u{FFE0}-\u{FFE6}]/u;
+    const tF = (0, Xk.memo)((function(kk) {
+      var Fk;
       let {
-        rule: ZC,
-        value: QC,
-        status: wC,
-        pending: bC,
-        hiddenNames: nC,
-        OJ: fC,
-        onAction: oC
-      } = CC;
+        rule: Ik,
+        value: Xk,
+        status: Tk,
+        pending: ik,
+        hiddenNames: yk,
+        xV: lk,
+        onAction: ak
+      } = kk;
       const {
-        t: qC
-      } = (0, MC.y)(), FC = CC => fC(ZC, CC), WC = (CC, zC) => {
-        oC(ZC, CC, zC)
-      }, NC = dC(qC, ZC.label, nC), gC = ZC.info ? dC(qC, ZC.info, nC) : void 0, SC = ZC.placeholder ? dC(qC, ZC.placeholder, nC) : void 0, pC = (null !== (zC = ZC.options) && void 0 !== zC ? zC : []).map((CC => ({
-        value: CC.value,
-        label: dC(qC, CC.label, nC)
-      }))), PC = Math.max(0, ...pC.map((CC => function(CC) {
-        let zC = 0;
-        for (const ZC of CC) zC += qz.test(ZC) ? 2 : 1;
-        return zC
-      }(CC.label)))), GC = wC && (0, lC.jsx)("div", {
+        t: qk
+      } = (0, jk.y)(), Lk = kk => lk(Ik, kk), tk = (kk, Fk) => {
+        ak(Ik, kk, Fk)
+      }, Zk = Gk(qk, Ik.label, yk), ek = Ik.info ? Gk(qk, Ik.info, yk) : void 0, wk = Ik.placeholder ? Gk(qk, Ik.placeholder, yk) : void 0, Hk = (null !== (Fk = Ik.options) && void 0 !== Fk ? Fk : []).map((kk => ({
+        value: kk.value,
+        label: Gk(qk, kk.label, yk)
+      }))), Jk = Math.max(0, ...Hk.map((kk => function(kk) {
+        let Fk = 0;
+        for (const Ik of kk) Fk += LF.test(Ik) ? 2 : 1;
+        return Fk
+      }(kk.label)))), xk = Tk && (0, Rk.jsx)("div", {
         className: "LobbyManageRuleStatus",
-        children: (0, lC.jsx)(XC, {
-          status: wC
+        children: (0, Rk.jsx)(Uk, {
+          status: Tk
         })
-      }), RC = (0, lC.jsxs)("div", {
+      }), Pk = (0, Rk.jsxs)("div", {
         className: "SliderText",
-        children: [NC, void 0 !== gC && (0, lC.jsx)(oz.b, {
+        children: [Zk, void 0 !== ek && (0, Rk.jsx)(qF.c, {
           className: "SettingsTextInputCircleInfo",
-          hoverInfo: gC
+          hoverInfo: ek
         })]
       });
-      return "toggle" === ZC.kind ? (0, lC.jsxs)(lC.Fragment, {
-        children: [(0, lC.jsx)(fz.b, {
-          label: NC,
-          checked: !0 === QC,
-          circleInfoText: gC,
-          disabled: bC,
-          onClick: FC
-        }), GC]
-      }) : "choice" === ZC.kind && pC.length <= 3 ? (0, lC.jsxs)(lC.Fragment, {
-        children: [(0, lC.jsx)(fz.e, {
-          label: NC,
-          options: pC,
-          value: String(QC),
-          circleInfoText: gC,
-          onChange: FC
-        }), GC]
-      }) : (0, lC.jsxs)("div", {
+      return "toggle" === Ik.kind ? (0, Rk.jsxs)(Rk.Fragment, {
+        children: [(0, Rk.jsx)(aF.e, {
+          label: Zk,
+          checked: !0 === Xk,
+          circleInfoText: ek,
+          disabled: ik,
+          onClick: Lk
+        }), xk]
+      }) : "choice" === Ik.kind && Hk.length <= 3 ? (0, Rk.jsxs)(Rk.Fragment, {
+        children: [(0, Rk.jsx)(aF.h, {
+          label: Zk,
+          options: Hk,
+          value: String(Xk),
+          circleInfoText: ek,
+          onChange: Lk
+        }), xk]
+      }) : (0, Rk.jsxs)("div", {
         className: "SettingBox LobbyManageRuleRow",
-        children: [RC, "choice" === ZC.kind && (0, lC.jsx)("span", {
+        children: [Pk, "choice" === Ik.kind && (0, Rk.jsx)("span", {
           className: "LobbyManageRuleChoice",
           style: {
-            "--lobby-choice-chars": PC
+            "--lobby-choice-chars": Jk
           },
-          children: (0, lC.jsx)(KC.b, {
-            options: pC,
-            value: String(QC),
-            disabled: bC,
-            onChange: CC => {
-              FC(CC.value)
+          children: (0, Rk.jsx)(Ok.e, {
+            options: Hk,
+            value: String(Xk),
+            disabled: ik,
+            onChange: kk => {
+              Lk(kk.value)
             }
           })
-        }), ("number" === ZC.kind || "text" === ZC.kind) && (0, lC.jsx)(uC, {
-          value: null === QC ? "" : String(QC),
-          placeholder: SC,
-          ariaLabel: NC,
-          onSave: CC => {
-            const zC = CC.trim(),
-              QC = Number(zC);
-            return FC("number" === ZC.kind && "" !== zC && Number.isFinite(QC) ? QC : zC)
+        }), ("number" === Ik.kind || "text" === Ik.kind) && (0, Rk.jsx)(Nk, {
+          value: null === Xk ? "" : String(Xk),
+          placeholder: wk,
+          ariaLabel: Zk,
+          onSave: kk => {
+            const Fk = kk.trim(),
+              Xk = Number(Fk);
+            return Lk("number" === Ik.kind && "" !== Fk && Number.isFinite(Xk) ? Xk : Fk)
           }
-        }), "action" === ZC.kind && (0, lC.jsxs)("div", {
+        }), "action" === Ik.kind && (0, Rk.jsxs)("div", {
           className: "LobbyManageRuleInput",
-          children: [pC.length > 3 && (0, lC.jsx)(KC.b, {
-            options: pC,
+          children: [Hk.length > 3 && (0, Rk.jsx)(Ok.e, {
+            options: Hk,
             value: {
               value: "",
-              label: null !== SC && void 0 !== SC ? SC : NC
+              label: null !== wk && void 0 !== wk ? wk : Zk
             },
-            disabled: bC,
-            onChange: CC => {
-              WC(CC.value)
+            disabled: ik,
+            onChange: kk => {
+              tk(kk.value)
             }
-          }), pC.length > 0 && pC.length <= 3 && pC.map((CC => (0, lC.jsx)(AC.i, {
+          }), Hk.length > 0 && Hk.length <= 3 && Hk.map((kk => (0, Rk.jsx)(Kk.g, {
             className: "SmallTextLight",
-            disabled: bC,
+            disabled: ik,
             onClick: () => {
-              WC(CC.value)
+              tk(kk.value)
             },
-            children: CC.label
-          }, CC.value))), 0 === pC.length && (0, lC.jsx)(AC.i, {
+            children: kk.label
+          }, kk.value))), 0 === Hk.length && (0, Rk.jsx)(Kk.g, {
             className: "SmallTextLight",
-            disabled: bC,
+            disabled: ik,
             onClick: () => {
-              WC()
+              tk()
             },
-            children: null !== SC && void 0 !== SC ? SC : NC
+            children: null !== wk && void 0 !== wk ? wk : Zk
           })]
-        }), "names" === ZC.kind && (0, lC.jsx)(Wz, {
-          names: Array.isArray(QC) ? QC : [],
-          pending: bC,
-          onAction: WC
-        }), GC]
+        }), "names" === Ik.kind && (0, Rk.jsx)(ZF, {
+          names: Array.isArray(Xk) ? Xk : [],
+          pending: ik,
+          onAction: tk
+        }), xk]
       })
     }));
 
-    function Wz(CC) {
+    function ZF(kk) {
       let {
-        names: zC,
-        pending: ZC,
-        onAction: wC
-      } = CC;
+        names: Fk,
+        pending: Ik,
+        onAction: Tk
+      } = kk;
       const {
-        t: bC
-      } = (0, MC.y)(), nC = (0, QC.useRef)(null), [fC, oC] = (0, QC.useState)(""), qC = () => {
-        const CC = fC.trim();
-        "" !== CC && (wC(CC, "add"), nC.current && (nC.current.value = ""), oC(""))
+        t: ik
+      } = (0, jk.y)(), yk = (0, Xk.useRef)(null), [lk, ak] = (0, Xk.useState)(""), qk = () => {
+        const kk = lk.trim();
+        "" !== kk && (Tk(kk, "add"), yk.current && (yk.current.value = ""), ak(""))
       };
-      return (0, lC.jsxs)("div", {
+      return (0, Rk.jsxs)("div", {
         className: "LobbyManageNames",
-        children: [zC.map((CC => (0, lC.jsxs)("div", {
+        children: [Fk.map((kk => (0, Rk.jsxs)("div", {
           className: "LobbyManageName",
-          children: [(0, lC.jsx)("span", {
+          children: [(0, Rk.jsx)("span", {
             className: "LobbyManageNameText",
-            children: CC
-          }), (0, lC.jsx)(AC.i, {
+            children: kk
+          }), (0, Rk.jsx)(Kk.g, {
             className: "LobbyManageIconButton SmallTextLight",
-            ariaLabel: bC("lobbyManage:removeName", {
-              name: CC
+            ariaLabel: ik("lobbyManage:removeName", {
+              name: kk
             }),
-            disabled: ZC,
+            disabled: Ik,
             onClick: () => {
-              wC(CC, "remove")
+              Tk(kk, "remove")
             },
-            children: (0, lC.jsx)(gC.c, {
+            children: (0, Rk.jsx)(ek.e, {
               name: "xmark"
             })
           })]
-        }, CC))), (0, lC.jsxs)("div", {
+        }, kk))), (0, Rk.jsxs)("div", {
           className: "LobbyManageRuleInput",
-          children: [(0, lC.jsx)(EC.c, {
-            domRef: nC,
-            placeholderText: bC("lobbyManage:namePlaceholder"),
-            ariaLabel: bC("lobbyManage:namePlaceholder"),
+          children: [(0, Rk.jsx)(bk.c, {
+            domRef: yk,
+            placeholderText: ik("lobbyManage:namePlaceholder"),
+            ariaLabel: ik("lobbyManage:namePlaceholder"),
             maxLength: 32,
-            onValueChange: CC => {
-              oC(CC)
+            onValueChange: kk => {
+              ak(kk)
             },
-            onEnter: qC
-          }), (0, lC.jsx)(AC.i, {
+            onEnter: qk
+          }), (0, Rk.jsx)(Kk.g, {
             className: "SmallTextLight",
-            disabled: ZC || "" === fC.trim(),
-            onClick: qC,
-            children: bC("lobbyManage:addHere")
+            disabled: Ik || "" === lk.trim(),
+            onClick: qk,
+            children: ik("lobbyManage:addHere")
           })]
         })]
       })
     }
-    const Nz = [{
+    const jF = [{
       group: "gameplay",
       title: "lobbyManage:gameplay"
     }, {
@@ -1225,125 +1225,125 @@ export const modules = {
       title: "lobbyManage:world"
     }];
 
-    function Mz(CC, zC) {
-      return Nz.map((ZC => {
+    function eF(kk, Fk) {
+      return jF.map((Ik => {
         let {
-          group: QC,
-          title: wC
-        } = ZC;
-        const bC = CC.filter((CC => CC.group === QC && void 0 === CC.parent)).map((ZC => {
-          const QC = !0 === zC(ZC) ? CC.filter((CC => CC.parent === ZC.key)) : [];
+          group: Xk,
+          title: Tk
+        } = Ik;
+        const ik = kk.filter((kk => kk.group === Xk && void 0 === kk.parent)).map((Ik => {
+          const Xk = !0 === Fk(Ik) ? kk.filter((kk => kk.parent === Ik.key)) : [];
           return {
-            rule: ZC,
-            children: QC
+            rule: Ik,
+            children: Xk
           }
         }));
         return {
-          group: QC,
-          title: wC,
-          items: bC
+          group: Xk,
+          title: Tk,
+          items: ik
         }
       }))
     }
 
-    function gz(CC) {
-      return CC.flatMap((CC => {
+    function wF(kk) {
+      return kk.flatMap((kk => {
         let {
-          items: zC
-        } = CC;
-        return zC.flatMap((CC => {
+          items: Fk
+        } = kk;
+        return Fk.flatMap((kk => {
           let {
-            rule: zC,
-            children: ZC
-          } = CC;
-          return [zC, ...ZC]
+            rule: Fk,
+            children: Ik
+          } = kk;
+          return [Fk, ...Ik]
         }))
       }))
     }
 
-    function Sz(CC) {
+    function HF(kk) {
       let {
-        manage: zC,
-        rowsShown: ZC
-      } = CC;
+        manage: Fk,
+        rowsShown: Ik
+      } = kk;
       const {
-        t: bC
-      } = (0, MC.y)(), nC = (0, RC.f)("hiddenPlayerNames"), {
-        rules: fC
-      } = zC.state, oC = FC(), qC = CC => {
-        const zC = oC.get(CC.key);
-        return void 0 === zC ? CC.value : zC
-      }, WC = Mz(fC, qC), [NC] = (0, QC.useState)((() => gz(WC).map((CC => CC.key)))), gC = ZC === 1 / 0 ? null : new Set(NC.slice(0, ZC)), SC = CC => null === gC || gC.has(CC.key), {
-        hold: PC
-      } = oC, GC = (0, QC.useCallback)(((CC, ZC) => {
-        (0, wC.reportAnalyticsClick)({
+        t: ik
+      } = (0, jk.y)(), yk = (0, Pk.k)("hiddenPlayerNames"), {
+        rules: lk
+      } = Fk.state, ak = Lk(), qk = kk => {
+        const Fk = ak.get(kk.key);
+        return void 0 === Fk ? kk.value : Fk
+      }, tk = eF(lk, qk), [Zk] = (0, Xk.useState)((() => wF(tk).map((kk => kk.key)))), ek = Ik === 1 / 0 ? null : new Set(Zk.slice(0, Ik)), wk = kk => null === ek || ek.has(kk.key), {
+        hold: Jk
+      } = ak, xk = (0, Xk.useCallback)(((kk, Ik) => {
+        (0, Tk.reportAnalyticsClick)({
           id: "lobby_manage.set_rule",
-          value: CC.key
+          value: kk.key
         });
-        const QC = zC.send({
+        const Xk = Fk.send({
           type: "setRule",
-          key: CC.key,
-          value: ZC
-        }, `rule:${CC.key}`);
-        return PC(CC.key, ZC, QC), QC
-      }), [zC, PC]), AC = (0, QC.useCallback)(((CC, ZC, QC) => {
-        (0, wC.reportAnalyticsClick)({
+          key: kk.key,
+          value: Ik
+        }, `rule:${kk.key}`);
+        return Jk(kk.key, Ik, Xk), Xk
+      }), [Fk, Jk]), Kk = (0, Xk.useCallback)(((kk, Ik, Xk) => {
+        (0, Tk.reportAnalyticsClick)({
           id: "lobby_manage.set_rule",
-          value: CC.key
-        }), zC.send({
+          value: kk.key
+        }), Fk.send({
           type: "ruleAction",
-          key: CC.key,
-          ...void 0 === ZC ? {} : {
-            arg: ZC
+          key: kk.key,
+          ...void 0 === Ik ? {} : {
+            arg: Ik
           },
-          ...void 0 === QC ? {} : {
-            op: QC
+          ...void 0 === Xk ? {} : {
+            op: Xk
           }
-        }, `rule:${CC.key}`, void 0 === QC ? bC("lobbyManage:setJustNow") : void 0)
-      }), [zC, bC]), xC = CC => {
-        const ZC = `rule:${CC.key}`;
-        return (0, lC.jsx)(Fz, {
-          rule: CC,
-          value: qC(CC),
-          status: zC.statusOf(ZC),
-          pending: zC.isPending(ZC),
-          hiddenNames: nC,
-          OJ: GC,
-          onAction: AC
-        }, CC.key)
+        }, `rule:${kk.key}`, void 0 === Xk ? ik("lobbyManage:setJustNow") : void 0)
+      }), [Fk, ik]), Qk = kk => {
+        const Ik = `rule:${kk.key}`;
+        return (0, Rk.jsx)(tF, {
+          rule: kk,
+          value: qk(kk),
+          status: Fk.statusOf(Ik),
+          pending: Fk.isPending(Ik),
+          hiddenNames: yk,
+          xV: xk,
+          onAction: Kk
+        }, kk.key)
       };
-      return (0, lC.jsx)("div", {
+      return (0, Rk.jsx)("div", {
         className: "LobbyManagePage LobbyManageRules",
-        children: WC.map((CC => {
+        children: tk.map((kk => {
           let {
-            group: zC,
-            title: ZC,
-            items: wC
-          } = CC;
-          const nC = wC.filter((CC => {
+            group: Fk,
+            title: Ik,
+            items: Tk
+          } = kk;
+          const yk = Tk.filter((kk => {
             let {
-              rule: zC
-            } = CC;
-            return SC(zC)
+              rule: Fk
+            } = kk;
+            return wk(Fk)
           }));
-          return 0 === nC.length ? null : (0, lC.jsxs)(QC.Fragment, {
-            children: [(0, lC.jsx)(pC.b, {
-              label: bC(ZC)
-            }), nC.map((CC => {
+          return 0 === yk.length ? null : (0, Rk.jsxs)(Xk.Fragment, {
+            children: [(0, Rk.jsx)(Hk.b, {
+              label: ik(Ik)
+            }), yk.map((kk => {
               let {
-                rule: zC,
-                children: ZC
-              } = CC;
-              return 0 === ZC.length ? xC(zC) : (0, lC.jsxs)("div", {
+                rule: Fk,
+                children: Ik
+              } = kk;
+              return 0 === Ik.length ? Qk(Fk) : (0, Rk.jsxs)("div", {
                 className: "SettingBoxGroup",
-                children: [xC(zC), ZC.filter(SC).map(xC)]
-              }, zC.key)
+                children: [Qk(Fk), Ik.filter(wk).map(Qk)]
+              }, Fk.key)
             }))]
-          }, zC)
+          }, Fk)
         }))
       })
     }
-    const pz = {
+    const JF = {
         players: {
           icon: "user-group",
           title: "lobbyManage:players"
@@ -1361,590 +1361,590 @@ export const modules = {
           title: "lobbyManage:leaderboard"
         }
       },
-      Pz = 5,
-      Gz = (0, QC.memo)((function(CC) {
+      xF = 5,
+      PF = (0, Xk.memo)((function(kk) {
         let {
-          page: zC,
-          manage: ZC,
-          leaderboard: wC,
-          focusRequest: bC,
-          onFocused: nC,
-          ruleRowsShown: fC
-        } = CC;
-        return "leaderboard" === zC ? (0, lC.jsx)(QC.Suspense, {
-          fallback: (0, lC.jsx)("div", {
+          page: Fk,
+          manage: Ik,
+          leaderboard: Tk,
+          focusRequest: ik,
+          onFocused: yk,
+          ruleRowsShown: lk
+        } = kk;
+        return "leaderboard" === Fk ? (0, Rk.jsx)(Xk.Suspense, {
+          fallback: (0, Rk.jsx)("div", {
             className: "LobbyManageLoading",
-            children: (0, lC.jsx)(SC.d, {})
+            children: (0, Rk.jsx)(wk.c, {})
           }),
-          children: wC
-        }) : "joining" === zC ? (0, lC.jsx)(Qz, {
-          manage: ZC
-        }) : "rules" === zC ? (0, lC.jsx)(Sz, {
-          manage: ZC,
-          rowsShown: fC
-        }) : (0, lC.jsx)(aC, {
-          manage: ZC,
-          focusRequest: bC,
-          onFocused: nC
+          children: Tk
+        }) : "joining" === Fk ? (0, Rk.jsx)(TF, {
+          manage: Ik
+        }) : "rules" === Fk ? (0, Rk.jsx)(HF, {
+          manage: Ik,
+          rowsShown: lk
+        }) : (0, Rk.jsx)(Bk, {
+          manage: Ik,
+          focusRequest: ik,
+          onFocused: yk
         })
       }));
 
-    function Rz(CC) {
+    function KF(kk) {
       let {
-        page: zC
-      } = CC;
+        page: Fk
+      } = kk;
       const {
-        t: ZC
-      } = (0, MC.y)(), QC = pz[zC];
-      return (0, lC.jsxs)(lC.Fragment, {
-        children: [(0, lC.jsx)(gC.c, {
-          name: QC.icon
-        }), " ", (0, lC.jsx)("span", {
+        t: Ik
+      } = (0, jk.y)(), Xk = JF[Fk];
+      return (0, Rk.jsxs)(Rk.Fragment, {
+        children: [(0, Rk.jsx)(ek.e, {
+          name: Xk.icon
+        }), " ", (0, Rk.jsx)("span", {
           className: "LobbyManagePageTitle",
-          children: ZC(QC.title)
+          children: Ik(Xk.title)
         })]
       })
     }
 
-    function Az(CC) {
-      var zC;
+    function QF(kk) {
+      var Fk;
       const {
-        t: ZC
-      } = (0, MC.y)(), {
-        pages: bC,
-        landing: nC
-      } = CC, oC = (0, QC.useRef)(null), qC = (0, QC.useRef)(null), FC = (0, QC.useRef)(null), WC = (0, QC.useRef)(new Map), [gC, SC] = (0, QC.useState)(null), RC = (0, QC.useRef)(gC), AC = (0, QC.useRef)(0), [xC, JC] = (0, QC.useState)(bC[0]), IC = null !== gC && void 0 !== gC ? gC : bC.includes(xC) ? xC : bC[0], [iC] = (0, QC.useState)(null !== (zC = null === nC || void 0 === nC ? void 0 : nC.page) && void 0 !== zC ? zC : null), vC = null !== iC && bC.includes(iC) ? [iC, ...bC.filter((CC => CC !== iC))] : bC, [eC] = (0, QC.useState)((() => {
-        const zC = gz(Mz(CC.manage.state.rules, (CC => CC.value)));
-        return Math.max(1, Math.ceil(zC.length / Pz))
-      })), hC = vC.flatMap((CC => "rules" === CC ? Array(eC).fill(CC) : [CC])), KC = function(CC, zC) {
-        const [ZC, wC] = (0, QC.useState)(CC), bC = ZC >= zC;
-        return bC && ZC !== 1 / 0 && wC(1 / 0), (0, QC.useLayoutEffect)((() => {
-          if (bC) return;
-          let CC = !0;
-          return (0, GC.e)().then((() => {
-            CC && wC((CC => CC + 1))
+        t: Ik
+      } = (0, jk.y)(), {
+        pages: ik,
+        landing: yk
+      } = kk, ak = (0, Xk.useRef)(null), qk = (0, Xk.useRef)(null), Lk = (0, Xk.useRef)(null), tk = (0, Xk.useRef)(new Map), [ek, wk] = (0, Xk.useState)(null), Pk = (0, Xk.useRef)(ek), Kk = (0, Xk.useRef)(0), [Qk, sk] = (0, Xk.useState)(ik[0]), Vk = null !== ek && void 0 !== ek ? ek : ik.includes(Qk) ? Qk : ik[0], [zk] = (0, Xk.useState)(null !== (Fk = null === yk || void 0 === yk ? void 0 : yk.page) && void 0 !== Fk ? Fk : null), Sk = null !== zk && ik.includes(zk) ? [zk, ...ik.filter((kk => kk !== zk))] : ik, [vk] = (0, Xk.useState)((() => {
+        const Fk = wF(eF(kk.manage.state.rules, (kk => kk.value)));
+        return Math.max(1, Math.ceil(Fk.length / xF))
+      })), Ek = Sk.flatMap((kk => "rules" === kk ? Array(vk).fill(kk) : [kk])), Ok = function(kk, Fk) {
+        const [Ik, Tk] = (0, Xk.useState)(kk), ik = Ik >= Fk;
+        return ik && Ik !== 1 / 0 && Tk(1 / 0), (0, Xk.useLayoutEffect)((() => {
+          if (ik) return;
+          let kk = !0;
+          return (0, xk.e)().then((() => {
+            kk && Tk((kk => kk + 1))
           })), () => {
-            CC = !1
+            kk = !1
           }
-        }), [ZC, bC]), bC ? 1 / 0 : ZC
-      }(1, hC.length), YC = hC.slice(0, KC), dC = new Set(YC), mC = KC < hC.length, HC = mC ? YC.filter((CC => "rules" === CC)).length * Pz : 1 / 0, EC = (0, QC.useRef)(CC.focusRequest);
-      EC.current = CC.focusRequest;
-      const XC = CC => {
-          RC.current = CC, SC(CC)
+        }), [Ik, ik]), ik ? 1 / 0 : Ik
+      }(1, Ek.length), nk = Ek.slice(0, Ok), Gk = new Set(nk), pk = Ok < Ek.length, uk = pk ? nk.filter((kk => "rules" === kk)).length * xF : 1 / 0, bk = (0, Xk.useRef)(kk.focusRequest);
+      bk.current = kk.focusRequest;
+      const Uk = kk => {
+          Pk.current = kk, wk(kk)
         },
-        cC = () => {
-          var CC, zC;
-          oC.current.style.scrollPaddingTop = `${null!==(CC=null===(zC=FC.current)||void 0===zC?void 0:zC.offsetHeight)&&void 0!==CC?CC:0}px`
+        Ck = () => {
+          var kk, Fk;
+          ak.current.style.scrollPaddingTop = `${null!==(kk=null===(Fk=Lk.current)||void 0===Fk?void 0:Fk.offsetHeight)&&void 0!==kk?kk:0}px`
         },
-        uC = CC => {
-          const zC = oC.current,
-            ZC = WC.current.get(CC);
-          if (void 0 === ZC) return;
-          const QC = document.activeElement,
-            wC = EC.current,
-            bC = null === wC ? null : ZC.querySelector(`[data-lobby-manage-row="${CSS.escape(wC.name)}"]`);
-          cC(), QC instanceof HTMLElement && null !== bC && void 0 !== bC && bC.contains(QC) ? QC.scrollIntoView({
+        Nk = kk => {
+          const Fk = ak.current,
+            Ik = tk.current.get(kk);
+          if (void 0 === Ik) return;
+          const Xk = document.activeElement,
+            Tk = bk.current,
+            ik = null === Tk ? null : Ik.querySelector(`[data-lobby-manage-row="${CSS.escape(Tk.name)}"]`);
+          Ck(), Xk instanceof HTMLElement && null !== ik && void 0 !== ik && ik.contains(Xk) ? Xk.scrollIntoView({
             block: "center"
-          }) : null === ZC.previousElementSibling ? zC.scrollTop = 0 : ZC.scrollIntoView({
+          }) : null === Ik.previousElementSibling ? Fk.scrollTop = 0 : Ik.scrollIntoView({
             block: "start"
-          }), AC.current = zC.scrollTop
+          }), Kk.current = Fk.scrollTop
         },
-        rC = CC => {
-          (0, wC.reportAnalyticsClick)({
+        ck = kk => {
+          (0, Tk.reportAnalyticsClick)({
             id: "lobby_manage.page",
-            value: CC
-          }), XC(CC), uC(CC)
+            value: kk
+          }), Uk(kk), Nk(kk)
         },
-        sC = () => {
-          var CC, zC;
-          const ZC = oC.current,
-            QC = ZC.getBoundingClientRect().top + (null !== (CC = null === (zC = FC.current) || void 0 === zC ? void 0 : zC.offsetHeight) && void 0 !== CC ? CC : 0),
-            wC = bC.map((CC => {
-              var zC, ZC;
-              return (null !== (zC = null === (ZC = WC.current.get(CC)) || void 0 === ZC ? void 0 : ZC.getBoundingClientRect().top) && void 0 !== zC ? zC : 1 / 0) - QC
+        Wk = () => {
+          var kk, Fk;
+          const Ik = ak.current,
+            Xk = Ik.getBoundingClientRect().top + (null !== (kk = null === (Fk = Lk.current) || void 0 === Fk ? void 0 : Fk.offsetHeight) && void 0 !== kk ? kk : 0),
+            Tk = ik.map((kk => {
+              var Fk, Ik;
+              return (null !== (Fk = null === (Ik = tk.current.get(kk)) || void 0 === Ik ? void 0 : Ik.getBoundingClientRect().top) && void 0 !== Fk ? Fk : 1 / 0) - Xk
             })),
-            nC = !mC && ZC.scrollTop + ZC.clientHeight >= ZC.scrollHeight - 1;
-          JC(bC[(0, fC.h)(wC, nC)])
+            yk = !pk && Ik.scrollTop + Ik.clientHeight >= Ik.scrollHeight - 1;
+          sk(ik[(0, lk.h)(Tk, yk)])
         },
-        TC = () => {
-          null !== RC.current && (XC(null), sC())
+        fk = () => {
+          null !== Pk.current && (Uk(null), Wk())
         };
-      (0, QC.useLayoutEffect)((() => {
-        null !== nC && bC.includes(nC.page) && rC(nC.page)
-      }), [null === nC || void 0 === nC ? void 0 : nC.seq]), (0, QC.useLayoutEffect)((() => {
-        null === RC.current || bC.includes(RC.current) || TC()
+      (0, Xk.useLayoutEffect)((() => {
+        null !== yk && ik.includes(yk.page) && ck(yk.page)
+      }), [null === yk || void 0 === yk ? void 0 : yk.seq]), (0, Xk.useLayoutEffect)((() => {
+        null === Pk.current || ik.includes(Pk.current) || fk()
       }));
       const {
-        onFocused: aC
-      } = CC, tC = (0, QC.useCallback)((CC => {
-        null !== RC.current && uC(RC.current), aC(CC)
-      }), [aC]);
-      (0, QC.useLayoutEffect)((() => {
-        const CC = RC.current;
-        null !== CC && (!mC || bC.indexOf(hC[KC - 1]) < bC.indexOf(CC)) && uC(CC)
-      }), [KC]), (0, QC.useEffect)((() => {
-        const CC = new ResizeObserver((() => {
-          null !== RC.current ? uC(RC.current) : cC()
+        onFocused: Bk
+      } = kk, dk = (0, Xk.useCallback)((kk => {
+        null !== Pk.current && Nk(Pk.current), Bk(kk)
+      }), [Bk]);
+      (0, Xk.useLayoutEffect)((() => {
+        const kk = Pk.current;
+        null !== kk && (!pk || ik.indexOf(Ek[Ok - 1]) < ik.indexOf(kk)) && Nk(kk)
+      }), [Ok]), (0, Xk.useEffect)((() => {
+        const kk = new ResizeObserver((() => {
+          null !== Pk.current ? Nk(Pk.current) : Ck()
         }));
-        return CC.observe(oC.current), CC.observe(qC.current), () => {
-          CC.disconnect()
+        return kk.observe(ak.current), kk.observe(qk.current), () => {
+          kk.disconnect()
         }
-      }), []), (0, QC.useLayoutEffect)((() => {
-        const CC = FC.current,
-          zC = null === CC || void 0 === CC ? void 0 : CC.querySelector(".SegmentedToggleOptionSelected");
-        zC && (CC.scrollLeft = Math.min(zC.offsetLeft, Math.max(CC.scrollLeft, zC.offsetLeft + zC.offsetWidth - CC.clientWidth)))
-      }), [IC]);
-      return (0, lC.jsxs)("div", {
-        ref: oC,
+      }), []), (0, Xk.useLayoutEffect)((() => {
+        const kk = Lk.current,
+          Fk = null === kk || void 0 === kk ? void 0 : kk.querySelector(".SegmentedToggleOptionSelected");
+        Fk && (kk.scrollLeft = Math.min(Fk.offsetLeft, Math.max(kk.scrollLeft, Fk.offsetLeft + Fk.offsetWidth - kk.clientWidth)))
+      }), [Vk]);
+      return (0, Rk.jsxs)("div", {
+        ref: ak,
         className: "MenuBody LobbyManageBody",
         onScroll: () => {
-          null === RC.current ? sC() : Math.abs(oC.current.scrollTop - AC.current) > 1 && TC()
+          null === Pk.current ? Wk() : Math.abs(ak.current.scrollTop - Kk.current) > 1 && fk()
         },
-        onClick: CC => {
-          var zC;
-          null !== (zC = FC.current) && void 0 !== zC && zC.contains(CC.target) || TC()
+        onClick: kk => {
+          var Fk;
+          null !== (Fk = Lk.current) && void 0 !== Fk && Fk.contains(kk.target) || fk()
         },
-        onFocus: CC => {
-          var zC;
-          const ZC = null === RC.current ? null : WC.current.get(RC.current);
-          !ZC || ZC.contains(CC.target) || null !== (zC = FC.current) && void 0 !== zC && zC.contains(CC.target) || TC()
+        onFocus: kk => {
+          var Fk;
+          const Ik = null === Pk.current ? null : tk.current.get(Pk.current);
+          !Ik || Ik.contains(kk.target) || null !== (Fk = Lk.current) && void 0 !== Fk && Fk.contains(kk.target) || fk()
         },
-        children: [bC.length > 1 && (0, lC.jsx)("div", {
-          ref: FC,
+        children: [ik.length > 1 && (0, Rk.jsx)("div", {
+          ref: Lk,
           className: "LobbyManageChips",
-          children: (0, lC.jsx)(PC.b, {
-            options: bC.map((CC => ({
-              value: CC,
-              label: (0, lC.jsx)(Rz, {
-                page: CC
+          children: (0, Rk.jsx)(Jk.b, {
+            options: ik.map((kk => ({
+              value: kk,
+              label: (0, Rk.jsx)(KF, {
+                page: kk
               }),
-              ariaLabel: ZC(pz[CC].title)
+              ariaLabel: Ik(JF[kk].title)
             }))),
-            value: IC,
+            value: Vk,
             padTabs: "2",
-            ariaLabel: ZC("lobbyManageEntry:manageLobby"),
+            ariaLabel: Ik("lobbyManageEntry:manageLobby"),
             reselectable: !0,
-            onChange: rC
+            onChange: ck
           })
-        }), (0, lC.jsx)("div", {
-          ref: qC,
-          className: NC()("LobbyManageInner", {
-            Staging: mC
+        }), (0, Rk.jsx)("div", {
+          ref: qk,
+          className: Zk()("LobbyManageInner", {
+            Staging: pk
           }),
-          children: bC.filter((CC => dC.has(CC))).map((zC => {
-            const ZC = zC === gC;
-            return (0, lC.jsxs)("section", {
-              ref: CC => {
-                CC ? WC.current.set(zC, CC) : WC.current.delete(zC)
+          children: ik.filter((kk => Gk.has(kk))).map((Fk => {
+            const Ik = Fk === ek;
+            return (0, Rk.jsxs)("section", {
+              ref: kk => {
+                kk ? tk.current.set(Fk, kk) : tk.current.delete(Fk)
               },
               className: "LobbyManageSection",
-              "data-pad-initial-area": ZC || void 0,
-              children: [bC.length > 1 && (0, lC.jsx)("div", {
+              "data-pad-initial-area": Ik || void 0,
+              children: [ik.length > 1 && (0, Rk.jsx)("div", {
                 className: "LobbyManageSectionHeading",
-                "data-pad-focusable": ZC || void 0,
-                "data-pad-unavailable": ZC || void 0,
-                children: (0, lC.jsx)(pC.b, {
-                  label: (0, lC.jsx)(Rz, {
-                    page: zC
+                "data-pad-focusable": Ik || void 0,
+                "data-pad-unavailable": Ik || void 0,
+                children: (0, Rk.jsx)(Hk.b, {
+                  label: (0, Rk.jsx)(KF, {
+                    page: Fk
                   })
                 })
-              }), (0, lC.jsx)(Gz, {
-                page: zC,
-                manage: CC.manage,
-                leaderboard: CC.leaderboard,
-                focusRequest: CC.focusRequest,
-                onFocused: tC,
-                ruleRowsShown: "rules" === zC ? HC : 1 / 0
+              }), (0, Rk.jsx)(PF, {
+                page: Fk,
+                manage: kk.manage,
+                leaderboard: kk.leaderboard,
+                focusRequest: kk.focusRequest,
+                onFocused: dk,
+                ruleRowsShown: "rules" === Fk ? uk : 1 / 0
               })]
-            }, zC)
+            }, Fk)
           }))
         })]
       })
     }
 
-    function xz(CC) {
-      return void 0 === (null === CC || void 0 === CC ? void 0 : CC.page) ? null : {
-        page: CC.page,
-        seq: CC.seq
+    function sF(kk) {
+      return void 0 === (null === kk || void 0 === kk ? void 0 : kk.page) ? null : {
+        page: kk.page,
+        seq: kk.seq
       }
     }
 
-    function Jz(CC) {
+    function VF(kk) {
       let {
-        leaderboard: zC
-      } = CC;
-      const ZC = function() {
-          const CC = (0, oC.h)("lobbyManage"),
-            [zC, ZC] = (0, QC.useReducer)((CC => CC + 1), 0),
-            [wC] = (0, QC.useState)((() => new qC.b(ZC)));
-          return (0, QC.useEffect)((() => {
-            const CC = wC.nextDeadline();
-            if (null === CC) return;
-            const zC = setTimeout((() => {
-              wC.expire(Date.now()), ZC()
-            }), Math.max(0, CC - Date.now()));
+        leaderboard: Fk
+      } = kk;
+      const Ik = function() {
+          const kk = (0, ak.j)("lobbyManage"),
+            [Fk, Ik] = (0, Xk.useReducer)((kk => kk + 1), 0),
+            [Tk] = (0, Xk.useState)((() => new qk.b(Ik)));
+          return (0, Xk.useEffect)((() => {
+            const kk = Tk.nextDeadline();
+            if (null === kk) return;
+            const Fk = setTimeout((() => {
+              Tk.expire(Date.now()), Ik()
+            }), Math.max(0, kk - Date.now()));
             return () => {
-              clearTimeout(zC)
+              clearTimeout(Fk)
             }
-          })), (0, QC.useMemo)((() => null === CC ? null : {
-            state: CC,
-            send: (CC, zC, QC) => {
-              const bC = wC.send(CC, zC, null !== QC && void 0 !== QC ? QC : null);
-              return ZC(), bC
+          })), (0, Xk.useMemo)((() => null === kk ? null : {
+            state: kk,
+            send: (kk, Fk, Xk) => {
+              const ik = Tk.send(kk, Fk, null !== Xk && void 0 !== Xk ? Xk : null);
+              return Ik(), ik
             },
-            statusOf: CC => wC.statusOf(CC, Date.now()),
-            showStatus: (CC, zC) => {
-              wC.show(CC, zC)
+            statusOf: kk => Tk.statusOf(kk, Date.now()),
+            showStatus: (kk, Fk) => {
+              Tk.show(kk, Fk)
             },
-            isPending: CC => wC.isPending(CC)
-          }), [CC, zC, wC])
+            isPending: kk => Tk.isPending(kk)
+          }), [kk, Fk, Tk])
         }(),
-        FC = (0, fC.i)((0, bC.e)()),
-        WC = (0, nC.k)(),
-        [NC, MC] = (0, QC.useState)((() => xz(WC))),
-        [gC, SC] = (0, QC.useState)(null);
-      return (0, QC.useEffect)((() => {
-        null === WC && (0, wC.reportAnalyticsClick)({
+        Lk = (0, lk.l)((0, ik.e)()),
+        tk = (0, yk.l)(),
+        [Zk, jk] = (0, Xk.useState)((() => sF(tk))),
+        [ek, wk] = (0, Xk.useState)(null);
+      return (0, Xk.useEffect)((() => {
+        null === tk && (0, Tk.reportAnalyticsClick)({
           id: "lobby_manage.open",
           value: "menu_tab"
         })
-      }), []), (0, QC.useEffect)((() => {
-        null !== WC && (MC((CC => (null === CC || void 0 === CC ? void 0 : CC.seq) === WC.seq ? CC : xz(WC))), void 0 !== WC.focusName && "players" === WC.page ? SC({
-          name: WC.focusName,
-          seq: WC.seq
-        }) : (0, nC.i)(WC.seq))
-      }), [null === WC || void 0 === WC ? void 0 : WC.seq]), null === ZC ? null : (0, lC.jsx)("div", {
+      }), []), (0, Xk.useEffect)((() => {
+        null !== tk && (jk((kk => (null === kk || void 0 === kk ? void 0 : kk.seq) === tk.seq ? kk : sF(tk))), void 0 !== tk.focusName && "players" === tk.page ? wk({
+          name: tk.focusName,
+          seq: tk.seq
+        }) : (0, yk.j)(tk.seq))
+      }), [null === tk || void 0 === tk ? void 0 : tk.seq]), null === Ik ? null : (0, Rk.jsx)("div", {
         className: "LobbyManage Menu",
-        children: (0, lC.jsx)(Az, {
-          pages: (0, fC.f)(ZC.state, FC),
-          manage: ZC,
-          leaderboard: zC,
-          focusRequest: gC,
-          onFocused: nC.i,
-          landing: NC
+        children: (0, Rk.jsx)(QF, {
+          pages: (0, lk.d)(Ik.state, Lk),
+          manage: Ik,
+          leaderboard: Fk,
+          focusRequest: ek,
+          onFocused: yk.j,
+          landing: Zk
         })
       })
     }
   },
-  36447: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => FC,
-      d: () => oC
+  36558: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => Lk,
+      f: () => ak
     });
-    var QC = ZC(1418),
-      wC = ZC(1865),
-      bC = ZC(1840);
-    const nC = 1e4;
-    let fC = 0;
+    var Xk = Ik(1432),
+      Tk = Ik(1894),
+      ik = Ik(1875);
+    const yk = 1e4;
+    let lk = 0;
 
-    function oC(CC) {
-      const zC = ++fC;
-      return new Promise((ZC => {
-        const fC = zC => {
-            oC(), clearTimeout(qC), !1 === (null === zC || void 0 === zC ? void 0 : zC.ok) && (0, QC.reportAnalyticsClick)({
+    function ak(kk) {
+      const Fk = ++lk;
+      return new Promise((Ik => {
+        const lk = Fk => {
+            ak(), clearTimeout(qk), !1 === (null === Fk || void 0 === Fk ? void 0 : Fk.ok) && (0, Xk.reportAnalyticsClick)({
               id: "lobby_manage.refused",
-              value: CC.type
-            }), ZC(zC)
+              value: kk.type
+            }), Ik(Fk)
           },
-          oC = wC.e.subscribe("lobbyManage", (CC => {
-            const ZC = function(CC, zC) {
-              var ZC;
-              return null !== (ZC = null === CC || void 0 === CC ? void 0 : CC.results.find((CC => CC.requestId === zC))) && void 0 !== ZC ? ZC : null
-            }(CC, zC);
-            null !== ZC && fC(ZC)
+          ak = Tk.e.subscribe("lobbyManage", (kk => {
+            const Ik = function(kk, Fk) {
+              var Ik;
+              return null !== (Ik = null === kk || void 0 === kk ? void 0 : kk.results.find((kk => kk.requestId === Fk))) && void 0 !== Ik ? Ik : null
+            }(kk, Fk);
+            null !== Ik && lk(Ik)
           })),
-          qC = setTimeout((() => {
-            fC(null)
-          }), nC);
-        bC.gameBridge.send("lobbyManage", {
-          ...CC,
-          requestId: zC
+          qk = setTimeout((() => {
+            lk(null)
+          }), yk);
+        ik.gameBridge.send("lobbyManage", {
+          ...kk,
+          requestId: Fk
         })
       }))
     }
-    const qC = [{
+    const qk = [{
       translationKey: "lobbyManageEntry:noAnswer"
     }];
-    class FC {
-      constructor(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : oC;
-        this.onChange = CC, this.sendAction = zC, this.pending = new Map, this.statuses = new Map
+    class Lk {
+      constructor(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ak;
+        this.onChange = kk, this.sendAction = Fk, this.pending = new Map, this.statuses = new Map
       }
-      send(CC, zC, ZC) {
-        var QC;
-        return this.statuses.delete(zC), this.pending.set(zC, (null !== (QC = this.pending.get(zC)) && void 0 !== QC ? QC : 0) + 1), this.sendAction(CC).then((CC => {
-          var QC;
-          const wC = null !== CC && void 0 !== CC ? CC : {
+      send(kk, Fk, Ik) {
+        var Xk;
+        return this.statuses.delete(Fk), this.pending.set(Fk, (null !== (Xk = this.pending.get(Fk)) && void 0 !== Xk ? Xk : 0) + 1), this.sendAction(kk).then((kk => {
+          var Xk;
+          const Tk = null !== kk && void 0 !== kk ? kk : {
               requestId: -1,
               ok: !1,
-              message: qC
+              message: qk
             },
-            bC = (null !== (QC = this.pending.get(zC)) && void 0 !== QC ? QC : 1) - 1;
-          bC > 0 ? this.pending.set(zC, bC) : this.pending.delete(zC);
-          const nC = !wC.ok || wC.message.length > 0 ? wC.message : null === ZC ? null : [ZC];
-          return null !== nC && this.statuses.set(zC, {
-            ok: wC.ok,
-            text: nC,
+            ik = (null !== (Xk = this.pending.get(Fk)) && void 0 !== Xk ? Xk : 1) - 1;
+          ik > 0 ? this.pending.set(Fk, ik) : this.pending.delete(Fk);
+          const yk = !Tk.ok || Tk.message.length > 0 ? Tk.message : null === Ik ? null : [Ik];
+          return null !== yk && this.statuses.set(Fk, {
+            ok: Tk.ok,
+            text: yk,
             until: Date.now() + 4e3
-          }), this.onChange(), wC
+          }), this.onChange(), Tk
         }))
       }
-      show(CC, zC) {
-        this.statuses.set(CC, {
-          ...zC,
+      show(kk, Fk) {
+        this.statuses.set(kk, {
+          ...Fk,
           until: Date.now() + 4e3
         }), this.onChange()
       }
-      expire(CC) {
-        for (const [zC, ZC] of this.statuses) ZC.until <= CC && this.statuses.delete(zC)
+      expire(kk) {
+        for (const [Fk, Ik] of this.statuses) Ik.until <= kk && this.statuses.delete(Fk)
       }
       nextDeadline() {
-        let CC = null;
-        for (const ZC of this.statuses.values()) {
-          var zC;
-          CC = Math.min(null !== (zC = CC) && void 0 !== zC ? zC : 1 / 0, ZC.until)
+        let kk = null;
+        for (const Ik of this.statuses.values()) {
+          var Fk;
+          kk = Math.min(null !== (Fk = kk) && void 0 !== Fk ? Fk : 1 / 0, Ik.until)
         }
-        return CC
+        return kk
       }
-      statusOf(CC, zC) {
-        const ZC = this.statuses.get(CC);
-        return !ZC || ZC.until <= zC ? null : {
-          ok: ZC.ok,
-          text: ZC.text
+      statusOf(kk, Fk) {
+        const Ik = this.statuses.get(kk);
+        return !Ik || Ik.until <= Fk ? null : {
+          ok: Ik.ok,
+          text: Ik.text
         }
       }
-      isPending(CC) {
-        return this.pending.has(CC)
+      isPending(kk) {
+        return this.pending.has(kk)
       }
     }
   },
-  36436: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => qC,
-      f: () => oC
+  36548: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => qk,
+      i: () => ak
     });
-    var QC = ZC(583),
-      wC = ZC(1840),
-      bC = ZC(1559),
-      nC = ZC(77),
-      fC = ZC(1209);
+    var Xk = Ik(612),
+      Tk = Ik(1875),
+      ik = Ik(1585),
+      yk = Ik(95),
+      lk = Ik(1248);
 
-    function oC(CC, zC, ZC) {
-      return nC.featureFlags.useSocialFeatures && CC && null === (0, fC.e)(zC, ZC)
+    function ak(kk, Fk, Ik) {
+      return yk.featureFlags.useSocialFeatures && kk && null === (0, lk.c)(Fk, Ik)
     }
 
-    function qC(CC, zC) {
-      var ZC, nC;
-      const fC = bC.d.getSocialState().friends.find((CC => CC.name.toLowerCase() === zC.toLowerCase())),
-        oC = wC.gameBridge.latest("players").byId[CC],
-        qC = void 0 !== oC && oC.name === zC,
-        FC = qC && null !== (ZC = oC.cosmetics) && void 0 !== ZC ? ZC : void 0,
-        WC = fC && FC ? {
-          ...fC,
-          cosmetics: FC
-        } : fC;
+    function qk(kk, Fk) {
+      var Ik, yk;
+      const lk = ik.c.getSocialState().friends.find((kk => kk.name.toLowerCase() === Fk.toLowerCase())),
+        ak = Tk.gameBridge.latest("players").byId[kk],
+        qk = void 0 !== ak && ak.name === Fk,
+        Lk = qk && null !== (Ik = ak.cosmetics) && void 0 !== Ik ? Ik : void 0,
+        tk = lk && Lk ? {
+          ...lk,
+          cosmetics: Lk
+        } : lk;
       return {
-        playerSocialPreview: null !== WC && void 0 !== WC ? WC : {
+        playerSocialPreview: null !== tk && void 0 !== tk ? tk : {
           isError: !1,
-          name: zC,
-          ranks: qC ? [...oC.ranks] : [],
-          cosmetics: null !== FC && void 0 !== FC ? FC : {},
-          nameColour: null !== (nC = null === FC || void 0 === FC ? void 0 : FC.nameColour) && void 0 !== nC ? nC : QC.d,
+          name: Fk,
+          ranks: qk ? [...ak.ranks] : [],
+          cosmetics: null !== Lk && void 0 !== Lk ? Lk : {},
+          nameColour: null !== (yk = null === Lk || void 0 === Lk ? void 0 : Lk.nameColour) && void 0 !== yk ? yk : Xk.c,
           location: {
             status: "inGame"
           }
         },
-        isFriend: void 0 !== fC
+        isFriend: void 0 !== lk
       }
     }
   },
-  36620: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => WC
+  36742: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => tk
     });
-    var QC = ZC(48),
-      wC = ZC(1002),
-      bC = ZC.n(wC),
-      nC = ZC(1593),
-      fC = ZC(1388),
-      oC = ZC(1295),
-      qC = ZC(1013),
-      FC = ZC(1056);
+    var Xk = Ik(58),
+      Tk = Ik(1055),
+      ik = Ik.n(Tk),
+      yk = Ik(1617),
+      lk = Ik(1406),
+      ak = Ik(1318),
+      qk = Ik(1066),
+      Lk = Ik(1096);
 
-    function WC(CC) {
+    function tk(kk) {
       let {
-        label: zC,
-        icon: ZC,
-        placeholder: wC,
-        onSubmit: WC
-      } = CC;
-      const NC = (0, QC.useRef)(null),
-        [MC, gC] = (0, QC.useState)(""),
-        [SC, pC] = (0, QC.useState)("Enter"),
-        [PC, GC] = (0, QC.useState)(null);
-      (0, QC.useEffect)((() => {
-        if ("Success" !== SC && "Error" !== SC) return;
-        const CC = setTimeout((() => {
-          "Success" === SC && NC.current && (NC.current.value = "", gC("")), pC("Enter")
-        }), "Success" === SC ? 1e3 : 4e3);
+        label: Fk,
+        icon: Ik,
+        placeholder: Tk,
+        onSubmit: tk
+      } = kk;
+      const Zk = (0, Xk.useRef)(null),
+        [jk, ek] = (0, Xk.useState)(""),
+        [wk, Hk] = (0, Xk.useState)("Enter"),
+        [Jk, xk] = (0, Xk.useState)(null);
+      (0, Xk.useEffect)((() => {
+        if ("Success" !== wk && "Error" !== wk) return;
+        const kk = setTimeout((() => {
+          "Success" === wk && Zk.current && (Zk.current.value = "", ek("")), Hk("Enter")
+        }), "Success" === wk ? 1e3 : 4e3);
         return () => {
-          clearTimeout(CC)
+          clearTimeout(kk)
         }
-      }), [SC]);
-      const RC = () => {
-        const CC = MC.trim();
-        "" !== CC && "Enter" === SC && (pC("Loading"), WC(CC).then((CC => {
-          NC.current && ("error" in CC ? null === CC.error ? pC("Enter") : (GC(CC.error), pC("Error")) : pC("Success"))
+      }), [wk]);
+      const Pk = () => {
+        const kk = jk.trim();
+        "" !== kk && "Enter" === wk && (Hk("Loading"), tk(kk).then((kk => {
+          Zk.current && ("error" in kk ? null === kk.error ? Hk("Enter") : (xk(kk.error), Hk("Error")) : Hk("Success"))
         })))
       };
-      return (0, FC.jsxs)("div", {
+      return (0, Lk.jsxs)("div", {
         className: "PlayerNameField",
-        onKeyDown: CC => {
-          CC.target === NC.current && "Escape" !== CC.key && CC.stopPropagation()
+        onKeyDown: kk => {
+          kk.target === Zk.current && "Escape" !== kk.key && kk.stopPropagation()
         },
-        children: [(0, FC.jsxs)("div", {
-          className: bC()("AddFriendBodyOverlay", `AddFriendBodyOverlay${SC}`),
-          children: ["Loading" === SC && (0, FC.jsx)(oC.d, {}), "Success" === SC && (0, FC.jsx)(qC.c, {
+        children: [(0, Lk.jsxs)("div", {
+          className: ik()("AddFriendBodyOverlay", `AddFriendBodyOverlay${wk}`),
+          children: ["Loading" === wk && (0, Lk.jsx)(ak.c, {}), "Success" === wk && (0, Lk.jsx)(qk.e, {
             name: "check"
-          }), "Error" === SC && PC]
-        }), (0, FC.jsxs)("div", {
+          }), "Error" === wk && Jk]
+        }), (0, Lk.jsxs)("div", {
           className: "PlayerSearch",
-          children: [(0, FC.jsx)(nC.c, {
+          children: [(0, Lk.jsx)(yk.c, {
             className: "PlayerSearchInput",
-            domRef: NC,
+            domRef: Zk,
             maxLength: 32,
-            placeholderText: wC,
-            ariaLabel: wC,
+            placeholderText: Tk,
+            ariaLabel: Tk,
             stopPropagation: !1,
-            onValueChange: CC => {
-              gC(CC)
+            onValueChange: kk => {
+              ek(kk)
             },
-            onEnter: RC
-          }), (0, FC.jsxs)(fC.g, {
+            onEnter: Pk
+          }), (0, Lk.jsxs)(lk.d, {
             className: "PlayerSearchInputButton SmallTextLight",
-            disabled: "Enter" !== SC || "" === MC.trim(),
-            onClick: RC,
-            children: [(0, FC.jsx)(qC.c, {
-              name: ZC
-            }), " ", zC]
+            disabled: "Enter" !== wk || "" === jk.trim(),
+            onClick: Pk,
+            children: [(0, Lk.jsx)(qk.e, {
+              name: Ik
+            }), " ", Fk]
           })]
         })]
       })
     }
   },
-  36598: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => WC
+  36721: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => tk
     });
-    var QC = ZC(48),
-      wC = ZC(1002),
-      bC = ZC.n(wC),
-      nC = ZC(1143),
-      fC = ZC(1013),
-      oC = ZC(1056);
-    const qC = {
+    var Xk = Ik(58),
+      Tk = Ik(1055),
+      ik = Ik.n(Tk),
+      yk = Ik(1179),
+      lk = Ik(1066),
+      ak = Ik(1096);
+    const qk = {
         unlisted: "link",
         public: "globe",
         whitelist: "user-check",
         private: "lock"
       },
-      FC = ["unlisted", "public", "whitelist", "private"];
+      Lk = ["unlisted", "public", "whitelist", "private"];
 
-    function WC(CC) {
+    function tk(kk) {
       let {
-        visibility: zC,
-        onPick: ZC
-      } = CC;
+        visibility: Fk,
+        onPick: Ik
+      } = kk;
       const {
-        t: wC
-      } = (0, nC.y)(), WC = (0, QC.useRef)([]);
-      return (0, oC.jsx)("div", {
+        t: Tk
+      } = (0, yk.y)(), tk = (0, Xk.useRef)([]);
+      return (0, ak.jsx)("div", {
         className: "WorldSocialTiles",
         role: "group",
-        "aria-label": wC("worldSocial:whoCanJoin"),
-        children: FC.map(((CC, QC) => {
-          const nC = CC === zC;
-          return (0, oC.jsxs)("button", {
-            ref: CC => {
-              WC.current[QC] = CC
+        "aria-label": Tk("worldSocial:whoCanJoin"),
+        children: Lk.map(((kk, Xk) => {
+          const yk = kk === Fk;
+          return (0, ak.jsxs)("button", {
+            ref: kk => {
+              tk.current[Xk] = kk
             },
             type: "button",
-            className: bC()("WorldSocialTile", {
-              WorldSocialTileSelected: nC
+            className: ik()("WorldSocialTile", {
+              WorldSocialTileSelected: yk
             }),
-            "aria-pressed": nC,
-            tabIndex: nC ? 0 : -1,
-            onKeyDown: CC => {
-              ((CC, zC) => {
-                const ZC = "ArrowRight" === CC.key || "ArrowDown" === CC.key ? 1 : "ArrowLeft" === CC.key || "ArrowUp" === CC.key ? -1 : 0;
-                var QC;
-                0 !== ZC && (CC.preventDefault(), null === (QC = WC.current[(zC + ZC + FC.length) % FC.length]) || void 0 === QC || QC.focus())
-              })(CC, QC)
+            "aria-pressed": yk,
+            tabIndex: yk ? 0 : -1,
+            onKeyDown: kk => {
+              ((kk, Fk) => {
+                const Ik = "ArrowRight" === kk.key || "ArrowDown" === kk.key ? 1 : "ArrowLeft" === kk.key || "ArrowUp" === kk.key ? -1 : 0;
+                var Xk;
+                0 !== Ik && (kk.preventDefault(), null === (Xk = tk.current[(Fk + Ik + Lk.length) % Lk.length]) || void 0 === Xk || Xk.focus())
+              })(kk, Xk)
             },
             onClick: () => {
-              ZC(CC)
+              Ik(kk)
             },
-            children: [(0, oC.jsx)("span", {
+            children: [(0, ak.jsx)("span", {
               className: "WorldSocialTileIcon",
-              children: (0, oC.jsx)(fC.c, {
-                name: qC[CC]
+              children: (0, ak.jsx)(lk.e, {
+                name: qk[kk]
               })
-            }), (0, oC.jsxs)("span", {
+            }), (0, ak.jsxs)("span", {
               className: "WorldSocialTileText",
-              children: [(0, oC.jsx)("span", {
+              children: [(0, ak.jsx)("span", {
                 className: "WorldSocialTileTitle",
-                children: wC(`worldSocial:${CC}`)
-              }), (0, oC.jsx)("span", {
+                children: Tk(`worldSocial:${kk}`)
+              }), (0, ak.jsx)("span", {
                 className: "WorldSocialTileDescription",
-                children: wC(`worldSocial:${CC}Description`)
+                children: Tk(`worldSocial:${kk}Description`)
               })]
             })]
-          }, CC)
+          }, kk)
         }))
       })
     }
   },
-  36612: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => fC
+  36733: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => lk
     });
-    var QC = ZC(1143),
-      wC = ZC(2633),
-      bC = ZC(4300),
-      nC = ZC(1056);
+    var Xk = Ik(1179),
+      Tk = Ik(2578),
+      ik = Ik(4338),
+      yk = Ik(1096);
 
-    function fC(CC) {
+    function lk(kk) {
       let {
-        ZN: zC,
-        children: ZC,
-        ...fC
-      } = CC;
+        Dt: Fk,
+        children: Ik,
+        ...lk
+      } = kk;
       const {
-        t: oC
-      } = (0, QC.y)();
-      return (0, nC.jsx)("div", {
+        t: ak
+      } = (0, Xk.y)();
+      return (0, yk.jsx)("div", {
         className: "WhitelistTickRow",
         onClick: () => {
-          zC.onChange(!zC.on)
+          Fk.onChange(!Fk.on)
         },
-        children: (0, nC.jsx)(wC.f, {
-          ...fC,
+        children: (0, yk.jsx)(Tk.e, {
+          ...lk,
           opensProfileCard: !1,
-          children: (0, nC.jsxs)("div", {
+          children: (0, yk.jsxs)("div", {
             className: "WhitelistTickRowActions",
-            onClick: CC => {
-              CC.stopPropagation()
+            onClick: kk => {
+              kk.stopPropagation()
             },
-            children: [ZC, (0, nC.jsx)("label", {
+            children: [Ik, (0, yk.jsx)("label", {
               className: "WhitelistTickRowTick",
-              children: (0, nC.jsx)(bC.e, {
-                checked: zC.on,
+              children: (0, yk.jsx)(ik.d, {
+                checked: Fk.on,
                 disabled: !1,
-                ariaLabel: oC("worldSocial:letJoin", {
-                  playerName: fC.playerSocialPreview.name
+                ariaLabel: ak("worldSocial:letJoin", {
+                  playerName: lk.playerSocialPreview.name
                 }),
-                onChange: CC => {
-                  zC.onChange(CC.target.checked)
+                onChange: kk => {
+                  Fk.onChange(kk.target.checked)
                 }
               })
             })]
@@ -1953,395 +1953,395 @@ export const modules = {
       })
     }
   },
-  36590: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => gC
+  36712: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => ek
     });
-    var QC = ZC(48),
-      wC = ZC(1143),
-      bC = ZC(1774),
-      nC = ZC(77),
-      fC = ZC(20),
-      oC = ZC(1418),
-      qC = ZC(2659),
-      FC = ZC(34056),
-      WC = ZC(1388),
-      NC = ZC(1013),
-      MC = ZC(1056);
+    var Xk = Ik(58),
+      Tk = Ik(1179),
+      ik = Ik(1800),
+      yk = Ik(95),
+      lk = Ik(25),
+      ak = Ik(1432),
+      qk = Ik(2602),
+      Lk = Ik(34058),
+      tk = Ik(1406),
+      Zk = Ik(1066),
+      jk = Ik(1096);
 
-    function gC(CC) {
+    function ek(kk) {
       let {
-        worldCode: zC,
-        message: ZC
-      } = CC;
+        worldCode: Fk,
+        message: Ik
+      } = kk;
       const {
-        t: gC
-      } = (0, wC.y)(), {
-        isTouchScreen: SC
-      } = (0, fC.k)(["isTouchScreen"]), pC = nC.featureFlags.canUseInviteLinks, PC = (0, FC.e)(pC && null === ZC), [GC, RC] = (0, qC.i)(), AC = (0, QC.useRef)(null);
-      if (null !== ZC) return (0, MC.jsxs)("div", {
+        t: ek
+      } = (0, Tk.y)(), {
+        isTouchScreen: wk
+      } = (0, lk.j)(["isTouchScreen"]), Hk = yk.featureFlags.canUseInviteLinks, Jk = (0, Lk.d)(Hk && null === Ik), [xk, Pk] = (0, qk.g)(), Kk = (0, Xk.useRef)(null);
+      if (null !== Ik) return (0, jk.jsxs)("div", {
         className: "WorldSocialLinkRow WorldSocialLinkRowMessage",
-        children: [(0, MC.jsx)(NC.c, {
+        children: [(0, jk.jsx)(Zk.e, {
           name: "lock"
-        }), (0, MC.jsx)("span", {
-          children: ZC
+        }), (0, jk.jsx)("span", {
+          children: Ik
         })]
       });
-      const xC = pC ? PC : zC,
-        JC = SC && pC && (0, qC.c)();
-      return (0, MC.jsxs)("div", {
+      const Qk = Hk ? Jk : Fk,
+        sk = wk && Hk && (0, qk.b)();
+      return (0, jk.jsxs)("div", {
         className: "WorldSocialLinkRow",
-        children: [!pC && (0, MC.jsx)("span", {
+        children: [!Hk && (0, jk.jsx)("span", {
           className: "WorldSocialCodeLabel",
-          children: gC("worldSocial:worldCode")
-        }), (0, MC.jsx)("input", {
-          ref: AC,
+          children: ek("worldSocial:worldCode")
+        }), (0, jk.jsx)("input", {
+          ref: Kk,
           className: "WorldSocialLink",
           readOnly: !0,
-          value: null !== xC && void 0 !== xC ? xC : "",
-          "aria-label": gC(pC ? "worldSocial:worldLink" : "worldSocial:worldCode"),
-          onFocus: CC => {
-            CC.currentTarget.select()
+          value: null !== Qk && void 0 !== Qk ? Qk : "",
+          "aria-label": ek(Hk ? "worldSocial:worldLink" : "worldSocial:worldCode"),
+          onFocus: kk => {
+            kk.currentTarget.select()
           }
-        }), (0, MC.jsxs)(WC.g, {
+        }), (0, jk.jsxs)(tk.d, {
           className: "WorldSocialCopy",
-          disabled: null === xC,
+          disabled: null === Qk,
           onClick: () => {
-            null !== xC && (0, qC.f)(xC, {
-              useShareSheet: JC,
-              onOutcome: CC => {
-                if ((0, oC.reportAnalyticsClick)({
+            null !== Qk && (0, qk.e)(Qk, {
+              useShareSheet: sk,
+              onOutcome: kk => {
+                if ((0, ak.reportAnalyticsClick)({
                     id: "world_social.copy_link",
-                    value: "copied" !== CC || pC ? CC : "code"
-                  }), "copied" === CC) RC();
-                else if ("failed" === CC) {
-                  var zC;
-                  null === (zC = AC.current) || void 0 === zC || zC.focus(), bC.d.showMessage({
+                    value: "copied" !== kk || Hk ? kk : "code"
+                  }), "copied" === kk) Pk();
+                else if ("failed" === kk) {
+                  var Fk;
+                  null === (Fk = Kk.current) || void 0 === Fk || Fk.focus(), ik.e.showMessage({
                     translationKey: "partyBar:copyFailed"
                   })
                 }
               }
             })
           },
-          children: [(0, MC.jsx)(NC.c, {
-            name: GC ? "check" : JC ? "up-from-bracket" : "copy"
-          }), " ", gC(GC ? "general:copied" : JC ? "worldSocial:share" : "general:copy")]
+          children: [(0, jk.jsx)(Zk.e, {
+            name: xk ? "check" : sk ? "up-from-bracket" : "copy"
+          }), " ", ek(xk ? "general:copied" : sk ? "worldSocial:share" : "general:copy")]
         })]
       })
     }
   },
-  36605: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => MC,
-      i: () => NC,
-      l: () => WC
+  36727: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => jk,
+      i: () => Zk,
+      j: () => tk
     });
-    var QC = ZC(583),
-      wC = ZC(1143),
-      bC = ZC(1559),
-      nC = ZC(2633),
-      fC = ZC(2575),
-      oC = ZC(1388),
-      qC = ZC(36612),
-      FC = ZC(1056);
+    var Xk = Ik(612),
+      Tk = Ik(1179),
+      ik = Ik(1585),
+      yk = Ik(2578),
+      lk = Ik(2525),
+      ak = Ik(1406),
+      qk = Ik(36733),
+      Lk = Ik(1096);
 
-    function WC(CC, zC) {
-      var ZC;
+    function tk(kk, Fk) {
+      var Ik;
       return {
         isError: !1,
-        name: CC,
+        name: kk,
         ranks: [...arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : []],
-        cosmetics: null !== zC && void 0 !== zC ? zC : {},
-        nameColour: null !== (ZC = null === zC || void 0 === zC ? void 0 : zC.nameColour) && void 0 !== ZC ? ZC : QC.d,
+        cosmetics: null !== Fk && void 0 !== Fk ? Fk : {},
+        nameColour: null !== (Ik = null === Fk || void 0 === Fk ? void 0 : Fk.nameColour) && void 0 !== Ik ? Ik : Xk.c,
         location: {
           status: "offline"
         }
       }
     }
 
-    function NC(CC) {
+    function Zk(kk) {
       let {
-        player: zC,
-        isFriend: ZC = !1,
-        status: QC,
-        showLocation: oC = void 0 === QC,
-        ZN: WC,
-        onSendFriendRequest: NC,
-        actions: MC,
-        zIndex: gC
-      } = CC;
+        player: Fk,
+        isFriend: Ik = !1,
+        status: Xk,
+        showLocation: ak = void 0 === Xk,
+        Dt: tk,
+        onSendFriendRequest: Zk,
+        actions: jk,
+        zIndex: ek
+      } = kk;
       const {
-        t: SC
-      } = (0, wC.y)();
-      let pC = QC;
-      null !== WC && void 0 !== WC && WC.on && (pC = (0, FC.jsxs)(FC.Fragment, {
-        children: [null !== QC && void 0 !== QC ? QC : (0, FC.jsx)(fC.b, {
-          socialPreview: zC
-        }), (0, FC.jsxs)("span", {
+        t: wk
+      } = (0, Tk.y)();
+      let Hk = Xk;
+      null !== tk && void 0 !== tk && tk.on && (Hk = (0, Lk.jsxs)(Lk.Fragment, {
+        children: [null !== Xk && void 0 !== Xk ? Xk : (0, Lk.jsx)(lk.c, {
+          socialPreview: Fk
+        }), (0, Lk.jsxs)("span", {
           className: "WorldSocialCanJoin",
-          children: [" \xb7 ", SC("worldSocial:canJoin")]
+          children: [" \xb7 ", wk("worldSocial:canJoin")]
         })]
       }));
-      const PC = {
-        playerSocialPreview: zC,
-        isFriend: ZC,
+      const Jk = {
+        playerSocialPreview: Fk,
+        isFriend: Ik,
         hideFriendBadge: !0,
-        onFriendRemoved: ZC ? CC => {
-          bC.d.removeFriendFromState(CC)
+        onFriendRemoved: Ik ? kk => {
+          ik.c.removeFriendFromState(kk)
         } : void 0,
-        status: pC,
-        showLocation: oC,
-        onSendFriendRequest: NC,
-        zIndex: gC
+        status: Hk,
+        showLocation: ak,
+        onSendFriendRequest: Zk,
+        zIndex: ek
       };
-      return WC ? (0, FC.jsx)(qC.d, {
-        ...PC,
-        ZN: WC,
-        children: MC
-      }) : (0, FC.jsx)(nC.f, {
-        ...PC,
+      return tk ? (0, Lk.jsx)(qk.c, {
+        ...Jk,
+        Dt: tk,
+        children: jk
+      }) : (0, Lk.jsx)(yk.e, {
+        ...Jk,
         opensProfileCard: !1,
-        children: MC || void 0
+        children: jk || void 0
       })
     }
 
-    function MC(CC) {
+    function jk(kk) {
       let {
-        row: zC,
-        ZN: ZC,
-        canInvite: QC,
-        invited: bC,
-        onInvite: nC,
-        zIndex: fC
-      } = CC;
+        row: Fk,
+        Dt: Ik,
+        canInvite: Xk,
+        invited: ik,
+        onInvite: yk,
+        zIndex: lk
+      } = kk;
       const {
-        t: qC
-      } = (0, wC.y)(), WC = "online" === zC.place ? oC.g : oC.i;
-      return (0, FC.jsx)(NC, {
-        player: zC.friend,
+        t: qk
+      } = (0, Tk.y)(), tk = "online" === Fk.place ? ak.d : ak.g;
+      return (0, Lk.jsx)(Zk, {
+        player: Fk.friend,
         isFriend: !0,
-        status: "here" === zC.place ? qC("worldSocial:inThisWorld") : void 0,
+        status: "here" === Fk.place ? qk("worldSocial:inThisWorld") : void 0,
         showLocation: !0,
-        ZN: ZC,
-        zIndex: fC,
-        actions: QC && (0, FC.jsx)(WC, {
+        Dt: Ik,
+        zIndex: lk,
+        actions: Xk && (0, Lk.jsx)(tk, {
           className: "WorldSocialInvite SmallTextLight",
-          disabled: bC,
-          onClick: nC,
-          ariaLabel: `${qC("worldSocial:invite")} ${zC.friend.name}`,
-          children: qC(bC ? "worldSocial:invited" : "worldSocial:invite")
+          disabled: ik,
+          onClick: yk,
+          ariaLabel: `${qk("worldSocial:invite")} ${Fk.friend.name}`,
+          children: qk(ik ? "worldSocial:invited" : "worldSocial:invite")
         })
       })
     }
   },
-  36584: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => oC,
-      i: () => nC,
-      j: () => qC
+  36707: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => ak,
+      f: () => yk,
+      g: () => qk
     });
-    var QC = ZC(48),
-      wC = ZC(4525),
-      bC = ZC(1774);
+    var Xk = Ik(58),
+      Tk = Ik(4584),
+      ik = Ik(1800);
 
-    function nC(CC) {
-      const zC = {
-        lobbyName: CC,
+    function yk(kk) {
+      const Fk = {
+        lobbyName: kk,
         answer: null,
-        response: wC.d.getSocialSettings(CC)
+        response: Tk.c.getSocialSettings(kk)
       };
-      return zC.response.then((CC => {
-        zC.answer = CC
-      })), zC
+      return Fk.response.then((kk => {
+        Fk.answer = kk
+      })), Fk
     }
-    const fC = new Map;
+    const lk = new Map;
 
-    function oC(CC) {
-      fC.set(CC.lobbyName, CC)
+    function ak(kk) {
+      lk.set(kk.lobbyName, kk)
     }
 
-    function qC(CC) {
-      const [zC] = (0, QC.useState)((() => function(CC) {
-        var zC;
-        const ZC = null !== (zC = fC.get(CC)) && void 0 !== zC ? zC : null;
-        return null !== ZC && void 0 !== ZC && ZC.answer && "error" in ZC.answer ? null : ZC
-      }(CC))), [ZC, nC] = (0, QC.useState)((() => null !== zC && void 0 !== zC && zC.answer && "settings" in zC.answer ? zC.answer.settings : null)), [oC, qC] = (0, QC.useState)(!0), [FC, WC] = (0, QC.useState)(null !== ZC), NC = (0, QC.useRef)(ZC);
-      NC.current = ZC;
-      const MC = (0, QC.useRef)(0),
-        gC = (0, QC.useRef)(0),
-        SC = (0, QC.useRef)(!1),
-        pC = (0, QC.useRef)(!0),
-        PC = (0, QC.useCallback)((async zC => {
-          const ZC = ++MC.current,
-            QC = await (null !== zC && void 0 !== zC ? zC : wC.d.getSocialSettings(CC));
-          pC.current && ZC === MC.current && (WC(!0), qC(!1), "error" in QC || nC(QC.settings))
-        }), [CC]),
-        GC = (0, QC.useCallback)((() => {
-          qC(!0), PC()
-        }), [PC]),
-        RC = (0, QC.useCallback)((() => {
-          gC.current > 0 ? SC.current = !0 : PC()
-        }), [PC]);
-      (0, QC.useEffect)((() => (pC.current = !0, fC.delete(CC), qC(!0), PC(null === zC || void 0 === zC ? void 0 : zC.response), () => {
-        pC.current = !1
-      })), [PC, CC, zC]);
-      const AC = CC => {
-        MC.current++, qC(!1), NC.current = CC, nC(CC)
+    function qk(kk) {
+      const [Fk] = (0, Xk.useState)((() => function(kk) {
+        var Fk;
+        const Ik = null !== (Fk = lk.get(kk)) && void 0 !== Fk ? Fk : null;
+        return null !== Ik && void 0 !== Ik && Ik.answer && "error" in Ik.answer ? null : Ik
+      }(kk))), [Ik, yk] = (0, Xk.useState)((() => null !== Fk && void 0 !== Fk && Fk.answer && "settings" in Fk.answer ? Fk.answer.settings : null)), [ak, qk] = (0, Xk.useState)(!0), [Lk, tk] = (0, Xk.useState)(null !== Ik), Zk = (0, Xk.useRef)(Ik);
+      Zk.current = Ik;
+      const jk = (0, Xk.useRef)(0),
+        ek = (0, Xk.useRef)(0),
+        wk = (0, Xk.useRef)(!1),
+        Hk = (0, Xk.useRef)(!0),
+        Jk = (0, Xk.useCallback)((async Fk => {
+          const Ik = ++jk.current,
+            Xk = await (null !== Fk && void 0 !== Fk ? Fk : Tk.c.getSocialSettings(kk));
+          Hk.current && Ik === jk.current && (tk(!0), qk(!1), "error" in Xk || yk(Xk.settings))
+        }), [kk]),
+        xk = (0, Xk.useCallback)((() => {
+          qk(!0), Jk()
+        }), [Jk]),
+        Pk = (0, Xk.useCallback)((() => {
+          ek.current > 0 ? wk.current = !0 : Jk()
+        }), [Jk]);
+      (0, Xk.useEffect)((() => (Hk.current = !0, lk.delete(kk), qk(!0), Jk(null === Fk || void 0 === Fk ? void 0 : Fk.response), () => {
+        Hk.current = !1
+      })), [Jk, kk, Fk]);
+      const Kk = kk => {
+        jk.current++, qk(!1), Zk.current = kk, yk(kk)
       };
       return {
-        settings: ZC,
-        loading: oC,
-        answered: FC,
-        retry: GC,
-        refresh: RC,
-        change: async function(zC, ZC) {
+        settings: Ik,
+        loading: ak,
+        answered: Lk,
+        retry: xk,
+        refresh: Pk,
+        change: async function(Fk, Ik) {
           let {
-            quiet: QC = !1,
-            onAnswer: nC
+            quiet: Xk = !1,
+            onAnswer: yk
           } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-          const fC = NC.current;
-          if (null === fC) return !1;
-          AC(ZC(fC)), gC.current > 0 && (SC.current = !0), gC.current++;
-          const oC = await wC.d.setSocialSettings(CC, zC);
-          gC.current--;
-          const qC = !("error" in oC);
-          if (!pC.current) return qC;
-          if (null === nC || void 0 === nC || nC(oC), QC);
-          else if ("error" in oC) bC.d.showMessage({
-            translationKey: oC.error
+          const lk = Zk.current;
+          if (null === lk) return !1;
+          Kk(Ik(lk)), ek.current > 0 && (wk.current = !0), ek.current++;
+          const ak = await Tk.c.setSocialSettings(kk, Fk);
+          ek.current--;
+          const qk = !("error" in ak);
+          if (!Hk.current) return qk;
+          if (null === yk || void 0 === yk || yk(ak), Xk);
+          else if ("error" in ak) ik.e.showMessage({
+            translationKey: ak.error
           });
           else
-            for (const CC of oC.notFound) bC.d.showMessage({
+            for (const kk of ak.notFound) ik.e.showMessage({
               translationKey: "worldSocial:notFound",
               params: {
-                playerName: CC
+                playerName: kk
               }
             });
-          if (gC.current > 0) return qC;
-          const FC = SC.current;
-          return SC.current = !1, !FC && "settings" in oC ? AC(oC.settings) : (FC || AC(fC), PC()), qC
+          if (ek.current > 0) return qk;
+          const Lk = wk.current;
+          return wk.current = !1, !Lk && "settings" in ak ? Kk(ak.settings) : (Lk || Kk(lk), Jk()), qk
         }
       }
     }
   },
-  36627: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => nC,
-      d: () => bC
+  36750: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => yk,
+      f: () => ik
     });
-    var QC = ZC(134);
-    const wC = new Map;
+    var Xk = Ik(149);
+    const Tk = new Map;
 
-    function bC(CC, zC) {
-      var ZC;
-      const QC = null !== (ZC = wC.get(CC)) && void 0 !== ZC ? ZC : new Map;
-      QC.set(zC, Date.now()), wC.set(CC, QC)
+    function ik(kk, Fk) {
+      var Ik;
+      const Xk = null !== (Ik = Tk.get(kk)) && void 0 !== Ik ? Ik : new Map;
+      Xk.set(Fk, Date.now()), Tk.set(kk, Xk)
     }
 
-    function nC(CC) {
-      const zC = wC.get(CC);
-      if (!zC) return [];
-      const ZC = Date.now();
-      for (const [wC, bC] of zC) ZC - bC >= QC.m && zC.delete(wC);
-      return [...zC.keys()]
+    function yk(kk) {
+      const Fk = Tk.get(kk);
+      if (!Fk) return [];
+      const Ik = Date.now();
+      for (const [Tk, ik] of Fk) Ik - ik >= Xk.k && Fk.delete(Tk);
+      return [...Fk.keys()]
     }
   },
-  36588: (CC, zC, ZC) => {
-    function QC(CC, zC) {
-      const ZC = zC.toLowerCase();
-      for (const QC of CC)
-        if (QC.toLowerCase() === ZC) return !0;
+  36710: (kk, Fk, Ik) => {
+    function Xk(kk, Fk) {
+      const Ik = Fk.toLowerCase();
+      for (const Xk of kk)
+        if (Xk.toLowerCase() === Ik) return !0;
       return !1
     }
 
-    function wC(CC, zC, ZC) {
-      const wC = [],
-        bC = [],
-        nC = [];
-      for (const fC of CC) !fC.isError && fC.name && ("inGame" === fC.location.status && fC.location.inLobbyName === zC || QC(ZC, fC.name) ? bC.push({
-        friend: fC,
+    function Tk(kk, Fk, Ik) {
+      const Tk = [],
+        ik = [],
+        yk = [];
+      for (const lk of kk) !lk.isError && lk.name && ("inGame" === lk.location.status && lk.location.inLobbyName === Fk || Xk(Ik, lk.name) ? ik.push({
+        friend: lk,
         place: "here"
-      }) : "offline" === fC.location.status ? nC.push({
-        friend: fC,
+      }) : "offline" === lk.location.status ? yk.push({
+        friend: lk,
         place: "offline"
-      }) : wC.push({
-        friend: fC,
+      }) : Tk.push({
+        friend: lk,
         place: "online"
       }));
-      return [...wC, ...bC, ...nC]
+      return [...Tk, ...ik, ...yk]
     }
 
-    function bC(CC, zC, ZC) {
-      const wC = [],
-        bC = CC.flatMap((CC => "here" === CC.place ? [CC.friend.name] : []));
-      for (const nC of [...bC, ...zC]) QC(wC, nC) || QC(ZC, nC) || wC.push(nC);
-      return wC
+    function ik(kk, Fk, Ik) {
+      const Tk = [],
+        ik = kk.flatMap((kk => "here" === kk.place ? [kk.friend.name] : []));
+      for (const yk of [...ik, ...Fk]) Xk(Tk, yk) || Xk(Ik, yk) || Tk.push(yk);
+      return Tk
     }
 
-    function nC(CC, zC) {
-      return null === CC || void 0 === CC || !CC.canManage || QC(CC.whitelist, zC) ? "none" : "whitelist" === CC.visibility ? "required" : "quiet"
+    function yk(kk, Fk) {
+      return null === kk || void 0 === kk || !kk.canManage || Xk(kk.whitelist, Fk) ? "none" : "whitelist" === kk.visibility ? "required" : "quiet"
     }
 
-    function fC(CC) {
-      if (null === CC) return !0;
+    function lk(kk) {
+      if (null === kk) return !0;
       const {
-        visibility: zC
-      } = CC;
-      return "public" === zC || "unlisted" === zC || "whitelist" === zC && CC.canManage
+        visibility: Fk
+      } = kk;
+      return "public" === Fk || "unlisted" === Fk || "whitelist" === Fk && kk.canManage
     }
 
-    function oC(CC, zC, ZC) {
-      if (ZC) {
-        const ZC = zC.filter((zC => !QC(CC.whitelist, zC)));
+    function ak(kk, Fk, Ik) {
+      if (Ik) {
+        const Ik = Fk.filter((Fk => !Xk(kk.whitelist, Fk)));
         return {
-          ...CC,
-          whitelist: [...CC.whitelist, ...ZC]
+          ...kk,
+          whitelist: [...kk.whitelist, ...Ik]
         }
       }
       return {
-        ...CC,
-        whitelist: CC.whitelist.filter((CC => !QC(zC, CC)))
+        ...kk,
+        whitelist: kk.whitelist.filter((kk => !Xk(Fk, kk)))
       }
     }
 
-    function qC(CC, zC) {
-      const ZC = [];
-      for (let QC = 0; QC < CC.length; QC += zC) ZC.push(CC.slice(QC, QC + zC));
-      return ZC
+    function qk(kk, Fk) {
+      const Ik = [];
+      for (let Xk = 0; Xk < kk.length; Xk += Fk) Ik.push(kk.slice(Xk, Xk + Fk));
+      return Ik
     }
-    ZC.d(zC, {
-      d: () => fC,
-      f: () => bC,
-      i: () => wC,
-      k: () => QC,
-      n: () => qC,
-      q: () => nC,
-      s: () => oC
+    Ik.d(Fk, {
+      e: () => lk,
+      f: () => ik,
+      i: () => Tk,
+      m: () => Xk,
+      q: () => qk,
+      r: () => yk,
+      s: () => ak
     })
   },
-  36882: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => bC
+  37056: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => ik
     });
-    var QC = ZC(48),
-      wC = ZC(2369);
+    var Xk = Ik(58),
+      Tk = Ik(2349);
 
-    function bC() {
-      const CC = (0, wC.h)("lobbyLeaderboardInfo");
-      return (0, QC.useMemo)((() => function(CC) {
-        if (null === CC) return null;
-        const zC = Object.entries(CC),
-          ZC = zC.filter((CC => {
-            let [, zC] = CC;
-            return void 0 !== zC
+    function ik() {
+      const kk = (0, Tk.j)("lobbyLeaderboardInfo");
+      return (0, Xk.useMemo)((() => function(kk) {
+        if (null === kk) return null;
+        const Fk = Object.entries(kk),
+          Ik = Fk.filter((kk => {
+            let [, Fk] = kk;
+            return void 0 !== Fk
           }));
-        if (ZC.length === zC.length) return CC;
-        const QC = Object.fromEntries(ZC),
-          wC = Object.keys(CC).filter((CC => !Object.hasOwn(QC, CC)));
-        return console.warn(`lobbyLeaderboardInfo left out its undefined columns: ${wC.join(", ")}`), QC
-      }(CC)), [CC])
+        if (Ik.length === Fk.length) return kk;
+        const Xk = Object.fromEntries(Ik),
+          Tk = Object.keys(kk).filter((kk => !Object.hasOwn(Xk, kk)));
+        return console.warn(`lobbyLeaderboardInfo left out its undefined columns: ${Tk.join(", ")}`), Xk
+      }(kk)), [kk])
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

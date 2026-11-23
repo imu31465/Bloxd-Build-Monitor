@@ -1,80 +1,80 @@
 export const id = 301;
 export const ids = [301];
 export const modules = {
-  41289: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      ensureLocalBloxdTypes: () => PC
+  41488: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      ensureLocalBloxdTypes: () => Jk
     });
-    var QC = ZC(4696),
-      wC = ZC(41188),
-      bC = ZC(41179),
-      nC = ZC(36714),
-      fC = ZC(36721),
-      oC = ZC(36735);
-    const qC = JSON.stringify({
+    var Xk = Ik(4761),
+      Tk = Ik(41383),
+      ik = Ik(41376),
+      yk = Ik(36882),
+      lk = Ik(36891),
+      ak = Ik(36909);
+    const qk = JSON.stringify({
       name: "@bloxd",
       types: "index.d.ts"
     }, null, "\t") + "\n";
 
-    function FC(CC) {
-      return CC.replace(/^\//, "")
+    function Lk(kk) {
+      return kk.replace(/^\//, "")
     }
 
-    function WC(CC) {
-      return FC((0, fC.t)(CC.name, "")).replace(/\/$/, "")
+    function tk(kk) {
+      return Lk((0, lk.w)(kk.name, "")).replace(/\/$/, "")
     }
 
-    function NC(CC) {
-      return CC.typesVfsPath.slice(CC.typesVfsPath.lastIndexOf("/") + 1)
+    function Zk(kk) {
+      return kk.typesVfsPath.slice(kk.typesVfsPath.lastIndexOf("/") + 1)
     }
 
-    function MC(CC) {
+    function jk(kk) {
       return JSON.stringify({
-        name: CC.specifier,
-        types: NC(CC)
+        name: kk.specifier,
+        types: Zk(kk)
       }, null, "\t") + "\n"
     }
-    async function gC(CC) {
-      let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-      const ZC = [];
-      for await (const [QC, wC] of CC.entries()) {
-        const CC = zC ? `${zC}/${QC}` : QC;
-        "directory" !== wC.kind ? ZC.push(CC) : ZC.push(...await gC(wC, CC))
+    async function ek(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+      const Ik = [];
+      for await (const [Xk, Tk] of kk.entries()) {
+        const kk = Fk ? `${Fk}/${Xk}` : Xk;
+        "directory" !== Tk.kind ? Ik.push(kk) : Ik.push(...await ek(Tk, kk))
       }
-      return ZC
+      return Ik
     }
-    async function SC(CC, zC, ZC) {
-      const QC = WC(zC),
-        wC = await (0, oC.k)(CC, QC);
-      if (!wC) return;
-      const bC = new Set([NC(zC), "package.json"]);
-      if (ZC)
-        for (const oC of Object.keys(zC.files)) bC.add(oC);
-      const nC = await gC(wC),
-        fC = new Set;
-      for (const WC of nC) {
-        if (bC.has(WC)) continue;
-        await (0, oC.y)(CC, `${QC}/${WC}`);
-        const zC = WC.split("/");
-        for (let CC = 1; CC < zC.length; CC++) fC.add(zC.slice(0, CC).join("/"))
+    async function wk(kk, Fk, Ik) {
+      const Xk = tk(Fk),
+        Tk = await (0, ak.f)(kk, Xk);
+      if (!Tk) return;
+      const ik = new Set([Zk(Fk), "package.json"]);
+      if (Ik)
+        for (const ak of Object.keys(Fk.files)) ik.add(ak);
+      const yk = await ek(Tk),
+        lk = new Set;
+      for (const tk of yk) {
+        if (ik.has(tk)) continue;
+        await (0, ak.v)(kk, `${Xk}/${tk}`);
+        const Fk = tk.split("/");
+        for (let kk = 1; kk < Fk.length; kk++) lk.add(Fk.slice(0, kk).join("/"))
       }
-      const qC = [...fC].sort(((CC, zC) => zC.split("/").length - CC.split("/").length));
-      for (const WC of qC) try {
-        await (0, oC.y)(CC, `${QC}/${WC}`)
-      } catch (FC) {
-        if (FC instanceof DOMException && "InvalidModificationError" === FC.name) continue;
-        throw FC
+      const qk = [...lk].sort(((kk, Fk) => Fk.split("/").length - kk.split("/").length));
+      for (const tk of qk) try {
+        await (0, ak.v)(kk, `${Xk}/${tk}`)
+      } catch (Lk) {
+        if (Lk instanceof DOMException && "InvalidModificationError" === Lk.name) continue;
+        throw Lk
       }
     }
 
-    function pC(CC) {
-      const zC = {
+    function Hk(kk) {
+      const Fk = {
         "@bloxd": ["./node_modules/@bloxd/index.d.ts"]
       };
-      for (const QC of Object.values(nC.c)) zC[QC.specifier] = [`.${QC.typesVfsPath}`];
-      const ZC = [];
-      for (const QC of CC)
-        for (const CC of Object.keys(QC.files)) ZC.push(FC((0, fC.t)(QC.name, CC)));
+      for (const Xk of Object.values(yk.e)) Fk[Xk.specifier] = [`.${Xk.typesVfsPath}`];
+      const Ik = [];
+      for (const Xk of kk)
+        for (const kk of Object.keys(Xk.files)) Ik.push(Lk((0, lk.w)(Xk.name, kk)));
       return JSON.stringify({
         compilerOptions: {
           allowJs: !0,
@@ -87,26 +87,26 @@ export const modules = {
           noLib: !0,
           skipLibCheck: !0,
           baseUrl: ".",
-          paths: zC
+          paths: Fk
         },
         include: ["./**/*.ts", "./**/*.js", "./**/*.d.ts"],
-        files: ["node_modules/@bloxd/globals.d.ts", "node_modules/@bloxd/lib.d.ts", ...ZC]
+        files: ["node_modules/@bloxd/globals.d.ts", "node_modules/@bloxd/lib.d.ts", ...Ik]
       }, null, "\t") + "\n"
     }
-    async function PC(CC) {
-      let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-      const ZC = new Set(zC.map((CC => CC.name))),
-        NC = Object.values(nC.c).flatMap((zC => {
-          const QC = FC(zC.typesVfsPath),
-            wC = `${WC(zC)}/package.json`;
-          return [...ZC.has(zC.name) ? Object.entries(zC.files).map((ZC => {
-            let [QC, wC] = ZC;
-            return (0, oC.F)(CC, FC((0, fC.t)(zC.name, QC)), wC)
-          })) : [], (0, oC.F)(CC, QC, zC.types), (0, oC.F)(CC, wC, MC(zC))]
+    async function Jk(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+      const Ik = new Set(Fk.map((kk => kk.name))),
+        Zk = Object.values(yk.e).flatMap((Fk => {
+          const Xk = Lk(Fk.typesVfsPath),
+            Tk = `${tk(Fk)}/package.json`;
+          return [...Ik.has(Fk.name) ? Object.entries(Fk.files).map((Ik => {
+            let [Xk, Tk] = Ik;
+            return (0, ak.C)(kk, Lk((0, lk.w)(Fk.name, Xk)), Tk)
+          })) : [], (0, ak.C)(kk, Xk, Fk.types), (0, ak.C)(kk, Tk, jk(Fk))]
         }));
-      await Promise.all([(0, oC.F)(CC, "node_modules/@bloxd/index.d.ts", QC.default), (0, oC.F)(CC, "node_modules/@bloxd/globals.d.ts", bC.b), (0, oC.F)(CC, "node_modules/@bloxd/lib.d.ts", wC.d), (0, oC.F)(CC, "node_modules/@bloxd/package.json", qC), (0, oC.F)(CC, "tsconfig.json", pC(zC)), ...NC]), await Promise.all(Object.values(nC.c).map((zC => SC(CC, zC, ZC.has(zC.name)))))
+      await Promise.all([(0, ak.C)(kk, "node_modules/@bloxd/index.d.ts", Xk.default), (0, ak.C)(kk, "node_modules/@bloxd/globals.d.ts", ik.c), (0, ak.C)(kk, "node_modules/@bloxd/lib.d.ts", Tk.e), (0, ak.C)(kk, "node_modules/@bloxd/package.json", qk), (0, ak.C)(kk, "tsconfig.json", Hk(Fk)), ...Zk]), await Promise.all(Object.values(yk.e).map((Fk => wk(kk, Fk, Ik.has(Fk.name)))))
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

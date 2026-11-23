@@ -1,502 +1,502 @@
 export const id = 247;
 export const ids = [247];
 export const modules = {
-  40866: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => bC,
-      g: () => nC
+  41050: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => ik,
+      g: () => yk
     });
-    var QC = ZC(1851);
-    let wC = !1;
+    var Xk = Ik(1886);
+    let Tk = !1;
 
-    function bC() {
-      wC = !0
+    function ik() {
+      Tk = !0
     }
 
-    function nC() {
-      wC && (wC = !1, (0, QC.c)())
+    function yk() {
+      Tk && (Tk = !1, (0, Xk.c)())
     }
   },
-  40858: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => nC,
-      d: () => bC,
-      e: () => fC
+  41047: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => yk,
+      g: () => ik,
+      j: () => lk
     });
-    var QC = ZC(40412),
-      wC = ZC(40423);
+    var Xk = Ik(40583),
+      Tk = Ik(40596);
 
-    function bC(CC) {
-      if (CC.queries.drawCensus() < QC.Gb.BYTES) return null;
-      const zC = CC.memoryData(CC.scratch(), QC.Gb.BYTES, 4, "the draw census");
-      return null === zC ? null : {
-        terrainOpaque: QC.Gb.terrainOpaque(zC, 0),
-        terrainTransparent: QC.Gb.terrainTransparent(zC, 0),
-        terrainPack: QC.Gb.terrainPack(zC, 0),
-        earthSky: QC.Gb.earthSky(zC, 0),
-        skyMeshes: QC.Gb.skyMeshes(zC, 0),
-        regular: QC.Gb.regular(zC, 0),
-        thin: QC.Gb.thin(zC, 0),
-        line: QC.Gb.line(zC, 0),
-        text: QC.Gb.text(zC, 0),
-        particles: QC.Gb.particles(zC, 0),
-        terrainParts: QC.Gb.terrainParts(zC, 0),
-        terrainCompiling: QC.Gb.terrainCompiling(zC, 0),
-        ringCopiesMax: QC.Gb.ringCopiesMax(zC, 0),
-        ringBusyWrites: QC.Gb.ringBusyWrites(zC, 0)
+    function ik(kk) {
+      if (kk.queries.drawCensus() < Xk.xb.BYTES) return null;
+      const Fk = kk.memoryData(kk.scratch(), Xk.xb.BYTES, 4, "the draw census");
+      return null === Fk ? null : {
+        terrainOpaque: Xk.xb.terrainOpaque(Fk, 0),
+        terrainTransparent: Xk.xb.terrainTransparent(Fk, 0),
+        terrainPack: Xk.xb.terrainPack(Fk, 0),
+        earthSky: Xk.xb.earthSky(Fk, 0),
+        skyMeshes: Xk.xb.skyMeshes(Fk, 0),
+        regular: Xk.xb.regular(Fk, 0),
+        thin: Xk.xb.thin(Fk, 0),
+        line: Xk.xb.line(Fk, 0),
+        text: Xk.xb.text(Fk, 0),
+        particles: Xk.xb.particles(Fk, 0),
+        terrainParts: Xk.xb.terrainParts(Fk, 0),
+        terrainCompiling: Xk.xb.terrainCompiling(Fk, 0),
+        ringCopiesMax: Xk.xb.ringCopiesMax(Fk, 0),
+        ringBusyWrites: Xk.xb.ringBusyWrites(Fk, 0)
       }
     }
 
-    function nC(CC) {
+    function yk(kk) {
       const {
-        terrainOpaque: zC,
-        terrainTransparent: ZC,
-        earthSky: QC,
-        skyMeshes: wC,
-        regular: bC,
-        thin: nC,
-        line: fC,
-        text: oC,
-        particles: qC
-      } = CC;
-      return zC + ZC + QC + wC + bC + nC + fC + oC + qC
+        terrainOpaque: Fk,
+        terrainTransparent: Ik,
+        earthSky: Xk,
+        skyMeshes: Tk,
+        regular: ik,
+        thin: yk,
+        line: lk,
+        text: ak,
+        particles: qk
+      } = kk;
+      return Fk + Ik + Xk + Tk + ik + yk + lk + ak + qk
     }
 
-    function fC() {
-      const CC = (0, wC.k)();
-      return !0 === (null === CC || void 0 === CC ? void 0 : CC.isCoreRunning) ? function(CC) {
-        const zC = bC(CC);
-        if (null === zC) return [];
+    function lk() {
+      const kk = (0, Tk.k)();
+      return !0 === (null === kk || void 0 === kk ? void 0 : kk.isCoreRunning) ? function(kk) {
+        const Fk = ik(kk);
+        if (null === Fk) return [];
         const {
-          terrainOpaque: ZC,
-          terrainTransparent: QC,
-          terrainPack: wC,
-          earthSky: fC,
-          skyMeshes: oC,
-          regular: qC,
-          thin: FC,
-          line: WC,
-          text: NC,
-          particles: MC
-        } = zC;
+          terrainOpaque: Ik,
+          terrainTransparent: Xk,
+          terrainPack: Tk,
+          earthSky: lk,
+          skyMeshes: ak,
+          regular: qk,
+          thin: Lk,
+          line: tk,
+          text: Zk,
+          particles: jk
+        } = Fk;
         return [{
           label: "Drawn",
-          value: `${nC(zC)}`
+          value: `${yk(Fk)}`
         }, {
           label: "Terrain",
-          value: `${ZC} opaque / ${QC} transparent (${wC} shader pack)`
+          value: `${Ik} opaque / ${Xk} transparent (${Tk} shader pack)`
         }, {
           label: "Meshes / Thin bases",
-          value: `${qC} / ${FC}`
+          value: `${qk} / ${Lk}`
         }, {
           label: "Text / Lines",
-          value: `${NC} / ${WC}`
+          value: `${Zk} / ${tk}`
         }, {
           label: "Sky / Particles",
-          value: `${fC+oC} / ${MC}`
+          value: `${lk+ak} / ${jk}`
         }]
-      }(CC.api) : []
+      }(kk.api) : []
     }
   },
-  40842: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => gC,
-      g: () => NC,
-      k: () => MC
+  41029: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => ek,
+      i: () => Zk,
+      m: () => jk
     });
-    var QC = ZC(1858),
-      wC = ZC(1248),
-      bC = ZC(40423),
-      nC = ZC(40446),
-      fC = ZC(40449),
-      oC = ZC(40470);
-    const qC = new wC.d;
-    let FC = !1;
+    var Xk = Ik(1891),
+      Tk = Ik(1272),
+      ik = Ik(40596),
+      yk = Ik(40609),
+      lk = Ik(40614),
+      ak = Ik(40636);
+    const qk = new Tk.d;
+    let Lk = !1;
 
-    function WC(CC) {
-      const zC = (0, bC.k)();
-      return null !== zC && +CC === zC.api.localId
+    function tk(kk) {
+      const Fk = (0, ik.k)();
+      return null !== Fk && +kk === Fk.api.localId
     }
 
-    function NC() {
-      FC || (FC = !0, (0, oC.l)(nC.m, (CC => {
-        var zC, ZC;
-        const QC = (0, fC.h)(nC.m, CC);
-        if (!(0, fC.e)(QC)) return;
-        const wC = QC;
-        WC(wC.gQ) && MC(wC.SQ, {
-          icon: wC.Aw,
-          level: wC.Jw,
-          displayName: null !== (zC = wC.pQ) && void 0 !== zC ? zC : null,
-          durationMs: null !== (ZC = wC.xw) && void 0 !== ZC ? ZC : null
+    function Zk() {
+      Lk || (Lk = !0, (0, ak.l)(yk.m, (kk => {
+        var Fk, Ik;
+        const Xk = (0, lk.e)(yk.m, kk);
+        if (!(0, lk.c)(Xk)) return;
+        const Tk = Xk;
+        tk(Tk.wX) && jk(Tk.HX, {
+          icon: Tk.sT,
+          level: Tk.zT,
+          displayName: null !== (Fk = Tk.JX) && void 0 !== Fk ? Fk : null,
+          durationMs: null !== (Ik = Tk.VT) && void 0 !== Ik ? Ik : null
         })
-      })), (0, oC.l)(nC.T, (CC => {
-        const zC = (0, fC.h)(nC.T, CC);
-        if (!(0, fC.e)(zC)) return;
-        const ZC = zC;
-        WC(ZC.gQ) && QC.c.remove(ZC.SQ)
-      })), (0, oC.i)((() => {
-        QC.c.clear()
+      })), (0, ak.l)(yk.J, (kk => {
+        const Fk = (0, lk.e)(yk.J, kk);
+        if (!(0, lk.c)(Fk)) return;
+        const Ik = Fk;
+        tk(Ik.wX) && Xk.e.remove(Ik.HX)
+      })), (0, ak.f)((() => {
+        Xk.e.clear()
       })))
     }
 
-    function MC(CC, zC) {
-      QC.c.update(CC, zC), qC.forEach((zC => {
-        zC(CC)
+    function jk(kk, Fk) {
+      Xk.e.update(kk, Fk), qk.forEach((Fk => {
+        Fk(kk)
       }))
     }
-    const gC = {
+    const ek = {
       localEffectUpdated: {
-        watch: CC => qC.add(CC)
+        watch: kk => qk.add(kk)
       }
     }
   },
-  40845: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => FC
+  41037: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Lk
     });
-    var QC = ZC(4733),
-      wC = ZC(4727),
-      bC = ZC(40457),
-      nC = ZC(40470);
-    const fC = new Set(QC.S),
-      oC = QC.S.map((CC => (new TextEncoder).encode(CC))),
-      qC = new Map;
+    var Xk = Ik(4799),
+      Tk = Ik(4797),
+      ik = Ik(40623),
+      yk = Ik(40636);
+    const lk = new Set(Xk.M),
+      ak = Xk.M.map((kk => (new TextEncoder).encode(kk))),
+      qk = new Map;
 
-    function FC(CC, zC) {
-      var ZC;
-      return null === (ZC = qC.get(CC)) || void 0 === ZC ? void 0 : ZC[zC]
-    }(0, nC.l)(QC.Bc.NewOtherEntitySettings, (CC => {
-      CC.payloadKind === wC.hc.Msgpack && oC.some((zC => function(CC, zC) {
-        const ZC = zC[0];
-        for (let QC = CC.indexOf(ZC); - 1 !== QC && QC + zC.length <= CC.length; QC = CC.indexOf(ZC, QC + 1)) {
-          let ZC = 1;
-          for (; ZC < zC.length && CC[QC + ZC] === zC[ZC];) ZC++;
-          if (ZC === zC.length) return !0
+    function Lk(kk, Fk) {
+      var Ik;
+      return null === (Ik = qk.get(kk)) || void 0 === Ik ? void 0 : Ik[Fk]
+    }(0, yk.l)(Xk.sc.NewOtherEntitySettings, (kk => {
+      kk.payloadKind === Tk.fc.Msgpack && ak.some((Fk => function(kk, Fk) {
+        const Ik = Fk[0];
+        for (let Xk = kk.indexOf(Ik); - 1 !== Xk && Xk + Fk.length <= kk.length; Xk = kk.indexOf(Ik, Xk + 1)) {
+          let Ik = 1;
+          for (; Ik < Fk.length && kk[Xk + Ik] === Fk[Ik];) Ik++;
+          if (Ik === Fk.length) return !0
         }
         return !1
-      }(CC.payload, zC))) && function(CC) {
-        if (null === CC || "object" !== typeof CC || null === CC.settings || "object" !== typeof CC.settings) return;
-        const zC = String(CC.eId),
-          ZC = CC.settings;
-        let QC = qC.get(zC);
-        for (const wC in ZC) {
-          if (!fC.has(wC)) continue;
-          const CC = ZC[wC];
-          null === CC || void 0 === CC ? QC && delete QC[wC] : (QC ??= {}, QC[wC] = CC)
+      }(kk.payload, Fk))) && function(kk) {
+        if (null === kk || "object" !== typeof kk || null === kk.settings || "object" !== typeof kk.settings) return;
+        const Fk = String(kk.eId),
+          Ik = kk.settings;
+        let Xk = qk.get(Fk);
+        for (const Tk in Ik) {
+          if (!lk.has(Tk)) continue;
+          const kk = Ik[Tk];
+          null === kk || void 0 === kk ? Xk && delete Xk[Tk] : (Xk ??= {}, Xk[Tk] = kk)
         }
-        QC && qC.set(zC, QC)
-      }((0, bC.c)(CC.payload))
-    })), (0, nC.i)((() => {
-      qC.clear()
+        Xk && qk.set(Fk, Xk)
+      }((0, ik.b)(kk.payload))
+    })), (0, yk.f)((() => {
+      qk.clear()
     }))
   },
-  40838: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => MC,
-      f: () => qC,
-      j: () => WC
+  41020: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => jk,
+      f: () => qk,
+      g: () => tk
     });
-    var QC = ZC(38832),
-      wC = ZC(1843),
-      bC = ZC(1248),
-      nC = ZC(40446),
-      fC = ZC(40449),
-      oC = ZC(40470);
-    const qC = new QC.c;
-    let FC = {};
+    var Xk = Ik(38986),
+      Tk = Ik(1881),
+      ik = Ik(1272),
+      yk = Ik(40609),
+      lk = Ik(40614),
+      ak = Ik(40636);
+    const qk = new Xk.d;
+    let Lk = {};
 
-    function WC(CC) {
-      return FC[CC]
+    function tk(kk) {
+      return Lk[kk]
     }
-    const NC = new bC.d;
+    const Zk = new ik.d;
 
-    function MC(CC) {
-      return NC.add(CC)
+    function jk(kk) {
+      return Zk.add(kk)
     }
 
-    function gC(CC) {
-      NC.callEach(CC, "a roster listener")
-    }(0, oC.l)(nC.cb, (CC => {
-      const zC = (0, fC.h)(nC.cb, CC);
-      if (void 0 === zC) return;
-      const ZC = zC.OZ.some((CC => {
+    function ek(kk) {
+      Zk.callEach(kk, "a roster listener")
+    }(0, ak.l)(yk.T, (kk => {
+      const Fk = (0, lk.e)(yk.T, kk);
+      if (void 0 === Fk) return;
+      const Ik = Fk.DI.some((kk => {
           let {
-            kZ: zC,
-            VZ: ZC
-          } = CC;
-          return null !== ZC && qC.has(zC) && qC.getName(zC) !== ZC
+            MI: Fk,
+            kX: Ik
+          } = kk;
+          return null !== Ik && qk.has(Fk) && qk.getName(Fk) !== Ik
         })),
         {
-          added: QC,
-          removed: bC,
-          settingChanges: oC
-        } = qC.apply(zC),
-        FC = new Set;
-      for (const wC of oC)
-        for (const CC in wC.settings) FC.add(CC);
-      const WC = ZC || QC.length > 0 || bC.length > 0;
-      (WC || FC.has("hideNameSeed")) && function() {
-        const CC = new Map;
-        for (const zC of qC.ids()) {
-          const ZC = qC.getName(zC),
-            QC = qC.getSetting(zC, "hideNameSeed");
-          void 0 !== ZC && void 0 !== QC && null !== QC && CC.set(ZC, QC)
+          added: Xk,
+          removed: ik,
+          settingChanges: ak
+        } = qk.apply(Fk),
+        Lk = new Set;
+      for (const Tk of ak)
+        for (const kk in Tk.settings) Lk.add(kk);
+      const tk = Ik || Xk.length > 0 || ik.length > 0;
+      (tk || Lk.has("hideNameSeed")) && function() {
+        const kk = new Map;
+        for (const Fk of qk.ids()) {
+          const Ik = qk.getName(Fk),
+            Xk = qk.getSetting(Fk, "hideNameSeed");
+          void 0 !== Ik && void 0 !== Xk && null !== Xk && kk.set(Ik, Xk)
         }
-        wC.d.replaceAll(CC)
-      }(), gC({
+        Tk.d.replaceAll(kk)
+      }(), ek({
         kind: "roster",
-        members: WC,
-        settings: FC
+        members: tk,
+        settings: Lk
       })
-    })), (0, oC.l)(nC.Q, (CC => {
-      const zC = (0, fC.h)(nC.Q, CC);
-      if (void 0 !== zC) {
+    })), (0, ak.l)(yk.I, (kk => {
+      const Fk = (0, lk.e)(yk.I, kk);
+      if (void 0 !== Fk) {
         for (const {
-            xQ: CC,
-            JQ: ZC,
-            IQ: QC
+            sX: kk,
+            VX: Ik,
+            zX: Xk
           }
-          of zC) FC[CC] = {
-          ...FC[CC],
-          [ZC]: QC
+          of Fk) Lk[kk] = {
+          ...Lk[kk],
+          [Ik]: Xk
         };
-        gC({
+        ek({
           kind: "cosmetics",
-          updates: zC
+          updates: Fk
         })
       }
-    })), (0, oC.i)((() => {
-      qC.clear(), FC = {}, wC.d.clear(), gC({
+    })), (0, ak.f)((() => {
+      qk.clear(), Lk = {}, Tk.d.clear(), ek({
         kind: "reset"
       })
-    })), (0, oC.j)((() => {
-      qC.clear(), gC({
+    })), (0, ak.j)((() => {
+      qk.clear(), ek({
         kind: "reset"
       })
     }))
   },
-  40854: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => hC,
-      g: () => pC,
-      k: () => mC,
-      m: () => HC
+  41045: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Ek,
+      i: () => Hk,
+      l: () => pk,
+      m: () => uk
     });
-    var QC = ZC(1211),
-      wC = ZC(590),
-      bC = ZC(77),
-      nC = ZC(4733),
-      fC = ZC(40412),
-      oC = ZC(40440),
-      qC = ZC(40423),
-      FC = ZC(40845),
-      WC = ZC(40838),
-      NC = ZC(40449),
-      MC = ZC(40470);
+    var Xk = Ik(1253),
+      Tk = Ik(614),
+      ik = Ik(95),
+      yk = Ik(4799),
+      lk = Ik(40583),
+      ak = Ik(40604),
+      qk = Ik(40596),
+      Lk = Ik(41037),
+      tk = Ik(41020),
+      Zk = Ik(40614),
+      jk = Ik(40636);
 
-    function gC(CC) {
+    function ek(kk) {
       let {
-        deadEId: zC,
-        killerEId: ZC,
-        killerLifeformType: QC,
-        withItem: wC,
-        killstreak: bC
-      } = CC;
+        deadEId: Fk,
+        killerEId: Ik,
+        killerLifeformType: Xk,
+        withItem: Tk,
+        killstreak: ik
+      } = kk;
       return {
-        killer: AC({
-          eId: ZC,
-          lifeformType: QC
+        killer: Kk({
+          eId: Ik,
+          lifeformType: Xk
         }),
-        victim: AC({
-          eId: zC
+        victim: Kk({
+          eId: Fk
         }),
-        withItem: wC,
-        killstreak: bC
+        withItem: Tk,
+        killstreak: ik
       }
     }
 
-    function SC(CC) {
+    function wk(kk) {
       let {
-        killer: zC,
-        victim: ZC,
-        withItem: QC
-      } = CC;
+        killer: Fk,
+        victim: Ik,
+        withItem: Xk
+      } = kk;
       return {
-        killer: AC(zC),
-        victim: AC(ZC),
-        withItem: QC,
+        killer: Kk(Fk),
+        victim: Kk(Ik),
+        withItem: Xk,
         killstreak: 0
       }
     }
 
-    function pC(CC) {
-      iC && eC((() => "killed" === CC.kind ? gC(CC.body) : SC(CC.body)))
+    function Hk(kk) {
+      zk && vk((() => "killed" === kk.kind ? ek(kk.body) : wk(kk.body)))
     }
-    const PC = "#2727f1",
-      GC = "#912c2c";
+    const Jk = "#2727f1",
+      xk = "#912c2c";
 
-    function RC(CC, zC) {
-      var ZC;
-      return WC.f.has(CC) ? null === (ZC = WC.f.getSettings(CC)) || void 0 === ZC ? void 0 : ZC[zC] : (0, FC.c)(CC, zC)
+    function Pk(kk, Fk) {
+      var Ik;
+      return tk.f.has(kk) ? null === (Ik = tk.f.getSettings(kk)) || void 0 === Ik ? void 0 : Ik[Fk] : (0, Lk.c)(kk, Fk)
     }
 
-    function AC(CC) {
-      var zC, ZC, nC, fC, FC;
+    function Kk(kk) {
+      var Fk, Ik, yk, lk, Lk;
       let {
-        eId: NC,
-        name: MC,
-        colour: gC,
-        lifeformType: SC
-      } = CC;
-      if (void 0 === NC || null === NC || "" === NC) {
-        const CC = MC || null;
+        eId: Zk,
+        name: jk,
+        colour: ek,
+        lifeformType: wk
+      } = kk;
+      if (void 0 === Zk || null === Zk || "" === Zk) {
+        const kk = jk || null;
         return {
           id: null,
-          shownName: CC,
-          lifeformType: null === CC && null !== SC && void 0 !== SC ? SC : null,
-          colour: gC || null,
+          shownName: kk,
+          lifeformType: null === kk && null !== wk && void 0 !== wk ? wk : null,
+          colour: ek || null,
           local: !1,
           realName: null
         }
       }
-      const pC = String(NC),
-        AC = null === (zC = (0, qC.k)()) || void 0 === zC ? void 0 : zC.api,
-        xC = void 0 !== AC && String(AC.localId) === pC,
-        JC = null !== (ZC = WC.f.getName(pC)) && void 0 !== ZC ? ZC : null,
-        IC = null !== (nC = RC(pC, "hideNameSeed")) && void 0 !== nC ? nC : null;
-      let iC = null === JC ? null : (0, QC.b)(JC, !bC.featureFlags.canSeeRealPlayerNames, IC) || null,
-        vC = null;
-      if (null === iC && void 0 !== AC) {
-        const CC = AC.getEntityType(pC);
-        "Player" !== CC && (iC = (0, oC.j)(AC, +pC) || null), vC = wC.i.includes(CC) ? CC : null
+      const Hk = String(Zk),
+        Kk = null === (Fk = (0, qk.k)()) || void 0 === Fk ? void 0 : Fk.api,
+        Qk = void 0 !== Kk && String(Kk.localId) === Hk,
+        sk = null !== (Ik = tk.f.getName(Hk)) && void 0 !== Ik ? Ik : null,
+        Vk = null !== (yk = Pk(Hk, "hideNameSeed")) && void 0 !== yk ? yk : null;
+      let zk = null === sk ? null : (0, Xk.e)(sk, !ik.featureFlags.canSeeRealPlayerNames, Vk) || null,
+        Sk = null;
+      if (null === zk && void 0 !== Kk) {
+        const kk = Kk.getEntityType(Hk);
+        "Player" !== kk && (zk = (0, ak.l)(Kk, +Hk) || null), Sk = Tk.m.includes(kk) ? kk : null
       }
       return {
-        id: pC,
-        shownName: iC,
-        lifeformType: null === iC && null !== (fC = null !== (FC = vC) && void 0 !== FC ? FC : SC) && void 0 !== fC ? fC : null,
-        colour: gC || RC(pC, "killfeedColour") || (xC ? PC : GC),
-        local: xC,
-        realName: JC
+        id: Hk,
+        shownName: zk,
+        lifeformType: null === zk && null !== (lk = null !== (Lk = Sk) && void 0 !== Lk ? Lk : wk) && void 0 !== lk ? lk : null,
+        colour: ek || Pk(Hk, "killfeedColour") || (Qk ? Jk : xk),
+        local: Qk,
+        realName: sk
       }
     }
-    const xC = 32;
-    let JC = [],
-      IC = null,
-      iC = !1,
-      vC = !1;
+    const Qk = 32;
+    let sk = [],
+      Vk = null,
+      zk = !1,
+      Sk = !1;
 
-    function eC(CC) {
-      null === IC ? (JC.length === xC && JC.shift(), JC.push(CC)) : IC(CC())
+    function vk(kk) {
+      null === Vk ? (sk.length === Qk && sk.shift(), sk.push(kk)) : Vk(kk())
     }
 
-    function hC() {
-      vC || (vC = !0, (0, MC.l)(nC.Bc.PlayerKilled, (CC => {
-        const zC = (0, NC.j)(CC);
-        (0, NC.e)(zC) && eC((() => gC(zC)))
-      })), (0, MC.l)(nC.Bc.CustomKillfeed, (CC => {
-        const zC = (0, NC.j)(CC);
-        (0, NC.e)(zC) && (0, NC.e)(zC.killer) && (0, NC.e)(zC.victim) && eC((() => SC(zC)))
-      })), (0, MC.i)((() => {
-        JC = []
+    function Ek() {
+      Sk || (Sk = !0, (0, jk.l)(yk.sc.PlayerKilled, (kk => {
+        const Fk = (0, Zk.g)(kk);
+        (0, Zk.c)(Fk) && vk((() => ek(Fk)))
+      })), (0, jk.l)(yk.sc.CustomKillfeed, (kk => {
+        const Fk = (0, Zk.g)(kk);
+        (0, Zk.c)(Fk) && (0, Zk.c)(Fk.killer) && (0, Zk.c)(Fk.victim) && vk((() => wk(Fk)))
+      })), (0, jk.f)((() => {
+        sk = []
       })))
     }
-    const KC = Object.freeze([0, 0, 0]),
-      YC = [0, 0, 0],
-      dC = [0, 0, 0],
-      mC = {
+    const Ok = Object.freeze([0, 0, 0]),
+      nk = [0, 0, 0],
+      Gk = [0, 0, 0],
+      pk = {
         kill: {
-          watch(CC) {
-            if (iC = !0, 0 === JC.length) return IC = CC, () => {
-              iC = !1, IC = null
+          watch(kk) {
+            if (zk = !0, 0 === sk.length) return Vk = kk, () => {
+              zk = !1, Vk = null
             };
-            const zC = setTimeout((() => {
-              const zC = JC;
-              JC = [], IC = CC;
-              for (const QC of zC) try {
-                CC(QC())
-              } catch (ZC) {
-                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", ZC)
+            const Fk = setTimeout((() => {
+              const Fk = sk;
+              sk = [], Vk = kk;
+              for (const Xk of Fk) try {
+                kk(Xk())
+              } catch (Ik) {
+                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", Ik)
               }
             }), 0);
             return () => {
-              clearTimeout(zC), iC = !1, IC = null
+              clearTimeout(Fk), zk = !1, Vk = null
             }
           }
         }
       },
-      HC = {
+      uk = {
         localPos() {
-          const CC = (0, qC.k)();
-          if (null === CC) return KC;
-          const zC = CC.api.apiView;
-          for (let ZC = 0; ZC < 3; ZC++) YC[ZC] = fC.w.localPos(zC, 0, ZC);
-          return YC
+          const kk = (0, qk.k)();
+          if (null === kk) return Ok;
+          const Fk = kk.api.apiView;
+          for (let Ik = 0; Ik < 3; Ik++) nk[Ik] = lk.y.localPos(Fk, 0, Ik);
+          return nk
         },
         targetedBlockPos() {
-          const CC = (0, qC.k)();
-          if (null === CC || fC.w.targetBlockId(CC.api.apiView, 0) === fC.rd) return null;
-          for (let zC = 0; zC < 3; zC++) dC[zC] = fC.w.targetBlock(CC.api.apiView, 0, zC);
-          return dC
+          const kk = (0, qk.k)();
+          if (null === kk || lk.y.targetBlockId(kk.api.apiView, 0) === lk._c) return null;
+          for (let Fk = 0; Fk < 3; Fk++) Gk[Fk] = lk.y.targetBlock(kk.api.apiView, 0, Fk);
+          return Gk
         }
       }
   },
-  38832: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => QC
+  38986: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Xk
     });
-    class QC {
+    class Xk {
       constructor() {
         this.members = new Map
       }
-      apply(CC) {
-        const zC = {
+      apply(kk) {
+        const Fk = {
           added: [],
           removed: [],
           settingChanges: []
         };
-        for (const QC of CC.OZ) {
-          let CC = this.members.get(QC.kZ);
-          if (CC || (CC = {
+        for (const Xk of kk.DI) {
+          let kk = this.members.get(Xk.MI);
+          if (kk || (kk = {
               name: null,
               settings: {}
-            }, this.members.set(QC.kZ, CC), zC.added.push(QC.kZ)), null !== QC.VZ && (CC.name = QC.VZ), null !== QC.CQ || QC.zQ.length > 0) {
-            const ZC = null === QC.CQ ? {} : JSON.parse(QC.CQ);
-            Object.assign(CC.settings, ZC);
-            for (const zC of QC.zQ) delete CC.settings[zC], ZC[zC] = void 0;
-            zC.settingChanges.push({
-              playerId: QC.kZ,
-              settings: ZC
+            }, this.members.set(Xk.MI, kk), Fk.added.push(Xk.MI)), null !== Xk.kX && (kk.name = Xk.kX), null !== Xk.FX || Xk.IX.length > 0) {
+            const Ik = null === Xk.FX ? {} : JSON.parse(Xk.FX);
+            Object.assign(kk.settings, Ik);
+            for (const Fk of Xk.IX) delete kk.settings[Fk], Ik[Fk] = void 0;
+            Fk.settingChanges.push({
+              playerId: Xk.MI,
+              settings: Ik
             })
           }
         }
-        for (const QC of CC.ZQ) {
-          const CC = this.members.get(QC);
-          var ZC;
-          if (CC) this.members.delete(QC), zC.removed.push({
-            playerId: QC,
-            name: null !== (ZC = CC.name) && void 0 !== ZC ? ZC : void 0
+        for (const Xk of kk.XX) {
+          const kk = this.members.get(Xk);
+          var Ik;
+          if (kk) this.members.delete(Xk), Fk.removed.push({
+            playerId: Xk,
+            name: null !== (Ik = kk.name) && void 0 !== Ik ? Ik : void 0
           })
         }
-        return zC
+        return Fk
       }
-      has(CC) {
-        return this.members.has(CC)
+      has(kk) {
+        return this.members.has(kk)
       }
       ids() {
         return [...this.members.keys()]
       }
-      getName(CC) {
-        var zC, ZC;
-        return null !== (zC = null === (ZC = this.members.get(CC)) || void 0 === ZC ? void 0 : ZC.name) && void 0 !== zC ? zC : void 0
+      getName(kk) {
+        var Fk, Ik;
+        return null !== (Fk = null === (Ik = this.members.get(kk)) || void 0 === Ik ? void 0 : Ik.name) && void 0 !== Fk ? Fk : void 0
       }
-      getSettings(CC) {
-        var zC;
-        return null === (zC = this.members.get(CC)) || void 0 === zC ? void 0 : zC.settings
+      getSettings(kk) {
+        var Fk;
+        return null === (Fk = this.members.get(kk)) || void 0 === Fk ? void 0 : Fk.settings
       }
-      getSetting(CC, zC) {
-        var ZC;
-        return null === (ZC = this.members.get(CC)) || void 0 === ZC ? void 0 : ZC.settings[zC]
+      getSetting(kk, Fk) {
+        var Ik;
+        return null === (Ik = this.members.get(kk)) || void 0 === Ik ? void 0 : Ik.settings[Fk]
       }
       clear() {
         this.members.clear()
@@ -505,4 +505,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

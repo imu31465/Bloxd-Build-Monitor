@@ -1,39 +1,39 @@
 export const id = 232;
 export const ids = [232];
 export const modules = {
-  37142: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => WC,
-      g: () => NC,
-      i: () => SC,
-      j: () => MC
+  37331: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => tk,
+      h: () => Zk,
+      i: () => wk,
+      k: () => jk
     });
-    var QC = ZC(36971),
-      wC = ZC(36968),
-      bC = ZC(36991),
-      nC = ZC(37002);
+    var Xk = Ik(37166),
+      Tk = Ik(37158),
+      ik = Ik(37189),
+      yk = Ik(37201);
 
-    function fC(CC) {
-      return Math.pow(CC, wC.i)
+    function lk(kk) {
+      return Math.pow(kk, Tk.g)
     }
 
-    function oC(CC) {
-      return CC <= .04045 ? .0773993808 * CC : Math.pow(.947867299 * (CC + .055), 2.4)
+    function ak(kk) {
+      return kk <= .04045 ? .0773993808 * kk : Math.pow(.947867299 * (kk + .055), 2.4)
     }
 
-    function qC(CC) {
-      return Math.pow(CC, wC.g)
+    function qk(kk) {
+      return Math.pow(kk, Tk.d)
     }
 
-    function FC(CC) {
-      return CC <= .0031308 ? 12.92 * CC : 1.055 * Math.pow(CC, .41666) - .055
+    function Lk(kk) {
+      return kk <= .0031308 ? 12.92 * kk : 1.055 * Math.pow(kk, .41666) - .055
     }
-    class WC {
+    class tk {
       constructor() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this.r = CC, this.g = zC, this.b = ZC
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this.r = kk, this.g = Fk, this.b = Ik
       }
       toString() {
         return "{R: " + this.r + " G:" + this.g + " B:" + this.b + "}"
@@ -42,416 +42,416 @@ export const modules = {
         return "Color3"
       }
       getHashCode() {
-        let CC = 255 * this.r | 0;
-        return CC = 397 * CC ^ 255 * this.g, CC = 397 * CC ^ 255 * this.b, CC
+        let kk = 255 * this.r | 0;
+        return kk = 397 * kk ^ 255 * this.g, kk = 397 * kk ^ 255 * this.b, kk
       }
-      toArray(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return CC[zC] = this.r, CC[zC + 1] = this.g, CC[zC + 2] = this.b, this
+      toArray(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return kk[Fk] = this.r, kk[Fk + 1] = this.g, kk[Fk + 2] = this.b, this
       }
-      azC(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return WC.FromArrayToRef(CC, zC, this), this
+      hFk(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return tk.FromArrayToRef(kk, Fk, this), this
       }
       toColor4() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-        return new NC(this.r, this.g, this.b, CC)
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+        return new Zk(this.r, this.g, this.b, kk)
       }
-      VZC() {
+      iXk() {
         return [this.r, this.g, this.b]
       }
       toLuminance() {
         return .3 * this.r + .59 * this.g + .11 * this.b
       }
-      multiply(CC) {
-        return new WC(this.r * CC.r, this.g * CC.g, this.b * CC.b)
+      multiply(kk) {
+        return new tk(this.r * kk.r, this.g * kk.g, this.b * kk.b)
       }
-      multiplyToRef(CC, zC) {
-        return zC.r = this.r * CC.r, zC.g = this.g * CC.g, zC.b = this.b * CC.b, zC
+      multiplyToRef(kk, Fk) {
+        return Fk.r = this.r * kk.r, Fk.g = this.g * kk.g, Fk.b = this.b * kk.b, Fk
       }
-      multiplyInPlace(CC) {
-        return this.r *= CC.r, this.g *= CC.g, this.b *= CC.b, this
+      multiplyInPlace(kk) {
+        return this.r *= kk.r, this.g *= kk.g, this.b *= kk.b, this
       }
-      multiplyByFloats(CC, zC, ZC) {
-        return new WC(this.r * CC, this.g * zC, this.b * ZC)
+      multiplyByFloats(kk, Fk, Ik) {
+        return new tk(this.r * kk, this.g * Fk, this.b * Ik)
       }
-      divide(CC) {
+      divide(kk) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideToRef(CC, zC) {
+      divideToRef(kk, Fk) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideInPlace(CC) {
+      divideInPlace(kk) {
         throw new ReferenceError("Can not divide a color")
       }
-      minimizeInPlace(CC) {
-        return this.minimizeInPlaceFromFloats(CC.r, CC.g, CC.b)
+      minimizeInPlace(kk) {
+        return this.minimizeInPlaceFromFloats(kk.r, kk.g, kk.b)
       }
-      maximizeInPlace(CC) {
-        return this.maximizeInPlaceFromFloats(CC.r, CC.g, CC.b)
+      maximizeInPlace(kk) {
+        return this.maximizeInPlaceFromFloats(kk.r, kk.g, kk.b)
       }
-      minimizeInPlaceFromFloats(CC, zC, ZC) {
-        return this.r = Math.min(CC, this.r), this.g = Math.min(zC, this.g), this.b = Math.min(ZC, this.b), this
+      minimizeInPlaceFromFloats(kk, Fk, Ik) {
+        return this.r = Math.min(kk, this.r), this.g = Math.min(Fk, this.g), this.b = Math.min(Ik, this.b), this
       }
-      maximizeInPlaceFromFloats(CC, zC, ZC) {
-        return this.r = Math.max(CC, this.r), this.g = Math.max(zC, this.g), this.b = Math.max(ZC, this.b), this
+      maximizeInPlaceFromFloats(kk, Fk, Ik) {
+        return this.r = Math.max(kk, this.r), this.g = Math.max(Fk, this.g), this.b = Math.max(Ik, this.b), this
       }
-      floorToRef(CC) {
+      floorToRef(kk) {
         throw new ReferenceError("Can not floor a color")
       }
       floor() {
         throw new ReferenceError("Can not floor a color")
       }
-      fractToRef(CC) {
+      fractToRef(kk) {
         throw new ReferenceError("Can not fract a color")
       }
       fract() {
         throw new ReferenceError("Can not fract a color")
       }
-      equals(CC) {
-        return CC && this.r === CC.r && this.g === CC.g && this.b === CC.b
+      equals(kk) {
+        return kk && this.r === kk.r && this.g === kk.g && this.b === kk.b
       }
-      equalsFloats(CC, zC, ZC) {
-        return this.dnC(CC, zC, ZC)
+      equalsFloats(kk, Fk, Ik) {
+        return this.Ryk(kk, Fk, Ik)
       }
-      dnC(CC, zC, ZC) {
-        return this.r === CC && this.g === zC && this.b === ZC
+      Ryk(kk, Fk, Ik) {
+        return this.r === kk && this.g === Fk && this.b === Ik
       }
-      equalsWithEpsilon(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wC.e;
-        return (0, bC.WithinEpsilon)(this.r, CC.r, zC) && (0, bC.WithinEpsilon)(this.g, CC.g, zC) && (0, bC.WithinEpsilon)(this.b, CC.b, zC)
+      equalsWithEpsilon(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Tk.b;
+        return (0, ik.WithinEpsilon)(this.r, kk.r, Fk) && (0, ik.WithinEpsilon)(this.g, kk.g, Fk) && (0, ik.WithinEpsilon)(this.b, kk.b, Fk)
       }
-      Of() {
+      nX() {
         throw new ReferenceError("Can not negate a color")
       }
       negateInPlace() {
         throw new ReferenceError("Can not negate a color")
       }
-      negateToRef(CC) {
+      negateToRef(kk) {
         throw new ReferenceError("Can not negate a color")
       }
-      scale(CC) {
-        return new WC(this.r * CC, this.g * CC, this.b * CC)
+      scale(kk) {
+        return new tk(this.r * kk, this.g * kk, this.b * kk)
       }
-      scaleInPlace(CC) {
-        return this.r *= CC, this.g *= CC, this.b *= CC, this
+      scaleInPlace(kk) {
+        return this.r *= kk, this.g *= kk, this.b *= kk, this
       }
-      scaleToRef(CC, zC) {
-        return zC.r = this.r * CC, zC.g = this.g * CC, zC.b = this.b * CC, zC
+      scaleToRef(kk, Fk) {
+        return Fk.r = this.r * kk, Fk.g = this.g * kk, Fk.b = this.b * kk, Fk
       }
-      scaleAndAddToRef(CC, zC) {
-        return zC.r += this.r * CC, zC.g += this.g * CC, zC.b += this.b * CC, zC
+      scaleAndAddToRef(kk, Fk) {
+        return Fk.r += this.r * kk, Fk.g += this.g * kk, Fk.b += this.b * kk, Fk
       }
       clampToRef() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          ZC = arguments.length > 2 ? arguments[2] : void 0;
-        return ZC.r = (0, bC.Clamp)(this.r, CC, zC), ZC.g = (0, bC.Clamp)(this.g, CC, zC), ZC.b = (0, bC.Clamp)(this.b, CC, zC), ZC
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          Ik = arguments.length > 2 ? arguments[2] : void 0;
+        return Ik.r = (0, ik.Clamp)(this.r, kk, Fk), Ik.g = (0, ik.Clamp)(this.g, kk, Fk), Ik.b = (0, ik.Clamp)(this.b, kk, Fk), Ik
       }
-      add(CC) {
-        return new WC(this.r + CC.r, this.g + CC.g, this.b + CC.b)
+      add(kk) {
+        return new tk(this.r + kk.r, this.g + kk.g, this.b + kk.b)
       }
-      addInPlace(CC) {
-        return this.r += CC.r, this.g += CC.g, this.b += CC.b, this
+      addInPlace(kk) {
+        return this.r += kk.r, this.g += kk.g, this.b += kk.b, this
       }
-      addInPlaceFromFloats(CC, zC, ZC) {
-        return this.r += CC, this.g += zC, this.b += ZC, this
+      addInPlaceFromFloats(kk, Fk, Ik) {
+        return this.r += kk, this.g += Fk, this.b += Ik, this
       }
-      addToRef(CC, zC) {
-        return zC.r = this.r + CC.r, zC.g = this.g + CC.g, zC.b = this.b + CC.b, zC
+      addToRef(kk, Fk) {
+        return Fk.r = this.r + kk.r, Fk.g = this.g + kk.g, Fk.b = this.b + kk.b, Fk
       }
-      subtract(CC) {
-        return new WC(this.r - CC.r, this.g - CC.g, this.b - CC.b)
+      subtract(kk) {
+        return new tk(this.r - kk.r, this.g - kk.g, this.b - kk.b)
       }
-      subtractToRef(CC, zC) {
-        return zC.r = this.r - CC.r, zC.g = this.g - CC.g, zC.b = this.b - CC.b, zC
+      subtractToRef(kk, Fk) {
+        return Fk.r = this.r - kk.r, Fk.g = this.g - kk.g, Fk.b = this.b - kk.b, Fk
       }
-      RQC(CC) {
-        return this.r -= CC.r, this.g -= CC.g, this.b -= CC.b, this
+      zXk(kk) {
+        return this.r -= kk.r, this.g -= kk.g, this.b -= kk.b, this
       }
-      subtractFromFloats(CC, zC, ZC) {
-        return new WC(this.r - CC, this.g - zC, this.b - ZC)
+      subtractFromFloats(kk, Fk, Ik) {
+        return new tk(this.r - kk, this.g - Fk, this.b - Ik)
       }
-      subtractFromFloatsToRef(CC, zC, ZC, QC) {
-        return QC.r = this.r - CC, QC.g = this.g - zC, QC.b = this.b - ZC, QC
+      subtractFromFloatsToRef(kk, Fk, Ik, Xk) {
+        return Xk.r = this.r - kk, Xk.g = this.g - Fk, Xk.b = this.b - Ik, Xk
       }
       clone() {
-        return new WC(this.r, this.g, this.b)
+        return new tk(this.r, this.g, this.b)
       }
-      Av(CC) {
-        return this.r = CC.r, this.g = CC.g, this.b = CC.b, this
+      kS(kk) {
+        return this.r = kk.r, this.g = kk.g, this.b = kk.b, this
       }
-      L_(CC, zC, ZC) {
-        return this.r = CC, this.g = zC, this.b = ZC, this
+      t5(kk, Fk, Ik) {
+        return this.r = kk, this.g = Fk, this.b = Ik, this
       }
-      set(CC, zC, ZC) {
-        return this.L_(CC, zC, ZC)
+      set(kk, Fk, Ik) {
+        return this.t5(kk, Fk, Ik)
       }
-      Q_(CC) {
-        return this.r = this.g = this.b = CC, this
+      I6(kk) {
+        return this.r = this.g = this.b = kk, this
       }
       toHexString() {
-        const CC = Math.round(255 * this.r),
-          zC = Math.round(255 * this.g),
-          ZC = Math.round(255 * this.b);
-        return "#" + (0, bC.ToHex)(CC) + (0, bC.ToHex)(zC) + (0, bC.ToHex)(ZC)
+        const kk = Math.round(255 * this.r),
+          Fk = Math.round(255 * this.g),
+          Ik = Math.round(255 * this.b);
+        return "#" + (0, ik.ToHex)(kk) + (0, ik.ToHex)(Fk) + (0, ik.ToHex)(Ik)
       }
-      fromHexString(CC) {
-        return "#" !== CC.substring(0, 1) || 7 !== CC.length || (this.r = parseInt(CC.substring(1, 3), 16) / 255, this.g = parseInt(CC.substring(3, 5), 16) / 255, this.b = parseInt(CC.substring(5, 7), 16) / 255), this
+      fromHexString(kk) {
+        return "#" !== kk.substring(0, 1) || 7 !== kk.length || (this.r = parseInt(kk.substring(1, 3), 16) / 255, this.g = parseInt(kk.substring(3, 5), 16) / 255, this.b = parseInt(kk.substring(5, 7), 16) / 255), this
       }
       toHSV() {
-        return this.toHSVToRef(new WC)
+        return this.toHSVToRef(new tk)
       }
-      toHSVToRef(CC) {
-        const zC = this.r,
-          ZC = this.g,
-          QC = this.b,
-          wC = Math.max(zC, ZC, QC),
-          bC = Math.min(zC, ZC, QC);
-        let nC = 0,
-          fC = 0;
-        const oC = wC,
-          qC = wC - bC;
-        return 0 !== wC && (fC = qC / wC), wC != bC && (wC == zC ? (nC = (ZC - QC) / qC, ZC < QC && (nC += 6)) : wC == ZC ? nC = (QC - zC) / qC + 2 : wC == QC && (nC = (zC - ZC) / qC + 4), nC *= 60), CC.r = nC, CC.g = fC, CC.b = oC, CC
+      toHSVToRef(kk) {
+        const Fk = this.r,
+          Ik = this.g,
+          Xk = this.b,
+          Tk = Math.max(Fk, Ik, Xk),
+          ik = Math.min(Fk, Ik, Xk);
+        let yk = 0,
+          lk = 0;
+        const ak = Tk,
+          qk = Tk - ik;
+        return 0 !== Tk && (lk = qk / Tk), Tk != ik && (Tk == Fk ? (yk = (Ik - Xk) / qk, Ik < Xk && (yk += 6)) : Tk == Ik ? yk = (Xk - Fk) / qk + 2 : Tk == Xk && (yk = (Fk - Ik) / qk + 4), yk *= 60), kk.r = yk, kk.g = lk, kk.b = ak, kk
       }
       toLinearSpace() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const zC = new WC;
-        return this.toLinearSpaceToRef(zC, CC), zC
+        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Fk = new tk;
+        return this.toLinearSpaceToRef(Fk, kk), Fk
       }
-      toLinearSpaceToRef(CC) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (CC.r = oC(this.r), CC.g = oC(this.g), CC.b = oC(this.b)) : (CC.r = fC(this.r), CC.g = fC(this.g), CC.b = fC(this.b)), this
+      toLinearSpaceToRef(kk) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (kk.r = ak(this.r), kk.g = ak(this.g), kk.b = ak(this.b)) : (kk.r = lk(this.r), kk.g = lk(this.g), kk.b = lk(this.b)), this
       }
       toGammaSpace() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const zC = new WC;
-        return this.toGammaSpaceToRef(zC, CC), zC
+        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Fk = new tk;
+        return this.toGammaSpaceToRef(Fk, kk), Fk
       }
-      toGammaSpaceToRef(CC) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (CC.r = FC(this.r), CC.g = FC(this.g), CC.b = FC(this.b)) : (CC.r = qC(this.r), CC.g = qC(this.g), CC.b = qC(this.b)), this
+      toGammaSpaceToRef(kk) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (kk.r = Lk(this.r), kk.g = Lk(this.g), kk.b = Lk(this.b)) : (kk.r = qk(this.r), kk.g = qk(this.g), kk.b = qk(this.b)), this
       }
-      static HSVtoRGBToRef(CC, zC, ZC, QC) {
-        const wC = ZC * zC,
-          bC = CC / 60,
-          nC = wC * (1 - Math.abs(bC % 2 - 1));
-        let fC = 0,
-          oC = 0,
-          qC = 0;
-        bC >= 0 && bC <= 1 ? (fC = wC, oC = nC) : bC >= 1 && bC <= 2 ? (fC = nC, oC = wC) : bC >= 2 && bC <= 3 ? (oC = wC, qC = nC) : bC >= 3 && bC <= 4 ? (oC = nC, qC = wC) : bC >= 4 && bC <= 5 ? (fC = nC, qC = wC) : bC >= 5 && bC <= 6 && (fC = wC, qC = nC);
-        const FC = ZC - wC;
-        return QC.r = fC + FC, QC.g = oC + FC, QC.b = qC + FC, QC
+      static HSVtoRGBToRef(kk, Fk, Ik, Xk) {
+        const Tk = Ik * Fk,
+          ik = kk / 60,
+          yk = Tk * (1 - Math.abs(ik % 2 - 1));
+        let lk = 0,
+          ak = 0,
+          qk = 0;
+        ik >= 0 && ik <= 1 ? (lk = Tk, ak = yk) : ik >= 1 && ik <= 2 ? (lk = yk, ak = Tk) : ik >= 2 && ik <= 3 ? (ak = Tk, qk = yk) : ik >= 3 && ik <= 4 ? (ak = yk, qk = Tk) : ik >= 4 && ik <= 5 ? (lk = yk, qk = Tk) : ik >= 5 && ik <= 6 && (lk = Tk, qk = yk);
+        const Lk = Ik - Tk;
+        return Xk.r = lk + Lk, Xk.g = ak + Lk, Xk.b = qk + Lk, Xk
       }
-      static FromHSV(CC, zC, ZC) {
-        const QC = new WC(0, 0, 0);
-        return WC.HSVtoRGBToRef(CC, zC, ZC, QC), QC
+      static FromHSV(kk, Fk, Ik) {
+        const Xk = new tk(0, 0, 0);
+        return tk.HSVtoRGBToRef(kk, Fk, Ik, Xk), Xk
       }
-      static FromHexString(CC) {
-        return new WC(0, 0, 0).fromHexString(CC)
+      static FromHexString(kk) {
+        return new tk(0, 0, 0).fromHexString(kk)
       }
-      static FromArray(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new WC(CC[zC], CC[zC + 1], CC[zC + 2])
+      static FromArray(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new tk(kk[Fk], kk[Fk + 1], kk[Fk + 2])
       }
-      static FromArrayToRef(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          ZC = arguments.length > 2 ? arguments[2] : void 0;
-        ZC.r = CC[zC], ZC.g = CC[zC + 1], ZC.b = CC[zC + 2]
+      static FromArrayToRef(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          Ik = arguments.length > 2 ? arguments[2] : void 0;
+        Ik.r = kk[Fk], Ik.g = kk[Fk + 1], Ik.b = kk[Fk + 2]
       }
-      static FromInts(CC, zC, ZC) {
-        return new WC(CC / 255, zC / 255, ZC / 255)
+      static FromInts(kk, Fk, Ik) {
+        return new tk(kk / 255, Fk / 255, Ik / 255)
       }
-      static Lerp(CC, zC, ZC) {
-        const QC = new WC(0, 0, 0);
-        return WC.LerpToRef(CC, zC, ZC, QC), QC
+      static Lerp(kk, Fk, Ik) {
+        const Xk = new tk(0, 0, 0);
+        return tk.LerpToRef(kk, Fk, Ik, Xk), Xk
       }
-      static LerpToRef(CC, zC, ZC, QC) {
-        QC.r = CC.r + (zC.r - CC.r) * ZC, QC.g = CC.g + (zC.g - CC.g) * ZC, QC.b = CC.b + (zC.b - CC.b) * ZC
+      static LerpToRef(kk, Fk, Ik, Xk) {
+        Xk.r = kk.r + (Fk.r - kk.r) * Ik, Xk.g = kk.g + (Fk.g - kk.g) * Ik, Xk.b = kk.b + (Fk.b - kk.b) * Ik
       }
-      static Hermite(CC, zC, ZC, QC, wC) {
-        const bC = wC * wC,
-          nC = wC * bC,
-          fC = 2 * nC - 3 * bC + 1,
-          oC = -2 * nC + 3 * bC,
-          qC = nC - 2 * bC + wC,
-          FC = nC - bC,
-          NC = CC.r * fC + ZC.r * oC + zC.r * qC + QC.r * FC,
-          MC = CC.g * fC + ZC.g * oC + zC.g * qC + QC.g * FC,
-          gC = CC.b * fC + ZC.b * oC + zC.b * qC + QC.b * FC;
-        return new WC(NC, MC, gC)
+      static Hermite(kk, Fk, Ik, Xk, Tk) {
+        const ik = Tk * Tk,
+          yk = Tk * ik,
+          lk = 2 * yk - 3 * ik + 1,
+          ak = -2 * yk + 3 * ik,
+          qk = yk - 2 * ik + Tk,
+          Lk = yk - ik,
+          Zk = kk.r * lk + Ik.r * ak + Fk.r * qk + Xk.r * Lk,
+          jk = kk.g * lk + Ik.g * ak + Fk.g * qk + Xk.g * Lk,
+          ek = kk.b * lk + Ik.b * ak + Fk.b * qk + Xk.b * Lk;
+        return new tk(Zk, jk, ek)
       }
-      static Hermite1stDerivative(CC, zC, ZC, QC, wC) {
-        const bC = WC.Black();
-        return this.Hermite1stDerivativeToRef(CC, zC, ZC, QC, wC, bC), bC
+      static Hermite1stDerivative(kk, Fk, Ik, Xk, Tk) {
+        const ik = tk.Black();
+        return this.Hermite1stDerivativeToRef(kk, Fk, Ik, Xk, Tk, ik), ik
       }
-      static Hermite1stDerivativeToRef(CC, zC, ZC, QC, wC, bC) {
-        const nC = wC * wC;
-        bC.r = 6 * (nC - wC) * CC.r + (3 * nC - 4 * wC + 1) * zC.r + 6 * (-nC + wC) * ZC.r + (3 * nC - 2 * wC) * QC.r, bC.g = 6 * (nC - wC) * CC.g + (3 * nC - 4 * wC + 1) * zC.g + 6 * (-nC + wC) * ZC.g + (3 * nC - 2 * wC) * QC.g, bC.b = 6 * (nC - wC) * CC.b + (3 * nC - 4 * wC + 1) * zC.b + 6 * (-nC + wC) * ZC.b + (3 * nC - 2 * wC) * QC.b
+      static Hermite1stDerivativeToRef(kk, Fk, Ik, Xk, Tk, ik) {
+        const yk = Tk * Tk;
+        ik.r = 6 * (yk - Tk) * kk.r + (3 * yk - 4 * Tk + 1) * Fk.r + 6 * (-yk + Tk) * Ik.r + (3 * yk - 2 * Tk) * Xk.r, ik.g = 6 * (yk - Tk) * kk.g + (3 * yk - 4 * Tk + 1) * Fk.g + 6 * (-yk + Tk) * Ik.g + (3 * yk - 2 * Tk) * Xk.g, ik.b = 6 * (yk - Tk) * kk.b + (3 * yk - 4 * Tk + 1) * Fk.b + 6 * (-yk + Tk) * Ik.b + (3 * yk - 2 * Tk) * Xk.b
       }
       static Red() {
-        return new WC(1, 0, 0)
+        return new tk(1, 0, 0)
       }
       static Green() {
-        return new WC(0, 1, 0)
+        return new tk(0, 1, 0)
       }
       static Blue() {
-        return new WC(0, 0, 1)
+        return new tk(0, 0, 1)
       }
       static Black() {
-        return new WC(0, 0, 0)
+        return new tk(0, 0, 0)
       }
       static get BlackReadOnly() {
-        return WC._BlackReadOnly
+        return tk._BlackReadOnly
       }
       static White() {
-        return new WC(1, 1, 1)
+        return new tk(1, 1, 1)
       }
       static Purple() {
-        return new WC(.5, 0, .5)
+        return new tk(.5, 0, .5)
       }
       static Magenta() {
-        return new WC(1, 0, 1)
+        return new tk(1, 0, 1)
       }
       static Yellow() {
-        return new WC(1, 1, 0)
+        return new tk(1, 1, 0)
       }
       static Gray() {
-        return new WC(.5, .5, .5)
+        return new tk(.5, .5, .5)
       }
       static Teal() {
-        return new WC(0, 1, 1)
+        return new tk(0, 1, 1)
       }
       static Random() {
-        return new WC(Math.random(), Math.random(), Math.random())
+        return new tk(Math.random(), Math.random(), Math.random())
       }
     }
-    WC._V8PerformanceHack = new WC(.5, .5, .5), WC._BlackReadOnly = WC.Black();
-    class NC {
+    tk._V8PerformanceHack = new tk(.5, .5, .5), tk._BlackReadOnly = tk.Black();
+    class Zk {
       constructor() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
-        this.r = CC, this.g = zC, this.b = ZC, this.a = QC
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
+        this.r = kk, this.g = Fk, this.b = Ik, this.a = Xk
       }
-      VZC() {
+      iXk() {
         return [this.r, this.g, this.b, this.a]
       }
-      toArray(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return CC[zC] = this.r, CC[zC + 1] = this.g, CC[zC + 2] = this.b, CC[zC + 3] = this.a, this
+      toArray(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return kk[Fk] = this.r, kk[Fk + 1] = this.g, kk[Fk + 2] = this.b, kk[Fk + 3] = this.a, this
       }
-      azC(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.r = CC[zC], this.g = CC[zC + 1], this.b = CC[zC + 2], this.a = CC[zC + 3], this
+      hFk(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.r = kk[Fk], this.g = kk[Fk + 1], this.b = kk[Fk + 2], this.a = kk[Fk + 3], this
       }
-      equals(CC) {
-        return CC && this.r === CC.r && this.g === CC.g && this.b === CC.b && this.a === CC.a
+      equals(kk) {
+        return kk && this.r === kk.r && this.g === kk.g && this.b === kk.b && this.a === kk.a
       }
-      add(CC) {
-        return new NC(this.r + CC.r, this.g + CC.g, this.b + CC.b, this.a + CC.a)
+      add(kk) {
+        return new Zk(this.r + kk.r, this.g + kk.g, this.b + kk.b, this.a + kk.a)
       }
-      addToRef(CC, zC) {
-        return zC.r = this.r + CC.r, zC.g = this.g + CC.g, zC.b = this.b + CC.b, zC.a = this.a + CC.a, zC
+      addToRef(kk, Fk) {
+        return Fk.r = this.r + kk.r, Fk.g = this.g + kk.g, Fk.b = this.b + kk.b, Fk.a = this.a + kk.a, Fk
       }
-      addInPlace(CC) {
-        return this.r += CC.r, this.g += CC.g, this.b += CC.b, this.a += CC.a, this
+      addInPlace(kk) {
+        return this.r += kk.r, this.g += kk.g, this.b += kk.b, this.a += kk.a, this
       }
-      addInPlaceFromFloats(CC, zC, ZC, QC) {
-        return this.r += CC, this.g += zC, this.b += ZC, this.a += QC, this
+      addInPlaceFromFloats(kk, Fk, Ik, Xk) {
+        return this.r += kk, this.g += Fk, this.b += Ik, this.a += Xk, this
       }
-      subtract(CC) {
-        return new NC(this.r - CC.r, this.g - CC.g, this.b - CC.b, this.a - CC.a)
+      subtract(kk) {
+        return new Zk(this.r - kk.r, this.g - kk.g, this.b - kk.b, this.a - kk.a)
       }
-      subtractToRef(CC, zC) {
-        return zC.r = this.r - CC.r, zC.g = this.g - CC.g, zC.b = this.b - CC.b, zC.a = this.a - CC.a, zC
+      subtractToRef(kk, Fk) {
+        return Fk.r = this.r - kk.r, Fk.g = this.g - kk.g, Fk.b = this.b - kk.b, Fk.a = this.a - kk.a, Fk
       }
-      RQC(CC) {
-        return this.r -= CC.r, this.g -= CC.g, this.b -= CC.b, this.a -= CC.a, this
+      zXk(kk) {
+        return this.r -= kk.r, this.g -= kk.g, this.b -= kk.b, this.a -= kk.a, this
       }
-      subtractFromFloats(CC, zC, ZC, QC) {
-        return new NC(this.r - CC, this.g - zC, this.b - ZC, this.a - QC)
+      subtractFromFloats(kk, Fk, Ik, Xk) {
+        return new Zk(this.r - kk, this.g - Fk, this.b - Ik, this.a - Xk)
       }
-      subtractFromFloatsToRef(CC, zC, ZC, QC, wC) {
-        return wC.r = this.r - CC, wC.g = this.g - zC, wC.b = this.b - ZC, wC.a = this.a - QC, wC
+      subtractFromFloatsToRef(kk, Fk, Ik, Xk, Tk) {
+        return Tk.r = this.r - kk, Tk.g = this.g - Fk, Tk.b = this.b - Ik, Tk.a = this.a - Xk, Tk
       }
-      scale(CC) {
-        return new NC(this.r * CC, this.g * CC, this.b * CC, this.a * CC)
+      scale(kk) {
+        return new Zk(this.r * kk, this.g * kk, this.b * kk, this.a * kk)
       }
-      scaleInPlace(CC) {
-        return this.r *= CC, this.g *= CC, this.b *= CC, this.a *= CC, this
+      scaleInPlace(kk) {
+        return this.r *= kk, this.g *= kk, this.b *= kk, this.a *= kk, this
       }
-      scaleToRef(CC, zC) {
-        return zC.r = this.r * CC, zC.g = this.g * CC, zC.b = this.b * CC, zC.a = this.a * CC, zC
+      scaleToRef(kk, Fk) {
+        return Fk.r = this.r * kk, Fk.g = this.g * kk, Fk.b = this.b * kk, Fk.a = this.a * kk, Fk
       }
-      scaleAndAddToRef(CC, zC) {
-        return zC.r += this.r * CC, zC.g += this.g * CC, zC.b += this.b * CC, zC.a += this.a * CC, zC
+      scaleAndAddToRef(kk, Fk) {
+        return Fk.r += this.r * kk, Fk.g += this.g * kk, Fk.b += this.b * kk, Fk.a += this.a * kk, Fk
       }
       clampToRef() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          ZC = arguments.length > 2 ? arguments[2] : void 0;
-        return ZC.r = (0, bC.Clamp)(this.r, CC, zC), ZC.g = (0, bC.Clamp)(this.g, CC, zC), ZC.b = (0, bC.Clamp)(this.b, CC, zC), ZC.a = (0, bC.Clamp)(this.a, CC, zC), ZC
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          Ik = arguments.length > 2 ? arguments[2] : void 0;
+        return Ik.r = (0, ik.Clamp)(this.r, kk, Fk), Ik.g = (0, ik.Clamp)(this.g, kk, Fk), Ik.b = (0, ik.Clamp)(this.b, kk, Fk), Ik.a = (0, ik.Clamp)(this.a, kk, Fk), Ik
       }
-      multiply(CC) {
-        return new NC(this.r * CC.r, this.g * CC.g, this.b * CC.b, this.a * CC.a)
+      multiply(kk) {
+        return new Zk(this.r * kk.r, this.g * kk.g, this.b * kk.b, this.a * kk.a)
       }
-      multiplyToRef(CC, zC) {
-        return zC.r = this.r * CC.r, zC.g = this.g * CC.g, zC.b = this.b * CC.b, zC.a = this.a * CC.a, zC
+      multiplyToRef(kk, Fk) {
+        return Fk.r = this.r * kk.r, Fk.g = this.g * kk.g, Fk.b = this.b * kk.b, Fk.a = this.a * kk.a, Fk
       }
-      multiplyInPlace(CC) {
-        return this.r *= CC.r, this.g *= CC.g, this.b *= CC.b, this.a *= CC.a, this
+      multiplyInPlace(kk) {
+        return this.r *= kk.r, this.g *= kk.g, this.b *= kk.b, this.a *= kk.a, this
       }
-      multiplyByFloats(CC, zC, ZC, QC) {
-        return new NC(this.r * CC, this.g * zC, this.b * ZC, this.a * QC)
+      multiplyByFloats(kk, Fk, Ik, Xk) {
+        return new Zk(this.r * kk, this.g * Fk, this.b * Ik, this.a * Xk)
       }
-      divide(CC) {
+      divide(kk) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideToRef(CC, zC) {
+      divideToRef(kk, Fk) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideInPlace(CC) {
+      divideInPlace(kk) {
         throw new ReferenceError("Can not divide a color")
       }
-      minimizeInPlace(CC) {
-        return this.r = Math.min(this.r, CC.r), this.g = Math.min(this.g, CC.g), this.b = Math.min(this.b, CC.b), this.a = Math.min(this.a, CC.a), this
+      minimizeInPlace(kk) {
+        return this.r = Math.min(this.r, kk.r), this.g = Math.min(this.g, kk.g), this.b = Math.min(this.b, kk.b), this.a = Math.min(this.a, kk.a), this
       }
-      maximizeInPlace(CC) {
-        return this.r = Math.max(this.r, CC.r), this.g = Math.max(this.g, CC.g), this.b = Math.max(this.b, CC.b), this.a = Math.max(this.a, CC.a), this
+      maximizeInPlace(kk) {
+        return this.r = Math.max(this.r, kk.r), this.g = Math.max(this.g, kk.g), this.b = Math.max(this.b, kk.b), this.a = Math.max(this.a, kk.a), this
       }
-      minimizeInPlaceFromFloats(CC, zC, ZC, QC) {
-        return this.r = Math.min(CC, this.r), this.g = Math.min(zC, this.g), this.b = Math.min(ZC, this.b), this.a = Math.min(QC, this.a), this
+      minimizeInPlaceFromFloats(kk, Fk, Ik, Xk) {
+        return this.r = Math.min(kk, this.r), this.g = Math.min(Fk, this.g), this.b = Math.min(Ik, this.b), this.a = Math.min(Xk, this.a), this
       }
-      maximizeInPlaceFromFloats(CC, zC, ZC, QC) {
-        return this.r = Math.max(CC, this.r), this.g = Math.max(zC, this.g), this.b = Math.max(ZC, this.b), this.a = Math.max(QC, this.a), this
+      maximizeInPlaceFromFloats(kk, Fk, Ik, Xk) {
+        return this.r = Math.max(kk, this.r), this.g = Math.max(Fk, this.g), this.b = Math.max(Ik, this.b), this.a = Math.max(Xk, this.a), this
       }
-      floorToRef(CC) {
+      floorToRef(kk) {
         throw new ReferenceError("Can not floor a color")
       }
       floor() {
         throw new ReferenceError("Can not floor a color")
       }
-      fractToRef(CC) {
+      fractToRef(kk) {
         throw new ReferenceError("Can not fract a color")
       }
       fract() {
         throw new ReferenceError("Can not fract a color")
       }
-      Of() {
+      nX() {
         throw new ReferenceError("Can not negate a color")
       }
       negateInPlace() {
         throw new ReferenceError("Can not negate a color")
       }
-      negateToRef(CC) {
+      negateToRef(kk) {
         throw new ReferenceError("Can not negate a color")
       }
-      equalsWithEpsilon(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wC.e;
-        return (0, bC.WithinEpsilon)(this.r, CC.r, zC) && (0, bC.WithinEpsilon)(this.g, CC.g, zC) && (0, bC.WithinEpsilon)(this.b, CC.b, zC) && (0, bC.WithinEpsilon)(this.a, CC.a, zC)
+      equalsWithEpsilon(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Tk.b;
+        return (0, ik.WithinEpsilon)(this.r, kk.r, Fk) && (0, ik.WithinEpsilon)(this.g, kk.g, Fk) && (0, ik.WithinEpsilon)(this.b, kk.b, Fk) && (0, ik.WithinEpsilon)(this.a, kk.a, Fk)
       }
-      dnC(CC, zC, ZC, QC) {
-        return this.r === CC && this.g === zC && this.b === ZC && this.a === QC
+      Ryk(kk, Fk, Ik, Xk) {
+        return this.r === kk && this.g === Fk && this.b === Ik && this.a === Xk
       }
       toString() {
         return "{R: " + this.r + " G:" + this.g + " B:" + this.b + " A:" + this.a + "}"
@@ -460,346 +460,346 @@ export const modules = {
         return "Color4"
       }
       getHashCode() {
-        let CC = 255 * this.r | 0;
-        return CC = 397 * CC ^ 255 * this.g, CC = 397 * CC ^ 255 * this.b, CC = 397 * CC ^ 255 * this.a, CC
+        let kk = 255 * this.r | 0;
+        return kk = 397 * kk ^ 255 * this.g, kk = 397 * kk ^ 255 * this.b, kk = 397 * kk ^ 255 * this.a, kk
       }
       clone() {
-        return (new NC).Av(this)
+        return (new Zk).kS(this)
       }
-      Av(CC) {
-        return this.r = CC.r, this.g = CC.g, this.b = CC.b, this.a = CC.a, this
+      kS(kk) {
+        return this.r = kk.r, this.g = kk.g, this.b = kk.b, this.a = kk.a, this
       }
-      L_(CC, zC, ZC, QC) {
-        return this.r = CC, this.g = zC, this.b = ZC, this.a = QC, this
+      t5(kk, Fk, Ik, Xk) {
+        return this.r = kk, this.g = Fk, this.b = Ik, this.a = Xk, this
       }
-      set(CC, zC, ZC, QC) {
-        return this.L_(CC, zC, ZC, QC)
+      set(kk, Fk, Ik, Xk) {
+        return this.t5(kk, Fk, Ik, Xk)
       }
-      Q_(CC) {
-        return this.r = this.g = this.b = this.a = CC, this
+      I6(kk) {
+        return this.r = this.g = this.b = this.a = kk, this
       }
       toHexString() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const zC = Math.round(255 * this.r),
-          ZC = Math.round(255 * this.g),
-          QC = Math.round(255 * this.b);
-        if (CC) return "#" + (0, bC.ToHex)(zC) + (0, bC.ToHex)(ZC) + (0, bC.ToHex)(QC);
-        const wC = Math.round(255 * this.a);
-        return "#" + (0, bC.ToHex)(zC) + (0, bC.ToHex)(ZC) + (0, bC.ToHex)(QC) + (0, bC.ToHex)(wC)
+        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Fk = Math.round(255 * this.r),
+          Ik = Math.round(255 * this.g),
+          Xk = Math.round(255 * this.b);
+        if (kk) return "#" + (0, ik.ToHex)(Fk) + (0, ik.ToHex)(Ik) + (0, ik.ToHex)(Xk);
+        const Tk = Math.round(255 * this.a);
+        return "#" + (0, ik.ToHex)(Fk) + (0, ik.ToHex)(Ik) + (0, ik.ToHex)(Xk) + (0, ik.ToHex)(Tk)
       }
-      fromHexString(CC) {
-        return "#" !== CC.substring(0, 1) || 9 !== CC.length && 7 !== CC.length || (this.r = parseInt(CC.substring(1, 3), 16) / 255, this.g = parseInt(CC.substring(3, 5), 16) / 255, this.b = parseInt(CC.substring(5, 7), 16) / 255, 9 === CC.length && (this.a = parseInt(CC.substring(7, 9), 16) / 255)), this
+      fromHexString(kk) {
+        return "#" !== kk.substring(0, 1) || 9 !== kk.length && 7 !== kk.length || (this.r = parseInt(kk.substring(1, 3), 16) / 255, this.g = parseInt(kk.substring(3, 5), 16) / 255, this.b = parseInt(kk.substring(5, 7), 16) / 255, 9 === kk.length && (this.a = parseInt(kk.substring(7, 9), 16) / 255)), this
       }
       toLinearSpace() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const zC = new NC;
-        return this.toLinearSpaceToRef(zC, CC), zC
+        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Fk = new Zk;
+        return this.toLinearSpaceToRef(Fk, kk), Fk
       }
-      toLinearSpaceToRef(CC) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (CC.r = oC(this.r), CC.g = oC(this.g), CC.b = oC(this.b)) : (CC.r = fC(this.r), CC.g = fC(this.g), CC.b = fC(this.b)), CC.a = this.a, this
+      toLinearSpaceToRef(kk) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (kk.r = ak(this.r), kk.g = ak(this.g), kk.b = ak(this.b)) : (kk.r = lk(this.r), kk.g = lk(this.g), kk.b = lk(this.b)), kk.a = this.a, this
       }
       toGammaSpace() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const zC = new NC;
-        return this.toGammaSpaceToRef(zC, CC), zC
+        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Fk = new Zk;
+        return this.toGammaSpaceToRef(Fk, kk), Fk
       }
-      toGammaSpaceToRef(CC) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (CC.r = FC(this.r), CC.g = FC(this.g), CC.b = FC(this.b)) : (CC.r = qC(this.r), CC.g = qC(this.g), CC.b = qC(this.b)), CC.a = this.a, this
+      toGammaSpaceToRef(kk) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (kk.r = Lk(this.r), kk.g = Lk(this.g), kk.b = Lk(this.b)) : (kk.r = qk(this.r), kk.g = qk(this.g), kk.b = qk(this.b)), kk.a = this.a, this
       }
-      static FromHexString(CC) {
-        return "#" !== CC.substring(0, 1) || 9 !== CC.length && 7 !== CC.length ? new NC(0, 0, 0, 0) : new NC(0, 0, 0, 1).fromHexString(CC)
+      static FromHexString(kk) {
+        return "#" !== kk.substring(0, 1) || 9 !== kk.length && 7 !== kk.length ? new Zk(0, 0, 0, 0) : new Zk(0, 0, 0, 1).fromHexString(kk)
       }
-      static Lerp(CC, zC, ZC) {
-        return NC.LerpToRef(CC, zC, ZC, new NC)
+      static Lerp(kk, Fk, Ik) {
+        return Zk.LerpToRef(kk, Fk, Ik, new Zk)
       }
-      static LerpToRef(CC, zC, ZC, QC) {
-        return QC.r = CC.r + (zC.r - CC.r) * ZC, QC.g = CC.g + (zC.g - CC.g) * ZC, QC.b = CC.b + (zC.b - CC.b) * ZC, QC.a = CC.a + (zC.a - CC.a) * ZC, QC
+      static LerpToRef(kk, Fk, Ik, Xk) {
+        return Xk.r = kk.r + (Fk.r - kk.r) * Ik, Xk.g = kk.g + (Fk.g - kk.g) * Ik, Xk.b = kk.b + (Fk.b - kk.b) * Ik, Xk.a = kk.a + (Fk.a - kk.a) * Ik, Xk
       }
-      static Hermite(CC, zC, ZC, QC, wC) {
-        const bC = wC * wC,
-          nC = wC * bC,
-          fC = 2 * nC - 3 * bC + 1,
-          oC = -2 * nC + 3 * bC,
-          qC = nC - 2 * bC + wC,
-          FC = nC - bC,
-          WC = CC.r * fC + ZC.r * oC + zC.r * qC + QC.r * FC,
-          MC = CC.g * fC + ZC.g * oC + zC.g * qC + QC.g * FC,
-          gC = CC.b * fC + ZC.b * oC + zC.b * qC + QC.b * FC,
-          SC = CC.a * fC + ZC.a * oC + zC.a * qC + QC.a * FC;
-        return new NC(WC, MC, gC, SC)
+      static Hermite(kk, Fk, Ik, Xk, Tk) {
+        const ik = Tk * Tk,
+          yk = Tk * ik,
+          lk = 2 * yk - 3 * ik + 1,
+          ak = -2 * yk + 3 * ik,
+          qk = yk - 2 * ik + Tk,
+          Lk = yk - ik,
+          tk = kk.r * lk + Ik.r * ak + Fk.r * qk + Xk.r * Lk,
+          jk = kk.g * lk + Ik.g * ak + Fk.g * qk + Xk.g * Lk,
+          ek = kk.b * lk + Ik.b * ak + Fk.b * qk + Xk.b * Lk,
+          wk = kk.a * lk + Ik.a * ak + Fk.a * qk + Xk.a * Lk;
+        return new Zk(tk, jk, ek, wk)
       }
-      static Hermite1stDerivative(CC, zC, ZC, QC, wC) {
-        const bC = new NC;
-        return this.Hermite1stDerivativeToRef(CC, zC, ZC, QC, wC, bC), bC
+      static Hermite1stDerivative(kk, Fk, Ik, Xk, Tk) {
+        const ik = new Zk;
+        return this.Hermite1stDerivativeToRef(kk, Fk, Ik, Xk, Tk, ik), ik
       }
-      static Hermite1stDerivativeToRef(CC, zC, ZC, QC, wC, bC) {
-        const nC = wC * wC;
-        bC.r = 6 * (nC - wC) * CC.r + (3 * nC - 4 * wC + 1) * zC.r + 6 * (-nC + wC) * ZC.r + (3 * nC - 2 * wC) * QC.r, bC.g = 6 * (nC - wC) * CC.g + (3 * nC - 4 * wC + 1) * zC.g + 6 * (-nC + wC) * ZC.g + (3 * nC - 2 * wC) * QC.g, bC.b = 6 * (nC - wC) * CC.b + (3 * nC - 4 * wC + 1) * zC.b + 6 * (-nC + wC) * ZC.b + (3 * nC - 2 * wC) * QC.b, bC.a = 6 * (nC - wC) * CC.a + (3 * nC - 4 * wC + 1) * zC.a + 6 * (-nC + wC) * ZC.a + (3 * nC - 2 * wC) * QC.a
+      static Hermite1stDerivativeToRef(kk, Fk, Ik, Xk, Tk, ik) {
+        const yk = Tk * Tk;
+        ik.r = 6 * (yk - Tk) * kk.r + (3 * yk - 4 * Tk + 1) * Fk.r + 6 * (-yk + Tk) * Ik.r + (3 * yk - 2 * Tk) * Xk.r, ik.g = 6 * (yk - Tk) * kk.g + (3 * yk - 4 * Tk + 1) * Fk.g + 6 * (-yk + Tk) * Ik.g + (3 * yk - 2 * Tk) * Xk.g, ik.b = 6 * (yk - Tk) * kk.b + (3 * yk - 4 * Tk + 1) * Fk.b + 6 * (-yk + Tk) * Ik.b + (3 * yk - 2 * Tk) * Xk.b, ik.a = 6 * (yk - Tk) * kk.a + (3 * yk - 4 * Tk + 1) * Fk.a + 6 * (-yk + Tk) * Ik.a + (3 * yk - 2 * Tk) * Xk.a
       }
-      static FromColor3(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new NC(CC.r, CC.g, CC.b, zC)
+      static FromColor3(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new Zk(kk.r, kk.g, kk.b, Fk)
       }
-      static FromArray(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new NC(CC[zC], CC[zC + 1], CC[zC + 2], CC[zC + 3])
+      static FromArray(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new Zk(kk[Fk], kk[Fk + 1], kk[Fk + 2], kk[Fk + 3])
       }
-      static FromArrayToRef(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          ZC = arguments.length > 2 ? arguments[2] : void 0;
-        ZC.r = CC[zC], ZC.g = CC[zC + 1], ZC.b = CC[zC + 2], ZC.a = CC[zC + 3]
+      static FromArrayToRef(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          Ik = arguments.length > 2 ? arguments[2] : void 0;
+        Ik.r = kk[Fk], Ik.g = kk[Fk + 1], Ik.b = kk[Fk + 2], Ik.a = kk[Fk + 3]
       }
-      static FromInts(CC, zC, ZC, QC) {
-        return new NC(CC / 255, zC / 255, ZC / 255, QC / 255)
+      static FromInts(kk, Fk, Ik, Xk) {
+        return new Zk(kk / 255, Fk / 255, Ik / 255, Xk / 255)
       }
-      static CheckColors4(CC, zC) {
-        if (CC.length === 3 * zC) {
-          const zC = [];
-          for (let ZC = 0; ZC < CC.length; ZC += 3) {
-            const QC = ZC / 3 * 4;
-            zC[QC] = CC[ZC], zC[QC + 1] = CC[ZC + 1], zC[QC + 2] = CC[ZC + 2], zC[QC + 3] = 1
+      static CheckColors4(kk, Fk) {
+        if (kk.length === 3 * Fk) {
+          const Fk = [];
+          for (let Ik = 0; Ik < kk.length; Ik += 3) {
+            const Xk = Ik / 3 * 4;
+            Fk[Xk] = kk[Ik], Fk[Xk + 1] = kk[Ik + 1], Fk[Xk + 2] = kk[Ik + 2], Fk[Xk + 3] = 1
           }
-          return zC
+          return Fk
         }
-        return CC
+        return kk
       }
     }
-    NC._V8PerformanceHack = new NC(.5, .5, .5, .5);
-    class MC {}
-    MC.Color3 = (0, QC.d)(3, WC.Black), MC.Color4 = (0, QC.d)(3, (() => new NC(0, 0, 0, 0)));
-    let gC = !1;
+    Zk._V8PerformanceHack = new Zk(.5, .5, .5, .5);
+    class jk {}
+    jk.Color3 = (0, Xk.b)(3, tk.Black), jk.Color4 = (0, Xk.b)(3, (() => new Zk(0, 0, 0, 0)));
+    let ek = !1;
 
-    function SC() {
-      gC || (gC = !0, Object.defineProperties(WC.prototype, {
+    function wk() {
+      ek || (ek = !0, Object.defineProperties(tk.prototype, {
         dimension: {
           value: [3]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(NC.prototype, {
+      }), Object.defineProperties(Zk.prototype, {
         dimension: {
           value: [4]
         },
         rank: {
           value: 1
         }
-      }), (0, nC.d)("BABYLON.Color3", WC), (0, nC.d)("BABYLON.Color4", NC))
+      }), (0, yk.f)("BABYLON.Color3", tk), (0, yk.f)("BABYLON.Color4", Zk))
     }
   },
-  36968: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => bC,
-      g: () => QC,
-      i: () => wC
+  37158: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => ik,
+      d: () => Xk,
+      g: () => Tk
     });
-    const QC = 1 / 2.2,
-      wC = 2.2;
+    const Xk = 1 / 2.2,
+      Tk = 2.2;
     Math.sqrt(5);
-    let bC = .001
+    let ik = .001
   },
-  36991: (CC, zC, ZC) => {
-    function QC(CC) {
-      return parseInt(CC.toString().replace(/\W/g, ""))
+  37189: (kk, Fk, Ik) => {
+    function Xk(kk) {
+      return parseInt(kk.toString().replace(/\W/g, ""))
     }
 
-    function wC(CC, zC) {
-      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
-      return Math.abs(CC - zC) <= ZC
+    function Tk(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
+      return Math.abs(kk - Fk) <= Ik
     }
 
-    function bC(CC, zC, ZC) {
-      let QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
-      return CC < zC - QC || CC > ZC + QC
+    function ik(kk, Fk, Ik) {
+      let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
+      return kk < Fk - Xk || kk > Ik + Xk
     }
 
-    function nC(CC, zC) {
-      return CC === zC ? CC : Math.random() * (zC - CC) + CC
+    function yk(kk, Fk) {
+      return kk === Fk ? kk : Math.random() * (Fk - kk) + kk
     }
 
-    function fC(CC, zC, ZC) {
-      return CC + (zC - CC) * ZC
+    function lk(kk, Fk, Ik) {
+      return kk + (Fk - kk) * Ik
     }
 
-    function oC(CC, zC, ZC) {
-      let QC = pC(zC - CC, 360);
-      return QC > 180 && (QC -= 360), CC + QC * NC(ZC)
+    function ak(kk, Fk, Ik) {
+      let Xk = Hk(Fk - kk, 360);
+      return Xk > 180 && (Xk -= 360), kk + Xk * Zk(Ik)
     }
 
-    function qC(CC, zC, ZC) {
-      let QC;
-      return QC = CC != zC ? NC((ZC - CC) / (zC - CC)) : 0, QC
+    function qk(kk, Fk, Ik) {
+      let Xk;
+      return Xk = kk != Fk ? Zk((Ik - kk) / (Fk - kk)) : 0, Xk
     }
 
-    function FC(CC, zC, ZC, QC, wC) {
-      const bC = wC * wC,
-        nC = wC * bC;
-      return CC * (2 * nC - 3 * bC + 1) + ZC * (-2 * nC + 3 * bC) + zC * (nC - 2 * bC + wC) + QC * (nC - bC)
+    function Lk(kk, Fk, Ik, Xk, Tk) {
+      const ik = Tk * Tk,
+        yk = Tk * ik;
+      return kk * (2 * yk - 3 * ik + 1) + Ik * (-2 * yk + 3 * ik) + Fk * (yk - 2 * ik + Tk) + Xk * (yk - ik)
     }
 
-    function WC(CC, zC, ZC, QC, wC) {
-      const bC = wC * wC;
-      return 6 * (bC - wC) * CC + (3 * bC - 4 * wC + 1) * zC + 6 * (-bC + wC) * ZC + (3 * bC - 2 * wC) * QC
+    function tk(kk, Fk, Ik, Xk, Tk) {
+      const ik = Tk * Tk;
+      return 6 * (ik - Tk) * kk + (3 * ik - 4 * Tk + 1) * Fk + 6 * (-ik + Tk) * Ik + (3 * ik - 2 * Tk) * Xk
     }
 
-    function NC(CC) {
-      let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return Math.min(ZC, Math.max(zC, CC))
+    function Zk(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return Math.min(Ik, Math.max(Fk, kk))
     }
 
-    function MC(CC) {
-      return CC -= 2 * Math.PI * Math.floor((CC + Math.PI) / (2 * Math.PI))
+    function jk(kk) {
+      return kk -= 2 * Math.PI * Math.floor((kk + Math.PI) / (2 * Math.PI))
     }
 
-    function gC(CC) {
-      const zC = CC.toString(16);
-      return CC <= 15 ? ("0" + zC).toUpperCase() : zC.toUpperCase()
+    function ek(kk) {
+      const Fk = kk.toString(16);
+      return kk <= 15 ? ("0" + Fk).toUpperCase() : Fk.toUpperCase()
     }
 
-    function SC(CC) {
-      if (Math.log2) return Math.floor(Math.log2(CC));
-      if (CC < 0) return NaN;
-      if (0 === CC) return -1 / 0;
-      let zC = 0;
-      if (CC < 1) {
-        for (; CC < 1;) zC++, CC *= 2;
-        zC = -zC
-      } else if (CC > 1)
-        for (; CC > 1;) zC++, CC = Math.floor(CC / 2);
-      return zC
+    function wk(kk) {
+      if (Math.log2) return Math.floor(Math.log2(kk));
+      if (kk < 0) return NaN;
+      if (0 === kk) return -1 / 0;
+      let Fk = 0;
+      if (kk < 1) {
+        for (; kk < 1;) Fk++, kk *= 2;
+        Fk = -Fk
+      } else if (kk > 1)
+        for (; kk > 1;) Fk++, kk = Math.floor(kk / 2);
+      return Fk
     }
 
-    function pC(CC, zC) {
-      return CC - Math.floor(CC / zC) * zC
+    function Hk(kk, Fk) {
+      return kk - Math.floor(kk / Fk) * Fk
     }
 
-    function PC(CC, zC, ZC) {
-      return (CC - zC) / (ZC - zC)
+    function Jk(kk, Fk, Ik) {
+      return (kk - Fk) / (Ik - Fk)
     }
 
-    function GC(CC, zC, ZC) {
-      return CC * (ZC - zC) + zC
+    function xk(kk, Fk, Ik) {
+      return kk * (Ik - Fk) + Fk
     }
 
-    function RC(CC, zC) {
-      let ZC = pC(zC - CC, 360);
-      return ZC > 180 && (ZC -= 360), ZC
+    function Pk(kk, Fk) {
+      let Ik = Hk(Fk - kk, 360);
+      return Ik > 180 && (Ik -= 360), Ik
     }
 
-    function AC(CC, zC) {
-      const ZC = pC(CC, 2 * zC);
-      return zC - Math.abs(ZC - zC)
+    function Kk(kk, Fk) {
+      const Ik = Hk(kk, 2 * Fk);
+      return Fk - Math.abs(Ik - Fk)
     }
 
-    function xC(CC, zC, ZC) {
-      let QC = NC(ZC);
-      return QC = -2 * QC * QC * QC + 3 * QC * QC, zC * QC + CC * (1 - QC)
+    function Qk(kk, Fk, Ik) {
+      let Xk = Zk(Ik);
+      return Xk = -2 * Xk * Xk * Xk + 3 * Xk * Xk, Fk * Xk + kk * (1 - Xk)
     }
 
-    function JC(CC, zC, ZC) {
-      let QC;
-      return QC = Math.abs(zC - CC) <= ZC ? zC : CC + Math.sign(zC - CC) * ZC, QC
+    function sk(kk, Fk, Ik) {
+      let Xk;
+      return Xk = Math.abs(Fk - kk) <= Ik ? Fk : kk + Math.sign(Fk - kk) * Ik, Xk
     }
 
-    function IC(CC, zC, ZC) {
-      const QC = RC(CC, zC);
-      let wC;
-      return wC = -ZC < QC && QC < ZC ? zC : JC(CC, zC = CC + QC, ZC), wC
+    function Vk(kk, Fk, Ik) {
+      const Xk = Pk(kk, Fk);
+      let Tk;
+      return Tk = -Ik < Xk && Xk < Ik ? Fk : sk(kk, Fk = kk + Xk, Ik), Tk
     }
 
-    function iC(CC, zC, ZC) {
-      return (CC - zC) / (ZC - zC)
+    function zk(kk, Fk, Ik) {
+      return (kk - Fk) / (Ik - Fk)
     }
 
-    function vC(CC, zC, ZC) {
-      return (ZC - zC) * CC + zC
+    function Sk(kk, Fk, Ik) {
+      return (Ik - Fk) * kk + Fk
     }
 
-    function eC(CC, zC) {
-      const ZC = CC % zC;
-      return 0 === ZC ? zC : eC(zC, ZC)
+    function vk(kk, Fk) {
+      const Ik = kk % Fk;
+      return 0 === Ik ? Fk : vk(Fk, Ik)
     }
-    ZC.r(zC), ZC.d(zC, {
-      Clamp: () => NC,
-      DeltaAngle: () => RC,
-      Denormalize: () => GC,
-      ExtractAsInt: () => QC,
-      Hermite: () => FC,
-      Hermite1stDerivative: () => WC,
-      HighestCommonFactor: () => eC,
-      ILog2: () => SC,
-      InverseLerp: () => qC,
-      Lerp: () => fC,
-      LerpAngle: () => oC,
-      MoveTowards: () => JC,
-      MoveTowardsAngle: () => IC,
-      Normalize: () => PC,
-      NormalizeRadians: () => MC,
-      OutsideRange: () => bC,
-      PercentToRange: () => vC,
-      PingPong: () => AC,
-      RandomRange: () => nC,
-      RangeToPercent: () => iC,
-      Repeat: () => pC,
-      SmoothStep: () => xC,
-      ToHex: () => gC,
-      WithinEpsilon: () => wC
+    Ik.r(Fk), Ik.d(Fk, {
+      Clamp: () => Zk,
+      DeltaAngle: () => Pk,
+      Denormalize: () => xk,
+      ExtractAsInt: () => Xk,
+      Hermite: () => Lk,
+      Hermite1stDerivative: () => tk,
+      HighestCommonFactor: () => vk,
+      ILog2: () => wk,
+      InverseLerp: () => qk,
+      Lerp: () => lk,
+      LerpAngle: () => ak,
+      MoveTowards: () => sk,
+      MoveTowardsAngle: () => Vk,
+      Normalize: () => Jk,
+      NormalizeRadians: () => jk,
+      OutsideRange: () => ik,
+      PercentToRange: () => Sk,
+      PingPong: () => Kk,
+      RandomRange: () => yk,
+      RangeToPercent: () => zk,
+      Repeat: () => Hk,
+      SmoothStep: () => Qk,
+      ToHex: () => ek,
+      WithinEpsilon: () => Tk
     })
   },
-  36971: (CC, zC, ZC) => {
-    function QC(CC, zC) {
-      const ZC = [];
-      for (let QC = 0; QC < CC; ++QC) ZC.push(zC());
-      return ZC
+  37166: (kk, Fk, Ik) => {
+    function Xk(kk, Fk) {
+      const Ik = [];
+      for (let Xk = 0; Xk < kk; ++Xk) Ik.push(Fk());
+      return Ik
     }
 
-    function wC(CC, zC) {
-      return QC(CC, zC)
+    function Tk(kk, Fk) {
+      return Xk(kk, Fk)
     }
-    ZC.d(zC, {
-      d: () => QC,
-      g: () => wC,
-      i: () => nC
+    Ik.d(Fk, {
+      b: () => Xk,
+      c: () => Tk,
+      f: () => yk
     });
-    const bC = ["push", "splice", "pop", "shift", "unshift"];
+    const ik = ["push", "splice", "pop", "shift", "unshift"];
 
-    function nC(CC, zC) {
-      const ZC = bC.map((ZC => function(CC, zC, ZC) {
-        const QC = CC[zC];
-        if ("function" !== typeof QC) return null;
-        const wC = function() {
-          const QC = CC.length,
-            bC = wC.previous.apply(CC, arguments);
-          return ZC(zC, QC), bC
+    function yk(kk, Fk) {
+      const Ik = ik.map((Ik => function(kk, Fk, Ik) {
+        const Xk = kk[Fk];
+        if ("function" !== typeof Xk) return null;
+        const Tk = function() {
+          const Xk = kk.length,
+            ik = Tk.previous.apply(kk, arguments);
+          return Ik(Fk, Xk), ik
         };
-        return QC.next = wC, wC.previous = QC, CC[zC] = wC, () => {
-          const ZC = wC.previous;
-          if (!ZC) return;
-          const QC = wC.next;
-          QC ? (ZC.next = QC, QC.previous = ZC) : (ZC.next = void 0, CC[zC] = ZC), wC.next = void 0, wC.previous = void 0
+        return Xk.next = Tk, Tk.previous = Xk, kk[Fk] = Tk, () => {
+          const Ik = Tk.previous;
+          if (!Ik) return;
+          const Xk = Tk.next;
+          Xk ? (Ik.next = Xk, Xk.previous = Ik) : (Ik.next = void 0, kk[Fk] = Ik), Tk.next = void 0, Tk.previous = void 0
         }
-      }(CC, ZC, zC)));
+      }(kk, Ik, Fk)));
       return () => {
-        for (const CC of ZC) CC?.()
+        for (const kk of Ik) kk?.()
       }
     }
   },
-  37002: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => bC,
-      d: () => wC
+  37201: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => ik,
+      f: () => Tk
     });
-    const QC = {};
+    const Xk = {};
 
-    function wC(CC, zC) {
-      QC[CC] = zC
+    function Tk(kk, Fk) {
+      Xk[kk] = Fk
     }
 
-    function bC(CC) {
-      return QC[CC]
+    function ik(kk) {
+      return Xk[kk]
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

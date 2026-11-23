@@ -1,272 +1,272 @@
 export const id = 78;
 export const ids = [78, 93];
 export const modules = {
-    4760: (CC, zC, ZC) => {
-      ZC.d(zC, {
-        c: () => pC,
-        d: () => PC
+    4829: (kk, Fk, Ik) => {
+      Ik.d(Fk, {
+        e: () => Hk,
+        h: () => Jk
       });
-      var QC = ZC(1002),
-        wC = ZC.n(QC),
-        bC = ZC(48),
-        nC = ZC(1143),
-        fC = ZC(4769),
-        oC = ZC(1811),
-        qC = ZC(2369),
-        FC = ZC(4775),
-        WC = ZC(1056);
-      const NC = new WeakMap;
-      let MC = 0;
+      var Xk = Ik(1055),
+        Tk = Ik.n(Xk),
+        ik = Ik(58),
+        yk = Ik(1179),
+        lk = Ik(4833),
+        ak = Ik(1849),
+        qk = Ik(2349),
+        Lk = Ik(4837),
+        tk = Ik(1096);
+      const Zk = new WeakMap;
+      let jk = 0;
 
-      function gC(CC) {
-        let zC = NC.get(CC);
-        return void 0 === zC && (zC = MC++, NC.set(CC, zC)), zC
+      function ek(kk) {
+        let Fk = Zk.get(kk);
+        return void 0 === Fk && (Fk = jk++, Zk.set(kk, Fk)), Fk
       }
 
-      function SC(CC) {
+      function wk(kk) {
         let {
-          piece: zC
-        } = CC;
-        return "space" === zC.kind ? (0, WC.jsx)(WC.Fragment, {
-          children: zC.text
-        }) : (0, WC.jsx)("span", {
+          piece: Fk
+        } = kk;
+        return "space" === Fk.kind ? (0, tk.jsx)(tk.Fragment, {
+          children: Fk.text
+        }) : (0, tk.jsx)("span", {
           className: "DialogueWord",
           style: {
-            "--word-delay": `${zC.delayMs}ms`
+            "--word-delay": `${Fk.delayMs}ms`
           },
-          children: (0, WC.jsx)(fC.e, {
-            text: "icon" === zC.kind ? `[[${zC.icon}]]` : zC.text
+          children: (0, tk.jsx)(lk.b, {
+            text: "icon" === Fk.kind ? `[[${Fk.icon}]]` : Fk.text
           })
         })
       }
 
-      function pC(CC) {
+      function Hk(kk) {
         let {
-          display: zC
-        } = CC;
+          display: Fk
+        } = kk;
         const {
-          selectedLanguage: ZC
-        } = (0, nC.y)(), QC = (0, bC.useMemo)((() => (0, FC.c)((0, FC.f)(zC).plan.pieces)), [zC, ZC.code]);
-        return (0, WC.jsxs)("div", {
-          className: wC()("Dialogue", {
-            DialogueAnimateIn: !1 !== zC.animateIn
+          selectedLanguage: Ik
+        } = (0, yk.y)(), Xk = (0, ik.useMemo)((() => (0, Lk.d)((0, Lk.e)(Fk).plan.pieces)), [Fk, Ik.code]);
+        return (0, tk.jsxs)("div", {
+          className: Tk()("Dialogue", {
+            DialogueAnimateIn: !1 !== Fk.animateIn
           }),
-          children: [zC.speakerName && (0, WC.jsx)(oC.e, {
-            text: zC.speakerName,
+          children: [Fk.speakerName && (0, tk.jsx)(ak.c, {
+            text: Fk.speakerName,
             className: "DialogueSpeaker"
-          }), (0, WC.jsx)("p", {
+          }), (0, tk.jsx)("p", {
             className: "DialogueLine",
-            children: QC.map(((CC, zC) => 1 === CC.length && "space" === CC[0].kind ? CC[0].text : (0, WC.jsx)("span", {
+            children: Xk.map(((kk, Fk) => 1 === kk.length && "space" === kk[0].kind ? kk[0].text : (0, tk.jsx)("span", {
               className: "DialogueGlue",
-              children: CC.map(((CC, zC) => (0, WC.jsx)(SC, {
-                piece: CC
-              }, zC)))
-            }, zC)))
+              children: kk.map(((kk, Fk) => (0, tk.jsx)(wk, {
+                piece: kk
+              }, Fk)))
+            }, Fk)))
           })]
         })
       }
-      const PC = (0, bC.memo)((function() {
-        const CC = (0, qC.h)("dialogue");
-        return (0, WC.jsx)("div", {
+      const Jk = (0, ik.memo)((function() {
+        const kk = (0, qk.j)("dialogue");
+        return (0, tk.jsx)("div", {
           className: "DialogueAnchor",
           "data-camera-keeper": "",
           role: "status",
           "aria-live": "polite",
           "aria-atomic": "true",
-          children: CC && (0, WC.jsx)(pC, {
-            display: CC
-          }, gC(CC))
+          children: kk && (0, tk.jsx)(Hk, {
+            display: kk
+          }, ek(kk))
         })
       }))
     },
-    4648: (CC, zC, ZC) => {
-        ZC.r(zC), ZC.d(zC, {
-          default: () => Vb
+    4707: (kk, Fk, Ik) => {
+        Ik.r(Fk), Ik.d(Fk, {
+          default: () => Fy
         });
-        var QC = ZC(48),
-          wC = ZC(1002),
-          bC = ZC.n(wC),
-          nC = ZC(1455),
-          fC = ZC(1463),
-          oC = ZC(20),
-          qC = ZC(60),
-          FC = ZC(4657),
-          WC = ZC(4668),
-          NC = ZC(4672),
-          MC = ZC(4296),
-          gC = ZC(1056);
-        const SC = "/textures/docs/icons";
+        var Xk = Ik(58),
+          Tk = Ik(1055),
+          ik = Ik.n(Tk),
+          yk = Ik(1481),
+          lk = Ik(1485),
+          ak = Ik(25),
+          qk = Ik(74),
+          Lk = Ik(4714),
+          tk = Ik(4729),
+          Zk = Ik(4731),
+          jk = Ik(4335),
+          ek = Ik(1096);
+        const wk = "/textures/docs/icons";
 
-        function pC(CC) {
+        function Hk(kk) {
           let {
-            name: zC,
-            isTinted: ZC,
-            className: QC,
-            style: wC
-          } = CC;
-          const nC = `${SC}/${zC}.png`;
-          return ZC ? (0, gC.jsxs)("span", {
-            className: bC()("DocsPixelIcon", "Tinted", QC),
+            name: Fk,
+            isTinted: Ik,
+            className: Xk,
+            style: Tk
+          } = kk;
+          const yk = `${wk}/${Fk}.png`;
+          return Ik ? (0, ek.jsxs)("span", {
+            className: ik()("DocsPixelIcon", "Tinted", Xk),
             "aria-hidden": "true",
-            style: wC,
-            children: [(0, gC.jsx)("span", {
+            style: Tk,
+            children: [(0, ek.jsx)("span", {
               className: "DocsPixelIconTint",
               style: {
-                maskImage: `url("${nC}")`,
-                WebkitMaskImage: `url("${nC}")`
+                maskImage: `url("${yk}")`,
+                WebkitMaskImage: `url("${yk}")`
               }
-            }), (0, gC.jsx)("img", {
-              src: nC,
+            }), (0, ek.jsx)("img", {
+              src: yk,
               alt: ""
             })]
-          }) : (0, gC.jsx)("img", {
-            className: bC()("DocsPixelIcon", QC),
-            src: nC,
+          }) : (0, ek.jsx)("img", {
+            className: ik()("DocsPixelIcon", Xk),
+            src: yk,
             alt: "",
             "aria-hidden": "true",
-            style: wC
+            style: Tk
           })
         }
-        const PC = 1500;
+        const Jk = 1500;
 
-        function GC() {
-          const [CC, zC] = (0, QC.useState)(null);
-          (0, QC.useEffect)((() => {
-            if (null === CC) return;
-            const ZC = setTimeout((() => {
-              zC(null)
-            }), PC);
+        function xk() {
+          const [kk, Fk] = (0, Xk.useState)(null);
+          (0, Xk.useEffect)((() => {
+            if (null === kk) return;
+            const Ik = setTimeout((() => {
+              Fk(null)
+            }), Jk);
             return () => {
-              clearTimeout(ZC)
+              clearTimeout(Ik)
             }
-          }), [CC]);
-          return [CC, CC => {
-            (0, MC.e)(CC).then((() => {
-              zC({
-                text: CC,
+          }), [kk]);
+          return [kk, kk => {
+            (0, jk.b)(kk).then((() => {
+              Fk({
+                text: kk,
                 failed: !1
               })
-            }), (ZC => {
-              console.error("Could not copy to the clipboard", ZC), zC({
-                text: CC,
+            }), (Ik => {
+              console.error("Could not copy to the clipboard", Ik), Fk({
+                text: kk,
                 failed: !0
               })
             }))
           }]
         }
 
-        function RC(CC) {
+        function Pk(kk) {
           let {
-            text: zC,
-            label: ZC,
-            className: QC
-          } = CC;
-          const [wC, nC] = GC(), fC = !1 === (null === wC || void 0 === wC ? void 0 : wC.failed);
-          return (0, gC.jsxs)("button", {
+            text: Fk,
+            label: Ik,
+            className: Xk
+          } = kk;
+          const [Tk, yk] = xk(), lk = !1 === (null === Tk || void 0 === Tk ? void 0 : Tk.failed);
+          return (0, ek.jsxs)("button", {
             type: "button",
-            className: bC()("DocsCopyButton", QC, {
-              Copied: fC
+            className: ik()("DocsCopyButton", Xk, {
+              Copied: lk
             }),
-            title: `Copy ${zC.length>40?"to clipboard":zC}`,
-            "aria-label": ZC ? void 0 : `Copy ${zC}`,
-            onClick: CC => {
-              CC.stopPropagation(), nC(zC)
+            title: `Copy ${Fk.length>40?"to clipboard":Fk}`,
+            "aria-label": Ik ? void 0 : `Copy ${Fk}`,
+            onClick: kk => {
+              kk.stopPropagation(), yk(Fk)
             },
-            children: [(0, gC.jsx)(pC, {
-              name: fC ? "check" : "copy"
-            }), ZC && (0, gC.jsx)("span", {
-              children: fC ? "Copied" : null !== wC && void 0 !== wC && wC.failed ? "Copy failed" : ZC
+            children: [(0, ek.jsx)(Hk, {
+              name: lk ? "check" : "copy"
+            }), Ik && (0, ek.jsx)("span", {
+              children: lk ? "Copied" : null !== Tk && void 0 !== Tk && Tk.failed ? "Copy failed" : Ik
             })]
           })
         }
-        FC.c.registerLanguage("javascript", WC.b), FC.c.registerLanguage("typescript", NC.b);
-        const AC = {
+        Lk.c.registerLanguage("javascript", tk.b), Lk.c.registerLanguage("typescript", Zk.d);
+        const Kk = {
             js: "javascript",
             ts: "typescript",
             javascript: "javascript",
             typescript: "typescript"
           },
-          xC = {
+          Qk = {
             javascript: "JavaScript",
             typescript: "TypeScript"
           },
-          JC = 24;
+          sk = 24;
 
-        function IC(CC) {
+        function Vk(kk) {
           let {
-            code: zC,
-            lang: ZC,
-            compact: wC = !1
-          } = CC;
-          const nC = (0, QC.useMemo)((() => function(CC, zC) {
-              const ZC = AC[zC];
-              return ZC ? FC.c.highlight(CC, {
-                language: ZC
-              }).value : CC.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-            }(zC, ZC)), [zC, ZC]),
-            fC = zC.split("\n").length,
-            oC = !wC && fC > JC + 6,
-            [qC, WC] = (0, QC.useState)(!1),
-            NC = AC[ZC];
-          return (0, gC.jsxs)("div", {
-            className: bC()("DocsCodeBlock", {
-              Compact: wC,
-              Collapsed: oC && !qC
+            code: Fk,
+            lang: Ik,
+            compact: Tk = !1
+          } = kk;
+          const yk = (0, Xk.useMemo)((() => function(kk, Fk) {
+              const Ik = Kk[Fk];
+              return Ik ? Lk.c.highlight(kk, {
+                language: Ik
+              }).value : kk.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+            }(Fk, Ik)), [Fk, Ik]),
+            lk = Fk.split("\n").length,
+            ak = !Tk && lk > sk + 6,
+            [qk, tk] = (0, Xk.useState)(!1),
+            Zk = Kk[Ik];
+          return (0, ek.jsxs)("div", {
+            className: ik()("DocsCodeBlock", {
+              Compact: Tk,
+              Collapsed: ak && !qk
             }),
-            children: [!wC && (0, gC.jsxs)("div", {
+            children: [!Tk && (0, ek.jsxs)("div", {
               className: "DocsCodeBlockHeader",
-              children: [(0, gC.jsx)("span", {
+              children: [(0, ek.jsx)("span", {
                 className: "DocsCodeBlockLanguage",
-                children: NC ? xC[NC] : "Text"
-              }), (0, gC.jsx)(RC, {
-                text: zC,
+                children: Zk ? Qk[Zk] : "Text"
+              }), (0, ek.jsx)(Pk, {
+                text: Fk,
                 label: "Copy"
               })]
-            }), (0, gC.jsx)("pre", {
-              children: (0, gC.jsx)("code", {
+            }), (0, ek.jsx)("pre", {
+              children: (0, ek.jsx)("code", {
                 className: "hljs",
                 dangerouslySetInnerHTML: {
-                  __html: nC
+                  __html: yk
                 }
               })
-            }), oC && (0, gC.jsxs)("button", {
+            }), ak && (0, ek.jsxs)("button", {
               type: "button",
               className: "DocsCodeBlockExpand",
-              "aria-expanded": qC,
+              "aria-expanded": qk,
               onClick: () => {
-                WC(!qC)
+                tk(!qk)
               },
-              children: [(0, gC.jsx)(pC, {
-                name: qC ? "chevron-up" : "chevron-down"
-              }), qC ? "Show less" : `Show all ${fC} lines`]
+              children: [(0, ek.jsx)(Hk, {
+                name: qk ? "chevron-up" : "chevron-down"
+              }), qk ? "Show less" : `Show all ${lk} lines`]
             })]
           })
         }
-        var iC = ZC(4674);
-        var vC = ZC(4679);
-        const eC = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
+        var zk = Ik(4739);
+        var Sk = Ik(4745);
+        const vk = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
 
-        function hC(CC) {
-          const zC = new Map;
-          let ZC, QC = [],
-            wC = !1;
-          const bC = () => {
-            ZC && zC.set(ZC.name, ZC.lines.join("\n").trimEnd())
+        function Ek(kk) {
+          const Fk = new Map;
+          let Ik, Xk = [],
+            Tk = !1;
+          const ik = () => {
+            Ik && Fk.set(Ik.name, Ik.lines.join("\n").trimEnd())
           };
-          for (const nC of CC.split("\n")) {
-            const CC = nC.match(eC);
-            wC || nC.startsWith("/*") ? (wC || (bC(), ZC = void 0), QC.push(nC), wC = !nC.includes("*/")) : CC ? (bC(), ZC = {
-              name: CC[1],
-              lines: [...QC, nC]
-            }, QC = []) : ZC && (nC.startsWith(" ") || nC.startsWith("\t") || /^[}\])|]/.test(nC)) ? ZC.lines.push(nC) : ZC && "" !== nC.trim() && (bC(), ZC = void 0)
+          for (const yk of kk.split("\n")) {
+            const kk = yk.match(vk);
+            Tk || yk.startsWith("/*") ? (Tk || (ik(), Ik = void 0), Xk.push(yk), Tk = !yk.includes("*/")) : kk ? (ik(), Ik = {
+              name: kk[1],
+              lines: [...Xk, yk]
+            }, Xk = []) : Ik && (yk.startsWith(" ") || yk.startsWith("\t") || /^[}\])|]/.test(yk)) ? Ik.lines.push(yk) : Ik && "" !== yk.trim() && (ik(), Ik = void 0)
           }
-          return bC(), zC
+          return ik(), Fk
         }
 
-        function KC(CC) {
-          return "methods" === CC || "callbacks" === CC || "settings" === CC
+        function Ok(kk) {
+          return "methods" === kk || "callbacks" === kk || "settings" === kk
         }
-        const YC = {
+        const nk = {
             readme: {
               icon: "code-block",
               summary: "Code blocks, boards and World Code, and the globals your code can use.",
@@ -302,25 +302,25 @@ export const modules = {
               icon: "player",
               summary: "Per-player options such as speed, health and camera.",
               layout: "settings",
-              setterSnippet: (CC, zC) => `api.setClientOption(playerId, "${CC}", ${zC})`
+              setterSnippet: (kk, Fk) => `api.setClientOption(playerId, "${kk}", ${Fk})`
             },
             entitySettings: {
               icon: "eye",
               summary: "How one player sees and interacts with another entity.",
               layout: "settings",
-              setterSnippet: (CC, zC) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${CC}", ${zC})`
+              setterSnippet: (kk, Fk) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${kk}", ${Fk})`
             },
             mobSettings: {
               icon: "mob",
               summary: "Health, movement, combat and AI settings for mobs.",
               layout: "settings",
-              setterSnippet: (CC, zC) => `api.setMobSetting(mobId, "${CC}", ${zC})`
+              setterSnippet: (kk, Fk) => `api.setMobSetting(mobId, "${kk}", ${Fk})`
             },
             vehicleSettings: {
               icon: "car",
               summary: "Movement, physics and camera settings for vehicles.",
               layout: "settings",
-              setterSnippet: (CC, zC) => `api.setVehicleSetting(vehicleId, "${CC}", ${zC})`
+              setterSnippet: (kk, Fk) => `api.setVehicleSetting(vehicleId, "${kk}", ${Fk})`
             },
             meshEntities: {
               icon: "mesh",
@@ -377,7 +377,7 @@ export const modules = {
               gallery: "items"
             }
           },
-          dC = {
+          Gk = {
             Variations: {
               icon: "layers",
               summary: "Alternate versions of a custom game, and matchmaking players between them."
@@ -404,20 +404,20 @@ export const modules = {
             }
           };
 
-        function mC(CC) {
-          return CC.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
+        function pk(kk) {
+          return kk.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
         }
 
-        function HC(CC) {
-          let zC = !1;
-          return CC.split("\n").map((CC => (CC.startsWith("```") && (zC = !zC), !zC && /^#{3,} /.test(CC) ? CC.slice(1) : CC))).join("\n")
+        function uk(kk) {
+          let Fk = !1;
+          return kk.split("\n").map((kk => (kk.startsWith("```") && (Fk = !Fk), !Fk && /^#{3,} /.test(kk) ? kk.slice(1) : kk))).join("\n")
         }
 
-        function EC(CC) {
-          return "readme" === CC ? "getting-started" : mC(CC)
+        function bk(kk) {
+          return "readme" === kk ? "getting-started" : pk(kk)
         }
-        const lC = "## Glossary of Referenced Types";
-        const XC = [{
+        const Rk = "## Glossary of Referenced Types";
+        const Uk = [{
             id: "welcome",
             slug: "",
             title: "Welcome",
@@ -425,28 +425,28 @@ export const modules = {
             summary: "Run JavaScript in Bloxd, from a single block to a whole custom game.",
             layout: "article",
             markdown: "# Welcome to the Bloxd Code API\n\nWrite JavaScript that runs inside Bloxd: make a block launch players into the sky, give your world its own shop, or build a whole custom game with rounds, teams and a winner.\n\n## New to coding in Bloxd?\n\nStart with [Getting started](#readme), which explains code blocks, boards and World Code, and where each one runs. Then copy something from [Snippets](#snippets) into a code block and change it to see what happens.\n\n## Building a game\n\n[Callbacks](#callbacks) let your World Code react to players joining, chatting, breaking blocks and more. The [How-Tos](#howTo) walk through bigger features step by step, from plugins to a complete team game.\n\n## Looking something up\n\nThe [API Reference](#apiReference) lists every method on `api`. Settings for players, entities, mobs and vehicles each have their own page, and the Assets pages list every block, item, sound, particle, icon and skin name you can use. Press Ctrl K, or \u2318 K on a Mac, to search all of it.\n\n## What's new\n\nThe [Changelog](#changelog) lists what has changed in the Code API, newest first.\n\n## Get help\n\nAsk questions, report problems and suggest features on [our Discord](https://discord.gg/playbloxd)."
-          }, ...vC.c.flatMap((CC => {
-            const zC = {
-              id: CC.id,
-              slug: EC(CC.id),
-              title: CC.title,
-              markdown: CC.content,
-              ...YC[CC.id]
+          }, ...Sk.d.flatMap((kk => {
+            const Fk = {
+              id: kk.id,
+              slug: bk(kk.id),
+              title: kk.title,
+              markdown: kk.content,
+              ...nk[kk.id]
             };
-            if ("readme" === CC.id) return function(CC) {
-              const zC = CC.markdown.indexOf(lC),
-                ZC = CC.markdown.indexOf("\n```", zC),
-                QC = CC.markdown.indexOf("\n```", ZC + 1);
-              if (-1 === zC || -1 === ZC || -1 === QC) throw new Error(`Getting started has no "${lC}" section with a code block`);
-              const wC = CC.markdown.slice(zC + 31, ZC).trim(),
-                bC = [...hC(CC.markdown.slice(CC.markdown.indexOf("\n", ZC + 1) + 1, QC))].map((CC => {
-                  let [zC, ZC] = CC;
-                  return `## ${zC}\n\n\`\`\`ts\n${ZC}\n\`\`\`\n`
+            if ("readme" === kk.id) return function(kk) {
+              const Fk = kk.markdown.indexOf(Rk),
+                Ik = kk.markdown.indexOf("\n```", Fk),
+                Xk = kk.markdown.indexOf("\n```", Ik + 1);
+              if (-1 === Fk || -1 === Ik || -1 === Xk) throw new Error(`Getting started has no "${Rk}" section with a code block`);
+              const Tk = kk.markdown.slice(Fk + 31, Ik).trim(),
+                ik = [...Ek(kk.markdown.slice(kk.markdown.indexOf("\n", Ik + 1) + 1, Xk))].map((kk => {
+                  let [Fk, Ik] = kk;
+                  return `## ${Fk}\n\n\`\`\`ts\n${Ik}\n\`\`\`\n`
                 })),
-                nC = CC.markdown.slice(CC.markdown.indexOf("\n", QC + 1) + 1);
+                yk = kk.markdown.slice(kk.markdown.indexOf("\n", Xk + 1) + 1);
               return [{
-                ...CC,
-                markdown: `${CC.markdown.slice(0,zC)}${nC}`
+                ...kk,
+                markdown: `${kk.markdown.slice(0,Fk)}${yk}`
               }, {
                 id: "types",
                 slug: "types",
@@ -454,57 +454,57 @@ export const modules = {
                 icon: "tag",
                 summary: "The types the API Reference's parameters and return values refer to.",
                 layout: "article",
-                markdown: `# Types\n\n${wC}\n\n${bC.join("\n")}`
+                markdown: `# Types\n\n${Tk}\n\n${ik.join("\n")}`
               }]
-            }(zC);
-            if ("howTo" === CC.id) {
+            }(Fk);
+            if ("howTo" === kk.id) {
               const {
-                parent: CC,
-                guides: ZC
-              } = function(CC) {
-                const [zC, ...ZC] = CC.markdown.split(/^(?=## )/m), QC = [zC], wC = [];
-                for (const nC of ZC) {
-                  var bC;
-                  const zC = nC.indexOf("\n"),
-                    ZC = nC.slice(3, zC).trim(),
-                    fC = nC.slice(zC + 1);
-                  if (!fC.includes("```")) {
-                    QC.push(nC);
+                parent: kk,
+                guides: Ik
+              } = function(kk) {
+                const [Fk, ...Ik] = kk.markdown.split(/^(?=## )/m), Xk = [Fk], Tk = [];
+                for (const yk of Ik) {
+                  var ik;
+                  const Fk = yk.indexOf("\n"),
+                    Ik = yk.slice(3, Fk).trim(),
+                    lk = yk.slice(Fk + 1);
+                  if (!lk.includes("```")) {
+                    Xk.push(yk);
                     continue
                   }
-                  const oC = null !== (bC = dC[ZC]) && void 0 !== bC ? bC : {
+                  const ak = null !== (ik = Gk[Ik]) && void 0 !== ik ? ik : {
                     icon: "lightbulb",
-                    summary: `How to use ${ZC.toLowerCase()} in World Code.`
+                    summary: `How to use ${Ik.toLowerCase()} in World Code.`
                   };
-                  wC.push({
-                    id: `${CC.id}${ZC.split(/[^A-Za-z0-9]+/).map((CC=>CC.charAt(0).toUpperCase()+CC.slice(1))).join("")}`,
-                    slug: `${CC.slug}-${mC(ZC)}`,
-                    title: ZC,
+                  Tk.push({
+                    id: `${kk.id}${Ik.split(/[^A-Za-z0-9]+/).map((kk=>kk.charAt(0).toUpperCase()+kk.slice(1))).join("")}`,
+                    slug: `${kk.slug}-${pk(Ik)}`,
+                    title: Ik,
                     layout: "article",
-                    sourceAnchor: (0, iC.p)(ZC),
-                    markdown: `# ${ZC}\n\n${HC(fC)}`,
-                    ...oC
+                    sourceAnchor: (0, zk.t)(Ik),
+                    markdown: `# ${Ik}\n\n${uk(lk)}`,
+                    ...ak
                   })
                 }
                 return {
                   parent: {
-                    ...CC,
-                    markdown: QC.join(""),
-                    childPageIds: wC.map((CC => CC.id))
+                    ...kk,
+                    markdown: Xk.join(""),
+                    childPageIds: Tk.map((kk => kk.id))
                   },
-                  guides: wC
+                  guides: Tk
                 }
-              }(zC);
-              return [CC, ...ZC]
+              }(Fk);
+              return [kk, ...Ik]
             }
-            return [zC]
+            return [Fk]
           }))],
-          cC = [{
+          Ck = [{
             title: "Get started",
             pageIds: ["welcome", "readme", "snippets", "changelog"]
           }, {
             title: "How-Tos",
-            pageIds: ["howTo", ...XC.filter((CC => void 0 !== CC.sourceAnchor)).map((CC => CC.id))]
+            pageIds: ["howTo", ...Uk.filter((kk => void 0 !== kk.sourceAnchor)).map((kk => kk.id))]
           }, {
             title: "Reference",
             pageIds: ["apiReference", "callbacks", "clientOptions", "types"]
@@ -519,42 +519,42 @@ export const modules = {
             pageIds: ["particles", "sounds", "icons", "skins", "blockNames", "itemNames"]
           }];
 
-        function uC(CC) {
-          return XC.find((zC => zC.id === CC))
+        function Nk(kk) {
+          return Uk.find((Fk => Fk.id === kk))
         }
-        const rC = new Map;
+        const ck = new Map;
 
-        function sC(CC) {
-          let zC = rC.get(CC.id);
-          return zC || (zC = (0, iC.s)(CC.markdown, "changelog" === CC.layout ? 3 : 2), rC.set(CC.id, zC)), zC
-        }
-
-        function TC(CC, zC) {
-          return sC(CC).sections.some((CC => CC.heading.anchor === zC || CC.blocks.some((CC => "heading" === CC.kind && CC.anchor === zC))))
+        function Wk(kk) {
+          let Fk = ck.get(kk.id);
+          return Fk || (Fk = (0, zk.w)(kk.markdown, "changelog" === kk.layout ? 3 : 2), ck.set(kk.id, Fk)), Fk
         }
 
-        function aC(CC) {
-          const [zC, ...ZC] = CC.replace(/^#/, "").split("-"), QC = XC.find((CC => CC.id === zC));
-          if (!QC) return null;
-          const wC = ZC.length > 0 ? (0, iC.p)(ZC.join("-")) : "";
-          for (const nC of null !== (bC = QC.childPageIds) && void 0 !== bC ? bC : []) {
-            var bC;
-            const CC = uC(nC);
-            if (CC.sourceAnchor === wC) return {
-              page: CC,
+        function fk(kk, Fk) {
+          return Wk(kk).sections.some((kk => kk.heading.anchor === Fk || kk.blocks.some((kk => "heading" === kk.kind && kk.anchor === Fk))))
+        }
+
+        function Bk(kk) {
+          const [Fk, ...Ik] = kk.replace(/^#/, "").split("-"), Xk = Uk.find((kk => kk.id === Fk));
+          if (!Xk) return null;
+          const Tk = Ik.length > 0 ? (0, zk.t)(Ik.join("-")) : "";
+          for (const yk of null !== (ik = Xk.childPageIds) && void 0 !== ik ? ik : []) {
+            var ik;
+            const kk = Nk(yk);
+            if (kk.sourceAnchor === Tk) return {
+              page: kk,
               anchor: ""
             };
-            if (TC(CC, wC)) return {
-              page: CC,
-              anchor: wC
+            if (fk(kk, Tk)) return {
+              page: kk,
+              anchor: Tk
             }
           }
           return {
-            page: QC,
-            anchor: wC
+            page: Xk,
+            anchor: Tk
           }
         }
-        const tC = {
+        const dk = {
           Examples: {
             pageId: "snippets",
             anchor: ""
@@ -569,182 +569,182 @@ export const modules = {
           }
         };
 
-        function DC(CC, zC) {
-          let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-          const QC = zC.slug ? `${CC}/${zC.slug}` : CC;
-          return ZC ? `${QC}#${ZC}` : QC
+        function Yk(kk, Fk) {
+          let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+          const Xk = Fk.slug ? `${kk}/${Fk.slug}` : kk;
+          return Ik ? `${Xk}#${Ik}` : Xk
         }
-        var jC = ZC(4696);
-        const yC = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
-          LC = new Set(["GameApi", "Console", "_TypeOf"]),
-          UC = 4;
+        var Ak = Ik(4761);
+        const gk = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
+          mk = new Set(["GameApi", "Console", "_TypeOf"]),
+          hk = 4;
 
-        function BC(CC) {
-          let zC = CC.length;
-          for (; zC > 0 && "" === CC[zC - 1].trim();) zC--;
-          return CC.slice(0, zC)
+        function rk(kk) {
+          let Fk = kk.length;
+          for (; Fk > 0 && "" === kk[Fk - 1].trim();) Fk--;
+          return kk.slice(0, Fk)
         }
 
-        function OC(CC) {
-          var zC;
-          const ZC = BC(CC);
-          if (null === (zC = ZC.at(-1)) || void 0 === zC || !zC.trimEnd().endsWith("*/")) return {
-            lines: ZC,
+        function Dk(kk) {
+          var Fk;
+          const Ik = rk(kk);
+          if (null === (Fk = Ik.at(-1)) || void 0 === Fk || !Fk.trimEnd().endsWith("*/")) return {
+            lines: Ik,
             doc: ""
           };
-          const QC = ZC.findLastIndex((CC => CC.startsWith("/**")));
-          return -1 === QC ? {
-            lines: ZC,
+          const Xk = Ik.findLastIndex((kk => kk.startsWith("/**")));
+          return -1 === Xk ? {
+            lines: Ik,
             doc: ""
           } : {
-            lines: BC(ZC.slice(0, QC)),
-            doc: ZC.slice(QC).join("\n")
+            lines: rk(Ik.slice(0, Xk)),
+            doc: Ik.slice(Xk).join("\n")
           }
         }
 
-        function kC(CC) {
-          var zC;
-          const ZC = CC.split("\n"),
-            QC = ZC.flatMap(((CC, zC) => yC.test(CC) ? [zC] : []));
-          let wC = OC(ZC.slice(0, null !== (zC = QC[0]) && void 0 !== zC ? zC : ZC.length)).doc;
-          return QC.map(((CC, zC) => {
-            var bC;
-            const nC = OC(ZC.slice(CC, null !== (bC = QC[zC + 1]) && void 0 !== bC ? bC : ZC.length)),
-              fC = {
-                name: ZC[CC].match(yC)[1],
-                doc: wC,
-                lines: nC.lines
+        function Mk(kk) {
+          var Fk;
+          const Ik = kk.split("\n"),
+            Xk = Ik.flatMap(((kk, Fk) => gk.test(kk) ? [Fk] : []));
+          let Tk = Dk(Ik.slice(0, null !== (Fk = Xk[0]) && void 0 !== Fk ? Fk : Ik.length)).doc;
+          return Xk.map(((kk, Fk) => {
+            var ik;
+            const yk = Dk(Ik.slice(kk, null !== (ik = Xk[Fk + 1]) && void 0 !== ik ? ik : Ik.length)),
+              lk = {
+                name: Ik[kk].match(gk)[1],
+                doc: Tk,
+                lines: yk.lines
               };
-            return wC = nC.doc, fC
+            return Tk = yk.doc, lk
           }))
         }
 
-        function VC(CC) {
-          var zC;
-          const ZC = CC.match(/^readonly \[([\s\S]*)\]$/);
-          return ZC ? null !== (zC = ZC[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== zC ? zC : [] : null
+        function kF(kk) {
+          var Fk;
+          const Ik = kk.match(/^readonly \[([\s\S]*)\]$/);
+          return Ik ? null !== (Fk = Ik[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== Fk ? Fk : [] : null
         }
 
-        function Cz(CC) {
-          if (!CC.startsWith("{") || !CC.endsWith("}")) return null;
-          const zC = {
+        function FF(kk) {
+          if (!kk.startsWith("{") || !kk.endsWith("}")) return null;
+          const Fk = {
               keys: [],
               values: []
             },
-            ZC = CC => {
-              const ZC = CC.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
-              ZC && (zC.keys.push(ZC[1].startsWith('"') ? ZC[1] : `"${ZC[1]}"`), zC.values.push(ZC[2].trim()))
+            Ik = kk => {
+              const Ik = kk.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
+              Ik && (Fk.keys.push(Ik[1].startsWith('"') ? Ik[1] : `"${Ik[1]}"`), Fk.values.push(Ik[2].trim()))
             };
-          let QC = 0,
-            wC = "";
-          for (const bC of CC.slice(1, -1)) "{[(".includes(bC) ? QC++ : "}])".includes(bC) && QC--, ";" === bC && 0 === QC ? (ZC(wC), wC = "") : wC += bC;
-          return ZC(wC), zC
+          let Xk = 0,
+            Tk = "";
+          for (const ik of kk.slice(1, -1)) "{[(".includes(ik) ? Xk++ : "}])".includes(ik) && Xk--, ";" === ik && 0 === Xk ? (Ik(Tk), Tk = "") : Tk += ik;
+          return Ik(Tk), Fk
         }
 
-        function zz(CC) {
-          return CC.length > UC ? `\n\t| ${CC.join("\n\t| ")}` : CC.join(" | ")
+        function IF(kk) {
+          return kk.length > hk ? `\n\t| ${kk.join("\n\t| ")}` : kk.join(" | ")
         }
 
-        function Zz(CC, zC) {
-          const ZC = function(CC, zC) {
-            return CC.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((CC, ZC) => {
-              var QC;
-              const wC = null === (QC = zC.get(ZC)) || void 0 === QC ? void 0 : QC.object;
-              return wC ? zz(wC.values) : CC
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((CC, ZC) => {
-              var QC, wC;
-              const bC = null === (QC = zC.get(ZC)) || void 0 === QC || null === (wC = QC.object) || void 0 === wC ? void 0 : wC.values.map(VC);
-              return null !== bC && void 0 !== bC && bC.every((CC => null !== CC)) ? zz([...new Set(bC.flat())]) : CC
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((CC, ZC) => {
-              var QC;
-              const wC = null === (QC = zC.get(ZC)) || void 0 === QC ? void 0 : QC.members;
-              return wC ? zz(wC) : CC
-            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((CC, ZC) => {
-              var QC;
-              const wC = null === (QC = zC.get(ZC)) || void 0 === QC ? void 0 : QC.object;
-              return wC ? zz(wC.keys) : CC
-            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((CC, ZC) => {
-              var QC, wC;
-              return null !== (QC = null === (wC = zC.get(ZC)) || void 0 === wC ? void 0 : wC.text) && void 0 !== QC ? QC : CC
+        function XF(kk, Fk) {
+          const Ik = function(kk, Fk) {
+            return kk.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((kk, Ik) => {
+              var Xk;
+              const Tk = null === (Xk = Fk.get(Ik)) || void 0 === Xk ? void 0 : Xk.object;
+              return Tk ? IF(Tk.values) : kk
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((kk, Ik) => {
+              var Xk, Tk;
+              const ik = null === (Xk = Fk.get(Ik)) || void 0 === Xk || null === (Tk = Xk.object) || void 0 === Tk ? void 0 : Tk.values.map(kF);
+              return null !== ik && void 0 !== ik && ik.every((kk => null !== kk)) ? IF([...new Set(ik.flat())]) : kk
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((kk, Ik) => {
+              var Xk;
+              const Tk = null === (Xk = Fk.get(Ik)) || void 0 === Xk ? void 0 : Xk.members;
+              return Tk ? IF(Tk) : kk
+            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((kk, Ik) => {
+              var Xk;
+              const Tk = null === (Xk = Fk.get(Ik)) || void 0 === Xk ? void 0 : Xk.object;
+              return Tk ? IF(Tk.keys) : kk
+            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((kk, Ik) => {
+              var Xk, Tk;
+              return null !== (Xk = null === (Tk = Fk.get(Ik)) || void 0 === Tk ? void 0 : Tk.text) && void 0 !== Xk ? Xk : kk
             }))
-          }(CC.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), zC);
-          return [CC.doc, ZC].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
+          }(kk.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), Fk);
+          return [kk.doc, Ik].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
         }
 
-        function Qz(CC) {
-          const zC = kC(CC),
-            ZC = function(CC) {
-              const zC = new Map,
-                ZC = CC.find((CC => "_TypeOf" === CC.name));
-              let QC = null;
-              const wC = () => {
-                if (QC) {
-                  const CC = QC.lines.join("\n");
-                  zC.set(QC.name, {
-                    text: CC,
-                    members: VC(CC),
-                    object: Cz(CC)
+        function TF(kk) {
+          const Fk = Mk(kk),
+            Ik = function(kk) {
+              const Fk = new Map,
+                Ik = kk.find((kk => "_TypeOf" === kk.name));
+              let Xk = null;
+              const Tk = () => {
+                if (Xk) {
+                  const kk = Xk.lines.join("\n");
+                  Fk.set(Xk.name, {
+                    text: kk,
+                    members: kF(kk),
+                    object: FF(kk)
                   })
                 }
               };
-              for (const bC of ZC.lines.slice(1, -1)) {
-                const CC = bC.match(/^\t([\w$]+): (.+)$/);
-                CC ? (wC(), QC = {
-                  name: CC[1],
-                  lines: [CC[2]]
-                }) : QC && QC.lines.push(bC.replace(/^\t/, ""))
+              for (const ik of Ik.lines.slice(1, -1)) {
+                const kk = ik.match(/^\t([\w$]+): (.+)$/);
+                kk ? (Tk(), Xk = {
+                  name: kk[1],
+                  lines: [kk[2]]
+                }) : Xk && Xk.lines.push(ik.replace(/^\t/, ""))
               }
-              return wC(), zC
-            }(zC),
-            QC = new Map;
-          for (const wC of zC) LC.has(wC.name) || QC.has(wC.name) || QC.set(wC.name, Zz(wC, ZC));
-          return QC
+              return Tk(), Fk
+            }(Fk),
+            Xk = new Map;
+          for (const Tk of Fk) mk.has(Tk.name) || Xk.has(Tk.name) || Xk.set(Tk.name, XF(Tk, Ik));
+          return Xk
         }
-        let wz, bz, nz;
+        let iF, yF, lF;
 
-        function fz() {
-          return bz ??= function(CC) {
-            const zC = kC(CC).find((CC => "GameApi" === CC.name)),
-              ZC = new Map,
-              QC = zC.lines;
-            for (let bC = 0; bC < QC.length; bC++) {
-              var wC;
-              if (!QC[bC].trimStart().startsWith("/**")) continue;
-              const CC = bC;
-              for (; bC < QC.length && !QC[bC].includes("*/");) bC++;
-              const zC = null === (wC = QC[bC + 1]) || void 0 === wC ? void 0 : wC.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
-              if (!zC) continue;
-              let nC = null;
-              const fC = [];
-              let oC = "description",
-                qC = !1;
-              for (const ZC of QC.slice(CC, bC + 1).join("\n").split("\n").map((CC => CC.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
-                const CC = ZC.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
-                CC ? (nC = CC[1].trim(), oC = "deprecation") : ZC.startsWith("@") ? (oC = "otherTag", qC = !0) : "" === ZC.trim() ? qC || (oC = "description", fC.push(ZC)) : "deprecation" !== oC || /^[A-Z]/.test(ZC.trim()) ? "otherTag" !== oC && (oC = "description", fC.push(ZC)) : nC = `${nC} ${ZC.trim()}`.trim()
+        function aF() {
+          return yF ??= function(kk) {
+            const Fk = Mk(kk).find((kk => "GameApi" === kk.name)),
+              Ik = new Map,
+              Xk = Fk.lines;
+            for (let ik = 0; ik < Xk.length; ik++) {
+              var Tk;
+              if (!Xk[ik].trimStart().startsWith("/**")) continue;
+              const kk = ik;
+              for (; ik < Xk.length && !Xk[ik].includes("*/");) ik++;
+              const Fk = null === (Tk = Xk[ik + 1]) || void 0 === Tk ? void 0 : Tk.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
+              if (!Fk) continue;
+              let yk = null;
+              const lk = [];
+              let ak = "description",
+                qk = !1;
+              for (const Ik of Xk.slice(kk, ik + 1).join("\n").split("\n").map((kk => kk.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
+                const kk = Ik.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
+                kk ? (yk = kk[1].trim(), ak = "deprecation") : Ik.startsWith("@") ? (ak = "otherTag", qk = !0) : "" === Ik.trim() ? qk || (ak = "description", lk.push(Ik)) : "deprecation" !== ak || /^[A-Z]/.test(Ik.trim()) ? "otherTag" !== ak && (ak = "description", lk.push(Ik)) : yk = `${yk} ${Ik.trim()}`.trim()
               }
-              ZC.set(zC[1], {
-                deprecation: nC,
-                description: fC.join("\n").trim()
+              Ik.set(Fk[1], {
+                deprecation: yk,
+                description: lk.join("\n").trim()
               })
             }
-            return ZC
-          }(jC.default), bz
+            return Ik
+          }(Ak.default), yF
         }
 
-        function oz() {
-          if (!nz) {
-            nz = new Map;
-            for (const CC of XC) {
-              const zC = (0, iC.r)(sC(CC)).flatMap((CC => CC.blocks));
-              for (const CC of (0, iC.h)(zC))
-                if ("ts" === CC.lang || "typescript" === CC.lang)
-                  for (const [zC, ZC] of hC(CC.code)) nz.set(zC, ZC)
+        function qF() {
+          if (!lF) {
+            lF = new Map;
+            for (const kk of Uk) {
+              const Fk = (0, zk.u)(Wk(kk)).flatMap((kk => kk.blocks));
+              for (const kk of (0, zk.n)(Fk))
+                if ("ts" === kk.lang || "typescript" === kk.lang)
+                  for (const [Fk, Ik] of Ek(kk.code)) lF.set(Fk, Ik)
             }
-            for (const [CC, zC] of(wz ??= Qz(jC.default), wz)) nz.has(CC) || nz.set(CC, zC)
+            for (const [kk, Fk] of(iF ??= TF(Ak.default), iF)) lF.has(kk) || lF.set(kk, Fk)
           }
-          return nz
+          return lF
         }
-        const qz = {
+        const LF = {
           BlockName: "blockNames",
           BlockNameOrId: "blockNames",
           ItemName: "itemNames",
@@ -761,332 +761,332 @@ export const modules = {
           VehicleSetting: "vehicleSettings",
           SettableVehicleSetting: "vehicleSettings"
         };
-        let Fz;
+        let tF;
 
-        function Wz() {
-          if (!Fz) {
-            Fz = new Map;
-            for (const CC of XC)
-              if (KC(CC.layout))
-                for (const zC of sC(CC).sections) Fz.has(zC.heading.text) || Fz.set(zC.heading.text, {
-                  pageId: CC.id,
-                  anchor: zC.heading.anchor
+        function ZF() {
+          if (!tF) {
+            tF = new Map;
+            for (const kk of Uk)
+              if (Ok(kk.layout))
+                for (const Fk of Wk(kk).sections) tF.has(Fk.heading.text) || tF.set(Fk.heading.text, {
+                  pageId: kk.id,
+                  anchor: Fk.heading.anchor
                 })
           }
-          return Fz
+          return tF
         }
 
-        function Nz(CC) {
-          const zC = CC.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
-          return zC ? Wz().get(zC[1]) : void 0
+        function jF(kk) {
+          const Fk = kk.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
+          return Fk ? ZF().get(Fk[1]) : void 0
         }
-        const Mz = (0, QC.createContext)("/docs"),
-          gz = (0, QC.createContext)(null),
-          Sz = (0, QC.createContext)(!1),
-          pz = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
+        const eF = (0, Xk.createContext)("/docs"),
+          wF = (0, Xk.createContext)(null),
+          HF = (0, Xk.createContext)(!1),
+          JF = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
 
-        function Pz(CC) {
-          const zC = CC.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
-          return zC ? zC[1] : null
+        function xF(kk) {
+          const Fk = kk.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
+          return Fk ? Fk[1] : null
         }
 
-        function Gz(CC) {
+        function PF(kk) {
           let {
-            colour: zC
-          } = CC;
-          return (0, gC.jsx)("span", {
+            colour: Fk
+          } = kk;
+          return (0, ek.jsx)("span", {
             className: "DocsColourSwatch",
             style: {
-              background: zC
+              background: Fk
             },
             "aria-hidden": "true"
           })
         }
 
-        function Rz(CC) {
-          const zC = [];
-          let ZC = 0;
-          for (const QC of CC.matchAll(pz)) zC.push(CC.slice(ZC, QC.index), (0, gC.jsx)(Gz, {
-            colour: QC[0]
-          }), QC[0]), ZC = QC.index + QC[0].length;
-          return zC.push(CC.slice(ZC)), zC
+        function KF(kk) {
+          const Fk = [];
+          let Ik = 0;
+          for (const Xk of kk.matchAll(JF)) Fk.push(kk.slice(Ik, Xk.index), (0, ek.jsx)(PF, {
+            colour: Xk[0]
+          }), Xk[0]), Ik = Xk.index + Xk[0].length;
+          return Fk.push(kk.slice(Ik)), Fk
         }
 
-        function Az(CC) {
+        function QF(kk) {
           let {
-            href: zC,
-            children: ZC
-          } = CC;
-          const wC = (0, QC.useContext)(Mz);
-          if (zC.startsWith("#")) {
-            const CC = aC(zC);
-            if (CC) return (0, gC.jsx)(nC.d, {
-              to: DC(wC, CC.page, CC.anchor),
-              children: (0, gC.jsx)(Sz.Provider, {
+            href: Fk,
+            children: Ik
+          } = kk;
+          const Tk = (0, Xk.useContext)(eF);
+          if (Fk.startsWith("#")) {
+            const kk = Bk(Fk);
+            if (kk) return (0, ek.jsx)(yk.e, {
+              to: Yk(Tk, kk.page, kk.anchor),
+              children: (0, ek.jsx)(HF.Provider, {
                 value: !0,
-                children: ZC
+                children: Ik
               })
             })
           }
-          return (0, gC.jsx)("a", {
-            href: zC,
+          return (0, ek.jsx)("a", {
+            href: Fk,
             target: "_blank",
             rel: "noopener noreferrer",
-            children: (0, gC.jsx)(Sz.Provider, {
+            children: (0, ek.jsx)(HF.Provider, {
               value: !0,
-              children: ZC
+              children: Ik
             })
           })
         }
 
-        function xz(CC) {
+        function sF(kk) {
           let {
-            code: zC
-          } = CC;
-          const ZC = (0, QC.useContext)(Mz);
-          if ((0, QC.useContext)(Sz)) return (0, gC.jsx)("code", {
+            code: Fk
+          } = kk;
+          const Ik = (0, Xk.useContext)(eF);
+          if ((0, Xk.useContext)(HF)) return (0, ek.jsx)("code", {
             className: "DocsInlineCode",
-            children: zC
+            children: Fk
           });
-          if (oz().has(zC)) return (0, gC.jsx)(vz, {
-            type: zC
+          if (qF().has(Fk)) return (0, ek.jsx)(oF, {
+            type: Fk
           });
-          const wC = Nz(zC);
-          if (wC) return (0, gC.jsx)(nC.d, {
+          const Tk = jF(Fk);
+          if (Tk) return (0, ek.jsx)(yk.e, {
             className: "DocsInlineCode DocsSymbolLink",
-            to: DC(ZC, uC(wC.pageId), wC.anchor),
-            children: zC
+            to: Yk(Ik, Nk(Tk.pageId), Tk.anchor),
+            children: Fk
           });
-          const bC = Pz(zC);
-          return (0, gC.jsxs)("code", {
+          const ik = xF(Fk);
+          return (0, ek.jsxs)("code", {
             className: "DocsInlineCode",
-            children: [bC && (0, gC.jsx)(Gz, {
-              colour: bC
-            }), zC]
+            children: [ik && (0, ek.jsx)(PF, {
+              colour: ik
+            }), Fk]
           })
         }
 
-        function Jz(CC) {
+        function VF(kk) {
           let {
-            text: zC
-          } = CC;
-          const ZC = [];
-          let wC = 0;
-          for (const QC of zC.matchAll(iC.e)) {
-            QC.index > wC && ZC.push(...Rz(zC.slice(wC, QC.index)));
-            const [, CC, bC, nC, fC, oC] = QC;
-            CC ? ZC.push((0, gC.jsx)(xz, {
-              code: (0, iC.j)(CC, bC)
-            })) : nC ? ZC.push((0, gC.jsx)("strong", {
-              children: (0, gC.jsx)(Jz, {
-                text: nC
+            text: Fk
+          } = kk;
+          const Ik = [];
+          let Tk = 0;
+          for (const Xk of Fk.matchAll(zk.h)) {
+            Xk.index > Tk && Ik.push(...KF(Fk.slice(Tk, Xk.index)));
+            const [, kk, ik, yk, lk, ak] = Xk;
+            kk ? Ik.push((0, ek.jsx)(sF, {
+              code: (0, zk.p)(kk, ik)
+            })) : yk ? Ik.push((0, ek.jsx)("strong", {
+              children: (0, ek.jsx)(VF, {
+                text: yk
               })
-            })) : ZC.push((0, gC.jsx)(Az, {
-              href: oC,
-              children: (0, gC.jsx)(Jz, {
-                text: fC
+            })) : Ik.push((0, ek.jsx)(QF, {
+              href: ak,
+              children: (0, ek.jsx)(VF, {
+                text: lk
               })
-            })), wC = QC.index + QC[0].length
+            })), Tk = Xk.index + Xk[0].length
           }
-          return wC < zC.length && ZC.push(...Rz(zC.slice(wC))), (0, gC.jsx)(gC.Fragment, {
-            children: ZC.map(((CC, zC) => (0, gC.jsx)(QC.Fragment, {
-              children: CC
-            }, zC)))
+          return Tk < Fk.length && Ik.push(...KF(Fk.slice(Tk))), (0, ek.jsx)(ek.Fragment, {
+            children: Ik.map(((kk, Fk) => (0, ek.jsx)(Xk.Fragment, {
+              children: kk
+            }, Fk)))
           })
         }
-        const Iz = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
-          iz = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
+        const zF = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
+          SF = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
 
-        function vz(CC) {
+        function oF(kk) {
           let {
-            type: zC
-          } = CC;
-          const ZC = oz(),
-            wC = [];
-          for (const QC of zC.trim().matchAll(Iz)) {
-            const [CC, zC, bC, nC, fC] = QC;
-            zC ? wC.push((0, gC.jsx)("span", {
+            type: Fk
+          } = kk;
+          const Ik = qF(),
+            Tk = [];
+          for (const Xk of Fk.trim().matchAll(zF)) {
+            const [kk, Fk, ik, yk, lk] = Xk;
+            Fk ? Tk.push((0, ek.jsx)("span", {
               className: "DocsTypeString",
-              children: CC
-            })) : bC && ZC.has(bC) ? wC.push((0, gC.jsx)(dz, {
-              name: bC,
-              definition: ZC.get(bC)
-            })) : bC ? wC.push((0, gC.jsx)("span", {
-              className: iz.has(bC) ? "DocsTypeKeyword" : "DocsTypeName",
-              children: CC
-            })) : nC ? wC.push((0, gC.jsx)("span", {
+              children: kk
+            })) : ik && Ik.has(ik) ? Tk.push((0, ek.jsx)(GF, {
+              name: ik,
+              definition: Ik.get(ik)
+            })) : ik ? Tk.push((0, ek.jsx)("span", {
+              className: SF.has(ik) ? "DocsTypeKeyword" : "DocsTypeName",
+              children: kk
+            })) : yk ? Tk.push((0, ek.jsx)("span", {
               className: "DocsTypeNumber",
-              children: CC
-            })) : fC ? wC.push(" ") : wC.push((0, gC.jsx)("span", {
+              children: kk
+            })) : lk ? Tk.push(" ") : Tk.push((0, ek.jsx)("span", {
               className: "DocsTypePunctuation",
-              children: CC
+              children: kk
             }))
           }
-          return (0, gC.jsx)("code", {
+          return (0, ek.jsx)("code", {
             className: "DocsInlineCode DocsTypeText",
-            children: wC.map(((CC, zC) => (0, gC.jsx)(QC.Fragment, {
-              children: CC
-            }, zC)))
+            children: Tk.map(((kk, Fk) => (0, ek.jsx)(Xk.Fragment, {
+              children: kk
+            }, Fk)))
           })
         }
-        const ez = 480,
-          hz = 6,
-          Kz = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
-        let Yz = 0;
+        const vF = 480,
+          EF = 6,
+          OF = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
+        let nF = 0;
 
-        function dz(CC) {
+        function GF(kk) {
           let {
-            name: zC,
-            definition: ZC
-          } = CC;
-          const wC = (0, QC.useContext)(Mz),
-            bC = qz[zC],
-            fC = (0, QC.useRef)(null),
-            oC = (0, QC.useRef)(null),
-            FC = (0, QC.useRef)(null),
-            [WC, NC] = (0, QC.useState)(!1),
-            [MC, SC] = (0, QC.useState)(null),
-            PC = (0, QC.useRef)(),
-            GC = (0, QC.useContext)(gz),
-            [RC] = (0, QC.useState)((() => "DocsTypePopover-" + Yz++)),
-            AC = () => {
-              clearTimeout(PC.current), NC(!0)
+            name: Fk,
+            definition: Ik
+          } = kk;
+          const Tk = (0, Xk.useContext)(eF),
+            ik = LF[Fk],
+            lk = (0, Xk.useRef)(null),
+            ak = (0, Xk.useRef)(null),
+            Lk = (0, Xk.useRef)(null),
+            [tk, Zk] = (0, Xk.useState)(!1),
+            [jk, wk] = (0, Xk.useState)(null),
+            Jk = (0, Xk.useRef)(),
+            xk = (0, Xk.useContext)(wF),
+            [Pk] = (0, Xk.useState)((() => "DocsTypePopover-" + nF++)),
+            Kk = () => {
+              clearTimeout(Jk.current), Zk(!0)
             },
-            xC = () => {
-              clearTimeout(PC.current), PC.current = setTimeout((() => {
-                NC(!1)
+            Qk = () => {
+              clearTimeout(Jk.current), Jk.current = setTimeout((() => {
+                Zk(!1)
               }), 120)
             };
-          return (0, QC.useEffect)((() => {
-            if (!WC) return;
-            const CC = CC => {
-              if ("Escape" === CC.key) {
-                var zC, ZC;
-                if (null !== (zC = oC.current) && void 0 !== zC && zC.contains(document.activeElement)) null === (ZC = fC.current) || void 0 === ZC || ZC.focus();
-                NC(!1)
+          return (0, Xk.useEffect)((() => {
+            if (!tk) return;
+            const kk = kk => {
+              if ("Escape" === kk.key) {
+                var Fk, Ik;
+                if (null !== (Fk = ak.current) && void 0 !== Fk && Fk.contains(document.activeElement)) null === (Ik = lk.current) || void 0 === Ik || Ik.focus();
+                Zk(!1)
               }
             };
-            return document.addEventListener("keydown", CC), () => {
-              document.removeEventListener("keydown", CC)
+            return document.addEventListener("keydown", kk), () => {
+              document.removeEventListener("keydown", kk)
             }
-          }), [WC]), (0, QC.useEffect)((() => () => {
-            clearTimeout(PC.current)
-          }), []), (0, QC.useLayoutEffect)((() => {
-            if (!WC || !fC.current || !oC.current) return void SC(null);
-            const CC = fC.current.getBoundingClientRect(),
-              zC = oC.current.offsetHeight,
-              ZC = Math.min(ez, window.innerWidth - 32),
-              QC = Math.min(Math.max(16, CC.left), window.innerWidth - ZC - 16),
-              wC = CC.bottom + hz + zC < window.innerHeight;
-            SC({
-              left: QC,
-              top: wC ? CC.bottom + hz : Math.max(16, CC.top - hz - zC)
+          }), [tk]), (0, Xk.useEffect)((() => () => {
+            clearTimeout(Jk.current)
+          }), []), (0, Xk.useLayoutEffect)((() => {
+            if (!tk || !lk.current || !ak.current) return void wk(null);
+            const kk = lk.current.getBoundingClientRect(),
+              Fk = ak.current.offsetHeight,
+              Ik = Math.min(vF, window.innerWidth - 32),
+              Xk = Math.min(Math.max(16, kk.left), window.innerWidth - Ik - 16),
+              Tk = kk.bottom + EF + Fk < window.innerHeight;
+            wk({
+              left: Xk,
+              top: Tk ? kk.bottom + EF : Math.max(16, kk.top - EF - Fk)
             })
-          }), [WC]), (0, gC.jsxs)(gC.Fragment, {
-            children: [(0, gC.jsx)("button", {
+          }), [tk]), (0, ek.jsxs)(ek.Fragment, {
+            children: [(0, ek.jsx)("button", {
               type: "button",
-              ref: fC,
+              ref: lk,
               className: "DocsTypeLink",
-              "aria-expanded": WC,
-              "aria-describedby": WC ? RC : void 0,
-              onMouseEnter: AC,
-              onMouseLeave: xC,
-              onFocus: AC,
-              onBlur: xC,
-              onKeyDown: CC => {
-                "Tab" === CC.key && !CC.shiftKey && FC.current && (CC.preventDefault(), FC.current.focus())
+              "aria-expanded": tk,
+              "aria-describedby": tk ? Pk : void 0,
+              onMouseEnter: Kk,
+              onMouseLeave: Qk,
+              onFocus: Kk,
+              onBlur: Qk,
+              onKeyDown: kk => {
+                "Tab" === kk.key && !kk.shiftKey && Lk.current && (kk.preventDefault(), Lk.current.focus())
               },
-              onClick: AC,
-              children: zC
-            }), WC && (0, qC.createPortal)((0, gC.jsxs)("span", {
-              ref: oC,
-              id: RC,
+              onClick: Kk,
+              children: Fk
+            }), tk && (0, qk.createPortal)((0, ek.jsxs)("span", {
+              ref: ak,
+              id: Pk,
               className: "DocsTypePopover",
               role: "tooltip",
-              style: MC ? {
-                left: MC.left,
-                top: MC.top,
-                maxWidth: ez
+              style: jk ? {
+                left: jk.left,
+                top: jk.top,
+                maxWidth: vF
               } : {
                 visibility: "hidden"
               },
-              onMouseEnter: AC,
-              onMouseLeave: xC,
-              onFocus: AC,
-              onBlur: xC,
-              children: [(0, gC.jsxs)("span", {
+              onMouseEnter: Kk,
+              onMouseLeave: Qk,
+              onFocus: Kk,
+              onBlur: Qk,
+              children: [(0, ek.jsxs)("span", {
                 className: "DocsTypePopoverHeader",
-                children: [(0, gC.jsx)("span", {
+                children: [(0, ek.jsx)("span", {
                   className: "DocsTypePopoverTitle",
-                  children: zC
-                }), bC && (0, gC.jsxs)(nC.d, {
-                  ref: FC,
+                  children: Fk
+                }), ik && (0, ek.jsxs)(yk.e, {
+                  ref: Lk,
                   className: "DocsTypePopoverLink",
-                  to: DC(wC, uC(bC)),
+                  to: Yk(Tk, Nk(ik)),
                   onClick: () => {
-                    NC(!1)
+                    Zk(!1)
                   },
-                  onKeyDown: CC => {
-                    if ("Tab" === CC.key) {
-                      var zC;
-                      if (CC.preventDefault(), CC.shiftKey || !fC.current || ! function(CC, zC) {
-                          const ZC = [...document.querySelectorAll(Kz)],
-                            QC = ZC.slice(ZC.indexOf(CC) + 1).find((CC => CC.getClientRects().length > 0 && !(null !== zC && void 0 !== zC && zC.contains(CC))));
-                          return null === QC || void 0 === QC || QC.focus(), void 0 !== QC
-                        }(fC.current, oC.current)) null === (zC = fC.current) || void 0 === zC || zC.focus();
-                      CC.shiftKey || NC(!1)
+                  onKeyDown: kk => {
+                    if ("Tab" === kk.key) {
+                      var Fk;
+                      if (kk.preventDefault(), kk.shiftKey || !lk.current || ! function(kk, Fk) {
+                          const Ik = [...document.querySelectorAll(OF)],
+                            Xk = Ik.slice(Ik.indexOf(kk) + 1).find((kk => kk.getClientRects().length > 0 && !(null !== Fk && void 0 !== Fk && Fk.contains(kk))));
+                          return null === Xk || void 0 === Xk || Xk.focus(), void 0 !== Xk
+                        }(lk.current, ak.current)) null === (Fk = lk.current) || void 0 === Fk || Fk.focus();
+                      kk.shiftKey || Zk(!1)
                     }
                   },
-                  children: [uC(bC).title, (0, gC.jsx)(pC, {
+                  children: [Nk(ik).title, (0, ek.jsx)(Hk, {
                     name: "arrow-right"
                   })]
                 })]
-              }), (0, gC.jsx)(IC, {
+              }), (0, ek.jsx)(Vk, {
                 lang: "ts",
-                code: ZC,
+                code: Ik,
                 compact: !0
               })]
-            }), null !== GC && void 0 !== GC ? GC : document.body)]
+            }), null !== xk && void 0 !== xk ? xk : document.body)]
           })
         }
-        var mz = ZC(184),
-          Hz = ZC(4698),
-          Ez = ZC(4701),
-          lz = ZC(4706);
-        const Xz = {
+        var pF = Ik(187),
+          uF = Ik(4767),
+          bF = Ik(4775),
+          RF = Ik(4784);
+        const UF = {
           progressBar: {
-            iZ: 30,
-            vZ: .075,
-            eZ: 5,
-            hZ: !1,
+            SI: 30,
+            oI: .075,
+            vI: 5,
+            EI: !1,
             description: [{
               str: "Click repeatedly to complete!"
             }],
-            dZ: "fa-solid fa-computer-mouse",
+            GI: "fa-solid fa-computer-mouse",
             scale: 3,
             rotation: 15
           },
           timedClick: {
-            HZ: 3e3,
+            uI: 3e3,
             icon: "fa-solid fa-computer-mouse",
             label: [{
               str: "Click to complete the QTE!"
             }],
-            EZ: !0,
+            bI: !0,
             scale: 3,
             rotation: 15,
-            lZ: !1
+            RI: !1
           },
           gravityBar: {
-            iZ: 30,
-            cZ: .25,
-            uZ: 3,
-            rZ: .8,
+            SI: 30,
+            CI: .25,
+            NI: 3,
+            cI: .8,
             gravity: 1,
-            sZ: 1.5,
-            TZ: 8,
-            aZ: 4,
-            hZ: !1,
+            WI: 1.5,
+            fI: 8,
+            BI: 4,
+            EI: !1,
             description: [{
               str: "Hold to catch!"
             }],
@@ -1094,7 +1094,7 @@ export const modules = {
           },
           precisionBar: {
             speed: .5,
-            DZ: .15,
+            YI: .15,
             label: [{
               str: "Click when the marker is within the green zone."
             }],
@@ -1103,30 +1103,30 @@ export const modules = {
             rotation: 0
           },
           rhythmClick: {
-            yZ: 5,
-            LZ: 1200,
-            UZ: .15,
-            BZ: 3,
+            gI: 5,
+            mI: 1200,
+            hI: .15,
+            rI: 3,
             label: [{
               str: "Click when the circles align!"
             }],
             icon: ""
           }
         };
-        var cz = ZC(310),
-          uz = ZC(1894);
+        var CF = Ik(318),
+          NF = Ik(1926);
 
-        function rz(CC) {
-          return CC.startsWith("fa-")
+        function cF(kk) {
+          return kk.startsWith("fa-")
         }
-        const sz = {
+        const WF = {
             text: "Text",
             icon: "Icon",
             progressBar: "Progress bar",
             keyBinding: "Key binding",
             other: "Other"
           },
-          Tz = {
+          fF = {
             text: "Text",
             icon: {
               icon: "Pixelated Heart"
@@ -1141,10 +1141,10 @@ export const modules = {
             }
           };
 
-        function az(CC) {
-          return "string" === typeof CC ? "text" : "entityName" in CC || "translationKey" in CC ? "other" : (0, cz.ub)(CC) ? "progressBar" : (0, cz.tb)(CC) ? "keyBinding" : "icon" in CC ? "icon" : "str" in CC && "string" === typeof CC.str ? "text" : "other"
+        function BF(kk) {
+          return "string" === typeof kk ? "text" : "entityName" in kk || "translationKey" in kk ? "other" : (0, CF.Db)(kk) ? "progressBar" : (0, CF.Ab)(kk) ? "keyBinding" : "icon" in kk ? "icon" : "str" in kk && "string" === typeof kk.str ? "text" : "other"
         }
-        const tz = [{
+        const dF = [{
             path: ["style", "color"],
             label: "Colour",
             field: {
@@ -1182,7 +1182,7 @@ export const modules = {
             },
             defaultText: "1"
           }],
-          Dz = {
+          YF = {
             text: [{
               path: ["str"],
               label: "Text",
@@ -1191,7 +1191,7 @@ export const modules = {
                 multiline: !0
               },
               isRequired: !0
-            }, ...tz],
+            }, ...dF],
             icon: [{
               path: ["icon"],
               label: "Icon",
@@ -1262,360 +1262,360 @@ export const modules = {
               label: "Action",
               field: {
                 kind: "choice",
-                options: uz.o
+                options: NF.l
               },
               isRequired: !0
-            }, ...tz],
+            }, ...dF],
             other: []
           };
 
-        function jz(CC) {
-          return "string" === typeof CC ? {
-            str: CC
-          } : CC
+        function AF(kk) {
+          return "string" === typeof kk ? {
+            str: kk
+          } : kk
         }
 
-        function yz(CC, zC) {
-          let ZC = jz(CC);
-          for (const QC of zC) ZC = ZC && "object" === typeof ZC ? ZC[QC] : void 0;
-          return ZC
+        function gF(kk, Fk) {
+          let Ik = AF(kk);
+          for (const Xk of Fk) Ik = Ik && "object" === typeof Ik ? Ik[Xk] : void 0;
+          return Ik
         }
 
-        function Lz(CC, zC, ZC) {
-          const QC = (CC, wC) => {
-            var bC;
-            const nC = zC[wC],
-              fC = {
-                ...CC
+        function mF(kk, Fk, Ik) {
+          const Xk = (kk, Tk) => {
+            var ik;
+            const yk = Fk[Tk],
+              lk = {
+                ...kk
               };
-            if (wC === zC.length - 1) return void 0 === ZC ? delete fC[nC] : fC[nC] = ZC, fC;
-            const oC = QC(null !== (bC = CC[nC]) && void 0 !== bC ? bC : {}, wC + 1);
-            return 0 === Object.keys(oC).length ? delete fC[nC] : fC[nC] = oC, fC
+            if (Tk === Fk.length - 1) return void 0 === Ik ? delete lk[yk] : lk[yk] = Ik, lk;
+            const ak = Xk(null !== (ik = kk[yk]) && void 0 !== ik ? ik : {}, Tk + 1);
+            return 0 === Object.keys(ak).length ? delete lk[yk] : lk[yk] = ak, lk
           };
-          return function(CC) {
-            const zC = Object.keys(CC);
-            return "string" === typeof CC.str && 1 === zC.length ? CC.str : CC
-          }(QC(jz(CC), 0))
+          return function(kk) {
+            const Fk = Object.keys(kk);
+            return "string" === typeof kk.str && 1 === Fk.length ? kk.str : kk
+          }(Xk(AF(kk), 0))
         }
 
-        function Uz(CC, zC) {
-          const ZC = az(CC),
-            QC = Dz[ZC].find((CC => CC.path.join(".") === zC.join("."))),
-            wC = null !== QC && void 0 !== QC && QC.isRequired && "other" !== ZC ? yz(Tz[ZC], zC) : void 0;
-          return Lz(CC, zC, wC)
+        function hF(kk, Fk) {
+          const Ik = BF(kk),
+            Xk = YF[Ik].find((kk => kk.path.join(".") === Fk.join("."))),
+            Tk = null !== Xk && void 0 !== Xk && Xk.isRequired && "other" !== Ik ? gF(fF[Ik], Fk) : void 0;
+          return mF(kk, Fk, Tk)
         }
 
-        function Bz(CC) {
-          switch (az(CC)) {
+        function rF(kk) {
+          switch (BF(kk)) {
             case "text":
-              return String(yz(CC, ["str"]));
+              return String(gF(kk, ["str"]));
             case "icon":
-              return String(yz(CC, ["icon"]));
+              return String(gF(kk, ["icon"]));
             case "progressBar":
-              return `${Math.round(100*Number(yz(CC,["progress"])))}%`;
+              return `${Math.round(100*Number(gF(kk,["progress"])))}%`;
             case "keyBinding":
-              return String(yz(CC, ["action"]));
+              return String(gF(kk, ["action"]));
             case "other":
-              return JSON.stringify(CC)
+              return JSON.stringify(kk)
           }
         }
-        const Oz = /^[A-Za-z_$][\w$]*$/;
+        const DF = /^[A-Za-z_$][\w$]*$/;
 
-        function kz(CC) {
-          if (Array.isArray(CC)) return `[${CC.map(kz).join(", ")}]`;
-          if (CC && "object" === typeof CC) {
-            const zC = Object.entries(CC).map((CC => {
-              let [zC, ZC] = CC;
-              return `${Oz.test(zC)?zC:JSON.stringify(zC)}: ${kz(ZC)}`
+        function MF(kk) {
+          if (Array.isArray(kk)) return `[${kk.map(MF).join(", ")}]`;
+          if (kk && "object" === typeof kk) {
+            const Fk = Object.entries(kk).map((kk => {
+              let [Fk, Ik] = kk;
+              return `${DF.test(Fk)?Fk:JSON.stringify(Fk)}: ${MF(Ik)}`
             }));
-            return 0 === zC.length ? "{}" : `{ ${zC.join(", ")} }`
+            return 0 === Fk.length ? "{}" : `{ ${Fk.join(", ")} }`
           }
-          return JSON.stringify(CC)
+          return JSON.stringify(kk)
         }
 
-        function Vz(CC) {
-          const zC = CC.map(kz),
-            ZC = `[${zC.join(", ")}]`;
-          return ZC.length <= 60 ? ZC : `[\n${zC.map((CC=>`    ${CC},`)).join("\n")}\n]`
+        function kI(kk) {
+          const Fk = kk.map(MF),
+            Ik = `[${Fk.join(", ")}]`;
+          return Ik.length <= 60 ? Ik : `[\n${Fk.map((kk=>`    ${kk},`)).join("\n")}\n]`
         }
-        const CZ = {
+        const FI = {
           "\n": "\\n",
           "\r": "\\r",
           "\t": "\\t"
         };
 
-        function zZ(CC) {
-          let zC = "";
-          for (let wC = 0; wC < CC.length; wC++) {
-            const bC = CC[wC];
-            if ("\\" === bC) {
-              var ZC;
-              const QC = null !== (ZC = CC[wC + 1]) && void 0 !== ZC ? ZC : "";
-              zC += "'" === QC ? "'" : bC + QC, wC++
-            } else if ('"' === bC) zC += '\\"';
+        function II(kk) {
+          let Fk = "";
+          for (let Tk = 0; Tk < kk.length; Tk++) {
+            const ik = kk[Tk];
+            if ("\\" === ik) {
+              var Ik;
+              const Xk = null !== (Ik = kk[Tk + 1]) && void 0 !== Ik ? Ik : "";
+              Fk += "'" === Xk ? "'" : ik + Xk, Tk++
+            } else if ('"' === ik) Fk += '\\"';
             else {
-              var QC;
-              zC += null !== (QC = CZ[bC]) && void 0 !== QC ? QC : bC
+              var Xk;
+              Fk += null !== (Xk = FI[ik]) && void 0 !== Xk ? Xk : ik
             }
           }
-          return `"${zC}"`
+          return `"${Fk}"`
         }
 
-        function ZZ(CC) {
-          if ("string" === typeof CC) return !0;
-          if (!CC || "object" !== typeof CC || Array.isArray(CC)) return !1;
-          const zC = CC;
-          return "ProgressBar" === zC.type ? "number" === typeof zC.progress : "StyledKeyBinding" === zC.type ? uz.o.includes(zC.action) : "string" === typeof zC.icon || "string" === typeof zC.str || "string" === typeof zC.entityName || "string" === typeof zC.translationKey
+        function XI(kk) {
+          if ("string" === typeof kk) return !0;
+          if (!kk || "object" !== typeof kk || Array.isArray(kk)) return !1;
+          const Fk = kk;
+          return "ProgressBar" === Fk.type ? "number" === typeof Fk.progress : "StyledKeyBinding" === Fk.type ? NF.l.includes(Fk.action) : "string" === typeof Fk.icon || "string" === typeof Fk.str || "string" === typeof Fk.entityName || "string" === typeof Fk.translationKey
         }
 
-        function QZ(CC) {
-          let zC;
+        function TI(kk) {
+          let Fk;
           try {
-            zC = function(CC) {
-              let zC = "",
-                ZC = "",
-                QC = 0;
-              const wC = () => {
-                zC += ZC.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), ZC = ""
+            Fk = function(kk) {
+              let Fk = "",
+                Ik = "",
+                Xk = 0;
+              const Tk = () => {
+                Fk += Ik.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), Ik = ""
               };
-              for (; QC < CC.length;) {
-                const bC = CC.slice(QC).search(/["'`]|\/\//);
-                if (-1 === bC) {
-                  ZC += CC.slice(QC);
+              for (; Xk < kk.length;) {
+                const ik = kk.slice(Xk).search(/["'`]|\/\//);
+                if (-1 === ik) {
+                  Ik += kk.slice(Xk);
                   break
                 }
-                ZC += CC.slice(QC, QC + bC);
-                const nC = QC + bC,
-                  fC = CC[nC];
-                if ("/" === fC) {
-                  const zC = CC.indexOf("\n", nC);
-                  QC = -1 === zC ? CC.length : zC;
+                Ik += kk.slice(Xk, Xk + ik);
+                const yk = Xk + ik,
+                  lk = kk[yk];
+                if ("/" === lk) {
+                  const Fk = kk.indexOf("\n", yk);
+                  Xk = -1 === Fk ? kk.length : Fk;
                   continue
                 }
-                if (wC(), "`" === fC) throw new Error("Use quotes rather than template strings.");
-                let oC = nC + 1;
-                for (; oC < CC.length && CC[oC] !== fC;) oC += "\\" === CC[oC] ? 2 : 1;
-                if (oC >= CC.length) throw new Error("A string is missing its closing quote.");
-                const qC = CC.slice(nC + 1, oC);
-                zC += zZ(qC), QC = oC + 1
+                if (Tk(), "`" === lk) throw new Error("Use quotes rather than template strings.");
+                let ak = yk + 1;
+                for (; ak < kk.length && kk[ak] !== lk;) ak += "\\" === kk[ak] ? 2 : 1;
+                if (ak >= kk.length) throw new Error("A string is missing its closing quote.");
+                const qk = kk.slice(yk + 1, ak);
+                Fk += II(qk), Xk = ak + 1
               }
-              return wC(), JSON.parse(zC)
-            }(CC.trim())
-          } catch (QC) {
+              return Tk(), JSON.parse(Fk)
+            }(kk.trim())
+          } catch (Xk) {
             return {
               parts: null,
-              error: QC instanceof SyntaxError ? "This isn't a valid array yet." : QC.message
+              error: Xk instanceof SyntaxError ? "This isn't a valid array yet." : Xk.message
             }
           }
-          if (!Array.isArray(zC)) return {
+          if (!Array.isArray(Fk)) return {
             parts: null,
             error: 'Styled text is an array, e.g. ["Hello ", { str: "world" }]'
           };
-          const ZC = zC.findIndex((CC => !ZZ(CC)));
-          return -1 !== ZC ? {
+          const Ik = Fk.findIndex((kk => !XI(kk)));
+          return -1 !== Ik ? {
             parts: null,
-            error: `Part ${ZC+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
+            error: `Part ${Ik+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
           } : {
-            parts: zC,
+            parts: Fk,
             error: null
           }
         }
-        const wZ = 1 / mz.f.clientTicksPerSecond,
-          bZ = 700,
-          nZ = {
+        const iI = 1 / pF.f.clientTicksPerSecond,
+          yI = 700,
+          lI = {
             type: null,
             parameters: null,
             state: null,
             isActive: !1
           },
-          fZ = {
-            progressBar: Xz.progressBar.dZ,
-            timedClick: Xz.timedClick.icon,
-            gravityBar: Xz.gravityBar.icon,
-            precisionBar: Xz.precisionBar.icon,
-            rhythmClick: Xz.rhythmClick.icon
+          aI = {
+            progressBar: UF.progressBar.GI,
+            timedClick: UF.timedClick.icon,
+            gravityBar: UF.gravityBar.icon,
+            precisionBar: UF.precisionBar.icon,
+            rhythmClick: UF.rhythmClick.icon
           };
 
-        function oZ(CC) {
+        function qI(kk) {
           let {
-            type: zC
-          } = CC;
-          const [ZC, wC] = (0, QC.useState)("ready"), [nC, fC] = (0, QC.useState)(1), [oC, qC] = (0, QC.useState)(!0), FC = (0, QC.useRef)(null), WC = (0, QC.useRef)(null), NC = (0, QC.useRef)(null), MC = (0, QC.useRef)(new Set), SC = (0, QC.useRef)(!1), PC = fZ[zC], GC = (0, QC.useMemo)((() => ({
+            type: Fk
+          } = kk;
+          const [Ik, Tk] = (0, Xk.useState)("ready"), [yk, lk] = (0, Xk.useState)(1), [ak, qk] = (0, Xk.useState)(!0), Lk = (0, Xk.useRef)(null), tk = (0, Xk.useRef)(null), Zk = (0, Xk.useRef)(null), jk = (0, Xk.useRef)(new Set), wk = (0, Xk.useRef)(!1), Jk = aI[Fk], xk = (0, Xk.useMemo)((() => ({
             getState: () => {
-              var CC, zC;
-              return null !== (CC = null === (zC = NC.current) || void 0 === zC ? void 0 : zC.getState()) && void 0 !== CC ? CC : nZ
+              var kk, Fk;
+              return null !== (kk = null === (Fk = Zk.current) || void 0 === Fk ? void 0 : Fk.getState()) && void 0 !== kk ? kk : lI
             },
-            onFrame: CC => (MC.current.add(CC), () => {
-              MC.current.delete(CC)
+            onFrame: kk => (jk.current.add(kk), () => {
+              jk.current.delete(kk)
             })
           })), []);
-          (0, QC.useEffect)((() => {
-            const CC = FC.current,
-              zC = WC.current;
-            if (!CC || !zC) return;
-            const ZC = new ResizeObserver((() => {
-              fC(CC.clientWidth / Math.max(1, zC.offsetWidth))
+          (0, Xk.useEffect)((() => {
+            const kk = Lk.current,
+              Fk = tk.current;
+            if (!kk || !Fk) return;
+            const Ik = new ResizeObserver((() => {
+              lk(kk.clientWidth / Math.max(1, Fk.offsetWidth))
             }));
-            return ZC.observe(CC), () => {
-              ZC.disconnect()
+            return Ik.observe(kk), () => {
+              Ik.disconnect()
             }
-          }), []), (0, QC.useEffect)((() => {
-            var CC;
-            if ("playing" !== ZC) return;
-            let QC = !1;
-            const bC = new lz.f[zC](Xz[zC], (CC => {
-              QC = !0, qC(!1), wC(CC ? "succeeded" : "failed")
+          }), []), (0, Xk.useEffect)((() => {
+            var kk;
+            if ("playing" !== Ik) return;
+            let Xk = !1;
+            const ik = new RF.c[Fk](UF[Fk], (kk => {
+              Xk = !0, qk(!1), Tk(kk ? "succeeded" : "failed")
             }), (() => {}));
-            NC.current = bC;
-            let nC = 0,
-              fC = performance.now(),
-              oC = requestAnimationFrame((function CC(zC) {
-                for (nC += Math.min(.25, (zC - fC) / 1e3), fC = zC; nC >= wZ && !QC;) nC -= wZ, bC.handleTick(wZ);
-                for (const ZC of MC.current) ZC();
-                QC || (oC = requestAnimationFrame(CC))
+            Zk.current = ik;
+            let yk = 0,
+              lk = performance.now(),
+              ak = requestAnimationFrame((function kk(Fk) {
+                for (yk += Math.min(.25, (Fk - lk) / 1e3), lk = Fk; yk >= iI && !Xk;) yk -= iI, ik.handleTick(iI);
+                for (const Ik of jk.current) Ik();
+                Xk || (ak = requestAnimationFrame(kk))
               }));
-            return null === (CC = FC.current) || void 0 === CC || CC.focus({
+            return null === (kk = Lk.current) || void 0 === kk || kk.focus({
               preventScroll: !0
             }), () => {
-              cancelAnimationFrame(oC), bC.tearDown(), NC.current = null, SC.current = !1
+              cancelAnimationFrame(ak), ik.tearDown(), Zk.current = null, wk.current = !1
             }
-          }), [ZC, zC]), (0, QC.useEffect)((() => {
-            if (oC) return;
-            const CC = setTimeout((() => {
-              qC(!0)
-            }), bZ);
+          }), [Ik, Fk]), (0, Xk.useEffect)((() => {
+            if (ak) return;
+            const kk = setTimeout((() => {
+              qk(!0)
+            }), yI);
             return () => {
-              clearTimeout(CC)
+              clearTimeout(kk)
             }
-          }), [oC]);
-          const RC = CC => {
-            var zC;
-            "playing" === ZC && SC.current !== CC && (SC.current = CC, null === (zC = NC.current) || void 0 === zC || zC.handleMouseInput(CC))
+          }), [ak]);
+          const Pk = kk => {
+            var Fk;
+            "playing" === Ik && wk.current !== kk && (wk.current = kk, null === (Fk = Zk.current) || void 0 === Fk || Fk.handleMouseInput(kk))
           };
-          return (0, gC.jsxs)("div", {
+          return (0, ek.jsxs)("div", {
             className: "DocsQteDemo",
-            children: [(0, gC.jsxs)("div", {
-              ref: FC,
-              className: bC()("DocsQteStage", {
-                Playing: "playing" === ZC
+            children: [(0, ek.jsxs)("div", {
+              ref: Lk,
+              className: ik()("DocsQteStage", {
+                Playing: "playing" === Ik
               }),
-              tabIndex: "playing" === ZC ? 0 : -1,
-              role: "playing" === ZC ? "button" : void 0,
-              "aria-label": "playing" === ZC ? `${zC} quick time event: click or press Space` : void 0,
-              onPointerDown: CC => {
-                0 === CC.button && RC(!0)
+              tabIndex: "playing" === Ik ? 0 : -1,
+              role: "playing" === Ik ? "button" : void 0,
+              "aria-label": "playing" === Ik ? `${Fk} quick time event: click or press Space` : void 0,
+              onPointerDown: kk => {
+                0 === kk.button && Pk(!0)
               },
               onPointerUp: () => {
-                RC(!1)
+                Pk(!1)
               },
               onPointerLeave: () => {
-                RC(!1)
+                Pk(!1)
               },
               onPointerCancel: () => {
-                RC(!1)
+                Pk(!1)
               },
-              onKeyDown: CC => {
-                "playing" !== ZC || " " !== CC.key && "Enter" !== CC.key || (CC.preventDefault(), RC(!0))
+              onKeyDown: kk => {
+                "playing" !== Ik || " " !== kk.key && "Enter" !== kk.key || (kk.preventDefault(), Pk(!0))
               },
-              onKeyUp: CC => {
-                "playing" !== ZC || " " !== CC.key && "Enter" !== CC.key || RC(!1)
+              onKeyUp: kk => {
+                "playing" !== Ik || " " !== kk.key && "Enter" !== kk.key || Pk(!1)
               },
-              children: [(0, gC.jsx)("div", {
-                ref: WC,
+              children: [(0, ek.jsx)("div", {
+                ref: tk,
                 className: "DocsQteScreen",
                 style: {
-                  transform: `scale(${nC})`
+                  transform: `scale(${yk})`
                 },
-                children: "playing" === ZC && (0, gC.jsx)(Ez.b.Provider, {
-                  value: GC,
-                  children: (0, gC.jsx)(Hz.d, {
+                children: "playing" === Ik && (0, ek.jsx)(bF.d.Provider, {
+                  value: xk,
+                  children: (0, ek.jsx)(uF.b, {
                     qte: {
-                      type: zC,
-                      parameters: Xz[zC]
+                      type: Fk,
+                      parameters: UF[Fk]
                     }
                   })
                 })
-              }), "playing" !== ZC && (0, gC.jsxs)("div", {
+              }), "playing" !== Ik && (0, ek.jsxs)("div", {
                 className: "DocsQteOverlay",
-                children: ["ready" !== ZC && (0, gC.jsxs)("div", {
-                  className: bC()("DocsQteResult", "succeeded" === ZC ? "Succeeded" : "Failed"),
-                  children: [(0, gC.jsx)(pC, {
-                    name: "succeeded" === ZC ? "check" : "cross",
+                children: ["ready" !== Ik && (0, ek.jsxs)("div", {
+                  className: ik()("DocsQteResult", "succeeded" === Ik ? "Succeeded" : "Failed"),
+                  children: [(0, ek.jsx)(Hk, {
+                    name: "succeeded" === Ik ? "check" : "cross",
                     isTinted: !0
-                  }), (0, gC.jsx)("span", {
-                    children: "succeeded" === ZC ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
+                  }), (0, ek.jsx)("span", {
+                    children: "succeeded" === Ik ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
                   })]
-                }), (0, gC.jsxs)("button", {
+                }), (0, ek.jsxs)("button", {
                   type: "button",
                   className: "DocsQtePlay",
-                  disabled: !oC,
+                  disabled: !ak,
                   onClick: () => {
-                    wC("playing")
+                    Tk("playing")
                   },
-                  children: [(0, gC.jsx)(pC, {
-                    name: "ready" === ZC ? "play" : "replay"
-                  }), (0, gC.jsx)("span", {
-                    children: "ready" === ZC ? `Try ${zC}` : "Play again"
+                  children: [(0, ek.jsx)(Hk, {
+                    name: "ready" === Ik ? "play" : "replay"
+                  }), (0, ek.jsx)("span", {
+                    children: "ready" === Ik ? `Try ${Fk}` : "Play again"
                   })]
                 })]
               })]
-            }), PC && !rz(PC) && (0, gC.jsxs)("p", {
+            }), Jk && !cF(Jk) && (0, ek.jsxs)("p", {
               className: "DocsQteCaption",
-              children: ["The ", (0, gC.jsx)("code", {
-                children: PC
+              children: ["The ", (0, ek.jsx)("code", {
+                children: Jk
               }), " icon is a Bloxd item, so it shows in game only."]
             })]
           })
         }
 
-        function qZ(CC) {
+        function LI(kk) {
           let {
-            level: zC,
-            text: ZC,
-            anchor: QC,
-            className: wC
-          } = CC;
-          const nC = `h${Math.min(zC,6)}`;
-          return (0, gC.jsxs)(nC, {
-                id: QC,
-                className: bC()("DocsHeading", wC),
-                children: [(0, gC.jsx)(Jz, {
-                      text: ZC
-                    }), (0, gC.jsx)("a", {
+            level: Fk,
+            text: Ik,
+            anchor: Xk,
+            className: Tk
+          } = kk;
+          const yk = `h${Math.min(Fk,6)}`;
+          return (0, ek.jsxs)(yk, {
+                id: Xk,
+                className: ik()("DocsHeading", Tk),
+                children: [(0, ek.jsx)(VF, {
+                      text: Ik
+                    }), (0, ek.jsx)("a", {
                         className: "DocsHeadingAnchor",
-                        href: `#${QC}`,
-                        "aria-label": `Link to ${ZC.replace(/`/g,"")}`,children:"#"})]})}function FZ(CC){let{items:zC,ordered:ZC}=CC;const QC=ZC?"ol":"ul";return(0,gC.jsx)(QC,{className:"DocsList",children:zC.map(((CC,zC)=>(0,gC.jsxs)("li",{children:[(0,gC.jsx)(Jz,{text:CC.text}),CC.children.length>0&&(0,gC.jsx)(FZ,{items:CC.children,ordered:ZC})]},zC)))})}function WZ(CC){const zC=CC[0],ZC="paragraph"===(null===zC||void 0===zC?void 0:zC.kind)?zC.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(ZC)?"warning":/^\*\*(tip|prefer)/.test(ZC)?"tip":"note"}function NZ(CC){let{block:zC}=CC;switch(zC.kind){case"heading":return(0,gC.jsx)(qZ,{level:zC.level,text:zC.text,anchor:zC.anchor});case"paragraph":return(0,gC.jsx)("p",{children:(0,gC.jsx)(Jz,{text:zC.text})});case"code":{const CC="ts"===zC.lang?function(CC){const zC=CC.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return zC&&Object.hasOwn(Xz,zC[1])?zC[1]:null}(zC.code):null;return(0,gC.jsxs)(gC.Fragment,{children:[(0,gC.jsx)(IC,{code:zC.code,lang:zC.lang}),CC&&(0,gC.jsx)(oZ,{type:CC})]})}case"table":return(0,gC.jsx)("div",{className:"DocsTableScroll",children:(0,gC.jsxs)("table",{className:"DocsTable",children:[(0,gC.jsx)("thead",{children:(0,gC.jsx)("tr",{children:zC.header.map(((CC,zC)=>(0,gC.jsx)("th",{children:(0,gC.jsx)(Jz,{text:CC})},zC)))})}),(0,gC.jsx)("tbody",{children:zC.rows.map(((CC,zC)=>(0,gC.jsx)("tr",{children:CC.map(((CC,zC)=>(0,gC.jsx)("td",{children:(0,gC.jsx)(Jz,{text:CC})},zC)))},zC)))})]})});case"list":return(0,gC.jsx)(FZ,{items:zC.items,ordered:zC.ordered});case"quote":return(0,gC.jsx)("aside",{className:bC()("DocsCallout",WZ(zC.blocks)),children:(0,gC.jsx)(MZ,{blocks:zC.blocks})});case"rule":return(0,gC.jsx)("hr",{className:"DocsRule"})}}function MZ(CC){let{blocks:zC}=CC;return(0,gC.jsx)(gC.Fragment,{children:zC.map(((CC,zC)=>(0,gC.jsx)(NZ,{block:CC},zC)))})}var gZ=ZC(4688),SZ=ZC(4694);function pZ(CC){return"blocks"===CC||"items"===CC}const PZ=new Map;function GZ(CC){let zC=PZ.get(CC);return zC||(zC=function(CC){const zC={entries:[],legend:[],notes:[],examples:[]};let ZC=!1;for(const bC of CC.split(/\r?\n/).slice(1)){if(bC.startsWith("#")){const CC=bC.replace(/^# ?/,""),QC=CC.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);QC?zC.legend.push({code:QC[1],meaning:QC[2],usage:QC[3].trim()}):/^Examples:/.test(CC.trim())?ZC=!0:ZC&&CC.trim()?zC.examples.push(CC.trim()):CC.trim()&&!/^\s/.test(CC)&&zC.notes.push(CC.trim());continue}const CC=bC.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var QC,wC;CC&&zC.entries.push({name:CC[1],variants:null!==(QC=null===(wC=CC[2])||void 0===wC?void 0:wC.split(","))&&void 0!==QC?QC:[]})}return zC}("blocks"===CC?gZ:SZ),PZ.set(CC,zC)),zC}function RZ(CC){let{className:zC,value:ZC,placeholder:QC,label:wC,onChange:bC,count:nC,children:fC}=CC;return(0,gC.jsxs)("div",{className:zC,children:[(0,gC.jsx)(pC,{name:"magnifying-glass"}),(0,gC.jsx)("input",{type:"search",value:ZC,placeholder:QC,"aria-label":wC,onChange:CC=>{bC(CC.target.value)}}),fC,nC&&(0,gC.jsxs)("span",{className:"DocsFilterCount",children:[nC.visible," of ",nC.total]})]})}var AZ=ZC(1013);function xZ(CC){const zC=CC.trim().match(/^(` {
+                        href: `#${Xk}`,
+                        "aria-label": `Link to ${Ik.replace(/`/g,"")}`,children:"#"})]})}function tI(kk){let{items:Fk,ordered:Ik}=kk;const Xk=Ik?"ol":"ul";return(0,ek.jsx)(Xk,{className:"DocsList",children:Fk.map(((kk,Fk)=>(0,ek.jsxs)("li",{children:[(0,ek.jsx)(VF,{text:kk.text}),kk.children.length>0&&(0,ek.jsx)(tI,{items:kk.children,ordered:Ik})]},Fk)))})}function ZI(kk){const Fk=kk[0],Ik="paragraph"===(null===Fk||void 0===Fk?void 0:Fk.kind)?Fk.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(Ik)?"warning":/^\*\*(tip|prefer)/.test(Ik)?"tip":"note"}function jI(kk){let{block:Fk}=kk;switch(Fk.kind){case"heading":return(0,ek.jsx)(LI,{level:Fk.level,text:Fk.text,anchor:Fk.anchor});case"paragraph":return(0,ek.jsx)("p",{children:(0,ek.jsx)(VF,{text:Fk.text})});case"code":{const kk="ts"===Fk.lang?function(kk){const Fk=kk.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return Fk&&Object.hasOwn(UF,Fk[1])?Fk[1]:null}(Fk.code):null;return(0,ek.jsxs)(ek.Fragment,{children:[(0,ek.jsx)(Vk,{code:Fk.code,lang:Fk.lang}),kk&&(0,ek.jsx)(qI,{type:kk})]})}case"table":return(0,ek.jsx)("div",{className:"DocsTableScroll",children:(0,ek.jsxs)("table",{className:"DocsTable",children:[(0,ek.jsx)("thead",{children:(0,ek.jsx)("tr",{children:Fk.header.map(((kk,Fk)=>(0,ek.jsx)("th",{children:(0,ek.jsx)(VF,{text:kk})},Fk)))})}),(0,ek.jsx)("tbody",{children:Fk.rows.map(((kk,Fk)=>(0,ek.jsx)("tr",{children:kk.map(((kk,Fk)=>(0,ek.jsx)("td",{children:(0,ek.jsx)(VF,{text:kk})},Fk)))},Fk)))})]})});case"list":return(0,ek.jsx)(tI,{items:Fk.items,ordered:Fk.ordered});case"quote":return(0,ek.jsx)("aside",{className:ik()("DocsCallout",ZI(Fk.blocks)),children:(0,ek.jsx)(eI,{blocks:Fk.blocks})});case"rule":return(0,ek.jsx)("hr",{className:"DocsRule"})}}function eI(kk){let{blocks:Fk}=kk;return(0,ek.jsx)(ek.Fragment,{children:Fk.map(((kk,Fk)=>(0,ek.jsx)(jI,{block:kk},Fk)))})}var wI=Ik(4747),HI=Ik(4755);function JI(kk){return"blocks"===kk||"items"===kk}const xI=new Map;function PI(kk){let Fk=xI.get(kk);return Fk||(Fk=function(kk){const Fk={entries:[],legend:[],notes:[],examples:[]};let Ik=!1;for(const ik of kk.split(/\r?\n/).slice(1)){if(ik.startsWith("#")){const kk=ik.replace(/^# ?/,""),Xk=kk.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);Xk?Fk.legend.push({code:Xk[1],meaning:Xk[2],usage:Xk[3].trim()}):/^Examples:/.test(kk.trim())?Ik=!0:Ik&&kk.trim()?Fk.examples.push(kk.trim()):kk.trim()&&!/^\s/.test(kk)&&Fk.notes.push(kk.trim());continue}const kk=ik.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var Xk,Tk;kk&&Fk.entries.push({name:kk[1],variants:null!==(Xk=null===(Tk=kk[2])||void 0===Tk?void 0:Tk.split(","))&&void 0!==Xk?Xk:[]})}return Fk}("blocks"===kk?wI:HI),xI.set(kk,Fk)),Fk}function KI(kk){let{className:Fk,value:Ik,placeholder:Xk,label:Tk,onChange:ik,count:yk,children:lk}=kk;return(0,ek.jsxs)("div",{className:Fk,children:[(0,ek.jsx)(Hk,{name:"magnifying-glass"}),(0,ek.jsx)("input",{type:"search",value:Ik,placeholder:Xk,"aria-label":Tk,onChange:kk=>{ik(kk.target.value)}}),lk,yk&&(0,ek.jsxs)("span",{className:"DocsFilterCount",children:[yk.visible," of ",yk.total]})]})}var QI=Ik(1066);function sI(kk){const Fk=kk.trim().match(/^(` {
                           1,
                           2
-                        })\ s * ([ ^ `]+?)\s*\1$/);return zC?zC[2]:null}function JZ(CC){return"paragraph"===CC.kind&&""===CC.text.trim()}function IZ(CC){const zC={name:CC.heading.text,description:[],params:[],returns:null};let ZC="description";for(const wC of CC.blocks)if(!JZ(wC))if("heading"===wC.kind&&/^Parameters:?$/.test(wC.text))ZC="params";else if("heading"===wC.kind&&/^Returns:?$/.test(wC.text))ZC="returns",zC.returns={type:"",description:[]};else if("params"!==ZC||"table"!==wC.kind){if("returns"===ZC&&"paragraph"===wC.kind&&""===zC.returns.type){const CC=xZ(wC.text);if(null!==CC){zC.returns.type=CC.replaceAll("\\|","|");continue}}"returns"===ZC?zC.returns.description.push(wC):zC.description.push(wC)}else for(const[CC,ZC,bC]of wC.rows){var QC;zC.params.push({name:CC,type:null!==(QC=xZ(ZC))&&void 0!==QC?QC:ZC,description:null!==bC&&void 0!==bC?bC:""})}return zC}const iZ=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function vZ(CC){return CC.filter((CC=>!JZ(CC)))}const eZ=/^[\w][\w .'&!:()-]*$/,hZ=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function KZ(CC){var zC;if("code"===CC.kind&&"text"===CC.lang){const zC=CC.code.split("\n").map((CC=>CC.trim())).filter(Boolean);return zC.length>0&&zC.every((CC=>eZ.test(CC)))?zC.map((CC=>({name:CC}))):null}return"paragraph"===CC.kind&&hZ.test(CC.text.trim())?[...CC.text.matchAll(/`([ ^ `]+)` / g)].flatMap((CC => CC[1].split(/,\s*/).map((CC => ({
-                              name: CC.trim()
-                            }))))): "table" === CC.kind && null !== (zC = CC.header[0]) && void 0 !== zC && zC.startsWith("Song") ? CC.rows.map((CC => {
-                              let [zC, ZC] = CC;
+                        })\ s * ([ ^ `]+?)\s*\1$/);return Fk?Fk[2]:null}function VI(kk){return"paragraph"===kk.kind&&""===kk.text.trim()}function zI(kk){const Fk={name:kk.heading.text,description:[],params:[],returns:null};let Ik="description";for(const Tk of kk.blocks)if(!VI(Tk))if("heading"===Tk.kind&&/^Parameters:?$/.test(Tk.text))Ik="params";else if("heading"===Tk.kind&&/^Returns:?$/.test(Tk.text))Ik="returns",Fk.returns={type:"",description:[]};else if("params"!==Ik||"table"!==Tk.kind){if("returns"===Ik&&"paragraph"===Tk.kind&&""===Fk.returns.type){const kk=sI(Tk.text);if(null!==kk){Fk.returns.type=kk.replaceAll("\\|","|");continue}}"returns"===Ik?Fk.returns.description.push(Tk):Fk.description.push(Tk)}else for(const[kk,Ik,ik]of Tk.rows){var Xk;Fk.params.push({name:kk,type:null!==(Xk=sI(Ik))&&void 0!==Xk?Xk:Ik,description:null!==ik&&void 0!==ik?ik:""})}return Fk}const SI=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function oI(kk){return kk.filter((kk=>!VI(kk)))}const vI=/^[\w][\w .'&!:()-]*$/,EI=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function OI(kk){var Fk;if("code"===kk.kind&&"text"===kk.lang){const Fk=kk.code.split("\n").map((kk=>kk.trim())).filter(Boolean);return Fk.length>0&&Fk.every((kk=>vI.test(kk)))?Fk.map((kk=>({name:kk}))):null}return"paragraph"===kk.kind&&EI.test(kk.text.trim())?[...kk.text.matchAll(/`([ ^ `]+)` / g)].flatMap((kk => kk[1].split(/,\s*/).map((kk => ({
+                              name: kk.trim()
+                            }))))): "table" === kk.kind && null !== (Fk = kk.header[0]) && void 0 !== Fk && Fk.startsWith("Song") ? kk.rows.map((kk => {
+                              let [Fk, Ik] = kk;
                               return {
-                                name: zC.replace(/`/g, ""),
-                                caption: ZC
+                                name: Fk.replace(/`/g, ""),
+                                caption: Ik
                               }
                             })) : null
                           }
 
-                          function YZ(CC) {
-                            const zC = [];
-                            for (const ZC of CC) {
-                              const CC = KZ(ZC),
-                                QC = zC.at(-1),
-                                wC = "table" === ZC.kind;
-                              CC ? "names" === (null === QC || void 0 === QC ? void 0 : QC.kind) && QC.isSongs === wC ? QC.names.push(...CC) : zC.push({
+                          function nI(kk) {
+                            const Fk = [];
+                            for (const Ik of kk) {
+                              const kk = OI(Ik),
+                                Xk = Fk.at(-1),
+                                Tk = "table" === Ik.kind;
+                              kk ? "names" === (null === Xk || void 0 === Xk ? void 0 : Xk.kind) && Xk.isSongs === Tk ? Xk.names.push(...kk) : Fk.push({
                                 kind: "names",
-                                names: CC,
-                                isSongs: wC
-                              }) : zC.push({
+                                names: kk,
+                                isSongs: Tk
+                              }) : Fk.push({
                                 kind: "block",
-                                block: ZC
+                                block: Ik
                               })
                             }
-                            return zC
+                            return Fk
                           }
-                          const dZ = {
+                          const GI = {
                             icons: "icon",
                             particles: "particle",
                             sounds: "sound",
@@ -1624,58 +1624,58 @@ export const modules = {
                             items: "item"
                           };
 
-                          function mZ(CC, zC) {
-                            return `${dZ[CC]}-${(0,iC.p)(zC)}`
+                          function pI(kk, Fk) {
+                            return `${GI[kk]}-${(0,zk.t)(Fk)}`
                           }
-                          const HZ = new WeakMap;
+                          const uI = new WeakMap;
 
-                          function EZ(CC, zC, ZC) {
-                            let QC = HZ.get(zC);
-                            if (!QC) {
-                              QC = new Map;
-                              const ZC = new Set;
-                              for (const wC of (0, iC.r)(zC)) {
-                                const zC = YZ(vZ(wC.blocks)).map((zC => {
-                                  if ("block" === zC.kind) return zC;
+                          function bI(kk, Fk, Ik) {
+                            let Xk = uI.get(Fk);
+                            if (!Xk) {
+                              Xk = new Map;
+                              const Ik = new Set;
+                              for (const Tk of (0, zk.u)(Fk)) {
+                                const Fk = nI(oI(Tk.blocks)).map((Fk => {
+                                  if ("block" === Fk.kind) return Fk;
                                   return {
                                     kind: "names",
-                                    names: zC.names.map((zC => {
-                                      var QC, bC;
-                                      const nC = mZ(CC, zC.name);
-                                      let fC = nC;
-                                      for (let CC = 2; ZC.has(fC); CC++) fC = `${nC}-${CC}`;
-                                      return ZC.add(fC), {
-                                        ...zC,
-                                        anchor: fC,
-                                        heading: null !== (QC = null === (bC = wC.heading) || void 0 === bC ? void 0 : bC.text) && void 0 !== QC ? QC : ""
+                                    names: Fk.names.map((Fk => {
+                                      var Xk, ik;
+                                      const yk = pI(kk, Fk.name);
+                                      let lk = yk;
+                                      for (let kk = 2; Ik.has(lk); kk++) lk = `${yk}-${kk}`;
+                                      return Ik.add(lk), {
+                                        ...Fk,
+                                        anchor: lk,
+                                        heading: null !== (Xk = null === (ik = Tk.heading) || void 0 === ik ? void 0 : ik.text) && void 0 !== Xk ? Xk : ""
                                       }
                                     })),
-                                    isSongs: zC.isSongs
+                                    isSongs: Fk.isSongs
                                   }
                                 }));
-                                QC.set(wC.blocks, zC)
+                                Xk.set(Tk.blocks, Fk)
                               }
-                              HZ.set(zC, QC)
+                              uI.set(Fk, Xk)
                             }
-                            const wC = QC.get(ZC);
-                            if (!wC) throw new Error("Gallery blocks must be the page's intro or one of its sections");
-                            return wC
+                            const Tk = Xk.get(Ik);
+                            if (!Tk) throw new Error("Gallery blocks must be the page's intro or one of its sections");
+                            return Tk
                           }
-                          const lZ = "/textures/docs/skinPreviews",
-                            XZ = [{
+                          const RI = "/textures/docs/skinPreviews",
+                            UI = [{
                               heading: "NPC Skins",
                               prefix: "npc"
                             }, {
                               heading: "Poses",
                               prefix: "pose"
                             }];
-                          var cZ = ZC(4166),
-                            uZ = ZC(4179);
+                          var CI = Ik(4196),
+                            NI = Ik(4210);
 
-                          function rZ(CC) {
-                            return Object.hasOwn(cZ.e, CC) ? cZ.e[CC] : null
+                          function cI(kk) {
+                            return Object.hasOwn(CI.g, kk) ? CI.g[kk] : null
                           }
-                          const sZ = {
+                          const WI = {
                             dir1: [-1, -1, -1],
                             dir2: [1, 1, 1],
                             texture: "bubble",
@@ -1697,453 +1697,453 @@ export const modules = {
                               factor: 1,
                               factor2: 1
                             }],
-                            blendMode: uZ.d.Standard
+                            blendMode: NI.d.Standard
                           };
 
-                          function TZ(CC, zC, ZC) {
-                            return zC + (ZC - zC) * CC()
+                          function fI(kk, Fk, Ik) {
+                            return Fk + (Ik - Fk) * kk()
                           }
 
-                          function aZ(CC, zC, ZC) {
-                            return CC + (zC - CC) * ZC
+                          function BI(kk, Fk, Ik) {
+                            return kk + (Fk - kk) * Ik
                           }
 
-                          function tZ(CC) {
-                            return CC.length > 0 && "timeFraction" in CC[0]
+                          function dI(kk) {
+                            return kk.length > 0 && "timeFraction" in kk[0]
                           }
 
-                          function DZ(CC, zC) {
-                            if (0 === CC.colorGradients.length) return [{
+                          function YI(kk, Fk) {
+                            if (0 === kk.colorGradients.length) return [{
                               at: 0,
                               colour: [1, 1, 1, 1]
                             }];
-                            if (!tZ(CC.colorGradients)) {
-                              const ZC = CC.colorGradients,
+                            if (!dI(kk.colorGradients)) {
+                              const Ik = kk.colorGradients,
                                 {
-                                  color: QC
-                                } = ZC[Math.floor(zC() * ZC.length) % ZC.length];
+                                  color: Xk
+                                } = Ik[Math.floor(Fk() * Ik.length) % Ik.length];
                               return [{
                                 at: 0,
-                                colour: [QC[0] / 255, QC[1] / 255, QC[2] / 255, 1]
+                                colour: [Xk[0] / 255, Xk[1] / 255, Xk[2] / 255, 1]
                               }]
                             }
-                            return [...CC.colorGradients].sort(((CC, zC) => CC.timeFraction - zC.timeFraction)).map((CC => {
-                              var ZC, QC, wC;
-                              const bC = CC.minColor,
-                                nC = null !== (ZC = CC.maxColor) && void 0 !== ZC ? ZC : bC,
-                                fC = zC(),
-                                oC = [aZ(bC[0], nC[0], fC) / 255, aZ(bC[1], nC[1], fC) / 255, aZ(bC[2], nC[2], fC) / 255, aZ(null !== (QC = bC[3]) && void 0 !== QC ? QC : 1, null !== (wC = nC[3]) && void 0 !== wC ? wC : 1, fC)];
+                            return [...kk.colorGradients].sort(((kk, Fk) => kk.timeFraction - Fk.timeFraction)).map((kk => {
+                              var Ik, Xk, Tk;
+                              const ik = kk.minColor,
+                                yk = null !== (Ik = kk.maxColor) && void 0 !== Ik ? Ik : ik,
+                                lk = Fk(),
+                                ak = [BI(ik[0], yk[0], lk) / 255, BI(ik[1], yk[1], lk) / 255, BI(ik[2], yk[2], lk) / 255, BI(null !== (Xk = ik[3]) && void 0 !== Xk ? Xk : 1, null !== (Tk = yk[3]) && void 0 !== Tk ? Tk : 1, lk)];
                               return {
-                                at: CC.timeFraction,
-                                colour: oC
+                                at: kk.timeFraction,
+                                colour: ak
                               }
                             }))
                           }
 
-                          function jZ(CC, zC, ZC, QC) {
-                            const wC = TZ(QC, CC.minEmitPower, CC.maxEmitPower),
-                              bC = zC => TZ(QC, Math.min(CC.dir1[zC], CC.dir2[zC]), Math.max(CC.dir1[zC], CC.dir2[zC])) * wC,
-                              nC = [...CC.velocityGradients].sort(((CC, zC) => CC.timeFraction - zC.timeFraction)).map((CC => ({
-                                at: CC.timeFraction,
-                                factor: TZ(QC, CC.factor, CC.factor2)
+                          function AI(kk, Fk, Ik, Xk) {
+                            const Tk = fI(Xk, kk.minEmitPower, kk.maxEmitPower),
+                              ik = Fk => fI(Xk, Math.min(kk.dir1[Fk], kk.dir2[Fk]), Math.max(kk.dir1[Fk], kk.dir2[Fk])) * Tk,
+                              yk = [...kk.velocityGradients].sort(((kk, Fk) => kk.timeFraction - Fk.timeFraction)).map((kk => ({
+                                at: kk.timeFraction,
+                                factor: fI(Xk, kk.factor, kk.factor2)
                               })));
                             return {
-                              pos: [TZ(QC, zC[0], ZC[0]), TZ(QC, zC[1], ZC[1]), TZ(QC, zC[2], ZC[2])],
-                              dir: [bC(0), bC(1), bC(2)],
+                              pos: [fI(Xk, Fk[0], Ik[0]), fI(Xk, Fk[1], Ik[1]), fI(Xk, Fk[2], Ik[2])],
+                              dir: [ik(0), ik(1), ik(2)],
                               age: 0,
-                              life: TZ(QC, CC.minLifeTime, CC.maxLifeTime),
-                              size: TZ(QC, CC.minSize, CC.maxSize),
-                              colours: DZ(CC, QC),
-                              velocityFactors: nC
+                              life: fI(Xk, kk.minLifeTime, kk.maxLifeTime),
+                              size: fI(Xk, kk.minSize, kk.maxSize),
+                              colours: YI(kk, Xk),
+                              velocityFactors: yk
                             }
                           }
 
-                          function yZ(CC, zC, ZC, QC) {
-                            if (zC < CC[0].at) return ZC(Math.min(1, CC.length - 1));
-                            for (let wC = 0; wC < CC.length - 1; wC++)
-                              if (zC <= CC[wC + 1].at) {
-                                const bC = CC[wC + 1].at - CC[wC].at;
-                                return QC(ZC(wC), ZC(wC + 1), bC > 0 ? (zC - CC[wC].at) / bC : 1)
-                              } return ZC(CC.length - 1)
+                          function gI(kk, Fk, Ik, Xk) {
+                            if (Fk < kk[0].at) return Ik(Math.min(1, kk.length - 1));
+                            for (let Tk = 0; Tk < kk.length - 1; Tk++)
+                              if (Fk <= kk[Tk + 1].at) {
+                                const ik = kk[Tk + 1].at - kk[Tk].at;
+                                return Xk(Ik(Tk), Ik(Tk + 1), ik > 0 ? (Fk - kk[Tk].at) / ik : 1)
+                              } return Ik(kk.length - 1)
                           }
 
-                          function LZ(CC) {
-                            return yZ(CC.colours, CC.age / CC.life, (zC => CC.colours[zC].colour), ((CC, zC, ZC) => [aZ(CC[0], zC[0], ZC), aZ(CC[1], zC[1], ZC), aZ(CC[2], zC[2], ZC), aZ(CC[3], zC[3], ZC)]))
+                          function mI(kk) {
+                            return gI(kk.colours, kk.age / kk.life, (Fk => kk.colours[Fk].colour), ((kk, Fk, Ik) => [BI(kk[0], Fk[0], Ik), BI(kk[1], Fk[1], Ik), BI(kk[2], Fk[2], Ik), BI(kk[3], Fk[3], Ik)]))
                           }
 
-                          function UZ(CC, zC, ZC) {
-                            if (CC.age += ZC, CC.age >= CC.life) return !1;
-                            const QC = function(CC) {
-                              return 0 === CC.velocityFactors.length ? 1 : yZ(CC.velocityFactors, CC.age / CC.life, (zC => CC.velocityFactors[zC].factor), aZ)
-                            }(CC) * ZC;
-                            for (let bC = 0; bC < 3; bC++) {
-                              var wC;
-                              CC.pos[bC] += CC.dir[bC] * QC, CC.dir[bC] += (null !== (wC = zC[bC]) && void 0 !== wC ? wC : 0) * ZC
+                          function hI(kk, Fk, Ik) {
+                            if (kk.age += Ik, kk.age >= kk.life) return !1;
+                            const Xk = function(kk) {
+                              return 0 === kk.velocityFactors.length ? 1 : gI(kk.velocityFactors, kk.age / kk.life, (Fk => kk.velocityFactors[Fk].factor), BI)
+                            }(kk) * Ik;
+                            for (let ik = 0; ik < 3; ik++) {
+                              var Tk;
+                              kk.pos[ik] += kk.dir[ik] * Xk, kk.dir[ik] += (null !== (Tk = Fk[ik]) && void 0 !== Tk ? Tk : 0) * Ik
                             }
                             return !0
                           }
 
-                          function BZ(CC) {
-                            return String(Math.round(1e6 * CC) / 1e6)
+                          function rI(kk) {
+                            return String(Math.round(1e6 * kk) / 1e6)
                           }
 
-                          function OZ(CC) {
-                            return `[${CC.map(BZ).join(", ")}]`
+                          function DI(kk) {
+                            return `[${kk.map(rI).join(", ")}]`
                           }
 
-                          function kZ(CC, zC) {
-                            const ZC = `${zC}    `;
-                            return `[\n${(tZ(CC)?CC.map((CC=>{const zC=[`${ZC}    timeFraction: ${BZ(CC.timeFraction)},`,`${ZC}    minColor: ${OZ(CC.minColor)},`];return CC.maxColor&&zC.push(`${ZC}    maxColor: ${OZ(CC.maxColor)},`),`${ZC}{\n${zC.join("\n")}\n${ZC}},`})):CC.map((CC=>`
+                          function MI(kk, Fk) {
+                            const Ik = `${Fk}    `;
+                            return `[\n${(dI(kk)?kk.map((kk=>{const Fk=[`${Ik}    timeFraction: ${rI(kk.timeFraction)},`,`${Ik}    minColor: ${DI(kk.minColor)},`];return kk.maxColor&&Fk.push(`${Ik}    maxColor: ${DI(kk.maxColor)},`),`${Ik}{\n${Fk.join("\n")}\n${Ik}},`})):kk.map((kk=>`
                             $ {
-                              ZC
+                              Ik
                             } {
                               color: $ {
-                                OZ(CC.color)
+                                DI(kk.color)
                               }
-                            }, `))).join("\n")}\n${zC}]`
+                            }, `))).join("\n")}\n${Fk}]`
                           }
-                          const VZ = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
-                            CQ = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
-                          const zQ = .6;
+                          const kX = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
+                            FX = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
+                          const IX = .6;
 
-                          function ZQ(CC, zC) {
-                            return `${zC?"song":"sound"}:${CC}`
+                          function XX(kk, Fk) {
+                            return `${Fk?"song":"sound"}:${kk}`
                           }
-                          let QQ = {
+                          let TX = {
                               track: null,
-                              volume: zQ
+                              volume: IX
                             },
-                            wQ = null,
-                            bQ = 0,
-                            nQ = 0;
-                          const fQ = new Set;
+                            iX = null,
+                            yX = 0,
+                            lX = 0;
+                          const aX = new Set;
 
-                          function oQ(CC) {
-                            QQ = {
-                              ...QQ,
-                              ...CC
-                            }, fQ.forEach((CC => {
-                              CC()
+                          function qX(kk) {
+                            TX = {
+                              ...TX,
+                              ...kk
+                            }, aX.forEach((kk => {
+                              kk()
                             }))
                           }
 
-                          function qQ(CC) {
-                            QQ.track && oQ({
+                          function LX(kk) {
+                            TX.track && qX({
                               track: {
-                                ...QQ.track,
-                                ...CC
+                                ...TX.track,
+                                ...kk
                               }
                             })
                           }
 
-                          function FQ(CC) {
-                            const [zC, ZC] = (0, QC.useState)((() => CC(QQ))), wC = (0, QC.useRef)(CC);
-                            return wC.current = CC, (0, QC.useEffect)((() => {
-                              const CC = () => {
-                                ZC((() => wC.current(QQ)))
+                          function tX(kk) {
+                            const [Fk, Ik] = (0, Xk.useState)((() => kk(TX))), Tk = (0, Xk.useRef)(kk);
+                            return Tk.current = kk, (0, Xk.useEffect)((() => {
+                              const kk = () => {
+                                Ik((() => Tk.current(TX)))
                               };
-                              return fQ.add(CC), CC(), () => {
-                                fQ.delete(CC)
+                              return aX.add(kk), kk(), () => {
+                                aX.delete(kk)
                               }
-                            }), []), zC
+                            }), []), Fk
                           }
 
-                          function WQ() {
-                            bQ++;
-                            const CC = wQ;
-                            wQ = null, null === CC || void 0 === CC || CC.stop()
+                          function ZX() {
+                            yX++;
+                            const kk = iX;
+                            iX = null, null === kk || void 0 === kk || kk.stop()
                           }
 
-                          function NQ(CC, zC) {
-                            let QC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-                            WQ();
-                            const wC = bQ,
+                          function jX(kk, Fk) {
+                            let Xk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+                            ZX();
+                            const Tk = yX,
                               {
-                                track: bC
-                              } = QQ,
-                              nC = bC && bC.name === CC && bC.isSong === zC ? bC.duration : 0;
-                            nQ = QC, oQ({
+                                track: ik
+                              } = TX,
+                              yk = ik && ik.name === kk && ik.isSong === Fk ? ik.duration : 0;
+                            lX = Xk, qX({
                               track: {
-                                name: CC,
-                                isSong: zC,
+                                name: kk,
+                                isSong: Fk,
                                 status: "loading",
-                                duration: nC
+                                duration: yk
                               }
-                            }), Promise.all([ZC.e(222), ZC.e(249)]).then((() => ZC(39621))).then((ZC => {
+                            }), Promise.all([Ik.e(222), Ik.e(249)]).then((() => Ik(39792))).then((Ik => {
                               let {
-                                playDocsSound: bC
-                              } = ZC;
-                              wC === bQ && (wQ = bC(CC, zC, QQ.volume, QC, {
-                                onPlay: CC => {
-                                  wC === bQ && qQ({
+                                playDocsSound: ik
+                              } = Ik;
+                              Tk === yX && (iX = ik(kk, Fk, TX.volume, Xk, {
+                                onPlay: kk => {
+                                  Tk === yX && LX({
                                     status: "playing",
-                                    duration: CC
+                                    duration: kk
                                   })
                                 },
-                                onEnd: CC => {
-                                  var zC, ZC;
-                                  wC === bQ && (wQ = null, CC ? oQ({
+                                onEnd: kk => {
+                                  var Fk, Ik;
+                                  Tk === yX && (iX = null, kk ? qX({
                                     track: null
-                                  }) : (nQ = null !== (zC = null === (ZC = QQ.track) || void 0 === ZC ? void 0 : ZC.duration) && void 0 !== zC ? zC : 0, qQ({
+                                  }) : (lX = null !== (Fk = null === (Ik = TX.track) || void 0 === Ik ? void 0 : Ik.duration) && void 0 !== Fk ? Fk : 0, LX({
                                     status: "paused"
                                   })))
                                 }
                               }))
-                            })).catch((zC => {
-                              console.error(`Could not play docs sound ${CC}`, zC), wC === bQ && oQ({
+                            })).catch((Fk => {
+                              console.error(`Could not play docs sound ${kk}`, Fk), Tk === yX && qX({
                                 track: null
                               })
                             }))
                           }
 
-                          function MQ() {
+                          function eX() {
                             const {
-                              track: CC
-                            } = QQ;
-                            if (!CC) return;
-                            if ("playing" === CC.status && wQ) return nQ = wQ.yG(), wQ.pause(), void qQ({
+                              track: kk
+                            } = TX;
+                            if (!kk) return;
+                            if ("playing" === kk.status && iX) return lX = iX.OJ(), iX.pause(), void LX({
                               status: "paused"
                             });
-                            if ("loading" === CC.status) return WQ(), void qQ({
+                            if ("loading" === kk.status) return ZX(), void LX({
                               status: "paused"
                             });
-                            if (wQ) return void wQ.resume();
-                            const zC = CC.duration > 0 && nQ >= CC.duration - .05;
-                            NQ(CC.name, CC.isSong, zC ? 0 : nQ)
+                            if (iX) return void iX.resume();
+                            const Fk = kk.duration > 0 && lX >= kk.duration - .05;
+                            jX(kk.name, kk.isSong, Fk ? 0 : lX)
                           }
 
-                          function gQ() {
-                            var CC;
-                            return wQ && "playing" === (null === (CC = QQ.track) || void 0 === CC ? void 0 : CC.status) ? wQ.yG() : nQ
+                          function wX() {
+                            var kk;
+                            return iX && "playing" === (null === (kk = TX.track) || void 0 === kk ? void 0 : kk.status) ? iX.OJ() : lX
                           }
 
-                          function SQ(CC) {
-                            var zC;
-                            null === (zC = wQ) || void 0 === zC || zC.setVolume(CC), oQ({
-                              volume: CC
+                          function HX(kk) {
+                            var Fk;
+                            null === (Fk = iX) || void 0 === Fk || Fk.setVolume(kk), qX({
+                              volume: kk
                             })
                           }
 
-                          function pQ() {
-                            WQ(), nQ = 0, oQ({
+                          function JX() {
+                            ZX(), lX = 0, qX({
                               track: null
                             })
                           }
-                          const PQ = (0, QC.createContext)(null);
-                          let GQ = null;
+                          const xX = (0, Xk.createContext)(null);
+                          let PX = null;
 
-                          function RQ() {
-                            const [CC, zC] = (0, QC.useState)(null);
-                            return (0, QC.useEffect)((() => {
-                              let CC = !1;
-                              return GQ ??= Promise.all([ZC.e(72), ZC.e(75), ZC.e(74), ZC.e(73), ZC.e(186), ZC.e(98), ZC.e(226)]).then((() => ZC(39617))), GQ.then((ZC => {
-                                CC || zC(ZC)
-                              }), (CC => {
-                                console.error("Could not load the docs gallery's textures", CC), GQ = null
+                          function KX() {
+                            const [kk, Fk] = (0, Xk.useState)(null);
+                            return (0, Xk.useEffect)((() => {
+                              let kk = !1;
+                              return PX ??= Promise.all([Ik.e(72), Ik.e(75), Ik.e(74), Ik.e(73), Ik.e(186), Ik.e(98), Ik.e(226)]).then((() => Ik(39784))), PX.then((Ik => {
+                                kk || Fk(Ik)
+                              }), (kk => {
+                                console.error("Could not load the docs gallery's textures", kk), PX = null
                               })), () => {
-                                CC = !0
+                                kk = !0
                               }
-                            }), []), CC
+                            }), []), kk
                           }
-                          const AQ = 24,
-                            xQ = /^[a-z]+_(\d+(_\d+)?|none)$/;
+                          const QX = 24,
+                            sX = /^[a-z]+_(\d+(_\d+)?|none)$/;
 
-                          function JQ(CC, zC) {
-                            const ZC = "skins" === CC ? function(CC, zC) {
-                              const ZC = XZ.find((zC => CC.startsWith(zC.heading)));
-                              return ZC ? function(CC, zC) {
-                                return `${CC}-${zC}`
-                              }(ZC.prefix, zC) : null
-                            }(zC.heading, zC.name) : null;
-                            return null === ZC ? null : `${lZ}/${ZC}.webp`
+                          function VX(kk, Fk) {
+                            const Ik = "skins" === kk ? function(kk, Fk) {
+                              const Ik = UI.find((Fk => kk.startsWith(Fk.heading)));
+                              return Ik ? function(kk, Fk) {
+                                return `${kk}-${Fk}`
+                              }(Ik.prefix, Fk) : null
+                            }(Fk.heading, Fk.name) : null;
+                            return null === Ik ? null : `${RI}/${Ik}.webp`
                           }
 
-                          function IQ(CC) {
+                          function zX(kk) {
                             let {
-                              kind: zC,
-                              entry: ZC,
-                              assets: wC,
-                              renderedUrl: nC
-                            } = CC;
+                              kind: Fk,
+                              entry: Ik,
+                              assets: Tk,
+                              renderedUrl: yk
+                            } = kk;
                             const {
-                              name: fC
-                            } = ZC, [oC, qC] = (0, QC.useState)(!1);
-                            if ("icons" === zC && rz(fC)) return (0, gC.jsx)(AZ.c, {
+                              name: lk
+                            } = Ik, [ak, qk] = (0, Xk.useState)(!1);
+                            if ("icons" === Fk && cF(lk)) return (0, ek.jsx)(QI.e, {
                               className: "DocsTileIcon",
-                              name: fC
+                              name: lk
                             });
-                            let FC = null;
-                            var WC;
-                            if ("icons" === zC) FC = null !== (WC = null === wC || void 0 === wC ? void 0 : wC.getIngameIconUrl(fC)) && void 0 !== WC ? WC : null;
-                            else if ("particles" === zC) {
-                              var NC, MC, SC;
-                              FC = null !== (NC = null === wC || void 0 === wC ? void 0 : wC.getParticleTextureUrl(null !== (MC = null === (SC = rZ(fC)) || void 0 === SC ? void 0 : SC.texture) && void 0 !== MC ? MC : fC)) && void 0 !== NC ? NC : null
-                            } else "skins" === zC && (FC = null !== nC && void 0 !== nC ? nC : xQ.test(fC) ? `/textures/charSkins/previews/${fC}_preview.png` : null);
-                            return !FC || oC ? (0, gC.jsx)(pC, {
+                            let Lk = null;
+                            var tk;
+                            if ("icons" === Fk) Lk = null !== (tk = null === Tk || void 0 === Tk ? void 0 : Tk.getIngameIconUrl(lk)) && void 0 !== tk ? tk : null;
+                            else if ("particles" === Fk) {
+                              var Zk, jk, wk;
+                              Lk = null !== (Zk = null === Tk || void 0 === Tk ? void 0 : Tk.getParticleTextureUrl(null !== (jk = null === (wk = cI(lk)) || void 0 === wk ? void 0 : wk.texture) && void 0 !== jk ? jk : lk)) && void 0 !== Zk ? Zk : null
+                            } else "skins" === Fk && (Lk = null !== yk && void 0 !== yk ? yk : sX.test(lk) ? `/textures/charSkins/previews/${lk}_preview.png` : null);
+                            return !Lk || ak ? (0, ek.jsx)(Hk, {
                               className: "DocsTileIcon Placeholder",
-                              name: "skins" === zC ? "person" : "image"
-                            }) : (0, gC.jsx)("img", {
-                              className: bC()("DocsTileImage", {
-                                Pixelated: "skins" !== zC
+                              name: "skins" === Fk ? "person" : "image"
+                            }) : (0, ek.jsx)("img", {
+                              className: ik()("DocsTileImage", {
+                                Pixelated: "skins" !== Fk
                               }),
-                              src: FC,
-                              srcSet: FC === nC ? `${FC} 2x` : void 0,
+                              src: Lk,
+                              srcSet: Lk === yk ? `${Lk} 2x` : void 0,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs gallery: could not load ${FC}`), qC(!0)
+                                console.warn(`Docs gallery: could not load ${Lk}`), qk(!0)
                               }
                             })
                           }
 
-                          function iQ(CC) {
+                          function SX(kk) {
                             let {
-                              entry: zC,
-                              isSong: ZC
-                            } = CC;
-                            const QC = FQ((CC => {
+                              entry: Fk,
+                              isSong: Ik
+                            } = kk;
+                            const Xk = tX((kk => {
                                 let {
-                                  track: QC
-                                } = CC;
-                                return (null === QC || void 0 === QC ? void 0 : QC.name) === zC.name && QC.isSong === ZC ? QC.status : null
+                                  track: Xk
+                                } = kk;
+                                return (null === Xk || void 0 === Xk ? void 0 : Xk.name) === Fk.name && Xk.isSong === Ik ? Xk.status : null
                               })),
-                              wC = null !== QC && "paused" !== QC;
-                            return (0, gC.jsxs)("button", {
+                              Tk = null !== Xk && "paused" !== Xk;
+                            return (0, ek.jsxs)("button", {
                               type: "button",
-                              id: zC.anchor,
-                              className: bC()("DocsSoundTile", {
-                                Playing: wC
+                              id: Fk.anchor,
+                              className: ik()("DocsSoundTile", {
+                                Playing: Tk
                               }),
-                              "data-docs-track": ZQ(zC.name, ZC),
-                              "aria-label": wC ? `Pause ${zC.name}` : `Play ${zC.name}`,
+                              "data-docs-track": XX(Fk.name, Ik),
+                              "aria-label": Tk ? `Pause ${Fk.name}` : `Play ${Fk.name}`,
                               onClick: () => {
-                                null !== QC ? MQ() : NQ(zC.name, ZC)
+                                null !== Xk ? eX() : jX(Fk.name, Ik)
                               },
-                              children: [(0, gC.jsx)("span", {
+                              children: [(0, ek.jsx)("span", {
                                 className: "DocsSoundPlay",
-                                children: (0, gC.jsx)(pC, {
-                                  name: wC ? "pause" : "play"
+                                children: (0, ek.jsx)(Hk, {
+                                  name: Tk ? "pause" : "play"
                                 })
-                              }), (0, gC.jsx)("code", {
+                              }), (0, ek.jsx)("code", {
                                 className: "DocsSoundName",
-                                children: zC.name
-                              }), zC.caption && (0, gC.jsx)("span", {
+                                children: Fk.name
+                              }), Fk.caption && (0, ek.jsx)("span", {
                                 className: "DocsSoundCaption",
-                                children: zC.caption
+                                children: Fk.caption
                               })]
                             })
                           }
 
-                          function vQ(CC) {
+                          function oX(kk) {
                             let {
-                              kind: zC,
-                              names: ZC,
-                              isSongs: wC
-                            } = CC;
-                            const nC = RQ(),
-                              [fC, oC] = GC(),
-                              qC = !1 === (null === fC || void 0 === fC ? void 0 : fC.failed) ? fC.text : null,
-                              FC = (0, QC.useContext)(PQ),
-                              [WC, NC] = (0, QC.useState)(""),
-                              MC = WC.trim().toLowerCase(),
-                              SC = MC ? ZC.filter((CC => CC.name.toLowerCase().includes(MC))) : ZC;
-                            return (0, gC.jsxs)("div", {
+                              kind: Fk,
+                              names: Ik,
+                              isSongs: Tk
+                            } = kk;
+                            const yk = KX(),
+                              [lk, ak] = xk(),
+                              qk = !1 === (null === lk || void 0 === lk ? void 0 : lk.failed) ? lk.text : null,
+                              Lk = (0, Xk.useContext)(xX),
+                              [tk, Zk] = (0, Xk.useState)(""),
+                              jk = tk.trim().toLowerCase(),
+                              wk = jk ? Ik.filter((kk => kk.name.toLowerCase().includes(jk))) : Ik;
+                            return (0, ek.jsxs)("div", {
                               className: "DocsGallery",
-                              children: [ZC.length > AQ && (0, gC.jsx)(RZ, {
+                              children: [Ik.length > QX && (0, ek.jsx)(KI, {
                                 className: "DocsGalleryFilter",
-                                value: WC,
-                                placeholder: `Filter ${ZC.length} names\u2026`,
+                                value: tk,
+                                placeholder: `Filter ${Ik.length} names\u2026`,
                                 label: "Filter names",
-                                onChange: NC,
-                                count: MC ? {
-                                  visible: SC.length,
-                                  total: ZC.length
+                                onChange: Zk,
+                                count: jk ? {
+                                  visible: wk.length,
+                                  total: Ik.length
                                 } : null
-                              }), (0, gC.jsx)("div", {
-                                className: bC()("DocsGalleryGrid", `Kind-${zC}`, {
-                                  Songs: wC
+                              }), (0, ek.jsx)("div", {
+                                className: ik()("DocsGalleryGrid", `Kind-${Fk}`, {
+                                  Songs: Tk
                                 }),
-                                children: SC.map((CC => {
-                                  if ("sounds" === zC) return (0, gC.jsx)(iQ, {
-                                    entry: CC,
-                                    isSong: wC
-                                  }, CC.anchor);
-                                  if (FC && "particles" === zC && rZ(CC.name)) return (0, gC.jsxs)("button", {
+                                children: wk.map((kk => {
+                                  if ("sounds" === Fk) return (0, ek.jsx)(SX, {
+                                    entry: kk,
+                                    isSong: Tk
+                                  }, kk.anchor);
+                                  if (Lk && "particles" === Fk && cI(kk.name)) return (0, ek.jsxs)("button", {
                                     type: "button",
-                                    id: CC.anchor,
-                                    className: bC()("DocsTile Previewable", {
-                                      Copied: qC === CC.name
+                                    id: kk.anchor,
+                                    className: ik()("DocsTile Previewable", {
+                                      Copied: qk === kk.name
                                     }),
-                                    title: `Play "${CC.name}" in the playground and copy its name`,
+                                    title: `Play "${kk.name}" in the playground and copy its name`,
                                     onClick: () => {
-                                      FC(CC.name), oC(CC.name)
+                                      Lk(kk.name), ak(kk.name)
                                     },
-                                    children: [(0, gC.jsxs)("span", {
+                                    children: [(0, ek.jsxs)("span", {
                                       className: "DocsTilePreview",
-                                      children: [(0, gC.jsx)(IQ, {
-                                        kind: zC,
-                                        entry: CC,
-                                        assets: nC,
+                                      children: [(0, ek.jsx)(zX, {
+                                        kind: Fk,
+                                        entry: kk,
+                                        assets: yk,
                                         renderedUrl: null
-                                      }), (0, gC.jsx)("span", {
+                                      }), (0, ek.jsx)("span", {
                                         className: "DocsTilePlayBadge",
-                                        children: (0, gC.jsx)(pC, {
+                                        children: (0, ek.jsx)(Hk, {
                                           name: "play"
                                         })
                                       })]
-                                    }), (0, gC.jsx)("span", {
+                                    }), (0, ek.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: qC === CC.name ? "Copied!" : CC.name
+                                      children: qk === kk.name ? "Copied!" : kk.name
                                     })]
-                                  }, CC.anchor);
-                                  const ZC = JQ(zC, CC);
-                                  return (0, gC.jsxs)("button", {
+                                  }, kk.anchor);
+                                  const Ik = VX(Fk, kk);
+                                  return (0, ek.jsxs)("button", {
                                     type: "button",
-                                    id: CC.anchor,
-                                    className: bC()("DocsTile", {
-                                      Copied: qC === CC.name
+                                    id: kk.anchor,
+                                    className: ik()("DocsTile", {
+                                      Copied: qk === kk.name
                                     }),
-                                    title: `Copy "${CC.name}"`,
+                                    title: `Copy "${kk.name}"`,
                                     onClick: () => {
-                                      oC(CC.name)
+                                      ak(kk.name)
                                     },
-                                    children: [(0, gC.jsx)("span", {
-                                      className: bC()("DocsTilePreview", {
-                                        Rendered: null !== ZC
+                                    children: [(0, ek.jsx)("span", {
+                                      className: ik()("DocsTilePreview", {
+                                        Rendered: null !== Ik
                                       }),
-                                      children: (0, gC.jsx)(IQ, {
-                                        kind: zC,
-                                        entry: CC,
-                                        assets: nC,
-                                        renderedUrl: ZC
+                                      children: (0, ek.jsx)(zX, {
+                                        kind: Fk,
+                                        entry: kk,
+                                        assets: yk,
+                                        renderedUrl: Ik
                                       })
-                                    }), (0, gC.jsx)("span", {
+                                    }), (0, ek.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: qC === CC.name ? "Copied!" : CC.name
+                                      children: qk === kk.name ? "Copied!" : kk.name
                                     })]
-                                  }, CC.anchor)
+                                  }, kk.anchor)
                                 }))
                               })]
                             })
                           }
 
-                          function eQ(CC) {
+                          function vX(kk) {
                             let {
-                              kind: zC,
-                              content: ZC,
-                              blocks: QC
-                            } = CC;
-                            return (0, gC.jsx)(gC.Fragment, {
-                              children: EZ(zC, ZC, QC).map(((CC, ZC) => "block" === CC.kind ? (0, gC.jsx)(NZ, {
-                                block: CC.block
-                              }, ZC) : (0, gC.jsx)(vQ, {
-                                kind: zC,
-                                names: CC.names,
-                                isSongs: CC.isSongs
-                              }, ZC)))
+                              kind: Fk,
+                              content: Ik,
+                              blocks: Xk
+                            } = kk;
+                            return (0, ek.jsx)(ek.Fragment, {
+                              children: bI(Fk, Ik, Xk).map(((kk, Ik) => "block" === kk.kind ? (0, ek.jsx)(jI, {
+                                block: kk.block
+                              }, Ik) : (0, ek.jsx)(oX, {
+                                kind: Fk,
+                                names: kk.names,
+                                isSongs: kk.isSongs
+                              }, Ik)))
                             })
                           }
-                          const hQ = [{
+                          const EX = [{
                             pageId: "readme"
                           }, {
                             pageId: "snippets",
@@ -2161,420 +2161,420 @@ export const modules = {
                             countNoun: "options"
                           }];
 
-                          function KQ(CC) {
+                          function OX(kk) {
                             let {
-                              cards: zC = hQ,
-                              label: ZC = "Start here"
-                            } = CC;
-                            const wC = (0, QC.useContext)(Mz);
-                            return (0, gC.jsx)("nav", {
+                              cards: Fk = EX,
+                              label: Ik = "Start here"
+                            } = kk;
+                            const Tk = (0, Xk.useContext)(eF);
+                            return (0, ek.jsx)("nav", {
                               className: "DocsLandingCards",
-                              "aria-label": ZC,
-                              children: zC.map((CC => {
+                              "aria-label": Ik,
+                              children: Fk.map((kk => {
                                 let {
-                                  pageId: zC,
-                                  countNoun: ZC
-                                } = CC;
-                                const QC = uC(zC);
-                                return (0, gC.jsxs)(nC.d, {
-                                  to: DC(wC, QC),
+                                  pageId: Fk,
+                                  countNoun: Ik
+                                } = kk;
+                                const Xk = Nk(Fk);
+                                return (0, ek.jsxs)(yk.e, {
+                                  to: Yk(Tk, Xk),
                                   className: "DocsLandingCard",
-                                  children: [(0, gC.jsx)("span", {
+                                  children: [(0, ek.jsx)("span", {
                                     className: "DocsLandingCardIcon",
-                                    children: (0, gC.jsx)(pC, {
-                                      name: QC.icon
+                                    children: (0, ek.jsx)(Hk, {
+                                      name: Xk.icon
                                     })
-                                  }), (0, gC.jsx)("span", {
+                                  }), (0, ek.jsx)("span", {
                                     className: "DocsLandingCardTitle",
-                                    children: QC.title
-                                  }), (0, gC.jsx)("span", {
+                                    children: Xk.title
+                                  }), (0, ek.jsx)("span", {
                                     className: "DocsLandingCardSummary",
-                                    children: QC.summary
-                                  }), ZC && (0, gC.jsxs)("span", {
+                                    children: Xk.summary
+                                  }), Ik && (0, ek.jsxs)("span", {
                                     className: "DocsLandingCardCount",
-                                    children: [sC(QC).sections.length, " ", ZC]
+                                    children: [Wk(Xk).sections.length, " ", Ik]
                                   })]
-                                }, zC)
+                                }, Fk)
                               }))
                             })
                           }
-                          const YQ = 240;
+                          const nX = 240;
 
-                          function dQ(CC) {
+                          function GX(kk) {
                             let {
-                              faces: zC
-                            } = CC;
-                            return (0, gC.jsxs)("span", {
+                              faces: Fk
+                            } = kk;
+                            return (0, ek.jsxs)("span", {
                               className: "DocsCube",
                               "aria-hidden": "true",
-                              children: [(0, gC.jsx)("span", {
+                              children: [(0, ek.jsx)("span", {
                                 className: "DocsCubeFace Top",
                                 style: {
-                                  backgroundImage: `url("${zC.top}")`
+                                  backgroundImage: `url("${Fk.top}")`
                                 }
-                              }), (0, gC.jsx)("span", {
+                              }), (0, ek.jsx)("span", {
                                 className: "DocsCubeFace Left",
                                 style: {
-                                  backgroundImage: `url("${zC.left}")`
+                                  backgroundImage: `url("${Fk.left}")`
                                 }
-                              }), (0, gC.jsx)("span", {
+                              }), (0, ek.jsx)("span", {
                                 className: "DocsCubeFace Right",
                                 style: {
-                                  backgroundImage: `url("${zC.right}")`
+                                  backgroundImage: `url("${Fk.right}")`
                                 }
                               })]
                             })
                           }
 
-                          function mQ(CC) {
+                          function pX(kk) {
                             let {
-                              src: zC
-                            } = CC;
-                            const [ZC, wC] = (0, QC.useState)(!1);
-                            return ZC ? null : (0, gC.jsx)("img", {
-                              src: zC,
+                              src: Fk
+                            } = kk;
+                            const [Ik, Tk] = (0, Xk.useState)(!1);
+                            return Ik ? null : (0, ek.jsx)("img", {
+                              src: Fk,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs catalogue: could not load ${zC}`), wC(!0)
+                                console.warn(`Docs catalogue: could not load ${Fk}`), Tk(!0)
                               }
                             })
                           }
 
-                          function HQ(CC) {
+                          function uX(kk) {
                             let {
-                              kind: zC
-                            } = CC;
-                            const ZC = GZ(zC),
-                              wC = RQ(),
-                              nC = (0, fC.v)(),
-                              [oC, qC] = (0, QC.useState)(""),
-                              [FC, WC] = (0, QC.useState)(null),
-                              [NC, MC] = (0, QC.useState)(YQ),
-                              [SC, PC] = (0, QC.useState)(null),
-                              GC = (0, QC.useRef)(null),
-                              AC = oC.trim().toLowerCase();
-                            (0, QC.useEffect)((() => {
-                              const CC = (0, iC.n)(nC.hash),
-                                QC = ZC.entries.find((ZC => mZ(zC, ZC.name) === CC));
-                              if (QC) GC.current = QC.name, qC(QC.name), WC(null), PC(QC.name);
-                              else if (null !== GC.current) {
-                                const CC = GC.current;
-                                GC.current = null, qC((zC => zC === CC ? "" : zC)), PC(null)
+                              kind: Fk
+                            } = kk;
+                            const Ik = PI(Fk),
+                              Tk = KX(),
+                              yk = (0, lk.q)(),
+                              [ak, qk] = (0, Xk.useState)(""),
+                              [Lk, tk] = (0, Xk.useState)(null),
+                              [Zk, jk] = (0, Xk.useState)(nX),
+                              [wk, Jk] = (0, Xk.useState)(null),
+                              xk = (0, Xk.useRef)(null),
+                              Kk = ak.trim().toLowerCase();
+                            (0, Xk.useEffect)((() => {
+                              const kk = (0, zk.s)(yk.hash),
+                                Xk = Ik.entries.find((Ik => pI(Fk, Ik.name) === kk));
+                              if (Xk) xk.current = Xk.name, qk(Xk.name), tk(null), Jk(Xk.name);
+                              else if (null !== xk.current) {
+                                const kk = xk.current;
+                                xk.current = null, qk((Fk => Fk === kk ? "" : Fk)), Jk(null)
                               }
-                            }), [ZC, zC, nC.hash, nC.key]), (0, QC.useEffect)((() => {
-                              var CC;
-                              null !== SC && (null === (CC = document.getElementById(mZ(zC, SC))) || void 0 === CC || CC.scrollIntoView({
+                            }), [Ik, Fk, yk.hash, yk.key]), (0, Xk.useEffect)((() => {
+                              var kk;
+                              null !== wk && (null === (kk = document.getElementById(pI(Fk, wk))) || void 0 === kk || kk.scrollIntoView({
                                 block: "center"
                               }))
-                            }), [zC, SC]);
-                            const xC = ZC.entries.filter((CC => (!AC || CC.name.toLowerCase().includes(AC)) && (!FC || CC.variants.includes(FC))));
-                            return (0, gC.jsxs)("div", {
+                            }), [Fk, wk]);
+                            const Qk = Ik.entries.filter((kk => (!Kk || kk.name.toLowerCase().includes(Kk)) && (!Lk || kk.variants.includes(Lk))));
+                            return (0, ek.jsxs)("div", {
                               className: "DocsCatalogue",
-                              children: [ZC.notes.length > 0 && (0, gC.jsx)("div", {
+                              children: [Ik.notes.length > 0 && (0, ek.jsx)("div", {
                                 className: "DocsProse",
-                                children: ZC.notes.map((CC => (0, gC.jsx)("p", {
-                                  children: CC
-                                }, CC)))
-                              }), ZC.legend.length > 0 && (0, gC.jsx)("div", {
+                                children: Ik.notes.map((kk => (0, ek.jsx)("p", {
+                                  children: kk
+                                }, kk)))
+                              }), Ik.legend.length > 0 && (0, ek.jsx)("div", {
                                 className: "DocsTableScroll",
-                                children: (0, gC.jsxs)("table", {
+                                children: (0, ek.jsxs)("table", {
                                   className: "DocsTable DocsVariantLegend",
-                                  children: [(0, gC.jsx)("thead", {
-                                    children: (0, gC.jsxs)("tr", {
-                                      children: [(0, gC.jsx)("th", {
+                                  children: [(0, ek.jsx)("thead", {
+                                    children: (0, ek.jsxs)("tr", {
+                                      children: [(0, ek.jsx)("th", {
                                         children: "Code"
-                                      }), (0, gC.jsx)("th", {
+                                      }), (0, ek.jsx)("th", {
                                         children: "Variant"
-                                      }), (0, gC.jsx)("th", {
+                                      }), (0, ek.jsx)("th", {
                                         children: "Name to use"
                                       })]
                                     })
-                                  }), (0, gC.jsx)("tbody", {
-                                    children: ZC.legend.map((CC => (0, gC.jsxs)("tr", {
-                                      children: [(0, gC.jsx)("td", {
-                                        children: (0, gC.jsx)("button", {
+                                  }), (0, ek.jsx)("tbody", {
+                                    children: Ik.legend.map((kk => (0, ek.jsxs)("tr", {
+                                      children: [(0, ek.jsx)("td", {
+                                        children: (0, ek.jsx)("button", {
                                           type: "button",
-                                          className: bC()("DocsVariantChip", {
-                                            Active: FC === CC.code
+                                          className: ik()("DocsVariantChip", {
+                                            Active: Lk === kk.code
                                           }),
-                                          "aria-pressed": FC === CC.code,
-                                          title: `Show only ${zC} with ${CC.meaning} variants`,
+                                          "aria-pressed": Lk === kk.code,
+                                          title: `Show only ${Fk} with ${kk.meaning} variants`,
                                           onClick: () => {
-                                            WC(FC === CC.code ? null : CC.code)
+                                            tk(Lk === kk.code ? null : kk.code)
                                           },
-                                          children: CC.code
+                                          children: kk.code
                                         })
-                                      }), (0, gC.jsx)("td", {
-                                        children: CC.meaning
-                                      }), (0, gC.jsx)("td", {
-                                        children: (0, gC.jsx)("code", {
+                                      }), (0, ek.jsx)("td", {
+                                        children: kk.meaning
+                                      }), (0, ek.jsx)("td", {
+                                        children: (0, ek.jsx)("code", {
                                           className: "DocsInlineCode",
-                                          children: CC.usage
+                                          children: kk.usage
                                         })
                                       })]
-                                    }, CC.code)))
+                                    }, kk.code)))
                                   })]
                                 })
-                              }), ZC.examples.length > 0 && (0, gC.jsx)(IC, {
+                              }), Ik.examples.length > 0 && (0, ek.jsx)(Vk, {
                                 lang: "text",
-                                code: ZC.examples.join("\n")
-                              }), (0, gC.jsx)(RZ, {
+                                code: Ik.examples.join("\n")
+                              }), (0, ek.jsx)(KI, {
                                 className: "DocsFilterBar",
-                                value: oC,
-                                placeholder: `Search ${ZC.entries.length} ${zC}\u2026`,
-                                label: `Search ${zC}`,
-                                onChange: CC => {
-                                  qC(CC), MC(YQ)
+                                value: ak,
+                                placeholder: `Search ${Ik.entries.length} ${Fk}\u2026`,
+                                label: `Search ${Fk}`,
+                                onChange: kk => {
+                                  qk(kk), jk(nX)
                                 },
-                                count: AC || FC ? {
-                                  visible: xC.length,
-                                  total: ZC.entries.length
+                                count: Kk || Lk ? {
+                                  visible: Qk.length,
+                                  total: Ik.entries.length
                                 } : null,
-                                children: FC && (0, gC.jsxs)("button", {
+                                children: Lk && (0, ek.jsxs)("button", {
                                   type: "button",
                                   className: "DocsVariantChip Active",
                                   onClick: () => {
-                                    WC(null)
+                                    tk(null)
                                   },
-                                  children: [FC, " ", (0, gC.jsx)(pC, {
+                                  children: [Lk, " ", (0, ek.jsx)(Hk, {
                                     name: "cross"
                                   })]
                                 })
-                              }), (0, gC.jsx)("div", {
+                              }), (0, ek.jsx)("div", {
                                 className: "DocsCatalogueGrid",
-                                children: xC.slice(0, NC).map((CC => {
-                                  const ZC = "blocks" === zC ? null === wC || void 0 === wC ? void 0 : wC.getBlockFaces(CC.name) : null,
-                                    QC = wC && !ZC ? wC.getItemTextureUrl(CC.name) : null;
-                                  return (0, gC.jsxs)("div", {
-                                    id: mZ(zC, CC.name),
-                                    className: bC()("DocsCatalogueTile", {
-                                      Linked: CC.name === SC
+                                children: Qk.slice(0, Zk).map((kk => {
+                                  const Ik = "blocks" === Fk ? null === Tk || void 0 === Tk ? void 0 : Tk.getBlockFaces(kk.name) : null,
+                                    Xk = Tk && !Ik ? Tk.getItemTextureUrl(kk.name) : null;
+                                  return (0, ek.jsxs)("div", {
+                                    id: pI(Fk, kk.name),
+                                    className: ik()("DocsCatalogueTile", {
+                                      Linked: kk.name === wk
                                     }),
-                                    children: [(0, gC.jsxs)("span", {
+                                    children: [(0, ek.jsxs)("span", {
                                       className: "DocsCatalogueTexture",
-                                      children: [ZC && (0, gC.jsx)(dQ, {
-                                        faces: ZC
-                                      }), QC && (0, gC.jsx)(mQ, {
-                                        src: QC
+                                      children: [Ik && (0, ek.jsx)(GX, {
+                                        faces: Ik
+                                      }), Xk && (0, ek.jsx)(pX, {
+                                        src: Xk
                                       })]
-                                    }), (0, gC.jsx)("span", {
+                                    }), (0, ek.jsx)("span", {
                                       className: "DocsCatalogueName",
-                                      children: CC.name
-                                    }), CC.variants.length > 0 && (0, gC.jsx)("span", {
+                                      children: kk.name
+                                    }), kk.variants.length > 0 && (0, ek.jsx)("span", {
                                       className: "DocsCatalogueVariants",
-                                      children: CC.variants.map((CC => (0, gC.jsx)("span", {
-                                        children: CC
-                                      }, CC)))
-                                    }), (0, gC.jsx)(RC, {
-                                      text: CC.name,
+                                      children: kk.variants.map((kk => (0, ek.jsx)("span", {
+                                        children: kk
+                                      }, kk)))
+                                    }), (0, ek.jsx)(Pk, {
+                                      text: kk.name,
                                       className: "DocsCatalogueCopy"
                                     })]
-                                  }, CC.name)
+                                  }, kk.name)
                                 }))
-                              }), xC.length > NC && (0, gC.jsxs)("button", {
+                              }), Qk.length > Zk && (0, ek.jsxs)("button", {
                                 type: "button",
                                 className: "DocsShowMore",
                                 onClick: () => {
-                                  MC(xC.length)
+                                  jk(Qk.length)
                                 },
-                                children: ["Show all ", xC.length]
-                              }), 0 === xC.length && (0, gC.jsxs)("p", {
+                                children: ["Show all ", Qk.length]
+                              }), 0 === Qk.length && (0, ek.jsxs)("p", {
                                 className: "DocsEmpty",
-                                children: ["No ", zC, " match."]
+                                children: ["No ", Fk, " match."]
                               })]
                             })
                           }
-                          var EQ = ZC(4755),
-                            lQ = ZC(1520);
-                          const XQ = .95 * EQ.b;
+                          var bX = Ik(4821),
+                            RX = Ik(1534);
+                          const UX = .95 * bX.d;
 
-                          function cQ(CC) {
-                            return /^\s*```/.test(CC)
+                          function CX(kk) {
+                            return /^\s*```/.test(kk)
                           }
 
-                          function uQ(CC, zC) {
-                            const ZC = [
+                          function NX(kk, Fk) {
+                            const Ik = [
                               []
                             ];
-                            let QC = !1;
-                            for (const wC of CC.split("\n")) !QC && zC(wC) && ZC.at(-1).length > 0 && ZC.push([]), cQ(wC) && (QC = !QC), ZC.at(-1).push(wC);
-                            return ZC.map((CC => CC.join("\n").trim())).filter(Boolean)
+                            let Xk = !1;
+                            for (const Tk of kk.split("\n")) !Xk && Fk(Tk) && Ik.at(-1).length > 0 && Ik.push([]), CX(Tk) && (Xk = !Xk), Ik.at(-1).push(Tk);
+                            return Ik.map((kk => kk.join("\n").trim())).filter(Boolean)
                           }
 
-                          function rQ(CC, zC) {
-                            const ZC = `${"#".repeat(zC)} `,
-                              QC = [];
-                            let wC = !1;
-                            for (const bC of CC.split("\n")) cQ(bC) ? wC = !wC : !wC && bC.startsWith(ZC) && QC.push(bC.slice(ZC.length).trim());
-                            return QC
+                          function cX(kk, Fk) {
+                            const Ik = `${"#".repeat(Fk)} `,
+                              Xk = [];
+                            let Tk = !1;
+                            for (const ik of kk.split("\n")) CX(ik) ? Tk = !Tk : !Tk && ik.startsWith(Ik) && Xk.push(ik.slice(Ik.length).trim());
+                            return Xk
                           }
 
-                          function sQ(CC) {
-                            return CC.markdown.replace(/^\s*# .*\n/, "").trim()
+                          function WX(kk) {
+                            return kk.markdown.replace(/^\s*# .*\n/, "").trim()
                           }
-                          class TQ {
-                            constructor(CC, zC) {
-                              this.origin = zC, this.pages = void 0, this.partPaths = new Map;
-                              const ZC = CC.map((CC => {
-                                const zC = zC => this.resolveLinks(CC, zC).length,
-                                  ZC = function(CC, zC) {
-                                    const ZC = CC.map((CC => zC(CC.markdown) + 2)),
-                                      QC = ZC.reduce(((CC, zC) => CC + zC), 0),
-                                      wC = QC / Math.ceil(QC / XQ),
-                                      bC = [];
-                                    let nC = 0;
-                                    return CC.forEach(((CC, zC) => {
-                                      const QC = ZC[zC];
-                                      (0 === bC.length || nC + QC > XQ || nC + QC / 2 > wC) && (bC.push([]), nC = 0), bC.at(-1).push(CC), nC += QC
-                                    })), bC
-                                  }(function(CC, zC) {
-                                    return uQ(CC, (CC => CC.startsWith("## "))).flatMap((CC => {
-                                      var ZC;
-                                      const QC = null !== (ZC = rQ(CC, 2)[0]) && void 0 !== ZC ? ZC : "";
-                                      if (zC(CC) <= XQ) return [{
-                                        markdown: CC,
-                                        section: QC
+                          class fX {
+                            constructor(kk, Fk) {
+                              this.origin = Fk, this.pages = void 0, this.partPaths = new Map;
+                              const Ik = kk.map((kk => {
+                                const Fk = Fk => this.resolveLinks(kk, Fk).length,
+                                  Ik = function(kk, Fk) {
+                                    const Ik = kk.map((kk => Fk(kk.markdown) + 2)),
+                                      Xk = Ik.reduce(((kk, Fk) => kk + Fk), 0),
+                                      Tk = Xk / Math.ceil(Xk / UX),
+                                      ik = [];
+                                    let yk = 0;
+                                    return kk.forEach(((kk, Fk) => {
+                                      const Xk = Ik[Fk];
+                                      (0 === ik.length || yk + Xk > UX || yk + Xk / 2 > Tk) && (ik.push([]), yk = 0), ik.at(-1).push(kk), yk += Xk
+                                    })), ik
+                                  }(function(kk, Fk) {
+                                    return NX(kk, (kk => kk.startsWith("## "))).flatMap((kk => {
+                                      var Ik;
+                                      const Xk = null !== (Ik = cX(kk, 2)[0]) && void 0 !== Ik ? Ik : "";
+                                      if (Fk(kk) <= UX) return [{
+                                        markdown: kk,
+                                        section: Xk
                                       }];
-                                      let wC = !1,
-                                        bC = "";
-                                      return uQ(CC, (CC => {
-                                        const zC = wC && "" !== CC.trim();
-                                        return wC = "" === CC.trim(), zC
-                                      })).map((CC => {
-                                        var zC;
-                                        const ZC = rQ(CC, 3),
-                                          wC = CC.startsWith("### ") ? ZC[0] : bC;
-                                        return bC = null !== (zC = ZC.at(-1)) && void 0 !== zC ? zC : bC, {
-                                          markdown: CC,
-                                          section: QC || wC
+                                      let Tk = !1,
+                                        ik = "";
+                                      return NX(kk, (kk => {
+                                        const Fk = Tk && "" !== kk.trim();
+                                        return Tk = "" === kk.trim(), Fk
+                                      })).map((kk => {
+                                        var Fk;
+                                        const Ik = cX(kk, 3),
+                                          Tk = kk.startsWith("### ") ? Ik[0] : ik;
+                                        return ik = null !== (Fk = Ik.at(-1)) && void 0 !== Fk ? Fk : ik, {
+                                          markdown: kk,
+                                          section: Xk || Tk
                                         }
                                       }))
                                     }))
-                                  }(sQ(CC), zC), zC);
+                                  }(WX(kk), Fk), Fk);
                                 return {
-                                  page: CC,
-                                  groups: ZC.length > 1 ? ZC : []
+                                  page: kk,
+                                  groups: Ik.length > 1 ? Ik : []
                                 }
                               }));
                               for (const {
-                                  page: QC,
-                                  groups: wC
+                                  page: Xk,
+                                  groups: Tk
                                 }
-                                of ZC) wC.forEach(((CC, zC) => {
-                                const ZC = (0, EQ.t)(QC.slug, zC);
-                                for (const wC of CC.flatMap((CC => [...rQ(CC.markdown, 2), ...rQ(CC.markdown, 3)]))) {
-                                  const CC = `${QC.id}#${(0,iC.p)(wC)}`;
-                                  this.partPaths.has(CC) || this.partPaths.set(CC, ZC)
+                                of Ik) Tk.forEach(((kk, Fk) => {
+                                const Ik = (0, bX.t)(Xk.slug, Fk);
+                                for (const Tk of kk.flatMap((kk => [...cX(kk.markdown, 2), ...cX(kk.markdown, 3)]))) {
+                                  const kk = `${Xk.id}#${(0,zk.t)(Tk)}`;
+                                  this.partPaths.has(kk) || this.partPaths.set(kk, Ik)
                                 }
                               }));
-                              this.pages = ZC.map((CC => {
+                              this.pages = Ik.map((kk => {
                                 let {
-                                  page: zC,
-                                  groups: ZC
-                                } = CC;
+                                  page: Fk,
+                                  groups: Ik
+                                } = kk;
                                 return {
-                                  page: zC,
-                                  path: (0, EQ.p)(zC.slug),
-                                  markdown: `# ${zC.title}\n\n${this.resolveLinks(zC,sQ(zC))}\n`,
-                                  parts: ZC.map(((CC, QC) => this.renderPart(zC, CC, QC, ZC.length)))
+                                  page: Fk,
+                                  path: (0, bX.r)(Fk.slug),
+                                  markdown: `# ${Fk.title}\n\n${this.resolveLinks(Fk,WX(Fk))}\n`,
+                                  parts: Ik.map(((kk, Xk) => this.renderPart(Fk, kk, Xk, Ik.length)))
                                 }
                               }))
                             }
-                            url(CC) {
-                              return `${this.origin}${CC}`
+                            url(kk) {
+                              return `${this.origin}${kk}`
                             }
-                            getPage(CC) {
-                              return this.pages.find((zC => zC.page.id === CC))
+                            getPage(kk) {
+                              return this.pages.find((Fk => Fk.page.id === kk))
                             }
                             oversizedFiles() {
-                              return this.pages.flatMap((CC => (CC.parts.length > 0 ? CC.parts : [{
-                                path: CC.path,
+                              return this.pages.flatMap((kk => (kk.parts.length > 0 ? kk.parts : [{
+                                path: kk.path,
                                 label: "",
-                                markdown: CC.markdown
-                              }]).filter((CC => CC.markdown.length > EQ.b))))
+                                markdown: kk.markdown
+                              }]).filter((kk => kk.markdown.length > bX.d))))
                             }
-                            markdownUrl(CC, zC) {
-                              const ZC = zC && this.partPaths.get(`${CC.id}#${zC}`) || (0, EQ.p)(CC.slug);
-                              return this.url(zC ? `${ZC}#${zC}` : ZC)
+                            markdownUrl(kk, Fk) {
+                              const Ik = Fk && this.partPaths.get(`${kk.id}#${Fk}`) || (0, bX.r)(kk.slug);
+                              return this.url(Fk ? `${Ik}#${Fk}` : Ik)
                             }
-                            resolveLinks(CC, zC) {
-                              return zC.replace(/\]\((#[^)]+)\)/g, ((zC, ZC) => {
-                                var QC;
-                                const wC = null !== (QC = aC(ZC)) && void 0 !== QC ? QC : this.samePageTarget(CC, ZC);
-                                return wC ? `](${this.markdownUrl(wC.page,wC.anchor)})` : zC
+                            resolveLinks(kk, Fk) {
+                              return Fk.replace(/\]\((#[^)]+)\)/g, ((Fk, Ik) => {
+                                var Xk;
+                                const Tk = null !== (Xk = Bk(Ik)) && void 0 !== Xk ? Xk : this.samePageTarget(kk, Ik);
+                                return Tk ? `](${this.markdownUrl(Tk.page,Tk.anchor)})` : Fk
                               }))
                             }
-                            samePageTarget(CC, zC) {
-                              const ZC = (0, iC.p)(zC.slice(1));
-                              return TC(CC, ZC) ? {
-                                page: CC,
-                                anchor: ZC
+                            samePageTarget(kk, Fk) {
+                              const Ik = (0, zk.t)(Fk.slice(1));
+                              return fk(kk, Ik) ? {
+                                page: kk,
+                                anchor: Ik
                               } : null
                             }
-                            renderPart(CC, zC, ZC, QC) {
-                              const wC = function(CC) {
-                                  const zC = CC.map((CC => CC.section)).filter(Boolean);
-                                  if (0 === zC.length) return "";
-                                  const ZC = zC[0],
-                                    QC = zC.at(-1);
-                                  return ZC === QC ? ZC : `${ZC} to ${QC}`
-                                }(zC),
-                                bC = zC.map((CC => CC.markdown)).join("\n\n"),
-                                nC = wC ? `It covers ${wC}. ` : "",
-                                fC = `Part ${ZC+1} of ${QC} of [${CC.title}](${this.url((0,EQ.p)(CC.slug))}). ${nC}[llms.txt](${this.url(EQ.g)}) lists every part.`;
+                            renderPart(kk, Fk, Ik, Xk) {
+                              const Tk = function(kk) {
+                                  const Fk = kk.map((kk => kk.section)).filter(Boolean);
+                                  if (0 === Fk.length) return "";
+                                  const Ik = Fk[0],
+                                    Xk = Fk.at(-1);
+                                  return Ik === Xk ? Ik : `${Ik} to ${Xk}`
+                                }(Fk),
+                                ik = Fk.map((kk => kk.markdown)).join("\n\n"),
+                                yk = Tk ? `It covers ${Tk}. ` : "",
+                                lk = `Part ${Ik+1} of ${Xk} of [${kk.title}](${this.url((0,bX.r)(kk.slug))}). ${yk}[llms.txt](${this.url(bX.g)}) lists every part.`;
                               return {
-                                path: (0, EQ.t)(CC.slug, ZC),
-                                label: wC,
-                                markdown: `# ${CC.title}, part ${ZC+1} of ${QC}\n\n${fC}\n\n${this.resolveLinks(CC,bC)}\n`
+                                path: (0, bX.t)(kk.slug, Ik),
+                                label: Tk,
+                                markdown: `# ${kk.title}, part ${Ik+1} of ${Xk}\n\n${lk}\n\n${this.resolveLinks(kk,ik)}\n`
                               }
                             }
-                            llmsTxt(CC) {
-                              const zC = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${aQ(EQ.b)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
-                              for (const ZC of cC) {
-                                zC.push("", `## ${ZC.title}`, "");
-                                for (const CC of ZC.pageIds) {
-                                  const ZC = this.getPage(CC),
+                            llmsTxt(kk) {
+                              const Fk = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${BX(bX.d)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
+                              for (const Ik of Ck) {
+                                Fk.push("", `## ${Ik.title}`, "");
+                                for (const kk of Ik.pageIds) {
+                                  const Ik = this.getPage(kk),
                                     {
-                                      page: QC,
-                                      parts: wC
-                                    } = ZC,
-                                    bC = `About ${aQ(ZC.markdown.length)} tokens${wC.length>0?`, in ${wC.length} parts:`:"."}`;
-                                  zC.push(`- [${QC.title}](${this.url(ZC.path)}): ${QC.summary} ${bC}`), wC.forEach(((CC, ZC) => {
-                                    zC.push(`  - [Part ${ZC+1}${CC.label?`: ${CC.label}`:""}](${this.url(CC.path)})`)
+                                      page: Xk,
+                                      parts: Tk
+                                    } = Ik,
+                                    ik = `About ${BX(Ik.markdown.length)} tokens${Tk.length>0?`, in ${Tk.length} parts:`:"."}`;
+                                  Fk.push(`- [${Xk.title}](${this.url(Ik.path)}): ${Xk.summary} ${ik}`), Tk.forEach(((kk, Ik) => {
+                                    Fk.push(`  - [Part ${Ik+1}${kk.label?`: ${kk.label}`:""}](${this.url(kk.path)})`)
                                   }))
                                 }
                               }
-                              return zC.push("", "## Optional", "", `- [Every page in one file](${this.url(EQ.d)}): About ${aQ(CC.length)} tokens, for a model with a large context window.`, ""), zC.join("\n")
+                              return Fk.push("", "## Optional", "", `- [Every page in one file](${this.url(bX.f)}): About ${BX(kk.length)} tokens, for a model with a large context window.`, ""), Fk.join("\n")
                             }
                             llmsFullTxt() {
-                              return cC.flatMap((CC => CC.pageIds.map((CC => this.getPage(CC).markdown)))).join("\n---\n\n")
+                              return Ck.flatMap((kk => kk.pageIds.map((kk => this.getPage(kk).markdown)))).join("\n---\n\n")
                             }
                             files() {
-                              const CC = this.llmsFullTxt(),
-                                zC = this.llmsTxt(CC),
-                                ZC = new Map([
-                                  [EQ.m, zC],
-                                  [EQ.g, zC],
-                                  [EQ.d, CC]
+                              const kk = this.llmsFullTxt(),
+                                Fk = this.llmsTxt(kk),
+                                Ik = new Map([
+                                  [bX.k, Fk],
+                                  [bX.g, Fk],
+                                  [bX.f, kk]
                                 ]);
-                              for (const QC of this.pages) {
-                                ZC.set(QC.path, QC.markdown);
-                                for (const CC of QC.parts) ZC.set(CC.path, CC.markdown)
+                              for (const Xk of this.pages) {
+                                Ik.set(Xk.path, Xk.markdown);
+                                for (const kk of Xk.parts) Ik.set(kk.path, kk.markdown)
                               }
-                              return ZC
+                              return Ik
                             }
                           }
 
-                          function aQ(CC) {
-                            return `${Math.max(1,Math.round(CC/4e3))}K`
+                          function BX(kk) {
+                            return `${Math.max(1,Math.round(kk/4e3))}K`
                           }
-                          let tQ = null;
+                          let dX = null;
 
-                          function DQ() {
-                            return tQ ??= new TQ(XC, lQ.d), tQ
+                          function YX() {
+                            return dX ??= new fX(Uk, RX.b), dX
                           }
-                          const jQ = [{
+                          const AX = [{
                             name: "ChatGPT",
                             url: "https://chatgpt.com/?hints=search&q="
                           }, {
@@ -2582,373 +2582,373 @@ export const modules = {
                             url: "https://claude.ai/new?q="
                           }];
 
-                          function yQ(CC) {
-                            return DQ().getPage(CC.id).parts.length > 0 ? `Read ${EQ.k}, then the parts of the Bloxd Code API's ${CC.title} page it lists, so I can ask questions about it.` : `Read ${lQ.d}${(0,EQ.p)(CC.slug)} so I can ask questions about it. ${EQ.k} lists every page of the Bloxd Code API docs.`
+                          function gX(kk) {
+                            return YX().getPage(kk.id).parts.length > 0 ? `Read ${bX.h}, then the parts of the Bloxd Code API's ${kk.title} page it lists, so I can ask questions about it.` : `Read ${RX.b}${(0,bX.r)(kk.slug)} so I can ask questions about it. ${bX.h} lists every page of the Bloxd Code API docs.`
                           }
 
-                          function LQ(CC) {
+                          function mX(kk) {
                             let {
-                              page: zC
-                            } = CC;
-                            const [ZC, QC] = GC();
-                            return (0, gC.jsxs)("div", {
+                              page: Fk
+                            } = kk;
+                            const [Ik, Xk] = xk();
+                            return (0, ek.jsxs)("div", {
                               className: "DocsPageAgentActions",
-                              children: [(0, gC.jsxs)("button", {
+                              children: [(0, ek.jsxs)("button", {
                                 type: "button",
                                 className: "DocsPageAgentAction",
                                 onClick: () => {
-                                  QC(DQ().getPage(zC.id).markdown)
+                                  Xk(YX().getPage(Fk.id).markdown)
                                 },
-                                children: [(0, gC.jsx)(pC, {
-                                  name: !1 === (null === ZC || void 0 === ZC ? void 0 : ZC.failed) ? "check" : "copy"
-                                }), (0, gC.jsx)("span", {
-                                  children: ZC ? ZC.failed ? "Copy failed" : "Copied" : "Copy page"
+                                children: [(0, ek.jsx)(Hk, {
+                                  name: !1 === (null === Ik || void 0 === Ik ? void 0 : Ik.failed) ? "check" : "copy"
+                                }), (0, ek.jsx)("span", {
+                                  children: Ik ? Ik.failed ? "Copy failed" : "Copied" : "Copy page"
                                 })]
-                              }), jQ.map((CC => (0, gC.jsxs)("a", {
+                              }), AX.map((kk => (0, ek.jsxs)("a", {
                                 className: "DocsPageAgentAction",
-                                href: `${CC.url}${encodeURIComponent(yQ(zC))}`,
+                                href: `${kk.url}${encodeURIComponent(gX(Fk))}`,
                                 target: "_blank",
                                 rel: "noreferrer",
-                                children: [(0, gC.jsx)(pC, {
+                                children: [(0, ek.jsx)(Hk, {
                                   name: "external-link"
-                                }), (0, gC.jsxs)("span", {
-                                  children: ["Open in ", CC.name]
+                                }), (0, ek.jsxs)("span", {
+                                  children: ["Open in ", kk.name]
                                 })]
-                              }, CC.name)))]
+                              }, kk.name)))]
                             })
                           }
 
-                          function UQ(CC) {
-                            return `#${[0,1,2].map((zC=>Math.round(Math.min(255,Math.max(0,CC[zC]))).toString(16).padStart(2,"0"))).join("")}`
+                          function hX(kk) {
+                            return `#${[0,1,2].map((Fk=>Math.round(Math.min(255,Math.max(0,kk[Fk]))).toString(16).padStart(2,"0"))).join("")}`
                           }
 
-                          function BQ(CC) {
-                            return [parseInt(CC.slice(1, 3), 16), parseInt(CC.slice(3, 5), 16), parseInt(CC.slice(5, 7), 16)]
+                          function rX(kk) {
+                            return [parseInt(kk.slice(1, 3), 16), parseInt(kk.slice(3, 5), 16), parseInt(kk.slice(5, 7), 16)]
                           }
 
-                          function OQ(CC) {
+                          function DX(kk) {
                             let {
-                              label: zC,
-                              min: ZC,
-                              max: QC,
-                              step: wC,
-                              low: bC,
-                              high: nC,
-                              onChange: fC
-                            } = CC;
-                            return (0, gC.jsxs)("div", {
+                              label: Fk,
+                              min: Ik,
+                              max: Xk,
+                              step: Tk,
+                              low: ik,
+                              high: yk,
+                              onChange: lk
+                            } = kk;
+                            return (0, ek.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, gC.jsxs)("div", {
+                              children: [(0, ek.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, gC.jsx)("span", {
-                                  children: zC
-                                }), (0, gC.jsx)("span", {
+                                children: [(0, ek.jsx)("span", {
+                                  children: Fk
+                                }), (0, ek.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: bC === nC ? bC : `${bC}\u2013${nC}`
+                                  children: ik === yk ? ik : `${ik}\u2013${yk}`
                                 })]
-                              }), (0, gC.jsxs)("div", {
+                              }), (0, ek.jsxs)("div", {
                                 className: "DocsParticleRange",
-                                children: [(0, gC.jsx)("input", {
+                                children: [(0, ek.jsx)("input", {
                                   type: "range",
-                                  min: ZC,
-                                  max: QC,
-                                  step: wC,
-                                  value: Math.min(QC, bC),
-                                  "aria-label": `Minimum ${zC.toLowerCase()}`,
-                                  onChange: CC => {
-                                    const zC = Number(CC.target.value);
-                                    fC(zC, Math.max(zC, nC))
+                                  min: Ik,
+                                  max: Xk,
+                                  step: Tk,
+                                  value: Math.min(Xk, ik),
+                                  "aria-label": `Minimum ${Fk.toLowerCase()}`,
+                                  onChange: kk => {
+                                    const Fk = Number(kk.target.value);
+                                    lk(Fk, Math.max(Fk, yk))
                                   }
-                                }), (0, gC.jsx)("input", {
+                                }), (0, ek.jsx)("input", {
                                   type: "range",
-                                  min: ZC,
-                                  max: QC,
-                                  step: wC,
-                                  value: Math.min(QC, nC),
-                                  "aria-label": `Maximum ${zC.toLowerCase()}`,
-                                  onChange: CC => {
-                                    const zC = Number(CC.target.value);
-                                    fC(Math.min(zC, bC), zC)
+                                  min: Ik,
+                                  max: Xk,
+                                  step: Tk,
+                                  value: Math.min(Xk, yk),
+                                  "aria-label": `Maximum ${Fk.toLowerCase()}`,
+                                  onChange: kk => {
+                                    const Fk = Number(kk.target.value);
+                                    lk(Math.min(Fk, ik), Fk)
                                   }
                                 })]
                               })]
                             })
                           }
 
-                          function kQ(CC) {
+                          function MX(kk) {
                             let {
-                              label: zC,
-                              min: ZC,
-                              max: QC,
-                              step: wC,
-                              value: bC,
-                              onChange: nC,
-                              format: fC = String
-                            } = CC;
-                            return (0, gC.jsxs)("div", {
+                              label: Fk,
+                              min: Ik,
+                              max: Xk,
+                              step: Tk,
+                              value: ik,
+                              onChange: yk,
+                              format: lk = String
+                            } = kk;
+                            return (0, ek.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, gC.jsxs)("div", {
+                              children: [(0, ek.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, gC.jsx)("span", {
-                                  children: zC
-                                }), (0, gC.jsx)("span", {
+                                children: [(0, ek.jsx)("span", {
+                                  children: Fk
+                                }), (0, ek.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: fC(bC)
+                                  children: lk(ik)
                                 })]
-                              }), (0, gC.jsx)("input", {
+                              }), (0, ek.jsx)("input", {
                                 type: "range",
-                                min: ZC,
-                                max: QC,
-                                step: wC,
-                                value: Math.min(QC, Math.max(ZC, bC)),
-                                "aria-label": zC,
-                                onChange: CC => {
-                                  nC(Number(CC.target.value))
+                                min: Ik,
+                                max: Xk,
+                                step: Tk,
+                                value: Math.min(Xk, Math.max(Ik, ik)),
+                                "aria-label": Fk,
+                                onChange: kk => {
+                                  yk(Number(kk.target.value))
                                 }
                               })]
                             })
                           }
 
-                          function VQ(CC) {
+                          function kT(kk) {
                             let {
-                              opts: zC,
-                              onChange: ZC
-                            } = CC;
-                            const QC = zC.colorGradients;
-                            if (!tZ(QC)) return (0, gC.jsxs)("div", {
+                              opts: Fk,
+                              onChange: Ik
+                            } = kk;
+                            const Xk = Fk.colorGradients;
+                            if (!dI(Xk)) return (0, ek.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, gC.jsx)("div", {
+                              children: [(0, ek.jsx)("div", {
                                 className: "DocsControlLabel",
-                                children: (0, gC.jsx)("span", {
+                                children: (0, ek.jsx)("span", {
                                   children: "Colours, one per particle"
                                 })
-                              }), (0, gC.jsx)("div", {
+                              }), (0, ek.jsx)("div", {
                                 className: "DocsParticleSwatches",
-                                children: QC.map(((CC, zC) => (0, gC.jsx)("input", {
+                                children: Xk.map(((kk, Fk) => (0, ek.jsx)("input", {
                                   type: "color",
-                                  value: UQ(CC.color),
-                                  "aria-label": `Colour ${zC+1}`,
-                                  onChange: CC => {
-                                    const wC = [...QC];
-                                    wC[zC] = {
-                                      color: BQ(CC.target.value)
-                                    }, ZC(wC)
+                                  value: hX(kk.color),
+                                  "aria-label": `Colour ${Fk+1}`,
+                                  onChange: kk => {
+                                    const Tk = [...Xk];
+                                    Tk[Fk] = {
+                                      color: rX(kk.target.value)
+                                    }, Ik(Tk)
                                   }
-                                }, zC)))
+                                }, Fk)))
                               })]
                             });
-                            const wC = (CC, zC) => {
-                              const wC = [...QC];
-                              wC[CC] = zC, ZC(wC)
+                            const Tk = (kk, Fk) => {
+                              const Tk = [...Xk];
+                              Tk[kk] = Fk, Ik(Tk)
                             };
-                            return (0, gC.jsxs)("div", {
+                            return (0, ek.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, gC.jsxs)("div", {
+                              children: [(0, ek.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, gC.jsx)("span", {
+                                children: [(0, ek.jsx)("span", {
                                   children: "Colour over lifetime"
-                                }), (0, gC.jsx)("span", {
+                                }), (0, ek.jsx)("span", {
                                   className: "DocsControlValue",
                                   children: "min \xb7 max"
                                 })]
-                              }), QC.map(((CC, zC) => {
-                                var ZC;
-                                const QC = null !== (ZC = CC.maxColor) && void 0 !== ZC ? ZC : CC.minColor;
-                                return (0, gC.jsxs)("div", {
+                              }), Xk.map(((kk, Fk) => {
+                                var Ik;
+                                const Xk = null !== (Ik = kk.maxColor) && void 0 !== Ik ? Ik : kk.minColor;
+                                return (0, ek.jsxs)("div", {
                                   className: "DocsParticleStop",
-                                  children: [(0, gC.jsxs)("span", {
+                                  children: [(0, ek.jsxs)("span", {
                                     className: "DocsParticleStopTime",
-                                    children: [Math.round(100 * CC.timeFraction), "%"]
-                                  }), (0, gC.jsx)("span", {
+                                    children: [Math.round(100 * kk.timeFraction), "%"]
+                                  }), (0, ek.jsx)("span", {
                                     className: "DocsParticleStopBar",
                                     style: {
-                                      background: `linear-gradient(90deg, ${UQ(CC.minColor)}, ${UQ(QC)})`
+                                      background: `linear-gradient(90deg, ${hX(kk.minColor)}, ${hX(Xk)})`
                                     }
-                                  }), (0, gC.jsx)("input", {
+                                  }), (0, ek.jsx)("input", {
                                     type: "color",
-                                    value: UQ(CC.minColor),
-                                    "aria-label": `Minimum colour at ${Math.round(100*CC.timeFraction)}%`,
-                                    onChange: ZC => {
-                                      wC(zC, {
-                                        ...CC,
-                                        minColor: [...BQ(ZC.target.value), CC.minColor[3]]
+                                    value: hX(kk.minColor),
+                                    "aria-label": `Minimum colour at ${Math.round(100*kk.timeFraction)}%`,
+                                    onChange: Ik => {
+                                      Tk(Fk, {
+                                        ...kk,
+                                        minColor: [...rX(Ik.target.value), kk.minColor[3]]
                                       })
                                     }
-                                  }), (0, gC.jsx)("input", {
+                                  }), (0, ek.jsx)("input", {
                                     type: "color",
-                                    value: UQ(QC),
-                                    "aria-label": `Maximum colour at ${Math.round(100*CC.timeFraction)}%`,
-                                    onChange: ZC => {
-                                      wC(zC, {
-                                        ...CC,
-                                        maxColor: [...BQ(ZC.target.value), QC[3]]
+                                    value: hX(Xk),
+                                    "aria-label": `Maximum colour at ${Math.round(100*kk.timeFraction)}%`,
+                                    onChange: Ik => {
+                                      Tk(Fk, {
+                                        ...kk,
+                                        maxColor: [...rX(Ik.target.value), Xk[3]]
                                       })
                                     }
                                   })]
-                                }, zC)
+                                }, Fk)
                               }))]
                             })
                           }
-                          const Cw = [-.5, -.5, -.5],
-                            zw = [.5, .5, .5],
-                            Zw = [0, 1, 2, 3, 4, 5, 6, 7].map((CC => [1 & CC ? zw[0] : Cw[0], 2 & CC ? zw[1] : Cw[1], 4 & CC ? zw[2] : Cw[2]]));class Qw {
+                          const FT = [-.5, -.5, -.5],
+                            IT = [.5, .5, .5],
+                            XT = [0, 1, 2, 3, 4, 5, 6, 7].map((kk => [1 & kk ? IT[0] : FT[0], 2 & kk ? IT[1] : FT[1], 4 & kk ? IT[2] : FT[2]]));class TT {
                             constructor() {
                               this.tints = new WeakMap
                             }
-                            get(CC, zC, ZC, QC) {
-                              const wC = Math.round(31 * zC),
-                                bC = Math.round(31 * ZC),
-                                nC = Math.round(31 * QC),
-                                fC = `${wC}|${bC}|${nC}`;
-                              let oC = this.tints.get(CC);
-                              (!oC || oC.size > 2e3) && (oC = new Map, this.tints.set(CC, oC));
-                              let qC = oC.get(fC);
-                              if (qC) return qC;
-                              qC = document.createElement("canvas"), qC.width = CC.naturalWidth || 16, qC.height = CC.naturalHeight || 16;
-                              const FC = qC.getContext("2d");
-                              return FC ? (FC.imageSmoothingEnabled = !1, FC.drawImage(CC, 0, 0, qC.width, qC.height), FC.globalCompositeOperation = "multiply", FC.fillStyle = `rgb(${wC/31*255}, ${bC/31*255}, ${nC/31*255})`, FC.fillRect(0, 0, qC.width, qC.height), FC.globalCompositeOperation = "destination-in", FC.drawImage(CC, 0, 0, qC.width, qC.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), oC.set(fC, qC), qC
+                            get(kk, Fk, Ik, Xk) {
+                              const Tk = Math.round(31 * Fk),
+                                ik = Math.round(31 * Ik),
+                                yk = Math.round(31 * Xk),
+                                lk = `${Tk}|${ik}|${yk}`;
+                              let ak = this.tints.get(kk);
+                              (!ak || ak.size > 2e3) && (ak = new Map, this.tints.set(kk, ak));
+                              let qk = ak.get(lk);
+                              if (qk) return qk;
+                              qk = document.createElement("canvas"), qk.width = kk.naturalWidth || 16, qk.height = kk.naturalHeight || 16;
+                              const Lk = qk.getContext("2d");
+                              return Lk ? (Lk.imageSmoothingEnabled = !1, Lk.drawImage(kk, 0, 0, qk.width, qk.height), Lk.globalCompositeOperation = "multiply", Lk.fillStyle = `rgb(${Tk/31*255}, ${ik/31*255}, ${yk/31*255})`, Lk.fillRect(0, 0, qk.width, qk.height), Lk.globalCompositeOperation = "destination-in", Lk.drawImage(kk, 0, 0, qk.width, qk.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), ak.set(lk, qk), qk
                             }
                           }
 
-                          function ww(CC) {
+                          function iT(kk) {
                             let {
-                              opts: zC,
-                              textureUrl: ZC,
-                              burst: wC,
-                              paused: bC
-                            } = CC;
-                            const nC = (0, QC.useRef)(null),
-                              fC = (0, QC.useRef)(zC);
-                            fC.current = zC;
-                            const oC = (0, QC.useRef)(bC);
-                            oC.current = bC;
-                            const qC = (0, QC.useRef)(null),
-                              FC = (0, QC.useRef)(null),
-                              WC = (0, QC.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(CC) {
-                                let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
-                                const ZC = [-.5, -.5, -.5],
-                                  QC = [.5, .5, .5];
-                                let wC = .5;
-                                for (let bC = 0; bC < 40; bC++) {
-                                  const bC = jZ(CC, ZC, QC, zC),
-                                    nC = Math.max(bC.life / 30, .001);
-                                  for (; UZ(bC, CC.gravity, nC);) wC = Math.max(wC, Math.hypot(bC.pos[0], bC.pos[1], bC.pos[2]) + bC.size / 2)
+                              opts: Fk,
+                              textureUrl: Ik,
+                              burst: Tk,
+                              paused: ik
+                            } = kk;
+                            const yk = (0, Xk.useRef)(null),
+                              lk = (0, Xk.useRef)(Fk);
+                            lk.current = Fk;
+                            const ak = (0, Xk.useRef)(ik);
+                            ak.current = ik;
+                            const qk = (0, Xk.useRef)(null),
+                              Lk = (0, Xk.useRef)(null),
+                              tk = (0, Xk.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(kk) {
+                                let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
+                                const Ik = [-.5, -.5, -.5],
+                                  Xk = [.5, .5, .5];
+                                let Tk = .5;
+                                for (let ik = 0; ik < 40; ik++) {
+                                  const ik = AI(kk, Ik, Xk, Fk),
+                                    yk = Math.max(ik.life / 30, .001);
+                                  for (; hI(ik, kk.gravity, yk);) Tk = Math.max(Tk, Math.hypot(ik.pos[0], ik.pos[1], ik.pos[2]) + ik.size / 2)
                                 }
-                                return wC
-                              }(zC)))), [zC]),
-                              NC = (0, QC.useRef)(WC);
-                            return NC.current = WC, (0, QC.useEffect)((() => {
-                              if (qC.current = null, !ZC) return;
-                              const CC = new Image;
-                              let zC = !1;
-                              return CC.onload = () => {
-                                zC || (qC.current = CC)
-                              }, CC.onerror = () => {
-                                console.warn(`Particle preview: could not load the texture ${ZC}`)
-                              }, CC.src = ZC, () => {
-                                zC = !0
+                                return Tk
+                              }(Fk)))), [Fk]),
+                              Zk = (0, Xk.useRef)(tk);
+                            return Zk.current = tk, (0, Xk.useEffect)((() => {
+                              if (qk.current = null, !Ik) return;
+                              const kk = new Image;
+                              let Fk = !1;
+                              return kk.onload = () => {
+                                Fk || (qk.current = kk)
+                              }, kk.onerror = () => {
+                                console.warn(`Particle preview: could not load the texture ${Ik}`)
+                              }, kk.src = Ik, () => {
+                                Fk = !0
                               }
-                            }), [ZC]), (0, QC.useEffect)((() => {
-                              var CC;
-                              null === (CC = FC.current) || void 0 === CC || CC.call(FC)
-                            }), [zC, wC]), (0, QC.useEffect)((() => {
-                              const CC = nC.current,
-                                zC = null === CC || void 0 === CC ? void 0 : CC.getContext("2d");
-                              if (!CC || !zC) return void console.warn("Particle preview: no 2D canvas context to draw on");
-                              const ZC = new Qw;
-                              let QC = [],
-                                wC = 0,
-                                bC = -.7,
-                                WC = NC.current,
-                                MC = performance.now(),
-                                gC = 0,
-                                SC = !0,
-                                pC = null;
-                              const PC = () => {
-                                const CC = fC.current,
-                                  zC = Math.min(400, Math.max(0, Math.ceil(CC.manualEmitCount)));
-                                QC = [];
-                                for (let ZC = 0; ZC < zC; ZC++) QC.push(jZ(CC, Cw, zw, Math.random));
-                                wC = 0
+                            }), [Ik]), (0, Xk.useEffect)((() => {
+                              var kk;
+                              null === (kk = Lk.current) || void 0 === kk || kk.call(Lk)
+                            }), [Fk, Tk]), (0, Xk.useEffect)((() => {
+                              const kk = yk.current,
+                                Fk = null === kk || void 0 === kk ? void 0 : kk.getContext("2d");
+                              if (!kk || !Fk) return void console.warn("Particle preview: no 2D canvas context to draw on");
+                              const Ik = new TT;
+                              let Xk = [],
+                                Tk = 0,
+                                ik = -.7,
+                                tk = Zk.current,
+                                jk = performance.now(),
+                                ek = 0,
+                                wk = !0,
+                                Hk = null;
+                              const Jk = () => {
+                                const kk = lk.current,
+                                  Fk = Math.min(400, Math.max(0, Math.ceil(kk.manualEmitCount)));
+                                Xk = [];
+                                for (let Ik = 0; Ik < Fk; Ik++) Xk.push(AI(kk, FT, IT, Math.random));
+                                Tk = 0
                               };
-                              FC.current = PC, PC();
-                              const GC = nC => {
-                                gC = requestAnimationFrame(GC);
-                                const FC = Math.min(.05, (nC - MC) / 1e3);
-                                if (MC = nC, !SC) return;
-                                const RC = window.devicePixelRatio || 1,
-                                  AC = Math.round(CC.clientWidth * RC),
-                                  xC = Math.round(CC.clientHeight * RC);
-                                if (0 === AC || 0 === xC) return;
-                                CC.width === AC && CC.height === xC || (CC.width = AC, CC.height = xC);
-                                const JC = fC.current;
-                                null === pC && (bC += .18 * FC), WC += (NC.current - WC) * Math.min(1, 4 * FC);
-                                const IC = .6 * FC;
-                                QC = QC.filter((CC => UZ(CC, JC.gravity, IC))), 0 !== QC.length || oC.current || (wC += FC, wC > .6 && PC());
-                                const iC = function(CC, zC, ZC, QC) {
-                                  const wC = 3.2 * QC,
-                                    bC = .44 * Math.min(CC, zC) * wC / QC,
-                                    nC = Math.cos(ZC),
-                                    fC = Math.sin(ZC),
-                                    oC = Math.cos(.42),
-                                    qC = Math.sin(.42);
-                                  return (ZC, QC, FC) => {
-                                    const WC = ZC * fC + FC * nC,
-                                      NC = wC - (QC * qC + WC * oC);
-                                    if (NC < .05) return null;
-                                    const MC = bC / NC;
+                              Lk.current = Jk, Jk();
+                              const xk = yk => {
+                                ek = requestAnimationFrame(xk);
+                                const Lk = Math.min(.05, (yk - jk) / 1e3);
+                                if (jk = yk, !wk) return;
+                                const Pk = window.devicePixelRatio || 1,
+                                  Kk = Math.round(kk.clientWidth * Pk),
+                                  Qk = Math.round(kk.clientHeight * Pk);
+                                if (0 === Kk || 0 === Qk) return;
+                                kk.width === Kk && kk.height === Qk || (kk.width = Kk, kk.height = Qk);
+                                const sk = lk.current;
+                                null === Hk && (ik += .18 * Lk), tk += (Zk.current - tk) * Math.min(1, 4 * Lk);
+                                const Vk = .6 * Lk;
+                                Xk = Xk.filter((kk => hI(kk, sk.gravity, Vk))), 0 !== Xk.length || ak.current || (Tk += Lk, Tk > .6 && Jk());
+                                const zk = function(kk, Fk, Ik, Xk) {
+                                  const Tk = 3.2 * Xk,
+                                    ik = .44 * Math.min(kk, Fk) * Tk / Xk,
+                                    yk = Math.cos(Ik),
+                                    lk = Math.sin(Ik),
+                                    ak = Math.cos(.42),
+                                    qk = Math.sin(.42);
+                                  return (Ik, Xk, Lk) => {
+                                    const tk = Ik * lk + Lk * yk,
+                                      Zk = Tk - (Xk * qk + tk * ak);
+                                    if (Zk < .05) return null;
+                                    const jk = ik / Zk;
                                     return {
-                                      x: CC / 2 + (ZC * nC - FC * fC) * MC,
-                                      y: zC / 2 - (QC * oC - WC * qC) * MC,
-                                      scale: MC,
-                                      depth: NC
+                                      x: kk / 2 + (Ik * yk - Lk * lk) * jk,
+                                      y: Fk / 2 - (Xk * ak - tk * qk) * jk,
+                                      scale: jk,
+                                      depth: Zk
                                     }
                                   }
-                                }(AC, xC, bC, WC);
-                                ! function(CC, zC, ZC, QC, wC) {
-                                  const bC = CC.createLinearGradient(0, 0, 0, ZC);
-                                  bC.addColorStop(0, "#23262d"), bC.addColorStop(1, "#16181c"), CC.globalCompositeOperation = "source-over", CC.globalAlpha = 1, CC.fillStyle = bC, CC.fillRect(0, 0, zC, ZC);
-                                  const nC = (zC, ZC) => {
-                                      const wC = QC(zC[0], zC[1], zC[2]),
-                                        bC = QC(ZC[0], ZC[1], ZC[2]);
-                                      wC && bC && (CC.beginPath(), CC.moveTo(wC.x, wC.y), CC.lineTo(bC.x, bC.y), CC.stroke())
+                                }(Kk, Qk, ik, tk);
+                                ! function(kk, Fk, Ik, Xk, Tk) {
+                                  const ik = kk.createLinearGradient(0, 0, 0, Ik);
+                                  ik.addColorStop(0, "#23262d"), ik.addColorStop(1, "#16181c"), kk.globalCompositeOperation = "source-over", kk.globalAlpha = 1, kk.fillStyle = ik, kk.fillRect(0, 0, Fk, Ik);
+                                  const yk = (Fk, Ik) => {
+                                      const Tk = Xk(Fk[0], Fk[1], Fk[2]),
+                                        ik = Xk(Ik[0], Ik[1], Ik[2]);
+                                      Tk && ik && (kk.beginPath(), kk.moveTo(Tk.x, Tk.y), kk.lineTo(ik.x, ik.y), kk.stroke())
                                     },
-                                    fC = Math.ceil(wC) + 1,
-                                    oC = Cw[1];
-                                  CC.lineWidth = 1, CC.strokeStyle = "rgba(255, 255, 255, 0.07)";
-                                  for (let qC = -fC; qC <= fC; qC++) nC([qC + .5, oC, .5 - fC], [qC + .5, oC, fC + .5]), nC([.5 - fC, oC, qC + .5], [fC + .5, oC, qC + .5]);
-                                  CC.strokeStyle = "rgba(255, 255, 255, 0.28)", CC.setLineDash([4, 4]);
-                                  for (const qC of Zw)
-                                    for (const CC of Zw) {
-                                      const zC = [0, 1, 2].filter((zC => qC[zC] !== CC[zC]));
-                                      1 === zC.length && qC[zC[0]] < CC[zC[0]] && nC(qC, CC)
+                                    lk = Math.ceil(Tk) + 1,
+                                    ak = FT[1];
+                                  kk.lineWidth = 1, kk.strokeStyle = "rgba(255, 255, 255, 0.07)";
+                                  for (let qk = -lk; qk <= lk; qk++) yk([qk + .5, ak, .5 - lk], [qk + .5, ak, lk + .5]), yk([.5 - lk, ak, qk + .5], [lk + .5, ak, qk + .5]);
+                                  kk.strokeStyle = "rgba(255, 255, 255, 0.28)", kk.setLineDash([4, 4]);
+                                  for (const qk of XT)
+                                    for (const kk of XT) {
+                                      const Fk = [0, 1, 2].filter((Fk => qk[Fk] !== kk[Fk]));
+                                      1 === Fk.length && qk[Fk[0]] < kk[Fk[0]] && yk(qk, kk)
                                     }
-                                  CC.setLineDash([])
-                                }(zC, AC, xC, iC, WC);
-                                const vC = qC.current,
-                                  eC = QC.map((CC => ({
-                                    particle: CC,
-                                    at: iC(CC.pos[0], CC.pos[1], CC.pos[2])
-                                  }))).filter((CC => null !== CC.at)).sort(((CC, zC) => zC.at.depth - CC.at.depth));
-                                zC.imageSmoothingEnabled = !1;
-                                for (const CC of function(CC) {
-                                    switch (CC) {
-                                      case uZ.d.OneOne:
+                                  kk.setLineDash([])
+                                }(Fk, Kk, Qk, zk, tk);
+                                const Sk = qk.current,
+                                  vk = Xk.map((kk => ({
+                                    particle: kk,
+                                    at: zk(kk.pos[0], kk.pos[1], kk.pos[2])
+                                  }))).filter((kk => null !== kk.at)).sort(((kk, Fk) => Fk.at.depth - kk.at.depth));
+                                Fk.imageSmoothingEnabled = !1;
+                                for (const kk of function(kk) {
+                                    switch (kk) {
+                                      case NI.d.OneOne:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !1
                                         }];
-                                      case uZ.d.Add:
+                                      case NI.d.Add:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !0
                                         }];
-                                      case uZ.d.Multiply:
+                                      case NI.d.Multiply:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
                                         }];
-                                      case uZ.d.MultiplyAdd:
+                                      case NI.d.MultiplyAdd:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
@@ -2962,665 +2962,665 @@ export const modules = {
                                           usesAlpha: !0
                                         }]
                                     }
-                                  }(JC.blendMode)) {
-                                  zC.globalCompositeOperation = CC.operation;
+                                  }(sk.blendMode)) {
+                                  Fk.globalCompositeOperation = kk.operation;
                                   for (const {
-                                      particle: QC,
-                                      at: wC
+                                      particle: Xk,
+                                      at: Tk
                                     }
-                                    of eC) {
-                                    const [bC, nC, fC, oC] = LZ(QC), qC = Math.max(1, QC.size * wC.scale);
-                                    zC.globalAlpha = CC.usesAlpha ? Math.min(1, Math.max(0, oC)) : 1, vC ? zC.drawImage(ZC.get(vC, bC, nC, fC), wC.x - qC / 2, wC.y - qC / 2, qC, qC) : (zC.fillStyle = `rgb(${255*bC}, ${255*nC}, ${255*fC})`, zC.fillRect(wC.x - qC / 2, wC.y - qC / 2, qC, qC))
+                                    of vk) {
+                                    const [ik, yk, lk, ak] = mI(Xk), qk = Math.max(1, Xk.size * Tk.scale);
+                                    Fk.globalAlpha = kk.usesAlpha ? Math.min(1, Math.max(0, ak)) : 1, Sk ? Fk.drawImage(Ik.get(Sk, ik, yk, lk), Tk.x - qk / 2, Tk.y - qk / 2, qk, qk) : (Fk.fillStyle = `rgb(${255*ik}, ${255*yk}, ${255*lk})`, Fk.fillRect(Tk.x - qk / 2, Tk.y - qk / 2, qk, qk))
                                   }
                                 }
-                                zC.globalCompositeOperation = "source-over", zC.globalAlpha = 1
+                                Fk.globalCompositeOperation = "source-over", Fk.globalAlpha = 1
                               };
-                              gC = requestAnimationFrame(GC);
-                              const RC = new IntersectionObserver((CC => {
-                                let [zC] = CC;
-                                SC = zC.isIntersecting
+                              ek = requestAnimationFrame(xk);
+                              const Pk = new IntersectionObserver((kk => {
+                                let [Fk] = kk;
+                                wk = Fk.isIntersecting
                               }));
-                              RC.observe(CC);
-                              const AC = zC => {
-                                  pC = zC.clientX, CC.setPointerCapture(zC.pointerId)
+                              Pk.observe(kk);
+                              const Kk = Fk => {
+                                  Hk = Fk.clientX, kk.setPointerCapture(Fk.pointerId)
                                 },
-                                xC = CC => {
-                                  null !== pC && (bC += .01 * (CC.clientX - pC), pC = CC.clientX)
+                                Qk = kk => {
+                                  null !== Hk && (ik += .01 * (kk.clientX - Hk), Hk = kk.clientX)
                                 },
-                                JC = () => {
-                                  pC = null
+                                sk = () => {
+                                  Hk = null
                                 };
-                              return CC.addEventListener("pointerdown", AC), CC.addEventListener("pointermove", xC), CC.addEventListener("pointerup", JC), CC.addEventListener("pointercancel", JC), () => {
-                                cancelAnimationFrame(gC), RC.disconnect(), FC.current = null, CC.removeEventListener("pointerdown", AC), CC.removeEventListener("pointermove", xC), CC.removeEventListener("pointerup", JC), CC.removeEventListener("pointercancel", JC)
+                              return kk.addEventListener("pointerdown", Kk), kk.addEventListener("pointermove", Qk), kk.addEventListener("pointerup", sk), kk.addEventListener("pointercancel", sk), () => {
+                                cancelAnimationFrame(ek), Pk.disconnect(), Lk.current = null, kk.removeEventListener("pointerdown", Kk), kk.removeEventListener("pointermove", Qk), kk.removeEventListener("pointerup", sk), kk.removeEventListener("pointercancel", sk)
                               }
-                            }), []), (0, gC.jsx)("canvas", {
-                              ref: nC,
+                            }), []), (0, ek.jsx)("canvas", {
+                              ref: yk,
                               className: "DocsParticleCanvas",
                               role: "img",
-                              "aria-label": `Preview of a ${zC.texture} particle effect. Drag to turn the view.`
+                              "aria-label": `Preview of a ${Fk.texture} particle effect. Drag to turn the view.`
                             })
                           }
-                          const bw = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
-                            nw = [{
-                              mode: uZ.d.OneOne,
+                          const yT = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
+                            lT = [{
+                              mode: NI.d.OneOne,
                               label: "0 \xb7 OneOne (glow)"
                             }, {
-                              mode: uZ.d.Standard,
+                              mode: NI.d.Standard,
                               label: "1 \xb7 Standard"
                             }, {
-                              mode: uZ.d.Add,
+                              mode: NI.d.Add,
                               label: "2 \xb7 Add"
                             }, {
-                              mode: uZ.d.Multiply,
+                              mode: NI.d.Multiply,
                               label: "3 \xb7 Multiply"
                             }, {
-                              mode: uZ.d.MultiplyAdd,
+                              mode: NI.d.MultiplyAdd,
                               label: "4 \xb7 MultiplyAdd"
                             }],
-                            fw = (0, QC.forwardRef)((function(CC, zC) {
-                              var ZC, wC;
+                            aT = (0, Xk.forwardRef)((function(kk, Fk) {
+                              var Ik, Tk;
                               let {
-                                textures: nC
-                              } = CC;
-                              const fC = RQ(),
-                                oC = (0, QC.useRef)(null),
-                                [qC, FC] = (0, QC.useState)(sZ),
-                                [WC, NC] = (0, QC.useState)("example"),
-                                [MC, SC] = (0, QC.useState)(0),
-                                [PC, GC] = (0, QC.useState)(!1),
-                                AC = CC => {
-                                  const zC = "example" === CC ? sZ : rZ(CC);
-                                  zC && (FC(zC), NC(CC))
+                                textures: yk
+                              } = kk;
+                              const lk = KX(),
+                                ak = (0, Xk.useRef)(null),
+                                [qk, Lk] = (0, Xk.useState)(WI),
+                                [tk, Zk] = (0, Xk.useState)("example"),
+                                [jk, wk] = (0, Xk.useState)(0),
+                                [Jk, xk] = (0, Xk.useState)(!1),
+                                Kk = kk => {
+                                  const Fk = "example" === kk ? WI : cI(kk);
+                                  Fk && (Lk(Fk), Zk(kk))
                                 };
-                              (0, QC.useImperativeHandle)(zC, (() => ({
-                                preview: CC => {
-                                  var zC;
-                                  AC(CC), null === (zC = oC.current) || void 0 === zC || zC.scrollIntoView({
+                              (0, Xk.useImperativeHandle)(Fk, (() => ({
+                                preview: kk => {
+                                  var Fk;
+                                  Kk(kk), null === (Fk = ak.current) || void 0 === Fk || Fk.scrollIntoView({
                                     behavior: "smooth",
                                     block: "start"
                                   })
                                 }
                               })));
-                              const xC = CC => {
-                                  FC({
-                                    ...qC,
-                                    ...CC
-                                  }), NC(null)
+                              const Qk = kk => {
+                                  Lk({
+                                    ...qk,
+                                    ...kk
+                                  }), Zk(null)
                                 },
-                                JC = function(CC, zC) {
-                                  if (null !== zC) return `${VZ}    presetId: "${zC}",\n${CQ}\n})`;
-                                  const ZC = CC.velocityGradients.map((CC => `        {\n            timeFraction: ${BZ(CC.timeFraction)},\n            factor: ${BZ(CC.factor)},\n            factor2: ${BZ(CC.factor2)},\n        },`)),
-                                    QC = [`    dir1: ${OZ(CC.dir1)},`, `    dir2: ${OZ(CC.dir2)},`, CQ, `    texture: "${CC.texture}",`, `    minLifeTime: ${BZ(CC.minLifeTime)},`, `    maxLifeTime: ${BZ(CC.maxLifeTime)},`, `    minEmitPower: ${BZ(CC.minEmitPower)},`, `    maxEmitPower: ${BZ(CC.maxEmitPower)},`, `    minSize: ${BZ(CC.minSize)},`, `    maxSize: ${BZ(CC.maxSize)},`, `    manualEmitCount: ${BZ(CC.manualEmitCount)},`, `    gravity: ${OZ(CC.gravity)},`, `    colorGradients: ${kZ(CC.colorGradients,"    ")},`, `    velocityGradients: ${ZC.length>0?`[\n${ZC.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${BZ(CC.blendMode)},`];
-                                  return void 0 !== CC.hideDist && QC.push(`    hideDist: ${BZ(CC.hideDist)},`), `${VZ}${QC.join("\n")}\n})`
-                                }(qC, null === WC || "example" === WC ? null : WC),
-                                iC = nC.includes(qC.texture) ? nC : [...nC, qC.texture];
-                              return (0, gC.jsxs)("section", {
-                                ref: oC,
+                                sk = function(kk, Fk) {
+                                  if (null !== Fk) return `${kX}    presetId: "${Fk}",\n${FX}\n})`;
+                                  const Ik = kk.velocityGradients.map((kk => `        {\n            timeFraction: ${rI(kk.timeFraction)},\n            factor: ${rI(kk.factor)},\n            factor2: ${rI(kk.factor2)},\n        },`)),
+                                    Xk = [`    dir1: ${DI(kk.dir1)},`, `    dir2: ${DI(kk.dir2)},`, FX, `    texture: "${kk.texture}",`, `    minLifeTime: ${rI(kk.minLifeTime)},`, `    maxLifeTime: ${rI(kk.maxLifeTime)},`, `    minEmitPower: ${rI(kk.minEmitPower)},`, `    maxEmitPower: ${rI(kk.maxEmitPower)},`, `    minSize: ${rI(kk.minSize)},`, `    maxSize: ${rI(kk.maxSize)},`, `    manualEmitCount: ${rI(kk.manualEmitCount)},`, `    gravity: ${DI(kk.gravity)},`, `    colorGradients: ${MI(kk.colorGradients,"    ")},`, `    velocityGradients: ${Ik.length>0?`[\n${Ik.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${rI(kk.blendMode)},`];
+                                  return void 0 !== kk.hideDist && Xk.push(`    hideDist: ${rI(kk.hideDist)},`), `${kX}${Xk.join("\n")}\n})`
+                                }(qk, null === tk || "example" === tk ? null : tk),
+                                zk = yk.includes(qk.texture) ? yk : [...yk, qk.texture];
+                              return (0, ek.jsxs)("section", {
+                                ref: ak,
                                 className: "DocsPlayground DocsParticlePlayground",
                                 "aria-label": "Particle effect playground",
-                                children: [(0, gC.jsxs)("header", {
+                                children: [(0, ek.jsxs)("header", {
                                   className: "DocsPlaygroundHeader",
-                                  children: [(0, gC.jsxs)("div", {
-                                    children: [(0, gC.jsx)("div", {
+                                  children: [(0, ek.jsxs)("div", {
+                                    children: [(0, ek.jsx)("div", {
                                       className: "DocsPlaygroundTitle",
                                       children: "Try it: particle effects"
-                                    }), (0, gC.jsx)("div", {
+                                    }), (0, ek.jsx)("div", {
                                       className: "DocsPlaygroundHint",
                                       children: "Pick a preset or change the settings, and the burst replays. Drag the preview to turn it."
                                     })]
-                                  }), (0, gC.jsx)(RC, {
-                                    text: JC,
+                                  }), (0, ek.jsx)(Pk, {
+                                    text: sk,
                                     label: "Copy code"
                                   })]
-                                }), (0, gC.jsxs)("div", {
+                                }), (0, ek.jsxs)("div", {
                                   className: "DocsPlaygroundPresets",
-                                  children: [(0, gC.jsx)("button", {
+                                  children: [(0, ek.jsx)("button", {
                                     type: "button",
-                                    className: bC()("DocsVariantChip", {
-                                      Active: "example" === WC
+                                    className: ik()("DocsVariantChip", {
+                                      Active: "example" === tk
                                     }),
                                     onClick: () => {
-                                      AC("example")
+                                      Kk("example")
                                     },
                                     children: "Example"
-                                  }), bw.filter((CC => null !== rZ(CC))).map((CC => (0, gC.jsx)("button", {
+                                  }), yT.filter((kk => null !== cI(kk))).map((kk => (0, ek.jsx)("button", {
                                     type: "button",
-                                    className: bC()("DocsVariantChip", {
-                                      Active: WC === CC
+                                    className: ik()("DocsVariantChip", {
+                                      Active: tk === kk
                                     }),
                                     onClick: () => {
-                                      AC(CC)
+                                      Kk(kk)
                                     },
-                                    children: CC
-                                  }, CC))), (0, gC.jsxs)("select", {
+                                    children: kk
+                                  }, kk))), (0, ek.jsxs)("select", {
                                     className: "DocsParticleSelect",
-                                    value: null !== WC && void 0 !== WC ? WC : "custom",
+                                    value: null !== tk && void 0 !== tk ? tk : "custom",
                                     "aria-label": "Preset",
-                                    onChange: CC => {
-                                      AC(CC.target.value)
+                                    onChange: kk => {
+                                      Kk(kk.target.value)
                                     },
-                                    children: [(0, gC.jsx)("option", {
+                                    children: [(0, ek.jsx)("option", {
                                       value: "example",
                                       children: "Example effect"
-                                    }), null === WC && (0, gC.jsx)("option", {
+                                    }), null === tk && (0, ek.jsx)("option", {
                                       value: "custom",
                                       children: "Custom"
-                                    }), cZ.b.map((CC => (0, gC.jsx)("option", {
-                                      value: CC,
-                                      children: CC
-                                    }, CC)))]
+                                    }), CI.e.map((kk => (0, ek.jsx)("option", {
+                                      value: kk,
+                                      children: kk
+                                    }, kk)))]
                                   })]
-                                }), (0, gC.jsxs)("div", {
+                                }), (0, ek.jsxs)("div", {
                                   className: "DocsParticleBody",
-                                  children: [(0, gC.jsxs)("div", {
+                                  children: [(0, ek.jsxs)("div", {
                                     className: "DocsParticleStageWrap",
-                                    children: [(0, gC.jsx)(ww, {
-                                      opts: qC,
-                                      textureUrl: null !== (ZC = null === fC || void 0 === fC ? void 0 : fC.getParticleTextureUrl(qC.texture)) && void 0 !== ZC ? ZC : null,
-                                      burst: MC,
-                                      paused: PC
-                                    }), (0, gC.jsxs)("div", {
+                                    children: [(0, ek.jsx)(iT, {
+                                      opts: qk,
+                                      textureUrl: null !== (Ik = null === lk || void 0 === lk ? void 0 : lk.getParticleTextureUrl(qk.texture)) && void 0 !== Ik ? Ik : null,
+                                      burst: jk,
+                                      paused: Jk
+                                    }), (0, ek.jsxs)("div", {
                                       className: "DocsParticleStageButtons",
-                                      children: [(0, gC.jsxs)("button", {
+                                      children: [(0, ek.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
                                         onClick: () => {
-                                          SC(MC + 1)
+                                          wk(jk + 1)
                                         },
-                                        children: [(0, gC.jsx)(pC, {
+                                        children: [(0, ek.jsx)(Hk, {
                                           name: "replay"
-                                        }), (0, gC.jsx)("span", {
+                                        }), (0, ek.jsx)("span", {
                                           children: "Replay"
                                         })]
-                                      }), (0, gC.jsxs)("button", {
+                                      }), (0, ek.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
-                                        "aria-pressed": PC,
+                                        "aria-pressed": Jk,
                                         onClick: () => {
-                                          GC(!PC)
+                                          xk(!Jk)
                                         },
-                                        children: [(0, gC.jsx)(pC, {
-                                          name: PC ? "play" : "pause"
-                                        }), (0, gC.jsx)("span", {
-                                          children: PC ? "Loop" : "Stop looping"
+                                        children: [(0, ek.jsx)(Hk, {
+                                          name: Jk ? "play" : "pause"
+                                        }), (0, ek.jsx)("span", {
+                                          children: Jk ? "Loop" : "Stop looping"
                                         })]
                                       })]
                                     })]
-                                  }), (0, gC.jsxs)("div", {
+                                  }), (0, ek.jsxs)("div", {
                                     className: "DocsParticleControls",
-                                    children: [(0, gC.jsxs)("div", {
+                                    children: [(0, ek.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, gC.jsxs)("div", {
+                                      children: [(0, ek.jsxs)("div", {
                                         className: "DocsControlLabel",
-                                        children: [(0, gC.jsx)("span", {
+                                        children: [(0, ek.jsx)("span", {
                                           children: "Texture"
-                                        }), (0, gC.jsx)("code", {
+                                        }), (0, ek.jsx)("code", {
                                           className: "DocsControlValue",
-                                          children: qC.texture
+                                          children: qk.texture
                                         })]
-                                      }), (0, gC.jsx)("div", {
+                                      }), (0, ek.jsx)("div", {
                                         className: "DocsParticleTextures",
-                                        children: iC.map((CC => {
-                                          var zC;
-                                          const ZC = null !== (zC = null === fC || void 0 === fC ? void 0 : fC.getParticleTextureUrl(CC)) && void 0 !== zC ? zC : null;
-                                          return (0, gC.jsx)("button", {
+                                        children: zk.map((kk => {
+                                          var Fk;
+                                          const Ik = null !== (Fk = null === lk || void 0 === lk ? void 0 : lk.getParticleTextureUrl(kk)) && void 0 !== Fk ? Fk : null;
+                                          return (0, ek.jsx)("button", {
                                             type: "button",
-                                            className: bC()("DocsParticleTexture", {
-                                              Active: qC.texture === CC
+                                            className: ik()("DocsParticleTexture", {
+                                              Active: qk.texture === kk
                                             }),
-                                            title: CC,
-                                            "aria-label": CC,
-                                            "aria-pressed": qC.texture === CC,
+                                            title: kk,
+                                            "aria-label": kk,
+                                            "aria-pressed": qk.texture === kk,
                                             onClick: () => {
-                                              xC({
-                                                texture: CC
+                                              Qk({
+                                                texture: kk
                                               })
                                             },
-                                            children: ZC ? (0, gC.jsx)("img", {
-                                              src: ZC,
+                                            children: Ik ? (0, ek.jsx)("img", {
+                                              src: Ik,
                                               alt: ""
-                                            }) : (0, gC.jsx)(pC, {
+                                            }) : (0, ek.jsx)(Hk, {
                                               name: "image"
                                             })
-                                          }, CC)
+                                          }, kk)
                                         }))
                                       })]
-                                    }), (0, gC.jsx)(kQ, {
+                                    }), (0, ek.jsx)(MX, {
                                       label: "Particles",
                                       min: 1,
                                       max: 400,
                                       step: 1,
-                                      value: qC.manualEmitCount,
-                                      onChange: CC => {
-                                        xC({
-                                          manualEmitCount: CC
+                                      value: qk.manualEmitCount,
+                                      onChange: kk => {
+                                        Qk({
+                                          manualEmitCount: kk
                                         })
                                       }
-                                    }), (0, gC.jsx)(OQ, {
+                                    }), (0, ek.jsx)(DX, {
                                       label: "Lifetime",
                                       min: .05,
                                       max: 3,
                                       step: .05,
-                                      low: qC.minLifeTime,
-                                      high: qC.maxLifeTime,
-                                      onChange: (CC, zC) => {
-                                        xC({
-                                          minLifeTime: CC,
-                                          maxLifeTime: zC
+                                      low: qk.minLifeTime,
+                                      high: qk.maxLifeTime,
+                                      onChange: (kk, Fk) => {
+                                        Qk({
+                                          minLifeTime: kk,
+                                          maxLifeTime: Fk
                                         })
                                       }
-                                    }), (0, gC.jsx)(OQ, {
+                                    }), (0, ek.jsx)(DX, {
                                       label: "Emit power",
                                       min: 0,
                                       max: 40,
                                       step: .5,
-                                      low: qC.minEmitPower,
-                                      high: qC.maxEmitPower,
-                                      onChange: (CC, zC) => {
-                                        xC({
-                                          minEmitPower: CC,
-                                          maxEmitPower: zC
+                                      low: qk.minEmitPower,
+                                      high: qk.maxEmitPower,
+                                      onChange: (kk, Fk) => {
+                                        Qk({
+                                          minEmitPower: kk,
+                                          maxEmitPower: Fk
                                         })
                                       }
-                                    }), (0, gC.jsx)(OQ, {
+                                    }), (0, ek.jsx)(DX, {
                                       label: "Size",
                                       min: .05,
                                       max: 2,
                                       step: .05,
-                                      low: qC.minSize,
-                                      high: qC.maxSize,
-                                      onChange: (CC, zC) => {
-                                        xC({
-                                          minSize: CC,
-                                          maxSize: zC
+                                      low: qk.minSize,
+                                      high: qk.maxSize,
+                                      onChange: (kk, Fk) => {
+                                        Qk({
+                                          minSize: kk,
+                                          maxSize: Fk
                                         })
                                       }
-                                    }), (0, gC.jsx)(kQ, {
+                                    }), (0, ek.jsx)(MX, {
                                       label: "Gravity (up)",
                                       min: -40,
                                       max: 40,
                                       step: 1,
-                                      value: null !== (wC = qC.gravity[1]) && void 0 !== wC ? wC : 0,
-                                      onChange: CC => {
-                                        var zC, ZC;
-                                        xC({
-                                          gravity: [null !== (zC = qC.gravity[0]) && void 0 !== zC ? zC : 0, CC, null !== (ZC = qC.gravity[2]) && void 0 !== ZC ? ZC : 0]
+                                      value: null !== (Tk = qk.gravity[1]) && void 0 !== Tk ? Tk : 0,
+                                      onChange: kk => {
+                                        var Fk, Ik;
+                                        Qk({
+                                          gravity: [null !== (Fk = qk.gravity[0]) && void 0 !== Fk ? Fk : 0, kk, null !== (Ik = qk.gravity[2]) && void 0 !== Ik ? Ik : 0]
                                         })
                                       }
-                                    }), (0, gC.jsxs)("div", {
+                                    }), (0, ek.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, gC.jsx)("div", {
+                                      children: [(0, ek.jsx)("div", {
                                         className: "DocsControlLabel",
-                                        children: (0, gC.jsx)("span", {
+                                        children: (0, ek.jsx)("span", {
                                           children: "Blend mode"
                                         })
-                                      }), (0, gC.jsx)("select", {
+                                      }), (0, ek.jsx)("select", {
                                         className: "DocsParticleSelect",
-                                        value: qC.blendMode,
+                                        value: qk.blendMode,
                                         "aria-label": "Blend mode",
-                                        onChange: CC => {
-                                          xC({
-                                            blendMode: Number(CC.target.value)
+                                        onChange: kk => {
+                                          Qk({
+                                            blendMode: Number(kk.target.value)
                                           })
                                         },
-                                        children: nw.map((CC => {
+                                        children: lT.map((kk => {
                                           let {
-                                            mode: zC,
-                                            label: ZC
-                                          } = CC;
-                                          return (0, gC.jsx)("option", {
-                                            value: zC,
-                                            children: ZC
-                                          }, zC)
+                                            mode: Fk,
+                                            label: Ik
+                                          } = kk;
+                                          return (0, ek.jsx)("option", {
+                                            value: Fk,
+                                            children: Ik
+                                          }, Fk)
                                         }))
                                       })]
-                                    }), (0, gC.jsx)(VQ, {
-                                      opts: qC,
-                                      onChange: CC => {
-                                        xC({
-                                          colorGradients: CC
+                                    }), (0, ek.jsx)(kT, {
+                                      opts: qk,
+                                      onChange: kk => {
+                                        Qk({
+                                          colorGradients: kk
                                         })
                                       }
                                     })]
                                   })]
-                                }), (0, gC.jsx)(IC, {
-                                  code: JC,
+                                }), (0, ek.jsx)(Vk, {
+                                  code: sk,
                                   lang: "ts"
                                 })]
                               })
                             }));
-                          var ow = ZC(4397),
-                            qw = ZC(1811);
+                          var qT = Ik(4466),
+                            LT = Ik(1849);
 
-                          function Fw(CC, zC) {
-                            return CC ? ow.c.includes(zC) ? CC.getIngameIconUrl(zC) : CC.getItemIconUrl(zC) : null
+                          function tT(kk, Fk) {
+                            return kk ? qT.c.includes(Fk) ? kk.getIngameIconUrl(Fk) : kk.getItemIconUrl(Fk) : null
                           }
 
-                          function Ww(CC) {
-                            var zC, ZC, QC;
+                          function ZT(kk) {
+                            var Fk, Ik, Xk;
                             let {
-                              part: wC,
-                              assets: nC
-                            } = CC;
-                            const fC = Fw(nC, wC.icon),
-                              oC = null !== (zC = null === (ZC = wC.style) || void 0 === ZC ? void 0 : ZC.fontSize) && void 0 !== zC ? zC : "1.8em",
-                              qC = (0, cz.Wb)(wC.style);
-                            return (0, gC.jsxs)("span", {
-                              className: bC()("DocsBloxdTextIcon", {
-                                Missing: !fC
+                              part: Tk,
+                              assets: yk
+                            } = kk;
+                            const lk = tT(yk, Tk.icon),
+                              ak = null !== (Fk = null === (Ik = Tk.style) || void 0 === Ik ? void 0 : Ik.fontSize) && void 0 !== Fk ? Fk : "1.8em",
+                              qk = (0, CF.fc)(Tk.style);
+                            return (0, ek.jsxs)("span", {
+                              className: ik()("DocsBloxdTextIcon", {
+                                Missing: !lk
                               }),
                               style: {
-                                width: oC,
-                                height: oC,
-                                opacity: null === (QC = wC.style) || void 0 === QC ? void 0 : QC.opacity
+                                width: ak,
+                                height: ak,
+                                opacity: null === (Xk = Tk.style) || void 0 === Xk ? void 0 : Xk.opacity
                               },
-                              title: fC ? void 0 : `No Bloxd icon, item or block is called "${wC.icon}"`,
-                              children: [fC && qC && (0, gC.jsx)("span", {
+                              title: lk ? void 0 : `No Bloxd icon, item or block is called "${Tk.icon}"`,
+                              children: [lk && qk && (0, ek.jsx)("span", {
                                 className: "DocsBloxdTextIconTint",
                                 style: {
-                                  background: qC,
-                                  maskImage: `url("${fC}")`,
-                                  WebkitMaskImage: `url("${fC}")`
+                                  background: qk,
+                                  maskImage: `url("${lk}")`,
+                                  WebkitMaskImage: `url("${lk}")`
                                 }
-                              }), fC ? (0, gC.jsx)("img", {
-                                src: fC,
+                              }), lk ? (0, ek.jsx)("img", {
+                                src: lk,
                                 alt: "",
-                                className: bC()({
-                                  Tinted: qC
+                                className: ik()({
+                                  Tinted: qk
                                 })
-                              }) : (0, gC.jsx)(pC, {
+                              }) : (0, ek.jsx)(Hk, {
                                 name: "image"
                               })]
                             })
                           }
 
-                          function Nw(CC) {
+                          function jT(kk) {
                             let {
-                              parts: zC,
-                              className: ZC
-                            } = CC;
-                            const QC = RQ(),
-                              wC = [];
-                            let nC = [];
-                            const fC = CC => {
-                              nC.length > 0 && (wC.push((0, gC.jsx)(qw.e, {
-                                text: nC
-                              }, `run-${CC}`)), nC = [])
+                              parts: Fk,
+                              className: Ik
+                            } = kk;
+                            const Xk = KX(),
+                              Tk = [];
+                            let yk = [];
+                            const lk = kk => {
+                              yk.length > 0 && (Tk.push((0, ek.jsx)(LT.c, {
+                                text: yk
+                              }, `run-${kk}`)), yk = [])
                             };
-                            return zC.forEach(((CC, zC) => {
-                              "icon" !== az(CC) || rz(CC.icon) ? nC.push(CC) : (fC(zC), wC.push((0, gC.jsx)(Ww, {
-                                part: CC,
-                                assets: QC
-                              }, `icon-${zC}`)))
-                            })), fC(zC.length), (0, gC.jsx)("div", {
-                              className: bC()("DocsStyledTextPreview", ZC),
-                              children: wC
+                            return Fk.forEach(((kk, Fk) => {
+                              "icon" !== BF(kk) || cF(kk.icon) ? yk.push(kk) : (lk(Fk), Tk.push((0, ek.jsx)(ZT, {
+                                part: kk,
+                                assets: Xk
+                              }, `icon-${Fk}`)))
+                            })), lk(Fk.length), (0, ek.jsx)("div", {
+                              className: ik()("DocsStyledTextPreview", Ik),
+                              children: Tk
                             })
                           }
-                          const Mw = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
-                          let gw = null;
+                          const eT = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
+                          let wT = null;
 
-                          function Sw(CC) {
-                            if (gw ??= document.createElement("canvas").getContext("2d"), !gw) return "#000000";
-                            gw.fillStyle = "#000000", gw.fillStyle = CC;
-                            const zC = gw.fillStyle;
-                            return zC.startsWith("#") ? zC : "#000000"
+                          function HT(kk) {
+                            if (wT ??= document.createElement("canvas").getContext("2d"), !wT) return "#000000";
+                            wT.fillStyle = "#000000", wT.fillStyle = kk;
+                            const Fk = wT.fillStyle;
+                            return Fk.startsWith("#") ? Fk : "#000000"
                           }
 
-                          function pw(CC) {
+                          function JT(kk) {
                             let {
-                              value: zC,
-                              label: ZC,
-                              onChange: QC
-                            } = CC;
-                            return (0, gC.jsxs)("span", {
+                              value: Fk,
+                              label: Ik,
+                              onChange: Xk
+                            } = kk;
+                            return (0, ek.jsxs)("span", {
                               className: "DocsColourInput",
-                              children: [(0, gC.jsx)("input", {
+                              children: [(0, ek.jsx)("input", {
                                 type: "color",
-                                value: Sw(zC),
-                                "aria-label": `${ZC} picker`,
-                                onChange: CC => {
-                                  QC(CC.target.value)
+                                value: HT(Fk),
+                                "aria-label": `${Ik} picker`,
+                                onChange: kk => {
+                                  Xk(kk.target.value)
                                 }
-                              }), (0, gC.jsx)("input", {
+                              }), (0, ek.jsx)("input", {
                                 type: "text",
-                                value: zC,
+                                value: Fk,
                                 placeholder: "#ffb914 or gold",
-                                "aria-label": ZC,
+                                "aria-label": Ik,
                                 spellCheck: !1,
-                                onChange: CC => {
-                                  QC(CC.target.value)
+                                onChange: kk => {
+                                  Xk(kk.target.value)
                                 }
                               })]
                             })
                           }
 
-                          function Pw(CC) {
+                          function xT(kk) {
                             let {
-                              value: zC,
-                              fontAwesomeIcons: ZC,
-                              onChange: wC
-                            } = CC;
-                            const nC = RQ(),
-                              [fC, oC] = (0, QC.useState)(rz(zC) ? "fontAwesome" : "bloxd"),
-                              [qC, FC] = (0, QC.useState)(""),
-                              WC = qC.trim().toLowerCase(),
-                              NC = "bloxd" === fC ? ow.c : ZC,
-                              MC = WC ? NC.filter((CC => CC.toLowerCase().includes(WC))) : NC;
-                            return (0, gC.jsxs)("div", {
+                              value: Fk,
+                              fontAwesomeIcons: Ik,
+                              onChange: Tk
+                            } = kk;
+                            const yk = KX(),
+                              [lk, ak] = (0, Xk.useState)(cF(Fk) ? "fontAwesome" : "bloxd"),
+                              [qk, Lk] = (0, Xk.useState)(""),
+                              tk = qk.trim().toLowerCase(),
+                              Zk = "bloxd" === lk ? qT.c : Ik,
+                              jk = tk ? Zk.filter((kk => kk.toLowerCase().includes(tk))) : Zk;
+                            return (0, ek.jsxs)("div", {
                               className: "DocsIconPicker",
-                              children: [(0, gC.jsx)("input", {
+                              children: [(0, ek.jsx)("input", {
                                 type: "text",
-                                value: zC,
+                                value: Fk,
                                 "aria-label": "Icon name",
                                 spellCheck: !1,
-                                onChange: CC => {
-                                  wC(CC.target.value)
+                                onChange: kk => {
+                                  Tk(kk.target.value)
                                 }
-                              }), (0, gC.jsx)("p", {
+                              }), (0, ek.jsx)("p", {
                                 className: "DocsTextFieldHint",
                                 children: "Pick one below, or type any item or block name."
-                              }), (0, gC.jsxs)("div", {
+                              }), (0, ek.jsxs)("div", {
                                 className: "DocsIconPickerTabs",
                                 role: "tablist",
                                 children: [
-                                  ["bloxd", "fontAwesome"].map((CC => (0, gC.jsx)("button", {
+                                  ["bloxd", "fontAwesome"].map((kk => (0, ek.jsx)("button", {
                                     type: "button",
                                     role: "tab",
-                                    "aria-selected": fC === CC,
-                                    className: bC()("DocsVariantChip", {
-                                      Active: fC === CC
+                                    "aria-selected": lk === kk,
+                                    className: ik()("DocsVariantChip", {
+                                      Active: lk === kk
                                     }),
                                     onClick: () => {
-                                      oC(CC)
+                                      ak(kk)
                                     },
-                                    children: "bloxd" === CC ? `Bloxd icons (${ow.c.length})` : `Font Awesome (${ZC.length})`
-                                  }, CC))), (0, gC.jsx)("input", {
+                                    children: "bloxd" === kk ? `Bloxd icons (${qT.c.length})` : `Font Awesome (${Ik.length})`
+                                  }, kk))), (0, ek.jsx)("input", {
                                     type: "search",
-                                    value: qC,
+                                    value: qk,
                                     placeholder: "Filter\u2026",
                                     "aria-label": "Filter icons",
-                                    onChange: CC => {
-                                      FC(CC.target.value)
+                                    onChange: kk => {
+                                      Lk(kk.target.value)
                                     }
                                   })
                                 ]
-                              }), (0, gC.jsxs)("div", {
+                              }), (0, ek.jsxs)("div", {
                                 className: "DocsIconPickerGrid",
                                 role: "tabpanel",
-                                children: [MC.map((CC => {
-                                  const ZC = "bloxd" === fC ? Fw(nC, CC) : null;
-                                  return (0, gC.jsx)("button", {
+                                children: [jk.map((kk => {
+                                  const Ik = "bloxd" === lk ? tT(yk, kk) : null;
+                                  return (0, ek.jsx)("button", {
                                     type: "button",
-                                    title: CC,
-                                    "aria-label": CC,
-                                    "aria-pressed": CC === zC,
-                                    className: bC()("DocsIconPickerOption", {
-                                      Active: CC === zC
+                                    title: kk,
+                                    "aria-label": kk,
+                                    "aria-pressed": kk === Fk,
+                                    className: ik()("DocsIconPickerOption", {
+                                      Active: kk === Fk
                                     }),
                                     onClick: () => {
-                                      wC(CC)
+                                      Tk(kk)
                                     },
-                                    children: "fontAwesome" === fC ? (0, gC.jsx)(AZ.c, {
-                                      name: CC
-                                    }) : ZC ? (0, gC.jsx)("img", {
-                                      src: ZC,
+                                    children: "fontAwesome" === lk ? (0, ek.jsx)(QI.e, {
+                                      name: kk
+                                    }) : Ik ? (0, ek.jsx)("img", {
+                                      src: Ik,
                                       alt: ""
-                                    }) : (0, gC.jsx)(pC, {
+                                    }) : (0, ek.jsx)(Hk, {
                                       name: "image"
                                     })
-                                  }, CC)
-                                })), 0 === MC.length && (0, gC.jsxs)("p", {
+                                  }, kk)
+                                })), 0 === jk.length && (0, ek.jsxs)("p", {
                                   className: "DocsTextFieldHint",
-                                  children: ["No icons match \u201c", qC, "\u201d."]
+                                  children: ["No icons match \u201c", qk, "\u201d."]
                                 })]
                               })]
                             })
                           }
 
-                          function Gw(CC) {
+                          function PT(kk) {
                             let {
-                              property: zC,
-                              value: ZC,
-                              fontAwesomeIcons: QC,
-                              onChange: wC
-                            } = CC;
+                              property: Fk,
+                              value: Ik,
+                              fontAwesomeIcons: Xk,
+                              onChange: Tk
+                            } = kk;
                             const {
-                              field: bC,
-                              label: nC
-                            } = zC, fC = CC => "" !== CC || zC.isRequired ? CC : void 0;
-                            switch (bC.kind) {
+                              field: ik,
+                              label: yk
+                            } = Fk, lk = kk => "" !== kk || Fk.isRequired ? kk : void 0;
+                            switch (ik.kind) {
                               case "text":
-                                return bC.multiline ? (0, gC.jsx)("textarea", {
-                                  value: String(null !== ZC && void 0 !== ZC ? ZC : ""),
+                                return ik.multiline ? (0, ek.jsx)("textarea", {
+                                  value: String(null !== Ik && void 0 !== Ik ? Ik : ""),
                                   rows: 2,
-                                  "aria-label": nC,
-                                  onChange: CC => {
-                                    wC(CC.target.value)
+                                  "aria-label": yk,
+                                  onChange: kk => {
+                                    Tk(kk.target.value)
                                   }
-                                }) : (0, gC.jsx)("input", {
+                                }) : (0, ek.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== ZC && void 0 !== ZC ? ZC : ""),
-                                  "aria-label": nC,
-                                  onChange: CC => {
-                                    wC(fC(CC.target.value))
+                                  value: String(null !== Ik && void 0 !== Ik ? Ik : ""),
+                                  "aria-label": yk,
+                                  onChange: kk => {
+                                    Tk(lk(kk.target.value))
                                   }
                                 });
                               case "size":
-                                return (0, gC.jsx)("input", {
+                                return (0, ek.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== ZC && void 0 !== ZC ? ZC : ""),
-                                  placeholder: zC.defaultText,
+                                  value: String(null !== Ik && void 0 !== Ik ? Ik : ""),
+                                  placeholder: Fk.defaultText,
                                   list: "DocsTextSizeSuggestions",
-                                  "aria-label": nC,
+                                  "aria-label": yk,
                                   spellCheck: !1,
-                                  onChange: CC => {
-                                    wC(fC(CC.target.value.trim()))
+                                  onChange: kk => {
+                                    Tk(lk(kk.target.value.trim()))
                                   }
                                 });
                               case "colour":
-                                return (0, gC.jsx)(pw, {
-                                  value: String(null !== ZC && void 0 !== ZC ? ZC : ""),
-                                  label: nC,
-                                  onChange: CC => {
-                                    wC(fC(CC))
+                                return (0, ek.jsx)(JT, {
+                                  value: String(null !== Ik && void 0 !== Ik ? Ik : ""),
+                                  label: yk,
+                                  onChange: kk => {
+                                    Tk(lk(kk))
                                   }
                                 });
                               case "colours": {
-                                const CC = Array.isArray(ZC) ? ZC : [],
-                                  zC = CC => {
-                                    wC(CC.length > 0 ? CC : void 0)
+                                const kk = Array.isArray(Ik) ? Ik : [],
+                                  Fk = kk => {
+                                    Tk(kk.length > 0 ? kk : void 0)
                                   };
-                                return (0, gC.jsxs)("div", {
+                                return (0, ek.jsxs)("div", {
                                   className: "DocsColourList",
-                                  children: [CC.map(((ZC, QC) => (0, gC.jsxs)("span", {
+                                  children: [kk.map(((Ik, Xk) => (0, ek.jsxs)("span", {
                                     className: "DocsColourListRow",
-                                    children: [(0, gC.jsx)(pw, {
-                                      value: ZC,
-                                      label: `${nC} ${QC+1}`,
-                                      onChange: ZC => {
-                                        zC(CC.map(((CC, zC) => zC === QC ? ZC : CC)))
+                                    children: [(0, ek.jsx)(JT, {
+                                      value: Ik,
+                                      label: `${yk} ${Xk+1}`,
+                                      onChange: Ik => {
+                                        Fk(kk.map(((kk, Fk) => Fk === Xk ? Ik : kk)))
                                       }
-                                    }), (0, gC.jsx)("button", {
+                                    }), (0, ek.jsx)("button", {
                                       type: "button",
                                       className: "DocsTextIconButton",
-                                      "aria-label": `Remove colour ${QC+1}`,
+                                      "aria-label": `Remove colour ${Xk+1}`,
                                       onClick: () => {
-                                        zC(CC.filter(((CC, zC) => zC !== QC)))
+                                        Fk(kk.filter(((kk, Fk) => Fk !== Xk)))
                                       },
-                                      children: (0, gC.jsx)(pC, {
+                                      children: (0, ek.jsx)(Hk, {
                                         name: "cross"
                                       })
                                     })]
-                                  }, QC))), (0, gC.jsxs)("button", {
+                                  }, Xk))), (0, ek.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextAddButton",
                                     onClick: () => {
-                                      var ZC;
-                                      zC([...CC, null !== (ZC = CC.at(-1)) && void 0 !== ZC ? ZC : "#ffffff"])
+                                      var Ik;
+                                      Fk([...kk, null !== (Ik = kk.at(-1)) && void 0 !== Ik ? Ik : "#ffffff"])
                                     },
-                                    children: [(0, gC.jsx)(pC, {
+                                    children: [(0, ek.jsx)(Hk, {
                                       name: "plus"
-                                    }), 0 === CC.length ? "Add a colour" : "Add a colour to the gradient"]
+                                    }), 0 === kk.length ? "Add a colour" : "Add a colour to the gradient"]
                                   })]
                                 })
                               }
                               case "fraction": {
-                                var oC;
-                                const CC = "number" === typeof ZC ? ZC : Number(null !== (oC = zC.defaultText) && void 0 !== oC ? oC : 0);
-                                return (0, gC.jsxs)("span", {
+                                var ak;
+                                const kk = "number" === typeof Ik ? Ik : Number(null !== (ak = Fk.defaultText) && void 0 !== ak ? ak : 0);
+                                return (0, ek.jsxs)("span", {
                                   className: "DocsFractionInput",
-                                  children: [(0, gC.jsx)("input", {
+                                  children: [(0, ek.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: CC,
-                                    "aria-label": nC,
-                                    onChange: CC => {
-                                      wC(Number(CC.target.value))
+                                    value: kk,
+                                    "aria-label": yk,
+                                    onChange: kk => {
+                                      Tk(Number(kk.target.value))
                                     }
-                                  }), (0, gC.jsx)("output", {
-                                    children: CC.toFixed(2)
+                                  }), (0, ek.jsx)("output", {
+                                    children: kk.toFixed(2)
                                   })]
                                 })
                               }
                               case "choice":
-                                return (0, gC.jsxs)("select", {
-                                  value: String(null !== ZC && void 0 !== ZC ? ZC : ""),
-                                  "aria-label": nC,
-                                  onChange: CC => {
-                                    wC(fC(CC.target.value))
+                                return (0, ek.jsxs)("select", {
+                                  value: String(null !== Ik && void 0 !== Ik ? Ik : ""),
+                                  "aria-label": yk,
+                                  onChange: kk => {
+                                    Tk(lk(kk.target.value))
                                   },
-                                  children: [!zC.isRequired && (0, gC.jsxs)("option", {
+                                  children: [!Fk.isRequired && (0, ek.jsxs)("option", {
                                     value: "",
-                                    children: ["Default (", zC.defaultText, ")"]
-                                  }), bC.options.map((CC => (0, gC.jsx)("option", {
-                                    value: CC,
-                                    children: CC
-                                  }, CC)))]
+                                    children: ["Default (", Fk.defaultText, ")"]
+                                  }), ik.options.map((kk => (0, ek.jsx)("option", {
+                                    value: kk,
+                                    children: kk
+                                  }, kk)))]
                                 });
                               case "icon":
-                                return (0, gC.jsx)(Pw, {
-                                  value: String(null !== ZC && void 0 !== ZC ? ZC : ""),
-                                  fontAwesomeIcons: QC,
-                                  onChange: wC
+                                return (0, ek.jsx)(xT, {
+                                  value: String(null !== Ik && void 0 !== Ik ? Ik : ""),
+                                  fontAwesomeIcons: Xk,
+                                  onChange: Tk
                                 })
                             }
                           }
 
-                          function Rw(CC) {
-                            let zC;
+                          function KT(kk) {
+                            let Fk;
                             try {
-                              zC = JSON.parse(CC)
-                            } catch (ZC) {
+                              Fk = JSON.parse(kk)
+                            } catch (Ik) {
                               return {
                                 part: null,
-                                error: `Not valid JSON yet: ${ZC.message}`
+                                error: `Not valid JSON yet: ${Ik.message}`
                               }
                             }
-                            return ZZ(zC) ? {
-                              part: zC,
+                            return XI(Fk) ? {
+                              part: Fk,
                               error: null
                             } : {
                               part: null,
@@ -3628,150 +3628,150 @@ export const modules = {
                             }
                           }
 
-                          function Aw(CC) {
+                          function QT(kk) {
                             let {
-                              parts: zC,
-                              index: ZC,
-                              fontAwesomeIcons: wC,
-                              onChange: bC,
-                              lY: nC,
-                              onClose: fC
-                            } = CC;
-                            const oC = (0, QC.useContext)(gz),
-                              FC = (0, QC.useRef)(null),
-                              WC = zC[ZC],
-                              NC = az(WC),
-                              [MC, SC] = (0, QC.useState)((() => JSON.stringify(WC, null, 2))),
-                              PC = (0, QC.useMemo)((() => "other" === NC ? Rw(MC).error : null), [NC, MC]);
-                            (0, QC.useEffect)((() => {
-                              var CC;
-                              null === (CC = FC.current) || void 0 === CC || CC.focus()
+                              parts: Fk,
+                              index: Ik,
+                              fontAwesomeIcons: Tk,
+                              onChange: ik,
+                              iG: yk,
+                              onClose: lk
+                            } = kk;
+                            const ak = (0, Xk.useContext)(wF),
+                              Lk = (0, Xk.useRef)(null),
+                              tk = Fk[Ik],
+                              Zk = BF(tk),
+                              [jk, wk] = (0, Xk.useState)((() => JSON.stringify(tk, null, 2))),
+                              Jk = (0, Xk.useMemo)((() => "other" === Zk ? KT(jk).error : null), [Zk, jk]);
+                            (0, Xk.useEffect)((() => {
+                              var kk;
+                              null === (kk = Lk.current) || void 0 === kk || kk.focus()
                             }), []);
-                            const GC = (0, gC.jsx)("div", {
+                            const xk = (0, ek.jsx)("div", {
                               className: "DocsTextDialogOverlay",
-                              onMouseDown: CC => {
-                                CC.target === CC.currentTarget && fC()
+                              onMouseDown: kk => {
+                                kk.target === kk.currentTarget && lk()
                               },
-                              children: (0, gC.jsxs)("div", {
-                                ref: FC,
+                              children: (0, ek.jsxs)("div", {
+                                ref: Lk,
                                 className: "DocsTextDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
-                                "aria-label": `Edit part ${ZC+1}: ${sz[NC]}`,
+                                "aria-label": `Edit part ${Ik+1}: ${WF[Zk]}`,
                                 tabIndex: -1,
-                                onKeyDown: CC => {
-                                  "Escape" === CC.key ? (CC.stopPropagation(), fC()) : "Tab" === CC.key && FC.current && function(CC, zC) {
-                                    const ZC = Array.from(CC.querySelectorAll(Kz)),
-                                      QC = ZC[0],
-                                      wC = ZC.at(-1);
-                                    if (!QC || !wC) return;
-                                    const bC = document.activeElement;
-                                    !zC.shiftKey || bC !== QC && bC !== CC ? zC.shiftKey || bC !== wC || (zC.preventDefault(), QC.focus()) : (zC.preventDefault(), wC.focus())
-                                  }(FC.current, CC)
+                                onKeyDown: kk => {
+                                  "Escape" === kk.key ? (kk.stopPropagation(), lk()) : "Tab" === kk.key && Lk.current && function(kk, Fk) {
+                                    const Ik = Array.from(kk.querySelectorAll(OF)),
+                                      Xk = Ik[0],
+                                      Tk = Ik.at(-1);
+                                    if (!Xk || !Tk) return;
+                                    const ik = document.activeElement;
+                                    !Fk.shiftKey || ik !== Xk && ik !== kk ? Fk.shiftKey || ik !== Tk || (Fk.preventDefault(), Xk.focus()) : (Fk.preventDefault(), Tk.focus())
+                                  }(Lk.current, kk)
                                 },
-                                children: [(0, gC.jsxs)("header", {
+                                children: [(0, ek.jsxs)("header", {
                                   className: "DocsTextDialogHeader",
-                                  children: [(0, gC.jsxs)("div", {
-                                    children: [(0, gC.jsxs)("div", {
+                                  children: [(0, ek.jsxs)("div", {
+                                    children: [(0, ek.jsxs)("div", {
                                       className: "DocsTextDialogKind",
-                                      children: ["Part ", ZC + 1]
-                                    }), (0, gC.jsx)("div", {
+                                      children: ["Part ", Ik + 1]
+                                    }), (0, ek.jsx)("div", {
                                       className: "DocsTextDialogTitle",
-                                      children: sz[NC]
+                                      children: WF[Zk]
                                     })]
-                                  }), (0, gC.jsx)("button", {
+                                  }), (0, ek.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextIconButton",
                                     "aria-label": "Close",
-                                    onClick: fC,
-                                    children: (0, gC.jsx)(pC, {
+                                    onClick: lk,
+                                    children: (0, ek.jsx)(Hk, {
                                       name: "cross"
                                     })
                                   })]
-                                }), (0, gC.jsx)(Nw, {
-                                  parts: zC,
+                                }), (0, ek.jsx)(jT, {
+                                  parts: Fk,
                                   className: "DocsTextDialogPreview"
-                                }), (0, gC.jsx)("div", {
+                                }), (0, ek.jsx)("div", {
                                   className: "DocsTextDialogFields",
-                                  children: "other" === NC ? (0, gC.jsxs)("label", {
+                                  children: "other" === Zk ? (0, ek.jsxs)("label", {
                                     className: "DocsTextField",
-                                    children: [(0, gC.jsx)("span", {
+                                    children: [(0, ek.jsx)("span", {
                                       className: "DocsTextFieldLabel",
                                       children: "JSON"
-                                    }), (0, gC.jsx)("textarea", {
+                                    }), (0, ek.jsx)("textarea", {
                                       className: "DocsTextJson",
-                                      value: MC,
+                                      value: jk,
                                       rows: 6,
                                       spellCheck: !1,
-                                      onChange: CC => {
-                                        SC(CC.target.value);
-                                        const zC = Rw(CC.target.value);
-                                        null !== zC.part && bC(zC.part)
+                                      onChange: kk => {
+                                        wk(kk.target.value);
+                                        const Fk = KT(kk.target.value);
+                                        null !== Fk.part && ik(Fk.part)
                                       }
-                                    }), PC && (0, gC.jsx)("span", {
+                                    }), Jk && (0, ek.jsx)("span", {
                                       className: "DocsTextFieldError",
-                                      children: PC
+                                      children: Jk
                                     })]
-                                  }) : Dz[NC].map((CC => {
-                                    const zC = yz(WC, CC.path),
-                                      ZC = CC.isRequired ? JSON.stringify(Uz(WC, CC.path)) === JSON.stringify(WC) : void 0 === zC;
-                                    return (0, gC.jsxs)("div", {
+                                  }) : YF[Zk].map((kk => {
+                                    const Fk = gF(tk, kk.path),
+                                      Ik = kk.isRequired ? JSON.stringify(hF(tk, kk.path)) === JSON.stringify(tk) : void 0 === Fk;
+                                    return (0, ek.jsxs)("div", {
                                       className: "DocsTextField",
-                                      children: [(0, gC.jsxs)("div", {
+                                      children: [(0, ek.jsxs)("div", {
                                         className: "DocsTextFieldLabel",
-                                        children: [(0, gC.jsx)("span", {
-                                          children: CC.label
-                                        }), (0, gC.jsxs)("button", {
+                                        children: [(0, ek.jsx)("span", {
+                                          children: kk.label
+                                        }), (0, ek.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextResetButton",
-                                          disabled: ZC,
-                                          "aria-label": `Reset ${CC.label.toLowerCase()} to default`,
+                                          disabled: Ik,
+                                          "aria-label": `Reset ${kk.label.toLowerCase()} to default`,
                                           onClick: () => {
-                                            bC(Uz(WC, CC.path))
+                                            ik(hF(tk, kk.path))
                                           },
-                                          children: [(0, gC.jsx)(pC, {
+                                          children: [(0, ek.jsx)(Hk, {
                                             name: "replay"
                                           }), "Reset"]
                                         })]
-                                      }), (0, gC.jsx)(Gw, {
-                                        property: CC,
-                                        value: zC,
-                                        fontAwesomeIcons: wC,
-                                        onChange: zC => {
-                                          bC(Lz(WC, CC.path, zC))
+                                      }), (0, ek.jsx)(PT, {
+                                        property: kk,
+                                        value: Fk,
+                                        fontAwesomeIcons: Tk,
+                                        onChange: Fk => {
+                                          ik(mF(tk, kk.path, Fk))
                                         }
-                                      }), !CC.isRequired && (0, gC.jsxs)("span", {
+                                      }), !kk.isRequired && (0, ek.jsxs)("span", {
                                         className: "DocsTextFieldHint",
-                                        children: ["Default: ", CC.defaultText]
+                                        children: ["Default: ", kk.defaultText]
                                       })]
-                                    }, CC.path.join("."))
+                                    }, kk.path.join("."))
                                   }))
-                                }), (0, gC.jsxs)("footer", {
+                                }), (0, ek.jsxs)("footer", {
                                   className: "DocsTextDialogFooter",
-                                  children: [(0, gC.jsxs)("button", {
+                                  children: [(0, ek.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextRemoveButton",
-                                    onClick: nC,
-                                    children: [(0, gC.jsx)(pC, {
+                                    onClick: yk,
+                                    children: [(0, ek.jsx)(Hk, {
                                       name: "trash"
                                     }), "Remove part"]
-                                  }), (0, gC.jsx)("button", {
+                                  }), (0, ek.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextDoneButton",
-                                    onClick: fC,
+                                    onClick: lk,
                                     children: "Done"
                                   })]
-                                }), (0, gC.jsx)("datalist", {
+                                }), (0, ek.jsx)("datalist", {
                                   id: "DocsTextSizeSuggestions",
-                                  children: Mw.map((CC => (0, gC.jsx)("option", {
-                                    value: CC
-                                  }, CC)))
+                                  children: eT.map((kk => (0, ek.jsx)("option", {
+                                    value: kk
+                                  }, kk)))
                                 })]
                               })
                             });
-                            return oC ? (0, qC.createPortal)(GC, oC) : GC
+                            return ak ? (0, qk.createPortal)(xk, ak) : xk
                           }
-                          const xw = [{
+                          const sT = [{
                               label: "Icon and text",
                               parts: [{
                                 icon: "Pixelated Heart"
@@ -3815,265 +3815,265 @@ export const modules = {
                                 action: "jump"
                               }]
                             }],
-                            Jw = Object.keys(Tz);
+                            VT = Object.keys(fF);
 
-                          function Iw(CC) {
+                          function zT(kk) {
                             let {
-                              fontAwesomeIcons: zC
-                            } = CC;
-                            const [ZC, wC] = (0, QC.useState)(xw[0].parts), [nC, fC] = (0, QC.useState)((() => Vz(xw[0].parts))), [oC, qC] = (0, QC.useState)(null), [FC, WC] = (0, QC.useState)(!1), [NC, MC] = (0, QC.useState)(null), [SC, PC] = (0, QC.useState)(!1), [GC, RC] = (0, QC.useState)(null), AC = (0, QC.useRef)(null), xC = Vz(ZC);
-                            (0, QC.useLayoutEffect)((() => {
-                              var CC;
-                              if (!GC) return;
-                              const zC = CC => {
-                                  var zC;
-                                  return null === (zC = AC.current) || void 0 === zC ? void 0 : zC.querySelector(`[data-focus-key="${CC}"]`)
+                              fontAwesomeIcons: Fk
+                            } = kk;
+                            const [Ik, Tk] = (0, Xk.useState)(sT[0].parts), [yk, lk] = (0, Xk.useState)((() => kI(sT[0].parts))), [ak, qk] = (0, Xk.useState)(null), [Lk, tk] = (0, Xk.useState)(!1), [Zk, jk] = (0, Xk.useState)(null), [wk, Jk] = (0, Xk.useState)(!1), [xk, Pk] = (0, Xk.useState)(null), Kk = (0, Xk.useRef)(null), Qk = kI(Ik);
+                            (0, Xk.useLayoutEffect)((() => {
+                              var kk;
+                              if (!xk) return;
+                              const Fk = kk => {
+                                  var Fk;
+                                  return null === (Fk = Kk.current) || void 0 === Fk ? void 0 : Fk.querySelector(`[data-focus-key="${kk}"]`)
                                 },
-                                ZC = zC(GC.key);
-                              null === (CC = ZC && !ZC.disabled ? ZC : zC(GC.fallback)) || void 0 === CC || CC.focus(), RC(null)
-                            }), [GC]);
-                            const JC = CC => {
-                                wC(CC), fC(Vz(CC)), qC(null)
+                                Ik = Fk(xk.key);
+                              null === (kk = Ik && !Ik.disabled ? Ik : Fk(xk.fallback)) || void 0 === kk || kk.focus(), Pk(null)
+                            }), [xk]);
+                            const sk = kk => {
+                                Tk(kk), lk(kI(kk)), qk(null)
                               },
-                              iC = CC => {
-                                JC(ZC.filter(((zC, ZC) => ZC !== CC))), RC({
-                                  key: `edit-${Math.min(CC,ZC.length-2)}`,
+                              zk = kk => {
+                                sk(Ik.filter(((Fk, Ik) => Ik !== kk))), Pk({
+                                  key: `edit-${Math.min(kk,Ik.length-2)}`,
                                   fallback: "add"
                                 })
                               },
-                              vC = (CC, zC) => {
-                                const QC = [...ZC],
-                                  [wC] = QC.splice(CC, 1);
-                                QC.splice(CC + zC, 0, wC), JC(QC);
-                                RC({
-                                  key: `${zC<0?"up":"down"}-${CC+zC}`,
-                                  fallback: `edit-${CC+zC}`
+                              Sk = (kk, Fk) => {
+                                const Xk = [...Ik],
+                                  [Tk] = Xk.splice(kk, 1);
+                                Xk.splice(kk + Fk, 0, Tk), sk(Xk);
+                                Pk({
+                                  key: `${Fk<0?"up":"down"}-${kk+Fk}`,
+                                  fallback: `edit-${kk+Fk}`
                                 })
                               };
-                            return (0, gC.jsxs)("section", {
-                              ref: AC,
+                            return (0, ek.jsxs)("section", {
+                              ref: Kk,
                               className: "DocsPlayground DocsTextEditor",
                               "aria-label": "Styled text editor",
-                              children: [(0, gC.jsx)("header", {
+                              children: [(0, ek.jsx)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: (0, gC.jsxs)("div", {
-                                  children: [(0, gC.jsx)("div", {
+                                children: (0, ek.jsxs)("div", {
+                                  children: [(0, ek.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Styled text editor"
-                                  }), (0, gC.jsx)("div", {
+                                  }), (0, ek.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Add parts, click one to style it, and copy the code. The preview draws it as the game does."
                                   })]
                                 })
-                              }), (0, gC.jsx)("div", {
+                              }), (0, ek.jsx)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: xw.map((CC => (0, gC.jsx)("button", {
+                                children: sT.map((kk => (0, ek.jsx)("button", {
                                   type: "button",
-                                  className: bC()("DocsVariantChip", {
-                                    Active: xC === Vz(CC.parts)
+                                  className: ik()("DocsVariantChip", {
+                                    Active: Qk === kI(kk.parts)
                                   }),
                                   onClick: () => {
-                                    JC(CC.parts)
+                                    sk(kk.parts)
                                   },
-                                  children: CC.label
-                                }, CC.label)))
-                              }), (0, gC.jsx)(Nw, {
-                                parts: ZC,
+                                  children: kk.label
+                                }, kk.label)))
+                              }), (0, ek.jsx)(jT, {
+                                parts: Ik,
                                 className: "DocsTextEditorPreview"
-                              }), (0, gC.jsxs)("div", {
+                              }), (0, ek.jsxs)("div", {
                                 className: "DocsTextEditorBody",
-                                children: [(0, gC.jsxs)("div", {
+                                children: [(0, ek.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, gC.jsx)("div", {
+                                  children: [(0, ek.jsx)("div", {
                                     className: "DocsTextEditorPanelTitle",
                                     children: "Parts"
-                                  }), (0, gC.jsxs)("ol", {
+                                  }), (0, ek.jsxs)("ol", {
                                     className: "DocsTextParts",
-                                    children: [ZC.map(((CC, zC) => {
-                                      const QC = az(CC);
-                                      return (0, gC.jsxs)("li", {
+                                    children: [Ik.map(((kk, Fk) => {
+                                      const Xk = BF(kk);
+                                      return (0, ek.jsxs)("li", {
                                         className: "DocsTextPart",
-                                        children: [(0, gC.jsxs)("button", {
+                                        children: [(0, ek.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextPartMain",
-                                          "data-focus-key": `edit-${zC}`,
-                                          "aria-label": `Edit part ${zC+1}, ${sz[QC]}`,
+                                          "data-focus-key": `edit-${Fk}`,
+                                          "aria-label": `Edit part ${Fk+1}, ${WF[Xk]}`,
                                           onClick: () => {
-                                            MC(zC)
+                                            jk(Fk)
                                           },
-                                          children: [(0, gC.jsx)("span", {
+                                          children: [(0, ek.jsx)("span", {
                                             className: "DocsTextPartKind",
-                                            children: sz[QC]
-                                          }), (0, gC.jsx)(Nw, {
-                                            parts: [CC],
+                                            children: WF[Xk]
+                                          }), (0, ek.jsx)(jT, {
+                                            parts: [kk],
                                             className: "DocsTextPartPreview"
-                                          }), "text" !== QC && (0, gC.jsx)("code", {
+                                          }), "text" !== Xk && (0, ek.jsx)("code", {
                                             className: "DocsTextPartName",
-                                            children: Bz(CC)
+                                            children: rF(kk)
                                           })]
-                                        }), (0, gC.jsxs)("span", {
+                                        }), (0, ek.jsxs)("span", {
                                           className: "DocsTextPartActions",
-                                          children: [(0, gC.jsx)("button", {
+                                          children: [(0, ek.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${zC+1} up`,
-                                            "data-focus-key": `up-${zC}`,
-                                            disabled: 0 === zC,
+                                            "aria-label": `Move part ${Fk+1} up`,
+                                            "data-focus-key": `up-${Fk}`,
+                                            disabled: 0 === Fk,
                                             onClick: () => {
-                                              vC(zC, -1)
+                                              Sk(Fk, -1)
                                             },
-                                            children: (0, gC.jsx)(pC, {
+                                            children: (0, ek.jsx)(Hk, {
                                               name: "chevron-up"
                                             })
-                                          }), (0, gC.jsx)("button", {
+                                          }), (0, ek.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${zC+1} down`,
-                                            "data-focus-key": `down-${zC}`,
-                                            disabled: zC === ZC.length - 1,
+                                            "aria-label": `Move part ${Fk+1} down`,
+                                            "data-focus-key": `down-${Fk}`,
+                                            disabled: Fk === Ik.length - 1,
                                             onClick: () => {
-                                              vC(zC, 1)
+                                              Sk(Fk, 1)
                                             },
-                                            children: (0, gC.jsx)(pC, {
+                                            children: (0, ek.jsx)(Hk, {
                                               name: "chevron-down"
                                             })
-                                          }), (0, gC.jsx)("button", {
+                                          }), (0, ek.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Remove part ${zC+1}`,
+                                            "aria-label": `Remove part ${Fk+1}`,
                                             onClick: () => {
-                                              iC(zC)
+                                              zk(Fk)
                                             },
-                                            children: (0, gC.jsx)(pC, {
+                                            children: (0, ek.jsx)(Hk, {
                                               name: "cross"
                                             })
                                           })]
                                         })]
-                                      }, zC)
-                                    })), 0 === ZC.length && (0, gC.jsx)("li", {
+                                      }, Fk)
+                                    })), 0 === Ik.length && (0, ek.jsx)("li", {
                                       className: "DocsTextPartsEmpty",
                                       children: "No parts yet. Add one below."
                                     })]
-                                  }), (0, gC.jsxs)("div", {
+                                  }), (0, ek.jsxs)("div", {
                                     className: "DocsTextAddPart",
-                                    onKeyDown: CC => {
-                                      "Escape" === CC.key && SC && (CC.stopPropagation(), PC(!1), RC({
+                                    onKeyDown: kk => {
+                                      "Escape" === kk.key && wk && (kk.stopPropagation(), Jk(!1), Pk({
                                         key: "add",
                                         fallback: "add"
                                       }))
                                     },
-                                    children: [(0, gC.jsxs)("button", {
+                                    children: [(0, ek.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextAddPartButton",
                                       "data-focus-key": "add",
-                                      "aria-expanded": SC,
+                                      "aria-expanded": wk,
                                       "aria-controls": "DocsTextAddPartMenu",
                                       onClick: () => {
-                                        PC(!SC)
+                                        Jk(!wk)
                                       },
-                                      children: [(0, gC.jsx)(pC, {
+                                      children: [(0, ek.jsx)(Hk, {
                                         name: "plus"
-                                      }), "Add a part", (0, gC.jsx)(pC, {
-                                        name: SC ? "chevron-up" : "chevron-down"
+                                      }), "Add a part", (0, ek.jsx)(Hk, {
+                                        name: wk ? "chevron-up" : "chevron-down"
                                       })]
-                                    }), SC && (0, gC.jsx)("ul", {
+                                    }), wk && (0, ek.jsx)("ul", {
                                       id: "DocsTextAddPartMenu",
                                       className: "DocsTextAddPartMenu",
-                                      children: Jw.map((CC => (0, gC.jsx)("li", {
-                                        children: (0, gC.jsx)("button", {
+                                      children: VT.map((kk => (0, ek.jsx)("li", {
+                                        children: (0, ek.jsx)("button", {
                                           type: "button",
                                           onClick: () => {
-                                            (CC => {
-                                              JC([...ZC, Tz[CC]]), PC(!1), MC(ZC.length)
-                                            })(CC)
+                                            (kk => {
+                                              sk([...Ik, fF[kk]]), Jk(!1), jk(Ik.length)
+                                            })(kk)
                                           },
-                                          children: sz[CC]
+                                          children: WF[kk]
                                         })
-                                      }, CC)))
+                                      }, kk)))
                                     })]
                                   })]
-                                }), (0, gC.jsxs)("div", {
+                                }), (0, ek.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, gC.jsxs)("div", {
+                                  children: [(0, ek.jsxs)("div", {
                                     className: "DocsTextEditorPanelTitle",
-                                    children: ["Code", (0, gC.jsxs)("button", {
+                                    children: ["Code", (0, ek.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextEditCodeButton",
-                                      "aria-pressed": FC,
+                                      "aria-pressed": Lk,
                                       onClick: () => {
-                                        WC(!FC)
+                                        tk(!Lk)
                                       },
-                                      children: [(0, gC.jsx)(pC, {
-                                        name: FC ? "check" : "pencil"
-                                      }), FC ? "Done" : "Edit"]
+                                      children: [(0, ek.jsx)(Hk, {
+                                        name: Lk ? "check" : "pencil"
+                                      }), Lk ? "Done" : "Edit"]
                                     })]
-                                  }), FC ? (0, gC.jsxs)(gC.Fragment, {
-                                    children: [(0, gC.jsx)("textarea", {
+                                  }), Lk ? (0, ek.jsxs)(ek.Fragment, {
+                                    children: [(0, ek.jsx)("textarea", {
                                       className: "DocsPlaygroundInput",
-                                      value: nC,
+                                      value: yk,
                                       spellCheck: !1,
                                       "aria-label": "Styled text as code",
-                                      onChange: CC => {
-                                        fC(CC.target.value);
-                                        const zC = QZ(CC.target.value);
-                                        qC(zC.error), zC.parts && wC(zC.parts)
+                                      onChange: kk => {
+                                        lk(kk.target.value);
+                                        const Fk = TI(kk.target.value);
+                                        qk(Fk.error), Fk.parts && Tk(Fk.parts)
                                       }
-                                    }), oC && (0, gC.jsx)("p", {
+                                    }), ak && (0, ek.jsx)("p", {
                                       className: "DocsPlaygroundError",
-                                      children: oC
+                                      children: ak
                                     })]
-                                  }) : (0, gC.jsx)(IC, {
+                                  }) : (0, ek.jsx)(Vk, {
                                     lang: "js",
-                                    code: `api.sendMessage(playerId, ${xC})`
+                                    code: `api.sendMessage(playerId, ${Qk})`
                                   })]
                                 })]
-                              }), null !== NC && NC < ZC.length && (0, gC.jsx)(Aw, {
-                                parts: ZC,
-                                index: NC,
-                                fontAwesomeIcons: zC,
-                                onChange: CC => {
-                                  ((CC, zC) => {
-                                    JC(ZC.map(((ZC, QC) => QC === CC ? zC : ZC)))
-                                  })(NC, CC)
+                              }), null !== Zk && Zk < Ik.length && (0, ek.jsx)(QT, {
+                                parts: Ik,
+                                index: Zk,
+                                fontAwesomeIcons: Fk,
+                                onChange: kk => {
+                                  ((kk, Fk) => {
+                                    sk(Ik.map(((Ik, Xk) => Xk === kk ? Fk : Ik)))
+                                  })(Zk, kk)
                                 },
-                                lY: () => {
-                                  iC(NC), MC(null)
+                                iG: () => {
+                                  zk(Zk), jk(null)
                                 },
                                 onClose: () => {
-                                  MC(null), RC({
-                                    key: `edit-${NC}`,
+                                  jk(null), Pk({
+                                    key: `edit-${Zk}`,
                                     fallback: "add"
                                   })
                                 }
                               })]
                             })
                           }
-                          var iw = ZC(4783),
-                            vw = ZC(4760),
-                            ew = ZC(4775),
-                            hw = ZC(4788);
-                          const Kw = 40,
-                            Yw = 800,
-                            dw = 150,
-                            mw = 8e3,
-                            Hw = 2e3;
+                          var ST = Ik(4843),
+                            oT = Ik(4829),
+                            vT = Ik(4837),
+                            ET = Ik(4850);
+                          const OT = 40,
+                            nT = 800,
+                            GT = 150,
+                            pT = 8e3,
+                            uT = 2e3;
 
-                          function Ew(CC, zC) {
-                            return 12 * Math.log2(zC / CC)
+                          function bT(kk, Fk) {
+                            return 12 * Math.log2(Fk / kk)
                           }
 
-                          function lw(CC, zC) {
-                            return Math.round(CC * 2 ** (zC / 12) * 10) / 10
+                          function RT(kk, Fk) {
+                            return Math.round(kk * 2 ** (Fk / 12) * 10) / 10
                           }
 
-                          function Xw(CC) {
-                            return `${CC} ms`
+                          function UT(kk) {
+                            return `${kk} ms`
                           }
 
-                          function uw(CC) {
-                            return `${CC} st`
+                          function CT(kk) {
+                            return `${kk} st`
                           }
-                          const rw = [{
+                          const NT = [{
                             key: "variationSemitones",
                             label: "Word variation",
                             max: 6
@@ -4091,769 +4091,769 @@ export const modules = {
                             max: 12
                           }];
 
-                          function sw(CC) {
+                          function cT(kk) {
                             let {
-                              synth: zC,
-                              onChange: ZC
-                            } = CC;
-                            const QC = (0, iw.m)(zC);
-                            return (0, gC.jsxs)("div", {
+                              synth: Fk,
+                              onChange: Ik
+                            } = kk;
+                            const Xk = (0, ST.k)(Fk);
+                            return (0, ek.jsxs)("div", {
                               className: "DocsVoiceControls",
-                              children: [(0, gC.jsxs)("div", {
+                              children: [(0, ek.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, gC.jsx)("div", {
+                                children: [(0, ek.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Voice"
-                                }), (0, gC.jsxs)("div", {
+                                }), (0, ek.jsxs)("div", {
                                   className: "DocsControl",
-                                  children: [(0, gC.jsx)("div", {
+                                  children: [(0, ek.jsx)("div", {
                                     className: "DocsControlLabel",
-                                    children: (0, gC.jsx)("span", {
+                                    children: (0, ek.jsx)("span", {
                                       children: "Tone"
                                     })
-                                  }), (0, gC.jsx)("div", {
+                                  }), (0, ek.jsx)("div", {
                                     className: "DocsVoiceWaveforms",
-                                    children: iw.f.map((CC => (0, gC.jsx)("button", {
+                                    children: ST.d.map((kk => (0, ek.jsx)("button", {
                                       type: "button",
-                                      className: bC()("DocsVariantChip", {
-                                        Active: zC.waveform === CC
+                                      className: ik()("DocsVariantChip", {
+                                        Active: Fk.waveform === kk
                                       }),
-                                      "aria-pressed": zC.waveform === CC,
+                                      "aria-pressed": Fk.waveform === kk,
                                       onClick: () => {
-                                        ZC({
-                                          waveform: CC
+                                        Ik({
+                                          waveform: kk
                                         })
                                       },
-                                      children: CC
-                                    }, CC)))
+                                      children: kk
+                                    }, kk)))
                                   })]
-                                }), (0, gC.jsx)(kQ, {
+                                }), (0, ek.jsx)(MX, {
                                   label: "Pitch",
                                   min: 0,
-                                  max: Ew(Kw, Yw),
+                                  max: bT(OT, nT),
                                   step: .1,
-                                  value: Ew(Kw, zC.pitchHz),
-                                  format: () => `${zC.pitchHz} Hz`,
-                                  onChange: CC => {
-                                    ZC({
-                                      pitchHz: lw(Kw, CC)
+                                  value: bT(OT, Fk.pitchHz),
+                                  format: () => `${Fk.pitchHz} Hz`,
+                                  onChange: kk => {
+                                    Ik({
+                                      pitchHz: RT(OT, kk)
                                     })
                                   }
-                                }), (0, gC.jsx)(kQ, {
+                                }), (0, ek.jsx)(MX, {
                                   label: "Time per syllable",
                                   min: 25,
                                   max: 200,
                                   step: 1,
-                                  value: zC.syllableMs,
-                                  format: Xw,
-                                  onChange: CC => {
-                                    ZC({
-                                      syllableMs: CC
+                                  value: Fk.syllableMs,
+                                  format: UT,
+                                  onChange: kk => {
+                                    Ik({
+                                      syllableMs: kk
                                     })
                                   }
-                                }), (0, gC.jsx)(kQ, {
+                                }), (0, ek.jsx)(MX, {
                                   label: "Volume",
                                   min: 0,
                                   max: 2,
                                   step: .05,
-                                  value: zC.volume,
-                                  onChange: CC => {
-                                    ZC({
-                                      volume: CC
+                                  value: Fk.volume,
+                                  onChange: kk => {
+                                    Ik({
+                                      volume: kk
                                     })
                                   }
                                 })]
-                              }), (0, gC.jsxs)("div", {
+                              }), (0, ek.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, gC.jsx)("div", {
+                                children: [(0, ek.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Each blip"
-                                }), (0, gC.jsx)(kQ, {
+                                }), (0, ek.jsx)(MX, {
                                   label: "Length",
                                   min: 10,
                                   max: 300,
                                   step: 1,
-                                  value: zC.durationMs,
-                                  format: Xw,
-                                  onChange: CC => {
-                                    ZC({
-                                      durationMs: CC
+                                  value: Fk.durationMs,
+                                  format: UT,
+                                  onChange: kk => {
+                                    Ik({
+                                      durationMs: kk
                                     })
                                   }
-                                }), (0, gC.jsx)(kQ, {
+                                }), (0, ek.jsx)(MX, {
                                   label: "Fade in",
                                   min: 0,
-                                  max: QC.durationMs,
+                                  max: Xk.durationMs,
                                   step: 1,
-                                  value: QC.attackMs,
-                                  format: Xw,
-                                  onChange: CC => {
-                                    ZC({
-                                      attackMs: CC
+                                  value: Xk.attackMs,
+                                  format: UT,
+                                  onChange: kk => {
+                                    Ik({
+                                      attackMs: kk
                                     })
                                   }
-                                }), (0, gC.jsx)(kQ, {
+                                }), (0, ek.jsx)(MX, {
                                   label: "Fade out",
                                   min: 0,
-                                  max: QC.durationMs - QC.attackMs,
+                                  max: Xk.durationMs - Xk.attackMs,
                                   step: 1,
-                                  value: QC.releaseMs,
-                                  format: Xw,
-                                  onChange: CC => {
-                                    ZC({
-                                      releaseMs: CC
+                                  value: Xk.releaseMs,
+                                  format: UT,
+                                  onChange: kk => {
+                                    Ik({
+                                      releaseMs: kk
                                     })
                                   }
-                                }), (0, gC.jsx)(kQ, {
+                                }), (0, ek.jsx)(MX, {
                                   label: "Glide",
                                   min: -12,
                                   max: 12,
                                   step: .1,
-                                  value: zC.glideSemitones,
-                                  format: uw,
-                                  onChange: CC => {
-                                    ZC({
-                                      glideSemitones: CC
+                                  value: Fk.glideSemitones,
+                                  format: CT,
+                                  onChange: kk => {
+                                    Ik({
+                                      glideSemitones: kk
                                     })
                                   }
-                                }), (0, gC.jsxs)("label", {
+                                }), (0, ek.jsxs)("label", {
                                   className: "DocsVoiceToggle",
-                                  children: [(0, gC.jsx)("input", {
+                                  children: [(0, ek.jsx)("input", {
                                     type: "checkbox",
-                                    checked: null !== zC.lowpassHz,
-                                    onChange: CC => {
-                                      ZC({
-                                        lowpassHz: CC.target.checked ? Hw : null
+                                    checked: null !== Fk.lowpassHz,
+                                    onChange: kk => {
+                                      Ik({
+                                        lowpassHz: kk.target.checked ? uT : null
                                       })
                                     }
-                                  }), (0, gC.jsx)("span", {
+                                  }), (0, ek.jsx)("span", {
                                     children: "Muffle with a filter"
                                   })]
-                                }), null !== zC.lowpassHz && (0, gC.jsx)(kQ, {
+                                }), null !== Fk.lowpassHz && (0, ek.jsx)(MX, {
                                   label: "Filter",
                                   min: 0,
-                                  max: Ew(dw, mw),
+                                  max: bT(GT, pT),
                                   step: .1,
-                                  value: Ew(dw, zC.lowpassHz),
-                                  format: () => `${zC.lowpassHz} Hz`,
-                                  onChange: CC => {
-                                    ZC({
-                                      lowpassHz: lw(dw, CC)
+                                  value: bT(GT, Fk.lowpassHz),
+                                  format: () => `${Fk.lowpassHz} Hz`,
+                                  onChange: kk => {
+                                    Ik({
+                                      lowpassHz: RT(GT, kk)
                                     })
                                   }
                                 })]
-                              }), (0, gC.jsxs)("div", {
+                              }), (0, ek.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, gC.jsx)("div", {
+                                children: [(0, ek.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Intonation"
-                                }), rw.map((CC => {
+                                }), NT.map((kk => {
                                   let {
-                                    key: QC,
-                                    label: wC,
-                                    max: bC
-                                  } = CC;
-                                  return (0, gC.jsx)(kQ, {
-                                    label: wC,
+                                    key: Xk,
+                                    label: Tk,
+                                    max: ik
+                                  } = kk;
+                                  return (0, ek.jsx)(MX, {
+                                    label: Tk,
                                     min: 0,
-                                    max: bC,
+                                    max: ik,
                                     step: .1,
-                                    value: zC.intonation[QC],
-                                    format: uw,
-                                    onChange: CC => {
-                                      ZC({
+                                    value: Fk.intonation[Xk],
+                                    format: CT,
+                                    onChange: kk => {
+                                      Ik({
                                         intonation: {
-                                          ...zC.intonation,
-                                          [QC]: CC
+                                          ...Fk.intonation,
+                                          [Xk]: kk
                                         }
                                       })
                                     }
-                                  }, QC)
+                                  }, Xk)
                                 }))]
                               })]
                             })
                           }
-                          const Tw = Object.keys(iw.i),
-                            aw = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
+                          const WT = Object.keys(ST.g),
+                            fT = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
 
-                          function tw(CC) {
-                            var zC;
-                            const ZC = JSON.stringify((0, iw.m)(CC));
-                            return null !== (zC = Tw.find((CC => JSON.stringify((0, iw.m)(iw.i[CC])) === ZC))) && void 0 !== zC ? zC : null
+                          function BT(kk) {
+                            var Fk;
+                            const Ik = JSON.stringify((0, ST.k)(kk));
+                            return null !== (Fk = WT.find((kk => JSON.stringify((0, ST.k)(ST.g[kk])) === Ik))) && void 0 !== Fk ? Fk : null
                           }
 
-                          function Dw(CC) {
-                            let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-                            if ("object" !== typeof CC || null === CC) return JSON.stringify(CC);
-                            return `{\n${Object.entries(CC).map((CC=>{let[ZC,QC]=CC;return`${zC}    ${ZC}: ${Dw(QC,`${zC}    `)},`})).join("\n")}\n${zC}}`
+                          function dT(kk) {
+                            let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+                            if ("object" !== typeof kk || null === kk) return JSON.stringify(kk);
+                            return `{\n${Object.entries(kk).map((kk=>{let[Ik,Xk]=kk;return`${Fk}    ${Ik}: ${dT(Xk,`${Fk}    `)},`})).join("\n")}\n${Fk}}`
                           }
 
-                          function jw(CC, zC, ZC) {
-                            const QC = tw(CC),
-                              wC = [`    line: ${JSON.stringify(zC)},`];
-                            return ZC && wC.push(`    speakerName: ${JSON.stringify(ZC)},`), wC.push("    voice,"), `const voice = ${QC?JSON.stringify(QC):Dw((0,iw.m)(CC))}\n\napi.setClientOption(playerId, "dialogue", {\n${wC.join("\n")}\n})`
+                          function YT(kk, Fk, Ik) {
+                            const Xk = BT(kk),
+                              Tk = [`    line: ${JSON.stringify(Fk)},`];
+                            return Ik && Tk.push(`    speakerName: ${JSON.stringify(Ik)},`), Tk.push("    voice,"), `const voice = ${Xk?JSON.stringify(Xk):dT((0,ST.k)(kk))}\n\napi.setClientOption(playerId, "dialogue", {\n${Tk.join("\n")}\n})`
                           }
-                          const yw = 400,
-                            Lw = 90;
-                          let Uw = null;
+                          const AT = 400,
+                            gT = 90;
+                          let mT = null;
 
-                          function Bw(CC, zC, ZC) {
-                            return Uw ??= new AudioContext, Uw.resume(), (0, hw.b)(Uw, Uw.destination, CC, zC, ZC, (() => {}))
+                          function hT(kk, Fk, Ik) {
+                            return mT ??= new AudioContext, mT.resume(), (0, ET.e)(mT, mT.destination, kk, Fk, Ik, (() => {}))
                           }
 
-                          function Ow() {
-                            const [CC, zC] = (0, QC.useState)(iw.i.regular), [ZC, wC] = (0, QC.useState)(aw[0]), [nC, fC] = (0, QC.useState)("Innkeeper"), [oC, qC] = (0, QC.useState)(0), FC = FQ((CC => CC.volume)), WC = (0, QC.useRef)(null), NC = (0, QC.useRef)(0), MC = (0, QC.useRef)(0), SC = () => {
-                              var CC;
-                              null === (CC = WC.current) || void 0 === CC || CC.call(WC), WC.current = null
+                          function rT() {
+                            const [kk, Fk] = (0, Xk.useState)(ST.g.regular), [Ik, Tk] = (0, Xk.useState)(fT[0]), [yk, lk] = (0, Xk.useState)("Innkeeper"), [ak, qk] = (0, Xk.useState)(0), Lk = tX((kk => kk.volume)), tk = (0, Xk.useRef)(null), Zk = (0, Xk.useRef)(0), jk = (0, Xk.useRef)(0), wk = () => {
+                              var kk;
+                              null === (kk = tk.current) || void 0 === kk || kk.call(tk), tk.current = null
                             };
-                            (0, QC.useEffect)((() => () => {
-                              var CC;
-                              null === (CC = WC.current) || void 0 === CC || CC.call(WC), window.clearTimeout(NC.current)
+                            (0, Xk.useEffect)((() => () => {
+                              var kk;
+                              null === (kk = tk.current) || void 0 === kk || kk.call(tk), window.clearTimeout(Zk.current)
                             }), []);
-                            const PC = (0, QC.useMemo)((() => ({
-                                line: ZC,
-                                speakerName: nC || void 0,
-                                voice: CC
-                              })), [ZC, nC, CC]),
-                              GC = (0, QC.useRef)(PC);
-                            GC.current = PC;
-                            const AC = tw(CC),
-                              xC = CC => {
-                                window.clearTimeout(NC.current), SC();
+                            const Jk = (0, Xk.useMemo)((() => ({
+                                line: Ik,
+                                speakerName: yk || void 0,
+                                voice: kk
+                              })), [Ik, yk, kk]),
+                              xk = (0, Xk.useRef)(Jk);
+                            xk.current = Jk;
+                            const Kk = BT(kk),
+                              Qk = kk => {
+                                window.clearTimeout(Zk.current), wk();
                                 const {
-                                  plan: zC,
-                                  synth: ZC
-                                } = (0, ew.f)(CC);
-                                ZC && (WC.current = Bw(ZC, zC.blips, FC)), qC((CC => CC + 1))
+                                  plan: Fk,
+                                  synth: Ik
+                                } = (0, vT.e)(kk);
+                                Ik && (tk.current = hT(Ik, Fk.blips, Lk)), qk((kk => kk + 1))
                               },
-                              JC = jw(CC, ZC, nC);
-                            return (0, gC.jsxs)("section", {
+                              sk = YT(kk, Ik, yk);
+                            return (0, ek.jsxs)("section", {
                               className: "DocsPlayground DocsVoicePlayground",
                               "aria-label": "Voice playground",
-                              children: [(0, gC.jsxs)("header", {
+                              children: [(0, ek.jsxs)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: [(0, gC.jsxs)("div", {
-                                  children: [(0, gC.jsx)("div", {
+                                children: [(0, ek.jsxs)("div", {
+                                  children: [(0, ek.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Try it: voices"
-                                  }), (0, gC.jsx)("div", {
+                                  }), (0, ek.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Start from a preset and change it to suit your character. The line replays as you go."
                                   })]
-                                }), (0, gC.jsx)(RC, {
-                                  text: JC,
+                                }), (0, ek.jsx)(Pk, {
+                                  text: sk,
                                   label: "Copy code"
                                 })]
-                              }), (0, gC.jsxs)("div", {
+                              }), (0, ek.jsxs)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: [Tw.map((CC => (0, gC.jsx)("button", {
+                                children: [WT.map((kk => (0, ek.jsx)("button", {
                                   type: "button",
-                                  className: bC()("DocsVariantChip", {
-                                    Active: AC === CC
+                                  className: ik()("DocsVariantChip", {
+                                    Active: Kk === kk
                                   }),
-                                  "aria-pressed": AC === CC,
+                                  "aria-pressed": Kk === kk,
                                   onClick: () => {
-                                    (CC => {
-                                      const ZC = iw.i[CC];
-                                      zC(ZC), xC({
-                                        ...PC,
-                                        voice: ZC
+                                    (kk => {
+                                      const Ik = ST.g[kk];
+                                      Fk(Ik), Qk({
+                                        ...Jk,
+                                        voice: Ik
                                       })
-                                    })(CC)
+                                    })(kk)
                                   },
-                                  children: CC
-                                }, CC))), !AC && (0, gC.jsx)("span", {
+                                  children: kk
+                                }, kk))), !Kk && (0, ek.jsx)("span", {
                                   className: "DocsVariantChip Active DocsVoiceCustomChip",
                                   children: "custom"
                                 })]
-                              }), (0, gC.jsxs)("div", {
+                              }), (0, ek.jsxs)("div", {
                                 className: "DocsVoiceBody",
-                                children: [(0, gC.jsxs)("div", {
+                                children: [(0, ek.jsxs)("div", {
                                   className: "DocsVoiceScene",
-                                  children: [(0, gC.jsx)("div", {
+                                  children: [(0, ek.jsx)("div", {
                                     className: "DocsVoiceStage",
-                                    children: (0, gC.jsx)(vw.c, {
-                                      display: PC
-                                    }, oC)
-                                  }), (0, gC.jsxs)("form", {
+                                    children: (0, ek.jsx)(oT.e, {
+                                      display: Jk
+                                    }, ak)
+                                  }), (0, ek.jsxs)("form", {
                                     className: "DocsVoiceLineRow",
-                                    onSubmit: CC => {
-                                      CC.preventDefault(), xC(PC)
+                                    onSubmit: kk => {
+                                      kk.preventDefault(), Qk(Jk)
                                     },
-                                    children: [(0, gC.jsx)("input", {
-                                      value: ZC,
+                                    children: [(0, ek.jsx)("input", {
+                                      value: Ik,
                                       "aria-label": "Line",
                                       placeholder: "Type a line to hear it",
-                                      onChange: CC => {
-                                        wC(CC.target.value)
+                                      onChange: kk => {
+                                        Tk(kk.target.value)
                                       }
-                                    }), (0, gC.jsxs)("button", {
+                                    }), (0, ek.jsxs)("button", {
                                       type: "submit",
                                       className: "DocsVoiceSpeakButton",
-                                      children: [(0, gC.jsx)(pC, {
+                                      children: [(0, ek.jsx)(Hk, {
                                         name: "play"
-                                      }), (0, gC.jsx)("span", {
+                                      }), (0, ek.jsx)("span", {
                                         children: "Speak"
                                       })]
                                     })]
-                                  }), (0, gC.jsx)("div", {
+                                  }), (0, ek.jsx)("div", {
                                     className: "DocsVoiceSamples",
-                                    children: aw.map((CC => (0, gC.jsx)("button", {
+                                    children: fT.map((kk => (0, ek.jsx)("button", {
                                       type: "button",
-                                      className: bC()("DocsVariantChip", {
-                                        Active: ZC === CC
+                                      className: ik()("DocsVariantChip", {
+                                        Active: Ik === kk
                                       }),
                                       onClick: () => {
-                                        var zC;
-                                        wC(zC = CC), xC({
-                                          ...PC,
-                                          line: zC
+                                        var Fk;
+                                        Tk(Fk = kk), Qk({
+                                          ...Jk,
+                                          line: Fk
                                         })
                                       },
-                                      children: CC
-                                    }, CC)))
-                                  }), (0, gC.jsxs)("label", {
+                                      children: kk
+                                    }, kk)))
+                                  }), (0, ek.jsxs)("label", {
                                     className: "DocsVoiceSpeaker",
-                                    children: [(0, gC.jsx)("span", {
+                                    children: [(0, ek.jsx)("span", {
                                       children: "Speaker"
-                                    }), (0, gC.jsx)("input", {
-                                      value: nC,
+                                    }), (0, ek.jsx)("input", {
+                                      value: yk,
                                       placeholder: "No name",
-                                      onChange: CC => {
-                                        fC(CC.target.value)
+                                      onChange: kk => {
+                                        lk(kk.target.value)
                                       }
                                     })]
                                   })]
-                                }), (0, gC.jsx)(sw, {
-                                  synth: CC,
-                                  onChange: ZC => {
-                                    const QC = {
-                                      ...CC,
-                                      ...ZC
+                                }), (0, ek.jsx)(cT, {
+                                  synth: kk,
+                                  onChange: Ik => {
+                                    const Xk = {
+                                      ...kk,
+                                      ...Ik
                                     };
-                                    zC(QC);
-                                    const wC = {
-                                        ...PC,
-                                        voice: QC
+                                    Fk(Xk);
+                                    const Tk = {
+                                        ...Jk,
+                                        voice: Xk
                                       },
-                                      bC = performance.now();
-                                    if (bC - MC.current >= Lw) {
-                                      MC.current = bC, SC();
-                                      const CC = (0, ew.f)(wC).plan.blips[0];
-                                      CC && (WC.current = Bw((0, iw.m)(QC), [{
-                                        ...CC,
+                                      ik = performance.now();
+                                    if (ik - jk.current >= gT) {
+                                      jk.current = ik, wk();
+                                      const kk = (0, vT.e)(Tk).plan.blips[0];
+                                      kk && (tk.current = hT((0, ST.k)(Xk), [{
+                                        ...kk,
                                         atMs: 0
-                                      }], FC))
+                                      }], Lk))
                                     }
-                                    window.clearTimeout(NC.current), NC.current = window.setTimeout((() => {
-                                      xC(GC.current)
-                                    }), yw)
+                                    window.clearTimeout(Zk.current), Zk.current = window.setTimeout((() => {
+                                      Qk(xk.current)
+                                    }), AT)
                                   }
                                 })]
-                              }), (0, gC.jsx)(IC, {
-                                code: JC,
+                              }), (0, ek.jsx)(Vk, {
+                                code: sk,
                                 lang: "ts"
                               })]
                             })
                           }
-                          var kw = ZC(4804);
-                          const Vw = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
-                            Cb = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
-                            zb = [
-                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${Cb}`, "g"), kw.n],
+                          var DT = Ik(4866);
+                          const MT = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
+                            ki = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
+                            Fi = [
+                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${ki}`, "g"), DT.l],
                               [/\bfunction\s+([A-Za-z_$][\w$]*)\s*\(/g],
-                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, kw.n]
+                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, DT.l]
                             ];
 
-                          function Zb(CC) {
-                            return `${CC.pageId}#${CC.anchor}`
+                          function Ii(kk) {
+                            return `${kk.pageId}#${kk.anchor}`
                           }
-                          let Qb, wb, bb;
+                          let Xi, Ti, ii;
 
-                          function nb(CC) {
-                            const zC = (0, iC.g)(CC),
-                              ZC = new Set;
-                            for (const [, , QC] of zC.matchAll(iC.b)) {
-                              const CC = QC.startsWith("#") ? aC(QC) : null,
-                                zC = CC ? Zb({
-                                  pageId: CC.page.id,
-                                  anchor: CC.anchor
+                          function yi(kk) {
+                            const Fk = (0, zk.l)(kk),
+                              Ik = new Set;
+                            for (const [, , Xk] of Fk.matchAll(zk.d)) {
+                              const kk = Xk.startsWith("#") ? Bk(Xk) : null,
+                                Fk = kk ? Ii({
+                                  pageId: kk.page.id,
+                                  anchor: kk.anchor
                                 }) : null;
-                              null !== zC && (Qb || (Qb = new Set(XC.flatMap((CC => KC(CC.layout) ? sC(CC).sections.map((zC => Zb({
-                                pageId: CC.id,
-                                anchor: zC.heading.anchor
-                              }))) : [])))), Qb).has(zC) && ZC.add(zC)
+                              null !== Fk && (Xi || (Xi = new Set(Uk.flatMap((kk => Ok(kk.layout) ? Wk(kk).sections.map((Fk => Ii({
+                                pageId: kk.id,
+                                anchor: Fk.heading.anchor
+                              }))) : [])))), Xi).has(Fk) && Ik.add(Fk)
                             }
-                            for (const [, , QC] of zC.matchAll(Vw)) {
-                              const CC = Nz(QC);
-                              CC && ZC.add(Zb(CC))
+                            for (const [, , Xk] of Fk.matchAll(MT)) {
+                              const kk = jF(Xk);
+                              kk && Ik.add(Ii(kk))
                             }
-                            return ZC
+                            return Ik
                           }
 
-                          function fb(CC, zC) {
-                            const ZC = new Set,
-                              QC = function(CC) {
-                                return CC.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
-                              }(CC);
-                            for (const [, wC] of QC.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) ZC.add(wC);
-                            for (const [wC, bC] of zb)
-                              for (const [, CC] of(0, kw.f)(QC, wC, bC)) zC.has(CC) && ZC.add(CC);
-                            return ZC
+                          function li(kk, Fk) {
+                            const Ik = new Set,
+                              Xk = function(kk) {
+                                return kk.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
+                              }(kk);
+                            for (const [, Tk] of Xk.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) Ik.add(Tk);
+                            for (const [Tk, ik] of Fi)
+                              for (const [, kk] of(0, DT.e)(Xk, Tk, ik)) Fk.has(kk) && Ik.add(kk);
+                            return Ik
                           }
 
-                          function ob(CC, zC, ZC, QC) {
-                            const wC = CC.get(zC);
-                            wC ? !QC && wC.some((CC => CC.pageId === ZC.pageId)) || wC.push(ZC) : CC.set(zC, [ZC])
+                          function ai(kk, Fk, Ik, Xk) {
+                            const Tk = kk.get(Fk);
+                            Tk ? !Xk && Tk.some((kk => kk.pageId === Ik.pageId)) || Tk.push(Ik) : kk.set(Fk, [Ik])
                           }
-                          const qb = /^[A-Za-z_$][\w$]*$/;
+                          const qi = /^[A-Za-z_$][\w$]*$/;
 
-                          function Fb(CC) {
-                            return qb.test(CC.name) ? CC.name : "options"
-                          }
-
-                          function Wb(CC, zC) {
-                            const ZC = CC.params.map(Fb).join(", ");
-                            return zC ? `${CC.name} = (${ZC}) => {\n\t\n}` : `api.${CC.name}(${ZC})`
+                          function Li(kk) {
+                            return qi.test(kk.name) ? kk.name : "options"
                           }
 
-                          function Nb(CC) {
+                          function ti(kk, Fk) {
+                            const Ik = kk.params.map(Li).join(", ");
+                            return Fk ? `${kk.name} = (${Ik}) => {\n\t\n}` : `api.${kk.name}(${Ik})`
+                          }
+
+                          function Zi(kk) {
                             let {
-                              method: zC,
-                              isCallback: ZC
-                            } = CC;
-                            return (0, gC.jsxs)("div", {
+                              method: Fk,
+                              isCallback: Ik
+                            } = kk;
+                            return (0, ek.jsxs)("div", {
                               className: "DocsSignature",
-                              children: [(0, gC.jsxs)("span", {
+                              children: [(0, ek.jsxs)("span", {
                                 className: "DocsSignatureCode",
-                                children: [ZC ? (0, gC.jsxs)(gC.Fragment, {
-                                  children: [(0, gC.jsx)("span", {
+                                children: [Ik ? (0, ek.jsxs)(ek.Fragment, {
+                                  children: [(0, ek.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: zC.name
-                                  }), (0, gC.jsx)("span", {
+                                    children: Fk.name
+                                  }), (0, ek.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: " = ("
                                   })]
-                                }) : (0, gC.jsxs)(gC.Fragment, {
-                                  children: [(0, gC.jsx)("span", {
+                                }) : (0, ek.jsxs)(ek.Fragment, {
+                                  children: [(0, ek.jsx)("span", {
                                     className: "DocsSignatureObject",
                                     children: "api."
-                                  }), (0, gC.jsx)("span", {
+                                  }), (0, ek.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: zC.name
-                                  }), (0, gC.jsx)("span", {
+                                    children: Fk.name
+                                  }), (0, ek.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: "("
                                   })]
-                                }), zC.params.map(((CC, ZC) => (0, gC.jsxs)(QC.Fragment, {
-                                  children: [ZC > 0 && (0, gC.jsx)("span", {
+                                }), Fk.params.map(((kk, Ik) => (0, ek.jsxs)(Xk.Fragment, {
+                                  children: [Ik > 0 && (0, ek.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: ", "
-                                  }), (0, gC.jsx)("a", {
+                                  }), (0, ek.jsx)("a", {
                                     className: "DocsSignatureParam",
-                                    href: `#${zC.name}-${Fb(CC)}`,
-                                    children: CC.name
+                                    href: `#${Fk.name}-${Li(kk)}`,
+                                    children: kk.name
                                   })]
-                                }, CC.name))), (0, gC.jsx)("span", {
+                                }, kk.name))), (0, ek.jsx)("span", {
                                   className: "DocsTypePunctuation",
-                                  children: ZC ? ") => " : ")"
-                                }), ZC && !zC.returns && (0, gC.jsx)("span", {
+                                  children: Ik ? ") => " : ")"
+                                }), Ik && !Fk.returns && (0, ek.jsx)("span", {
                                   className: "DocsTypeKeyword",
                                   children: "void"
                                 })]
-                              }), zC.returns && zC.returns.type && (0, gC.jsxs)("span", {
+                              }), Fk.returns && Fk.returns.type && (0, ek.jsxs)("span", {
                                 className: "DocsSignatureReturns",
-                                children: [!ZC && (0, gC.jsx)("span", {
+                                children: [!Ik && (0, ek.jsx)("span", {
                                   className: "DocsSignatureArrow",
                                   children: "\u2192"
-                                }), (0, gC.jsx)(vz, {
-                                  type: zC.returns.type
+                                }), (0, ek.jsx)(oF, {
+                                  type: Fk.returns.type
                                 })]
                               })]
                             })
                           }
 
-                          function Mb(CC) {
+                          function ji(kk) {
                             let {
-                              title: zC,
-                              references: ZC
-                            } = CC;
-                            const wC = (0, QC.useContext)(Mz);
-                            return (0, gC.jsxs)("div", {
+                              title: Fk,
+                              references: Ik
+                            } = kk;
+                            const Tk = (0, Xk.useContext)(eF);
+                            return (0, ek.jsxs)("div", {
                               className: "DocsCardReferences",
-                              children: [(0, gC.jsx)("span", {
+                              children: [(0, ek.jsx)("span", {
                                 className: "DocsCardReferencesTitle",
-                                children: zC
-                              }), ZC.map((CC => (0, gC.jsx)(nC.d, {
-                                to: DC(wC, uC(CC.pageId), CC.anchor),
-                                children: CC.label
-                              }, `${CC.pageId}#${CC.anchor}`)))]
+                                children: Fk
+                              }), Ik.map((kk => (0, ek.jsx)(yk.e, {
+                                to: Yk(Tk, Nk(kk.pageId), kk.anchor),
+                                children: kk.label
+                              }, `${kk.pageId}#${kk.anchor}`)))]
                             })
                           }
 
-                          function gb(CC) {
-                            var zC, ZC;
+                          function ei(kk) {
+                            var Fk, Ik;
                             let {
-                              pageId: QC,
-                              anchor: wC
-                            } = CC;
-                            const bC = Zb({
-                                pageId: QC,
-                                anchor: wC
+                              pageId: Xk,
+                              anchor: Tk
+                            } = kk;
+                            const ik = Ii({
+                                pageId: Xk,
+                                anchor: Tk
                               }),
-                              nC = null !== (zC = function() {
-                                if (!bb) {
-                                  bb = new Map;
-                                  const QC = new Set(XC.filter((CC => "callbacks" === CC.layout)).flatMap((CC => sC(CC).sections.map((CC => CC.heading.text)))));
-                                  for (const wC of XC)
-                                    if ("article" === wC.layout || "snippets" === wC.layout)
-                                      for (const bC of (0, iC.r)(sC(wC)))
+                              yk = null !== (Fk = function() {
+                                if (!ii) {
+                                  ii = new Map;
+                                  const Xk = new Set(Uk.filter((kk => "callbacks" === kk.layout)).flatMap((kk => Wk(kk).sections.map((kk => kk.heading.text)))));
+                                  for (const Tk of Uk)
+                                    if ("article" === Tk.layout || "snippets" === Tk.layout)
+                                      for (const ik of (0, zk.u)(Wk(Tk)))
                                         for (const {
-                                            code: nC
+                                            code: yk
                                           }
-                                          of(0, iC.h)(bC.blocks))
-                                          for (const fC of fb(nC, QC)) {
-                                            const QC = Wz().get(fC);
-                                            if (QC) {
-                                              var CC, zC, ZC;
-                                              const nC = {
-                                                pageId: wC.id,
-                                                anchor: null !== (CC = null === (zC = bC.heading) || void 0 === zC ? void 0 : zC.anchor) && void 0 !== CC ? CC : "",
-                                                label: null !== (ZC = wC.navTitle) && void 0 !== ZC ? ZC : wC.title
+                                          of(0, zk.n)(ik.blocks))
+                                          for (const lk of li(yk, Xk)) {
+                                            const Xk = ZF().get(lk);
+                                            if (Xk) {
+                                              var kk, Fk, Ik;
+                                              const yk = {
+                                                pageId: Tk.id,
+                                                anchor: null !== (kk = null === (Fk = ik.heading) || void 0 === Fk ? void 0 : Fk.anchor) && void 0 !== kk ? kk : "",
+                                                label: null !== (Ik = Tk.navTitle) && void 0 !== Ik ? Ik : Tk.title
                                               };
-                                              ob(bb, Zb(QC), nC, !1)
+                                              ai(ii, Ii(Xk), yk, !1)
                                             }
                                           }
                                 }
-                                return bb
-                              }().get(bC)) && void 0 !== zC ? zC : [],
-                              fC = null !== (ZC = function() {
-                                if (!wb) {
-                                  wb = new Map;
-                                  const CC = uC("changelog");
-                                  for (const zC of sC(CC).sections) {
-                                    const ZC = new Set(zC.blocks.flatMap((CC => [...nb(CC)])));
-                                    for (const QC of ZC) {
-                                      const ZC = {
-                                        pageId: CC.id,
-                                        anchor: zC.heading.anchor,
-                                        label: zC.heading.text
+                                return ii
+                              }().get(ik)) && void 0 !== Fk ? Fk : [],
+                              lk = null !== (Ik = function() {
+                                if (!Ti) {
+                                  Ti = new Map;
+                                  const kk = Nk("changelog");
+                                  for (const Fk of Wk(kk).sections) {
+                                    const Ik = new Set(Fk.blocks.flatMap((kk => [...yi(kk)])));
+                                    for (const Xk of Ik) {
+                                      const Ik = {
+                                        pageId: kk.id,
+                                        anchor: Fk.heading.anchor,
+                                        label: Fk.heading.text
                                       };
-                                      ob(wb, QC, ZC, !0)
+                                      ai(Ti, Xk, Ik, !0)
                                     }
                                   }
                                 }
-                                return wb
-                              }().get(bC)) && void 0 !== ZC ? ZC : [];
-                            return 0 === nC.length && 0 === fC.length ? null : (0, gC.jsxs)("footer", {
+                                return Ti
+                              }().get(ik)) && void 0 !== Ik ? Ik : [];
+                            return 0 === yk.length && 0 === lk.length ? null : (0, ek.jsxs)("footer", {
                               className: "DocsCardFooter",
-                              children: [nC.length > 0 && (0, gC.jsx)(Mb, {
+                              children: [yk.length > 0 && (0, ek.jsx)(ji, {
                                 title: "Used in",
-                                references: nC
-                              }), fC.length > 0 && (0, gC.jsx)(Mb, {
+                                references: yk
+                              }), lk.length > 0 && (0, ek.jsx)(ji, {
                                 title: "Changelog",
-                                references: fC
+                                references: lk
                               })]
                             })
                           }
 
-                          function Sb(CC) {
+                          function wi(kk) {
                             let {
-                              method: zC,
-                              pageId: ZC,
-                              anchor: QC,
-                              isCallback: wC
-                            } = CC;
-                            const bC = wC ? void 0 : fz().get(zC.name),
-                              nC = zC.description.length > 0 || null === bC || void 0 === bC || !bC.description ? zC.description : (0, iC.u)(bC.description);
-                            return (0, gC.jsxs)("article", {
+                              method: Fk,
+                              pageId: Ik,
+                              anchor: Xk,
+                              isCallback: Tk
+                            } = kk;
+                            const ik = Tk ? void 0 : aF().get(Fk.name),
+                              yk = Fk.description.length > 0 || null === ik || void 0 === ik || !ik.description ? Fk.description : (0, zk.A)(ik.description);
+                            return (0, ek.jsxs)("article", {
                               className: "DocsCard DocsMethodCard",
-                              children: [(0, gC.jsxs)("header", {
+                              children: [(0, ek.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, gC.jsx)(qZ, {
+                                children: [(0, ek.jsx)(LI, {
                                   level: 2,
-                                  text: zC.name,
-                                  anchor: QC,
+                                  text: Fk.name,
+                                  anchor: Xk,
                                   className: "DocsCardTitle"
-                                }), (0, gC.jsx)(RC, {
-                                  text: Wb(zC, wC),
-                                  label: wC ? "Copy handler" : "Copy call",
+                                }), (0, ek.jsx)(Pk, {
+                                  text: ti(Fk, Tk),
+                                  label: Tk ? "Copy handler" : "Copy call",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, gC.jsx)(Nb, {
-                                method: zC,
-                                isCallback: wC
-                              }), bC && null !== bC.deprecation && (0, gC.jsxs)("aside", {
+                              }), (0, ek.jsx)(Zi, {
+                                method: Fk,
+                                isCallback: Tk
+                              }), ik && null !== ik.deprecation && (0, ek.jsxs)("aside", {
                                 className: "DocsCallout warning DocsDeprecation",
-                                children: [(0, gC.jsx)("strong", {
+                                children: [(0, ek.jsx)("strong", {
                                   children: "Deprecated"
-                                }), bC.deprecation && (0, gC.jsxs)(gC.Fragment, {
-                                  children: [": ", (0, gC.jsx)(Jz, {
-                                    text: (fC = bC.deprecation, (0, kw.v)(fC, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, kw.l)("`\\w"), (CC => {
-                                      let [zC] = CC;
-                                      return Wz().has(zC) ? `\`${zC}\`` : zC
+                                }), ik.deprecation && (0, ek.jsxs)(ek.Fragment, {
+                                  children: [": ", (0, ek.jsx)(VF, {
+                                    text: (lk = ik.deprecation, (0, DT.s)(lk, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, DT.j)("`\\w"), (kk => {
+                                      let [Fk] = kk;
+                                      return ZF().has(Fk) ? `\`${Fk}\`` : Fk
                                     })))
                                   })]
                                 })]
-                              }), nC.length > 0 && (0, gC.jsx)("div", {
+                              }), yk.length > 0 && (0, ek.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, gC.jsx)(MZ, {
-                                  blocks: nC
+                                children: (0, ek.jsx)(eI, {
+                                  blocks: yk
                                 })
-                              }), zC.params.length > 0 && (0, gC.jsxs)("section", {
+                              }), Fk.params.length > 0 && (0, ek.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, gC.jsx)("h3", {
+                                children: [(0, ek.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Parameters"
-                                }), (0, gC.jsx)("dl", {
+                                }), (0, ek.jsx)("dl", {
                                   className: "DocsParamList",
-                                  children: zC.params.map((CC => (0, gC.jsxs)("div", {
-                                    id: `${zC.name}-${Fb(CC)}`,
+                                  children: Fk.params.map((kk => (0, ek.jsxs)("div", {
+                                    id: `${Fk.name}-${Li(kk)}`,
                                     className: "DocsParam",
-                                    children: [(0, gC.jsxs)("dt", {
-                                      children: [(0, gC.jsx)("code", {
+                                    children: [(0, ek.jsxs)("dt", {
+                                      children: [(0, ek.jsx)("code", {
                                         className: "DocsParamName",
-                                        children: CC.name
-                                      }), (0, gC.jsx)(vz, {
-                                        type: CC.type
+                                        children: kk.name
+                                      }), (0, ek.jsx)(oF, {
+                                        type: kk.type
                                       })]
-                                    }), CC.description && (0, gC.jsx)("dd", {
-                                      children: (0, gC.jsx)(Jz, {
-                                        text: CC.description
+                                    }), kk.description && (0, ek.jsx)("dd", {
+                                      children: (0, ek.jsx)(VF, {
+                                        text: kk.description
                                       })
                                     })]
-                                  }, CC.name)))
+                                  }, kk.name)))
                                 })]
-                              }), zC.returns && (zC.returns.type || zC.returns.description.length > 0) && (0, gC.jsxs)("section", {
+                              }), Fk.returns && (Fk.returns.type || Fk.returns.description.length > 0) && (0, ek.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, gC.jsx)("h3", {
+                                children: [(0, ek.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Returns"
-                                }), (0, gC.jsxs)("div", {
+                                }), (0, ek.jsxs)("div", {
                                   className: "DocsReturns",
-                                  children: [zC.returns.type && (0, gC.jsx)(vz, {
-                                    type: zC.returns.type
-                                  }), zC.returns.description.length > 0 && (0, gC.jsx)("div", {
+                                  children: [Fk.returns.type && (0, ek.jsx)(oF, {
+                                    type: Fk.returns.type
+                                  }), Fk.returns.description.length > 0 && (0, ek.jsx)("div", {
                                     className: "DocsProse",
-                                    children: (0, gC.jsx)(MZ, {
-                                      blocks: zC.returns.description
+                                    children: (0, ek.jsx)(eI, {
+                                      blocks: Fk.returns.description
                                     })
                                   })]
                                 })]
-                              }), (0, gC.jsx)(gb, {
-                                pageId: ZC,
-                                anchor: QC
+                              }), (0, ek.jsx)(ei, {
+                                pageId: Ik,
+                                anchor: Xk
                               })]
                             });
-                            var fC
+                            var lk
                           }
 
-                          function pb(CC) {
-                            var zC;
-                            return null !== CC.defaultValue && "undefined" !== CC.defaultValue ? CC.defaultValue : null !== (zC = CC.example) && void 0 !== zC ? zC : "value"
+                          function Hi(kk) {
+                            var Fk;
+                            return null !== kk.defaultValue && "undefined" !== kk.defaultValue ? kk.defaultValue : null !== (Fk = kk.example) && void 0 !== Fk ? Fk : "value"
                           }
 
-                          function Pb(CC) {
+                          function Ji(kk) {
                             let {
-                              setting: zC,
-                              pageId: ZC,
-                              anchor: QC,
-                              setterSnippet: wC
-                            } = CC;
-                            const bC = null === zC.defaultValue ? null : Pz(zC.defaultValue);
-                            return (0, gC.jsxs)("article", {
+                              setting: Fk,
+                              pageId: Ik,
+                              anchor: Xk,
+                              setterSnippet: Tk
+                            } = kk;
+                            const ik = null === Fk.defaultValue ? null : xF(Fk.defaultValue);
+                            return (0, ek.jsxs)("article", {
                               className: "DocsCard DocsSettingCard",
-                              children: [(0, gC.jsxs)("header", {
+                              children: [(0, ek.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, gC.jsx)(qZ, {
+                                children: [(0, ek.jsx)(LI, {
                                   level: 2,
-                                  text: zC.name,
-                                  anchor: QC,
+                                  text: Fk.name,
+                                  anchor: Xk,
                                   className: "DocsCardTitle"
-                                }), (0, gC.jsx)(RC, {
-                                  text: wC(zC.name, pb(zC)),
+                                }), (0, ek.jsx)(Pk, {
+                                  text: Tk(Fk.name, Hi(Fk)),
                                   label: "Copy setter",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, gC.jsxs)("dl", {
+                              }), (0, ek.jsxs)("dl", {
                                 className: "DocsSettingFacts",
-                                children: [(0, gC.jsxs)("div", {
-                                  children: [(0, gC.jsx)("dt", {
+                                children: [(0, ek.jsxs)("div", {
+                                  children: [(0, ek.jsx)("dt", {
                                     children: "Type"
-                                  }), (0, gC.jsx)("dd", {
-                                    children: (0, gC.jsx)(vz, {
-                                      type: zC.type
+                                  }), (0, ek.jsx)("dd", {
+                                    children: (0, ek.jsx)(oF, {
+                                      type: Fk.type
                                     })
                                   })]
-                                }), null !== zC.defaultValue && (0, gC.jsxs)("div", {
-                                  children: [(0, gC.jsx)("dt", {
+                                }), null !== Fk.defaultValue && (0, ek.jsxs)("div", {
+                                  children: [(0, ek.jsx)("dt", {
                                     children: "Default"
-                                  }), (0, gC.jsx)("dd", {
-                                    children: (0, gC.jsxs)("code", {
+                                  }), (0, ek.jsx)("dd", {
+                                    children: (0, ek.jsxs)("code", {
                                       className: "DocsInlineCode DocsDefaultValue",
-                                      children: [bC && (0, gC.jsx)(Gz, {
-                                        colour: bC
-                                      }), zC.defaultValue]
+                                      children: [ik && (0, ek.jsx)(PF, {
+                                        colour: ik
+                                      }), Fk.defaultValue]
                                     })
                                   })]
-                                }), null !== zC.example && (0, gC.jsxs)("div", {
-                                  children: [(0, gC.jsx)("dt", {
+                                }), null !== Fk.example && (0, ek.jsxs)("div", {
+                                  children: [(0, ek.jsx)("dt", {
                                     children: "Example"
-                                  }), (0, gC.jsx)("dd", {
-                                    children: (0, gC.jsx)("code", {
+                                  }), (0, ek.jsx)("dd", {
+                                    children: (0, ek.jsx)("code", {
                                       className: "DocsInlineCode",
-                                      children: zC.example
+                                      children: Fk.example
                                     })
                                   })]
                                 })]
-                              }), zC.description.length > 0 && (0, gC.jsx)("div", {
+                              }), Fk.description.length > 0 && (0, ek.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, gC.jsx)(MZ, {
-                                  blocks: zC.description
+                                children: (0, ek.jsx)(eI, {
+                                  blocks: Fk.description
                                 })
-                              }), (0, gC.jsx)(gb, {
-                                pageId: ZC,
-                                anchor: QC
+                              }), (0, ek.jsx)(ei, {
+                                pageId: Ik,
+                                anchor: Xk
                               })]
                             })
                           }
 
-                          function Gb(CC) {
+                          function xi(kk) {
                             let {
-                              section: zC
-                            } = CC;
-                            return (0, gC.jsxs)("article", {
+                              section: Fk
+                            } = kk;
+                            return (0, ek.jsxs)("article", {
                               className: "DocsCard DocsSnippetCard",
-                              children: [(0, gC.jsx)(qZ, {
+                              children: [(0, ek.jsx)(LI, {
                                 level: 2,
-                                text: zC.heading.text,
-                                anchor: zC.heading.anchor,
+                                text: Fk.heading.text,
+                                anchor: Fk.heading.anchor,
                                 className: "DocsCardTitle"
-                              }), (0, gC.jsx)("div", {
+                              }), (0, ek.jsx)("div", {
                                 className: "DocsProse",
-                                children: (0, gC.jsx)(MZ, {
-                                  blocks: zC.blocks
+                                children: (0, ek.jsx)(eI, {
+                                  blocks: Fk.blocks
                                 })
                               })]
                             })
                           }
 
-                          function Rb(CC) {
+                          function Pi(kk) {
                             let {
-                              section: zC
-                            } = CC;
-                            return (0, gC.jsxs)("section", {
+                              section: Fk
+                            } = kk;
+                            return (0, ek.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, gC.jsx)(qZ, {
-                                level: zC.heading.level,
-                                text: zC.heading.text,
-                                anchor: zC.heading.anchor
-                              }), (0, gC.jsx)(MZ, {
-                                blocks: zC.blocks
+                              children: [(0, ek.jsx)(LI, {
+                                level: Fk.heading.level,
+                                text: Fk.heading.text,
+                                anchor: Fk.heading.anchor
+                              }), (0, ek.jsx)(eI, {
+                                blocks: Fk.blocks
                               })]
                             })
                           }
-                          const Ab = {
+                          const Ki = {
                             methods: "methods",
                             callbacks: "callbacks",
                             settings: "settings",
@@ -4862,337 +4862,337 @@ export const modules = {
                             article: "sections"
                           };
 
-                          function xb(CC) {
+                          function Qi(kk) {
                             let {
-                              page: zC,
-                              section: ZC
-                            } = CC;
-                            if ("methods" === zC.layout || "callbacks" === zC.layout) return (0, gC.jsx)(Sb, {
-                              method: IZ(ZC),
-                              pageId: zC.id,
-                              anchor: ZC.heading.anchor,
-                              isCallback: "callbacks" === zC.layout
+                              page: Fk,
+                              section: Ik
+                            } = kk;
+                            if ("methods" === Fk.layout || "callbacks" === Fk.layout) return (0, ek.jsx)(wi, {
+                              method: zI(Ik),
+                              pageId: Fk.id,
+                              anchor: Ik.heading.anchor,
+                              isCallback: "callbacks" === Fk.layout
                             });
-                            if ("settings" === zC.layout) {
-                              const CC = function(CC) {
-                                const zC = {
-                                  name: CC.heading.text,
+                            if ("settings" === Fk.layout) {
+                              const kk = function(kk) {
+                                const Fk = {
+                                  name: kk.heading.text,
                                   type: "",
                                   defaultValue: null,
                                   example: null,
                                   description: []
                                 };
-                                for (const QC of CC.blocks) {
-                                  var ZC;
-                                  if (JZ(QC)) continue;
-                                  const CC = "paragraph" === QC.kind ? QC.text.match(iZ) : null;
-                                  if (!CC) {
-                                    zC.description.push(QC);
+                                for (const Xk of kk.blocks) {
+                                  var Ik;
+                                  if (VI(Xk)) continue;
+                                  const kk = "paragraph" === Xk.kind ? Xk.text.match(SI) : null;
+                                  if (!kk) {
+                                    Fk.description.push(Xk);
                                     continue
                                   }
-                                  const wC = null !== (ZC = xZ(CC[2])) && void 0 !== ZC ? ZC : CC[2];
-                                  "Type" === CC[1] ? zC.type = wC : "Default" === CC[1] ? zC.defaultValue = wC : "" !== wC && (zC.example = wC)
+                                  const Tk = null !== (Ik = sI(kk[2])) && void 0 !== Ik ? Ik : kk[2];
+                                  "Type" === kk[1] ? Fk.type = Tk : "Default" === kk[1] ? Fk.defaultValue = Tk : "" !== Tk && (Fk.example = Tk)
                                 }
-                                return zC.type ? zC : null
-                              }(ZC);
-                              if (CC) return (0, gC.jsx)(Pb, {
-                                setting: CC,
-                                pageId: zC.id,
-                                anchor: ZC.heading.anchor,
-                                setterSnippet: zC.setterSnippet
+                                return Fk.type ? Fk : null
+                              }(Ik);
+                              if (kk) return (0, ek.jsx)(Ji, {
+                                setting: kk,
+                                pageId: Fk.id,
+                                anchor: Ik.heading.anchor,
+                                setterSnippet: Fk.setterSnippet
                               })
                             }
-                            return "snippets" === zC.layout ? (0, gC.jsx)(Gb, {
-                              section: ZC
-                            }) : "changelog" === zC.layout ? (0, gC.jsxs)("section", {
+                            return "snippets" === Fk.layout ? (0, ek.jsx)(xi, {
+                              section: Ik
+                            }) : "changelog" === Fk.layout ? (0, ek.jsxs)("section", {
                               className: "DocsChangelogEntry",
-                              children: [(0, gC.jsx)("div", {
+                              children: [(0, ek.jsx)("div", {
                                 className: "DocsChangelogDate",
-                                children: (0, gC.jsx)(qZ, {
+                                children: (0, ek.jsx)(LI, {
                                   level: 2,
-                                  text: ZC.heading.text,
-                                  anchor: ZC.heading.anchor
+                                  text: Ik.heading.text,
+                                  anchor: Ik.heading.anchor
                                 })
-                              }), (0, gC.jsx)("div", {
+                              }), (0, ek.jsx)("div", {
                                 className: "DocsProse DocsChangelogBody",
-                                children: (0, gC.jsx)(MZ, {
-                                  blocks: vZ(ZC.blocks)
+                                children: (0, ek.jsx)(eI, {
+                                  blocks: oI(Ik.blocks)
                                 })
                               })]
-                            }) : zC.gallery ? (0, gC.jsxs)("section", {
+                            }) : Fk.gallery ? (0, ek.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, gC.jsx)(qZ, {
-                                level: ZC.heading.level,
-                                text: ZC.heading.text,
-                                anchor: ZC.heading.anchor
-                              }), (0, gC.jsx)(eQ, {
-                                kind: zC.gallery,
-                                content: sC(zC),
-                                blocks: ZC.blocks
+                              children: [(0, ek.jsx)(LI, {
+                                level: Ik.heading.level,
+                                text: Ik.heading.text,
+                                anchor: Ik.heading.anchor
+                              }), (0, ek.jsx)(vX, {
+                                kind: Fk.gallery,
+                                content: Wk(Fk),
+                                blocks: Ik.blocks
                               })]
-                            }) : (0, gC.jsx)(Rb, {
-                              section: ZC
+                            }) : (0, ek.jsx)(Pi, {
+                              section: Ik
                             })
                           }
 
-                          function Jb(CC) {
+                          function si(kk) {
                             let {
-                              page: zC,
-                              onTocChange: ZC
-                            } = CC;
-                            const wC = sC(zC),
-                              [bC, nC] = (0, QC.useState)(""),
-                              fC = "article" !== zC.layout,
-                              oC = pZ(zC.gallery) ? zC.gallery : null,
-                              qC = null !== oC,
-                              FC = bC.trim().toLowerCase(),
-                              WC = (0, QC.useRef)(null),
-                              NC = (0, QC.useCallback)((CC => {
-                                var zC;
-                                null === (zC = WC.current) || void 0 === zC || zC.preview(CC)
+                              page: Fk,
+                              onTocChange: Ik
+                            } = kk;
+                            const Tk = Wk(Fk),
+                              [ik, yk] = (0, Xk.useState)(""),
+                              lk = "article" !== Fk.layout,
+                              ak = JI(Fk.gallery) ? Fk.gallery : null,
+                              qk = null !== ak,
+                              Lk = ik.trim().toLowerCase(),
+                              tk = (0, Xk.useRef)(null),
+                              Zk = (0, Xk.useCallback)((kk => {
+                                var Fk;
+                                null === (Fk = tk.current) || void 0 === Fk || Fk.preview(kk)
                               }), []),
-                              MC = (0, QC.useMemo)((() => {
-                                if (!zC.hasParticlePlayground) return [];
-                                const CC = YZ(wC.intro).find((CC => "names" === CC.kind && !CC.names.some((CC => null !== rZ(CC.name)))));
-                                return "names" === (null === CC || void 0 === CC ? void 0 : CC.kind) ? CC.names.map((CC => CC.name)) : []
-                              }), [zC, wC]),
-                              SC = (0, QC.useMemo)((() => {
-                                if (!zC.hasTextPlayground) return [];
-                                const CC = wC.sections.flatMap((CC => CC.blocks.flatMap((CC => {
-                                  var zC;
-                                  return (null !== (zC = KZ(CC)) && void 0 !== zC ? zC : []).flatMap((CC => rz(CC.name) ? [CC.name] : []))
+                              jk = (0, Xk.useMemo)((() => {
+                                if (!Fk.hasParticlePlayground) return [];
+                                const kk = nI(Tk.intro).find((kk => "names" === kk.kind && !kk.names.some((kk => null !== cI(kk.name)))));
+                                return "names" === (null === kk || void 0 === kk ? void 0 : kk.kind) ? kk.names.map((kk => kk.name)) : []
+                              }), [Fk, Tk]),
+                              wk = (0, Xk.useMemo)((() => {
+                                if (!Fk.hasTextPlayground) return [];
+                                const kk = Tk.sections.flatMap((kk => kk.blocks.flatMap((kk => {
+                                  var Fk;
+                                  return (null !== (Fk = OI(kk)) && void 0 !== Fk ? Fk : []).flatMap((kk => cF(kk.name) ? [kk.name] : []))
                                 }))));
-                                return [...new Set(CC)]
-                              }), [zC, wC]),
-                              pC = (0, QC.useMemo)((() => FC ? wC.sections.filter((CC => function(CC, zC) {
-                                return !!CC.heading.text.toLowerCase().includes(zC) || CC.blocks.some((CC => (0, iC.g)(CC).toLowerCase().includes(zC)))
-                              }(CC, FC))) : wC.sections), [wC, FC]),
-                              PC = (0, QC.useMemo)((() => function(CC, zC) {
-                                return "article" !== CC.layout ? zC.map((CC => ({
-                                  anchor: CC.heading.anchor,
-                                  text: CC.heading.text,
+                                return [...new Set(kk)]
+                              }), [Fk, Tk]),
+                              Hk = (0, Xk.useMemo)((() => Lk ? Tk.sections.filter((kk => function(kk, Fk) {
+                                return !!kk.heading.text.toLowerCase().includes(Fk) || kk.blocks.some((kk => (0, zk.l)(kk).toLowerCase().includes(Fk)))
+                              }(kk, Lk))) : Tk.sections), [Tk, Lk]),
+                              Jk = (0, Xk.useMemo)((() => function(kk, Fk) {
+                                return "article" !== kk.layout ? Fk.map((kk => ({
+                                  anchor: kk.heading.anchor,
+                                  text: kk.heading.text,
                                   level: 2
-                                }))) : zC.flatMap((CC => {
-                                  const zC = CC.blocks.flatMap((CC => "heading" === CC.kind && 3 === CC.level ? [{
-                                    anchor: CC.anchor,
-                                    text: CC.text,
+                                }))) : Fk.flatMap((kk => {
+                                  const Fk = kk.blocks.flatMap((kk => "heading" === kk.kind && 3 === kk.level ? [{
+                                    anchor: kk.anchor,
+                                    text: kk.text,
                                     level: 3
                                   }] : []));
                                   return [{
-                                    anchor: CC.heading.anchor,
-                                    text: CC.heading.text,
+                                    anchor: kk.heading.anchor,
+                                    text: kk.heading.text,
                                     level: 2
-                                  }, ...zC]
+                                  }, ...Fk]
                                 }))
-                              }(zC, pC)), [zC, pC]);
-                            return (0, QC.useEffect)((() => {
-                              ZC(PC)
-                            }), [PC, ZC]), (0, gC.jsxs)("article", {
+                              }(Fk, Hk)), [Fk, Hk]);
+                            return (0, Xk.useEffect)((() => {
+                              Ik(Jk)
+                            }), [Jk, Ik]), (0, ek.jsxs)("article", {
                               className: "DocsPage",
-                              children: [(0, gC.jsxs)("header", {
+                              children: [(0, ek.jsxs)("header", {
                                 className: "DocsPageHeader",
-                                children: [(0, gC.jsx)("h1", {
+                                children: [(0, ek.jsx)("h1", {
                                   className: "DocsPageTitle",
-                                  children: wC.title || zC.title
-                                }), (0, gC.jsx)("p", {
+                                  children: Tk.title || Fk.title
+                                }), (0, ek.jsx)("p", {
                                   className: "DocsPageSummary",
-                                  children: zC.summary
-                                }), (0, gC.jsx)(LQ, {
-                                  page: zC
-                                }), fC && (0, gC.jsx)("div", {
+                                  children: Fk.summary
+                                }), (0, ek.jsx)(mX, {
+                                  page: Fk
+                                }), lk && (0, ek.jsx)("div", {
                                   className: "DocsPageStats",
-                                  children: (0, gC.jsxs)("span", {
-                                    children: [(0, gC.jsx)("strong", {
-                                      children: wC.sections.length
-                                    }), " ", Ab[zC.layout]]
+                                  children: (0, ek.jsxs)("span", {
+                                    children: [(0, ek.jsx)("strong", {
+                                      children: Tk.sections.length
+                                    }), " ", Ki[Fk.layout]]
                                   })
                                 })]
-                              }), "" === zC.slug && (0, gC.jsx)(KQ, {}), oC && (0, gC.jsx)(HQ, {
-                                kind: oC
-                              }, oC), zC.hasParticlePlayground && (0, gC.jsx)(fw, {
-                                ref: WC,
-                                textures: MC
-                              }), !qC && wC.intro.length > 0 && (0, gC.jsx)("div", {
+                              }), "" === Fk.slug && (0, ek.jsx)(OX, {}), ak && (0, ek.jsx)(uX, {
+                                kind: ak
+                              }, ak), Fk.hasParticlePlayground && (0, ek.jsx)(aT, {
+                                ref: tk,
+                                textures: jk
+                              }), !qk && Tk.intro.length > 0 && (0, ek.jsx)("div", {
                                 className: "DocsProse DocsPageIntro",
-                                children: zC.gallery ? (0, gC.jsx)(PQ.Provider, {
-                                  value: zC.hasParticlePlayground ? NC : null,
-                                  children: (0, gC.jsx)(eQ, {
-                                    kind: zC.gallery,
-                                    content: wC,
-                                    blocks: wC.intro
+                                children: Fk.gallery ? (0, ek.jsx)(xX.Provider, {
+                                  value: Fk.hasParticlePlayground ? Zk : null,
+                                  children: (0, ek.jsx)(vX, {
+                                    kind: Fk.gallery,
+                                    content: Tk,
+                                    blocks: Tk.intro
                                   })
-                                }) : (0, gC.jsx)(MZ, {
-                                  blocks: vZ(wC.intro)
+                                }) : (0, ek.jsx)(eI, {
+                                  blocks: oI(Tk.intro)
                                 })
-                              }), zC.hasTextPlayground && (0, gC.jsx)(Iw, {
-                                fontAwesomeIcons: SC
-                              }), zC.hasVoicePlayground && (0, gC.jsx)(Ow, {}), zC.childPageIds && (0, gC.jsx)(KQ, {
-                                cards: zC.childPageIds.map((CC => ({
-                                  pageId: CC
+                              }), Fk.hasTextPlayground && (0, ek.jsx)(zT, {
+                                fontAwesomeIcons: wk
+                              }), Fk.hasVoicePlayground && (0, ek.jsx)(rT, {}), Fk.childPageIds && (0, ek.jsx)(OX, {
+                                cards: Fk.childPageIds.map((kk => ({
+                                  pageId: kk
                                 }))),
-                                label: zC.title
-                              }), fC && (0, gC.jsx)(RZ, {
+                                label: Fk.title
+                              }), lk && (0, ek.jsx)(KI, {
                                 className: "DocsFilterBar",
-                                value: bC,
-                                placeholder: `Filter ${wC.sections.length} ${Ab[zC.layout]}\u2026`,
-                                label: `Filter ${Ab[zC.layout]}`,
-                                onChange: nC,
-                                count: FC ? {
-                                  visible: pC.length,
-                                  total: wC.sections.length
+                                value: ik,
+                                placeholder: `Filter ${Tk.sections.length} ${Ki[Fk.layout]}\u2026`,
+                                label: `Filter ${Ki[Fk.layout]}`,
+                                onChange: yk,
+                                count: Lk ? {
+                                  visible: Hk.length,
+                                  total: Tk.sections.length
                                 } : null
-                              }), !qC && (0, gC.jsxs)("div", {
-                                className: `DocsSections Layout-${zC.layout}`,
-                                children: [pC.map((CC => (0, gC.jsx)(xb, {
-                                  page: zC,
-                                  section: CC
-                                }, CC.heading.anchor))), 0 === pC.length && (0, gC.jsxs)("p", {
+                              }), !qk && (0, ek.jsxs)("div", {
+                                className: `DocsSections Layout-${Fk.layout}`,
+                                children: [Hk.map((kk => (0, ek.jsx)(Qi, {
+                                  page: Fk,
+                                  section: kk
+                                }, kk.heading.anchor))), 0 === Hk.length && (0, ek.jsxs)("p", {
                                   className: "DocsEmpty",
-                                  children: ["No ", Ab[zC.layout], " match \u201c", bC, "\u201d."]
+                                  children: ["No ", Ki[Fk.layout], " match \u201c", ik, "\u201d."]
                                 })]
                               })]
                             })
                           }
-                          const Ib = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
+                          const Vi = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
 
-                          function ib(CC) {
+                          function zi(kk) {
                             let {
-                              entry: zC,
-                              isActive: ZC,
-                              onNavigate: QC,
-                              label: wC,
-                              children: nC
-                            } = CC;
-                            return (0, gC.jsx)("a", {
-                              href: `#${zC.anchor}`,
-                              "aria-label": wC,
-                              className: bC()(`Level${zC.level}`, {
-                                Active: ZC
+                              entry: Fk,
+                              isActive: Ik,
+                              onNavigate: Xk,
+                              label: Tk,
+                              children: yk
+                            } = kk;
+                            return (0, ek.jsx)("a", {
+                              href: `#${Fk.anchor}`,
+                              "aria-label": Tk,
+                              className: ik()(`Level${Fk.level}`, {
+                                Active: Ik
                               }),
-                              "aria-current": ZC ? "location" : void 0,
-                              onClick: CC => {
-                                CC.preventDefault(), QC(zC.anchor)
+                              "aria-current": Ik ? "location" : void 0,
+                              onClick: kk => {
+                                kk.preventDefault(), Xk(Fk.anchor)
                               },
-                              children: nC
+                              children: yk
                             })
                           }
 
-                          function vb(CC) {
+                          function Si(kk) {
                             let {
-                              toc: zC,
-                              activeAnchor: ZC,
-                              onNavigate: wC
-                            } = CC;
-                            const nC = Math.max(0, zC.findIndex((CC => CC.anchor === ZC))),
-                              fC = (0, QC.useRef)(null),
-                              oC = (0, QC.useRef)(!1);
-                            (0, QC.useEffect)((() => {
-                              var CC, ZC;
-                              const QC = null === (CC = fC.current) || void 0 === CC ? void 0 : CC.closest(".DocsToc"),
-                                wC = null === (ZC = fC.current) || void 0 === ZC ? void 0 : ZC.querySelector(".DocsTimelineNotch.Active");
-                              if (!QC || !wC) return;
-                              let bC = 0;
-                              if (nC === zC.length - 1) bC = QC.scrollHeight;
-                              else if (nC > 0) {
-                                const CC = QC.getBoundingClientRect(),
-                                  zC = wC.getBoundingClientRect();
-                                bC = QC.scrollTop + zC.top + zC.height / 2 - (CC.top + QC.clientHeight / 2)
+                              toc: Fk,
+                              activeAnchor: Ik,
+                              onNavigate: Tk
+                            } = kk;
+                            const yk = Math.max(0, Fk.findIndex((kk => kk.anchor === Ik))),
+                              lk = (0, Xk.useRef)(null),
+                              ak = (0, Xk.useRef)(!1);
+                            (0, Xk.useEffect)((() => {
+                              var kk, Ik;
+                              const Xk = null === (kk = lk.current) || void 0 === kk ? void 0 : kk.closest(".DocsToc"),
+                                Tk = null === (Ik = lk.current) || void 0 === Ik ? void 0 : Ik.querySelector(".DocsTimelineNotch.Active");
+                              if (!Xk || !Tk) return;
+                              let ik = 0;
+                              if (yk === Fk.length - 1) ik = Xk.scrollHeight;
+                              else if (yk > 0) {
+                                const kk = Xk.getBoundingClientRect(),
+                                  Fk = Tk.getBoundingClientRect();
+                                ik = Xk.scrollTop + Fk.top + Fk.height / 2 - (kk.top + Xk.clientHeight / 2)
                               }
-                              QC.scrollTo({
-                                top: bC,
-                                behavior: oC.current ? "smooth" : "auto"
-                              }), oC.current = !0
-                            }), [nC, zC.length]);
-                            const qC = [];
-                            return zC.forEach(((CC, zC) => {
-                              var ZC, QC, wC;
-                              const bC = function(CC) {
-                                  const zC = CC.trim().match(Ib);
-                                  return zC ? {
-                                    day: zC[1],
-                                    month: `${zC[2]} ${zC[3]}`
+                              Xk.scrollTo({
+                                top: ik,
+                                behavior: ak.current ? "smooth" : "auto"
+                              }), ak.current = !0
+                            }), [yk, Fk.length]);
+                            const qk = [];
+                            return Fk.forEach(((kk, Fk) => {
+                              var Ik, Xk, Tk;
+                              const ik = function(kk) {
+                                  const Fk = kk.trim().match(Vi);
+                                  return Fk ? {
+                                    day: Fk[1],
+                                    month: `${Fk[2]} ${Fk[3]}`
                                   } : null
-                                }(CC.text),
-                                nC = null !== (ZC = null === bC || void 0 === bC ? void 0 : bC.month) && void 0 !== ZC ? ZC : null;
-                              null !== nC && (null === (QC = qC.at(-1)) || void 0 === QC ? void 0 : QC.month) === nC || qC.push({
-                                month: nC,
+                                }(kk.text),
+                                yk = null !== (Ik = null === ik || void 0 === ik ? void 0 : ik.month) && void 0 !== Ik ? Ik : null;
+                              null !== yk && (null === (Xk = qk.at(-1)) || void 0 === Xk ? void 0 : Xk.month) === yk || qk.push({
+                                month: yk,
                                 entries: []
-                              }), qC.at(-1).entries.push({
-                                entry: CC,
-                                day: null !== (wC = null === bC || void 0 === bC ? void 0 : bC.day) && void 0 !== wC ? wC : null,
-                                index: zC
+                              }), qk.at(-1).entries.push({
+                                entry: kk,
+                                day: null !== (Tk = null === ik || void 0 === ik ? void 0 : ik.day) && void 0 !== Tk ? Tk : null,
+                                index: Fk
                               })
-                            })), (0, gC.jsx)("ol", {
-                              ref: fC,
+                            })), (0, ek.jsx)("ol", {
+                              ref: lk,
                               className: "DocsTimeline",
-                              children: qC.map((CC => {
+                              children: qk.map((kk => {
                                 let {
-                                  month: zC,
-                                  entries: ZC
-                                } = CC;
-                                return (0, gC.jsxs)("li", {
+                                  month: Fk,
+                                  entries: Ik
+                                } = kk;
+                                return (0, ek.jsxs)("li", {
                                   className: "DocsTimelineMonth",
-                                  children: [zC && (0, gC.jsx)("span", {
+                                  children: [Fk && (0, ek.jsx)("span", {
                                     className: "DocsTimelineMonthName",
-                                    children: zC
-                                  }), (0, gC.jsx)("ol", {
-                                    children: ZC.map((CC => {
+                                    children: Fk
+                                  }), (0, ek.jsx)("ol", {
+                                    children: Ik.map((kk => {
                                       let {
-                                        entry: zC,
-                                        day: ZC,
-                                        index: QC
-                                      } = CC;
-                                      return (0, gC.jsx)("li", {
-                                        className: bC()("DocsTimelineNotch", {
-                                          Passed: QC < nC,
-                                          Active: QC === nC
+                                        entry: Fk,
+                                        day: Ik,
+                                        index: Xk
+                                      } = kk;
+                                      return (0, ek.jsx)("li", {
+                                        className: ik()("DocsTimelineNotch", {
+                                          Passed: Xk < yk,
+                                          Active: Xk === yk
                                         }),
-                                        children: (0, gC.jsx)(ib, {
-                                          entry: zC,
-                                          isActive: QC === nC,
-                                          onNavigate: wC,
-                                          label: zC.text,
-                                          children: (0, gC.jsx)("span", {
+                                        children: (0, ek.jsx)(zi, {
+                                          entry: Fk,
+                                          isActive: Xk === yk,
+                                          onNavigate: Tk,
+                                          label: Fk.text,
+                                          children: (0, ek.jsx)("span", {
                                             className: "DocsTimelineDay",
-                                            children: null !== ZC && void 0 !== ZC ? ZC : zC.text
+                                            children: null !== Ik && void 0 !== Ik ? Ik : Fk.text
                                           })
                                         })
-                                      }, zC.anchor)
+                                      }, Fk.anchor)
                                     }))
                                   })]
-                                }, ZC[0].entry.anchor)
+                                }, Ik[0].entry.anchor)
                               }))
                             })
                           }
 
-                          function eb(CC) {
+                          function oi(kk) {
                             let {
-                              isChangelog: zC,
-                              toc: ZC,
-                              activeAnchor: QC,
-                              onNavigate: wC
-                            } = CC;
-                            return 0 === ZC.length ? null : (0, gC.jsxs)(gC.Fragment, {
-                              children: [(0, gC.jsx)("div", {
+                              isChangelog: Fk,
+                              toc: Ik,
+                              activeAnchor: Xk,
+                              onNavigate: Tk
+                            } = kk;
+                            return 0 === Ik.length ? null : (0, ek.jsxs)(ek.Fragment, {
+                              children: [(0, ek.jsx)("div", {
                                 className: "DocsTocTitle",
-                                children: zC ? "Updates" : "On this page"
-                              }), zC ? (0, gC.jsx)(vb, {
-                                toc: ZC,
-                                activeAnchor: QC,
-                                onNavigate: wC
-                              }) : (0, gC.jsx)("ul", {
-                                children: ZC.map((CC => (0, gC.jsx)("li", {
-                                  children: (0, gC.jsx)(ib, {
-                                    entry: CC,
-                                    isActive: CC.anchor === QC,
-                                    onNavigate: wC,
-                                    children: CC.text.replace(/`/g, "")
+                                children: Fk ? "Updates" : "On this page"
+                              }), Fk ? (0, ek.jsx)(Si, {
+                                toc: Ik,
+                                activeAnchor: Xk,
+                                onNavigate: Tk
+                              }) : (0, ek.jsx)("ul", {
+                                children: Ik.map((kk => (0, ek.jsx)("li", {
+                                  children: (0, ek.jsx)(zi, {
+                                    entry: kk,
+                                    isActive: kk.anchor === Xk,
+                                    onNavigate: Tk,
+                                    children: kk.text.replace(/`/g, "")
                                   })
-                                }, CC.anchor)))
+                                }, kk.anchor)))
                               })]
                             })
                           }
-                          const hb = {
+                          const vi = {
                               methods: "Method",
                               callbacks: "Callback",
                               settings: "Setting",
@@ -5200,7 +5200,7 @@ export const modules = {
                               snippets: "Snippet",
                               article: "Section"
                             },
-                            Kb = {
+                            Ei = {
                               icons: "Icon",
                               particles: "Particle",
                               sounds: "Sound",
@@ -5208,1086 +5208,1086 @@ export const modules = {
                               blocks: "Block",
                               items: "Item"
                             },
-                            Yb = 20,
-                            db = 10,
-                            mb = 40,
-                            Hb = 120;
-                          let Eb;
+                            Oi = 20,
+                            ni = 10,
+                            Gi = 40,
+                            ui = 120;
+                          let bi;
 
-                          function lb(CC) {
-                            const zC = CC.gallery;
-                            if (!zC) return [];
-                            if (pZ(zC)) return function(CC) {
-                              return GZ(CC).entries.map((CC => CC.name))
-                            }(zC).map((ZC => ({
-                              page: CC,
-                              anchor: mZ(zC, ZC),
-                              title: ZC,
-                              kind: Kb[zC],
+                          function Ri(kk) {
+                            const Fk = kk.gallery;
+                            if (!Fk) return [];
+                            if (JI(Fk)) return function(kk) {
+                              return PI(kk).entries.map((kk => kk.name))
+                            }(Fk).map((Ik => ({
+                              page: kk,
+                              anchor: pI(Fk, Ik),
+                              title: Ik,
+                              kind: Ei[Fk],
                               text: "",
-                              listedUnder: CC.title
+                              listedUnder: kk.title
                             })));
-                            const ZC = sC(CC);
-                            return (0, iC.r)(ZC).flatMap((QC => {
-                              const wC = QC.heading ? `${CC.title} \u203a ${QC.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : CC.title;
-                              return EZ(zC, ZC, QC.blocks).flatMap((ZC => "names" !== ZC.kind ? [] : ZC.names.map((QC => {
-                                const bC = ZC.isSongs ? "Song" : Kb[zC];
+                            const Ik = Wk(kk);
+                            return (0, zk.u)(Ik).flatMap((Xk => {
+                              const Tk = Xk.heading ? `${kk.title} \u203a ${Xk.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : kk.title;
+                              return bI(Fk, Ik, Xk.blocks).flatMap((Ik => "names" !== Ik.kind ? [] : Ik.names.map((Xk => {
+                                const ik = Ik.isSongs ? "Song" : Ei[Fk];
                                 return {
-                                  page: CC,
-                                  anchor: QC.anchor,
-                                  title: QC.name,
-                                  kind: bC,
+                                  page: kk,
+                                  anchor: Xk.anchor,
+                                  title: Xk.name,
+                                  kind: ik,
                                   text: "",
-                                  listedUnder: wC
+                                  listedUnder: Tk
                                 }
                               }))))
                             }))
                           }
 
-                          function Xb(CC, zC, ZC) {
-                            const QC = CC.title.toLowerCase();
-                            let wC = 0;
-                            if (QC === zC) wC = 100;
-                            else if (QC.startsWith(zC)) wC = 80;
-                            else if (QC.includes(zC)) wC = 60;
-                            else if (ZC.every((CC => QC.includes(CC)))) wC = 45;
+                          function Ui(kk, Fk, Ik) {
+                            const Xk = kk.title.toLowerCase();
+                            let Tk = 0;
+                            if (Xk === Fk) Tk = 100;
+                            else if (Xk.startsWith(Fk)) Tk = 80;
+                            else if (Xk.includes(Fk)) Tk = 60;
+                            else if (Ik.every((kk => Xk.includes(kk)))) Tk = 45;
                             else {
-                              if (!CC.text.toLowerCase().includes(zC)) return 0;
-                              wC = 20
+                              if (!kk.text.toLowerCase().includes(Fk)) return 0;
+                              Tk = 20
                             }
-                            return wC - Math.min(QC.length / 10, 9) + ("Page" === CC.kind ? 8 : "Method" === CC.kind ? 3 : 0) - (CC.listedUnder ? Yb : 0)
+                            return Tk - Math.min(Xk.length / 10, 9) + ("Page" === kk.kind ? 8 : "Method" === kk.kind ? 3 : 0) - (kk.listedUnder ? Oi : 0)
                           }
 
-                          function cb(CC, zC) {
-                            const ZC = CC.toLowerCase().indexOf(zC),
-                              QC = Math.max(0, ZC - Hb / 3);
-                            return `${QC>0?"\u2026":""}${CC.slice(QC,QC+Hb)}${QC+Hb<CC.length?"\u2026":""}`
+                          function Ci(kk, Fk) {
+                            const Ik = kk.toLowerCase().indexOf(Fk),
+                              Xk = Math.max(0, Ik - ui / 3);
+                            return `${Xk>0?"\u2026":""}${kk.slice(Xk,Xk+ui)}${Xk+ui<kk.length?"\u2026":""}`
                           }
 
-                          function ub(CC) {
+                          function Ni(kk) {
                             let {
-                              text: zC,
-                              query: ZC
-                            } = CC;
-                            const QC = ZC ? zC.toLowerCase().indexOf(ZC) : -1;
-                            return -1 === QC ? (0, gC.jsx)(gC.Fragment, {
-                              children: zC
-                            }) : (0, gC.jsxs)(gC.Fragment, {
-                              children: [zC.slice(0, QC), (0, gC.jsx)("mark", {
-                                children: zC.slice(QC, QC + ZC.length)
-                              }), zC.slice(QC + ZC.length)]
+                              text: Fk,
+                              query: Ik
+                            } = kk;
+                            const Xk = Ik ? Fk.toLowerCase().indexOf(Ik) : -1;
+                            return -1 === Xk ? (0, ek.jsx)(ek.Fragment, {
+                              children: Fk
+                            }) : (0, ek.jsxs)(ek.Fragment, {
+                              children: [Fk.slice(0, Xk), (0, ek.jsx)("mark", {
+                                children: Fk.slice(Xk, Xk + Ik.length)
+                              }), Fk.slice(Xk + Ik.length)]
                             })
                           }
 
-                          function rb(CC) {
+                          function ci(kk) {
                             let {
-                              basePath: zC,
-                              onClose: ZC
-                            } = CC;
-                            const wC = (0, fC.w)(),
-                              [nC, oC] = (0, QC.useState)(""),
-                              [qC, FC] = (0, QC.useState)(0),
-                              WC = (0, QC.useRef)(null),
-                              NC = (0, QC.useRef)(null),
-                              MC = nC.trim().toLowerCase(),
-                              SC = (0, QC.useMemo)((() => {
-                                const CC = (Eb || (Eb = XC.flatMap((CC => {
-                                  const zC = sC(CC);
+                              basePath: Fk,
+                              onClose: Ik
+                            } = kk;
+                            const Tk = (0, lk.u)(),
+                              [yk, ak] = (0, Xk.useState)(""),
+                              [qk, Lk] = (0, Xk.useState)(0),
+                              tk = (0, Xk.useRef)(null),
+                              Zk = (0, Xk.useRef)(null),
+                              jk = yk.trim().toLowerCase(),
+                              wk = (0, Xk.useMemo)((() => {
+                                const kk = (bi || (bi = Uk.flatMap((kk => {
+                                  const Fk = Wk(kk);
                                   return [{
-                                    page: CC,
+                                    page: kk,
                                     anchor: "",
-                                    title: CC.title,
+                                    title: kk.title,
                                     kind: "Page",
-                                    text: CC.summary
-                                  }, ...zC.sections.flatMap((zC => {
-                                    const ZC = zC.blocks.filter((CC => "paragraph" === CC.kind)).map(iC.g).join(" ").replace(/[`*]/g, ""),
-                                      QC = {
-                                        page: CC,
-                                        anchor: zC.heading.anchor,
-                                        title: zC.heading.text.replace(/`/g, ""),
-                                        kind: hb[CC.layout],
-                                        text: ZC
+                                    text: kk.summary
+                                  }, ...Fk.sections.flatMap((Fk => {
+                                    const Ik = Fk.blocks.filter((kk => "paragraph" === kk.kind)).map(zk.l).join(" ").replace(/[`*]/g, ""),
+                                      Xk = {
+                                        page: kk,
+                                        anchor: Fk.heading.anchor,
+                                        title: Fk.heading.text.replace(/`/g, ""),
+                                        kind: vi[kk.layout],
+                                        text: Ik
                                       },
-                                      wC = zC.blocks.flatMap((zC => "article" === CC.layout && "heading" === zC.kind && 3 === zC.level ? [{
-                                        page: CC,
-                                        anchor: zC.anchor,
-                                        title: zC.text.replace(/`/g, ""),
+                                      Tk = Fk.blocks.flatMap((Fk => "article" === kk.layout && "heading" === Fk.kind && 3 === Fk.level ? [{
+                                        page: kk,
+                                        anchor: Fk.anchor,
+                                        title: Fk.text.replace(/`/g, ""),
                                         kind: "Section",
-                                        text: QC.title
+                                        text: Xk.title
                                       }] : []));
-                                    return [QC, ...wC]
-                                  })), ...lb(CC)]
-                                }))), Eb);
-                                if (!MC) return CC.filter((CC => "Page" === CC.kind));
-                                const zC = MC.split(/\s+/);
-                                let ZC = 0;
-                                return CC.map((CC => ({
-                                  entry: CC,
-                                  score: Xb(CC, MC, zC)
-                                }))).filter((CC => CC.score > 0)).sort(((CC, zC) => zC.score - CC.score)).filter((CC => !CC.entry.listedUnder || (ZC++, ZC <= db))).slice(0, mb).map((CC => CC.entry))
-                              }), [MC]);
-                            (0, QC.useEffect)((() => {
-                              FC(0)
-                            }), [MC]), (0, QC.useEffect)((() => {
-                              const CC = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+                                    return [Xk, ...Tk]
+                                  })), ...Ri(kk)]
+                                }))), bi);
+                                if (!jk) return kk.filter((kk => "Page" === kk.kind));
+                                const Fk = jk.split(/\s+/);
+                                let Ik = 0;
+                                return kk.map((kk => ({
+                                  entry: kk,
+                                  score: Ui(kk, jk, Fk)
+                                }))).filter((kk => kk.score > 0)).sort(((kk, Fk) => Fk.score - kk.score)).filter((kk => !kk.entry.listedUnder || (Ik++, Ik <= ni))).slice(0, Gi).map((kk => kk.entry))
+                              }), [jk]);
+                            (0, Xk.useEffect)((() => {
+                              Lk(0)
+                            }), [jk]), (0, Xk.useEffect)((() => {
+                              const kk = document.activeElement instanceof HTMLElement ? document.activeElement : null;
                               return () => {
-                                null === CC || void 0 === CC || CC.focus()
+                                null === kk || void 0 === kk || kk.focus()
                               }
-                            }), []), (0, QC.useEffect)((() => {
-                              var CC, zC;
-                              null === (CC = WC.current) || void 0 === CC || null === (zC = CC.querySelector(".Active")) || void 0 === zC || zC.scrollIntoView({
+                            }), []), (0, Xk.useEffect)((() => {
+                              var kk, Fk;
+                              null === (kk = tk.current) || void 0 === kk || null === (Fk = kk.querySelector(".Active")) || void 0 === Fk || Fk.scrollIntoView({
                                 block: "nearest"
                               })
-                            }), [qC]);
-                            const PC = CC => {
-                              wC(DC(zC, CC.page, CC.anchor)), ZC()
+                            }), [qk]);
+                            const Jk = kk => {
+                              Tk(Yk(Fk, kk.page, kk.anchor)), Ik()
                             };
-                            return (0, gC.jsx)("div", {
+                            return (0, ek.jsx)("div", {
                               className: "DocsSearchOverlay",
-                              onMouseDown: CC => {
-                                CC.target === CC.currentTarget && ZC()
+                              onMouseDown: kk => {
+                                kk.target === kk.currentTarget && Ik()
                               },
-                              children: (0, gC.jsxs)("div", {
+                              children: (0, ek.jsxs)("div", {
                                 className: "DocsSearchDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
                                 "aria-label": "Search the docs",
-                                onMouseDown: CC => {
-                                  CC.target !== NC.current && CC.preventDefault()
+                                onMouseDown: kk => {
+                                  kk.target !== Zk.current && kk.preventDefault()
                                 },
-                                onKeyDown: CC => {
-                                  if ("Escape" === CC.key) ZC();
-                                  else if ("Tab" === CC.key) {
-                                    var zC;
-                                    CC.preventDefault(), null === (zC = NC.current) || void 0 === zC || zC.focus()
+                                onKeyDown: kk => {
+                                  if ("Escape" === kk.key) Ik();
+                                  else if ("Tab" === kk.key) {
+                                    var Fk;
+                                    kk.preventDefault(), null === (Fk = Zk.current) || void 0 === Fk || Fk.focus()
                                   }
                                 },
-                                children: [(0, gC.jsxs)("div", {
+                                children: [(0, ek.jsxs)("div", {
                                   className: "DocsSearchInputRow",
-                                  children: [(0, gC.jsx)(pC, {
+                                  children: [(0, ek.jsx)(Hk, {
                                     name: "magnifying-glass"
-                                  }), (0, gC.jsx)("input", {
-                                    ref: NC,
+                                  }), (0, ek.jsx)("input", {
+                                    ref: Zk,
                                     autoFocus: !0,
-                                    value: nC,
+                                    value: yk,
                                     placeholder: "Search methods, callbacks, settings and guides\u2026",
                                     "aria-label": "Search the docs",
                                     "aria-controls": "DocsSearchResults",
-                                    "aria-activedescendant": SC.length > 0 ? `DocsSearchResult-${qC}` : void 0,
-                                    onChange: CC => {
-                                      oC(CC.target.value)
+                                    "aria-activedescendant": wk.length > 0 ? `DocsSearchResult-${qk}` : void 0,
+                                    onChange: kk => {
+                                      ak(kk.target.value)
                                     },
-                                    onKeyDown: CC => {
-                                      if ("ArrowDown" === CC.key || "ArrowUp" === CC.key) {
-                                        CC.preventDefault();
-                                        const zC = "ArrowDown" === CC.key ? 1 : -1;
-                                        FC((qC + zC + SC.length) % Math.max(SC.length, 1))
-                                      } else "Enter" === CC.key && SC[qC] && PC(SC[qC])
+                                    onKeyDown: kk => {
+                                      if ("ArrowDown" === kk.key || "ArrowUp" === kk.key) {
+                                        kk.preventDefault();
+                                        const Fk = "ArrowDown" === kk.key ? 1 : -1;
+                                        Lk((qk + Fk + wk.length) % Math.max(wk.length, 1))
+                                      } else "Enter" === kk.key && wk[qk] && Jk(wk[qk])
                                     }
-                                  }), (0, gC.jsx)("kbd", {
+                                  }), (0, ek.jsx)("kbd", {
                                     children: "Esc"
                                   })]
-                                }), (0, gC.jsxs)("ul", {
+                                }), (0, ek.jsxs)("ul", {
                                   id: "DocsSearchResults",
-                                  ref: WC,
+                                  ref: tk,
                                   className: "DocsSearchResults",
                                   role: "listbox",
-                                  children: [!MC && (0, gC.jsx)("li", {
+                                  children: [!jk && (0, ek.jsx)("li", {
                                     className: "DocsSearchHint",
                                     children: "Jump to a page"
-                                  }), SC.map(((CC, zC) => {
-                                    var ZC;
-                                    return (0, gC.jsxs)("li", {
-                                      id: `DocsSearchResult-${zC}`,
+                                  }), wk.map(((kk, Fk) => {
+                                    var Ik;
+                                    return (0, ek.jsxs)("li", {
+                                      id: `DocsSearchResult-${Fk}`,
                                       role: "option",
-                                      "aria-selected": zC === qC,
-                                      className: bC()("DocsSearchResult", {
-                                        Active: zC === qC
+                                      "aria-selected": Fk === qk,
+                                      className: ik()("DocsSearchResult", {
+                                        Active: Fk === qk
                                       }),
                                       onMouseMove: () => {
-                                        FC(zC)
+                                        Lk(Fk)
                                       },
                                       onClick: () => {
-                                        PC(CC)
+                                        Jk(kk)
                                       },
-                                      children: [(0, gC.jsx)(pC, {
-                                        name: CC.page.icon
-                                      }), (0, gC.jsxs)("div", {
+                                      children: [(0, ek.jsx)(Hk, {
+                                        name: kk.page.icon
+                                      }), (0, ek.jsxs)("div", {
                                         className: "DocsSearchResultText",
-                                        children: [(0, gC.jsx)("div", {
+                                        children: [(0, ek.jsx)("div", {
                                           className: "DocsSearchResultTitle",
-                                          children: (0, gC.jsx)(ub, {
-                                            text: CC.title,
-                                            query: MC
+                                          children: (0, ek.jsx)(Ni, {
+                                            text: kk.title,
+                                            query: jk
                                           })
-                                        }), CC.text && (0, gC.jsx)("div", {
+                                        }), kk.text && (0, ek.jsx)("div", {
                                           className: "DocsSearchResultSnippet",
-                                          children: (0, gC.jsx)(ub, {
-                                            text: cb(CC.text, MC),
-                                            query: MC
+                                          children: (0, ek.jsx)(Ni, {
+                                            text: Ci(kk.text, jk),
+                                            query: jk
                                           })
                                         })]
-                                      }), (0, gC.jsx)("span", {
+                                      }), (0, ek.jsx)("span", {
                                         className: "DocsSearchResultMeta",
-                                        children: "Page" === CC.kind ? "Page" : null !== (ZC = CC.listedUnder) && void 0 !== ZC ? ZC : `${CC.kind} \xb7 ${CC.page.title}`
+                                        children: "Page" === kk.kind ? "Page" : null !== (Ik = kk.listedUnder) && void 0 !== Ik ? Ik : `${kk.kind} \xb7 ${kk.page.title}`
                                       })]
-                                    }, `${CC.page.id}#${CC.anchor}`)
-                                  })), MC && 0 === SC.length && (0, gC.jsxs)("li", {
+                                    }, `${kk.page.id}#${kk.anchor}`)
+                                  })), jk && 0 === wk.length && (0, ek.jsxs)("li", {
                                     className: "DocsSearchHint",
-                                    children: ["Nothing matches \u201c", nC, "\u201d."]
+                                    children: ["Nothing matches \u201c", yk, "\u201d."]
                                   })]
                                 })]
                               })
                             })
                           }
 
-                          function sb(CC, zC) {
-                            if (zC < 10) return `${CC.toFixed(1)}s`;
-                            const ZC = Math.floor(CC);
-                            return `${Math.floor(ZC/60)}:${String(ZC%60).padStart(2,"0")}`
+                          function Wi(kk, Fk) {
+                            if (Fk < 10) return `${kk.toFixed(1)}s`;
+                            const Ik = Math.floor(kk);
+                            return `${Math.floor(Ik/60)}:${String(Ik%60).padStart(2,"0")}`
                           }
 
-                          function Tb() {
-                            const CC = FQ((CC => CC.track)),
-                              zC = FQ((CC => CC.volume)),
-                              [ZC, wC] = (0, QC.useState)(0),
-                              nC = (0, QC.useRef)(zQ);
-                            if ((0, QC.useEffect)((() => {
-                                if (!CC) return;
-                                if (wC(gQ()), "playing" !== CC.status) return;
-                                let zC = 0;
-                                const ZC = () => {
-                                  wC(gQ()), zC = requestAnimationFrame(ZC)
+                          function fi() {
+                            const kk = tX((kk => kk.track)),
+                              Fk = tX((kk => kk.volume)),
+                              [Ik, Tk] = (0, Xk.useState)(0),
+                              yk = (0, Xk.useRef)(IX);
+                            if ((0, Xk.useEffect)((() => {
+                                if (!kk) return;
+                                if (Tk(wX()), "playing" !== kk.status) return;
+                                let Fk = 0;
+                                const Ik = () => {
+                                  Tk(wX()), Fk = requestAnimationFrame(Ik)
                                 };
-                                return zC = requestAnimationFrame(ZC), () => {
-                                  cancelAnimationFrame(zC)
+                                return Fk = requestAnimationFrame(Ik), () => {
+                                  cancelAnimationFrame(Fk)
                                 }
-                              }), [CC]), !CC) return null;
-                            const fC = "paused" !== CC.status,
-                              oC = Math.min(ZC, CC.duration);
-                            return (0, gC.jsx)("div", {
+                              }), [kk]), !kk) return null;
+                            const lk = "paused" !== kk.status,
+                              ak = Math.min(Ik, kk.duration);
+                            return (0, ek.jsx)("div", {
                               className: "DocsSoundPlayerDock",
-                              children: (0, gC.jsxs)("section", {
+                              children: (0, ek.jsxs)("section", {
                                 className: "DocsSoundPlayer",
                                 "aria-label": "Sound player",
-                                children: [(0, gC.jsx)("button", {
+                                children: [(0, ek.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerToggle",
-                                  "aria-label": fC ? `Pause ${CC.name}` : `Play ${CC.name}`,
-                                  onClick: MQ,
-                                  children: (0, gC.jsx)(pC, {
-                                    name: fC ? "pause" : "play"
+                                  "aria-label": lk ? `Pause ${kk.name}` : `Play ${kk.name}`,
+                                  onClick: eX,
+                                  children: (0, ek.jsx)(Hk, {
+                                    name: lk ? "pause" : "play"
                                   })
-                                }), (0, gC.jsxs)("div", {
+                                }), (0, ek.jsxs)("div", {
                                   className: "DocsSoundPlayerTrack",
-                                  children: [(0, gC.jsxs)("div", {
+                                  children: [(0, ek.jsxs)("div", {
                                     className: "DocsSoundPlayerTitle",
-                                    children: [(0, gC.jsx)("code", {
-                                      children: CC.name
-                                    }), (0, gC.jsx)("span", {
-                                      children: CC.isSong ? "Song" : "Sound"
+                                    children: [(0, ek.jsx)("code", {
+                                      children: kk.name
+                                    }), (0, ek.jsx)("span", {
+                                      children: kk.isSong ? "Song" : "Sound"
                                     })]
-                                  }), (0, gC.jsxs)("div", {
+                                  }), (0, ek.jsxs)("div", {
                                     className: "DocsSoundPlayerScrubber",
-                                    children: [(0, gC.jsx)("span", {
-                                      children: sb(oC, CC.duration)
-                                    }), (0, gC.jsx)("input", {
+                                    children: [(0, ek.jsx)("span", {
+                                      children: Wi(ak, kk.duration)
+                                    }), (0, ek.jsx)("input", {
                                       type: "range",
                                       min: 0,
-                                      max: CC.duration || 1,
+                                      max: kk.duration || 1,
                                       step: .01,
-                                      value: oC,
-                                      disabled: 0 === CC.duration,
+                                      value: ak,
+                                      disabled: 0 === kk.duration,
                                       "aria-label": "Position",
-                                      "aria-valuetext": `${sb(oC,CC.duration)} of ${sb(CC.duration,CC.duration)}`,
-                                      onChange: CC => {
-                                        const zC = Number(CC.target.value);
-                                        ! function(CC) {
-                                          var zC;
-                                          nQ = CC, null === (zC = wQ) || void 0 === zC || zC.seek(CC)
-                                        }(zC), wC(zC)
+                                      "aria-valuetext": `${Wi(ak,kk.duration)} of ${Wi(kk.duration,kk.duration)}`,
+                                      onChange: kk => {
+                                        const Fk = Number(kk.target.value);
+                                        ! function(kk) {
+                                          var Fk;
+                                          lX = kk, null === (Fk = iX) || void 0 === Fk || Fk.seek(kk)
+                                        }(Fk), Tk(Fk)
                                       }
-                                    }), (0, gC.jsx)("span", {
-                                      children: CC.duration > 0 ? sb(CC.duration, CC.duration) : "\u2013"
+                                    }), (0, ek.jsx)("span", {
+                                      children: kk.duration > 0 ? Wi(kk.duration, kk.duration) : "\u2013"
                                     })]
                                   })]
-                                }), (0, gC.jsxs)("div", {
+                                }), (0, ek.jsxs)("div", {
                                   className: "DocsSoundPlayerVolume",
-                                  children: [(0, gC.jsx)("button", {
+                                  children: [(0, ek.jsx)("button", {
                                     type: "button",
-                                    "aria-label": 0 === zC ? "Unmute" : "Mute",
+                                    "aria-label": 0 === Fk ? "Unmute" : "Mute",
                                     onClick: () => {
-                                      0 === zC ? SQ(nC.current) : (nC.current = zC, SQ(0))
+                                      0 === Fk ? HX(yk.current) : (yk.current = Fk, HX(0))
                                     },
-                                    children: (0, gC.jsx)(pC, {
+                                    children: (0, ek.jsx)(Hk, {
                                       name: "volume",
-                                      className: bC()({
-                                        Muted: 0 === zC
+                                      className: ik()({
+                                        Muted: 0 === Fk
                                       })
                                     })
-                                  }), (0, gC.jsx)("input", {
+                                  }), (0, ek.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: zC,
+                                    value: Fk,
                                     "aria-label": "Volume",
-                                    onChange: CC => {
-                                      SQ(Number(CC.target.value))
+                                    onChange: kk => {
+                                      HX(Number(kk.target.value))
                                     }
                                   })]
-                                }), (0, gC.jsx)("button", {
+                                }), (0, ek.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerClose",
                                   "aria-label": "Close the player",
                                   onClick: () => {
-                                    var zC;
-                                    null === (zC = document.querySelector(`[data-docs-track="${CSS.escape(ZQ(CC.name,CC.isSong))}"]`)) || void 0 === zC || zC.focus(), pQ()
+                                    var Fk;
+                                    null === (Fk = document.querySelector(`[data-docs-track="${CSS.escape(XX(kk.name,kk.isSong))}"]`)) || void 0 === Fk || Fk.focus(), JX()
                                   },
-                                  children: (0, gC.jsx)(pC, {
+                                  children: (0, ek.jsx)(Hk, {
                                     name: "cross"
                                   })
                                 })]
                               })
                             })
                           }
-                          var ab = ZC(38);
-                          const tb = "docsTheme",
-                            Db = window.matchMedia("(prefers-color-scheme: light)");
+                          var Bi = Ik(41);
+                          const di = "docsTheme",
+                            Yi = window.matchMedia("(prefers-color-scheme: light)");
 
-                          function jb(CC) {
+                          function Ai(kk) {
                             let {
-                              theme: zC,
-                              onChange: ZC
-                            } = CC;
-                            const QC = "dark" === zC ? "light" : "dark";
-                            return (0, gC.jsx)("button", {
+                              theme: Fk,
+                              onChange: Ik
+                            } = kk;
+                            const Xk = "dark" === Fk ? "light" : "dark";
+                            return (0, ek.jsx)("button", {
                               type: "button",
                               className: "DocsIconButton DocsThemeToggle",
-                              "aria-label": `Switch to ${QC} theme`,
-                              title: `Switch to ${QC} theme`,
+                              "aria-label": `Switch to ${Xk} theme`,
+                              title: `Switch to ${Xk} theme`,
                               onClick: () => {
-                                ZC(QC)
+                                Ik(Xk)
                               },
-                              children: (0, gC.jsx)(pC, {
-                                name: "dark" === zC ? "moon" : "sun"
+                              children: (0, ek.jsx)(Hk, {
+                                name: "dark" === Fk ? "moon" : "sun"
                               })
                             })
                           }
-                          const yb = "https://github.com/Bloxdy/code-api",
-                            Lb = "https://discord.gg/playbloxd",
-                            Ub = 180,
-                            Bb = /Mac|iPhone|iPad/.test(navigator.userAgent);
+                          const gi = "https://github.com/Bloxdy/code-api",
+                            mi = "https://discord.gg/playbloxd",
+                            ri = 180,
+                            Di = /Mac|iPhone|iPad/.test(navigator.userAgent);
 
-                          function Ob(CC) {
+                          function Mi(kk) {
                             let {
-                              basePath: zC,
-                              activePageId: ZC,
-                              onNavigate: QC
-                            } = CC;
-                            return (0, gC.jsx)("nav", {
+                              basePath: Fk,
+                              activePageId: Ik,
+                              onNavigate: Xk
+                            } = kk;
+                            return (0, ek.jsx)("nav", {
                               className: "DocsNav",
                               "aria-label": "Documentation",
-                              children: cC.map((CC => (0, gC.jsxs)("div", {
+                              children: Ck.map((kk => (0, ek.jsxs)("div", {
                                 className: "DocsNavGroup",
-                                children: [(0, gC.jsx)("div", {
+                                children: [(0, ek.jsx)("div", {
                                   className: "DocsNavGroupTitle",
-                                  children: CC.title
-                                }), CC.pageIds.map((CC => {
-                                  var wC;
-                                  const fC = uC(CC);
-                                  return (0, gC.jsxs)(nC.d, {
-                                    to: DC(zC, fC),
-                                    className: bC()("DocsNavLink", {
-                                      Active: fC.id === ZC
+                                  children: kk.title
+                                }), kk.pageIds.map((kk => {
+                                  var Tk;
+                                  const lk = Nk(kk);
+                                  return (0, ek.jsxs)(yk.e, {
+                                    to: Yk(Fk, lk),
+                                    className: ik()("DocsNavLink", {
+                                      Active: lk.id === Ik
                                     }),
-                                    "aria-current": fC.id === ZC ? "page" : void 0,
-                                    onClick: QC,
-                                    children: [(0, gC.jsx)(pC, {
-                                      name: fC.icon
-                                    }), (0, gC.jsx)("span", {
-                                      children: null !== (wC = fC.navTitle) && void 0 !== wC ? wC : fC.title
+                                    "aria-current": lk.id === Ik ? "page" : void 0,
+                                    onClick: Xk,
+                                    children: [(0, ek.jsx)(Hk, {
+                                      name: lk.icon
+                                    }), (0, ek.jsx)("span", {
+                                      children: null !== (Tk = lk.navTitle) && void 0 !== Tk ? Tk : lk.title
                                     })]
-                                  }, fC.id)
+                                  }, lk.id)
                                 }))]
-                              }, CC.title)))
+                              }, kk.title)))
                             })
                           }
 
-                          function kb(CC) {
+                          function ky(kk) {
                             let {
-                              basePath: zC,
-                              pageId: ZC
-                            } = CC;
-                            const QC = cC.flatMap((CC => CC.pageIds)),
-                              wC = QC.indexOf(ZC),
-                              bC = wC > 0 ? uC(QC[wC - 1]) : null,
-                              fC = wC < QC.length - 1 ? uC(QC[wC + 1]) : null;
-                            return (0, gC.jsxs)("nav", {
+                              basePath: Fk,
+                              pageId: Ik
+                            } = kk;
+                            const Xk = Ck.flatMap((kk => kk.pageIds)),
+                              Tk = Xk.indexOf(Ik),
+                              ik = Tk > 0 ? Nk(Xk[Tk - 1]) : null,
+                              lk = Tk < Xk.length - 1 ? Nk(Xk[Tk + 1]) : null;
+                            return (0, ek.jsxs)("nav", {
                               className: "DocsPager",
                               "aria-label": "Pages",
-                              children: [bC ? (0, gC.jsxs)(nC.d, {
+                              children: [ik ? (0, ek.jsxs)(yk.e, {
                                 className: "DocsPagerLink Previous",
-                                to: DC(zC, bC),
-                                children: [(0, gC.jsx)("span", {
+                                to: Yk(Fk, ik),
+                                children: [(0, ek.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Previous"
-                                }), (0, gC.jsx)("span", {
+                                }), (0, ek.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: bC.title
+                                  children: ik.title
                                 })]
-                              }) : (0, gC.jsx)("span", {}), fC && (0, gC.jsxs)(nC.d, {
+                              }) : (0, ek.jsx)("span", {}), lk && (0, ek.jsxs)(yk.e, {
                                 className: "DocsPagerLink Next",
-                                to: DC(zC, fC),
-                                children: [(0, gC.jsx)("span", {
+                                to: Yk(Fk, lk),
+                                children: [(0, ek.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Next"
-                                }), (0, gC.jsx)("span", {
+                                }), (0, ek.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: fC.title
+                                  children: lk.title
                                 })]
                               })]
                             })
                           }
 
-                          function Vb(CC) {
+                          function Fy(kk) {
                             let {
-                              basePath: zC,
-                              embedded: ZC = !1
-                            } = CC;
+                              basePath: Fk,
+                              embedded: Ik = !1
+                            } = kk;
                             const {
-                              pageSlug: wC = ""
-                            } = (0, fC.C)(), qC = (0, fC.v)(), FC = (0, fC.w)(), WC = (NC = wC, XC.find((CC => CC.slug === NC)));
-                            var NC;
-                            const [MC, SC] = function() {
-                              const [CC, zC] = (0, QC.useState)((() => {
-                                const CC = ab.i.getItem(tb);
-                                return "dark" === CC || "light" === CC ? CC : null
-                              })), [ZC, wC] = (0, QC.useState)(Db.matches ? "light" : "dark");
-                              return (0, QC.useEffect)((() => {
-                                const CC = () => {
-                                  wC(Db.matches ? "light" : "dark")
+                              pageSlug: Tk = ""
+                            } = (0, lk.A)(), qk = (0, lk.q)(), Lk = (0, lk.u)(), tk = (Zk = Tk, Uk.find((kk => kk.slug === Zk)));
+                            var Zk;
+                            const [jk, wk] = function() {
+                              const [kk, Fk] = (0, Xk.useState)((() => {
+                                const kk = Bi.j.getItem(di);
+                                return "dark" === kk || "light" === kk ? kk : null
+                              })), [Ik, Tk] = (0, Xk.useState)(Yi.matches ? "light" : "dark");
+                              return (0, Xk.useEffect)((() => {
+                                const kk = () => {
+                                  Tk(Yi.matches ? "light" : "dark")
                                 };
-                                return Db.addEventListener("change", CC), () => {
-                                  Db.removeEventListener("change", CC)
+                                return Yi.addEventListener("change", kk), () => {
+                                  Yi.removeEventListener("change", kk)
                                 }
-                              }), []), [null !== CC && void 0 !== CC ? CC : ZC, CC => {
-                                ab.i.setItem(tb, CC), zC(CC)
+                              }), []), [null !== kk && void 0 !== kk ? kk : Ik, kk => {
+                                Bi.j.setItem(di, kk), Fk(kk)
                               }]
-                            }(), [PC, GC] = (0, QC.useState)(null), [RC, AC] = (0, QC.useState)(!1), [xC, JC] = (0, QC.useState)(!1), [IC, vC] = (0, QC.useState)([]), eC = function(CC, zC) {
-                              const [ZC, wC] = (0, QC.useState)("");
-                              return (0, QC.useEffect)((() => {
-                                if (!zC) return;
-                                let ZC = 0;
-                                const QC = () => {
-                                    var QC, bC;
-                                    ZC = 0;
-                                    const nC = zC.getBoundingClientRect().top + Ub;
-                                    let fC = null !== (QC = null === (bC = CC[0]) || void 0 === bC ? void 0 : bC.anchor) && void 0 !== QC ? QC : "";
-                                    for (const zC of CC) {
-                                      const CC = document.getElementById(zC.anchor);
-                                      CC && CC.getBoundingClientRect().top <= nC && (fC = zC.anchor)
+                            }(), [Jk, xk] = (0, Xk.useState)(null), [Pk, Kk] = (0, Xk.useState)(!1), [Qk, sk] = (0, Xk.useState)(!1), [Vk, Sk] = (0, Xk.useState)([]), vk = function(kk, Fk) {
+                              const [Ik, Tk] = (0, Xk.useState)("");
+                              return (0, Xk.useEffect)((() => {
+                                if (!Fk) return;
+                                let Ik = 0;
+                                const Xk = () => {
+                                    var Xk, ik;
+                                    Ik = 0;
+                                    const yk = Fk.getBoundingClientRect().top + ri;
+                                    let lk = null !== (Xk = null === (ik = kk[0]) || void 0 === ik ? void 0 : ik.anchor) && void 0 !== Xk ? Xk : "";
+                                    for (const Fk of kk) {
+                                      const kk = document.getElementById(Fk.anchor);
+                                      kk && kk.getBoundingClientRect().top <= yk && (lk = Fk.anchor)
                                     }
-                                    zC.scrollTop + zC.clientHeight >= zC.scrollHeight - 2 && zC.scrollTop > 0 && CC.length > 0 && (fC = CC[CC.length - 1].anchor), wC(fC)
+                                    Fk.scrollTop + Fk.clientHeight >= Fk.scrollHeight - 2 && Fk.scrollTop > 0 && kk.length > 0 && (lk = kk[kk.length - 1].anchor), Tk(lk)
                                   },
-                                  bC = () => {
-                                    ZC || (ZC = requestAnimationFrame(QC))
+                                  ik = () => {
+                                    Ik || (Ik = requestAnimationFrame(Xk))
                                   };
-                                return QC(), zC.addEventListener("scroll", bC, {
+                                return Xk(), Fk.addEventListener("scroll", ik, {
                                   passive: !0
                                 }), () => {
-                                  cancelAnimationFrame(ZC), zC.removeEventListener("scroll", bC)
+                                  cancelAnimationFrame(Ik), Fk.removeEventListener("scroll", ik)
                                 }
-                              }), [CC, zC]), ZC
-                            }(IC, PC), hC = "" === wC && qC.hash ? function(CC) {
-                              const zC = (0, iC.n)(CC);
-                              if (TC(uC("welcome"), zC)) return null;
-                              const ZC = Object.hasOwn(tC, zC) ? tC[zC] : null;
-                              if (ZC) return {
-                                page: uC(ZC.pageId),
-                                anchor: ZC.anchor
+                              }), [kk, Fk]), Ik
+                            }(Vk, Jk), Ek = "" === Tk && qk.hash ? function(kk) {
+                              const Fk = (0, zk.s)(kk);
+                              if (fk(Nk("welcome"), Fk)) return null;
+                              const Ik = Object.hasOwn(dk, Fk) ? dk[Fk] : null;
+                              if (Ik) return {
+                                page: Nk(Ik.pageId),
+                                anchor: Ik.anchor
                               };
-                              const QC = uC("readme");
-                              return TC(QC, zC) ? {
-                                page: QC,
-                                anchor: zC
-                              } : aC(`#${zC}`)
-                            }(qC.hash) : null;
-                            (0, QC.useEffect)((() => (oC.b.set({
+                              const Xk = Nk("readme");
+                              return fk(Xk, Fk) ? {
+                                page: Xk,
+                                anchor: Fk
+                              } : Bk(`#${Fk}`)
+                            }(qk.hash) : null;
+                            (0, Xk.useEffect)((() => (ak.d.set({
                               musicOnFromPage: !1
                             }), () => {
-                              oC.b.set({
+                              ak.d.set({
                                 musicOnFromPage: !0
-                              }), pQ()
-                            })), []), (0, QC.useEffect)((() => {
-                              const CC = CC => {
-                                const zC = CC.target;
-                                if (zC.closest(".DocsTextDialog")) return;
-                                const ZC = zC.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(zC.tagName);
-                                "k" === CC.key && (CC.metaKey || CC.ctrlKey) || "/" === CC.key && !ZC ? (CC.preventDefault(), JC(!0)) : "Escape" === CC.key && AC(!1)
+                              }), JX()
+                            })), []), (0, Xk.useEffect)((() => {
+                              const kk = kk => {
+                                const Fk = kk.target;
+                                if (Fk.closest(".DocsTextDialog")) return;
+                                const Ik = Fk.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(Fk.tagName);
+                                "k" === kk.key && (kk.metaKey || kk.ctrlKey) || "/" === kk.key && !Ik ? (kk.preventDefault(), sk(!0)) : "Escape" === kk.key && Kk(!1)
                               };
-                              return window.addEventListener("keydown", CC), () => {
-                                window.removeEventListener("keydown", CC)
+                              return window.addEventListener("keydown", kk), () => {
+                                window.removeEventListener("keydown", kk)
                               }
                             }), []);
-                            const KC = (0, QC.useRef)(null);
-                            (0, QC.useLayoutEffect)((() => {
-                              var CC, zC;
-                              if (!PC) return;
-                              const ZC = KC.current === qC.pathname;
-                              KC.current = qC.pathname;
-                              const QC = (0, iC.n)(qC.hash),
-                                wC = QC ? document.getElementById(QC) : null;
-                              if (null === (CC = PC.querySelector(".DocsTargeted")) || void 0 === CC || CC.classList.remove("DocsTargeted"), null === wC || void 0 === wC || null === (zC = wC.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === zC || zC.classList.add("DocsTargeted"), wC) {
-                                var bC;
-                                const CC = wC.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
-                                (null !== (bC = wC.closest(".DocsChangelogEntry")) && void 0 !== bC ? bC : wC).scrollIntoView({
-                                  block: CC ? "center" : "start",
-                                  behavior: ZC ? "smooth" : "auto"
+                            const Ok = (0, Xk.useRef)(null);
+                            (0, Xk.useLayoutEffect)((() => {
+                              var kk, Fk;
+                              if (!Jk) return;
+                              const Ik = Ok.current === qk.pathname;
+                              Ok.current = qk.pathname;
+                              const Xk = (0, zk.s)(qk.hash),
+                                Tk = Xk ? document.getElementById(Xk) : null;
+                              if (null === (kk = Jk.querySelector(".DocsTargeted")) || void 0 === kk || kk.classList.remove("DocsTargeted"), null === Tk || void 0 === Tk || null === (Fk = Tk.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === Fk || Fk.classList.add("DocsTargeted"), Tk) {
+                                var ik;
+                                const kk = Tk.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
+                                (null !== (ik = Tk.closest(".DocsChangelogEntry")) && void 0 !== ik ? ik : Tk).scrollIntoView({
+                                  block: kk ? "center" : "start",
+                                  behavior: Ik ? "smooth" : "auto"
                                 })
-                              } else ZC || PC.scrollTo({
+                              } else Ik || Jk.scrollTo({
                                 top: 0
                               })
-                            }), [PC, qC.pathname, qC.hash, qC.key]);
-                            const YC = (0, QC.useCallback)((() => {
-                                AC(!1)
+                            }), [Jk, qk.pathname, qk.hash, qk.key]);
+                            const nk = (0, Xk.useCallback)((() => {
+                                Kk(!1)
                               }), []),
-                              dC = (0, QC.useCallback)((CC => {
-                                FC({
-                                  hash: CC
+                              Gk = (0, Xk.useCallback)((kk => {
+                                Lk({
+                                  hash: kk
                                 })
-                              }), [FC]);
-                            if (hC) return (0, gC.jsx)(fC.e, {
+                              }), [Lk]);
+                            if (Ek) return (0, ek.jsx)(lk.d, {
                               replace: !0,
-                              to: DC(zC, hC.page, hC.anchor)
+                              to: Yk(Fk, Ek.page, Ek.anchor)
                             });
-                            if (!WC) return (0, gC.jsx)(fC.e, {
+                            if (!tk) return (0, ek.jsx)(lk.d, {
                               replace: !0,
-                              to: zC
+                              to: Fk
                             });
-                            const mC = ZC ? "div" : "main";
-                            return (0, gC.jsx)(Mz.Provider, {
-                              value: zC,
-                              children: (0, gC.jsx)(gz.Provider, {
-                                value: PC,
-                                children: (0, gC.jsxs)("div", {
-                                  ref: GC,
-                                  className: bC()("DocsSite", {
-                                    Embedded: ZC,
-                                    NavOpen: RC
+                            const pk = Ik ? "div" : "main";
+                            return (0, ek.jsx)(eF.Provider, {
+                              value: Fk,
+                              children: (0, ek.jsx)(wF.Provider, {
+                                value: Jk,
+                                children: (0, ek.jsxs)("div", {
+                                  ref: xk,
+                                  className: ik()("DocsSite", {
+                                    Embedded: Ik,
+                                    NavOpen: Pk
                                   }),
-                                  "data-theme": MC,
-                                  children: [(0, gC.jsxs)("header", {
+                                  "data-theme": jk,
+                                  children: [(0, ek.jsxs)("header", {
                                     className: "DocsTopBar",
-                                    children: [(0, gC.jsx)("button", {
+                                    children: [(0, ek.jsx)("button", {
                                       type: "button",
                                       className: "DocsIconButton DocsMenuButton",
-                                      "aria-label": RC ? "Close menu" : "Open menu",
-                                      "aria-expanded": RC,
+                                      "aria-label": Pk ? "Close menu" : "Open menu",
+                                      "aria-expanded": Pk,
                                       onClick: () => {
-                                        AC(!RC)
+                                        Kk(!Pk)
                                       },
-                                      children: (0, gC.jsx)(pC, {
-                                        name: RC ? "cross" : "menu"
+                                      children: (0, ek.jsx)(Hk, {
+                                        name: Pk ? "cross" : "menu"
                                       })
-                                    }), (0, gC.jsxs)(nC.d, {
-                                      to: zC,
+                                    }), (0, ek.jsxs)(yk.e, {
+                                      to: Fk,
                                       className: "DocsBrand",
-                                      children: [(0, gC.jsx)("img", {
+                                      children: [(0, ek.jsx)("img", {
                                         src: "/favicon.svg",
                                         alt: "",
                                         width: 28,
                                         height: 28
-                                      }), (0, gC.jsx)("span", {
+                                      }), (0, ek.jsx)("span", {
                                         className: "DocsBrandName",
                                         children: "Bloxd"
-                                      }), (0, gC.jsx)("span", {
+                                      }), (0, ek.jsx)("span", {
                                         className: "DocsBrandTag",
                                         children: "Code API"
                                       })]
-                                    }), (0, gC.jsxs)("button", {
+                                    }), (0, ek.jsxs)("button", {
                                       type: "button",
                                       className: "DocsSearchTrigger",
                                       onClick: () => {
-                                        JC(!0)
+                                        sk(!0)
                                       },
-                                      children: [(0, gC.jsx)(pC, {
+                                      children: [(0, ek.jsx)(Hk, {
                                         name: "magnifying-glass"
-                                      }), (0, gC.jsx)("span", {
+                                      }), (0, ek.jsx)("span", {
                                         className: "DocsSearchTriggerLabel",
                                         children: "Search docs"
-                                      }), (0, gC.jsxs)("kbd", {
-                                        children: [Bb ? "\u2318" : "Ctrl", " K"]
+                                      }), (0, ek.jsxs)("kbd", {
+                                        children: [Di ? "\u2318" : "Ctrl", " K"]
                                       })]
-                                    }), (0, gC.jsxs)("div", {
+                                    }), (0, ek.jsxs)("div", {
                                       className: "DocsTopBarLinks",
-                                      children: [(0, gC.jsxs)("a", {
-                                        href: Lb,
+                                      children: [(0, ek.jsxs)("a", {
+                                        href: mi,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, gC.jsx)(pC, {
+                                        children: [(0, ek.jsx)(Hk, {
                                           name: "discord"
-                                        }), (0, gC.jsx)("span", {
+                                        }), (0, ek.jsx)("span", {
                                           children: "Discord"
                                         })]
-                                      }), (0, gC.jsxs)("a", {
-                                        href: yb,
+                                      }), (0, ek.jsxs)("a", {
+                                        href: gi,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, gC.jsx)(pC, {
+                                        children: [(0, ek.jsx)(Hk, {
                                           name: "external-link"
-                                        }), (0, gC.jsx)("span", {
+                                        }), (0, ek.jsx)("span", {
                                           children: "GitHub"
                                         })]
-                                      }), !ZC && (0, gC.jsxs)(nC.d, {
+                                      }), !Ik && (0, ek.jsxs)(yk.e, {
                                         to: "/",
                                         className: "DocsTopBarLink DocsPlayLink",
-                                        children: [(0, gC.jsx)(pC, {
+                                        children: [(0, ek.jsx)(Hk, {
                                           name: "play"
-                                        }), (0, gC.jsx)("span", {
+                                        }), (0, ek.jsx)("span", {
                                           children: "Play Bloxd"
                                         })]
-                                      }), (0, gC.jsx)(jb, {
-                                        theme: MC,
-                                        onChange: SC
+                                      }), (0, ek.jsx)(Ai, {
+                                        theme: jk,
+                                        onChange: wk
                                       })]
                                     })]
-                                  }), (0, gC.jsxs)("div", {
+                                  }), (0, ek.jsxs)("div", {
                                     className: "DocsSiteBody",
-                                    children: [(0, gC.jsx)("aside", {
+                                    children: [(0, ek.jsx)("aside", {
                                       className: "DocsSidebar",
-                                      children: (0, gC.jsx)(Ob, {
-                                        basePath: zC,
-                                        activePageId: WC.id,
-                                        onNavigate: YC
+                                      children: (0, ek.jsx)(Mi, {
+                                        basePath: Fk,
+                                        activePageId: tk.id,
+                                        onNavigate: nk
                                       })
-                                    }), (0, gC.jsx)("div", {
+                                    }), (0, ek.jsx)("div", {
                                       className: "DocsNavScrim",
-                                      onClick: YC
-                                    }), (0, gC.jsxs)(mC, {
+                                      onClick: nk
+                                    }), (0, ek.jsxs)(pk, {
                                       className: "DocsMain",
-                                      children: [(0, gC.jsx)(Jb, {
-                                        page: WC,
-                                        onTocChange: vC
-                                      }, WC.id), (0, gC.jsx)(kb, {
-                                        basePath: zC,
-                                        pageId: WC.id
+                                      children: [(0, ek.jsx)(si, {
+                                        page: tk,
+                                        onTocChange: Sk
+                                      }, tk.id), (0, ek.jsx)(ky, {
+                                        basePath: Fk,
+                                        pageId: tk.id
                                       })]
-                                    }), (0, gC.jsx)("aside", {
-                                      className: bC()("DocsToc", {
-                                        Timeline: "changelog" === WC.layout
+                                    }), (0, ek.jsx)("aside", {
+                                      className: ik()("DocsToc", {
+                                        Timeline: "changelog" === tk.layout
                                       }),
                                       "aria-label": "On this page",
-                                      children: (0, gC.jsx)(eb, {
-                                        isChangelog: "changelog" === WC.layout,
-                                        toc: IC,
-                                        activeAnchor: eC,
-                                        onNavigate: dC
+                                      children: (0, ek.jsx)(oi, {
+                                        isChangelog: "changelog" === tk.layout,
+                                        toc: Vk,
+                                        activeAnchor: vk,
+                                        onNavigate: Gk
                                       })
                                     })]
-                                  }), (0, gC.jsx)(Tb, {}), xC && (0, gC.jsx)(rb, {
-                                    basePath: zC,
+                                  }), (0, ek.jsx)(fi, {}), Qk && (0, ek.jsx)(ci, {
+                                    basePath: Fk,
                                     onClose: () => {
-                                      JC(!1)
+                                      sk(!1)
                                     }
                                   })]
                                 })
                               })
                             })
                           }
-                        }, 4674: (CC, zC, ZC) => {
-                          ZC.d(zC, {
-                            b: () => QC,
-                            e: () => nC,
-                            g: () => pC,
-                            h: () => SC,
-                            j: () => fC,
-                            n: () => wC,
-                            p: () => bC,
-                            r: () => gC,
-                            s: () => MC,
-                            u: () => NC
+                        }, 4739: (kk, Fk, Ik) => {
+                          Ik.d(Fk, {
+                            A: () => Zk,
+                            d: () => Xk,
+                            h: () => yk,
+                            l: () => Hk,
+                            n: () => wk,
+                            p: () => lk,
+                            s: () => Tk,
+                            t: () => ik,
+                            u: () => ek,
+                            w: () => jk
                           });
-                          const QC = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+                          const Xk = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-                          function wC(CC) {
+                          function Tk(kk) {
                             try {
-                              return decodeURIComponent(CC.slice(1))
+                              return decodeURIComponent(kk.slice(1))
                             } catch {
-                              return CC.slice(1)
+                              return kk.slice(1)
                             }
                           }
 
-                          function bC(CC) {
-                            return CC.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+                          function ik(kk) {
+                            return kk.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
                           }
-                          const nC = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${QC.source}`, "g");
+                          const yk = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${Xk.source}`, "g");
 
-                          function fC(CC, zC) {
-                            return 2 === CC.length ? zC.replace(/^ (.*) $/, "$1") : zC
-                          }
-
-                          function oC(CC) {
-                            return "" === CC.trim()
+                          function lk(kk, Fk) {
+                            return 2 === kk.length ? Fk.replace(/^ (.*) $/, "$1") : Fk
                           }
 
-                          function qC(CC) {
-                            const zC = [];
-                            for (const ZC of CC.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) zC.length > 0 && zC[zC.length - 1].endsWith("\\") ? zC[zC.length - 1] += `|${ZC}` : zC.push(ZC);
-                            return zC.map((CC => CC.trim().replaceAll("\\|", "|")))
+                          function ak(kk) {
+                            return "" === kk.trim()
                           }
-                          const FC = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-                          function WC(CC) {
-                            const zC = [],
-                              ZC = [{
+                          function qk(kk) {
+                            const Fk = [];
+                            for (const Ik of kk.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) Fk.length > 0 && Fk[Fk.length - 1].endsWith("\\") ? Fk[Fk.length - 1] += `|${Ik}` : Fk.push(Ik);
+                            return Fk.map((kk => kk.trim().replaceAll("\\|", "|")))
+                          }
+                          const Lk = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+                          function tk(kk) {
+                            const Fk = [],
+                              Ik = [{
                                 indent: -1,
-                                items: zC
+                                items: Fk
                               }];
-                            let QC = null;
-                            for (const wC of CC) {
-                              const CC = wC.match(FC);
-                              if (!CC) {
-                                QC && (QC.text += ` ${wC.trim()}`);
+                            let Xk = null;
+                            for (const Tk of kk) {
+                              const kk = Tk.match(Lk);
+                              if (!kk) {
+                                Xk && (Xk.text += ` ${Tk.trim()}`);
                                 continue
                               }
-                              const zC = CC[1].replace(/\t/g, "  ").length;
-                              for (; zC <= ZC[ZC.length - 1].indent;) ZC.pop();
-                              QC = {
-                                text: CC[3].trim(),
+                              const Fk = kk[1].replace(/\t/g, "  ").length;
+                              for (; Fk <= Ik[Ik.length - 1].indent;) Ik.pop();
+                              Xk = {
+                                text: kk[3].trim(),
                                 children: []
-                              }, ZC[ZC.length - 1].items.push(QC), ZC.push({
-                                indent: zC,
-                                items: QC.children
+                              }, Ik[Ik.length - 1].items.push(Xk), Ik.push({
+                                indent: Fk,
+                                items: Xk.children
                               })
                             }
-                            return zC
+                            return Fk
                           }
 
-                          function NC(CC) {
-                            const zC = CC.replace(/\r\n/g, "\n").split("\n"),
-                              ZC = [];
-                            let QC = 0;
-                            for (; QC < zC.length;) {
-                              const CC = zC[QC];
-                              if (oC(CC)) {
-                                QC++;
+                          function Zk(kk) {
+                            const Fk = kk.replace(/\r\n/g, "\n").split("\n"),
+                              Ik = [];
+                            let Xk = 0;
+                            for (; Xk < Fk.length;) {
+                              const kk = Fk[Xk];
+                              if (ak(kk)) {
+                                Xk++;
                                 continue
                               }
-                              const wC = CC.match(/^\s*```\s*(\w*)\s*$/);
-                              if (wC) {
-                                const CC = [];
-                                for (QC++; QC < zC.length && !/^\s*```\s*$/.test(zC[QC]);) CC.push(zC[QC]), QC++;
-                                QC++, ZC.push({
+                              const Tk = kk.match(/^\s*```\s*(\w*)\s*$/);
+                              if (Tk) {
+                                const kk = [];
+                                for (Xk++; Xk < Fk.length && !/^\s*```\s*$/.test(Fk[Xk]);) kk.push(Fk[Xk]), Xk++;
+                                Xk++, Ik.push({
                                   kind: "code",
-                                  lang: wC[1] || "text",
-                                  code: CC.join("\n").replace(/\s+$/, "")
+                                  lang: Tk[1] || "text",
+                                  code: kk.join("\n").replace(/\s+$/, "")
                                 });
                                 continue
                               }
-                              const nC = CC.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-                              if (nC) {
-                                const CC = nC[2].trim();
-                                ZC.push({
+                              const yk = kk.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+                              if (yk) {
+                                const kk = yk[2].trim();
+                                Ik.push({
                                   kind: "heading",
-                                  level: nC[1].length,
-                                  text: CC,
-                                  anchor: bC(CC)
-                                }), QC++;
+                                  level: yk[1].length,
+                                  text: kk,
+                                  anchor: ik(kk)
+                                }), Xk++;
                                 continue
                               }
-                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(CC)) {
-                                ZC.push({
+                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(kk)) {
+                                Ik.push({
                                   kind: "rule"
-                                }), QC++;
+                                }), Xk++;
                                 continue
                               }
-                              if (CC.trim().startsWith("|") && QC + 1 < zC.length && /^\s*\|[\s:|-]+\|\s*$/.test(zC[QC + 1])) {
-                                const wC = qC(CC),
-                                  bC = [];
-                                for (QC += 2; QC < zC.length && zC[QC].trim().startsWith("|");) bC.push(qC(zC[QC])), QC++;
-                                ZC.push({
+                              if (kk.trim().startsWith("|") && Xk + 1 < Fk.length && /^\s*\|[\s:|-]+\|\s*$/.test(Fk[Xk + 1])) {
+                                const Tk = qk(kk),
+                                  ik = [];
+                                for (Xk += 2; Xk < Fk.length && Fk[Xk].trim().startsWith("|");) ik.push(qk(Fk[Xk])), Xk++;
+                                Ik.push({
                                   kind: "table",
-                                  header: wC,
-                                  rows: bC
+                                  header: Tk,
+                                  rows: ik
                                 });
                                 continue
                               }
-                              if (CC.startsWith(">")) {
-                                const CC = [];
-                                for (; QC < zC.length && zC[QC].startsWith(">");) CC.push(zC[QC].replace(/^>\s?/, "")), QC++;
-                                ZC.push({
+                              if (kk.startsWith(">")) {
+                                const kk = [];
+                                for (; Xk < Fk.length && Fk[Xk].startsWith(">");) kk.push(Fk[Xk].replace(/^>\s?/, "")), Xk++;
+                                Ik.push({
                                   kind: "quote",
-                                  blocks: NC(CC.join("\n"))
+                                  blocks: Zk(kk.join("\n"))
                                 });
                                 continue
                               }
-                              if (FC.test(CC)) {
-                                const wC = [],
-                                  bC = /^\s*\d+\./.test(CC);
-                                for (; QC < zC.length && !oC(zC[QC]) && (FC.test(zC[QC]) || /^\s+\S/.test(zC[QC]));) wC.push(zC[QC]), QC++;
-                                ZC.push({
+                              if (Lk.test(kk)) {
+                                const Tk = [],
+                                  ik = /^\s*\d+\./.test(kk);
+                                for (; Xk < Fk.length && !ak(Fk[Xk]) && (Lk.test(Fk[Xk]) || /^\s+\S/.test(Fk[Xk]));) Tk.push(Fk[Xk]), Xk++;
+                                Ik.push({
                                   kind: "list",
-                                  ordered: bC,
-                                  items: WC(wC)
+                                  ordered: ik,
+                                  items: tk(Tk)
                                 });
                                 continue
                               }
-                              const fC = [];
-                              for (; QC < zC.length && !oC(zC[QC]) && !/^\s*```/.test(zC[QC]) && !/^#{1,6}\s/.test(zC[QC]) && !zC[QC].startsWith(">") && !FC.test(zC[QC]) && (!zC[QC].trim().startsWith("|") || 0 !== fC.length);) fC.push(zC[QC].trim()), QC++;
-                              0 === fC.length && (fC.push(zC[QC].trim()), QC++), ZC.push({
+                              const lk = [];
+                              for (; Xk < Fk.length && !ak(Fk[Xk]) && !/^\s*```/.test(Fk[Xk]) && !/^#{1,6}\s/.test(Fk[Xk]) && !Fk[Xk].startsWith(">") && !Lk.test(Fk[Xk]) && (!Fk[Xk].trim().startsWith("|") || 0 !== lk.length);) lk.push(Fk[Xk].trim()), Xk++;
+                              0 === lk.length && (lk.push(Fk[Xk].trim()), Xk++), Ik.push({
                                 kind: "paragraph",
-                                text: fC.join(" ")
+                                text: lk.join(" ")
                               })
                             }
-                            return ZC
+                            return Ik
                           }
 
-                          function MC(CC) {
-                            let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-                            const ZC = NC(CC);
-                            let QC = "";
-                            const wC = [],
-                              bC = [],
-                              nC = new Map;
-                            for (const qC of ZC) {
-                              if ("heading" === qC.kind) {
-                                var fC;
-                                const CC = (null !== (fC = nC.get(qC.anchor)) && void 0 !== fC ? fC : 0) + 1;
-                                nC.set(qC.anchor, CC), CC > 1 && (qC.anchor = `${qC.anchor}-${CC}`)
+                          function jk(kk) {
+                            let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+                            const Ik = Zk(kk);
+                            let Xk = "";
+                            const Tk = [],
+                              ik = [],
+                              yk = new Map;
+                            for (const qk of Ik) {
+                              if ("heading" === qk.kind) {
+                                var lk;
+                                const kk = (null !== (lk = yk.get(qk.anchor)) && void 0 !== lk ? lk : 0) + 1;
+                                yk.set(qk.anchor, kk), kk > 1 && (qk.anchor = `${qk.anchor}-${kk}`)
                               }
-                              if ("heading" === qC.kind && 1 === qC.level && !QC) {
-                                QC = qC.text;
+                              if ("heading" === qk.kind && 1 === qk.level && !Xk) {
+                                Xk = qk.text;
                                 continue
                               }
-                              if ("heading" === qC.kind && qC.level <= zC) {
-                                bC.push({
-                                  heading: qC,
+                              if ("heading" === qk.kind && qk.level <= Fk) {
+                                ik.push({
+                                  heading: qk,
                                   blocks: []
                                 });
                                 continue
                               }
-                              const CC = bC.at(-1);
-                              CC ? CC.blocks.push(qC) : wC.push(qC)
+                              const kk = ik.at(-1);
+                              kk ? kk.blocks.push(qk) : Tk.push(qk)
                             }
-                            const oC = CC => {
+                            const ak = kk => {
                               for (;
-                                "rule" === (null === (zC = CC.at(-1)) || void 0 === zC ? void 0 : zC.kind);) {
-                                var zC;
-                                CC.pop()
+                                "rule" === (null === (Fk = kk.at(-1)) || void 0 === Fk ? void 0 : Fk.kind);) {
+                                var Fk;
+                                kk.pop()
                               }
                             };
-                            oC(wC);
-                            for (const qC of bC) oC(qC.blocks);
+                            ak(Tk);
+                            for (const qk of ik) ak(qk.blocks);
                             return {
-                              title: QC,
-                              intro: wC,
-                              sections: bC
+                              title: Xk,
+                              intro: Tk,
+                              sections: ik
                             }
                           }
 
-                          function gC(CC) {
+                          function ek(kk) {
                             return [{
                               heading: null,
-                              blocks: CC.intro
-                            }, ...CC.sections.map((CC => ({
-                              heading: CC.heading,
-                              blocks: CC.blocks
+                              blocks: kk.intro
+                            }, ...kk.sections.map((kk => ({
+                              heading: kk.heading,
+                              blocks: kk.blocks
                             })))]
                           }
 
-                          function SC(CC) {
-                            return CC.flatMap((CC => "code" === CC.kind ? [CC] : "quote" === CC.kind ? SC(CC.blocks) : []))
+                          function wk(kk) {
+                            return kk.flatMap((kk => "code" === kk.kind ? [kk] : "quote" === kk.kind ? wk(kk.blocks) : []))
                           }
 
-                          function pC(CC) {
-                            switch (CC.kind) {
+                          function Hk(kk) {
+                            switch (kk.kind) {
                               case "heading":
                               case "paragraph":
-                                return CC.text;
+                                return kk.text;
                               case "code":
-                                return CC.code;
+                                return kk.code;
                               case "table":
-                                return [CC.header, ...CC.rows].map((CC => CC.join(" "))).join(" ");
+                                return [kk.header, ...kk.rows].map((kk => kk.join(" "))).join(" ");
                               case "list": {
-                                const zC = CC => CC.map((CC => `${CC.text} ${zC(CC.children)}`)).join(" ");
-                                return zC(CC.items)
+                                const Fk = kk => kk.map((kk => `${kk.text} ${Fk(kk.children)}`)).join(" ");
+                                return Fk(kk.items)
                               }
                               case "quote":
-                                return CC.blocks.map(pC).join(" ");
+                                return kk.blocks.map(Hk).join(" ");
                               case "rule":
                                 return ""
                             }
                           }
-                        }, 4769: (CC, zC, ZC) => {
-                          ZC.d(zC, {
-                            e: () => fC
+                        }, 4833: (kk, Fk, Ik) => {
+                          Ik.d(Fk, {
+                            b: () => lk
                           });
-                          var QC = ZC(48),
-                            wC = ZC(310),
-                            bC = ZC(1822),
-                            nC = ZC(1056);
+                          var Xk = Ik(58),
+                            Tk = Ik(318),
+                            ik = Ik(1864),
+                            yk = Ik(1096);
 
-                          function fC(CC) {
+                          function lk(kk) {
                             let {
-                              text: zC
-                            } = CC;
-                            const ZC = [];
-                            let fC = "";
-                            return (0, wC.dc)(zC).forEach(((CC, zC) => {
-                              if ("string" === typeof CC || !(0, bC.h)(CC.icon)) return void(fC += "string" === typeof CC ? CC : CC.icon);
-                              const wC = Math.max(0, fC.trimEnd().search(/\S{1,12}$/));
-                              ZC.push((0, nC.jsxs)(QC.Fragment, {
-                                children: [fC.slice(0, wC), (0, nC.jsxs)("span", {
+                              text: Fk
+                            } = kk;
+                            const Ik = [];
+                            let lk = "";
+                            return (0, Tk.oc)(Fk).forEach(((kk, Fk) => {
+                              if ("string" === typeof kk || !(0, ik.e)(kk.icon)) return void(lk += "string" === typeof kk ? kk : kk.icon);
+                              const Tk = Math.max(0, lk.trimEnd().search(/\S{1,12}$/));
+                              Ik.push((0, yk.jsxs)(Xk.Fragment, {
+                                children: [lk.slice(0, Tk), (0, yk.jsxs)("span", {
                                   className: "InlineIconTextGlue",
-                                  children: [fC.slice(wC), (0, nC.jsx)("span", {
+                                  children: [lk.slice(Tk), (0, yk.jsx)("span", {
                                     className: "InlineIconTextIcon",
                                     role: "img",
-                                    "aria-label": CC.icon,
-                                    children: (0, nC.jsx)(bC.e, {
-                                      itemName: CC.icon,
+                                    "aria-label": kk.icon,
+                                    children: (0, yk.jsx)(ik.d, {
+                                      itemName: kk.icon,
                                       amount: 0
                                     })
                                   })]
                                 })]
-                              }, zC)), fC = ""
-                            })), ZC.push(fC), (0, nC.jsx)(nC.Fragment, {
-                              children: ZC
+                              }, Fk)), lk = ""
+                            })), Ik.push(lk), (0, yk.jsx)(yk.Fragment, {
+                              children: Ik
                             })
                           }
-                        }, 4698: (CC, zC, ZC) => {
-                          ZC.d(zC, {
-                            e: () => GC,
-                            d: () => PC
+                        }, 4767: (kk, Fk, Ik) => {
+                          Ik.d(Fk, {
+                            d: () => xk,
+                            b: () => Jk
                           });
-                          var QC = ZC(48),
-                            wC = ZC(1383),
-                            bC = ZC(1811),
-                            nC = ZC(4701),
-                            fC = ZC(1056);
-                          const oC = (0, QC.memo)((function(CC) {
+                          var Xk = Ik(58),
+                            Tk = Ik(1402),
+                            ik = Ik(1849),
+                            yk = Ik(4775),
+                            lk = Ik(1096);
+                          const ak = (0, Xk.memo)((function(kk) {
                             let {
-                              initialParameters: zC
-                            } = CC;
-                            const ZC = (0, QC.useRef)(null),
-                              wC = (0, QC.useRef)(null),
-                              oC = (0, QC.useRef)(0),
-                              qC = (0, QC.useRef)(null),
-                              FC = zC.description,
-                              WC = zC.dZ,
+                              initialParameters: Fk
+                            } = kk;
+                            const Ik = (0, Xk.useRef)(null),
+                              Tk = (0, Xk.useRef)(null),
+                              ak = (0, Xk.useRef)(0),
+                              qk = (0, Xk.useRef)(null),
+                              Lk = Fk.description,
+                              tk = Fk.GI,
                               {
-                                scale: NC,
-                                rotation: MC
-                              } = null !== zC && void 0 !== zC ? zC : {},
-                              gC = (0, nC.f)();
-                            return (0, QC.useEffect)((() => {
-                              const CC = gC.onFrame((() => {
-                                const CC = gC.getState();
-                                if (!CC.isActive || !ZC.current || !wC.current) return;
-                                const zC = CC.state;
-                                if (ZC.current.value = zC.progress, zC.clickCount > oC.current) {
-                                  oC.current = zC.clickCount;
-                                  const CC = wC.current;
-                                  CC.classList.add("pulse"), qC.current = setTimeout((() => {
-                                    CC.classList.remove("pulse")
+                                scale: Zk,
+                                rotation: jk
+                              } = null !== Fk && void 0 !== Fk ? Fk : {},
+                              ek = (0, yk.g)();
+                            return (0, Xk.useEffect)((() => {
+                              const kk = ek.onFrame((() => {
+                                const kk = ek.getState();
+                                if (!kk.isActive || !Ik.current || !Tk.current) return;
+                                const Fk = kk.state;
+                                if (Ik.current.value = Fk.progress, Fk.clickCount > ak.current) {
+                                  ak.current = Fk.clickCount;
+                                  const kk = Tk.current;
+                                  kk.classList.add("pulse"), qk.current = setTimeout((() => {
+                                    kk.classList.remove("pulse")
                                   }), 100)
                                 }
                               }));
                               return () => {
-                                clearTimeout(qC.current), CC()
+                                clearTimeout(qk.current), kk()
                               }
-                            }), [gC]), (0, fC.jsx)(fC.Fragment, {
-                              children: (0, fC.jsxs)("div", {
+                            }), [ek]), (0, lk.jsx)(lk.Fragment, {
+                              children: (0, lk.jsxs)("div", {
                                 className: "QTEProgressBarWrapper",
                                 style: {
-                                  ...null !== NC && {
-                                    "--scale": NC
+                                  ...null !== Zk && {
+                                    "--scale": Zk
                                   },
-                                  ...null !== MC && {
-                                    "--rotation": `${MC}deg`
+                                  ...null !== jk && {
+                                    "--rotation": `${jk}deg`
                                   }
                                 },
-                                children: [(0, fC.jsx)("progress", {
+                                children: [(0, lk.jsx)("progress", {
                                   id: "catch",
                                   max: 100,
                                   className: "QTEProgressBar",
-                                  ref: ZC
-                                }), (0, fC.jsx)("span", {
+                                  ref: Ik
+                                }), (0, lk.jsx)("span", {
                                   className: "QTEProgressBarInteractionIndicator",
-                                  ref: wC,
-                                  children: (0, fC.jsx)(bC.e, {
+                                  ref: Tk,
+                                  children: (0, lk.jsx)(ik.c, {
                                     text: [{
-                                      icon: WC
+                                      icon: tk
                                     }]
                                   })
-                                }), (0, fC.jsx)("div", {
+                                }), (0, lk.jsx)("div", {
                                   className: "QTEProgressBarDescription",
-                                  children: (0, fC.jsx)(bC.e, {
-                                    text: FC
+                                  children: (0, lk.jsx)(ik.c, {
+                                    text: Lk
                                   })
                                 })]
                               })
                             })
                           }));
-                          var qC = ZC(1002),
-                            FC = ZC.n(qC);
-                          const WC = 2 * Math.PI * 90,
-                            NC = (0, QC.memo)((function(CC) {
+                          var qk = Ik(1055),
+                            Lk = Ik.n(qk);
+                          const tk = 2 * Math.PI * 90,
+                            Zk = (0, Xk.memo)((function(kk) {
                               let {
-                                initialParameters: zC
-                              } = CC;
-                              const ZC = (0, QC.useRef)(null),
-                                wC = (0, QC.useRef)(null),
-                                oC = (0, QC.useRef)(null),
-                                qC = zC.label,
-                                NC = zC.icon,
-                                MC = zC.EZ,
+                                initialParameters: Fk
+                              } = kk;
+                              const Ik = (0, Xk.useRef)(null),
+                                Tk = (0, Xk.useRef)(null),
+                                ak = (0, Xk.useRef)(null),
+                                qk = Fk.label,
+                                Zk = Fk.icon,
+                                jk = Fk.bI,
                                 {
-                                  scale: gC,
-                                  rotation: SC,
-                                  lZ: pC
-                                } = null !== zC && void 0 !== zC ? zC : {},
-                                PC = (0, nC.f)();
-                              return (0, QC.useEffect)((() => {
-                                const CC = PC.onFrame((() => {
-                                  var CC, zC;
-                                  const QC = PC.getState();
-                                  if (!QC.isActive || !wC.current) return;
-                                  const bC = QC.state,
-                                    nC = null !== (CC = bC.timeRemaining) && void 0 !== CC ? CC : 0,
-                                    fC = null !== (zC = bC.HZ) && void 0 !== zC ? zC : 1,
-                                    qC = WC * (1 - nC / fC);
-                                  wC.current.style.strokeDashoffset = `${qC}`, ZC.current && (ZC.current.style.opacity = nC > 0 ? "1" : "0"), oC.current && MC && (oC.current.textContent = `${(nC/1e3).toFixed(1)}s`)
+                                  scale: ek,
+                                  rotation: wk,
+                                  RI: Hk
+                                } = null !== Fk && void 0 !== Fk ? Fk : {},
+                                Jk = (0, yk.g)();
+                              return (0, Xk.useEffect)((() => {
+                                const kk = Jk.onFrame((() => {
+                                  var kk, Fk;
+                                  const Xk = Jk.getState();
+                                  if (!Xk.isActive || !Tk.current) return;
+                                  const ik = Xk.state,
+                                    yk = null !== (kk = ik.timeRemaining) && void 0 !== kk ? kk : 0,
+                                    lk = null !== (Fk = ik.uI) && void 0 !== Fk ? Fk : 1,
+                                    qk = tk * (1 - yk / lk);
+                                  Tk.current.style.strokeDashoffset = `${qk}`, Ik.current && (Ik.current.style.opacity = yk > 0 ? "1" : "0"), ak.current && jk && (ak.current.textContent = `${(yk/1e3).toFixed(1)}s`)
                                 }));
                                 return () => {
-                                  CC()
+                                  kk()
                                 }
-                              }), [PC, MC]), (0, fC.jsxs)("div", {
+                              }), [Jk, jk]), (0, lk.jsxs)("div", {
                                 className: "QTETimedClick",
-                                ref: ZC,
+                                ref: Ik,
                                 style: {
-                                  ...null !== gC && {
-                                    "--scale": gC
+                                  ...null !== ek && {
+                                    "--scale": ek
                                   },
-                                  ...null !== SC && {
-                                    "--rotation": `${SC}deg`
+                                  ...null !== wk && {
+                                    "--rotation": `${wk}deg`
                                   }
                                 },
-                                children: [(0, fC.jsxs)("div", {
+                                children: [(0, lk.jsxs)("div", {
                                   className: "QTETimedClickCircleContainer",
-                                  children: [(0, fC.jsxs)("svg", {
+                                  children: [(0, lk.jsxs)("svg", {
                                     className: "QTETimedClickCircularProgress",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, fC.jsx)("circle", {
+                                    children: [(0, lk.jsx)("circle", {
                                       className: "QTETimedClickProgressTrack",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
                                       fill: "none",
                                       strokeWidth: "12"
-                                    }), (0, fC.jsx)("circle", {
+                                    }), (0, lk.jsx)("circle", {
                                       className: "QTETimedClickProgressArc",
                                       cx: "100",
                                       cy: "100",
@@ -6295,80 +6295,80 @@ export const modules = {
                                       fill: "none",
                                       strokeWidth: "12",
                                       strokeLinecap: "square",
-                                      strokeDasharray: WC,
-                                      ref: wC
+                                      strokeDasharray: tk,
+                                      ref: Tk
                                     })]
-                                  }), (0, fC.jsx)("div", {
+                                  }), (0, lk.jsx)("div", {
                                     className: "QTETimedClickCenterContent",
-                                    children: (0, fC.jsx)(bC.e, {
+                                    children: (0, lk.jsx)(ik.c, {
                                       text: [{
-                                        icon: NC
+                                        icon: Zk
                                       }],
-                                      className: FC()("QTETimedClickInnerText", {
-                                        QTETimedClickBreathe: pC
+                                      className: Lk()("QTETimedClickInnerText", {
+                                        QTETimedClickBreathe: Hk
                                       })
                                     })
                                   })]
-                                }), (0, fC.jsxs)("div", {
+                                }), (0, lk.jsxs)("div", {
                                   className: "QTETimedClickRightTextContainer",
-                                  children: [(0, fC.jsx)(bC.e, {
-                                    text: qC,
+                                  children: [(0, lk.jsx)(ik.c, {
+                                    text: qk,
                                     className: "QTETimedClickLabelText"
-                                  }), MC && (0, fC.jsx)("span", {
+                                  }), jk && (0, lk.jsx)("span", {
                                     className: "QTETimedClickTimeText",
-                                    ref: oC
+                                    ref: ak
                                   })]
                                 })]
                               })
                             })),
-                            MC = (0, QC.memo)((function(CC) {
+                            jk = (0, Xk.memo)((function(kk) {
                               let {
-                                initialParameters: zC
-                              } = CC;
-                              const ZC = (0, QC.useRef)(null),
-                                wC = (0, QC.useRef)(null),
-                                oC = (0, QC.useRef)(null),
-                                qC = (0, QC.useRef)(!1),
-                                FC = zC.description,
-                                WC = null === zC || void 0 === zC ? void 0 : zC.icon,
-                                NC = (0, nC.f)();
-                              return (0, QC.useEffect)((() => {
-                                const CC = NC.onFrame((() => {
-                                  const CC = NC.getState();
-                                  if (!CC.isActive) return;
-                                  const zC = CC.state;
-                                  if (ZC.current) {
-                                    const CC = 100 * (zC.catchZonePosition - zC.cZ / 2);
-                                    ZC.current.style.left = `${CC}%`, ZC.current.style.width = 100 * zC.cZ + "%", zC.isCatching !== qC.current && (qC.current = zC.isCatching, zC.isCatching ? ZC.current.classList.add("catching") : ZC.current.classList.remove("catching"))
+                                initialParameters: Fk
+                              } = kk;
+                              const Ik = (0, Xk.useRef)(null),
+                                Tk = (0, Xk.useRef)(null),
+                                ak = (0, Xk.useRef)(null),
+                                qk = (0, Xk.useRef)(!1),
+                                Lk = Fk.description,
+                                tk = null === Fk || void 0 === Fk ? void 0 : Fk.icon,
+                                Zk = (0, yk.g)();
+                              return (0, Xk.useEffect)((() => {
+                                const kk = Zk.onFrame((() => {
+                                  const kk = Zk.getState();
+                                  if (!kk.isActive) return;
+                                  const Fk = kk.state;
+                                  if (Ik.current) {
+                                    const kk = 100 * (Fk.catchZonePosition - Fk.CI / 2);
+                                    Ik.current.style.left = `${kk}%`, Ik.current.style.width = 100 * Fk.CI + "%", Fk.isCatching !== qk.current && (qk.current = Fk.isCatching, Fk.isCatching ? Ik.current.classList.add("catching") : Ik.current.classList.remove("catching"))
                                   }
-                                  wC.current && (wC.current.style.left = 100 * zC.moverPosition + "%"), oC.current && (oC.current.value = zC.progress)
+                                  Tk.current && (Tk.current.style.left = 100 * Fk.moverPosition + "%"), ak.current && (ak.current.value = Fk.progress)
                                 }));
                                 return () => {
-                                  CC()
+                                  kk()
                                 }
-                              }), [NC]), (0, fC.jsxs)("div", {
+                              }), [Zk]), (0, lk.jsxs)("div", {
                                 className: "QTEGravityBar",
-                                children: [(0, fC.jsx)("div", {
+                                children: [(0, lk.jsx)("div", {
                                   className: "QTEGravityBarDescription",
-                                  children: (0, fC.jsx)(bC.e, {
-                                    text: FC
+                                  children: (0, lk.jsx)(ik.c, {
+                                    text: Lk
                                   })
-                                }), (0, fC.jsx)("progress", {
+                                }), (0, lk.jsx)("progress", {
                                   max: 100,
                                   className: "QTEGravityBarProgress",
-                                  ref: oC
-                                }), (0, fC.jsxs)("div", {
+                                  ref: ak
+                                }), (0, lk.jsxs)("div", {
                                   className: "QTEGravityBarTrack",
-                                  children: [(0, fC.jsx)("div", {
+                                  children: [(0, lk.jsx)("div", {
                                     className: "QTEGravityBarCatchZone",
-                                    ref: ZC
-                                  }), (0, fC.jsx)("div", {
+                                    ref: Ik
+                                  }), (0, lk.jsx)("div", {
                                     className: "QTEGravityBarMover",
-                                    ref: wC,
-                                    children: (0, fC.jsx)("span", {
-                                      children: WC && (0, fC.jsx)(bC.e, {
+                                    ref: Tk,
+                                    children: (0, lk.jsx)("span", {
+                                      children: tk && (0, lk.jsx)(ik.c, {
                                         text: [{
-                                          icon: WC,
+                                          icon: tk,
                                           style: {
                                             fontSize: "4rem"
                                           }
@@ -6379,749 +6379,749 @@ export const modules = {
                                 })]
                               })
                             }));
-                          var gC = ZC(600);
-                          const SC = (0, QC.memo)((function(CC) {
+                          var ek = Ik(628);
+                          const wk = (0, Xk.memo)((function(kk) {
                               let {
-                                initialParameters: zC
-                              } = CC;
-                              const ZC = (0, QC.useRef)(null),
-                                wC = zC.label,
-                                oC = zC.DZ,
+                                initialParameters: Fk
+                              } = kk;
+                              const Ik = (0, Xk.useRef)(null),
+                                Tk = Fk.label,
+                                ak = Fk.YI,
                                 {
-                                  icon: qC,
-                                  scale: FC,
-                                  rotation: WC
-                                } = null !== zC && void 0 !== zC ? zC : {},
-                                NC = 100 * (.5 - oC / 2),
-                                MC = 100 * oC,
-                                SC = (0, nC.f)();
-                              return (0, QC.useEffect)((() => {
-                                const CC = SC.onFrame((() => {
-                                  const CC = SC.getState();
-                                  if (!CC.isActive || !ZC.current) return;
-                                  const zC = CC.state;
-                                  ZC.current.style.left = 100 * zC.markerPosition + "%"
+                                  icon: qk,
+                                  scale: Lk,
+                                  rotation: tk
+                                } = null !== Fk && void 0 !== Fk ? Fk : {},
+                                Zk = 100 * (.5 - ak / 2),
+                                jk = 100 * ak,
+                                wk = (0, yk.g)();
+                              return (0, Xk.useEffect)((() => {
+                                const kk = wk.onFrame((() => {
+                                  const kk = wk.getState();
+                                  if (!kk.isActive || !Ik.current) return;
+                                  const Fk = kk.state;
+                                  Ik.current.style.left = 100 * Fk.markerPosition + "%"
                                 }));
                                 return () => {
-                                  CC()
+                                  kk()
                                 }
-                              }), [SC]), (0, fC.jsxs)("div", {
+                              }), [wk]), (0, lk.jsxs)("div", {
                                 className: "QTEPrecisionBarWrapper",
                                 style: {
-                                  ...!(0, gC.H)(FC) && {
-                                    "--scale": FC
+                                  ...!(0, ek.Q)(Lk) && {
+                                    "--scale": Lk
                                   },
-                                  ...!(0, gC.H)(WC) && {
-                                    "--rotation": `${WC}deg`
+                                  ...!(0, ek.Q)(tk) && {
+                                    "--rotation": `${tk}deg`
                                   }
                                 },
-                                children: [qC && (0, fC.jsx)(bC.e, {
+                                children: [qk && (0, lk.jsx)(ik.c, {
                                   text: [{
-                                    icon: qC
+                                    icon: qk
                                   }],
                                   className: "QTEPrecisionBarIcon"
-                                }), (0, fC.jsxs)("div", {
+                                }), (0, lk.jsxs)("div", {
                                   className: "QTEPrecisionBarTrack",
-                                  children: [(0, fC.jsx)("div", {
+                                  children: [(0, lk.jsx)("div", {
                                     className: "QTEPrecisionBarSuccessZone",
                                     style: {
-                                      left: `${NC}%`,
-                                      width: `${MC}%`
+                                      left: `${Zk}%`,
+                                      width: `${jk}%`
                                     }
-                                  }), (0, fC.jsx)("div", {
+                                  }), (0, lk.jsx)("div", {
                                     className: "QTEPrecisionBarMarker",
-                                    ref: ZC
+                                    ref: Ik
                                   })]
-                                }), (0, fC.jsx)("div", {
+                                }), (0, lk.jsx)("div", {
                                   className: "QTEPrecisionBarLabel",
-                                  children: (0, fC.jsx)(bC.e, {
-                                    text: wC
+                                  children: (0, lk.jsx)(ik.c, {
+                                    text: Tk
                                   })
                                 })]
                               })
                             })),
-                            pC = (0, QC.memo)((function(CC) {
+                            Hk = (0, Xk.memo)((function(kk) {
                               let {
-                                initialParameters: zC
-                              } = CC;
-                              const ZC = (0, QC.useRef)(null),
-                                [wC, oC] = (0, QC.useState)((() => new Array(zC.yZ).fill("pending"))),
-                                [qC, FC] = (0, QC.useState)((() => {
-                                  const CC = zC.BZ;
-                                  return (0, gC.H)(CC) || CC <= 0 ? [] : new Array(CC).fill("pending")
+                                initialParameters: Fk
+                              } = kk;
+                              const Ik = (0, Xk.useRef)(null),
+                                [Tk, ak] = (0, Xk.useState)((() => new Array(Fk.gI).fill("pending"))),
+                                [qk, Lk] = (0, Xk.useState)((() => {
+                                  const kk = Fk.rI;
+                                  return (0, ek.Q)(kk) || kk <= 0 ? [] : new Array(kk).fill("pending")
                                 })),
-                                WC = zC.label,
+                                tk = Fk.label,
                                 {
-                                  icon: NC
-                                } = zC,
-                                MC = (0, QC.useRef)(0),
-                                SC = (0, QC.useRef)(0),
-                                pC = (0, QC.useRef)([]),
-                                PC = (0, nC.f)();
-                              return (0, QC.useEffect)((() => {
-                                const CC = PC.onFrame((() => {
-                                  const CC = PC.getState();
-                                  if (!CC.isActive || !ZC.current) return;
-                                  const zC = CC.state,
-                                    QC = 30 + 60 * zC.outerCircleProgress;
-                                  if (ZC.current.setAttribute("r", String(QC)), !0 === zC.lastClickResult && zC.successes > MC.current) {
-                                    ZC.current.classList.remove("QTERhythmClickOuterCircle--miss"), ZC.current.classList.add("QTERhythmClickOuterCircle--hit");
-                                    const CC = setTimeout((() => {
-                                      var CC;
-                                      null === (CC = ZC.current) || void 0 === CC || CC.classList.remove("QTERhythmClickOuterCircle--hit")
+                                  icon: Zk
+                                } = Fk,
+                                jk = (0, Xk.useRef)(0),
+                                wk = (0, Xk.useRef)(0),
+                                Hk = (0, Xk.useRef)([]),
+                                Jk = (0, yk.g)();
+                              return (0, Xk.useEffect)((() => {
+                                const kk = Jk.onFrame((() => {
+                                  const kk = Jk.getState();
+                                  if (!kk.isActive || !Ik.current) return;
+                                  const Fk = kk.state,
+                                    Xk = 30 + 60 * Fk.outerCircleProgress;
+                                  if (Ik.current.setAttribute("r", String(Xk)), !0 === Fk.lastClickResult && Fk.successes > jk.current) {
+                                    Ik.current.classList.remove("QTERhythmClickOuterCircle--miss"), Ik.current.classList.add("QTERhythmClickOuterCircle--hit");
+                                    const kk = setTimeout((() => {
+                                      var kk;
+                                      null === (kk = Ik.current) || void 0 === kk || kk.classList.remove("QTERhythmClickOuterCircle--hit")
                                     }), 200);
-                                    pC.current.push(CC)
-                                  } else if (!1 === zC.lastClickResult && zC.misses > SC.current) {
-                                    ZC.current.classList.remove("QTERhythmClickOuterCircle--hit"), ZC.current.classList.add("QTERhythmClickOuterCircle--miss");
-                                    const CC = setTimeout((() => {
-                                      var CC;
-                                      null === (CC = ZC.current) || void 0 === CC || CC.classList.remove("QTERhythmClickOuterCircle--miss")
+                                    Hk.current.push(kk)
+                                  } else if (!1 === Fk.lastClickResult && Fk.misses > wk.current) {
+                                    Ik.current.classList.remove("QTERhythmClickOuterCircle--hit"), Ik.current.classList.add("QTERhythmClickOuterCircle--miss");
+                                    const kk = setTimeout((() => {
+                                      var kk;
+                                      null === (kk = Ik.current) || void 0 === kk || kk.classList.remove("QTERhythmClickOuterCircle--miss")
                                     }), 200);
-                                    pC.current.push(CC)
+                                    Hk.current.push(kk)
                                   }
-                                  zC.successes === MC.current && zC.misses === SC.current || (MC.current = zC.successes, SC.current = zC.misses, oC((CC => {
-                                    const ZC = [...CC];
-                                    for (let QC = 0; QC < zC.yZ; QC++) ZC[QC] = QC < zC.successes ? "success" : "pending";
-                                    return ZC
-                                  })), FC((CC => {
-                                    if (0 === CC.length) return CC;
-                                    const ZC = [...CC];
-                                    for (let QC = 0; QC < ZC.length; QC++) ZC[QC] = QC < zC.misses ? "miss" : "pending";
-                                    return ZC
+                                  Fk.successes === jk.current && Fk.misses === wk.current || (jk.current = Fk.successes, wk.current = Fk.misses, ak((kk => {
+                                    const Ik = [...kk];
+                                    for (let Xk = 0; Xk < Fk.gI; Xk++) Ik[Xk] = Xk < Fk.successes ? "success" : "pending";
+                                    return Ik
+                                  })), Lk((kk => {
+                                    if (0 === kk.length) return kk;
+                                    const Ik = [...kk];
+                                    for (let Xk = 0; Xk < Ik.length; Xk++) Ik[Xk] = Xk < Fk.misses ? "miss" : "pending";
+                                    return Ik
                                   })))
                                 }));
                                 return () => {
-                                  CC();
-                                  for (const CC of pC.current) clearTimeout(CC);
-                                  pC.current = []
+                                  kk();
+                                  for (const kk of Hk.current) clearTimeout(kk);
+                                  Hk.current = []
                                 }
-                              }), [PC]), (0, fC.jsxs)("div", {
+                              }), [Jk]), (0, lk.jsxs)("div", {
                                 className: "QTERhythmClickWrapper",
-                                children: [(0, fC.jsx)("div", {
+                                children: [(0, lk.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: wC.map(((CC, zC) => (0, fC.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("success" === CC ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
-                                  }, zC)))
-                                }), (0, fC.jsxs)("div", {
+                                  children: Tk.map(((kk, Fk) => (0, lk.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("success" === kk ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
+                                  }, Fk)))
+                                }), (0, lk.jsxs)("div", {
                                   className: "QTERhythmClickCircleContainer",
-                                  children: [(0, fC.jsxs)("svg", {
+                                  children: [(0, lk.jsxs)("svg", {
                                     className: "QTERhythmClickSvg",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, fC.jsx)("circle", {
+                                    children: [(0, lk.jsx)("circle", {
                                       className: "QTERhythmClickInnerCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 30
-                                    }), (0, fC.jsx)("circle", {
+                                    }), (0, lk.jsx)("circle", {
                                       className: "QTERhythmClickOuterCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
-                                      ref: ZC
+                                      ref: Ik
                                     })]
-                                  }), NC && (0, fC.jsx)("div", {
+                                  }), Zk && (0, lk.jsx)("div", {
                                     className: "QTERhythmClickCenterContent",
-                                    children: (0, fC.jsx)(bC.e, {
+                                    children: (0, lk.jsx)(ik.c, {
                                       text: [{
-                                        icon: NC
+                                        icon: Zk
                                       }],
                                       className: "QTERhythmClickIcon"
                                     })
                                   })]
-                                }), qC.length > 0 && (0, fC.jsx)("div", {
+                                }), qk.length > 0 && (0, lk.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: qC.map(((CC, zC) => (0, fC.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("miss" === CC ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
-                                  }, zC)))
-                                }), (0, fC.jsx)("div", {
+                                  children: qk.map(((kk, Fk) => (0, lk.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("miss" === kk ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
+                                  }, Fk)))
+                                }), (0, lk.jsx)("div", {
                                   className: "QTERhythmClickLabel",
-                                  children: (0, fC.jsx)(bC.e, {
-                                    text: WC
+                                  children: (0, lk.jsx)(ik.c, {
+                                    text: tk
                                   })
                                 })]
                               })
                             }));
 
-                          function PC(CC) {
+                          function Jk(kk) {
                             let {
-                              qte: zC
-                            } = CC;
-                            switch (zC.type) {
+                              qte: Fk
+                            } = kk;
+                            switch (Fk.type) {
                               case "progressBar":
-                                return (0, fC.jsx)(oC, {
-                                  initialParameters: zC.parameters
+                                return (0, lk.jsx)(ak, {
+                                  initialParameters: Fk.parameters
                                 });
                               case "timedClick":
-                                return (0, fC.jsx)(NC, {
-                                  initialParameters: zC.parameters
+                                return (0, lk.jsx)(Zk, {
+                                  initialParameters: Fk.parameters
                                 });
                               case "gravityBar":
-                                return (0, fC.jsx)(MC, {
-                                  initialParameters: zC.parameters
+                                return (0, lk.jsx)(jk, {
+                                  initialParameters: Fk.parameters
                                 });
                               case "precisionBar":
-                                return (0, fC.jsx)(SC, {
-                                  initialParameters: zC.parameters
+                                return (0, lk.jsx)(wk, {
+                                  initialParameters: Fk.parameters
                                 });
                               case "rhythmClick":
-                                return (0, fC.jsx)(pC, {
-                                  initialParameters: zC.parameters
+                                return (0, lk.jsx)(Hk, {
+                                  initialParameters: Fk.parameters
                                 });
                               default:
                                 return console.warn("Unknown QTE type"), null
                             }
                           }
-                          const GC = (0, QC.memo)((function() {
-                            const [CC, zC] = (0, QC.useState)({
+                          const xk = (0, Xk.memo)((function() {
+                            const [kk, Fk] = (0, Xk.useState)({
                               type: null,
                               parameters: null,
                               state: null,
                               isActive: !1
                             });
-                            return (0, wC.c)("qteStateUpdated", (CC => {
-                              zC(CC)
-                            })), CC.isActive && CC.type ? (0, fC.jsx)("div", {
+                            return (0, Tk.d)("qteStateUpdated", (kk => {
+                              Fk(kk)
+                            })), kk.isActive && kk.type ? (0, lk.jsx)("div", {
                               className: "QTE",
                               "data-camera-keeper": "",
-                              children: (0, fC.jsx)(PC, {
-                                qte: CC
+                              children: (0, lk.jsx)(Jk, {
+                                qte: kk
                               })
                             }) : null
                           }))
-                        }, 4701: (CC, zC, ZC) => {
-                          ZC.d(zC, {
-                            b: () => fC,
-                            f: () => oC
+                        }, 4775: (kk, Fk, Ik) => {
+                          Ik.d(Fk, {
+                            d: () => lk,
+                            g: () => ak
                           });
-                          var QC = ZC(48),
-                            wC = ZC(1257),
-                            bC = ZC(4706);
-                          const nC = {
-                              getState: () => bC.c.getCurrentState(),
-                              onFrame: wC.r
+                          var Xk = Ik(58),
+                            Tk = Ik(1276),
+                            ik = Ik(4784);
+                          const yk = {
+                              getState: () => ik.b.getCurrentState(),
+                              onFrame: Tk.u
                             },
-                            fC = (0, QC.createContext)(nC);
+                            lk = (0, Xk.createContext)(yk);
 
-                          function oC() {
-                            return (0, QC.useContext)(fC)
+                          function ak() {
+                            return (0, Xk.useContext)(lk)
                           }
-                        }, 4775: (CC, zC, ZC) => {
-                          ZC.d(zC, {
-                            c: () => EC,
-                            f: () => HC
+                        }, 4837: (kk, Fk, Ik) => {
+                          Ik.d(Fk, {
+                            d: () => bk,
+                            e: () => uk
                           });
-                          var QC = ZC(4783),
-                            wC = ZC(310);
-                          const bC = 120,
-                            nC = 260,
-                            fC = 1.15,
-                            oC = 1.2,
-                            qC = 2,
-                            FC = 1.08,
-                            WC = .8,
-                            NC = .95,
-                            MC = 8,
-                            gC = "[\"')\\]\u300d\u300f\uff09]*",
-                            SC = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${gC}$`),
-                            pC = new RegExp(`[?\uff1f]${gC}$`),
-                            PC = new RegExp(`[!\uff01]${gC}$`),
-                            GC = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-                            RC = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-                            AC = new RegExp(`[${RC}]`),
-                            xC = new RegExp(`[${RC}]|[^${RC}]+`, "g"),
-                            JC = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+                          var Xk = Ik(4843),
+                            Tk = Ik(318);
+                          const ik = 120,
+                            yk = 260,
+                            lk = 1.15,
+                            ak = 1.2,
+                            qk = 2,
+                            Lk = 1.08,
+                            tk = .8,
+                            Zk = .95,
+                            jk = 8,
+                            ek = "[\"')\\]\u300d\u300f\uff09]*",
+                            wk = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${ek}$`),
+                            Hk = new RegExp(`[?\uff1f]${ek}$`),
+                            Jk = new RegExp(`[!\uff01]${ek}$`),
+                            xk = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+                            Pk = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+                            Kk = new RegExp(`[${Pk}]`),
+                            Qk = new RegExp(`[${Pk}]|[^${Pk}]+`, "g"),
+                            sk = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-                          function IC(CC) {
-                            let zC = 2166136261;
-                            for (let ZC = 0; ZC < CC.length; ZC++) zC ^= CC.charCodeAt(ZC), zC = Math.imul(zC, 16777619);
-                            return (zC >>> 0) / 4294967295 * 2 - 1
+                          function Vk(kk) {
+                            let Fk = 2166136261;
+                            for (let Ik = 0; Ik < kk.length; Ik++) Fk ^= kk.charCodeAt(Ik), Fk = Math.imul(Fk, 16777619);
+                            return (Fk >>> 0) / 4294967295 * 2 - 1
                           }
 
-                          function iC(CC) {
-                            var zC;
-                            if (AC.test(CC)) return 1;
-                            const ZC = CC.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-                              QC = ZC.replace(/[^0-9]/g, "");
-                            if (QC.length > 0 && !/\p{L}/u.test(ZC)) return Math.min(QC.length, 4);
-                            const wC = null !== (zC = ZC.match(JC)) && void 0 !== zC ? zC : [];
-                            if (0 === wC.length) {
-                              var bC, nC;
-                              const CC = null !== (bC = null === (nC = ZC.match(/\p{L}/gu)) || void 0 === nC ? void 0 : nC.length) && void 0 !== bC ? bC : 0;
-                              return 0 === CC ? 0 : Math.min(Math.max(1, Math.round(CC / 2.5)), MC)
+                          function zk(kk) {
+                            var Fk;
+                            if (Kk.test(kk)) return 1;
+                            const Ik = kk.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+                              Xk = Ik.replace(/[^0-9]/g, "");
+                            if (Xk.length > 0 && !/\p{L}/u.test(Ik)) return Math.min(Xk.length, 4);
+                            const Tk = null !== (Fk = Ik.match(sk)) && void 0 !== Fk ? Fk : [];
+                            if (0 === Tk.length) {
+                              var ik, yk;
+                              const kk = null !== (ik = null === (yk = Ik.match(/\p{L}/gu)) || void 0 === yk ? void 0 : yk.length) && void 0 !== ik ? ik : 0;
+                              return 0 === kk ? 0 : Math.min(Math.max(1, Math.round(kk / 2.5)), jk)
                             }
-                            const fC = ZC.replace(/[^\p{L}]/gu, ""),
-                              oC = wC.length > 1 && "e" === wC.at(-1) && fC.endsWith("e") && !fC.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(CC.replace(/[^\p{L}]/gu, ""));
-                            return Math.min(wC.length - (oC ? 1 : 0), MC)
+                            const lk = Ik.replace(/[^\p{L}]/gu, ""),
+                              ak = Tk.length > 1 && "e" === Tk.at(-1) && lk.endsWith("e") && !lk.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(kk.replace(/[^\p{L}]/gu, ""));
+                            return Math.min(Tk.length - (ak ? 1 : 0), jk)
                           }
 
-                          function vC(CC) {
-                            return CC.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+                          function Sk(kk) {
+                            return kk.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
                           }
 
-                          function eC(CC) {
-                            const zC = CC.replace(/[^\p{L}]/gu, "");
-                            return zC.length >= 2 && zC === zC.toUpperCase() && zC !== zC.toLowerCase()
+                          function vk(kk) {
+                            const Fk = kk.replace(/[^\p{L}]/gu, "");
+                            return Fk.length >= 2 && Fk === Fk.toUpperCase() && Fk !== Fk.toLowerCase()
                           }
 
-                          function hC(CC, zC) {
-                            var ZC;
-                            const MC = zC && (0, QC.m)(zC),
-                              gC = null !== (ZC = null === MC || void 0 === MC ? void 0 : MC.syllableMs) && void 0 !== ZC ? ZC : QC.b,
-                              RC = function(CC) {
-                                const zC = [];
-                                for (const QC of (0, wC.dc)(CC))
-                                  if ("string" === typeof QC)
-                                    for (const CC of QC.split(/(\s+)/)) {
-                                      if ("" === CC) continue;
-                                      if (/^\s+$/.test(CC)) {
-                                        zC.push({
+                          function Ek(kk, Fk) {
+                            var Ik;
+                            const jk = Fk && (0, Xk.k)(Fk),
+                              ek = null !== (Ik = null === jk || void 0 === jk ? void 0 : jk.syllableMs) && void 0 !== Ik ? Ik : Xk.b,
+                              Pk = function(kk) {
+                                const Fk = [];
+                                for (const Xk of (0, Tk.oc)(kk))
+                                  if ("string" === typeof Xk)
+                                    for (const kk of Xk.split(/(\s+)/)) {
+                                      if ("" === kk) continue;
+                                      if (/^\s+$/.test(kk)) {
+                                        Fk.push({
                                           kind: "space",
-                                          text: CC
+                                          text: kk
                                         });
                                         continue
                                       }
-                                      if (!AC.test(CC)) {
-                                        zC.push({
+                                      if (!Kk.test(kk)) {
+                                        Fk.push({
                                           kind: "word",
-                                          text: CC,
+                                          text: kk,
                                           delayMs: 0
                                         });
                                         continue
                                       }
-                                      let QC = !0;
-                                      for (const wC of null !== (ZC = CC.match(xC)) && void 0 !== ZC ? ZC : []) {
-                                        var ZC;
-                                        const CC = zC.at(-1);
-                                        QC || "word" !== (null === CC || void 0 === CC ? void 0 : CC.kind) || AC.test(wC) || /[\p{L}\p{N}]/u.test(wC) ? (QC || zC.push({
+                                      let Xk = !0;
+                                      for (const Tk of null !== (Ik = kk.match(Qk)) && void 0 !== Ik ? Ik : []) {
+                                        var Ik;
+                                        const kk = Fk.at(-1);
+                                        Xk || "word" !== (null === kk || void 0 === kk ? void 0 : kk.kind) || Kk.test(Tk) || /[\p{L}\p{N}]/u.test(Tk) ? (Xk || Fk.push({
                                           kind: "space",
                                           text: "\u200b"
-                                        }), zC.push({
+                                        }), Fk.push({
                                           kind: "word",
-                                          text: wC,
+                                          text: Tk,
                                           delayMs: 0
-                                        }), QC = !1) : CC.text += wC
+                                        }), Xk = !1) : kk.text += Tk
                                       }
-                                    } else zC.push({
+                                    } else Fk.push({
                                       kind: "icon",
-                                      text: QC.icon,
+                                      text: Xk.icon,
                                       delayMs: 0
                                     });
-                                return zC
-                              }(CC),
-                              JC = [];
-                            let hC = [];
-                            for (const QC of RC) "space" !== QC.kind && (hC.push(QC), SC.test(QC.text) && (JC.push(hC), hC = []));
-                            JC.push(hC);
-                            const KC = [];
-                            let YC = 0;
-                            for (const QC of JC) {
-                              var dC, mC;
-                              const CC = null !== (dC = null === (mC = QC.at(-1)) || void 0 === mC ? void 0 : mC.text) && void 0 !== dC ? dC : "",
-                                zC = pC.test(CC),
-                                ZC = PC.test(CC),
-                                wC = QC.map((CC => "word" === CC.kind ? iC(CC.text) : 1)),
-                                RC = wC.findLastIndex((CC => CC > 0));
-                              for (const [pC, PC] of QC.entries()) {
-                                const CC = "word" === PC.kind,
-                                  QC = wC[pC];
-                                PC.delayMs = YC;
-                                for (let wC = 0; MC && wC < QC; wC++) {
+                                return Fk
+                              }(kk),
+                              sk = [];
+                            let Ek = [];
+                            for (const Xk of Pk) "space" !== Xk.kind && (Ek.push(Xk), wk.test(Xk.text) && (sk.push(Ek), Ek = []));
+                            sk.push(Ek);
+                            const Ok = [];
+                            let nk = 0;
+                            for (const Xk of sk) {
+                              var Gk, pk;
+                              const kk = null !== (Gk = null === (pk = Xk.at(-1)) || void 0 === pk ? void 0 : pk.text) && void 0 !== Gk ? Gk : "",
+                                Fk = Hk.test(kk),
+                                Ik = Jk.test(kk),
+                                Tk = Xk.map((kk => "word" === kk.kind ? zk(kk.text) : 1)),
+                                Pk = Tk.findLastIndex((kk => kk > 0));
+                              for (const [Hk, Jk] of Xk.entries()) {
+                                const kk = "word" === Jk.kind,
+                                  Xk = Tk[Hk];
+                                Jk.delayMs = nk;
+                                for (let Tk = 0; jk && Tk < Xk; Tk++) {
                                   const {
-                                    intonation: bC
-                                  } = MC;
-                                  let nC = RC > 0 ? -bC.declineSemitones * (pC / RC) : 0;
-                                  nC += IC(`${vC(PC.text)}|${wC}`) * bC.variationSemitones;
-                                  const SC = Math.min(1, bC.variationSemitones);
-                                  let GC = MC.glideSemitones,
-                                    AC = 1;
-                                  ZC && (nC += bC.exclaimLiftSemitones, AC *= fC), zC && pC === RC && (nC += bC.questionRiseSemitones * (QC > 1 ? .5 + .5 * wC / (QC - 1) : 1), wC === QC - 1 && (GC = Math.abs(GC) + bC.questionRiseSemitones / 2)), CC && eC(PC.text) && (nC += qC * SC, AC *= oC), QC > 1 && 0 === wC && (nC += WC * SC, AC *= FC), KC.push({
-                                    atMs: YC + wC * gC,
-                                    semitones: nC,
-                                    glideSemitones: GC,
-                                    durationMs: wC < QC - 1 ? Math.min(MC.durationMs, gC * NC) : MC.durationMs,
-                                    level: AC
+                                    intonation: ik
+                                  } = jk;
+                                  let yk = Pk > 0 ? -ik.declineSemitones * (Hk / Pk) : 0;
+                                  yk += Vk(`${Sk(Jk.text)}|${Tk}`) * ik.variationSemitones;
+                                  const wk = Math.min(1, ik.variationSemitones);
+                                  let xk = jk.glideSemitones,
+                                    Kk = 1;
+                                  Ik && (yk += ik.exclaimLiftSemitones, Kk *= lk), Fk && Hk === Pk && (yk += ik.questionRiseSemitones * (Xk > 1 ? .5 + .5 * Tk / (Xk - 1) : 1), Tk === Xk - 1 && (xk = Math.abs(xk) + ik.questionRiseSemitones / 2)), kk && vk(Jk.text) && (yk += qk * wk, Kk *= ak), Xk > 1 && 0 === Tk && (yk += tk * wk, Kk *= Lk), Ok.push({
+                                    atMs: nk + Tk * ek,
+                                    semitones: yk,
+                                    glideSemitones: xk,
+                                    durationMs: Tk < Xk - 1 ? Math.min(jk.durationMs, ek * Zk) : jk.durationMs,
+                                    level: Kk
                                   })
                                 }
-                                YC += QC * gC + (SC.test(PC.text) ? nC : GC.test(PC.text) ? bC : 0)
+                                nk += Xk * ek + (wk.test(Jk.text) ? yk : xk.test(Jk.text) ? ik : 0)
                               }
                             }
                             return {
-                              pieces: RC.map((CC => "space" === CC.kind ? CC : "icon" === CC.kind ? {
+                              pieces: Pk.map((kk => "space" === kk.kind ? kk : "icon" === kk.kind ? {
                                 kind: "icon",
-                                icon: CC.text,
-                                delayMs: CC.delayMs
+                                icon: kk.text,
+                                delayMs: kk.delayMs
                               } : {
                                 kind: "word",
-                                text: CC.text,
-                                delayMs: CC.delayMs
+                                text: kk.text,
+                                delayMs: kk.delayMs
                               })),
-                              blips: KC
+                              blips: Ok
                             }
                           }
-                          var KC = ZC(1143),
-                            YC = ZC(1192),
-                            dC = ZC(1843);
+                          var Ok = Ik(1179),
+                            nk = Ik(1241),
+                            Gk = Ik(1881);
 
-                          function mC(CC) {
-                            if ("string" === typeof CC) return CC;
-                            const zC = YC.h.get().getCurrentLanguageCode();
-                            return (0, KC.r)(zC, CC.translationKey, (0, KC.q)(CC.params, dC.d.shown))
+                          function pk(kk) {
+                            if ("string" === typeof kk) return kk;
+                            const Fk = nk.d.get().getCurrentLanguageCode();
+                            return (0, Ok.q)(Fk, kk.translationKey, (0, Ok.m)(kk.params, Gk.d.shown))
                           }
 
-                          function HC(CC) {
-                            const zC = void 0 === CC.voice ? null : (0, QC.q)(CC.voice),
-                              ZC = zC && (0, QC.m)(zC);
+                          function uk(kk) {
+                            const Fk = void 0 === kk.voice ? null : (0, Xk.n)(kk.voice),
+                              Ik = Fk && (0, Xk.k)(Fk);
                             return {
-                              plan: hC(mC(CC.line), ZC),
-                              synth: ZC
+                              plan: Ek(pk(kk.line), Ik),
+                              synth: Ik
                             }
                           }
 
-                          function EC(CC) {
-                            const zC = [];
-                            let ZC = [];
-                            for (const [wC, bC] of CC.entries()) {
-                              var QC;
-                              "space" === bC.kind && (" " !== bC.text || "icon" !== (null === (QC = CC[wC + 1]) || void 0 === QC ? void 0 : QC.kind)) ? (ZC.length > 0 && zC.push(ZC), zC.push([bC]), ZC = []) : ZC.push(bC)
+                          function bk(kk) {
+                            const Fk = [];
+                            let Ik = [];
+                            for (const [Tk, ik] of kk.entries()) {
+                              var Xk;
+                              "space" === ik.kind && (" " !== ik.text || "icon" !== (null === (Xk = kk[Tk + 1]) || void 0 === Xk ? void 0 : Xk.kind)) ? (Ik.length > 0 && Fk.push(Ik), Fk.push([ik]), Ik = []) : Ik.push(ik)
                             }
-                            return ZC.length > 0 && zC.push(ZC), zC
+                            return Ik.length > 0 && Fk.push(Ik), Fk
                           }
-                        }, 4788: (CC, zC, ZC) => {
-                          ZC.d(zC, {
-                            b: () => FC,
-                            f: () => WC
+                        }, 4850: (kk, Fk, Ik) => {
+                          Ik.d(Fk, {
+                            e: () => Lk,
+                            i: () => tk
                           });
-                          var QC = ZC(4797),
-                            wC = ZC(20);
-                          const bC = .25,
-                            nC = .85,
-                            fC = .02,
-                            oC = .01;
+                          var Xk = Ik(4857),
+                            Tk = Ik(25);
+                          const ik = .25,
+                            yk = .85,
+                            lk = .02,
+                            ak = .01;
 
-                          function qC(CC, zC, ZC, QC, wC, bC, fC) {
+                          function qk(kk, Fk, Ik, Xk, Tk, ik, lk) {
                             const {
-                              waveform: oC,
-                              pitchHz: qC,
-                              attackMs: FC,
-                              releaseMs: WC,
-                              lowpassHz: NC
-                            } = ZC, MC = wC + QC.durationMs / 1e3, gC = qC * 2 ** (QC.semitones / 12), SC = CC.createOscillator();
-                            SC.type = oC, SC.frequency.setValueAtTime(gC, wC), SC.frequency.exponentialRampToValueAtTime(gC * 2 ** (QC.glideSemitones / 12), MC);
-                            const pC = wC + Math.min(FC, QC.durationMs) / 1e3,
-                              PC = CC.createGain();
-                            PC.gain.setValueAtTime(0, wC), PC.gain.linearRampToValueAtTime(bC, pC), PC.gain.linearRampToValueAtTime(bC * nC, Math.max(pC, MC - WC / 1e3)), PC.gain.linearRampToValueAtTime(0, MC);
-                            const GC = [SC];
-                            if (null !== NC) {
-                              const zC = CC.createBiquadFilter();
-                              zC.type = "lowpass", zC.frequency.value = NC, GC.push(zC)
+                              waveform: ak,
+                              pitchHz: qk,
+                              attackMs: Lk,
+                              releaseMs: tk,
+                              lowpassHz: Zk
+                            } = Ik, jk = Tk + Xk.durationMs / 1e3, ek = qk * 2 ** (Xk.semitones / 12), wk = kk.createOscillator();
+                            wk.type = ak, wk.frequency.setValueAtTime(ek, Tk), wk.frequency.exponentialRampToValueAtTime(ek * 2 ** (Xk.glideSemitones / 12), jk);
+                            const Hk = Tk + Math.min(Lk, Xk.durationMs) / 1e3,
+                              Jk = kk.createGain();
+                            Jk.gain.setValueAtTime(0, Tk), Jk.gain.linearRampToValueAtTime(ik, Hk), Jk.gain.linearRampToValueAtTime(ik * yk, Math.max(Hk, jk - tk / 1e3)), Jk.gain.linearRampToValueAtTime(0, jk);
+                            const xk = [wk];
+                            if (null !== Zk) {
+                              const Fk = kk.createBiquadFilter();
+                              Fk.type = "lowpass", Fk.frequency.value = Zk, xk.push(Fk)
                             }
-                            GC.push(PC, zC);
-                            for (let nC = 1; nC < GC.length; nC++) GC[nC - 1].connect(GC[nC]);
-                            return SC.onended = () => {
-                              for (const CC of GC.slice(0, -1)) CC.disconnect();
-                              fC()
-                            }, SC.start(wC), SC.stop(MC), SC
+                            xk.push(Jk, Fk);
+                            for (let yk = 1; yk < xk.length; yk++) xk[yk - 1].connect(xk[yk]);
+                            return wk.onended = () => {
+                              for (const kk of xk.slice(0, -1)) kk.disconnect();
+                              lk()
+                            }, wk.start(Tk), wk.stop(jk), wk
                           }
 
-                          function FC(CC, zC, ZC, QC, wC, nC) {
-                            if (0 === QC.length) return nC(), () => {};
-                            const FC = bC * ZC.volume * wC,
-                              WC = CC.createGain();
-                            WC.connect(zC);
-                            const NC = CC.currentTime + fC,
-                              MC = new Set;
-                            for (const bC of QC) {
-                              const zC = qC(CC, WC, ZC, bC, NC + bC.atMs / 1e3, FC * bC.level, (() => {
-                                MC.delete(zC), 0 === MC.size && (WC.disconnect(), nC())
+                          function Lk(kk, Fk, Ik, Xk, Tk, yk) {
+                            if (0 === Xk.length) return yk(), () => {};
+                            const Lk = ik * Ik.volume * Tk,
+                              tk = kk.createGain();
+                            tk.connect(Fk);
+                            const Zk = kk.currentTime + lk,
+                              jk = new Set;
+                            for (const ik of Xk) {
+                              const Fk = qk(kk, tk, Ik, ik, Zk + ik.atMs / 1e3, Lk * ik.level, (() => {
+                                jk.delete(Fk), 0 === jk.size && (tk.disconnect(), yk())
                               }));
-                              MC.add(zC)
+                              jk.add(Fk)
                             }
                             return () => {
-                              const zC = CC.currentTime;
-                              WC.gain.setTargetAtTime(0, zC, oC);
-                              for (const CC of MC) try {
-                                CC.stop(zC + 5 * oC)
+                              const Fk = kk.currentTime;
+                              tk.gain.setTargetAtTime(0, Fk, ak);
+                              for (const kk of jk) try {
+                                kk.stop(Fk + 5 * ak)
                               } catch {}
                             }
                           }
 
-                          function WC(CC, zC) {
-                            var ZC;
-                            const bC = QC.Howler.ctx,
-                              nC = QC.Howler.masterGain;
-                            if (!bC || !nC || !wC.b.get("soundOnFromAd")) return () => {};
-                            const fC = QC.Howler;
-                            return null === (ZC = fC._autoResume) || void 0 === ZC || ZC.call(fC), FC(bC, nC, CC, zC, wC.b.get("soundVolume"), (() => {
-                              var CC;
-                              null === (CC = fC._autoSuspend) || void 0 === CC || CC.call(fC)
+                          function tk(kk, Fk) {
+                            var Ik;
+                            const ik = Xk.Howler.ctx,
+                              yk = Xk.Howler.masterGain;
+                            if (!ik || !yk || !Tk.d.get("soundOnFromAd")) return () => {};
+                            const lk = Xk.Howler;
+                            return null === (Ik = lk._autoResume) || void 0 === Ik || Ik.call(lk), Lk(ik, yk, kk, Fk, Tk.d.get("soundVolume"), (() => {
+                              var kk;
+                              null === (kk = lk._autoSuspend) || void 0 === kk || kk.call(lk)
                             }))
                           }
-                        }, 4797: (CC, zC, ZC) => {
-                          ZC.r(zC), ZC.d(zC, {
-                            Howl: () => wC.Howl,
-                            Howler: () => wC.Howler,
-                            musicOutput: () => pC,
-                            readyAudioContext: () => PC
+                        }, 4857: (kk, Fk, Ik) => {
+                          Ik.r(Fk), Ik.d(Fk, {
+                            Howl: () => Tk.Howl,
+                            Howler: () => Tk.Howler,
+                            musicOutput: () => Hk,
+                            readyAudioContext: () => Jk
                           });
-                          var QC, wC = ZC(4801),
-                            bC = ZC(3419),
-                            nC = ZC(4587);
-                          const fC = wC.Howler;
+                          var Xk, Tk = Ik(4863),
+                            ik = Ik(3378),
+                            yk = Ik(4636);
+                          const lk = Tk.Howler;
 
-                          function oC() {
-                            var CC, zC;
-                            if (fC.ctx || !fC.usingWebAudio || "undefined" === typeof AudioContext || !(0, nC.h)()) return;
-                            const ZC = navigator.audioSession;
-                            let QC;
-                            "auto" === (null === ZC || void 0 === ZC ? void 0 : ZC.type) && (ZC.type = "ambient");
+                          function ak() {
+                            var kk, Fk;
+                            if (lk.ctx || !lk.usingWebAudio || "undefined" === typeof AudioContext || !(0, yk.h)()) return;
+                            const Ik = navigator.audioSession;
+                            let Xk;
+                            "auto" === (null === Ik || void 0 === Ik ? void 0 : Ik.type) && (Ik.type = "ambient");
                             try {
-                              QC = new AudioContext({
+                              Xk = new AudioContext({
                                 sampleRate: 44100
                               })
                             } catch {
                               return
                             }
-                            const wC = QC.createGain();
-                            wC.gain.setValueAtTime(fC._muted ? 0 : null !== (CC = fC._volume) && void 0 !== CC ? CC : 1, QC.currentTime), wC.connect(QC.destination), fC.ctx = QC, fC.masterGain = wC, null === (zC = fC._setup) || void 0 === zC || zC.call(fC)
+                            const Tk = Xk.createGain();
+                            Tk.gain.setValueAtTime(lk._muted ? 0 : null !== (kk = lk._volume) && void 0 !== kk ? kk : 1, Xk.currentTime), Tk.connect(Xk.destination), lk.ctx = Xk, lk.masterGain = Tk, null === (Fk = lk._setup) || void 0 === Fk || Fk.call(lk)
                           }
-                          fC._mobileUnloaded = !0;
-                          const qC = fC.volume.bind(wC.Howler);
-                          fC.volume = function() {
-                            return oC(), qC(...arguments)
+                          lk._mobileUnloaded = !0;
+                          const qk = lk.volume.bind(Tk.Howler);
+                          lk.volume = function() {
+                            return ak(), qk(...arguments)
                           };
-                          const FC = fC.mute.bind(wC.Howler);
-                          fC.mute = CC => (oC(), FC(CC));
-                          const WC = wC.Howl.prototype,
-                            NC = WC.init;
+                          const Lk = lk.mute.bind(Tk.Howler);
+                          lk.mute = kk => (ak(), Lk(kk));
+                          const tk = Tk.Howl.prototype,
+                            Zk = tk.init;
 
-                          function MC() {
-                            for (; fC._html5AudioPool.length < fC.html5PoolSize;) {
-                              const CC = new Audio;
-                              CC._unlocked = !0, fC._releaseHtml5Audio(CC)
+                          function jk() {
+                            for (; lk._html5AudioPool.length < lk.html5PoolSize;) {
+                              const kk = new Audio;
+                              kk._unlocked = !0, lk._releaseHtml5Audio(kk)
                             }
-                            for (const zC of fC._howls)
-                              if (!zC._webAudio)
-                                for (const ZC of zC._getSoundIds()) {
-                                  var CC;
-                                  const QC = null === (CC = zC._soundById(ZC)) || void 0 === CC ? void 0 : CC._node;
-                                  QC && !QC._unlocked && (QC._unlocked = !0, QC.load())
+                            for (const Fk of lk._howls)
+                              if (!Fk._webAudio)
+                                for (const Ik of Fk._getSoundIds()) {
+                                  var kk;
+                                  const Xk = null === (kk = Fk._soundById(Ik)) || void 0 === kk ? void 0 : kk._node;
+                                  Xk && !Xk._unlocked && (Xk._unlocked = !0, Xk.load())
                                 }
                           }
-                          WC.init = function(CC) {
-                            return oC(), NC.call(this, CC)
-                          }, (0, nC.h)() && (fC._unlockAudio = () => {
-                            const CC = fC.ctx;
-                            if (fC._audioUnlocked || !CC) return;
-                            fC.autoUnlock = !1;
-                            const zC = CC.createBuffer(1, 1, 22050);
-                            fC._scratchBuffer = zC;
-                            const ZC = new AbortController;
-                            let QC = "afterPaint";
-                            const wC = () => {
-                                var QC;
-                                if (fC._audioUnlocked) return;
-                                null === (QC = fC._autoResume) || void 0 === QC || QC.call(fC);
-                                const wC = CC.createBufferSource();
-                                wC.buffer = zC, wC.connect(CC.destination), wC.start(0), CC.resume().catch((() => {})), wC.onended = () => {
-                                  wC.disconnect(0), fC._audioUnlocked = !0, ZC.abort();
-                                  for (const CC of fC._howls) CC._emit("unlock")
+                          tk.init = function(kk) {
+                            return ak(), Zk.call(this, kk)
+                          }, (0, yk.h)() && (lk._unlockAudio = () => {
+                            const kk = lk.ctx;
+                            if (lk._audioUnlocked || !kk) return;
+                            lk.autoUnlock = !1;
+                            const Fk = kk.createBuffer(1, 1, 22050);
+                            lk._scratchBuffer = Fk;
+                            const Ik = new AbortController;
+                            let Xk = "afterPaint";
+                            const Tk = () => {
+                                var Xk;
+                                if (lk._audioUnlocked) return;
+                                null === (Xk = lk._autoResume) || void 0 === Xk || Xk.call(lk);
+                                const Tk = kk.createBufferSource();
+                                Tk.buffer = Fk, Tk.connect(kk.destination), Tk.start(0), kk.resume().catch((() => {})), Tk.onended = () => {
+                                  Tk.disconnect(0), lk._audioUnlocked = !0, Ik.abort();
+                                  for (const kk of lk._howls) kk._emit("unlock")
                                 }
                               },
-                              oC = () => {
-                                MC(), wC()
+                              ak = () => {
+                                jk(), Tk()
                               },
-                              qC = zC => {
-                                if (MC(), "inTap" === QC) {
-                                  if ("running" === CC.state) return;
-                                  console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), wC()
-                                } else "afterPaint" === QC && (QC = "queued", (0, bC.c)(zC.timeStamp, (() => {
-                                  QC = "inTap", wC()
+                              qk = Fk => {
+                                if (jk(), "inTap" === Xk) {
+                                  if ("running" === kk.state) return;
+                                  console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), Tk()
+                                } else "afterPaint" === Xk && (Xk = "queued", (0, ik.b)(Fk.timeStamp, (() => {
+                                  Xk = "inTap", Tk()
                                 })))
                               };
-                            for (const bC of ["touchstart", "touchend"]) document.addEventListener(bC, oC, {
+                            for (const ik of ["touchstart", "touchend"]) document.addEventListener(ik, ak, {
                               capture: !0,
-                              signal: ZC.signal
+                              signal: Ik.signal
                             });
-                            for (const bC of nC.c) document.addEventListener(bC, qC, {
+                            for (const ik of yk.b) document.addEventListener(ik, qk, {
                               capture: !0,
-                              signal: ZC.signal
+                              signal: Ik.signal
                             })
                           });
-                          let gC = 0;
-                          const SC = null === (QC = fC._autoSuspend) || void 0 === QC ? void 0 : QC.bind(wC.Howler);
+                          let ek = 0;
+                          const wk = null === (Xk = lk._autoSuspend) || void 0 === Xk ? void 0 : Xk.bind(Tk.Howler);
 
-                          function pC() {
-                            PC();
+                          function Hk() {
+                            Jk();
                             const {
-                              ctx: CC,
-                              masterGain: zC
-                            } = fC;
-                            return CC && zC ? {
-                              ctx: CC,
-                              destination: zC,
-                              holdAwake: CC => {
-                                var zC, ZC;
-                                (gC += CC ? 1 : -1, CC) ? null === (zC = fC._autoResume) || void 0 === zC || zC.call(fC): null === (ZC = fC._autoSuspend) || void 0 === ZC || ZC.call(fC)
+                              ctx: kk,
+                              masterGain: Fk
+                            } = lk;
+                            return kk && Fk ? {
+                              ctx: kk,
+                              destination: Fk,
+                              holdAwake: kk => {
+                                var Fk, Ik;
+                                (ek += kk ? 1 : -1, kk) ? null === (Fk = lk._autoResume) || void 0 === Fk || Fk.call(lk): null === (Ik = lk._autoSuspend) || void 0 === Ik || Ik.call(lk)
                               },
                               wake: () => {
-                                var zC;
-                                "running" !== CC.state && (null === (zC = fC._autoResume) || void 0 === zC || zC.call(fC), CC.resume().catch((() => {})))
+                                var Fk;
+                                "running" !== kk.state && (null === (Fk = lk._autoResume) || void 0 === Fk || Fk.call(lk), kk.resume().catch((() => {})))
                               }
                             } : null
                           }
 
-                          function PC() {
-                            var CC;
-                            (fC.volume(), fC.ctx && fC.autoUnlock) && (null === (CC = fC._unlockAudio) || void 0 === CC || CC.call(fC))
+                          function Jk() {
+                            var kk;
+                            (lk.volume(), lk.ctx && lk.autoUnlock) && (null === (kk = lk._unlockAudio) || void 0 === kk || kk.call(lk))
                           }
-                          SC && (fC._autoSuspend = () => gC > 0 ? wC.Howler : SC())
-                        }, 4804: (CC, zC, ZC) => {
-                          function QC(CC) {
+                          wk && (lk._autoSuspend = () => ek > 0 ? Tk.Howler : wk())
+                        }, 4866: (kk, Fk, Ik) => {
+                          function Xk(kk) {
                             return {
-                              notAfter: CC
+                              notAfter: kk
                             }
                           }
-                          ZC.d(zC, {
-                            d: () => oC,
-                            f: () => qC,
-                            h: () => fC,
-                            l: () => QC,
-                            n: () => wC,
-                            q: () => bC,
-                            s: () => nC,
-                            v: () => FC,
-                            z: () => WC
+                          Ik.d(Fk, {
+                            b: () => ak,
+                            e: () => qk,
+                            g: () => lk,
+                            j: () => Xk,
+                            l: () => Tk,
+                            m: () => ik,
+                            o: () => yk,
+                            s: () => Lk,
+                            u: () => tk
                           });
-                          const wC = QC("\\w$."),
-                            bC = QC("\\w.,");
+                          const Tk = Xk("\\w$."),
+                            ik = Xk("\\w.,");
 
-                          function nC(CC) {
-                            return zC => oC(zC, CC)
+                          function yk(kk) {
+                            return Fk => ak(Fk, kk)
                           }
 
-                          function fC(CC) {
-                            return zC => !CC.test(zC.input.slice(0, zC.index))
+                          function lk(kk) {
+                            return Fk => !kk.test(Fk.input.slice(0, Fk.index))
                           }
 
-                          function oC(CC, zC) {
-                            return CC.index > 0 && new RegExp(`[${zC}]`).test(CC.input[CC.index - 1])
+                          function ak(kk, Fk) {
+                            return kk.index > 0 && new RegExp(`[${Fk}]`).test(kk.input[kk.index - 1])
                           }
 
-                          function qC(CC, zC, ZC) {
-                            return function(CC) {
-                              return void 0 !== CC && "function" !== typeof CC
-                            }(ZC) ? function(CC, zC, ZC) {
-                              const QC = zC.flags.replace(/[gy]/g, ""),
-                                wC = new RegExp(`[^${ZC}](?:${zC.source})`, `${QC}g`),
-                                bC = [],
-                                nC = ZC => {
-                                  const QC = ZC.index + ZC[0].length;
-                                  return ("" === ZC[0] ? NC(CC, zC, QC) : QC) - 1
+                          function qk(kk, Fk, Ik) {
+                            return function(kk) {
+                              return void 0 !== kk && "function" !== typeof kk
+                            }(Ik) ? function(kk, Fk, Ik) {
+                              const Xk = Fk.flags.replace(/[gy]/g, ""),
+                                Tk = new RegExp(`[^${Ik}](?:${Fk.source})`, `${Xk}g`),
+                                ik = [],
+                                yk = Ik => {
+                                  const Xk = Ik.index + Ik[0].length;
+                                  return ("" === Ik[0] ? Zk(kk, Fk, Xk) : Xk) - 1
                                 },
-                                fC = new RegExp(`(?:${zC.source})`, `${QC}y`).exec(CC);
-                              if (fC) {
-                                if (bC.push(fC), !zC.global) return bC;
-                                wC.lastIndex = nC(fC)
+                                lk = new RegExp(`(?:${Fk.source})`, `${Xk}y`).exec(kk);
+                              if (lk) {
+                                if (ik.push(lk), !Fk.global) return ik;
+                                Tk.lastIndex = yk(lk)
                               }
-                              for (let oC = wC.exec(CC); oC; oC = wC.exec(CC)) {
-                                const ZC = NC(CC, zC, oC.index) - oC.index;
-                                if (oC[0] = oC[0].slice(ZC), oC.index += ZC, bC.push(oC), !zC.global) break;
-                                wC.lastIndex = nC(oC)
+                              for (let ak = Tk.exec(kk); ak; ak = Tk.exec(kk)) {
+                                const Ik = Zk(kk, Fk, ak.index) - ak.index;
+                                if (ak[0] = ak[0].slice(Ik), ak.index += Ik, ik.push(ak), !Fk.global) break;
+                                Tk.lastIndex = yk(ak)
                               }
-                              return bC
-                            }(CC, zC, ZC.notAfter) : function(CC, zC, ZC) {
-                              const QC = new RegExp(zC.source, `${zC.flags.replace(/[gy]/g,"")}g`),
-                                wC = [];
-                              for (let bC = QC.exec(CC); bC; bC = QC.exec(CC))
-                                if (!ZC || ZC(bC)) {
-                                  if (wC.push(bC), !zC.global) break;
-                                  "" === bC[0] && (QC.lastIndex = NC(CC, zC, QC.lastIndex))
-                                } else QC.lastIndex = NC(CC, zC, bC.index);
-                              return wC
-                            }(CC, zC, ZC)
+                              return ik
+                            }(kk, Fk, Ik.notAfter) : function(kk, Fk, Ik) {
+                              const Xk = new RegExp(Fk.source, `${Fk.flags.replace(/[gy]/g,"")}g`),
+                                Tk = [];
+                              for (let ik = Xk.exec(kk); ik; ik = Xk.exec(kk))
+                                if (!Ik || Ik(ik)) {
+                                  if (Tk.push(ik), !Fk.global) break;
+                                  "" === ik[0] && (Xk.lastIndex = Zk(kk, Fk, Xk.lastIndex))
+                                } else Xk.lastIndex = Zk(kk, Fk, ik.index);
+                              return Tk
+                            }(kk, Fk, Ik)
                           }
 
-                          function FC(CC, zC, ZC, QC) {
-                            let wC = "",
-                              bC = 0;
-                            for (const nC of qC(CC, zC, ZC)) wC += CC.slice(bC, nC.index) + QC(nC), bC = nC.index + nC[0].length;
-                            return wC + CC.slice(bC)
+                          function Lk(kk, Fk, Ik, Xk) {
+                            let Tk = "",
+                              ik = 0;
+                            for (const yk of qk(kk, Fk, Ik)) Tk += kk.slice(ik, yk.index) + Xk(yk), ik = yk.index + yk[0].length;
+                            return Tk + kk.slice(ik)
                           }
 
-                          function WC(CC, zC, ZC) {
-                            const QC = [];
-                            let wC = 0;
-                            for (const bC of qC(CC, zC, ZC)) QC.push(CC.slice(wC, bC.index)), wC = bC.index + bC[0].length;
-                            return [...QC, CC.slice(wC)]
+                          function tk(kk, Fk, Ik) {
+                            const Xk = [];
+                            let Tk = 0;
+                            for (const ik of qk(kk, Fk, Ik)) Xk.push(kk.slice(Tk, ik.index)), Tk = ik.index + ik[0].length;
+                            return [...Xk, kk.slice(Tk)]
                           }
 
-                          function NC(CC, zC, ZC) {
-                            var QC;
-                            return ZC + (zC.unicode && (null !== (QC = CC.codePointAt(ZC)) && void 0 !== QC ? QC : 0) > 65535 ? 2 : 1)
+                          function Zk(kk, Fk, Ik) {
+                            var Xk;
+                            return Ik + (Fk.unicode && (null !== (Xk = kk.codePointAt(Ik)) && void 0 !== Xk ? Xk : 0) > 65535 ? 2 : 1)
                           }
-                        }, 4755: (CC, zC, ZC) => {
-                          ZC.d(zC, {
-                            b: () => wC,
-                            d: () => oC,
-                            g: () => bC,
-                            k: () => nC,
-                            m: () => fC,
-                            n: () => pC,
-                            p: () => FC,
-                            t: () => WC,
-                            w: () => SC,
-                            y: () => MC
+                        }, 4821: (kk, Fk, Ik) => {
+                          Ik.d(Fk, {
+                            d: () => Tk,
+                            f: () => ak,
+                            g: () => ik,
+                            h: () => yk,
+                            k: () => lk,
+                            o: () => Hk,
+                            r: () => Lk,
+                            t: () => tk,
+                            w: () => wk,
+                            z: () => jk
                           });
-                          var QC = ZC(1520);
-                          const wC = 24e3,
-                            bC = "/docs/llms.txt",
-                            nC = `${QC.d}${bC}`,
-                            fC = "/llms.txt",
-                            oC = "/docs/llms-full.txt";
+                          var Xk = Ik(1534);
+                          const Tk = 24e3,
+                            ik = "/docs/llms.txt",
+                            yk = `${Xk.b}${ik}`,
+                            lk = "/llms.txt",
+                            ak = "/docs/llms-full.txt";
 
-                          function qC(CC) {
-                            return CC || "index"
+                          function qk(kk) {
+                            return kk || "index"
                           }
 
-                          function FC(CC) {
-                            return `/docs/${qC(CC)}.md`
+                          function Lk(kk) {
+                            return `/docs/${qk(kk)}.md`
                           }
 
-                          function WC(CC, zC) {
-                            return `/docs/${qC(CC)}/${zC+1}.md`
+                          function tk(kk, Fk) {
+                            return `/docs/${qk(kk)}/${Fk+1}.md`
                           }
-                          const NC = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
+                          const Zk = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
 
-                          function MC(CC) {
-                            const zC = NC.exec(CC);
-                            return null === zC ? null : {
-                              name: zC[1],
-                              part: void 0 === zC[2] ? null : Number(zC[2])
+                          function jk(kk) {
+                            const Fk = Zk.exec(kk);
+                            return null === Fk ? null : {
+                              name: Fk[1],
+                              part: void 0 === Fk[2] ? null : Number(Fk[2])
                             }
                           }
-                          const gC = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
+                          const ek = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
 
-                          function SC(CC) {
-                            const zC = gC.exec(CC);
-                            if (null === zC) return null;
-                            const [, ZC = "", QC] = zC;
-                            return void 0 === QC ? FC(ZC) : WC(ZC, Number(QC) - 1)
+                          function wk(kk) {
+                            const Fk = ek.exec(kk);
+                            if (null === Fk) return null;
+                            const [, Ik = "", Xk] = Fk;
+                            return void 0 === Xk ? Lk(Ik) : tk(Ik, Number(Xk) - 1)
                           }
 
-                          function pC(CC) {
-                            return `/docsHtml/${qC(CC)}.html`
+                          function Hk(kk) {
+                            return `/docsHtml/${qk(kk)}.html`
                           }
-                        }, 4783: (CC, zC, ZC) => {
-                          ZC.d(zC, {
-                            b: () => wC,
-                            f: () => QC,
-                            i: () => bC,
-                            m: () => oC,
-                            q: () => nC
+                        }, 4843: (kk, Fk, Ik) => {
+                          Ik.d(Fk, {
+                            b: () => Tk,
+                            d: () => Xk,
+                            g: () => ik,
+                            k: () => ak,
+                            n: () => yk
                           });
-                          const QC = ["sine", "triangle", "square", "sawtooth"],
-                            wC = 55,
-                            bC = {
+                          const Xk = ["sine", "triangle", "square", "sawtooth"],
+                            Tk = 55,
+                            ik = {
                               soft: {
                                 waveform: "sine",
                                 pitchHz: 300,
@@ -7260,38 +7260,38 @@ export const modules = {
                               }
                             };
 
-                          function nC(CC) {
-                            return "string" !== typeof CC ? CC : Object.hasOwn(bC, CC) ? bC[CC] : null
+                          function yk(kk) {
+                            return "string" !== typeof kk ? kk : Object.hasOwn(ik, kk) ? ik[kk] : null
                           }
 
-                          function fC(CC, zC, ZC) {
-                            return Math.min(ZC, Math.max(zC, CC))
+                          function lk(kk, Fk, Ik) {
+                            return Math.min(Ik, Math.max(Fk, kk))
                           }
 
-                          function oC(CC) {
-                            const zC = fC(CC.durationMs, 10, 500),
-                              ZC = fC(CC.attackMs, 0, zC),
+                          function ak(kk) {
+                            const Fk = lk(kk.durationMs, 10, 500),
+                              Ik = lk(kk.attackMs, 0, Fk),
                               {
-                                intonation: wC
-                              } = CC;
+                                intonation: Tk
+                              } = kk;
                             return {
-                              waveform: QC.includes(CC.waveform) ? CC.waveform : "sine",
-                              pitchHz: fC(CC.pitchHz, 20, 4e3),
-                              glideSemitones: fC(CC.glideSemitones, -24, 24),
-                              durationMs: zC,
-                              attackMs: ZC,
-                              releaseMs: fC(CC.releaseMs, 0, zC - ZC),
-                              lowpassHz: null === CC.lowpassHz ? null : fC(CC.lowpassHz, 20, 2e4),
-                              volume: fC(CC.volume, 0, 2),
+                              waveform: Xk.includes(kk.waveform) ? kk.waveform : "sine",
+                              pitchHz: lk(kk.pitchHz, 20, 4e3),
+                              glideSemitones: lk(kk.glideSemitones, -24, 24),
+                              durationMs: Fk,
+                              attackMs: Ik,
+                              releaseMs: lk(kk.releaseMs, 0, Fk - Ik),
+                              lowpassHz: null === kk.lowpassHz ? null : lk(kk.lowpassHz, 20, 2e4),
+                              volume: lk(kk.volume, 0, 2),
                               intonation: {
-                                variationSemitones: fC(wC.variationSemitones, 0, 6),
-                                declineSemitones: fC(wC.declineSemitones, 0, 12),
-                                questionRiseSemitones: fC(wC.questionRiseSemitones, 0, 12),
-                                exclaimLiftSemitones: fC(wC.exclaimLiftSemitones, 0, 12)
+                                variationSemitones: lk(Tk.variationSemitones, 0, 6),
+                                declineSemitones: lk(Tk.declineSemitones, 0, 12),
+                                questionRiseSemitones: lk(Tk.questionRiseSemitones, 0, 12),
+                                exclaimLiftSemitones: lk(Tk.exclaimLiftSemitones, 0, 12)
                               },
-                              syllableMs: fC(CC.syllableMs, 25, 200)
+                              syllableMs: lk(kk.syllableMs, 25, 200)
                             }
                           }
                         }
                       }; Object.freeze(modules);
-                      for (const CC in modules) Object.freeze(modules[CC]);
+                      for (const kk in modules) Object.freeze(modules[kk]);

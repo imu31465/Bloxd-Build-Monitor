@@ -1,68 +1,68 @@
 export const id = 351;
 export const ids = [351];
 export const modules = {
-  42347: (CC, zC, ZC) => {
-    function QC(CC) {
-      return Math.floor(CC / 8)
+  42554: (kk, Fk, Ik) => {
+    function Xk(kk) {
+      return Math.floor(kk / 8)
     }
 
-    function wC(CC) {
-      return 1 << CC % 8
+    function Tk(kk) {
+      return 1 << kk % 8
     }
-    ZC.d(zC, {
-      OptimizeIndices: () => nC
+    Ik.d(Fk, {
+      OptimizeIndices: () => yk
     });
-    class bC {
-      constructor(CC) {
-        this.size = CC, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
+    class ik {
+      constructor(kk) {
+        this.size = kk, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
       }
-      get(CC) {
-        if (CC >= this.size) throw new RangeError("Bit index out of range");
-        const zC = QC(CC),
-          ZC = wC(CC);
-        return 0 !== (this._byteArray[zC] & ZC)
+      get(kk) {
+        if (kk >= this.size) throw new RangeError("Bit index out of range");
+        const Fk = Xk(kk),
+          Ik = Tk(kk);
+        return 0 !== (this._byteArray[Fk] & Ik)
       }
-      set(CC, zC) {
-        if (CC >= this.size) throw new RangeError("Bit index out of range");
-        const ZC = QC(CC),
-          bC = wC(CC);
-        zC ? this._byteArray[ZC] |= bC : this._byteArray[ZC] &= ~bC
+      set(kk, Fk) {
+        if (kk >= this.size) throw new RangeError("Bit index out of range");
+        const Ik = Xk(kk),
+          ik = Tk(kk);
+        Fk ? this._byteArray[Ik] |= ik : this._byteArray[Ik] &= ~ik
       }
     }
 
-    function nC(CC) {
-      const zC = [],
-        ZC = CC.length / 3;
-      for (let bC = 0; bC < ZC; bC++) zC.push([CC[3 * bC], CC[3 * bC + 1], CC[3 * bC + 2]]);
-      const QC = new Map;
-      for (let bC = 0; bC < zC.length; bC++) {
-        const CC = zC[bC];
-        for (const zC of CC) {
-          let CC = QC.get(zC);
-          CC || QC.set(zC, CC = []), CC.push(bC)
+    function yk(kk) {
+      const Fk = [],
+        Ik = kk.length / 3;
+      for (let ik = 0; ik < Ik; ik++) Fk.push([kk[3 * ik], kk[3 * ik + 1], kk[3 * ik + 2]]);
+      const Xk = new Map;
+      for (let ik = 0; ik < Fk.length; ik++) {
+        const kk = Fk[ik];
+        for (const Fk of kk) {
+          let kk = Xk.get(Fk);
+          kk || Xk.set(Fk, kk = []), kk.push(ik)
         }
       }
-      const wC = new bC(ZC),
-        nC = [],
-        fC = CC => {
-          const ZC = [CC];
-          for (; ZC.length > 0;) {
-            const CC = ZC.pop();
-            if (!wC.get(CC)) {
-              wC.set(CC, !0), nC.push(zC[CC]);
-              for (const bC of zC[CC]) {
-                const CC = QC.get(bC);
-                if (!CC) return;
-                for (const zC of CC) wC.get(zC) || ZC.push(zC)
+      const Tk = new ik(Ik),
+        yk = [],
+        lk = kk => {
+          const Ik = [kk];
+          for (; Ik.length > 0;) {
+            const kk = Ik.pop();
+            if (!Tk.get(kk)) {
+              Tk.set(kk, !0), yk.push(Fk[kk]);
+              for (const ik of Fk[kk]) {
+                const kk = Xk.get(ik);
+                if (!kk) return;
+                for (const Fk of kk) Tk.get(Fk) || Ik.push(Fk)
               }
             }
           }
         };
-      for (let bC = 0; bC < ZC; bC++) wC.get(bC) || fC(bC);
-      let oC = 0;
-      for (const bC of nC) CC[oC++] = bC[0], CC[oC++] = bC[1], CC[oC++] = bC[2]
+      for (let ik = 0; ik < Ik; ik++) Tk.get(ik) || lk(ik);
+      let ak = 0;
+      for (const ik of yk) kk[ak++] = ik[0], kk[ak++] = ik[1], kk[ak++] = ik[2]
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

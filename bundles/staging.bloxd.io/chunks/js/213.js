@@ -1,52 +1,52 @@
 export const id = 213;
 export const ids = [213];
 export const modules = {
-  36223: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      CreateCustomLobby: () => YC
+  36327: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      CreateCustomLobby: () => nk
     });
-    ZC(36227);
-    var QC = ZC(4562),
-      wC = ZC(48),
-      bC = ZC(1593),
-      nC = ZC(1002),
-      fC = ZC.n(nC),
-      oC = ZC(3113),
-      qC = ZC(1078),
-      FC = ZC(1149),
-      WC = ZC(4525),
-      NC = ZC(1388),
-      MC = ZC(36234),
-      gC = ZC(1143),
-      SC = ZC(1284),
-      pC = ZC(1453),
-      PC = ZC(20),
-      GC = ZC(1392),
-      RC = ZC(600),
-      AC = ZC(4876),
-      xC = ZC(728),
-      JC = ZC(1183),
-      IC = ZC(1169),
-      iC = ZC(4887),
-      vC = ZC(1013),
-      eC = ZC(36241),
-      hC = ZC(36244),
-      KC = ZC(1056);
+    Ik(36335);
+    var Xk = Ik(4612),
+      Tk = Ik(58),
+      ik = Ik(1617),
+      yk = Ik(1055),
+      lk = Ik.n(yk),
+      ak = Ik(3065),
+      qk = Ik(1120),
+      Lk = Ik(1194),
+      tk = Ik(4584),
+      Zk = Ik(1406),
+      jk = Ik(36340),
+      ek = Ik(1179),
+      wk = Ik(1308),
+      Hk = Ik(1475),
+      Jk = Ik(25),
+      xk = Ik(1415),
+      Pk = Ik(628),
+      Kk = Ik(4931),
+      Qk = Ik(768),
+      sk = Ik(1231),
+      Vk = Ik(1217),
+      zk = Ik(4938),
+      Sk = Ik(1066),
+      vk = Ik(36347),
+      Ek = Ik(36355),
+      Ok = Ik(1096);
 
-    function YC(CC) {
-      var zC, ZC, nC, YC;
+    function nk(kk) {
+      var Fk, Ik, yk, nk;
       let {
-        gameNameWithVariation: dC,
-        close: mC,
-        initialDefaultGamemode: HC
-      } = CC;
+        gameNameWithVariation: Gk,
+        close: pk,
+        initialDefaultGamemode: uk
+      } = kk;
       const {
-        t: EC
-      } = (0, gC.y)(), lC = (0, pC.useNavigatePreserveSearch)(), [XC, cC] = (0, wC.useState)("Enter"), [uC, rC] = (0, wC.useState)(""), sC = wC.useRef(null), TC = null === (zC = xC.d[dC]) || void 0 === zC ? void 0 : zC.showWorldsInsteadOfCustomLobbies, aC = TC ? 1 : null === (ZC = xC.d[dC]) || void 0 === ZC ? void 0 : ZC.customLobbyCustomSchematicLimit, [tC, DC] = (0, wC.useState)(!TC);
-      HC || (HC = "classic_creative" === dC || "classic_creativeFlat" === dC ? "creative" : "classic" === dC ? "peaceful" : "survival");
-      const jC = {
+        t: bk
+      } = (0, ek.y)(), Rk = (0, Hk.useNavigatePreserveSearch)(), [Uk, Ck] = (0, Tk.useState)("Enter"), [Nk, ck] = (0, Tk.useState)(""), Wk = Tk.useRef(null), fk = null === (Fk = Qk.e[Gk]) || void 0 === Fk ? void 0 : Fk.showWorldsInsteadOfCustomLobbies, Bk = fk ? 1 : null === (Ik = Qk.e[Gk]) || void 0 === Ik ? void 0 : Ik.customLobbyCustomSchematicLimit, [dk, Yk] = (0, Tk.useState)(!fk);
+      uk || (uk = "classic_creative" === Gk || "classic_creativeFlat" === Gk ? "creative" : "classic" === Gk ? "peaceful" : "survival");
+      const Ak = {
         baseOptions: {
-          gameNameWithVariation: TC ? "classic" : dC,
+          gameNameWithVariation: fk ? "classic" : Gk,
           name: "",
           visibility: "unlisted"
         },
@@ -56,13 +56,13 @@ export const modules = {
           emojis: ""
         },
         mapOptions: {
-          mapType: "classic_creativeFlat" === dC ? "flat" : "default",
+          mapType: "classic_creativeFlat" === Gk ? "flat" : "default",
           schematicIdList: []
         },
         worldOptions: null
       };
-      TC && (jC.worldOptions = {
-        defaultGamemode: HC,
+      fk && (Ak.worldOptions = {
+        defaultGamemode: uk,
         disableProtectors: !1,
         spawnProtection: !0,
         disableTpRequests: !1,
@@ -78,631 +78,631 @@ export const modules = {
         enableSpawnReset: !1,
         enableDayNight: !0
       });
-      const [yC, LC] = (0, wC.useState)(jC), [UC, BC] = (0, wC.useState)(null);
+      const [gk, mk] = (0, Tk.useState)(Ak), [hk, rk] = (0, Tk.useState)(null);
 
-      function OC(CC, zC) {
-        LC({
-          ...yC,
+      function Dk(kk, Fk) {
+        mk({
+          ...gk,
           baseOptions: {
-            ...yC.baseOptions,
-            [CC]: zC
+            ...gk.baseOptions,
+            [kk]: Fk
           }
         })
       }
 
-      function kC(CC, zC) {
-        LC({
-          ...yC,
+      function Mk(kk, Fk) {
+        mk({
+          ...gk,
           listedOptions: {
-            ...yC.listedOptions,
-            [CC]: zC
+            ...gk.listedOptions,
+            [kk]: Fk
           }
         })
       }
 
-      function VC(CC, zC) {
-        LC({
-          ...yC,
+      function kF(kk, Fk) {
+        mk({
+          ...gk,
           worldOptions: {
-            ...yC.worldOptions,
-            [CC]: zC
+            ...gk.worldOptions,
+            [kk]: Fk
           }
         })
       }
 
-      function Cz(CC) {
-        LC({
-          ...yC,
+      function FF(kk) {
+        mk({
+          ...gk,
           mapOptions: {
-            ...yC.mapOptions,
-            ...CC
+            ...gk.mapOptions,
+            ...kk
           }
         })
-      }(0, wC.useEffect)((() => {
-        WC.d.getNewStarterName().then((CC => {
-          LC((zC => "" !== zC.baseOptions.name ? zC : {
-            ...zC,
+      }(0, Tk.useEffect)((() => {
+        tk.c.getNewStarterName().then((kk => {
+          mk((Fk => "" !== Fk.baseOptions.name ? Fk : {
+            ...Fk,
             baseOptions: {
-              ...zC.baseOptions,
-              name: CC
+              ...Fk.baseOptions,
+              name: kk
             }
           }))
-        })).catch((CC => {
-          console.error("Error getting new starter name:", CC)
+        })).catch((kk => {
+          console.error("Error getting new starter name:", kk)
         }))
-      }), []), (0, wC.useEffect)((() => {
-        "customSchematic" === yC.mapOptions.mapType && null === UC && (0, qC.postJsonWithMetricsCookiesAndJsonResponse)(`${FC.clientSideServerUrls.indexUrl}/index/schematic/get-owned-schematics`, {}, {
+      }), []), (0, Tk.useEffect)((() => {
+        "customSchematic" === gk.mapOptions.mapType && null === hk && (0, qk.postJsonWithMetricsCookiesAndJsonResponse)(`${Lk.clientSideServerUrls.indexUrl}/index/schematic/get-owned-schematics`, {}, {
           retries: 0,
           minTimeout: 3e3
-        }).then((CC => {
-          BC(CC)
+        }).then((kk => {
+          rk(kk)
         }))
-      }), [yC.mapOptions.mapType, UC]);
-      const zz = {
+      }), [gk.mapOptions.mapType, hk]);
+      const IF = {
           tpRequests: {
-            isEnabled: () => !yC.worldOptions.disableTpRequests,
-            IK: CC => {
-              VC("disableTpRequests", !CC)
+            isEnabled: () => !gk.worldOptions.disableTpRequests,
+            Av: kk => {
+              kF("disableTpRequests", !kk)
             }
           },
           spawnProtection: {
-            isEnabled: () => yC.worldOptions.spawnProtection,
-            IK: CC => {
-              VC("spawnProtection", CC)
+            isEnabled: () => gk.worldOptions.spawnProtection,
+            Av: kk => {
+              kF("spawnProtection", kk)
             }
           },
           spawnReset: {
-            isEnabled: () => yC.worldOptions.enableSpawnReset,
-            IK: CC => {
-              VC("enableSpawnReset", CC)
+            isEnabled: () => gk.worldOptions.enableSpawnReset,
+            Av: kk => {
+              kF("enableSpawnReset", kk)
             }
           },
           smpMarketplace: {
-            isEnabled: () => yC.worldOptions.enableSmpMarketplace,
-            IK: CC => {
-              VC("enableSmpMarketplace", CC)
+            isEnabled: () => gk.worldOptions.enableSmpMarketplace,
+            Av: kk => {
+              kF("enableSmpMarketplace", kk)
             }
           },
           survivalGuns: {
-            isEnabled: () => yC.worldOptions.enableSurvivalGuns,
-            IK: CC => {
-              VC("enableSurvivalGuns", CC)
+            isEnabled: () => gk.worldOptions.enableSurvivalGuns,
+            Av: kk => {
+              kF("enableSurvivalGuns", kk)
             }
           },
           fallDamage: {
-            isEnabled: () => !yC.worldOptions.disableFallDamage,
-            IK: CC => {
-              VC("disableFallDamage", !CC)
+            isEnabled: () => !gk.worldOptions.disableFallDamage,
+            Av: kk => {
+              kF("disableFallDamage", !kk)
             }
           },
           dayNight: {
-            isEnabled: () => yC.worldOptions.enableDayNight,
-            IK: CC => {
-              VC("enableDayNight", CC)
+            isEnabled: () => gk.worldOptions.enableDayNight,
+            Av: kk => {
+              kF("enableDayNight", kk)
             }
           }
         },
-        Zz = "Enter" !== XC,
-        Qz = (0, KC.jsx)(AC.h, {
+        XF = "Enter" !== Uk,
+        TF = (0, Ok.jsx)(Kk.i, {
           className: "NameInput",
           label: "general:name",
-          disabled: "Enter" !== XC,
-          children: (0, KC.jsx)(bC.c, {
-            domRef: sC,
-            onValueChange: (CC, zC) => {
-              const ZC = (0, IC.Ab)(CC);
-              OC("name", ZC), sC.current.value = ZC
+          disabled: "Enter" !== Uk,
+          children: (0, Ok.jsx)(ik.c, {
+            domRef: Wk,
+            onValueChange: (kk, Fk) => {
+              const Ik = (0, Vk.qb)(kk);
+              Dk("name", Ik), Wk.current.value = Ik
             },
-            maxLength: IC.W,
-            defaultValue: yC.baseOptions.name
+            maxLength: Vk.M,
+            defaultValue: gk.baseOptions.name
           })
         });
-      return (0, KC.jsxs)("div", {
-        className: fC()("CreateCustomLobby", {
-          CreateCustomLobbySuccess: "Success" === XC,
-          AdvancedMode: tC
+      return (0, Ok.jsxs)("div", {
+        className: lk()("CreateCustomLobby", {
+          CreateCustomLobbySuccess: "Success" === Uk,
+          AdvancedMode: dk
         }),
-        children: ["Success" === XC && (0, KC.jsxs)("div", {
+        children: ["Success" === Uk && (0, Ok.jsxs)("div", {
           className: "CreateCustomLobbySuccessOverlay",
-          children: [(0, KC.jsxs)("div", {
+          children: [(0, Ok.jsxs)("div", {
             className: "CreateCustomLobbySuccessTitle FullyFancyText AnimFadeInScaleUp",
-            children: [(0, KC.jsx)(vC.c, {
+            children: [(0, Ok.jsx)(Sk.e, {
               name: "check"
-            }), (0, KC.jsx)(GC.c, {})]
-          }), (0, KC.jsx)("div", {
+            }), (0, Ok.jsx)(xk.d, {})]
+          }), (0, Ok.jsx)("div", {
             className: "CreateCustomLobbySuccessButtons AnimFadeInScaleUp",
-            children: (0, KC.jsx)(NC.o, {
+            children: (0, Ok.jsx)(Zk.m, {
               padDefaultFocus: !0,
               onClick: () => {
-                (0, PC.g)("worldCreation"), lC((0, SC.b)(dC, yC.baseOptions.name))
+                (0, Jk.h)("worldCreation"), Rk((0, wk.e)(Gk, gk.baseOptions.name))
               },
-              children: EC("homePage:joinLobbyName", {
-                lobbyName: yC.baseOptions.name
+              children: bk("homePage:joinLobbyName", {
+                lobbyName: gk.baseOptions.name
               })
             })
           })]
-        }), (0, KC.jsx)("div", {
+        }), (0, Ok.jsx)("div", {
           className: "CreateCustomLobbyTitleContainer",
-          children: (0, KC.jsx)("div", {
+          children: (0, Ok.jsx)("div", {
             className: "CreateCustomLobbyTitle",
-            children: EC(TC ? "homePage:createWorld" : "homePage:createCustomLobby")
+            children: bk(fk ? "homePage:createWorld" : "homePage:createCustomLobby")
           })
-        }), (0, KC.jsx)(hC.c, {
-          locked: Zz,
-          children: (0, KC.jsxs)("div", {
+        }), (0, Ok.jsx)(Ek.d, {
+          locked: XF,
+          children: (0, Ok.jsxs)("div", {
             className: "CreateCustomLobbyFields",
-            children: [!tC && Qz, tC && (0, KC.jsxs)("div", {
+            children: [!dk && TF, dk && (0, Ok.jsxs)("div", {
               className: "BloxdForm",
-              children: [(0, KC.jsx)("div", {
+              children: [(0, Ok.jsx)("div", {
                 className: "SectionTitle",
-                children: EC("customLobby:generalOptions")
-              }), (0, KC.jsxs)("div", {
+                children: bk("customLobby:generalOptions")
+              }), (0, Ok.jsxs)("div", {
                 className: "SectionBody",
-                children: [Qz, (0, KC.jsx)(AC.h, {
+                children: [TF, (0, Ok.jsx)(Kk.i, {
                   label: "customLobby:visibility",
-                  circleInfoText: EC("customLobby:visibilityDescription"),
-                  disabled: "Enter" !== XC,
-                  children: (0, KC.jsx)(oC.b, {
-                    options: QC.t.map((CC => ({
-                      value: CC,
-                      label: QC.d[CC]
+                  circleInfoText: bk("customLobby:visibilityDescription"),
+                  disabled: "Enter" !== Uk,
+                  children: (0, Ok.jsx)(ak.e, {
+                    options: Xk.p.map((kk => ({
+                      value: kk,
+                      label: Xk.e[kk]
                     }))),
-                    value: yC.baseOptions.visibility,
-                    onChange: CC => {
-                      OC("visibility", CC.value)
+                    value: gk.baseOptions.visibility,
+                    onChange: kk => {
+                      Dk("visibility", kk.value)
                     }
                   })
                 })]
               })]
-            }), TC && (0, KC.jsx)(eC.e, {
-              value: yC.worldOptions.defaultGamemode,
-              onChange: CC => {
-                VC("defaultGamemode", CC)
+            }), fk && (0, Ok.jsx)(vk.e, {
+              value: gk.worldOptions.defaultGamemode,
+              onChange: kk => {
+                kF("defaultGamemode", kk)
               },
-              showAll: tC,
-              disabled: Zz
-            }), (TC || !(0, RC.H)(aC) && aC > 0) && (0, KC.jsx)(eC.h, {
-              mapTypes: TC ? QC.I : QC.p,
-              value: yC.mapOptions.mapType,
-              onChange: CC => {
-                const zC = {
-                  mapType: CC
+              showAll: dk,
+              disabled: XF
+            }), (fk || !(0, Pk.Q)(Bk) && Bk > 0) && (0, Ok.jsx)(vk.g, {
+              mapTypes: fk ? Xk.A : Xk.m,
+              value: gk.mapOptions.mapType,
+              onChange: kk => {
+                const Fk = {
+                  mapType: kk
                 };
-                "customSchematic" !== CC && (zC.schematicIdList = []), Cz(zC)
+                "customSchematic" !== kk && (Fk.schematicIdList = []), FF(Fk)
               },
-              showAll: tC,
-              disabled: Zz,
-              children: "customSchematic" === yC.mapOptions.mapType && (0, KC.jsxs)(KC.Fragment, {
-                children: [(0, KC.jsxs)("div", {
+              showAll: dk,
+              disabled: XF,
+              children: "customSchematic" === gk.mapOptions.mapType && (0, Ok.jsxs)(Ok.Fragment, {
+                children: [(0, Ok.jsxs)("div", {
                   className: "SchematicListTitle AnimFadeIn",
-                  children: [TC && EC("customLobby:selectWorldSchematic"), !TC && EC("customLobby:selectCustomLobbySchematics", {
-                    schematicLimit: aC
+                  children: [fk && bk("customLobby:selectWorldSchematic"), !fk && bk("customLobby:selectCustomLobbySchematics", {
+                    schematicLimit: Bk
                   })]
-                }), (0, KC.jsx)("div", {
-                  className: fC()("SchematicListContainer AnimFadeIn", {
-                    SchematicListContainerDisabled: "Enter" !== XC
+                }), (0, Ok.jsx)("div", {
+                  className: lk()("SchematicListContainer AnimFadeIn", {
+                    SchematicListContainerDisabled: "Enter" !== Uk
                   }),
-                  children: (0, KC.jsx)(MC.d, {
-                    loading: null === UC,
-                    schematics: null !== UC && void 0 !== UC ? UC : [],
-                    onSchematicPicked: function(CC) {
-                      const zC = yC.mapOptions.schematicIdList;
-                      if (zC.includes(CC.schematicId)) Cz({
-                        schematicIdList: zC.filter((zC => zC !== CC.schematicId))
+                  children: (0, Ok.jsx)(jk.e, {
+                    loading: null === hk,
+                    schematics: null !== hk && void 0 !== hk ? hk : [],
+                    onSchematicPicked: function(kk) {
+                      const Fk = gk.mapOptions.schematicIdList;
+                      if (Fk.includes(kk.schematicId)) FF({
+                        schematicIdList: Fk.filter((Fk => Fk !== kk.schematicId))
                       });
                       else {
-                        if (aC && yC.mapOptions.schematicIdList.length >= aC) return;
-                        Cz({
-                          schematicIdList: [...yC.mapOptions.schematicIdList, CC.schematicId]
+                        if (Bk && gk.mapOptions.schematicIdList.length >= Bk) return;
+                        FF({
+                          schematicIdList: [...gk.mapOptions.schematicIdList, kk.schematicId]
                         })
                       }
                     },
-                    selectedSchematicIdList: yC.mapOptions.schematicIdList,
+                    selectedSchematicIdList: gk.mapOptions.schematicIdList,
                     disableAutoExport: !0
                   })
                 })]
               })
-            }), tC && (0, KC.jsxs)("div", {
+            }), dk && (0, Ok.jsxs)("div", {
               className: "BloxdForm",
-              children: [(0, KC.jsx)("div", {
+              children: [(0, Ok.jsx)("div", {
                 className: "SectionTitle",
-                children: EC("customLobby:listedOptions")
-              }), (0, KC.jsxs)("div", {
+                children: bk("customLobby:listedOptions")
+              }), (0, Ok.jsxs)("div", {
                 className: "SectionBody",
-                children: [(0, KC.jsx)(AC.h, {
+                children: [(0, Ok.jsx)(Kk.i, {
                   label: "general:description",
                   className: "CustomLobbyDescription",
-                  disabled: "Enter" !== XC,
-                  children: (0, KC.jsx)(bC.c, {
-                    onValueChange: (CC, zC) => {
-                      kC("description", CC)
+                  disabled: "Enter" !== Uk,
+                  children: (0, Ok.jsx)(ik.c, {
+                    onValueChange: (kk, Fk) => {
+                      Mk("description", kk)
                     },
                     maxLength: 100,
-                    defaultValue: yC.listedOptions.description
+                    defaultValue: gk.listedOptions.description
                   })
-                }), (0, KC.jsx)(AC.h, {
+                }), (0, Ok.jsx)(Kk.i, {
                   label: "general:color",
                   circleInfoText: "customLobby:lobbyColorDescription",
-                  disabled: "Enter" !== XC,
-                  children: (0, KC.jsx)("div", {
+                  disabled: "Enter" !== Uk,
+                  children: (0, Ok.jsx)("div", {
                     className: "OtherInput",
-                    children: (0, KC.jsx)("input", {
+                    children: (0, Ok.jsx)("input", {
                       type: "color",
-                      value: yC.listedOptions.color,
-                      onChange: CC => {
-                        kC("color", CC.target.value)
+                      value: gk.listedOptions.color,
+                      onChange: kk => {
+                        Mk("color", kk.target.value)
                       }
                     })
                   })
-                }), (0, KC.jsx)(AC.h, {
+                }), (0, Ok.jsx)(Kk.i, {
                   label: "general:emojis",
                   circleInfoText: "customLobby:lobbyEmojisDescription",
-                  disabled: "Enter" !== XC,
-                  children: (0, KC.jsx)(bC.c, {
-                    onValueChange: (CC, zC) => {
-                      kC("emojis", CC)
+                  disabled: "Enter" !== Uk,
+                  children: (0, Ok.jsx)(ik.c, {
+                    onValueChange: (kk, Fk) => {
+                      Mk("emojis", kk)
                     },
                     maxLength: 6,
-                    defaultValue: yC.listedOptions.emojis
+                    defaultValue: gk.listedOptions.emojis
                   })
                 })]
               })]
-            }), tC && TC && (0, KC.jsxs)("div", {
+            }), dk && fk && (0, Ok.jsxs)("div", {
               className: "BloxdForm",
-              children: [(0, KC.jsx)("div", {
+              children: [(0, Ok.jsx)("div", {
                 className: "SectionTitle",
-                children: EC("customLobby:advancedOptions")
-              }), (0, KC.jsxs)("div", {
+                children: bk("customLobby:advancedOptions")
+              }), (0, Ok.jsxs)("div", {
                 className: "SectionBody",
-                children: [(0, KC.jsx)(AC.h, {
+                children: [(0, Ok.jsx)(Kk.i, {
                   label: "classic:worldGenSeed",
-                  disabled: "Enter" !== XC,
-                  children: (0, KC.jsx)(bC.c, {
-                    onValueChange: (CC, zC) => {
-                      VC("worldGenSeed", CC)
+                  disabled: "Enter" !== Uk,
+                  children: (0, Ok.jsx)(ik.c, {
+                    onValueChange: (kk, Fk) => {
+                      kF("worldGenSeed", kk)
                     },
-                    maxLength: IC.W
+                    maxLength: Vk.M
                   })
-                }), (0, KC.jsx)(AC.h, {
+                }), (0, Ok.jsx)(Kk.i, {
                   label: "classic:disableProtectors",
-                  disabled: "Enter" !== XC,
-                  children: (0, KC.jsx)(AC.d, {
-                    checked: yC.worldOptions.disableProtectors,
-                    setChecked: CC => {
-                      VC("disableProtectors", CC)
+                  disabled: "Enter" !== Uk,
+                  children: (0, Ok.jsx)(Kk.e, {
+                    checked: gk.worldOptions.disableProtectors,
+                    setChecked: kk => {
+                      kF("disableProtectors", kk)
                     }
                   })
-                }), (0, KC.jsx)(AC.h, {
+                }), (0, Ok.jsx)(Kk.i, {
                   label: "classic:disableTribeCreation",
-                  disabled: "Enter" !== XC,
-                  children: (0, KC.jsx)(AC.d, {
-                    checked: yC.worldOptions.disableTribeCreation,
-                    setChecked: CC => {
-                      VC("disableTribeCreation", CC)
+                  disabled: "Enter" !== Uk,
+                  children: (0, Ok.jsx)(Kk.e, {
+                    checked: gk.worldOptions.disableTribeCreation,
+                    setChecked: kk => {
+                      kF("disableTribeCreation", kk)
                     }
                   })
-                }), (0, KC.jsx)(AC.h, {
+                }), (0, Ok.jsx)(Kk.i, {
                   label: "classic:voidDeathHeight",
                   circleInfoText: "classic:voidDeathHeightDescription",
-                  disabled: "Enter" !== XC,
-                  children: (0, KC.jsx)("input", {
+                  disabled: "Enter" !== Uk,
+                  children: (0, Ok.jsx)("input", {
                     type: "number",
-                    max: JC.G,
-                    value: null !== (nC = yC.worldOptions.voidDeathHeight) && void 0 !== nC ? nC : "",
-                    onChange: CC => {
-                      const zC = parseInt(CC.target.value);
-                      VC("voidDeathHeight", isNaN(zC) ? null : zC)
+                    max: sk.K,
+                    value: null !== (yk = gk.worldOptions.voidDeathHeight) && void 0 !== yk ? yk : "",
+                    onChange: kk => {
+                      const Fk = parseInt(kk.target.value);
+                      kF("voidDeathHeight", isNaN(Fk) ? null : Fk)
                     }
                   })
-                }), (0, KC.jsx)(AC.h, {
+                }), (0, Ok.jsx)(Kk.i, {
                   label: "classic:disableLobbySpawn",
-                  disabled: "Enter" !== XC,
-                  children: (0, KC.jsx)(AC.d, {
-                    checked: yC.worldOptions.disableLobbySpawn,
-                    setChecked: CC => {
-                      VC("disableLobbySpawn", CC)
+                  disabled: "Enter" !== Uk,
+                  children: (0, Ok.jsx)(Kk.e, {
+                    checked: gk.worldOptions.disableLobbySpawn,
+                    setChecked: kk => {
+                      kF("disableLobbySpawn", kk)
                     }
                   })
-                }), (0, KC.jsx)(AC.h, {
+                }), (0, Ok.jsx)(Kk.i, {
                   label: "classic:worldBorder",
                   circleInfoText: "classic:worldBorderDescription",
-                  disabled: "Enter" !== XC,
-                  children: (0, KC.jsx)("input", {
+                  disabled: "Enter" !== Uk,
+                  children: (0, Ok.jsx)("input", {
                     type: "number",
-                    min: JC.Q,
-                    max: JC.K,
-                    value: null !== (YC = yC.worldOptions.worldBorder) && void 0 !== YC ? YC : "",
-                    onChange: CC => {
-                      const zC = parseInt(CC.target.value);
-                      VC("worldBorder", isNaN(zC) ? null : zC)
+                    min: sk.Q,
+                    max: sk.L,
+                    value: null !== (nk = gk.worldOptions.worldBorder) && void 0 !== nk ? nk : "",
+                    onChange: kk => {
+                      const Fk = parseInt(kk.target.value);
+                      kF("worldBorder", isNaN(Fk) ? null : Fk)
                     }
                   })
-                }), (0, KC.jsx)(AC.h, {
+                }), (0, Ok.jsx)(Kk.i, {
                   label: "classic:disableMobs",
-                  disabled: "Enter" !== XC,
-                  children: (0, KC.jsx)(AC.d, {
-                    checked: yC.worldOptions.disableMobs,
-                    setChecked: CC => {
-                      VC("disableMobs", CC)
+                  disabled: "Enter" !== Uk,
+                  children: (0, Ok.jsx)(Kk.e, {
+                    checked: gk.worldOptions.disableMobs,
+                    setChecked: kk => {
+                      kF("disableMobs", kk)
                     }
                   })
                 })]
               })]
-            }), TC && (0, KC.jsx)(iC.e, {
-              callbacks: zz,
-              disabled: "Enter" !== XC,
-              advancedMode: tC
+            }), fk && (0, Ok.jsx)(zk.e, {
+              callbacks: IF,
+              disabled: "Enter" !== Uk,
+              advancedMode: dk
             })]
           })
-        }), (0, KC.jsxs)("div", {
+        }), (0, Ok.jsxs)("div", {
           className: "CreateCustomLobbyFooter",
-          children: [(0, KC.jsx)(NC.o, {
+          children: [(0, Ok.jsx)(Zk.m, {
             className: "CreateCustomLobbyButton",
             padDefaultFocus: !0,
-            loading: "Enter" !== XC,
+            loading: "Enter" !== Uk,
             onClick: () => {
               !async function() {
-                if ("Enter" === XC) {
-                  cC("Loading"), rC("");
+                if ("Enter" === Uk) {
+                  Ck("Loading"), ck("");
                   try {
-                    await WC.d.createCustomLobby(yC), cC("Success")
-                  } catch (CC) {
-                    rC(CC.message), console.error(CC.message), cC("Enter")
+                    await tk.c.createCustomLobby(gk), Ck("Success")
+                  } catch (kk) {
+                    ck(kk.message), console.error(kk.message), Ck("Enter")
                   }
                 }
               }()
             },
-            children: EC("general:create")
-          }), TC && (0, KC.jsx)("div", {
+            children: bk("general:create")
+          }), fk && (0, Ok.jsx)("div", {
             className: "CreateCustomLobbyAdvancedToggle",
-            "data-pad-ignore": Zz || void 0,
-            children: (0, KC.jsx)(AC.h, {
+            "data-pad-ignore": XF || void 0,
+            children: (0, Ok.jsx)(Kk.i, {
               label: "customLobby:showAdvancedOptions",
-              disabled: Zz,
+              disabled: XF,
               onLabelClick: () => {
-                DC(!tC)
+                Yk(!dk)
               },
-              children: (0, KC.jsx)(AC.d, {
-                checked: tC,
-                setChecked: DC
+              children: (0, Ok.jsx)(Kk.e, {
+                checked: dk,
+                setChecked: Yk
               })
             })
-          }), uC && (0, KC.jsx)("div", {
+          }), Nk && (0, Ok.jsx)("div", {
             className: "CreateCustomLobbyError AnimFadeInScaleUp",
-            children: uC
+            children: Nk
           })]
         })]
       })
     }
   },
-  36244: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => oC
+  36355: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => ak
     });
-    var QC = ZC(1002),
-      wC = ZC.n(QC),
-      bC = ZC(48),
-      nC = ZC(4515),
-      fC = ZC(1056);
+    var Xk = Ik(1055),
+      Tk = Ik.n(Xk),
+      ik = Ik(58),
+      yk = Ik(4570),
+      lk = Ik(1096);
 
-    function oC(CC) {
+    function ak(kk) {
       let {
-        locked: zC,
-        children: ZC
-      } = CC;
-      const QC = (0, bC.useRef)(null),
-        oC = (0, nC.b)(QC, "y");
-      return (0, fC.jsx)("div", {
-        ref: QC,
-        className: wC()("CreateCustomLobbyBody", {
-          CreateCustomLobbyBodyMoreAbove: oC.before,
-          CreateCustomLobbyBodyMoreBelow: oC.after
+        locked: Fk,
+        children: Ik
+      } = kk;
+      const Xk = (0, ik.useRef)(null),
+        ak = (0, yk.e)(Xk, "y");
+      return (0, lk.jsx)("div", {
+        ref: Xk,
+        className: Tk()("CreateCustomLobbyBody", {
+          CreateCustomLobbyBodyMoreAbove: ak.before,
+          CreateCustomLobbyBodyMoreBelow: ak.after
         }),
-        "data-pad-ignore": zC || void 0,
-        children: ZC
+        "data-pad-ignore": Fk || void 0,
+        children: Ik
       })
     }
   },
-  36234: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => FC,
-      e: () => NC
+  36340: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Lk,
+      i: () => Zk
     });
-    var QC = ZC(48),
-      wC = ZC(1307),
-      bC = ZC(1143),
-      nC = ZC(1295),
-      fC = ZC(3448),
-      oC = ZC(4873),
-      qC = ZC(1056);
+    var Xk = Ik(58),
+      Tk = Ik(1324),
+      ik = Ik(1179),
+      yk = Ik(1318),
+      lk = Ik(3414),
+      ak = Ik(4929),
+      qk = Ik(1096);
 
-    function FC(CC) {
+    function Lk(kk) {
       let {
-        loading: zC,
-        schematics: ZC,
-        onSchematicPicked: QC,
-        selectedSchematicIdList: wC = [],
-        disableAutoExport: oC
-      } = CC;
+        loading: Fk,
+        schematics: Ik,
+        onSchematicPicked: Xk,
+        selectedSchematicIdList: Tk = [],
+        disableAutoExport: ak
+      } = kk;
       const {
-        t: FC
-      } = (0, bC.y)();
-      return (0, qC.jsxs)("div", {
+        t: Lk
+      } = (0, ik.y)();
+      return (0, qk.jsxs)("div", {
         className: "SchematicList",
-        children: [zC && (0, qC.jsx)(nC.d, {}), !zC && 0 === ZC.length && (0, qC.jsx)("div", {
+        children: [Fk && (0, qk.jsx)(yk.c, {}), !Fk && 0 === Ik.length && (0, qk.jsx)("div", {
           className: "NoSchematicsText",
-          children: FC("worldBuilder:noSavedSchematic")
-        }), !zC && ZC.map((CC => (0, qC.jsx)(fC.d, {
+          children: Lk("worldBuilder:noSavedSchematic")
+        }), !Fk && Ik.map((kk => (0, qk.jsx)(lk.c, {
           source: {
             type: "schematic",
-            schematic: CC
+            schematic: kk
           },
           gameWidth: "25%",
           useLongRatio: !0,
           onClick: () => {
-            QC(CC)
+            Xk(kk)
           },
-          isSelected: wC.includes(CC.schematicId),
+          isSelected: Tk.includes(kk.schematicId),
           hideCcu: !0,
           hideFavourites: !0,
           showPublishedChip: !0,
           hideUnpublishedChip: !0,
-          disabled: CC.isAutoExported && oC,
+          disabled: kk.isAutoExported && ak,
           disabledReason: "worldBuilder:autoExportDisabled"
-        }, CC.schematicId)))]
+        }, kk.schematicId)))]
       })
     }
 
-    function WC(CC) {
+    function tk(kk) {
       let {
-        ownedSchematics: zC,
-        currentWorldSchematicId: ZC,
-        onClose: wC
-      } = CC;
+        ownedSchematics: Fk,
+        currentWorldSchematicId: Ik,
+        onClose: Tk
+      } = kk;
       const {
-        t: nC
-      } = (0, bC.y)(), [fC, WC] = (0, QC.useState)(null);
-      return (0, qC.jsxs)("div", {
+        t: yk
+      } = (0, ik.y)(), [lk, tk] = (0, Xk.useState)(null);
+      return (0, qk.jsxs)("div", {
         className: "SchematicListWindow",
-        children: [null === fC && (0, qC.jsxs)(qC.Fragment, {
-          children: [(0, qC.jsx)("h1", {
+        children: [null === lk && (0, qk.jsxs)(qk.Fragment, {
+          children: [(0, qk.jsx)("h1", {
             className: "SchematicPopupTitle",
-            children: nC("worldBuilder:schematicList")
-          }), (0, qC.jsx)("h2", {
+            children: yk("worldBuilder:schematicList")
+          }), (0, qk.jsx)("h2", {
             className: "SchematicPopupSubtitle",
-            children: nC("worldBuilder:clickSchematicForOptions")
-          }), (0, qC.jsx)("div", {
+            children: yk("worldBuilder:clickSchematicForOptions")
+          }), (0, qk.jsx)("div", {
             className: "SchematicPopupSchematicListContainer",
-            children: (0, qC.jsx)(FC, {
+            children: (0, qk.jsx)(Lk, {
               loading: !1,
-              schematics: zC,
-              onSchematicPicked: CC => {
-                WC(CC)
+              schematics: Fk,
+              onSchematicPicked: kk => {
+                tk(kk)
               },
               disableAutoExport: !1
             })
           })]
-        }), null !== fC && (0, qC.jsx)(oC.k, {
-          schematic: fC,
-          inSourceWorld: fC.schematicId === ZC,
-          onSchematicUpdate: CC => {
-            WC(CC)
+        }), null !== lk && (0, qk.jsx)(ak.f, {
+          schematic: lk,
+          inSourceWorld: lk.schematicId === Ik,
+          onSchematicUpdate: kk => {
+            tk(kk)
           },
           onClose: () => {
-            WC(null), wC()
+            tk(null), Tk()
           }
         })]
       })
     }
 
-    function NC(CC) {
+    function Zk(kk) {
       let {
-        ownedSchematics: zC,
-        currentWorldSchematicId: ZC,
-        onClose: QC
-      } = CC;
-      wC.NotificationProvider.showCustomPopup({
-        body: CC => (0, qC.jsx)(WC, {
-          ownedSchematics: zC,
-          currentWorldSchematicId: ZC,
-          onClose: CC
+        ownedSchematics: Fk,
+        currentWorldSchematicId: Ik,
+        onClose: Xk
+      } = kk;
+      Tk.NotificationProvider.showCustomPopup({
+        body: kk => (0, qk.jsx)(tk, {
+          ownedSchematics: Fk,
+          currentWorldSchematicId: Ik,
+          onClose: kk
         }),
         middleScreenPopupClassName: "SchematicPopup",
-        onClose: QC,
+        onClose: Xk,
         unlockPointerKey: "schematicListPopup"
       })
     }
   },
-  36241: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => qC,
-      h: () => FC
+  36347: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => qk,
+      g: () => Lk
     });
-    ZC(48);
-    var QC = ZC(1002),
-      wC = ZC.n(QC),
-      bC = ZC(4562),
-      nC = ZC(310),
-      fC = ZC(1143),
-      oC = ZC(1056);
+    Ik(58);
+    var Xk = Ik(1055),
+      Tk = Ik.n(Xk),
+      ik = Ik(4612),
+      yk = Ik(318),
+      lk = Ik(1179),
+      ak = Ik(1096);
 
-    function qC(CC) {
+    function qk(kk) {
       let {
-        value: zC,
-        onChange: ZC,
-        showAll: QC,
-        disabled: qC = !1
-      } = CC;
+        value: Fk,
+        onChange: Ik,
+        showAll: Xk,
+        disabled: qk = !1
+      } = kk;
       const {
-        t: FC
-      } = (0, fC.y)();
-      return (0, oC.jsxs)("div", {
-        className: wC()("BloxdForm GamemodeForm", {
-          BasicOptions: !QC
+        t: Lk
+      } = (0, lk.y)();
+      return (0, ak.jsxs)("div", {
+        className: Tk()("BloxdForm GamemodeForm", {
+          BasicOptions: !Xk
         }),
-        children: [(0, oC.jsx)("div", {
+        children: [(0, ak.jsx)("div", {
           className: "SectionTitle",
-          children: FC("classic:defaultGamemode")
-        }), (0, oC.jsx)("div", {
+          children: Lk("classic:defaultGamemode")
+        }), (0, ak.jsx)("div", {
           className: "SectionBody",
-          children: bC.H.map((CC => QC || (0, bC.B)(CC) ? (0, oC.jsx)("button", {
+          children: ik.x.map((kk => Xk || (0, ik.r)(kk) ? (0, ak.jsx)("button", {
             type: "button",
-            className: wC()("WorldGamemode", {
-              Selected: zC === CC
+            className: Tk()("WorldGamemode", {
+              Selected: Fk === kk
             }),
-            disabled: qC,
+            disabled: qk,
             onClick: () => {
-              ZC(CC)
+              Ik(kk)
             },
             style: {
-              "--background-image": `url(${nC.s[CC]})`
+              "--background-image": `url(${yk.x[kk]})`
             },
-            children: nC.q[CC]
-          }, CC) : null))
+            children: yk.t[kk]
+          }, kk) : null))
         })]
       })
     }
 
-    function FC(CC) {
+    function Lk(kk) {
       let {
-        mapTypes: zC,
-        value: ZC,
-        onChange: QC,
-        showAll: qC,
-        disabled: FC = !1,
-        children: WC
-      } = CC;
+        mapTypes: Fk,
+        value: Ik,
+        onChange: Xk,
+        showAll: qk,
+        disabled: Lk = !1,
+        children: tk
+      } = kk;
       const {
-        t: NC
-      } = (0, fC.y)();
-      return (0, oC.jsxs)("div", {
-        className: wC()("BloxdForm MapTypeForm", {
-          BasicOptions: !qC
+        t: Zk
+      } = (0, lk.y)();
+      return (0, ak.jsxs)("div", {
+        className: Tk()("BloxdForm MapTypeForm", {
+          BasicOptions: !qk
         }),
-        children: [(0, oC.jsx)("div", {
+        children: [(0, ak.jsx)("div", {
           className: "SectionTitle",
-          children: NC("customLobby:mapType")
-        }), (0, oC.jsx)("div", {
+          children: Zk("customLobby:mapType")
+        }), (0, ak.jsx)("div", {
           className: "SectionBody",
-          children: zC.map((CC => qC || (0, bC.D)(CC) ? (0, oC.jsx)("button", {
+          children: Fk.map((kk => qk || (0, ik.u)(kk) ? (0, ak.jsx)("button", {
             type: "button",
-            className: wC()("MapType", {
-              Selected: ZC === CC
+            className: Tk()("MapType", {
+              Selected: Ik === kk
             }),
-            disabled: FC,
+            disabled: Lk,
             onClick: () => {
-              QC(CC)
+              Xk(kk)
             },
             style: {
-              "--background-image": `url(${nC.k[CC]})`
+              "--background-image": `url(${yk.p[kk]})`
             },
-            children: nC.j[CC]
-          }, CC) : null))
-        }), WC]
+            children: yk.n[kk]
+          }, kk) : null))
+        }), tk]
       })
     }
   },
-  36227: () => {}
+  36335: () => {}
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

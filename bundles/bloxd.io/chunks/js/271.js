@@ -1,20 +1,20 @@
 export const id = 271;
 export const ids = [271];
 export const modules = {
-  40888: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      gamePackSource: () => bC
+  41067: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      gamePackSource: () => ik
     });
-    var QC = ZC(4925),
-      wC = ZC(1439);
+    var Xk = Ik(4976),
+      Tk = Ik(1453);
 
-    function bC(CC) {
+    function ik(kk) {
       return {
-        packKey: async zC => (await wC.d.getGame(CC, zC, !0)).customTexturePackKey,
-        fetchPack: QC.d
+        packKey: async Fk => (await Tk.e.getGame(kk, Fk, !0)).customTexturePackKey,
+        fetchPack: Xk.c
       }
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

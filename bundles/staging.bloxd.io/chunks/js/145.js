@@ -1,17 +1,17 @@
 export const id = 145;
 export const ids = [145];
 export const modules = {
-  8102: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      BloxdFirebaseSdk: () => NC
+  8073: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      BloxdFirebaseSdk: () => Zk
     });
-    var QC = ZC(1762),
-      wC = ZC(2909),
-      bC = ZC(88),
-      nC = ZC(77),
-      fC = ZC(1609),
-      oC = ZC(1944);
-    const qC = {
+    var Xk = Ik(1787),
+      Tk = Ik(2837),
+      ik = Ik(104),
+      yk = Ik(95),
+      lk = Ik(1631),
+      ak = Ik(1969);
+    const qk = {
       apiKey: "AIzaSyCJ-G6m_NyA3P021v-ugDmMmkcKysUebSE",
       authDomain: "bloxd-ee1aa.firebaseapp.com",
       projectId: "bloxd-ee1aa",
@@ -19,148 +19,148 @@ export const modules = {
       messagingSenderId: "758847442742",
       appId: "1:758847442742:web:7bb74eb261641e30f02d97"
     };
-    var FC = ZC(2927),
-      WC = ZC(1633);
-    class NC {
+    var Lk = Ik(2852),
+      tk = Ik(1649);
+    class Zk {
       constructor() {}
       static async setup() {
         try {
-          return await NC.setupInternal()
-        } catch (CC) {
-          return console.error("Failed to setup Firebase SDK:", CC), null
+          return await Zk.setupInternal()
+        } catch (kk) {
+          return console.error("Failed to setup Firebase SDK:", kk), null
         }
       }
       static async setupInternal() {
-        const CC = await Promise.all([ZC.e(266), ZC.e(265)]).then((() => ZC(40325))),
-          zC = await Promise.all([ZC.e(266), ZC.e(267)]).then((() => ZC(40357))),
-          MC = await Promise.all([ZC.e(266), ZC.e(268)]).then((() => ZC(40364))),
-          gC = CC.initializeApp({
-            ...qC,
-            measurementId: wC.d
+        const kk = await Promise.all([Ik.e(266), Ik.e(265)]).then((() => Ik(40509))),
+          Fk = await Promise.all([Ik.e(266), Ik.e(267)]).then((() => Ik(40532))),
+          jk = await Promise.all([Ik.e(266), Ik.e(268)]).then((() => Ik(40536))),
+          ek = kk.initializeApp({
+            ...qk,
+            measurementId: Tk.e
           });
-        (0, wC.F)(), window.gtag("config", wC.d), (0, wC.z)(), window.gtag("config", "AW-16469618203");
-        const SC = zC.getAnalytics(gC),
-          pC = {
-            portal: bC.currentUrl.getSearchParam("portal") || "root",
+        (0, Tk.E)(), window.gtag("config", Tk.e), (0, Tk.z)(), window.gtag("config", "AW-16469618203");
+        const wk = Fk.getAnalytics(ek),
+          Hk = {
+            portal: ik.currentUrl.getSearchParam("portal") || "root",
             loggedIn: !1
           };
-        zC.setUserProperties(SC, pC);
-        const PC = MC.initializeAuth(gC, {
-          persistence: [MC.indexedDBLocalPersistence, MC.browserLocalPersistence, MC.browserSessionPersistence],
-          popupRedirectResolver: (0, nC.isMobileApp)() ? void 0 : MC.browserPopupRedirectResolver
+        Fk.setUserProperties(wk, Hk);
+        const Jk = jk.initializeAuth(ek, {
+          persistence: [jk.indexedDBLocalPersistence, jk.browserLocalPersistence, jk.browserSessionPersistence],
+          popupRedirectResolver: (0, yk.isMobileApp)() ? void 0 : jk.browserPopupRedirectResolver
         });
-        MC.useDeviceLanguage(PC);
-        const GC = new MC.GoogleAuthProvider;
-        GC.setCustomParameters({
+        jk.useDeviceLanguage(Jk);
+        const xk = new jk.GoogleAuthProvider;
+        xk.setCustomParameters({
           prompt: "select_account"
         });
-        const RC = new MC.OAuthProvider(QC.k[QC.e.APPLE]),
-          AC = new MC.OAuthProvider(QC.k[QC.e.MICROSOFT]);
-        AC.setCustomParameters({
+        const Pk = new jk.OAuthProvider(Xk.i[Xk.d.APPLE]),
+          Kk = new jk.OAuthProvider(Xk.i[Xk.d.MICROSOFT]);
+        Kk.setCustomParameters({
           prompt: "select_account",
           tenant: "consumers"
         });
-        const xC = {
-          [QC.e.GOOGLE]: GC,
-          [QC.e.APPLE]: RC,
-          [QC.e.MICROSOFT]: AC
+        const Qk = {
+          [Xk.d.GOOGLE]: xk,
+          [Xk.d.APPLE]: Pk,
+          [Xk.d.MICROSOFT]: Kk
         };
         window.gtag("set", {
           cookie_flags: "SameSite=None;Secure"
-        }), await new Promise((CC => {
-          const zC = MC.onIdTokenChanged(PC, (ZC => {
-            zC(), CC()
+        }), await new Promise((kk => {
+          const Fk = jk.onIdTokenChanged(Jk, (Ik => {
+            Fk(), kk()
           }))
         }));
-        class JC extends NC {
-          setUserProperties(CC) {
-            zC.setUserProperties(SC, CC)
+        class sk extends Zk {
+          setUserProperties(kk) {
+            Fk.setUserProperties(wk, kk)
           }
-          onIdTokenChanged(CC) {
-            MC.onIdTokenChanged(PC, CC)
+          onIdTokenChanged(kk) {
+            jk.onIdTokenChanged(Jk, kk)
           }
           canSignIn() {
             return !0
           }
-          async signInWithPopup(CC) {
-            var zC;
-            const ZC = await MC.signInWithPopup(PC, xC[CC]);
-            return null !== (zC = null === ZC || void 0 === ZC ? void 0 : ZC.user) && void 0 !== zC ? zC : null
+          async signInWithPopup(kk) {
+            var Fk;
+            const Ik = await jk.signInWithPopup(Jk, Qk[kk]);
+            return null !== (Fk = null === Ik || void 0 === Ik ? void 0 : Ik.user) && void 0 !== Fk ? Fk : null
           }
-          async getCurrentUser(CC) {
-            const zC = PC.currentUser;
-            if (!zC) return null;
+          async getCurrentUser(kk) {
+            const Fk = Jk.currentUser;
+            if (!Fk) return null;
             const {
-              signInProvider: ZC
-            } = await zC.getIdTokenResult(!1);
-            return ZC === QC.k[CC] ? zC : null
+              signInProvider: Ik
+            } = await Fk.getIdTokenResult(!1);
+            return Ik === Xk.i[kk] ? Fk : null
           }
-          async signOut(CC) {
-            null !== await this.getCurrentUser(CC) && await MC.signOut(PC)
+          async signOut(kk) {
+            null !== await this.getCurrentUser(kk) && await jk.signOut(Jk)
           }
         }
-        async function IC(CC, zC) {
-          const ZC = await fC.d.request(`${CC}.${zC}`, {});
-          if (null === ZC) return null;
-          const QC = "google" === CC ? MC.GoogleAuthProvider.credential(ZC.idToken) : RC.credential({
-            idToken: ZC.idToken
+        async function Vk(kk, Fk) {
+          const Ik = await lk.b.request(`${kk}.${Fk}`, {});
+          if (null === Ik) return null;
+          const Xk = "google" === kk ? jk.GoogleAuthProvider.credential(Ik.idToken) : Pk.credential({
+            idToken: Ik.idToken
           });
-          return (await MC.signInWithCredential(PC, QC)).user
+          return (await jk.signInWithCredential(Jk, Xk)).user
         }
-        class iC extends NC {
-          setUserProperties(CC) {
-            zC.setUserProperties(SC, CC)
+        class zk extends Zk {
+          setUserProperties(kk) {
+            Fk.setUserProperties(wk, kk)
           }
-          onIdTokenChanged(CC) {
-            MC.onIdTokenChanged(PC, CC)
+          onIdTokenChanged(kk) {
+            jk.onIdTokenChanged(Jk, kk)
           }
-          canSignIn(CC) {
-            return null !== (0, oC.e)(CC)
+          canSignIn(kk) {
+            return null !== (0, ak.d)(kk)
           }
-          async signInWithPopup(CC) {
-            const zC = (0, oC.e)(CC);
-            if (null === zC) return console.warn(`The app can't sign in with ${CC}; check canSignIn first`), null;
+          async signInWithPopup(kk) {
+            const Fk = (0, ak.d)(kk);
+            if (null === Fk) return console.warn(`The app can't sign in with ${kk}; check canSignIn first`), null;
             try {
-              return await IC(zC, "signIn")
-            } catch (ZC) {
-              if (ZC instanceof WC.e && "timeout" === ZC.code) return null;
-              throw (0, FC.reportClientError)("login_failed", ZC, `app_${zC}`), ZC
+              return await Vk(Fk, "signIn")
+            } catch (Ik) {
+              if (Ik instanceof tk.d && "timeout" === Ik.code) return null;
+              throw (0, Lk.reportClientError)("login_failed", Ik, `app_${Fk}`), Ik
             }
           }
-          async getCurrentUser(CC) {
-            const zC = PC.currentUser;
-            if (zC) {
+          async getCurrentUser(kk) {
+            const Fk = Jk.currentUser;
+            if (Fk) {
               const {
-                signInProvider: ZC
-              } = await zC.getIdTokenResult(!1);
-              if (ZC === QC.k[CC]) return zC
+                signInProvider: Ik
+              } = await Fk.getIdTokenResult(!1);
+              if (Ik === Xk.i[kk]) return Fk
             }
-            const ZC = (0, oC.e)(CC);
-            if (null === ZC) return null;
+            const Ik = (0, ak.d)(kk);
+            if (null === Ik) return null;
             try {
-              return await IC(ZC, "getCurrentUser")
-            } catch (wC) {
-              return console.error(`Failed to get the current ${CC} user from the app:`, wC), null
+              return await Vk(Ik, "getCurrentUser")
+            } catch (Tk) {
+              return console.error(`Failed to get the current ${kk} user from the app:`, Tk), null
             }
           }
-          async signOut(CC) {
-            const zC = (0, oC.e)(CC);
-            null !== zC && fC.d.request(`${zC}.signOut`, {}).catch((zC => {
-              console.error(`Failed to sign out of ${CC} in the app:`, zC)
+          async signOut(kk) {
+            const Fk = (0, ak.d)(kk);
+            null !== Fk && lk.b.request(`${Fk}.signOut`, {}).catch((Fk => {
+              console.error(`Failed to sign out of ${kk} in the app:`, Fk)
             }));
-            const ZC = PC.currentUser;
-            if (ZC) {
+            const Ik = Jk.currentUser;
+            if (Ik) {
               const {
-                signInProvider: zC
-              } = await ZC.getIdTokenResult(!1);
-              zC === QC.k[CC] && await MC.signOut(PC)
+                signInProvider: Fk
+              } = await Ik.getIdTokenResult(!1);
+              Fk === Xk.i[kk] && await jk.signOut(Jk)
             }
           }
         }
-        return (0, nC.isMobileApp)() ? (await fC.d.ready, new iC) : new JC
+        return (0, yk.isMobileApp)() ? (await lk.b.ready, new zk) : new sk
       }
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

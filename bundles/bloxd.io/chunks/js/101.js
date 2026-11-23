@@ -1,117 +1,117 @@
 export const id = 101;
 export const ids = [101];
 export const modules = {
-  4847: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => NC
+  4911: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => Zk
     });
-    var QC = ZC(1002),
-      wC = ZC.n(QC),
-      bC = ZC(1013),
-      nC = ZC(1295),
-      fC = ZC(3464),
-      oC = ZC(113),
-      qC = ZC(3498),
-      FC = ZC(3487),
-      WC = ZC(1056);
+    var Xk = Ik(1055),
+      Tk = Ik.n(Xk),
+      ik = Ik(1066),
+      yk = Ik(1318),
+      lk = Ik(3442),
+      ak = Ik(129),
+      qk = Ik(3488),
+      Lk = Ik(3475),
+      tk = Ik(1096);
 
-    function NC(CC) {
+    function Zk(kk) {
       let {
-        game: zC
-      } = CC;
-      const ZC = (0, oC.o)() ? "large" : "small",
-        QC = (0, qC.g)(zC, ZC),
-        NC = (0, fC.e)(QC),
-        MC = void 0 !== NC.blurhash;
-      return (0, WC.jsxs)("div", {
+        game: Fk
+      } = kk;
+      const Ik = (0, ak.p)() ? "large" : "small",
+        Xk = (0, qk.h)(Fk, Ik),
+        Zk = (0, lk.e)(Xk),
+        jk = void 0 !== Zk.blurhash;
+      return (0, tk.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [NC.isLoading && !MC && (0, WC.jsx)(nC.d, {
+        children: [Zk.isLoading && !jk && (0, tk.jsx)(yk.c, {
           loaderType: "Secondary"
-        }), !NC.failed && (null !== NC.src || MC) && (0, WC.jsx)("div", {
-          className: wC()("SchematicImage", FC.k, {
-            SchematicImageFadeIn: NC.fadeIn && !MC
+        }), !Zk.failed && (null !== Zk.src || jk) && (0, tk.jsx)("div", {
+          className: Tk()("SchematicImage", Lk.g, {
+            SchematicImageFadeIn: Zk.fadeIn && !jk
           }),
-          style: (0, FC.g)(NC),
-          children: (0, WC.jsx)(FC.d, {
-            image: NC
+          style: (0, Lk.f)(Zk),
+          children: (0, tk.jsx)(Lk.d, {
+            image: Zk
           })
-        }), NC.failed && (0, WC.jsx)("div", {
+        }), Zk.failed && (0, tk.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, WC.jsx)(bC.c, {
+          children: (0, tk.jsx)(ik.e, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  4830: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      default: () => vC
+  4895: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      default: () => Sk
     });
-    ZC(4838);
-    var QC = ZC(48),
-      wC = ZC(1002),
-      bC = ZC.n(wC),
-      nC = ZC(310),
-      fC = ZC(979),
-      oC = ZC(1169),
-      qC = ZC(1143),
-      FC = ZC(1076),
-      WC = ZC(1439),
-      NC = ZC(4847),
-      MC = ZC(1388),
-      gC = ZC(4854),
-      SC = ZC(1295),
-      pC = ZC(1453),
-      PC = ZC(4571),
-      GC = ZC(1013),
-      RC = ZC(964),
-      AC = ZC(2465),
-      xC = ZC(4863),
-      JC = ZC(1477),
-      IC = ZC(1056);
+    Ik(4903);
+    var Xk = Ik(58),
+      Tk = Ik(1055),
+      ik = Ik.n(Tk),
+      yk = Ik(318),
+      lk = Ik(1023),
+      ak = Ik(1217),
+      qk = Ik(1179),
+      Lk = Ik(1118),
+      tk = Ik(1453),
+      Zk = Ik(4911),
+      jk = Ik(1406),
+      ek = Ik(4914),
+      wk = Ik(1318),
+      Hk = Ik(1475),
+      Jk = Ik(4616),
+      xk = Ik(1066),
+      Pk = Ik(1016),
+      Kk = Ik(2438),
+      Qk = Ik(4922),
+      sk = Ik(1504),
+      Vk = Ik(1096);
 
-    function iC() {
+    function zk() {
       const {
-        t: CC
-      } = (0, qC.y)(), zC = (0, pC.useNavigatePreserveSearch)(), ZC = (0, AC.r)(), wC = (0, QC.useMemo)((() => [...RC.e].sort(((zC, QC) => {
-        var wC, bC;
-        const nC = (null !== (wC = (0, AC.b)(QC, ZC)) && void 0 !== wC ? wC : 0) - (null !== (bC = (0, AC.b)(zC, ZC)) && void 0 !== bC ? bC : 0);
-        return 0 !== nC ? nC : (0, JC.n)(zC, CC).localeCompare((0, JC.n)(QC, CC))
-      }))), [ZC, CC]);
-      return (0, IC.jsxs)(IC.Fragment, {
-        children: [(0, IC.jsx)("div", {
+        t: kk
+      } = (0, qk.y)(), Fk = (0, Hk.useNavigatePreserveSearch)(), Ik = (0, Kk.l)(), Tk = (0, Xk.useMemo)((() => [...Pk.e].sort(((Fk, Xk) => {
+        var Tk, ik;
+        const yk = (null !== (Tk = (0, Kk.b)(Xk, Ik)) && void 0 !== Tk ? Tk : 0) - (null !== (ik = (0, Kk.b)(Fk, Ik)) && void 0 !== ik ? ik : 0);
+        return 0 !== yk ? yk : (0, sk.k)(Fk, kk).localeCompare((0, sk.k)(Xk, kk))
+      }))), [Ik, kk]);
+      return (0, Vk.jsxs)(Vk.Fragment, {
+        children: [(0, Vk.jsx)("div", {
           className: "StudioPageHeader",
-          children: (0, IC.jsx)("h1", {
+          children: (0, Vk.jsx)("h1", {
             className: "StudioPageTitle",
-            children: CC("studio:firstPartyGames")
+            children: kk("studio:firstPartyGames")
           })
-        }), (0, IC.jsx)(gC.b, {
+        }), (0, Vk.jsx)(ek.e, {
           className: "StudioTable AnimFadeIn",
           columns: [{
             key: "game",
-            header: CC("general:game")
+            header: kk("general:game")
           }, {
             key: "ccu",
-            header: CC("studio:metricCcu")
+            header: kk("studio:metricCcu")
           }],
-          rows: wC,
-          getRowKey: CC => CC,
-          renderRow: QC => {
-            var wC;
-            return (0, IC.jsxs)("tr", {
+          rows: Tk,
+          getRowKey: kk => kk,
+          renderRow: Xk => {
+            var Tk;
+            return (0, Vk.jsxs)("tr", {
               onClick: () => {
-                zC((0, JC.o)((0, fC.f)(QC, !0)))
+                Fk((0, sk.m)((0, lk.d)(Xk, !0)))
               },
-              children: [(0, IC.jsx)("td", {
-                children: (0, IC.jsx)(xC.g, {
-                  thumbnail: (0, IC.jsx)(xC.e, {
-                    game: QC
+              children: [(0, Vk.jsx)("td", {
+                children: (0, Vk.jsx)(Qk.g, {
+                  thumbnail: (0, Vk.jsx)(Qk.c, {
+                    game: Xk
                   }),
-                  name: (0, JC.n)(QC, CC)
+                  name: (0, sk.k)(Xk, kk)
                 })
-              }), (0, IC.jsx)("td", {
-                children: (0, oC.Z)(null !== (wC = (0, AC.b)(QC, ZC)) && void 0 !== wC ? wC : 0)
+              }), (0, Vk.jsx)("td", {
+                children: (0, ak.Q)(null !== (Tk = (0, Kk.b)(Xk, Ik)) && void 0 !== Tk ? Tk : 0)
               })]
             })
           }
@@ -119,18 +119,18 @@ export const modules = {
       })
     }
 
-    function vC() {
+    function Sk() {
       const {
-        t: CC
-      } = (0, qC.y)(), zC = (0, pC.useNavigatePreserveSearch)(), {
-        userContext: ZC,
-        isUserContextUpdating: wC
-      } = (0, FC.e)(), {
-        isCreating: RC,
-        create: AC
-      } = (0, PC.e)(), [vC, eC] = (0, QC.useState)(null), [hC, KC] = (0, QC.useState)(null), [YC, dC] = (0, QC.useState)(!1);
-      (0, QC.useEffect)((() => {
-        wC || (dC(!1), WC.d.getPublishedGamePreviews(ZC, {
+        t: kk
+      } = (0, qk.y)(), Fk = (0, Hk.useNavigatePreserveSearch)(), {
+        userContext: Ik,
+        isUserContextUpdating: Tk
+      } = (0, Lk.d)(), {
+        isCreating: Pk,
+        create: Kk
+      } = (0, Jk.h)(), [Sk, vk] = (0, Xk.useState)(null), [Ek, Ok] = (0, Xk.useState)(null), [nk, Gk] = (0, Xk.useState)(!1);
+      (0, Xk.useEffect)((() => {
+        Tk || (Gk(!1), tk.e.getPublishedGamePreviews(Ik, {
           searchQuery: null,
           pageNumber: 1,
           pageSize: 50,
@@ -140,162 +140,162 @@ export const modules = {
           schematicIdsToExclude: [],
           gameCategories: [],
           upAndComing: !1
-        }).then((CC => {
-          eC({
-            ...CC,
-            results: (0, nC.$)(CC.results)
+        }).then((kk => {
+          vk({
+            ...kk,
+            results: (0, yk.ab)(kk.results)
           })
-        })).catch((CC => {
-          console.error("Failed to get owned published games", CC), dC(!0)
-        })), WC.d.getOwnedUnpublishedGames(ZC).then((CC => {
-          KC(CC)
-        })).catch((CC => {
-          console.error("Failed to get owned unpublished games", CC), dC(!0)
+        })).catch((kk => {
+          console.error("Failed to get owned published games", kk), Gk(!0)
+        })), tk.e.getOwnedUnpublishedGames(Ik).then((kk => {
+          Ok(kk)
+        })).catch((kk => {
+          console.error("Failed to get owned unpublished games", kk), Gk(!0)
         })))
-      }), [wC, ZC]);
-      const mC = null !== vC && null !== hC ? [...vC.results, ...hC] : [],
-        HC = !YC && (null === vC || null === hC),
-        EC = !HC && !YC && 0 === mC.length,
-        lC = !wC && ZC.playerHasRank("developer");
-      return (0, IC.jsxs)("div", {
+      }), [Tk, Ik]);
+      const pk = null !== Sk && null !== Ek ? [...Sk.results, ...Ek] : [],
+        uk = !nk && (null === Sk || null === Ek),
+        bk = !uk && !nk && 0 === pk.length,
+        Rk = !Tk && Ik.playerHasRank("developer");
+      return (0, Vk.jsxs)("div", {
         className: "StudioPage StudioGameList",
-        children: [(0, IC.jsxs)("div", {
+        children: [(0, Vk.jsxs)("div", {
           className: "StudioPageHeader",
-          children: [(0, IC.jsx)("h1", {
+          children: [(0, Vk.jsx)("h1", {
             className: "StudioPageTitle",
-            children: CC("studio:myGames")
-          }), (0, IC.jsxs)(MC.o, {
-            onClick: AC,
-            loading: RC,
-            children: [(0, IC.jsx)(GC.c, {
+            children: kk("studio:myGames")
+          }), (0, Vk.jsxs)(jk.m, {
+            onClick: Kk,
+            loading: Pk,
+            children: [(0, Vk.jsx)(xk.e, {
               name: "plus"
-            }), " ", CC("homePage:createCustomGame")]
+            }), " ", kk("homePage:createCustomGame")]
           })]
-        }), HC && (0, IC.jsx)("div", {
+        }), uk && (0, Vk.jsx)("div", {
           className: "StudioPageLoader AnimFadeIn",
-          children: (0, IC.jsx)(SC.d, {})
-        }), YC && (0, IC.jsx)("div", {
+          children: (0, Vk.jsx)(wk.c, {})
+        }), nk && (0, Vk.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: CC("studio:failedToLoadGames")
-        }), EC && (0, IC.jsx)("div", {
+          children: kk("studio:failedToLoadGames")
+        }), bk && (0, Vk.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: CC("studio:noGamesYet")
-        }), !HC && !YC && !EC && (0, IC.jsx)(gC.b, {
+          children: kk("studio:noGamesYet")
+        }), !uk && !nk && !bk && (0, Vk.jsx)(ek.e, {
           className: "StudioTable AnimFadeIn",
           columns: [{
             key: "game",
-            header: CC("general:game")
+            header: kk("general:game")
           }, {
             key: "status",
-            header: CC("general:status")
+            header: kk("general:status")
           }, {
             key: "ccu",
-            header: CC("studio:metricCcu")
+            header: kk("studio:metricCcu")
           }, {
             key: "favourites",
-            header: CC("general:favourites")
+            header: kk("general:favourites")
           }],
-          rows: mC,
-          getRowKey: CC => CC.schematicId,
-          renderRow: ZC => (0, IC.jsxs)("tr", {
+          rows: pk,
+          getRowKey: kk => kk.schematicId,
+          renderRow: Ik => (0, Vk.jsxs)("tr", {
             onClick: () => {
-              var CC;
-              CC = ZC.schematicId, zC((0, JC.o)((0, fC.d)(CC)))
+              var kk;
+              kk = Ik.schematicId, Fk((0, sk.m)((0, lk.c)(kk)))
             },
-            children: [(0, IC.jsx)("td", {
-              children: (0, IC.jsx)(xC.g, {
-                thumbnail: (0, IC.jsx)(NC.d, {
-                  game: ZC
+            children: [(0, Vk.jsx)("td", {
+              children: (0, Vk.jsx)(Qk.g, {
+                thumbnail: (0, Vk.jsx)(Zk.b, {
+                  game: Ik
                 }),
-                name: ZC.name
+                name: Ik.name
               })
-            }), (0, IC.jsx)("td", {
-              children: (0, IC.jsx)("span", {
-                className: bC()("StudioGameListStatusChip", {
-                  StudioGameListStatusChipPublished: ZC.gamePublished
+            }), (0, Vk.jsx)("td", {
+              children: (0, Vk.jsx)("span", {
+                className: ik()("StudioGameListStatusChip", {
+                  StudioGameListStatusChipPublished: Ik.gamePublished
                 }),
-                children: ZC.gamePublished ? CC("general:published") : CC("general:draft")
+                children: Ik.gamePublished ? kk("general:published") : kk("general:draft")
               })
-            }), (0, IC.jsx)("td", {
-              children: (0, oC.Z)(ZC.ccu)
-            }), (0, IC.jsx)("td", {
-              children: (0, oC.Z)(ZC.favourites)
+            }), (0, Vk.jsx)("td", {
+              children: (0, ak.Q)(Ik.ccu)
+            }), (0, Vk.jsx)("td", {
+              children: (0, ak.Q)(Ik.favourites)
             })]
           })
-        }), lC && (0, IC.jsx)(iC, {})]
+        }), Rk && (0, Vk.jsx)(zk, {})]
       })
     }
   },
-  4863: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => nC,
-      g: () => bC
+  4922: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => yk,
+      g: () => ik
     });
-    var QC = ZC(1477),
-      wC = ZC(1056);
+    var Xk = Ik(1504),
+      Tk = Ik(1096);
 
-    function bC(CC) {
+    function ik(kk) {
       let {
-        thumbnail: zC,
-        name: ZC
-      } = CC;
-      return (0, wC.jsxs)("div", {
+        thumbnail: Fk,
+        name: Ik
+      } = kk;
+      return (0, Tk.jsxs)("div", {
         className: "StudioTableGameCell",
-        children: [(0, wC.jsx)("div", {
+        children: [(0, Tk.jsx)("div", {
           className: "StudioTableThumbnail",
-          children: zC
-        }), (0, wC.jsx)("span", {
+          children: Fk
+        }), (0, Tk.jsx)("span", {
           className: "StudioTableGameName",
-          children: ZC
+          children: Ik
         })]
       })
     }
 
-    function nC(CC) {
+    function yk(kk) {
       let {
-        game: zC
-      } = CC;
-      return (0, wC.jsx)("img", {
+        game: Fk
+      } = kk;
+      return (0, Tk.jsx)("img", {
         className: "StudioTableThumbnailImage",
-        src: (0, QC.j)(zC),
+        src: (0, Xk.g)(Fk),
         alt: ""
       })
     }
   },
-  4854: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => fC
+  4914: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => lk
     });
-    var QC = ZC(48),
-      wC = ZC(1002),
-      bC = ZC.n(wC),
-      nC = ZC(1056);
+    var Xk = Ik(58),
+      Tk = Ik(1055),
+      ik = Ik.n(Tk),
+      yk = Ik(1096);
 
-    function fC(CC) {
+    function lk(kk) {
       let {
-        columns: zC,
-        rows: ZC,
-        getRowKey: wC,
-        renderRow: fC,
-        className: oC
-      } = CC;
-      return (0, nC.jsxs)("table", {
-        className: bC()("Table", oC),
-        children: [(0, nC.jsx)("thead", {
-          children: (0, nC.jsx)("tr", {
-            children: zC.map((CC => (0, nC.jsx)("th", {
-              children: CC.header
-            }, CC.key)))
+        columns: Fk,
+        rows: Ik,
+        getRowKey: Tk,
+        renderRow: lk,
+        className: ak
+      } = kk;
+      return (0, yk.jsxs)("table", {
+        className: ik()("Table", ak),
+        children: [(0, yk.jsx)("thead", {
+          children: (0, yk.jsx)("tr", {
+            children: Fk.map((kk => (0, yk.jsx)("th", {
+              children: kk.header
+            }, kk.key)))
           })
-        }), (0, nC.jsx)("tbody", {
-          children: ZC.map((CC => (0, nC.jsx)(QC.Fragment, {
-            children: fC(CC)
-          }, wC(CC))))
+        }), (0, yk.jsx)("tbody", {
+          children: Ik.map((kk => (0, yk.jsx)(Xk.Fragment, {
+            children: lk(kk)
+          }, Tk(kk))))
         })]
       })
     }
   },
-  4838: () => {}
+  4903: () => {}
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

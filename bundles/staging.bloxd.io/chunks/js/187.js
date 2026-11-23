@@ -1,106 +1,106 @@
 export const id = 187;
 export const ids = [187];
 export const modules = {
-  37555: (CC, zC, ZC) => {
-    var QC = ZC(37560);
+  37749: (kk, Fk, Ik) => {
+    var Xk = Ik(37758);
 
-    function wC(CC) {
-      for (var zC, ZC, wC = 0, bC = CC.length, nC = 0; nC < CC.length;) {
-        for (zC = CC[nC], ZC = 0; nC < bC && CC[nC] === zC;) ++nC, ++ZC;
-        wC += QC.log2(ZC) / 7 | 0, wC += QC.log2(zC >>> 0) / 7 | 0, wC += 2
+    function Tk(kk) {
+      for (var Fk, Ik, Tk = 0, ik = kk.length, yk = 0; yk < kk.length;) {
+        for (Fk = kk[yk], Ik = 0; yk < ik && kk[yk] === Fk;) ++yk, ++Ik;
+        Tk += Xk.log2(Ik) / 7 | 0, Tk += Xk.log2(Fk >>> 0) / 7 | 0, Tk += 2
       }
-      return wC
+      return Tk
     }
-    zC.size = wC, zC.encode = function(CC, zC) {
-      zC || (zC = new Uint8Array(wC(CC)));
-      for (var ZC, QC, bC = 0, nC = zC.length, fC = 0; fC < CC.length;) {
-        for (ZC = CC[fC], QC = 0; fC < CC.length && CC[fC] === ZC;) ++fC, ++QC;
-        for (; bC < nC && QC >= 128;) zC[bC++] = 128 + (127 & QC), QC >>>= 7;
-        if (bC >= nC) throw new Error("RLE buffer overflow");
-        for (zC[bC++] = QC, ZC >>>= 0; bC < nC && ZC >= 128;) zC[bC++] = 128 + (127 & ZC), ZC >>>= 7;
-        if (bC >= nC) throw new Error("RLE buffer overflow");
-        zC[bC++] = ZC
+    Fk.size = Tk, Fk.encode = function(kk, Fk) {
+      Fk || (Fk = new Uint8Array(Tk(kk)));
+      for (var Ik, Xk, ik = 0, yk = Fk.length, lk = 0; lk < kk.length;) {
+        for (Ik = kk[lk], Xk = 0; lk < kk.length && kk[lk] === Ik;) ++lk, ++Xk;
+        for (; ik < yk && Xk >= 128;) Fk[ik++] = 128 + (127 & Xk), Xk >>>= 7;
+        if (ik >= yk) throw new Error("RLE buffer overflow");
+        for (Fk[ik++] = Xk, Ik >>>= 0; ik < yk && Ik >= 128;) Fk[ik++] = 128 + (127 & Ik), Ik >>>= 7;
+        if (ik >= yk) throw new Error("RLE buffer overflow");
+        Fk[ik++] = Ik
       }
-      return zC
-    }, zC.decode = function(CC, zC) {
-      for (var ZC, QC, wC, bC, nC = zC.length, fC = CC.length, oC = 0, qC = 0; qC < fC;) {
-        for (ZC = 0, QC = 0; qC < fC && CC[qC] >= 128;) ZC += (127 & CC[qC++]) << QC, QC += 7;
-        if (ZC += CC[qC++] << QC, qC >= fC) throw new Error("RLE buffer underrun");
-        if (oC + ZC > nC) throw new Error("Chunk buffer overflow");
-        for (wC = 0, QC = 0; qC < fC && CC[qC] >= 128;) wC += (127 & CC[qC++]) << QC, QC += 7;
-        if (qC >= fC) throw new Error("RLE buffer underrun");
-        for (wC += CC[qC++] << QC, bC = 0; bC < ZC; ++bC) zC[oC++] = wC
+      return Fk
+    }, Fk.decode = function(kk, Fk) {
+      for (var Ik, Xk, Tk, ik, yk = Fk.length, lk = kk.length, ak = 0, qk = 0; qk < lk;) {
+        for (Ik = 0, Xk = 0; qk < lk && kk[qk] >= 128;) Ik += (127 & kk[qk++]) << Xk, Xk += 7;
+        if (Ik += kk[qk++] << Xk, qk >= lk) throw new Error("RLE buffer underrun");
+        if (ak + Ik > yk) throw new Error("Chunk buffer overflow");
+        for (Tk = 0, Xk = 0; qk < lk && kk[qk] >= 128;) Tk += (127 & kk[qk++]) << Xk, Xk += 7;
+        if (qk >= lk) throw new Error("RLE buffer underrun");
+        for (Tk += kk[qk++] << Xk, ik = 0; ik < Ik; ++ik) Fk[ak++] = Tk
       }
-      return zC
+      return Fk
     }
   },
-  37560: (CC, zC) => {
-    function ZC(CC) {
-      var zC = 32;
-      return (CC &= -CC) && zC--, 65535 & CC && (zC -= 16), 16711935 & CC && (zC -= 8), 252645135 & CC && (zC -= 4), 858993459 & CC && (zC -= 2), 1431655765 & CC && (zC -= 1), zC
+  37758: (kk, Fk) => {
+    function Ik(kk) {
+      var Fk = 32;
+      return (kk &= -kk) && Fk--, 65535 & kk && (Fk -= 16), 16711935 & kk && (Fk -= 8), 252645135 & kk && (Fk -= 4), 858993459 & kk && (Fk -= 2), 1431655765 & kk && (Fk -= 1), Fk
     }
-    zC.INT_BITS = 32, zC.INT_MAX = 2147483647, zC.INT_MIN = -1 << 31, zC.sign = function(CC) {
-      return (CC > 0) - (CC < 0)
-    }, zC.abs = function(CC) {
-      var zC = CC >> 31;
-      return (CC ^ zC) - zC
-    }, zC.min = function(CC, zC) {
-      return zC ^ (CC ^ zC) & -(CC < zC)
-    }, zC.max = function(CC, zC) {
-      return CC ^ (CC ^ zC) & -(CC < zC)
-    }, zC.isPow2 = function(CC) {
-      return !(CC & CC - 1) && !!CC
-    }, zC.log2 = function(CC) {
-      var zC, ZC;
-      return zC = (CC > 65535) << 4, zC |= ZC = ((CC >>>= zC) > 255) << 3, zC |= ZC = ((CC >>>= ZC) > 15) << 2, (zC |= ZC = ((CC >>>= ZC) > 3) << 1) | (CC >>>= ZC) >> 1
-    }, zC.log10 = function(CC) {
-      return CC >= 1e9 ? 9 : CC >= 1e8 ? 8 : CC >= 1e7 ? 7 : CC >= 1e6 ? 6 : CC >= 1e5 ? 5 : CC >= 1e4 ? 4 : CC >= 1e3 ? 3 : CC >= 100 ? 2 : CC >= 10 ? 1 : 0
-    }, zC.popCount = function(CC) {
-      return 16843009 * ((CC = (858993459 & (CC -= CC >>> 1 & 1431655765)) + (CC >>> 2 & 858993459)) + (CC >>> 4) & 252645135) >>> 24
-    }, zC.countTrailingZeros = ZC, zC.nextPow2 = function(CC) {
-      return CC += 0 === CC, --CC, CC |= CC >>> 1, CC |= CC >>> 2, CC |= CC >>> 4, CC |= CC >>> 8, (CC |= CC >>> 16) + 1
-    }, zC.prevPow2 = function(CC) {
-      return CC |= CC >>> 1, CC |= CC >>> 2, CC |= CC >>> 4, CC |= CC >>> 8, (CC |= CC >>> 16) - (CC >>> 1)
-    }, zC.parity = function(CC) {
-      return CC ^= CC >>> 16, CC ^= CC >>> 8, CC ^= CC >>> 4, 27030 >>> (CC &= 15) & 1
+    Fk.INT_BITS = 32, Fk.INT_MAX = 2147483647, Fk.INT_MIN = -1 << 31, Fk.sign = function(kk) {
+      return (kk > 0) - (kk < 0)
+    }, Fk.abs = function(kk) {
+      var Fk = kk >> 31;
+      return (kk ^ Fk) - Fk
+    }, Fk.min = function(kk, Fk) {
+      return Fk ^ (kk ^ Fk) & -(kk < Fk)
+    }, Fk.max = function(kk, Fk) {
+      return kk ^ (kk ^ Fk) & -(kk < Fk)
+    }, Fk.isPow2 = function(kk) {
+      return !(kk & kk - 1) && !!kk
+    }, Fk.log2 = function(kk) {
+      var Fk, Ik;
+      return Fk = (kk > 65535) << 4, Fk |= Ik = ((kk >>>= Fk) > 255) << 3, Fk |= Ik = ((kk >>>= Ik) > 15) << 2, (Fk |= Ik = ((kk >>>= Ik) > 3) << 1) | (kk >>>= Ik) >> 1
+    }, Fk.log10 = function(kk) {
+      return kk >= 1e9 ? 9 : kk >= 1e8 ? 8 : kk >= 1e7 ? 7 : kk >= 1e6 ? 6 : kk >= 1e5 ? 5 : kk >= 1e4 ? 4 : kk >= 1e3 ? 3 : kk >= 100 ? 2 : kk >= 10 ? 1 : 0
+    }, Fk.popCount = function(kk) {
+      return 16843009 * ((kk = (858993459 & (kk -= kk >>> 1 & 1431655765)) + (kk >>> 2 & 858993459)) + (kk >>> 4) & 252645135) >>> 24
+    }, Fk.countTrailingZeros = Ik, Fk.nextPow2 = function(kk) {
+      return kk += 0 === kk, --kk, kk |= kk >>> 1, kk |= kk >>> 2, kk |= kk >>> 4, kk |= kk >>> 8, (kk |= kk >>> 16) + 1
+    }, Fk.prevPow2 = function(kk) {
+      return kk |= kk >>> 1, kk |= kk >>> 2, kk |= kk >>> 4, kk |= kk >>> 8, (kk |= kk >>> 16) - (kk >>> 1)
+    }, Fk.parity = function(kk) {
+      return kk ^= kk >>> 16, kk ^= kk >>> 8, kk ^= kk >>> 4, 27030 >>> (kk &= 15) & 1
     };
-    var QC = new Array(256);
-    ! function(CC) {
-      for (var zC = 0; zC < 256; ++zC) {
-        var ZC = zC,
-          QC = zC,
-          wC = 7;
-        for (ZC >>>= 1; ZC; ZC >>>= 1) QC <<= 1, QC |= 1 & ZC, --wC;
-        CC[zC] = QC << wC & 255
+    var Xk = new Array(256);
+    ! function(kk) {
+      for (var Fk = 0; Fk < 256; ++Fk) {
+        var Ik = Fk,
+          Xk = Fk,
+          Tk = 7;
+        for (Ik >>>= 1; Ik; Ik >>>= 1) Xk <<= 1, Xk |= 1 & Ik, --Tk;
+        kk[Fk] = Xk << Tk & 255
       }
-    }(QC), zC.reverse = function(CC) {
-      return QC[255 & CC] << 24 | QC[CC >>> 8 & 255] << 16 | QC[CC >>> 16 & 255] << 8 | QC[CC >>> 24 & 255]
-    }, zC.interleave2 = function(CC, zC) {
-      return (CC = 1431655765 & ((CC = 858993459 & ((CC = 252645135 & ((CC = 16711935 & ((CC &= 65535) | CC << 8)) | CC << 4)) | CC << 2)) | CC << 1)) | (zC = 1431655765 & ((zC = 858993459 & ((zC = 252645135 & ((zC = 16711935 & ((zC &= 65535) | zC << 8)) | zC << 4)) | zC << 2)) | zC << 1)) << 1
-    }, zC.deinterleave2 = function(CC, zC) {
-      return (CC = 65535 & ((CC = 16711935 & ((CC = 252645135 & ((CC = 858993459 & ((CC = CC >>> zC & 1431655765) | CC >>> 1)) | CC >>> 2)) | CC >>> 4)) | CC >>> 16)) << 16 >> 16
-    }, zC.interleave3 = function(CC, zC, ZC) {
-      return CC = 1227133513 & ((CC = 3272356035 & ((CC = 251719695 & ((CC = 4278190335 & ((CC &= 1023) | CC << 16)) | CC << 8)) | CC << 4)) | CC << 2), (CC |= (zC = 1227133513 & ((zC = 3272356035 & ((zC = 251719695 & ((zC = 4278190335 & ((zC &= 1023) | zC << 16)) | zC << 8)) | zC << 4)) | zC << 2)) << 1) | (ZC = 1227133513 & ((ZC = 3272356035 & ((ZC = 251719695 & ((ZC = 4278190335 & ((ZC &= 1023) | ZC << 16)) | ZC << 8)) | ZC << 4)) | ZC << 2)) << 2
-    }, zC.deinterleave3 = function(CC, zC) {
-      return (CC = 1023 & ((CC = 4278190335 & ((CC = 251719695 & ((CC = 3272356035 & ((CC = CC >>> zC & 1227133513) | CC >>> 2)) | CC >>> 4)) | CC >>> 8)) | CC >>> 16)) << 22 >> 22
-    }, zC.nextCombination = function(CC) {
-      var zC = CC | CC - 1;
-      return zC + 1 | (~zC & -~zC) - 1 >>> ZC(CC) + 1
+    }(Xk), Fk.reverse = function(kk) {
+      return Xk[255 & kk] << 24 | Xk[kk >>> 8 & 255] << 16 | Xk[kk >>> 16 & 255] << 8 | Xk[kk >>> 24 & 255]
+    }, Fk.interleave2 = function(kk, Fk) {
+      return (kk = 1431655765 & ((kk = 858993459 & ((kk = 252645135 & ((kk = 16711935 & ((kk &= 65535) | kk << 8)) | kk << 4)) | kk << 2)) | kk << 1)) | (Fk = 1431655765 & ((Fk = 858993459 & ((Fk = 252645135 & ((Fk = 16711935 & ((Fk &= 65535) | Fk << 8)) | Fk << 4)) | Fk << 2)) | Fk << 1)) << 1
+    }, Fk.deinterleave2 = function(kk, Fk) {
+      return (kk = 65535 & ((kk = 16711935 & ((kk = 252645135 & ((kk = 858993459 & ((kk = kk >>> Fk & 1431655765) | kk >>> 1)) | kk >>> 2)) | kk >>> 4)) | kk >>> 16)) << 16 >> 16
+    }, Fk.interleave3 = function(kk, Fk, Ik) {
+      return kk = 1227133513 & ((kk = 3272356035 & ((kk = 251719695 & ((kk = 4278190335 & ((kk &= 1023) | kk << 16)) | kk << 8)) | kk << 4)) | kk << 2), (kk |= (Fk = 1227133513 & ((Fk = 3272356035 & ((Fk = 251719695 & ((Fk = 4278190335 & ((Fk &= 1023) | Fk << 16)) | Fk << 8)) | Fk << 4)) | Fk << 2)) << 1) | (Ik = 1227133513 & ((Ik = 3272356035 & ((Ik = 251719695 & ((Ik = 4278190335 & ((Ik &= 1023) | Ik << 16)) | Ik << 8)) | Ik << 4)) | Ik << 2)) << 2
+    }, Fk.deinterleave3 = function(kk, Fk) {
+      return (kk = 1023 & ((kk = 4278190335 & ((kk = 251719695 & ((kk = 3272356035 & ((kk = kk >>> Fk & 1227133513) | kk >>> 2)) | kk >>> 4)) | kk >>> 8)) | kk >>> 16)) << 22 >> 22
+    }, Fk.nextCombination = function(kk) {
+      var Fk = kk | kk - 1;
+      return Fk + 1 | (~Fk & -~Fk) - 1 >>> Ik(kk) + 1
     }
   },
-  39623: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      emptyColumnHeight: () => AC,
-      loadHeatmapSchematic: () => xC,
-      readSchematicBlocks: () => JC
+  39794: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      emptyColumnHeight: () => Kk,
+      loadHeatmapSchematic: () => Qk,
+      readSchematicBlocks: () => sk
     });
-    var QC = ZC(3681),
-      wC = ZC.n(QC),
-      bC = ZC(3661),
-      nC = ZC(37555),
-      fC = ZC(184),
-      oC = ZC(9194);
-    const qC = [{
+    var Xk = Ik(3709),
+      Tk = Ik.n(Xk),
+      ik = Ik(3682),
+      yk = Ik(37749),
+      lk = Ik(187),
+      ak = Ik(9183);
+    const qk = [{
         name: "x",
         type: "int"
       }, {
@@ -110,20 +110,20 @@ export const modules = {
         name: "z",
         type: "int"
       }],
-      FC = [{
+      Lk = [{
         name: "name",
         type: "string"
       }, {
         name: "startOffset",
         type: {
           type: "record",
-          fields: qC
+          fields: qk
         }
       }, {
         name: "dimensions",
         type: {
           type: "record",
-          fields: qC
+          fields: qk
         }
       }, {
         name: "chunkData",
@@ -131,26 +131,26 @@ export const modules = {
           type: "array",
           items: {
             type: "record",
-            fields: [...qC, {
+            fields: [...qk, {
               name: "rle",
               type: "bytes"
             }]
           }
         }
       }],
-      WC = wC().Type.forSchema({
+      tk = Tk().Type.forSchema({
         type: "record",
-        fields: FC
+        fields: Lk
       }),
-      NC = wC().Type.forSchema({
+      Zk = Tk().Type.forSchema({
         type: "record",
-        fields: [...FC, {
+        fields: [...Lk, {
           name: "blockData",
           type: {
             type: "array",
             items: {
               type: "record",
-              fields: [...qC, {
+              fields: [...qk, {
                 name: "data",
                 type: "bytes"
               }]
@@ -160,187 +160,187 @@ export const modules = {
           name: "pasteOffset",
           type: {
             type: "record",
-            fields: qC
+            fields: qk
           }
         }]
       }),
-      MC = 2,
-      gC = 6,
-      SC = {
+      jk = 2,
+      ek = 6,
+      wk = {
         Water: [63, 118, 228],
         Lava: [232, 110, 30]
       },
-      pC = [150, 150, 150],
-      PC = 16,
-      GC = 4096,
-      RC = fC.f.Ig,
-      AC = -2147483648;
-    async function xC(CC) {
-      const zC = await JC(new Uint8Array(await CC.arrayBuffer()), await async function() {
+      Hk = [150, 150, 150],
+      Jk = 16,
+      xk = 4096,
+      Pk = lk.f.se,
+      Kk = -2147483648;
+    async function Qk(kk) {
+      const Fk = await sk(new Uint8Array(await kk.arrayBuffer()), await async function() {
         const {
-          averageColors: CC
-        } = await ZC.e(204).then((() => ZC(34243))), zC = new Map;
-        return ZC => {
-          var QC, wC, bC, nC, fC;
-          const qC = zC.get(ZC);
-          if (void 0 !== qC) return qC;
-          const FC = null !== (QC = null === (wC = oC.g[ZC]) || void 0 === wC ? void 0 : wC.name) && void 0 !== QC ? QC : "",
-            WC = null !== (bC = CC[FC]) && void 0 !== bC ? bC : CC[FC.split("|")[0]],
-            NC = SC[FC.split("|")[0]],
-            MC = null !== (nC = null !== (fC = null === WC || void 0 === WC ? void 0 : WC[0]) && void 0 !== fC ? fC : NC) && void 0 !== nC ? nC : 0 === (null === WC || void 0 === WC ? void 0 : WC.length) ? null : pC;
-          return zC.set(ZC, MC), MC
+          averageColors: kk
+        } = await Ik.e(204).then((() => Ik(34274))), Fk = new Map;
+        return Ik => {
+          var Xk, Tk, ik, yk, lk;
+          const qk = Fk.get(Ik);
+          if (void 0 !== qk) return qk;
+          const Lk = null !== (Xk = null === (Tk = ak.g[Ik]) || void 0 === Tk ? void 0 : Tk.name) && void 0 !== Xk ? Xk : "",
+            tk = null !== (ik = kk[Lk]) && void 0 !== ik ? ik : kk[Lk.split("|")[0]],
+            Zk = wk[Lk.split("|")[0]],
+            jk = null !== (yk = null !== (lk = null === tk || void 0 === tk ? void 0 : tk[0]) && void 0 !== lk ? lk : Zk) && void 0 !== yk ? yk : 0 === (null === tk || void 0 === tk ? void 0 : tk.length) ? null : Hk;
+          return Fk.set(Ik, jk), jk
         }
       }());
       return {
-        surface: zC.surface,
-        topDown: iC(zC.columnTops)
+        surface: Fk.surface,
+        topDown: zk(Fk.columnTops)
       }
     }
-    async function JC(CC, zC) {
-      var ZC;
-      if (CC.byteLength < 4) throw new Error("The file is too short to be a schematic.");
-      const QC = new DataView(CC.buffer, CC.byteOffset, CC.byteLength).getUint32(0, !0);
-      if (QC > gC) throw new Error("The file isn't a schematic this version of Bloxd can read.");
-      const wC = (QC >= MC ? NC : WC).decode(bC.gg.from(CC.subarray(4)), 0).value;
-      if (!wC) throw new Error("The file isn't a schematic.");
-      if (0 === wC.chunkData.length) throw new Error("The schematic has no blocks in it.");
-      const fC = null !== (ZC = wC.pasteOffset) && void 0 !== ZC ? ZC : {
+    async function sk(kk, Fk) {
+      var Ik;
+      if (kk.byteLength < 4) throw new Error("The file is too short to be a schematic.");
+      const Xk = new DataView(kk.buffer, kk.byteOffset, kk.byteLength).getUint32(0, !0);
+      if (Xk > ek) throw new Error("The file isn't a schematic this version of Bloxd can read.");
+      const Tk = (Xk >= jk ? Zk : tk).decode(ik.je.from(kk.subarray(4)), 0).value;
+      if (!Tk) throw new Error("The file isn't a schematic.");
+      if (0 === Tk.chunkData.length) throw new Error("The schematic has no blocks in it.");
+      const lk = null !== (Ik = Tk.pasteOffset) && void 0 !== Ik ? Ik : {
           x: 0,
           y: 0,
           z: 0
         },
-        oC = [fC.x, fC.y, fC.z].map((CC => Math.floor(CC / RC))),
-        qC = wC.chunkData.map((CC => ({
-          x: CC.x + oC[0],
-          y: CC.y + oC[1],
-          z: CC.z + oC[2],
-          rle: CC.rle
+        ak = [lk.x, lk.y, lk.z].map((kk => Math.floor(kk / Pk))),
+        qk = Tk.chunkData.map((kk => ({
+          x: kk.x + ak[0],
+          y: kk.y + ak[1],
+          z: kk.z + ak[2],
+          rle: kk.rle
         }))),
-        FC = new Map;
-      for (const [bC, WC] of qC.entries()) {
-        const CC = new Uint16Array(RC ** 3);
-        nC.decode(WC.rle, CC), FC.set(`${WC.x},${WC.y},${WC.z}`, CC), bC % PC === PC - 1 && await vC()
+        Lk = new Map;
+      for (const [ik, tk] of qk.entries()) {
+        const kk = new Uint16Array(Pk ** 3);
+        yk.decode(tk.rle, kk), Lk.set(`${tk.x},${tk.y},${tk.z}`, kk), ik % Jk === Jk - 1 && await Sk()
       }
-      const SC = (CC, zC, ZC) => CC * RC * RC + zC * RC + ZC,
-        pC = (CC, zC, ZC) => {
-          var QC, wC;
-          const bC = Math.floor(CC / RC),
-            nC = Math.floor(zC / RC),
-            fC = Math.floor(ZC / RC);
-          return null !== (QC = null === (wC = FC.get(`${bC},${nC},${fC}`)) || void 0 === wC ? void 0 : wC[SC(CC - bC * RC, zC - nC * RC, ZC - fC * RC)]) && void 0 !== QC ? QC : 0
+      const wk = (kk, Fk, Ik) => kk * Pk * Pk + Fk * Pk + Ik,
+        Hk = (kk, Fk, Ik) => {
+          var Xk, Tk;
+          const ik = Math.floor(kk / Pk),
+            yk = Math.floor(Fk / Pk),
+            lk = Math.floor(Ik / Pk);
+          return null !== (Xk = null === (Tk = Lk.get(`${ik},${yk},${lk}`)) || void 0 === Tk ? void 0 : Tk[wk(kk - ik * Pk, Fk - yk * Pk, Ik - lk * Pk)]) && void 0 !== Xk ? Xk : 0
         },
-        GC = new Map,
-        xC = [],
-        JC = [];
-      for (const [bC, nC] of qC.entries()) {
-        const CC = FC.get(`${nC.x},${nC.y},${nC.z}`),
-          ZC = [nC.x * RC, nC.y * RC, nC.z * RC],
-          QC = (zC, QC, wC) => zC < 0 || QC < 0 || wC < 0 || zC >= RC || QC >= RC || wC >= RC ? pC(ZC[0] + zC, ZC[1] + QC, ZC[2] + wC) : CC[SC(zC, QC, wC)],
-          wC = `${nC.x},${nC.z}`;
-        let fC = GC.get(wC);
-        void 0 === fC && (fC = {
-          chunkX: nC.x,
-          chunkZ: nC.z,
-          heights: new Int32Array(RC * RC).fill(AC),
-          colours: new Uint8Array(RC * RC * 3)
-        }, GC.set(wC, fC));
-        for (let bC = 0; bC < RC; bC++)
-          for (let wC = 0; wC < RC; wC++)
-            for (let nC = 0; nC < RC; nC++) {
-              const oC = CC[SC(bC, wC, nC)];
-              if (0 === oC) continue;
-              const qC = ZC[0] + bC,
-                FC = ZC[1] + wC,
-                WC = ZC[2] + nC,
-                NC = zC(oC);
-              if (null === NC) continue;
-              const MC = nC * RC + bC;
-              FC > fC.heights[MC] && (fC.heights[MC] = FC, fC.colours.set(NC, 3 * MC));
-              !IC(oC) && (IC(QC(bC + 1, wC, nC)) || IC(QC(bC - 1, wC, nC)) || IC(QC(bC, wC + 1, nC)) || IC(QC(bC, wC - 1, nC)) || IC(QC(bC, wC, nC + 1)) || IC(QC(bC, wC, nC - 1))) && (xC.push(qC, FC, WC), JC.push(NC[0], NC[1], NC[2]))
+        xk = new Map,
+        Qk = [],
+        sk = [];
+      for (const [ik, yk] of qk.entries()) {
+        const kk = Lk.get(`${yk.x},${yk.y},${yk.z}`),
+          Ik = [yk.x * Pk, yk.y * Pk, yk.z * Pk],
+          Xk = (Fk, Xk, Tk) => Fk < 0 || Xk < 0 || Tk < 0 || Fk >= Pk || Xk >= Pk || Tk >= Pk ? Hk(Ik[0] + Fk, Ik[1] + Xk, Ik[2] + Tk) : kk[wk(Fk, Xk, Tk)],
+          Tk = `${yk.x},${yk.z}`;
+        let lk = xk.get(Tk);
+        void 0 === lk && (lk = {
+          chunkX: yk.x,
+          chunkZ: yk.z,
+          heights: new Int32Array(Pk * Pk).fill(Kk),
+          colours: new Uint8Array(Pk * Pk * 3)
+        }, xk.set(Tk, lk));
+        for (let ik = 0; ik < Pk; ik++)
+          for (let Tk = 0; Tk < Pk; Tk++)
+            for (let yk = 0; yk < Pk; yk++) {
+              const ak = kk[wk(ik, Tk, yk)];
+              if (0 === ak) continue;
+              const qk = Ik[0] + ik,
+                Lk = Ik[1] + Tk,
+                tk = Ik[2] + yk,
+                Zk = Fk(ak);
+              if (null === Zk) continue;
+              const jk = yk * Pk + ik;
+              Lk > lk.heights[jk] && (lk.heights[jk] = Lk, lk.colours.set(Zk, 3 * jk));
+              !Vk(ak) && (Vk(Xk(ik + 1, Tk, yk)) || Vk(Xk(ik - 1, Tk, yk)) || Vk(Xk(ik, Tk + 1, yk)) || Vk(Xk(ik, Tk - 1, yk)) || Vk(Xk(ik, Tk, yk + 1)) || Vk(Xk(ik, Tk, yk - 1))) && (Qk.push(qk, Lk, tk), sk.push(Zk[0], Zk[1], Zk[2]))
             }
-        bC % PC === PC - 1 && await vC()
+        ik % Jk === Jk - 1 && await Sk()
       }
-      if (0 === xC.length) throw new Error("The schematic has no blocks in it.");
+      if (0 === Qk.length) throw new Error("The schematic has no blocks in it.");
       return {
-        name: wC.name,
+        name: Tk.name,
         surface: {
-          positions: Int32Array.from(xC),
-          colours: Uint8Array.from(JC),
-          count: xC.length / 3
+          positions: Int32Array.from(Qk),
+          colours: Uint8Array.from(sk),
+          count: Qk.length / 3
         },
-        columnTops: [...GC.values()]
+        columnTops: [...xk.values()]
       }
     }
 
-    function IC(CC) {
-      if (0 === CC) return !0;
-      const zC = oC.g[CC];
-      return void 0 === zC || zC.NM || zC.transTex || !1 === zC.solid
+    function Vk(kk) {
+      if (0 === kk) return !0;
+      const Fk = ak.g[kk];
+      return void 0 === Fk || Fk.qj || Fk.transTex || !1 === Fk.solid
     }
 
-    function iC(CC) {
-      let zC = 1 / 0,
-        ZC = -1 / 0,
-        QC = 1 / 0,
-        wC = -1 / 0;
+    function zk(kk) {
+      let Fk = 1 / 0,
+        Ik = -1 / 0,
+        Xk = 1 / 0,
+        Tk = -1 / 0;
       for (const {
-          chunkX: gC,
-          chunkZ: SC,
-          heights: pC
+          chunkX: ek,
+          chunkZ: wk,
+          heights: Hk
         }
-        of CC) pC.forEach(((CC, bC) => {
-        if (CC === AC) return;
-        const nC = gC * RC + bC % RC,
-          fC = SC * RC + Math.floor(bC / RC);
-        zC = Math.min(zC, nC), ZC = Math.max(ZC, nC), QC = Math.min(QC, fC), wC = Math.max(wC, fC)
+        of kk) Hk.forEach(((kk, ik) => {
+        if (kk === Kk) return;
+        const yk = ek * Pk + ik % Pk,
+          lk = wk * Pk + Math.floor(ik / Pk);
+        Fk = Math.min(Fk, yk), Ik = Math.max(Ik, yk), Xk = Math.min(Xk, lk), Tk = Math.max(Tk, lk)
       }));
-      const bC = ZC - zC + 1,
-        nC = wC - QC + 1,
-        fC = Math.max(1, Math.ceil(bC / GC), Math.ceil(nC / GC)),
-        oC = Math.ceil(bC / fC),
-        qC = Math.ceil(nC / fC),
-        FC = document.createElement("canvas");
-      FC.width = oC, FC.height = qC;
-      const WC = FC.getContext("2d");
-      if (!WC) throw new Error("Couldn't draw the schematic from above.");
-      const NC = WC.createImageData(oC, qC),
-        MC = new Int32Array(oC * qC).fill(AC);
+      const ik = Ik - Fk + 1,
+        yk = Tk - Xk + 1,
+        lk = Math.max(1, Math.ceil(ik / xk), Math.ceil(yk / xk)),
+        ak = Math.ceil(ik / lk),
+        qk = Math.ceil(yk / lk),
+        Lk = document.createElement("canvas");
+      Lk.width = ak, Lk.height = qk;
+      const tk = Lk.getContext("2d");
+      if (!tk) throw new Error("Couldn't draw the schematic from above.");
+      const Zk = tk.createImageData(ak, qk),
+        jk = new Int32Array(ak * qk).fill(Kk);
       for (const {
-          chunkX: gC,
-          chunkZ: SC,
-          heights: pC,
-          colours: PC
+          chunkX: ek,
+          chunkZ: wk,
+          heights: Hk,
+          colours: Jk
         }
-        of CC) pC.forEach(((CC, zC) => {
-        const wC = gC * RC + zC % RC,
-          bC = SC * RC + Math.floor(zC / RC),
-          nC = Math.floor((bC - QC) / fC) * oC + Math.floor((ZC - wC) / fC);
-        CC === AC || CC <= MC[nC] || (MC[nC] = CC, NC.data.set(PC.subarray(3 * zC, 3 * zC + 3), 4 * nC), NC.data[4 * nC + 3] = 255)
+        of kk) Hk.forEach(((kk, Fk) => {
+        const Tk = ek * Pk + Fk % Pk,
+          ik = wk * Pk + Math.floor(Fk / Pk),
+          yk = Math.floor((ik - Xk) / lk) * ak + Math.floor((Ik - Tk) / lk);
+        kk === Kk || kk <= jk[yk] || (jk[yk] = kk, Zk.data.set(Jk.subarray(3 * Fk, 3 * Fk + 3), 4 * yk), Zk.data[4 * yk + 3] = 255)
       }));
-      return WC.putImageData(NC, 0, 0), {
-        maxX: ZC,
-        minZ: QC,
-        width: oC * fC,
-        depth: qC * fC,
-        canvas: FC
+      return tk.putImageData(Zk, 0, 0), {
+        maxX: Ik,
+        minZ: Xk,
+        width: ak * lk,
+        depth: qk * lk,
+        canvas: Lk
       }
     }
 
-    function vC() {
-      return new Promise((CC => {
-        setTimeout(CC, 0)
+    function Sk() {
+      return new Promise((kk => {
+        setTimeout(kk, 0)
       }))
     }
   },
-  9299: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => wC,
-      d: () => bC
+  9278: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Tk,
+      g: () => ik
     });
-    var QC = ZC(9239);
-    const wC = "Air",
-      bC = Object.freeze(new QC.e(wC, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var Xk = Ik(9237);
+    const Tk = "Air",
+      ik = Object.freeze(new Xk.g(Tk, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

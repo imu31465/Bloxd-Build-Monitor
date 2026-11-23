@@ -1,77 +1,77 @@
 export const id = 191;
 export const ids = [191];
 export const modules = {
-  38967: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => QC
+  39134: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Xk
     });
-    class QC {
-      constructor(CC, zC) {
-        this.read = CC, this.apply = zC, this.release = null
+    class Xk {
+      constructor(kk, Fk) {
+        this.read = kk, this.apply = Fk, this.release = null
       }
-      turn(CC, zC) {
-        const ZC = null === this.release ? this.read() : this.release.transitionMs;
+      turn(kk, Fk) {
+        const Ik = null === this.release ? this.read() : this.release.transitionMs;
         this.stop(!1), this.apply({
-          forcedCameraDirectionTransitionMs: zC,
-          forcedCameraDirection: [CC[0], CC[1], CC[2]]
+          forcedCameraDirectionTransitionMs: Fk,
+          forcedCameraDirection: [kk[0], kk[1], kk[2]]
         }), this.release = {
           timer: setTimeout((() => {
             this.stop(!0)
-          }), zC + 100),
-          transitionMs: ZC
+          }), Fk + 100),
+          transitionMs: Ik
         }
       }
       dispose() {
         this.stop(!0)
       }
-      stop(CC) {
-        null !== this.release && (clearTimeout(this.release.timer), CC && this.apply({
+      stop(kk) {
+        null !== this.release && (clearTimeout(this.release.timer), kk && this.apply({
           forcedCameraDirection: null,
           forcedCameraDirectionTransitionMs: this.release.transitionMs
         }), this.release = null)
       }
     }
   },
-  38471: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => bC,
-      e: () => wC
+  38632: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => ik,
+      g: () => Tk
     });
-    const QC = new Map;
+    const Xk = new Map;
 
-    function wC(CC, zC) {
-      QC.set(CC, zC)
+    function Tk(kk, Fk) {
+      Xk.set(kk, Fk)
     }
 
-    function bC(CC) {
-      return CC ? QC.get(CC) : void 0
+    function ik(kk) {
+      return kk ? Xk.get(kk) : void 0
     }
   },
-  39426: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => wC
+  39603: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Tk
     });
-    var QC = ZC(38042);
+    var Xk = Ik(38204);
 
-    function wC(CC, zC, ZC) {
-      var wC, bC, nC, fC, oC, qC, FC;
-      const WC = (0, QC.d)(CC, zC, ZC[0], ZC[1], ZC[2]),
-        NC = WC ? null !== (wC = WC.textCell) && void 0 !== wC ? wC : WC.rect.anchor : ZC,
-        MC = zC(NC[0], NC[1], NC[2]);
+    function Tk(kk, Fk, Ik) {
+      var Tk, ik, yk, lk, ak, qk, Lk;
+      const tk = (0, Xk.b)(kk, Fk, Ik[0], Ik[1], Ik[2]),
+        Zk = tk ? null !== (Tk = tk.textCell) && void 0 !== Tk ? Tk : tk.rect.anchor : Ik,
+        jk = Fk(Zk[0], Zk[1], Zk[2]);
       return {
-        pos: [ZC[0], ZC[1], ZC[2]],
-        noticeboardSpan: WC && {
-          width: WC.rect.width,
-          height: WC.rect.height
+        pos: [Ik[0], Ik[1], Ik[2]],
+        noticeboardSpan: tk && {
+          width: tk.rect.width,
+          height: tk.rect.height
         },
-        text: null !== (bC = null === MC || void 0 === MC || null === (nC = MC.persisted) || void 0 === nC || null === (fC = nC.shared) || void 0 === fC ? void 0 : fC.text) && void 0 !== bC ? bC : "",
-        textSize: null !== (oC = null === MC || void 0 === MC || null === (qC = MC.persisted) || void 0 === qC || null === (FC = qC.shared) || void 0 === FC ? void 0 : FC.textSize) && void 0 !== oC ? oC : null
+        text: null !== (ik = null === jk || void 0 === jk || null === (yk = jk.persisted) || void 0 === yk || null === (lk = yk.shared) || void 0 === lk ? void 0 : lk.text) && void 0 !== ik ? ik : "",
+        textSize: null !== (ak = null === jk || void 0 === jk || null === (qk = jk.persisted) || void 0 === qk || null === (Lk = qk.shared) || void 0 === Lk ? void 0 : Lk.textSize) && void 0 !== ak ? ak : null
       }
     }
   },
-  38334: (CC, zC, ZC) => {
-    function QC(CC) {
-      switch (CC.kind) {
+  38501: (kk, Fk, Ik) => {
+    function Xk(kk) {
+      switch (kk.kind) {
         case void 0:
         case "flatEmissive":
           return !1;
@@ -80,452 +80,452 @@ export const modules = {
           return !0
       }
     }
-    ZC.d(zC, {
-      d: () => wC,
-      g: () => bC,
-      j: () => QC
+    Ik.d(Fk, {
+      d: () => Tk,
+      e: () => ik,
+      g: () => Xk
     });
-    const wC = 4,
-      bC = 3
+    const Tk = 4,
+      ik = 3
   },
-  38986: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => wC,
-      e: () => bC
+  39162: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Tk,
+      i: () => ik
     });
-    var QC = ZC(326);
-    const wC = new Set(["bedwars", "bridgeBattle", "buildAFactory2", "classic", "clutch", "containmentBreach", "cooking", "defusal", "frontline", "goalRush", "luckyBedwars", "ninetyNineNights", "oneBlock", "plots", "pvpCiv", "skyIslands", "skyblock", "tsunami"]);
-    class bC {
-      constructor(CC) {
-        this.importGame = CC, this.loads = new Map, this.loaded = new Map
+    var Xk = Ik(337);
+    const Tk = new Set(["bedwars", "bridgeBattle", "buildAFactory2", "classic", "clutch", "containmentBreach", "cooking", "defusal", "frontline", "goalRush", "luckyBedwars", "ninetyNineNights", "oneBlock", "plots", "pvpCiv", "skyIslands", "skyblock", "tsunami"]);
+    class ik {
+      constructor(kk) {
+        this.importGame = kk, this.loads = new Map, this.loaded = new Map
       }
-      load(CC) {
-        const zC = (0, QC.Cb)(CC);
-        if (!wC.has(zC)) return Promise.resolve(void 0);
-        let ZC = this.loads.get(zC);
-        return ZC || (ZC = this.importGame(zC).then((CC => {
-          const ZC = CC.default;
-          if ("function" !== typeof ZC) throw new Error(`${zC}'s client code has no default-exported factory`);
-          return this.loaded.set(zC, ZC), ZC
-        })).catch((CC => {
-          throw this.loads.delete(zC), CC
-        })), this.loads.set(zC, ZC)), ZC
+      load(kk) {
+        const Fk = (0, Xk.dc)(kk);
+        if (!Tk.has(Fk)) return Promise.resolve(void 0);
+        let Ik = this.loads.get(Fk);
+        return Ik || (Ik = this.importGame(Fk).then((kk => {
+          const Ik = kk.default;
+          if ("function" !== typeof Ik) throw new Error(`${Fk}'s client code has no default-exported factory`);
+          return this.loaded.set(Fk, Ik), Ik
+        })).catch((kk => {
+          throw this.loads.delete(Fk), kk
+        })), this.loads.set(Fk, Ik)), Ik
       }
-      loadedFactory(CC) {
-        const zC = (0, QC.Cb)(CC);
-        if (!wC.has(zC)) return;
-        const ZC = this.loaded.get(zC);
-        if (!ZC) throw new Error(`${zC}'s client code started before it loaded`);
-        return ZC
+      loadedFactory(kk) {
+        const Fk = (0, Xk.dc)(kk);
+        if (!Tk.has(Fk)) return;
+        const Ik = this.loaded.get(Fk);
+        if (!Ik) throw new Error(`${Fk}'s client code started before it loaded`);
+        return Ik
       }
     }
   },
-  39432: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => nC
+  39610: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => yk
     });
-    var QC = ZC(9299),
-      wC = ZC(34171),
-      bC = ZC(3276);
+    var Xk = Ik(9278),
+      Tk = Ik(34193),
+      ik = Ik(3229);
 
-    function nC(CC) {
-      if (CC === QC.b) return 0;
-      const zC = (0, bC.b)(CC);
-      if (void 0 !== zC && zC <= wC.MAX_BLOCK_ID) return zC;
-      const ZC = (0, bC.b)(CC.split("|")[0]);
-      if (void 0 !== ZC && ZC <= wC.MAX_BLOCK_ID && (0, wC.rootMetaDescOf)(ZC) === CC) return ZC;
-      throw new Error(`Invalid block name. You sent ${CC}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`)
+    function yk(kk) {
+      if (kk === Xk.c) return 0;
+      const Fk = (0, ik.e)(kk);
+      if (void 0 !== Fk && Fk <= Tk.MAX_BLOCK_ID) return Fk;
+      const Ik = (0, ik.e)(kk.split("|")[0]);
+      if (void 0 !== Ik && Ik <= Tk.MAX_BLOCK_ID && (0, Tk.rootMetaDescOf)(Ik) === kk) return Ik;
+      throw new Error(`Invalid block name. You sent ${kk}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`)
     }
   },
-  39042: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => wC
+  39221: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Tk
     });
-    var QC = ZC(20);
-    class wC {
-      constructor(CC) {
-        this.screen = CC, this.hidesHud = !1
+    var Xk = Ik(25);
+    class Tk {
+      constructor(kk) {
+        this.screen = kk, this.hidesHud = !1
       }
-      show(CC, zC) {
-        this.screen.setFade(CC.colour, CC.alpha), this.screen.setLetterbox(!0 === zC.letterbox, CC.alpha < 1), this.setHudHidden(!0 === zC.hideHud)
+      show(kk, Fk) {
+        this.screen.setFade(kk.colour, kk.alpha), this.screen.setLetterbox(!0 === Fk.letterbox, kk.alpha < 1), this.setHudHidden(!0 === Fk.hideHud)
       }
       clear() {
         this.screen.clear(), this.setHudHidden(!1)
       }
-      setHudHidden(CC) {
-        this.hidesHud !== CC && (this.hidesHud = CC, QC.b.set({
-          isUiHiddenByCamera: CC
+      setHudHidden(kk) {
+        this.hidesHud !== kk && (this.hidesHud = kk, Xk.d.set({
+          isUiHiddenByCamera: kk
         }))
       }
     }
   },
-  39005: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => QC,
-      c: () => NC,
-      g: () => WC,
-      h: () => nC,
-      j: () => gC,
-      m: () => oC,
-      o: () => SC,
-      s: () => qC,
-      t: () => fC,
-      w: () => FC
+  39183: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      C: () => lk,
+      F: () => Lk,
+      d: () => Xk,
+      h: () => Zk,
+      k: () => tk,
+      l: () => yk,
+      n: () => ek,
+      r: () => ak,
+      u: () => wk,
+      y: () => qk
     });
-    const QC = Math.PI / 2 - .001,
-      wC = 2 * Math.PI,
-      bC = 1e-9;
+    const Xk = Math.PI / 2 - .001,
+      Tk = 2 * Math.PI,
+      ik = 1e-9;
 
-    function nC(CC, zC) {
-      zC.heading = CC.heading, zC.pitch = CC.pitch
+    function yk(kk, Fk) {
+      Fk.heading = kk.heading, Fk.pitch = kk.pitch
     }
 
-    function fC(CC, zC) {
-      const ZC = zC - CC;
-      return ZC - wC * Math.floor((ZC + Math.PI) / wC)
+    function lk(kk, Fk) {
+      const Ik = Fk - kk;
+      return Ik - Tk * Math.floor((Ik + Math.PI) / Tk)
     }
 
-    function oC(CC, zC, ZC) {
-      return CC + fC(CC, zC) * ZC
+    function ak(kk, Fk, Ik) {
+      return kk + lk(kk, Fk) * Ik
     }
 
-    function qC(CC) {
-      if (!Number.isFinite(CC)) return CC;
-      const zC = CC - wC * Math.floor(CC / wC);
-      return zC < wC ? zC : 0
+    function qk(kk) {
+      if (!Number.isFinite(kk)) return kk;
+      const Fk = kk - Tk * Math.floor(kk / Tk);
+      return Fk < Tk ? Fk : 0
     }
 
-    function FC(CC, zC) {
-      return CC + fC(CC, zC)
+    function Lk(kk, Fk) {
+      return kk + lk(kk, Fk)
     }
 
-    function WC(CC) {
-      return Math.max(-QC, Math.min(QC, CC))
+    function tk(kk) {
+      return Math.max(-Xk, Math.min(Xk, kk))
     }
 
-    function NC(CC, zC, ZC) {
-      const QC = Math.cos(zC);
-      return ZC[0] = QC * Math.sin(CC), ZC[1] = -Math.sin(zC), ZC[2] = QC * Math.cos(CC), ZC
+    function Zk(kk, Fk, Ik) {
+      const Xk = Math.cos(Fk);
+      return Ik[0] = Xk * Math.sin(kk), Ik[1] = -Math.sin(Fk), Ik[2] = Xk * Math.cos(kk), Ik
     }
 
-    function MC(CC, zC, ZC, QC) {
-      const wC = Math.sqrt(CC * CC + ZC * ZC);
-      return wC < bC && Math.abs(zC) < bC || (wC >= bC && (QC.heading = Math.atan2(CC, ZC)), QC.pitch = WC(Math.atan2(-zC, wC) + 0)), QC
+    function jk(kk, Fk, Ik, Xk) {
+      const Tk = Math.sqrt(kk * kk + Ik * Ik);
+      return Tk < ik && Math.abs(Fk) < ik || (Tk >= ik && (Xk.heading = Math.atan2(kk, Ik)), Xk.pitch = tk(Math.atan2(-Fk, Tk) + 0)), Xk
     }
 
-    function gC(CC, zC) {
-      return MC(CC[0], CC[1], CC[2], zC)
+    function ek(kk, Fk) {
+      return jk(kk[0], kk[1], kk[2], Fk)
     }
 
-    function SC(CC, zC, ZC) {
-      return MC(zC[0] - CC[0], zC[1] - CC[1], zC[2] - CC[2], ZC)
+    function wk(kk, Fk, Ik) {
+      return jk(Fk[0] - kk[0], Fk[1] - kk[1], Fk[2] - kk[2], Ik)
     }
   },
-  39036: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => bC,
-      d: () => wC
+  39217: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => ik,
+      e: () => Tk
     });
-    var QC = ZC(39005);
+    var Xk = Ik(39183);
 
-    function wC(CC) {
-      var zC;
-      const ZC = "default" === CC.mode ? "movement" : null !== (zC = CC.playerFacing) && void 0 !== zC ? zC : "movement";
-      return "cursor" === ZC ? {
-        facing: ZC,
+    function Tk(kk) {
+      var Fk;
+      const Ik = "default" === kk.mode ? "movement" : null !== (Fk = kk.playerFacing) && void 0 !== Fk ? Fk : "movement";
+      return "cursor" === Ik ? {
+        facing: Ik,
         mouseTurns: null
       } : {
-        facing: ZC,
-        mouseTurns: "default" !== CC.mode && void 0 !== CC.playerLook ? "look" : "view"
+        facing: Ik,
+        mouseTurns: "default" !== kk.mode && void 0 !== kk.playerLook ? "look" : "view"
       }
     }
 
-    function bC(CC, zC, ZC, wC, bC, nC) {
-      return nC.VY = 0, nC.Zm = 0, nC.pointedAt = void 0, void 0 !== wC ? bC ? (nC.pointedAt = wC, CC) : (0, QC.s)(wC.heading) : bC ? (nC.VY = zC, nC.Zm = ZC, CC) : (0, QC.s)(CC + zC)
+    function ik(kk, Fk, Ik, Tk, ik, yk) {
+      return yk.JG = 0, yk.xG = 0, yk.pointedAt = void 0, void 0 !== Tk ? ik ? (yk.pointedAt = Tk, kk) : (0, Xk.y)(Tk.heading) : ik ? (yk.JG = Fk, yk.xG = Ik, kk) : (0, Xk.y)(kk + Fk)
     }
   },
-  39015: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => aC
+  39196: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => Bk
     });
-    var QC = ZC(39022),
-      wC = ZC(39005),
-      bC = ZC(36864);
+    var Xk = Ik(39201),
+      Tk = Ik(39183),
+      ik = Ik(37029);
 
-    function nC(CC, zC, ZC, QC) {
-      if (!(QC > 0)) return zC;
-      const wC = zC > CC ? Math.min(zC, CC + ZC / QC) : Math.max(zC, CC - ZC / QC);
-      return Math.abs(zC - wC) < 1e-9 ? zC : wC
+    function yk(kk, Fk, Ik, Xk) {
+      if (!(Xk > 0)) return Fk;
+      const Tk = Fk > kk ? Math.min(Fk, kk + Ik / Xk) : Math.max(Fk, kk - Ik / Xk);
+      return Math.abs(Fk - Tk) < 1e-9 ? Fk : Tk
     }
-    class fC {
+    class lk {
       constructor() {
         this.phase = null, this.outMs = 0, this.holdMs = 0, this.inMs = 0, this.heldMs = 0, this.sinceTurnMs = 1 / 0, this.clearMs = 1 / 0, this.waiting = null, this.screen = {
-          colour: QC.f,
+          colour: Xk.f,
           alpha: 0
         }
       }
       getScreen() {
         return this.screen
       }
-      fadeOut(CC) {
-        !this.isGoingOut() && this.sinceTurnMs < QC.k.minFadeTurnMs ? this.waiting = {
+      fadeOut(kk) {
+        !this.isGoingOut() && this.sinceTurnMs < Xk.k.minFadeTurnMs ? this.waiting = {
           turn: "out",
-          transition: CC
-        } : (this.waiting = null, this.startOut(CC))
+          transition: kk
+        } : (this.waiting = null, this.startOut(kk))
       }
-      fadeIn(CC) {
-        this.isGoingOut() ? this.sinceTurnMs < QC.k.minFadeTurnMs ? this.waiting = {
+      fadeIn(kk) {
+        this.isGoingOut() ? this.sinceTurnMs < Xk.k.minFadeTurnMs ? this.waiting = {
           turn: "in",
-          minMs: CC
-        } : (this.waiting = null, this.startIn(CC)) : this.waiting = null
+          minMs: kk
+        } : (this.waiting = null, this.startIn(kk)) : this.waiting = null
       }
-      advance(CC) {
-        const zC = this.waiting;
-        if (null === zC) return this.step(CC);
-        const ZC = QC.k.minFadeTurnMs - this.sinceTurnMs;
-        if (ZC > CC) return this.step(CC);
-        const wC = this.step(ZC);
-        return this.waiting = null, "out" === zC.turn ? this.startOut(zC.transition) : this.startIn(zC.minMs), this.step(CC - ZC) || wC
+      advance(kk) {
+        const Fk = this.waiting;
+        if (null === Fk) return this.step(kk);
+        const Ik = Xk.k.minFadeTurnMs - this.sinceTurnMs;
+        if (Ik > kk) return this.step(kk);
+        const Tk = this.step(Ik);
+        return this.waiting = null, "out" === Fk.turn ? this.startOut(Fk.transition) : this.startIn(Fk.minMs), this.step(kk - Ik) || Tk
       }
       isGoingOut() {
         return "out" === this.phase || "hold" === this.phase
       }
-      startOut(CC) {
-        ("in" === this.phase || null === this.phase && this.clearMs < QC.k.minFadeTurnMs) && (this.sinceTurnMs = 0), this.phase = "out", 0 === this.screen.alpha && (this.screen.colour = CC.colour), this.outMs = CC.outMs, this.holdMs = CC.holdMs, this.inMs = CC.inMs
+      startOut(kk) {
+        ("in" === this.phase || null === this.phase && this.clearMs < Xk.k.minFadeTurnMs) && (this.sinceTurnMs = 0), this.phase = "out", 0 === this.screen.alpha && (this.screen.colour = kk.colour), this.outMs = kk.outMs, this.holdMs = kk.holdMs, this.inMs = kk.inMs
       }
-      startIn(CC) {
-        this.isGoingOut() && (this.sinceTurnMs = 0), this.phase = "in", this.inMs = Math.max(CC, this.inMs)
+      startIn(kk) {
+        this.isGoingOut() && (this.sinceTurnMs = 0), this.phase = "in", this.inMs = Math.max(kk, this.inMs)
       }
-      step(CC) {
-        const zC = this.screen;
-        this.sinceTurnMs += CC, null === this.phase && (this.clearMs += CC);
-        let ZC = !1,
-          wC = CC;
+      step(kk) {
+        const Fk = this.screen;
+        this.sinceTurnMs += kk, null === this.phase && (this.clearMs += kk);
+        let Ik = !1,
+          Tk = kk;
         if ("out" === this.phase) {
-          const QC = (1 - zC.alpha) * this.outMs;
-          if (zC.alpha = nC(zC.alpha, 1, CC, this.outMs), zC.alpha < 1) return !1;
-          this.phase = "hold", this.heldMs = 0, wC = Math.max(0, CC - QC), ZC = !0
+          const Xk = (1 - Fk.alpha) * this.outMs;
+          if (Fk.alpha = yk(Fk.alpha, 1, kk, this.outMs), Fk.alpha < 1) return !1;
+          this.phase = "hold", this.heldMs = 0, Tk = Math.max(0, kk - Xk), Ik = !0
         }
-        let bC = CC;
+        let ik = kk;
         if ("hold" === this.phase) {
-          this.heldMs += wC;
-          const CC = Math.min(this.heldMs - this.holdMs, this.sinceTurnMs - QC.k.minFadeTurnMs);
-          if (CC < 0 || ZC) return ZC;
-          this.phase = "in", this.sinceTurnMs = CC, bC = CC
+          this.heldMs += Tk;
+          const kk = Math.min(this.heldMs - this.holdMs, this.sinceTurnMs - Xk.k.minFadeTurnMs);
+          if (kk < 0 || Ik) return Ik;
+          this.phase = "in", this.sinceTurnMs = kk, ik = kk
         }
-        return "in" === this.phase && (zC.alpha = nC(zC.alpha, 0, bC, this.inMs), zC.alpha <= 0 && (this.phase = null, this.clearMs = 0)), ZC
+        return "in" === this.phase && (Fk.alpha = yk(Fk.alpha, 0, ik, this.inMs), Fk.alpha <= 0 && (this.phase = null, this.clearMs = 0)), Ik
       }
     }
-    var oC = ZC(39e3),
-      qC = ZC(39028),
-      FC = ZC(1806),
-      WC = ZC(36454);
+    var ak = Ik(39180),
+      qk = Ik(39209),
+      Lk = Ik(1844),
+      tk = Ik(36571);
 
-    function NC(CC, zC) {
-      for (let ZC = 0; ZC < zC.length; ZC++) zC[ZC] = CC[ZC]
+    function Zk(kk, Fk) {
+      for (let Ik = 0; Ik < Fk.length; Ik++) Fk[Ik] = kk[Ik]
     }
 
-    function MC(CC, zC) {
-      var ZC;
-      return null !== (ZC = CC.fov) && void 0 !== ZC ? ZC : zC.getDefaultFov()
+    function jk(kk, Fk) {
+      var Ik;
+      return null !== (Ik = kk.fov) && void 0 !== Ik ? Ik : Fk.getDefaultFov()
     }
 
-    function gC(CC, zC, ZC, QC, wC) {
-      const bC = 2 / QC,
-        nC = Math.exp(-bC * wC);
-      for (let fC = 0; fC < CC.length; fC++) {
-        const QC = CC[fC] - ZC[fC],
-          oC = (zC[fC] + bC * QC) * wC;
-        CC[fC] = ZC[fC] + (QC + oC) * nC, zC[fC] = (zC[fC] - bC * oC) * nC
+    function ek(kk, Fk, Ik, Xk, Tk) {
+      const ik = 2 / Xk,
+        yk = Math.exp(-ik * Tk);
+      for (let lk = 0; lk < kk.length; lk++) {
+        const Xk = kk[lk] - Ik[lk],
+          ak = (Fk[lk] + ik * Xk) * Tk;
+        kk[lk] = Ik[lk] + (Xk + ak) * yk, Fk[lk] = (Fk[lk] - ik * ak) * yk
       }
     }
-    class SC {
-      constructor(CC, zC, ZC, QC) {
-        var bC, nC, fC, oC, qC;
-        this.settings = CC, this.fN = zC, this.targets = ZC, this.base = void 0, this.closestDistance = void 0, this.furthestDistance = void 0, this.goal = void 0, this.framedTargets = !1, this.smoothed = [0, 0, 0, 0, 0, 0], this.Np = [0, 0, 0, 0, 0, 0], this.started = !1, this.angles = {
+    class wk {
+      constructor(kk, Fk, Ik, Xk) {
+        var ik, yk, lk, ak, qk;
+        this.settings = kk, this.XZ = Fk, this.targets = Ik, this.base = void 0, this.closestDistance = void 0, this.furthestDistance = void 0, this.goal = void 0, this.framedTargets = !1, this.smoothed = [0, 0, 0, 0, 0, 0], this.TH = [0, 0, 0, 0, 0, 0], this.started = !1, this.angles = {
           heading: 0,
           pitch: 0
         }, this.points = [], this.forward = [0, 0, 0], this.base = {
-          heading: (0, wC.s)((0, FC.j)(null !== (bC = CC.viewHeading) && void 0 !== bC ? bC : 0)),
-          pitch: (0, wC.g)((0, FC.j)(null !== (nC = CC.viewElevation) && void 0 !== nC ? nC : 45))
-        }, this.closestDistance = null !== (fC = CC.closestDistance) && void 0 !== fC ? fC : Math.min(6, null !== (oC = CC.furthestDistance) && void 0 !== oC ? oC : 1 / 0), this.furthestDistance = null !== (qC = CC.furthestDistance) && void 0 !== qC ? qC : Math.max(64, this.closestDistance);
-        const WC = (0, wC.c)(this.base.heading, this.base.pitch, this.forward),
-          NC = QC.position,
-          MC = this.closestDistance;
-        this.goal = [NC[0] + WC[0] * MC, NC[1] + WC[1] * MC, NC[2] + WC[2] * MC, MC, this.base.heading, this.base.pitch]
+          heading: (0, Tk.y)((0, Lk.k)(null !== (ik = kk.viewHeading) && void 0 !== ik ? ik : 0)),
+          pitch: (0, Tk.k)((0, Lk.k)(null !== (yk = kk.viewElevation) && void 0 !== yk ? yk : 45))
+        }, this.closestDistance = null !== (lk = kk.closestDistance) && void 0 !== lk ? lk : Math.min(6, null !== (ak = kk.furthestDistance) && void 0 !== ak ? ak : 1 / 0), this.furthestDistance = null !== (qk = kk.furthestDistance) && void 0 !== qk ? qk : Math.max(64, this.closestDistance);
+        const tk = (0, Tk.h)(this.base.heading, this.base.pitch, this.forward),
+          Zk = Xk.position,
+          jk = this.closestDistance;
+        this.goal = [Zk[0] + tk[0] * jk, Zk[1] + tk[1] * jk, Zk[2] + tk[2] * jk, jk, this.base.heading, this.base.pitch]
       }
-      update(CC, zC, ZC) {
-        var QC, bC;
-        this.placeGoal(null !== (QC = this.settings.fov) && void 0 !== QC ? QC : this.fN.getBaseFov()), this.goal[4] = (0, wC.w)(this.smoothed[4], this.base.heading), this.goal[5] = this.base.pitch;
-        const nC = null !== (bC = this.settings.smoothMs) && void 0 !== bC ? bC : 400;
-        !this.started || nC < 1 ? (NC(this.goal, this.smoothed), this.Np.fill(0), this.started = !0) : gC(this.smoothed, this.Np, this.goal, nC, CC), this.angles.heading = this.smoothed[4], this.angles.pitch = (0, wC.g)(this.smoothed[5]), zC.apply(this.angles, ZC);
-        const fC = (0, wC.c)(ZC.heading, ZC.pitch, this.forward);
-        for (let wC = 0; wC < 3; wC++) ZC.position[wC] = this.smoothed[wC] - fC[wC] * this.smoothed[3];
-        ZC.fov = MC(this.settings, this.fN)
+      update(kk, Fk, Ik) {
+        var Xk, ik;
+        this.placeGoal(null !== (Xk = this.settings.fov) && void 0 !== Xk ? Xk : this.XZ.getBaseFov()), this.goal[4] = (0, Tk.F)(this.smoothed[4], this.base.heading), this.goal[5] = this.base.pitch;
+        const yk = null !== (ik = this.settings.smoothMs) && void 0 !== ik ? ik : 400;
+        !this.started || yk < 1 ? (Zk(this.goal, this.smoothed), this.TH.fill(0), this.started = !0) : ek(this.smoothed, this.TH, this.goal, yk, kk), this.angles.heading = this.smoothed[4], this.angles.pitch = (0, Tk.k)(this.smoothed[5]), Fk.apply(this.angles, Ik);
+        const lk = (0, Tk.h)(Ik.heading, Ik.pitch, this.forward);
+        for (let Tk = 0; Tk < 3; Tk++) Ik.position[Tk] = this.smoothed[Tk] - lk[Tk] * this.smoothed[3];
+        Ik.fov = jk(this.settings, this.XZ)
       }
-      continueFrom(CC) {
-        CC instanceof SC && (NC(CC.goal, this.goal), NC(CC.smoothed, this.smoothed), NC(CC.Np, this.Np), this.framedTargets = CC.framedTargets, this.started = CC.started)
+      continueFrom(kk) {
+        kk instanceof wk && (Zk(kk.goal, this.goal), Zk(kk.smoothed, this.smoothed), Zk(kk.TH, this.TH), this.framedTargets = kk.framedTargets, this.started = kk.started)
       }
       reset() {
-        this.Np.fill(0), this.started = !1
+        this.TH.fill(0), this.started = !1
       }
-      placeGoal(CC) {
-        var zC;
-        let ZC = 0;
-        for (const FC of this.settings.targets) {
-          const CC = this.targets.currentAimPoint(FC);
-          CC && (0, oC.h)(CC, this.pointAt(ZC++))
+      placeGoal(kk) {
+        var Fk;
+        let Ik = 0;
+        for (const Lk of this.settings.targets) {
+          const kk = this.targets.currentAimPoint(Lk);
+          kk && (0, ak.f)(kk, this.pointAt(Ik++))
         }
-        if (ZC > 0) this.framedTargets = !0;
+        if (Ik > 0) this.framedTargets = !0;
         else if (!this.framedTargets) {
-          const CC = this.targets.aimPoint(this.fN.localPlayerId);
-          CC && (0, oC.h)(CC, this.pointAt(ZC++))
+          const kk = this.targets.aimPoint(this.XZ.localPlayerId);
+          kk && (0, ak.f)(kk, this.pointAt(Ik++))
         }
-        const QC = this.goal;
-        if (0 === ZC) return void(QC[3] = this.withinDistances(QC[3]));
-        for (let oC = 0; oC < 3; oC++) {
-          let CC = 1 / 0,
-            zC = -1 / 0;
-          for (let QC = 0; QC < ZC; QC++) CC = Math.min(CC, this.points[QC][oC]), zC = Math.max(zC, this.points[QC][oC]);
-          QC[oC] = (CC + zC) / 2
+        const Xk = this.goal;
+        if (0 === Ik) return void(Xk[3] = this.withinDistances(Xk[3]));
+        for (let ak = 0; ak < 3; ak++) {
+          let kk = 1 / 0,
+            Fk = -1 / 0;
+          for (let Xk = 0; Xk < Ik; Xk++) kk = Math.min(kk, this.points[Xk][ak]), Fk = Math.max(Fk, this.points[Xk][ak]);
+          Xk[ak] = (kk + Fk) / 2
         }
-        let wC = 0;
-        for (let oC = 0; oC < ZC; oC++) {
-          const CC = this.points[oC];
-          wC = Math.max(wC, Math.hypot(CC[0] - QC[0], CC[1] - QC[1], CC[2] - QC[2]))
+        let Tk = 0;
+        for (let ak = 0; ak < Ik; ak++) {
+          const kk = this.points[ak];
+          Tk = Math.max(Tk, Math.hypot(kk[0] - Xk[0], kk[1] - Xk[1], kk[2] - Xk[2]))
         }
-        const bC = Math.tan((0, FC.j)(CC) / 2),
-          nC = Math.atan(bC * (!0 === this.settings.letterbox ? WC.f : 1)),
-          fC = Math.atan(bC * this.fN.getAspectRatio()),
-          qC = (wC + (null !== (zC = this.settings.padding) && void 0 !== zC ? zC : 2)) / Math.sin(Math.min(nC, fC));
-        QC[3] = this.withinDistances(qC)
+        const ik = Math.tan((0, Lk.k)(kk) / 2),
+          yk = Math.atan(ik * (!0 === this.settings.letterbox ? tk.h : 1)),
+          lk = Math.atan(ik * this.XZ.getAspectRatio()),
+          qk = (Tk + (null !== (Fk = this.settings.padding) && void 0 !== Fk ? Fk : 2)) / Math.sin(Math.min(yk, lk));
+        Xk[3] = this.withinDistances(qk)
       }
-      withinDistances(CC) {
-        return Math.min(this.furthestDistance, Math.max(this.closestDistance, CC))
+      withinDistances(kk) {
+        return Math.min(this.furthestDistance, Math.max(this.closestDistance, kk))
       }
-      pointAt(CC) {
-        return CC === this.points.length && this.points.push([0, 0, 0]), this.points[CC]
+      pointAt(kk) {
+        return kk === this.points.length && this.points.push([0, 0, 0]), this.points[kk]
       }
     }
-    class pC {
-      constructor(CC) {
-        this.limits = CC, this.yawOffset = 0, this.pitchOffset = 0, this.idleMs = 0, this.pointedAt = null
+    class Hk {
+      constructor(kk) {
+        this.limits = kk, this.yawOffset = 0, this.pitchOffset = 0, this.idleMs = 0, this.pointedAt = null
       }
-      continueFrom(CC) {
-        this.limits && (this.yawOffset = CC.yawOffset, this.pitchOffset = CC.pitchOffset, this.idleMs = CC.idleMs)
+      continueFrom(kk) {
+        this.limits && (this.yawOffset = kk.yawOffset, this.pitchOffset = kk.pitchOffset, this.idleMs = kk.idleMs)
       }
-      update(CC, zC) {
-        const ZC = this.limits;
-        if (!ZC) return;
-        const QC = Number.isFinite(zC.VY) ? zC.VY : 0,
-          wC = Number.isFinite(zC.Zm) ? zC.Zm : 0;
-        if (zC.pointedAt) this.idleMs = 0, this.pointedAt = {
-          heading: zC.pointedAt.heading,
-          pitch: zC.pointedAt.pitch
+      update(kk, Fk) {
+        const Ik = this.limits;
+        if (!Ik) return;
+        const Xk = Number.isFinite(Fk.JG) ? Fk.JG : 0,
+          Tk = Number.isFinite(Fk.xG) ? Fk.xG : 0;
+        if (Fk.pointedAt) this.idleMs = 0, this.pointedAt = {
+          heading: Fk.pointedAt.heading,
+          pitch: Fk.pointedAt.pitch
         };
-        else if (0 !== QC || 0 !== wC) this.idleMs = 0, this.yawOffset += QC, this.pitchOffset += wC;
+        else if (0 !== Xk || 0 !== Tk) this.idleMs = 0, this.yawOffset += Xk, this.pitchOffset += Tk;
         else {
-          const zC = Math.max(0, this.idleMs + CC - 200) - Math.max(0, this.idleMs - 200);
-          if (this.idleMs += CC, void 0 !== ZC.returnMs && zC > 0) {
-            const CC = ZC.returnMs > 0 ? Math.exp(-3 * zC / ZC.returnMs) : 0;
-            this.yawOffset *= CC, this.pitchOffset *= CC
+          const Fk = Math.max(0, this.idleMs + kk - 200) - Math.max(0, this.idleMs - 200);
+          if (this.idleMs += kk, void 0 !== Ik.returnMs && Fk > 0) {
+            const kk = Ik.returnMs > 0 ? Math.exp(-3 * Fk / Ik.returnMs) : 0;
+            this.yawOffset *= kk, this.pitchOffset *= kk
           }
         }
-        this.clampOffsets(ZC)
+        this.clampOffsets(Ik)
       }
-      clampOffsets(CC) {
-        if (CC.maxYaw >= 180) this.yawOffset = (0, wC.t)(0, this.yawOffset);
+      clampOffsets(kk) {
+        if (kk.maxYaw >= 180) this.yawOffset = (0, Tk.C)(0, this.yawOffset);
         else {
-          const zC = (0, FC.j)(CC.maxYaw);
-          this.yawOffset = Math.max(-zC, Math.min(zC, this.yawOffset))
+          const Fk = (0, Lk.k)(kk.maxYaw);
+          this.yawOffset = Math.max(-Fk, Math.min(Fk, this.yawOffset))
         }
-        const zC = (0, FC.j)(CC.maxPitch);
-        this.pitchOffset = Math.max(-zC, Math.min(zC, this.pitchOffset))
+        const Fk = (0, Lk.k)(kk.maxPitch);
+        this.pitchOffset = Math.max(-Fk, Math.min(Fk, this.pitchOffset))
       }
-      apply(CC, zC) {
-        this.pointedAt && this.limits && (this.yawOffset = (0, wC.t)(CC.heading, this.pointedAt.heading), this.pitchOffset = this.pointedAt.pitch - CC.pitch, this.pointedAt = null, this.clampOffsets(this.limits));
-        const ZC = (0, wC.g)(CC.pitch + this.pitchOffset);
-        this.pitchOffset = ZC - CC.pitch, zC.heading = (0, wC.s)(CC.heading + this.yawOffset), zC.pitch = ZC
+      apply(kk, Fk) {
+        this.pointedAt && this.limits && (this.yawOffset = (0, Tk.C)(kk.heading, this.pointedAt.heading), this.pitchOffset = this.pointedAt.pitch - kk.pitch, this.pointedAt = null, this.clampOffsets(this.limits));
+        const Ik = (0, Tk.k)(kk.pitch + this.pitchOffset);
+        this.pitchOffset = Ik - kk.pitch, Fk.heading = (0, Tk.y)(kk.heading + this.yawOffset), Fk.pitch = Ik
       }
-      unapply(CC, zC) {
-        zC.heading = (0, wC.s)(CC.heading - this.yawOffset), zC.pitch = (0, wC.g)(CC.pitch - this.pitchOffset)
+      unapply(kk, Fk) {
+        Fk.heading = (0, Tk.y)(kk.heading - this.yawOffset), Fk.pitch = (0, Tk.k)(kk.pitch - this.pitchOffset)
       }
     }
-    const PC = 1e-6;
+    const Jk = 1e-6;
 
-    function GC(CC) {
-      return Math.sqrt(CC[0] * CC[0] + CC[1] * CC[1] + CC[2] * CC[2])
+    function xk(kk) {
+      return Math.sqrt(kk[0] * kk[0] + kk[1] * kk[1] + kk[2] * kk[2])
     }
 
-    function RC(CC, zC, ZC, QC, wC) {
-      const bC = wC * wC,
-        nC = bC * wC;
-      return (2 * nC - 3 * bC + 1) * CC + (nC - 2 * bC + wC) * zC + (-2 * nC + 3 * bC) * ZC + (nC - bC) * QC
+    function Pk(kk, Fk, Ik, Xk, Tk) {
+      const ik = Tk * Tk,
+        yk = ik * Tk;
+      return (2 * yk - 3 * ik + 1) * kk + (yk - 2 * ik + Tk) * Fk + (-2 * yk + 3 * ik) * Ik + (yk - ik) * Xk
     }
 
-    function AC(CC, zC, ZC, QC, wC) {
-      const bC = wC * wC;
-      return (6 * bC - 6 * wC) * CC + (3 * bC - 4 * wC + 1) * zC + (-6 * bC + 6 * wC) * ZC + (3 * bC - 2 * wC) * QC
+    function Kk(kk, Fk, Ik, Xk, Tk) {
+      const ik = Tk * Tk;
+      return (6 * ik - 6 * Tk) * kk + (3 * ik - 4 * Tk + 1) * Fk + (-6 * ik + 6 * Tk) * Ik + (3 * ik - 2 * Tk) * Xk
     }
 
-    function xC(CC, zC) {
-      const ZC = zC[0] - CC[0],
-        QC = zC[1] - CC[1],
-        wC = zC[2] - CC[2];
-      return Math.sqrt(ZC * ZC + QC * QC + wC * wC)
+    function Qk(kk, Fk) {
+      const Ik = Fk[0] - kk[0],
+        Xk = Fk[1] - kk[1],
+        Tk = Fk[2] - kk[2];
+      return Math.sqrt(Ik * Ik + Xk * Xk + Tk * Tk)
     }
 
-    function JC(CC, zC, ZC, QC, wC, bC) {
-      for (let nC = 0; nC < 3; nC++) bC[nC] = wC ? CC[nC] * QC : ZC[nC] - zC[nC];
-      return wC && function(CC, zC) {
-        const ZC = GC(CC);
-        if (ZC > zC) {
-          const QC = zC / ZC;
-          CC[0] *= QC, CC[1] *= QC, CC[2] *= QC
+    function sk(kk, Fk, Ik, Xk, Tk, ik) {
+      for (let yk = 0; yk < 3; yk++) ik[yk] = Tk ? kk[yk] * Xk : Ik[yk] - Fk[yk];
+      return Tk && function(kk, Fk) {
+        const Ik = xk(kk);
+        if (Ik > Fk) {
+          const Xk = Fk / Ik;
+          kk[0] *= Xk, kk[1] *= Xk, kk[2] *= Xk
         }
-      }(bC, 3 * xC(zC, ZC)), bC
+      }(ik, 3 * Qk(Fk, Ik)), ik
     }
 
-    function IC(CC, zC, ZC, QC) {
-      for (let wC = 0; wC < 3; wC++) QC[wC] = 6 * (zC[wC] - CC[wC]) - 2 * ZC[wC];
-      if (GC(QC) < PC)
-        for (let wC = 0; wC < 3; wC++) QC[wC] = zC[wC] - CC[wC];
-      return QC
+    function Vk(kk, Fk, Ik, Xk) {
+      for (let Tk = 0; Tk < 3; Tk++) Xk[Tk] = 6 * (Fk[Tk] - kk[Tk]) - 2 * Ik[Tk];
+      if (xk(Xk) < Jk)
+        for (let Tk = 0; Tk < 3; Tk++) Xk[Tk] = Fk[Tk] - kk[Tk];
+      return Xk
     }
 
-    function iC(CC, zC) {
-      return [2 * zC[0] - CC[0], 2 * zC[1] - CC[1], 2 * zC[2] - CC[2]]
+    function zk(kk, Fk) {
+      return [2 * Fk[0] - kk[0], 2 * Fk[1] - kk[1], 2 * Fk[2] - kk[2]]
     }
 
-    function vC(CC, zC, ZC, QC, wC, bC, nC) {
-      if (!bC && !nC) return 0;
-      const fC = bC ? CC : 2 * zC - ZC,
-        oC = nC ? ZC : 2 * zC - CC,
-        qC = bC ? QC : wC,
-        FC = nC ? wC : QC,
-        WC = (zC - fC) / qC,
-        NC = (oC - zC) / FC;
-      if (WC * NC <= 0) return 0;
-      const MC = (oC - fC) / (qC + FC),
-        gC = 3 * Math.min(Math.abs(WC), Math.abs(NC));
-      return Math.max(-gC, Math.min(gC, MC))
+    function Sk(kk, Fk, Ik, Xk, Tk, ik, yk) {
+      if (!ik && !yk) return 0;
+      const lk = ik ? kk : 2 * Fk - Ik,
+        ak = yk ? Ik : 2 * Fk - kk,
+        qk = ik ? Xk : Tk,
+        Lk = yk ? Tk : Xk,
+        tk = (Fk - lk) / qk,
+        Zk = (ak - Fk) / Lk;
+      if (tk * Zk <= 0) return 0;
+      const jk = (ak - lk) / (qk + Lk),
+        ek = 3 * Math.min(Math.abs(tk), Math.abs(Zk));
+      return Math.max(-ek, Math.min(ek, jk))
     }
 
-    function eC(CC, zC, ZC, QC, wC, bC, nC) {
+    function vk(kk, Fk, Ik, Xk, Tk, ik, yk) {
       const {
-        u: fC,
-        segmentMs: oC
-      } = CC;
-      if (!CC.curved) return ZC + (QC - ZC) * fC;
-      return RC(ZC, vC(zC, ZC, QC, CC.beforeMs, oC, bC, !0) * oC, QC, vC(ZC, QC, wC, oC, CC.afterMs, !0, nC) * oC, fC)
+        u: lk,
+        segmentMs: ak
+      } = kk;
+      if (!kk.curved) return Ik + (Xk - Ik) * lk;
+      return Pk(Ik, Sk(Fk, Ik, Xk, kk.beforeMs, ak, ik, !0) * ak, Xk, Sk(Ik, Xk, Tk, ak, kk.afterMs, !0, yk) * ak, lk)
     }
 
-    function hC(CC) {
-      return Math.abs(CC.pitch) >= wC.b
+    function Ek(kk) {
+      return Math.abs(kk.pitch) >= Tk.d
     }
-    class KC {
-      constructor(CC, zC, ZC, QC, wC) {
-        this.nodes = CC, this.prevNodes = ZC, this.nextNodes = QC, this.tangents = void 0, this.derivative = [0, 0, 0], this.beforeAngles = {
+    class Ok {
+      constructor(kk, Fk, Ik, Xk, Tk) {
+        this.nodes = kk, this.prevNodes = Ik, this.nextNodes = Xk, this.tangents = void 0, this.derivative = [0, 0, 0], this.beforeAngles = {
           heading: 0,
           pitch: 0
         }, this.fromAngles = {
@@ -540,84 +540,84 @@ export const modules = {
         }, this.borrowedAngles = {
           heading: 0,
           pitch: 0
-        }, this.tangents = CC.map(((CC, ZC) => this.nodeTangent(zC, wC, ZC)))
+        }, this.tangents = kk.map(((kk, Ik) => this.nodeTangent(Fk, Tk, Ik)))
       }
-      sample(CC, zC, ZC) {
+      sample(kk, Fk, Ik) {
         const {
-          index: QC,
-          toIndex: bC,
-          segmentMs: nC,
-          curved: fC
-        } = CC, oC = this.fromAngles, qC = this.toAngles, FC = this.nodeAngles(QC, ZC.position, zC, oC), WC = this.nodeAngles(bC, ZC.position, zC, qC);
-        if (nC > 0 && "aim" !== FC && "aim" !== WC && this.liveTangent(CC, oC)) return ZC.heading = (0, wC.s)(oC.heading), void(ZC.pitch = oC.pitch);
-        if ("none" === FC && "none" === WC) return;
-        !fC && nC > 0 && ("tangent" === FC && this.liveTangent(CC, oC), "tangent" === WC && this.liveTangent(CC, qC)), "none" === FC ? (0, wC.h)(qC, oC) : "none" === WC && (0, wC.h)(oC, qC);
-        const NC = fC && CC.beforeIndex >= 0 && "none" !== this.nodeAngles(CC.beforeIndex, ZC.position, zC, this.beforeAngles),
-          MC = fC && CC.afterIndex >= 0 && "none" !== this.nodeAngles(CC.afterIndex, ZC.position, zC, this.afterAngles),
-          gC = (0, wC.w)(oC.heading, qC.heading),
-          SC = eC(CC, NC ? (0, wC.w)(oC.heading, this.beforeAngles.heading) : 0, oC.heading, gC, MC ? (0, wC.w)(gC, this.afterAngles.heading) : 0, NC, MC);
-        ZC.heading = (0, wC.s)(SC), ZC.pitch = (0, wC.g)(eC(CC, this.beforeAngles.pitch, oC.pitch, qC.pitch, this.afterAngles.pitch, NC, MC))
+          index: Xk,
+          toIndex: ik,
+          segmentMs: yk,
+          curved: lk
+        } = kk, ak = this.fromAngles, qk = this.toAngles, Lk = this.nodeAngles(Xk, Ik.position, Fk, ak), tk = this.nodeAngles(ik, Ik.position, Fk, qk);
+        if (yk > 0 && "aim" !== Lk && "aim" !== tk && this.liveTangent(kk, ak)) return Ik.heading = (0, Tk.y)(ak.heading), void(Ik.pitch = ak.pitch);
+        if ("none" === Lk && "none" === tk) return;
+        !lk && yk > 0 && ("tangent" === Lk && this.liveTangent(kk, ak), "tangent" === tk && this.liveTangent(kk, qk)), "none" === Lk ? (0, Tk.l)(qk, ak) : "none" === tk && (0, Tk.l)(ak, qk);
+        const Zk = lk && kk.beforeIndex >= 0 && "none" !== this.nodeAngles(kk.beforeIndex, Ik.position, Fk, this.beforeAngles),
+          jk = lk && kk.afterIndex >= 0 && "none" !== this.nodeAngles(kk.afterIndex, Ik.position, Fk, this.afterAngles),
+          ek = (0, Tk.F)(ak.heading, qk.heading),
+          wk = vk(kk, Zk ? (0, Tk.F)(ak.heading, this.beforeAngles.heading) : 0, ak.heading, ek, jk ? (0, Tk.F)(ek, this.afterAngles.heading) : 0, Zk, jk);
+        Ik.heading = (0, Tk.y)(wk), Ik.pitch = (0, Tk.k)(vk(kk, this.beforeAngles.pitch, ak.pitch, qk.pitch, this.afterAngles.pitch, Zk, jk))
       }
-      nodeAngles(CC, zC, ZC, QC) {
-        const wC = this.rawNodeAngles(CC, zC, ZC, QC);
-        return "none" !== wC && hC(QC) && !this.borrowHeading(this.prevNodes[CC], zC, ZC, QC) && this.borrowHeading(this.nextNodes[CC], zC, ZC, QC), wC
+      nodeAngles(kk, Fk, Ik, Xk) {
+        const Tk = this.rawNodeAngles(kk, Fk, Ik, Xk);
+        return "none" !== Tk && Ek(Xk) && !this.borrowHeading(this.prevNodes[kk], Fk, Ik, Xk) && this.borrowHeading(this.nextNodes[kk], Fk, Ik, Xk), Tk
       }
-      borrowHeading(CC, zC, ZC, QC) {
-        const wC = this.borrowedAngles;
-        return !(CC < 0 || "none" === this.rawNodeAngles(CC, zC, ZC, wC) || hC(wC)) && (QC.heading = wC.heading, !0)
+      borrowHeading(kk, Fk, Ik, Xk) {
+        const Tk = this.borrowedAngles;
+        return !(kk < 0 || "none" === this.rawNodeAngles(kk, Fk, Ik, Tk) || Ek(Tk)) && (Xk.heading = Tk.heading, !0)
       }
-      rawNodeAngles(CC, zC, ZC, QC) {
-        const bC = this.nodes[CC].keyframe;
-        if (bC.lookDirection) return (0, wC.j)(bC.lookDirection, QC), "aim";
-        if (void 0 !== bC.lookAt) {
-          const CC = ZC(bC.lookAt);
-          if (CC) return (0, wC.o)(zC, CC, QC), "aim"
+      rawNodeAngles(kk, Fk, Ik, Xk) {
+        const ik = this.nodes[kk].keyframe;
+        if (ik.lookDirection) return (0, Tk.n)(ik.lookDirection, Xk), "aim";
+        if (void 0 !== ik.lookAt) {
+          const kk = Ik(ik.lookAt);
+          if (kk) return (0, Tk.u)(Fk, kk, Xk), "aim"
         }
-        const nC = this.tangents[CC];
-        return nC ? ((0, wC.h)(nC, QC), "tangent") : "none"
+        const yk = this.tangents[kk];
+        return yk ? ((0, Tk.l)(yk, Xk), "tangent") : "none"
       }
-      liveTangent(CC, zC) {
-        const ZC = this.nodes[CC.index].position,
-          QC = this.nodes[CC.toIndex].position,
-          bC = this.derivative;
-        for (let wC = 0; wC < 3; wC++) bC[wC] = AC(ZC[wC], CC.fromTangent[wC], QC[wC], CC.toTangent[wC], CC.u);
-        return GC(bC) > 1e-9 ? ((0, wC.j)(bC, zC), !0) : !(xC(ZC, QC) < PC) && ((0, wC.j)(IC(ZC, QC, CC.u < .5 ? CC.toTangent : CC.fromTangent, bC), zC), !0)
+      liveTangent(kk, Fk) {
+        const Ik = this.nodes[kk.index].position,
+          Xk = this.nodes[kk.toIndex].position,
+          ik = this.derivative;
+        for (let Tk = 0; Tk < 3; Tk++) ik[Tk] = Kk(Ik[Tk], kk.fromTangent[Tk], Xk[Tk], kk.toTangent[Tk], kk.u);
+        return xk(ik) > 1e-9 ? ((0, Tk.n)(ik, Fk), !0) : !(Qk(Ik, Xk) < Jk) && ((0, Tk.n)(Vk(Ik, Xk, kk.u < .5 ? kk.toTangent : kk.fromTangent, ik), Fk), !0)
       }
-      nodeTangent(CC, zC, ZC) {
-        var QC;
-        const bC = CC[ZC];
-        if (GC(bC) > 1e-9) return (0, wC.j)(bC, {
+      nodeTangent(kk, Fk, Ik) {
+        var Xk;
+        const ik = kk[Ik];
+        if (xk(ik) > 1e-9) return (0, Tk.n)(ik, {
           heading: 0,
           pitch: 0
         });
-        const nC = null !== (QC = this.restDirectionTo(ZC, ZC + 1, CC, zC)) && void 0 !== QC ? QC : this.restDirectionTo(ZC, ZC - 1, CC, zC);
-        return nC ? (0, wC.j)(nC, {
+        const yk = null !== (Xk = this.restDirectionTo(Ik, Ik + 1, kk, Fk)) && void 0 !== Xk ? Xk : this.restDirectionTo(Ik, Ik - 1, kk, Fk);
+        return yk ? (0, Tk.n)(yk, {
           heading: 0,
           pitch: 0
         }) : null
       }
-      restDirectionTo(CC, zC, ZC, QC) {
-        const wC = this.nodes[CC],
-          bC = this.nodes[zC];
-        if (!bC || xC(wC.position, bC.position) < PC) return null;
-        const [nC, fC] = zC > CC ? [wC, bC] : [bC, wC], oC = JC(ZC[zC], nC.position, fC.position, fC.timeMs - nC.timeMs, QC, [0, 0, 0]);
-        return IC(nC.position, fC.position, oC, [0, 0, 0])
+      restDirectionTo(kk, Fk, Ik, Xk) {
+        const Tk = this.nodes[kk],
+          ik = this.nodes[Fk];
+        if (!ik || Qk(Tk.position, ik.position) < Jk) return null;
+        const [yk, lk] = Fk > kk ? [Tk, ik] : [ik, Tk], ak = sk(Ik[Fk], yk.position, lk.position, lk.timeMs - yk.timeMs, Xk, [0, 0, 0]);
+        return Vk(yk.position, lk.position, ak, [0, 0, 0])
       }
     }
 
-    function YC(CC, zC) {
-      const ZC = CC.lookDirection || zC.lookDirection ? function(CC, zC) {
-        if (!CC || !zC) return CC === zC;
-        const ZC = GC(CC),
-          QC = GC(zC);
-        return Math.hypot(CC[0] / ZC - zC[0] / QC, CC[1] / ZC - zC[1] / QC, CC[2] / ZC - zC[2] / QC) < PC
-      }(CC.lookDirection, zC.lookDirection) : (QC = CC.lookAt, wC = zC.lookAt, "object" !== typeof QC || "object" !== typeof wC ? QC === wC : xC(QC, wC) < PC);
-      var QC, wC;
-      return xC(CC.position, zC.position) < PC && CC.fov === zC.fov && ZC
+    function nk(kk, Fk) {
+      const Ik = kk.lookDirection || Fk.lookDirection ? function(kk, Fk) {
+        if (!kk || !Fk) return kk === Fk;
+        const Ik = xk(kk),
+          Xk = xk(Fk);
+        return Math.hypot(kk[0] / Ik - Fk[0] / Xk, kk[1] / Ik - Fk[1] / Xk, kk[2] / Ik - Fk[2] / Xk) < Jk
+      }(kk.lookDirection, Fk.lookDirection) : (Xk = kk.lookAt, Tk = Fk.lookAt, "object" !== typeof Xk || "object" !== typeof Tk ? Xk === Tk : Qk(Xk, Tk) < Jk);
+      var Xk, Tk;
+      return Qk(kk.position, Fk.position) < Jk && kk.fov === Fk.fov && Ik
     }
-    class dC {
-      constructor(CC, zC, ZC) {
-        if (this.smooth = zC, this.nodes = void 0, this.velocities = void 0, this.prevNodes = void 0, this.nextNodes = void 0, this.prevGaps = void 0, this.nextGaps = void 0, this.loopMs = void 0, this.aim = void 0, this.segment = {
+    class Gk {
+      constructor(kk, Fk, Ik) {
+        if (this.smooth = Fk, this.nodes = void 0, this.velocities = void 0, this.prevNodes = void 0, this.nextNodes = void 0, this.prevGaps = void 0, this.nextGaps = void 0, this.loopMs = void 0, this.aim = void 0, this.segment = {
             index: 0,
             toIndex: 0,
             u: 0,
@@ -629,306 +629,306 @@ export const modules = {
             afterMs: 0,
             fromTangent: [0, 0, 0],
             toTangent: [0, 0, 0]
-          }, 0 === CC.length) throw new Error("A camera path needs at least one keyframe");
-        for (let bC = 1; bC < CC.length; bC++)
-          if (!(CC[bC].timeMs > CC[bC - 1].timeMs)) throw new Error("Camera path keyframe times must strictly increase");
-        this.nodes = CC.map((CC => {
-          var zC;
+          }, 0 === kk.length) throw new Error("A camera path needs at least one keyframe");
+        for (let ik = 1; ik < kk.length; ik++)
+          if (!(kk[ik].timeMs > kk[ik - 1].timeMs)) throw new Error("Camera path keyframe times must strictly increase");
+        this.nodes = kk.map((kk => {
+          var Fk;
           return {
-            timeMs: CC.timeMs,
-            position: [...CC.position],
-            keyframe: CC,
-            easing: (0, bC.p)(null !== (zC = CC.easing) && void 0 !== zC ? zC : "linear")
+            timeMs: kk.timeMs,
+            position: [...kk.position],
+            keyframe: kk,
+            easing: (0, ik.r)(null !== (Fk = kk.easing) && void 0 !== Fk ? Fk : "linear")
           }
         }));
-        const QC = this.nodes[0],
-          wC = this.nodes[this.nodes.length - 1],
-          nC = ZC && this.nodes.length > 1;
-        nC && !YC(QC.keyframe, wC.keyframe) && this.nodes.push({
-          ...QC,
-          timeMs: wC.timeMs + (wC.timeMs - QC.timeMs) / (this.nodes.length - 1)
-        }), this.loopMs = nC ? this.nodes[this.nodes.length - 1].timeMs - QC.timeMs : 0, this.prevNodes = this.nodes.map(((CC, zC) => this.neighbour(zC, -1))), this.nextNodes = this.nodes.map(((CC, zC) => this.neighbour(zC, 1))), this.prevGaps = this.prevNodes.map(((CC, zC) => CC >= 0 ? this.gapMs(zC, -1) : 0)), this.nextGaps = this.nextNodes.map(((CC, zC) => CC >= 0 ? this.gapMs(zC, 1) : 0)), this.velocities = this.nodes.map(((CC, zC) => {
-          const ZC = this.prevNodes[zC],
-            QC = this.nextNodes[zC];
-          return function(CC, zC, ZC, QC, wC, bC) {
-            if (bC[0] = 0, bC[1] = 0, bC[2] = 0, !CC && !ZC) return bC;
-            const nC = null !== CC && void 0 !== CC ? CC : iC(null !== ZC && void 0 !== ZC ? ZC : zC, zC),
-              fC = null !== ZC && void 0 !== ZC ? ZC : iC(null !== CC && void 0 !== CC ? CC : zC, zC),
-              oC = CC ? QC : wC,
-              qC = ZC ? wC : QC,
-              FC = xC(nC, zC),
-              WC = xC(zC, fC);
-            if (FC < PC || WC < PC) return bC;
-            const NC = Math.sqrt(FC),
-              MC = Math.sqrt(WC),
-              gC = (NC + MC) / (oC + qC);
-            for (let SC = 0; SC < 3; SC++) {
-              const CC = (zC[SC] - nC[SC]) / NC - (fC[SC] - nC[SC]) / (NC + MC) + (fC[SC] - zC[SC]) / MC;
-              bC[SC] = CC * gC
+        const Xk = this.nodes[0],
+          Tk = this.nodes[this.nodes.length - 1],
+          yk = Ik && this.nodes.length > 1;
+        yk && !nk(Xk.keyframe, Tk.keyframe) && this.nodes.push({
+          ...Xk,
+          timeMs: Tk.timeMs + (Tk.timeMs - Xk.timeMs) / (this.nodes.length - 1)
+        }), this.loopMs = yk ? this.nodes[this.nodes.length - 1].timeMs - Xk.timeMs : 0, this.prevNodes = this.nodes.map(((kk, Fk) => this.neighbour(Fk, -1))), this.nextNodes = this.nodes.map(((kk, Fk) => this.neighbour(Fk, 1))), this.prevGaps = this.prevNodes.map(((kk, Fk) => kk >= 0 ? this.gapMs(Fk, -1) : 0)), this.nextGaps = this.nextNodes.map(((kk, Fk) => kk >= 0 ? this.gapMs(Fk, 1) : 0)), this.velocities = this.nodes.map(((kk, Fk) => {
+          const Ik = this.prevNodes[Fk],
+            Xk = this.nextNodes[Fk];
+          return function(kk, Fk, Ik, Xk, Tk, ik) {
+            if (ik[0] = 0, ik[1] = 0, ik[2] = 0, !kk && !Ik) return ik;
+            const yk = null !== kk && void 0 !== kk ? kk : zk(null !== Ik && void 0 !== Ik ? Ik : Fk, Fk),
+              lk = null !== Ik && void 0 !== Ik ? Ik : zk(null !== kk && void 0 !== kk ? kk : Fk, Fk),
+              ak = kk ? Xk : Tk,
+              qk = Ik ? Tk : Xk,
+              Lk = Qk(yk, Fk),
+              tk = Qk(Fk, lk);
+            if (Lk < Jk || tk < Jk) return ik;
+            const Zk = Math.sqrt(Lk),
+              jk = Math.sqrt(tk),
+              ek = (Zk + jk) / (ak + qk);
+            for (let wk = 0; wk < 3; wk++) {
+              const kk = (Fk[wk] - yk[wk]) / Zk - (lk[wk] - yk[wk]) / (Zk + jk) + (lk[wk] - Fk[wk]) / jk;
+              ik[wk] = kk * ek
             }
-            return bC
-          }(ZC >= 0 ? this.nodes[ZC].position : null, CC.position, QC >= 0 ? this.nodes[QC].position : null, this.prevGaps[zC], this.nextGaps[zC], [0, 0, 0])
-        })), this.aim = new KC(this.nodes, this.velocities, this.prevNodes, this.nextNodes, zC)
+            return ik
+          }(Ik >= 0 ? this.nodes[Ik].position : null, kk.position, Xk >= 0 ? this.nodes[Xk].position : null, this.prevGaps[Fk], this.nextGaps[Fk], [0, 0, 0])
+        })), this.aim = new Ok(this.nodes, this.velocities, this.prevNodes, this.nextNodes, Fk)
       }
-      sample(CC, zC, ZC, QC) {
-        const wC = this.findSegment(this.pathTime(CC));
-        this.samplePosition(wC, QC.position), this.aim.sample(wC, zC, QC);
+      sample(kk, Fk, Ik, Xk) {
+        const Tk = this.findSegment(this.pathTime(kk));
+        this.samplePosition(Tk, Xk.position), this.aim.sample(Tk, Fk, Xk);
         const {
-          beforeIndex: bC,
-          afterIndex: nC
-        } = wC;
-        QC.fov = eC(wC, bC >= 0 ? this.fovAt(bC, ZC) : 0, this.fovAt(wC.index, ZC), this.fovAt(wC.toIndex, ZC), nC >= 0 ? this.fovAt(nC, ZC) : 0, bC >= 0, nC >= 0)
+          beforeIndex: ik,
+          afterIndex: yk
+        } = Tk;
+        Xk.fov = vk(Tk, ik >= 0 ? this.fovAt(ik, Ik) : 0, this.fovAt(Tk.index, Ik), this.fovAt(Tk.toIndex, Ik), yk >= 0 ? this.fovAt(yk, Ik) : 0, ik >= 0, yk >= 0)
       }
-      pathTime(CC) {
-        const zC = this.nodes[0].timeMs;
-        if (this.loopMs <= 0 || CC <= zC) return CC;
-        const ZC = CC - zC;
-        return zC + ZC - this.loopMs * Math.floor(ZC / this.loopMs)
+      pathTime(kk) {
+        const Fk = this.nodes[0].timeMs;
+        if (this.loopMs <= 0 || kk <= Fk) return kk;
+        const Ik = kk - Fk;
+        return Fk + Ik - this.loopMs * Math.floor(Ik / this.loopMs)
       }
-      findSegment(CC) {
-        const zC = this.nodes,
-          ZC = this.segment;
-        let QC = ZC.index;
-        for (CC < zC[QC].timeMs && (QC = 0); QC < zC.length - 2 && zC[QC + 1].timeMs <= CC;) QC++;
-        const wC = Math.min(QC + 1, zC.length - 1),
-          nC = zC[wC].timeMs - zC[QC].timeMs;
-        return ZC.index = QC, ZC.toIndex = wC, ZC.segmentMs = nC, ZC.u = nC > 0 ? (0, bC.o)((CC - zC[QC].timeMs) / nC, zC[QC].easing) : 1, ZC.curved = this.smooth && nC > 0, ZC.beforeIndex = this.prevNodes[QC], ZC.afterIndex = this.nextNodes[wC], ZC.beforeMs = this.prevGaps[QC], ZC.afterMs = this.nextGaps[wC], ZC
+      findSegment(kk) {
+        const Fk = this.nodes,
+          Ik = this.segment;
+        let Xk = Ik.index;
+        for (kk < Fk[Xk].timeMs && (Xk = 0); Xk < Fk.length - 2 && Fk[Xk + 1].timeMs <= kk;) Xk++;
+        const Tk = Math.min(Xk + 1, Fk.length - 1),
+          yk = Fk[Tk].timeMs - Fk[Xk].timeMs;
+        return Ik.index = Xk, Ik.toIndex = Tk, Ik.segmentMs = yk, Ik.u = yk > 0 ? (0, ik.o)((kk - Fk[Xk].timeMs) / yk, Fk[Xk].easing) : 1, Ik.curved = this.smooth && yk > 0, Ik.beforeIndex = this.prevNodes[Xk], Ik.afterIndex = this.nextNodes[Tk], Ik.beforeMs = this.prevGaps[Xk], Ik.afterMs = this.nextGaps[Tk], Ik
       }
-      samplePosition(CC, zC) {
+      samplePosition(kk, Fk) {
         const {
-          fromTangent: ZC,
-          toTangent: QC,
-          curved: wC
-        } = CC, bC = this.nodes[CC.index].position, nC = this.nodes[CC.toIndex].position;
-        JC(this.velocities[CC.index], bC, nC, CC.segmentMs, wC, ZC), JC(this.velocities[CC.toIndex], bC, nC, CC.segmentMs, wC, QC);
-        const fC = CC.u;
-        for (let oC = 0; oC < 3; oC++) zC[oC] = wC ? RC(bC[oC], ZC[oC], nC[oC], QC[oC], fC) : bC[oC] + (nC[oC] - bC[oC]) * fC
+          fromTangent: Ik,
+          toTangent: Xk,
+          curved: Tk
+        } = kk, ik = this.nodes[kk.index].position, yk = this.nodes[kk.toIndex].position;
+        sk(this.velocities[kk.index], ik, yk, kk.segmentMs, Tk, Ik), sk(this.velocities[kk.toIndex], ik, yk, kk.segmentMs, Tk, Xk);
+        const lk = kk.u;
+        for (let ak = 0; ak < 3; ak++) Fk[ak] = Tk ? Pk(ik[ak], Ik[ak], yk[ak], Xk[ak], lk) : ik[ak] + (yk[ak] - ik[ak]) * lk
       }
-      fovAt(CC, zC) {
-        var ZC;
-        return null !== (ZC = this.nodes[CC].keyframe.fov) && void 0 !== ZC ? ZC : zC
+      fovAt(kk, Fk) {
+        var Ik;
+        return null !== (Ik = this.nodes[kk].keyframe.fov) && void 0 !== Ik ? Ik : Fk
       }
-      neighbour(CC, zC) {
-        const ZC = this.nodes.length - 1,
-          QC = CC + zC;
-        return QC >= 0 && QC <= ZC ? QC : this.loopMs <= 0 || ZC < 2 ? -1 : QC < 0 ? ZC - 1 : 1
+      neighbour(kk, Fk) {
+        const Ik = this.nodes.length - 1,
+          Xk = kk + Fk;
+        return Xk >= 0 && Xk <= Ik ? Xk : this.loopMs <= 0 || Ik < 2 ? -1 : Xk < 0 ? Ik - 1 : 1
       }
-      gapMs(CC, zC) {
-        const ZC = this.nodes.length - 1;
-        if (1 === zC) {
-          const zC = CC === ZC ? 0 : CC;
-          return this.nodes[zC + 1].timeMs - this.nodes[zC].timeMs
+      gapMs(kk, Fk) {
+        const Ik = this.nodes.length - 1;
+        if (1 === Fk) {
+          const Fk = kk === Ik ? 0 : kk;
+          return this.nodes[Fk + 1].timeMs - this.nodes[Fk].timeMs
         }
-        const QC = 0 === CC ? ZC : CC;
-        return this.nodes[QC].timeMs - this.nodes[QC - 1].timeMs
+        const Xk = 0 === kk ? Ik : kk;
+        return this.nodes[Xk].timeMs - this.nodes[Xk - 1].timeMs
       }
     }
-    class mC {
-      constructor(CC) {
-        this.fN = CC, this.lastFeet = new Map, this.lastAimPoints = new Map, this.lastHeadings = new Map, this.readFeet = void 0, this.readAimPoint = void 0, this.readFeet = zC => CC.getEntityPosition(zC), this.readAimPoint = zC => CC.getEntityAimPoint(zC)
+    class pk {
+      constructor(kk) {
+        this.XZ = kk, this.lastFeet = new Map, this.lastAimPoints = new Map, this.lastHeadings = new Map, this.readFeet = void 0, this.readAimPoint = void 0, this.readFeet = Fk => kk.getEntityPosition(Fk), this.readAimPoint = Fk => kk.getEntityAimPoint(Fk)
       }
-      aimPoint(CC) {
-        return "string" !== typeof CC ? (0, oC.n)(CC, 3) ? CC : null : this.resolve(CC, this.readAimPoint, this.lastAimPoints)
+      aimPoint(kk) {
+        return "string" !== typeof kk ? (0, ak.o)(kk, 3) ? kk : null : this.resolve(kk, this.readAimPoint, this.lastAimPoints)
       }
-      currentAimPoint(CC) {
-        const zC = "string" === typeof CC ? this.fN.getEntityAimPoint(CC) : CC;
-        return zC && (0, oC.n)(zC, 3) ? zC : null
+      currentAimPoint(kk) {
+        const Fk = "string" === typeof kk ? this.XZ.getEntityAimPoint(kk) : kk;
+        return Fk && (0, ak.o)(Fk, 3) ? Fk : null
       }
-      feetPosition(CC) {
-        return this.resolve(CC, this.readFeet, this.lastFeet)
+      feetPosition(kk) {
+        return this.resolve(kk, this.readFeet, this.lastFeet)
       }
-      heading(CC) {
-        const zC = this.fN.getEntityHeading(CC);
-        if (null !== zC && Number.isFinite(zC)) return this.lastHeadings.set(CC, zC), zC;
-        const ZC = this.lastHeadings.get(CC);
-        return void 0 !== ZC ? ZC : CC === this.fN.localPlayerId ? 0 : this.heading(this.fN.localPlayerId)
+      heading(kk) {
+        const Fk = this.XZ.getEntityHeading(kk);
+        if (null !== Fk && Number.isFinite(Fk)) return this.lastHeadings.set(kk, Fk), Fk;
+        const Ik = this.lastHeadings.get(kk);
+        return void 0 !== Ik ? Ik : kk === this.XZ.localPlayerId ? 0 : this.heading(this.XZ.localPlayerId)
       }
-      resolve(CC, zC, ZC) {
-        const QC = zC(CC);
-        let wC = ZC.get(CC);
-        return QC && (0, oC.n)(QC, 3) ? (wC || (wC = [0, 0, 0], ZC.set(CC, wC)), wC[0] = QC[0], wC[1] = QC[1], wC[2] = QC[2], wC) : wC || (CC === this.fN.localPlayerId ? null : this.resolve(this.fN.localPlayerId, zC, ZC))
+      resolve(kk, Fk, Ik) {
+        const Xk = Fk(kk);
+        let Tk = Ik.get(kk);
+        return Xk && (0, ak.o)(Xk, 3) ? (Tk || (Tk = [0, 0, 0], Ik.set(kk, Tk)), Tk[0] = Xk[0], Tk[1] = Xk[1], Tk[2] = Xk[2], Tk) : Tk || (kk === this.XZ.localPlayerId ? null : this.resolve(this.XZ.localPlayerId, Fk, Ik))
       }
     }
 
-    function HC(CC) {
+    function uk(kk) {
       return {
-        heading: CC.heading,
-        pitch: CC.pitch
+        heading: kk.heading,
+        pitch: kk.pitch
       }
     }
 
-    function EC(CC, zC) {
-      Number.isFinite(CC.heading) && Number.isFinite(CC.pitch) || (0, wC.h)(zC, CC)
+    function bk(kk, Fk) {
+      Number.isFinite(kk.heading) && Number.isFinite(kk.pitch) || (0, Tk.l)(Fk, kk)
     }
 
-    function lC(CC, zC, ZC, QC, bC) {
-      if (zC) return void(0, wC.j)(zC, bC);
-      const nC = QC.aimPoint(ZC);
-      nC && (0, wC.o)(CC, nC, bC)
+    function Rk(kk, Fk, Ik, Xk, ik) {
+      if (Fk) return void(0, Tk.n)(Fk, ik);
+      const yk = Xk.aimPoint(Ik);
+      yk && (0, Tk.u)(kk, yk, ik)
     }
-    class XC {
-      constructor(CC, zC, ZC, QC) {
-        this.settings = CC, this.fN = zC, this.targets = ZC, this.base = void 0, this.base = HC(QC)
+    class Uk {
+      constructor(kk, Fk, Ik, Xk) {
+        this.settings = kk, this.XZ = Fk, this.targets = Ik, this.base = void 0, this.base = uk(Xk)
       }
-      update(CC, zC, ZC) {
-        var QC;
-        const wC = this.settings;
-        (0, oC.h)(wC.position, ZC.position), lC(wC.position, wC.lookDirection, null !== (QC = wC.lookAt) && void 0 !== QC ? QC : this.fN.localPlayerId, this.targets, this.base), zC.apply(this.base, ZC), ZC.fov = MC(wC, this.fN)
+      update(kk, Fk, Ik) {
+        var Xk;
+        const Tk = this.settings;
+        (0, ak.f)(Tk.position, Ik.position), Rk(Tk.position, Tk.lookDirection, null !== (Xk = Tk.lookAt) && void 0 !== Xk ? Xk : this.XZ.localPlayerId, this.targets, this.base), Fk.apply(this.base, Ik), Ik.fov = jk(Tk, this.XZ)
       }
-      continueFrom(CC) {
-        CC instanceof XC && (0, wC.h)(CC.base, this.base)
+      continueFrom(kk) {
+        kk instanceof Uk && (0, Tk.l)(kk.base, this.base)
       }
-      reset(CC) {
-        EC(this.base, CC)
+      reset(kk) {
+        bk(this.base, kk)
       }
     }
-    class cC {
-      constructor(CC, zC, ZC, QC) {
-        this.settings = CC, this.fN = zC, this.targets = ZC, this.base = void 0, this.goal = void 0, this.lastFeet = [0, 0, 0], this.foundFeet = !1, this.smoothed = [0, 0, 0], this.Np = [0, 0, 0], this.started = !1, this.distance = -1, this.toCamera = [0, 0, 0], this.aimOrigin = [0, 0, 0], this.base = HC(QC), this.goal = [...QC.position]
+    class Ck {
+      constructor(kk, Fk, Ik, Xk) {
+        this.settings = kk, this.XZ = Fk, this.targets = Ik, this.base = void 0, this.goal = void 0, this.lastFeet = [0, 0, 0], this.foundFeet = !1, this.smoothed = [0, 0, 0], this.TH = [0, 0, 0], this.started = !1, this.distance = -1, this.toCamera = [0, 0, 0], this.aimOrigin = [0, 0, 0], this.base = uk(Xk), this.goal = [...Xk.position]
       }
-      update(CC, zC, ZC) {
-        var QC, wC, bC;
-        const nC = this.settings,
-          fC = null !== (QC = nC.target) && void 0 !== QC ? QC : this.fN.localPlayerId,
-          qC = this.targets.feetPosition(fC);
-        let FC = !1;
-        qC && (FC = this.foundFeet && xC(this.lastFeet, qC) > 32 + .1 * CC, (0, oC.h)(qC, this.lastFeet), this.foundFeet = !0, this.placeGoal(qC, fC));
-        const WC = null !== (wC = nC.smoothMs) && void 0 !== wC ? wC : 0;
-        !this.started || WC < 1 || FC ? ((0, oC.h)(this.goal, this.smoothed), this.Np.fill(0), this.started = !0) : gC(this.smoothed, this.Np, this.goal, WC, CC), FC && (this.distance = -1), (0, oC.h)(this.smoothed, ZC.position);
-        const NC = !0 === nC.avoidTerrain ? this.pullIn(fC, CC, ZC) : 1;
-        let SC = this.goal;
-        if ("target" === nC.offsetSpace) SC = ZC.position;
-        else if (NC < 1) {
-          SC = this.aimOrigin;
-          for (let CC = 0; CC < 3; CC++) SC[CC] = ZC.position[CC] + (this.goal[CC] - this.smoothed[CC]) * NC
+      update(kk, Fk, Ik) {
+        var Xk, Tk, ik;
+        const yk = this.settings,
+          lk = null !== (Xk = yk.target) && void 0 !== Xk ? Xk : this.XZ.localPlayerId,
+          qk = this.targets.feetPosition(lk);
+        let Lk = !1;
+        qk && (Lk = this.foundFeet && Qk(this.lastFeet, qk) > 32 + .1 * kk, (0, ak.f)(qk, this.lastFeet), this.foundFeet = !0, this.placeGoal(qk, lk));
+        const tk = null !== (Tk = yk.smoothMs) && void 0 !== Tk ? Tk : 0;
+        !this.started || tk < 1 || Lk ? ((0, ak.f)(this.goal, this.smoothed), this.TH.fill(0), this.started = !0) : ek(this.smoothed, this.TH, this.goal, tk, kk), Lk && (this.distance = -1), (0, ak.f)(this.smoothed, Ik.position);
+        const Zk = !0 === yk.avoidTerrain ? this.pullIn(lk, kk, Ik) : 1;
+        let wk = this.goal;
+        if ("target" === yk.offsetSpace) wk = Ik.position;
+        else if (Zk < 1) {
+          wk = this.aimOrigin;
+          for (let kk = 0; kk < 3; kk++) wk[kk] = Ik.position[kk] + (this.goal[kk] - this.smoothed[kk]) * Zk
         }
-        lC(SC, nC.lookDirection, null !== (bC = nC.lookAt) && void 0 !== bC ? bC : fC, this.targets, this.base), zC.apply(this.base, ZC), ZC.fov = MC(nC, this.fN)
+        Rk(wk, yk.lookDirection, null !== (ik = yk.lookAt) && void 0 !== ik ? ik : lk, this.targets, this.base), Fk.apply(this.base, Ik), Ik.fov = jk(yk, this.XZ)
       }
-      continueFrom(CC) {
-        CC instanceof cC && (0, QC.s)(CC.settings.target, this.settings.target) && ((0, wC.h)(CC.base, this.base), (0, oC.h)(CC.goal, this.goal), (0, oC.h)(CC.lastFeet, this.lastFeet), this.foundFeet = CC.foundFeet, (0, oC.h)(CC.smoothed, this.smoothed), (0, oC.h)(CC.Np, this.Np), this.started = CC.started, !0 === CC.settings.avoidTerrain && (this.distance = CC.distance))
+      continueFrom(kk) {
+        kk instanceof Ck && (0, Xk.u)(kk.settings.target, this.settings.target) && ((0, Tk.l)(kk.base, this.base), (0, ak.f)(kk.goal, this.goal), (0, ak.f)(kk.lastFeet, this.lastFeet), this.foundFeet = kk.foundFeet, (0, ak.f)(kk.smoothed, this.smoothed), (0, ak.f)(kk.TH, this.TH), this.started = kk.started, !0 === kk.settings.avoidTerrain && (this.distance = kk.distance))
       }
-      reset(CC) {
-        EC(this.base, CC), this.Np.fill(0), this.started = !1, this.distance = -1
+      reset(kk) {
+        bk(this.base, kk), this.TH.fill(0), this.started = !1, this.distance = -1
       }
-      pullIn(CC, zC, ZC) {
-        const QC = this.targets.aimPoint(CC);
-        if (!QC) return 1;
-        const wC = ZC.position,
-          bC = xC(QC, wC);
-        if (!(bC > 0)) return 1;
-        const nC = this.toCamera;
-        for (let oC = 0; oC < 3; oC++) nC[oC] = (wC[oC] - QC[oC]) / bC;
-        const fC = function(CC, zC, ZC) {
-          return CC < 0 || zC < CC ? zC : zC + (CC - zC) * Math.exp(-ZC / 150)
-        }(this.distance, function(CC, zC, ZC, QC) {
-          const wC = CC.raycastTerrain(zC, ZC, QC);
-          return null !== wC && Number.isFinite(wC) ? Math.min(QC, Math.max(0, wC - .2)) : QC
-        }(this.fN, QC, nC, bC), zC);
-        if (bC - fC < .001) return this.distance = -1, 1;
-        this.distance = fC;
-        for (let oC = 0; oC < 3; oC++) wC[oC] = QC[oC] + nC[oC] * fC;
-        return fC / bC
+      pullIn(kk, Fk, Ik) {
+        const Xk = this.targets.aimPoint(kk);
+        if (!Xk) return 1;
+        const Tk = Ik.position,
+          ik = Qk(Xk, Tk);
+        if (!(ik > 0)) return 1;
+        const yk = this.toCamera;
+        for (let ak = 0; ak < 3; ak++) yk[ak] = (Tk[ak] - Xk[ak]) / ik;
+        const lk = function(kk, Fk, Ik) {
+          return kk < 0 || Fk < kk ? Fk : Fk + (kk - Fk) * Math.exp(-Ik / 150)
+        }(this.distance, function(kk, Fk, Ik, Xk) {
+          const Tk = kk.raycastTerrain(Fk, Ik, Xk);
+          return null !== Tk && Number.isFinite(Tk) ? Math.min(Xk, Math.max(0, Tk - .2)) : Xk
+        }(this.XZ, Xk, yk, ik), Fk);
+        if (ik - lk < .001) return this.distance = -1, 1;
+        this.distance = lk;
+        for (let ak = 0; ak < 3; ak++) Tk[ak] = Xk[ak] + yk[ak] * lk;
+        return lk / ik
       }
-      placeGoal(CC, zC) {
-        const ZC = this.settings.offset;
-        let QC = ZC[0],
-          wC = ZC[2];
+      placeGoal(kk, Fk) {
+        const Ik = this.settings.offset;
+        let Xk = Ik[0],
+          Tk = Ik[2];
         if ("target" === this.settings.offsetSpace) {
-          const CC = this.targets.heading(zC),
-            bC = Math.cos(CC),
-            nC = Math.sin(CC);
-          QC = ZC[0] * bC + ZC[2] * nC, wC = -ZC[0] * nC + ZC[2] * bC
+          const kk = this.targets.heading(Fk),
+            ik = Math.cos(kk),
+            yk = Math.sin(kk);
+          Xk = Ik[0] * ik + Ik[2] * yk, Tk = -Ik[0] * yk + Ik[2] * ik
         }
-        this.goal[0] = CC[0] + QC, this.goal[1] = CC[1] + ZC[1], this.goal[2] = CC[2] + wC
+        this.goal[0] = kk[0] + Xk, this.goal[1] = kk[1] + Ik[1], this.goal[2] = kk[2] + Tk
       }
     }
-    class uC {
-      constructor(CC, zC, ZC, QC) {
-        var wC, bC;
-        this.settings = CC, this.fN = zC, this.sampler = void 0, this.base = void 0, this.resolveTarget = void 0, this.elapsedMs = 0, this.sampler = CC.keyframes.length > 0 ? new dC(CC.keyframes, null === (wC = CC.smooth) || void 0 === wC || wC, null !== (bC = CC.loop) && void 0 !== bC && bC) : null, this.base = (0, oC.g)(QC, (0, oC.k)()), this.resolveTarget = CC => ZC.aimPoint(CC)
+    class Nk {
+      constructor(kk, Fk, Ik, Xk) {
+        var Tk, ik;
+        this.settings = kk, this.XZ = Fk, this.sampler = void 0, this.base = void 0, this.resolveTarget = void 0, this.elapsedMs = 0, this.sampler = kk.keyframes.length > 0 ? new Gk(kk.keyframes, null === (Tk = kk.smooth) || void 0 === Tk || Tk, null !== (ik = kk.loop) && void 0 !== ik && ik) : null, this.base = (0, ak.e)(Xk, (0, ak.j)()), this.resolveTarget = kk => Ik.aimPoint(kk)
       }
-      update(CC, zC, ZC) {
-        this.elapsedMs += CC;
-        const QC = MC(this.settings, this.fN);
-        this.sampler ? this.sampler.sample(this.elapsedMs, this.resolveTarget, QC, this.base) : this.base.fov = QC, (0, oC.h)(this.base.position, ZC.position), ZC.fov = this.base.fov, zC.apply(this.base, ZC)
+      update(kk, Fk, Ik) {
+        this.elapsedMs += kk;
+        const Xk = jk(this.settings, this.XZ);
+        this.sampler ? this.sampler.sample(this.elapsedMs, this.resolveTarget, Xk, this.base) : this.base.fov = Xk, (0, ak.f)(this.base.position, Ik.position), Ik.fov = this.base.fov, Fk.apply(this.base, Ik)
       }
-      continueFrom(CC) {
-        CC instanceof uC && (0, QC.s)(CC.settings.keyframes, this.settings.keyframes) && (this.elapsedMs = CC.elapsedMs, (0, oC.g)(CC.base, this.base))
+      continueFrom(kk) {
+        kk instanceof Nk && (0, Xk.u)(kk.settings.keyframes, this.settings.keyframes) && (this.elapsedMs = kk.elapsedMs, (0, ak.e)(kk.base, this.base))
       }
-      reset(CC) {
-        EC(this.base, CC), Number.isFinite(this.elapsedMs) || (this.elapsedMs = 0)
+      reset(kk) {
+        bk(this.base, kk), Number.isFinite(this.elapsedMs) || (this.elapsedMs = 0)
       }
     }
 
-    function rC(CC, zC) {
-      return (0, QC.u)(CC, zC)
+    function ck(kk, Fk) {
+      return (0, Xk.y)(kk, Fk)
     }
-    class sC {
-      constructor(CC, zC, ZC) {
-        var QC;
-        this.settings = CC, this.fN = zC, this.pose = void 0, this.lastGoodPose = void 0, this.look = void 0, this.targets = void 0, this.mode = void 0, this.warnedNonFinite = !1;
-        const wC = null !== ZC && ZC.settings.mode === CC.mode,
-          bC = wC ? ZC.pose : zC.getDefaultPose();
-        this.pose = (0, oC.g)(bC, (0, oC.k)()), this.lastGoodPose = (0, oC.g)(wC ? ZC.lastGoodPose : bC, (0, oC.k)()), this.look = new pC(CC.playerLook), this.targets = null !== (QC = null === ZC || void 0 === ZC ? void 0 : ZC.targets) && void 0 !== QC ? QC : new mC(zC);
-        const nC = (0, oC.g)(bC, (0, oC.k)());
-        wC && ZC.look.unapply(nC, nC), this.mode = function(CC, zC, ZC, QC) {
-          switch (CC.mode) {
+    class Wk {
+      constructor(kk, Fk, Ik) {
+        var Xk;
+        this.settings = kk, this.XZ = Fk, this.pose = void 0, this.lastGoodPose = void 0, this.look = void 0, this.targets = void 0, this.mode = void 0, this.warnedNonFinite = !1;
+        const Tk = null !== Ik && Ik.settings.mode === kk.mode,
+          ik = Tk ? Ik.pose : Fk.getDefaultPose();
+        this.pose = (0, ak.e)(ik, (0, ak.j)()), this.lastGoodPose = (0, ak.e)(Tk ? Ik.lastGoodPose : ik, (0, ak.j)()), this.look = new Hk(kk.playerLook), this.targets = null !== (Xk = null === Ik || void 0 === Ik ? void 0 : Ik.targets) && void 0 !== Xk ? Xk : new pk(Fk);
+        const yk = (0, ak.e)(ik, (0, ak.j)());
+        Tk && Ik.look.unapply(yk, yk), this.mode = function(kk, Fk, Ik, Xk) {
+          switch (kk.mode) {
             case "fixed":
-              return new XC(CC, zC, ZC, QC);
+              return new Uk(kk, Fk, Ik, Xk);
             case "follow":
-              return new cC(CC, zC, ZC, QC);
+              return new Ck(kk, Fk, Ik, Xk);
             case "path":
-              return new uC(CC, zC, ZC, QC);
+              return new Nk(kk, Fk, Ik, Xk);
             case "frame":
-              return new SC(CC, zC, ZC, QC)
+              return new wk(kk, Fk, Ik, Xk)
           }
-        }(CC, zC, this.targets, nC), wC && (this.look.continueFrom(ZC.look), this.mode.continueFrom(ZC.mode))
+        }(kk, Fk, this.targets, yk), Tk && (this.look.continueFrom(Ik.look), this.mode.continueFrom(Ik.mode))
       }
-      update(CC, zC) {
-        return this.look.update(CC, zC), this.mode.update(CC, this.look, this.pose), (0, oC.l)(this.pose) ? (0, oC.g)(this.pose, this.lastGoodPose) : (this.warnedNonFinite || (console.warn("Scripted camera produced a non-finite pose; holding the last good one"), this.warnedNonFinite = !0), (0, oC.g)(this.lastGoodPose, this.pose), this.mode.reset((0, oC.l)(this.lastGoodPose) ? this.lastGoodPose : this.fN.getDefaultPose())), this.pose
+      update(kk, Fk) {
+        return this.look.update(kk, Fk), this.mode.update(kk, this.look, this.pose), (0, ak.k)(this.pose) ? (0, ak.e)(this.pose, this.lastGoodPose) : (this.warnedNonFinite || (console.warn("Scripted camera produced a non-finite pose; holding the last good one"), this.warnedNonFinite = !0), (0, ak.e)(this.lastGoodPose, this.pose), this.mode.reset((0, ak.k)(this.lastGoodPose) ? this.lastGoodPose : this.XZ.getDefaultPose())), this.pose
       }
     }
 
-    function TC(CC) {
-      return [0, 0, CC[2], CC[3]]
+    function fk(kk) {
+      return [0, 0, kk[2], kk[3]]
     }
-    class aC {
-      constructor(CC) {
-        this.fN = CC, this.settings = {
+    class Bk {
+      constructor(kk) {
+        this.XZ = kk, this.settings = {
           mode: "default"
-        }, this.pending = null, this.fade = new fC, this.shot = null, this.blend = null, this.mixed = (0, oC.k)(), this.output = (0, oC.k)(), this.hasOutput = !1, this.loadingPositions = [], this.loadingSlots = Array.from({
+        }, this.pending = null, this.fade = new lk, this.shot = null, this.blend = null, this.mixed = (0, ak.j)(), this.output = (0, ak.j)(), this.hasOutput = !1, this.loadingPositions = [], this.loadingSlots = Array.from({
           length: 3
         }, (() => [0, 0, 0]))
       }
-      setSettings(CC) {
-        const zC = (0, qC.d)(CC);
-        if ((0, QC.s)(zC, this.pending ? this.pending.settings : this.settings)) return;
-        const ZC = rC(this.settings, zC);
-        if (void 0 !== zC.transition && !ZC) return this.pending = {
-          settings: zC,
-          shot: "default" === zC.mode ? null : new sC(zC, this.fN, null)
-        }, void this.fade.fadeOut(zC.transition);
-        const wC = null !== this.pending;
-        this.pending = null, !wC && ZC || this.fade.fadeIn(QC.k.minTransitionFadeMs), this.show(zC, !1)
+      setSettings(kk) {
+        const Fk = (0, qk.c)(kk);
+        if ((0, Xk.u)(Fk, this.pending ? this.pending.settings : this.settings)) return;
+        const Ik = ck(this.settings, Fk);
+        if (void 0 !== Fk.transition && !Ik) return this.pending = {
+          settings: Fk,
+          shot: "default" === Fk.mode ? null : new Wk(Fk, this.XZ, null)
+        }, void this.fade.fadeOut(Fk.transition);
+        const Tk = null !== this.pending;
+        this.pending = null, !Tk && Ik || this.fade.fadeIn(Xk.k.minTransitionFadeMs), this.show(Fk, !1)
       }
-      show(CC, zC) {
-        var ZC, wC;
-        if ((0, QC.s)(CC, this.settings)) return;
-        const nC = !zC && rC(this.settings, CC);
-        this.settings = CC;
-        const fC = null !== this.blend && this.blend.elapsedMs > 0,
-          qC = (0, oC.g)(this.hasOutput ? this.output : this.fN.getDefaultPose(), (0, oC.k)());
-        if (this.shot = "default" === CC.mode ? null : new sC(CC, this.fN, zC ? null : this.shot), nC) return;
-        const FC = zC || !this.shot && !this.hasOutput ? 0 : null !== (ZC = CC.blendInMs) && void 0 !== ZC ? ZC : 0;
-        if (FC <= 0) return void(this.blend = null);
-        const WC = (0, bC.p)(null !== (wC = CC.blendEasing) && void 0 !== wC ? wC : "easeInOut");
+      show(kk, Fk) {
+        var Ik, Tk;
+        if ((0, Xk.u)(kk, this.settings)) return;
+        const yk = !Fk && ck(this.settings, kk);
+        this.settings = kk;
+        const lk = null !== this.blend && this.blend.elapsedMs > 0,
+          qk = (0, ak.e)(this.hasOutput ? this.output : this.XZ.getDefaultPose(), (0, ak.j)());
+        if (this.shot = "default" === kk.mode ? null : new Wk(kk, this.XZ, Fk ? null : this.shot), yk) return;
+        const Lk = Fk || !this.shot && !this.hasOutput ? 0 : null !== (Ik = kk.blendInMs) && void 0 !== Ik ? Ik : 0;
+        if (Lk <= 0) return void(this.blend = null);
+        const tk = (0, ik.r)(null !== (Tk = kk.blendEasing) && void 0 !== Tk ? Tk : "easeInOut");
         this.blend = {
-          from: qC,
+          from: qk,
           fromScripted: this.hasOutput,
           headingDelta: NaN,
           elapsedMs: 0,
-          durationMs: FC,
-          easing: fC ? TC(WC) : WC
+          durationMs: Lk,
+          easing: lk ? fk(tk) : tk
         }
       }
       getSettings() {
@@ -943,66 +943,66 @@ export const modules = {
       isActive() {
         return null !== this.shot || null !== this.blend
       }
-      update(CC, zC) {
-        const ZC = Number.isFinite(CC) && CC > 0 ? CC : 0;
-        if (this.fade.advance(ZC) && null !== this.pending) {
+      update(kk, Fk) {
+        const Ik = Number.isFinite(kk) && kk > 0 ? kk : 0;
+        if (this.fade.advance(Ik) && null !== this.pending) {
           const {
-            settings: CC
+            settings: kk
           } = this.pending;
-          this.pending = null, this.show(CC, !0)
+          this.pending = null, this.show(kk, !0)
         }
         this.loadingPositions.length = 0;
-        const QC = this.pending;
-        if (null !== QC && void 0 !== QC && QC.shot) {
-          const CC = "path" === QC.settings.mode ? 0 : ZC;
-          this.noteLoadingPosition(QC.shot.update(CC, oC.e).position)
+        const Xk = this.pending;
+        if (null !== Xk && void 0 !== Xk && Xk.shot) {
+          const kk = "path" === Xk.settings.mode ? 0 : Ik;
+          this.noteLoadingPosition(Xk.shot.update(kk, ak.d).position)
         }
         if (!this.isActive()) return this.hasOutput = !1, null;
-        const nC = this.shot ? this.shot.update(ZC, zC) : this.fN.getDefaultPose();
-        this.shot && this.noteLoadingPosition(nC.position);
-        const fC = this.blend;
-        if (!fC) return this.writeOutput(nC);
-        fC.elapsedMs += ZC;
-        const qC = Math.min(1, fC.elapsedMs / fC.durationMs);
-        if (fC.headingDelta = Number.isFinite(fC.headingDelta) ? (0, wC.w)(fC.headingDelta, nC.heading - fC.from.heading) : (0, wC.t)(fC.from.heading, nC.heading), (0, oC.p)(fC.from, nC, fC.headingDelta, (0, bC.o)(qC, fC.easing), this.mixed), qC >= 1) {
+        const yk = this.shot ? this.shot.update(Ik, Fk) : this.XZ.getDefaultPose();
+        this.shot && this.noteLoadingPosition(yk.position);
+        const lk = this.blend;
+        if (!lk) return this.writeOutput(yk);
+        lk.elapsedMs += Ik;
+        const qk = Math.min(1, lk.elapsedMs / lk.durationMs);
+        if (lk.headingDelta = Number.isFinite(lk.headingDelta) ? (0, Tk.F)(lk.headingDelta, yk.heading - lk.from.heading) : (0, Tk.C)(lk.from.heading, yk.heading), (0, ak.s)(lk.from, yk, lk.headingDelta, (0, ik.o)(qk, lk.easing), this.mixed), qk >= 1) {
           if (this.blend = null, !this.shot) return this.hasOutput = !1, null
-        } else fC.fromScripted && this.noteLoadingPosition(fC.from.position);
+        } else lk.fromScripted && this.noteLoadingPosition(lk.from.position);
         return this.writeOutput(this.mixed)
       }
-      noteLoadingPosition(CC) {
-        if (CC.every(Number.isFinite)) {
-          const zC = this.loadingPositions;
-          zC.push((0, oC.h)(CC, this.loadingSlots[zC.length]))
+      noteLoadingPosition(kk) {
+        if (kk.every(Number.isFinite)) {
+          const Fk = this.loadingPositions;
+          Fk.push((0, ak.f)(kk, this.loadingSlots[Fk.length]))
         }
       }
-      writeOutput(CC) {
-        const zC = this.output;
-        (0, oC.l)(CC) ? (0, oC.g)(CC, zC) : this.hasOutput || (0, oC.g)(this.fN.getDefaultPose(), zC), zC.pitch = (0, wC.g)(zC.pitch);
-        const ZC = this.fN.getDefaultFov(),
-          bC = Number.isFinite(ZC) && ZC > 0 && ZC < 180,
-          nC = bC ? Math.min(QC.k.minFov, ZC) : QC.k.minFov,
-          fC = bC ? Math.max(QC.k.maxFov, ZC) : QC.k.maxFov;
-        return zC.fov = Number.isFinite(zC.fov) ? Math.min(fC, Math.max(nC, zC.fov)) : fC, this.hasOutput = !0, zC
+      writeOutput(kk) {
+        const Fk = this.output;
+        (0, ak.k)(kk) ? (0, ak.e)(kk, Fk) : this.hasOutput || (0, ak.e)(this.XZ.getDefaultPose(), Fk), Fk.pitch = (0, Tk.k)(Fk.pitch);
+        const Ik = this.XZ.getDefaultFov(),
+          ik = Number.isFinite(Ik) && Ik > 0 && Ik < 180,
+          yk = ik ? Math.min(Xk.k.minFov, Ik) : Xk.k.minFov,
+          lk = ik ? Math.max(Xk.k.maxFov, Ik) : Xk.k.maxFov;
+        return Fk.fov = Number.isFinite(Fk.fov) ? Math.min(lk, Math.max(yk, Fk.fov)) : lk, this.hasOutput = !0, Fk
       }
     }
   },
-  39e3: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => wC,
-      g: () => fC,
-      h: () => nC,
-      k: () => bC,
-      l: () => qC,
-      n: () => oC,
-      p: () => FC
+  39180: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Tk,
+      e: () => lk,
+      f: () => yk,
+      j: () => ik,
+      k: () => qk,
+      o: () => ak,
+      s: () => Lk
     });
-    var QC = ZC(39005);
-    const wC = {
-      VY: 0,
-      Zm: 0
+    var Xk = Ik(39183);
+    const Tk = {
+      JG: 0,
+      xG: 0
     };
 
-    function bC() {
+    function ik() {
       return {
         position: [0, 0, 0],
         heading: 0,
@@ -1011,196 +1011,196 @@ export const modules = {
       }
     }
 
-    function nC(CC, zC) {
-      return zC[0] = CC[0], zC[1] = CC[1], zC[2] = CC[2], zC
+    function yk(kk, Fk) {
+      return Fk[0] = kk[0], Fk[1] = kk[1], Fk[2] = kk[2], Fk
     }
 
-    function fC(CC, zC) {
-      return nC(CC.position, zC.position), zC.heading = CC.heading, zC.pitch = CC.pitch, zC.fov = CC.fov, zC
+    function lk(kk, Fk) {
+      return yk(kk.position, Fk.position), Fk.heading = kk.heading, Fk.pitch = kk.pitch, Fk.fov = kk.fov, Fk
     }
 
-    function oC(CC, zC) {
-      return Array.isArray(CC) && CC.length === zC && CC.every(Number.isFinite)
+    function ak(kk, Fk) {
+      return Array.isArray(kk) && kk.length === Fk && kk.every(Number.isFinite)
     }
 
-    function qC(CC) {
-      return oC(CC.position, 3) && Number.isFinite(CC.heading) && Number.isFinite(CC.pitch) && Number.isFinite(CC.fov)
+    function qk(kk) {
+      return ak(kk.position, 3) && Number.isFinite(kk.heading) && Number.isFinite(kk.pitch) && Number.isFinite(kk.fov)
     }
 
-    function FC(CC, zC, ZC, wC, bC) {
-      for (let QC = 0; QC < 3; QC++) bC.position[QC] = CC.position[QC] + (zC.position[QC] - CC.position[QC]) * wC;
-      return bC.heading = (0, QC.s)(CC.heading + ZC * wC), bC.pitch = CC.pitch + (zC.pitch - CC.pitch) * wC, bC.fov = CC.fov + (zC.fov - CC.fov) * wC, bC
+    function Lk(kk, Fk, Ik, Tk, ik) {
+      for (let Xk = 0; Xk < 3; Xk++) ik.position[Xk] = kk.position[Xk] + (Fk.position[Xk] - kk.position[Xk]) * Tk;
+      return ik.heading = (0, Xk.y)(kk.heading + Ik * Tk), ik.pitch = kk.pitch + (Fk.pitch - kk.pitch) * Tk, ik.fov = kk.fov + (Fk.fov - kk.fov) * Tk, ik
     }
   },
-  39028: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => IC,
-      e: () => NC
+  39209: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Vk,
+      g: () => Zk
     });
-    var QC = ZC(39022),
-      wC = ZC(39e3);
-    const bC = QC.g,
-      nC = QC.m;
+    var Xk = Ik(39201),
+      Tk = Ik(39180);
+    const ik = Xk.j,
+      yk = Xk.m;
 
-    function fC(CC, zC, ZC, QC) {
-      return Number.isFinite(CC) ? Math.min(ZC, Math.max(zC, CC)) : QC
+    function lk(kk, Fk, Ik, Xk) {
+      return Number.isFinite(kk) ? Math.min(Ik, Math.max(Fk, kk)) : Xk
     }
 
-    function oC(CC, zC, ZC) {
-      return void 0 !== CC && Number.isFinite(CC) ? Math.min(ZC, Math.max(zC, CC)) : void 0
+    function ak(kk, Fk, Ik) {
+      return void 0 !== kk && Number.isFinite(kk) ? Math.min(Ik, Math.max(Fk, kk)) : void 0
     }
 
-    function qC(CC) {
-      const zC = QC.k.maxCoordinate;
-      return [Math.min(zC, Math.max(-zC, CC[0])), Math.min(zC, Math.max(-zC, CC[1])), Math.min(zC, Math.max(-zC, CC[2]))]
+    function qk(kk) {
+      const Fk = Xk.k.maxCoordinate;
+      return [Math.min(Fk, Math.max(-Fk, kk[0])), Math.min(Fk, Math.max(-Fk, kk[1])), Math.min(Fk, Math.max(-Fk, kk[2]))]
     }
 
-    function FC(CC) {
-      return "string" === typeof CC ? CC : (0, wC.n)(CC, 3) ? qC(CC) : void 0
+    function Lk(kk) {
+      return "string" === typeof kk ? kk : (0, Tk.o)(kk, 3) ? qk(kk) : void 0
     }
-    const WC = new RegExp(QC.o);
+    const tk = new RegExp(Xk.q);
 
-    function NC(CC) {
-      return "string" === typeof CC && WC.test(CC)
+    function Zk(kk) {
+      return "string" === typeof kk && tk.test(kk)
     }
 
-    function MC(CC) {
-      const zC = [];
-      if (!Array.isArray(CC)) return zC;
-      for (const ZC of CC.slice(0, QC.k.maxFrameTargets)) {
-        const CC = FC(ZC);
-        void 0 === CC || "string" === typeof CC && !NC(CC) || zC.push(CC)
+    function jk(kk) {
+      const Fk = [];
+      if (!Array.isArray(kk)) return Fk;
+      for (const Ik of kk.slice(0, Xk.k.maxFrameTargets)) {
+        const kk = Lk(Ik);
+        void 0 === kk || "string" === typeof kk && !Zk(kk) || Fk.push(kk)
       }
-      return zC
+      return Fk
     }
 
-    function gC(CC) {
-      if (!(0, wC.n)(CC, 3)) return;
-      const zC = Math.max(Math.abs(CC[0]), Math.abs(CC[1]), Math.abs(CC[2])),
-        ZC = Math.hypot(CC[0] / zC, CC[1] / zC, CC[2] / zC);
-      return 0 === zC || zC * ZC < QC.k.minDirectionLength ? void 0 : [CC[0] / zC / ZC, CC[1] / zC / ZC, CC[2] / zC / ZC]
+    function ek(kk) {
+      if (!(0, Tk.o)(kk, 3)) return;
+      const Fk = Math.max(Math.abs(kk[0]), Math.abs(kk[1]), Math.abs(kk[2])),
+        Ik = Math.hypot(kk[0] / Fk, kk[1] / Fk, kk[2] / Fk);
+      return 0 === Fk || Fk * Ik < Xk.k.minDirectionLength ? void 0 : [kk[0] / Fk / Ik, kk[1] / Fk / Ik, kk[2] / Fk / Ik]
     }
 
-    function SC(CC) {
-      if (void 0 !== CC) return "string" === typeof CC ? bC.includes(CC) ? CC : void 0 : (0, wC.n)(CC, 4) ? [fC(CC[0], 0, 1, 0), fC(CC[1], QC.k.minEasingY, QC.k.maxEasingY, 0), fC(CC[2], 0, 1, 1), fC(CC[3], QC.k.minEasingY, QC.k.maxEasingY, 1)] : "linear"
+    function wk(kk) {
+      if (void 0 !== kk) return "string" === typeof kk ? ik.includes(kk) ? kk : void 0 : (0, Tk.o)(kk, 4) ? [lk(kk[0], 0, 1, 0), lk(kk[1], Xk.k.minEasingY, Xk.k.maxEasingY, 0), lk(kk[2], 0, 1, 1), lk(kk[3], Xk.k.minEasingY, Xk.k.maxEasingY, 1)] : "linear"
     }
 
-    function pC(CC) {
-      if (CC) return {
-        maxYaw: fC(CC.maxYaw, 0, QC.k.maxPlayerLook, 0),
-        maxPitch: fC(CC.maxPitch, 0, QC.k.maxPlayerLook, 0),
-        returnMs: oC(CC.returnMs, 0, QC.k.maxReturnMs)
+    function Hk(kk) {
+      if (kk) return {
+        maxYaw: lk(kk.maxYaw, 0, Xk.k.maxPlayerLook, 0),
+        maxPitch: lk(kk.maxPitch, 0, Xk.k.maxPlayerLook, 0),
+        returnMs: ak(kk.returnMs, 0, Xk.k.maxReturnMs)
       }
     }
-    const PC = new RegExp(QC.b);
+    const Jk = new RegExp(Xk.e);
 
-    function GC(CC) {
-      var zC;
-      if ("object" !== typeof CC || null === CC) return;
-      const ZC = QC.k.maxTransitionMs,
-        wC = QC.k.minTransitionFadeMs;
+    function xk(kk) {
+      var Fk;
+      if ("object" !== typeof kk || null === kk) return;
+      const Ik = Xk.k.maxTransitionMs,
+        Tk = Xk.k.minTransitionFadeMs;
       return {
-        colour: "string" === typeof CC.colour && PC.test(CC.colour) ? CC.colour : QC.f,
-        outMs: fC(CC.outMs, wC, ZC, wC),
-        holdMs: fC(null !== (zC = CC.holdMs) && void 0 !== zC ? zC : 0, 0, ZC, 0),
-        inMs: fC(CC.inMs, wC, ZC, wC)
+        colour: "string" === typeof kk.colour && Jk.test(kk.colour) ? kk.colour : Xk.f,
+        outMs: lk(kk.outMs, Tk, Ik, Tk),
+        holdMs: lk(null !== (Fk = kk.holdMs) && void 0 !== Fk ? Fk : 0, 0, Ik, 0),
+        inMs: lk(kk.inMs, Tk, Ik, Tk)
       }
     }
 
-    function RC(CC) {
-      return !0 === CC || void 0
+    function Pk(kk) {
+      return !0 === kk || void 0
     }
 
-    function AC(CC) {
-      if ("object" !== typeof CC || null === CC) return !1;
-      const zC = CC.lookAt;
-      return Number.isFinite(CC.timeMs) && (0, wC.n)(CC.position, 3) && (void 0 === zC || "string" === typeof zC || (0, wC.n)(zC, 3))
+    function Kk(kk) {
+      if ("object" !== typeof kk || null === kk) return !1;
+      const Fk = kk.lookAt;
+      return Number.isFinite(kk.timeMs) && (0, Tk.o)(kk.position, 3) && (void 0 === Fk || "string" === typeof Fk || (0, Tk.o)(Fk, 3))
     }
 
-    function xC(CC) {
+    function Qk(kk) {
       return {
-        ...CC,
-        timeMs: fC(CC.timeMs, 0, QC.k.maxPathMs, 0),
-        position: qC(CC.position),
-        lookAt: FC(CC.lookAt),
-        lookDirection: gC(CC.lookDirection),
-        fov: oC(CC.fov, QC.k.minFov, QC.k.maxFov),
-        easing: SC(CC.easing)
+        ...kk,
+        timeMs: lk(kk.timeMs, 0, Xk.k.maxPathMs, 0),
+        position: qk(kk.position),
+        lookAt: Lk(kk.lookAt),
+        lookDirection: ek(kk.lookDirection),
+        fov: ak(kk.fov, Xk.k.minFov, Xk.k.maxFov),
+        easing: wk(kk.easing)
       }
     }
 
-    function JC(CC) {
-      const zC = [];
-      if (!Array.isArray(CC)) return zC;
-      for (const ZC of CC.slice(0, QC.k.maxKeyframes)) {
-        if (!AC(ZC)) continue;
-        const CC = xC(ZC);
-        (0 === zC.length || CC.timeMs > zC[zC.length - 1].timeMs) && zC.push(CC)
+    function sk(kk) {
+      const Fk = [];
+      if (!Array.isArray(kk)) return Fk;
+      for (const Ik of kk.slice(0, Xk.k.maxKeyframes)) {
+        if (!Kk(Ik)) continue;
+        const kk = Qk(Ik);
+        (0 === Fk.length || kk.timeMs > Fk[Fk.length - 1].timeMs) && Fk.push(kk)
       }
-      return zC
+      return Fk
     }
 
-    function IC(CC) {
-      if ("object" !== typeof CC || null === CC) return {
+    function Vk(kk) {
+      if ("object" !== typeof kk || null === kk) return {
         mode: "default"
       };
-      const zC = {
-          blendInMs: oC(CC.blendInMs, 0, QC.k.maxBlendInMs),
-          blendEasing: SC(CC.blendEasing),
-          transition: GC(CC.transition),
-          letterbox: RC(CC.letterbox),
-          hideHud: RC(CC.hideHud)
+      const Fk = {
+          blendInMs: ak(kk.blendInMs, 0, Xk.k.maxBlendInMs),
+          blendEasing: wk(kk.blendEasing),
+          transition: xk(kk.transition),
+          letterbox: Pk(kk.letterbox),
+          hideHud: Pk(kk.hideHud)
         },
-        ZC = {
+        Ik = {
           mode: "default",
-          ...zC
+          ...Fk
         };
-      if ("default" === CC.mode || "fixed" === CC.mode && !(0, wC.n)(CC.position, 3)) return ZC;
-      const bC = {
-        ...zC,
-        fov: oC(CC.fov, QC.k.minFov, QC.k.maxFov),
-        playerFacing: (WC = CC.playerFacing, nC.includes(WC) ? WC : void 0),
-        playerLook: pC(CC.playerLook)
+      if ("default" === kk.mode || "fixed" === kk.mode && !(0, Tk.o)(kk.position, 3)) return Ik;
+      const ik = {
+        ...Fk,
+        fov: ak(kk.fov, Xk.k.minFov, Xk.k.maxFov),
+        playerFacing: (tk = kk.playerFacing, yk.includes(tk) ? tk : void 0),
+        playerLook: Hk(kk.playerLook)
       };
-      var WC, NC;
-      switch (CC.mode) {
+      var tk, Zk;
+      switch (kk.mode) {
         case "fixed":
           return {
-            ...CC, ...bC, position: qC(CC.position), lookAt: FC(CC.lookAt), lookDirection: gC(CC.lookDirection)
+            ...kk, ...ik, position: qk(kk.position), lookAt: Lk(kk.lookAt), lookDirection: ek(kk.lookDirection)
           };
         case "follow":
           return {
-            ...CC, ...bC, target: "string" === typeof CC.target ? CC.target : void 0, lookAt: FC(CC.lookAt), offset: (NC = CC.offset, Array.isArray(NC) ? [fC(NC[0], -QC.k.maxOffset, QC.k.maxOffset, 0), fC(NC[1], -QC.k.maxOffset, QC.k.maxOffset, 0), fC(NC[2], -QC.k.maxOffset, QC.k.maxOffset, 0)] : [0, 0, 0]), lookDirection: gC(CC.lookDirection), smoothMs: oC(CC.smoothMs, 0, QC.k.maxSmoothMs)
+            ...kk, ...ik, target: "string" === typeof kk.target ? kk.target : void 0, lookAt: Lk(kk.lookAt), offset: (Zk = kk.offset, Array.isArray(Zk) ? [lk(Zk[0], -Xk.k.maxOffset, Xk.k.maxOffset, 0), lk(Zk[1], -Xk.k.maxOffset, Xk.k.maxOffset, 0), lk(Zk[2], -Xk.k.maxOffset, Xk.k.maxOffset, 0)] : [0, 0, 0]), lookDirection: ek(kk.lookDirection), smoothMs: ak(kk.smoothMs, 0, Xk.k.maxSmoothMs)
           };
         case "path":
           return {
-            ...CC, ...bC, keyframes: JC(CC.keyframes)
+            ...kk, ...ik, keyframes: sk(kk.keyframes)
           };
         case "frame":
           return {
-            ...CC, ...bC, targets: MC(CC.targets), viewHeading: oC(CC.viewHeading, -QC.k.maxFrameHeading, QC.k.maxFrameHeading), viewElevation: oC(CC.viewElevation, 0, QC.k.maxFrameElevation), padding: oC(CC.padding, 0, QC.k.maxFrameDistance), closestDistance: oC(CC.closestDistance, 0, QC.k.maxFrameDistance), furthestDistance: oC(CC.furthestDistance, 0, QC.k.maxFrameDistance), smoothMs: oC(CC.smoothMs, 0, QC.k.maxSmoothMs)
+            ...kk, ...ik, targets: jk(kk.targets), viewHeading: ak(kk.viewHeading, -Xk.k.maxFrameHeading, Xk.k.maxFrameHeading), viewElevation: ak(kk.viewElevation, 0, Xk.k.maxFrameElevation), padding: ak(kk.padding, 0, Xk.k.maxFrameDistance), closestDistance: ak(kk.closestDistance, 0, Xk.k.maxFrameDistance), furthestDistance: ak(kk.furthestDistance, 0, Xk.k.maxFrameDistance), smoothMs: ak(kk.smoothMs, 0, Xk.k.maxSmoothMs)
           };
         default:
-          return ZC
+          return Ik
       }
     }
   },
-  38487: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => fC
+  38649: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => lk
     });
-    var QC = ZC(1169);
+    var Xk = Ik(1217);
 
-    function wC(CC) {
-      const zC = /(\d*\.?\d+)px/.exec(CC);
-      return zC ? Number(zC[1]) : null
+    function Tk(kk) {
+      const Fk = /(\d*\.?\d+)px/.exec(kk);
+      return Fk ? Number(Fk[1]) : null
     }
 
-    function bC(CC) {
-      return CC.split(/[\s,]+/).pop()
+    function ik(kk) {
+      return kk.split(/[\s,]+/).pop()
     }
-    let nC = !1;
-    const fC = {
+    let yk = !1;
+    const lk = {
       debug: !1,
       align: "center",
       vAlign: "middle",
@@ -1211,385 +1211,385 @@ export const modules = {
       font: "Arial",
       lineHeight: null,
       justify: !1,
-      drawText: function(CC, zC, QC, fC, oC, qC) {
-        if (oC <= 0 || qC <= 0 || this.fontSize <= 0) return {
+      drawText: function(kk, Fk, Xk, lk, ak, qk) {
+        if (ak <= 0 || qk <= 0 || this.fontSize <= 0) return {
           height: 0
         };
         const {
-          fontStyle: FC,
-          fontVariant: WC,
-          fontWeight: NC,
-          fontSize: MC,
-          font: gC
-        } = this, SC = [FC, WC, NC, `${MC}px`, gC].filter(Boolean).join(" "), pC = [
-          [NC, `${MC}px`, bC(gC)].filter(Boolean).join(" "), `${MC}px sans-serif`
-        ], PC = CC.font, GC = function(CC, zC, ZC) {
-          for (const QC of zC) {
-            CC.font = QC;
-            const zC = wC(CC.font),
-              nC = bC(QC);
-            if (null !== zC && Math.abs(zC - ZC) <= .5 && CC.font.toLowerCase().includes(nC.toLowerCase())) return QC
+          fontStyle: Lk,
+          fontVariant: tk,
+          fontWeight: Zk,
+          fontSize: jk,
+          font: ek
+        } = this, wk = [Lk, tk, Zk, `${jk}px`, ek].filter(Boolean).join(" "), Hk = [
+          [Zk, `${jk}px`, ik(ek)].filter(Boolean).join(" "), `${jk}px sans-serif`
+        ], Jk = kk.font, xk = function(kk, Fk, Ik) {
+          for (const Xk of Fk) {
+            kk.font = Xk;
+            const Fk = Tk(kk.font),
+              yk = ik(Xk);
+            if (null !== Fk && Math.abs(Fk - Ik) <= .5 && kk.font.toLowerCase().includes(yk.toLowerCase())) return Xk
           }
           return null
-        }(CC, [SC, ...pC], MC);
-        GC !== SC && function(CC, zC, QC) {
-          nC || (nC = !0, Promise.resolve().then((() => ZC(1029))).then((ZC => {
+        }(kk, [wk, ...Hk], jk);
+        xk !== wk && function(kk, Fk, Xk) {
+          yk || (yk = !0, Promise.resolve().then((() => Ik(1076))).then((Ik => {
             let {
-              IS: wC
-            } = ZC;
-            wC(new Error("A canvas didn't take canvasTxt's font"), {
-              font: CC,
-              lM: zC,
-              drawnWith: null !== QC && void 0 !== QC ? QC : "the kept font, scaled"
+              ow: Tk
+            } = Ik;
+            Tk(new Error("A canvas didn't take canvasTxt's font"), {
+              font: kk,
+              Gj: Fk,
+              drawnWith: null !== Xk && void 0 !== Xk ? Xk : "the kept font, scaled"
             })
           })).catch((() => {})))
-        }(SC, PC, GC);
-        const RC = wC(CC.font);
-        if (null === GC && null !== RC && RC > 0) {
-          const ZC = MC / RC;
-          CC.save();
+        }(wk, Jk, xk);
+        const Pk = Tk(kk.font);
+        if (null === xk && null !== Pk && Pk > 0) {
+          const Ik = jk / Pk;
+          kk.save();
           try {
-            return CC.scale(ZC, ZC), {
-              height: this.drawLines(CC, zC, QC / ZC, fC / ZC, oC / ZC, qC / ZC, RC).height * ZC
+            return kk.scale(Ik, Ik), {
+              height: this.drawLines(kk, Fk, Xk / Ik, lk / Ik, ak / Ik, qk / Ik, Pk).height * Ik
             }
           } finally {
-            CC.restore()
+            kk.restore()
           }
         }
-        return this.drawLines(CC, zC, QC, fC, oC, qC, MC)
+        return this.drawLines(kk, Fk, Xk, lk, ak, qk, jk)
       },
-      drawLines: function(CC, zC, ZC, wC, bC, nC, fC) {
-        const oC = ZC + bC,
-          qC = wC + nC;
-        let FC, WC = wC + nC / 2 + fC / 2;
-        "right" === this.align ? (FC = oC, CC.textAlign = "right") : "left" === this.align ? (FC = ZC, CC.textAlign = "left") : (FC = ZC + bC / 2, CC.textAlign = "center");
-        for (const QC of zC) {
-          CC.measureText(QC).width >= bC && (zC = zC.replace(QC, ""))
+      drawLines: function(kk, Fk, Ik, Tk, ik, yk, lk) {
+        const ak = Ik + ik,
+          qk = Tk + yk;
+        let Lk, tk = Tk + yk / 2 + lk / 2;
+        "right" === this.align ? (Lk = ak, kk.textAlign = "right") : "left" === this.align ? (Lk = Ik, kk.textAlign = "left") : (Lk = Ik + ik / 2, kk.textAlign = "center");
+        for (const Xk of Fk) {
+          kk.measureText(Xk).width >= ik && (Fk = Fk.replace(Xk, ""))
         }
-        zC = (0, QC.bb)(zC);
-        const NC = [],
-          MC = zC.split("\n"),
-          gC = this.justify ? CC.measureText("\u200a").width : 0;
-        MC.forEach((zC => {
-          let ZC = CC.measureText(zC).width;
-          if (ZC <= bC) NC.push(zC);
+        Fk = (0, Xk.S)(Fk);
+        const Zk = [],
+          jk = Fk.split("\n"),
+          ek = this.justify ? kk.measureText("\u200a").width : 0;
+        jk.forEach((Fk => {
+          let Ik = kk.measureText(Fk).width;
+          if (Ik <= ik) Zk.push(Fk);
           else {
-            let QC = zC;
-            const wC = bC;
-            let nC, fC, oC;
-            for (ZC = CC.measureText(QC).width; ZC > wC;) {
-              for (nC = 0, fC = 0, oC = ""; fC < wC;) nC++, oC = QC.substr(0, nC), fC = CC.measureText(oC).width;
-              nC--, oC = oC.substr(0, nC);
-              const zC = nC;
-              if (" " !== QC.substr(nC, 1)) {
+            let Xk = Fk;
+            const Tk = ik;
+            let yk, lk, ak;
+            for (Ik = kk.measureText(Xk).width; Ik > Tk;) {
+              for (yk = 0, lk = 0, ak = ""; lk < Tk;) yk++, ak = Xk.substr(0, yk), lk = kk.measureText(ak).width;
+              yk--, ak = ak.substr(0, yk);
+              const Fk = yk;
+              if (" " !== Xk.substr(yk, 1)) {
                 for (;
-                  " " !== QC.substr(nC, 1) && 0 !== nC;) nC--;
-                0 === nC && (nC = zC), oC = QC.substr(0, nC)
+                  " " !== Xk.substr(yk, 1) && 0 !== yk;) yk--;
+                0 === yk && (yk = Fk), ak = Xk.substr(0, yk)
               }
-              oC = this.justify ? this.justifyLine(CC, oC, gC, "\u200a", bC) : oC, QC = QC.substr(nC), ZC = CC.measureText(QC).width, NC.push(oC)
+              ak = this.justify ? this.justifyLine(kk, ak, ek, "\u200a", ik) : ak, Xk = Xk.substr(yk), Ik = kk.measureText(Xk).width, Zk.push(ak)
             }
-            ZC > 0 && NC.push(QC)
+            Ik > 0 && Zk.push(Xk)
           }
         }));
-        const SC = this.lineHeight ? this.lineHeight : this.getTextHeight(CC, zC),
-          pC = SC * (NC.length - 1),
-          PC = pC / 2;
-        let GC = wC;
-        "top" === this.vAlign ? WC = wC + fC : "bottom" === this.vAlign ? (WC = qC - pC, GC = qC) : (GC = wC + nC / 2, WC -= PC), NC.forEach((zC => {
-          zC = zC.trim(), CC.fillText(zC, FC, WC), WC += SC
-        })), this.debug && (CC.lineWidth = 3, CC.strokeStyle = "#00909e", CC.strokeRect(ZC, wC, bC, nC), CC.lineWidth = 2, CC.strokeStyle = "#f6d743", CC.beginPath(), CC.moveTo(FC, wC), CC.lineTo(FC, qC), CC.stroke(), CC.strokeStyle = "#ff6363", CC.beginPath(), CC.moveTo(ZC, GC), CC.lineTo(oC, GC), CC.stroke());
+        const wk = this.lineHeight ? this.lineHeight : this.getTextHeight(kk, Fk),
+          Hk = wk * (Zk.length - 1),
+          Jk = Hk / 2;
+        let xk = Tk;
+        "top" === this.vAlign ? tk = Tk + lk : "bottom" === this.vAlign ? (tk = qk - Hk, xk = qk) : (xk = Tk + yk / 2, tk -= Jk), Zk.forEach((Fk => {
+          Fk = Fk.trim(), kk.fillText(Fk, Lk, tk), tk += wk
+        })), this.debug && (kk.lineWidth = 3, kk.strokeStyle = "#00909e", kk.strokeRect(Ik, Tk, ik, yk), kk.lineWidth = 2, kk.strokeStyle = "#f6d743", kk.beginPath(), kk.moveTo(Lk, Tk), kk.lineTo(Lk, qk), kk.stroke(), kk.strokeStyle = "#ff6363", kk.beginPath(), kk.moveTo(Ik, xk), kk.lineTo(ak, xk), kk.stroke());
         return {
-          height: pC + SC
+          height: Hk + wk
         }
       },
-      getTextHeight: function(CC, zC) {
-        const ZC = CC.textBaseline;
-        CC.textBaseline = "bottom";
+      getTextHeight: function(kk, Fk) {
+        const Ik = kk.textBaseline;
+        kk.textBaseline = "bottom";
         const {
-          actualBoundingBoxAscent: QC
-        } = CC.measureText(zC);
-        return CC.textBaseline = ZC, QC
+          actualBoundingBoxAscent: Xk
+        } = kk.measureText(Fk);
+        return kk.textBaseline = Ik, Xk
       },
-      justifyLine: function(CC, zC, ZC, QC, wC) {
-        const bC = zC.trim(),
-          nC = CC.measureText(bC).width,
-          fC = bC.split(/\s+/).length - 1,
-          oC = Math.floor((wC - nC) / ZC);
-        if (fC <= 0 || oC <= 0) return bC;
-        const qC = Math.floor(oC / fC);
-        let FC = oC - fC * qC,
-          WC = [];
-        for (let NC = 0; NC < qC; NC++) WC.push(QC);
-        WC = WC.join("");
-        return bC.replace(/\s+/g, (CC => {
-          const zC = FC > 0 ? WC + QC : WC;
-          return FC--, CC + zC
+      justifyLine: function(kk, Fk, Ik, Xk, Tk) {
+        const ik = Fk.trim(),
+          yk = kk.measureText(ik).width,
+          lk = ik.split(/\s+/).length - 1,
+          ak = Math.floor((Tk - yk) / Ik);
+        if (lk <= 0 || ak <= 0) return ik;
+        const qk = Math.floor(ak / lk);
+        let Lk = ak - lk * qk,
+          tk = [];
+        for (let Zk = 0; Zk < qk; Zk++) tk.push(Xk);
+        tk = tk.join("");
+        return ik.replace(/\s+/g, (kk => {
+          const Fk = Lk > 0 ? tk + Xk : tk;
+          return Lk--, kk + Fk
         }))
       }
     }
   },
-  38964: (CC, zC, ZC) => {
-    function QC(CC, zC) {
-      return zC.set(CC), zC
+  39129: (kk, Fk, Ik) => {
+    function Xk(kk, Fk) {
+      return Fk.set(kk), Fk
     }
-    ZC.d(zC, {
-      b: () => QC
+    Ik.d(Fk, {
+      c: () => Xk
     })
   },
-  38493: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => SC,
-      f: () => gC,
-      j: () => NC,
-      n: () => FC,
-      q: () => WC
+  38656: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => wk,
+      d: () => ek,
+      h: () => Zk,
+      k: () => Lk,
+      n: () => tk
     });
-    var QC = ZC(4179),
-      wC = ZC(326);
-    const bC = 1024,
-      nC = 1536,
-      fC = 2 * QC.j + 1,
-      oC = new Intl.NumberFormat("en", {
+    var Xk = Ik(4210),
+      Tk = Ik(337);
+    const ik = 1024,
+      yk = 1536,
+      lk = 2 * Xk.i + 1,
+      ak = new Intl.NumberFormat("en", {
         maximumSignificantDigits: 15
       }),
-      qC = 1.5;
+      qk = 1.5;
 
-    function FC(CC, zC, ZC) {
-      if ("string" !== typeof CC) return zC;
+    function Lk(kk, Fk, Ik) {
+      if ("string" !== typeof kk) return Fk;
       try {
-        const ZC = JSON.parse(CC);
-        return ZC && "object" === typeof ZC ? ZC : zC
-      } catch (QC) {
-        return void 0 !== ZC && console.error(`Couldn't parse ${ZC}`, QC), zC
+        const Ik = JSON.parse(kk);
+        return Ik && "object" === typeof Ik ? Ik : Fk
+      } catch (Xk) {
+        return void 0 !== Ik && console.error(`Couldn't parse ${Ik}`, Xk), Fk
       }
     }
 
-    function WC(CC) {
-      return FC(CC, null, "a leaderboard's rows")
+    function tk(kk) {
+      return Lk(kk, null, "a leaderboard's rows")
     }
 
-    function NC(CC, zC) {
-      var ZC, QC;
-      return null !== zC && void 0 !== zC ? zC : {
-        status: null !== (ZC = CC.status) && void 0 !== ZC ? ZC : "loading",
-        entries: null !== (QC = CC.entries) && void 0 !== QC ? QC : []
+    function Zk(kk, Fk) {
+      var Ik, Xk;
+      return null !== Fk && void 0 !== Fk ? Fk : {
+        status: null !== (Ik = kk.status) && void 0 !== Ik ? Ik : "loading",
+        entries: null !== (Xk = kk.entries) && void 0 !== Xk ? Xk : []
       }
     }
 
-    function MC(CC, zC) {
-      return "number" === typeof CC && Number.isFinite(CC) && CC > 0 ? CC : zC
+    function jk(kk, Fk) {
+      return "number" === typeof kk && Number.isFinite(kk) && kk > 0 ? kk : Fk
     }
 
-    function gC(CC, zC) {
-      const ZC = MC(CC.size, 1);
-      let QC = MC(CC.width, MC(2.5 * ZC, 2.5)),
-        wC = MC(CC.height, MC(3.75 * ZC, 3.75));
-      Number.isFinite(bC * wC / QC) && Number.isFinite(nC * QC / wC) || (QC = 2.5, wC = 3.75);
-      const fC = wC / QC,
-        oC = Math.max(1, Math.min(bC, zC / fC));
+    function ek(kk, Fk) {
+      const Ik = jk(kk.size, 1);
+      let Xk = jk(kk.width, jk(2.5 * Ik, 2.5)),
+        Tk = jk(kk.height, jk(3.75 * Ik, 3.75));
+      Number.isFinite(ik * Tk / Xk) && Number.isFinite(yk * Xk / Tk) || (Xk = 2.5, Tk = 3.75);
+      const lk = Tk / Xk,
+        ak = Math.max(1, Math.min(ik, Fk / lk));
       return {
-        width: QC,
-        height: wC,
-        layoutWidth: Math.max(bC, nC / fC),
-        layoutHeight: Math.max(nC, bC * fC),
-        pixelWidth: Math.round(oC),
-        pixelHeight: Math.round(Math.max(1, Math.min(zC, oC * fC)))
+        width: Xk,
+        height: Tk,
+        layoutWidth: Math.max(ik, yk / lk),
+        layoutHeight: Math.max(yk, ik * lk),
+        pixelWidth: Math.round(ak),
+        pixelHeight: Math.round(Math.max(1, Math.min(Fk, ak * lk)))
       }
     }
 
-    function SC(CC, zC, ZC, nC, FC, WC) {
-      CC.setTransform(1, 0, 0, 1, 0, 0), CC.fillStyle = wC.H.defaultNameTagBackground, CC.fillRect(0, 0, zC, ZC), CC.scale(zC / nC.layoutWidth, ZC / nC.layoutHeight), CC.translate((nC.layoutWidth - bC) / 2, 0),
-        function(CC, zC, ZC, bC) {
-          var nC, FC, WC, NC;
+    function wk(kk, Fk, Ik, yk, Lk, tk) {
+      kk.setTransform(1, 0, 0, 1, 0, 0), kk.fillStyle = Tk.J.defaultNameTagBackground, kk.fillRect(0, 0, Fk, Ik), kk.scale(Fk / yk.layoutWidth, Ik / yk.layoutHeight), kk.translate((yk.layoutWidth - ik) / 2, 0),
+        function(kk, Fk, Ik, ik) {
+          var yk, Lk, tk, Zk;
           const {
-            top: MC,
-            around: gC,
-            showPlayerText: SC,
-            localPlayerDbId: GC
-          } = ZC, {
-            whiteUiText: RC,
-            grayUiText: AC,
-            yellowUiText: xC
-          } = wC.H;
-          CC.textBaseline = "middle";
-          const JC = function(zC, ZC, QC, wC, bC, nC) {
-              let fC = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
-              CC.font = `bold ${wC}px 'Jetbrains Mono', monospace`, CC.fillStyle = bC, CC.textAlign = fC;
-              let oC = zC.replace(/[\r\n\t]/g, " ");
-              if (CC.measureText(oC).width > nC) {
-                for (; oC.length > 0 && CC.measureText(`${oC}\u2026`).width > nC;) oC = oC.slice(0, -1);
-                oC += "\u2026"
+            top: jk,
+            around: ek,
+            showPlayerText: wk,
+            localPlayerDbId: xk
+          } = Ik, {
+            whiteUiText: Pk,
+            grayUiText: Kk,
+            yellowUiText: Qk
+          } = Tk.J;
+          kk.textBaseline = "middle";
+          const sk = function(Fk, Ik, Xk, Tk, ik, yk) {
+              let lk = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
+              kk.font = `bold ${Tk}px 'Jetbrains Mono', monospace`, kk.fillStyle = ik, kk.textAlign = lk;
+              let ak = Fk.replace(/[\r\n\t]/g, " ");
+              if (kk.measureText(ak).width > yk) {
+                for (; ak.length > 0 && kk.measureText(`${ak}\u2026`).width > yk;) ak = ak.slice(0, -1);
+                ak += "\u2026"
               }
-              CC.fillText(oC, ZC, QC)
+              kk.fillText(ak, Ik, Xk)
             },
-            IC = zC => {
-              CC.fillStyle = RC, CC.globalAlpha = .15, CC.fillRect(24, zC, 976, 2), CC.globalAlpha = 1
+            Vk = Fk => {
+              kk.fillStyle = Pk, kk.globalAlpha = .15, kk.fillRect(24, Fk, 976, 2), kk.globalAlpha = 1
             },
-            iC = null === GC ? null : (0, wC.ac)(GC),
-            vC = CC => null !== iC && CC.playerHash === iC,
-            eC = pC(MC.entries, QC.l),
-            hC = "ready" === MC.status && eC.length > 0,
-            KC = null === gC ? [] : pC(gC.entries, fC),
-            YC = eC.some(vC),
-            dC = null === gC ? null : function(CC) {
-              const zC = CC;
-              if (!zC || !Number.isFinite(zC.rank) || !Number.isFinite(zC.tied) || !Number.isFinite(zC.total)) return null;
-              return zC
-            }(gC.standing),
-            mC = KC.find(vC),
-            HC = eC.find(vC),
-            EC = null === dC || void 0 === mC ? null : {
-              value: mC.value,
-              rank: dC.rank
+            zk = null === xk ? null : (0, Tk.yc)(xk),
+            Sk = kk => null !== zk && kk.playerHash === zk,
+            vk = Hk(jk.entries, Xk.k),
+            Ek = "ready" === jk.status && vk.length > 0,
+            Ok = null === ek ? [] : Hk(ek.entries, lk),
+            nk = vk.some(Sk),
+            Gk = null === ek ? null : function(kk) {
+              const Fk = kk;
+              if (!Fk || !Number.isFinite(Fk.rank) || !Number.isFinite(Fk.tied) || !Number.isFinite(Fk.total)) return null;
+              return Fk
+            }(ek.standing),
+            pk = Ok.find(Sk),
+            uk = vk.find(Sk),
+            bk = null === Gk || void 0 === pk ? null : {
+              value: pk.value,
+              rank: Gk.rank
             },
-            lC = PC(eC, void 0 === HC || HC.value === (null === EC || void 0 === EC ? void 0 : EC.value) ? EC : null),
-            XC = PC(KC, EC),
-            cC = (CC, zC) => {
-              const ZC = CC.findIndex(vC);
-              return ZC >= 0 ? zC[ZC] : null
+            Rk = Jk(vk, void 0 === uk || uk.value === (null === bk || void 0 === bk ? void 0 : bk.value) ? bk : null),
+            Uk = Jk(Ok, bk),
+            Ck = (kk, Fk) => {
+              const Ik = kk.findIndex(Sk);
+              return Ik >= 0 ? Fk[Ik] : null
             },
-            uC = null !== (nC = null !== (FC = null === dC || void 0 === dC ? void 0 : dC.rank) && void 0 !== FC ? FC : cC(KC, XC)) && void 0 !== nC ? nC : cC(eC, lC);
-          CC.font = "bold 34px 'Jetbrains Mono', monospace";
-          const rC = [...hC ? lC : [], ...YC ? [] : XC],
-            sC = Math.min(280, Math.max(0, ...rC.map((zC => CC.measureText(oC.format(zC)).width)))),
-            TC = sC <= 80,
-            aC = TC ? 80 : 32 + sC,
-            tC = TC ? 148 : aC + 28,
-            DC = 660 - tC;
-          JC(`TOP ${QC.l}  /  ALL TIME`, 24, 52, 28, AC, 976), JC(SC ? String(null !== (WC = zC.title) && void 0 !== WC ? WC : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, RC, 976), JC("RANK", 32, 174, 28, AC, tC - 40), JC("PLAYER", tC, 174, 28, AC, DC), JC(SC ? String(null !== (NC = zC.scoreLabel) && void 0 !== NC ? NC : "Score").slice(0, 24) : "Score", 992, 174, 28, AC, 304, "right"), IC(202);
-          const jC = (bC - 232) / (QC.l + qC + fC),
-            yC = 208 + QC.l * jC,
-            LC = yC + qC * jC,
-            UC = (zC, ZC, QC, wC) => {
-              const bC = vC(zC);
-              CC.fillStyle = bC ? xC : RC, CC.globalAlpha = bC ? .15 : wC ? .035 : 0, CC.fillRect(24, QC - jC / 2 + 1, 976, jC - 2), CC.globalAlpha = 1;
-              const nC = bC ? xC : RC;
-              JC(oC.format(ZC), aC, QC, 34, nC, TC ? 80 : sC, TC ? "center" : "right"), JC(SC ? String(zC.name).slice(0, 64) : "Player", tC, QC, 34, nC, DC);
-              const fC = oC.format(zC.value);
-              JC(CC.measureText(fC).width > 304 ? zC.value.toExponential(6) : fC, 992, QC, 34, nC, 304, "right")
+            Nk = null !== (yk = null !== (Lk = null === Gk || void 0 === Gk ? void 0 : Gk.rank) && void 0 !== Lk ? Lk : Ck(Ok, Uk)) && void 0 !== yk ? yk : Ck(vk, Rk);
+          kk.font = "bold 34px 'Jetbrains Mono', monospace";
+          const ck = [...Ek ? Rk : [], ...nk ? [] : Uk],
+            Wk = Math.min(280, Math.max(0, ...ck.map((Fk => kk.measureText(ak.format(Fk)).width)))),
+            fk = Wk <= 80,
+            Bk = fk ? 80 : 32 + Wk,
+            dk = fk ? 148 : Bk + 28,
+            Yk = 660 - dk;
+          sk(`TOP ${Xk.k}  /  ALL TIME`, 24, 52, 28, Kk, 976), sk(wk ? String(null !== (tk = Fk.title) && void 0 !== tk ? tk : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, Pk, 976), sk("RANK", 32, 174, 28, Kk, dk - 40), sk("PLAYER", dk, 174, 28, Kk, Yk), sk(wk ? String(null !== (Zk = Fk.scoreLabel) && void 0 !== Zk ? Zk : "Score").slice(0, 24) : "Score", 992, 174, 28, Kk, 304, "right"), Vk(202);
+          const Ak = (ik - 232) / (Xk.k + qk + lk),
+            gk = 208 + Xk.k * Ak,
+            mk = gk + qk * Ak,
+            hk = (Fk, Ik, Xk, Tk) => {
+              const ik = Sk(Fk);
+              kk.fillStyle = ik ? Qk : Pk, kk.globalAlpha = ik ? .15 : Tk ? .035 : 0, kk.fillRect(24, Xk - Ak / 2 + 1, 976, Ak - 2), kk.globalAlpha = 1;
+              const yk = ik ? Qk : Pk;
+              sk(ak.format(Ik), Bk, Xk, 34, yk, fk ? 80 : Wk, fk ? "center" : "right"), sk(wk ? String(Fk.name).slice(0, 64) : "Player", dk, Xk, 34, yk, Yk);
+              const lk = ak.format(Fk.value);
+              sk(kk.measureText(lk).width > 304 ? Fk.value.toExponential(6) : lk, 992, Xk, 34, yk, 304, "right")
             };
-          if (hC)
-            for (const [QC, wC] of eC.entries()) UC(wC, lC[QC], 208 + (QC + .5) * jC, QC % 2 === 0);
+          if (Ek)
+            for (const [Xk, Tk] of vk.entries()) hk(Tk, Rk[Xk], 208 + (Xk + .5) * Ak, Xk % 2 === 0);
           else {
-            const CC = "error" === MC.status,
-              zC = CC ? "Couldn't load leaderboard" : "ready" === MC.status ? "No scores yet" : "Loading leaderboard\u2026",
-              ZC = CC ? "Trying again shortly" : "ready" === MC.status ? "Be the first on the board!" : "Fetching the top players",
-              QC = (208 + yC) / 2;
-            JC(zC, 512, QC - 28, 40, CC ? wC.H.redUiText : RC, 960, "center"), JC(ZC, 512, QC + 27, 30, AC, 960, "center")
+            const kk = "error" === jk.status,
+              Fk = kk ? "Couldn't load leaderboard" : "ready" === jk.status ? "No scores yet" : "Loading leaderboard\u2026",
+              Ik = kk ? "Trying again shortly" : "ready" === jk.status ? "Be the first on the board!" : "Fetching the top players",
+              Xk = (208 + gk) / 2;
+            sk(Fk, 512, Xk - 28, 40, kk ? Tk.J.redUiText : Pk, 960, "center"), sk(Ik, 512, Xk + 27, 30, Kk, 960, "center")
           }
-          const BC = yC + qC * jC / 2;
-          if (null === uC) IC(BC);
+          const rk = gk + qk * Ak / 2;
+          if (null === Nk) Vk(rk);
           else {
-            const zC = null === dC ? 0 : dC.tied - 1,
-              ZC = `YOUR RANK #${oC.format(uC)}${null===dC?"":` of ${oC.format(dC.total)}`}`;
-            CC.font = "bold 36px 'Jetbrains Mono', monospace";
-            const QC = Math.max(20, Math.min(36, Math.floor(34560 / CC.measureText(ZC).width)));
-            JC(ZC, 512, BC - (zC > 0 ? 15 : 0), QC, xC, 960, "center"), zC > 0 && JC(`Tied with ${oC.format(zC)} other${1===zC?"":"s"}`, 512, BC + 24, 24, AC, 960, "center")
+            const Fk = null === Gk ? 0 : Gk.tied - 1,
+              Ik = `YOUR RANK #${ak.format(Nk)}${null===Gk?"":` of ${ak.format(Gk.total)}`}`;
+            kk.font = "bold 36px 'Jetbrains Mono', monospace";
+            const Xk = Math.max(20, Math.min(36, Math.floor(34560 / kk.measureText(Ik).width)));
+            sk(Ik, 512, rk - (Fk > 0 ? 15 : 0), Xk, Qk, 960, "center"), Fk > 0 && sk(`Tied with ${ak.format(Fk)} other${1===Fk?"":"s"}`, 512, rk + 24, 24, Kk, 960, "center")
           }
-          if (null === gC) return;
-          const OC = LC + fC * jC / 2;
-          if (YC) JC(`You're in the top ${QC.l}!`, 512, OC, 40, xC, 960, "center");
-          else if (0 === KC.length) JC("You're not on this board yet", 512, OC, 34, AC, 960, "center");
+          if (null === ek) return;
+          const Dk = mk + lk * Ak / 2;
+          if (nk) sk(`You're in the top ${Xk.k}!`, 512, Dk, 40, Qk, 960, "center");
+          else if (0 === Ok.length) sk("You're not on this board yet", 512, Dk, 34, Kk, 960, "center");
           else
-            for (const [QC, wC] of KC.entries()) UC(wC, XC[QC], LC + (QC + .5) * jC, QC % 2 === 0)
-        }(CC, FC, WC, nC.layoutHeight)
+            for (const [Xk, Tk] of Ok.entries()) hk(Tk, Uk[Xk], mk + (Xk + .5) * Ak, Xk % 2 === 0)
+        }(kk, Lk, tk, yk.layoutHeight)
     }
 
-    function pC(CC, zC) {
-      return Array.isArray(CC) ? CC.slice(0, zC).filter((CC => CC && Number.isFinite(CC.rank) && Number.isFinite(CC.value))) : []
+    function Hk(kk, Fk) {
+      return Array.isArray(kk) ? kk.slice(0, Fk).filter((kk => kk && Number.isFinite(kk.rank) && Number.isFinite(kk.value))) : []
     }
 
-    function PC(CC, zC) {
-      const ZC = [];
-      let QC = !1;
-      return CC.forEach(((wC, bC) => {
-        if (null !== zC && wC.value === zC.value) return void ZC.push(zC.rank);
-        const nC = bC > 0 && wC.value === CC[bC - 1].value;
-        nC || (QC = 0 === bC && 1 !== wC.rank), ZC.push(nC && !QC ? ZC[bC - 1] : wC.rank)
-      })), ZC
+    function Jk(kk, Fk) {
+      const Ik = [];
+      let Xk = !1;
+      return kk.forEach(((Tk, ik) => {
+        if (null !== Fk && Tk.value === Fk.value) return void Ik.push(Fk.rank);
+        const yk = ik > 0 && Tk.value === kk[ik - 1].value;
+        yk || (Xk = 0 === ik && 1 !== Tk.rank), Ik.push(yk && !Xk ? Ik[ik - 1] : Tk.rank)
+      })), Ik
     }
   },
-  38692: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => wC,
-      h: () => bC
+  38868: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Tk,
+      g: () => ik
     });
-    const QC = 32;
+    const Xk = 32;
 
-    function wC(CC) {
-      return Array.from(CC).length
+    function Tk(kk) {
+      return Array.from(kk).length
     }
 
-    function bC(CC) {
-      const zC = [""];
-      let ZC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        wC = "";
-      const bC = () => {
-        zC.push(""), ZC = 0, wC = ""
+    function ik(kk) {
+      const Fk = [""];
+      let Ik = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        Tk = "";
+      const ik = () => {
+        Fk.push(""), Ik = 0, Tk = ""
       };
-      for (const nC of CC.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
-        if (/^\r?\n$/.test(nC)) bC();
-        else if (/^\s+$/.test(nC)) wC += nC;
-      else if (nC.length > 0) {
-        const CC = Array.from(nC);
-        ZC > 0 && ZC + wC.length + CC.length > QC && bC(), zC[zC.length - 1] += wC, ZC += wC.length, wC = "";
-        for (const wC of CC) ZC >= QC && bC(), zC[zC.length - 1] += wC, ZC++
+      for (const yk of kk.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
+        if (/^\r?\n$/.test(yk)) ik();
+        else if (/^\s+$/.test(yk)) Tk += yk;
+      else if (yk.length > 0) {
+        const kk = Array.from(yk);
+        Ik > 0 && Ik + Tk.length + kk.length > Xk && ik(), Fk[Fk.length - 1] += Tk, Ik += Tk.length, Tk = "";
+        for (const Tk of kk) Ik >= Xk && ik(), Fk[Fk.length - 1] += Tk, Ik++
       }
-      return zC[zC.length - 1] += wC, zC
+      return Fk[Fk.length - 1] += Tk, Fk
     }
   },
-  38961: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => nC
+  39121: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => yk
     });
-    var QC = ZC(36512),
-      wC = ZC.n(QC);
-    const bC = [1, 1, 1];
+    var Xk = Ik(36624),
+      Tk = Ik.n(Xk);
+    const ik = [1, 1, 1];
 
-    function nC(CC) {
-      if (!CC) return [...bC];
+    function yk(kk) {
+      if (!kk) return [...ik];
       try {
-        const [zC, ZC, QC] = wC()(CC).rgb().array();
-        return [zC / 255, ZC / 255, QC / 255]
-      } catch (zC) {
-        return console.warn(`Invalid groundArrowPath colour "${CC}":`, zC), [...bC]
+        const [Fk, Ik, Xk] = Tk()(kk).rgb().array();
+        return [Fk / 255, Ik / 255, Xk / 255]
+      } catch (Fk) {
+        return console.warn(`Invalid groundArrowPath colour "${kk}":`, Fk), [...ik]
       }
     }
   },
-  39060: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => fC,
-      i: () => qC,
-      j: () => oC
+  39230: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => lk,
+      f: () => qk,
+      j: () => ak
     });
-    var QC = ZC(273),
-      wC = ZC(2894);
-    const bC = /\/textures\/skyBoxes\/(space_blue|space_lightblue|space_red_2|space_white)\/(_[np][xyz]\.jpg)$/,
-      nC = 512;
+    var Xk = Ik(293),
+      Tk = Ik(2830);
+    const ik = /\/textures\/skyBoxes\/(space_blue|space_lightblue|space_red_2|space_white)\/(_[np][xyz]\.jpg)$/,
+      yk = 512;
 
-    function fC(CC) {
-      var zC;
-      const ZC = Math.min(screen.width, screen.height) * (null !== (zC = (0, QC.c)()) && void 0 !== zC ? zC : (0, wC.m)());
-      return Math.max(window.innerHeight * (0, wC.m)(), ZC) / (0, wC.q)(CC)
+    function lk(kk) {
+      var Fk;
+      const Ik = Math.min(screen.width, screen.height) * (null !== (Fk = (0, Xk.b)()) && void 0 !== Fk ? Fk : (0, Tk.m)());
+      return Math.max(window.innerHeight * (0, Tk.m)(), Ik) / (0, Tk.n)(kk)
     }
 
-    function oC(CC, zC, ZC) {
-      return zC / (2 * Math.tan(ZC / 2)) > nC ? CC : qC(CC)
+    function ak(kk, Fk, Ik) {
+      return Fk / (2 * Math.tan(Ik / 2)) > yk ? kk : qk(kk)
     }
 
-    function qC(CC) {
-      return CC.map((CC => CC.replace(bC, "/textures/skyBoxes/$1/1024/$2")))
+    function qk(kk) {
+      return kk.map((kk => kk.replace(ik, "/textures/skyBoxes/$1/1024/$2")))
     }
   },
-  33998: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => bC,
-      e: () => fC,
-      h: () => nC,
-      l: () => wC,
-      m: () => QC
+  34008: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => ik,
+      h: () => lk,
+      l: () => yk,
+      n: () => Tk,
+      q: () => Xk
     });
-    const QC = {
+    const Xk = {
         default: {
           type: "earth",
           vertexTint: [137, 207, 240]
@@ -1676,41 +1676,41 @@ export const modules = {
           pz: "/textures/skyBoxes/space_white/_pz.jpg"
         }
       },
-      wC = "/textures/dayNight/sun.png",
-      bC = "/textures/dayNight/moon.png",
-      nC = "/textures/dayNight/stars",
-      fC = ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
+      Tk = "/textures/dayNight/sun.png",
+      ik = "/textures/dayNight/moon.png",
+      yk = "/textures/dayNight/stars",
+      lk = ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
   },
-  39022: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => FC,
-      f: () => WC,
-      g: () => QC,
-      k: () => oC,
-      m: () => wC,
-      o: () => qC,
-      s: () => fC,
-      u: () => nC
+  39201: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Lk,
+      f: () => tk,
+      j: () => Xk,
+      k: () => ak,
+      m: () => Tk,
+      q: () => qk,
+      u: () => lk,
+      y: () => yk
     });
-    const QC = ["linear", "easeIn", "easeOut", "easeInOut"],
-      wC = ["movement", "camera", "cursor"],
-      bC = ["targets", "playerFacing", "blendInMs", "blendEasing", "transition", "letterbox", "hideHud"];
+    const Xk = ["linear", "easeIn", "easeOut", "easeInOut"],
+      Tk = ["movement", "camera", "cursor"],
+      ik = ["targets", "playerFacing", "blendInMs", "blendEasing", "transition", "letterbox", "hideHud"];
 
-    function nC(CC, zC) {
-      return fC(CC, zC, bC)
+    function yk(kk, Fk) {
+      return lk(kk, Fk, ik)
     }
 
-    function fC(CC, zC) {
-      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      if (CC === zC || Number.isNaN(CC) && Number.isNaN(zC)) return !0;
-      if ("object" !== typeof CC || "object" !== typeof zC || null === CC || null === zC || Array.isArray(CC) !== Array.isArray(zC)) return !1;
-      const QC = CC,
-        wC = zC;
-      for (const bC of new Set([...Object.keys(QC), ...Object.keys(wC)]))
-        if (!ZC.includes(bC) && !fC(QC[bC], wC[bC])) return !1;
+    function lk(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      if (kk === Fk || Number.isNaN(kk) && Number.isNaN(Fk)) return !0;
+      if ("object" !== typeof kk || "object" !== typeof Fk || null === kk || null === Fk || Array.isArray(kk) !== Array.isArray(Fk)) return !1;
+      const Xk = kk,
+        Tk = Fk;
+      for (const ik of new Set([...Object.keys(Xk), ...Object.keys(Tk)]))
+        if (!Ik.includes(ik) && !lk(Xk[ik], Tk[ik])) return !1;
       return !0
     }
-    const oC = {
+    const ak = {
         maxBlendInMs: 1e4,
         minFov: 10,
         maxFov: 120,
@@ -1732,10 +1732,10 @@ export const modules = {
         minEasingY: -1,
         maxEasingY: 2
       },
-      qC = "^-[1-9][0-9]*$",
-      FC = "^#[0-9a-fA-F]{6}$",
-      WC = "#000000"
+      qk = "^-[1-9][0-9]*$",
+      Lk = "^#[0-9a-fA-F]{6}$",
+      tk = "#000000"
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

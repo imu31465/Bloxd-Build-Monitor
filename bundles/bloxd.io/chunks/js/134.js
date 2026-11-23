@@ -1,26 +1,26 @@
 export const id = 134;
 export const ids = [134];
 export const modules = {
-  38592: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => oC,
-      g: () => WC,
-      k: () => SC,
-      o: () => FC,
-      r: () => qC,
-      u: () => MC
+  38762: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => ak,
+      g: () => tk,
+      i: () => wk,
+      k: () => Lk,
+      l: () => qk,
+      o: () => jk
     });
-    var QC = ZC(304),
-      wC = ZC(1637);
-    const bC = "A valid external Instance reference no longer exists.",
-      nC = [
+    var Xk = Ik(314),
+      Tk = Ik(1652);
+    const ik = "A valid external Instance reference no longer exists.",
+      yk = [
         [1e4, "<10s", "lt10s"],
         [6e4, "<1m", "lt1m"],
         [3e5, "<5m", "lt5m"],
         [18e5, "<30m", "lt30m"],
         [1 / 0, "30m+", "ge30m"]
       ],
-      fC = [
+      lk = [
         [1e3, "lt1s"],
         [2e3, "lt2s"],
         [5e3, "lt5s"],
@@ -28,202 +28,202 @@ export const modules = {
         [3e4, "lt30s"],
         [1 / 0, "ge30s"]
       ];
-    const oC = {
+    const ak = {
       WebGPU: "WebGPU device lost",
       WebGL2: "WebGL2 context lost"
     };
 
-    function qC(CC, zC) {
-      return CC ? "frames_refused" : arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? "browser_destroyed" : function(CC) {
-        var zC;
-        const ZC = null !== (zC = /Device removed reason: (?!S_OK)([A-Z][A-Z0-9_]+)/.exec(CC)) && void 0 !== zC ? zC : /failed with ([A-Z][A-Z0-9_]+)/.exec(CC);
-        return ZC ? ZC[1] : CC.includes(bC) ? "gpu_process_lost" : "other"
-      }(zC)
+    function qk(kk, Fk) {
+      return kk ? "frames_refused" : arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? "browser_destroyed" : function(kk) {
+        var Fk;
+        const Ik = null !== (Fk = /Device removed reason: (?!S_OK)([A-Z][A-Z0-9_]+)/.exec(kk)) && void 0 !== Fk ? Fk : /failed with ([A-Z][A-Z0-9_]+)/.exec(kk);
+        return Ik ? Ik[1] : kk.includes(ik) ? "gpu_process_lost" : "other"
+      }(Fk)
     }
 
-    function FC(CC) {
-      return `${(null===CC||void 0===CC?void 0:CC.vendor)||"unknown vendor"} ${(null===CC||void 0===CC?void 0:CC.architecture)||"unknown architecture"}`
+    function Lk(kk) {
+      return `${(null===kk||void 0===kk?void 0:kk.vendor)||"unknown vendor"} ${(null===kk||void 0===kk?void 0:kk.architecture)||"unknown architecture"}`
     }
 
-    function WC(CC) {
-      return pC(CC)[1]
+    function tk(kk) {
+      return Hk(kk)[1]
     }
 
-    function NC(CC) {
-      return pC(CC)[2]
+    function Zk(kk) {
+      return Hk(kk)[2]
     }
 
-    function MC(CC, zC, ZC) {
-      const wC = (0, QC.f)(),
-        bC = null !== wC && wC >= zC,
-        nC = document.hidden ? "hidden" : bC ? "shown" : "visible",
-        fC = bC ? ZC - wC : null;
+    function jk(kk, Fk, Ik) {
+      const Tk = (0, Xk.e)(),
+        ik = null !== Tk && Tk >= Fk,
+        yk = document.hidden ? "hidden" : ik ? "shown" : "visible",
+        lk = ik ? Ik - Tk : null;
       return {
-        page: null === fC ? nC : `${nC}${WC(fC)}`,
-        code: `${CC}_${null===fC?nC:`${nC}_${NC(fC)}`}_${gC(ZC)}`
+        page: null === lk ? yk : `${yk}${tk(lk)}`,
+        code: `${kk}_${null===lk?yk:`${yk}_${Zk(lk)}`}_${ek(Ik)}`
       }
     }
 
-    function gC(CC) {
-      if ((0, wC.f)()) return "ad_open";
-      const zC = (0, wC.b)();
-      return null === zC ? "ad_none" : `ad_${NC(CC-zC.endedAt)}_${zC.pageHid?"h":"v"}`
+    function ek(kk) {
+      if ((0, Tk.c)()) return "ad_open";
+      const Fk = (0, Tk.b)();
+      return null === Fk ? "ad_none" : `ad_${Zk(kk-Fk.endedAt)}_${Fk.pageHid?"h":"v"}`
     }
 
-    function SC(CC) {
-      return PC(fC, CC)[1]
+    function wk(kk) {
+      return Jk(lk, kk)[1]
     }
 
-    function pC(CC) {
-      return PC(nC, CC)
+    function Hk(kk) {
+      return Jk(yk, kk)
     }
 
-    function PC(CC, zC) {
-      var ZC;
-      return null !== (ZC = CC.find((CC => {
-        let [ZC] = CC;
-        return zC < ZC
-      }))) && void 0 !== ZC ? ZC : CC[CC.length - 1]
+    function Jk(kk, Fk) {
+      var Ik;
+      return null !== (Ik = kk.find((kk => {
+        let [Ik] = kk;
+        return Fk < Ik
+      }))) && void 0 !== Ik ? Ik : kk[kk.length - 1]
     }
   },
-  38898: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => oC
+  39058: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => ak
     });
-    var QC = ZC(8897),
-      wC = ZC(36369),
-      bC = ZC(38907);
-    const nC = {
+    var Xk = Ik(8880),
+      Tk = Ik(36486),
+      ik = Ik(39066);
+    const yk = {
         seat: "seat_timeout",
         socket_unopened: "socket_timeout_unopened",
         socket: "socket_timeout"
       },
-      fC = {
+      lk = {
         seat: "seat_lost",
         socket_unopened: "socket_unopened",
         socket: "socket_closed"
       };
 
-    function oC(CC, zC) {
-      if (CC instanceof wC.f) return {
-        at: nC[zC],
+    function ak(kk, Fk) {
+      if (kk instanceof Tk.f) return {
+        at: yk[Fk],
         code: 0
       };
-      const ZC = (0, QC.e)(CC),
-        oC = "number" === typeof ZC ? ZC : 0;
-      return null !== (0, bC.j)(oC).name ? {
+      const Ik = (0, Xk.g)(kk),
+        ak = "number" === typeof Ik ? Ik : 0;
+      return null !== (0, ik.l)(ak).name ? {
         at: "refused",
-        code: oC
+        code: ak
       } : {
-        at: fC[zC],
-        code: oC
+        at: lk[Fk],
+        code: ak
       }
     }
   },
-  8897: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => bC,
-      e: () => nC,
-      i: () => fC,
-      m: () => qC,
-      n: () => oC
+  8880: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => ik,
+      g: () => yk,
+      j: () => lk,
+      n: () => qk,
+      p: () => ak
     });
-    var QC = ZC(184),
-      wC = ZC(4562);
+    var Xk = Ik(187),
+      Tk = Ik(4612);
 
-    function bC(CC) {
-      return nC(CC) === QC.e.gameOrPluginOnPlayerAuthRejected.code
+    function ik(kk) {
+      return yk(kk) === Xk.d.gameOrPluginOnPlayerAuthRejected.code
     }
 
-    function nC(CC) {
-      return "object" === typeof CC && null !== CC ? CC.code : void 0
+    function yk(kk) {
+      return "object" === typeof kk && null !== kk ? kk.code : void 0
     }
 
-    function fC(CC) {
-      var zC;
-      return null !== (zC = Object.keys(wC.c).find((zC => wC.c[zC] === CC))) && void 0 !== zC ? zC : null
+    function lk(kk) {
+      var Fk;
+      return null !== (Fk = Object.keys(Tk.b).find((Fk => Tk.b[Fk] === kk))) && void 0 !== Fk ? Fk : null
     }
 
-    function oC(CC) {
-      return "notWhitelisted" === CC ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
+    function ak(kk) {
+      return "notWhitelisted" === kk ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
     }
-    const qC = {
+    const qk = {
       private: "customLobby:cantJoinPrivate",
       notWhitelisted: "customLobby:cantJoinNotWhitelisted",
       banned: "customLobby:cantJoinBanned",
       adminLocked: "customLobby:cantJoinAdminLocked"
     }
   },
-  38907: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => wC,
-      e: () => bC,
-      f: () => fC,
-      j: () => FC,
-      k: () => oC,
-      o: () => nC
+  39066: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => Tk,
+      e: () => ik,
+      i: () => lk,
+      l: () => Lk,
+      n: () => ak,
+      p: () => yk
     });
-    var QC = ZC(184);
-    const wC = 3e3,
-      bC = 15e3;
+    var Xk = Ik(187);
+    const Tk = 3e3,
+      ik = 15e3;
 
-    function nC(CC) {
-      const zC = CC.endsWith(QC.k);
+    function yk(kk) {
+      const Fk = kk.endsWith(Xk.m);
       return {
-        text: (zC ? CC.slice(0, -QC.k.length) : CC) || null,
-        dropsCache: zC
+        text: (Fk ? kk.slice(0, -Xk.m.length) : kk) || null,
+        dropsCache: Fk
       }
     }
-    const fC = "Either your internet isn't working or this is a bug.";
+    const lk = "Either your internet isn't working or this is a bug.";
 
-    function oC(CC, zC) {
-      const ZC = FC(CC);
-      return null !== ZC.name && "" === QC.e[ZC.name].text && null !== zC ? zC : ZC.reason
+    function ak(kk, Fk) {
+      const Ik = Lk(kk);
+      return null !== Ik.name && "" === Xk.d[Ik.name].text && null !== Fk ? Fk : Ik.reason
     }
-    const qC = "You were removed from the game.";
+    const qk = "You were removed from the game.";
 
-    function FC(CC) {
-      var zC;
-      let ZC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const wC = null !== (zC = Object.keys(QC.e).find((zC => QC.e[zC].code === CC))) && void 0 !== zC ? zC : null;
-      if (null === wC) return {
-        code: CC,
-        name: wC,
-        reason: null !== ZC && void 0 !== ZC ? ZC : `${fC}\nCode: ${CC}`,
+    function Lk(kk) {
+      var Fk;
+      let Ik = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const Tk = null !== (Fk = Object.keys(Xk.d).find((Fk => Xk.d[Fk].code === kk))) && void 0 !== Fk ? Fk : null;
+      if (null === Tk) return {
+        code: kk,
+        name: Tk,
+        reason: null !== Ik && void 0 !== Ik ? Ik : `${lk}\nCode: ${kk}`,
         canReconnect: !1,
         automaticallyReconnect: !1,
         requiresRefresh: !1
       };
       const {
-        text: bC,
-        canReconnect: nC = !1
-      } = QC.e[wC], oC = CC === QC.e.outdatedVersion.code || CC === QC.e.loadRecaptchaError.code;
+        text: ik,
+        canReconnect: yk = !1
+      } = Xk.d[Tk], ak = kk === Xk.d.outdatedVersion.code || kk === Xk.d.loadRecaptchaError.code;
       return {
-        code: CC,
-        name: wC,
-        reason: "" !== bC ? bC : null !== ZC && void 0 !== ZC ? ZC : CC === QC.e.gameOrPluginKick.code ? qC : `Code: ${CC}`,
-        canReconnect: nC,
-        automaticallyReconnect: CC === QC.e.customGameUpdated.code || CC === QC.e.duplicateLobbyNameError.code,
-        requiresRefresh: oC
+        code: kk,
+        name: Tk,
+        reason: "" !== ik ? ik : null !== Ik && void 0 !== Ik ? Ik : kk === Xk.d.gameOrPluginKick.code ? qk : `Code: ${kk}`,
+        canReconnect: yk,
+        automaticallyReconnect: kk === Xk.d.customGameUpdated.code || kk === Xk.d.duplicateLobbyNameError.code,
+        requiresRefresh: ak
       }
     }
   },
-  36712: (CC, zC, ZC) => {
-    function QC(CC) {
-      return "fetch" === CC || "timeout" === CC || "integrity" === CC ? "download" : "browser"
+  36879: (kk, Fk, Ik) => {
+    function Xk(kk) {
+      return "fetch" === kk || "timeout" === kk || "integrity" === kk ? "download" : "browser"
     }
-    ZC.d(zC, {
-      b: () => wC,
-      c: () => nC,
-      g: () => oC,
-      j: () => fC,
-      m: () => QC,
-      p: () => bC
+    Ik.d(Fk, {
+      d: () => Tk,
+      f: () => yk,
+      i: () => ak,
+      j: () => lk,
+      l: () => Xk,
+      p: () => ik
     });
-    const wC = "https://discord.gg/playbloxd";
+    const Tk = "https://discord.gg/playbloxd";
 
-    function bC(CC) {
-      return "download" === CC ? {
+    function ik(kk) {
+      return "download" === kk ? {
         icon: "wifi",
         title: "wasmScreens:downloadFailedTitle",
         help: "wasmScreens:downloadFailedHelp",
@@ -242,21 +242,21 @@ export const modules = {
       }
     }
 
-    function nC(CC, zC) {
+    function yk(kk, Fk) {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:crashTitle",
-        help: zC ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
+        help: Fk ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
         helpValues: {
-          code: CC.code
+          code: kk.code
         },
-        discordLink: zC,
+        discordLink: Fk,
         confirm: "general:reload",
         cancel: "general:back"
       }
     }
 
-    function fC() {
+    function lk() {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:turnstilePageTitle",
@@ -268,74 +268,74 @@ export const modules = {
       }
     }
 
-    function oC(CC, zC, ZC) {
+    function ak(kk, Fk, Ik) {
       return {
         icon: "wifi",
         title: "wasmScreens:disconnectedTitle",
-        help: ZC ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
+        help: Ik ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
         helpValues: {
-          reason: CC.reason
+          reason: kk.reason
         },
-        discordLink: null === CC.name,
-        confirm: zC ? "general:reconnect" : CC.requiresRefresh ? "general:reload" : "general:ok",
+        discordLink: null === kk.name,
+        confirm: Fk ? "general:reconnect" : kk.requiresRefresh ? "general:reload" : "general:ok",
         cancel: null
       }
     }
   },
-  36201: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => UC,
-      d: () => VC,
-      g: () => OC,
-      h: () => LC
+  36297: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => hk,
+      c: () => kF,
+      e: () => Dk,
+      h: () => mk
     });
-    var QC = ZC(2848),
-      wC = ZC(2871),
-      bC = ZC(6616),
-      nC = ZC(4635),
-      fC = ZC(2862),
-      oC = ZC(2856);
-    const qC = "bloxd-wasmDownloaded",
-      FC = 12;
+    var Xk = Ik(2801),
+      Tk = Ik(2809),
+      ik = Ik(6599),
+      yk = Ik(4692),
+      lk = Ik(2806),
+      ak = Ik(2803);
+    const qk = "bloxd-wasmDownloaded",
+      Lk = 12;
 
-    function WC(CC) {
-      return CC.pathname.slice(CC.pathname.lastIndexOf("/") + 1)
+    function tk(kk) {
+      return kk.pathname.slice(kk.pathname.lastIndexOf("/") + 1)
     }
 
-    function NC() {
+    function Zk() {
       try {
         if ("undefined" === typeof localStorage) return null;
-        const CC = JSON.parse(localStorage.getItem(qC) ?? "[]");
-        return Array.isArray(CC) ? CC.filter((CC => "string" === typeof CC)) : []
-      } catch (CC) {
-        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", CC), null
+        const kk = JSON.parse(localStorage.getItem(qk) ?? "[]");
+        return Array.isArray(kk) ? kk.filter((kk => "string" === typeof kk)) : []
+      } catch (kk) {
+        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", kk), null
       }
     }
-    const MC = Reflect.apply,
-      gC = "undefined" === typeof Worker ? void 0 : Worker,
-      SC = gC?.prototype.postMessage,
-      pC = gC?.prototype.terminate,
-      PC = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
-      GC = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
-      RC = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
-      AC = function() {
+    const jk = Reflect.apply,
+      ek = "undefined" === typeof Worker ? void 0 : Worker,
+      wk = ek?.prototype.postMessage,
+      Hk = ek?.prototype.terminate,
+      Jk = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
+      xk = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
+      Pk = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
+      Kk = function() {
         try {
-          return (0, nC.k)(gC, "Worker", !0) && (0, nC.k)(SC, "postMessage") && (0, nC.k)(pC, "terminate") && (0, nC.k)(RC, "buffer") && void 0 !== PC && void 0 !== GC
+          return (0, yk.m)(ek, "Worker", !0) && (0, yk.m)(wk, "postMessage") && (0, yk.m)(Hk, "terminate") && (0, yk.m)(Pk, "buffer") && void 0 !== Jk && void 0 !== xk
         } catch {
           return !1
         }
       }();
-    let xC = !1;
+    let Qk = !1;
 
-    function JC() {
-      return AC && !xC
+    function sk() {
+      return Kk && !Qk
     }
-    class IC {
+    class Vk {
       worker = null;
       failed = !1;
       constructor() {
-        if (JC()) try {
-          this.worker = vC(), MC(PC, this.worker, ["error", () => {
+        if (sk()) try {
+          this.worker = Sk(), jk(Jk, this.worker, ["error", () => {
             this.failed = !0
           }])
         } catch {
@@ -343,125 +343,125 @@ export const modules = {
         }
       }
       take() {
-        const CC = this.worker;
-        if (this.worker = null, null !== CC && this.failed) throw MC(pC, CC, []), new Error("it did not run");
-        return CC
+        const kk = this.worker;
+        if (this.worker = null, null !== kk && this.failed) throw jk(Hk, kk, []), new Error("it did not run");
+        return kk
       }
       stop() {
-        const CC = this.worker;
-        this.worker = null, null !== CC && MC(pC, CC, [])
+        const kk = this.worker;
+        this.worker = null, null !== kk && jk(Hk, kk, [])
       }
     }
-    class iC {
+    class zk {
       decoded;
       worker;
       reject;
-      constructor(CC, zC, ZC, QC, bC) {
+      constructor(kk, Fk, Ik, Xk, ik) {
         try {
-          this.worker = bC?.take() ?? vC()
-        } catch (qC) {
-          throw xC = !0, new Error(`The zstd decoder's worker did not start: ${(0,fC.f)(qC)}`)
+          this.worker = ik?.take() ?? Sk()
+        } catch (qk) {
+          throw Qk = !0, new Error(`The zstd decoder's worker did not start: ${(0,lk.d)(qk)}`)
         }
-        const nC = this.worker;
-        this.decoded = (0, wC.f)(((zC, wC) => {
-          this.reject = wC;
-          const bC = (CC, zC) => {
-            MC(PC, nC, [CC, zC])
+        const yk = this.worker;
+        this.decoded = (0, Tk.i)(((Fk, Tk) => {
+          this.reject = Tk;
+          const ik = (kk, Fk) => {
+            jk(Jk, yk, [kk, Fk])
           };
-          bC("message", (CC => {
-            QC();
+          ik("message", (kk => {
+            Xk();
             try {
-              const QC = MC(GC, CC, []);
-              if (!0 === QC) zC();
+              const Xk = jk(xk, kk, []);
+              if (!0 === Xk) Fk();
               else {
-                if ("string" === typeof QC) throw QC.startsWith(fC.d) && (xC = !0), new Error(QC);
-                ZC(QC, MC(oC.w, QC, []))
+                if ("string" === typeof Xk) throw Xk.startsWith(lk.c) && (Qk = !0), new Error(Xk);
+                Ik(Xk, jk(ak.z, Xk, []))
               }
-            } catch (qC) {
-              wC(qC)
+            } catch (qk) {
+              Tk(qk)
             }
-          })), bC("error", (() => {
-            xC = !0, wC(new Error("The zstd decoder's worker did not run"))
-          })), bC("messageerror", (() => {
-            wC(new Error(`${CC}'s decoder sent a piece that could not be read`))
+          })), ik("error", (() => {
+            Qk = !0, Tk(new Error("The zstd decoder's worker did not run"))
+          })), ik("messageerror", (() => {
+            Tk(new Error(`${kk}'s decoder sent a piece that could not be read`))
           }))
-        })), (0, oC.X)(this.decoded), MC(SC, nC, [
-          [CC, zC]
+        })), (0, ak.Y)(this.decoded), jk(wk, yk, [
+          [kk, Fk]
         ])
       }
-      push(CC) {
-        MC(SC, this.worker, [CC, [MC(RC, CC, [])]])
+      push(kk) {
+        jk(wk, this.worker, [kk, [jk(Pk, kk, [])]])
       }
       end() {
-        MC(SC, this.worker, [null])
+        jk(wk, this.worker, [null])
       }
       markWorkerFailed() {
-        xC = !0
+        Qk = !0
       }
-      fail(CC) {
-        this.reject(CC), this.terminate()
+      fail(kk) {
+        this.reject(kk), this.terminate()
       }
       terminate() {
-        MC(pC, this.worker, [])
+        jk(Hk, this.worker, [])
       }
     }
 
-    function vC() {
-      if (globalThis.Worker !== gC) throw new Error("Worker is not the one the page loaded with");
-      return new Worker(new URL(ZC.p + ZC.u(67), ZC.b), {
+    function Sk() {
+      if (globalThis.Worker !== ek) throw new Error("Worker is not the one the page loaded with");
+      return new Worker(new URL(Ik.p + Ik.u(67), Ik.b), {
         name: "wasmZstdDecoder",
         type: "module"
       })
     }
-    const eC = Reflect.apply,
-      hC = ArrayBuffer,
-      KC = "undefined" === typeof Response ? void 0 : Response,
-      YC = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
-      dC = function() {
-        let CC;
-        void 0 !== YC && new YC({
+    const vk = Reflect.apply,
+      Ek = ArrayBuffer,
+      Ok = "undefined" === typeof Response ? void 0 : Response,
+      nk = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
+      Gk = function() {
+        let kk;
+        void 0 !== nk && new nk({
           __proto__: null,
-          start(zC) {
+          start(Fk) {
             const {
-              enqueue: ZC,
-              close: QC,
-              error: wC
-            } = Object.getPrototypeOf(zC);
-            CC = {
-              enqueue: ZC,
-              close: QC,
-              error: wC
+              enqueue: Ik,
+              close: Xk,
+              error: Tk
+            } = Object.getPrototypeOf(Fk);
+            kk = {
+              enqueue: Ik,
+              close: Xk,
+              error: Tk
             }
           }
         }, {
           __proto__: null
         });
-        return CC
+        return kk
       }(),
-      mC = function() {
+      pk = function() {
         try {
-          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== dC && (0, nC.k)(KC, "Response", !0) && (0, nC.k)(YC, "ReadableStream", !0) && (0, nC.k)(dC.enqueue, "enqueue") && (0, nC.k)(dC.close, "close") && (0, nC.k)(dC.error, "error") && (0, nC.k)(oC.$, "body") && (0, nC.k)(oC.R, "getReader") && (0, nC.k)(oC.Y, "read")
+          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== Gk && (0, yk.m)(Ok, "Response", !0) && (0, yk.m)(nk, "ReadableStream", !0) && (0, yk.m)(Gk.enqueue, "enqueue") && (0, yk.m)(Gk.close, "close") && (0, yk.m)(Gk.error, "error") && (0, yk.m)(ak.cb, "body") && (0, yk.m)(ak.Q, "getReader") && (0, yk.m)(ak.$, "read")
         } catch {
           return !1
         }
       }();
-    async function HC(CC, zC, ZC, QC, bC, nC, qC) {
-      const FC = new hC(zC),
+    async function uk(kk, Fk, Ik, Xk, ik, yk, qk) {
+      const Lk = new Ek(Fk),
         {
-          controller: WC,
-          compiled: NC
-        } = function(CC) {
+          controller: tk,
+          compiled: Zk
+        } = function(kk) {
           try {
-            let CC;
-            const zC = new YC({
+            let kk;
+            const Fk = new nk({
                 __proto__: null,
-                start(zC) {
-                  CC = zC
+                start(Fk) {
+                  kk = Fk
                 }
               }, {
                 __proto__: null
               }),
-              ZC = new KC(zC, {
+              Ik = new Ok(Fk, {
                 __proto__: null,
                 headers: {
                   __proto__: null,
@@ -469,387 +469,387 @@ export const modules = {
                 }
               });
             return {
-              controller: CC,
-              compiled: (0, oC.X)((0, oC.C)((0, oC.db)(ZC)))
+              controller: kk,
+              compiled: (0, ak.Y)((0, ak.B)((0, ak.ib)(Ik)))
             }
-          } catch (zC) {
-            throw new Error(`${CC} could not be streamed into a compile: ${(0,fC.f)(zC)}`)
+          } catch (Fk) {
+            throw new Error(`${kk} could not be streamed into a compile: ${(0,lk.d)(Fk)}`)
           }
-        }(CC),
+        }(kk),
         {
-          enqueue: MC,
-          close: gC,
-          error: SC
-        } = dC,
-        pC = CC => {
+          enqueue: jk,
+          close: ek,
+          error: wk
+        } = Gk,
+        Hk = kk => {
           try {
-            eC(SC, WC, [CC])
+            vk(wk, tk, [kk])
           } catch {}
         };
-      let PC = 0;
-      const GC = (ZC, QC) => {
-        if (PC + QC > zC) throw new Error(`${CC} decoded past its module's ${zC} bytes`);
-        eC(oC.bb, new oC.l(FC), [new oC.l(ZC), PC]);
+      let Jk = 0;
+      const xk = (Ik, Xk) => {
+        if (Jk + Xk > Fk) throw new Error(`${kk} decoded past its module's ${Fk} bytes`);
+        vk(ak.fb, new ak.n(Lk), [new ak.n(Ik), Jk]);
         try {
-          eC(MC, WC, [new oC.l(FC, PC, QC)])
+          vk(jk, tk, [new ak.n(Lk, Jk, Xk)])
         } catch {}
-        PC += QC
+        Jk += Xk
       };
-      let RC, AC;
+      let Pk, Kk;
       try {
-        RC = new iC(CC, zC, GC, QC, qC)
-      } catch (vC) {
-        throw pC(vC), vC
+        Pk = new zk(kk, Fk, xk, Xk, qk)
+      } catch (Sk) {
+        throw Hk(Sk), Sk
       }
-      const xC = CC => {
-        RC.fail(CC), void 0 !== AC && EC(AC)
+      const Qk = kk => {
+        Pk.fail(kk), void 0 !== Kk && bk(Kk)
       };
-      let JC = !1;
-      ZC.addEventListener("abort", (() => {
-        JC && RC.markWorkerFailed(), xC(new Error(`${CC} stalled`))
+      let sk = !1;
+      Ik.addEventListener("abort", (() => {
+        sk && Pk.markWorkerFailed(), Qk(new Error(`${kk} stalled`))
       }), {
         once: !0
-      }), (0, wC.r)(NC, (() => {}), xC);
+      }), (0, Tk.t)(Zk, (() => {}), Qk);
       try {
-        let nC;
+        let yk;
         try {
-          nC = await fetch(CC, {
-            signal: ZC
+          yk = await fetch(kk, {
+            signal: Ik
           })
-        } catch (vC) {
-          throw new Error(`Fetching ${CC} failed: ${(0,fC.f)(vC)}`)
+        } catch (Sk) {
+          throw new Error(`Fetching ${kk} failed: ${(0,lk.d)(Sk)}`)
         }
         const {
-          ok: qC,
-          status: FC,
-          body: WC
-        } = function(CC, zC) {
+          ok: qk,
+          status: Lk,
+          body: tk
+        } = function(kk, Fk) {
           try {
             const {
-              ok: CC,
-              status: ZC
-            } = zC;
+              ok: kk,
+              status: Ik
+            } = Fk;
             return {
-              ok: CC,
-              status: ZC,
-              body: eC(oC.$, zC, [])
+              ok: kk,
+              status: Ik,
+              body: vk(ak.cb, Fk, [])
             }
           } catch {
-            throw new Error(`${CC} came in a response a page script made`)
+            throw new Error(`${kk} came in a response a page script made`)
           }
-        }(CC, nC);
-        if (!qC) throw new Error(`Fetching ${CC} failed: HTTP ${FC}`);
-        QC();
-        const NC = eC(oC.R, WC, []);
-        AC = NC;
-        const MC = () => {
-          EC(NC)
+        }(kk, yk);
+        if (!qk) throw new Error(`Fetching ${kk} failed: HTTP ${Lk}`);
+        Xk();
+        const Zk = vk(ak.Q, tk, []);
+        Kk = Zk;
+        const jk = () => {
+          bk(Zk)
         };
-        for ((0, wC.r)(RC.decoded, MC, MC);;) {
-          let zC;
+        for ((0, Tk.t)(Pk.decoded, jk, jk);;) {
+          let Fk;
           try {
-            zC = await eC(oC.Y, NC, [])
-          } catch (vC) {
-            throw new Error(`Downloading ${CC} failed: ${(0,fC.f)(vC)}`)
+            Fk = await vk(ak.$, Zk, [])
+          } catch (Sk) {
+            throw new Error(`Downloading ${kk} failed: ${(0,lk.d)(Sk)}`)
           }
-          if (zC.done) break;
-          QC(), RC.push(zC.value)
+          if (Fk.done) break;
+          Xk(), Pk.push(Fk.value)
         }
-        if (JC = !0, RC.end(), await RC.decoded, bC(), PC !== zC) throw new Error(`${CC} ended before its module did`)
-      } catch (vC) {
-        throw pC(vC), xC(vC), vC
+        if (sk = !0, Pk.end(), await Pk.decoded, ik(), Jk !== Fk) throw new Error(`${kk} ended before its module did`)
+      } catch (Sk) {
+        throw Hk(Sk), Qk(Sk), Sk
       }
-      RC.terminate();
+      Pk.terminate();
       try {
-        eC(gC, WC, [])
+        vk(ek, tk, [])
       } catch {}
-      const IC = await NC;
-      return void 0 !== nC && await (0, oC.y)(CC, new oC.l(FC), {
-        sha256: nC.sha256,
+      const Vk = await Zk;
+      return void 0 !== yk && await (0, ak.A)(kk, new ak.n(Lk), {
+        sha256: yk.sha256,
         onMismatch: () => {}
-      }), IC
+      }), Vk
     }
 
-    function EC(CC) {
+    function bk(kk) {
       try {
-        (0, oC.X)(CC.cancel())
+        (0, ak.Y)(kk.cancel())
       } catch {}
     }
-    const lC = ".zst.bin",
-      XC = 1e3;
-    let cC = null;
+    const Rk = ".zst.bin",
+      Uk = 1e3;
+    let Ck = null;
 
-    function uC(CC) {
-      return cC ??= function() {
-        const CC = new Map,
-          zC = "bloxd_wasm_webgpu:5121311,bloxd_wasm_webgl:5500808,bloxd_wasm_webgl1:4836347,bloxd_wasm_workers:201241,bloxd_wasm_models:311531,bloxd_wasm_client:3704284";
-        for (const ZC of zC?.split(",") ?? []) {
-          const [zC = "", QC] = ZC.split(":"), wC = Number(QC);
-          Number.isInteger(wC) && wC > 0 && CC.set(zC, wC)
+    function Nk(kk) {
+      return Ck ??= function() {
+        const kk = new Map,
+          Fk = "bloxd_wasm_webgpu:5121311,bloxd_wasm_webgl:5500808,bloxd_wasm_webgl1:4836347,bloxd_wasm_workers:201241,bloxd_wasm_models:311531,bloxd_wasm_client:3704284";
+        for (const Ik of Fk?.split(",") ?? []) {
+          const [Fk = "", Xk] = Ik.split(":"), Tk = Number(Xk);
+          Number.isInteger(Tk) && Tk > 0 && kk.set(Fk, Tk)
         }
-        return CC
-      }(), cC.get(CC)
+        return kk
+      }(), Ck.get(kk)
     }
-    async function rC(CC, zC) {
-      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const QC = uC(CC.name);
-      if (void 0 === QC) return sC(await TC(CC, zC, ZC), "cold-wasm");
-      const bC = mC ? new IC : null;
-      let nC;
+    async function ck(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const Xk = Nk(kk.name);
+      if (void 0 === Xk) return Wk(await fk(kk, Fk, Ik), "cold-wasm");
+      const ik = pk ? new Vk : null;
+      let yk;
       try {
-        if (qC = CC.url(), NC()?.includes(WC(qC)) && await async function(CC) {
-            const zC = new AbortController;
-            let ZC;
-            const QC = (0, wC.f)((CC => {
-              ZC = setTimeout((() => {
-                zC.abort(), CC(null)
-              }), XC)
+        if (qk = kk.url(), Zk()?.includes(tk(qk)) && await async function(kk) {
+            const Fk = new AbortController;
+            let Ik;
+            const Xk = (0, Tk.i)((kk => {
+              Ik = setTimeout((() => {
+                Fk.abort(), kk(null)
+              }), Uk)
             }));
             try {
-              const ZC = fetch(CC.href, {
+              const Ik = fetch(kk.href, {
                   cache: "only-if-cached",
                   mode: "same-origin",
-                  signal: zC.signal
+                  signal: Fk.signal
                 }),
-                bC = await (0, wC.n)([ZC, QC]);
-              return !!bC?.ok && ((0, oC.X)(bC.body.cancel()), !0)
+                ik = await (0, Tk.s)([Ik, Xk]);
+              return !!ik?.ok && ((0, ak.Y)(ik.body.cancel()), !0)
             } catch {
               return !1
             } finally {
-              clearTimeout(ZC)
+              clearTimeout(Ik)
             }
-          }(CC.url())) return bC?.stop(), await async function(CC, zC, ZC, QC) {
-          let wC = !1;
-          const bC = ZC && {
-            sha256: ZC.sha256,
+          }(kk.url())) return ik?.stop(), await async function(kk, Fk, Ik, Xk) {
+          let Tk = !1;
+          const ik = Ik && {
+            sha256: Ik.sha256,
             onMismatch: () => {
-              wC = !0
+              Tk = !0
             }
           };
           try {
-            return sC(await TC(CC, bC, QC), "warm")
-          } catch (nC) {
-            const QC = await aC(CC, zC, ZC, null);
-            if (null === QC) throw wC && ZC.onMismatch(), nC;
-            return console.warn(`${CC.url().href} from the HTTP cache failed: ${(0,fC.f)(nC)}: loaded its copy instead`), sC(QC, wC ? "warm-refused" : "warm-broken")
+            return Wk(await fk(kk, ik, Xk), "warm")
+          } catch (yk) {
+            const Xk = await Bk(kk, Fk, Ik, null);
+            if (null === Xk) throw Tk && Ik.onMismatch(), yk;
+            return console.warn(`${kk.url().href} from the HTTP cache failed: ${(0,lk.d)(yk)}: loaded its copy instead`), Wk(Xk, Tk ? "warm-refused" : "warm-broken")
           }
-        }(CC, QC, zC, ZC);
-        nC = await aC(CC, QC, zC, bC)
+        }(kk, Xk, Fk, Ik);
+        yk = await Bk(kk, Xk, Fk, ik)
       } finally {
-        bC?.stop()
+        ik?.stop()
       }
-      var qC;
-      return null !== nC ? sC(nC, "cold-worker") : sC(await TC(CC, zC, ZC), "cold-wasm")
+      var qk;
+      return null !== yk ? Wk(yk, "cold-worker") : Wk(await fk(kk, Fk, Ik), "cold-wasm")
     }
 
-    function sC(CC, zC) {
+    function Wk(kk, Fk) {
       return {
         __proto__: null,
-        module: CC,
-        path: zC
+        module: kk,
+        path: Fk
       }
     }
 
-    function TC(CC, zC, ZC) {
-      return void 0 === uC(CC.name) ? (0, oC.I)(CC.url(), zC, ZC) : (0, oC.I)(CC.url(), zC, {
-        ...ZC,
+    function fk(kk, Fk, Ik) {
+      return void 0 === Nk(kk.name) ? (0, ak.G)(kk.url(), Fk, Ik) : (0, ak.G)(kk.url(), Fk, {
+        ...Ik,
         hideThen: !0,
         onDownloaded: () => {
-          ! function(CC) {
-            const zC = NC();
-            if (null === zC) return;
-            const ZC = WC(CC),
-              QC = zC.filter((CC => CC !== ZC));
-            QC.push(ZC);
+          ! function(kk) {
+            const Fk = Zk();
+            if (null === Fk) return;
+            const Ik = tk(kk),
+              Xk = Fk.filter((kk => kk !== Ik));
+            Xk.push(Ik);
             try {
-              localStorage.setItem(qC, JSON.stringify(QC.slice(-FC)))
-            } catch (wC) {
-              console.warn(`Bloxd wasm: ${ZC} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, wC)
+              localStorage.setItem(qk, JSON.stringify(Xk.slice(-Lk)))
+            } catch (Tk) {
+              console.warn(`Bloxd wasm: ${Ik} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, Tk)
             }
-          }(CC.url()), ZC.onDownloaded?.()
+          }(kk.url()), Ik.onDownloaded?.()
         }
       })
     }
-    async function aC(CC, zC, ZC, QC) {
-      if (!mC || !JC()) return null;
-      const wC = CC.url(),
-        bC = `${wC.href}${lC}`;
+    async function Bk(kk, Fk, Ik, Xk) {
+      if (!pk || !sk()) return null;
+      const Tk = kk.url(),
+        ik = `${Tk.href}${Rk}`;
       try {
-        return await (0, oC.cb)(bC, ((CC, wC, nC) => HC(bC, zC, CC, wC, nC, ZC, QC)))
-      } catch (nC) {
-        return console.warn(`${(0,fC.f)(nC)}: loading ${wC.href} instead`), null
+        return await (0, ak.hb)(ik, ((kk, Tk, yk) => uk(ik, Fk, kk, Tk, yk, Ik, Xk)))
+      } catch (yk) {
+        return console.warn(`${(0,lk.d)(yk)}: loading ${Tk.href} instead`), null
       }
     }
-    let tC = null,
-      DC = !1;
-    const jC = new Map,
-      yC = new Map;
+    let dk = null,
+      Yk = !1;
+    const Ak = new Map,
+      gk = new Map;
 
-    function LC(CC, zC, ZC) {
-      return null === tC ? tC = BC(CC, zC, ZC?.memoryMaximumBytes) : CC !== tC.build ? console.warn(`Bloxd wasm: ${CC.name} was asked for after ${tC.build.name} started loading, which this thread keeps`) : zC.name !== tC.workers.name && console.warn(`Bloxd wasm: ${zC.name} was asked for workers after ${tC.workers.name}, which this thread keeps`), ZC?.reloadFailedDownload && !DC && (0, QC.Y)() && (DC = !0, tC = BC(tC.build, tC.workers, tC.memoryMaximumBytes)), tC.loaded
+    function mk(kk, Fk, Ik) {
+      return null === dk ? dk = rk(kk, Fk, Ik?.memoryMaximumBytes) : kk !== dk.build ? console.warn(`Bloxd wasm: ${kk.name} was asked for after ${dk.build.name} started loading, which this thread keeps`) : Fk.name !== dk.workers.name && console.warn(`Bloxd wasm: ${Fk.name} was asked for workers after ${dk.workers.name}, which this thread keeps`), Ik?.reloadFailedDownload && !Yk && (0, Xk.R)() && (Yk = !0, dk = rk(dk.build, dk.workers, dk.memoryMaximumBytes)), dk.loaded
     }
 
-    function UC(CC, zC) {
-      if (null !== tC) return (0, wC.d)([]);
-      const ZC = CC.filter((CC => !jC.has(CC.name))).map((CC => {
-        const ZC = new AbortController,
-          QC = {
-            compiled: TC(CC, (0, bC.e)(CC.name), {
-              priority: zC,
-              wZ: ZC.signal,
+    function hk(kk, Fk) {
+      if (null !== dk) return (0, Tk.f)([]);
+      const Ik = kk.filter((kk => !Ak.has(kk.name))).map((kk => {
+        const Ik = new AbortController,
+          Xk = {
+            compiled: fk(kk, (0, ik.c)(kk.name), {
+              priority: Fk,
+              iI: Ik.signal,
               onDownloaded: () => {
-                QC.downloaded = !0
+                Xk.downloaded = !0
               },
               retries: {
                 onRetry: () => {
-                  QC.downloaded = !1, null !== tC && ZC.abort()
+                  Xk.downloaded = !1, null !== dk && Ik.abort()
                 }
               }
             }),
-            cancel: ZC,
+            cancel: Ik,
             downloaded: !1
           };
-        return jC.set(CC.name, QC), (0, wC.f)((zC => {
-          (0, wC.r)(QC.compiled, (() => {
-            QC.downloaded = !0, zC()
-          }), (QC => {
-            ZC.signal.aborted || console.warn(`Bloxd wasm: ${CC.name}'s compile ahead of the load failed: the load compiles it afresh`, QC), zC()
+        return Ak.set(kk.name, Xk), (0, Tk.i)((Fk => {
+          (0, Tk.t)(Xk.compiled, (() => {
+            Xk.downloaded = !0, Fk()
+          }), (Xk => {
+            Ik.signal.aborted || console.warn(`Bloxd wasm: ${kk.name}'s compile ahead of the load failed: the load compiles it afresh`, Xk), Fk()
           }))
         }))
       }));
-      return (0, wC.d)(ZC)
+      return (0, Tk.f)(Ik)
     }
 
-    function BC(CC, zC, ZC) {
-      const bC = (0, QC.H)((async () => {
-        (0, nC.A)(), yC.clear();
-        const ZC = kC(CC),
-          QC = zC.name === CC.name ? ZC : kC(zC);
+    function rk(kk, Fk, Ik) {
+      const ik = (0, Xk.D)((async () => {
+        (0, yk.F)(), gk.clear();
+        const Ik = Mk(kk),
+          Xk = Fk.name === kk.name ? Ik : Mk(Fk);
         for (const {
-            cancel: CC
+            cancel: kk
           }
-          of jC.values()) CC.abort();
-        jC.clear(), await (0, wC.d)([ZC, QC]);
-        const bC = await ZC,
-          fC = await QC;
-        return (0, nC.A)(), {
-          module: bC,
-          workerModule: fC
+          of Ak.values()) kk.abort();
+        Ak.clear(), await (0, Tk.f)([Ik, Xk]);
+        const ik = await Ik,
+          lk = await Xk;
+        return (0, yk.F)(), {
+          module: ik,
+          workerModule: lk
         }
-      }), CC, ZC);
+      }), kk, Ik);
       return {
-        build: CC,
-        workers: zC,
-        memoryMaximumBytes: ZC,
-        loaded: bC
+        build: kk,
+        workers: Fk,
+        memoryMaximumBytes: Ik,
+        loaded: ik
       }
     }
 
-    function OC(CC) {
-      return yC.get(CC)
+    function Dk(kk) {
+      return gk.get(kk)
     }
 
-    function kC(CC) {
-      const zC = performance.now(),
-        ZC = jC.get(CC.name);
-      jC.delete(CC.name);
-      const QC = !0 === ZC?.downloaded ? ZC : void 0;
-      return void 0 !== ZC && void 0 === QC && ZC.cancel.abort(), (0, wC.f)(((ZC, bC) => {
-        const nC = (QC, wC) => {
-            yC.set(CC.name, {
-              path: wC,
-              ms: performance.now() - zC
-            }), ZC(QC)
+    function Mk(kk) {
+      const Fk = performance.now(),
+        Ik = Ak.get(kk.name);
+      Ak.delete(kk.name);
+      const Xk = !0 === Ik?.downloaded ? Ik : void 0;
+      return void 0 !== Ik && void 0 === Xk && Ik.cancel.abort(), (0, Tk.i)(((Ik, ik) => {
+        const yk = (Xk, Tk) => {
+            gk.set(kk.name, {
+              path: Tk,
+              ms: performance.now() - Fk
+            }), Ik(Xk)
           },
-          fC = () => {
-            (0, wC.r)(Cz(CC), (CC => {
+          lk = () => {
+            (0, Tk.t)(FF(kk), (kk => {
               let {
-                module: zC,
-                path: ZC
-              } = CC;
-              nC(zC, ZC)
-            }), bC)
+                module: Fk,
+                path: Ik
+              } = kk;
+              yk(Fk, Ik)
+            }), ik)
           };
-        void 0 === QC ? fC() : (0, wC.r)(QC.compiled, (CC => {
-          nC(CC, "ahead")
-        }), fC)
+        void 0 === Xk ? lk() : (0, Tk.t)(Xk.compiled, (kk => {
+          yk(kk, "ahead")
+        }), lk)
       }))
     }
-    async function VC(CC, zC) {
+    async function kF(kk, Fk) {
       const {
-        module: ZC
-      } = await Cz(CC, {
-        retries: zC
+        module: Ik
+      } = await FF(kk, {
+        retries: Fk
       });
-      return ZC
+      return Ik
     }
-    async function Cz(CC) {
-      let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      return await rC(CC, (0, bC.e)(CC.name), zC)
+    async function FF(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      return await ck(kk, (0, ik.c)(kk.name), Fk)
     }
   },
-  6616: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => nC
+  6599: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => yk
     });
-    var QC = ZC(2856);
-    const wC = {
-      bloxd_wasm: () => "64213eca4658377ef00b2e8eca80917f662fb244ea5072aa932d693e87ee34a4",
-      bloxd_wasm_client: () => "fc3cf04d5b7854fba80fd4d4a48c70cd5cfa75bed057ae2631f2eac809bb72d6",
-      bloxd_wasm_workers: () => "6e4d4a97778a79d3d1539bba135e452823879ae247a4075c185762ab01e74bb8",
-      bloxd_wasm_models: () => "a9e6377967b2efe08bc1c2c1ba7803c68faf84b1979c48237b60c2a5371ef6f0",
-      bloxd_wasm_webgpu: () => "0c329bbf92b5e8dc40c9c50de71fa16d3214efd01ed90e0c806f70cc5dc4a678",
-      bloxd_wasm_webgl: () => "1a61f36acda217637aa35c038c864802f4a597fe34b899397ecb8b3f7a6010d4",
-      bloxd_wasm_webgl1: () => "fa07e900fdcc5ea52a844349243c3504ebaca1ebb1ff15c9d66db4fcc37f2404",
-      bloxd_wasm_replay: () => "37f9a110c636f28820cc4bb4d1a11de7ceaafb9c9325a7fee4fe688876d19d67",
-      bloxd_wasm_recorder: () => "2775bc33cdba5c03f27ade88929e4fdaf4b4c582cc3952198fb551b59541422e",
-      bloxd_wasm_anim: () => "70063f4837211665774447f408deefe4678a8f5e792ddcf5187eb1ba64be142f",
-      bloxd_wasm_textures: () => "6b2065e443e650047a940883eaf075d2749daed9964ef622b7e96432f1c0c8b1",
-      bloxd_wasm_shader_pack: () => "90a9cbfbe256edc10cec287ff1dfdba1125031ab0d4dcf3f4270800ba2f9cb4a"
+    var Xk = Ik(2803);
+    const Tk = {
+      bloxd_wasm: () => "e2f9e22926b42992a62e6da973b3cd1227290abc3e4b086f16ef7a6e7451e01c",
+      bloxd_wasm_client: () => "197b3a58630dd256c73f6be56077b03aba52688d49b256cfcb5b4297a602be6f",
+      bloxd_wasm_workers: () => "c531aa2c5eb2277940017568a817b82729d5bd8e37ed09fdb9542eeedecfabb2",
+      bloxd_wasm_models: () => "82813a7dd849808b1d07d41cb80b2035277c675f83cdbe5540a809aa86e18dae",
+      bloxd_wasm_webgpu: () => "2066e38e37e17624dae8b4b9c559f5daf047cb3ceb4eb8056d5135d5b3d9eb24",
+      bloxd_wasm_webgl: () => "3d1d580992195f6369c2533ce100ae6e8452da7398faf88e49b339f937ec6192",
+      bloxd_wasm_webgl1: () => "8032d9766cccf3c8343274c4d612b6bb3252bd4e5129a88b0ce812c44371db80",
+      bloxd_wasm_replay: () => "8d3f5aa602437d8a622249e4b26ef375d3132f03479495456878d8869447f290",
+      bloxd_wasm_recorder: () => "4e4293beaac6f6862394c42133a435a6ade3bf181e4ae4bc1a5a3c0c8e0c9dd2",
+      bloxd_wasm_anim: () => "125adb66f5cee367958854d2a9364d34f8d55bf2c7b62e20f2a9dcc7b9af5035",
+      bloxd_wasm_textures: () => "b45159af64c2cb22c8ac7c32ed16b3591e0026feb57c6ebfb95e710677904764",
+      bloxd_wasm_shader_pack: () => "b4044fc49c30628f5ddaad152e8054fb78f46958556f35beebe36f24a022d42c"
     };
-    var bC = ZC(4635);
+    var ik = Ik(4692);
 
-    function nC(CC) {
-      const zC = Object.prototype.hasOwnProperty.call(wC, CC) ? wC[CC]() : void 0;
-      if (void 0 !== zC) return {
-        sha256: zC,
-        onMismatch: bC.w
+    function yk(kk) {
+      const Fk = Object.prototype.hasOwnProperty.call(Tk, kk) ? Tk[kk]() : void 0;
+      if (void 0 !== Fk) return {
+        sha256: Fk,
+        onMismatch: ik.C
       };
-      throw new QC.h(`${CC} has no release digest, so this build refuses it`)
+      throw new Xk.g(`${kk} has no release digest, so this build refuses it`)
     }
   },
-  6646: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => QC,
-      i: () => nC,
-      m: () => fC,
-      n: () => wC,
-      r: () => bC
+  6622: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => Xk,
+      e: () => yk,
+      f: () => lk,
+      h: () => Tk,
+      i: () => ik
     });
-    const QC = ["terrain", "liquid", "model"];
+    const Xk = ["terrain", "liquid", "model"];
 
-    function wC() {
-      const CC = [];
-      for (const zC of [!1, !0])
-        for (const ZC of QC) CC.push({
-          strict: zC,
-          program: ZC
+    function Tk() {
+      const kk = [];
+      for (const Fk of [!1, !0])
+        for (const Ik of Xk) kk.push({
+          strict: Fk,
+          program: Ik
         });
-      return CC
+      return kk
     }
 
-    function bC(CC) {
-      return `${CC.strict?"strict":"allow"}.${CC.program}`
+    function ik(kk) {
+      return `${kk.strict?"strict":"allow"}.${kk.program}`
     }
 
-    function nC(CC) {
-      return !CC.hooks.vertex && !CC.hooks.surface && !CC.hooks.light
+    function yk(kk) {
+      return !kk.hooks.vertex && !kk.hooks.surface && !kk.hooks.light
     }
 
-    function fC(CC, zC) {
-      return "off" !== zC && (null === CC || CC.some((CC => CC.key.strict === ("strict" === zC) && !nC(CC))))
+    function lk(kk, Fk) {
+      return "off" !== Fk && (null === kk || kk.some((kk => kk.key.strict === ("strict" === Fk) && !yk(kk))))
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

@@ -1,74 +1,74 @@
 export const id = 156;
 export const ids = [156];
 export const modules = {
-  8870: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => fC
+  8860: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => lk
     });
-    var QC = ZC(20),
-      wC = ZC(1143),
-      bC = ZC(4942),
-      nC = ZC(1056);
+    var Xk = Ik(25),
+      Tk = Ik(1179),
+      ik = Ik(4983),
+      yk = Ik(1096);
 
-    function fC(CC) {
+    function lk(kk) {
       let {
-        note: zC
-      } = CC;
+        note: Fk
+      } = kk;
       const {
-        t: ZC
-      } = (0, wC.y)(), {
-        clientEscMenuOptions: fC
-      } = (0, QC.k)(["clientEscMenuOptions"]);
-      return (0, nC.jsx)(bC.b, {
-        label: ZC("touchSettings:actionButtons"),
-        checked: fC.touchActionButtons,
-        onClick: CC => {
-          QC.b.setClientEscMenuOptions({
-            touchActionButtons: CC
+        t: Ik
+      } = (0, Tk.y)(), {
+        clientEscMenuOptions: lk
+      } = (0, Xk.j)(["clientEscMenuOptions"]);
+      return (0, yk.jsx)(ik.e, {
+        label: Ik("touchSettings:actionButtons"),
+        checked: lk.touchActionButtons,
+        onClick: kk => {
+          Xk.d.setClientEscMenuOptions({
+            touchActionButtons: kk
           })
         },
-        circleInfoText: ZC("touchSettings:actionButtonsInfo"),
-        note: zC
+        circleInfoText: Ik("touchSettings:actionButtonsInfo"),
+        note: Fk
       })
     }
   },
-  8859: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => XZ,
-      e: () => lZ
+  8846: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => UI,
+      d: () => RI
     });
-    var QC = ZC(1143),
-      wC = ZC(48),
-      bC = ZC(1887),
-      nC = ZC(1894),
-      fC = ZC(1002),
-      oC = ZC.n(fC),
-      qC = ZC(1388),
-      FC = ZC(20),
-      WC = ZC(77),
-      NC = ZC(91),
-      MC = ZC(4942),
-      gC = ZC(2369),
-      SC = ZC(264),
-      pC = ZC(1898),
-      PC = ZC(1902),
-      GC = ZC(8862),
-      RC = ZC(8870),
-      AC = ZC(310),
-      xC = ZC(1056);
-    const JC = {
+    var Xk = Ik(1179),
+      Tk = Ik(58),
+      ik = Ik(1916),
+      yk = Ik(1926),
+      lk = Ik(1055),
+      ak = Ik.n(lk),
+      qk = Ik(1406),
+      Lk = Ik(25),
+      tk = Ik(95),
+      Zk = Ik(111),
+      jk = Ik(4983),
+      ek = Ik(2349),
+      wk = Ik(272),
+      Hk = Ik(1933),
+      Jk = Ik(1935),
+      xk = Ik(8851),
+      Pk = Ik(8860),
+      Kk = Ik(318),
+      Qk = Ik(1096);
+    const sk = {
       floating: "settingsMenu:joystickFloating",
       fixed_shown: "settingsMenu:joystickFixed",
       fixed_hidden: "settingsMenu:joystickHidden"
     };
-    var IC = ZC(8876);
-    var iC = ZC(1418),
-      vC = ZC(1307),
-      eC = ZC(8882),
-      hC = ZC(1357),
-      KC = ZC(1013),
-      YC = ZC(2413);
-    const dC = {
+    var Vk = Ik(8862);
+    var zk = Ik(1432),
+      Sk = Ik(1324),
+      vk = Ik(8865),
+      Ek = Ik(1375),
+      Ok = Ik(1066),
+      nk = Ik(2374);
+    const Gk = {
         jump: "cluster",
         crouch: "cluster",
         attack: "cluster",
@@ -77,306 +77,306 @@ export const modules = {
         game: "cluster",
         arrows: "hotbar",
         inventory: "hotbar",
-        ...Object.fromEntries(YC.F.map((CC => [CC, "menu"])))
+        ...Object.fromEntries(nk.A.map((kk => [kk, "menu"])))
       },
-      mC = CC => YC.B.filter((zC => dC[zC] === CC)),
-      HC = new Set(mC("cluster")),
-      EC = ["cluster"],
-      lC = [...EC, ...YC.B.filter((CC => !EC.includes(CC) && !dC[CC]))],
-      XC = lC.flatMap((CC => [CC, ...mC(CC)])).map((CC => ({
-        id: CC,
-        label: `hudLayout:${CC}`,
-        ...YC.x[CC],
-        parent: dC[CC]
+      pk = kk => nk.y.filter((Fk => Gk[Fk] === kk)),
+      uk = new Set(pk("cluster")),
+      bk = ["cluster"],
+      Rk = [...bk, ...nk.y.filter((kk => !bk.includes(kk) && !Gk[kk]))],
+      Uk = Rk.flatMap((kk => [kk, ...pk(kk)])).map((kk => ({
+        id: kk,
+        label: `hudLayout:${kk}`,
+        ...nk.x[kk],
+        parent: Gk[kk]
       }))),
-      cC = Object.fromEntries(XC.map((CC => [CC.id, CC]))),
-      uC = "data-hud-el";
+      Ck = Object.fromEntries(Uk.map((kk => [kk.id, kk]))),
+      Nk = "data-hud-el";
 
-    function rC(CC, zC, ZC, QC) {
-      const wC = ZC(function(CC, zC) {
-          return "attack" !== CC || zC ? cC[CC].label : "hudLayout:attackContext"
-        }(CC, zC)),
-        bC = QC[CC];
-      return bC ? ZC("hudLayout:slotWithKey", {
-        slot: wC,
-        key: bC
-      }) : wC
+    function ck(kk, Fk, Ik, Xk) {
+      const Tk = Ik(function(kk, Fk) {
+          return "attack" !== kk || Fk ? Ck[kk].label : "hudLayout:attackContext"
+        }(kk, Fk)),
+        ik = Xk[kk];
+      return ik ? Ik("hudLayout:slotWithKey", {
+        slot: Tk,
+        key: ik
+      }) : Tk
     }
 
-    function sC(CC, zC, ZC, QC) {
-      return CC.map((CC => rC(CC, zC, ZC, QC))).join(", ")
+    function Wk(kk, Fk, Ik, Xk) {
+      return kk.map((kk => ck(kk, Fk, Ik, Xk))).join(", ")
     }
 
-    function TC(CC) {
+    function fk(kk) {
       let {
-        className: zC,
-        keepPlace: ZC
-      } = CC;
-      return ZC ? (0, xC.jsx)("div", {
-        className: oC()(zC, "Placeholder")
+        className: Fk,
+        keepPlace: Ik
+      } = kk;
+      return Ik ? (0, Qk.jsx)("div", {
+        className: ak()(Fk, "Placeholder")
       }) : null
     }
 
-    function aC(CC) {
+    function Bk(kk) {
       let {
-        id: zC,
-        elements: ZC,
-        actionButtons: wC,
-        keyNames: bC,
-        className: nC,
-        keepPlace: fC,
-        onHidden: oC
-      } = CC;
+        id: Fk,
+        elements: Ik,
+        actionButtons: Tk,
+        keyNames: ik,
+        className: yk,
+        keepPlace: lk,
+        onHidden: ak
+      } = kk;
       const {
-        t: FC
-      } = (0, QC.y)();
-      if (!cC[zC].hide) return (0, xC.jsx)(TC, {
-        className: nC,
-        keepPlace: fC
+        t: Lk
+      } = (0, Xk.y)();
+      if (!Ck[Fk].hide) return (0, Qk.jsx)(fk, {
+        className: yk,
+        keepPlace: lk
       });
-      const WC = (0, YC.u)(ZC, zC);
-      return (0, xC.jsx)(qC.O, {
-        className: nC,
-        ariaLabel: FC(WC ? "hudLayout:showElement" : "hudLayout:hideElement", {
-          name: rC(zC, wC, FC, bC)
+      const tk = (0, nk.u)(Ik, Fk);
+      return (0, Qk.jsx)(qk.Q, {
+        className: yk,
+        ariaLabel: Lk(tk ? "hudLayout:showElement" : "hudLayout:hideElement", {
+          name: ck(Fk, Tk, Lk, ik)
         }),
-        pressed: !WC,
+        pressed: !tk,
         onClick: () => {
-          oC(zC, !WC)
+          ak(Fk, !tk)
         },
-        children: (0, xC.jsx)(KC.c, {
-          name: WC ? "eye-slash" : "eye"
+        children: (0, Qk.jsx)(Ok.e, {
+          name: tk ? "eye-slash" : "eye"
         })
       })
     }
 
-    function tC(CC) {
-      var zC;
+    function dk(kk) {
+      var Fk;
       let {
-        id: ZC,
-        elements: wC,
-        actionButtons: bC,
-        keyNames: nC,
-        className: fC,
-        keepPlace: oC,
-        onlyWhenMoved: FC,
-        locked: WC,
-        onReset: NC
-      } = CC;
+        id: Ik,
+        elements: Tk,
+        actionButtons: ik,
+        keyNames: yk,
+        className: lk,
+        keepPlace: ak,
+        onlyWhenMoved: Lk,
+        locked: tk,
+        onReset: Zk
+      } = kk;
       const {
-        t: MC
-      } = (0, QC.y)(), gC = cC[ZC], SC = (0, YC.J)(null !== (zC = wC[ZC]) && void 0 !== zC ? zC : YC.p);
-      return !gC.move && !gC.scale || FC && SC ? (0, xC.jsx)(TC, {
-        className: fC,
-        keepPlace: oC
-      }) : (0, xC.jsx)(qC.O, {
-        className: fC,
-        disabled: SC || WC,
-        ariaLabel: MC("hudLayout:resetElement", {
-          name: rC(ZC, bC, MC, nC)
+        t: jk
+      } = (0, Xk.y)(), ek = Ck[Ik], wk = (0, nk.L)(null !== (Fk = Tk[Ik]) && void 0 !== Fk ? Fk : nk.q);
+      return !ek.move && !ek.scale || Lk && wk ? (0, Qk.jsx)(fk, {
+        className: lk,
+        keepPlace: ak
+      }) : (0, Qk.jsx)(qk.Q, {
+        className: lk,
+        disabled: wk || tk,
+        ariaLabel: jk("hudLayout:resetElement", {
+          name: ck(Ik, ik, jk, yk)
         }),
         analyticsClick: {
           id: "hud_layout.reset_element",
-          value: ZC
+          value: Ik
         },
-        onClick: CC => {
-          FC && LC(CC.currentTarget), NC(ZC)
+        onClick: kk => {
+          Lk && mk(kk.currentTarget), Zk(Ik)
         },
-        children: (0, xC.jsx)(KC.c, {
+        children: (0, Qk.jsx)(Ok.e, {
           name: "rotate-left"
         })
       })
     }
 
-    function DC(CC) {
+    function Yk(kk) {
       let {
-        id: zC,
-        actionButtons: ZC,
-        keyNames: wC,
-        className: bC,
-        keepPlace: nC,
-        locked: fC,
-        lockable: oC,
-        onLocked: FC
-      } = CC;
+        id: Fk,
+        actionButtons: Ik,
+        keyNames: Tk,
+        className: ik,
+        keepPlace: yk,
+        locked: lk,
+        lockable: ak,
+        onLocked: Lk
+      } = kk;
       const {
-        t: WC
-      } = (0, QC.y)();
-      return oC || fC ? (0, xC.jsx)(qC.O, {
-        className: bC,
-        ariaLabel: WC(fC ? "hudLayout:unlockElement" : "hudLayout:lockElement", {
-          name: rC(zC, ZC, WC, wC)
+        t: tk
+      } = (0, Xk.y)();
+      return ak || lk ? (0, Qk.jsx)(qk.Q, {
+        className: ik,
+        ariaLabel: tk(lk ? "hudLayout:unlockElement" : "hudLayout:lockElement", {
+          name: ck(Fk, Ik, tk, Tk)
         }),
-        pressed: fC,
-        active: fC,
+        pressed: lk,
+        active: lk,
         analyticsClick: {
           id: "hud_layout.edit",
-          value: `${fC?"unlock":"lock"}:${zC}`
+          value: `${lk?"unlock":"lock"}:${Fk}`
         },
         onClick: () => {
-          FC(zC, !fC)
+          Lk(Fk, !lk)
         },
-        children: (0, xC.jsx)(KC.c, {
-          name: fC ? "lock" : "lock-open"
+        children: (0, Qk.jsx)(Ok.e, {
+          name: lk ? "lock" : "lock-open"
         })
-      }) : (0, xC.jsx)(TC, {
-        className: bC,
-        keepPlace: nC
+      }) : (0, Qk.jsx)(fk, {
+        className: ik,
+        keepPlace: yk
       })
     }
 
-    function jC(CC) {
+    function Ak(kk) {
       let {
-        className: zC,
-        open: ZC,
-        name: wC,
-        onToggle: bC
-      } = CC;
+        className: Fk,
+        open: Ik,
+        name: Tk,
+        onToggle: ik
+      } = kk;
       const {
-        t: nC
-      } = (0, QC.y)();
-      return (0, xC.jsx)(qC.O, {
-        className: zC,
-        ariaLabel: nC(ZC ? "hudLayout:hideChildren" : "hudLayout:showChildren", {
-          name: wC
+        t: yk
+      } = (0, Xk.y)();
+      return (0, Qk.jsx)(qk.Q, {
+        className: Fk,
+        ariaLabel: yk(Ik ? "hudLayout:hideChildren" : "hudLayout:showChildren", {
+          name: Tk
         }),
-        pressed: ZC,
+        pressed: Ik,
         analyticsClick: {
           id: "hud_layout.children",
-          value: ZC ? "close" : "open"
+          value: Ik ? "close" : "open"
         },
         onClick: () => {
-          bC(!ZC)
+          ik(!Ik)
         },
-        children: (0, xC.jsx)(KC.c, {
-          name: ZC ? "angle-up" : "angle-down"
+        children: (0, Qk.jsx)(Ok.e, {
+          name: Ik ? "angle-up" : "angle-down"
         })
       })
     }
 
-    function yC(CC, zC) {
-      var ZC;
-      CC.contains(document.activeElement) && zC.focus({
+    function gk(kk, Fk) {
+      var Ik;
+      kk.contains(document.activeElement) && Fk.focus({
         preventScroll: !0
-      }), null === (ZC = (0, hC.f)()) || void 0 === ZC || ZC.handOverPadFocus(CC, zC)
+      }), null === (Ik = (0, Ek.h)()) || void 0 === Ik || Ik.handOverPadFocus(kk, Fk)
     }
 
-    function LC(CC) {
-      const zC = CC.closest("[data-hud-row]"),
-        ZC = null === zC || void 0 === zC ? void 0 : zC.querySelector(".HudElementRowName");
-      return !(!zC || !ZC) && (yC(zC, ZC), !0)
+    function mk(kk) {
+      const Fk = kk.closest("[data-hud-row]"),
+        Ik = null === Fk || void 0 === Fk ? void 0 : Fk.querySelector(".HudElementRowName");
+      return !(!Fk || !Ik) && (gk(Fk, Ik), !0)
     }
-    const UC = "button:not(:disabled), [role=button]:not([aria-disabled='true'])";
+    const hk = "button:not(:disabled), [role=button]:not([aria-disabled='true'])";
 
-    function BC(CC, zC) {
-      return "joystick" === CC && !zC
+    function rk(kk, Fk) {
+      return "joystick" === kk && !Fk
     }
 
-    function OC() {
+    function Dk() {
       const {
-        t: CC
-      } = (0, QC.y)();
-      return (0, xC.jsx)(qC.O, {
+        t: kk
+      } = (0, Xk.y)();
+      return (0, Qk.jsx)(qk.Q, {
         className: "HudFixJoystickButton",
         analyticsClick: {
           id: "hud_layout.fix_joystick"
         },
-        onClick: CC => {
-          const zC = CC.currentTarget;
-          if (!LC(zC)) {
-            const CC = function(CC) {
-              var zC, ZC;
-              const QC = [CC.previousElementSibling, CC.nextElementSibling].find((CC => CC instanceof HTMLElement && CC.matches(UC)));
-              return null !== (zC = null !== QC && void 0 !== QC ? QC : null === (ZC = CC.closest(".HudLayoutSidePanel, .HudFullScreenToolbar")) || void 0 === ZC ? void 0 : ZC.querySelector(`:is(${UC}):not(.HudFixJoystickButton)`)) && void 0 !== zC ? zC : null
-            }(zC);
-            CC && yC(zC, CC)
+        onClick: kk => {
+          const Fk = kk.currentTarget;
+          if (!mk(Fk)) {
+            const kk = function(kk) {
+              var Fk, Ik;
+              const Xk = [kk.previousElementSibling, kk.nextElementSibling].find((kk => kk instanceof HTMLElement && kk.matches(hk)));
+              return null !== (Fk = null !== Xk && void 0 !== Xk ? Xk : null === (Ik = kk.closest(".HudLayoutSidePanel, .HudFullScreenToolbar")) || void 0 === Ik ? void 0 : Ik.querySelector(`:is(${hk}):not(.HudFixJoystickButton)`)) && void 0 !== Fk ? Fk : null
+            }(Fk);
+            kk && gk(Fk, kk)
           }
-          FC.b.setClientEscMenuOptions({
+          Lk.d.setClientEscMenuOptions({
             joystickMode: "fixed_shown"
           })
         },
-        children: CC("hudLayout:fixJoystick")
+        children: kk("hudLayout:fixJoystick")
       })
     }
-    var kC = ZC(60),
-      VC = ZC(1228),
-      Cz = ZC(3099),
-      zz = ZC(2734),
-      Zz = ZC(8890),
-      Qz = ZC(2415),
-      wz = ZC(2431),
-      bz = ZC(3137);
-    const nz = ["J", "C", "A", "P", "U", "X", "G"],
-      fz = Object.freeze({
+    var Mk = Ik(74),
+      kF = Ik(1263),
+      FF = Ik(3042),
+      IF = Ik(2679),
+      XF = Ik(8871),
+      TF = Ik(2377),
+      iF = Ik(2400),
+      yF = Ik(3089);
+    const lF = ["J", "C", "A", "P", "U", "X", "G"],
+      aF = Object.freeze({
         faces: null,
         names: Object.freeze({}),
         shop: !0,
         bag: !0,
         items: null,
-        rowIcons: YC.F,
+        rowIcons: nk.A,
         pinnedIcon: null
       });
 
-    function oz(CC, zC) {
-      CC.replaceChildren(...[...zC.childNodes].map((CC => CC.cloneNode(!0))))
+    function qF(kk, Fk) {
+      kk.replaceChildren(...[...Fk.childNodes].map((kk => kk.cloneNode(!0))))
     }
-    const qz = CC => ({
-      [uC]: CC
+    const LF = kk => ({
+      [Nk]: kk
     });
 
-    function Fz(CC) {
+    function tF(kk) {
       let {
-        id: zC,
-        slot: ZC,
-        icon: QC,
-        label: bC,
-        hidden: nC,
-        className: fC,
-        face: qC
-      } = CC;
-      const FC = (0, wC.useRef)(null);
-      return (0, wC.useLayoutEffect)((() => {
-        qC && FC.current && oz(FC.current, qC)
-      }), [qC]), (0, xC.jsxs)("div", {
-        className: oC()("TouchKeyHit", `TouchSlot${ZC}`, fC, {
-          HudPreviewGhost: nC.has(zC)
+        id: Fk,
+        slot: Ik,
+        icon: Xk,
+        label: ik,
+        hidden: yk,
+        className: lk,
+        face: qk
+      } = kk;
+      const Lk = (0, Tk.useRef)(null);
+      return (0, Tk.useLayoutEffect)((() => {
+        qk && Lk.current && qF(Lk.current, qk)
+      }), [qk]), (0, Qk.jsxs)("div", {
+        className: ak()("TouchKeyHit", `TouchSlot${Ik}`, lk, {
+          HudPreviewGhost: yk.has(Fk)
         }),
-        ...qz(zC),
-        children: [qC && (0, xC.jsx)("div", {
-          ref: FC,
-          className: oC()("TouchKey", {
-            Labelled: qC.classList.contains("Labelled")
+        ...LF(Fk),
+        children: [qk && (0, Qk.jsx)("div", {
+          ref: Lk,
+          className: ak()("TouchKey", {
+            Labelled: qk.classList.contains("Labelled")
           })
-        }), !qC && (0, xC.jsxs)("div", {
-          className: oC()("TouchKey", {
-            Labelled: void 0 !== bC
+        }), !qk && (0, Qk.jsxs)("div", {
+          className: ak()("TouchKey", {
+            Labelled: void 0 !== ik
           }),
-          children: [QC && (0, xC.jsx)(KC.c, {
-            name: QC
-          }), void 0 !== bC && (0, xC.jsx)("span", {
+          children: [Xk && (0, Qk.jsx)(Ok.e, {
+            name: Xk
+          }), void 0 !== ik && (0, Qk.jsx)("span", {
             className: "TouchKeyLabel",
-            children: bC
+            children: ik
           })]
         })]
       })
     }
 
-    function Wz(CC) {
+    function ZF(kk) {
       let {
-        item: zC,
-        selected: ZC
-      } = CC;
-      const QC = (0, wC.useRef)(null);
-      return (0, wC.useLayoutEffect)((() => {
-        QC.current && oz(QC.current, zC)
-      }), [zC]), (0, xC.jsx)("div", {
-        ref: QC,
-        className: oC()("InvenItem", {
-          Selected: ZC
+        item: Fk,
+        selected: Ik
+      } = kk;
+      const Xk = (0, Tk.useRef)(null);
+      return (0, Tk.useLayoutEffect)((() => {
+        Xk.current && qF(Xk.current, Fk)
+      }), [Fk]), (0, Qk.jsx)("div", {
+        ref: Xk,
+        className: ak()("InvenItem", {
+          Selected: Ik
         })
       })
     }
-    const Nz = {
+    const jF = {
         emotes: "face-smile",
         perspective: "video",
         scoreboard: "list",
@@ -385,162 +385,162 @@ export const modules = {
         invite: "user-plus",
         settings: "gear"
       },
-      Mz = CC => void 0 === CC ? {} : {
+      eF = kk => void 0 === kk ? {} : {
         style: {
-          "--parked": CC
+          "--parked": kk
         }
       };
 
-    function gz(CC) {
+    function wF(kk) {
       let {
-        id: zC,
-        hidden: ZC,
-        parked: QC,
-        unslotted: wC = !1
-      } = CC;
-      return (0, xC.jsx)("div", {
-        className: oC()("TopRightIcon", wz.l[zC], {
-          HudPreviewGhost: ZC.has(zC),
-          [Qz.e]: void 0 !== QC,
-          [Qz.h]: wC
+        id: Fk,
+        hidden: Ik,
+        parked: Xk,
+        unslotted: Tk = !1
+      } = kk;
+      return (0, Qk.jsx)("div", {
+        className: ak()("TopRightIcon", iF.j[Fk], {
+          HudPreviewGhost: Ik.has(Fk),
+          [TF.d]: void 0 !== Xk,
+          [TF.f]: Tk
         }),
-        ...Mz(QC),
-        children: (0, xC.jsx)("div", {
+        ...eF(Xk),
+        children: (0, Qk.jsx)("div", {
           className: "UiItemIcon SmallTextBold",
-          ...qz(zC),
-          children: (0, xC.jsx)("div", {
+          ...LF(Fk),
+          children: (0, Qk.jsx)("div", {
             className: "ScaleOnHover",
-            children: (0, xC.jsx)(KC.c, {
-              name: Nz[zC]
+            children: (0, Qk.jsx)(Ok.e, {
+              name: jF[Fk]
             })
           })
         })
       })
     }
 
-    function Sz(CC) {
+    function HF(kk) {
       let {
-        portraitPhone: zC,
-        icons: ZC,
-        pinnedIcon: QC,
-        hidden: bC,
-        moved: nC,
-        trayState: fC
-      } = CC;
-      const qC = zC ? (0, Qz.K)(ZC) : [],
-        FC = ZC.filter((CC => "settings" === CC)),
-        WC = ZC.filter((CC => "settings" !== CC && !qC.includes(CC))).reverse(),
-        NC = qC.length > 0 && "gone" === fC,
-        MC = [...FC, ...NC ? ["tray"] : [], ...WC].filter((CC => "tray" === CC || bC.has(CC) && !nC.has(CC))),
-        gC = CC => {
-          const zC = MC.indexOf(CC);
-          return zC < 0 ? void 0 : zC
+        portraitPhone: Fk,
+        icons: Ik,
+        pinnedIcon: Xk,
+        hidden: ik,
+        moved: yk,
+        trayState: lk
+      } = kk;
+      const qk = Fk ? (0, TF.G)(Ik) : [],
+        Lk = Ik.filter((kk => "settings" === kk)),
+        tk = Ik.filter((kk => "settings" !== kk && !qk.includes(kk))).reverse(),
+        Zk = qk.length > 0 && "gone" === lk,
+        jk = [...Lk, ...Zk ? ["tray"] : [], ...tk].filter((kk => "tray" === kk || ik.has(kk) && !yk.has(kk))),
+        ek = kk => {
+          const Fk = jk.indexOf(kk);
+          return Fk < 0 ? void 0 : Fk
         },
-        SC = (CC, zC) => (0, xC.jsx)(gz, {
-          id: CC,
-          hidden: bC,
-          parked: zC ? gC(CC) : void 0,
-          unslotted: zC && bC.has(CC) && nC.has(CC)
-        }, CC);
-      return (0, xC.jsxs)("div", {
-        className: oC()("TopRightIcons TouchInGame", {
-          Column: zC
+        wk = (kk, Fk) => (0, Qk.jsx)(wF, {
+          id: kk,
+          hidden: ik,
+          parked: Fk ? ek(kk) : void 0,
+          unslotted: Fk && ik.has(kk) && yk.has(kk)
+        }, kk);
+      return (0, Qk.jsxs)("div", {
+        className: ak()("TopRightIcons TouchInGame", {
+          Column: Fk
         }),
-        children: [FC.map((CC => SC(CC, !0))), qC.length > 0 && (0, xC.jsxs)("div", {
-          className: oC()("TopRightIcon TopRightTrayToggle Open", {
-            [Qz.e]: NC
+        children: [Lk.map((kk => wk(kk, !0))), qk.length > 0 && (0, Qk.jsxs)("div", {
+          className: ak()("TopRightIcon TopRightTrayToggle Open", {
+            [TF.d]: Zk
           }),
-          ...Mz(gC("tray")),
-          children: [(0, xC.jsx)("div", {
-            className: oC()("UiItemIcon SmallTextBold", {
-              HudPreviewGhost: "filled" !== fC
+          ...eF(ek("tray")),
+          children: [(0, Qk.jsx)("div", {
+            className: ak()("UiItemIcon SmallTextBold", {
+              HudPreviewGhost: "filled" !== lk
             }),
-            children: (0, xC.jsx)("div", {
+            children: (0, Qk.jsx)("div", {
               className: "ScaleOnHover",
-              children: (0, xC.jsx)(KC.c, {
+              children: (0, Qk.jsx)(Ok.e, {
                 name: "ellipsis"
               })
             })
-          }), (0, xC.jsx)("div", {
+          }), (0, Qk.jsx)("div", {
             className: "TopRightTray",
-            children: qC.map((CC => SC(CC, !1)))
+            children: qk.map((kk => wk(kk, !1)))
           })]
-        }), WC.map((CC => (0, xC.jsxs)(wC.Fragment, {
-          children: ["perspective" === CC && null !== QC && (0, xC.jsx)("div", {
+        }), tk.map((kk => (0, Qk.jsxs)(Tk.Fragment, {
+          children: ["perspective" === kk && null !== Xk && (0, Qk.jsx)("div", {
             className: "TopRightIcon",
-            children: (0, xC.jsx)("div", {
+            children: (0, Qk.jsx)("div", {
               className: "UiItemIcon SmallTextBold",
-              children: (0, xC.jsx)("div", {
+              children: (0, Qk.jsx)("div", {
                 className: "ScaleOnHover",
-                children: (0, xC.jsx)(KC.c, {
-                  name: QC
+                children: (0, Qk.jsx)(Ok.e, {
+                  name: Xk
                 })
               })
             })
-          }), SC(CC, !0)]
-        }, CC)))]
+          }), wk(kk, !0)]
+        }, kk)))]
       })
     }
 
-    function pz(CC) {
+    function JF(kk) {
       let {
-        next: zC,
-        hidden: ZC
-      } = CC;
-      return (0, xC.jsx)("div", {
-        className: oC()("HotBarArrow", zC ? "Next" : "Previous", {
-          HudPreviewGhost: ZC
+        next: Fk,
+        hidden: Ik
+      } = kk;
+      return (0, Qk.jsx)("div", {
+        className: ak()("HotBarArrow", Fk ? "Next" : "Previous", {
+          HudPreviewGhost: Ik
         }),
-        ...qz("arrows"),
-        children: (0, xC.jsx)("div", {
+        ...LF("arrows"),
+        children: (0, Qk.jsx)("div", {
           className: "UiItemIcon SmallTextBold",
-          children: (0, xC.jsx)("div", {
+          children: (0, Qk.jsx)("div", {
             className: "ScaleOnHover",
-            children: (0, xC.jsx)(KC.c, {
-              name: zC ? "caret-right" : "caret-left"
+            children: (0, Qk.jsx)(Ok.e, {
+              name: Fk ? "caret-right" : "caret-left"
             })
           })
         })
       })
     }
 
-    function Pz() {
-      return (0, xC.jsx)("div", {
+    function xF() {
+      return (0, Qk.jsx)("div", {
         className: "SocialBarContainer",
-        children: (0, xC.jsx)("div", {
+        children: (0, Qk.jsx)("div", {
           className: "SocialBarOuter",
-          children: (0, xC.jsx)("div", {
+          children: (0, Qk.jsx)("div", {
             className: "SocialBar",
-            children: (0, xC.jsx)("div", {
+            children: (0, Qk.jsx)("div", {
               className: "CondensedSocialBarInner",
-              children: (0, xC.jsx)("div", {
+              children: (0, Qk.jsx)("div", {
                 className: "CondensedSectionsContainer",
-                children: (0, xC.jsxs)("div", {
+                children: (0, Qk.jsxs)("div", {
                   className: "CondensedSections",
-                  children: [(0, xC.jsxs)("div", {
+                  children: [(0, Qk.jsxs)("div", {
                     className: "CondensedSection CondensedSectionFriendRequests",
-                    children: [(0, xC.jsx)("div", {
+                    children: [(0, Qk.jsx)("div", {
                       className: "CondensedSectionValue",
                       children: "0"
-                    }), (0, xC.jsx)("div", {
+                    }), (0, Qk.jsx)("div", {
                       className: "CondensedSectionIcon",
-                      children: (0, xC.jsx)(KC.c, {
+                      children: (0, Qk.jsx)(Ok.e, {
                         name: "user-clock"
                       })
                     })]
-                  }), (0, xC.jsx)("div", {
+                  }), (0, Qk.jsx)("div", {
                     className: "SocialBarDividerContainer",
-                    children: (0, xC.jsx)("div", {
+                    children: (0, Qk.jsx)("div", {
                       className: "SocialBarDivider"
                     })
-                  }), (0, xC.jsxs)("div", {
+                  }), (0, Qk.jsxs)("div", {
                     className: "CondensedSection CondensedSectionOnlineFriends",
-                    children: [(0, xC.jsx)("div", {
+                    children: [(0, Qk.jsx)("div", {
                       className: "CondensedSectionValue",
                       children: "0"
-                    }), (0, xC.jsx)("div", {
+                    }), (0, Qk.jsx)("div", {
                       className: "CondensedSectionIcon",
-                      children: (0, xC.jsx)(KC.c, {
+                      children: (0, Qk.jsx)(Ok.e, {
                         name: "user"
                       })
                     })]
@@ -552,7 +552,7 @@ export const modules = {
         })
       })
     }
-    const Gz = {
+    const PF = {
         J: "jump",
         C: "crouch",
         A: "attack",
@@ -561,12 +561,12 @@ export const modules = {
         X: "extra",
         G: "game"
       },
-      Rz = {
+      KF = {
         J: "JumpKey",
         C: "CrouchKey"
       },
-      Az = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-      xz = {
+      QF = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      sF = {
         0: "swords",
         1: "hammer",
         2: "cube",
@@ -574,308 +574,308 @@ export const modules = {
         5: "cookie"
       };
 
-    function Jz(CC) {
+    function VF(kk) {
       let {
-        presence: zC,
-        portraitPhone: ZC,
-        hidden: wC,
-        actionButtons: bC,
-        joystickFixed: nC,
-        keysAbove: fC,
-        auraBar: qC,
-        trayState: FC,
-        moved: NC
-      } = CC;
+        presence: Fk,
+        portraitPhone: Ik,
+        hidden: Tk,
+        actionButtons: ik,
+        joystickFixed: yk,
+        keysAbove: lk,
+        auraBar: qk,
+        trayState: Lk,
+        moved: Zk
+      } = kk;
       const {
-        t: MC
-      } = (0, QC.y)(), {
-        faces: gC,
-        items: SC
-      } = zC, pC = CC => ({
-        HudPreviewGhost: wC.has(CC)
+        t: jk
+      } = (0, Xk.y)(), {
+        faces: ek,
+        items: wk
+      } = Fk, Hk = kk => ({
+        HudPreviewGhost: Tk.has(kk)
       });
-      return (0, xC.jsxs)("div", {
+      return (0, Qk.jsxs)("div", {
         className: "InGameUi HudPreviewInGameUi",
-        children: [(0, xC.jsx)("div", {
+        children: [(0, Qk.jsx)("div", {
           className: "InGameHeaderContainer Touchscreen",
-          children: (0, xC.jsxs)("div", {
+          children: (0, Qk.jsxs)("div", {
             className: "InGameHeader",
-            children: [(0, xC.jsx)("div", {
+            children: [(0, Qk.jsx)("div", {
               className: "InGameHeaderLogo",
               children: "bloxd.io"
-            }), (0, xC.jsx)("div", {
+            }), (0, Qk.jsx)("div", {
               className: "InGameHeaderSpacer"
-            }), (0, xC.jsx)("div", {
+            }), (0, Qk.jsx)("div", {
               className: "InGameHeaderGameName",
-              children: MC("hudLayout:previewGameName")
+              children: jk("hudLayout:previewGameName")
             })]
           })
-        }), (0, xC.jsx)("div", {
+        }), (0, Qk.jsx)("div", {
           className: "TopLeftElements",
-          children: (0, xC.jsx)("div", {
+          children: (0, Qk.jsx)("div", {
             className: "InGameHeaderAndChat",
-            children: (0, xC.jsxs)("div", {
+            children: (0, Qk.jsxs)("div", {
               className: "Chat",
-              children: [(0, xC.jsx)("div", {
+              children: [(0, Qk.jsx)("div", {
                 className: "ChatMessages HideScrollbar",
-                children: [MC("hudLayout:previewChatLine"), MC("hudLayout:previewChatJoined", {
+                children: [jk("hudLayout:previewChatLine"), jk("hudLayout:previewChatJoined", {
                   name: "Steve"
-                }), MC("hudLayout:previewChatJoined", {
+                }), jk("hudLayout:previewChatJoined", {
                   name: "Alex"
-                })].map((CC => (0, xC.jsx)("div", {
+                })].map((kk => (0, Qk.jsx)("div", {
                   className: "MessageWrapper",
-                  children: (0, xC.jsx)("div", {
+                  children: (0, Qk.jsx)("div", {
                     className: "TextFromServer",
-                    children: (0, xC.jsx)("div", {
+                    children: (0, Qk.jsx)("div", {
                       className: "IndividualText",
-                      children: CC
+                      children: kk
                     })
                   })
-                }, CC)))
-              }), (0, xC.jsx)("button", {
+                }, kk)))
+              }), (0, Qk.jsx)("button", {
                 type: "button",
                 tabIndex: -1,
-                className: oC()("ChatIconWrapper SmallTextLight", pC("chat")),
-                ...qz("chat"),
-                children: (0, xC.jsx)(KC.c, {
+                className: ak()("ChatIconWrapper SmallTextLight", Hk("chat")),
+                ...LF("chat"),
+                children: (0, Qk.jsx)(Ok.e, {
                   name: "comment-dots",
                   className: "ChatIcon"
                 })
               })]
             })
           })
-        }), (0, xC.jsx)("div", {
+        }), (0, Qk.jsx)("div", {
           className: "RightElements RightElementsTouchscreen",
-          children: (0, xC.jsxs)("div", {
+          children: (0, Qk.jsxs)("div", {
             className: "TopRightElements",
-            children: [(0, xC.jsx)("div", {
+            children: [(0, Qk.jsx)("div", {
               className: "TopRightElementsLeft",
-              children: (0, xC.jsx)("div", {
+              children: (0, Qk.jsx)("div", {
                 className: "TopRightIconsContainer",
-                ...qz("menu"),
-                children: (0, xC.jsx)(Sz, {
-                  portraitPhone: ZC,
-                  icons: zC.rowIcons,
-                  pinnedIcon: zC.pinnedIcon,
-                  hidden: wC,
-                  trayState: FC,
-                  moved: NC
+                ...LF("menu"),
+                children: (0, Qk.jsx)(HF, {
+                  portraitPhone: Ik,
+                  icons: Fk.rowIcons,
+                  pinnedIcon: Fk.pinnedIcon,
+                  hidden: Tk,
+                  trayState: Lk,
+                  moved: Zk
                 })
               })
-            }), WC.featureFlags.useSocialFeatures && (0, xC.jsx)("div", {
+            }), tk.featureFlags.useSocialFeatures && (0, Qk.jsx)("div", {
               className: "TopRightElementsRight",
-              children: (0, xC.jsx)(Pz, {})
+              children: (0, Qk.jsx)(xF, {})
             })]
           })
-        }), (0, xC.jsx)("div", {
+        }), (0, Qk.jsx)("div", {
           className: "HudPreviewCrosshair"
-        }), (0, xC.jsx)("div", {
+        }), (0, Qk.jsx)("div", {
           className: "TouchInteractHit HudPreviewInteract",
-          children: (0, xC.jsxs)("div", {
+          children: (0, Qk.jsxs)("div", {
             className: "TouchInteractKey",
-            ...qz("interact"),
-            children: [(0, xC.jsx)("div", {
+            ...LF("interact"),
+            children: [(0, Qk.jsx)("div", {
               className: "TouchInteractIcon",
-              children: (0, xC.jsx)(KC.c, {
+              children: (0, Qk.jsx)(Ok.e, {
                 name: "hand-back-point-up"
               })
-            }), (0, xC.jsx)("div", {
-              children: MC("hudLayout:previewInteract")
+            }), (0, Qk.jsx)("div", {
+              children: jk("hudLayout:previewInteract")
             })]
           })
-        }), (0, xC.jsx)("div", {
+        }), (0, Qk.jsx)("div", {
           className: "BottomCentre",
-          children: (0, xC.jsxs)("div", {
+          children: (0, Qk.jsxs)("div", {
             className: "BottomElements",
-            children: [(0, xC.jsx)("div", {
+            children: [(0, Qk.jsx)("div", {
               className: "BottomLeftElements Touch"
-            }), (0, xC.jsxs)("div", {
+            }), (0, Qk.jsxs)("div", {
               className: "BottomMiddleElements",
-              children: [(0, xC.jsx)("div", {
+              children: [(0, Qk.jsx)("div", {
                 className: "BottomScreenStatBarList",
-                ...qz("hotbar"),
-                children: (0, xC.jsx)("div", {
+                ...LF("hotbar"),
+                children: (0, Qk.jsx)("div", {
                   className: "BottomScreenStatBarWrapper",
-                  children: (0, xC.jsxs)("div", {
+                  children: (0, Qk.jsxs)("div", {
                     className: "BottomScreenStatBarBackground",
-                    children: [(0, xC.jsx)("div", {
+                    children: [(0, Qk.jsx)("div", {
                       className: "BottomScreenStatBar HealthBar",
                       style: {
                         transform: "scaleX(0.8)",
                         transformOrigin: "left center"
                       }
-                    }), (0, xC.jsxs)("div", {
+                    }), (0, Qk.jsxs)("div", {
                       className: "BottomScreenStatBarText SmallTextBold",
-                      children: [(0, xC.jsx)(KC.c, {
+                      children: [(0, Qk.jsx)(Ok.e, {
                         name: "heart"
                       }), " 80/100"]
                     })]
                   })
                 })
-              }), qC && (0, xC.jsxs)("div", {
+              }), qk && (0, Qk.jsxs)("div", {
                 className: "AuraBarWrapper",
-                children: [(0, xC.jsxs)("div", {
+                children: [(0, Qk.jsxs)("div", {
                   className: "AuraBarLabel SmallTextBold",
-                  children: [(0, xC.jsx)("img", {
+                  children: [(0, Qk.jsx)("img", {
                     className: "AuraBarLabelImage",
-                    src: (0, bz.d)("glint"),
+                    src: (0, yF.c)("glint"),
                     alt: ""
-                  }), (0, xC.jsx)("div", {
+                  }), (0, Qk.jsx)("div", {
                     className: "AuraBarLabelText",
                     children: "0"
                   })]
-                }), (0, xC.jsx)("div", {
+                }), (0, Qk.jsx)("div", {
                   className: "AuraBar",
-                  children: (0, xC.jsx)("div", {
+                  children: (0, Qk.jsx)("div", {
                     className: "AuraBarBackground",
                     style: {
                       width: "40%"
                     }
                   })
                 })]
-              }), (0, xC.jsx)("div", {
+              }), (0, Qk.jsx)("div", {
                 className: "HotBarRow",
-                children: (0, xC.jsx)("div", {
-                  className: oC()("HotBarContainer Touch", {
-                    KeysAbove: fC
+                children: (0, Qk.jsx)("div", {
+                  className: ak()("HotBarContainer Touch", {
+                    KeysAbove: lk
                   }),
-                  children: (0, xC.jsxs)("div", {
+                  children: (0, Qk.jsxs)("div", {
                     className: "HotBar",
-                    ...qz("hotbar"),
-                    children: [(0, xC.jsxs)("div", {
-                      className: oC()("TouchInventoryKeys", {
-                        NoAuraBar: !qC
+                    ...LF("hotbar"),
+                    children: [(0, Qk.jsxs)("div", {
+                      className: ak()("TouchInventoryKeys", {
+                        NoAuraBar: !qk
                       }),
-                      children: [(0, xC.jsx)("div", {
-                        className: oC()("TouchInventoryKey ShopKey", pC("inventory"), {
-                          Hidden: !zC.shop
+                      children: [(0, Qk.jsx)("div", {
+                        className: ak()("TouchInventoryKey ShopKey", Hk("inventory"), {
+                          Hidden: !Fk.shop
                         }),
-                        ...qz("inventory"),
-                        children: (0, xC.jsx)("div", {
+                        ...LF("inventory"),
+                        children: (0, Qk.jsx)("div", {
                           className: "UiItemIcon SmallTextBold",
-                          children: (0, xC.jsx)("div", {
+                          children: (0, Qk.jsx)("div", {
                             className: "ScaleOnHover",
-                            children: (0, xC.jsx)(KC.c, {
+                            children: (0, Qk.jsx)(Ok.e, {
                               name: "cart-shopping"
                             })
                           })
                         })
-                      }), (0, xC.jsx)("div", {
-                        className: oC()("TouchInventoryKey BagKey", pC("inventory"), {
-                          Hidden: !zC.bag
+                      }), (0, Qk.jsx)("div", {
+                        className: ak()("TouchInventoryKey BagKey", Hk("inventory"), {
+                          Hidden: !Fk.bag
                         }),
-                        ...qz("inventory"),
-                        children: (0, xC.jsx)("div", {
+                        ...LF("inventory"),
+                        children: (0, Qk.jsx)("div", {
                           className: "UiItemIcon SmallTextBold",
-                          children: (0, xC.jsx)("div", {
+                          children: (0, Qk.jsx)("div", {
                             className: "ScaleOnHover",
-                            children: (0, xC.jsx)(KC.c, {
+                            children: (0, Qk.jsx)(Ok.e, {
                               name: "backpack"
                             })
                           })
                         })
                       })]
-                    }), (0, xC.jsx)(pz, {
+                    }), (0, Qk.jsx)(JF, {
                       next: !1,
-                      hidden: wC.has("arrows")
-                    }), (0, xC.jsxs)("div", {
+                      hidden: Tk.has("arrows")
+                    }), (0, Qk.jsxs)("div", {
                       className: "HotBarGameItemsContainer",
-                      children: [null !== SC && SC.map(((CC, zC) => (0, xC.jsx)(Wz, {
-                        item: CC,
-                        selected: CC.classList.contains("Selected")
-                      }, zC))), null === SC && Az.map((CC => {
-                        const zC = xz[CC];
-                        return (0, xC.jsx)("div", {
-                          className: oC()("InvenItem", {
-                            Selected: 0 === CC
+                      children: [null !== wk && wk.map(((kk, Fk) => (0, Qk.jsx)(ZF, {
+                        item: kk,
+                        selected: kk.classList.contains("Selected")
+                      }, Fk))), null === wk && QF.map((kk => {
+                        const Fk = sF[kk];
+                        return (0, Qk.jsx)("div", {
+                          className: ak()("InvenItem", {
+                            Selected: 0 === kk
                           }),
-                          children: zC && (0, xC.jsx)("div", {
+                          children: Fk && (0, Qk.jsx)("div", {
                             className: "HudPreviewItem",
-                            children: (0, xC.jsx)(KC.c, {
-                              name: zC
+                            children: (0, Qk.jsx)(Ok.e, {
+                              name: Fk
                             })
                           })
-                        }, CC)
+                        }, kk)
                       }))]
-                    }), (0, xC.jsx)(pz, {
+                    }), (0, Qk.jsx)(JF, {
                       next: !0,
-                      hidden: wC.has("arrows")
+                      hidden: Tk.has("arrows")
                     })]
                   })
                 })
               })]
-            }), (0, xC.jsx)("div", {
+            }), (0, Qk.jsx)("div", {
               className: "BottomRightElements",
-              children: (0, xC.jsxs)("div", {
+              children: (0, Qk.jsxs)("div", {
                 className: "TouchComponentsButtons",
-                children: [null !== gC && nz.map((CC => {
-                  const zC = gC[CC];
-                  return zC && (0, xC.jsx)(Fz, {
-                    id: Gz[CC],
-                    slot: CC,
-                    face: zC,
-                    className: Rz[CC],
-                    hidden: wC
-                  }, CC)
-                })), null === gC && (0, xC.jsxs)(xC.Fragment, {
-                  children: [(0, xC.jsx)(Fz, {
+                children: [null !== ek && lF.map((kk => {
+                  const Fk = ek[kk];
+                  return Fk && (0, Qk.jsx)(tF, {
+                    id: PF[kk],
+                    slot: kk,
+                    face: Fk,
+                    className: KF[kk],
+                    hidden: Tk
+                  }, kk)
+                })), null === ek && (0, Qk.jsxs)(Qk.Fragment, {
+                  children: [(0, Qk.jsx)(tF, {
                     id: "jump",
                     slot: "J",
                     icon: "arrow-up-from-line",
                     className: "JumpKey",
-                    hidden: wC
-                  }), (0, xC.jsx)(Fz, {
+                    hidden: Tk
+                  }), (0, Qk.jsx)(tF, {
                     id: "crouch",
                     slot: "C",
                     icon: "arrow-down-to-line",
                     className: "CrouchKey",
-                    hidden: wC
-                  }), bC && (0, xC.jsxs)(xC.Fragment, {
-                    children: [(0, xC.jsx)(Fz, {
+                    hidden: Tk
+                  }), ik && (0, Qk.jsxs)(Qk.Fragment, {
+                    children: [(0, Qk.jsx)(tF, {
                       id: "attack",
                       slot: "A",
                       icon: "swords",
-                      hidden: wC
-                    }), (0, xC.jsx)(Fz, {
+                      hidden: Tk
+                    }), (0, Qk.jsx)(tF, {
                       id: "use",
                       slot: "U",
                       icon: "hand-back-point-up",
-                      hidden: wC
+                      hidden: Tk
                     })]
-                  }), !bC && (0, xC.jsx)(Fz, {
+                  }), !ik && (0, Qk.jsx)(tF, {
                     id: "attack",
                     slot: "P",
                     icon: "crosshairs",
-                    label: MC("touchKeys:scope"),
-                    hidden: wC
-                  }), (0, xC.jsx)(Fz, {
+                    label: jk("touchKeys:scope"),
+                    hidden: Tk
+                  }), (0, Qk.jsx)(tF, {
                     id: "extra",
                     slot: "X",
                     icon: "feather-pointed",
-                    label: MC("touchKeys:fly"),
-                    hidden: wC
-                  }), (0, xC.jsx)(Fz, {
+                    label: jk("touchKeys:fly"),
+                    hidden: Tk
+                  }), (0, Qk.jsx)(tF, {
                     id: "game",
                     slot: "G",
                     icon: "bolt",
-                    hidden: wC
+                    hidden: Tk
                   })]
                 })]
               })
             })]
           })
-        }), (0, xC.jsx)("div", {
+        }), (0, Qk.jsx)("div", {
           className: "TouchMovementWrapper",
-          children: (0, xC.jsx)("div", {
+          children: (0, Qk.jsx)("div", {
             className: "JoystickZone HudPreviewJoystickZone",
-            children: (0, xC.jsxs)("div", {
-              className: oC()("Joystick Resting HudPreviewJoystick", {
-                Floating: !nC
+            children: (0, Qk.jsxs)("div", {
+              className: ak()("Joystick Resting HudPreviewJoystick", {
+                Floating: !yk
               }),
-              ...qz("joystick"),
-              children: [(0, xC.jsx)("div", {
+              ...LF("joystick"),
+              children: [(0, Qk.jsx)("div", {
                 className: "JoystickBase"
-              }), (0, xC.jsx)("div", {
+              }), (0, Qk.jsx)("div", {
                 className: "JoystickKnob"
               })]
             })
@@ -884,1014 +884,1014 @@ export const modules = {
       })
     }
 
-    function Iz() {
-      const [CC, zC] = (0, wC.useState)({}), ZC = (0, wC.useCallback)((CC => {
-        zC((zC => [...new Set([...Object.keys(zC), ...Object.keys(CC)])].every((ZC => zC[ZC] === CC[ZC])) ? zC : CC))
+    function zF() {
+      const [kk, Fk] = (0, Tk.useState)({}), Ik = (0, Tk.useCallback)((kk => {
+        Fk((Fk => [...new Set([...Object.keys(Fk), ...Object.keys(kk)])].every((Ik => Fk[Ik] === kk[Ik])) ? Fk : kk))
       }), []);
-      return [CC, ZC]
+      return [kk, Ik]
     }
-    const iz = .05;
+    const SF = .05;
 
-    function vz(CC) {
-      var zC;
+    function oF(kk) {
+      var Fk;
       let {
-        selected: ZC,
-        layout: wC,
-        actionButtons: bC,
-        keyNames: nC,
-        overlaps: fC,
-        scaleCaps: FC,
-        joystickFixed: WC,
-        onScale: NC,
-        onHidden: MC,
-        onReset: gC,
-        locked: SC,
-        lockable: pC,
-        onLocked: PC,
-        extra: GC
-      } = CC;
+        selected: Ik,
+        layout: Tk,
+        actionButtons: ik,
+        keyNames: yk,
+        overlaps: lk,
+        scaleCaps: Lk,
+        joystickFixed: tk,
+        onScale: Zk,
+        onHidden: jk,
+        onReset: ek,
+        locked: wk,
+        lockable: Hk,
+        onLocked: Jk,
+        extra: xk
+      } = kk;
       const {
-        t: RC
-      } = (0, QC.y)(), AC = ZC ? cC[ZC] : null, JC = null !== ZC && SC.has(ZC), IC = (ZC && wC.hudElements[ZC] || YC.p)[2], iC = null !== (zC = ZC && FC[ZC]) && void 0 !== zC ? zC : YC.i, vC = CC => {
-        ZC && NC(ZC, Math.min(iC, Math.round(100 * (IC + .1 * CC)) / 100))
+        t: Pk
+      } = (0, Xk.y)(), Kk = Ik ? Ck[Ik] : null, sk = null !== Ik && wk.has(Ik), Vk = (Ik && Tk.hudElements[Ik] || nk.q)[2], zk = null !== (Fk = Ik && Lk[Ik]) && void 0 !== Fk ? Fk : nk.m, Sk = kk => {
+        Ik && Zk(Ik, Math.min(zk, Math.round(100 * (Vk + .1 * kk)) / 100))
       };
-      return (0, xC.jsxs)(xC.Fragment, {
-        children: [(0, xC.jsxs)("div", {
-          className: oC()("HudQuickName SmallTextBold", {
-            Overlap: fC.length > 0
+      return (0, Qk.jsxs)(Qk.Fragment, {
+        children: [(0, Qk.jsxs)("div", {
+          className: ak()("HudQuickName SmallTextBold", {
+            Overlap: lk.length > 0
           }),
-          children: [fC.length > 0 && (0, xC.jsx)(KC.c, {
+          children: [lk.length > 0 && (0, Qk.jsx)(Ok.e, {
             name: "triangle-exclamation"
-          }), AC ? rC(AC.id, bC, RC, nC) : RC("hudLayout:fullScreenHint"), fC.length > 0 && (0, xC.jsx)("span", {
+          }), Kk ? ck(Kk.id, ik, Pk, yk) : Pk("hudLayout:fullScreenHint"), lk.length > 0 && (0, Qk.jsx)("span", {
             className: "HudQuickOverlap",
-            children: RC("hudLayout:overlapsShort", {
-              names: sC(fC, bC, RC, nC)
+            children: Pk("hudLayout:overlapsShort", {
+              names: Wk(lk, ik, Pk, yk)
             })
           })]
-        }), (null === AC || void 0 === AC ? void 0 : AC.scale) && (0, xC.jsxs)("div", {
+        }), (null === Kk || void 0 === Kk ? void 0 : Kk.scale) && (0, Qk.jsxs)("div", {
           className: "HudQuickSize",
-          children: [(0, xC.jsx)(qC.O, {
-            disabled: JC || IC <= YC.l,
-            ariaLabel: RC("hudLayout:smaller"),
+          children: [(0, Qk.jsx)(qk.Q, {
+            disabled: sk || Vk <= nk.o,
+            ariaLabel: Pk("hudLayout:smaller"),
             onClick: () => {
-              vC(-1)
+              Sk(-1)
             },
-            children: (0, xC.jsx)(KC.c, {
+            children: (0, Qk.jsx)(Ok.e, {
               name: "minus"
             })
-          }), (0, xC.jsx)("span", {
+          }), (0, Qk.jsx)("span", {
             className: "HudQuickSizeValue",
-            children: `${Math.round(100*IC)}%`
-          }), (0, xC.jsx)(qC.O, {
-            disabled: JC || IC >= iC,
-            ariaLabel: RC("hudLayout:larger"),
+            children: `${Math.round(100*Vk)}%`
+          }), (0, Qk.jsx)(qk.Q, {
+            disabled: sk || Vk >= zk,
+            ariaLabel: Pk("hudLayout:larger"),
             onClick: () => {
-              vC(1)
+              Sk(1)
             },
-            children: (0, xC.jsx)(KC.c, {
+            children: (0, Qk.jsx)(Ok.e, {
               name: "plus"
             })
           })]
-        }), (AC || GC) && (0, xC.jsxs)("div", {
+        }), (Kk || xk) && (0, Qk.jsxs)("div", {
           className: "HudQuickActions",
-          children: [AC && (0, xC.jsxs)(xC.Fragment, {
-            children: [(0, xC.jsx)(DC, {
-              id: AC.id,
-              actionButtons: bC,
-              keyNames: nC,
-              locked: JC,
-              lockable: pC(AC.id),
-              onLocked: PC
-            }), (0, xC.jsx)(aC, {
-              id: AC.id,
-              elements: wC.hudElements,
-              actionButtons: bC,
-              keyNames: nC,
-              onHidden: MC
-            }), (0, xC.jsx)(tC, {
-              id: AC.id,
-              elements: wC.hudElements,
-              actionButtons: bC,
-              keyNames: nC,
-              locked: JC,
-              onReset: gC
-            }), BC(AC.id, WC) && (0, xC.jsx)(OC, {})]
-          }), GC]
+          children: [Kk && (0, Qk.jsxs)(Qk.Fragment, {
+            children: [(0, Qk.jsx)(Yk, {
+              id: Kk.id,
+              actionButtons: ik,
+              keyNames: yk,
+              locked: sk,
+              lockable: Hk(Kk.id),
+              onLocked: Jk
+            }), (0, Qk.jsx)(Bk, {
+              id: Kk.id,
+              elements: Tk.hudElements,
+              actionButtons: ik,
+              keyNames: yk,
+              onHidden: jk
+            }), (0, Qk.jsx)(dk, {
+              id: Kk.id,
+              elements: Tk.hudElements,
+              actionButtons: ik,
+              keyNames: yk,
+              locked: sk,
+              onReset: ek
+            }), rk(Kk.id, tk) && (0, Qk.jsx)(Dk, {})]
+          }), xk]
         })]
       })
     }
-    var ez = ZC(1072),
-      hz = ZC(4339);
-    const Kz = "HudPreviewDoc",
-      Yz = {
+    var vF = Ik(1103),
+      EF = Ik(4388);
+    const OF = "HudPreviewDoc",
+      nF = {
         hotbar: "TouchHotbar",
         keysAbove: "TouchHotbarKeysAbove",
         hasShop: "TouchHotbarHasShop",
         hasBag: "TouchHotbarHasBag"
       },
-      dz = new Set([Kz, ...Object.values(Yz)]),
-      mz = new Set(YC.B.map(wz.s)),
-      Hz = new Set(wz.h),
-      Ez = 'style, link[rel="stylesheet"]';
+      GF = new Set([OF, ...Object.values(nF)]),
+      pF = new Set(nk.y.map(iF.w)),
+      uF = new Set(iF.f),
+      bF = 'style, link[rel="stylesheet"]';
 
-    function lz(CC, zC, ZC, QC) {
-      const wC = new Map,
-        bC = new Set,
-        nC = new URL(CC.baseURI).origin,
-        fC = zC => {
-          var ZC;
-          if ("LINK" !== zC.nodeName) return !0;
-          const QC = null === (ZC = zC.getAttribute("href")) || void 0 === ZC ? void 0 : ZC.trim();
-          if (!QC) return !1;
+    function RF(kk, Fk, Ik, Xk) {
+      const Tk = new Map,
+        ik = new Set,
+        yk = new URL(kk.baseURI).origin,
+        lk = Fk => {
+          var Ik;
+          if ("LINK" !== Fk.nodeName) return !0;
+          const Xk = null === (Ik = Fk.getAttribute("href")) || void 0 === Ik ? void 0 : Ik.trim();
+          if (!Xk) return !1;
           try {
-            return new URL(QC, CC.baseURI).origin === nC
+            return new URL(Xk, kk.baseURI).origin === yk
           } catch {
             return !1
           }
         };
-      let oC = null;
-      const qC = () => {
-          oC !== (0 === bC.size) && (oC = 0 === bC.size, null === QC || void 0 === QC || QC(oC))
+      let ak = null;
+      const qk = () => {
+          ak !== (0 === ik.size) && (ak = 0 === ik.size, null === Xk || void 0 === Xk || Xk(ak))
         },
-        FC = CC => {
-          const zC = CC.cloneNode(!0);
-          if ("LINK" === zC.tagName) {
-            bC.add(zC);
-            const CC = () => {
-              bC.delete(zC), qC()
+        Lk = kk => {
+          const Fk = kk.cloneNode(!0);
+          if ("LINK" === Fk.tagName) {
+            ik.add(Fk);
+            const kk = () => {
+              ik.delete(Fk), qk()
             };
-            zC.addEventListener("load", CC), zC.addEventListener("error", CC), ZC && zC.addEventListener("load", ZC)
+            Fk.addEventListener("load", kk), Fk.addEventListener("error", kk), Ik && Fk.addEventListener("load", Ik)
           }
-          return zC
+          return Fk
         },
-        WC = () => {
-          const QC = function(CC) {
-              const zC = [...CC.body.children].filter((CC => CC.matches(Ez)));
-              return [...CC.head.querySelectorAll(Ez), ...zC]
-            }(CC).filter(fC),
-            nC = new Set(QC);
-          for (const [CC, zC] of wC) nC.has(CC) || (zC.remove(), wC.delete(CC), bC.delete(zC));
-          let oC = null;
-          for (let CC = QC.length - 1; CC >= 0; CC--) {
-            const bC = QC[CC];
-            let nC = wC.get(bC);
-            nC ? "STYLE" === bC.tagName && nC.textContent !== bC.textContent && (nC.textContent = bC.textContent, null === ZC || void 0 === ZC || ZC()) : (nC = FC(bC), wC.set(bC, nC), zC.head.insertBefore(nC, oC)), oC = nC
+        tk = () => {
+          const Xk = function(kk) {
+              const Fk = [...kk.body.children].filter((kk => kk.matches(bF)));
+              return [...kk.head.querySelectorAll(bF), ...Fk]
+            }(kk).filter(lk),
+            yk = new Set(Xk);
+          for (const [kk, Fk] of Tk) yk.has(kk) || (Fk.remove(), Tk.delete(kk), ik.delete(Fk));
+          let ak = null;
+          for (let kk = Xk.length - 1; kk >= 0; kk--) {
+            const ik = Xk[kk];
+            let yk = Tk.get(ik);
+            yk ? "STYLE" === ik.tagName && yk.textContent !== ik.textContent && (yk.textContent = ik.textContent, null === Ik || void 0 === Ik || Ik()) : (yk = Lk(ik), Tk.set(ik, yk), Fk.head.insertBefore(yk, ak)), ak = yk
           }
-          qC()
+          qk()
         };
-      WC();
-      const NC = new MutationObserver(WC);
-      return NC.observe(CC.head, {
+      tk();
+      const Zk = new MutationObserver(tk);
+      return Zk.observe(kk.head, {
         childList: !0,
         subtree: !0,
         characterData: !0
-      }), NC.observe(CC.body, {
+      }), Zk.observe(kk.body, {
         childList: !0
       }), () => {
-        NC.disconnect()
+        Zk.disconnect()
       }
     }
 
-    function Xz(CC, zC, ZC) {
+    function UF(kk, Fk, Ik) {
       let {
-        keysAbove: QC
-      } = ZC;
-      const wC = [...CC.documentElement.classList].filter((CC => !dz.has(CC) && !Hz.has(CC))),
-        bC = [...zC.documentElement.classList].filter((CC => Hz.has(CC))),
-        nC = [Kz, Yz.hotbar, Yz.hasShop, Yz.hasBag];
-      QC && nC.push(Yz.keysAbove), zC.documentElement.className = [...wC, ...nC, ...bC].join(" ")
+        keysAbove: Xk
+      } = Ik;
+      const Tk = [...kk.documentElement.classList].filter((kk => !GF.has(kk) && !uF.has(kk))),
+        ik = [...Fk.documentElement.classList].filter((kk => uF.has(kk))),
+        yk = [OF, nF.hotbar, nF.hasShop, nF.hasBag];
+      Xk && yk.push(nF.keysAbove), Fk.documentElement.className = [...Tk, ...yk, ...ik].join(" ")
     }
-    const cz = ["--notchTop", "--notchRight", "--notchBottom", "--notchLeft"];
+    const CF = ["--notchTop", "--notchRight", "--notchBottom", "--notchLeft"];
 
-    function uz(CC, zC, ZC, QC, wC) {
-      const bC = (0, YC.D)(ZC, QC, "joystick"),
-        nC = (0, wz.v)((0, wz.I)(ZC, QC, wC), QC),
-        fC = nC.classes.filter((CC => !mz.has(CC))),
-        oC = zC.documentElement;
-      (0, wz.P)({
-        ...nC,
-        classes: fC
+    function NF(kk, Fk, Ik, Xk, Tk) {
+      const ik = (0, nk.z)(Ik, Xk, "joystick"),
+        yk = (0, iF.A)((0, iF.N)(Ik, Xk, Tk), Xk),
+        lk = yk.classes.filter((kk => !pF.has(kk))),
+        ak = Fk.documentElement;
+      (0, iF.T)({
+        ...yk,
+        classes: lk
       }, {
-        vars: oC,
-        safe: oC,
-        classes: oC
+        vars: ak,
+        safe: ak,
+        classes: ak
       });
-      const qC = (0, wz.A)(ZC.hudLayouts[QC].hudSafe, window.innerWidth, window.innerHeight, rz(), (0, wz.L)(zC));
-      oC.style.setProperty("--preview-joystick-shift-left", `${qC[3]}px`), oC.style.setProperty("--preview-joystick-shift-bottom", `${qC[2]}px`), oC.style.setProperty("--preview-joystick-scale", String(bC[2])), (0, hz.f)(oC, zC, ZC, QC);
-      for (const FC of cz) oC.style.setProperty(FC, CC.documentElement.style.getPropertyValue(FC) || "0px")
+      const qk = (0, iF.G)(Ik.hudLayouts[Xk].hudSafe, window.innerWidth, window.innerHeight, cF(), (0, iF.P)(Fk));
+      ak.style.setProperty("--preview-joystick-shift-left", `${qk[3]}px`), ak.style.setProperty("--preview-joystick-shift-bottom", `${qk[2]}px`), ak.style.setProperty("--preview-joystick-scale", String(ik[2])), (0, EF.c)(ak, Fk, Ik, Xk);
+      for (const Lk of CF) ak.style.setProperty(Lk, kk.documentElement.style.getPropertyValue(Lk) || "0px")
     }
 
-    function rz() {
-      return (0, wz.G)(FC.b.get("notchSize"), window.innerWidth, window.innerHeight)
+    function cF() {
+      return (0, iF.K)(Lk.d.get("notchSize"), window.innerWidth, window.innerHeight)
     }
 
-    function sz(CC) {
-      return (0, wz.p)(rz(), (0, wz.L)(CC))
+    function WF(kk) {
+      return (0, iF.p)(cF(), (0, iF.P)(kk))
     }
 
-    function Tz(CC, zC, ZC) {
-      const QC = CC.documentElement.style,
-        wC = (0, wz.C)(zC),
-        bC = QC.getPropertyValue(wC);
+    function fF(kk, Fk, Ik) {
+      const Xk = kk.documentElement.style,
+        Tk = (0, iF.J)(Fk),
+        ik = Xk.getPropertyValue(Tk);
       try {
-        return ZC((CC => {
-          QC.setProperty(wC, String(CC))
+        return Ik((kk => {
+          Xk.setProperty(Tk, String(kk))
         }))
       } finally {
-        "" === bC ? QC.removeProperty(wC) : QC.setProperty(wC, bC)
+        "" === ik ? Xk.removeProperty(Tk) : Xk.setProperty(Tk, ik)
       }
     }
 
-    function az(CC, zC) {
-      const [ZC, QC] = Tz(CC, "hotbar", (zC => {
-        const ZC = ZC => {
-          var QC, wC;
-          return zC(ZC), null !== (QC = null === (wC = CC.querySelector(".HotBarGameItemsContainer")) || void 0 === wC ? void 0 : wC.getBoundingClientRect().width) && void 0 !== QC ? QC : 0
+    function BF(kk, Fk) {
+      const [Ik, Xk] = fF(kk, "hotbar", (Fk => {
+        const Ik = Ik => {
+          var Xk, Tk;
+          return Fk(Ik), null !== (Xk = null === (Tk = kk.querySelector(".HotBarGameItemsContainer")) || void 0 === Tk ? void 0 : Tk.getBoundingClientRect().width) && void 0 !== Xk ? Xk : 0
         };
-        return [ZC(1), ZC(YC.i)]
+        return [Ik(1), Ik(nk.m)]
       }));
-      return ZC <= 0 ? YC.i : Math.min(YC.i, Math.max(1, Math.floor(QC / ZC / zC + 1e-6) * zC))
+      return Ik <= 0 ? nk.m : Math.min(nk.m, Math.max(1, Math.floor(Xk / Ik / Fk + 1e-6) * Fk))
     }
-    const tz = 3,
-      Dz = .5,
-      jz = CC => CC.right - CC.left;
-    const yz = (CC, zC) => Math.abs((0, Zz.d)(CC).x - (0, Zz.d)(zC).x) + Math.abs((0, Zz.d)(CC).y - (0, Zz.d)(zC).y) + Math.abs(jz(CC) - jz(zC));
+    const dF = 3,
+      YF = .5,
+      AF = kk => kk.right - kk.left;
+    const gF = (kk, Fk) => Math.abs((0, XF.e)(kk).x - (0, XF.e)(Fk).x) + Math.abs((0, XF.e)(kk).y - (0, XF.e)(Fk).y) + Math.abs(AF(kk) - AF(Fk));
 
-    function Lz(CC, zC, ZC, QC, wC) {
+    function mF(kk, Fk, Ik, Xk, Tk) {
       let {
-        canKeep: bC = () => !0,
-        passes: nC = tz,
-        before: fC,
-        keysAboveOf: oC
+        canKeep: ik = () => !0,
+        passes: yk = dF,
+        before: lk,
+        keysAboveOf: ak
       } = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : {};
-      const qC = void 0 !== oC && oC(CC) !== oC(zC),
-        FC = zC.hudLayouts[ZC].hudLocked.filter((CC => bC(CC) && !(qC && "inventory" === CC))),
-        WC = new Set(FC);
-      if (0 === WC.size) return zC;
-      const NC = [...HC].filter((QC => !FC.includes(QC) && (0, YC.D)(CC, ZC, QC).join() === (0, YC.D)(zC, ZC, QC).join())),
-        MC = CC => {
-          const zC = (0, Zz.D)(NC.flatMap((zC => CC[zC] ? [CC[zC]] : [])));
+      const qk = void 0 !== ak && ak(kk) !== ak(Fk),
+        Lk = Fk.hudLayouts[Ik].hudLocked.filter((kk => ik(kk) && !(qk && "inventory" === kk))),
+        tk = new Set(Lk);
+      if (0 === tk.size) return Fk;
+      const Zk = [...uk].filter((Xk => !Lk.includes(Xk) && (0, nk.z)(kk, Ik, Xk).join() === (0, nk.z)(Fk, Ik, Xk).join())),
+        jk = kk => {
+          const Fk = (0, XF.M)(Zk.flatMap((Fk => kk[Fk] ? [kk[Fk]] : [])));
           return {
-            ...CC,
-            cluster: null !== zC && void 0 !== zC ? zC : void 0
+            ...kk,
+            cluster: null !== Fk && void 0 !== Fk ? Fk : void 0
           }
         },
-        gC = CC => {
-          const zC = wC(CC);
-          return zC && MC(zC)
+        ek = kk => {
+          const Fk = Tk(kk);
+          return Fk && jk(Fk)
         },
-        SC = fC ? MC(fC) : gC(CC);
-      let pC = SC && gC(zC);
-      if (!SC || !pC) return zC;
-      let PC = zC;
-      for (let GC = 0; GC < nC && WC.size > 0; GC++) {
-        const CC = new Map;
-        for (const zC of WC) {
-          const wC = SC[zC],
-            bC = pC[zC],
-            nC = wC && bC ? Uz(zC, (0, YC.D)(PC, ZC, zC), wC, bC, QC) : null;
-          nC ? CC.set(zC, nC) : WC.delete(zC)
+        wk = lk ? jk(lk) : ek(kk);
+      let Hk = wk && ek(Fk);
+      if (!wk || !Hk) return Fk;
+      let Jk = Fk;
+      for (let xk = 0; xk < yk && tk.size > 0; xk++) {
+        const kk = new Map;
+        for (const Fk of tk) {
+          const Tk = wk[Fk],
+            ik = Hk[Fk],
+            yk = Tk && ik ? hF(Fk, (0, nk.z)(Jk, Ik, Fk), Tk, ik, Xk) : null;
+          yk ? kk.set(Fk, yk) : tk.delete(Fk)
         }
-        if (0 === CC.size) break;
-        let wC = PC;
-        for (const [zC, QC] of CC) wC = (0, YC.db)(wC, ZC, zC, QC);
-        const bC = gC(wC);
-        if (!bC) return zC;
-        let nC = PC;
-        for (const [zC, QC] of CC) {
-          const CC = bC[zC];
-          CC && yz(SC[zC], CC) < yz(SC[zC], pC[zC]) - Dz ? nC = (0, YC.db)(nC, ZC, zC, QC) : WC.delete(zC)
+        if (0 === kk.size) break;
+        let Tk = Jk;
+        for (const [Fk, Xk] of kk) Tk = (0, nk.jb)(Tk, Ik, Fk, Xk);
+        const ik = ek(Tk);
+        if (!ik) return Fk;
+        let yk = Jk;
+        for (const [Fk, Xk] of kk) {
+          const kk = ik[Fk];
+          kk && gF(wk[Fk], kk) < gF(wk[Fk], Hk[Fk]) - YF ? yk = (0, nk.jb)(yk, Ik, Fk, Xk) : tk.delete(Fk)
         }
-        if (nC === PC) break;
-        const fC = [...CC.keys()].every((CC => WC.has(CC)));
-        if (PC = nC, pC = fC ? bC : gC(PC), !pC) return zC
+        if (yk === Jk) break;
+        const lk = [...kk.keys()].every((kk => tk.has(kk)));
+        if (Jk = yk, Hk = lk ? ik : ek(Jk), !Hk) return Fk
       }
-      return wC(PC), PC
+      return Tk(Jk), Jk
     }
 
-    function Uz(CC, zC, ZC, QC, wC) {
-      let [bC, nC, fC] = zC;
-      const oC = YC.x[CC],
-        qC = {};
-      oC.scale && jz(QC) > 0 && Math.abs(jz(ZC) - jz(QC)) > Dz && (qC.scale = Math.max(YC.l, Math.min(YC.i, fC * jz(ZC) / jz(QC))));
-      const FC = (0, Zz.d)(ZC).x - (0, Zz.d)(QC).x,
-        WC = (0, Zz.d)(ZC).y - (0, Zz.d)(QC).y;
-      return oC.move && (Math.abs(FC) > Dz || Math.abs(WC) > Dz) && (qC.dx = bC + FC / wC.width, qC.dy = nC + WC / wC.height), void 0 === qC.scale && void 0 === qC.dx ? null : qC
+    function hF(kk, Fk, Ik, Xk, Tk) {
+      let [ik, yk, lk] = Fk;
+      const ak = nk.x[kk],
+        qk = {};
+      ak.scale && AF(Xk) > 0 && Math.abs(AF(Ik) - AF(Xk)) > YF && (qk.scale = Math.max(nk.o, Math.min(nk.m, lk * AF(Ik) / AF(Xk))));
+      const Lk = (0, XF.e)(Ik).x - (0, XF.e)(Xk).x,
+        tk = (0, XF.e)(Ik).y - (0, XF.e)(Xk).y;
+      return ak.move && (Math.abs(Lk) > YF || Math.abs(tk) > YF) && (qk.dx = ik + Lk / Tk.width, qk.dy = yk + tk / Tk.height), void 0 === qk.scale && void 0 === qk.dx ? null : qk
     }
-    let Bz = 0;
+    let rF = 0;
 
-    function Oz() {
-      return Bz > 0
+    function DF() {
+      return rF > 0
     }
-    const kz = CC => 0 === CC.dx && 0 === CC.dy,
-      Vz = .001,
-      CZ = CC => Math.abs(CC.dx) >= 5e-4 || Math.abs(CC.dy) >= 5e-4 ? CC : {
-        dx: CC.dx,
-        dy: CC.dy < 0 ? -.001 : Vz
+    const MF = kk => 0 === kk.dx && 0 === kk.dy,
+      kI = .001,
+      FI = kk => Math.abs(kk.dx) >= 5e-4 || Math.abs(kk.dy) >= 5e-4 ? kk : {
+        dx: kk.dx,
+        dy: kk.dy < 0 ? -.001 : kI
       };
 
-    function zZ(CC) {
+    function II(kk) {
       let {
-        preview: zC,
-        stageRef: ZC,
-        ringRef: QC,
-        centreLineRef: bC,
-        snapCentre: nC,
-        ready: fC,
-        measure: oC,
-        k: qC,
-        viewport: FC,
-        boxes: WC,
-        pieces: NC,
-        selected: MC,
-        insets: gC,
-        layout: SC,
-        canMove: pC,
-        onSelect: PC,
-        onMove: GC
-      } = CC;
-      const RC = (0, wC.useRef)(null),
-        AC = (0, wC.useCallback)((() => null !== RC.current), []),
-        xC = (CC, zC) => {
-          if (!zC) return null;
-          const ZC = (0, Zz.d)(CC.origin),
-            QC = (0, Zz.d)(zC),
-            wC = (CC.to.dx - CC.from.dx) * FC.width,
-            bC = (CC.to.dy - CC.from.dy) * FC.height,
-            nC = zC.right - zC.left,
-            fC = zC.bottom - zC.top;
+        preview: Fk,
+        stageRef: Ik,
+        ringRef: Xk,
+        centreLineRef: ik,
+        snapCentre: yk,
+        ready: lk,
+        measure: ak,
+        k: qk,
+        viewport: Lk,
+        boxes: tk,
+        pieces: Zk,
+        selected: jk,
+        insets: ek,
+        layout: wk,
+        canMove: Hk,
+        onSelect: Jk,
+        onMove: xk
+      } = kk;
+      const Pk = (0, Tk.useRef)(null),
+        Kk = (0, Tk.useCallback)((() => null !== Pk.current), []),
+        Qk = (kk, Fk) => {
+          if (!Fk) return null;
+          const Ik = (0, XF.e)(kk.origin),
+            Xk = (0, XF.e)(Fk),
+            Tk = (kk.to.dx - kk.from.dx) * Lk.width,
+            ik = (kk.to.dy - kk.from.dy) * Lk.height,
+            yk = Fk.right - Fk.left,
+            lk = Fk.bottom - Fk.top;
           return {
             skew: {
-              x: QC.x - ZC.x - wC,
-              y: QC.y - ZC.y - bC
+              x: Xk.x - Ik.x - Tk,
+              y: Xk.y - Ik.y - ik
             },
             box: {
-              left: ZC.x - nC / 2,
-              top: ZC.y - fC / 2,
-              right: ZC.x + nC / 2,
-              bottom: ZC.y + fC / 2
+              left: Ik.x - yk / 2,
+              top: Ik.y - lk / 2,
+              right: Ik.x + yk / 2,
+              bottom: Ik.y + lk / 2
             }
           }
         },
-        JC = (CC, ZC) => {
-          var wC;
-          const nC = RC.current;
-          if (!nC || nC.pointerId !== CC.pointerId) return;
-          RC.current = null, null === (wC = bC.current) || void 0 === wC || wC.classList.remove("Shown", "Snapped");
-          const fC = QC.current;
-          if (fC && null !== nC.ringStyle && fC.setAttribute("style", nC.ringStyle), ZC && nC.moved) {
-            const CC = kz(nC.to) ? null : oC(nC.id),
-              zC = CC ? (0, Zz.A)(CC, (0, Zz.w)(FC.width, FC.height, gC)) : {
+        sk = (kk, Ik) => {
+          var Tk;
+          const yk = Pk.current;
+          if (!yk || yk.pointerId !== kk.pointerId) return;
+          Pk.current = null, null === (Tk = ik.current) || void 0 === Tk || Tk.classList.remove("Shown", "Snapped");
+          const lk = Xk.current;
+          if (lk && null !== yk.ringStyle && lk.setAttribute("style", yk.ringStyle), Ik && yk.moved) {
+            const kk = MF(yk.to) ? null : ak(yk.id),
+              Fk = kk ? (0, XF.L)(kk, (0, XF.H)(Lk.width, Lk.height, ek)) : {
                 x: 0,
                 y: 0
               },
-              ZC = {
-                dx: nC.to.dx + zC.x / FC.width,
-                dy: nC.to.dy + zC.y / FC.height
+              Ik = {
+                dx: yk.to.dx + Fk.x / Lk.width,
+                dy: yk.to.dy + Fk.y / Lk.height
               },
-              QC = kz(nC.to) ? ZC : CZ(ZC);
-            GC(nC.id, QC.dx, QC.dy)
-          } else zC(nC.id, null), ZC && nC.tapPick && PC(nC.tapPick)
+              Xk = MF(yk.to) ? Ik : FI(Ik);
+            xk(yk.id, Xk.dx, Xk.dy)
+          } else Fk(yk.id, null), Ik && yk.tapPick && Jk(yk.tapPick)
         };
       return {
-        busy: AC,
+        busy: Kk,
         handlers: {
-          onPointerDown: CC => {
-            var zC;
-            if (!fC || RC.current || !CC.target.closest(".HudPreviewHandle")) return;
-            const QC = ZC.current.getBoundingClientRect(),
-              wC = {
-                x: (CC.clientX - QC.left) / qC,
-                y: (CC.clientY - QC.top) / qC
+          onPointerDown: kk => {
+            var Fk;
+            if (!lk || Pk.current || !kk.target.closest(".HudPreviewHandle")) return;
+            const Xk = Ik.current.getBoundingClientRect(),
+              Tk = {
+                x: (kk.clientX - Xk.left) / qk,
+                y: (kk.clientY - Xk.top) / qk
               },
-              bC = (0, Zz.q)(wC, NC, 40 / qC),
-              nC = "cluster" === MC && void 0 !== WC.cluster && null !== (0, Zz.q)(wC, [{
+              ik = (0, XF.B)(Tk, Zk, 40 / qk),
+              yk = "cluster" === jk && void 0 !== tk.cluster && null !== (0, XF.B)(Tk, [{
                 id: "cluster",
-                box: WC.cluster
-              }], 40 / qC),
-              oC = "menu" === MC && void 0 !== WC.menu && (0, Zz.f)(WC.menu, wC) && ("menu" === bC || null !== bC && (0, Qz.B)(bC, SC.hudElements[bC])),
-              FC = nC ? "cluster" : oC ? "menu" : null,
-              gC = null !== FC,
-              GC = null !== FC && void 0 !== FC ? FC : bC;
-            if (!GC) return;
-            if (function(CC) {
-                Bz++;
-                const zC = ZC => {
-                  ZC.pointerId === CC && (Bz = Math.max(0, Bz - 1), window.removeEventListener("pointerup", zC, !0), window.removeEventListener("pointercancel", zC, !0))
+                box: tk.cluster
+              }], 40 / qk),
+              ak = "menu" === jk && void 0 !== tk.menu && (0, XF.i)(tk.menu, Tk) && ("menu" === ik || null !== ik && (0, TF.v)(ik, wk.hudElements[ik])),
+              Lk = yk ? "cluster" : ak ? "menu" : null,
+              ek = null !== Lk,
+              xk = null !== Lk && void 0 !== Lk ? Lk : ik;
+            if (!xk) return;
+            if (function(kk) {
+                rF++;
+                const Fk = Ik => {
+                  Ik.pointerId === kk && (rF = Math.max(0, rF - 1), window.removeEventListener("pointerup", Fk, !0), window.removeEventListener("pointercancel", Fk, !0))
                 };
-                window.addEventListener("pointerup", zC, !0), window.addEventListener("pointercancel", zC, !0)
-              }(CC.pointerId), !pC(GC)) return void PC(gC && bC ? bC : GC);
-            PC(GC);
-            const [AC, xC] = null !== (zC = SC.hudElements[GC]) && void 0 !== zC ? zC : [0, 0], JC = {
-              dx: AC,
-              dy: xC
-            }, IC = {
+                window.addEventListener("pointerup", Fk, !0), window.addEventListener("pointercancel", Fk, !0)
+              }(kk.pointerId), !Hk(xk)) return void Jk(ek && ik ? ik : xk);
+            Jk(xk);
+            const [Kk, Qk] = null !== (Fk = wk.hudElements[xk]) && void 0 !== Fk ? Fk : [0, 0], sk = {
+              dx: Kk,
+              dy: Qk
+            }, Vk = {
               skew: {
                 x: 0,
                 y: 0
               },
-              box: WC[GC]
+              box: tk[xk]
             };
-            RC.current = {
-              id: GC,
-              pointerId: CC.pointerId,
-              startX: CC.clientX,
-              startY: CC.clientY,
-              origin: WC[GC],
-              from: JC,
-              to: JC,
+            Pk.current = {
+              id: xk,
+              pointerId: kk.pointerId,
+              startX: kk.clientX,
+              startY: kk.clientY,
+              origin: tk[xk],
+              from: sk,
+              to: sk,
               moved: !1,
-              home: kz(JC) ? {
-                centre: (0, Zz.d)(WC[GC]),
-                anchor: IC
+              home: MF(sk) ? {
+                centre: (0, XF.e)(tk[xk]),
+                anchor: Vk
               } : null,
-              away: kz(JC) ? null : IC,
-              anchor: IC,
+              away: MF(sk) ? null : Vk,
+              anchor: Vk,
               ringStyle: null,
-              tapPick: gC ? bC : null
-            }, CC.currentTarget.setPointerCapture(CC.pointerId)
+              tapPick: ek ? ik : null
+            }, kk.currentTarget.setPointerCapture(kk.pointerId)
           },
-          onPointerMove: CC => {
-            const ZC = RC.current;
-            if (!ZC || ZC.pointerId !== CC.pointerId) return;
-            const wC = CC.clientX - ZC.startX,
-              fC = CC.clientY - ZC.startY;
-            if (!ZC.moved && Math.hypot(wC, fC) < 5) return;
-            const WC = !ZC.moved;
-            var NC, MC;
-            (ZC.moved = !0, WC) && (ZC.ringStyle = null !== (NC = null === (MC = QC.current) || void 0 === MC ? void 0 : MC.getAttribute("style")) && void 0 !== NC ? NC : null);
-            const SC = (0, Zz.w)(FC.width, FC.height, gC);
-            if (!ZC.home) {
-              var pC;
-              ZC.to = {
+          onPointerMove: kk => {
+            const Ik = Pk.current;
+            if (!Ik || Ik.pointerId !== kk.pointerId) return;
+            const Tk = kk.clientX - Ik.startX,
+              lk = kk.clientY - Ik.startY;
+            if (!Ik.moved && Math.hypot(Tk, lk) < 5) return;
+            const tk = !Ik.moved;
+            var Zk, jk;
+            (Ik.moved = !0, tk) && (Ik.ringStyle = null !== (Zk = null === (jk = Xk.current) || void 0 === jk ? void 0 : jk.getAttribute("style")) && void 0 !== Zk ? Zk : null);
+            const wk = (0, XF.H)(Lk.width, Lk.height, ek);
+            if (!Ik.home) {
+              var Hk;
+              Ik.to = {
                 dx: 0,
                 dy: 0
-              }, zC(ZC.id, ZC.to);
-              const CC = oC(ZC.id),
-                QC = null !== (pC = xC(ZC, CC)) && void 0 !== pC ? pC : {
+              }, Fk(Ik.id, Ik.to);
+              const kk = ak(Ik.id),
+                Xk = null !== (Hk = Qk(Ik, kk)) && void 0 !== Hk ? Hk : {
                   skew: {
                     x: 0,
                     y: 0
                   },
-                  box: ZC.origin
+                  box: Ik.origin
                 },
-                wC = (0, Zz.d)(ZC.origin);
-              ZC.home = {
-                centre: CC ? (0, Zz.d)(CC) : {
-                  x: wC.x - ZC.from.dx * FC.width,
-                  y: wC.y - ZC.from.dy * FC.height
+                Tk = (0, XF.e)(Ik.origin);
+              Ik.home = {
+                centre: kk ? (0, XF.e)(kk) : {
+                  x: Tk.x - Ik.from.dx * Lk.width,
+                  y: Tk.y - Ik.from.dy * Lk.height
                 },
-                anchor: QC
+                anchor: Xk
               }
             }
-            const PC = ZC.home;
-            let GC = !1;
-            const AC = CC => {
-                GC = !1;
-                let QC = (0, Zz.h)(CC.box, wC / qC, fC / qC, SC);
-                const bC = FC.width / 2;
-                if (nC && Math.abs((0, Zz.d)(ZC.origin).x + QC.x - bC) <= 8 / qC) {
-                  const zC = bC - (0, Zz.d)(ZC.origin).x,
-                    wC = (0, Zz.h)(CC.box, zC, QC.y, SC);
-                  GC = Math.abs(wC.x - zC) < .01, GC && (QC = wC)
+            const Jk = Ik.home;
+            let xk = !1;
+            const Kk = kk => {
+                xk = !1;
+                let Xk = (0, XF.o)(kk.box, Tk / qk, lk / qk, wk);
+                const ik = Lk.width / 2;
+                if (yk && Math.abs((0, XF.e)(Ik.origin).x + Xk.x - ik) <= 8 / qk) {
+                  const Fk = ik - (0, XF.e)(Ik.origin).x,
+                    Tk = (0, XF.o)(kk.box, Fk, Xk.y, wk);
+                  xk = Math.abs(Tk.x - Fk) < .01, xk && (Xk = Tk)
                 }
-                const oC = (0, Zz.o)(ZC.from, QC.x - CC.skew.x, QC.y - CC.skew.y, FC.width, FC.height);
-                ZC.to = CZ(oC), ZC.anchor = CC, zC(ZC.id, ZC.to)
+                const ak = (0, XF.z)(Ik.from, Xk.x - kk.skew.x, Xk.y - kk.skew.y, Lk.width, Lk.height);
+                Ik.to = FI(ak), Ik.anchor = kk, Fk(Ik.id, Ik.to)
               },
-              JC = (0, Zz.h)(PC.anchor.box, wC / qC, fC / qC, SC),
-              IC = bC.current,
-              iC = (0, Zz.d)(ZC.origin),
-              vC = ((0, YC.N)(ZC.id) ? 20 : 6) / qC;
-            if (Math.abs(iC.x + JC.x - PC.centre.x) <= vC && Math.abs(iC.y + JC.y - PC.centre.y) <= vC) ZC.to = {
+              sk = (0, XF.o)(Jk.anchor.box, Tk / qk, lk / qk, wk),
+              Vk = ik.current,
+              zk = (0, XF.e)(Ik.origin),
+              Sk = ((0, nk.N)(Ik.id) ? 20 : 6) / qk;
+            if (Math.abs(zk.x + sk.x - Jk.centre.x) <= Sk && Math.abs(zk.y + sk.y - Jk.centre.y) <= Sk) Ik.to = {
               dx: 0,
               dy: 0
-            }, ZC.anchor = PC.anchor, GC = nC && Math.abs(PC.centre.x - FC.width / 2) < 1, zC(ZC.id, ZC.to);
-            else if (ZC.away) AC(ZC.away);
+            }, Ik.anchor = Jk.anchor, xk = yk && Math.abs(Jk.centre.x - Lk.width / 2) < 1, Fk(Ik.id, Ik.to);
+            else if (Ik.away) Kk(Ik.away);
             else {
-              var eC;
-              AC(PC.anchor), ZC.away = null !== (eC = xC(ZC, oC(ZC.id))) && void 0 !== eC ? eC : PC.anchor, AC(ZC.away)
+              var vk;
+              Kk(Jk.anchor), Ik.away = null !== (vk = Qk(Ik, ak(Ik.id))) && void 0 !== vk ? vk : Jk.anchor, Kk(Ik.away)
             }
-            null === IC || void 0 === IC || IC.classList.add("Shown"), null === IC || void 0 === IC || IC.classList.toggle("Snapped", GC), (CC => {
-              const zC = QC.current;
-              if (zC) {
+            null === Vk || void 0 === Vk || Vk.classList.add("Shown"), null === Vk || void 0 === Vk || Vk.classList.toggle("Snapped", xk), (kk => {
+              const Fk = Xk.current;
+              if (Fk) {
                 const {
-                  skew: ZC,
-                  box: QC
-                } = CC.anchor;
-                zC.style.left = QC.left * qC + "px", zC.style.top = QC.top * qC + "px", zC.style.width = (QC.right - QC.left) * qC + "px", zC.style.height = (QC.bottom - QC.top) * qC + "px", zC.style.translate = `${((CC.to.dx-CC.from.dx)*FC.width+ZC.x)*qC}px ${((CC.to.dy-CC.from.dy)*FC.height+ZC.y)*qC}px`
+                  skew: Ik,
+                  box: Xk
+                } = kk.anchor;
+                Fk.style.left = Xk.left * qk + "px", Fk.style.top = Xk.top * qk + "px", Fk.style.width = (Xk.right - Xk.left) * qk + "px", Fk.style.height = (Xk.bottom - Xk.top) * qk + "px", Fk.style.translate = `${((kk.to.dx-kk.from.dx)*Lk.width+Ik.x)*qk}px ${((kk.to.dy-kk.from.dy)*Lk.height+Ik.y)*qk}px`
               }
-            })(ZC)
+            })(Ik)
           },
-          onPointerUp: CC => {
-            JC(CC, !0)
+          onPointerUp: kk => {
+            sk(kk, !0)
           },
-          onPointerCancel: CC => {
-            JC(CC, !1)
+          onPointerCancel: kk => {
+            sk(kk, !1)
           }
         }
       }
     }
 
-    function ZZ(CC, zC) {
-      return Object.keys(CC).filter((CC => CC !== zC)).map((zC => CC[zC]))
+    function XI(kk, Fk) {
+      return Object.keys(kk).filter((kk => kk !== Fk)).map((Fk => kk[Fk]))
     }
 
-    function QZ(CC) {
-      const zC = [],
-        ZC = zC => (0, YC.N)(zC) && !CC.documentElement.classList.contains((0, wz.y)(zC));
-      for (const nC of CC.querySelectorAll(`[${uC}]`)) {
-        const CC = ZC(nC.getAttribute(uC)) ? nC.querySelector(".ScaleOnHover") : null,
-          QC = (null !== CC && void 0 !== CC ? CC : nC).getBoundingClientRect();
-        (QC.width > 0 || QC.height > 0) && zC.push({
-          id: nC.getAttribute(uC),
+    function TI(kk) {
+      const Fk = [],
+        Ik = Fk => (0, nk.N)(Fk) && !kk.documentElement.classList.contains((0, iF.C)(Fk));
+      for (const yk of kk.querySelectorAll(`[${Nk}]`)) {
+        const kk = Ik(yk.getAttribute(Nk)) ? yk.querySelector(".ScaleOnHover") : null,
+          Xk = (null !== kk && void 0 !== kk ? kk : yk).getBoundingClientRect();
+        (Xk.width > 0 || Xk.height > 0) && Fk.push({
+          id: yk.getAttribute(Nk),
           box: {
-            left: QC.left,
-            top: QC.top,
-            right: QC.right,
-            bottom: QC.bottom
+            left: Xk.left,
+            top: Xk.top,
+            right: Xk.right,
+            bottom: Xk.bottom
           }
         })
       }
-      const QC = CC => (0, Zz.D)(zC.filter((zC => {
+      const Xk = kk => (0, XF.M)(Fk.filter((Fk => {
           let {
-            id: ZC
-          } = zC;
-          return CC(ZC)
-        })).map((CC => {
+            id: Ik
+          } = Fk;
+          return kk(Ik)
+        })).map((kk => {
           let {
-            box: zC
-          } = CC;
-          return zC
+            box: Fk
+          } = kk;
+          return Fk
         }))),
-        wC = {};
-      for (const nC of new Set(zC.map((CC => CC.id)))) wC[nC] = QC((CC => CC === nC));
-      const bC = QC((CC => HC.has(CC)));
-      return bC && (wC.cluster = bC), {
-        boxes: wC,
-        pieces: zC
+        Tk = {};
+      for (const yk of new Set(Fk.map((kk => kk.id)))) Tk[yk] = Xk((kk => kk === yk));
+      const ik = Xk((kk => uk.has(kk)));
+      return ik && (Tk.cluster = ik), {
+        boxes: Tk,
+        pieces: Fk
       }
     }
 
-    function wZ(CC, zC, ZC) {
-      const QC = zC.right - zC.left,
-        wC = zC.bottom - zC.top;
-      return Tz(CC, "cluster", (zC => {
-        const bC = ZC => {
-            zC(ZC);
-            const QC = [...CC.querySelectorAll(`[${uC}]:not(.HudPreviewGhost)`)].filter((CC => HC.has(CC.getAttribute(uC)))).map((CC => {
-                const zC = CC.getBoundingClientRect();
+    function iI(kk, Fk, Ik) {
+      const Xk = Fk.right - Fk.left,
+        Tk = Fk.bottom - Fk.top;
+      return fF(kk, "cluster", (Fk => {
+        const ik = Ik => {
+            Fk(Ik);
+            const Xk = [...kk.querySelectorAll(`[${Nk}]:not(.HudPreviewGhost)`)].filter((kk => uk.has(kk.getAttribute(Nk)))).map((kk => {
+                const Fk = kk.getBoundingClientRect();
                 return {
-                  left: zC.left,
-                  top: zC.top,
-                  right: zC.right,
-                  bottom: zC.bottom
+                  left: Fk.left,
+                  top: Fk.top,
+                  right: Fk.right,
+                  bottom: Fk.bottom
                 }
               })),
-              wC = (0, Zz.D)(QC);
-            return wC ? {
-              w: wC.right - wC.left,
-              h: wC.bottom - wC.top
+              Tk = (0, XF.M)(Xk);
+            return Tk ? {
+              w: Tk.right - Tk.left,
+              h: Tk.bottom - Tk.top
             } : null
           },
-          nC = CC => !CC || CC.w <= QC && CC.h <= wC,
-          fC = bC(1),
-          oC = bC(YC.i);
-        if (!fC || nC(oC)) return YC.i;
-        const qC = (CC, zC, ZC) => zC > CC ? 1 + (ZC - CC) * (YC.i - 1) / (zC - CC) : YC.i;
-        let FC = Math.floor(Math.min(YC.i, qC(fC.w, oC.w, QC), qC(fC.h, oC.h, wC)) / ZC + 1e-6) * ZC;
-        for (; FC > 1 && !nC(bC(FC));) FC = Math.round(100 * (FC - ZC)) / 100;
-        return Math.max(1, FC)
+          yk = kk => !kk || kk.w <= Xk && kk.h <= Tk,
+          lk = ik(1),
+          ak = ik(nk.m);
+        if (!lk || yk(ak)) return nk.m;
+        const qk = (kk, Fk, Ik) => Fk > kk ? 1 + (Ik - kk) * (nk.m - 1) / (Fk - kk) : nk.m;
+        let Lk = Math.floor(Math.min(nk.m, qk(lk.w, ak.w, Xk), qk(lk.h, ak.h, Tk)) / Ik + 1e-6) * Ik;
+        for (; Lk > 1 && !yk(ik(Lk));) Lk = Math.round(100 * (Lk - Ik)) / 100;
+        return Math.max(1, Lk)
       }))
     }
 
-    function bZ(CC) {
-      Xz(document, CC, {
+    function yI(kk) {
+      UF(document, kk, {
         keysAbove: !1
       });
-      const zC = parseFloat(getComputedStyle(CC.documentElement).getPropertyValue("--touch-hotbar-ends-spare")),
-        ZC = Number.isFinite(zC) && zC < 0;
-      return Xz(document, CC, {
-        keysAbove: ZC
-      }), ZC
+      const Fk = parseFloat(getComputedStyle(kk.documentElement).getPropertyValue("--touch-hotbar-ends-spare")),
+        Ik = Number.isFinite(Fk) && Fk < 0;
+      return UF(document, kk, {
+        keysAbove: Ik
+      }), Ik
     }
 
-    function nZ(CC, zC) {
+    function lI(kk, Fk) {
       let {
-        layout: ZC,
-        orientation: QC,
-        viewport: bC,
-        replicaKey: nC,
-        joystickFixed: fC,
-        busy: oC
-      } = zC;
-      const [qC, FC] = (0, wC.useState)(null), [WC, NC] = (0, wC.useState)({
+        layout: Ik,
+        orientation: Xk,
+        viewport: ik,
+        replicaKey: yk,
+        joystickFixed: lk,
+        busy: ak
+      } = Fk;
+      const [qk, Lk] = (0, Tk.useState)(null), [tk, Zk] = (0, Tk.useState)({
         boxes: {},
         pieces: []
-      }), [MC, gC] = (0, wC.useState)({
+      }), [jk, ek] = (0, Tk.useState)({
         top: 0,
         right: 0,
         bottom: 0,
         left: 0
-      }), [SC, pC] = (0, wC.useState)(!1), [PC, GC] = (0, wC.useState)(!1), [RC, AC] = (0, wC.useState)(!1), xC = (0, wC.useCallback)((CC => {
-        GC(CC), CC && AC(!0)
-      }), []), JC = ZC.hudLayouts[QC].hudSafe;
-      (0, wC.useLayoutEffect)((() => {
-        const zC = CC.current.contentDocument;
-        zC.open(), zC.write("<!DOCTYPE html><html><head></head><body></body></html>"), zC.close(), FC(zC)
-      }), [CC]);
-      const IC = (0, wC.useCallback)((() => {
-          qC && ((0, Qz.F)(qC), NC(QZ(qC)), gC(function(CC, zC) {
-            const ZC = sz(CC),
-              [QC, wC, bC, nC] = zC ? (0, wz.r)(zC, window.innerWidth, window.innerHeight, ZC) : ZC;
+      }), [wk, Hk] = (0, Tk.useState)(!1), [Jk, xk] = (0, Tk.useState)(!1), [Pk, Kk] = (0, Tk.useState)(!1), Qk = (0, Tk.useCallback)((kk => {
+        xk(kk), kk && Kk(!0)
+      }), []), sk = Ik.hudLayouts[Xk].hudSafe;
+      (0, Tk.useLayoutEffect)((() => {
+        const Fk = kk.current.contentDocument;
+        Fk.open(), Fk.write("<!DOCTYPE html><html><head></head><body></body></html>"), Fk.close(), Lk(Fk)
+      }), [kk]);
+      const Vk = (0, Tk.useCallback)((() => {
+          qk && ((0, TF.y)(qk), Zk(TI(qk)), ek(function(kk, Fk) {
+            const Ik = WF(kk),
+              [Xk, Tk, ik, yk] = Fk ? (0, iF.t)(Fk, window.innerWidth, window.innerHeight, Ik) : Ik;
             return {
-              top: QC,
-              right: wC,
-              bottom: bC,
-              left: nC
+              top: Xk,
+              right: Tk,
+              bottom: ik,
+              left: yk
             }
-          }(qC, JC)))
-        }), [qC, JC]),
-        iC = (0, wC.useCallback)((() => {
-          qC && pC(bZ(qC))
-        }), [qC]),
-        vC = (0, wC.useRef)((() => {}));
-      return vC.current = () => {
-        iC(), oC() || IC()
-      }, (0, wC.useLayoutEffect)((() => {
-        if (qC) return lz(document, qC, (() => {
-          vC.current()
-        }), xC)
-      }), [qC, xC]), (0, wC.useLayoutEffect)(iC, [iC, bC]), (0, wC.useLayoutEffect)((() => {
-        qC && (Xz(document, qC, {
-          keysAbove: SC
-        }), uz(document, qC, ZC, QC, fC), iC(), IC())
-      }), [qC, ZC, QC, SC, nC, fC, bC, IC, iC]), (0, wC.useEffect)((() => {
-        var CC;
-        if (!qC) return;
-        const zC = new ResizeObserver((() => {
-          oC() || IC()
+          }(qk, sk)))
+        }), [qk, sk]),
+        zk = (0, Tk.useCallback)((() => {
+          qk && Hk(yI(qk))
+        }), [qk]),
+        Sk = (0, Tk.useRef)((() => {}));
+      return Sk.current = () => {
+        zk(), ak() || Vk()
+      }, (0, Tk.useLayoutEffect)((() => {
+        if (qk) return RF(document, qk, (() => {
+          Sk.current()
+        }), Qk)
+      }), [qk, Qk]), (0, Tk.useLayoutEffect)(zk, [zk, ik]), (0, Tk.useLayoutEffect)((() => {
+        qk && (UF(document, qk, {
+          keysAbove: wk
+        }), NF(document, qk, Ik, Xk, lk), zk(), Vk())
+      }), [qk, Ik, Xk, wk, yk, lk, ik, Vk, zk]), (0, Tk.useEffect)((() => {
+        var kk;
+        if (!qk) return;
+        const Fk = new ResizeObserver((() => {
+          ak() || Vk()
         }));
-        for (const ZC of qC.querySelectorAll(`[${uC}]`)) zC.observe(ZC);
-        return null === (CC = qC.fonts) || void 0 === CC || CC.ready.then(IC), () => {
-          zC.disconnect()
+        for (const Ik of qk.querySelectorAll(`[${Nk}]`)) Fk.observe(Ik);
+        return null === (kk = qk.fonts) || void 0 === kk || kk.ready.then(Vk), () => {
+          Fk.disconnect()
         }
-      }), [qC, IC, oC, nC]), {
-        doc: qC,
-        boxes: WC.boxes,
-        pieces: WC.pieces,
-        insets: MC,
-        keysAbove: SC,
-        ready: PC,
-        settled: RC
+      }), [qk, Vk, ak, yk]), {
+        doc: qk,
+        boxes: tk.boxes,
+        pieces: tk.pieces,
+        insets: jk,
+        keysAbove: wk,
+        ready: Jk,
+        settled: Pk
       }
     }
-    const fZ = [
+    const aI = [
         ["hotbar", "arrows"],
         ["hotbar", "inventory"]
       ],
-      oZ = (CC, zC, ZC) => {
-        const QC = CC => (0, Qz.B)(CC, ZC.hudElements[CC]);
-        return "cluster" === CC && HC.has(zC) || "cluster" === zC && HC.has(CC) || "menu" === CC && QC(zC) || "menu" === zC && QC(CC) || fZ.some((QC => {
-          let [wC, bC] = QC;
-          const nC = ZC.hudElements.hotbar,
-            fC = "inventory" === bC && ZC.hudLocked.includes(bC) && void 0 !== nC && !(0, YC.J)(nC);
-          return (CC === wC && zC === bC || CC === bC && zC === wC) && !fC
+      qI = (kk, Fk, Ik) => {
+        const Xk = kk => (0, TF.v)(kk, Ik.hudElements[kk]);
+        return "cluster" === kk && uk.has(Fk) || "cluster" === Fk && uk.has(kk) || "menu" === kk && Xk(Fk) || "menu" === Fk && Xk(kk) || aI.some((Xk => {
+          let [Tk, ik] = Xk;
+          const yk = Ik.hudElements.hotbar,
+            lk = "inventory" === ik && Ik.hudLocked.includes(ik) && void 0 !== yk && !(0, nk.L)(yk);
+          return (kk === Tk && Fk === ik || kk === ik && Fk === Tk) && !lk
         }))
       };
-    const qZ = ["Above", "Below", "Left", "Right"];
+    const LI = ["Above", "Below", "Left", "Right"];
 
-    function FZ(CC, zC, ZC, QC, wC) {
-      const bC = ZC[CC],
-        nC = (bC.left + bC.right) / 2,
-        fC = (bC.top + bC.bottom) / 2,
-        oC = (7.5 * zC.length + 14) / QC,
-        qC = 18 / QC,
-        FC = {
+    function tI(kk, Fk, Ik, Xk, Tk) {
+      const ik = Ik[kk],
+        yk = (ik.left + ik.right) / 2,
+        lk = (ik.top + ik.bottom) / 2,
+        ak = (7.5 * Fk.length + 14) / Xk,
+        qk = 18 / Xk,
+        Lk = {
           Above: {
-            left: nC - oC / 2,
-            top: bC.top - qC,
-            right: nC + oC / 2,
-            bottom: bC.top
+            left: yk - ak / 2,
+            top: ik.top - qk,
+            right: yk + ak / 2,
+            bottom: ik.top
           },
           Below: {
-            left: nC - oC / 2,
-            top: bC.bottom,
-            right: nC + oC / 2,
-            bottom: bC.bottom + qC
+            left: yk - ak / 2,
+            top: ik.bottom,
+            right: yk + ak / 2,
+            bottom: ik.bottom + qk
           },
           Left: {
-            left: bC.left - oC,
-            top: fC - qC / 2,
-            right: bC.left,
-            bottom: fC + qC / 2
+            left: ik.left - ak,
+            top: lk - qk / 2,
+            right: ik.left,
+            bottom: lk + qk / 2
           },
           Right: {
-            left: bC.right,
-            top: fC - qC / 2,
-            right: bC.right + oC,
-            bottom: fC + qC / 2
+            left: ik.right,
+            top: lk - qk / 2,
+            right: ik.right + ak,
+            bottom: lk + qk / 2
           }
         },
-        WC = ZZ(ZC, CC),
-        NC = {
+        tk = XI(Ik, kk),
+        Zk = {
           left: 0,
           top: 0,
-          right: wC.width,
-          bottom: wC.height
+          right: Tk.width,
+          bottom: Tk.height
         };
-      return qZ[(0, Zz.n)(qZ.map((CC => FC[CC])), WC, {
-        bounds: NC
+      return LI[(0, XF.v)(LI.map((kk => Lk[kk])), tk, {
+        bounds: Zk
       })]
     }
 
-    function WZ() {
-      const [CC, zC] = (0, Cz.c)();
-      return (0, wC.useMemo)((() => ({
-        width: CC,
-        height: zC
-      })), [CC, zC])
+    function ZI() {
+      const [kk, Fk] = (0, FF.c)();
+      return (0, Tk.useMemo)((() => ({
+        width: kk,
+        height: Fk
+      })), [kk, Fk])
     }
 
-    function NZ(CC) {
-      var zC;
+    function jI(kk) {
+      var Fk;
       const {
-        layout: ZC,
-        orientation: bC,
-        selected: nC,
-        onSelect: fC,
-        onMove: qC,
-        canMove: FC,
-        actionButtons: WC,
-        joystickFixed: NC,
-        presence: MC,
-        keyNames: SC,
-        maxHeight: pC,
-        fill: PC = !1,
-        apiRef: GC
-      } = CC, {
-        t: RC
-      } = (0, QC.y)(), AC = WZ(), JC = (null !== (zC = (0, gC.h)("maxAuraLevel")) && void 0 !== zC ? zC : 0) > 0, IC = ZC.hudLayouts[bC], iC = (0, wC.useRef)(null), vC = (0, wC.useRef)(null), eC = (0, wC.useRef)(null), hC = (0, wC.useRef)(null), dC = (0, wC.useRef)(null), mC = (0, wC.useRef)(null), EC = (0, zz.e)(iC).width, lC = PC ? 1 : EC > 0 ? (0, Zz.u)(EC, AC.width, AC.height, pC) : 0, XC = (0, wC.useRef)((() => !1)), cC = (0, wC.useCallback)((() => XC.current()), []), {
-        doc: uC,
-        boxes: sC,
-        pieces: TC,
-        insets: aC,
-        keysAbove: tC,
-        ready: DC,
-        settled: jC
-      } = nZ(eC, {
-        layout: ZC,
-        orientation: bC,
-        viewport: AC,
-        replicaKey: `${WC}:${NC}:${JC}`,
-        joystickFixed: NC,
-        busy: cC
-      }), yC = (0, wC.useCallback)((CC => {
-        uC && uz(document, uC, CC, bC, NC)
-      }), [uC, bC, NC]), LC = (0, wC.useCallback)((CC => uC && jC ? (yC(CC), bZ(uC), function(CC) {
+        layout: Ik,
+        orientation: ik,
+        selected: yk,
+        onSelect: lk,
+        onMove: qk,
+        canMove: Lk,
+        actionButtons: tk,
+        joystickFixed: Zk,
+        presence: jk,
+        keyNames: wk,
+        maxHeight: Hk,
+        fill: Jk = !1,
+        apiRef: xk
+      } = kk, {
+        t: Pk
+      } = (0, Xk.y)(), Kk = ZI(), sk = (null !== (Fk = (0, ek.j)("maxAuraLevel")) && void 0 !== Fk ? Fk : 0) > 0, Vk = Ik.hudLayouts[ik], zk = (0, Tk.useRef)(null), Sk = (0, Tk.useRef)(null), vk = (0, Tk.useRef)(null), Ek = (0, Tk.useRef)(null), Gk = (0, Tk.useRef)(null), pk = (0, Tk.useRef)(null), bk = (0, IF.b)(zk).width, Rk = Jk ? 1 : bk > 0 ? (0, XF.E)(bk, Kk.width, Kk.height, Hk) : 0, Uk = (0, Tk.useRef)((() => !1)), Ck = (0, Tk.useCallback)((() => Uk.current()), []), {
+        doc: Nk,
+        boxes: Wk,
+        pieces: fk,
+        insets: Bk,
+        keysAbove: dk,
+        ready: Yk,
+        settled: Ak
+      } = lI(vk, {
+        layout: Ik,
+        orientation: ik,
+        viewport: Kk,
+        replicaKey: `${tk}:${Zk}:${sk}`,
+        joystickFixed: Zk,
+        busy: Ck
+      }), gk = (0, Tk.useCallback)((kk => {
+        Nk && NF(document, Nk, kk, ik, Zk)
+      }), [Nk, ik, Zk]), mk = (0, Tk.useCallback)((kk => Nk && Ak ? (gk(kk), yI(Nk), function(kk) {
         let {
-          boxes: zC,
-          pieces: ZC
-        } = CC;
-        const QC = ZC.find((CC => "inventory" === CC.id));
-        if (!QC || !zC.inventory) return zC;
-        const wC = (0, Zz.d)(zC.inventory),
-          bC = jz(QC.box) / 2,
-          nC = (QC.box.bottom - QC.box.top) / 2;
+          boxes: Fk,
+          pieces: Ik
+        } = kk;
+        const Xk = Ik.find((kk => "inventory" === kk.id));
+        if (!Xk || !Fk.inventory) return Fk;
+        const Tk = (0, XF.e)(Fk.inventory),
+          ik = AF(Xk.box) / 2,
+          yk = (Xk.box.bottom - Xk.box.top) / 2;
         return {
-          ...zC,
+          ...Fk,
           inventory: {
-            left: wC.x - bC,
-            top: wC.y - nC,
-            right: wC.x + bC,
-            bottom: wC.y + nC
+            left: Tk.x - ik,
+            top: Tk.y - yk,
+            right: Tk.x + ik,
+            bottom: Tk.y + yk
           }
         }
-      }(QZ(uC))) : null), [uC, jC, yC]), UC = (0, wC.useCallback)((CC => !!uC && (yC(CC), bZ(uC))), [uC, yC]), BC = (0, wC.useRef)(null), OC = (0, wC.useRef)(null), VC = (0, wC.useRef)(ZC);
-      VC.current = ZC;
-      const Cz = (0, wC.useCallback)((() => {
-        null !== BC.current && (cancelAnimationFrame(BC.current), BC.current = null)
+      }(TI(Nk))) : null), [Nk, Ak, gk]), hk = (0, Tk.useCallback)((kk => !!Nk && (gk(kk), yI(Nk))), [Nk, gk]), rk = (0, Tk.useRef)(null), Dk = (0, Tk.useRef)(null), kF = (0, Tk.useRef)(Ik);
+      kF.current = Ik;
+      const FF = (0, Tk.useCallback)((() => {
+        null !== rk.current && (cancelAnimationFrame(rk.current), rk.current = null)
       }), []);
-      (0, wC.useEffect)((() => Cz), [ZC, Cz]);
+      (0, Tk.useEffect)((() => FF), [Ik, FF]);
       const {
-        lockable: bz
-      } = CC, nz = (0, wC.useCallback)((CC => {
-        if (yC(CC), !jC || 0 === ZC.hudLayouts[bC].hudLocked.length) return;
-        const zC = ZC;
-        Cz(), BC.current = requestAnimationFrame((() => {
-          var ZC;
-          if (BC.current = null, VC.current !== zC) return;
-          const QC = (null === (ZC = OC.current) || void 0 === ZC ? void 0 : ZC.from) === zC ? OC.current.boxes : LC(zC);
-          QC && (OC.current = {
-            from: zC,
-            boxes: QC
-          }), yC(QC ? Lz(zC, CC, bC, AC, LC, {
-            canKeep: bz,
+        lockable: yF
+      } = kk, lF = (0, Tk.useCallback)((kk => {
+        if (gk(kk), !Ak || 0 === Ik.hudLayouts[ik].hudLocked.length) return;
+        const Fk = Ik;
+        FF(), rk.current = requestAnimationFrame((() => {
+          var Ik;
+          if (rk.current = null, kF.current !== Fk) return;
+          const Xk = (null === (Ik = Dk.current) || void 0 === Ik ? void 0 : Ik.from) === Fk ? Dk.current.boxes : mk(Fk);
+          Xk && (Dk.current = {
+            from: Fk,
+            boxes: Xk
+          }), gk(Xk ? mF(Fk, kk, ik, Kk, mk, {
+            canKeep: yF,
             passes: 1,
-            before: QC,
-            keysAboveOf: UC
-          }) : CC)
+            before: Xk,
+            keysAboveOf: hk
+          }) : kk)
         }))
-      }), [yC, jC, ZC, bC, AC, LC, UC, bz, Cz]), fz = zZ({
-        preview: (CC, zC) => {
-          zC ? nz((0, YC.db)(ZC, bC, CC, zC)) : (Cz(), yC(ZC))
+      }), [gk, Ak, Ik, ik, Kk, mk, hk, yF, FF]), aF = II({
+        preview: (kk, Fk) => {
+          Fk ? lF((0, nk.jb)(Ik, ik, kk, Fk)) : (FF(), gk(Ik))
         },
-        stageRef: vC,
-        ringRef: hC,
-        centreLineRef: dC,
-        snapCentre: ZC.hudSnapCentre,
-        ready: jC,
-        measure: CC => {
-          var zC;
-          return uC && DC && null !== (zC = QZ(uC).boxes[CC]) && void 0 !== zC ? zC : null
+        stageRef: Sk,
+        ringRef: Ek,
+        centreLineRef: Gk,
+        snapCentre: Ik.hudSnapCentre,
+        ready: Ak,
+        measure: kk => {
+          var Fk;
+          return Nk && Yk && null !== (Fk = TI(Nk).boxes[kk]) && void 0 !== Fk ? Fk : null
         },
-        k: lC,
-        viewport: AC,
-        boxes: sC,
-        pieces: TC,
-        selected: nC,
-        insets: aC,
-        layout: IC,
-        canMove: FC,
-        onSelect: fC,
-        onMove: (CC, zC, ZC) => {
-          Cz(), qC(CC, zC, ZC)
+        k: Rk,
+        viewport: Kk,
+        boxes: Wk,
+        pieces: fk,
+        selected: yk,
+        insets: Bk,
+        layout: Vk,
+        canMove: Lk,
+        onSelect: lk,
+        onMove: (kk, Fk, Ik) => {
+          FF(), qk(kk, Fk, Ik)
         }
       });
-      (0, wC.useLayoutEffect)((() => {
-        XC.current = fz.busy
-      }), [fz.busy]);
-      const oz = (0, wC.useRef)([]),
-        qz = (0, wC.useRef)(IC.hudElements);
-      (0, wC.useEffect)((() => {
-        for (const wC of Object.keys(IC.hudElements)) {
-          var CC, zC, ZC, QC;
-          (null !== (CC = null === (zC = IC.hudElements[wC]) || void 0 === zC ? void 0 : zC[2]) && void 0 !== CC ? CC : 1) > (null !== (ZC = null === (QC = qz.current[wC]) || void 0 === QC ? void 0 : QC[2]) && void 0 !== ZC ? ZC : 1) && FC(wC) && !(0, Qz.B)(wC, IC.hudElements[wC]) && oz.current.push(wC)
+      (0, Tk.useLayoutEffect)((() => {
+        Uk.current = aF.busy
+      }), [aF.busy]);
+      const qF = (0, Tk.useRef)([]),
+        LF = (0, Tk.useRef)(Vk.hudElements);
+      (0, Tk.useEffect)((() => {
+        for (const Tk of Object.keys(Vk.hudElements)) {
+          var kk, Fk, Ik, Xk;
+          (null !== (kk = null === (Fk = Vk.hudElements[Tk]) || void 0 === Fk ? void 0 : Fk[2]) && void 0 !== kk ? kk : 1) > (null !== (Ik = null === (Xk = LF.current[Tk]) || void 0 === Xk ? void 0 : Xk[2]) && void 0 !== Ik ? Ik : 1) && Lk(Tk) && !(0, TF.v)(Tk, Vk.hudElements[Tk]) && qF.current.push(Tk)
         }
-        qz.current = IC.hudElements
-      }), [IC.hudElements, FC]), (0, wC.useEffect)((() => {
-        if (!DC) return;
-        const CC = oz.current.shift(),
-          zC = CC && sC[CC];
-        if (!CC || !zC || fz.busy()) return;
-        const ZC = (0, Zz.A)(zC, (0, Zz.w)(AC.width, AC.height, aC));
-        if (0 !== ZC.x || 0 !== ZC.y) {
-          var QC;
-          const [zC, wC] = null !== (QC = IC.hudElements[CC]) && void 0 !== QC ? QC : [0, 0];
-          qC(CC, zC + ZC.x / AC.width, wC + ZC.y / AC.height)
+        LF.current = Vk.hudElements
+      }), [Vk.hudElements, Lk]), (0, Tk.useEffect)((() => {
+        if (!Yk) return;
+        const kk = qF.current.shift(),
+          Fk = kk && Wk[kk];
+        if (!kk || !Fk || aF.busy()) return;
+        const Ik = (0, XF.L)(Fk, (0, XF.H)(Kk.width, Kk.height, Bk));
+        if (0 !== Ik.x || 0 !== Ik.y) {
+          var Xk;
+          const [Fk, Tk] = null !== (Xk = Vk.hudElements[kk]) && void 0 !== Xk ? Xk : [0, 0];
+          qk(kk, Fk + Ik.x / Kk.width, Tk + Ik.y / Kk.height)
         }
-      }), [sC, DC]), (0, wC.useImperativeHandle)(GC, (() => ({
-        setScale: (CC, zC) => {
-          nz((0, YC.db)(ZC, bC, CC, {
-            scale: zC
+      }), [Wk, Yk]), (0, Tk.useImperativeHandle)(xk, (() => ({
+        setScale: (kk, Fk) => {
+          lF((0, nk.jb)(Ik, ik, kk, {
+            scale: Fk
           }))
         },
-        setOpacity: CC => {
-          yC({
-            ...ZC,
-            hudKeyOpacity: CC
+        setOpacity: kk => {
+          gk({
+            ...Ik,
+            hudKeyOpacity: kk
           })
         },
-        keepLocks: (CC, zC) => (Cz(), Lz(CC, zC, bC, AC, LC, {
-          canKeep: bz,
-          keysAboveOf: UC
+        keepLocks: (kk, Fk) => (FF(), mF(kk, Fk, ik, Kk, mk, {
+          canKeep: yF,
+          keysAboveOf: hk
         })),
-        setSafe: CC => {
-          nz((0, YC.ib)(ZC, bC, CC)), mC.current && (mC.current.style.inset = (0, wz.r)(CC, AC.width, AC.height, sz(null !== uC && void 0 !== uC ? uC : document)).map((CC => CC * lC + "px")).join(" "))
+        setSafe: kk => {
+          lF((0, nk.pb)(Ik, ik, kk)), pk.current && (pk.current.style.inset = (0, iF.t)(kk, Kk.width, Kk.height, WF(null !== Nk && void 0 !== Nk ? Nk : document)).map((kk => kk * Rk + "px")).join(" "))
         }
-      })), [yC, nz, LC, UC, Cz, bz, uC, ZC, bC, AC, lC]);
-      const Fz = new Set(Object.keys(IC.hudElements).filter((CC => (0, YC.u)(IC.hudElements, CC)))),
-        Wz = nC ? sC[nC] : void 0,
-        Nz = nC ? rC(nC, WC, RC, SC) : "",
-        Mz = (0, ez.h)(AC.width, AC.height),
-        gz = nC ? function(CC, zC, ZC, QC) {
-          const wC = CC => (0, YC.u)(ZC.hudElements, CC) || (0, Qz.x)(CC, ZC, QC);
-          if (wC(CC)) return [];
-          const bC = zC.filter((zC => {
+      })), [gk, lF, mk, hk, FF, yF, Nk, Ik, ik, Kk, Rk]);
+      const tF = new Set(Object.keys(Vk.hudElements).filter((kk => (0, nk.u)(Vk.hudElements, kk)))),
+        ZF = yk ? Wk[yk] : void 0,
+        jF = yk ? ck(yk, tk, Pk, wk) : "",
+        eF = (0, vF.g)(Kk.width, Kk.height),
+        wF = yk ? function(kk, Fk, Ik, Xk) {
+          const Tk = kk => (0, nk.u)(Ik.hudElements, kk) || (0, TF.r)(kk, Ik, Xk);
+          if (Tk(kk)) return [];
+          const ik = Fk.filter((Fk => {
               let {
-                id: ZC
-              } = zC;
-              return "cluster" === CC ? HC.has(ZC) : ZC === CC
+                id: Ik
+              } = Fk;
+              return "cluster" === kk ? uk.has(Ik) : Ik === kk
             })),
-            nC = new Set;
-          for (const fC of zC) fC.id === CC || nC.has(fC.id) || oZ(CC, fC.id, ZC) || wC(fC.id) || void 0 === ZC.hudElements[CC] && void 0 === ZC.hudElements[fC.id] || bC.some((CC => {
+            yk = new Set;
+          for (const lk of Fk) lk.id === kk || yk.has(lk.id) || qI(kk, lk.id, Ik) || Tk(lk.id) || void 0 === Ik.hudElements[kk] && void 0 === Ik.hudElements[lk.id] || ik.some((kk => {
             let {
-              id: zC,
-              box: ZC
-            } = CC;
-            return zC !== fC.id && (0, Zz.g)(ZC, fC.box, 2)
-          })) && nC.add(fC.id);
-          return [...nC]
-        }(nC, TC, IC, Mz) : [],
-        Sz = new Set((0, Qz.w)(IC.hudElements)),
-        pz = (0, Qz.L)(IC, (0, Qz.K)(MC.rowIcons)).state,
-        Pz = gz.join(),
-        Gz = (0, wC.useRef)(CC.onReady);
-      Gz.current = CC.onReady, (0, wC.useEffect)((() => {
-        var CC;
-        null === (CC = Gz.current) || void 0 === CC || CC.call(Gz, jC)
-      }), [jC]);
-      const Rz = (0, wC.useRef)(CC.onMeasured);
-      (0, wC.useLayoutEffect)((() => {
-        Rz.current = CC.onMeasured
-      })), (0, wC.useEffect)((() => {
-        var CC;
-        const zC = uC ? {
-          hotbar: az(uC, iz),
-          cluster: wZ(uC, (0, Zz.w)(AC.width, AC.height, aC), iz)
+              id: Fk,
+              box: Ik
+            } = kk;
+            return Fk !== lk.id && (0, XF.l)(Ik, lk.box, 2)
+          })) && yk.add(lk.id);
+          return [...yk]
+        }(yk, fk, Vk, eF) : [],
+        HF = new Set((0, TF.q)(Vk.hudElements)),
+        JF = (0, TF.H)(Vk, (0, TF.G)(jk.rowIcons)).state,
+        xF = wF.join(),
+        PF = (0, Tk.useRef)(kk.onReady);
+      PF.current = kk.onReady, (0, Tk.useEffect)((() => {
+        var kk;
+        null === (kk = PF.current) || void 0 === kk || kk.call(PF, Ak)
+      }), [Ak]);
+      const KF = (0, Tk.useRef)(kk.onMeasured);
+      (0, Tk.useLayoutEffect)((() => {
+        KF.current = kk.onMeasured
+      })), (0, Tk.useEffect)((() => {
+        var kk;
+        const Fk = Nk ? {
+          hotbar: BF(Nk, SF),
+          cluster: iI(Nk, (0, XF.H)(Kk.width, Kk.height, Bk), SF)
         } : {};
-        null === (CC = Rz.current) || void 0 === CC || CC.call(Rz, sC, Pz ? Pz.split(",") : [], zC)
-      }), [sC, Pz, uC, AC, aC]);
-      const Az = CC => ({
-        left: CC.left * lC,
-        top: CC.top * lC,
-        width: (CC.right - CC.left) * lC,
-        height: (CC.bottom - CC.top) * lC
+        null === (kk = KF.current) || void 0 === kk || kk.call(KF, Wk, xF ? xF.split(",") : [], Fk)
+      }), [Wk, xF, Nk, Kk, Bk]);
+      const QF = kk => ({
+        left: kk.left * Rk,
+        top: kk.top * Rk,
+        width: (kk.right - kk.left) * Rk,
+        height: (kk.bottom - kk.top) * Rk
       });
-      return (0, xC.jsx)("div", {
-        ref: iC,
-        className: oC()("HudPreviewBox", {
-          Fill: PC
+      return (0, Qk.jsx)("div", {
+        ref: zk,
+        className: ak()("HudPreviewBox", {
+          Fill: Jk
         }),
         style: {
-          height: AC.height * lC
+          height: Kk.height * Rk
         },
-        children: (0, xC.jsxs)("div", {
-          ref: vC,
+        children: (0, Qk.jsxs)("div", {
+          ref: Sk,
           className: "HudPreviewStage",
           style: {
-            width: AC.width * lC,
-            height: AC.height * lC
+            width: Kk.width * Rk,
+            height: Kk.height * Rk
           },
-          children: [(0, xC.jsx)("iframe", {
-            ref: eC,
+          children: [(0, Qk.jsx)("iframe", {
+            ref: vk,
             className: "HudPreviewFrame",
-            title: RC("hudLayout:preview"),
+            title: Pk("hudLayout:preview"),
             "aria-hidden": !0,
             tabIndex: -1,
             style: {
-              width: AC.width,
-              height: AC.height,
-              transform: `scale(${lC})`
+              width: Kk.width,
+              height: Kk.height,
+              transform: `scale(${Rk})`
             }
-          }), uC && (0, kC.createPortal)((0, xC.jsx)(Jz, {
-            presence: MC,
-            portraitPhone: Mz,
-            hidden: Fz,
-            actionButtons: WC,
-            joystickFixed: NC,
-            keysAbove: tC,
-            auraBar: JC,
-            trayState: pz,
-            moved: Sz
-          }), uC.body), (0, xC.jsxs)("div", {
+          }), Nk && (0, Mk.createPortal)((0, Qk.jsx)(VF, {
+            presence: jk,
+            portraitPhone: eF,
+            hidden: tF,
+            actionButtons: tk,
+            joystickFixed: Zk,
+            keysAbove: dk,
+            auraBar: sk,
+            trayState: JF,
+            moved: HF
+          }), Nk.body), (0, Qk.jsxs)("div", {
             className: "HudPreviewOverlay",
-            ...fz.handlers,
-            children: [(0, xC.jsx)("div", {
-              ref: mC,
+            ...aF.handlers,
+            children: [(0, Qk.jsx)("div", {
+              ref: pk,
               className: "HudPreviewSafeZone",
               style: {
-                top: aC.top * lC,
-                right: aC.right * lC,
-                bottom: aC.bottom * lC,
-                left: aC.left * lC
+                top: Bk.top * Rk,
+                right: Bk.right * Rk,
+                bottom: Bk.bottom * Rk,
+                left: Bk.left * Rk
               }
-            }), TC.map(((CC, zC) => {
+            }), fk.map(((kk, Fk) => {
               let {
-                id: ZC,
-                box: QC
-              } = CC;
-              return (0, xC.jsx)("div", {
+                id: Ik,
+                box: Xk
+              } = kk;
+              return (0, Qk.jsx)("div", {
                 className: "HudPreviewHandle",
-                style: Az((0, Zz.l)(QC, 40 / lC))
-              }, `${ZC}:${zC}`)
-            })), IC.hudLocked.map((CC => {
-              const zC = sC[CC];
-              return zC && (0, xC.jsx)("span", {
+                style: QF((0, XF.s)(Xk, 40 / Rk))
+              }, `${Ik}:${Fk}`)
+            })), Vk.hudLocked.map((kk => {
+              const Fk = Wk[kk];
+              return Fk && (0, Qk.jsx)("span", {
                 className: "HudPreviewLockBadge",
                 style: {
-                  left: zC.right * lC,
-                  top: zC.top * lC
+                  left: Fk.right * Rk,
+                  top: Fk.top * Rk
                 },
-                children: (0, xC.jsx)(KC.c, {
+                children: (0, Qk.jsx)(Ok.e, {
                   name: "lock"
                 })
-              }, CC)
-            })), (0, xC.jsx)("div", {
-              ref: dC,
+              }, kk)
+            })), (0, Qk.jsx)("div", {
+              ref: Gk,
               className: "HudPreviewCentreLine",
               style: {
-                left: AC.width / 2 * lC
+                left: Kk.width / 2 * Rk
               }
-            }), nC && Wz && (0, xC.jsx)("div", {
-              ref: hC,
-              className: oC()("HudPreviewRing", {
-                Fixed: !FC(nC),
-                Overlap: gz.length > 0
+            }), yk && ZF && (0, Qk.jsx)("div", {
+              ref: Ek,
+              className: ak()("HudPreviewRing", {
+                Fixed: !Lk(yk),
+                Overlap: wF.length > 0
               }),
-              style: Az(Wz),
-              children: (0, xC.jsx)("span", {
-                className: oC()("HudPreviewRingLabel", FZ(nC, Nz, sC, lC, AC)),
-                children: Nz
+              style: QF(ZF),
+              children: (0, Qk.jsx)("span", {
+                className: ak()("HudPreviewRingLabel", tI(yk, jF, Wk, Rk, Kk)),
+                children: jF
               })
             })]
           })]
@@ -1899,1659 +1899,1659 @@ export const modules = {
       })
     }
 
-    function MZ(CC, zC) {
-      (0, wC.useEffect)((() => {
-        var ZC;
-        null === (ZC = CC.current) || void 0 === ZC || ZC.toggleAttribute("inert", zC)
-      }), [CC, zC])
+    function eI(kk, Fk) {
+      (0, Tk.useEffect)((() => {
+        var Ik;
+        null === (Ik = kk.current) || void 0 === Ik || Ik.toggleAttribute("inert", Fk)
+      }), [kk, Fk])
     }
-    const gZ = "hudFullScreen";
+    const wI = "hudFullScreen";
 
-    function SZ(CC) {
+    function HI(kk) {
       let {
-        onScale: zC,
-        onHidden: ZC,
-        onReset: bC,
-        locked: nC,
-        lockable: fC,
-        onLocked: oC,
-        onClose: FC,
-        ...WC
-      } = CC;
+        onScale: Fk,
+        onHidden: Ik,
+        onReset: ik,
+        locked: yk,
+        lockable: lk,
+        onLocked: ak,
+        onClose: Lk,
+        ...tk
+      } = kk;
       const {
-        t: NC
-      } = (0, QC.y)(), MC = (0, wC.useRef)(null);
-      (0, VC.u)("popup", MC, FC),
-      function(CC) {
-        const zC = (0, wC.useRef)(CC);
-        zC.current = CC, (0, wC.useEffect)((() => {
+        t: Zk
+      } = (0, Xk.y)(), jk = (0, Tk.useRef)(null);
+      (0, kF.t)("popup", jk, Lk),
+      function(kk) {
+        const Fk = (0, Tk.useRef)(kk);
+        Fk.current = kk, (0, Tk.useEffect)((() => {
           window.history.pushState({
             ...window.history.state,
-            [gZ]: !0
+            [wI]: !0
           }, "");
-          let CC = !1;
-          const ZC = () => {
-            CC = !0, zC.current()
+          let kk = !1;
+          const Ik = () => {
+            kk = !0, Fk.current()
           };
-          return window.addEventListener("popstate", ZC), () => {
-            var zC;
-            window.removeEventListener("popstate", ZC), !CC && null !== (zC = window.history.state) && void 0 !== zC && zC[gZ] && window.history.back()
+          return window.addEventListener("popstate", Ik), () => {
+            var Fk;
+            window.removeEventListener("popstate", Ik), !kk && null !== (Fk = window.history.state) && void 0 !== Fk && Fk[wI] && window.history.back()
           }
         }), [])
-      }(FC), (0, wC.useEffect)((() => {
-        function CC(CC) {
-          "Escape" === CC.key && (CC.stopPropagation(), FC())
+      }(Lk), (0, Tk.useEffect)((() => {
+        function kk(kk) {
+          "Escape" === kk.key && (kk.stopPropagation(), Lk())
         }
-        return window.addEventListener("keydown", CC, !0), () => {
-          window.removeEventListener("keydown", CC, !0)
+        return window.addEventListener("keydown", kk, !0), () => {
+          window.removeEventListener("keydown", kk, !0)
         }
-      }), [FC]);
+      }), [Lk]);
       const {
-        selected: gC
-      } = WC, SC = (0, wC.useRef)(null), pC = (0, wC.useRef)(null), [PC, GC] = (0, wC.useState)(!1);
-      MZ(pC, !PC);
-      const [RC, AC] = (0, wC.useState)(null), [JC, IC] = (0, wC.useState)([]), [iC, vC] = Iz(), eC = (0, wC.useRef)(WC.selected);
-      eC.current = WC.selected;
-      const hC = (0, wC.useRef)({}),
-        KC = (0, wC.useCallback)((() => {
-          const CC = SC.current;
-          CC && AC(function(CC, zC, ZC) {
-            var QC;
+        selected: ek
+      } = tk, wk = (0, Tk.useRef)(null), Hk = (0, Tk.useRef)(null), [Jk, xk] = (0, Tk.useState)(!1);
+      eI(Hk, !Jk);
+      const [Pk, Kk] = (0, Tk.useState)(null), [sk, Vk] = (0, Tk.useState)([]), [zk, Sk] = zF(), vk = (0, Tk.useRef)(tk.selected);
+      vk.current = tk.selected;
+      const Ek = (0, Tk.useRef)({}),
+        Ok = (0, Tk.useCallback)((() => {
+          const kk = wk.current;
+          kk && Kk(function(kk, Fk, Ik) {
+            var Xk;
             const {
-              innerWidth: wC,
-              innerHeight: bC
-            } = window, nC = CC.offsetWidth, fC = CC.offsetHeight, oC = Math.max(rz()[0], 6), qC = [];
-            for (const NC of [oC, .2 * bC, .5 * bC - fC / 2, .33 * bC])
-              for (const CC of [.5, .3, .7]) qC.push({
-                left: Math.max(0, Math.min(wC - nC - 6, Math.max(6, wC * CC - nC / 2))),
-                top: NC
+              innerWidth: Tk,
+              innerHeight: ik
+            } = window, yk = kk.offsetWidth, lk = kk.offsetHeight, ak = Math.max(cF()[0], 6), qk = [];
+            for (const Zk of [ak, .2 * ik, .5 * ik - lk / 2, .33 * ik])
+              for (const kk of [.5, .3, .7]) qk.push({
+                left: Math.max(0, Math.min(Tk - yk - 6, Math.max(6, Tk * kk - yk / 2))),
+                top: Zk
               });
-            const FC = qC.map((CC => ({
-                left: CC.left - 6,
-                top: CC.top - 6,
-                right: CC.left + nC + 6,
-                bottom: CC.top + fC + 6
+            const Lk = qk.map((kk => ({
+                left: kk.left - 6,
+                top: kk.top - 6,
+                right: kk.left + yk + 6,
+                bottom: kk.top + lk + 6
               }))),
-              WC = ZZ(zC, ZC);
-            return qC[(0, Zz.n)(FC, WC, {
-              avoid: ZC && null !== (QC = zC[ZC]) && void 0 !== QC ? QC : null
+              tk = XI(Fk, Ik);
+            return qk[(0, XF.v)(Lk, tk, {
+              avoid: Ik && null !== (Xk = Fk[Ik]) && void 0 !== Xk ? Xk : null
             })]
-          }(CC, hC.current, eC.current))
+          }(kk, Ek.current, vk.current))
         }), []),
-        YC = (0, wC.useCallback)(((CC, zC, ZC) => {
-          IC(zC), vC(ZC), hC.current = CC, KC()
-        }), [KC, vC]);
-      return (0, wC.useLayoutEffect)(KC, [WC.selected, KC]), (0, kC.createPortal)((0, xC.jsxs)("div", {
-        ref: MC,
+        nk = (0, Tk.useCallback)(((kk, Fk, Ik) => {
+          Vk(Fk), Sk(Ik), Ek.current = kk, Ok()
+        }), [Ok, Sk]);
+      return (0, Tk.useLayoutEffect)(Ok, [tk.selected, Ok]), (0, Mk.createPortal)((0, Qk.jsxs)("div", {
+        ref: jk,
         className: "HudFullScreenEditor",
-        children: [(0, xC.jsx)(NZ, {
-          ...WC,
+        children: [(0, Qk.jsx)(jI, {
+          ...tk,
           maxHeight: window.innerHeight,
           fill: !0,
-          onMeasured: YC,
-          onReady: GC,
-          lockable: fC
-        }), (0, xC.jsxs)("div", {
-          ref: SC,
+          onMeasured: nk,
+          onReady: xk,
+          lockable: lk
+        }), (0, Qk.jsxs)("div", {
+          ref: wk,
           className: "HudFullScreenToolbar",
-          style: null === RC ? void 0 : {
-            left: RC.left,
-            top: RC.top,
+          style: null === Pk ? void 0 : {
+            left: Pk.left,
+            top: Pk.top,
             transform: "none"
           },
-          children: [(0, xC.jsx)("div", {
-            ref: pC,
+          children: [(0, Qk.jsx)("div", {
+            ref: Hk,
             className: "HudFullScreenControls",
-            children: (0, xC.jsx)(vz, {
-              selected: gC,
-              layout: WC.layout.hudLayouts[WC.orientation],
-              actionButtons: WC.actionButtons,
-              keyNames: WC.keyNames,
-              overlaps: JC,
-              scaleCaps: iC,
-              onScale: zC,
-              onHidden: ZC,
-              onReset: bC,
-              locked: nC,
-              lockable: fC,
-              onLocked: oC,
-              joystickFixed: WC.joystickFixed
+            children: (0, Qk.jsx)(oF, {
+              selected: ek,
+              layout: tk.layout.hudLayouts[tk.orientation],
+              actionButtons: tk.actionButtons,
+              keyNames: tk.keyNames,
+              overlaps: sk,
+              scaleCaps: zk,
+              onScale: Fk,
+              onHidden: Ik,
+              onReset: ik,
+              locked: yk,
+              lockable: lk,
+              onLocked: ak,
+              joystickFixed: tk.joystickFixed
             })
-          }), (0, xC.jsx)(qC.g, {
+          }), (0, Qk.jsx)(qk.d, {
             className: "HudFullScreenDone",
-            onClick: FC,
+            onClick: Lk,
             padDefaultFocus: !0,
-            children: NC("hudLayout:done")
+            children: Zk("hudLayout:done")
           })]
         })]
       }), document.body)
     }
-    const pZ = CC => `${Math.round(100*CC)}%`;
+    const JI = kk => `${Math.round(100*kk)}%`;
 
-    function PZ(CC) {
+    function xI(kk) {
       let {
-        info: zC,
-        tuple: ZC,
-        props: wC
-      } = CC;
+        info: Fk,
+        tuple: Ik,
+        props: Tk
+      } = kk;
       const {
-        t: bC
-      } = (0, QC.y)();
-      return (0, xC.jsx)(MC.f, {
-        name: bC("hudLayout:size"),
-        min: YC.l,
-        max: YC.i,
-        step: iz,
-        initValue: ZC[2],
-        disabled: wC.locked.has(zC.id),
-        selectableMax: wC.scaleCaps[zC.id],
-        cappedNote: bC("hudLayout:sizeCapped"),
-        format: pZ,
-        onChange: CC => {
-          wC.onScalePreview(zC.id, CC)
+        t: ik
+      } = (0, Xk.y)();
+      return (0, Qk.jsx)(jk.j, {
+        name: ik("hudLayout:size"),
+        min: nk.o,
+        max: nk.m,
+        step: SF,
+        initValue: Ik[2],
+        disabled: Tk.locked.has(Fk.id),
+        selectableMax: Tk.scaleCaps[Fk.id],
+        cappedNote: ik("hudLayout:sizeCapped"),
+        format: JI,
+        onChange: kk => {
+          Tk.onScalePreview(Fk.id, kk)
         },
-        onChangeComplete: CC => {
-          wC.onScale(zC.id, CC)
+        onChangeComplete: kk => {
+          Tk.onScale(Fk.id, kk)
         }
       })
     }
 
-    function GZ(CC) {
+    function PI(kk) {
       const {
-        t: zC
-      } = (0, QC.y)(), {
-        present: ZC,
-        elements: bC,
-        selected: nC,
-        onSelect: fC,
-        onHidden: qC,
-        onReset: FC,
-        note: WC,
-        actionButtons: NC,
-        keyNames: MC,
-        sizeBesidePreview: gC,
-        locked: SC,
-        lockable: pC,
-        onLocked: PC
-      } = CC, {
-        rowIconsOpen: GC,
-        onRowIconsOpen: RC
-      } = CC, AC = (0, wC.useRef)(null), JC = null !== nC && (GC || !(0, YC.N)(nC));
-      return (0, wC.useEffect)((() => {
-        var CC;
-        const zC = nC ? null === (CC = AC.current) || void 0 === CC ? void 0 : CC.querySelector(`[data-hud-row="${nC}"]`) : null;
-        if (!zC) return;
-        const ZC = zC.closest(".SettingsMenuRight"),
-          QC = performance.now();
-        let wC = null;
-        const bC = () => {
-            clearInterval(oC), null === ZC || void 0 === ZC || ZC.removeEventListener("scroll", fC)
+        t: Fk
+      } = (0, Xk.y)(), {
+        present: Ik,
+        elements: ik,
+        selected: yk,
+        onSelect: lk,
+        onHidden: qk,
+        onReset: Lk,
+        note: tk,
+        actionButtons: Zk,
+        keyNames: jk,
+        sizeBesidePreview: ek,
+        locked: wk,
+        lockable: Hk,
+        onLocked: Jk
+      } = kk, {
+        rowIconsOpen: xk,
+        onRowIconsOpen: Pk
+      } = kk, Kk = (0, Tk.useRef)(null), sk = null !== yk && (xk || !(0, nk.N)(yk));
+      return (0, Tk.useEffect)((() => {
+        var kk;
+        const Fk = yk ? null === (kk = Kk.current) || void 0 === kk ? void 0 : kk.querySelector(`[data-hud-row="${yk}"]`) : null;
+        if (!Fk) return;
+        const Ik = Fk.closest(".SettingsMenuRight"),
+          Xk = performance.now();
+        let Tk = null;
+        const ik = () => {
+            clearInterval(ak), null === Ik || void 0 === Ik || Ik.removeEventListener("scroll", lk)
           },
-          fC = () => {
-            Oz() || bC()
+          lk = () => {
+            DF() || ik()
           },
-          oC = setInterval((() => {
-            const CC = performance.now();
-            CC - QC > 1500 ? bC() : Oz() ? wC = null : null === wC ? wC = CC : CC - wC >= 150 && (bC(), function(CC) {
-              var zC;
-              const ZC = CC.closest(".SettingsMenuRight"),
-                QC = null === (zC = CC.closest(".HudLayoutSettings")) || void 0 === zC ? void 0 : zC.querySelector(".HudLayoutPreviewBox");
-              if (!ZC || !QC) return;
-              const wC = QC.getBoundingClientRect().bottom + 8,
-                bC = ZC.getBoundingClientRect().bottom - 8,
-                nC = CC.getBoundingClientRect();
-              nC.top < wC ? ZC.scrollBy({
-                top: nC.top - wC,
+          ak = setInterval((() => {
+            const kk = performance.now();
+            kk - Xk > 1500 ? ik() : DF() ? Tk = null : null === Tk ? Tk = kk : kk - Tk >= 150 && (ik(), function(kk) {
+              var Fk;
+              const Ik = kk.closest(".SettingsMenuRight"),
+                Xk = null === (Fk = kk.closest(".HudLayoutSettings")) || void 0 === Fk ? void 0 : Fk.querySelector(".HudLayoutPreviewBox");
+              if (!Ik || !Xk) return;
+              const Tk = Xk.getBoundingClientRect().bottom + 8,
+                ik = Ik.getBoundingClientRect().bottom - 8,
+                yk = kk.getBoundingClientRect();
+              yk.top < Tk ? Ik.scrollBy({
+                top: yk.top - Tk,
                 behavior: "smooth"
-              }) : nC.bottom > bC && ZC.scrollBy({
-                top: Math.min(nC.bottom - bC, nC.top - wC),
+              }) : yk.bottom > ik && Ik.scrollBy({
+                top: Math.min(yk.bottom - ik, yk.top - Tk),
                 behavior: "smooth"
               })
-            }(zC))
+            }(Fk))
           }), 50);
-        return null === ZC || void 0 === ZC || ZC.addEventListener("scroll", fC, {
+        return null === Ik || void 0 === Ik || Ik.addEventListener("scroll", lk, {
           passive: !0
-        }), bC
-      }), [nC, JC]), (0, xC.jsx)("div", {
-        ref: AC,
+        }), ik
+      }), [yk, sk]), (0, Qk.jsx)("div", {
+        ref: Kk,
         className: "SettingBoxGroup HudElementList",
-        children: XC.filter((CC => ZC.has(CC.id) && (GC || !(0, YC.N)(CC.id)))).map((ZC => {
-          const QC = ((CC, zC) => {
-              var ZC;
-              return null !== (ZC = CC[zC]) && void 0 !== ZC ? ZC : YC.p
-            })(bC, ZC.id),
-            wC = (0, YC.u)(bC, ZC.id),
-            AC = ZC.id === nC,
-            JC = ZC.scale && !gC,
-            IC = WC(ZC.id, AC);
-          return (0, xC.jsxs)("div", {
-            "data-hud-row": ZC.id,
-            className: oC()("SettingBox HudElementRow", {
-              Open: AC,
-              Hidden: wC,
-              Child: void 0 !== ZC.parent
+        children: Uk.filter((kk => Ik.has(kk.id) && (xk || !(0, nk.N)(kk.id)))).map((Ik => {
+          const Xk = ((kk, Fk) => {
+              var Ik;
+              return null !== (Ik = kk[Fk]) && void 0 !== Ik ? Ik : nk.q
+            })(ik, Ik.id),
+            Tk = (0, nk.u)(ik, Ik.id),
+            Kk = Ik.id === yk,
+            sk = Ik.scale && !ek,
+            Vk = tk(Ik.id, Kk);
+          return (0, Qk.jsxs)("div", {
+            "data-hud-row": Ik.id,
+            className: ak()("SettingBox HudElementRow", {
+              Open: Kk,
+              Hidden: Tk,
+              Child: void 0 !== Ik.parent
             }),
-            children: [(0, xC.jsxs)("div", {
+            children: [(0, Qk.jsxs)("div", {
               className: "HudElementRowHead",
-              children: [(0, xC.jsxs)("button", {
+              children: [(0, Qk.jsxs)("button", {
                 type: "button",
                 className: "HudElementRowName",
-                "aria-expanded": JC ? AC : void 0,
+                "aria-expanded": sk ? Kk : void 0,
                 onClick: () => {
-                  fC(ZC.id)
+                  lk(Ik.id)
                 },
-                children: [rC(ZC.id, NC, zC, MC), ZC.scale && 1 !== QC[2] && !(AC && JC) && (0, xC.jsx)("span", {
+                children: [ck(Ik.id, Zk, Fk, jk), Ik.scale && 1 !== Xk[2] && !(Kk && sk) && (0, Qk.jsx)("span", {
                   className: "HudElementRowSize",
-                  children: pZ(QC[2])
-                }), JC && (0, xC.jsx)("span", {
+                  children: JI(Xk[2])
+                }), sk && (0, Qk.jsx)("span", {
                   className: "HudElementRowChevron",
                   children: "\u25be"
                 })]
-              }), (0, xC.jsx)(DC, {
+              }), (0, Qk.jsx)(Yk, {
                 className: "HudElementRowIcon",
                 keepPlace: !0,
-                id: ZC.id,
-                actionButtons: NC,
-                keyNames: MC,
-                locked: SC.has(ZC.id),
-                lockable: pC(ZC.id),
-                onLocked: PC
-              }), "menu" === ZC.id && (0, xC.jsx)(jC, {
+                id: Ik.id,
+                actionButtons: Zk,
+                keyNames: jk,
+                locked: wk.has(Ik.id),
+                lockable: Hk(Ik.id),
+                onLocked: Jk
+              }), "menu" === Ik.id && (0, Qk.jsx)(Ak, {
                 className: "HudElementRowIcon",
-                open: GC,
-                name: rC(ZC.id, NC, zC, MC),
-                onToggle: RC
-              }), "menu" !== ZC.id && (0, xC.jsx)(aC, {
+                open: xk,
+                name: ck(Ik.id, Zk, Fk, jk),
+                onToggle: Pk
+              }), "menu" !== Ik.id && (0, Qk.jsx)(Bk, {
                 className: "HudElementRowIcon",
                 keepPlace: !0,
-                id: ZC.id,
-                elements: bC,
-                actionButtons: NC,
-                keyNames: MC,
-                onHidden: qC
-              }), (0, xC.jsx)(tC, {
+                id: Ik.id,
+                elements: ik,
+                actionButtons: Zk,
+                keyNames: jk,
+                onHidden: qk
+              }), (0, Qk.jsx)(dk, {
                 className: "HudElementRowIcon",
                 keepPlace: !0,
                 onlyWhenMoved: !0,
-                locked: SC.has(ZC.id),
-                id: ZC.id,
-                elements: bC,
-                actionButtons: NC,
-                keyNames: MC,
-                onReset: FC
+                locked: wk.has(Ik.id),
+                id: Ik.id,
+                elements: ik,
+                actionButtons: Zk,
+                keyNames: jk,
+                onReset: Lk
               })]
-            }), AC && JC && (0, xC.jsx)(PZ, {
-              info: ZC,
-              tuple: QC,
-              props: CC
-            }), IC && (0, xC.jsx)("div", {
+            }), Kk && sk && (0, Qk.jsx)(xI, {
+              info: Ik,
+              tuple: Xk,
+              props: kk
+            }), Vk && (0, Qk.jsx)("div", {
               className: "HudElementNote",
-              children: IC
+              children: Vk
             })]
-          }, ZC.id)
+          }, Ik.id)
         }))
       })
     }
 
-    function RZ(CC) {
+    function KI(kk) {
       let {
-        preview: zC,
-        quick: ZC,
-        onFullScreen: bC,
-        resting: nC,
-        onSidePanel: fC
-      } = CC;
+        preview: Fk,
+        quick: Ik,
+        onFullScreen: ik,
+        resting: yk,
+        onSidePanel: lk
+      } = kk;
       const {
-        t: oC
-      } = (0, QC.y)(), FC = WZ(), WC = (0, wC.useRef)(null), {
-        width: NC
-      } = (0, zz.e)(WC), MC = Math.floor(FC.width * Math.min(1, zC.maxHeight / FC.height)), gC = NC - MC - 12, SC = gC >= 130, pC = NC > 0;
-      (0, wC.useEffect)((() => {
-        pC && fC(SC)
-      }), [pC, SC, fC]);
-      const PC = (0, Zz.u)(SC ? MC : NC, FC.width, FC.height, zC.maxHeight),
-        GC = nC ? (0, xC.jsx)("div", {
+        t: ak
+      } = (0, Xk.y)(), Lk = ZI(), tk = (0, Tk.useRef)(null), {
+        width: Zk
+      } = (0, IF.b)(tk), jk = Math.floor(Lk.width * Math.min(1, Fk.maxHeight / Lk.height)), ek = Zk - jk - 12, wk = ek >= 130, Hk = Zk > 0;
+      (0, Tk.useEffect)((() => {
+        Hk && lk(wk)
+      }), [Hk, wk, lk]);
+      const Jk = (0, XF.E)(wk ? jk : Zk, Lk.width, Lk.height, Fk.maxHeight),
+        xk = yk ? (0, Qk.jsx)("div", {
           className: "HudPreviewResting",
           style: {
-            height: FC.height * PC
+            height: Lk.height * Jk
           }
-        }) : (0, xC.jsx)(NZ, {
-          ...zC
+        }) : (0, Qk.jsx)(jI, {
+          ...Fk
         }),
-        RC = CC => (0, xC.jsxs)(qC.O, {
+        Pk = kk => (0, Qk.jsxs)(qk.Q, {
           className: "HudLayoutFullScreenButton",
-          ariaLabel: oC("hudLayout:fullScreen"),
+          ariaLabel: ak("hudLayout:fullScreen"),
           analyticsClick: {
             id: "hud_layout.full_screen"
           },
-          onClick: bC,
-          children: [(0, xC.jsx)(KC.c, {
+          onClick: ik,
+          children: [(0, Qk.jsx)(Ok.e, {
             name: "expand"
-          }), CC && (0, xC.jsx)("span", {
-            children: oC("hudLayout:fullScreen")
+          }), kk && (0, Qk.jsx)("span", {
+            children: ak("hudLayout:fullScreen")
           })]
         });
-      return (0, xC.jsxs)("div", {
-        ref: WC,
+      return (0, Qk.jsxs)("div", {
+        ref: tk,
         className: "SettingBox HudLayoutPreviewBox",
-        children: [NC > 0 && SC && (0, xC.jsxs)("div", {
+        children: [Zk > 0 && wk && (0, Qk.jsxs)("div", {
           className: "HudLayoutPreviewRow",
-          children: [(0, xC.jsx)("div", {
+          children: [(0, Qk.jsx)("div", {
             style: {
-              width: MC
+              width: jk
             },
-            children: GC
-          }), (0, xC.jsx)("div", {
+            children: xk
+          }), (0, Qk.jsx)("div", {
             className: "HudLayoutSidePanel",
-            children: (0, xC.jsx)(vz, {
-              selected: zC.selected,
-              ...ZC,
-              joystickFixed: zC.joystickFixed,
-              extra: RC(!zC.selected || gC >= 278)
+            children: (0, Qk.jsx)(oF, {
+              selected: Fk.selected,
+              ...Ik,
+              joystickFixed: Fk.joystickFixed,
+              extra: Pk(!Fk.selected || ek >= 278)
             })
           })]
-        }), NC > 0 && !SC && (0, xC.jsxs)(xC.Fragment, {
-          children: [GC, (0, xC.jsx)("div", {
+        }), Zk > 0 && !wk && (0, Qk.jsxs)(Qk.Fragment, {
+          children: [xk, (0, Qk.jsx)("div", {
             className: "HudLayoutCornerButton",
-            children: RC(!1)
+            children: Pk(!1)
           })]
         })]
       })
     }
-    var AZ = ZC(2424),
-      xZ = ZC(4335),
-      JZ = ZC(2406),
-      IZ = ZC(2363);
-    const iZ = CC => {
-      const zC = wz.m * ("sides" === CC ? window.innerWidth : window.innerHeight);
-      return Math.min(64, 2 * Math.floor(zC / 2))
+    var QI = Ik(2389),
+      sI = Ik(4384),
+      VI = Ik(2368),
+      zI = Ik(2345);
+    const SI = kk => {
+      const Fk = iF.l * ("sides" === kk ? window.innerWidth : window.innerHeight);
+      return Math.min(64, 2 * Math.floor(Fk / 2))
     };
 
-    function vZ(CC, zC, ZC) {
-      const [QC, wC, bC, nC] = CC;
-      return "sides" === zC ? [QC, ZC, bC, ZC] : [ZC, wC, ZC, nC]
+    function oI(kk, Fk, Ik) {
+      const [Xk, Tk, ik, yk] = kk;
+      return "sides" === Fk ? [Xk, Ik, ik, Ik] : [Ik, Tk, Ik, yk]
     }
-    const eZ = [null, null, null, null],
-      hZ = CC => `${CC}px`;
+    const vI = [null, null, null, null],
+      EI = kk => `${kk}px`;
 
-    function KZ(CC) {
+    function OI(kk) {
       let {
-        safe: zC,
-        onPreview: ZC,
-        onCommit: bC
-      } = CC;
+        safe: Fk,
+        onPreview: Ik,
+        onCommit: ik
+      } = kk;
       const {
-        t: nC
-      } = (0, QC.y)(), fC = (0, wz.r)(null !== zC && void 0 !== zC ? zC : eZ, window.innerWidth, window.innerHeight, sz(document).map(Math.round)), oC = (0, wC.useRef)(null !== zC && void 0 !== zC ? zC : eZ);
-      oC.current = null !== zC && void 0 !== zC ? zC : eZ;
-      const FC = CC => {
-        const zC = Math.min(iZ(CC), "sides" === CC ? Math.max(fC[1], fC[3]) : Math.max(fC[0], fC[2]));
-        return (0, xC.jsx)(MC.f, {
-          name: nC("sides" === CC ? "hudLayout:safeSides" : "hudLayout:safeEnds"),
+        t: yk
+      } = (0, Xk.y)(), lk = (0, iF.t)(null !== Fk && void 0 !== Fk ? Fk : vI, window.innerWidth, window.innerHeight, WF(document).map(Math.round)), ak = (0, Tk.useRef)(null !== Fk && void 0 !== Fk ? Fk : vI);
+      ak.current = null !== Fk && void 0 !== Fk ? Fk : vI;
+      const Lk = kk => {
+        const Fk = Math.min(SI(kk), "sides" === kk ? Math.max(lk[1], lk[3]) : Math.max(lk[0], lk[2]));
+        return (0, Qk.jsx)(jk.j, {
+          name: yk("sides" === kk ? "hudLayout:safeSides" : "hudLayout:safeEnds"),
           min: 0,
-          max: iZ(CC),
+          max: SI(kk),
           step: 2,
-          initValue: zC,
-          format: hZ,
-          onChange: zC => {
-            ZC(vZ(oC.current, CC, zC))
+          initValue: Fk,
+          format: EI,
+          onChange: Fk => {
+            Ik(oI(ak.current, kk, Fk))
           },
-          onChangeComplete: QC => {
-            if (QC === zC) return void ZC(oC.current);
-            const wC = vZ(oC.current, CC, QC);
-            oC.current = wC, bC(wC), (0, iC.reportAnalyticsClick)({
+          onChangeComplete: Xk => {
+            if (Xk === Fk) return void Ik(ak.current);
+            const Tk = oI(ak.current, kk, Xk);
+            ak.current = Tk, ik(Tk), (0, zk.reportAnalyticsClick)({
               id: "hud_layout.safe_zone",
-              value: CC
+              value: kk
             })
           }
         })
       };
-      return (0, xC.jsxs)("div", {
+      return (0, Qk.jsxs)("div", {
         className: "SettingBoxGroup HudSafeZone",
-        children: [(0, xC.jsxs)("div", {
+        children: [(0, Qk.jsxs)("div", {
           className: "SettingBox HudSafeZoneHeader",
-          children: [(0, xC.jsx)("div", {
-            children: nC("hudLayout:safeZone")
-          }), (0, xC.jsx)(qC.O, {
-            active: null === zC,
-            pressed: null === zC,
+          children: [(0, Qk.jsx)("div", {
+            children: yk("hudLayout:safeZone")
+          }), (0, Qk.jsx)(qk.Q, {
+            active: null === Fk,
+            pressed: null === Fk,
             onClick: () => {
-              bC(null)
+              ik(null)
             },
-            children: nC("hudLayout:safeZoneAuto")
+            children: yk("hudLayout:safeZoneAuto")
           })]
-        }), FC("sides"), FC("ends")]
+        }), Lk("sides"), Lk("ends")]
       })
     }
 
-    function YZ() {
-      var CC, zC;
+    function nI() {
+      var kk, Fk;
       const {
-        t: ZC
-      } = (0, QC.y)(), bC = (0, YC.ab)(), {
-        clientEscMenuOptions: nC
-      } = (0, FC.k)(["clientEscMenuOptions"]), fC = (0, AZ.h)(), oC = bC.hudLayouts[fC], [WC, NC] = (0, wC.useState)(null), {
-        rowIconsOpen: gC,
-        onRowIconsOpen: SC,
-        select: pC
-      } = function(CC, zC) {
-        const [ZC, QC] = (0, wC.useState)((() => YC.F.some((zC => void 0 !== CC.hudElements[zC] || CC.hudLocked.includes(zC))))), bC = (0, wC.useCallback)((CC => {
-          zC(CC), (0, YC.N)(CC) && QC(!0)
-        }), [zC]);
+        t: Ik
+      } = (0, Xk.y)(), ik = (0, nk.fb)(), {
+        clientEscMenuOptions: yk
+      } = (0, Lk.j)(["clientEscMenuOptions"]), lk = (0, QI.d)(), ak = ik.hudLayouts[lk], [tk, Zk] = (0, Tk.useState)(null), {
+        rowIconsOpen: ek,
+        onRowIconsOpen: wk,
+        select: Hk
+      } = function(kk, Fk) {
+        const [Ik, Xk] = (0, Tk.useState)((() => nk.A.some((Fk => void 0 !== kk.hudElements[Fk] || kk.hudLocked.includes(Fk))))), ik = (0, Tk.useCallback)((kk => {
+          Fk(kk), (0, nk.N)(kk) && Xk(!0)
+        }), [Fk]);
         return {
-          rowIconsOpen: ZC,
-          onRowIconsOpen: QC,
-          select: bC
+          rowIconsOpen: Ik,
+          onRowIconsOpen: Xk,
+          select: ik
         }
-      }(oC, NC), [PC, GC] = (0, wC.useState)([]), [RC, AC] = (0, wC.useState)(null), [JC, IC] = Iz(), eC = (0, wC.useCallback)(((CC, zC, ZC) => {
-        GC(zC), IC(ZC);
-        const QC = Object.keys(CC);
-        AC((CC => (null === CC || void 0 === CC ? void 0 : CC.size) === QC.length && QC.every((zC => CC.has(zC))) ? CC : new Set(QC)))
-      }), [IC]), {
-        gameState: hC
-      } = (0, FC.k)(["gameState"]), KC = (0, JZ.j)(), dC = null !== (CC = null === (zC = (0, IZ.l)()) || void 0 === zC ? void 0 : zC.icon) && void 0 !== CC ? CC : null, [mC] = (0, wC.useState)((() => "inGame" === hC ? function(CC, zC, ZC) {
-        const QC = CC.querySelector(".InGameUi .TouchComponentsButtons");
-        if (!QC) return fz;
-        const wC = {},
-          bC = {};
-        for (const FC of nz) {
-          const CC = QC.querySelector(`.TouchSlot${FC} > .TouchKey`);
-          if (CC) {
-            var nC, fC;
-            wC[FC] = CC.cloneNode(!0);
-            const zC = (null !== (nC = null === (fC = CC.querySelector(".TouchKeyLabel")) || void 0 === fC ? void 0 : fC.textContent) && void 0 !== nC ? nC : "").split(/\s+/).filter((CC => !/[\d\xd7]/.test(CC))).join(" ");
-            zC && (bC[FC] = zC)
+      }(ak, Zk), [Jk, xk] = (0, Tk.useState)([]), [Pk, Kk] = (0, Tk.useState)(null), [sk, Vk] = zF(), vk = (0, Tk.useCallback)(((kk, Fk, Ik) => {
+        xk(Fk), Vk(Ik);
+        const Xk = Object.keys(kk);
+        Kk((kk => (null === kk || void 0 === kk ? void 0 : kk.size) === Xk.length && Xk.every((Fk => kk.has(Fk))) ? kk : new Set(Xk)))
+      }), [Vk]), {
+        gameState: Ek
+      } = (0, Lk.j)(["gameState"]), Ok = (0, VI.i)(), Gk = null !== (kk = null === (Fk = (0, zI.m)()) || void 0 === Fk ? void 0 : Fk.icon) && void 0 !== kk ? kk : null, [pk] = (0, Tk.useState)((() => "inGame" === Ek ? function(kk, Fk, Ik) {
+        const Xk = kk.querySelector(".InGameUi .TouchComponentsButtons");
+        if (!Xk) return aF;
+        const Tk = {},
+          ik = {};
+        for (const Lk of lF) {
+          const kk = Xk.querySelector(`.TouchSlot${Lk} > .TouchKey`);
+          if (kk) {
+            var yk, lk;
+            Tk[Lk] = kk.cloneNode(!0);
+            const Fk = (null !== (yk = null === (lk = kk.querySelector(".TouchKeyLabel")) || void 0 === lk ? void 0 : lk.textContent) && void 0 !== yk ? yk : "").split(/\s+/).filter((kk => !/[\d\xd7]/.test(kk))).join(" ");
+            Fk && (ik[Lk] = Fk)
           }
         }
-        const oC = zC => {
-            const ZC = CC.querySelector(`.InGameUi ${zC}`);
-            return null !== ZC && !ZC.classList.contains("Hidden")
+        const ak = Fk => {
+            const Ik = kk.querySelector(`.InGameUi ${Fk}`);
+            return null !== Ik && !Ik.classList.contains("Hidden")
           },
-          qC = [...CC.querySelectorAll(".InGameUi .HotBarContainer.Touch .HotBarGameItemsContainer .InvenItem")].map((CC => CC.cloneNode(!0)));
+          qk = [...kk.querySelectorAll(".InGameUi .HotBarContainer.Touch .HotBarGameItemsContainer .InvenItem")].map((kk => kk.cloneNode(!0)));
         return {
-          faces: Object.keys(wC).length > 0 ? wC : null,
-          names: bC,
-          shop: oC(".TouchInventoryKey.ShopKey"),
-          bag: oC(".TouchInventoryKey.BagKey"),
-          items: qC.length > 0 ? qC : null,
-          rowIcons: zC,
-          pinnedIcon: ZC
+          faces: Object.keys(Tk).length > 0 ? Tk : null,
+          names: ik,
+          shop: ak(".TouchInventoryKey.ShopKey"),
+          bag: ak(".TouchInventoryKey.BagKey"),
+          items: qk.length > 0 ? qk : null,
+          rowIcons: Fk,
+          pinnedIcon: Ik
         }
-      }(document, KC, dC) : fz)), HC = (0, wC.useRef)(null), EC = (0, wC.useRef)(null), lC = function(CC) {
-        const [zC, ZC] = (0, wC.useState)((() => .4 * window.innerHeight));
-        return (0, wC.useLayoutEffect)((() => {
-          var zC;
-          const QC = null === (zC = CC.current) || void 0 === zC ? void 0 : zC.closest(".SettingsMenuRight");
-          if (!QC) return;
-          const wC = () => {
-            const CC = QC.clientHeight < dZ ? .4 : .5;
-            ZC(Math.max(80, QC.clientHeight * CC - 24))
+      }(document, Ok, Gk) : aF)), uk = (0, Tk.useRef)(null), bk = (0, Tk.useRef)(null), Rk = function(kk) {
+        const [Fk, Ik] = (0, Tk.useState)((() => .4 * window.innerHeight));
+        return (0, Tk.useLayoutEffect)((() => {
+          var Fk;
+          const Xk = null === (Fk = kk.current) || void 0 === Fk ? void 0 : Fk.closest(".SettingsMenuRight");
+          if (!Xk) return;
+          const Tk = () => {
+            const kk = Xk.clientHeight < GI ? .4 : .5;
+            Ik(Math.max(80, Xk.clientHeight * kk - 24))
           };
-          wC();
-          const bC = new ResizeObserver(wC);
-          return bC.observe(QC), () => {
-            bC.disconnect()
+          Tk();
+          const ik = new ResizeObserver(Tk);
+          return ik.observe(Xk), () => {
+            ik.disconnect()
           }
-        }), [CC]), zC
-      }(EC), uC = (0, xZ.j)(nC.joystickMode), rC = nC.touchActionButtons, TC = (0, wC.useMemo)((() => function(CC, zC) {
-        const ZC = {},
-          QC = [
+        }), [kk]), Fk
+      }(bk), Nk = (0, sI.p)(yk.joystickMode), ck = yk.touchActionButtons, fk = (0, Tk.useMemo)((() => function(kk, Fk) {
+        const Ik = {},
+          Xk = [
             ["extra", "X"],
             ["game", "G"]
           ];
-        zC || QC.push(["attack", "P"]);
-        for (const [wC, bC] of QC) {
-          const zC = CC.names[bC];
-          zC && (ZC[wC] = zC)
+        Fk || Xk.push(["attack", "P"]);
+        for (const [Tk, ik] of Xk) {
+          const Fk = kk.names[ik];
+          Fk && (Ik[Tk] = Fk)
         }
-        return ZC
-      }(mC, rC)), [mC, rC]);
-      (0, wC.useEffect)((() => {
-        (0, iC.reportAnalyticsClick)({
+        return Ik
+      }(pk, ck)), [pk, ck]);
+      (0, Tk.useEffect)((() => {
+        (0, zk.reportAnalyticsClick)({
           id: "hud_layout.open"
         })
       }), []);
-      const [aC, tC] = (0, wC.useState)(!1), [DC, jC] = (0, wC.useState)(!1), yC = (0, wC.useRef)(null);
-      MZ(yC, !DC);
-      const [LC, UC] = (0, wC.useState)(!1), kC = (0, wC.useCallback)((() => {
-        UC(!1)
-      }), []), VC = (0, wC.useMemo)((() => new Set(oC.hudLocked)), [oC.hudLocked]), Cz = CC => {
-        var zC, ZC;
-        const QC = (0, YC.s)(),
-          wC = CC(QC);
-        (0, YC.W)(null !== (zC = null === (ZC = HC.current) || void 0 === ZC ? void 0 : ZC.keepLocks(QC, wC)) && void 0 !== zC ? zC : wC)
-      }, zz = (CC, zC) => {
-        Cz((ZC => (0, YC.db)(ZC, fC, CC, zC)))
-      }, Zz = (CC, zC, ZC) => {
-        zz(CC, {
-          dx: zC,
-          dy: ZC
-        }), (0, iC.reportAnalyticsClick)({
+      const [Bk, dk] = (0, Tk.useState)(!1), [Yk, Ak] = (0, Tk.useState)(!1), gk = (0, Tk.useRef)(null);
+      eI(gk, !Yk);
+      const [mk, hk] = (0, Tk.useState)(!1), Mk = (0, Tk.useCallback)((() => {
+        hk(!1)
+      }), []), kF = (0, Tk.useMemo)((() => new Set(ak.hudLocked)), [ak.hudLocked]), FF = kk => {
+        var Fk, Ik;
+        const Xk = (0, nk.s)(),
+          Tk = kk(Xk);
+        (0, nk.$)(null !== (Fk = null === (Ik = uk.current) || void 0 === Ik ? void 0 : Ik.keepLocks(Xk, Tk)) && void 0 !== Fk ? Fk : Tk)
+      }, IF = (kk, Fk) => {
+        FF((Ik => (0, nk.jb)(Ik, lk, kk, Fk)))
+      }, XF = (kk, Fk, Ik) => {
+        IF(kk, {
+          dx: Fk,
+          dy: Ik
+        }), (0, zk.reportAnalyticsClick)({
           id: "hud_layout.edit",
-          value: `move:${CC}`
+          value: `move:${kk}`
         })
-      }, wz = (CC, zC) => {
-        Cz((ZC => (0, YC.hb)(ZC, fC, CC, zC)))
-      }, bz = CC => {
-        const zC = cC[CC];
-        return (zC.move || zC.scale) && ("joystick" !== CC || uC) && !(0, Qz.B)(CC, oC.hudElements[CC])
-      }, oz = CC => cC[CC].move && ("joystick" !== CC || uC) && !VC.has(CC), qz = new Set(XC.map((CC => CC.id)).filter((CC => {
-        const zC = (0, YC.N)(CC) && !mC.rowIcons.includes(CC);
-        return null === RC || RC.has(CC) || (0, YC.u)(oC.hudElements, CC) && !zC
-      }))), Fz = {
-        present: qz,
-        actionButtons: rC,
-        keyNames: TC,
-        scaleCaps: JC,
-        sizeBesidePreview: aC,
-        elements: oC.hudElements,
-        selected: WC,
-        onSelect: pC,
-        rowIconsOpen: gC,
-        onRowIconsOpen: SC,
-        onScalePreview: (CC, zC) => {
-          var ZC;
-          null === (ZC = HC.current) || void 0 === ZC || ZC.setScale(CC, zC)
+      }, iF = (kk, Fk) => {
+        FF((Ik => (0, nk.mb)(Ik, lk, kk, Fk)))
+      }, yF = kk => {
+        const Fk = Ck[kk];
+        return (Fk.move || Fk.scale) && ("joystick" !== kk || Nk) && !(0, TF.v)(kk, ak.hudElements[kk])
+      }, qF = kk => Ck[kk].move && ("joystick" !== kk || Nk) && !kF.has(kk), LF = new Set(Uk.map((kk => kk.id)).filter((kk => {
+        const Fk = (0, nk.N)(kk) && !pk.rowIcons.includes(kk);
+        return null === Pk || Pk.has(kk) || (0, nk.u)(ak.hudElements, kk) && !Fk
+      }))), tF = {
+        present: LF,
+        actionButtons: ck,
+        keyNames: fk,
+        scaleCaps: sk,
+        sizeBesidePreview: Bk,
+        elements: ak.hudElements,
+        selected: tk,
+        onSelect: Hk,
+        rowIconsOpen: ek,
+        onRowIconsOpen: wk,
+        onScalePreview: (kk, Fk) => {
+          var Ik;
+          null === (Ik = uk.current) || void 0 === Ik || Ik.setScale(kk, Fk)
         },
-        onScale: (CC, zC) => {
-          zz(CC, {
-            scale: zC
-          }), (0, iC.reportAnalyticsClick)({
+        onScale: (kk, Fk) => {
+          IF(kk, {
+            scale: Fk
+          }), (0, zk.reportAnalyticsClick)({
             id: "hud_layout.edit",
-            value: `size:${CC}`
+            value: `size:${kk}`
           })
         },
-        onHidden: (CC, zC) => {
-          zz(CC, {
-            hidden: zC
-          }), (0, iC.reportAnalyticsClick)({
+        onHidden: (kk, Fk) => {
+          IF(kk, {
+            hidden: Fk
+          }), (0, zk.reportAnalyticsClick)({
             id: "hud_layout.edit",
-            value: `${zC?"hide":"show"}:${CC}`
+            value: `${Fk?"hide":"show"}:${kk}`
           })
         },
-        onReset: CC => {
-          zz(CC, YC.b)
+        onReset: kk => {
+          IF(kk, nk.e)
         },
-        locked: VC,
-        lockable: bz,
-        onLocked: wz,
-        note: (CC, zC) => {
-          const QC = zC && PC.length > 0 ? ZC("hudLayout:overlapsNote", {
-            names: sC(PC, rC, ZC, TC)
+        locked: kF,
+        lockable: yF,
+        onLocked: iF,
+        note: (kk, Fk) => {
+          const Xk = Fk && Jk.length > 0 ? Ik("hudLayout:overlapsNote", {
+            names: Wk(Jk, ck, Ik, fk)
           }) : null;
-          return zC && BC(CC, uC) ? (0, xC.jsxs)(xC.Fragment, {
-            children: [QC && (0, xC.jsx)("span", {
-              children: QC
-            }), (0, xC.jsx)("span", {
-              children: ZC("hudLayout:floatingJoystickNote")
-            }), !aC && (0, xC.jsx)(OC, {})]
-          }) : QC || (zC && VC.has(CC) ? ZC("hudLayout:lockedNote") : zC && "cluster" === CC ? ZC("hudLayout:clusterNote") : zC && "menu" === CC ? ZC("hudLayout:menuNote") : zC && (0, Qz.B)(CC, oC.hudElements[CC]) && oz(CC) ? ZC("hudLayout:rowIconNote") : zC && "arrows" === CC ? ZC("hudLayout:arrowsNote") : "inventory" === CC && (0, YC.u)(oC.hudElements, "inventory") ? ZC("hudLayout:inventoryHiddenNote") : null)
+          return Fk && rk(kk, Nk) ? (0, Qk.jsxs)(Qk.Fragment, {
+            children: [Xk && (0, Qk.jsx)("span", {
+              children: Xk
+            }), (0, Qk.jsx)("span", {
+              children: Ik("hudLayout:floatingJoystickNote")
+            }), !Bk && (0, Qk.jsx)(Dk, {})]
+          }) : Xk || (Fk && kF.has(kk) ? Ik("hudLayout:lockedNote") : Fk && "cluster" === kk ? Ik("hudLayout:clusterNote") : Fk && "menu" === kk ? Ik("hudLayout:menuNote") : Fk && (0, TF.v)(kk, ak.hudElements[kk]) && qF(kk) ? Ik("hudLayout:rowIconNote") : Fk && "arrows" === kk ? Ik("hudLayout:arrowsNote") : "inventory" === kk && (0, nk.u)(ak.hudElements, "inventory") ? Ik("hudLayout:inventoryHiddenNote") : null)
         }
       };
-      return (0, xC.jsxs)("div", {
-        ref: EC,
+      return (0, Qk.jsxs)("div", {
+        ref: bk,
         className: "HudLayoutSettings",
-        children: [(0, xC.jsxs)("div", {
-          ref: yC,
+        children: [(0, Qk.jsxs)("div", {
+          ref: gk,
           className: "HudLayoutBody",
-          children: [(0, xC.jsx)("div", {
+          children: [(0, Qk.jsx)("div", {
             className: "HudLayoutOrientation",
-            children: ZC("landscape" === fC ? "hudLayout:editingLandscape" : "hudLayout:editingPortrait")
-          }), (0, xC.jsx)(RZ, {
+            children: Ik("landscape" === lk ? "hudLayout:editingLandscape" : "hudLayout:editingPortrait")
+          }), (0, Qk.jsx)(KI, {
             preview: {
-              layout: bC,
-              orientation: fC,
-              selected: WC,
-              onSelect: pC,
-              onMove: Zz,
-              canMove: oz,
-              actionButtons: rC,
-              joystickFixed: uC,
-              presence: mC,
-              keyNames: TC,
-              maxHeight: lC,
-              apiRef: HC,
-              onMeasured: eC,
-              onReady: jC,
-              lockable: bz
+              layout: ik,
+              orientation: lk,
+              selected: tk,
+              onSelect: Hk,
+              onMove: XF,
+              canMove: qF,
+              actionButtons: ck,
+              joystickFixed: Nk,
+              presence: pk,
+              keyNames: fk,
+              maxHeight: Rk,
+              apiRef: uk,
+              onMeasured: vk,
+              onReady: Ak,
+              lockable: yF
             },
             quick: {
-              layout: oC,
-              actionButtons: rC,
-              keyNames: TC,
-              scaleCaps: JC,
-              overlaps: PC,
-              onScale: Fz.onScale,
-              onHidden: Fz.onHidden,
-              onReset: Fz.onReset,
-              locked: VC,
-              lockable: bz,
-              onLocked: wz
+              layout: ak,
+              actionButtons: ck,
+              keyNames: fk,
+              scaleCaps: sk,
+              overlaps: Jk,
+              onScale: tF.onScale,
+              onHidden: tF.onHidden,
+              onReset: tF.onReset,
+              locked: kF,
+              lockable: yF,
+              onLocked: iF
             },
             onFullScreen: () => {
-              UC(!0)
+              hk(!0)
             },
-            resting: LC,
-            onSidePanel: tC
-          }), LC && (0, xC.jsx)(SZ, {
-            layout: bC,
-            orientation: fC,
-            selected: WC,
-            onSelect: pC,
-            onMove: Zz,
-            canMove: oz,
-            actionButtons: rC,
-            joystickFixed: uC,
-            presence: mC,
-            keyNames: TC,
-            onScale: Fz.onScale,
-            onHidden: Fz.onHidden,
-            onReset: Fz.onReset,
-            locked: VC,
-            lockable: bz,
-            onLocked: wz,
-            apiRef: HC,
-            onClose: kC
-          }), (0, xC.jsx)(KZ, {
-            safe: oC.hudSafe,
-            onCommit: CC => {
-              Cz((zC => (0, YC.ib)(zC, fC, CC)))
+            resting: mk,
+            onSidePanel: dk
+          }), mk && (0, Qk.jsx)(HI, {
+            layout: ik,
+            orientation: lk,
+            selected: tk,
+            onSelect: Hk,
+            onMove: XF,
+            canMove: qF,
+            actionButtons: ck,
+            joystickFixed: Nk,
+            presence: pk,
+            keyNames: fk,
+            onScale: tF.onScale,
+            onHidden: tF.onHidden,
+            onReset: tF.onReset,
+            locked: kF,
+            lockable: yF,
+            onLocked: iF,
+            apiRef: uk,
+            onClose: Mk
+          }), (0, Qk.jsx)(OI, {
+            safe: ak.hudSafe,
+            onCommit: kk => {
+              FF((Fk => (0, nk.pb)(Fk, lk, kk)))
             },
-            onPreview: CC => {
-              var zC;
-              null === (zC = HC.current) || void 0 === zC || zC.setSafe(CC)
+            onPreview: kk => {
+              var Fk;
+              null === (Fk = uk.current) || void 0 === Fk || Fk.setSafe(kk)
             }
-          }), (0, xC.jsx)(MC.b, {
-            label: ZC("hudLayout:snapCentre"),
-            checked: bC.hudSnapCentre,
-            onClick: CC => {
-              (0, YC.U)(CC)
+          }), (0, Qk.jsx)(jk.e, {
+            label: Ik("hudLayout:snapCentre"),
+            checked: ik.hudSnapCentre,
+            onClick: kk => {
+              (0, nk.Y)(kk)
             },
-            circleInfoText: ZC("hudLayout:snapCentreInfo")
-          }), (0, xC.jsx)(GZ, {
-            ...Fz
-          }), (0, xC.jsx)(MC.e, {
-            label: ZC("hudLayout:shape"),
-            options: YC.H.map((CC => ({
-              value: CC,
-              label: ZC(`hudLayout:shape_${CC}`)
+            circleInfoText: Ik("hudLayout:snapCentreInfo")
+          }), (0, Qk.jsx)(PI, {
+            ...tF
+          }), (0, Qk.jsx)(jk.h, {
+            label: Ik("hudLayout:shape"),
+            options: nk.E.map((kk => ({
+              value: kk,
+              label: Ik(`hudLayout:shape_${kk}`)
             }))),
-            value: bC.hudShape,
-            onChange: CC => {
-              Cz((zC => ({
-                ...zC,
-                hudShape: CC
-              }))), (0, iC.reportAnalyticsClick)({
+            value: ik.hudShape,
+            onChange: kk => {
+              FF((Fk => ({
+                ...Fk,
+                hudShape: kk
+              }))), (0, zk.reportAnalyticsClick)({
                 id: "hud_layout.shape",
-                value: CC
+                value: kk
               })
             }
-          }), (0, xC.jsx)(MC.f, {
-            name: ZC("hudLayout:opacity"),
-            min: YC.f,
+          }), (0, Qk.jsx)(jk.j, {
+            name: Ik("hudLayout:opacity"),
+            min: nk.i,
             max: 1,
             step: .05,
-            initValue: bC.hudKeyOpacity,
-            format: CC => `${Math.round(100*CC)}%`,
-            circleInfoText: ZC("hudLayout:opacityInfo"),
-            onChange: CC => {
-              var zC;
-              null === (zC = HC.current) || void 0 === zC || zC.setOpacity(CC)
+            initValue: ik.hudKeyOpacity,
+            format: kk => `${Math.round(100*kk)}%`,
+            circleInfoText: Ik("hudLayout:opacityInfo"),
+            onChange: kk => {
+              var Fk;
+              null === (Fk = uk.current) || void 0 === Fk || Fk.setOpacity(kk)
             },
-            onChangeComplete: CC => {
-              (0, YC.T)(CC), (0, iC.reportAnalyticsClick)({
+            onChangeComplete: kk => {
+              (0, nk.U)(kk), (0, zk.reportAnalyticsClick)({
                 id: "hud_layout.edit",
                 value: "opacity"
               })
             }
           })]
-        }), (0, xC.jsx)(qC.I, {
+        }), (0, Qk.jsx)(qk.G, {
           className: "HudLayoutResetAll",
           analyticsClick: {
             id: "hud_layout.reset_all"
           },
           onClick: () => {
             !async function() {
-              const CC = vC.NotificationProvider.showPromptPopup({
+              const kk = Sk.NotificationProvider.showPromptPopup({
                 title: "hudLayout:resetAllTitle",
                 subtitle: "hudLayout:resetAllSubtitle",
                 confirmText: "hudLayout:resetAllConfirm",
                 cancelText: "general:cancel",
                 destructive: !0
               });
-              !0 === await CC.getResult() && (0, YC.R)()
+              !0 === await kk.getResult() && (0, nk.Q)()
             }()
           },
-          children: ZC("hudLayout:resetAll")
+          children: Ik("hudLayout:resetAll")
         })]
       })
     }
-    const dZ = 350;
-    const mZ = [function() {
+    const GI = 350;
+    const pI = [function() {
       const {
-        t: CC
-      } = (0, QC.y)(), [zC, ZC] = (0, wC.useState)(!1), bC = (0, wC.useRef)(null);
-      return (0, wC.useEffect)((() => {
-        var CC;
-        zC && (null === (CC = bC.current) || void 0 === CC || CC.scrollIntoView({
+        t: kk
+      } = (0, Xk.y)(), [Fk, Ik] = (0, Tk.useState)(!1), ik = (0, Tk.useRef)(null);
+      return (0, Tk.useEffect)((() => {
+        var kk;
+        Fk && (null === (kk = ik.current) || void 0 === kk || kk.scrollIntoView({
           block: "start",
           behavior: "smooth"
         }))
-      }), [zC]), (0, xC.jsxs)("div", {
+      }), [Fk]), (0, Qk.jsxs)("div", {
         className: "HudLayoutSection",
-        children: [(0, xC.jsx)(eC.b, {
-          ref: bC,
+        children: [(0, Qk.jsx)(vk.e, {
+          ref: ik,
           icon: "arrows-up-down-left-right",
-          title: CC("hudLayout:title"),
-          sub: CC("hudLayout:entrySub"),
-          expanded: zC,
+          title: kk("hudLayout:title"),
+          sub: kk("hudLayout:entrySub"),
+          expanded: Fk,
           onClick: () => {
-            ZC(!zC)
+            Ik(!Fk)
           }
-        }), zC && (0, xC.jsx)(YZ, {})]
+        }), Fk && (0, Qk.jsx)(nI, {})]
       })
     }, function() {
       const {
-        t: CC
-      } = (0, QC.y)(), {
-        joystickMode: zC,
-        touchSpeedCurve: ZC,
-        autorun: wC,
-        jumpLock: bC
-      } = (0, FC.k)(["clientEscMenuOptions"]).clientEscMenuOptions;
-      return (0, xC.jsxs)(xC.Fragment, {
-        children: [(0, xC.jsx)(MC.e, {
-          label: CC("settingsMenu:joystick"),
-          options: AC.yb.map((zC => ({
-            value: zC,
-            label: CC(JC[zC])
+        t: kk
+      } = (0, Xk.y)(), {
+        joystickMode: Fk,
+        touchSpeedCurve: Ik,
+        autorun: Tk,
+        jumpLock: ik
+      } = (0, Lk.j)(["clientEscMenuOptions"]).clientEscMenuOptions;
+      return (0, Qk.jsxs)(Qk.Fragment, {
+        children: [(0, Qk.jsx)(jk.h, {
+          label: kk("settingsMenu:joystick"),
+          options: Kk.Gb.map((Fk => ({
+            value: Fk,
+            label: kk(sk[Fk])
           }))),
-          value: zC,
-          onChange: CC => {
-            FC.b.setClientEscMenuOptions({
-              joystickMode: CC
+          value: Fk,
+          onChange: kk => {
+            Lk.d.setClientEscMenuOptions({
+              joystickMode: kk
             })
           },
-          circleInfoText: CC("settingsMenu:joystickInfo")
-        }), (0, xC.jsx)(MC.b, {
-          label: CC("settingsMenu:preciseWalking"),
-          checked: ZC,
-          onClick: CC => {
-            FC.b.setClientEscMenuOptions({
-              touchSpeedCurve: CC
+          circleInfoText: kk("settingsMenu:joystickInfo")
+        }), (0, Qk.jsx)(jk.e, {
+          label: kk("settingsMenu:preciseWalking"),
+          checked: Ik,
+          onClick: kk => {
+            Lk.d.setClientEscMenuOptions({
+              touchSpeedCurve: kk
             })
           },
-          circleInfoText: CC("settingsMenu:preciseWalkingInfo")
-        }), (0, xC.jsx)(MC.b, {
-          label: CC("settingsMenu:autoRun"),
-          checked: wC,
-          onClick: CC => {
-            FC.b.setClientEscMenuOptions({
-              autorun: CC
+          circleInfoText: kk("settingsMenu:preciseWalkingInfo")
+        }), (0, Qk.jsx)(jk.e, {
+          label: kk("settingsMenu:autoRun"),
+          checked: Tk,
+          onClick: kk => {
+            Lk.d.setClientEscMenuOptions({
+              autorun: kk
             })
           },
-          circleInfoText: CC("settingsMenu:autoRunInfo")
-        }), (0, xC.jsx)(MC.b, {
-          label: CC("settingsMenu:jumpLock"),
-          checked: bC,
-          onClick: CC => {
-            FC.b.setClientEscMenuOptions({
-              jumpLock: CC
+          circleInfoText: kk("settingsMenu:autoRunInfo")
+        }), (0, Qk.jsx)(jk.e, {
+          label: kk("settingsMenu:jumpLock"),
+          checked: ik,
+          onClick: kk => {
+            Lk.d.setClientEscMenuOptions({
+              jumpLock: kk
             })
           },
-          circleInfoText: CC("settingsMenu:jumpLockInfo")
+          circleInfoText: kk("settingsMenu:jumpLockInfo")
         })]
       })
     }, function() {
-      return (0, xC.jsx)(RC.d, {})
+      return (0, Qk.jsx)(Pk.c, {})
     }, function() {
       const {
-        t: CC
-      } = (0, QC.y)(), {
-        clientEscMenuOptions: zC
-      } = (0, FC.k)(["clientEscMenuOptions"]);
-      return (0, IC.d)() ? (0, xC.jsx)(MC.b, {
-        label: CC("settingsMenu:vibration"),
-        checked: zC.vibration,
-        onClick: CC => {
-          FC.b.setClientEscMenuOptions({
-            vibration: CC
+        t: kk
+      } = (0, Xk.y)(), {
+        clientEscMenuOptions: Fk
+      } = (0, Lk.j)(["clientEscMenuOptions"]);
+      return (0, Vk.e)() ? (0, Qk.jsx)(jk.e, {
+        label: kk("settingsMenu:vibration"),
+        checked: Fk.vibration,
+        onClick: kk => {
+          Lk.d.setClientEscMenuOptions({
+            vibration: kk
           })
         },
-        circleInfoText: CC("settingsMenu:vibrationInfo")
+        circleInfoText: kk("settingsMenu:vibrationInfo")
       }) : null
     }];
 
-    function HZ() {
-      return (0, xC.jsx)(xC.Fragment, {
-        children: mZ.map(((CC, zC) => (0, xC.jsx)(CC, {}, zC)))
+    function uI() {
+      return (0, Qk.jsx)(Qk.Fragment, {
+        children: pI.map(((kk, Fk) => (0, Qk.jsx)(kk, {}, Fk)))
       })
     }
-    var EZ = ZC(4309);
+    var bI = Ik(4343);
 
-    function lZ() {
+    function RI() {
       const {
-        t: CC
-      } = (0, QC.y)(), {
-        isTouchScreen: zC,
-        clientEscMenuOptions: ZC,
-        gameState: nC
-      } = (0, FC.k)(["isTouchScreen", "clientEscMenuOptions", "gameState"]), fC = (0, gC.h)("ezBridging"), oC = (0, gC.h)("ezTowering"), pC = "inGame" !== nC || !0 === fC, PC = (0, SC.h)() && ("inGame" !== nC || !0 === oC), [, RC] = (0, wC.useReducer)((CC => CC + 1), 0), AC = (0, GC.f)(), [JC, IC] = (0, wC.useState)(EZ.i);
-      return (0, xC.jsxs)("div", {
+        t: kk
+      } = (0, Xk.y)(), {
+        isTouchScreen: Fk,
+        clientEscMenuOptions: Ik,
+        gameState: yk
+      } = (0, Lk.j)(["isTouchScreen", "clientEscMenuOptions", "gameState"]), lk = (0, ek.j)("ezBridging"), ak = (0, ek.j)("ezTowering"), Hk = "inGame" !== yk || !0 === lk, Jk = (0, wk.d)() && ("inGame" !== yk || !0 === ak), [, Pk] = (0, Tk.useReducer)((kk => kk + 1), 0), Kk = (0, xk.e)(), [sk, Vk] = (0, Tk.useState)(bI.f);
+      return (0, Qk.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [AC && (0, xC.jsxs)("div", {
+        children: [Kk && (0, Qk.jsxs)("div", {
           className: "SettingBox SettingBoxWithButton",
-          children: [(0, xC.jsx)("div", {
-            children: CC("controller:settingsControlsNote")
-          }), (0, xC.jsx)(qC.O, {
+          children: [(0, Qk.jsx)("div", {
+            children: kk("controller:settingsControlsNote")
+          }), (0, Qk.jsx)(qk.Q, {
             onClick: () => {
-              FC.b.set({
+              Lk.d.set({
                 openSettingsCategory: "controller"
               })
             },
-            children: CC("controller:settingsOpenController")
+            children: kk("controller:settingsOpenController")
           })]
-        }), (0, WC.isTouchscreen)() && !(0, WC.isMobile)() ? (0, xC.jsx)(xC.Fragment, {
-          children: (0, xC.jsx)(MC.b, {
-            label: CC("settingsMenu:useTouchControls"),
-            checked: JC,
-            onClick: CC => {
-              (0, EZ.e)(CC), IC(CC)
+        }), (0, tk.isTouchscreen)() && !(0, tk.isMobile)() ? (0, Qk.jsx)(Qk.Fragment, {
+          children: (0, Qk.jsx)(jk.e, {
+            label: kk("settingsMenu:useTouchControls"),
+            checked: sk,
+            onClick: kk => {
+              (0, bI.c)(kk), Vk(kk)
             }
           })
-        }) : null, zC && (0, xC.jsx)(HZ, {}), pC && (0, xC.jsx)(MC.b, {
-          label: CC("settingsMenu:ezBridging"),
-          checked: ZC.ezBridging,
-          onClick: CC => {
-            FC.b.setClientEscMenuOptions({
-              ezBridging: CC
+        }) : null, Fk && (0, Qk.jsx)(uI, {}), Hk && (0, Qk.jsx)(jk.e, {
+          label: kk("settingsMenu:ezBridging"),
+          checked: Ik.ezBridging,
+          onClick: kk => {
+            Lk.d.setClientEscMenuOptions({
+              ezBridging: kk
             })
           },
-          circleInfoText: CC("settingsMenu:ezBridgingInfo")
-        }), PC && (0, xC.jsx)(MC.b, {
-          label: CC("settingsMenu:ezTowering"),
-          checked: ZC.ezTowering,
-          onClick: CC => {
-            FC.b.setClientEscMenuOptions({
-              ezTowering: CC
+          circleInfoText: kk("settingsMenu:ezBridgingInfo")
+        }), Jk && (0, Qk.jsx)(jk.e, {
+          label: kk("settingsMenu:ezTowering"),
+          checked: Ik.ezTowering,
+          onClick: kk => {
+            Lk.d.setClientEscMenuOptions({
+              ezTowering: kk
             })
           },
-          circleInfoText: CC("settingsMenu:ezToweringInfo")
-        }), (0, xC.jsx)(MC.b, {
-          label: CC("settingsMenu:crouchToggle"),
-          checked: ZC.crouchIsToggle,
-          onClick: CC => {
-            FC.b.setClientEscMenuOptions({
-              crouchIsToggle: CC
+          circleInfoText: kk("settingsMenu:ezToweringInfo")
+        }), (0, Qk.jsx)(jk.e, {
+          label: kk("settingsMenu:crouchToggle"),
+          checked: Ik.crouchIsToggle,
+          onClick: kk => {
+            Lk.d.setClientEscMenuOptions({
+              crouchIsToggle: kk
             })
           },
-          circleInfoText: CC("settingsMenu:crouchToggleInfo")
-        }), (0, xC.jsx)(MC.b, {
-          label: CC("settingsMenu:hideUiToggle"),
-          checked: ZC.hideUiIsToggle,
-          onClick: CC => {
-            FC.b.setClientEscMenuOptions({
-              hideUiIsToggle: CC
+          circleInfoText: kk("settingsMenu:crouchToggleInfo")
+        }), (0, Qk.jsx)(jk.e, {
+          label: kk("settingsMenu:hideUiToggle"),
+          checked: Ik.hideUiIsToggle,
+          onClick: kk => {
+            Lk.d.setClientEscMenuOptions({
+              hideUiIsToggle: kk
             })
           },
-          circleInfoText: CC("settingsMenu:hideUiToggleInfo")
-        }), "mouseOnly" !== (0, NC.c)() && (0, xC.jsx)(MC.f, {
-          name: CC("settingsMenu:touchscreenSensitivity"),
+          circleInfoText: kk("settingsMenu:hideUiToggleInfo")
+        }), "mouseOnly" !== (0, Zk.e)() && (0, Qk.jsx)(jk.j, {
+          name: kk("settingsMenu:touchscreenSensitivity"),
           min: 1,
           max: 900,
           step: 1,
-          initValue: ZC.touchscreenSensitivity,
-          onChange: CC => {
-            FC.b.setClientEscMenuOptions({
-              touchscreenSensitivity: CC
+          initValue: Ik.touchscreenSensitivity,
+          onChange: kk => {
+            Lk.d.setClientEscMenuOptions({
+              touchscreenSensitivity: kk
             })
           }
-        }), !(0, WC.isMobile)() && (0, xC.jsx)(MC.f, {
-          name: CC("settingsMenu:mouseSensitivity"),
+        }), !(0, tk.isMobile)() && (0, Qk.jsx)(jk.j, {
+          name: kk("settingsMenu:mouseSensitivity"),
           min: 1,
           max: 200,
           step: 1,
-          initValue: ZC.mouseSensitivity,
-          onChange: CC => {
-            FC.b.setClientEscMenuOptions({
-              mouseSensitivity: CC
+          initValue: Ik.mouseSensitivity,
+          onChange: kk => {
+            Lk.d.setClientEscMenuOptions({
+              mouseSensitivity: kk
             })
           }
-        }), !(0, WC.isMobile)() && (0, xC.jsxs)("div", {
+        }), !(0, tk.isMobile)() && (0, Qk.jsxs)("div", {
           className: "ControlsContainer",
-          children: [(0, xC.jsx)("div", {
+          children: [(0, Qk.jsx)("div", {
             className: "SliderText",
-            children: CC("settingsMenu:keyBindings")
-          }), bC.e.map((zC => (0, xC.jsx)(XZ, {
-            title: CC(zC.name.translationKey, zC.name.params),
-            defaultOpen: bC.f.has(zC.id),
-            children: zC.actions.map((CC => (0, xC.jsx)(cZ, {
-              noaAction: CC,
-              forceUpdate: RC,
-              clashesWith: zC.clashesWith,
-              showPadGlyph: AC
-            }, CC)))
-          }, zC.name.translationKey))), (0, xC.jsx)(qC.I, {
+            children: kk("settingsMenu:keyBindings")
+          }), ik.i.map((Fk => (0, Qk.jsx)(UI, {
+            title: kk(Fk.name.translationKey, Fk.name.params),
+            defaultOpen: ik.j.has(Fk.id),
+            children: Fk.actions.map((kk => (0, Qk.jsx)(CI, {
+              noaAction: kk,
+              forceUpdate: Pk,
+              clashesWith: Fk.clashesWith,
+              showPadGlyph: Kk
+            }, kk)))
+          }, Fk.name.translationKey))), (0, Qk.jsx)(qk.G, {
             className: "ResetBindingsButton",
             onClick: () => {
-              (0, bC.z)(), RC()
+              (0, ik.D)(), Pk()
             },
-            children: CC("controls:resetBindings")
+            children: kk("controls:resetBindings")
           })]
         })]
       })
     }
 
-    function XZ(CC) {
+    function UI(kk) {
       let {
-        title: zC,
-        defaultOpen: ZC,
-        children: QC
-      } = CC;
-      const [bC, nC] = (0, wC.useState)(ZC);
-      return (0, xC.jsxs)("div", {
-        className: oC()("ControlsSection", {
-          Collapsed: !bC
+        title: Fk,
+        defaultOpen: Ik,
+        children: Xk
+      } = kk;
+      const [ik, yk] = (0, Tk.useState)(Ik);
+      return (0, Qk.jsxs)("div", {
+        className: ak()("ControlsSection", {
+          Collapsed: !ik
         }),
-        children: [(0, xC.jsxs)("div", {
+        children: [(0, Qk.jsxs)("div", {
           className: "ControlsSectionHeader",
           "data-pad-focusable": !0,
           onClick: () => {
-            nC(!bC)
+            yk(!ik)
           },
-          children: [(0, xC.jsx)("div", {
+          children: [(0, Qk.jsx)("div", {
             className: "ControlsSectionTitle",
-            children: zC
-          }), (0, xC.jsx)("div", {
+            children: Fk
+          }), (0, Qk.jsx)("div", {
             className: "ControlsSectionChevron",
             children: "\u25be"
           })]
-        }), bC && (0, xC.jsx)("div", {
+        }), ik && (0, Qk.jsx)("div", {
           className: "ControlsSectionRows",
-          children: QC
+          children: Xk
         })]
       })
     }
 
-    function cZ(CC) {
+    function CI(kk) {
       let {
-        noaAction: zC,
-        forceUpdate: ZC,
-        clashesWith: fC,
-        showPadGlyph: FC
-      } = CC;
+        noaAction: Fk,
+        forceUpdate: Ik,
+        clashesWith: lk,
+        showPadGlyph: Lk
+      } = kk;
       const {
-        t: WC
-      } = (0, QC.y)(), NC = (0, PC.c)(zC), [MC, gC] = (0, wC.useState)(!1), [SC, GC] = (0, wC.useState)("controls:clickToEnterNewBinding"), [RC, AC] = (0, wC.useState)(null), [JC, IC] = (0, wC.useState)(null), iC = (0, wC.useRef)(null);
-      (0, wC.useEffect)((() => {
-        MC && iC.current && iC.current.focus()
-      }), [MC]);
-      const vC = bC.o[zC].filter((CC => nC.l[CC]));
-      let eC = null;
-      const hC = [],
-        KC = fC.flatMap((CC => {
-          var zC, ZC;
-          return null !== (zC = null === (ZC = bC.e.find((zC => zC.id === CC))) || void 0 === ZC ? void 0 : ZC.actions) && void 0 !== zC ? zC : []
+        t: tk
+      } = (0, Xk.y)(), Zk = (0, Jk.b)(Fk), [jk, ek] = (0, Tk.useState)(!1), [wk, xk] = (0, Tk.useState)("controls:clickToEnterNewBinding"), [Pk, Kk] = (0, Tk.useState)(null), [sk, Vk] = (0, Tk.useState)(null), zk = (0, Tk.useRef)(null);
+      (0, Tk.useEffect)((() => {
+        jk && zk.current && zk.current.focus()
+      }), [jk]);
+      const Sk = ik.s[Fk].filter((kk => yk.k[kk]));
+      let vk = null;
+      const Ek = [],
+        Ok = lk.flatMap((kk => {
+          var Fk, Ik;
+          return null !== (Fk = null === (Ik = ik.i.find((Fk => Fk.id === kk))) || void 0 === Ik ? void 0 : Ik.actions) && void 0 !== Fk ? Fk : []
         }));
-      for (const QC of KC) {
-        if (QC === zC) continue;
-        const CC = bC.o[QC];
-        for (const zC of CC) vC.includes(zC) && hC.push(WC(bC.s[QC].translationKey, bC.s[QC].params))
+      for (const Xk of Ok) {
+        if (Xk === Fk) continue;
+        const kk = ik.s[Xk];
+        for (const Fk of kk) Sk.includes(Fk) && Ek.push(tk(ik.v[Xk].translationKey, ik.v[Xk].params))
       }
-      hC.length > 0 && (eC = WC("controls:sharedBindingsWarning") + " ", eC += hC.join(", "));
-      const YC = () => {
-          gC(!1), AC(null), GC("controls:clickToEnterNewBinding"), IC(null)
+      Ek.length > 0 && (vk = tk("controls:sharedBindingsWarning") + " ", vk += Ek.join(", "));
+      const nk = () => {
+          ek(!1), Kk(null), xk("controls:clickToEnterNewBinding"), Vk(null)
         },
-        dC = () => "BindingInput_" + zC;
-      return (0, xC.jsxs)("div", {
-        className: oC()("ControlRow", {
-          WarningBorder: null !== eC
+        Gk = () => "BindingInput_" + Fk;
+      return (0, Qk.jsxs)("div", {
+        className: ak()("ControlRow", {
+          WarningBorder: null !== vk
         }),
-        children: [(0, xC.jsxs)("div", {
+        children: [(0, Qk.jsxs)("div", {
           className: "ControlRowInner",
-          children: [(0, xC.jsxs)("div", {
+          children: [(0, Qk.jsxs)("div", {
             className: "ControlName",
-            children: [WC(bC.s[zC].translationKey, bC.s[zC].params), FC && NC && (0, xC.jsx)(pC.e, {
-              glyph: NC,
+            children: [tk(ik.v[Fk].translationKey, ik.v[Fk].params), Lk && Zk && (0, Qk.jsx)(Hk.e, {
+              glyph: Zk,
               className: "ControlPadGlyph"
             })]
-          }), (0, xC.jsxs)("div", {
+          }), (0, Qk.jsxs)("div", {
             className: "ControlBindingsContainer",
-            children: [(0, xC.jsxs)("div", {
+            children: [(0, Qk.jsxs)("div", {
               className: "ControlBindingsList",
-              children: [vC.map((CC => (0, xC.jsxs)("div", {
+              children: [Sk.map((kk => (0, Qk.jsxs)("div", {
                 className: "ControlBinding",
-                children: [(0, xC.jsx)("div", {
-                  children: (0, bC.h)(CC)
-                }), (0, xC.jsx)("div", {
+                children: [(0, Qk.jsx)("div", {
+                  children: (0, ik.n)(kk)
+                }), (0, Qk.jsx)("div", {
                   className: "ControlBindingRemoveIcon",
                   "data-pad-focusable": !0,
                   onClick: () => {
-                    const QC = (0, bC.t)(zC, CC);
-                    QC.isError() ? IC(QC.asError().message) : IC(null), ZC()
+                    const Xk = (0, ik.w)(Fk, kk);
+                    Xk.isError() ? Vk(Xk.asError().message) : Vk(null), Ik()
                   },
                   children: "\xd7"
                 })]
-              }, CC))), !MC && (0, xC.jsx)("div", {
+              }, kk))), !jk && (0, Qk.jsx)("div", {
                 className: "ControlBinding ControlBindingAdd",
                 onClick: () => {
-                  gC(!0), IC(null)
+                  ek(!0), Vk(null)
                 },
-                children: (0, xC.jsx)("div", {
+                children: (0, Qk.jsx)("div", {
                   className: "ControlBindingAddIcon",
                   children: "+"
                 })
               })]
-            }), MC && (0, xC.jsxs)("div", {
+            }), jk && (0, Qk.jsxs)("div", {
               className: "ControlBindingAddInput",
-              children: [(0, xC.jsxs)("div", {
+              children: [(0, Qk.jsxs)("div", {
                 className: "InputContainer",
-                children: [(0, xC.jsx)("div", {
+                children: [(0, Qk.jsx)("div", {
                   className: "InputOverlay",
-                  children: RC ? (0, bC.h)(RC) : (0, xC.jsx)("div", {
+                  children: Pk ? (0, ik.n)(Pk) : (0, Qk.jsx)("div", {
                     className: "InputOverlayPlaceholder",
-                    children: WC(SC)
+                    children: tk(wk)
                   })
-                }), (0, xC.jsx)("input", {
-                  ref: iC,
-                  id: dC(),
+                }), (0, Qk.jsx)("input", {
+                  ref: zk,
+                  id: Gk(),
                   "data-pad-no-osk": !0,
                   defaultValue: "",
-                  onKeyDown: CC => {
-                    if ("Escape" === CC.code) return YC(), CC.preventDefault(), void CC.stopPropagation();
-                    const zC = CC.code;
-                    nC.d.includes(zC) ? (IC(null), AC(zC)) : (IC("controls:keyIsReserved"), AC(null)), CC.preventDefault(), CC.stopPropagation()
+                  onKeyDown: kk => {
+                    if ("Escape" === kk.code) return nk(), kk.preventDefault(), void kk.stopPropagation();
+                    const Fk = kk.code;
+                    yk.d.includes(Fk) ? (Vk(null), Kk(Fk)) : (Vk("controls:keyIsReserved"), Kk(null)), kk.preventDefault(), kk.stopPropagation()
                   },
-                  onMouseDown: CC => {
-                    const zC = "Mouse" + (CC.button + 1);
-                    document.activeElement && document.activeElement.id === dC() ? nC.d.includes(zC) ? (IC(null), AC(zC)) : (IC("controls:keyIsReserved"), AC(null)) : GC("controls:enterNewBinding"), CC.stopPropagation()
+                  onMouseDown: kk => {
+                    const Fk = "Mouse" + (kk.button + 1);
+                    document.activeElement && document.activeElement.id === Gk() ? yk.d.includes(Fk) ? (Vk(null), Kk(Fk)) : (Vk("controls:keyIsReserved"), Kk(null)) : xk("controls:enterNewBinding"), kk.stopPropagation()
                   },
                   onBlur: () => {
-                    GC("controls:clickToEnterNewBinding")
+                    xk("controls:clickToEnterNewBinding")
                   }
                 })]
-              }), (0, xC.jsx)(qC.g, {
-                onPointerDown: CC => {
-                  CC.preventDefault()
+              }), (0, Qk.jsx)(qk.d, {
+                onPointerDown: kk => {
+                  kk.preventDefault()
                 },
                 onClick: () => {
-                  (0, bC.c)(zC, RC), ZC(), YC()
+                  (0, ik.e)(Fk, Pk), Ik(), nk()
                 },
                 className: "ControlBindingAddButton",
-                disabled: null === RC,
-                children: WC("general:add")
-              }), (0, xC.jsx)("div", {
+                disabled: null === Pk,
+                children: tk("general:add")
+              }), (0, Qk.jsx)("div", {
                 className: "ControlBindingAddCancel",
                 onClick: () => {
-                  YC()
+                  nk()
                 },
                 children: "\xd7"
               })]
-            }), JC && (0, xC.jsx)("div", {
+            }), sk && (0, Qk.jsx)("div", {
               className: "ControlBindingError",
-              children: WC(JC)
+              children: tk(sk)
             })]
           })]
-        }), eC && (0, xC.jsx)("div", {
+        }), vk && (0, Qk.jsx)("div", {
           className: "ControlRowWarning",
-          children: eC
+          children: vk
         })]
       })
     }
   },
-  8882: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => nC
+  8865: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => yk
     });
-    var QC = ZC(48),
-      wC = ZC(1013),
-      bC = ZC(1056);
-    const nC = (0, QC.forwardRef)((function(CC, zC) {
+    var Xk = Ik(58),
+      Tk = Ik(1066),
+      ik = Ik(1096);
+    const yk = (0, Xk.forwardRef)((function(kk, Fk) {
       let {
-        icon: ZC,
-        title: QC,
-        sub: nC,
-        expanded: fC,
-        onClick: oC
-      } = CC;
-      return (0, bC.jsxs)("button", {
-        ref: zC,
+        icon: Ik,
+        title: Xk,
+        sub: yk,
+        expanded: lk,
+        onClick: ak
+      } = kk;
+      return (0, ik.jsxs)("button", {
+        ref: Fk,
         type: "button",
         className: "SettingBox SettingBoxFeatured FeaturedSettingsEntry",
-        "aria-expanded": fC,
-        onClick: oC,
-        children: [(0, bC.jsx)(wC.c, {
-          name: ZC,
+        "aria-expanded": lk,
+        onClick: ak,
+        children: [(0, ik.jsx)(Tk.e, {
+          name: Ik,
           className: "FeaturedSettingsEntryIcon"
-        }), (0, bC.jsxs)("span", {
+        }), (0, ik.jsxs)("span", {
           className: "FeaturedSettingsEntryText",
-          children: [(0, bC.jsx)("span", {
+          children: [(0, ik.jsx)("span", {
             className: "FeaturedSettingsEntryTitle",
-            children: QC
-          }), (0, bC.jsx)("span", {
+            children: Xk
+          }), (0, ik.jsx)("span", {
             className: "FeaturedSettingsEntrySub",
-            children: nC
+            children: yk
           })]
-        }), (0, bC.jsx)("span", {
+        }), (0, ik.jsx)("span", {
           className: "FeaturedSettingsEntryChevron",
           children: "\u25be"
         })]
       })
     }))
   },
-  8890: (CC, zC, ZC) => {
-    function QC(CC) {
+  8871: (kk, Fk, Ik) => {
+    function Xk(kk) {
       return {
-        x: (CC.left + CC.right) / 2,
-        y: (CC.top + CC.bottom) / 2
+        x: (kk.left + kk.right) / 2,
+        y: (kk.top + kk.bottom) / 2
       }
     }
 
-    function wC(CC) {
-      return 0 === CC.length ? null : CC.reduce(((CC, zC) => ({
-        left: Math.min(CC.left, zC.left),
-        top: Math.min(CC.top, zC.top),
-        right: Math.max(CC.right, zC.right),
-        bottom: Math.max(CC.bottom, zC.bottom)
+    function Tk(kk) {
+      return 0 === kk.length ? null : kk.reduce(((kk, Fk) => ({
+        left: Math.min(kk.left, Fk.left),
+        top: Math.min(kk.top, Fk.top),
+        right: Math.max(kk.right, Fk.right),
+        bottom: Math.max(kk.bottom, Fk.bottom)
       })))
     }
 
-    function bC(CC, zC) {
-      const ZC = Math.max(0, (zC - (CC.right - CC.left)) / 2),
-        QC = Math.max(0, (zC - (CC.bottom - CC.top)) / 2);
+    function ik(kk, Fk) {
+      const Ik = Math.max(0, (Fk - (kk.right - kk.left)) / 2),
+        Xk = Math.max(0, (Fk - (kk.bottom - kk.top)) / 2);
       return {
-        left: CC.left - ZC,
-        top: CC.top - QC,
-        right: CC.right + ZC,
-        bottom: CC.bottom + QC
+        left: kk.left - Ik,
+        top: kk.top - Xk,
+        right: kk.right + Ik,
+        bottom: kk.bottom + Xk
       }
     }
 
-    function nC(CC, zC) {
-      return zC.x >= CC.left && zC.x <= CC.right && zC.y >= CC.top && zC.y <= CC.bottom
+    function yk(kk, Fk) {
+      return Fk.x >= kk.left && Fk.x <= kk.right && Fk.y >= kk.top && Fk.y <= kk.bottom
     }
 
-    function fC(CC, zC, ZC) {
-      let wC = null,
-        fC = 1 / 0;
+    function lk(kk, Fk, Ik) {
+      let Tk = null,
+        lk = 1 / 0;
       for (const {
-          id: QC,
-          box: bC
+          id: Xk,
+          box: ik
         }
-        of zC) {
-        const zC = (bC.right - bC.left) * (bC.bottom - bC.top);
-        nC(bC, CC) && zC < fC && (fC = zC, wC = QC)
+        of Fk) {
+        const Fk = (ik.right - ik.left) * (ik.bottom - ik.top);
+        yk(ik, kk) && Fk < lk && (lk = Fk, Tk = Xk)
       }
-      if (null !== wC) return wC;
-      let oC = 1 / 0;
+      if (null !== Tk) return Tk;
+      let ak = 1 / 0;
       for (const {
-          id: qC,
-          box: FC
+          id: qk,
+          box: Lk
         }
-        of zC) {
-        if (!nC(bC(FC, ZC), CC)) continue;
-        const zC = QC(FC),
-          fC = Math.hypot(CC.x - zC.x, CC.y - zC.y);
-        fC < oC && (oC = fC, wC = qC)
+        of Fk) {
+        if (!yk(ik(Lk, Ik), kk)) continue;
+        const Fk = Xk(Lk),
+          lk = Math.hypot(kk.x - Fk.x, kk.y - Fk.y);
+        lk < ak && (ak = lk, Tk = qk)
       }
-      return wC
+      return Tk
     }
 
-    function oC(CC, zC, ZC) {
+    function ak(kk, Fk, Ik) {
       return {
-        left: ZC.left,
-        top: ZC.top,
-        right: CC - ZC.right,
-        bottom: zC - ZC.bottom
+        left: Ik.left,
+        top: Ik.top,
+        right: kk - Ik.right,
+        bottom: Fk - Ik.bottom
       }
     }
 
-    function qC(CC, zC, ZC, QC) {
-      const wC = (CC, zC, ZC) => Math.max(Math.min(zC, 0), Math.min(Math.max(ZC, 0), CC));
+    function qk(kk, Fk, Ik, Xk) {
+      const Tk = (kk, Fk, Ik) => Math.max(Math.min(Fk, 0), Math.min(Math.max(Ik, 0), kk));
       return {
-        x: wC(zC, QC.left - CC.left, QC.right - CC.right),
-        y: wC(ZC, QC.top - CC.top, QC.bottom - CC.bottom)
+        x: Tk(Fk, Xk.left - kk.left, Xk.right - kk.right),
+        y: Tk(Ik, Xk.top - kk.top, Xk.bottom - kk.bottom)
       }
     }
 
-    function FC(CC, zC, ZC, QC, wC) {
-      const bC = CC.dx * QC + zC,
-        nC = CC.dy * wC + ZC,
-        fC = CC => Math.max(-1, Math.min(1, CC));
+    function Lk(kk, Fk, Ik, Xk, Tk) {
+      const ik = kk.dx * Xk + Fk,
+        yk = kk.dy * Tk + Ik,
+        lk = kk => Math.max(-1, Math.min(1, kk));
       return {
-        dx: fC(bC / QC),
-        dy: fC(nC / wC)
+        dx: lk(ik / Xk),
+        dy: lk(yk / Tk)
       }
     }
 
-    function WC(CC, zC, ZC, QC) {
-      return zC <= 0 || ZC <= 0 ? 1 : Math.max(.05, Math.min(1, CC / zC, QC / ZC))
+    function tk(kk, Fk, Ik, Xk) {
+      return Fk <= 0 || Ik <= 0 ? 1 : Math.max(.05, Math.min(1, kk / Fk, Xk / Ik))
     }
 
-    function NC(CC, zC, ZC) {
-      return Math.min(CC.right, zC.right) - Math.max(CC.left, zC.left) > ZC && Math.min(CC.bottom, zC.bottom) - Math.max(CC.top, zC.top) > ZC
+    function Zk(kk, Fk, Ik) {
+      return Math.min(kk.right, Fk.right) - Math.max(kk.left, Fk.left) > Ik && Math.min(kk.bottom, Fk.bottom) - Math.max(kk.top, Fk.top) > Ik
     }
 
-    function MC(CC, zC) {
-      const ZC = (CC, zC, ZC, QC) => zC - CC > QC - ZC ? ZC - CC > zC - QC ? QC - zC : ZC - CC : CC < ZC ? ZC - CC : zC > QC ? QC - zC : 0;
+    function jk(kk, Fk) {
+      const Ik = (kk, Fk, Ik, Xk) => Fk - kk > Xk - Ik ? Ik - kk > Fk - Xk ? Xk - Fk : Ik - kk : kk < Ik ? Ik - kk : Fk > Xk ? Xk - Fk : 0;
       return {
-        x: ZC(CC.left, CC.right, zC.left, zC.right),
-        y: ZC(CC.top, CC.bottom, zC.top, zC.bottom)
+        x: Ik(kk.left, kk.right, Fk.left, Fk.right),
+        y: Ik(kk.top, kk.bottom, Fk.top, Fk.bottom)
       }
     }
 
-    function gC(CC, zC) {
+    function ek(kk, Fk) {
       let {
-        avoid: ZC = null,
-        bounds: QC = null
-      } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, wC = 0, bC = 1 / 0;
-      return CC.forEach(((CC, nC) => {
-        const fC = zC.filter((zC => NC(CC, zC, 0))).length,
-          oC = null !== QC && (CC.left < QC.left || CC.top < QC.top || CC.right > QC.right || CC.bottom > QC.bottom),
-          qC = fC + (ZC && NC(CC, ZC, 0) ? 1e3 : 0) + (oC ? 1e6 : 0);
-        qC < bC && (wC = nC, bC = qC)
-      })), wC
+        avoid: Ik = null,
+        bounds: Xk = null
+      } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, Tk = 0, ik = 1 / 0;
+      return kk.forEach(((kk, yk) => {
+        const lk = Fk.filter((Fk => Zk(kk, Fk, 0))).length,
+          ak = null !== Xk && (kk.left < Xk.left || kk.top < Xk.top || kk.right > Xk.right || kk.bottom > Xk.bottom),
+          qk = lk + (Ik && Zk(kk, Ik, 0) ? 1e3 : 0) + (ak ? 1e6 : 0);
+        qk < ik && (Tk = yk, ik = qk)
+      })), Tk
     }
-    ZC.d(zC, {
-      A: () => MC,
-      D: () => wC,
-      d: () => QC,
-      f: () => nC,
-      g: () => NC,
-      h: () => qC,
-      l: () => bC,
-      n: () => gC,
-      o: () => FC,
-      q: () => fC,
-      u: () => WC,
-      w: () => oC
+    Ik.d(Fk, {
+      B: () => lk,
+      E: () => tk,
+      H: () => ak,
+      L: () => jk,
+      M: () => Tk,
+      e: () => Xk,
+      i: () => yk,
+      l: () => Zk,
+      o: () => qk,
+      s: () => ik,
+      v: () => ek,
+      z: () => Lk
     })
   },
-  8682: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => wC,
-      c: () => QC
+  8645: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => Tk,
+      d: () => Xk
     });
-    const QC = "controllerOpenKeyboard",
-      wC = "controllerKeyboardVisible"
+    const Xk = "controllerOpenKeyboard",
+      Tk = "controllerKeyboardVisible"
   },
-  8685: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => PC,
-      h: () => pC,
-      k: () => FC,
-      m: () => GC,
-      q: () => RC,
-      t: () => NC
+  8652: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Jk,
+      f: () => Hk,
+      j: () => Lk,
+      n: () => xk,
+      r: () => Pk,
+      s: () => Zk
     });
-    var QC = ZC(1584),
-      wC = ZC(1654);
-    const bC = CC => CC >= 56320 && CC <= 57343,
-      nC = CC => CC >= 55296 && CC <= 56319,
-      fC = (CC, zC) => zC >= 2 && bC(CC.charCodeAt(zC - 1)) && nC(CC.charCodeAt(zC - 2)) ? zC - 2 : Math.max(0, zC - 1),
-      oC = (CC, zC) => {
-        let ZC;
-        var QC, wC;
-        return ZC = CC.start !== CC.end ? zC < 0 ? CC.start : CC.end : zC < 0 ? fC(CC.value, CC.start) : (QC = CC.value, (wC = CC.start) + 1 < QC.length && nC(QC.charCodeAt(wC)) && bC(QC.charCodeAt(wC + 1)) ? wC + 2 : Math.min(QC.length, wC + 1)), {
-          value: CC.value,
-          start: ZC,
-          end: ZC
+    var Xk = Ik(1604),
+      Tk = Ik(1668);
+    const ik = kk => kk >= 56320 && kk <= 57343,
+      yk = kk => kk >= 55296 && kk <= 56319,
+      lk = (kk, Fk) => Fk >= 2 && ik(kk.charCodeAt(Fk - 1)) && yk(kk.charCodeAt(Fk - 2)) ? Fk - 2 : Math.max(0, Fk - 1),
+      ak = (kk, Fk) => {
+        let Ik;
+        var Xk, Tk;
+        return Ik = kk.start !== kk.end ? Fk < 0 ? kk.start : kk.end : Fk < 0 ? lk(kk.value, kk.start) : (Xk = kk.value, (Tk = kk.start) + 1 < Xk.length && yk(Xk.charCodeAt(Tk)) && ik(Xk.charCodeAt(Tk + 1)) ? Tk + 2 : Math.min(Xk.length, Tk + 1)), {
+          value: kk.value,
+          start: Ik,
+          end: Ik
         }
       },
-      qC = ["text", "search", "url", "email", "tel", "password", "number"],
-      FC = CC => !(!(0, wC.d)(CC) || CC.isContentEditable || CC.hasAttribute("data-pad-no-osk")) && (CC instanceof HTMLTextAreaElement || CC instanceof HTMLInputElement && qC.includes(CC.type)),
-      WC = CC => null !== CC.selectionStart,
-      NC = CC => {
-        var zC, ZC;
+      qk = ["text", "search", "url", "email", "tel", "password", "number"],
+      Lk = kk => !(!(0, Tk.b)(kk) || kk.isContentEditable || kk.hasAttribute("data-pad-no-osk")) && (kk instanceof HTMLTextAreaElement || kk instanceof HTMLInputElement && qk.includes(kk.type)),
+      tk = kk => null !== kk.selectionStart,
+      Zk = kk => {
+        var Fk, Ik;
         const {
-          value: QC
-        } = CC;
+          value: Xk
+        } = kk;
         return {
-          value: QC,
-          start: null !== (zC = CC.selectionStart) && void 0 !== zC ? zC : QC.length,
-          end: null !== (ZC = CC.selectionEnd) && void 0 !== ZC ? ZC : QC.length
+          value: Xk,
+          start: null !== (Fk = kk.selectionStart) && void 0 !== Fk ? Fk : Xk.length,
+          end: null !== (Ik = kk.selectionEnd) && void 0 !== Ik ? Ik : Xk.length
         }
       },
-      MC = (CC, zC, ZC) => {
-        if (CC.readOnly) return;
-        const wC = CC instanceof HTMLTextAreaElement ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype;
-        Object.getOwnPropertyDescriptor(wC, "value").set.call(CC, zC.value), WC(CC) && CC.setSelectionRange(zC.start, zC.end), (0, QC.f)(CC, new InputEvent("input", {
+      jk = (kk, Fk, Ik) => {
+        if (kk.readOnly) return;
+        const Tk = kk instanceof HTMLTextAreaElement ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype;
+        Object.getOwnPropertyDescriptor(Tk, "value").set.call(kk, Fk.value), tk(kk) && kk.setSelectionRange(Fk.start, Fk.end), (0, Xk.e)(kk, new InputEvent("input", {
           bubbles: !0,
-          inputType: ZC
+          inputType: Ik
         }))
       };
-    let gC = !1;
-    const SC = (CC, zC) => !!document.execCommand(CC, !1, zC) || (gC || (gC = !0, console.warn(`execCommand("${CC}") failed; the on-screen keyboard is setting the value directly`)), !1),
-      pC = (CC, zC) => {
-        SC("insertText", zC) || MC(CC, function(CC, zC) {
-          let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
-          const QC = CC.value.slice(0, CC.start),
-            wC = CC.value.slice(CC.end);
-          let bC = ZC < 0 ? zC.length : Math.max(0, ZC - QC.length - wC.length);
-          bC > 0 && bC < zC.length && nC(zC.charCodeAt(bC - 1)) && bC--;
-          const fC = zC.slice(0, bC),
-            oC = QC.length + fC.length;
+    let ek = !1;
+    const wk = (kk, Fk) => !!document.execCommand(kk, !1, Fk) || (ek || (ek = !0, console.warn(`execCommand("${kk}") failed; the on-screen keyboard is setting the value directly`)), !1),
+      Hk = (kk, Fk) => {
+        wk("insertText", Fk) || jk(kk, function(kk, Fk) {
+          let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
+          const Xk = kk.value.slice(0, kk.start),
+            Tk = kk.value.slice(kk.end);
+          let ik = Ik < 0 ? Fk.length : Math.max(0, Ik - Xk.length - Tk.length);
+          ik > 0 && ik < Fk.length && yk(Fk.charCodeAt(ik - 1)) && ik--;
+          const lk = Fk.slice(0, ik),
+            ak = Xk.length + lk.length;
           return {
-            value: QC + fC + wC,
-            start: oC,
-            end: oC
+            value: Xk + lk + Tk,
+            start: ak,
+            end: ak
           }
-        }(NC(CC), zC, CC.maxLength), "insertText")
+        }(Zk(kk), Fk, kk.maxLength), "insertText")
       },
-      PC = CC => {
-        SC("delete") || MC(CC, (CC => {
-          const zC = CC.start === CC.end ? fC(CC.value, CC.start) : CC.start;
+      Jk = kk => {
+        wk("delete") || jk(kk, (kk => {
+          const Fk = kk.start === kk.end ? lk(kk.value, kk.start) : kk.start;
           return {
-            value: CC.value.slice(0, zC) + CC.value.slice(CC.end),
-            start: zC,
-            end: zC
+            value: kk.value.slice(0, Fk) + kk.value.slice(kk.end),
+            start: Fk,
+            end: Fk
           }
-        })(NC(CC)), "deleteContentBackward")
+        })(Zk(kk)), "deleteContentBackward")
       },
-      GC = (CC, zC) => {
-        if (!WC(CC)) return;
-        const ZC = oC(NC(CC), zC);
-        CC.setSelectionRange(ZC.start, ZC.end)
+      xk = (kk, Fk) => {
+        if (!tk(kk)) return;
+        const Ik = ak(Zk(kk), Fk);
+        kk.setSelectionRange(Ik.start, Ik.end)
       },
-      RC = CC => {
-        WC(CC) && 0 === CC.selectionStart && 0 === CC.selectionEnd && CC.setSelectionRange(CC.value.length, CC.value.length)
+      Pk = kk => {
+        tk(kk) && 0 === kk.selectionStart && 0 === kk.selectionEnd && kk.setSelectionRange(kk.value.length, kk.value.length)
       }
   },
-  8844: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => fC
+  8822: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => lk
     });
-    var QC = ZC(20),
-      wC = ZC(2048),
-      bC = ZC(1307),
-      nC = ZC(1347);
-    const fC = async () => {
-      if ((0, nC.h)()) {
-        if (!0 !== await bC.NotificationProvider.showPromptPopup({
+    var Xk = Ik(25),
+      Tk = Ik(2056),
+      ik = Ik(1324),
+      yk = Ik(1364);
+    const lk = async () => {
+      if ((0, yk.f)()) {
+        if (!0 !== await ik.NotificationProvider.showPromptPopup({
             title: "controller:menusLeaveGameTitle",
             confirmText: "controller:menusLeaveGameLeave",
             cancelText: "controller:menusLeaveGameStay",
             destructive: !0
-          }).getResult() || "inGame" !== QC.b.get("gameState")) return
-      }(0, wC.e)()
+          }).getResult() || "inGame" !== Xk.d.get("gameState")) return
+      }(0, Tk.c)()
     }
   },
-  8847: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => oC,
-      g: () => bC,
-      k: () => nC,
-      m: () => wC,
-      n: () => fC
+  8825: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => ak,
+      d: () => ik,
+      g: () => yk,
+      h: () => Tk,
+      l: () => lk
     });
-    var QC = ZC(1867);
-    const wC = "controllerPadShopOpen",
-      bC = CC => QC.e.includes(CC),
-      nC = CC => Object.values(CC).some((CC => !1 !== CC.canBuy && !CC.isRewardedAd)),
-      fC = (CC, zC, ZC) => {
-        var QC, wC, nC, fC;
-        const oC = CC.filter((CC => !bC(CC))),
-          qC = null !== zC && CC.includes(zC) ? zC : null;
-        return null !== qC && !bC(qC) && ZC(qC) ? qC : null !== (QC = null !== (wC = null !== (nC = null !== (fC = oC.find(ZC)) && void 0 !== fC ? fC : oC[0]) && void 0 !== nC ? nC : qC) && void 0 !== wC ? wC : CC[0]) && void 0 !== QC ? QC : null
+    var Xk = Ik(1902);
+    const Tk = "controllerPadShopOpen",
+      ik = kk => Xk.j.includes(kk),
+      yk = kk => Object.values(kk).some((kk => !1 !== kk.canBuy && !kk.isRewardedAd)),
+      lk = (kk, Fk, Ik) => {
+        var Xk, Tk, yk, lk;
+        const ak = kk.filter((kk => !ik(kk))),
+          qk = null !== Fk && kk.includes(Fk) ? Fk : null;
+        return null !== qk && !ik(qk) && Ik(qk) ? qk : null !== (Xk = null !== (Tk = null !== (yk = null !== (lk = ak.find(Ik)) && void 0 !== lk ? lk : ak[0]) && void 0 !== yk ? yk : qk) && void 0 !== Tk ? Tk : kk[0]) && void 0 !== Xk ? Xk : null
       },
-      oC = CC => CC.userInput || CC.isRewardedAd || "boolean" === typeof CC.isSelected ? null : JSON.stringify([CC.image, CC.cost, CC.currency, CC.amount, CC.customTitle, CC.buyButtonText, CC.description, CC.canBuy])
+      ak = kk => kk.userInput || kk.isRewardedAd || "boolean" === typeof kk.isSelected ? null : JSON.stringify([kk.image, kk.cost, kk.currency, kk.amount, kk.customTitle, kk.buyButtonText, kk.description, kk.canBuy])
   },
-  8862: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => qC,
-      f: () => FC
+  8851: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => qk,
+      e: () => Lk
     });
-    var QC = ZC(48),
-      wC = ZC(1383),
-      bC = ZC(1911),
-      nC = ZC(1357),
-      fC = ZC(1373),
-      oC = ZC(1056);
-    const qC = () => {
-        const CC = (0, nC.r)();
-        if ((0, QC.useEffect)((() => {
-            (0, nC.i)()
-          }), []), !CC) return null;
+    var Xk = Ik(58),
+      Tk = Ik(1402),
+      ik = Ik(1939),
+      yk = Ik(1375),
+      lk = Ik(1392),
+      ak = Ik(1096);
+    const qk = () => {
+        const kk = (0, yk.v)();
+        if ((0, Xk.useEffect)((() => {
+            (0, yk.l)()
+          }), []), !kk) return null;
         const {
-          ControllerCategory: zC
-        } = CC;
-        return (0, oC.jsx)(fC.d, {
-          children: (0, oC.jsx)(zC, {})
+          ControllerCategory: Fk
+        } = kk;
+        return (0, ak.jsx)(lk.d, {
+          children: (0, ak.jsx)(Fk, {})
         })
       },
-      FC = () => {
-        var CC;
-        const zC = (0, nC.r)(),
-          [, ZC] = (0, QC.useReducer)((CC => CC + 1), 0);
-        return (0, wC.c)(bC.d, ZC), null !== (CC = null === zC || void 0 === zC ? void 0 : zC.hasActivePad()) && void 0 !== CC && CC
+      Lk = () => {
+        var kk;
+        const Fk = (0, yk.v)(),
+          [, Ik] = (0, Xk.useReducer)((kk => kk + 1), 0);
+        return (0, Tk.d)(ik.e, Ik), null !== (kk = null === Fk || void 0 === Fk ? void 0 : Fk.hasActivePad()) && void 0 !== kk && kk
       }
   },
-  8691: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => QC,
-      d: () => qC,
-      g: () => SC,
-      i: () => WC,
-      l: () => gC,
-      m: () => bC,
-      o: () => MC,
-      p: () => nC,
-      s: () => NC
+  8658: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => Xk,
+      d: () => qk,
+      g: () => wk,
+      h: () => tk,
+      l: () => ek,
+      n: () => ik,
+      o: () => jk,
+      p: () => yk,
+      q: () => Zk
     });
-    const QC = ["button", "a[href]", "input:not([type=hidden])", "textarea", "select", "[role=button]", "[role=tab]", "[role=switch]", "[role=checkbox]", "[role=option]", "[role=menuitem]", "[data-pad-focusable]", "[data-pad-tab]", ".Dropdown-control", ".Dropdown-option"].join(","),
-      wC = (CC, zC) => {
-        if ("function" === typeof CC.checkVisibility) return !CC.checkVisibility({
+    const Xk = ["button", "a[href]", "input:not([type=hidden])", "textarea", "select", "[role=button]", "[role=tab]", "[role=switch]", "[role=checkbox]", "[role=option]", "[role=menuitem]", "[data-pad-focusable]", "[data-pad-tab]", ".Dropdown-control", ".Dropdown-option"].join(","),
+      Tk = (kk, Fk) => {
+        if ("function" === typeof kk.checkVisibility) return !kk.checkVisibility({
           visibilityProperty: !0,
           checkVisibilityCSS: !0,
-          opacityProperty: zC,
-          checkOpacity: zC
+          opacityProperty: Fk,
+          checkOpacity: Fk
         });
         const {
-          visibility: ZC
-        } = getComputedStyle(CC);
-        if ("hidden" === ZC || "collapse" === ZC) return !0;
-        if (!zC) return !1;
-        for (let QC = CC; QC; QC = QC.parentElement)
-          if ("0" === getComputedStyle(QC).opacity) return !0;
+          visibility: Ik
+        } = getComputedStyle(kk);
+        if ("hidden" === Ik || "collapse" === Ik) return !0;
+        if (!Fk) return !1;
+        for (let Xk = kk; Xk; Xk = Xk.parentElement)
+          if ("0" === getComputedStyle(Xk).opacity) return !0;
         return !1
       },
-      bC = CC => {
-        if (!CC.isConnected || wC(CC, !0)) return !1;
-        const zC = CC.getBoundingClientRect();
-        return zC.width > 0 && zC.height > 0
+      ik = kk => {
+        if (!kk.isConnected || Tk(kk, !0)) return !1;
+        const Fk = kk.getBoundingClientRect();
+        return Fk.width > 0 && Fk.height > 0
       },
-      nC = CC => !!CC.matches(":disabled, [aria-disabled='true']") || "button" === CC.getAttribute("role") && "-1" === CC.getAttribute("tabindex"),
-      fC = CC => {
-        var zC;
-        if (CC.closest("[data-pad-ignore]")) return !0;
-        return !!(null === (zC = CC.parentElement) || void 0 === zC ? void 0 : zC.closest("[data-pad-focusable]"))
+      yk = kk => !!kk.matches(":disabled, [aria-disabled='true']") || "button" === kk.getAttribute("role") && "-1" === kk.getAttribute("tabindex"),
+      lk = kk => {
+        var Fk;
+        if (kk.closest("[data-pad-ignore]")) return !0;
+        return !!(null === (Fk = kk.parentElement) || void 0 === Fk ? void 0 : Fk.closest("[data-pad-focusable]"))
       },
-      oC = CC => {
-        const zC = CC.querySelectorAll(QC);
-        return CC.matches(QC) ? [CC, ...zC] : zC
+      ak = kk => {
+        const Fk = kk.querySelectorAll(Xk);
+        return kk.matches(Xk) ? [kk, ...Fk] : Fk
       },
-      qC = CC => {
-        const zC = [];
-        for (const ZC of oC(CC)) !fC(ZC) && bC(ZC) && zC.push(ZC);
-        return zC
+      qk = kk => {
+        const Fk = [];
+        for (const Ik of ak(kk)) !lk(Ik) && ik(Ik) && Fk.push(Ik);
+        return Fk
       },
-      FC = new WeakMap,
-      WC = CC => {
-        const zC = FC.get(CC);
-        if (zC && NC(zC, CC)) return !0;
-        for (const ZC of oC(CC))
-          if (!fC(ZC) && bC(ZC)) return FC.set(CC, ZC), !0;
-        return FC.delete(CC), !1
+      Lk = new WeakMap,
+      tk = kk => {
+        const Fk = Lk.get(kk);
+        if (Fk && Zk(Fk, kk)) return !0;
+        for (const Ik of ak(kk))
+          if (!lk(Ik) && ik(Ik)) return Lk.set(kk, Ik), !0;
+        return Lk.delete(kk), !1
       },
-      NC = (CC, zC) => zC.contains(CC) && CC.matches(QC) && !fC(CC) && bC(CC),
-      MC = (CC, zC) => NC(CC, zC) && !nC(CC),
-      gC = CC => {
-        for (const zC of CC.querySelectorAll("[data-pad-initial-area]"))
-          if (!wC(zC, !1)) return !0;
+      Zk = (kk, Fk) => Fk.contains(kk) && kk.matches(Xk) && !lk(kk) && ik(kk),
+      jk = (kk, Fk) => Zk(kk, Fk) && !yk(kk),
+      ek = kk => {
+        for (const Fk of kk.querySelectorAll("[data-pad-initial-area]"))
+          if (!Tk(Fk, !1)) return !0;
         return !1
       },
-      SC = CC => {
-        const zC = zC => {
-          let ZC = 0;
-          for (let QC = zC.parentElement; QC && QC !== CC; QC = QC.parentElement) ZC++;
-          return ZC
+      wk = kk => {
+        const Fk = Fk => {
+          let Ik = 0;
+          for (let Xk = Fk.parentElement; Xk && Xk !== kk; Xk = Xk.parentElement) Ik++;
+          return Ik
         };
-        return [...CC.querySelectorAll("[data-pad-initial-area]")].filter(bC).sort(((CC, ZC) => zC(ZC) - zC(CC)))
+        return [...kk.querySelectorAll("[data-pad-initial-area]")].filter(ik).sort(((kk, Ik) => Fk(Ik) - Fk(kk)))
       }
   },
-  8673: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      A: () => qC,
-      C: () => eC,
-      D: () => JC,
-      G: () => IC,
-      H: () => pC,
-      I: () => oC,
-      J: () => FC,
-      d: () => PC,
-      g: () => vC,
-      h: () => xC,
-      i: () => AC,
-      m: () => gC,
-      p: () => SC,
-      t: () => NC,
-      u: () => MC,
-      y: () => iC
+  8637: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      B: () => qk,
+      D: () => vk,
+      H: () => sk,
+      J: () => Vk,
+      K: () => Hk,
+      O: () => ak,
+      R: () => Lk,
+      e: () => Jk,
+      g: () => Sk,
+      j: () => Qk,
+      k: () => Kk,
+      l: () => ek,
+      p: () => wk,
+      s: () => Zk,
+      v: () => jk,
+      z: () => zk
     });
-    var QC = ZC(28),
-      wC = ZC(1584),
-      bC = ZC(8682),
-      nC = ZC(8685),
-      fC = ZC(8691);
-    const oC = CC => (0, nC.k)(CC),
-      qC = CC => {
-        const zC = CC.getBoundingClientRect();
+    var Xk = Ik(34),
+      Tk = Ik(1604),
+      ik = Ik(8645),
+      yk = Ik(8652),
+      lk = Ik(8658);
+    const ak = kk => (0, yk.j)(kk),
+      qk = kk => {
+        const Fk = kk.getBoundingClientRect();
         return {
-          x: zC.left + zC.width / 2,
-          y: zC.top + zC.height / 2
+          x: Fk.left + Fk.width / 2,
+          y: Fk.top + Fk.height / 2
         }
       },
-      FC = (CC, zC, ZC) => ({
+      Lk = (kk, Fk, Ik) => ({
         bubbles: !0,
         cancelable: !0,
         composed: !0,
         view: window,
-        clientX: CC.x,
-        clientY: CC.y,
-        screenX: CC.x,
-        screenY: CC.y,
-        button: zC,
-        buttons: ZC,
+        clientX: kk.x,
+        clientY: kk.y,
+        screenX: kk.x,
+        screenY: kk.y,
+        button: Fk,
+        buttons: Ik,
         pointerId: 1,
         pointerType: "mouse",
         isPrimary: !0
       }),
-      WC = (CC, zC) => {
-        (0, wC.f)(CC, zC)
+      tk = (kk, Fk) => {
+        (0, Tk.e)(kk, Fk)
       },
-      NC = function(CC, zC) {
-        let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        const QC = 0 === ZC ? 1 : 2;
-        WC(CC, new PointerEvent("pointerdown", FC(zC, ZC, QC))), WC(CC, new MouseEvent("mousedown", FC(zC, ZC, QC)))
+      Zk = function(kk, Fk) {
+        let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        const Xk = 0 === Ik ? 1 : 2;
+        tk(kk, new PointerEvent("pointerdown", Lk(Fk, Ik, Xk))), tk(kk, new MouseEvent("mousedown", Lk(Fk, Ik, Xk)))
       },
-      MC = function(CC, zC) {
-        let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        WC(CC, new PointerEvent("pointerup", FC(zC, ZC, 0))), WC(CC, new MouseEvent("mouseup", FC(zC, ZC, 0)))
+      jk = function(kk, Fk) {
+        let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        tk(kk, new PointerEvent("pointerup", Lk(Fk, Ik, 0))), tk(kk, new MouseEvent("mouseup", Lk(Fk, Ik, 0)))
       },
-      gC = function(CC, zC) {
-        let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        NC(CC, zC, ZC), MC(CC, zC, ZC), WC(CC, 0 === ZC ? new MouseEvent("click", FC(zC, 0, 0)) : new MouseEvent("contextmenu", FC(zC, 2, 0)))
+      ek = function(kk, Fk) {
+        let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        Zk(kk, Fk, Ik), jk(kk, Fk, Ik), tk(kk, 0 === Ik ? new MouseEvent("click", Lk(Fk, 0, 0)) : new MouseEvent("contextmenu", Lk(Fk, 2, 0)))
       },
-      SC = function(CC, zC, ZC) {
+      wk = function(kk, Fk, Ik) {
         let {
-          leaveBelow: QC = null,
-          enterBelow: wC = null
+          leaveBelow: Xk = null,
+          enterBelow: Tk = null
         } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        if (CC !== zC) {
-          if (null !== CC && void 0 !== CC && CC.isConnected) {
-            const wC = {
-              ...FC(ZC, 0, 0),
-              relatedTarget: zC
+        if (kk !== Fk) {
+          if (null !== kk && void 0 !== kk && kk.isConnected) {
+            const Tk = {
+              ...Lk(Ik, 0, 0),
+              relatedTarget: Fk
             };
-            WC(CC, new PointerEvent("pointerout", wC)), WC(CC, new MouseEvent("mouseout", wC));
-            const bC = CC => !!zC && CC.contains(zC) || !!QC && CC.contains(QC);
-            for (let zC = CC; zC && !bC(zC); zC = zC.parentElement) WC(zC, new PointerEvent("pointerleave", {
-              ...wC,
+            tk(kk, new PointerEvent("pointerout", Tk)), tk(kk, new MouseEvent("mouseout", Tk));
+            const ik = kk => !!Fk && kk.contains(Fk) || !!Xk && kk.contains(Xk);
+            for (let Fk = kk; Fk && !ik(Fk); Fk = Fk.parentElement) tk(Fk, new PointerEvent("pointerleave", {
+              ...Tk,
               bubbles: !1
-            })), WC(zC, new MouseEvent("mouseleave", {
-              ...wC,
+            })), tk(Fk, new MouseEvent("mouseleave", {
+              ...Tk,
               bubbles: !1
             }))
           }
-          if (zC) {
-            const QC = {
-              ...FC(ZC, 0, 0),
-              relatedTarget: CC
+          if (Fk) {
+            const Xk = {
+              ...Lk(Ik, 0, 0),
+              relatedTarget: kk
             };
-            WC(zC, new PointerEvent("pointerover", QC)), WC(zC, new MouseEvent("mouseover", QC));
-            const bC = [],
-              nC = zC => !(null === CC || void 0 === CC || !CC.isConnected) && zC.contains(CC) || !!wC && zC.contains(wC);
-            for (let CC = zC; CC && !nC(CC); CC = CC.parentElement) bC.push(CC);
-            for (const CC of bC.reverse()) WC(CC, new PointerEvent("pointerenter", {
-              ...QC,
+            tk(Fk, new PointerEvent("pointerover", Xk)), tk(Fk, new MouseEvent("mouseover", Xk));
+            const ik = [],
+              yk = Fk => !(null === kk || void 0 === kk || !kk.isConnected) && Fk.contains(kk) || !!Tk && Fk.contains(Tk);
+            for (let kk = Fk; kk && !yk(kk); kk = kk.parentElement) ik.push(kk);
+            for (const kk of ik.reverse()) tk(kk, new PointerEvent("pointerenter", {
+              ...Xk,
               bubbles: !1
-            })), WC(CC, new MouseEvent("mouseenter", {
-              ...QC,
+            })), tk(kk, new MouseEvent("mouseenter", {
+              ...Xk,
               bubbles: !1
             }));
-            WC(zC, new PointerEvent("pointermove", FC(ZC, 0, 0))), WC(zC, new MouseEvent("mousemove", FC(ZC, 0, 0)))
+            tk(Fk, new PointerEvent("pointermove", Lk(Ik, 0, 0))), tk(Fk, new MouseEvent("mousemove", Lk(Ik, 0, 0)))
           }
-        } else zC && (WC(zC, new PointerEvent("pointermove", FC(ZC, 0, 0))), WC(zC, new MouseEvent("mousemove", FC(ZC, 0, 0))))
+        } else Fk && (tk(Fk, new PointerEvent("pointermove", Lk(Ik, 0, 0))), tk(Fk, new MouseEvent("mousemove", Lk(Ik, 0, 0))))
       },
-      pC = CC => {
-        QC.o.bp(bC.c, CC)
+      Hk = kk => {
+        Xk.g.GL(ik.d, kk)
       },
-      PC = CC => {
-        if (oC(CC)) return void pC(CC);
-        const zC = CC.hasAttribute("data-pad-focusable") ? CC.querySelector("a[href]") : null,
-          ZC = null !== zC && void 0 !== zC ? zC : CC;
-        gC(ZC, qC(ZC))
+      Jk = kk => {
+        if (ak(kk)) return void Hk(kk);
+        const Fk = kk.hasAttribute("data-pad-focusable") ? kk.querySelector("a[href]") : null,
+          Ik = null !== Fk && void 0 !== Fk ? Fk : kk;
+        ek(Ik, qk(Ik))
       },
-      GC = ".Dropdown-root.is-open",
-      RC = CC => {
-        const zC = CC.querySelector(".Dropdown-control");
-        return PC(zC), zC
+      xk = ".Dropdown-root.is-open",
+      Pk = kk => {
+        const Fk = kk.querySelector(".Dropdown-control");
+        return Jk(Fk), Fk
       },
-      AC = CC => {
-        var zC;
-        const ZC = null !== (zC = CC.closest(GC)) && void 0 !== zC ? zC : CC.querySelector(GC);
-        return ZC ? RC(ZC) : null
+      Kk = kk => {
+        var Fk;
+        const Ik = null !== (Fk = kk.closest(xk)) && void 0 !== Fk ? Fk : kk.querySelector(xk);
+        return Ik ? Pk(Ik) : null
       },
-      xC = CC => {
-        for (const zC of document.querySelectorAll(GC)) zC.contains(CC) || RC(zC)
+      Qk = kk => {
+        for (const Fk of document.querySelectorAll(xk)) Fk.contains(kk) || Pk(Fk)
       },
-      JC = CC => null !== CC.closest("input[type=color], input[type=file], [data-pad-mouse-only]"),
-      IC = CC => {
-        const zC = CC ? document.elementFromPoint(CC.x, CC.y) : null;
-        return !(null === zC || void 0 === zC || !zC.closest("[data-pad-repeat]"))
+      sk = kk => null !== kk.closest("input[type=color], input[type=file], [data-pad-mouse-only]"),
+      Vk = kk => {
+        const Fk = kk ? document.elementFromPoint(kk.x, kk.y) : null;
+        return !(null === Fk || void 0 === Fk || !Fk.closest("[data-pad-repeat]"))
       },
-      iC = CC => {
-        var zC;
-        return null !== (zC = [...CC.querySelectorAll("[data-pad-back]")].find(fC.m)) && void 0 !== zC ? zC : null
+      zk = kk => {
+        var Fk;
+        return null !== (Fk = [...kk.querySelectorAll("[data-pad-back]")].find(lk.n)) && void 0 !== Fk ? Fk : null
       },
-      vC = CC => {
-        const zC = iC(CC);
-        return !!zC && (PC(zC), !0)
+      Sk = kk => {
+        const Fk = zk(kk);
+        return !!Fk && (Jk(Fk), !0)
       },
-      eC = CC => {
-        var zC, ZC, QC, wC;
-        return null !== (zC = null !== (ZC = null !== (QC = CC.getAttribute("data-pad-key")) && void 0 !== QC ? QC : CC.getAttribute("href")) && void 0 !== ZC ? ZC : null === (wC = CC.querySelector("a[href]")) || void 0 === wC ? void 0 : wC.getAttribute("href")) && void 0 !== zC ? zC : null
+      vk = kk => {
+        var Fk, Ik, Xk, Tk;
+        return null !== (Fk = null !== (Ik = null !== (Xk = kk.getAttribute("data-pad-key")) && void 0 !== Xk ? Xk : kk.getAttribute("href")) && void 0 !== Ik ? Ik : null === (Tk = kk.querySelector("a[href]")) || void 0 === Tk ? void 0 : Tk.getAttribute("href")) && void 0 !== Fk ? Fk : null
       }
   },
-  8876: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => fC,
-      f: () => oC
+  8862: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => lk,
+      h: () => ak
     });
-    var QC = ZC(20),
-      wC = ZC(1275),
-      bC = ZC(77);
-    const nC = {
+    var Xk = Ik(25),
+      Tk = Ik(1301),
+      ik = Ik(95);
+    const yk = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -3594,61 +3594,61 @@ export const modules = {
       }
     };
 
-    function fC() {
-      return (0, bC.isMobile)() && "function" === typeof navigator.vibrate
+    function lk() {
+      return (0, ik.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const oC = new class {
-      constructor(CC) {
-        this.deps = CC, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const ak = new class {
+      constructor(kk) {
+        this.deps = kk, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(CC, zC) {
-        var ZC;
+      play(kk, Fk) {
+        var Ik;
         if (!this.deps.enabled()) return;
-        const QC = nC[CC],
-          wC = null !== zC && void 0 !== zC ? zC : QC.pattern;
-        if (null === wC) return void console.warn("No vibration pattern for", CC);
-        const bC = this.deps.now();
-        bC - this.lastAnyAt < 40 && QC.priority < this.playingPriority || bC - (null !== (ZC = this.lastAt.get(CC)) && void 0 !== ZC ? ZC : -1 / 0) < QC.minGapMs || bC < this.playingUntil && QC.priority < this.playingPriority || (this.lastAt.set(CC, bC), this.lastAnyAt = bC, this.playingUntil = bC + wC.reduce(((CC, zC) => CC + zC), 0), this.playingPriority = QC.priority, this.deps.vibrate(wC))
+        const Xk = yk[kk],
+          Tk = null !== Fk && void 0 !== Fk ? Fk : Xk.pattern;
+        if (null === Tk) return void console.warn("No vibration pattern for", kk);
+        const ik = this.deps.now();
+        ik - this.lastAnyAt < 40 && Xk.priority < this.playingPriority || ik - (null !== (Ik = this.lastAt.get(kk)) && void 0 !== Ik ? Ik : -1 / 0) < Xk.minGapMs || ik < this.playingUntil && Xk.priority < this.playingPriority || (this.lastAt.set(kk, ik), this.lastAnyAt = ik, this.playingUntil = ik + Tk.reduce(((kk, Fk) => kk + Fk), 0), this.playingPriority = Xk.priority, this.deps.vibrate(Tk))
       }
     }({
-      vibrate: CC => {
-        navigator.vibrate([...CC])
+      vibrate: kk => {
+        navigator.vibrate([...kk])
       },
       now: () => performance.now(),
-      enabled: () => fC() && QC.b.get("isTouchScreen") && QC.b.get("clientEscMenuOptions").vibration && !(0, wC.g)()
+      enabled: () => lk() && Xk.d.get("isTouchScreen") && Xk.d.get("clientEscMenuOptions").vibration && !(0, Tk.h)()
     })
   },
-  8776: (CC, zC, ZC) => {
-    function QC(CC, zC) {
-      return !CC.hidden && (zC || !CC.isRewardedAd)
+  8752: (kk, Fk, Ik) => {
+    function Xk(kk, Fk) {
+      return !kk.hidden && (Fk || !kk.isRewardedAd)
     }
 
-    function wC(CC) {
-      return "object" === typeof CC ? CC.option : CC
+    function Tk(kk) {
+      return "object" === typeof kk ? kk.option : kk
     }
 
-    function bC(CC, zC) {
-      var ZC;
-      if ("dropdown" === (null === (ZC = CC.userInput) || void 0 === ZC ? void 0 : ZC.type) && "object" === typeof CC.userInput.dropdownOptions[0]) {
-        for (const ZC of CC.userInput.dropdownOptions)
-          if (wC(ZC) === zC) return "object" === typeof ZC ? ZC.cost : CC.cost;
-        console.error("Didn't find matching option for dropdown item. Item:", CC, "input:", zC)
+    function ik(kk, Fk) {
+      var Ik;
+      if ("dropdown" === (null === (Ik = kk.userInput) || void 0 === Ik ? void 0 : Ik.type) && "object" === typeof kk.userInput.dropdownOptions[0]) {
+        for (const Ik of kk.userInput.dropdownOptions)
+          if (Tk(Ik) === Fk) return "object" === typeof Ik ? Ik.cost : kk.cost;
+        console.error("Didn't find matching option for dropdown item. Item:", kk, "input:", Fk)
       }
-      return CC.cost
+      return kk.cost
     }
 
-    function nC(CC, zC, ZC) {
-      var QC;
-      const wC = null !== (QC = ZC.excludedPlayers) && void 0 !== QC ? QC : [zC];
-      return CC.filter((CC => !wC.includes(CC)))
+    function yk(kk, Fk, Ik) {
+      var Xk;
+      const Tk = null !== (Xk = Ik.excludedPlayers) && void 0 !== Xk ? Xk : [Fk];
+      return kk.filter((kk => !Tk.includes(kk)))
     }
-    ZC.d(zC, {
-      b: () => bC,
-      f: () => wC,
-      i: () => nC,
-      k: () => QC
+    Ik.d(Fk, {
+      b: () => ik,
+      e: () => Tk,
+      f: () => yk,
+      j: () => Xk
     })
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

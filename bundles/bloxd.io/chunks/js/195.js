@@ -1,225 +1,225 @@
 export const id = 195;
 export const ids = [195];
 export const modules = {
-  36264: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      showOnboardingPopup: () => lC
+  36370: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      showOnboardingPopup: () => Rk
     });
-    var QC = ZC(48),
-      wC = ZC(1143),
-      bC = ZC(1307),
-      nC = ZC(1388),
-      fC = ZC(4256),
-      oC = ZC(1501),
-      qC = ZC(1493),
-      FC = ZC(2166),
-      WC = ZC(1002),
-      NC = ZC.n(WC),
-      MC = ZC(1078),
-      gC = ZC(36271),
-      SC = ZC(1013),
-      pC = ZC(2318),
-      PC = ZC(3452),
-      GC = ZC(1076),
-      RC = ZC(1056);
-    const AC = Object.entries(oC.b).filter((CC => {
-      let [, zC] = CC;
-      return "default" === zC.cosmeticPack
+    var Xk = Ik(58),
+      Tk = Ik(1179),
+      ik = Ik(1324),
+      yk = Ik(1406),
+      lk = Ik(4294),
+      ak = Ik(1518),
+      qk = Ik(1515),
+      Lk = Ik(2148),
+      tk = Ik(1055),
+      Zk = Ik.n(tk),
+      jk = Ik(1120),
+      ek = Ik(36375),
+      wk = Ik(1066),
+      Hk = Ik(2300),
+      Jk = Ik(3428),
+      xk = Ik(1118),
+      Pk = Ik(1096);
+    const Kk = Object.entries(ak.c).filter((kk => {
+      let [, Fk] = kk;
+      return "default" === Fk.cosmeticPack
     }));
 
-    function xC(CC) {
-      return qC.d.default.colourGroups[CC].colours.map(((CC, zC) => {
+    function Qk(kk) {
+      return qk.d.default.colourGroups[kk].colours.map(((kk, Fk) => {
         let {
-          rbg: ZC,
-          order: QC
-        } = CC;
+          rbg: Ik,
+          order: Xk
+        } = kk;
         return {
-          rbg: ZC,
-          order: QC,
-          index: zC
+          rbg: Ik,
+          order: Xk,
+          index: Fk
         }
-      })).sort(((CC, zC) => CC.order - zC.order))
+      })).sort(((kk, Fk) => kk.order - Fk.order))
     }
-    const JC = xC("eyes"),
-      IC = xC("skin");
+    const sk = Qk("eyes"),
+      Vk = Qk("skin");
 
-    function iC(CC, zC) {
-      var ZC;
-      if (void 0 === zC || "default" !== (null === (ZC = (0, FC.j)(CC, zC)) || void 0 === ZC ? void 0 : ZC.cosmeticPack)) return null;
-      const QC = (0, FC.h)(zC);
-      return QC && [QC[0], Number(QC[1])]
-    }
-
-    function vC(CC, zC, ZC) {
-      return `${CC}_${zC}_${ZC}`
+    function zk(kk, Fk) {
+      var Ik;
+      if (void 0 === Fk || "default" !== (null === (Ik = (0, Lk.k)(kk, Fk)) || void 0 === Ik ? void 0 : Ik.cosmeticPack)) return null;
+      const Xk = (0, Lk.j)(Fk);
+      return Xk && [Xk[0], Number(Xk[1])]
     }
 
-    function eC(CC) {
+    function Sk(kk, Fk, Ik) {
+      return `${kk}_${Fk}_${Ik}`
+    }
+
+    function vk(kk) {
       let {
-        label: zC,
-        colours: ZC,
-        picked: QC,
-        onPick: bC
-      } = CC;
+        label: Fk,
+        colours: Ik,
+        picked: Xk,
+        onPick: ik
+      } = kk;
       const {
-        t: nC
-      } = (0, wC.y)();
-      return (0, RC.jsxs)("div", {
+        t: yk
+      } = (0, Tk.y)();
+      return (0, Pk.jsxs)("div", {
         className: "OnboardingColours",
-        children: [(0, RC.jsx)("div", {
+        children: [(0, Pk.jsx)("div", {
           className: "OnboardingColoursLabel",
-          children: zC
-        }), (0, RC.jsx)("div", {
+          children: Fk
+        }), (0, Pk.jsx)("div", {
           className: "OnboardingSwatches",
           role: "radiogroup",
-          "aria-label": zC,
-          children: ZC.map(((CC, zC) => {
+          "aria-label": Fk,
+          children: Ik.map(((kk, Fk) => {
             let {
-              rbg: ZC,
-              index: wC
-            } = CC;
-            return (0, RC.jsx)("button", {
+              rbg: Ik,
+              index: Tk
+            } = kk;
+            return (0, Pk.jsx)("button", {
               type: "button",
-              className: NC()("OnboardingSwatch", {
-                OnboardingSwatchSelected: wC === QC
+              className: Zk()("OnboardingSwatch", {
+                OnboardingSwatchSelected: Tk === Xk
               }),
               style: {
-                backgroundColor: `rgb(${ZC.join(",")})`
+                backgroundColor: `rgb(${Ik.join(",")})`
               },
               role: "radio",
-              "aria-checked": wC === QC,
-              "aria-label": nC("homePage:onboardingColour", {
-                number: zC + 1
+              "aria-checked": Tk === Xk,
+              "aria-label": yk("homePage:onboardingColour", {
+                number: Fk + 1
               }),
               onClick: () => {
-                bC(wC)
+                ik(Tk)
               }
-            }, wC)
+            }, Tk)
           }))
         })]
       })
     }
 
-    function hC() {
+    function Ek() {
       const {
-        t: CC
-      } = (0, wC.y)(), {
-        userContext: zC,
-        isUserContextUpdating: ZC
-      } = (0, GC.e)(), [bC, nC] = (0, QC.useState)(!1), [, oC] = (0, QC.useReducer)((CC => CC + 1), 0), qC = (0, QC.useRef)({}), FC = (0, QC.useRef)(null), WC = (0, PC.e)(), xC = {
-        ...zC.getPlayerCosmetics(),
-        ...FC.current
-      }, hC = (0, QC.useRef)(null);
-      (0, QC.useEffect)((() => {
-        var CC;
-        bC && (null === (CC = hC.current) || void 0 === CC || CC.scrollIntoView({
+        t: kk
+      } = (0, Tk.y)(), {
+        userContext: Fk,
+        isUserContextUpdating: Ik
+      } = (0, xk.d)(), [ik, yk] = (0, Xk.useState)(!1), [, ak] = (0, Xk.useReducer)((kk => kk + 1), 0), qk = (0, Xk.useRef)({}), Lk = (0, Xk.useRef)(null), tk = (0, Jk.d)(), Qk = {
+        ...Fk.getPlayerCosmetics(),
+        ...Lk.current
+      }, Ek = (0, Xk.useRef)(null);
+      (0, Xk.useEffect)((() => {
+        var kk;
+        ik && (null === (kk = Ek.current) || void 0 === kk || kk.scrollIntoView({
           block: "nearest"
         }))
-      }), [bC]);
-      const KC = (CC, zC) => {
-          (0, gC.e)(CC, Object.entries(zC)), WC.current ? oC() : CC.publishUpdateIfCurrent()
+      }), [ik]);
+      const Ok = (kk, Fk) => {
+          (0, ek.e)(kk, Object.entries(Fk)), tk.current ? ak() : kk.publishUpdateIfCurrent()
         },
-        YC = CC => {
-          const QC = {
-            ...FC.current,
-            ...CC
+        nk = kk => {
+          const Xk = {
+            ...Lk.current,
+            ...kk
           };
-          if (!ZC) return FC.current = null, void KC(zC, QC);
-          FC.current = QC, oC(), MC.userContextManager.getCurrentUserContext().then((CC => {
-            FC.current === QC && (FC.current = null, KC(CC, QC))
-          })).catch((CC => {
-            console.warn("Couldn't put on the onboarding look held for the account", CC), FC.current === QC && (FC.current = null, WC.current && oC())
+          if (!Ik) return Lk.current = null, void Ok(Fk, Xk);
+          Lk.current = Xk, ak(), jk.userContextManager.getCurrentUserContext().then((kk => {
+            Lk.current === Xk && (Lk.current = null, Ok(kk, Xk))
+          })).catch((kk => {
+            console.warn("Couldn't put on the onboarding look held for the account", kk), Lk.current === Xk && (Lk.current = null, tk.current && ak())
           }))
         };
-      (0, QC.useEffect)((() => () => {
-        zC.publishUpdateIfCurrent()
-      }), [zC]);
-      const dC = iC("eyes", xC.eyes),
-        mC = iC("skin", xC.skin);
-      return (0, RC.jsxs)(RC.Fragment, {
-        children: [(0, RC.jsx)("div", {
+      (0, Xk.useEffect)((() => () => {
+        Fk.publishUpdateIfCurrent()
+      }), [Fk]);
+      const Gk = zk("eyes", Qk.eyes),
+        pk = zk("skin", Qk.skin);
+      return (0, Pk.jsxs)(Pk.Fragment, {
+        children: [(0, Pk.jsx)("div", {
           className: "OnboardingPresets",
-          children: AC.map(((zC, ZC) => {
-            let [QC, {
-              cosmetics: wC
-            }] = zC;
-            const bC = function(CC, zC) {
-              return Object.entries(zC).every((zC => {
-                let [ZC, QC] = zC;
-                return "skin" === ZC || ("eyes" === ZC ? (null === (wC = iC("eyes", CC.eyes)) || void 0 === wC ? void 0 : wC[0]) === (null === (bC = iC("eyes", QC)) || void 0 === bC ? void 0 : bC[0]) : CC[ZC] === QC);
-                var wC, bC
+          children: Kk.map(((Fk, Ik) => {
+            let [Xk, {
+              cosmetics: Tk
+            }] = Fk;
+            const ik = function(kk, Fk) {
+              return Object.entries(Fk).every((Fk => {
+                let [Ik, Xk] = Fk;
+                return "skin" === Ik || ("eyes" === Ik ? (null === (Tk = zk("eyes", kk.eyes)) || void 0 === Tk ? void 0 : Tk[0]) === (null === (ik = zk("eyes", Xk)) || void 0 === ik ? void 0 : ik[0]) : kk[Ik] === Xk);
+                var Tk, ik
               }))
-            }(xC, wC);
-            return (0, RC.jsx)("button", {
+            }(Qk, Tk);
+            return (0, Pk.jsx)("button", {
               type: "button",
-              className: NC()("OnboardingPreset", {
-                OnboardingPresetSelected: bC
+              className: Zk()("OnboardingPreset", {
+                OnboardingPresetSelected: ik
               }),
-              "aria-label": CC("homePage:onboardingPreset", {
-                number: ZC + 1
+              "aria-label": kk("homePage:onboardingPreset", {
+                number: Ik + 1
               }),
-              "aria-pressed": bC,
+              "aria-pressed": ik,
               onClick: () => {
-                (0, fC.h)(`preset.${QC}`);
+                (0, lk.d)(`preset.${Xk}`);
                 const {
-                  eyes: CC,
-                  skin: zC
-                } = qC.current;
-                YC({
-                  ...wC,
-                  ...void 0 !== CC && {
-                    eyes: vC("eyes", iC("eyes", wC.eyes)[0], CC)
+                  eyes: kk,
+                  skin: Fk
+                } = qk.current;
+                nk({
+                  ...Tk,
+                  ...void 0 !== kk && {
+                    eyes: Sk("eyes", zk("eyes", Tk.eyes)[0], kk)
                   },
-                  ...void 0 !== zC && {
-                    skin: vC("skin", "0", zC)
+                  ...void 0 !== Fk && {
+                    skin: Sk("skin", "0", Fk)
                   }
                 })
               },
-              children: (0, RC.jsx)("div", {
+              children: (0, Pk.jsx)("div", {
                 className: "OnboardingPresetImage",
                 style: {
-                  backgroundImage: `url(/textures/charSkins/previews/character_${QC}_preview.png)`
+                  backgroundImage: `url(/textures/charSkins/previews/character_${Xk}_preview.png)`
                 }
               })
-            }, QC)
+            }, Xk)
           }))
-        }), (0, RC.jsxs)("button", {
+        }), (0, Pk.jsxs)("button", {
           type: "button",
           className: "OnboardingMoreOptions",
-          "aria-expanded": bC,
+          "aria-expanded": ik,
           onClick: () => {
-            bC || (0, fC.h)("more"), nC(!bC)
+            ik || (0, lk.d)("more"), yk(!ik)
           },
-          children: [CC("homePage:onboardingMoreOptions"), (0, RC.jsx)(SC.c, {
-            name: bC ? "caret-up" : "caret-down"
+          children: [kk("homePage:onboardingMoreOptions"), (0, Pk.jsx)(wk.e, {
+            name: ik ? "caret-up" : "caret-down"
           })]
-        }), bC && (0, RC.jsxs)("div", {
-          ref: hC,
+        }), ik && (0, Pk.jsxs)("div", {
+          ref: Ek,
           className: "OnboardingMore",
-          children: [(0, RC.jsx)("div", {
+          children: [(0, Pk.jsx)("div", {
             className: "OnboardingMorePreview",
-            children: (0, RC.jsx)(pC.c, {
-              cosmetics: xC
+            children: (0, Pk.jsx)(Hk.e, {
+              cosmetics: Qk
             })
-          }), (0, RC.jsxs)("div", {
+          }), (0, Pk.jsxs)("div", {
             className: "OnboardingMoreColours",
-            children: [(0, RC.jsx)(eC, {
-              label: CC("homePage:onboardingEyeColour"),
-              colours: JC,
-              picked: null === dC || void 0 === dC ? void 0 : dC[1],
-              onPick: CC => {
-                var zC;
-                (0, fC.h)("eyes"), qC.current.eyes = CC, YC({
-                  eyes: vC("eyes", null !== (zC = null === dC || void 0 === dC ? void 0 : dC[0]) && void 0 !== zC ? zC : "0", CC)
+            children: [(0, Pk.jsx)(vk, {
+              label: kk("homePage:onboardingEyeColour"),
+              colours: sk,
+              picked: null === Gk || void 0 === Gk ? void 0 : Gk[1],
+              onPick: kk => {
+                var Fk;
+                (0, lk.d)("eyes"), qk.current.eyes = kk, nk({
+                  eyes: Sk("eyes", null !== (Fk = null === Gk || void 0 === Gk ? void 0 : Gk[0]) && void 0 !== Fk ? Fk : "0", kk)
                 })
               }
-            }), (0, RC.jsx)(eC, {
-              label: CC("homePage:onboardingSkinColour"),
-              colours: IC,
-              picked: null === mC || void 0 === mC ? void 0 : mC[1],
-              onPick: CC => {
-                (0, fC.h)("skin"), qC.current.skin = CC, YC({
-                  skin: vC("skin", "0", CC)
+            }), (0, Pk.jsx)(vk, {
+              label: kk("homePage:onboardingSkinColour"),
+              colours: Vk,
+              picked: null === pk || void 0 === pk ? void 0 : pk[1],
+              onPick: kk => {
+                (0, lk.d)("skin"), qk.current.skin = kk, nk({
+                  skin: Sk("skin", "0", kk)
                 })
               }
             })]
@@ -227,339 +227,339 @@ export const modules = {
         })]
       })
     }
-    var KC = ZC(1211),
-      YC = ZC(20),
-      dC = ZC(34053),
-      mC = ZC(1295),
-      HC = ZC(1593);
+    var Ok = Ik(1253),
+      nk = Ik(25),
+      Gk = Ik(34051),
+      pk = Ik(1318),
+      uk = Ik(1617);
 
-    function EC(CC) {
+    function bk(kk) {
       const {
-        t: zC
-      } = (0, wC.y)(), {
-        userContext: ZC,
-        isUserContextUpdating: bC
-      } = (0, GC.e)(), oC = bC ? null : ZC.getPlayerName(), qC = (0, QC.useRef)(null), [FC, WC] = (0, QC.useState)((() => null === oC ? (0, KC.e)() : null)), [NC, MC] = (0, QC.useState)(null), [gC, pC] = (0, QC.useState)(!1), AC = (0, QC.useRef)("lM"), xC = (0, PC.e)(), JC = (0, QC.useRef)(null !== FC), IC = (0, QC.useRef)(!1), iC = null !== FC && void 0 !== FC ? FC : oC, vC = (0, QC.useRef)(null), eC = CC => {
-        qC.current && (qC.current.value = CC), WC(CC)
-      }, hC = (0, QC.useRef)(!1);
-      (0, QC.useEffect)((() => {
-        var CC, zC;
-        !gC && hC.current && (hC.current = !1, null === (CC = qC.current) || void 0 === CC || CC.focus(), null === (zC = qC.current) || void 0 === zC || zC.select())
-      }), [gC]);
-      const EC = (0, QC.useRef)(null);
-      (0, QC.useEffect)((() => {
-        var CC;
-        null !== NC && (null === (CC = EC.current) || void 0 === CC || CC.scrollIntoView({
+        t: Fk
+      } = (0, Tk.y)(), {
+        userContext: Ik,
+        isUserContextUpdating: ik
+      } = (0, xk.d)(), ak = ik ? null : Ik.getPlayerName(), qk = (0, Xk.useRef)(null), [Lk, tk] = (0, Xk.useState)((() => null === ak ? (0, Ok.g)() : null)), [Zk, jk] = (0, Xk.useState)(null), [ek, Hk] = (0, Xk.useState)(!1), Kk = (0, Xk.useRef)("Gj"), Qk = (0, Jk.d)(), sk = (0, Xk.useRef)(null !== Lk), Vk = (0, Xk.useRef)(!1), zk = null !== Lk && void 0 !== Lk ? Lk : ak, Sk = (0, Xk.useRef)(null), vk = kk => {
+        qk.current && (qk.current.value = kk), tk(kk)
+      }, Ek = (0, Xk.useRef)(!1);
+      (0, Xk.useEffect)((() => {
+        var kk, Fk;
+        !ek && Ek.current && (Ek.current = !1, null === (kk = qk.current) || void 0 === kk || kk.focus(), null === (Fk = qk.current) || void 0 === Fk || Fk.select())
+      }), [ek]);
+      const bk = (0, Xk.useRef)(null);
+      (0, Xk.useEffect)((() => {
+        var kk;
+        null !== Zk && (null === (kk = bk.current) || void 0 === kk || kk.scrollIntoView({
           block: "nearest"
         }))
-      }), [NC]);
-      const lC = (CC, zC) => {
-        const ZC = document.activeElement === qC.current || hC.current;
-        pC(!0), MC(null), CC.then((CC => {
-          xC.current && (pC(!1), hC.current = ZC, zC(CC))
+      }), [Zk]);
+      const Rk = (kk, Fk) => {
+        const Ik = document.activeElement === qk.current || Ek.current;
+        Hk(!0), jk(null), kk.then((kk => {
+          Qk.current && (Hk(!1), Ek.current = Ik, Fk(kk))
         }))
       };
-      (0, QC.useEffect)((() => {
-        var CC, zC;
-        YC.b.get("isTouchScreen") || (null === (CC = qC.current) || void 0 === CC || CC.focus(), null === (zC = qC.current) || void 0 === zC || zC.select())
+      (0, Xk.useEffect)((() => {
+        var kk, Fk;
+        nk.d.get("isTouchScreen") || (null === (kk = qk.current) || void 0 === kk || kk.focus(), null === (Fk = qk.current) || void 0 === Fk || Fk.select())
       }), []);
-      const XC = () => {
-          (0, fC.k)(AC.current), CC()
+      const Uk = () => {
+          (0, lk.e)(Kk.current), kk()
         },
-        cC = CC => "refused" === CC.outcome ? CC.message : zC((0, dC.e)(CC.failure)),
-        uC = CC => !(CC.length >= KC.l) && (MC({
+        Ck = kk => "refused" === kk.outcome ? kk.message : Fk((0, Gk.f)(kk.failure)),
+        Nk = kk => !(kk.length >= Ok.m) && (jk({
           kind: "error",
-          message: zC("homePage:changeNameMinLengthError", {
-            length: KC.l
+          message: Fk("homePage:changeNameMinLengthError", {
+            length: Ok.m
           })
         }), !0),
-        rC = CC => {
-          var QC, wC, bC;
-          CC.toLowerCase() !== (null === (QC = null !== (wC = null === (bC = vC.current) || void 0 === bC ? void 0 : bC.name) && void 0 !== wC ? wC : oC) || void 0 === QC ? void 0 : QC.toLowerCase()) ? uC(CC) || lC((0, dC.b)(ZC, CC), (ZC => {
-            "taken" !== ZC.outcome ? "refused" !== ZC.outcome && "failed" !== ZC.outcome ? ZC.name !== CC ? (AC.current = "suffixed", vC.current = {
-              name: ZC.name,
-              outcome: AC.current
-            }, eC(ZC.name), MC({
+        ck = kk => {
+          var Xk, Tk, ik;
+          kk.toLowerCase() !== (null === (Xk = null !== (Tk = null === (ik = Sk.current) || void 0 === ik ? void 0 : ik.name) && void 0 !== Tk ? Tk : ak) || void 0 === Xk ? void 0 : Xk.toLowerCase()) ? Nk(kk) || Rk((0, Gk.e)(Ik, kk), (Ik => {
+            "taken" !== Ik.outcome ? "refused" !== Ik.outcome && "failed" !== Ik.outcome ? Ik.name !== kk ? (Kk.current = "suffixed", Sk.current = {
+              name: Ik.name,
+              outcome: Kk.current
+            }, vk(Ik.name), jk({
               kind: "suffixed",
-              taken: CC,
-              name: ZC.name
-            })) : XC() : MC({
+              taken: kk,
+              name: Ik.name
+            })) : Uk() : jk({
               kind: "error",
-              message: cC(ZC)
-            }) : MC({
+              message: Ck(Ik)
+            }) : jk({
               kind: "error",
-              message: zC("homePage:onboardingNameAllTaken")
+              message: Fk("homePage:onboardingNameAllTaken")
             })
-          })) : XC()
+          })) : Uk()
         };
-      (0, QC.useEffect)((() => {
-        if (!gC || null !== oC || !IC.current) return;
-        const CC = setTimeout((() => {
-          IC.current = !1, pC(!1), MC({
+      (0, Xk.useEffect)((() => {
+        if (!ek || null !== ak || !Vk.current) return;
+        const kk = setTimeout((() => {
+          Vk.current = !1, Hk(!1), jk({
             kind: "noAccount"
           })
         }), 2e4);
         return () => {
-          clearTimeout(CC)
+          clearTimeout(kk)
         }
-      }), [gC, oC]), (0, QC.useEffect)((() => {
-        if (null === oC) return;
-        const CC = JC.current && "lM" === AC.current && ZC.isLoggedIn();
-        JC.current = !1, "noAccount" === (null === NC || void 0 === NC ? void 0 : NC.kind) && MC(null), CC && eC(oC), IC.current && (IC.current = !1, pC(!1), rC(CC ? oC : iC))
-      }), [oC]);
-      const sC = "error" === (null === NC || void 0 === NC ? void 0 : NC.kind) ? NC.message : "noAccount" === (null === NC || void 0 === NC ? void 0 : NC.kind) ? zC("homePage:onboardingNameNoAccount") : null;
+      }), [ek, ak]), (0, Xk.useEffect)((() => {
+        if (null === ak) return;
+        const kk = sk.current && "Gj" === Kk.current && Ik.isLoggedIn();
+        sk.current = !1, "noAccount" === (null === Zk || void 0 === Zk ? void 0 : Zk.kind) && jk(null), kk && vk(ak), Vk.current && (Vk.current = !1, Hk(!1), ck(kk ? ak : zk))
+      }), [ak]);
+      const Wk = "error" === (null === Zk || void 0 === Zk ? void 0 : Zk.kind) ? Zk.message : "noAccount" === (null === Zk || void 0 === Zk ? void 0 : Zk.kind) ? Fk("homePage:onboardingNameNoAccount") : null;
       return {
-        field: (0, RC.jsxs)("div", {
+        field: (0, Pk.jsxs)("div", {
           className: "OnboardingNameField",
-          ref: EC,
-          children: [(0, RC.jsx)("div", {
+          ref: bk,
+          children: [(0, Pk.jsx)("div", {
             className: "OnboardingSubtitle",
-            children: zC("general:name")
-          }), null === iC && (0, RC.jsx)(mC.d, {}), null !== iC && (0, RC.jsxs)("div", {
+            children: Fk("general:name")
+          }), null === zk && (0, Pk.jsx)(pk.c, {}), null !== zk && (0, Pk.jsxs)("div", {
             className: "OnboardingNameRow",
-            children: [(0, RC.jsx)(HC.c, {
+            children: [(0, Pk.jsx)(uk.c, {
               className: "OnboardingNameInput",
-              ariaLabel: zC("general:name"),
-              maxLength: KC.i,
-              defaultValue: iC,
-              domRef: qC,
-              forcedText: gC ? iC : null,
+              ariaLabel: Fk("general:name"),
+              maxLength: Ok.j,
+              defaultValue: zk,
+              domRef: qk,
+              forcedText: ek ? zk : null,
               onEnter: () => {
-                var CC;
-                null === (CC = qC.current) || void 0 === CC || CC.blur()
+                var kk;
+                null === (kk = qk.current) || void 0 === kk || kk.blur()
               },
-              onValueChange: CC => {
-                const ZC = (0, KC.q)(CC);
-                ZC !== CC && qC.current && (qC.current.value = ZC), MC(ZC !== CC ? {
+              onValueChange: kk => {
+                const Ik = (0, Ok.r)(kk);
+                Ik !== kk && qk.current && (qk.current.value = Ik), jk(Ik !== kk ? {
                   kind: "error",
-                  message: zC("homePage:nameCharacters")
-                } : null), ZC !== iC && (AC.current = "changed"), WC(ZC)
+                  message: Fk("homePage:nameCharacters")
+                } : null), Ik !== zk && (Kk.current = "changed"), tk(Ik)
               }
-            }), (0, RC.jsx)(nC.g, {
+            }), (0, Pk.jsx)(yk.d, {
               className: "OnboardingRandomName",
-              ariaLabel: zC("homePage:onboardingRandomName"),
-              disabled: gC,
+              ariaLabel: Fk("homePage:onboardingRandomName"),
+              disabled: ek,
               onClick: () => {
                 (() => {
-                  if (MC(null), null === oC || ZC.isLoggedIn()) return eC((0, KC.e)()), void(AC.current = "rolled");
-                  lC((0, dC.i)(ZC), (CC => {
-                    var zC, QC;
-                    if ("refused" === CC.outcome || "failed" === CC.outcome) return eC(ZC.getPlayerName()), AC.current = null !== (zC = null === (QC = vC.current) || void 0 === QC ? void 0 : QC.outcome) && void 0 !== zC ? zC : "lM", void MC({
+                  if (jk(null), null === ak || Ik.isLoggedIn()) return vk((0, Ok.g)()), void(Kk.current = "rolled");
+                  Rk((0, Gk.l)(Ik), (kk => {
+                    var Fk, Xk;
+                    if ("refused" === kk.outcome || "failed" === kk.outcome) return vk(Ik.getPlayerName()), Kk.current = null !== (Fk = null === (Xk = Sk.current) || void 0 === Xk ? void 0 : Xk.outcome) && void 0 !== Fk ? Fk : "Gj", void jk({
                       kind: "error",
-                      message: cC(CC)
+                      message: Ck(kk)
                     });
-                    AC.current = "rolled", vC.current = {
-                      name: CC.name,
+                    Kk.current = "rolled", Sk.current = {
+                      name: kk.name,
                       outcome: "rolled"
-                    }, eC(CC.name)
+                    }, vk(kk.name)
                   }))
                 })()
               },
-              children: (0, RC.jsx)(SC.c, {
+              children: (0, Pk.jsx)(wk.e, {
                 name: "dice"
               })
             })]
-          }), "suffixed" === (null === NC || void 0 === NC ? void 0 : NC.kind) && (0, RC.jsx)("div", {
+          }), "suffixed" === (null === Zk || void 0 === Zk ? void 0 : Zk.kind) && (0, Pk.jsx)("div", {
             className: "OnboardingNameNote",
-            children: zC("homePage:onboardingNameSuffixed", {
-              taken: NC.taken,
-              name: NC.name
+            children: Fk("homePage:onboardingNameSuffixed", {
+              taken: Zk.taken,
+              name: Zk.name
             })
-          }), null !== sC && (0, RC.jsx)("div", {
+          }), null !== Wk && (0, Pk.jsx)("div", {
             className: "OnboardingNameNote OnboardingNameError",
-            children: sC
+            children: Wk
           })]
         }),
         submit: () => {
-          if (!gC && null !== iC) {
-            if (null === oC) {
-              if (uC(iC)) return;
-              return hC.current = document.activeElement === qC.current, IC.current = !0, pC(!0), void MC(null)
+          if (!ek && null !== zk) {
+            if (null === ak) {
+              if (Nk(zk)) return;
+              return Ek.current = document.activeElement === qk.current, Vk.current = !0, Hk(!0), void jk(null)
             }
-            rC(iC)
+            ck(zk)
           }
         },
-        busy: gC,
-        ready: null !== iC
+        busy: ek,
+        ready: null !== zk
       }
     }
 
-    function lC() {
-      const CC = {
+    function Rk() {
+      const kk = {
         finished: !1
       };
-      bC.NotificationProvider.showCustomPopup({
-        body: zC => (0, RC.jsx)(XC, {
+      ik.NotificationProvider.showCustomPopup({
+        body: Fk => (0, Pk.jsx)(Uk, {
           onFinish: () => {
-            (0, fC.e)(), CC.finished = !0, zC()
+            (0, lk.c)(), kk.finished = !0, Fk()
           }
         }),
         middleScreenPopupClassName: "OnboardingPopup",
         ignoreBackgroundPress: !0,
         onClose: () => {
-          CC.finished || (0, fC.d)()
+          kk.finished || (0, lk.b)()
         }
       })
     }
 
-    function XC(CC) {
+    function Uk(kk) {
       let {
-        onFinish: zC
-      } = CC;
+        onFinish: Fk
+      } = kk;
       const {
-        t: ZC
-      } = (0, wC.y)(), bC = EC(zC);
-      return (0, QC.useEffect)((() => {
-        (0, fC.o)()
-      }), []), (0, RC.jsxs)("div", {
+        t: Ik
+      } = (0, Tk.y)(), ik = bk(Fk);
+      return (0, Xk.useEffect)((() => {
+        (0, lk.i)()
+      }), []), (0, Pk.jsxs)("div", {
         className: "Onboarding",
-        children: [(0, RC.jsx)("div", {
+        children: [(0, Pk.jsx)("div", {
           className: "OnboardingTitle",
-          children: ZC("homePage:onboardingTitle")
-        }), (0, RC.jsxs)("div", {
+          children: Ik("homePage:onboardingTitle")
+        }), (0, Pk.jsxs)("div", {
           className: "OnboardingBody",
-          children: [bC.field, (0, RC.jsx)(hC, {})]
-        }), (0, RC.jsx)("div", {
+          children: [ik.field, (0, Pk.jsx)(Ek, {})]
+        }), (0, Pk.jsx)("div", {
           className: "OnboardingFooter",
-          children: (0, RC.jsx)(nC.o, {
+          children: (0, Pk.jsx)(yk.m, {
             className: "OnboardingPrimaryButton",
             padDefaultFocus: !0,
-            loading: bC.busy,
-            disabled: !bC.ready,
-            onClick: bC.submit,
-            children: ZC("homePage:onboardingDone")
+            loading: ik.busy,
+            disabled: !ik.ready,
+            onClick: ik.submit,
+            children: Ik("homePage:onboardingDone")
           })
         })]
       })
     }
   },
-  36271: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => nC
+  36375: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => yk
     });
-    var QC = ZC(1840),
-      wC = ZC(1439);
-    const bC = new class {
+    var Xk = Ik(1875),
+      Tk = Ik(1453);
+    const ik = new class {
       constructor() {
         this.pending = new Map, this.userContext = null, this.timer = null, this.lastSentAt = -1 / 0, this.watchingVisibility = !1
       }
-      save(CC, zC) {
-        CC !== this.userContext && this.sendHeld(), this.userContext = CC;
-        for (const [QC, wC] of zC) this.pending.set(QC, wC);
+      save(kk, Fk) {
+        kk !== this.userContext && this.sendHeld(), this.userContext = kk;
+        for (const [Xk, Tk] of Fk) this.pending.set(Xk, Tk);
         if (null !== this.timer) return;
-        const ZC = this.lastSentAt + 1100 - Date.now();
-        ZC <= 0 ? this.send(CC) : (this.timer = setTimeout((() => {
+        const Ik = this.lastSentAt + 1100 - Date.now();
+        Ik <= 0 ? this.send(kk) : (this.timer = setTimeout((() => {
           this.sendHeld()
-        }), ZC), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
+        }), Ik), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.sendHeld()
         }))))
       }
       sendHeld() {
         null !== this.timer && null !== this.userContext && (clearTimeout(this.timer), this.timer = null, this.send(this.userContext))
       }
-      send(CC) {
-        const zC = Array.from(this.pending, (CC => {
-          let [zC, ZC] = CC;
+      send(kk) {
+        const Fk = Array.from(this.pending, (kk => {
+          let [Fk, Ik] = kk;
           return {
-            JQ: zC,
-            IQ: ZC
+            VX: Fk,
+            zX: Ik
           }
         }));
-        this.pending.clear(), this.lastSentAt = Date.now(), wC.d.updateCosmetics(CC, zC).catch((CC => {
-          console.error("Failed to update cosmetics", CC)
+        this.pending.clear(), this.lastSentAt = Date.now(), Tk.e.updateCosmetics(kk, Fk).catch((kk => {
+          console.error("Failed to update cosmetics", kk)
         }))
       }
     };
 
-    function nC(CC, zC) {
-      for (const [ZC, QC] of zC) CC.setPlayerCosmetics(ZC, QC);
-      if (null === QC.gameBridge.latest("connectedGame").websocketUrl) bC.save(CC, zC);
+    function yk(kk, Fk) {
+      for (const [Ik, Xk] of Fk) kk.setPlayerCosmetics(Ik, Xk);
+      if (null === Xk.gameBridge.latest("connectedGame").websocketUrl) ik.save(kk, Fk);
       else
-        for (const [ZC, wC] of zC) QC.gameBridge.send("updateMyCosmetic", {
-          JQ: ZC,
-          IQ: wC
+        for (const [Ik, Tk] of Fk) Xk.gameBridge.send("updateMyCosmetic", {
+          VX: Ik,
+          zX: Tk
         })
     }
   },
-  34053: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => GC,
-      e: () => qC,
-      h: () => SC,
-      i: () => gC
+  34051: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => xk,
+      f: () => qk,
+      h: () => wk,
+      l: () => ek
     });
-    var QC = ZC(134),
-      wC = ZC(1211),
-      bC = ZC(1149),
-      nC = ZC(1078),
-      fC = ZC(1642);
-    const oC = {
+    var Xk = Ik(149),
+      Tk = Ik(1253),
+      ik = Ik(1194),
+      yk = Ik(1120),
+      lk = Ik(1658);
+    const ak = {
       offline: "homePage:onboardingNameNoAccount",
       outdated: "general:updatedReloading",
       busy: "homePage:changeNameTooFast",
       server: "homePage:changeNameFailed"
     };
 
-    function qC(CC) {
-      return oC[CC]
+    function qk(kk) {
+      return ak[kk]
     }
 
-    function FC(CC) {
-      return (0, fC.c)(CC) ? "outdated" : CC instanceof QC.d ? 429 === CC.httpCode ? "busy" : "server" : "offline"
+    function Lk(kk) {
+      return (0, lk.d)(kk) ? "outdated" : kk instanceof Xk.b ? 429 === kk.httpCode ? "busy" : "server" : "offline"
     }
 
-    function WC(CC, zC, ZC) {
-      return (0, nC.postJsonWithMetricsCookiesAndJsonResponse)(`${bC.clientSideServerUrls.indexUrl}${zC}`, ZC, {
+    function tk(kk, Fk, Ik) {
+      return (0, yk.postJsonWithMetricsCookiesAndJsonResponse)(`${ik.clientSideServerUrls.indexUrl}${Fk}`, Ik, {
         retries: 3
-      }, CC.getMetricsCookies()).catch((CC => (console.error("Bad response from the server when trying to change name:", zC, CC), {
+      }, kk.getMetricsCookies()).catch((kk => (console.error("Bad response from the server when trying to change name:", Fk, kk), {
         outcome: "failed",
-        failure: FC(CC)
+        failure: Lk(kk)
       })))
     }
 
-    function NC(CC) {
-      return "outcome" in CC && "failed" === CC.outcome
+    function Zk(kk) {
+      return "outcome" in kk && "failed" === kk.outcome
     }
 
-    function MC(CC) {
-      return console.error("Error when trying to get with new name from DB", CC), {
+    function jk(kk) {
+      return console.error("Error when trying to get with new name from DB", kk), {
         outcome: "refused",
-        message: CC
+        message: kk
       }
     }
-    async function gC(CC) {
-      const zC = await WC(CC, "/index/name/random", {});
-      return NC(zC) ? zC : "err" in zC ? MC(zC.err) : (CC.setPlayerName(zC.name), {
+    async function ek(kk) {
+      const Fk = await tk(kk, "/index/name/random", {});
+      return Zk(Fk) ? Fk : "err" in Fk ? jk(Fk.err) : (kk.setPlayerName(Fk.name), {
         outcome: "changed",
-        name: zC.name
+        name: Fk.name
       })
     }
-    async function SC(CC, zC) {
-      const ZC = await WC(CC, "/index/name/update", {
-        name: zC
+    async function wk(kk, Fk) {
+      const Ik = await tk(kk, "/index/name/update", {
+        name: Fk
       });
-      return NC(ZC) ? ZC : "err" in ZC ? MC(ZC.err) : ZC.nameExists ? {
+      return Zk(Ik) ? Ik : "err" in Ik ? jk(Ik.err) : Ik.nameExists ? {
         outcome: "taken"
-      } : (CC.setPlayerName(zC), {
+      } : (kk.setPlayerName(Fk), {
         outcome: "changed",
-        name: zC
+        name: Fk
       })
     }
 
-    function pC(CC, zC) {
-      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
-      const QC = 1 === zC ? 1 : 10 ** (zC - 1),
-        bC = String(QC + Math.floor(ZC() * (10 ** zC - QC)));
-      return `${CC.slice(0,wC.i-zC)}${bC}`
+    function Hk(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
+      const Xk = 1 === Fk ? 1 : 10 ** (Fk - 1),
+        ik = String(Xk + Math.floor(Ik() * (10 ** Fk - Xk)));
+      return `${kk.slice(0,Tk.j-Fk)}${ik}`
     }
-    const PC = [1, 2, 3, 4];
-    async function GC(CC, zC) {
-      const ZC = await SC(CC, zC);
-      if ("taken" !== ZC.outcome) return ZC;
-      for (const QC of PC) {
-        const ZC = pC(zC, QC),
-          wC = await SC(CC, ZC);
-        if ("taken" !== wC.outcome) return wC
+    const Jk = [1, 2, 3, 4];
+    async function xk(kk, Fk) {
+      const Ik = await wk(kk, Fk);
+      if ("taken" !== Ik.outcome) return Ik;
+      for (const Xk of Jk) {
+        const Ik = Hk(Fk, Xk),
+          Tk = await wk(kk, Ik);
+        if ("taken" !== Tk.outcome) return Tk
       }
       return {
         outcome: "taken"
@@ -568,4 +568,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

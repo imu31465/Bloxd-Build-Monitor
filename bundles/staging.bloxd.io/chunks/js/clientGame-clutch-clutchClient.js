@@ -1,22 +1,22 @@
 export const id = 13;
 export const ids = [13];
 export const modules = {
-  39122: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      default: () => QC
+  39294: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      default: () => Xk
     });
-    const QC = function(CC, zC, ZC) {
-      let QC;
+    const Xk = function(kk, Fk, Ik) {
+      let Xk;
       return {
-        onCreate: CC => {
-          QC = CC
+        onCreate: kk => {
+          Xk = kk
         },
-        onPlayerAltAction: (CC, zC, ZC, wC, bC, nC) => {
-          nC && "Mesh" === QC.getEntityType(nC) && "Quartermaster" === QC.getEntityName(nC) && QC.openShop(CC, !1, "Armoury")
+        onPlayerAltAction: (kk, Fk, Ik, Tk, ik, yk) => {
+          yk && "Mesh" === Xk.getEntityType(yk) && "Quartermaster" === Xk.getEntityName(yk) && Xk.openShop(kk, !1, "Armoury")
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

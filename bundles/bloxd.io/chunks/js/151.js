@@ -1,17 +1,17 @@
 export const id = 151;
 export const ids = [151];
 export const modules = {
-  8130: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      AdMobSdkAdaptor: () => FC
+  8106: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      AdMobSdkAdaptor: () => Lk
     });
-    var QC = ZC(1269),
-      wC = ZC(20),
-      bC = ZC(1609),
-      nC = ZC(113),
-      fC = ZC(3441),
-      oC = ZC(326);
-    const qC = {
+    var Xk = Ik(1295),
+      Tk = Ik(25),
+      ik = Ik(1631),
+      yk = Ik(129),
+      lk = Ik(3407),
+      ak = Ik(337);
+    const qk = {
       mobileAndroid: {
         banners: {
           leaderboard_1: "ca-app-pub-5991928098122027/7081016880",
@@ -37,87 +37,87 @@ export const modules = {
         interstitial: "ca-app-pub-5991928098122027/4405533493"
       }
     };
-    class FC extends QC.c {
-      constructor(CC) {
-        super(), this.name = "admob", this.bannerAutoRefresh = "alwaysOn", this.adUnitIds = void 0, this.bannerPlacementByBloxdId = new Map, this.bannerFirstResponseSeen = new Set, this.fullScreenAdsInFlight = 0, this.adUnitIds = qC[CC], bC.d.on("ads.bannerStatus", (CC => {
+    class Lk extends Xk.d {
+      constructor(kk) {
+        super(), this.name = "admob", this.bannerAutoRefresh = "alwaysOn", this.adUnitIds = void 0, this.bannerPlacementByBloxdId = new Map, this.bannerFirstResponseSeen = new Set, this.fullScreenAdsInFlight = 0, this.adUnitIds = qk[kk], ik.b.on("ads.bannerStatus", (kk => {
           let {
-            placementId: zC,
-            shown: ZC,
-            error: QC
-          } = CC;
-          const wC = !this.bannerFirstResponseSeen.has(zC);
-          this.bannerFirstResponseSeen.add(zC), wC ? ZC ? console.log(`AD ${zC}: AdMob banner loaded`) : console.warn(`AD ${zC}: AdMob banner failed to load: ${QC}`) : ZC || console.warn(`AD ${zC}: AdMob banner refresh failed: ${QC}`)
+            placementId: Fk,
+            shown: Ik,
+            error: Xk
+          } = kk;
+          const Tk = !this.bannerFirstResponseSeen.has(Fk);
+          this.bannerFirstResponseSeen.add(Fk), Tk ? Ik ? console.log(`AD ${Fk}: AdMob banner loaded`) : console.warn(`AD ${Fk}: AdMob banner failed to load: ${Xk}`) : Ik || console.warn(`AD ${Fk}: AdMob banner refresh failed: ${Xk}`)
         }))
       }
       static async setup() {
-        const CC = "mobileIos" === nC.y ? "mobileIos" : "mobileAndroid";
-        return console.log(`AD: AdMobSDK initialised for ${CC}`), new FC(CC)
+        const kk = "mobileIos" === yk.v ? "mobileIos" : "mobileAndroid";
+        return console.log(`AD: AdMobSDK initialised for ${kk}`), new Lk(kk)
       }
-      muteGameDuring(CC) {
-        return this.fullScreenAdsInFlight++, wC.b.set({
+      muteGameDuring(kk) {
+        return this.fullScreenAdsInFlight++, Tk.d.set({
           soundOnFromAd: !1
-        }), CC.finally((() => {
-          this.fullScreenAdsInFlight--, 0 === this.fullScreenAdsInFlight && wC.b.set({
+        }), kk.finally((() => {
+          this.fullScreenAdsInFlight--, 0 === this.fullScreenAdsInFlight && Tk.d.set({
             soundOnFromAd: !0
           })
         }))
       }
-      playRewarded(CC, zC) {
-        const ZC = this.adUnitIds.rewarded;
-        this.muteGameDuring(bC.d.request("ads.showRewarded", {
-          placementId: ZC
-        })).then((ZC => {
+      playRewarded(kk, Fk) {
+        const Ik = this.adUnitIds.rewarded;
+        this.muteGameDuring(ik.b.request("ads.showRewarded", {
+          placementId: Ik
+        })).then((Ik => {
           let {
-            rewarded: QC
-          } = ZC;
-          QC ? CC() : zC()
-        }), (CC => {
-          console.warn(`AD ${ZC}: AdMob rewarded failed:`, CC), zC()
+            rewarded: Xk
+          } = Ik;
+          Xk ? kk() : Fk()
+        }), (kk => {
+          console.warn(`AD ${Ik}: AdMob rewarded failed:`, kk), Fk()
         }))
       }
-      playVideoAd(CC, zC) {
-        const ZC = this.adUnitIds.interstitial;
-        this.muteGameDuring(bC.d.request("ads.showInterstitial", {
-          placementId: ZC
+      playVideoAd(kk, Fk) {
+        const Ik = this.adUnitIds.interstitial;
+        this.muteGameDuring(ik.b.request("ads.showInterstitial", {
+          placementId: Ik
         })).then((() => {
-          CC()
-        }), (zC => {
-          console.warn(`AD ${ZC}: AdMob interstitial failed:`, zC), CC()
+          kk()
+        }), (Fk => {
+          console.warn(`AD ${Ik}: AdMob interstitial failed:`, Fk), kk()
         }))
       }
-      renderBanner(CC) {
-        const zC = (0, fC.c)(CC),
-          ZC = this.adUnitIds.banners[zC];
-        if (void 0 === ZC) return;
-        const QC = document.getElementById(CC.divId);
-        if (!QC) return void console.warn(`AD ${zC}: AdMob renderBanner called but div ${CC.divId} is not in DOM`);
-        const wC = QC.getBoundingClientRect(),
-          nC = window.innerWidth,
-          qC = window.innerHeight;
-        if (0 === nC || 0 === qC) return void console.warn(`AD ${zC}: AdMob renderBanner skipped \u2014 viewport has zero dimension`);
-        const FC = {
-          x1: oC.c.clamp(wC.left / nC * 100, 0, 100),
-          y1: oC.c.clamp(wC.top / qC * 100, 0, 100),
-          x2: oC.c.clamp(wC.right / nC * 100, 0, 100),
-          y2: oC.c.clamp(wC.bottom / qC * 100, 0, 100)
+      renderBanner(kk) {
+        const Fk = (0, lk.b)(kk),
+          Ik = this.adUnitIds.banners[Fk];
+        if (void 0 === Ik) return;
+        const Xk = document.getElementById(kk.divId);
+        if (!Xk) return void console.warn(`AD ${Fk}: AdMob renderBanner called but div ${kk.divId} is not in DOM`);
+        const Tk = Xk.getBoundingClientRect(),
+          yk = window.innerWidth,
+          qk = window.innerHeight;
+        if (0 === yk || 0 === qk) return void console.warn(`AD ${Fk}: AdMob renderBanner skipped \u2014 viewport has zero dimension`);
+        const Lk = {
+          x1: ak.e.clamp(Tk.left / yk * 100, 0, 100),
+          y1: ak.e.clamp(Tk.top / qk * 100, 0, 100),
+          x2: ak.e.clamp(Tk.right / yk * 100, 0, 100),
+          y2: ak.e.clamp(Tk.bottom / qk * 100, 0, 100)
         };
-        this.bannerPlacementByBloxdId.set(zC, ZC), console.log(`AD ${zC}: AdMob renderBanner placementId=${ZC} box=`, FC), bC.d.emit("ads.showBanner", {
-          placementId: ZC,
-          ...FC
+        this.bannerPlacementByBloxdId.set(Fk, Ik), console.log(`AD ${Fk}: AdMob renderBanner placementId=${Ik} box=`, Lk), ik.b.emit("ads.showBanner", {
+          placementId: Ik,
+          ...Lk
         })
       }
-      clearBanner(CC) {
-        const zC = (0, fC.c)(CC),
-          ZC = this.bannerPlacementByBloxdId.get(zC);
-        void 0 !== ZC && (this.bannerPlacementByBloxdId.delete(zC), this.bannerFirstResponseSeen.delete(ZC), console.log(`AD ${zC}: AdMob clearBanner placementId=${ZC}`), bC.d.emit("ads.hideBanner", {
-          placementId: ZC
+      clearBanner(kk) {
+        const Fk = (0, lk.b)(kk),
+          Ik = this.bannerPlacementByBloxdId.get(Fk);
+        void 0 !== Ik && (this.bannerPlacementByBloxdId.delete(Fk), this.bannerFirstResponseSeen.delete(Ik), console.log(`AD ${Fk}: AdMob clearBanner placementId=${Ik}`), ik.b.emit("ads.hideBanner", {
+          placementId: Ik
         }))
       }
-      canShowBloxdAd(CC) {
+      canShowBloxdAd(kk) {
         return !1
       }
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

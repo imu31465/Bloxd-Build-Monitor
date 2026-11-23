@@ -1,14 +1,14 @@
 export const id = 203;
 export const ids = [203];
 export const modules = {
-  34223: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => mC,
-      f: () => dC,
-      j: () => YC
+  34257: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => pk,
+      e: () => Gk,
+      f: () => nk
     });
-    var QC = ZC(34228);
-    const wC = {
+    var Xk = Ik(34262);
+    const Tk = {
         fileBytes: 4194304,
         vertices: 65535,
         indices: 196608,
@@ -20,7 +20,7 @@ export const modules = {
         images: 8,
         imageSide: 1024
       },
-      bC = {
+      ik = {
         items: 1024,
         perFile: 1024,
         surfaces: 256,
@@ -28,453 +28,453 @@ export const modules = {
         bounds: 16,
         attributeMembers: 32
       },
-      nC = 1048576,
-      fC = "is not a binary glTF 2.0 file",
-      oC = "loads data from outside the file",
-      qC = new Set(["KHR_draco_mesh_compression", "KHR_materials_unlit", "KHR_texture_transform", "KHR_materials_specular", "KHR_materials_ior", "KHR_materials_anisotropy"]),
-      FC = {
+      yk = 1048576,
+      lk = "is not a binary glTF 2.0 file",
+      ak = "loads data from outside the file",
+      qk = new Set(["KHR_draco_mesh_compression", "KHR_materials_unlit", "KHR_texture_transform", "KHR_materials_specular", "KHR_materials_ior", "KHR_materials_anisotropy"]),
+      Lk = {
         POSITION: "VEC3",
         NORMAL: "VEC3",
         TEXCOORD_0: "VEC2",
         COLOR_0: "VEC4"
       },
-      WC = {
+      tk = {
         type: "VEC2",
         componentTypes: [5126, 5121, 5123]
       },
-      NC = {
+      Zk = {
         TANGENT: {
           type: "VEC4",
           componentTypes: [5126]
         },
-        TEXCOORD_1: WC,
-        TEXCOORD_2: WC,
-        TEXCOORD_3: WC,
-        TEXCOORD_4: WC,
-        TEXCOORD_5: WC
+        TEXCOORD_1: tk,
+        TEXCOORD_2: tk,
+        TEXCOORD_3: tk,
+        TEXCOORD_4: tk,
+        TEXCOORD_5: tk
       },
-      MC = new Set(QC.h.map((CC => {
-        let [zC] = CC;
-        return zC
+      jk = new Set(Xk.h.map((kk => {
+        let [Fk] = kk;
+        return Fk
       }))),
-      gC = {
+      ek = {
         1: "line",
         2: "line loop",
         3: "line strip",
         5: "triangle strip",
         6: "triangle fan"
       },
-      SC = 5126;
+      wk = 5126;
 
-    function pC(CC) {
-      return CC.toLocaleString("en-US")
+    function Hk(kk) {
+      return kk.toLocaleString("en-US")
     }
 
-    function PC(CC, zC, ZC) {
-      return CC > zC ? `has ${pC(CC)} ${ZC} (the limit is ${pC(zC)})` : null
+    function Jk(kk, Fk, Ik) {
+      return kk > Fk ? `has ${Hk(kk)} ${Ik} (the limit is ${Hk(Fk)})` : null
     }
 
-    function GC(CC, zC) {
-      return Number.isInteger(CC) && CC >= 0 && CC < (null !== zC && void 0 !== zC ? zC : 0)
+    function xk(kk, Fk) {
+      return Number.isInteger(kk) && kk >= 0 && kk < (null !== Fk && void 0 !== Fk ? Fk : 0)
     }
 
-    function RC(CC) {
-      return Number.isInteger(CC) && CC >= 0
+    function Pk(kk) {
+      return Number.isInteger(kk) && kk >= 0
     }
 
-    function AC(CC, zC) {
-      return void 0 !== CC && (!Array.isArray(CC) || CC.length > zC)
+    function Kk(kk, Fk) {
+      return void 0 !== kk && (!Array.isArray(kk) || kk.length > Fk)
     }
 
-    function xC(CC, zC) {
-      return "object" === typeof CC && null !== CC && Object.keys(CC).length > zC
+    function Qk(kk, Fk) {
+      return "object" === typeof kk && null !== kk && Object.keys(kk).length > Fk
     }
 
-    function JC(CC) {
-      var zC;
-      return `${CC.normalized?"normalized ":""}${null!==(zC=QC.f[CC.componentType])&&void 0!==zC?zC:CC.componentType} ${CC.type}`
+    function sk(kk) {
+      var Fk;
+      return `${kk.normalized?"normalized ":""}${null!==(Fk=Xk.g[kk.componentType])&&void 0!==Fk?Fk:kk.componentType} ${kk.type}`
     }
 
-    function IC(CC) {
-      const zC = zC => {
-        var ZC;
-        return null !== (ZC = CC[zC]) && void 0 !== ZC ? ZC : -1
+    function Vk(kk) {
+      const Fk = Fk => {
+        var Ik;
+        return null !== (Ik = kk[Fk]) && void 0 !== Ik ? Ik : -1
       };
-      return 255 === zC(0) && 216 === zC(1) ? "JPEG" : 82 === zC(0) && 73 === zC(1) && 87 === zC(8) && 69 === zC(9) ? "WebP" : 171 === zC(0) && 75 === zC(1) && 84 === zC(2) && 88 === zC(3) ? "KTX2" : "non-PNG"
+      return 255 === Fk(0) && 216 === Fk(1) ? "JPEG" : 82 === Fk(0) && 73 === Fk(1) && 87 === Fk(8) && 69 === Fk(9) ? "WebP" : 171 === Fk(0) && 75 === Fk(1) && 84 === Fk(2) && 88 === Fk(3) ? "KTX2" : "non-PNG"
     }
 
-    function iC(CC) {
-      return CC.length >= 24 && [137, 80, 78, 71, 13, 10, 26, 10].every(((zC, ZC) => CC[ZC] === zC)) && 73 === CC[12] && 72 === CC[13] && 68 === CC[14] && 82 === CC[15]
+    function zk(kk) {
+      return kk.length >= 24 && [137, 80, 78, 71, 13, 10, 26, 10].every(((Fk, Ik) => kk[Ik] === Fk)) && 73 === kk[12] && 72 === kk[13] && 68 === kk[14] && 82 === kk[15]
     }
 
-    function vC(CC) {
-      return /^[aeiou]/i.test(CC) ? `an ${CC}` : `a ${CC}`
+    function Sk(kk) {
+      return /^[aeiou]/i.test(kk) ? `an ${kk}` : `a ${kk}`
     }
 
-    function eC(CC) {
-      const zC = CC.byteStride;
-      return void 0 === zC || Number.isInteger(zC) && zC >= 4 && zC <= 252 && zC % 4 === 0
+    function vk(kk) {
+      const Fk = kk.byteStride;
+      return void 0 === Fk || Number.isInteger(Fk) && Fk >= 4 && Fk <= 252 && Fk % 4 === 0
     }
 
-    function hC(CC, zC, ZC) {
-      var QC, wC;
-      const bC = null === (QC = CC.bufferViews) || void 0 === QC ? void 0 : QC[ZC];
-      if (!bC || !zC || 0 !== bC.buffer) return null;
-      const nC = null !== (wC = bC.byteOffset) && void 0 !== wC ? wC : 0;
-      return !RC(nC) || !RC(bC.byteLength) || nC + bC.byteLength > zC.byteLength ? null : zC.subarray(nC, nC + bC.byteLength)
+    function Ek(kk, Fk, Ik) {
+      var Xk, Tk;
+      const ik = null === (Xk = kk.bufferViews) || void 0 === Xk ? void 0 : Xk[Ik];
+      if (!ik || !Fk || 0 !== ik.buffer) return null;
+      const yk = null !== (Tk = ik.byteOffset) && void 0 !== Tk ? Tk : 0;
+      return !Pk(yk) || !Pk(ik.byteLength) || yk + ik.byteLength > Fk.byteLength ? null : Fk.subarray(yk, yk + ik.byteLength)
     }
 
-    function KC(CC, zC) {
-      var ZC, wC, bC;
-      const nC = QC.q[zC.type],
-        fC = QC.e[zC.componentType];
-      if (!nC || !fC || !Number.isInteger(zC.count) || zC.count < 0) return !1;
-      if (void 0 === zC.bufferView) return !0;
-      const oC = null === (ZC = CC.bufferViews) || void 0 === ZC ? void 0 : ZC[zC.bufferView],
-        qC = null !== (wC = zC.byteOffset) && void 0 !== wC ? wC : 0;
-      if (!oC || !RC(qC) || qC % fC !== 0) return !1;
-      const FC = nC * fC,
-        WC = null !== (bC = oC.byteStride) && void 0 !== bC ? bC : FC;
-      if (WC < FC) return !1;
-      return (0 === zC.count ? 0 : qC + WC * (zC.count - 1) + FC) <= oC.byteLength
+    function Ok(kk, Fk) {
+      var Ik, Tk, ik;
+      const yk = Xk.o[Fk.type],
+        lk = Xk.d[Fk.componentType];
+      if (!yk || !lk || !Number.isInteger(Fk.count) || Fk.count < 0) return !1;
+      if (void 0 === Fk.bufferView) return !0;
+      const ak = null === (Ik = kk.bufferViews) || void 0 === Ik ? void 0 : Ik[Fk.bufferView],
+        qk = null !== (Tk = Fk.byteOffset) && void 0 !== Tk ? Tk : 0;
+      if (!ak || !Pk(qk) || qk % lk !== 0) return !1;
+      const Lk = yk * lk,
+        tk = null !== (ik = ak.byteStride) && void 0 !== ik ? ik : Lk;
+      if (tk < Lk) return !1;
+      return (0 === Fk.count ? 0 : qk + tk * (Fk.count - 1) + Lk) <= ak.byteLength
     }
 
-    function YC(CC) {
-      return CC > wC.fileBytes ? `is ${(CC/nC).toFixed(1)} MiB (the limit is ${wC.fileBytes/nC} MiB)` : null
+    function nk(kk) {
+      return kk > Tk.fileBytes ? `is ${(kk/yk).toFixed(1)} MiB (the limit is ${Tk.fileBytes/yk} MiB)` : null
     }
 
-    function dC(CC, zC) {
+    function Gk(kk, Fk) {
       try {
-        return function(CC, zC) {
-          var ZC, nC, WC, pC, RC, YC, dC, mC, HC, EC, lC, XC, cC, uC, rC, sC, TC;
-          const aC = Array.isArray(CC.extensionsUsed) && CC.extensionsUsed.includes("KHR_draco_mesh_compression");
-          if (function(CC, zC) {
-              var ZC, QC;
+        return function(kk, Fk) {
+          var Ik, yk, tk, Hk, Pk, nk, Gk, pk, uk, bk, Rk, Uk, Ck, Nk, ck, Wk, fk;
+          const Bk = Array.isArray(kk.extensionsUsed) && kk.extensionsUsed.includes("KHR_draco_mesh_compression");
+          if (function(kk, Fk) {
+              var Ik, Xk;
               const {
-                items: wC,
-                perFile: nC,
-                surfaces: fC,
-                few: oC,
-                bounds: qC,
-                attributeMembers: FC
-              } = bC;
-              if (AC(CC.extensionsRequired, oC) || AC(CC.animations, 1 / 0) || AC(CC.skins, 1 / 0)) return !0;
-              if (null !== (ZC = CC.animations) && void 0 !== ZC && ZC.length || null !== (QC = CC.skins) && void 0 !== QC && QC.length) return !1;
+                items: Tk,
+                perFile: yk,
+                surfaces: lk,
+                few: ak,
+                bounds: qk,
+                attributeMembers: Lk
+              } = ik;
+              if (Kk(kk.extensionsRequired, ak) || Kk(kk.animations, 1 / 0) || Kk(kk.skins, 1 / 0)) return !0;
+              if (null !== (Ik = kk.animations) && void 0 !== Ik && Ik.length || null !== (Xk = kk.skins) && void 0 !== Xk && Xk.length) return !1;
               if ([
-                  [CC.buffers, oC],
-                  [CC.scenes, oC],
-                  [CC.bufferViews, wC],
-                  [CC.accessors, wC],
-                  [CC.nodes, wC],
-                  [CC.meshes, wC],
-                  [CC.materials, fC],
-                  [CC.textures, fC],
-                  [CC.samplers, fC],
-                  [CC.images, fC]
-                ].some((CC => {
-                  let [zC, ZC] = CC;
-                  return AC(zC, ZC)
+                  [kk.buffers, ak],
+                  [kk.scenes, ak],
+                  [kk.bufferViews, Tk],
+                  [kk.accessors, Tk],
+                  [kk.nodes, Tk],
+                  [kk.meshes, Tk],
+                  [kk.materials, lk],
+                  [kk.textures, lk],
+                  [kk.samplers, lk],
+                  [kk.images, lk]
+                ].some((kk => {
+                  let [Fk, Ik] = kk;
+                  return Kk(Fk, Ik)
                 }))) return !0;
-              for (const bC of null !== (WC = CC.accessors) && void 0 !== WC ? WC : []) {
-                var WC, NC, MC;
-                if (Number.isInteger(bC.count) && (!Number.isSafeInteger(bC.count) || Object.is(bC.count, -0)) || AC(null !== (NC = bC.min) && void 0 !== NC ? NC : void 0, qC) || AC(null !== (MC = bC.max) && void 0 !== MC ? MC : void 0, qC)) return !0
+              for (const ik of null !== (tk = kk.accessors) && void 0 !== tk ? tk : []) {
+                var tk, Zk, jk;
+                if (Number.isInteger(ik.count) && (!Number.isSafeInteger(ik.count) || Object.is(ik.count, -0)) || Kk(null !== (Zk = ik.min) && void 0 !== Zk ? Zk : void 0, qk) || Kk(null !== (jk = ik.max) && void 0 !== jk ? jk : void 0, qk)) return !0
               }
-              for (const bC of null !== (gC = CC.scenes) && void 0 !== gC ? gC : []) {
-                var gC;
-                if (AC(bC.nodes, wC)) return !0
+              for (const ik of null !== (ek = kk.scenes) && void 0 !== ek ? ek : []) {
+                var ek;
+                if (Kk(ik.nodes, Tk)) return !0
               }
-              let SC = 0;
-              for (const bC of null !== (pC = CC.nodes) && void 0 !== pC ? pC : []) {
-                var pC, PC, GC;
-                if (AC(bC.children, nC)) return !0;
-                SC += null !== (PC = null === (GC = bC.children) || void 0 === GC ? void 0 : GC.length) && void 0 !== PC ? PC : 0
+              let wk = 0;
+              for (const ik of null !== (Hk = kk.nodes) && void 0 !== Hk ? Hk : []) {
+                var Hk, Jk, xk;
+                if (Kk(ik.children, yk)) return !0;
+                wk += null !== (Jk = null === (xk = ik.children) || void 0 === xk ? void 0 : xk.length) && void 0 !== Jk ? Jk : 0
               }
-              if (SC > nC) return !0;
-              let RC = 0;
-              for (const bC of null !== (JC = CC.meshes) && void 0 !== JC ? JC : []) {
-                var JC;
-                if (!Array.isArray(bC.primitives)) return !0;
-                if (RC += bC.primitives.length, RC > nC) return !0;
-                for (const CC of bC.primitives) {
-                  var IC;
-                  const ZC = zC ? null === (IC = CC.extensions) || void 0 === IC ? void 0 : IC.KHR_draco_mesh_compression : void 0;
-                  if (xC(CC.attributes, FC) || xC(null === ZC || void 0 === ZC ? void 0 : ZC.attributes, FC)) return !0
+              if (wk > yk) return !0;
+              let Pk = 0;
+              for (const ik of null !== (sk = kk.meshes) && void 0 !== sk ? sk : []) {
+                var sk;
+                if (!Array.isArray(ik.primitives)) return !0;
+                if (Pk += ik.primitives.length, Pk > yk) return !0;
+                for (const kk of ik.primitives) {
+                  var Vk;
+                  const Ik = Fk ? null === (Vk = kk.extensions) || void 0 === Vk ? void 0 : Vk.KHR_draco_mesh_compression : void 0;
+                  if (Qk(kk.attributes, Lk) || Qk(null === Ik || void 0 === Ik ? void 0 : Ik.attributes, Lk)) return !0
                 }
               }
               return !1
-            }(CC, aC)) return fC;
-          const tC = null === (ZC = CC.asset) || void 0 === ZC ? void 0 : ZC.version;
-          if ("string" !== typeof tC || !/^2\.\d+/.test(tC)) return `uses glTF version ${null!==tC&&void 0!==tC?tC:"(none)"}`;
-          const DC = null === (nC = CC.asset) || void 0 === nC ? void 0 : nC.minVersion;
-          if (void 0 !== DC && "2.0" !== DC) return `uses glTF version ${DC}`;
-          for (const QC of null !== (jC = CC.extensionsRequired) && void 0 !== jC ? jC : []) {
-            var jC;
-            if (!qC.has(QC)) return `requires the glTF extension ${QC}`
+            }(kk, Bk)) return lk;
+          const dk = null === (Ik = kk.asset) || void 0 === Ik ? void 0 : Ik.version;
+          if ("string" !== typeof dk || !/^2\.\d+/.test(dk)) return `uses glTF version ${null!==dk&&void 0!==dk?dk:"(none)"}`;
+          const Yk = null === (yk = kk.asset) || void 0 === yk ? void 0 : yk.minVersion;
+          if (void 0 !== Yk && "2.0" !== Yk) return `uses glTF version ${Yk}`;
+          for (const Xk of null !== (Ak = kk.extensionsRequired) && void 0 !== Ak ? Ak : []) {
+            var Ak;
+            if (!qk.has(Xk)) return `requires the glTF extension ${Xk}`
           }
-          if (null !== (WC = CC.animations) && void 0 !== WC && WC.length) return "has animations";
-          if (null !== (pC = CC.skins) && void 0 !== pC && pC.length) return "uses skins";
-          const yC = null !== (RC = CC.buffers) && void 0 !== RC ? RC : [];
-          for (const [QC, wC] of yC.entries()) {
-            if (void 0 !== wC.uri) return oC;
-            if (QC > 0 || !zC) return fC
+          if (null !== (tk = kk.animations) && void 0 !== tk && tk.length) return "has animations";
+          if (null !== (Hk = kk.skins) && void 0 !== Hk && Hk.length) return "uses skins";
+          const gk = null !== (Pk = kk.buffers) && void 0 !== Pk ? Pk : [];
+          for (const [Xk, Tk] of gk.entries()) {
+            if (void 0 !== Tk.uri) return ak;
+            if (Xk > 0 || !Fk) return lk
           }
-          for (const [QC, wC] of(null !== (LC = CC.bufferViews) && void 0 !== LC ? LC : []).entries()) {
-            var LC;
-            if (!hC(CC, zC, QC) || !eC(wC)) return fC
+          for (const [Xk, Tk] of(null !== (mk = kk.bufferViews) && void 0 !== mk ? mk : []).entries()) {
+            var mk;
+            if (!Ek(kk, Fk, Xk) || !vk(Tk)) return lk
           }
-          const UC = null !== (YC = CC.accessors) && void 0 !== YC ? YC : [];
-          for (const QC of UC) {
-            if (void 0 !== QC.sparse) return "uses sparse accessors";
-            const zC = Number.isInteger(QC.count) ? PC(QC.count, wC.accessorElements, "elements in an accessor") : null;
-            if (zC) return zC;
-            if (!KC(CC, QC)) return fC
+          const hk = null !== (nk = kk.accessors) && void 0 !== nk ? nk : [];
+          for (const Xk of hk) {
+            if (void 0 !== Xk.sparse) return "uses sparse accessors";
+            const Fk = Number.isInteger(Xk.count) ? Jk(Xk.count, Tk.accessorElements, "elements in an accessor") : null;
+            if (Fk) return Fk;
+            if (!Ok(kk, Xk)) return lk
           }
-          const BC = null !== (dC = CC.scenes) && void 0 !== dC ? dC : [];
-          if (1 !== BC.length) return `has ${BC.length} scenes`;
-          const OC = (0, QC.w)(CC);
-          if (void 0 !== OC && 0 !== OC) return fC;
-          const kC = null !== (mC = CC.nodes) && void 0 !== mC ? mC : [],
-            VC = null !== (HC = CC.meshes) && void 0 !== HC ? HC : [],
-            Cz = null !== (EC = CC.materials) && void 0 !== EC ? EC : [],
-            zz = null !== (lC = CC.textures) && void 0 !== lC ? lC : [],
-            Zz = null !== (XC = CC.images) && void 0 !== XC ? XC : [],
-            Qz = null !== (cC = null !== (uC = null !== (rC = PC(kC.length, wC.nodes, "nodes")) && void 0 !== rC ? rC : PC(VC.length, wC.meshes, "meshes")) && void 0 !== uC ? uC : PC(Cz.length, wC.materials, "materials")) && void 0 !== cC ? cC : PC(Zz.length, wC.images, "images");
-          if (Qz) return Qz;
-          const wz = new Set;
-          for (const QC of kC)
-            for (const CC of null !== (bz = QC.children) && void 0 !== bz ? bz : []) {
-              var bz;
-              if (!GC(CC, kC.length) || wz.has(CC)) return fC;
-              wz.add(CC)
+          const rk = null !== (Gk = kk.scenes) && void 0 !== Gk ? Gk : [];
+          if (1 !== rk.length) return `has ${rk.length} scenes`;
+          const Dk = (0, Xk.u)(kk);
+          if (void 0 !== Dk && 0 !== Dk) return lk;
+          const Mk = null !== (pk = kk.nodes) && void 0 !== pk ? pk : [],
+            kF = null !== (uk = kk.meshes) && void 0 !== uk ? uk : [],
+            FF = null !== (bk = kk.materials) && void 0 !== bk ? bk : [],
+            IF = null !== (Rk = kk.textures) && void 0 !== Rk ? Rk : [],
+            XF = null !== (Uk = kk.images) && void 0 !== Uk ? Uk : [],
+            TF = null !== (Ck = null !== (Nk = null !== (ck = Jk(Mk.length, Tk.nodes, "nodes")) && void 0 !== ck ? ck : Jk(kF.length, Tk.meshes, "meshes")) && void 0 !== Nk ? Nk : Jk(FF.length, Tk.materials, "materials")) && void 0 !== Ck ? Ck : Jk(XF.length, Tk.images, "images");
+          if (TF) return TF;
+          const iF = new Set;
+          for (const Xk of Mk)
+            for (const kk of null !== (yF = Xk.children) && void 0 !== yF ? yF : []) {
+              var yF;
+              if (!xk(kk, Mk.length) || iF.has(kk)) return lk;
+              iF.add(kk)
             }
-          const nz = new Set,
-            fz = CC => {
-              var zC;
-              return !nz.has(CC) && (nz.add(CC), (null !== (zC = kC[CC].children) && void 0 !== zC ? zC : []).every(fz))
+          const lF = new Set,
+            aF = kk => {
+              var Fk;
+              return !lF.has(kk) && (lF.add(kk), (null !== (Fk = Mk[kk].children) && void 0 !== Fk ? Fk : []).every(aF))
             };
-          for (const QC of null !== (oz = BC[0].nodes) && void 0 !== oz ? oz : []) {
-            var oz;
-            if (!GC(QC, kC.length) || wz.has(QC) || !fz(QC)) return fC
+          for (const Xk of null !== (qF = rk[0].nodes) && void 0 !== qF ? qF : []) {
+            var qF;
+            if (!xk(Xk, Mk.length) || iF.has(Xk) || !aF(Xk)) return lk
           }
-          for (const QC of kC) {
-            if (void 0 !== QC.matrix) return "uses node matrices";
-            if (void 0 !== QC.skin) return "uses skins";
-            if (void 0 !== QC.weights) return "uses morph targets";
-            if (void 0 !== QC.mesh && !GC(QC.mesh, VC.length)) return fC;
-            const CC = [
-              [QC.translation, 3],
-              [QC.rotation, 4],
-              [QC.scale, 3]
+          for (const Xk of Mk) {
+            if (void 0 !== Xk.matrix) return "uses node matrices";
+            if (void 0 !== Xk.skin) return "uses skins";
+            if (void 0 !== Xk.weights) return "uses morph targets";
+            if (void 0 !== Xk.mesh && !xk(Xk.mesh, kF.length)) return lk;
+            const kk = [
+              [Xk.translation, 3],
+              [Xk.rotation, 4],
+              [Xk.scale, 3]
             ];
-            for (const [zC, ZC] of CC)
-              if (void 0 !== zC && (!Array.isArray(zC) || zC.length !== ZC || !zC.every((CC => Number.isFinite(CC))))) return fC
+            for (const [Fk, Ik] of kk)
+              if (void 0 !== Fk && (!Array.isArray(Fk) || Fk.length !== Ik || !Fk.every((kk => Number.isFinite(kk))))) return lk
           }
-          let qz = -1,
-            Fz = 0,
-            Wz = 0,
-            Nz = null;
-          for (const wC of VC) {
-            if (void 0 !== wC.weights) return "uses morph targets";
-            if (0 === wC.primitives.length) return fC;
-            for (const ZC of wC.primitives) {
-              var Mz, gz;
-              const wC = null !== (Mz = ZC.mode) && void 0 !== Mz ? Mz : 4;
-              var Sz;
-              if (4 !== wC && 0 !== wC) return `uses ${null!==(Sz=gC[wC])&&void 0!==Sz?Sz:`mode ${wC}`} primitives`;
-              if (void 0 !== ZC.targets) return "uses morph targets";
-              if (void 0 !== ZC.material && !GC(ZC.material, Cz.length)) return fC;
-              const bC = aC ? null === (gz = ZC.extensions) || void 0 === gz ? void 0 : gz.KHR_draco_mesh_compression : void 0;
-              if (bC) {
-                if (4 !== wC) return "uses Draco-compressed points";
-                if (!hC(CC, zC, bC.bufferView) || "object" !== typeof bC.attributes) return fC
+          let LF = -1,
+            tF = 0,
+            ZF = 0,
+            jF = null;
+          for (const Tk of kF) {
+            if (void 0 !== Tk.weights) return "uses morph targets";
+            if (0 === Tk.primitives.length) return lk;
+            for (const Ik of Tk.primitives) {
+              var eF, wF;
+              const Tk = null !== (eF = Ik.mode) && void 0 !== eF ? eF : 4;
+              var HF;
+              if (4 !== Tk && 0 !== Tk) return `uses ${null!==(HF=ek[Tk])&&void 0!==HF?HF:`mode ${Tk}`} primitives`;
+              if (void 0 !== Ik.targets) return "uses morph targets";
+              if (void 0 !== Ik.material && !xk(Ik.material, FF.length)) return lk;
+              const ik = Bk ? null === (wF = Ik.extensions) || void 0 === wF ? void 0 : wF.KHR_draco_mesh_compression : void 0;
+              if (ik) {
+                if (4 !== Tk) return "uses Draco-compressed points";
+                if (!Ek(kk, Fk, ik.bufferView) || "object" !== typeof ik.attributes) return lk
               }
-              const nC = ZC.attributes;
-              if ("object" !== typeof nC || null === nC) return fC;
-              if (void 0 === nC.POSITION) return "has a primitive with no positions";
-              if (!GC(nC.POSITION, UC.length)) return fC;
-              const oC = UC[nC.POSITION].count;
-              for (const [CC, zC] of Object.entries(nC)) {
-                if (!GC(zC, UC.length)) return fC;
-                if (/^(JOINTS|WEIGHTS)_\d+$/.test(CC)) return "uses skins";
-                const ZC = UC[zC],
-                  QC = FC[CC];
-                if (QC && (ZC.componentType !== SC || ZC.normalized || ZC.type !== QC)) return `stores ${CC} as ${JC(ZC)}`;
-                const wC = NC[CC];
-                if (wC && (ZC.type !== wC.type || !wC.componentTypes.includes(ZC.componentType) || ZC.componentType === SC === !!ZC.normalized)) return `stores ${CC} as ${JC(ZC)}`;
-                if (MC.has(CC) && ZC.count !== oC) return "has vertex attributes of different lengths"
+              const yk = Ik.attributes;
+              if ("object" !== typeof yk || null === yk) return lk;
+              if (void 0 === yk.POSITION) return "has a primitive with no positions";
+              if (!xk(yk.POSITION, hk.length)) return lk;
+              const ak = hk[yk.POSITION].count;
+              for (const [kk, Fk] of Object.entries(yk)) {
+                if (!xk(Fk, hk.length)) return lk;
+                if (/^(JOINTS|WEIGHTS)_\d+$/.test(kk)) return "uses skins";
+                const Ik = hk[Fk],
+                  Xk = Lk[kk];
+                if (Xk && (Ik.componentType !== wk || Ik.normalized || Ik.type !== Xk)) return `stores ${kk} as ${sk(Ik)}`;
+                const Tk = Zk[kk];
+                if (Tk && (Ik.type !== Tk.type || !Tk.componentTypes.includes(Ik.componentType) || Ik.componentType === wk === !!Ik.normalized)) return `stores ${kk} as ${sk(Ik)}`;
+                if (jk.has(kk) && Ik.count !== ak) return "has vertex attributes of different lengths"
               }
-              if (bC) {
-                if (void 0 === ZC.indices) return fC;
-                for (const zC in bC.attributes)
-                  if (MC.has(zC) && void 0 === nC[zC]) return fC;
-                if (void 0 === bC.attributes.POSITION) return fC;
-                const CC = GC(ZC.indices, UC.length) ? UC[ZC.indices].count : -1;
-                if (0 === CC) return fC;
-                if (-1 === qz) qz = bC.bufferView, Fz = oC, Wz = CC;
+              if (ik) {
+                if (void 0 === Ik.indices) return lk;
+                for (const Fk in ik.attributes)
+                  if (jk.has(Fk) && void 0 === yk[Fk]) return lk;
+                if (void 0 === ik.attributes.POSITION) return lk;
+                const kk = xk(Ik.indices, hk.length) ? hk[Ik.indices].count : -1;
+                if (0 === kk) return lk;
+                if (-1 === LF) LF = ik.bufferView, tF = ak, ZF = kk;
                 else {
-                  Nz ??= new Map([
-                    [qz, [Fz, Wz]]
+                  jF ??= new Map([
+                    [LF, [tF, ZF]]
                   ]);
-                  const zC = Nz.get(bC.bufferView);
-                  if (zC && (zC[0] !== oC || zC[1] !== CC)) return fC;
-                  Nz.set(bC.bufferView, null !== zC && void 0 !== zC ? zC : [oC, CC])
+                  const Fk = jF.get(ik.bufferView);
+                  if (Fk && (Fk[0] !== ak || Fk[1] !== kk)) return lk;
+                  jF.set(ik.bufferView, null !== Fk && void 0 !== Fk ? Fk : [ak, kk])
                 }
               }
-              let qC = oC;
-              if (void 0 !== ZC.indices) {
-                if (!GC(ZC.indices, UC.length)) return fC;
-                const CC = UC[ZC.indices];
-                if ("SCALAR" !== CC.type) return fC;
-                if (5121 === CC.componentType) return "uses 8-bit indices";
-                var pz;
-                if (5123 !== CC.componentType && 5125 !== CC.componentType) return `stores indices as ${null!==(pz=QC.f[CC.componentType])&&void 0!==pz?pz:CC.componentType}`;
-                if (!bC && void 0 === CC.bufferView) return fC;
-                qC = CC.count
+              let qk = ak;
+              if (void 0 !== Ik.indices) {
+                if (!xk(Ik.indices, hk.length)) return lk;
+                const kk = hk[Ik.indices];
+                if ("SCALAR" !== kk.type) return lk;
+                if (5121 === kk.componentType) return "uses 8-bit indices";
+                var JF;
+                if (5123 !== kk.componentType && 5125 !== kk.componentType) return `stores indices as ${null!==(JF=Xk.g[kk.componentType])&&void 0!==JF?JF:kk.componentType}`;
+                if (!ik && void 0 === kk.bufferView) return lk;
+                qk = kk.count
               }
-              if (4 === wC && qC % 3 !== 0) return fC
+              if (4 === Tk && qk % 3 !== 0) return lk
             }
           }
-          let Pz = 0,
-            Gz = 0,
-            Rz = 0;
-          for (let QC = 0; QC < kC.length; QC++) {
-            const CC = kC[QC].mesh;
-            if (void 0 !== CC && nz.has(QC))
-              for (const zC of VC[CC].primitives) Rz++, Pz += UC[zC.attributes.POSITION].count, void 0 !== zC.indices && (Gz += UC[zC.indices].count)
+          let xF = 0,
+            PF = 0,
+            KF = 0;
+          for (let Xk = 0; Xk < Mk.length; Xk++) {
+            const kk = Mk[Xk].mesh;
+            if (void 0 !== kk && lF.has(Xk))
+              for (const Fk of kF[kk].primitives) KF++, xF += hk[Fk.attributes.POSITION].count, void 0 !== Fk.indices && (PF += hk[Fk.indices].count)
           }
-          const Az = null !== (sC = null !== (TC = PC(Pz, wC.vertices, "vertices")) && void 0 !== TC ? TC : PC(Gz, wC.indices, "indices")) && void 0 !== sC ? sC : PC(Rz, wC.primitives, "primitives");
-          if (Az) return Az;
-          for (const QC of Cz) {
-            var xz, Jz;
-            if (void 0 !== QC.emissiveTexture) return "uses an emissive texture";
-            const zC = null !== (xz = QC.alphaMode) && void 0 !== xz ? xz : "OPAQUE";
-            if ("OPAQUE" !== zC && "MASK" !== zC && "BLEND" !== zC) return fC;
-            const ZC = null === (Jz = QC.pbrMetallicRoughness) || void 0 === Jz ? void 0 : Jz.baseColorTexture;
-            if (ZC) {
-              var Iz, iz, vz, ez, hz;
-              const zC = null !== (Iz = CC.extensionsUsed) && void 0 !== Iz && Iz.includes("KHR_texture_transform") ? null === (iz = ZC.extensions) || void 0 === iz ? void 0 : iz.KHR_texture_transform : void 0;
-              if (0 !== (null !== (vz = ZC.texCoord) && void 0 !== vz ? vz : 0) || 0 !== (null !== (ez = null === zC || void 0 === zC ? void 0 : zC.texCoord) && void 0 !== ez ? ez : 0)) return "uses a second UV set";
-              const QC = zz[ZC.index];
-              if (!QC || !GC(QC.source, Zz.length) || void 0 !== QC.sampler && !GC(QC.sampler, null === (hz = CC.samplers) || void 0 === hz ? void 0 : hz.length)) return fC
+          const QF = null !== (Wk = null !== (fk = Jk(xF, Tk.vertices, "vertices")) && void 0 !== fk ? fk : Jk(PF, Tk.indices, "indices")) && void 0 !== Wk ? Wk : Jk(KF, Tk.primitives, "primitives");
+          if (QF) return QF;
+          for (const Xk of FF) {
+            var sF, VF;
+            if (void 0 !== Xk.emissiveTexture) return "uses an emissive texture";
+            const Fk = null !== (sF = Xk.alphaMode) && void 0 !== sF ? sF : "OPAQUE";
+            if ("OPAQUE" !== Fk && "MASK" !== Fk && "BLEND" !== Fk) return lk;
+            const Ik = null === (VF = Xk.pbrMetallicRoughness) || void 0 === VF ? void 0 : VF.baseColorTexture;
+            if (Ik) {
+              var zF, SF, oF, vF, EF;
+              const Fk = null !== (zF = kk.extensionsUsed) && void 0 !== zF && zF.includes("KHR_texture_transform") ? null === (SF = Ik.extensions) || void 0 === SF ? void 0 : SF.KHR_texture_transform : void 0;
+              if (0 !== (null !== (oF = Ik.texCoord) && void 0 !== oF ? oF : 0) || 0 !== (null !== (vF = null === Fk || void 0 === Fk ? void 0 : Fk.texCoord) && void 0 !== vF ? vF : 0)) return "uses a second UV set";
+              const Xk = IF[Ik.index];
+              if (!Xk || !xk(Xk.source, XF.length) || void 0 !== Xk.sampler && !xk(Xk.sampler, null === (EF = kk.samplers) || void 0 === EF ? void 0 : EF.length)) return lk
             }
           }
-          for (const QC of Zz) {
-            if (void 0 !== QC.uri) return oC;
-            if (void 0 === QC.bufferView) return fC;
-            const ZC = hC(CC, zC, QC.bufferView);
-            if (!ZC) return fC;
-            if ("image/png" !== QC.mimeType) {
-              var Kz, Yz, dz;
-              return `has ${vC(null!==(Kz=null!==(Yz={"image/jpeg":"JPEG","image/webp":"WebP","image/ktx2":"KTX2"}[null!==(dz=QC.mimeType)&&void 0!==dz?dz:""])&&void 0!==Yz?Yz:QC.mimeType)&&void 0!==Kz?Kz:"untyped")} image`
+          for (const Xk of XF) {
+            if (void 0 !== Xk.uri) return ak;
+            if (void 0 === Xk.bufferView) return lk;
+            const Ik = Ek(kk, Fk, Xk.bufferView);
+            if (!Ik) return lk;
+            if ("image/png" !== Xk.mimeType) {
+              var OF, nF, GF;
+              return `has ${Sk(null!==(OF=null!==(nF={"image/jpeg":"JPEG","image/webp":"WebP","image/ktx2":"KTX2"}[null!==(GF=Xk.mimeType)&&void 0!==GF?GF:""])&&void 0!==nF?nF:Xk.mimeType)&&void 0!==OF?OF:"untyped")} image`
             }
-            if (!iC(ZC)) return `has ${vC(IC(ZC))} image`;
-            const bC = new DataView(ZC.buffer, ZC.byteOffset, ZC.byteLength),
-              nC = bC.getUint32(16),
-              qC = bC.getUint32(20);
-            if (nC > wC.imageSide || qC > wC.imageSide) return `has a ${nC} \xd7 ${qC} image (the limit is ${wC.imageSide})`
+            if (!zk(Ik)) return `has ${Sk(Vk(Ik))} image`;
+            const ik = new DataView(Ik.buffer, Ik.byteOffset, Ik.byteLength),
+              yk = ik.getUint32(16),
+              qk = ik.getUint32(20);
+            if (yk > Tk.imageSide || qk > Tk.imageSide) return `has a ${yk} \xd7 ${qk} image (the limit is ${Tk.imageSide})`
           }
           return null
-        }(CC, zC)
+        }(kk, Fk)
       } catch {
-        return fC
+        return lk
       }
     }
 
-    function mC(CC) {
-      const zC = YC(CC.byteLength);
-      if (zC) return zC;
+    function pk(kk) {
+      const Fk = nk(kk.byteLength);
+      if (Fk) return Fk;
       try {
         const {
-          json: zC,
-          bin: ZC
-        } = (0, QC.x)(CC);
-        return dC(zC, ZC)
-      } catch (ZC) {
-        if (ZC instanceof QC.n) return ZC.reason;
-        throw ZC
+          json: Fk,
+          bin: Ik
+        } = (0, Xk.v)(kk);
+        return Gk(Fk, Ik)
+      } catch (Ik) {
+        if (Ik instanceof Xk.m) return Ik.reason;
+        throw Ik
       }
     }
   },
-  34228: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => MC,
-      f: () => NC,
-      h: () => SC,
-      l: () => bC,
-      n: () => wC,
-      q: () => gC,
-      s: () => FC,
-      t: () => WC,
-      w: () => nC,
-      x: () => qC
+  34262: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => jk,
+      g: () => Zk,
+      h: () => wk,
+      l: () => ik,
+      m: () => Tk,
+      o: () => ek,
+      p: () => Lk,
+      r: () => tk,
+      u: () => yk,
+      v: () => qk
     });
-    var QC = ZC(34237);
-    class wC extends Error {
-      constructor(CC) {
-        super(`GLB refused: it ${CC}`), this.reason = CC, this.name = "GlbRefused"
+    var Xk = Ik(34266);
+    class Tk extends Error {
+      constructor(kk) {
+        super(`GLB refused: it ${kk}`), this.reason = kk, this.name = "GlbRefused"
       }
     }
-    class bC extends Error {
-      constructor(CC) {
-        super(CC), this.name = "GlbError"
+    class ik extends Error {
+      constructor(kk) {
+        super(kk), this.name = "GlbError"
       }
     }
 
-    function nC(CC) {
-      return Reflect.get(CC, "scene")
+    function yk(kk) {
+      return Reflect.get(kk, "scene")
     }
-    const fC = 5130562,
-      oC = "is not a binary glTF 2.0 file";
+    const lk = 5130562,
+      ak = "is not a binary glTF 2.0 file";
 
-    function qC(CC) {
-      var zC;
-      const ZC = CC instanceof Uint8Array ? CC : new Uint8Array(CC),
-        bC = (0, QC.f)(ZC);
-      if (null === bC) throw new wC(oC);
-      const nC = bC.json,
+    function qk(kk) {
+      var Fk;
+      const Ik = kk instanceof Uint8Array ? kk : new Uint8Array(kk),
+        ik = (0, Xk.g)(Ik);
+      if (null === ik) throw new Tk(ak);
+      const yk = ik.json,
         {
-          jsonEnd: qC,
-          length: FC
-        } = bC,
-        WC = new DataView(ZC.buffer, ZC.byteOffset, ZC.byteLength);
-      let NC = -1,
-        MC = 0;
-      for (let pC = qC; pC < FC;) {
-        if (pC + 8 > FC) throw new wC(oC);
-        const CC = WC.getUint32(pC, !0),
-          zC = WC.getUint32(pC + 4, !0);
-        if (pC + 8 + CC > FC || zC === QC.c || zC === fC && -1 !== NC) throw new wC(oC);
-        zC === fC && (NC = pC + 8, MC = CC), pC += 8 + CC
+          jsonEnd: qk,
+          length: Lk
+        } = ik,
+        tk = new DataView(Ik.buffer, Ik.byteOffset, Ik.byteLength);
+      let Zk = -1,
+        jk = 0;
+      for (let Hk = qk; Hk < Lk;) {
+        if (Hk + 8 > Lk) throw new Tk(ak);
+        const kk = tk.getUint32(Hk, !0),
+          Fk = tk.getUint32(Hk + 4, !0);
+        if (Hk + 8 + kk > Lk || Fk === Xk.e || Fk === lk && -1 !== Zk) throw new Tk(ak);
+        Fk === lk && (Zk = Hk + 8, jk = kk), Hk += 8 + kk
       }
-      let gC = null;
-      const SC = null === (zC = nC.buffers) || void 0 === zC ? void 0 : zC[0];
-      if (-1 !== NC && SC && void 0 === SC.uri) {
-        if (!(SC.byteLength >= 0) || SC.byteLength > MC) throw new wC(oC);
-        gC = new Uint8Array(ZC.buffer, ZC.byteOffset + NC, SC.byteLength)
+      let ek = null;
+      const wk = null === (Fk = yk.buffers) || void 0 === Fk ? void 0 : Fk[0];
+      if (-1 !== Zk && wk && void 0 === wk.uri) {
+        if (!(wk.byteLength >= 0) || wk.byteLength > jk) throw new Tk(ak);
+        ek = new Uint8Array(Ik.buffer, Ik.byteOffset + Zk, wk.byteLength)
       }
       return {
-        json: nC,
-        bin: gC,
-        fileBytes: ZC.byteLength
+        json: yk,
+        bin: ek,
+        fileBytes: Ik.byteLength
       }
     }
 
-    function FC(CC) {
-      const zC = CC.slice(CC.indexOf(",") + 1),
-        ZC = Uint8Array.fromBase64;
-      if (ZC) return ZC(zC).buffer;
-      const QC = atob(zC),
-        wC = new Uint8Array(QC.length);
-      for (let bC = 0; bC < QC.length; bC++) wC[bC] = QC.charCodeAt(bC);
-      return wC.buffer
+    function Lk(kk) {
+      const Fk = kk.slice(kk.indexOf(",") + 1),
+        Ik = Uint8Array.fromBase64;
+      if (Ik) return Ik(Fk).buffer;
+      const Xk = atob(Fk),
+        Tk = new Uint8Array(Xk.length);
+      for (let ik = 0; ik < Xk.length; ik++) Tk[ik] = Xk.charCodeAt(ik);
+      return Tk.buffer
     }
-    async function WC(CC) {
-      if (CC.startsWith("data:")) return FC(CC);
-      const zC = await fetch(CC);
-      if (!zC.ok) throw new bC(`fetching ${CC} failed: ${zC.status} ${zC.statusText}`);
-      return await zC.arrayBuffer()
+    async function tk(kk) {
+      if (kk.startsWith("data:")) return Lk(kk);
+      const Fk = await fetch(kk);
+      if (!Fk.ok) throw new ik(`fetching ${kk} failed: ${Fk.status} ${Fk.statusText}`);
+      return await Fk.arrayBuffer()
     }
-    const NC = {
+    const Zk = {
         5120: "i8",
         5121: "u8",
         5122: "i16",
@@ -482,7 +482,7 @@ export const modules = {
         5125: "u32",
         5126: "f32"
       },
-      MC = {
+      jk = {
         5120: 1,
         5121: 1,
         5122: 2,
@@ -490,7 +490,7 @@ export const modules = {
         5125: 4,
         5126: 4
       },
-      gC = {
+      ek = {
         SCALAR: 1,
         VEC2: 2,
         VEC3: 3,
@@ -499,7 +499,7 @@ export const modules = {
         MAT3: 9,
         MAT4: 16
       },
-      SC = [
+      wk = [
         ["POSITION", "position"],
         ["NORMAL", "normal"],
         ["TANGENT", "tangent"],
@@ -512,48 +512,48 @@ export const modules = {
         ["COLOR_0", "color"]
       ]
   },
-  34237: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => wC,
-      f: () => bC,
-      g: () => nC
+  34266: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Tk,
+      g: () => ik,
+      h: () => yk
     });
-    const QC = 1179937895,
-      wC = 1313821514;
+    const Xk = 1179937895,
+      Tk = 1313821514;
 
-    function bC(CC) {
-      const zC = new DataView(CC.buffer, CC.byteOffset, CC.byteLength);
-      if (CC.byteLength < 20 || zC.getUint32(0, !0) !== QC || 2 !== zC.getUint32(4, !0)) return null;
-      const ZC = Math.min(zC.getUint32(8, !0), CC.byteLength),
-        bC = zC.getUint32(12, !0);
-      if (zC.getUint32(16, !0) !== wC || 20 + bC > ZC) return null;
-      let nC;
+    function ik(kk) {
+      const Fk = new DataView(kk.buffer, kk.byteOffset, kk.byteLength);
+      if (kk.byteLength < 20 || Fk.getUint32(0, !0) !== Xk || 2 !== Fk.getUint32(4, !0)) return null;
+      const Ik = Math.min(Fk.getUint32(8, !0), kk.byteLength),
+        ik = Fk.getUint32(12, !0);
+      if (Fk.getUint32(16, !0) !== Tk || 20 + ik > Ik) return null;
+      let yk;
       try {
-        nC = JSON.parse((new TextDecoder).decode(CC.subarray(20, 20 + bC)))
+        yk = JSON.parse((new TextDecoder).decode(kk.subarray(20, 20 + ik)))
       } catch {
         return null
       }
-      return "object" === typeof nC && null !== nC ? {
-        json: nC,
-        jsonEnd: 20 + bC,
-        length: ZC
+      return "object" === typeof yk && null !== yk ? {
+        json: yk,
+        jsonEnd: 20 + ik,
+        length: Ik
       } : null
     }
 
-    function nC(CC) {
-      var zC;
-      const ZC = null === (zC = bC(CC)) || void 0 === zC ? void 0 : zC.json;
-      if (void 0 === ZC || !Array.isArray(ZC.extensionsUsed) || !ZC.extensionsUsed.includes("KHR_draco_mesh_compression")) return !1;
-      const QC = ZC.meshes;
-      return Array.isArray(QC) && QC.some((CC => {
-        const zC = null === CC || void 0 === CC ? void 0 : CC.primitives;
-        return Array.isArray(zC) && zC.some((CC => {
-          const zC = null === CC || void 0 === CC ? void 0 : CC.extensions;
-          return null != (null === zC || void 0 === zC ? void 0 : zC.KHR_draco_mesh_compression)
+    function yk(kk) {
+      var Fk;
+      const Ik = null === (Fk = ik(kk)) || void 0 === Fk ? void 0 : Fk.json;
+      if (void 0 === Ik || !Array.isArray(Ik.extensionsUsed) || !Ik.extensionsUsed.includes("KHR_draco_mesh_compression")) return !1;
+      const Xk = Ik.meshes;
+      return Array.isArray(Xk) && Xk.some((kk => {
+        const Fk = null === kk || void 0 === kk ? void 0 : kk.primitives;
+        return Array.isArray(Fk) && Fk.some((kk => {
+          const Fk = null === kk || void 0 === kk ? void 0 : kk.extensions;
+          return null != (null === Fk || void 0 === Fk ? void 0 : Fk.KHR_draco_mesh_compression)
         }))
       }))
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

@@ -1,473 +1,473 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var CC = __webpack_require__.u,
-        zC = __webpack_require__.e,
-        ZC = {},
-        QC = {};
-      __webpack_require__.u = function(zC) {
-        return CC(zC) + (ZC.hasOwnProperty(zC) ? "?" + ZC[zC] : "")
-      }, __webpack_require__.e = function(wC) {
-        return zC(wC).catch((function(zC) {
-          var bC = QC.hasOwnProperty(wC) ? QC[wC] : 4;
-          if (bC < 1) {
-            var nC = CC(wC);
-            throw zC.message = "Loading chunk " + wC + " failed after 4 retries.\n(" + nC + ")", zC.request = nC, ZC[wC] = "cache-bust=" + Date.now(), setTimeout((function() {
-              delete QC[wC]
-            }), 0), zC
+      var kk = __webpack_require__.u,
+        Fk = __webpack_require__.e,
+        Ik = {},
+        Xk = {};
+      __webpack_require__.u = function(Fk) {
+        return kk(Fk) + (Ik.hasOwnProperty(Fk) ? "?" + Ik[Fk] : "")
+      }, __webpack_require__.e = function(Tk) {
+        return Fk(Tk).catch((function(Fk) {
+          var ik = Xk.hasOwnProperty(Tk) ? Xk[Tk] : 4;
+          if (ik < 1) {
+            var yk = kk(Tk);
+            throw Fk.message = "Loading chunk " + Tk + " failed after 4 retries.\n(" + yk + ")", Fk.request = yk, Ik[Tk] = "cache-bust=" + Date.now(), setTimeout((function() {
+              delete Xk[Tk]
+            }), 0), Fk
           }
-          return new Promise((function(CC) {
-            var zC = 4 - bC + 1;
+          return new Promise((function(kk) {
+            var Fk = 4 - ik + 1;
             setTimeout((function() {
-              var zC = "cache-bust=" + Date.now();
-              ZC[wC] = zC, QC[wC] = bC - 1, CC(__webpack_require__.e(wC))
-            }), function(CC) {
-              return 500 * Math.pow(2, CC)
-            }(zC))
+              var Fk = "cache-bust=" + Date.now();
+              Ik[Tk] = Fk, Xk[Tk] = ik - 1, kk(__webpack_require__.e(Tk))
+            }), function(kk) {
+              return 500 * Math.pow(2, kk)
+            }(Fk))
           }))
         }))
       }
     }
   })();
 
-  function CC(CC) {
-    return CC instanceof Error ? CC.message : String(CC)
+  function kk(kk) {
+    return kk instanceof Error ? kk.message : String(kk)
   }
-  const zC = ArrayBuffer,
-    ZC = Uint8Array,
-    QC = Uint16Array,
-    wC = Int16Array,
-    bC = Int32Array,
-    nC = (CC, zC, QC) => {
-      if (ZC.prototype.slice) return ZC.prototype.slice.call(CC, zC, QC);
-      (null == zC || zC < 0) && (zC = 0), (null == QC || QC > CC.length) && (QC = CC.length);
-      const wC = new ZC(QC - zC);
-      return wC.set(CC.subarray(zC, QC)), wC
+  const Fk = ArrayBuffer,
+    Ik = Uint8Array,
+    Xk = Uint16Array,
+    Tk = Int16Array,
+    ik = Int32Array,
+    yk = (kk, Fk, Xk) => {
+      if (Ik.prototype.slice) return Ik.prototype.slice.call(kk, Fk, Xk);
+      (null == Fk || Fk < 0) && (Fk = 0), (null == Xk || Xk > kk.length) && (Xk = kk.length);
+      const Tk = new Ik(Xk - Fk);
+      return Tk.set(kk.subarray(Fk, Xk)), Tk
     },
-    fC = (CC, zC, QC, wC) => {
-      if (ZC.prototype.fill) return ZC.prototype.fill.call(CC, zC, QC, wC);
-      for ((null == QC || QC < 0) && (QC = 0), (null == wC || wC > CC.length) && (wC = CC.length); QC < wC; ++QC) CC[QC] = zC;
-      return CC
+    lk = (kk, Fk, Xk, Tk) => {
+      if (Ik.prototype.fill) return Ik.prototype.fill.call(kk, Fk, Xk, Tk);
+      for ((null == Xk || Xk < 0) && (Xk = 0), (null == Tk || Tk > kk.length) && (Tk = kk.length); Xk < Tk; ++Xk) kk[Xk] = Fk;
+      return kk
     },
-    oC = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
-    qC = (CC, zC, ZC) => {
-      const QC = new Error(zC || oC[CC]);
-      if (QC.code = CC, Error.captureStackTrace && Error.captureStackTrace(QC, qC), !ZC) throw QC;
-      return QC
+    ak = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
+    qk = (kk, Fk, Ik) => {
+      const Xk = new Error(Fk || ak[kk]);
+      if (Xk.code = kk, Error.captureStackTrace && Error.captureStackTrace(Xk, qk), !Ik) throw Xk;
+      return Xk
     },
-    FC = (CC, zC, ZC) => {
-      let QC = 0,
-        wC = 0;
-      for (; QC < ZC; ++QC) wC |= CC[zC++] << (QC << 3);
-      return wC
+    Lk = (kk, Fk, Ik) => {
+      let Xk = 0,
+        Tk = 0;
+      for (; Xk < Ik; ++Xk) Tk |= kk[Fk++] << (Xk << 3);
+      return Tk
     },
-    WC = (CC, zC) => {
-      const QC = CC[0] | CC[1] << 8 | CC[2] << 16;
-      if (3126568 == QC && 253 == CC[3]) {
-        const QC = CC[4],
-          wC = QC >> 5 & 1,
-          nC = QC >> 2 & 1,
-          fC = 3 & QC,
-          oC = QC >> 6;
-        8 & QC && qC(0);
-        let WC = 6 - wC;
-        const NC = 3 == fC ? 4 : fC,
-          MC = FC(CC, WC, NC);
-        WC += NC;
-        const gC = oC ? 1 << oC : wC,
-          SC = FC(CC, WC, gC) + (1 == oC && 256);
-        let pC = SC;
-        if (!wC) {
-          const zC = 1 << 10 + (CC[5] >> 3);
-          pC = zC + (zC >> 3) * (7 & CC[5])
+    tk = (kk, Fk) => {
+      const Xk = kk[0] | kk[1] << 8 | kk[2] << 16;
+      if (3126568 == Xk && 253 == kk[3]) {
+        const Xk = kk[4],
+          Tk = Xk >> 5 & 1,
+          yk = Xk >> 2 & 1,
+          lk = 3 & Xk,
+          ak = Xk >> 6;
+        8 & Xk && qk(0);
+        let tk = 6 - Tk;
+        const Zk = 3 == lk ? 4 : lk,
+          jk = Lk(kk, tk, Zk);
+        tk += Zk;
+        const ek = ak ? 1 << ak : Tk,
+          wk = Lk(kk, tk, ek) + (1 == ak && 256);
+        let Hk = wk;
+        if (!Tk) {
+          const Fk = 1 << 10 + (kk[5] >> 3);
+          Hk = Fk + (Fk >> 3) * (7 & kk[5])
         }
-        pC > 2145386496 && qC(1);
-        const PC = new ZC((1 == zC ? SC || pC : zC ? 0 : pC) + 12);
-        return PC[0] = 1, PC[4] = 4, PC[8] = 8, {
-          b: WC + gC,
+        Hk > 2145386496 && qk(1);
+        const Jk = new Ik((1 == Fk ? wk || Hk : Fk ? 0 : Hk) + 12);
+        return Jk[0] = 1, Jk[4] = 4, Jk[8] = 8, {
+          b: tk + ek,
           y: 0,
           l: 0,
-          d: MC,
-          w: zC && 1 != zC ? zC : PC.subarray(12),
-          e: pC,
-          o: new bC(PC.buffer, 0, 3),
-          u: SC,
-          c: nC,
-          m: Math.min(131072, pC)
+          d: jk,
+          w: Fk && 1 != Fk ? Fk : Jk.subarray(12),
+          e: Hk,
+          o: new ik(Jk.buffer, 0, 3),
+          u: wk,
+          c: yk,
+          m: Math.min(131072, Hk)
         }
       }
-      if (25481893 == (QC >> 4 | CC[3] << 20)) return 8 + (((wC = CC)[nC = 4] | wC[nC + 1] << 8 | wC[nC + 2] << 16 | wC[nC + 3] << 24) >>> 0);
-      var wC, nC;
-      qC(0)
+      if (25481893 == (Xk >> 4 | kk[3] << 20)) return 8 + (((Tk = kk)[yk = 4] | Tk[yk + 1] << 8 | Tk[yk + 2] << 16 | Tk[yk + 3] << 24) >>> 0);
+      var Tk, yk;
+      qk(0)
     },
-    NC = CC => {
-      let zC = 0;
-      for (; 1 << zC <= CC; ++zC);
-      return zC - 1
+    Zk = kk => {
+      let Fk = 0;
+      for (; 1 << Fk <= kk; ++Fk);
+      return Fk - 1
     },
-    MC = (CC, bC, nC) => {
-      let fC = 4 + (bC << 3);
-      const oC = 5 + (15 & CC[bC]);
-      oC > nC && qC(3);
-      const FC = 1 << oC;
-      let WC = FC,
-        MC = -1,
-        gC = -1,
-        SC = -1,
-        pC = FC;
-      const PC = new zC(512 + (FC << 2)),
-        GC = new wC(PC, 0, 256),
-        RC = new QC(PC, 0, 256),
-        AC = new QC(PC, 512, FC),
-        xC = 512 + (FC << 1),
-        JC = new ZC(PC, xC, FC),
-        IC = new ZC(PC, xC + FC);
-      for (; MC < 255 && WC > 0;) {
-        const zC = NC(WC + 1),
-          ZC = fC >> 3,
-          QC = (1 << zC + 1) - 1;
-        let wC = (CC[ZC] | CC[ZC + 1] << 8 | CC[ZC + 2] << 16) >> (7 & fC) & QC;
-        const bC = (1 << zC) - 1,
-          nC = QC - WC - 1,
-          oC = wC & bC;
-        if (oC < nC ? (fC += zC, wC = oC) : (fC += zC + 1, wC > bC && (wC -= nC)), GC[++MC] = --wC, -1 == wC ? (WC += wC, JC[--pC] = MC) : WC -= wC, !wC)
+    jk = (kk, ik, yk) => {
+      let lk = 4 + (ik << 3);
+      const ak = 5 + (15 & kk[ik]);
+      ak > yk && qk(3);
+      const Lk = 1 << ak;
+      let tk = Lk,
+        jk = -1,
+        ek = -1,
+        wk = -1,
+        Hk = Lk;
+      const Jk = new Fk(512 + (Lk << 2)),
+        xk = new Tk(Jk, 0, 256),
+        Pk = new Xk(Jk, 0, 256),
+        Kk = new Xk(Jk, 512, Lk),
+        Qk = 512 + (Lk << 1),
+        sk = new Ik(Jk, Qk, Lk),
+        Vk = new Ik(Jk, Qk + Lk);
+      for (; jk < 255 && tk > 0;) {
+        const Fk = Zk(tk + 1),
+          Ik = lk >> 3,
+          Xk = (1 << Fk + 1) - 1;
+        let Tk = (kk[Ik] | kk[Ik + 1] << 8 | kk[Ik + 2] << 16) >> (7 & lk) & Xk;
+        const ik = (1 << Fk) - 1,
+          yk = Xk - tk - 1,
+          ak = Tk & ik;
+        if (ak < yk ? (lk += Fk, Tk = ak) : (lk += Fk + 1, Tk > ik && (Tk -= yk)), xk[++jk] = --Tk, -1 == Tk ? (tk += Tk, sk[--Hk] = jk) : tk -= Tk, !Tk)
           do {
-            const zC = fC >> 3;
-            gC = (CC[zC] | CC[zC + 1] << 8) >> (7 & fC) & 3, fC += 2, MC += gC
-          } while (3 == gC)
-      }(MC > 255 || WC) && qC(0);
-      let iC = 0;
-      const vC = (FC >> 1) + (FC >> 3) + 3,
-        eC = FC - 1;
-      for (let zC = 0; zC <= MC; ++zC) {
-        const CC = GC[zC];
-        if (CC < 1) RC[zC] = -CC;
+            const Fk = lk >> 3;
+            ek = (kk[Fk] | kk[Fk + 1] << 8) >> (7 & lk) & 3, lk += 2, jk += ek
+          } while (3 == ek)
+      }(jk > 255 || tk) && qk(0);
+      let zk = 0;
+      const Sk = (Lk >> 1) + (Lk >> 3) + 3,
+        vk = Lk - 1;
+      for (let Fk = 0; Fk <= jk; ++Fk) {
+        const kk = xk[Fk];
+        if (kk < 1) Pk[Fk] = -kk;
         else
-          for (SC = 0; SC < CC; ++SC) {
-            JC[iC] = zC;
+          for (wk = 0; wk < kk; ++wk) {
+            sk[zk] = Fk;
             do {
-              iC = iC + vC & eC
-            } while (iC >= pC)
+              zk = zk + Sk & vk
+            } while (zk >= Hk)
           }
       }
-      for (iC && qC(0), SC = 0; SC < FC; ++SC) {
-        const CC = RC[JC[SC]]++,
-          zC = IC[SC] = oC - NC(CC);
-        AC[SC] = (CC << zC) - FC
+      for (zk && qk(0), wk = 0; wk < Lk; ++wk) {
+        const kk = Pk[sk[wk]]++,
+          Fk = Vk[wk] = ak - Zk(kk);
+        Kk[wk] = (kk << Fk) - Lk
       }
-      return [fC + 7 >> 3, {
-        b: oC,
-        s: JC,
-        n: IC,
-        t: AC
+      return [lk + 7 >> 3, {
+        b: ak,
+        s: sk,
+        n: Vk,
+        t: Kk
       }]
     },
-    gC = MC(new ZC([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
-    SC = MC(new ZC([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
-    pC = MC(new ZC([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
-    PC = (CC, zC) => {
-      const ZC = CC.length,
-        QC = new bC(ZC);
-      for (let wC = 0; wC < ZC; ++wC) QC[wC] = zC, zC += 1 << CC[wC];
-      return QC
+    ek = jk(new Ik([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
+    wk = jk(new Ik([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
+    Hk = jk(new Ik([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
+    Jk = (kk, Fk) => {
+      const Ik = kk.length,
+        Xk = new ik(Ik);
+      for (let Tk = 0; Tk < Ik; ++Tk) Xk[Tk] = Fk, Fk += 1 << kk[Tk];
+      return Xk
     },
-    GC = new ZC(new bC([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
-    RC = PC(GC, 0),
-    AC = new ZC(new bC([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
-    xC = PC(AC, 3),
-    JC = (CC, zC, ZC) => {
-      const QC = CC.length,
-        wC = zC.length,
-        bC = CC[QC - 1],
-        nC = (1 << ZC.b) - 1,
-        fC = -ZC.b;
-      bC || qC(0);
-      let oC = 0,
-        FC = ZC.b,
-        WC = (QC << 3) - 8 + NC(bC) - FC,
-        MC = -1;
-      for (; WC > fC && MC < wC;) {
-        const QC = WC >> 3;
-        oC = (oC << FC | (CC[QC] | CC[QC + 1] << 8 | CC[QC + 2] << 16) >> (7 & WC)) & nC, zC[++MC] = ZC.s[oC], WC -= FC = ZC.n[oC]
+    xk = new Ik(new ik([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
+    Pk = Jk(xk, 0),
+    Kk = new Ik(new ik([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
+    Qk = Jk(Kk, 3),
+    sk = (kk, Fk, Ik) => {
+      const Xk = kk.length,
+        Tk = Fk.length,
+        ik = kk[Xk - 1],
+        yk = (1 << Ik.b) - 1,
+        lk = -Ik.b;
+      ik || qk(0);
+      let ak = 0,
+        Lk = Ik.b,
+        tk = (Xk << 3) - 8 + Zk(ik) - Lk,
+        jk = -1;
+      for (; tk > lk && jk < Tk;) {
+        const Xk = tk >> 3;
+        ak = (ak << Lk | (kk[Xk] | kk[Xk + 1] << 8 | kk[Xk + 2] << 16) >> (7 & tk)) & yk, Fk[++jk] = Ik.s[ak], tk -= Lk = Ik.n[ak]
       }
-      WC == fC && MC + 1 == wC || qC(0)
+      tk == lk && jk + 1 == Tk || qk(0)
     },
-    IC = (CC, zC, ZC) => {
-      let QC = 6;
-      const wC = zC.length + 3 >> 2,
-        bC = wC << 1,
-        nC = wC + bC;
-      JC(CC.subarray(QC, QC += CC[0] | CC[1] << 8), zC.subarray(0, wC), ZC), JC(CC.subarray(QC, QC += CC[2] | CC[3] << 8), zC.subarray(wC, bC), ZC), JC(CC.subarray(QC, QC += CC[4] | CC[5] << 8), zC.subarray(bC, nC), ZC), JC(CC.subarray(QC), zC.subarray(nC), ZC)
+    Vk = (kk, Fk, Ik) => {
+      let Xk = 6;
+      const Tk = Fk.length + 3 >> 2,
+        ik = Tk << 1,
+        yk = Tk + ik;
+      sk(kk.subarray(Xk, Xk += kk[0] | kk[1] << 8), Fk.subarray(0, Tk), Ik), sk(kk.subarray(Xk, Xk += kk[2] | kk[3] << 8), Fk.subarray(Tk, ik), Ik), sk(kk.subarray(Xk, Xk += kk[4] | kk[5] << 8), Fk.subarray(ik, yk), Ik), sk(kk.subarray(Xk), Fk.subarray(yk), Ik)
     },
-    iC = (CC, zC, wC) => {
-      let bC = zC.b;
-      const oC = CC[bC],
-        FC = oC >> 1 & 3;
-      zC.l = 1 & oC;
-      const WC = oC >> 3 | CC[bC + 1] << 5 | CC[bC + 2] << 13,
-        PC = (bC += 3) + WC;
-      if (1 == FC) {
-        if (bC >= CC.length) return;
-        return zC.b = bC + 1, wC ? (fC(wC, CC[bC], zC.y, zC.y += WC), wC) : fC(new ZC(WC), CC[bC])
+    zk = (kk, Fk, Tk) => {
+      let ik = Fk.b;
+      const ak = kk[ik],
+        Lk = ak >> 1 & 3;
+      Fk.l = 1 & ak;
+      const tk = ak >> 3 | kk[ik + 1] << 5 | kk[ik + 2] << 13,
+        Jk = (ik += 3) + tk;
+      if (1 == Lk) {
+        if (ik >= kk.length) return;
+        return Fk.b = ik + 1, Tk ? (lk(Tk, kk[ik], Fk.y, Fk.y += tk), Tk) : lk(new Ik(tk), kk[ik])
       }
-      if (!(PC > CC.length)) {
-        if (0 == FC) return zC.b = PC, wC ? (wC.set(CC.subarray(bC, PC), zC.y), zC.y += WC, wC) : nC(CC, bC, PC);
-        if (2 == FC) {
-          const oC = CC[bC],
-            FC = 3 & oC,
-            WC = oC >> 2 & 3;
-          let iC = oC >> 4,
-            vC = 0,
-            eC = 0;
-          FC < 2 ? 1 & WC ? iC |= CC[++bC] << 4 | (2 & WC && CC[++bC] << 12) : iC = oC >> 3 : (eC = WC, WC < 2 ? (iC |= (63 & CC[++bC]) << 4, vC = CC[bC] >> 6 | CC[++bC] << 2) : 2 == WC ? (iC |= CC[++bC] << 4 | (3 & CC[++bC]) << 12, vC = CC[bC] >> 2 | CC[++bC] << 6) : (iC |= CC[++bC] << 4 | (63 & CC[++bC]) << 12, vC = CC[bC] >> 6 | CC[++bC] << 2 | CC[++bC] << 10)), ++bC;
-          let hC = wC ? wC.subarray(zC.y, zC.y + zC.m) : new ZC(zC.m),
-            KC = hC.length - iC;
-          if (KC < 0 && qC(0), 0 == FC) hC.set(CC.subarray(bC, bC += iC), KC);
-          else if (1 == FC) fC(hC, CC[bC++], KC);
+      if (!(Jk > kk.length)) {
+        if (0 == Lk) return Fk.b = Jk, Tk ? (Tk.set(kk.subarray(ik, Jk), Fk.y), Fk.y += tk, Tk) : yk(kk, ik, Jk);
+        if (2 == Lk) {
+          const ak = kk[ik],
+            Lk = 3 & ak,
+            tk = ak >> 2 & 3;
+          let zk = ak >> 4,
+            Sk = 0,
+            vk = 0;
+          Lk < 2 ? 1 & tk ? zk |= kk[++ik] << 4 | (2 & tk && kk[++ik] << 12) : zk = ak >> 3 : (vk = tk, tk < 2 ? (zk |= (63 & kk[++ik]) << 4, Sk = kk[ik] >> 6 | kk[++ik] << 2) : 2 == tk ? (zk |= kk[++ik] << 4 | (3 & kk[++ik]) << 12, Sk = kk[ik] >> 2 | kk[++ik] << 6) : (zk |= kk[++ik] << 4 | (63 & kk[++ik]) << 12, Sk = kk[ik] >> 6 | kk[++ik] << 2 | kk[++ik] << 10)), ++ik;
+          let Ek = Tk ? Tk.subarray(Fk.y, Fk.y + Fk.m) : new Ik(Fk.m),
+            Ok = Ek.length - zk;
+          if (Ok < 0 && qk(0), 0 == Lk) Ek.set(kk.subarray(ik, ik += zk), Ok);
+          else if (1 == Lk) lk(Ek, kk[ik++], Ok);
           else {
-            let wC = zC.h;
-            if (2 == FC) {
-              const nC = ((CC, zC) => {
-                let wC = 0,
-                  bC = -1;
-                const nC = new ZC(292),
-                  oC = CC[zC],
-                  FC = nC.subarray(0, 256),
-                  WC = nC.subarray(256, 268),
-                  gC = new QC(nC.buffer, 268);
-                if (oC < 128) {
-                  const [ZC, QC] = MC(CC, zC + 1, 6), wC = ZC << 3, nC = CC[zC += oC];
-                  nC || qC(0);
-                  let fC = 0,
-                    WC = 0,
-                    gC = QC.b,
-                    SC = gC,
-                    pC = (++zC << 3) - 8 + NC(nC);
-                  for (; bC > 254 && qC(0), pC -= gC, !(pC < wC);) {
-                    let zC = pC >> 3;
-                    if (fC += (CC[zC] | CC[zC + 1] << 8) >> (7 & pC) & (1 << gC) - 1, FC[++bC] = QC.s[fC], pC -= SC, pC < wC) break;
-                    zC = pC >> 3, WC += (CC[zC] | CC[zC + 1] << 8) >> (7 & pC) & (1 << SC) - 1, FC[++bC] = QC.s[WC], gC = QC.n[fC], fC = QC.t[fC], SC = QC.n[WC], WC = QC.t[WC]
-                  }++bC > 255 && qC(0)
+            let Tk = Fk.h;
+            if (2 == Lk) {
+              const yk = ((kk, Fk) => {
+                let Tk = 0,
+                  ik = -1;
+                const yk = new Ik(292),
+                  ak = kk[Fk],
+                  Lk = yk.subarray(0, 256),
+                  tk = yk.subarray(256, 268),
+                  ek = new Xk(yk.buffer, 268);
+                if (ak < 128) {
+                  const [Ik, Xk] = jk(kk, Fk + 1, 6), Tk = Ik << 3, yk = kk[Fk += ak];
+                  yk || qk(0);
+                  let lk = 0,
+                    tk = 0,
+                    ek = Xk.b,
+                    wk = ek,
+                    Hk = (++Fk << 3) - 8 + Zk(yk);
+                  for (; ik > 254 && qk(0), Hk -= ek, !(Hk < Tk);) {
+                    let Fk = Hk >> 3;
+                    if (lk += (kk[Fk] | kk[Fk + 1] << 8) >> (7 & Hk) & (1 << ek) - 1, Lk[++ik] = Xk.s[lk], Hk -= wk, Hk < Tk) break;
+                    Fk = Hk >> 3, tk += (kk[Fk] | kk[Fk + 1] << 8) >> (7 & Hk) & (1 << wk) - 1, Lk[++ik] = Xk.s[tk], ek = Xk.n[lk], lk = Xk.t[lk], wk = Xk.n[tk], tk = Xk.t[tk]
+                  }++ik > 255 && qk(0)
                 } else {
-                  for (bC = oC - 127; wC < bC; wC += 2) {
-                    const ZC = CC[++zC];
-                    FC[wC] = ZC >> 4, FC[wC + 1] = 15 & ZC
-                  }++zC
+                  for (ik = ak - 127; Tk < ik; Tk += 2) {
+                    const Ik = kk[++Fk];
+                    Lk[Tk] = Ik >> 4, Lk[Tk + 1] = 15 & Ik
+                  }++Fk
                 }
-                let SC = 0;
-                for (wC = 0; wC < bC; ++wC) {
-                  const CC = FC[wC];
-                  CC > 11 && qC(0), SC += CC && 1 << CC - 1
+                let wk = 0;
+                for (Tk = 0; Tk < ik; ++Tk) {
+                  const kk = Lk[Tk];
+                  kk > 11 && qk(0), wk += kk && 1 << kk - 1
                 }
-                const pC = NC(SC) + 1,
-                  PC = 1 << pC,
-                  GC = PC - SC;
-                for (GC & GC - 1 && qC(0), FC[bC++] = NC(GC) + 1, wC = 0; wC < bC; ++wC) {
-                  const CC = FC[wC];
-                  ++WC[FC[wC] = CC && pC + 1 - CC]
+                const Hk = Zk(wk) + 1,
+                  Jk = 1 << Hk,
+                  xk = Jk - wk;
+                for (xk & xk - 1 && qk(0), Lk[ik++] = Zk(xk) + 1, Tk = 0; Tk < ik; ++Tk) {
+                  const kk = Lk[Tk];
+                  ++tk[Lk[Tk] = kk && Hk + 1 - kk]
                 }
-                const RC = new ZC(PC << 1),
-                  AC = RC.subarray(0, PC),
-                  xC = RC.subarray(PC);
-                for (gC[pC] = 0, wC = pC; wC > 0; --wC) {
-                  const CC = gC[wC];
-                  fC(xC, wC, CC, gC[wC - 1] = CC + WC[wC] * (1 << pC - wC))
+                const Pk = new Ik(Jk << 1),
+                  Kk = Pk.subarray(0, Jk),
+                  Qk = Pk.subarray(Jk);
+                for (ek[Hk] = 0, Tk = Hk; Tk > 0; --Tk) {
+                  const kk = ek[Tk];
+                  lk(Qk, Tk, kk, ek[Tk - 1] = kk + tk[Tk] * (1 << Hk - Tk))
                 }
-                for (gC[0] != PC && qC(0), wC = 0; wC < bC; ++wC) {
-                  const CC = FC[wC];
-                  if (CC) {
-                    const zC = gC[CC];
-                    fC(AC, wC, zC, gC[CC] = zC + (1 << pC - CC))
+                for (ek[0] != Jk && qk(0), Tk = 0; Tk < ik; ++Tk) {
+                  const kk = Lk[Tk];
+                  if (kk) {
+                    const Fk = ek[kk];
+                    lk(Kk, Tk, Fk, ek[kk] = Fk + (1 << Hk - kk))
                   }
                 }
-                return [zC, {
-                  n: xC,
-                  b: pC,
-                  s: AC
+                return [Fk, {
+                  n: Qk,
+                  b: Hk,
+                  s: Kk
                 }]
-              })(CC, bC);
-              vC += bC - (bC = nC[0]), zC.h = wC = nC[1]
-            } else wC || qC(0);
-            (eC ? IC : JC)(CC.subarray(bC, bC += vC), hC.subarray(KC), wC)
+              })(kk, ik);
+              Sk += ik - (ik = yk[0]), Fk.h = Tk = yk[1]
+            } else Tk || qk(0);
+            (vk ? Vk : sk)(kk.subarray(ik, ik += Sk), Ek.subarray(Ok), Tk)
           }
-          let YC = CC[bC++];
-          if (YC) {
-            255 == YC ? YC = 32512 + (CC[bC++] | CC[bC++] << 8) : YC > 127 && (YC = YC - 128 << 8 | CC[bC++]);
-            const fC = CC[bC++];
-            3 & fC && qC(0);
-            const oC = [SC, pC, gC];
-            for (let wC = 2; wC > -1; --wC) {
-              const nC = fC >> 2 + (wC << 1) & 3;
-              if (1 == nC) {
-                const zC = new ZC([0, 0, CC[bC++]]);
-                oC[wC] = {
-                  s: zC.subarray(2, 3),
-                  n: zC.subarray(0, 1),
-                  t: new QC(zC.buffer, 0, 1),
+          let nk = kk[ik++];
+          if (nk) {
+            255 == nk ? nk = 32512 + (kk[ik++] | kk[ik++] << 8) : nk > 127 && (nk = nk - 128 << 8 | kk[ik++]);
+            const lk = kk[ik++];
+            3 & lk && qk(0);
+            const ak = [wk, Hk, ek];
+            for (let Tk = 2; Tk > -1; --Tk) {
+              const yk = lk >> 2 + (Tk << 1) & 3;
+              if (1 == yk) {
+                const Fk = new Ik([0, 0, kk[ik++]]);
+                ak[Tk] = {
+                  s: Fk.subarray(2, 3),
+                  n: Fk.subarray(0, 1),
+                  t: new Xk(Fk.buffer, 0, 1),
                   b: 0
                 }
-              } else 2 == nC ? [bC, oC[wC]] = MC(CC, bC, 9 - (1 & wC)) : 3 == nC && (zC.t || qC(0), oC[wC] = zC.t[wC])
+              } else 2 == yk ? [ik, ak[Tk]] = jk(kk, ik, 9 - (1 & Tk)) : 3 == yk && (Fk.t || qk(0), ak[Tk] = Fk.t[Tk])
             }
-            const [FC, WC, JC] = zC.t = oC, IC = CC[PC - 1];
-            IC || qC(0);
-            let iC = (PC << 3) - 8 + NC(IC) - JC.b,
-              vC = iC >> 3,
-              eC = 0,
-              dC = (CC[vC] | CC[vC + 1] << 8) >> (7 & iC) & (1 << JC.b) - 1;
-            vC = (iC -= WC.b) >> 3;
-            let mC = (CC[vC] | CC[vC + 1] << 8) >> (7 & iC) & (1 << WC.b) - 1;
-            vC = (iC -= FC.b) >> 3;
-            let HC = (CC[vC] | CC[vC + 1] << 8) >> (7 & iC) & (1 << FC.b) - 1;
-            for (++YC; --YC;) {
-              const ZC = JC.s[dC],
-                QC = JC.n[dC],
-                wC = FC.s[HC],
-                bC = FC.n[HC],
-                nC = WC.s[mC],
-                fC = WC.n[mC];
-              vC = (iC -= nC) >> 3;
-              const oC = 1 << nC;
-              let NC = oC + ((CC[vC] | CC[vC + 1] << 8 | CC[vC + 2] << 16 | CC[vC + 3] << 24) >>> (7 & iC) & oC - 1);
-              vC = (iC -= AC[wC]) >> 3;
-              let MC = xC[wC] + ((CC[vC] | CC[vC + 1] << 8 | CC[vC + 2] << 16) >> (7 & iC) & (1 << AC[wC]) - 1);
-              vC = (iC -= GC[ZC]) >> 3;
-              const gC = RC[ZC] + ((CC[vC] | CC[vC + 1] << 8 | CC[vC + 2] << 16) >> (7 & iC) & (1 << GC[ZC]) - 1);
-              if ((iC < 0 || KC + gC > hC.length || eC + gC + MC > hC.length) && qC(0), vC = (iC -= QC) >> 3, dC = JC.t[dC] + ((CC[vC] | CC[vC + 1] << 8) >> (7 & iC) & (1 << QC) - 1), vC = (iC -= bC) >> 3, HC = FC.t[HC] + ((CC[vC] | CC[vC + 1] << 8) >> (7 & iC) & (1 << bC) - 1), vC = (iC -= fC) >> 3, mC = WC.t[mC] + ((CC[vC] | CC[vC + 1] << 8) >> (7 & iC) & (1 << fC) - 1), NC > 3) zC.o[2] = zC.o[1], zC.o[1] = zC.o[0], zC.o[0] = NC -= 3;
+            const [Lk, tk, sk] = Fk.t = ak, Vk = kk[Jk - 1];
+            Vk || qk(0);
+            let zk = (Jk << 3) - 8 + Zk(Vk) - sk.b,
+              Sk = zk >> 3,
+              vk = 0,
+              Gk = (kk[Sk] | kk[Sk + 1] << 8) >> (7 & zk) & (1 << sk.b) - 1;
+            Sk = (zk -= tk.b) >> 3;
+            let pk = (kk[Sk] | kk[Sk + 1] << 8) >> (7 & zk) & (1 << tk.b) - 1;
+            Sk = (zk -= Lk.b) >> 3;
+            let uk = (kk[Sk] | kk[Sk + 1] << 8) >> (7 & zk) & (1 << Lk.b) - 1;
+            for (++nk; --nk;) {
+              const Ik = sk.s[Gk],
+                Xk = sk.n[Gk],
+                Tk = Lk.s[uk],
+                ik = Lk.n[uk],
+                yk = tk.s[pk],
+                lk = tk.n[pk];
+              Sk = (zk -= yk) >> 3;
+              const ak = 1 << yk;
+              let Zk = ak + ((kk[Sk] | kk[Sk + 1] << 8 | kk[Sk + 2] << 16 | kk[Sk + 3] << 24) >>> (7 & zk) & ak - 1);
+              Sk = (zk -= Kk[Tk]) >> 3;
+              let jk = Qk[Tk] + ((kk[Sk] | kk[Sk + 1] << 8 | kk[Sk + 2] << 16) >> (7 & zk) & (1 << Kk[Tk]) - 1);
+              Sk = (zk -= xk[Ik]) >> 3;
+              const ek = Pk[Ik] + ((kk[Sk] | kk[Sk + 1] << 8 | kk[Sk + 2] << 16) >> (7 & zk) & (1 << xk[Ik]) - 1);
+              if ((zk < 0 || Ok + ek > Ek.length || vk + ek + jk > Ek.length) && qk(0), Sk = (zk -= Xk) >> 3, Gk = sk.t[Gk] + ((kk[Sk] | kk[Sk + 1] << 8) >> (7 & zk) & (1 << Xk) - 1), Sk = (zk -= ik) >> 3, uk = Lk.t[uk] + ((kk[Sk] | kk[Sk + 1] << 8) >> (7 & zk) & (1 << ik) - 1), Sk = (zk -= lk) >> 3, pk = tk.t[pk] + ((kk[Sk] | kk[Sk + 1] << 8) >> (7 & zk) & (1 << lk) - 1), Zk > 3) Fk.o[2] = Fk.o[1], Fk.o[1] = Fk.o[0], Fk.o[0] = Zk -= 3;
               else {
-                const CC = NC - (0 != gC);
-                CC ? (NC = 3 == CC ? zC.o[0] - 1 : zC.o[CC], CC > 1 && (zC.o[2] = zC.o[1]), zC.o[1] = zC.o[0], zC.o[0] = NC) : NC = zC.o[0]
+                const kk = Zk - (0 != ek);
+                kk ? (Zk = 3 == kk ? Fk.o[0] - 1 : Fk.o[kk], kk > 1 && (Fk.o[2] = Fk.o[1]), Fk.o[1] = Fk.o[0], Fk.o[0] = Zk) : Zk = Fk.o[0]
               }
-              for (let CC = 0; CC < gC; ++CC) hC[eC + CC] = hC[KC + CC];
-              eC += gC, KC += gC;
-              let SC = eC - NC;
-              if (SC < 0) {
-                let CC = -SC;
-                const ZC = zC.e + SC;
-                ZC < 0 && qC(4), CC > MC && (CC = MC);
-                for (let QC = 0; QC < CC; ++QC) hC[eC + QC] = zC.w[ZC + QC];
-                eC += CC, MC -= CC, SC = 0
+              for (let kk = 0; kk < ek; ++kk) Ek[vk + kk] = Ek[Ok + kk];
+              vk += ek, Ok += ek;
+              let wk = vk - Zk;
+              if (wk < 0) {
+                let kk = -wk;
+                const Ik = Fk.e + wk;
+                Ik < 0 && qk(4), kk > jk && (kk = jk);
+                for (let Xk = 0; Xk < kk; ++Xk) Ek[vk + Xk] = Fk.w[Ik + Xk];
+                vk += kk, jk -= kk, wk = 0
               }
-              for (let CC = 0; CC < MC; ++CC) hC[eC + CC] = hC[SC + CC];
-              eC += MC
+              for (let kk = 0; kk < jk; ++kk) Ek[vk + kk] = Ek[wk + kk];
+              vk += jk
             }
-            if (eC != KC)
-              for (; KC < hC.length;) hC[eC++] = hC[KC++];
-            else eC = hC.length;
-            wC ? zC.y += eC : hC = nC(hC, 0, eC)
-          } else if (wC) {
-            if (zC.y += iC, KC)
-              for (let CC = 0; CC < iC; ++CC) hC[CC] = hC[KC + CC]
-          } else KC && (hC = nC(hC, KC));
-          return zC.b = PC, hC
+            if (vk != Ok)
+              for (; Ok < Ek.length;) Ek[vk++] = Ek[Ok++];
+            else vk = Ek.length;
+            Tk ? Fk.y += vk : Ek = yk(Ek, 0, vk)
+          } else if (Tk) {
+            if (Fk.y += zk, Ok)
+              for (let kk = 0; kk < zk; ++kk) Ek[kk] = Ek[Ok + kk]
+          } else Ok && (Ek = yk(Ek, Ok));
+          return Fk.b = Jk, Ek
         }
-        qC(2)
+        qk(2)
       }
     };
-  class vC {
+  class Sk {
     output = null;
     decoded = 0;
     done = !1;
     st = null;
     parts = [];
-    vq = 0;
+    eq = 0;
     needed = 18;
     size;
-    constructor(CC) {
-      this.size = CC
+    constructor(kk) {
+      this.size = kk
     }
-    push(CC) {
+    push(kk) {
       if (this.done) return;
-      if (this.parts.push(CC), this.vq += CC.length, this.vq < this.needed) return;
-      const zC = ((CC, zC) => {
-        if (1 == CC.length) return CC[0];
-        const QC = new ZC(zC);
-        for (let ZC = 0, wC = 0; ZC < CC.length; ++ZC) {
-          const zC = CC[ZC];
-          QC.set(zC, wC), wC += zC.length
+      if (this.parts.push(kk), this.eq += kk.length, this.eq < this.needed) return;
+      const Fk = ((kk, Fk) => {
+        if (1 == kk.length) return kk[0];
+        const Xk = new Ik(Fk);
+        for (let Ik = 0, Tk = 0; Ik < kk.length; ++Ik) {
+          const Fk = kk[Ik];
+          Xk.set(Fk, Tk), Tk += Fk.length
         }
-        return QC
-      })(this.parts, this.vq);
-      let QC = this.st;
-      if (!QC) {
-        const CC = WC(zC, new ZC(0));
-        "number" != typeof CC && CC.u === this.size || qC(0, `not a zstd frame of ${this.size} bytes`), QC = this.st = WC(zC, 1), QC.e = 0, this.output = QC.w
+        return Xk
+      })(this.parts, this.eq);
+      let Xk = this.st;
+      if (!Xk) {
+        const kk = tk(Fk, new Ik(0));
+        "number" != typeof kk && kk.u === this.size || qk(0, `not a zstd frame of ${this.size} bytes`), Xk = this.st = tk(Fk, 1), Xk.e = 0, this.output = Xk.w
       }
       for (;;) {
-        const CC = zC.length - QC.b;
-        if (CC < 3) {
+        const kk = Fk.length - Xk.b;
+        if (kk < 3) {
           this.needed = 3;
           break
         }
-        const ZC = zC[QC.b],
-          wC = ZC >> 1 & 3;
-        3 == wC && qC(2);
-        const bC = ZC >> 3 | zC[QC.b + 1] << 5 | zC[QC.b + 2] << 13;
-        bC > QC.m && qC(0), 0 == wC && QC.y + bC > QC.u && qC(0);
-        const nC = 1 == wC ? 4 : 3 + bC;
-        if (CC < nC) {
-          this.needed = nC;
+        const Ik = Fk[Xk.b],
+          Tk = Ik >> 1 & 3;
+        3 == Tk && qk(2);
+        const ik = Ik >> 3 | Fk[Xk.b + 1] << 5 | Fk[Xk.b + 2] << 13;
+        ik > Xk.m && qk(0), 0 == Tk && Xk.y + ik > Xk.u && qk(0);
+        const yk = 1 == Tk ? 4 : 3 + ik;
+        if (kk < yk) {
+          this.needed = yk;
           break
         }
-        if (iC(zC, QC, QC.w) || qC(5), QC.e = QC.y, (QC.y > QC.u || QC.l && QC.y != QC.u) && qC(0), QC.l) {
+        if (zk(Fk, Xk, Xk.w) || qk(5), Xk.e = Xk.y, (Xk.y > Xk.u || Xk.l && Xk.y != Xk.u) && qk(0), Xk.l) {
           this.done = !0;
           break
         }
       }
-      this.decoded = QC.y;
-      const wC = zC.subarray(QC.b);
-      this.parts = wC.length ? [wC] : [], this.vq = wC.length, QC.b = 0
+      this.decoded = Xk.y;
+      const Tk = Fk.subarray(Xk.b);
+      this.parts = Tk.length ? [Tk] : [], this.eq = Tk.length, Xk.b = 0
     }
   }
-  class eC {
+  class vk {
     post;
     href = "";
-    wg = null;
+    Xe = null;
     given = 0;
     stopped = !1;
-    constructor(CC) {
-      this.post = CC
+    constructor(kk) {
+      this.post = kk
     }
-    take(zC) {
+    take(Fk) {
       if (!this.stopped) try {
-        this.answer(zC)
-      } catch (ZC) {
-        this.stop(ZC instanceof RangeError ? `out of memory decoding ${this.href}: ${CC(ZC)}` : `${this.href} did not decode: ${CC(ZC)}`)
+        this.answer(Fk)
+      } catch (Ik) {
+        this.stop(Ik instanceof RangeError ? `out of memory decoding ${this.href}: ${kk(Ik)}` : `${this.href} did not decode: ${kk(Ik)}`)
       }
     }
-    answer(CC) {
-      if (null === this.wg) {
-        const [zC, ZC] = CC;
-        return this.href = zC, void(this.wg = new vC(ZC))
+    answer(kk) {
+      if (null === this.Xe) {
+        const [Fk, Ik] = kk;
+        return this.href = Fk, void(this.Xe = new Sk(Ik))
       }
-      if (null === CC) return void this.stop(`${this.href} ended before its module did`);
-      const zC = this.wg;
-      zC.push(CC);
+      if (null === kk) return void this.stop(`${this.href} ended before its module did`);
+      const Fk = this.Xe;
+      Fk.push(kk);
       const {
-        output: ZC,
-        decoded: QC
-      } = zC;
-      if (null !== ZC && QC > this.given) {
-        const CC = ZC.slice(this.given, QC).buffer;
-        this.given = QC, this.post(CC, [CC])
+        output: Ik,
+        decoded: Xk
+      } = Fk;
+      if (null !== Ik && Xk > this.given) {
+        const kk = Ik.slice(this.given, Xk).buffer;
+        this.given = Xk, this.post(kk, [kk])
       }
-      zC.done && this.stop(!0)
+      Fk.done && this.stop(!0)
     }
-    stop(CC) {
-      this.stopped = !0, this.post(CC)
+    stop(kk) {
+      this.stopped = !0, this.post(kk)
     }
   }
-  const hC = globalThis.WorkerGlobalScope;
-  if (void 0 !== hC && globalThis instanceof hC) {
-    const CC = globalThis,
-      zC = new eC((function(zC) {
-        let ZC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-        CC.postMessage(zC, ZC)
+  const Ek = globalThis.WorkerGlobalScope;
+  if (void 0 !== Ek && globalThis instanceof Ek) {
+    const kk = globalThis,
+      Fk = new vk((function(Fk) {
+        let Ik = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+        kk.postMessage(Fk, Ik)
       }));
-    CC.addEventListener("message", (CC => {
+    kk.addEventListener("message", (kk => {
       let {
-        data: ZC
-      } = CC;
-      zC.take(ZC)
+        data: Ik
+      } = kk;
+      Fk.take(Ik)
     }))
   }
 })();

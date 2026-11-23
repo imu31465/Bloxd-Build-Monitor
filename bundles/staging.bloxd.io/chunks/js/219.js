@@ -1,240 +1,240 @@
-/*! For license information please see w4ddu.219.9f0b8b79.chunk.js.LICENSE.txt */
+/*! For license information please see 31kiid.219.4bba5e46.chunk.js.LICENSE.txt */
 export const id = 219;
 export const ids = [219];
 export const modules = {
-  39388: (CC, zC, ZC) => {
-    CC.exports = wC;
-    var QC = ZC(338);
+  39572: (kk, Fk, Ik) => {
+    kk.exports = Tk;
+    var Xk = Ik(354);
 
-    function wC(CC, zC) {
-      if (!(this instanceof wC)) return new wC(CC, zC);
-      var ZC = QC.create();
-      QC.add(ZC, CC, zC), this.base = QC.min(QC.create(), CC, ZC), this.vec = QC.clone(zC), this.max = QC.max(QC.create(), CC, ZC), this.mag = QC.length(this.vec)
+    function Tk(kk, Fk) {
+      if (!(this instanceof Tk)) return new Tk(kk, Fk);
+      var Ik = Xk.create();
+      Xk.add(Ik, kk, Fk), this.base = Xk.min(Xk.create(), kk, Ik), this.vec = Xk.clone(Fk), this.max = Xk.max(Xk.create(), kk, Ik), this.mag = Xk.length(this.vec)
     }
-    var bC = wC.prototype;
-    bC.width = function() {
+    var ik = Tk.prototype;
+    ik.width = function() {
       return this.vec[0]
-    }, bC.height = function() {
+    }, ik.height = function() {
       return this.vec[1]
-    }, bC.depth = function() {
+    }, ik.depth = function() {
       return this.vec[2]
-    }, bC.x0 = function() {
+    }, ik.x0 = function() {
       return this.base[0]
-    }, bC.y0 = function() {
+    }, ik.y0 = function() {
       return this.base[1]
-    }, bC.z0 = function() {
+    }, ik.z0 = function() {
       return this.base[2]
-    }, bC.x1 = function() {
+    }, ik.x1 = function() {
       return this.max[0]
-    }, bC.y1 = function() {
+    }, ik.y1 = function() {
       return this.max[1]
-    }, bC.z1 = function() {
+    }, ik.z1 = function() {
       return this.max[2]
-    }, bC.translate = function(CC) {
-      return QC.add(this.max, this.max, CC), QC.add(this.base, this.base, CC), this
-    }, bC.setPosition = function(CC) {
-      return QC.add(this.max, CC, this.vec), QC.copy(this.base, CC), this
-    }, bC.expand = function(CC) {
-      var zC = QC.create(),
-        ZC = QC.create();
-      return QC.max(zC, CC.max, this.max), QC.min(ZC, CC.base, this.base), QC.subtract(zC, zC, ZC), new wC(ZC, zC)
-    }, bC.intersects = function(CC) {
-      return !(CC.base[0] > this.max[0]) && (!(CC.base[1] > this.max[1]) && (!(CC.base[2] > this.max[2]) && (!(CC.max[0] < this.base[0]) && (!(CC.max[1] < this.base[1]) && !(CC.max[2] < this.base[2])))))
-    }, bC.touches = function(CC) {
-      var zC = this.union(CC);
-      return null !== zC && (0 == zC.width() || 0 == zC.height() || 0 == zC.depth())
-    }, bC.union = function(CC) {
-      if (!this.intersects(CC)) return null;
-      var zC = Math.max(CC.base[0], this.base[0]),
-        ZC = Math.max(CC.base[1], this.base[1]),
-        QC = Math.max(CC.base[2], this.base[2]);
-      return new wC([zC, ZC, QC], [Math.min(CC.max[0], this.max[0]) - zC, Math.min(CC.max[1], this.max[1]) - ZC, Math.min(CC.max[2], this.max[2]) - QC])
+    }, ik.translate = function(kk) {
+      return Xk.add(this.max, this.max, kk), Xk.add(this.base, this.base, kk), this
+    }, ik.setPosition = function(kk) {
+      return Xk.add(this.max, kk, this.vec), Xk.copy(this.base, kk), this
+    }, ik.expand = function(kk) {
+      var Fk = Xk.create(),
+        Ik = Xk.create();
+      return Xk.max(Fk, kk.max, this.max), Xk.min(Ik, kk.base, this.base), Xk.subtract(Fk, Fk, Ik), new Tk(Ik, Fk)
+    }, ik.intersects = function(kk) {
+      return !(kk.base[0] > this.max[0]) && (!(kk.base[1] > this.max[1]) && (!(kk.base[2] > this.max[2]) && (!(kk.max[0] < this.base[0]) && (!(kk.max[1] < this.base[1]) && !(kk.max[2] < this.base[2])))))
+    }, ik.touches = function(kk) {
+      var Fk = this.union(kk);
+      return null !== Fk && (0 == Fk.width() || 0 == Fk.height() || 0 == Fk.depth())
+    }, ik.union = function(kk) {
+      if (!this.intersects(kk)) return null;
+      var Fk = Math.max(kk.base[0], this.base[0]),
+        Ik = Math.max(kk.base[1], this.base[1]),
+        Xk = Math.max(kk.base[2], this.base[2]);
+      return new Tk([Fk, Ik, Xk], [Math.min(kk.max[0], this.max[0]) - Fk, Math.min(kk.max[1], this.max[1]) - Ik, Math.min(kk.max[2], this.max[2]) - Xk])
     }
   },
-  39384: CC => {
-    CC.exports = function(CC, zC, ZC, QC, wC, bC) {
-      var nC = +zC[0],
-        fC = +zC[1],
-        oC = +zC[2],
-        qC = +ZC[0],
-        FC = +ZC[1],
-        WC = +ZC[2],
-        NC = Math.sqrt(qC * qC + FC * FC + WC * WC);
-      if (0 === NC) throw new Error("Can't raycast along a zero vector");
-      return function(CC, zC, ZC, QC, wC, bC, nC, fC, oC, qC) {
-        for (var FC = 0, WC = Math.floor, NC = 0 | WC(zC), MC = 0 | WC(ZC), gC = 0 | WC(QC), SC = wC > 0 ? 1 : -1, pC = bC > 0 ? 1 : -1, PC = nC > 0 ? 1 : -1, GC = Math.abs(1 / wC), RC = Math.abs(1 / bC), AC = Math.abs(1 / nC), xC = GC < 1 / 0 ? GC * (SC > 0 ? NC + 1 - zC : zC - NC) : 1 / 0, JC = RC < 1 / 0 ? RC * (pC > 0 ? MC + 1 - ZC : ZC - MC) : 1 / 0, IC = AC < 1 / 0 ? AC * (PC > 0 ? gC + 1 - QC : QC - gC) : 1 / 0, iC = -1; FC <= fC;) {
-          var vC = CC(NC, MC, gC);
-          if (vC) return oC && (oC[0] = zC + FC * wC, oC[1] = ZC + FC * bC, oC[2] = QC + FC * nC), qC && (qC[0] = qC[1] = qC[2] = 0, 0 === iC && (qC[0] = -SC), 1 === iC && (qC[1] = -pC), 2 === iC && (qC[2] = -PC)), vC;
-          xC < JC ? xC < IC ? (NC += SC, FC = xC, xC += GC, iC = 0) : (gC += PC, FC = IC, IC += AC, iC = 2) : JC < IC ? (MC += pC, FC = JC, JC += RC, iC = 1) : (gC += PC, FC = IC, IC += AC, iC = 2)
+  39565: kk => {
+    kk.exports = function(kk, Fk, Ik, Xk, Tk, ik) {
+      var yk = +Fk[0],
+        lk = +Fk[1],
+        ak = +Fk[2],
+        qk = +Ik[0],
+        Lk = +Ik[1],
+        tk = +Ik[2],
+        Zk = Math.sqrt(qk * qk + Lk * Lk + tk * tk);
+      if (0 === Zk) throw new Error("Can't raycast along a zero vector");
+      return function(kk, Fk, Ik, Xk, Tk, ik, yk, lk, ak, qk) {
+        for (var Lk = 0, tk = Math.floor, Zk = 0 | tk(Fk), jk = 0 | tk(Ik), ek = 0 | tk(Xk), wk = Tk > 0 ? 1 : -1, Hk = ik > 0 ? 1 : -1, Jk = yk > 0 ? 1 : -1, xk = Math.abs(1 / Tk), Pk = Math.abs(1 / ik), Kk = Math.abs(1 / yk), Qk = xk < 1 / 0 ? xk * (wk > 0 ? Zk + 1 - Fk : Fk - Zk) : 1 / 0, sk = Pk < 1 / 0 ? Pk * (Hk > 0 ? jk + 1 - Ik : Ik - jk) : 1 / 0, Vk = Kk < 1 / 0 ? Kk * (Jk > 0 ? ek + 1 - Xk : Xk - ek) : 1 / 0, zk = -1; Lk <= lk;) {
+          var Sk = kk(Zk, jk, ek);
+          if (Sk) return ak && (ak[0] = Fk + Lk * Tk, ak[1] = Ik + Lk * ik, ak[2] = Xk + Lk * yk), qk && (qk[0] = qk[1] = qk[2] = 0, 0 === zk && (qk[0] = -wk), 1 === zk && (qk[1] = -Hk), 2 === zk && (qk[2] = -Jk)), Sk;
+          Qk < sk ? Qk < Vk ? (Zk += wk, Lk = Qk, Qk += xk, zk = 0) : (ek += Jk, Lk = Vk, Vk += Kk, zk = 2) : sk < Vk ? (jk += Hk, Lk = sk, sk += Pk, zk = 1) : (ek += Jk, Lk = Vk, Vk += Kk, zk = 2)
         }
-        return oC && (oC[0] = zC + FC * wC, oC[1] = ZC + FC * bC, oC[2] = QC + FC * nC), qC && (qC[0] = qC[1] = qC[2] = 0), 0
-      }(CC, nC, fC, oC, qC /= NC, FC /= NC, WC /= NC, QC = "undefined" === typeof QC ? 64 : +QC, wC, bC)
+        return ak && (ak[0] = Fk + Lk * Tk, ak[1] = Ik + Lk * ik, ak[2] = Xk + Lk * yk), qk && (qk[0] = qk[1] = qk[2] = 0), 0
+      }(kk, yk, lk, ak, qk /= Zk, Lk /= Zk, tk /= Zk, Xk = "undefined" === typeof Xk ? 64 : +Xk, Tk, ik)
     }
   },
-  38946: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => fC,
-      d: () => bC
+  39113: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => lk,
+      c: () => ik
     });
-    var QC = ZC(4036);
-    let wC = null;
+    var Xk = Ik(4062);
+    let Tk = null;
 
-    function bC(CC) {
-      return null !== wC && CC === wC
+    function ik(kk) {
+      return null !== Tk && kk === Tk
     }
 
-    function nC() {
-      this.rD = !1, this.stopPropagation = !1, this.jD = !1, this.disabled = !1
+    function yk() {
+      this.dW = !1, this.stopPropagation = !1, this.rW = !1, this.disabled = !1
     }
-    class fC {
-      constructor(CC, zC) {
+    class lk {
+      constructor(kk, Fk) {
         this.version = "0.7.0";
-        var ZC = Object.assign({}, new nC, zC || {});
-        this.element = CC || document, this.rD = !!ZC.rD, this.stopPropagation = !!ZC.stopPropagation, this.jD = !!ZC.jD, this.disabled = !!ZC.disabled, this.filterEvents = (CC, zC) => !0, this.ignoreEvent = CC => !1, this.down = new QC.EventEmitter, this.up = new QC.EventEmitter, this.state = {}, this.Fy = {
+        var Ik = Object.assign({}, new yk, Fk || {});
+        this.element = kk || document, this.dW = !!Ik.dW, this.stopPropagation = !!Ik.stopPropagation, this.rW = !!Ik.rW, this.disabled = !!Ik.disabled, this.filterEvents = (kk, Fk) => !0, this.ignoreEvent = kk => !1, this.down = new Xk.EventEmitter, this.up = new Xk.EventEmitter, this.state = {}, this.XB = {
           dx: 0,
           dy: 0,
-          OCC: 0,
-          kCC: 0,
-          VCC: 0
+          iFk: 0,
+          yFk: 0,
+          lFk: 0
         }, this.pressCount = {}, this.releaseCount = {}, this._keyBindmap = {}, this._keyStates = {}, this._bindPressCount = {}, this._touches = {
           lastX: 0,
           lastY: 0,
           currID: null
-        }, "loading" !== document.readyState ? qC(this) : document.addEventListener("DOMContentLoaded", (CC => {
-          qC(this)
+        }, "loading" !== document.readyState ? qk(this) : document.addEventListener("DOMContentLoaded", (kk => {
+          qk(this)
         }), {
           once: !0
         })
       }
-      bind(CC) {
-        for (var zC = arguments.length, ZC = new Array(zC > 1 ? zC - 1 : 0), QC = 1; QC < zC; QC++) ZC[QC - 1] = arguments[QC];
-        ZC.forEach((zC => {
-          var ZC = this._keyBindmap[zC] || [];
-          ZC.includes(CC) || (ZC.push(CC), this._keyBindmap[zC] = ZC)
-        })), this.state[CC] = !!this.state[CC], this.pressCount[CC] = this.pressCount[CC] || 0, this.releaseCount[CC] = this.releaseCount[CC] || 0
+      bind(kk) {
+        for (var Fk = arguments.length, Ik = new Array(Fk > 1 ? Fk - 1 : 0), Xk = 1; Xk < Fk; Xk++) Ik[Xk - 1] = arguments[Xk];
+        Ik.forEach((Fk => {
+          var Ik = this._keyBindmap[Fk] || [];
+          Ik.includes(kk) || (Ik.push(kk), this._keyBindmap[Fk] = Ik)
+        })), this.state[kk] = !!this.state[kk], this.pressCount[kk] = this.pressCount[kk] || 0, this.releaseCount[kk] = this.releaseCount[kk] || 0
       }
-      unbind(CC) {
-        for (var zC in this._keyBindmap) {
-          var ZC = this._keyBindmap[zC],
-            QC = ZC.indexOf(CC);
-          QC > -1 && ZC.splice(QC, 1)
+      unbind(kk) {
+        for (var Fk in this._keyBindmap) {
+          var Ik = this._keyBindmap[Fk],
+            Xk = Ik.indexOf(kk);
+          Xk > -1 && Ik.splice(Xk, 1)
         }
       }
       getBindings() {
-        var CC = {};
-        for (var zC in this._keyBindmap) {
-          this._keyBindmap[zC].forEach((ZC => {
-            CC[ZC] = CC[ZC] || [], CC[ZC].push(zC)
+        var kk = {};
+        for (var Fk in this._keyBindmap) {
+          this._keyBindmap[Fk].forEach((Ik => {
+            kk[Ik] = kk[Ik] || [], kk[Ik].push(Fk)
           }))
         }
-        return CC
+        return kk
       }
-      ZN() {
-        oC(this.Fy), oC(this.pressCount), oC(this.releaseCount)
+      Dt() {
+        ak(this.XB), ak(this.pressCount), ak(this.releaseCount)
       }
     }
 
-    function oC(CC) {
-      for (var zC in CC) CC[zC] = 0
+    function ak(kk) {
+      for (var Fk in kk) kk[Fk] = 0
     }
 
-    function qC(CC) {
-      window.addEventListener("keydown", pC.bind(null, CC, !0), !1), window.addEventListener("keyup", pC.bind(null, CC, !1), !1);
-      var zC = {
+    function qk(kk) {
+      window.addEventListener("keydown", Hk.bind(null, kk, !0), !1), window.addEventListener("keyup", Hk.bind(null, kk, !1), !1);
+      var Fk = {
         passive: !0
       };
-      CC.element.addEventListener("touchstart", MC.bind(void 0, CC), {
+      kk.element.addEventListener("touchstart", jk.bind(void 0, kk), {
         passive: !1
-      }), CC.element.addEventListener("touchend", SC.bind(void 0, CC), zC), CC.element.addEventListener("mousedown", PC.bind(null, CC, !0), zC), window.document.addEventListener("mouseup", PC.bind(null, CC, !1), zC), CC.element.addEventListener("touchmove", GC.bind(null, CC), zC), CC.element.addEventListener("mousemove", GC.bind(null, CC), zC), window.PointerEvent, CC.element.addEventListener("wheel", RC.bind(null, CC), zC), CC.element.addEventListener("contextmenu", AC.bind(null, CC), !1), window.addEventListener("blur", IC.bind(null, CC), !1)
+      }), kk.element.addEventListener("touchend", wk.bind(void 0, kk), Fk), kk.element.addEventListener("mousedown", Jk.bind(null, kk, !0), Fk), window.document.addEventListener("mouseup", Jk.bind(null, kk, !1), Fk), kk.element.addEventListener("touchmove", xk.bind(null, kk), Fk), kk.element.addEventListener("mousemove", xk.bind(null, kk), Fk), window.PointerEvent, kk.element.addEventListener("wheel", Pk.bind(null, kk), Fk), kk.element.addEventListener("contextmenu", Kk.bind(null, kk), !1), window.addEventListener("blur", Vk.bind(null, kk), !1)
     }
-    var FC = 0,
-      WC = 0,
-      NC = null;
+    var Lk = 0,
+      tk = 0,
+      Zk = null;
 
-    function MC(CC, zC) {
-      zC.preventDefault(), gC(zC)
+    function jk(kk, Fk) {
+      Fk.preventDefault(), ek(Fk)
     }
 
-    function gC(CC) {
-      let zC = !1;
-      for (let ZC = 0; ZC < CC.touches.length; ++ZC)
-        if (CC.touches[ZC].identifier === NC) {
-          zC = !0;
+    function ek(kk) {
+      let Fk = !1;
+      for (let Ik = 0; Ik < kk.touches.length; ++Ik)
+        if (kk.touches[Ik].identifier === Zk) {
+          Fk = !0;
           break
-        } if (!zC) {
-        const zC = CC.changedTouches[0];
-        FC = zC.clientX, WC = zC.clientY, NC = zC.identifier
+        } if (!Fk) {
+        const Fk = kk.changedTouches[0];
+        Lk = Fk.clientX, tk = Fk.clientY, Zk = Fk.identifier
       }
     }
 
-    function SC(CC, zC) {
-      for (var ZC = zC.changedTouches, QC = 0; QC < ZC.length; ++QC) ZC[QC].identifier === NC && (NC = null)
+    function wk(kk, Fk) {
+      for (var Ik = Fk.changedTouches, Xk = 0; Xk < Ik.length; ++Xk) Ik[Xk].identifier === Zk && (Zk = null)
     }
 
-    function pC(CC, zC, ZC) {
-      if (!CC.ignoreEvent(ZC)) try {
-        iC(CC, ZC), zC && ZC.isTrusted && !ZC.repeat && CC._keyStates[ZC.code] && vC(CC, ZC.code)
+    function Hk(kk, Fk, Ik) {
+      if (!kk.ignoreEvent(Ik)) try {
+        zk(kk, Ik), Fk && Ik.isTrusted && !Ik.repeat && kk._keyStates[Ik.code] && Sk(kk, Ik.code)
       } finally {
-        eC(ZC.code, zC, CC, ZC)
+        vk(Ik.code, Fk, kk, Ik)
       }
     }
 
-    function PC(CC, zC, ZC) {
-      if (!CC.ignoreEvent(ZC)) try {
-        iC(CC, ZC)
+    function Jk(kk, Fk, Ik) {
+      if (!kk.ignoreEvent(Ik)) try {
+        zk(kk, Ik)
       } finally {
-        ! function(CC, zC, ZC) {
-          if ("pointerId" in ZC)
-            if (zC) {
-              if (null !== CC._touches.currID) return;
-              CC._touches.currID = ZC.pointerId
+        ! function(kk, Fk, Ik) {
+          if ("pointerId" in Ik)
+            if (Fk) {
+              if (null !== kk._touches.currID) return;
+              kk._touches.currID = Ik.pointerId
             } else {
-              if (CC._touches.currID !== ZC.pointerId) return;
-              CC._touches.currID = null
-            } var QC = "button" in ZC ? ZC.button + 1 : 1;
-          eC("Mouse" + QC, zC, CC, ZC)
-        }(CC, zC, ZC)
+              if (kk._touches.currID !== Ik.pointerId) return;
+              kk._touches.currID = null
+            } var Xk = "button" in Ik ? Ik.button + 1 : 1;
+          vk("Mouse" + Xk, Fk, kk, Ik)
+        }(kk, Fk, Ik)
       }
     }
 
-    function GC(CC, zC) {
-      var ZC = zC.movementX || zC.mozMovementX || 0,
-        QC = zC.movementY || zC.mozMovementY || 0;
-      if (zC.touches && 0 === (ZC | QC)) {
-        var wC = function(CC) {
-          gC(CC);
-          for (let zC = 0; zC < CC.changedTouches.length; ++zC)
-            if (CC.changedTouches[zC].identifier == NC) {
-              const ZC = CC.changedTouches[zC],
-                QC = [ZC.clientX - FC, ZC.clientY - WC];
-              return FC = ZC.clientX, WC = ZC.clientY, QC
-            } return console.error(`Did not find touch id ${NC}`), [0, 0]
-        }(zC);
-        ZC = wC[0], QC = wC[1]
+    function xk(kk, Fk) {
+      var Ik = Fk.movementX || Fk.mozMovementX || 0,
+        Xk = Fk.movementY || Fk.mozMovementY || 0;
+      if (Fk.touches && 0 === (Ik | Xk)) {
+        var Tk = function(kk) {
+          ek(kk);
+          for (let Fk = 0; Fk < kk.changedTouches.length; ++Fk)
+            if (kk.changedTouches[Fk].identifier == Zk) {
+              const Ik = kk.changedTouches[Fk],
+                Xk = [Ik.clientX - Lk, Ik.clientY - tk];
+              return Lk = Ik.clientX, tk = Ik.clientY, Xk
+            } return console.error(`Did not find touch id ${Zk}`), [0, 0]
+        }(Fk);
+        Ik = Tk[0], Xk = Tk[1]
       }
-      CC.Fy.dx += ZC, CC.Fy.dy += QC
+      kk.XB.dx += Ik, kk.XB.dy += Xk
     }
 
-    function RC(CC, zC) {
-      iC(CC, zC);
-      var ZC = 1;
-      switch (zC.deltaMode) {
+    function Pk(kk, Fk) {
+      zk(kk, Fk);
+      var Ik = 1;
+      switch (Fk.deltaMode) {
         case 0:
-          ZC = 1;
+          Ik = 1;
           break;
         case 1:
-          ZC = 12;
+          Ik = 12;
           break;
         case 2:
-          ZC = CC.element.clientHeight || window.innerHeight
+          Ik = kk.element.clientHeight || window.innerHeight
       }
-      CC.Fy.OCC += (zC.deltaX || 0) * ZC, CC.Fy.kCC += (zC.deltaY || 0) * ZC, CC.Fy.VCC += (zC.deltaZ || 0) * ZC
+      kk.XB.iFk += (Fk.deltaX || 0) * Ik, kk.XB.yFk += (Fk.deltaY || 0) * Ik, kk.XB.lFk += (Fk.deltaZ || 0) * Ik
     }
 
-    function AC(CC, zC) {
-      if (!CC.jD) return zC.preventDefault(), !1
+    function Kk(kk, Fk) {
+      if (!kk.rW) return Fk.preventDefault(), !1
     }
-    var xC = {
+    var Qk = {
       AltLeft: "altKey",
       AltRight: "altKey",
       ControlLeft: "ctrlKey",
@@ -245,91 +245,91 @@ export const modules = {
       MetaRight: "metaKey"
     };
 
-    function JC(CC, zC) {
-      return !!CC[xC[zC]] || ("AltRight" === zC || "ControlLeft" === zC) && "function" === typeof CC.getModifierState && !0 === CC.getModifierState("AltGraph")
+    function sk(kk, Fk) {
+      return !!kk[Qk[Fk]] || ("AltRight" === Fk || "ControlLeft" === Fk) && "function" === typeof kk.getModifierState && !0 === kk.getModifierState("AltGraph")
     }
 
-    function IC(CC, zC) {
-      for (var ZC in CC._modifiersHeldThroughBlur = {}, xC) CC._keyStates[ZC] && (CC._modifiersHeldThroughBlur[ZC] = !0);
-      zC && zC.isTrusted && function() {
+    function Vk(kk, Fk) {
+      for (var Ik in kk._modifiersHeldThroughBlur = {}, Qk) kk._keyStates[Ik] && (kk._modifiersHeldThroughBlur[Ik] = !0);
+      Fk && Fk.isTrusted && function() {
         try {
           return window.self !== window.top
-        } catch (CC) {
+        } catch (kk) {
           return !0
         }
-      }() && (clearTimeout(CC._blurRelease), CC._blurRelease = setTimeout((function() {
+      }() && (clearTimeout(kk._blurRelease), kk._blurRelease = setTimeout((function() {
         if (!document.hasFocus())
-          for (var zC in CC._modifiersHeldThroughBlur = {}, CC._keyStates) CC._keyStates[zC] && !/^Mouse\d/.test(zC) && vC(CC, zC)
+          for (var Fk in kk._modifiersHeldThroughBlur = {}, kk._keyStates) kk._keyStates[Fk] && !/^Mouse\d/.test(Fk) && Sk(kk, Fk)
       }), 0))
     }
 
-    function iC(CC, zC) {
-      var ZC = CC._modifiersHeldThroughBlur;
-      if (ZC && zC.isTrusted && document.hasFocus())
-        for (var QC in ZC) delete ZC[QC], CC._keyStates[QC] && QC !== zC.code && (JC(zC, QC) || vC(CC, QC))
+    function zk(kk, Fk) {
+      var Ik = kk._modifiersHeldThroughBlur;
+      if (Ik && Fk.isTrusted && document.hasFocus())
+        for (var Xk in Ik) delete Ik[Xk], kk._keyStates[Xk] && Xk !== Fk.code && (sk(Fk, Xk) || Sk(kk, Xk))
     }
 
-    function vC(CC, zC) {
-      const ZC = {
-          code: zC,
+    function Sk(kk, Fk) {
+      const Ik = {
+          code: Fk,
           preventDefault: () => {},
           stopPropagation: () => {}
         },
-        QC = wC;
-      wC = ZC;
+        Xk = Tk;
+      Tk = Ik;
       try {
-        eC(zC, !1, CC, ZC)
+        vk(Fk, !1, kk, Ik)
       } finally {
-        wC = QC
+        Tk = Xk
       }
     }
 
-    function eC(CC, zC, ZC, QC) {
-      var wC = ZC._keyBindmap[CC];
-      wC && (hC(ZC._keyStates[CC], zC) && (ZC._keyStates[CC] = zC, wC.forEach((CC => {
-        (!ZC.filterEvents || ZC.filterEvents(QC, CC)) && function(CC, zC, ZC, QC) {
-          var wC = zC ? ZC.pressCount : ZC.releaseCount;
-          wC[CC] = (wC[CC] || 0) + 1;
-          var bC = ZC._bindPressCount[CC] || 0;
-          (bC += zC ? 1 : -1) < 0 && (bC = 0);
-          ZC._bindPressCount[CC] = bC;
-          var nC = ZC.state[CC];
-          if (hC(nC, bC)) {
-            ZC.state[CC] = bC > 0;
-            var fC = zC ? ZC.down : ZC.up;
-            ZC.disabled || fC.emit(CC, QC)
+    function vk(kk, Fk, Ik, Xk) {
+      var Tk = Ik._keyBindmap[kk];
+      Tk && (Ek(Ik._keyStates[kk], Fk) && (Ik._keyStates[kk] = Fk, Tk.forEach((kk => {
+        (!Ik.filterEvents || Ik.filterEvents(Xk, kk)) && function(kk, Fk, Ik, Xk) {
+          var Tk = Fk ? Ik.pressCount : Ik.releaseCount;
+          Tk[kk] = (Tk[kk] || 0) + 1;
+          var ik = Ik._bindPressCount[kk] || 0;
+          (ik += Fk ? 1 : -1) < 0 && (ik = 0);
+          Ik._bindPressCount[kk] = ik;
+          var yk = Ik.state[kk];
+          if (Ek(yk, ik)) {
+            Ik.state[kk] = ik > 0;
+            var lk = Fk ? Ik.down : Ik.up;
+            Ik.disabled || lk.emit(kk, Xk)
           }
-        }(CC, zC, ZC, QC)
-      }))), "button" in QC || (ZC.rD && !QC.defaultPrevented && QC.preventDefault(), ZC.stopPropagation && QC.stopPropagation()))
+        }(kk, Fk, Ik, Xk)
+      }))), "button" in Xk || (Ik.dW && !Xk.defaultPrevented && Xk.preventDefault(), Ik.stopPropagation && Xk.stopPropagation()))
     }
 
-    function hC(CC, zC) {
-      return CC ? !zC : zC
+    function Ek(kk, Fk) {
+      return kk ? !Fk : Fk
     }
   },
-  36417: (CC, zC) => {
-    function ZC(CC) {
-      if (CC && "object" === typeof CC) {
-        var zC = CC.which || CC.keyCode || CC.charCode;
-        zC && (CC = zC)
+  36537: (kk, Fk) => {
+    function Ik(kk) {
+      if (kk && "object" === typeof kk) {
+        var Fk = kk.which || kk.keyCode || kk.charCode;
+        Fk && (kk = Fk)
       }
-      if ("number" === typeof CC) return nC[CC];
-      var ZC, bC = String(CC);
-      return (ZC = QC[bC.toLowerCase()]) ? ZC : (ZC = wC[bC.toLowerCase()]) || (1 === bC.length ? bC.charCodeAt(0) : void 0)
+      if ("number" === typeof kk) return yk[kk];
+      var Ik, ik = String(kk);
+      return (Ik = Xk[ik.toLowerCase()]) ? Ik : (Ik = Tk[ik.toLowerCase()]) || (1 === ik.length ? ik.charCodeAt(0) : void 0)
     }
-    ZC.isEventKey = function(CC, zC) {
-      if (CC && "object" === typeof CC) {
-        var ZC = CC.which || CC.keyCode || CC.charCode;
-        if (null === ZC || void 0 === ZC) return !1;
-        if ("string" === typeof zC) {
-          var bC;
-          if (bC = QC[zC.toLowerCase()]) return bC === ZC;
-          if (bC = wC[zC.toLowerCase()]) return bC === ZC
-        } else if ("number" === typeof zC) return zC === ZC;
+    Ik.isEventKey = function(kk, Fk) {
+      if (kk && "object" === typeof kk) {
+        var Ik = kk.which || kk.keyCode || kk.charCode;
+        if (null === Ik || void 0 === Ik) return !1;
+        if ("string" === typeof Fk) {
+          var ik;
+          if (ik = Xk[Fk.toLowerCase()]) return ik === Ik;
+          if (ik = Tk[Fk.toLowerCase()]) return ik === Ik
+        } else if ("number" === typeof Fk) return Fk === Ik;
         return !1
       }
     };
-    var QC = (zC = CC.exports = ZC).code = zC.codes = {
+    var Xk = (Fk = kk.exports = Ik).code = Fk.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -374,7 +374,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      wC = zC.aliases = {
+      Tk = Fk.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -396,139 +396,139 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (bC = 97; bC < 123; bC++) QC[String.fromCharCode(bC)] = bC - 32;
-    for (var bC = 48; bC < 58; bC++) QC[bC - 48] = bC;
-    for (bC = 1; bC < 13; bC++) QC["f" + bC] = bC + 111;
-    for (bC = 0; bC < 10; bC++) QC["numpad " + bC] = bC + 96;
-    var nC = zC.names = zC.title = {};
-    for (bC in QC) nC[QC[bC]] = bC;
-    for (var fC in wC) QC[fC] = wC[fC]
+    for (ik = 97; ik < 123; ik++) Xk[String.fromCharCode(ik)] = ik - 32;
+    for (var ik = 48; ik < 58; ik++) Xk[ik - 48] = ik;
+    for (ik = 1; ik < 13; ik++) Xk["f" + ik] = ik + 111;
+    for (ik = 0; ik < 10; ik++) Xk["numpad " + ik] = ik + 96;
+    var yk = Fk.names = Fk.title = {};
+    for (ik in Xk) yk[Xk[ik]] = ik;
+    for (var lk in Tk) Xk[lk] = Tk[lk]
   },
-  39376: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => QC
+  39551: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Xk
     });
-    class QC {
+    class Xk {
       constructor() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
-        this.Gl = !1, this.Rl = !1, this.Jm = 30, this.yE = 0, this.Al = 100, this.rp = !1, this.fullscreen = !1, this.sG = function(CC) {}, this.Kl = function(CC, zC, ZC) {}, this.Bl = function() {}, this.mG = function() {}, this.Tl = function() {}, this.onFullscreenChanged = function() {}, this.onPointerLockError = function(CC) {}, this._data = new wC(zC),
-          function(CC) {
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
+        this.pU = !1, this.WU = !1, this.WG = 30, this.aU = 0, this.dU = 100, this.uH = !1, this.fullscreen = !1, this.VJ = function(kk) {}, this.hU = function(kk, Fk, Ik) {}, this.lC = function() {}, this.PJ = function() {}, this.rU = function() {}, this.onFullscreenChanged = function() {}, this.onPointerLockError = function(kk) {}, this._data = new Tk(Fk),
+          function(kk) {
             if ("loading" === document.readyState) {
-              var zC = () => {
-                document.removeEventListener("readystatechange", zC), CC()
+              var Fk = () => {
+                document.removeEventListener("readystatechange", Fk), kk()
               };
-              document.addEventListener("readystatechange", zC)
-            } else setTimeout(CC, 0)
+              document.addEventListener("readystatechange", Fk)
+            } else setTimeout(kk, 0)
           }((() => {
-            ! function(CC) {
-              var zC = CC._data,
-                ZC = zC.nowObject.now();
-              zC.lastTickStarted = ZC, zC.lastFrameStarted = ZC, zC.lastRenderStarted = ZC, zC.frameCB = () => function(CC) {
-                var zC = CC._data;
-                requestAnimationFrame(zC.frameCB), fC(CC);
-                var ZC = zC.nowObject.now(),
-                  QC = ZC - zC.lastFrameStarted;
-                if (zC.lastFrameStarted = ZC, CC.yE > 0) {
-                  zC.renderAccum += QC;
-                  var wC = 1e3 / CC.yE;
-                  if (zC.renderAccum < wC) return;
-                  zC.renderAccum -= wC, zC.renderAccum > wC && (zC.renderAccum = wC)
+            ! function(kk) {
+              var Fk = kk._data,
+                Ik = Fk.nowObject.now();
+              Fk.lastTickStarted = Ik, Fk.lastFrameStarted = Ik, Fk.lastRenderStarted = Ik, Fk.frameCB = () => function(kk) {
+                var Fk = kk._data;
+                requestAnimationFrame(Fk.frameCB), lk(kk);
+                var Ik = Fk.nowObject.now(),
+                  Xk = Ik - Fk.lastFrameStarted;
+                if (Fk.lastFrameStarted = Ik, kk.aU > 0) {
+                  Fk.renderAccum += Xk;
+                  var Tk = 1e3 / kk.aU;
+                  if (Fk.renderAccum < Tk) return;
+                  Fk.renderAccum -= Tk, Fk.renderAccum > Tk && (Fk.renderAccum = Tk)
                 }
-                var bC = ZC - zC.lastRenderStarted;
-                zC.lastRenderStarted = ZC;
-                var nC = 1e3 / CC.Jm,
-                  oC = (ZC - zC.lastTickStarted) / nC;
-                oC < 0 && (oC = 0);
-                CC.Kl(bC, oC, nC), setTimeout(fC, 0, CC, !0)
-              }(CC), zC.intervalCB = () => fC(CC), requestAnimationFrame(zC.frameCB), zC.pollTime > 0 && (zC.intervalID = setInterval(zC.intervalCB, Math.max(zC.pollTime, 1e3 / CC.Jm / 2)))
+                var ik = Ik - Fk.lastRenderStarted;
+                Fk.lastRenderStarted = Ik;
+                var yk = 1e3 / kk.WG,
+                  ak = (Ik - Fk.lastTickStarted) / yk;
+                ak < 0 && (ak = 0);
+                kk.hU(ik, ak, yk), setTimeout(lk, 0, kk, !0)
+              }(kk), Fk.intervalCB = () => lk(kk), requestAnimationFrame(Fk.frameCB), Fk.pollTime > 0 && (Fk.intervalID = setInterval(Fk.intervalCB, Math.max(Fk.pollTime, 1e3 / kk.WG / 2)))
             }(this),
-            function(CC, zC) {
-              if (!zC) return;
-              var ZC = !1,
-                QC = !1,
-                wC = CC => {
-                  if (!!CC !== (ZC = zC === document.pointerLockElement))
-                    if (CC) {
-                      var QC = zC.requestPointerLock();
-                      QC && QC.catch && QC.catch((CC => {}))
+            function(kk, Fk) {
+              if (!Fk) return;
+              var Ik = !1,
+                Xk = !1,
+                Tk = kk => {
+                  if (!!kk !== (Ik = Fk === document.pointerLockElement))
+                    if (kk) {
+                      var Xk = Fk.requestPointerLock();
+                      Xk && Xk.catch && Xk.catch((kk => {}))
                     } else document.exitPointerLock()
                 },
-                bC = CC => {
-                  !!CC !== (QC = zC === document.fullscreenElement) && (CC ? zC.requestFullscreen ? zC.requestFullscreen() : zC.webkitRequestFullscreen && zC.webkitRequestFullscreen() : document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen && document.webkitExitFullscreen())
+                ik = kk => {
+                  !!kk !== (Xk = Fk === document.fullscreenElement) && (kk ? Fk.requestFullscreen ? Fk.requestFullscreen() : Fk.webkitRequestFullscreen && Fk.webkitRequestFullscreen() : document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen && document.webkitExitFullscreen())
                 };
-              document.addEventListener("pointerlockchange", (QC => {
-                ZC = zC === document.pointerLockElement, CC.Tl(ZC)
-              })), document.addEventListener("fullscreenchange", (ZC => {
-                QC = zC === document.fullscreenElement, CC.onFullscreenChanged(QC)
-              })), document.addEventListener("pointerlockerror", (QC => {
-                ZC = zC === document.pointerLockElement, CC.onPointerLockError(QC)
-              })), Object.defineProperty(CC, "rp", {
-                get: () => ZC,
-                set: wC
-              }), Object.defineProperty(CC, "fullscreen", {
-                get: () => QC,
-                set: bC
-              }), zC.addEventListener("click", (zC => {
-                CC.Gl && wC(!0), CC.Rl && bC(!0)
+              document.addEventListener("pointerlockchange", (Xk => {
+                Ik = Fk === document.pointerLockElement, kk.rU(Ik)
+              })), document.addEventListener("fullscreenchange", (Ik => {
+                Xk = Fk === document.fullscreenElement, kk.onFullscreenChanged(Xk)
+              })), document.addEventListener("pointerlockerror", (Xk => {
+                Ik = Fk === document.pointerLockElement, kk.onPointerLockError(Xk)
+              })), Object.defineProperty(kk, "uH", {
+                get: () => Ik,
+                set: Tk
+              }), Object.defineProperty(kk, "fullscreen", {
+                get: () => Xk,
+                set: ik
+              }), Fk.addEventListener("click", (Fk => {
+                kk.pU && Tk(!0), kk.WU && ik(!0)
               }));
-              var nC = () => CC.mG();
+              var yk = () => kk.PJ();
               if (window.ResizeObserver) {
-                new ResizeObserver(nC).observe(zC)
-              } else window.addEventListener("resize", nC)
-            }(this, CC), this.Bl()
+                new ResizeObserver(yk).observe(Fk)
+              } else window.addEventListener("resize", yk)
+            }(this, kk), this.lC()
           }))
       }
     }
 
-    function wC() {
-      let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
-      this.nowObject = performance || Date, this.pollTime = CC, this.renderAccum = 0, this.lastTickStarted = 0, this.lastFrameStarted = 0, this.lastRenderStarted = 0, this.avgTickTime = 2, this.frameCB = null, this.intervalCB = null, this.intervalID = -1
+    function Tk() {
+      let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
+      this.nowObject = performance || Date, this.pollTime = kk, this.renderAccum = 0, this.lastTickStarted = 0, this.lastFrameStarted = 0, this.lastRenderStarted = 0, this.avgTickTime = 2, this.frameCB = null, this.intervalCB = null, this.intervalID = -1
     }
-    var bC = 3,
-      nC = 20;
+    var ik = 3,
+      yk = 20;
 
-    function fC(CC) {
-      for (var zC = CC._data, ZC = 1e3 / CC.Jm, QC = zC.nowObject.now() + nC, wC = 0; zC.nowObject.now() >= zC.lastTickStarted + ZC && zC.nowObject.now() < QC && ++wC <= bC;) CC.sG(ZC), zC.lastTickStarted += ZC;
-      var fC = 5 * (ZC + 5),
-        oC = zC.nowObject.now();
-      if (oC - zC.lastTickStarted > fC)
-        for (; oC >= zC.lastTickStarted + ZC;) zC.lastTickStarted += ZC
+    function lk(kk) {
+      for (var Fk = kk._data, Ik = 1e3 / kk.WG, Xk = Fk.nowObject.now() + yk, Tk = 0; Fk.nowObject.now() >= Fk.lastTickStarted + Ik && Fk.nowObject.now() < Xk && ++Tk <= ik;) kk.VJ(Ik), Fk.lastTickStarted += Ik;
+      var lk = 5 * (Ik + 5),
+        ak = Fk.nowObject.now();
+      if (ak - Fk.lastTickStarted > lk)
+        for (; ak >= Fk.lastTickStarted + Ik;) Fk.lastTickStarted += Ik
     }
   },
-  36581: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => nC
+  36699: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => yk
     });
-    var QC = ZC(48);
-    const wC = QC.useLayoutEffect;
-    const bC = function(CC) {
-      var zC = (0, QC.useRef)(CC);
-      return wC((function() {
-        zC.current = CC
-      })), zC
+    var Xk = Ik(58);
+    const Tk = Xk.useLayoutEffect;
+    const ik = function(kk) {
+      var Fk = (0, Xk.useRef)(kk);
+      return Tk((function() {
+        Fk.current = kk
+      })), Fk
     };
-    var nC = function(CC) {
-      var zC = bC(CC);
-      (0, QC.useEffect)((function() {
-        var CC = function(CC) {
-          var ZC;
-          if (null != zC.current && (ZC = zC.current(CC)), CC.defaultPrevented && (CC.returnValue = ""), "string" === typeof ZC) return CC.returnValue = ZC, ZC
+    var yk = function(kk) {
+      var Fk = ik(kk);
+      (0, Xk.useEffect)((function() {
+        var kk = function(kk) {
+          var Ik;
+          if (null != Fk.current && (Ik = Fk.current(kk)), kk.defaultPrevented && (kk.returnValue = ""), "string" === typeof Ik) return kk.returnValue = Ik, Ik
         };
-        return window.addEventListener("beforeunload", CC),
+        return window.addEventListener("beforeunload", kk),
           function() {
-            window.removeEventListener("beforeunload", CC)
+            window.removeEventListener("beforeunload", kk)
           }
       }), [])
     }
   },
-  36466: CC => {
-    var zC, ZC = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      QC = /OS X/.test(ZC),
-      wC = /Opera/.test(ZC),
-      bC = !/like Gecko/.test(ZC) && !wC,
-      nC = CC.exports = {
-        0: QC ? "<menu>" : "<UNK>",
+  36580: kk => {
+    var Fk, Ik = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      Xk = /OS X/.test(Ik),
+      Tk = /Opera/.test(Ik),
+      ik = !/like Gecko/.test(Ik) && !Tk,
+      yk = kk.exports = {
+        0: Xk ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -571,7 +571,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: QC ? "<meta>" : "<menu>",
+        93: Xk ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -594,7 +594,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: QC && bC ? "-" : "<volume-mute>",
+        173: Xk && ik ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -620,7 +620,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: wC ? "`" : "<unicode>",
+        231: Tk ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -631,183 +631,183 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (zC = 58; zC < 65; ++zC) nC[zC] = String.fromCharCode(zC);
-    for (zC = 48; zC < 58; ++zC) nC[zC] = zC - 48 + "";
-    for (zC = 65; zC < 91; ++zC) nC[zC] = String.fromCharCode(zC);
-    for (zC = 96; zC < 106; ++zC) nC[zC] = "<num-" + (zC - 96) + ">";
-    for (zC = 112; zC < 136; ++zC) nC[zC] = "F" + (zC - 111)
+    for (Fk = 58; Fk < 65; ++Fk) yk[Fk] = String.fromCharCode(Fk);
+    for (Fk = 48; Fk < 58; ++Fk) yk[Fk] = Fk - 48 + "";
+    for (Fk = 65; Fk < 91; ++Fk) yk[Fk] = String.fromCharCode(Fk);
+    for (Fk = 96; Fk < 106; ++Fk) yk[Fk] = "<num-" + (Fk - 96) + ">";
+    for (Fk = 112; Fk < 136; ++Fk) yk[Fk] = "F" + (Fk - 111)
   },
-  38815: (CC, zC, ZC) => {
-    function QC(CC, zC, ZC, QC, wC) {
-      var bC = {};
-      return Object.keys(QC).forEach((function(CC) {
-        bC[CC] = QC[CC]
-      })), bC.enumerable = !!bC.enumerable, bC.configurable = !!bC.configurable, ("value" in bC || bC.initializer) && (bC.writable = !0), bC = ZC.slice().reverse().reduce((function(ZC, QC) {
-        return QC(CC, zC, ZC) || ZC
-      }), bC), wC && void 0 !== bC.initializer && (bC.value = bC.initializer ? bC.initializer.call(wC) : void 0, bC.initializer = void 0), void 0 === bC.initializer && (Object.defineProperty(CC, zC, bC), bC = null), bC
+  38967: (kk, Fk, Ik) => {
+    function Xk(kk, Fk, Ik, Xk, Tk) {
+      var ik = {};
+      return Object.keys(Xk).forEach((function(kk) {
+        ik[kk] = Xk[kk]
+      })), ik.enumerable = !!ik.enumerable, ik.configurable = !!ik.configurable, ("value" in ik || ik.initializer) && (ik.writable = !0), ik = Ik.slice().reverse().reduce((function(Ik, Xk) {
+        return Xk(kk, Fk, Ik) || Ik
+      }), ik), Tk && void 0 !== ik.initializer && (ik.value = ik.initializer ? ik.initializer.call(Tk) : void 0, ik.initializer = void 0), void 0 === ik.initializer && (Object.defineProperty(kk, Fk, ik), ik = null), ik
     }
-    ZC.d(zC, {
-      d: () => QC
+    Ik.d(Fk, {
+      b: () => Xk
     })
   },
-  38813: (CC, zC, ZC) => {
-    function QC(CC, zC, ZC, QC) {
-      ZC && Object.defineProperty(CC, zC, {
-        enumerable: ZC.enumerable,
-        configurable: ZC.configurable,
-        writable: ZC.writable,
-        value: ZC.initializer ? ZC.initializer.call(QC) : void 0
+  38960: (kk, Fk, Ik) => {
+    function Xk(kk, Fk, Ik, Xk) {
+      Ik && Object.defineProperty(kk, Fk, {
+        enumerable: Ik.enumerable,
+        configurable: Ik.configurable,
+        writable: Ik.writable,
+        value: Ik.initializer ? Ik.initializer.call(Xk) : void 0
       })
     }
-    ZC.d(zC, {
-      b: () => QC
+    Ik.d(Fk, {
+      e: () => Xk
     })
   },
-  38501: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => bC
+  38666: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => ik
     });
-    var QC = ZC(38507);
-    const wC = (CC, zC, ZC) => CC ? CC.getClassName && "Mesh" === CC.getClassName() ? null : !CC.getClassName || "SubMesh" !== CC.getClassName() && "PhysicsBody" !== CC.getClassName() ? CC.clone ? CC.clone() : Array.isArray(CC) ? CC.slice() : ZC && "object" === typeof CC ? {
-      ...CC
-    } : null : CC.clone(zC) : null;
-    class bC {
-      static DeepCopy(CC, zC, ZC, bC) {
-        let nC = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const fC = function(CC) {
-          const zC = [];
+    var Xk = Ik(38674);
+    const Tk = (kk, Fk, Ik) => kk ? kk.getClassName && "Mesh" === kk.getClassName() ? null : !kk.getClassName || "SubMesh" !== kk.getClassName() && "PhysicsBody" !== kk.getClassName() ? kk.clone ? kk.clone() : Array.isArray(kk) ? kk.slice() : Ik && "object" === typeof kk ? {
+      ...kk
+    } : null : kk.clone(Fk) : null;
+    class ik {
+      static DeepCopy(kk, Fk, Ik, ik) {
+        let yk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const lk = function(kk) {
+          const Fk = [];
           do {
-            const ZC = Object.getOwnPropertyNames(CC);
-            for (const CC of ZC) - 1 === zC.indexOf(CC) && zC.push(CC)
-          } while (CC = Object.getPrototypeOf(CC));
-          return zC
-        }(CC);
-        for (const qC of fC) {
-          if ("_" === qC[0] && (!bC || -1 === bC.indexOf(qC))) continue;
-          if (qC.endsWith("Observable")) continue;
-          if (ZC && -1 !== ZC.indexOf(qC)) continue;
-          const fC = CC[qC],
-            FC = typeof fC;
-          if ("function" !== FC) try {
-            if ("object" === FC)
-              if (fC instanceof Uint8Array) zC[qC] = Uint8Array.from(fC);
-              else if (fC instanceof Array) {
-              if (zC[qC] = [], fC.length > 0)
-                if ("object" == typeof fC[0])
-                  for (let CC = 0; CC < fC.length; CC++) {
-                    const ZC = wC(fC[CC], zC, nC); - 1 === zC[qC].indexOf(ZC) && zC[qC].push(ZC)
-                  } else zC[qC] = fC.slice(0)
-            } else zC[qC] = wC(fC, zC, nC);
-            else zC[qC] = fC
-          } catch (oC) {
-            QC.c.Warn(oC.message)
+            const Ik = Object.getOwnPropertyNames(kk);
+            for (const kk of Ik) - 1 === Fk.indexOf(kk) && Fk.push(kk)
+          } while (kk = Object.getPrototypeOf(kk));
+          return Fk
+        }(kk);
+        for (const qk of lk) {
+          if ("_" === qk[0] && (!ik || -1 === ik.indexOf(qk))) continue;
+          if (qk.endsWith("Observable")) continue;
+          if (Ik && -1 !== Ik.indexOf(qk)) continue;
+          const lk = kk[qk],
+            Lk = typeof lk;
+          if ("function" !== Lk) try {
+            if ("object" === Lk)
+              if (lk instanceof Uint8Array) Fk[qk] = Uint8Array.from(lk);
+              else if (lk instanceof Array) {
+              if (Fk[qk] = [], lk.length > 0)
+                if ("object" == typeof lk[0])
+                  for (let kk = 0; kk < lk.length; kk++) {
+                    const Ik = Tk(lk[kk], Fk, yk); - 1 === Fk[qk].indexOf(Ik) && Fk[qk].push(Ik)
+                  } else Fk[qk] = lk.slice(0)
+            } else Fk[qk] = Tk(lk, Fk, yk);
+            else Fk[qk] = lk
+          } catch (ak) {
+            Xk.e.Warn(ak.message)
           }
         }
       }
     }
   },
-  38538: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => wC,
-      f: () => bC,
-      g: () => nC,
-      k: () => fC
+  38706: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => Tk,
+      c: () => ik,
+      d: () => yk,
+      e: () => lk
     });
-    var QC = ZC(37142);
-    class wC {
-      constructor(CC, zC, ZC) {
-        this.gradient = CC, this.color1 = zC, this.color2 = ZC
+    var Xk = Ik(37331);
+    class Tk {
+      constructor(kk, Fk, Ik) {
+        this.gradient = kk, this.color1 = Fk, this.color2 = Ik
       }
-      getColorToRef(CC) {
-        this.color2 ? QC.g.LerpToRef(this.color1, this.color2, Math.random(), CC) : CC.Av(this.color1)
-      }
-    }
-    class bC {
-      constructor(CC, zC) {
-        this.gradient = CC, this.color = zC
+      getColorToRef(kk) {
+        this.color2 ? Xk.h.LerpToRef(this.color1, this.color2, Math.random(), kk) : kk.kS(this.color1)
       }
     }
-    class nC {
-      constructor(CC, zC, ZC) {
-        this.gradient = CC, this.factor1 = zC, this.factor2 = ZC
+    class ik {
+      constructor(kk, Fk) {
+        this.gradient = kk, this.color = Fk
+      }
+    }
+    class yk {
+      constructor(kk, Fk, Ik) {
+        this.gradient = kk, this.factor1 = Fk, this.factor2 = Ik
       }
       getFactor() {
         return void 0 === this.factor2 || this.factor2 === this.factor1 ? this.factor1 : this.factor1 + (this.factor2 - this.factor1) * Math.random()
       }
     }
-    class fC {
-      static GetCurrentGradient(CC, zC, ZC) {
-        if (zC[0].gradient > CC) return void ZC(zC[0], zC[0], 1);
-        for (let wC = 0; wC < zC.length - 1; wC++) {
-          const QC = zC[wC],
-            bC = zC[wC + 1];
-          if (CC >= QC.gradient && CC <= bC.gradient) {
-            return void ZC(QC, bC, (CC - QC.gradient) / (bC.gradient - QC.gradient))
+    class lk {
+      static GetCurrentGradient(kk, Fk, Ik) {
+        if (Fk[0].gradient > kk) return void Ik(Fk[0], Fk[0], 1);
+        for (let Tk = 0; Tk < Fk.length - 1; Tk++) {
+          const Xk = Fk[Tk],
+            ik = Fk[Tk + 1];
+          if (kk >= Xk.gradient && kk <= ik.gradient) {
+            return void Ik(Xk, ik, (kk - Xk.gradient) / (ik.gradient - Xk.gradient))
           }
         }
-        const QC = zC.length - 1;
-        ZC(zC[QC], zC[QC], 1)
+        const Xk = Fk.length - 1;
+        Ik(Fk[Xk], Fk[Xk], 1)
       }
     }
   },
-  38507: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => QC
+  38674: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Xk
     });
-    class QC {
-      static _CheckLimit(CC, zC) {
-        let ZC = QC._LogLimitOutputs[CC];
-        return ZC ? ZC.current++ : (ZC = {
-          limit: zC,
+    class Xk {
+      static _CheckLimit(kk, Fk) {
+        let Ik = Xk._LogLimitOutputs[kk];
+        return Ik ? Ik.current++ : (Ik = {
+          limit: Fk,
           current: 1
-        }, QC._LogLimitOutputs[CC] = ZC), ZC.current <= ZC.limit
+        }, Xk._LogLimitOutputs[kk] = Ik), Ik.current <= Ik.limit
       }
-      static _GenerateLimitMessage(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const ZC = QC._LogLimitOutputs[CC];
-        if (!ZC || !QC.MessageLimitReached) return;
-        const wC = this._Levels[zC];
-        ZC.current === ZC.limit && QC[wC.name](QC.MessageLimitReached.replace(/%LIMIT%/g, "" + ZC.limit).replace(/%TYPE%/g, wC.name ?? ""))
+      static _GenerateLimitMessage(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const Ik = Xk._LogLimitOutputs[kk];
+        if (!Ik || !Xk.MessageLimitReached) return;
+        const Tk = this._Levels[Fk];
+        Ik.current === Ik.limit && Xk[Tk.name](Xk.MessageLimitReached.replace(/%LIMIT%/g, "" + Ik.limit).replace(/%TYPE%/g, Tk.name ?? ""))
       }
-      static _AddLogEntry(CC) {
-        QC._LogCache = CC + QC._LogCache, QC.OnNewCacheEntry && QC.OnNewCacheEntry(CC)
+      static _AddLogEntry(kk) {
+        Xk._LogCache = kk + Xk._LogCache, Xk.OnNewCacheEntry && Xk.OnNewCacheEntry(kk)
       }
-      static _FormatMessage(CC) {
-        const zC = CC => CC < 10 ? "0" + CC : "" + CC,
-          ZC = new Date;
-        return "[" + zC(ZC.getHours()) + ":" + zC(ZC.getMinutes()) + ":" + zC(ZC.getSeconds()) + "]: " + CC
+      static _FormatMessage(kk) {
+        const Fk = kk => kk < 10 ? "0" + kk : "" + kk,
+          Ik = new Date;
+        return "[" + Fk(Ik.getHours()) + ":" + Fk(Ik.getMinutes()) + ":" + Fk(Ik.getSeconds()) + "]: " + kk
       }
-      static _LogDisabled(CC, zC) {}
+      static _LogDisabled(kk, Fk) {}
       static _LogEnabled() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          zC = arguments.length > 1 ? arguments[1] : void 0,
-          ZC = arguments.length > 2 ? arguments[2] : void 0;
-        const wC = Array.isArray(zC) ? zC[0] : zC;
-        if (void 0 !== ZC && !QC._CheckLimit(wC, ZC)) return;
-        const bC = QC._FormatMessage(wC),
-          nC = this._Levels[CC],
-          fC = Array.isArray(zC) ? zC.slice(1) : [];
-        nC.logFunc && nC.logFunc("BJS - " + bC, ...fC);
-        const oC = `<div style='color:${nC.color}'>${bC}</div><br>`;
-        QC._AddLogEntry(oC), QC._GenerateLimitMessage(wC, CC)
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Fk = arguments.length > 1 ? arguments[1] : void 0,
+          Ik = arguments.length > 2 ? arguments[2] : void 0;
+        const Tk = Array.isArray(Fk) ? Fk[0] : Fk;
+        if (void 0 !== Ik && !Xk._CheckLimit(Tk, Ik)) return;
+        const ik = Xk._FormatMessage(Tk),
+          yk = this._Levels[kk],
+          lk = Array.isArray(Fk) ? Fk.slice(1) : [];
+        yk.logFunc && yk.logFunc("BJS - " + ik, ...lk);
+        const ak = `<div style='color:${yk.color}'>${ik}</div><br>`;
+        Xk._AddLogEntry(ak), Xk._GenerateLimitMessage(Tk, kk)
       }
       static get LogCache() {
-        return QC._LogCache
+        return Xk._LogCache
       }
       static ClearLogCache() {
-        QC._LogCache = "", QC._LogLimitOutputs = {}, QC.errorsCount = 0
+        Xk._LogCache = "", Xk._LogLimitOutputs = {}, Xk.errorsCount = 0
       }
-      static set LogLevels(CC) {
-        QC.Log = QC._LogDisabled, QC.Warn = QC._LogDisabled, QC.Error = QC._LogDisabled;
-        const zC = [QC.MessageLogLevel, QC.WarningLogLevel, QC.ErrorLogLevel];
-        for (const ZC of zC)
-          if ((CC & ZC) === ZC) {
-            const CC = this._Levels[ZC];
-            QC[CC.name] = QC._LogEnabled.bind(QC, ZC)
+      static set LogLevels(kk) {
+        Xk.Log = Xk._LogDisabled, Xk.Warn = Xk._LogDisabled, Xk.Error = Xk._LogDisabled;
+        const Fk = [Xk.MessageLogLevel, Xk.WarningLogLevel, Xk.ErrorLogLevel];
+        for (const Ik of Fk)
+          if ((kk & Ik) === Ik) {
+            const kk = this._Levels[Ik];
+            Xk[kk.name] = Xk._LogEnabled.bind(Xk, Ik)
           }
       }
     }
-    QC.NoneLogLevel = 0, QC.MessageLogLevel = 1, QC.WarningLogLevel = 2, QC.ErrorLogLevel = 4, QC.AllLogLevel = 7, QC.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", QC._LogCache = "", QC._LogLimitOutputs = {}, QC._Levels = [{}, {
+    Xk.NoneLogLevel = 0, Xk.MessageLogLevel = 1, Xk.WarningLogLevel = 2, Xk.ErrorLogLevel = 4, Xk.AllLogLevel = 7, Xk.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Xk._LogCache = "", Xk._LogLimitOutputs = {}, Xk._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -819,42 +819,42 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], QC.errorsCount = 0, QC.Log = QC._LogEnabled.bind(QC, QC.MessageLogLevel), QC.Warn = QC._LogEnabled.bind(QC, QC.WarningLogLevel), QC.Error = QC._LogEnabled.bind(QC, QC.ErrorLogLevel)
+    }], Xk.errorsCount = 0, Xk.Log = Xk._LogEnabled.bind(Xk, Xk.MessageLogLevel), Xk.Warn = Xk._LogEnabled.bind(Xk, Xk.WarningLogLevel), Xk.Error = Xk._LogEnabled.bind(Xk, Xk.ErrorLogLevel)
   },
-  38544: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => nC
+  38708: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => yk
     });
-    var QC = ZC(36963),
-      wC = ZC(36991),
-      bC = ZC(38501);
-    class nC {
+    var Xk = Ik(37153),
+      Tk = Ik(37189),
+      ik = Ik(38666);
+    class yk {
       constructor() {
-        this.direction1 = new QC.r(0, 1, 0), this.direction2 = new QC.r(0, 1, 0), this.minEmitBox = new QC.r(-.5, -.5, -.5), this.maxEmitBox = new QC.r(.5, .5, .5)
+        this.direction1 = new Xk.t(0, 1, 0), this.direction2 = new Xk.t(0, 1, 0), this.minEmitBox = new Xk.t(-.5, -.5, -.5), this.maxEmitBox = new Xk.t(.5, .5, .5)
       }
-      startDirectionFunction(CC, zC, ZC, bC) {
-        const nC = (0, wC.RandomRange)(this.direction1.x, this.direction2.x),
-          fC = (0, wC.RandomRange)(this.direction1.y, this.direction2.y),
-          oC = (0, wC.RandomRange)(this.direction1.z, this.direction2.z);
-        if (bC) return zC.x = nC, zC.y = fC, void(zC.z = oC);
-        QC.r.TransformNormalFromFloatsToRef(nC, fC, oC, CC, zC)
+      startDirectionFunction(kk, Fk, Ik, ik) {
+        const yk = (0, Tk.RandomRange)(this.direction1.x, this.direction2.x),
+          lk = (0, Tk.RandomRange)(this.direction1.y, this.direction2.y),
+          ak = (0, Tk.RandomRange)(this.direction1.z, this.direction2.z);
+        if (ik) return Fk.x = yk, Fk.y = lk, void(Fk.z = ak);
+        Xk.t.TransformNormalFromFloatsToRef(yk, lk, ak, kk, Fk)
       }
-      startPositionFunction(CC, zC, ZC, bC) {
-        const nC = (0, wC.RandomRange)(this.minEmitBox.x, this.maxEmitBox.x),
-          fC = (0, wC.RandomRange)(this.minEmitBox.y, this.maxEmitBox.y),
-          oC = (0, wC.RandomRange)(this.minEmitBox.z, this.maxEmitBox.z);
-        if (bC) return zC.x = nC, zC.y = fC, void(zC.z = oC);
-        QC.r.TransformCoordinatesFromFloatsToRef(nC, fC, oC, CC, zC)
+      startPositionFunction(kk, Fk, Ik, ik) {
+        const yk = (0, Tk.RandomRange)(this.minEmitBox.x, this.maxEmitBox.x),
+          lk = (0, Tk.RandomRange)(this.minEmitBox.y, this.maxEmitBox.y),
+          ak = (0, Tk.RandomRange)(this.minEmitBox.z, this.maxEmitBox.z);
+        if (ik) return Fk.x = yk, Fk.y = lk, void(Fk.z = ak);
+        Xk.t.TransformCoordinatesFromFloatsToRef(yk, lk, ak, kk, Fk)
       }
       clone() {
-        const CC = new nC;
-        return bC.e.DeepCopy(this, CC), CC
+        const kk = new yk;
+        return ik.c.DeepCopy(this, kk), kk
       }
-      applyToShader(CC) {
-        CC.setVector3("direction1", this.direction1), CC.setVector3("direction2", this.direction2), CC.setVector3("minEmitBox", this.minEmitBox), CC.setVector3("maxEmitBox", this.maxEmitBox)
+      applyToShader(kk) {
+        kk.setVector3("direction1", this.direction1), kk.setVector3("direction2", this.direction2), kk.setVector3("minEmitBox", this.minEmitBox), kk.setVector3("maxEmitBox", this.maxEmitBox)
       }
-      buildUniformLayout(CC) {
-        CC.addUniform("direction1", 3), CC.addUniform("direction2", 3), CC.addUniform("minEmitBox", 3), CC.addUniform("maxEmitBox", 3)
+      buildUniformLayout(kk) {
+        kk.addUniform("direction1", 3), kk.addUniform("direction2", 3), kk.addUniform("minEmitBox", 3), kk.addUniform("maxEmitBox", 3)
       }
       getEffectDefines() {
         return "#define BOXEMITTER"
@@ -863,54 +863,54 @@ export const modules = {
         return "BoxParticleEmitter"
       }
       serialize() {
-        const CC = {};
-        return CC.type = this.getClassName(), CC.direction1 = this.direction1.VZC(), CC.direction2 = this.direction2.VZC(), CC.minEmitBox = this.minEmitBox.VZC(), CC.maxEmitBox = this.maxEmitBox.VZC(), CC
+        const kk = {};
+        return kk.type = this.getClassName(), kk.direction1 = this.direction1.iXk(), kk.direction2 = this.direction2.iXk(), kk.minEmitBox = this.minEmitBox.iXk(), kk.maxEmitBox = this.maxEmitBox.iXk(), kk
       }
-      parse(CC) {
-        QC.r.FromArrayToRef(CC.direction1, 0, this.direction1), QC.r.FromArrayToRef(CC.direction2, 0, this.direction2), QC.r.FromArrayToRef(CC.minEmitBox, 0, this.minEmitBox), QC.r.FromArrayToRef(CC.maxEmitBox, 0, this.maxEmitBox)
+      parse(kk) {
+        Xk.t.FromArrayToRef(kk.direction1, 0, this.direction1), Xk.t.FromArrayToRef(kk.direction2, 0, this.direction2), Xk.t.FromArrayToRef(kk.minEmitBox, 0, this.minEmitBox), Xk.t.FromArrayToRef(kk.maxEmitBox, 0, this.maxEmitBox)
       }
     }
   },
-  38497: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => fC,
-      i: () => nC
+  38661: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => lk,
+      e: () => yk
     });
-    var QC = ZC(36963),
-      wC = ZC(36991),
-      bC = ZC(38501);
-    class nC {
+    var Xk = Ik(37153),
+      Tk = Ik(37189),
+      ik = Ik(38666);
+    class yk {
       constructor() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-          wC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.radius = CC, this.height = zC, this.radiusRange = ZC, this.directionRandomizer = wC, this._tempVector = QC.r.Zero()
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          Tk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.radius = kk, this.height = Fk, this.radiusRange = Ik, this.directionRandomizer = Tk, this._tempVector = Xk.t.Zero()
       }
-      startDirectionFunction(CC, zC, ZC, bC, nC) {
-        ZC.position.subtractToRef(CC.getTranslation(), this._tempVector), this._tempVector.normalize(), QC.r.TransformNormalToRef(this._tempVector, nC, this._tempVector);
-        const fC = (0, wC.RandomRange)(-this.directionRandomizer / 2, this.directionRandomizer / 2);
-        let oC = Math.atan2(this._tempVector.x, this._tempVector.z);
-        oC += (0, wC.RandomRange)(-Math.PI / 2, Math.PI / 2) * this.directionRandomizer, this._tempVector.y = fC, this._tempVector.x = Math.sin(oC), this._tempVector.z = Math.cos(oC), this._tempVector.normalize(), bC ? zC.Av(this._tempVector) : QC.r.TransformNormalFromFloatsToRef(this._tempVector.x, this._tempVector.y, this._tempVector.z, CC, zC)
+      startDirectionFunction(kk, Fk, Ik, ik, yk) {
+        Ik.position.subtractToRef(kk.getTranslation(), this._tempVector), this._tempVector.normalize(), Xk.t.TransformNormalToRef(this._tempVector, yk, this._tempVector);
+        const lk = (0, Tk.RandomRange)(-this.directionRandomizer / 2, this.directionRandomizer / 2);
+        let ak = Math.atan2(this._tempVector.x, this._tempVector.z);
+        ak += (0, Tk.RandomRange)(-Math.PI / 2, Math.PI / 2) * this.directionRandomizer, this._tempVector.y = lk, this._tempVector.x = Math.sin(ak), this._tempVector.z = Math.cos(ak), this._tempVector.normalize(), ik ? Fk.kS(this._tempVector) : Xk.t.TransformNormalFromFloatsToRef(this._tempVector.x, this._tempVector.y, this._tempVector.z, kk, Fk)
       }
-      startPositionFunction(CC, zC, ZC, bC) {
-        const nC = (0, wC.RandomRange)(-this.height / 2, this.height / 2),
-          fC = (0, wC.RandomRange)(0, 2 * Math.PI),
-          oC = (0, wC.RandomRange)((1 - this.radiusRange) * (1 - this.radiusRange), 1),
-          qC = Math.sqrt(oC) * this.radius,
-          FC = qC * Math.cos(fC),
-          WC = qC * Math.sin(fC);
-        bC ? zC.L_(FC, nC, WC) : QC.r.TransformCoordinatesFromFloatsToRef(FC, nC, WC, CC, zC)
+      startPositionFunction(kk, Fk, Ik, ik) {
+        const yk = (0, Tk.RandomRange)(-this.height / 2, this.height / 2),
+          lk = (0, Tk.RandomRange)(0, 2 * Math.PI),
+          ak = (0, Tk.RandomRange)((1 - this.radiusRange) * (1 - this.radiusRange), 1),
+          qk = Math.sqrt(ak) * this.radius,
+          Lk = qk * Math.cos(lk),
+          tk = qk * Math.sin(lk);
+        ik ? Fk.t5(Lk, yk, tk) : Xk.t.TransformCoordinatesFromFloatsToRef(Lk, yk, tk, kk, Fk)
       }
       clone() {
-        const CC = new nC(this.radius, this.directionRandomizer);
-        return bC.e.DeepCopy(this, CC), CC
+        const kk = new yk(this.radius, this.directionRandomizer);
+        return ik.c.DeepCopy(this, kk), kk
       }
-      applyToShader(CC) {
-        CC.setFloat("radius", this.radius), CC.setFloat("height", this.height), CC.setFloat("radiusRange", this.radiusRange), CC.setFloat("directionRandomizer", this.directionRandomizer)
+      applyToShader(kk) {
+        kk.setFloat("radius", this.radius), kk.setFloat("height", this.height), kk.setFloat("radiusRange", this.radiusRange), kk.setFloat("directionRandomizer", this.directionRandomizer)
       }
-      buildUniformLayout(CC) {
-        CC.addUniform("radius", 1), CC.addUniform("height", 1), CC.addUniform("radiusRange", 1), CC.addUniform("directionRandomizer", 1)
+      buildUniformLayout(kk) {
+        kk.addUniform("radius", 1), kk.addUniform("height", 1), kk.addUniform("radiusRange", 1), kk.addUniform("directionRandomizer", 1)
       }
       getEffectDefines() {
         return "#define CYLINDEREMITTER"
@@ -919,37 +919,37 @@ export const modules = {
         return "CylinderParticleEmitter"
       }
       serialize() {
-        const CC = {};
-        return CC.type = this.getClassName(), CC.radius = this.radius, CC.height = this.height, CC.radiusRange = this.radiusRange, CC.directionRandomizer = this.directionRandomizer, CC
+        const kk = {};
+        return kk.type = this.getClassName(), kk.radius = this.radius, kk.height = this.height, kk.radiusRange = this.radiusRange, kk.directionRandomizer = this.directionRandomizer, kk
       }
-      parse(CC) {
-        this.radius = CC.radius, this.height = CC.height, this.radiusRange = CC.radiusRange, this.directionRandomizer = CC.directionRandomizer
+      parse(kk) {
+        this.radius = kk.radius, this.height = kk.height, this.radiusRange = kk.radiusRange, this.directionRandomizer = kk.directionRandomizer
       }
     }
-    class fC extends nC {
+    class lk extends yk {
       constructor() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-          wC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new QC.r(0, 1, 0),
-          bC = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new QC.r(0, 1, 0);
-        super(CC, zC, ZC), this.direction1 = wC, this.direction2 = bC
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          Tk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new Xk.t(0, 1, 0),
+          ik = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new Xk.t(0, 1, 0);
+        super(kk, Fk, Ik), this.direction1 = Tk, this.direction2 = ik
       }
-      startDirectionFunction(CC, zC, ZC, bC) {
-        const nC = (0, wC.RandomRange)(this.direction1.x, this.direction2.x),
-          fC = (0, wC.RandomRange)(this.direction1.y, this.direction2.y),
-          oC = (0, wC.RandomRange)(this.direction1.z, this.direction2.z);
-        bC ? zC.L_(nC, fC, oC) : QC.r.TransformNormalFromFloatsToRef(nC, fC, oC, CC, zC)
+      startDirectionFunction(kk, Fk, Ik, ik) {
+        const yk = (0, Tk.RandomRange)(this.direction1.x, this.direction2.x),
+          lk = (0, Tk.RandomRange)(this.direction1.y, this.direction2.y),
+          ak = (0, Tk.RandomRange)(this.direction1.z, this.direction2.z);
+        ik ? Fk.t5(yk, lk, ak) : Xk.t.TransformNormalFromFloatsToRef(yk, lk, ak, kk, Fk)
       }
       clone() {
-        const CC = new fC(this.radius, this.height, this.radiusRange, this.direction1, this.direction2);
-        return bC.e.DeepCopy(this, CC), CC
+        const kk = new lk(this.radius, this.height, this.radiusRange, this.direction1, this.direction2);
+        return ik.c.DeepCopy(this, kk), kk
       }
-      applyToShader(CC) {
-        CC.setFloat("radius", this.radius), CC.setFloat("height", this.height), CC.setFloat("radiusRange", this.radiusRange), CC.setVector3("direction1", this.direction1), CC.setVector3("direction2", this.direction2)
+      applyToShader(kk) {
+        kk.setFloat("radius", this.radius), kk.setFloat("height", this.height), kk.setFloat("radiusRange", this.radiusRange), kk.setVector3("direction1", this.direction1), kk.setVector3("direction2", this.direction2)
       }
-      buildUniformLayout(CC) {
-        CC.addUniform("radius", 1), CC.addUniform("height", 1), CC.addUniform("radiusRange", 1), CC.addUniform("direction1", 3), CC.addUniform("direction2", 3)
+      buildUniformLayout(kk) {
+        kk.addUniform("radius", 1), kk.addUniform("height", 1), kk.addUniform("radiusRange", 1), kk.addUniform("direction1", 3), kk.addUniform("direction2", 3)
       }
       getEffectDefines() {
         return "#define CYLINDEREMITTER\n#define DIRECTEDCYLINDEREMITTER"
@@ -958,239 +958,239 @@ export const modules = {
         return "CylinderDirectedParticleEmitter"
       }
       serialize() {
-        const CC = super.serialize();
-        return CC.direction1 = this.direction1.VZC(), CC.direction2 = this.direction2.VZC(), CC
+        const kk = super.serialize();
+        return kk.direction1 = this.direction1.iXk(), kk.direction2 = this.direction2.iXk(), kk
       }
-      parse(CC) {
-        super.parse(CC), QC.r.FromArrayToRef(CC.direction1, 0, this.direction1), QC.r.FromArrayToRef(CC.direction2, 0, this.direction2)
+      parse(kk) {
+        super.parse(kk), Xk.t.FromArrayToRef(kk.direction1, 0, this.direction1), Xk.t.FromArrayToRef(kk.direction2, 0, this.direction2)
       }
     }
   },
-  38617: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => WC
+  38789: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => tk
     });
-    const QC = .5 * (Math.sqrt(3) - 1),
-      wC = (3 - Math.sqrt(3)) / 6,
-      bC = 1 / 3,
-      nC = 1 / 6,
-      fC = (Math.sqrt(5) - 1) / 4,
-      oC = (5 - Math.sqrt(5)) / 20,
-      qC = new Float32Array([1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1]),
-      FC = new Float32Array([0, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 1, 0, 1, 1, 1, 0, 1, -1, 1, 0, -1, 1, 1, 0, -1, -1, -1, 0, 1, 1, -1, 0, 1, -1, -1, 0, -1, 1, -1, 0, -1, -1, 1, 1, 0, 1, 1, 1, 0, -1, 1, -1, 0, 1, 1, -1, 0, -1, -1, 1, 0, 1, -1, 1, 0, -1, -1, -1, 0, 1, -1, -1, 0, -1, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 0]);
-    const WC = class {
+    const Xk = .5 * (Math.sqrt(3) - 1),
+      Tk = (3 - Math.sqrt(3)) / 6,
+      ik = 1 / 3,
+      yk = 1 / 6,
+      lk = (Math.sqrt(5) - 1) / 4,
+      ak = (5 - Math.sqrt(5)) / 20,
+      qk = new Float32Array([1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1]),
+      Lk = new Float32Array([0, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 1, 0, 1, 1, 1, 0, 1, -1, 1, 0, -1, 1, 1, 0, -1, -1, -1, 0, 1, 1, -1, 0, 1, -1, -1, 0, -1, 1, -1, 0, -1, -1, 1, 1, 0, 1, 1, 1, 0, -1, 1, -1, 0, 1, 1, -1, 0, -1, -1, 1, 0, 1, -1, 1, 0, -1, -1, -1, 0, 1, -1, -1, 0, -1, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 0]);
+    const tk = class {
       constructor() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Math.random;
-        const zC = "function" == typeof CC ? CC : function(CC) {
-          let zC = 0,
-            ZC = 0,
-            QC = 0,
-            wC = 1;
-          const bC = function() {
-            let CC = 4022871197;
-            return function(zC) {
-              zC = zC.toString();
-              for (let ZC = 0; ZC < zC.length; ZC++) {
-                CC += zC.charCodeAt(ZC);
-                let QC = .02519603282416938 * CC;
-                CC = QC >>> 0, QC -= CC, QC *= CC, CC = QC >>> 0, QC -= CC, CC += 4294967296 * QC
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Math.random;
+        const Fk = "function" == typeof kk ? kk : function(kk) {
+          let Fk = 0,
+            Ik = 0,
+            Xk = 0,
+            Tk = 1;
+          const ik = function() {
+            let kk = 4022871197;
+            return function(Fk) {
+              Fk = Fk.toString();
+              for (let Ik = 0; Ik < Fk.length; Ik++) {
+                kk += Fk.charCodeAt(Ik);
+                let Xk = .02519603282416938 * kk;
+                kk = Xk >>> 0, Xk -= kk, Xk *= kk, kk = Xk >>> 0, Xk -= kk, kk += 4294967296 * Xk
               }
-              return 2.3283064365386963e-10 * (CC >>> 0)
+              return 2.3283064365386963e-10 * (kk >>> 0)
             }
           }();
-          zC = bC(" "), ZC = bC(" "), QC = bC(" "), zC -= bC(CC), zC < 0 && (zC += 1);
-          ZC -= bC(CC), ZC < 0 && (ZC += 1);
-          QC -= bC(CC), QC < 0 && (QC += 1);
+          Fk = ik(" "), Ik = ik(" "), Xk = ik(" "), Fk -= ik(kk), Fk < 0 && (Fk += 1);
+          Ik -= ik(kk), Ik < 0 && (Ik += 1);
+          Xk -= ik(kk), Xk < 0 && (Xk += 1);
           return function() {
-            const CC = 2091639 * zC + 2.3283064365386963e-10 * wC;
-            return zC = ZC, ZC = QC, QC = CC - (wC = 0 | CC)
+            const kk = 2091639 * Fk + 2.3283064365386963e-10 * Tk;
+            return Fk = Ik, Ik = Xk, Xk = kk - (Tk = 0 | kk)
           }
-        }(CC);
-        this.p = function(CC) {
-          const zC = new Uint8Array(256);
-          for (let ZC = 0; ZC < 256; ZC++) zC[ZC] = ZC;
-          for (let ZC = 0; ZC < 255; ZC++) {
-            const QC = ZC + ~~(CC() * (256 - ZC)),
-              wC = zC[ZC];
-            zC[ZC] = zC[QC], zC[QC] = wC
+        }(kk);
+        this.p = function(kk) {
+          const Fk = new Uint8Array(256);
+          for (let Ik = 0; Ik < 256; Ik++) Fk[Ik] = Ik;
+          for (let Ik = 0; Ik < 255; Ik++) {
+            const Xk = Ik + ~~(kk() * (256 - Ik)),
+              Tk = Fk[Ik];
+            Fk[Ik] = Fk[Xk], Fk[Xk] = Tk
           }
-          return zC
-        }(zC), this.perm = new Uint8Array(512), this.permMod12 = new Uint8Array(512);
-        for (let ZC = 0; ZC < 512; ZC++) this.perm[ZC] = this.p[255 & ZC], this.permMod12[ZC] = this.perm[ZC] % 12
+          return Fk
+        }(Fk), this.perm = new Uint8Array(512), this.permMod12 = new Uint8Array(512);
+        for (let Ik = 0; Ik < 512; Ik++) this.perm[Ik] = this.p[255 & Ik], this.permMod12[Ik] = this.perm[Ik] % 12
       }
-      noise2D(CC, zC) {
-        const ZC = this.permMod12,
-          bC = this.perm;
-        let nC = 0,
-          fC = 0,
-          oC = 0;
-        const FC = (CC + zC) * QC,
-          WC = Math.floor(CC + FC),
-          NC = Math.floor(zC + FC),
-          MC = (WC + NC) * wC,
-          gC = CC - (WC - MC),
-          SC = zC - (NC - MC);
-        let pC, PC;
-        gC > SC ? (pC = 1, PC = 0) : (pC = 0, PC = 1);
-        const GC = gC - pC + wC,
-          RC = SC - PC + wC,
-          AC = gC - 1 + 2 * wC,
-          xC = SC - 1 + 2 * wC,
-          JC = 255 & WC,
-          IC = 255 & NC;
-        let iC = .5 - gC * gC - SC * SC;
-        if (iC >= 0) {
-          const CC = 3 * ZC[JC + bC[IC]];
-          iC *= iC, nC = iC * iC * (qC[CC] * gC + qC[CC + 1] * SC)
+      noise2D(kk, Fk) {
+        const Ik = this.permMod12,
+          ik = this.perm;
+        let yk = 0,
+          lk = 0,
+          ak = 0;
+        const Lk = (kk + Fk) * Xk,
+          tk = Math.floor(kk + Lk),
+          Zk = Math.floor(Fk + Lk),
+          jk = (tk + Zk) * Tk,
+          ek = kk - (tk - jk),
+          wk = Fk - (Zk - jk);
+        let Hk, Jk;
+        ek > wk ? (Hk = 1, Jk = 0) : (Hk = 0, Jk = 1);
+        const xk = ek - Hk + Tk,
+          Pk = wk - Jk + Tk,
+          Kk = ek - 1 + 2 * Tk,
+          Qk = wk - 1 + 2 * Tk,
+          sk = 255 & tk,
+          Vk = 255 & Zk;
+        let zk = .5 - ek * ek - wk * wk;
+        if (zk >= 0) {
+          const kk = 3 * Ik[sk + ik[Vk]];
+          zk *= zk, yk = zk * zk * (qk[kk] * ek + qk[kk + 1] * wk)
         }
-        let vC = .5 - GC * GC - RC * RC;
-        if (vC >= 0) {
-          const CC = 3 * ZC[JC + pC + bC[IC + PC]];
-          vC *= vC, fC = vC * vC * (qC[CC] * GC + qC[CC + 1] * RC)
+        let Sk = .5 - xk * xk - Pk * Pk;
+        if (Sk >= 0) {
+          const kk = 3 * Ik[sk + Hk + ik[Vk + Jk]];
+          Sk *= Sk, lk = Sk * Sk * (qk[kk] * xk + qk[kk + 1] * Pk)
         }
-        let eC = .5 - AC * AC - xC * xC;
-        if (eC >= 0) {
-          const CC = 3 * ZC[JC + 1 + bC[IC + 1]];
-          eC *= eC, oC = eC * eC * (qC[CC] * AC + qC[CC + 1] * xC)
+        let vk = .5 - Kk * Kk - Qk * Qk;
+        if (vk >= 0) {
+          const kk = 3 * Ik[sk + 1 + ik[Vk + 1]];
+          vk *= vk, ak = vk * vk * (qk[kk] * Kk + qk[kk + 1] * Qk)
         }
-        return 70 * (nC + fC + oC)
+        return 70 * (yk + lk + ak)
       }
-      noise3D(CC, zC, ZC) {
-        const QC = this.permMod12,
-          wC = this.perm;
-        let fC, oC, FC, WC;
-        const NC = (CC + zC + ZC) * bC,
-          MC = Math.floor(CC + NC),
-          gC = Math.floor(zC + NC),
-          SC = Math.floor(ZC + NC),
-          pC = (MC + gC + SC) * nC,
-          PC = CC - (MC - pC),
-          GC = zC - (gC - pC),
-          RC = ZC - (SC - pC);
-        let AC, xC, JC, IC, iC, vC;
-        PC >= GC ? GC >= RC ? (AC = 1, xC = 0, JC = 0, IC = 1, iC = 1, vC = 0) : PC >= RC ? (AC = 1, xC = 0, JC = 0, IC = 1, iC = 0, vC = 1) : (AC = 0, xC = 0, JC = 1, IC = 1, iC = 0, vC = 1) : GC < RC ? (AC = 0, xC = 0, JC = 1, IC = 0, iC = 1, vC = 1) : PC < RC ? (AC = 0, xC = 1, JC = 0, IC = 0, iC = 1, vC = 1) : (AC = 0, xC = 1, JC = 0, IC = 1, iC = 1, vC = 0);
-        const eC = PC - AC + nC,
-          hC = GC - xC + nC,
-          KC = RC - JC + nC,
-          YC = PC - IC + 2 * nC,
-          dC = GC - iC + 2 * nC,
-          mC = RC - vC + 2 * nC,
-          HC = PC - 1 + .5,
-          EC = GC - 1 + .5,
-          lC = RC - 1 + .5,
-          XC = 255 & MC,
-          cC = 255 & gC,
-          uC = 255 & SC;
-        let rC = .6 - PC * PC - GC * GC - RC * RC;
-        if (rC < 0) fC = 0;
+      noise3D(kk, Fk, Ik) {
+        const Xk = this.permMod12,
+          Tk = this.perm;
+        let lk, ak, Lk, tk;
+        const Zk = (kk + Fk + Ik) * ik,
+          jk = Math.floor(kk + Zk),
+          ek = Math.floor(Fk + Zk),
+          wk = Math.floor(Ik + Zk),
+          Hk = (jk + ek + wk) * yk,
+          Jk = kk - (jk - Hk),
+          xk = Fk - (ek - Hk),
+          Pk = Ik - (wk - Hk);
+        let Kk, Qk, sk, Vk, zk, Sk;
+        Jk >= xk ? xk >= Pk ? (Kk = 1, Qk = 0, sk = 0, Vk = 1, zk = 1, Sk = 0) : Jk >= Pk ? (Kk = 1, Qk = 0, sk = 0, Vk = 1, zk = 0, Sk = 1) : (Kk = 0, Qk = 0, sk = 1, Vk = 1, zk = 0, Sk = 1) : xk < Pk ? (Kk = 0, Qk = 0, sk = 1, Vk = 0, zk = 1, Sk = 1) : Jk < Pk ? (Kk = 0, Qk = 1, sk = 0, Vk = 0, zk = 1, Sk = 1) : (Kk = 0, Qk = 1, sk = 0, Vk = 1, zk = 1, Sk = 0);
+        const vk = Jk - Kk + yk,
+          Ek = xk - Qk + yk,
+          Ok = Pk - sk + yk,
+          nk = Jk - Vk + 2 * yk,
+          Gk = xk - zk + 2 * yk,
+          pk = Pk - Sk + 2 * yk,
+          uk = Jk - 1 + .5,
+          bk = xk - 1 + .5,
+          Rk = Pk - 1 + .5,
+          Uk = 255 & jk,
+          Ck = 255 & ek,
+          Nk = 255 & wk;
+        let ck = .6 - Jk * Jk - xk * xk - Pk * Pk;
+        if (ck < 0) lk = 0;
         else {
-          const CC = 3 * QC[XC + wC[cC + wC[uC]]];
-          rC *= rC, fC = rC * rC * (qC[CC] * PC + qC[CC + 1] * GC + qC[CC + 2] * RC)
+          const kk = 3 * Xk[Uk + Tk[Ck + Tk[Nk]]];
+          ck *= ck, lk = ck * ck * (qk[kk] * Jk + qk[kk + 1] * xk + qk[kk + 2] * Pk)
         }
-        let sC = .6 - eC * eC - hC * hC - KC * KC;
-        if (sC < 0) oC = 0;
+        let Wk = .6 - vk * vk - Ek * Ek - Ok * Ok;
+        if (Wk < 0) ak = 0;
         else {
-          const CC = 3 * QC[XC + AC + wC[cC + xC + wC[uC + JC]]];
-          sC *= sC, oC = sC * sC * (qC[CC] * eC + qC[CC + 1] * hC + qC[CC + 2] * KC)
+          const kk = 3 * Xk[Uk + Kk + Tk[Ck + Qk + Tk[Nk + sk]]];
+          Wk *= Wk, ak = Wk * Wk * (qk[kk] * vk + qk[kk + 1] * Ek + qk[kk + 2] * Ok)
         }
-        let TC = .6 - YC * YC - dC * dC - mC * mC;
-        if (TC < 0) FC = 0;
+        let fk = .6 - nk * nk - Gk * Gk - pk * pk;
+        if (fk < 0) Lk = 0;
         else {
-          const CC = 3 * QC[XC + IC + wC[cC + iC + wC[uC + vC]]];
-          TC *= TC, FC = TC * TC * (qC[CC] * YC + qC[CC + 1] * dC + qC[CC + 2] * mC)
+          const kk = 3 * Xk[Uk + Vk + Tk[Ck + zk + Tk[Nk + Sk]]];
+          fk *= fk, Lk = fk * fk * (qk[kk] * nk + qk[kk + 1] * Gk + qk[kk + 2] * pk)
         }
-        let aC = .6 - HC * HC - EC * EC - lC * lC;
-        if (aC < 0) WC = 0;
+        let Bk = .6 - uk * uk - bk * bk - Rk * Rk;
+        if (Bk < 0) tk = 0;
         else {
-          const CC = 3 * QC[XC + 1 + wC[cC + 1 + wC[uC + 1]]];
-          aC *= aC, WC = aC * aC * (qC[CC] * HC + qC[CC + 1] * EC + qC[CC + 2] * lC)
+          const kk = 3 * Xk[Uk + 1 + Tk[Ck + 1 + Tk[Nk + 1]]];
+          Bk *= Bk, tk = Bk * Bk * (qk[kk] * uk + qk[kk + 1] * bk + qk[kk + 2] * Rk)
         }
-        return 32 * (fC + oC + FC + WC)
+        return 32 * (lk + ak + Lk + tk)
       }
-      noise4D(CC, zC, ZC, QC) {
-        const wC = this.perm;
-        let bC, nC, qC, WC, NC;
-        const MC = (CC + zC + ZC + QC) * fC,
-          gC = Math.floor(CC + MC),
-          SC = Math.floor(zC + MC),
-          pC = Math.floor(ZC + MC),
-          PC = Math.floor(QC + MC),
-          GC = (gC + SC + pC + PC) * oC,
-          RC = CC - (gC - GC),
-          AC = zC - (SC - GC),
-          xC = ZC - (pC - GC),
-          JC = QC - (PC - GC);
-        let IC = 0,
-          iC = 0,
-          vC = 0,
-          eC = 0;
-        RC > AC ? IC++ : iC++, RC > xC ? IC++ : vC++, RC > JC ? IC++ : eC++, AC > xC ? iC++ : vC++, AC > JC ? iC++ : eC++, xC > JC ? vC++ : eC++;
-        const hC = IC >= 3 ? 1 : 0,
-          KC = iC >= 3 ? 1 : 0,
-          YC = vC >= 3 ? 1 : 0,
-          dC = eC >= 3 ? 1 : 0,
-          mC = IC >= 2 ? 1 : 0,
-          HC = iC >= 2 ? 1 : 0,
-          EC = vC >= 2 ? 1 : 0,
-          lC = eC >= 2 ? 1 : 0,
-          XC = IC >= 1 ? 1 : 0,
-          cC = iC >= 1 ? 1 : 0,
-          uC = vC >= 1 ? 1 : 0,
-          rC = eC >= 1 ? 1 : 0,
-          sC = RC - hC + oC,
-          TC = AC - KC + oC,
-          aC = xC - YC + oC,
-          tC = JC - dC + oC,
-          DC = RC - mC + 2 * oC,
-          jC = AC - HC + 2 * oC,
-          yC = xC - EC + 2 * oC,
-          LC = JC - lC + 2 * oC,
-          UC = RC - XC + 3 * oC,
-          BC = AC - cC + 3 * oC,
-          OC = xC - uC + 3 * oC,
-          kC = JC - rC + 3 * oC,
-          VC = RC - 1 + 4 * oC,
-          Cz = AC - 1 + 4 * oC,
-          zz = xC - 1 + 4 * oC,
-          Zz = JC - 1 + 4 * oC,
-          Qz = 255 & gC,
-          wz = 255 & SC,
-          bz = 255 & pC,
-          nz = 255 & PC;
-        let fz = .6 - RC * RC - AC * AC - xC * xC - JC * JC;
-        if (fz < 0) bC = 0;
+      noise4D(kk, Fk, Ik, Xk) {
+        const Tk = this.perm;
+        let ik, yk, qk, tk, Zk;
+        const jk = (kk + Fk + Ik + Xk) * lk,
+          ek = Math.floor(kk + jk),
+          wk = Math.floor(Fk + jk),
+          Hk = Math.floor(Ik + jk),
+          Jk = Math.floor(Xk + jk),
+          xk = (ek + wk + Hk + Jk) * ak,
+          Pk = kk - (ek - xk),
+          Kk = Fk - (wk - xk),
+          Qk = Ik - (Hk - xk),
+          sk = Xk - (Jk - xk);
+        let Vk = 0,
+          zk = 0,
+          Sk = 0,
+          vk = 0;
+        Pk > Kk ? Vk++ : zk++, Pk > Qk ? Vk++ : Sk++, Pk > sk ? Vk++ : vk++, Kk > Qk ? zk++ : Sk++, Kk > sk ? zk++ : vk++, Qk > sk ? Sk++ : vk++;
+        const Ek = Vk >= 3 ? 1 : 0,
+          Ok = zk >= 3 ? 1 : 0,
+          nk = Sk >= 3 ? 1 : 0,
+          Gk = vk >= 3 ? 1 : 0,
+          pk = Vk >= 2 ? 1 : 0,
+          uk = zk >= 2 ? 1 : 0,
+          bk = Sk >= 2 ? 1 : 0,
+          Rk = vk >= 2 ? 1 : 0,
+          Uk = Vk >= 1 ? 1 : 0,
+          Ck = zk >= 1 ? 1 : 0,
+          Nk = Sk >= 1 ? 1 : 0,
+          ck = vk >= 1 ? 1 : 0,
+          Wk = Pk - Ek + ak,
+          fk = Kk - Ok + ak,
+          Bk = Qk - nk + ak,
+          dk = sk - Gk + ak,
+          Yk = Pk - pk + 2 * ak,
+          Ak = Kk - uk + 2 * ak,
+          gk = Qk - bk + 2 * ak,
+          mk = sk - Rk + 2 * ak,
+          hk = Pk - Uk + 3 * ak,
+          rk = Kk - Ck + 3 * ak,
+          Dk = Qk - Nk + 3 * ak,
+          Mk = sk - ck + 3 * ak,
+          kF = Pk - 1 + 4 * ak,
+          FF = Kk - 1 + 4 * ak,
+          IF = Qk - 1 + 4 * ak,
+          XF = sk - 1 + 4 * ak,
+          TF = 255 & ek,
+          iF = 255 & wk,
+          yF = 255 & Hk,
+          lF = 255 & Jk;
+        let aF = .6 - Pk * Pk - Kk * Kk - Qk * Qk - sk * sk;
+        if (aF < 0) ik = 0;
         else {
-          const CC = wC[Qz + wC[wz + wC[bz + wC[nz]]]] % 32 * 4;
-          fz *= fz, bC = fz * fz * (FC[CC] * RC + FC[CC + 1] * AC + FC[CC + 2] * xC + FC[CC + 3] * JC)
+          const kk = Tk[TF + Tk[iF + Tk[yF + Tk[lF]]]] % 32 * 4;
+          aF *= aF, ik = aF * aF * (Lk[kk] * Pk + Lk[kk + 1] * Kk + Lk[kk + 2] * Qk + Lk[kk + 3] * sk)
         }
-        let oz = .6 - sC * sC - TC * TC - aC * aC - tC * tC;
-        if (oz < 0) nC = 0;
+        let qF = .6 - Wk * Wk - fk * fk - Bk * Bk - dk * dk;
+        if (qF < 0) yk = 0;
         else {
-          const CC = wC[Qz + hC + wC[wz + KC + wC[bz + YC + wC[nz + dC]]]] % 32 * 4;
-          oz *= oz, nC = oz * oz * (FC[CC] * sC + FC[CC + 1] * TC + FC[CC + 2] * aC + FC[CC + 3] * tC)
+          const kk = Tk[TF + Ek + Tk[iF + Ok + Tk[yF + nk + Tk[lF + Gk]]]] % 32 * 4;
+          qF *= qF, yk = qF * qF * (Lk[kk] * Wk + Lk[kk + 1] * fk + Lk[kk + 2] * Bk + Lk[kk + 3] * dk)
         }
-        let qz = .6 - DC * DC - jC * jC - yC * yC - LC * LC;
-        if (qz < 0) qC = 0;
+        let LF = .6 - Yk * Yk - Ak * Ak - gk * gk - mk * mk;
+        if (LF < 0) qk = 0;
         else {
-          const CC = wC[Qz + mC + wC[wz + HC + wC[bz + EC + wC[nz + lC]]]] % 32 * 4;
-          qz *= qz, qC = qz * qz * (FC[CC] * DC + FC[CC + 1] * jC + FC[CC + 2] * yC + FC[CC + 3] * LC)
+          const kk = Tk[TF + pk + Tk[iF + uk + Tk[yF + bk + Tk[lF + Rk]]]] % 32 * 4;
+          LF *= LF, qk = LF * LF * (Lk[kk] * Yk + Lk[kk + 1] * Ak + Lk[kk + 2] * gk + Lk[kk + 3] * mk)
         }
-        let Fz = .6 - UC * UC - BC * BC - OC * OC - kC * kC;
-        if (Fz < 0) WC = 0;
+        let tF = .6 - hk * hk - rk * rk - Dk * Dk - Mk * Mk;
+        if (tF < 0) tk = 0;
         else {
-          const CC = wC[Qz + XC + wC[wz + cC + wC[bz + uC + wC[nz + rC]]]] % 32 * 4;
-          Fz *= Fz, WC = Fz * Fz * (FC[CC] * UC + FC[CC + 1] * BC + FC[CC + 2] * OC + FC[CC + 3] * kC)
+          const kk = Tk[TF + Uk + Tk[iF + Ck + Tk[yF + Nk + Tk[lF + ck]]]] % 32 * 4;
+          tF *= tF, tk = tF * tF * (Lk[kk] * hk + Lk[kk + 1] * rk + Lk[kk + 2] * Dk + Lk[kk + 3] * Mk)
         }
-        let Wz = .6 - VC * VC - Cz * Cz - zz * zz - Zz * Zz;
-        if (Wz < 0) NC = 0;
+        let ZF = .6 - kF * kF - FF * FF - IF * IF - XF * XF;
+        if (ZF < 0) Zk = 0;
         else {
-          const CC = wC[Qz + 1 + wC[wz + 1 + wC[bz + 1 + wC[nz + 1]]]] % 32 * 4;
-          Wz *= Wz, NC = Wz * Wz * (FC[CC] * VC + FC[CC + 1] * Cz + FC[CC + 2] * zz + FC[CC + 3] * Zz)
+          const kk = Tk[TF + 1 + Tk[iF + 1 + Tk[yF + 1 + Tk[lF + 1]]]] % 32 * 4;
+          ZF *= ZF, Zk = ZF * ZF * (Lk[kk] * kF + Lk[kk + 1] * FF + Lk[kk + 2] * IF + Lk[kk + 3] * XF)
         }
-        return 27 * (bC + nC + qC + WC + NC)
+        return 27 * (ik + yk + qk + tk + Zk)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

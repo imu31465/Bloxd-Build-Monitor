@@ -1,493 +1,493 @@
 export const id = 95;
 export const ids = [93, 94, 95];
 export const modules = {
-  36502: (CC, zC, ZC) => {
-    function QC(CC, zC, ZC, QC) {
-      return !(ZC && !CC.aimable) && (!zC || CC.gun && "head" !== QC)
+  36618: (kk, Fk, Ik) => {
+    function Xk(kk, Fk, Ik, Xk) {
+      return !(Ik && !kk.aimable) && (!Fk || kk.gun && "head" !== Xk)
     }
 
-    function wC(CC) {
-      return Math.max(.1 * CC, 1)
+    function Tk(kk) {
+      return Math.max(.1 * kk, 1)
     }
 
-    function bC(CC, zC) {
-      return !CC && zC
+    function ik(kk, Fk) {
+      return !kk && Fk
     }
-    ZC.d(zC, {
-      c: () => bC,
-      e: () => wC,
-      g: () => QC
+    Ik.d(Fk, {
+      e: () => ik,
+      h: () => Tk,
+      k: () => Xk
     })
   },
-  36508: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => fC,
-      g: () => nC
+  36620: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => lk,
+      g: () => yk
     });
-    let QC = null;
-    const wC = {
+    let Xk = null;
+    const Tk = {
         crosshairAccuracy: [],
         turnDamageIndicators: []
       },
-      bC = {
-        crosshairAccuracy: CC => {
-          const zC = wC.crosshairAccuracy.at(-1);
-          zC ? zC.hook(CC) : QC = CC
+      ik = {
+        crosshairAccuracy: kk => {
+          const Fk = Tk.crosshairAccuracy.at(-1);
+          Fk ? Fk.hook(kk) : Xk = kk
         },
-        turnDamageIndicators: CC => {
-          var zC;
-          null === (zC = wC.turnDamageIndicators.at(-1)) || void 0 === zC || zC.hook(CC)
+        turnDamageIndicators: kk => {
+          var Fk;
+          null === (Fk = Tk.turnDamageIndicators.at(-1)) || void 0 === Fk || Fk.hook(kk)
         }
       };
 
-    function nC(CC, zC) {
-      const ZC = {
-          hook: zC
+    function yk(kk, Fk) {
+      const Ik = {
+          hook: Fk
         },
-        nC = wC[CC];
-      if (nC.push(ZC), "crosshairAccuracy" === CC && null !== QC) {
-        const CC = QC;
-        QC = null, bC.crosshairAccuracy(CC)
+        yk = Tk[kk];
+      if (yk.push(Ik), "crosshairAccuracy" === kk && null !== Xk) {
+        const kk = Xk;
+        Xk = null, ik.crosshairAccuracy(kk)
       }
       return () => {
-        const CC = nC.indexOf(ZC); - 1 !== CC && nC.splice(CC, 1)
+        const kk = yk.indexOf(Ik); - 1 !== kk && yk.splice(kk, 1)
       }
     }
 
-    function fC() {
-      return bC
+    function lk() {
+      return ik
     }
   },
-  36318: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      countDecodesAs: () => WC,
-      decodedAudio: () => NC
+  36432: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      countDecodesAs: () => tk,
+      decodedAudio: () => Zk
     });
-    var QC = ZC(3252),
-      wC = ZC(4797);
-    const bC = wC.Howler,
-      nC = new Map;
-    let fC = 0;
-    const oC = {
+    var Xk = Ik(3191),
+      Tk = Ik(4857);
+    const ik = Tk.Howler,
+      yk = new Map;
+    let lk = 0;
+    const ak = {
         song: 0,
         sheet: 0
       },
-      qC = new WeakMap,
-      FC = new WeakSet;
+      qk = new WeakMap,
+      Lk = new WeakSet;
 
-    function WC(CC, zC) {
-      return qC.set(CC, zC), CC
+    function tk(kk, Fk) {
+      return qk.set(kk, Fk), kk
     }
 
-    function NC() {
+    function Zk() {
       return {
-        bytes: fC,
-        songsDecoded: oC.song,
-        sheetsDecoded: oC.sheet
+        bytes: lk,
+        songsDecoded: ak.song,
+        sheetsDecoded: ak.sheet
       }
     }
 
-    function MC(CC) {
-      if (FC.has(CC)) return;
-      FC.add(CC);
-      const zC = 1 === CC.decodeAudioData.length,
-        ZC = CC.decodeAudioData.bind(CC);
-      CC.decodeAudioData = (CC, QC, wC) => {
-        const FC = CC => {
-          const zC = bC._howls.filter((CC => "loaded" !== CC._state));
+    function jk(kk) {
+      if (Lk.has(kk)) return;
+      Lk.add(kk);
+      const Fk = 1 === kk.decodeAudioData.length,
+        Ik = kk.decodeAudioData.bind(kk);
+      kk.decodeAudioData = (kk, Xk, Tk) => {
+        const Lk = kk => {
+          const Fk = ik._howls.filter((kk => "loaded" !== kk._state));
           try {
-            null === QC || void 0 === QC || QC(CC)
+            null === Xk || void 0 === Xk || Xk(kk)
           } finally {
-            const ZC = zC.find((CC => "loaded" === CC._state));
-            void 0 !== ZC && "string" === typeof ZC._src && function(CC, zC, ZC) {
-              var QC;
-              fC += ZC - (null !== (QC = nC.get(zC)) && void 0 !== QC ? QC : 0), nC.set(zC, ZC);
-              const wC = qC.get(CC);
-              void 0 !== wC && oC[wC]++
-            }(ZC, ZC._src, CC.length * CC.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
+            const Ik = Fk.find((kk => "loaded" === kk._state));
+            void 0 !== Ik && "string" === typeof Ik._src && function(kk, Fk, Ik) {
+              var Xk;
+              lk += Ik - (null !== (Xk = yk.get(Fk)) && void 0 !== Xk ? Xk : 0), yk.set(Fk, Ik);
+              const Tk = qk.get(kk);
+              void 0 !== Tk && ak[Tk]++
+            }(Ik, Ik._src, kk.length * kk.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
           }
-          return CC
+          return kk
         };
-        if (!zC) return ZC(CC, FC, wC);
-        const WC = ZC(CC).then(FC);
-        return WC.catch((CC => {
-          null === wC || void 0 === wC || wC(CC)
-        })), WC
+        if (!Fk) return Ik(kk, Lk, Tk);
+        const tk = Ik(kk).then(Lk);
+        return tk.catch((kk => {
+          null === Tk || void 0 === Tk || Tk(kk)
+        })), tk
       }
-    }(0, QC.h)(NC);
-    const gC = wC.Howl.prototype,
-      SC = gC.init;
-    gC.init = function(CC) {
-      return wC.Howler.volume(), bC.ctx && MC(bC.ctx), SC.call(this, CC)
+    }(0, Xk.d)(Zk);
+    const ek = Tk.Howl.prototype,
+      wk = ek.init;
+    ek.init = function(kk) {
+      return Tk.Howler.volume(), ik.ctx && jk(ik.ctx), wk.call(this, kk)
     };
-    const pC = gC.unload;
-    gC.unload = function() {
-      const CC = this._src,
-        zC = pC.call(this);
-      if ("string" !== typeof CC) return zC;
-      const ZC = nC.get(CC);
-      return void 0 !== ZC && function(CC) {
-        return !bC._howls.some((zC => zC._src === CC || "string" === typeof zC._src && CC.indexOf(zC._src) >= 0))
-      }(CC) && (nC.delete(CC), fC -= ZC), zC
+    const Hk = ek.unload;
+    ek.unload = function() {
+      const kk = this._src,
+        Fk = Hk.call(this);
+      if ("string" !== typeof kk) return Fk;
+      const Ik = yk.get(kk);
+      return void 0 !== Ik && function(kk) {
+        return !ik._howls.some((Fk => Fk._src === kk || "string" === typeof Fk._src && kk.indexOf(Fk._src) >= 0))
+      }(kk) && (yk.delete(kk), lk -= Ik), Fk
     }
   },
-  36659: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => oC
+  36803: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => ak
     });
-    var QC = ZC(20),
-      wC = ZC(36641),
-      bC = ZC(2510),
-      nC = ZC(36664),
-      fC = ZC(4797);
-    const oC = function(CC) {
-      const zC = new Set;
-      return ZC => {
-        var QC;
-        const bC = null === (QC = [...wC.e].find((CC => {
-          let [, zC] = CC;
-          return zC.includes(ZC)
-        }))) || void 0 === QC ? void 0 : QC[0];
-        if (void 0 === bC || zC.has(bC)) return;
-        zC.add(bC);
-        ! function(CC, zC) {
+    var Xk = Ik(25),
+      Tk = Ik(36772),
+      ik = Ik(2473),
+      yk = Ik(36810),
+      lk = Ik(4857);
+    const ak = function(kk) {
+      const Fk = new Set;
+      return Ik => {
+        var Xk;
+        const ik = null === (Xk = [...Tk.e].find((kk => {
+          let [, Fk] = kk;
+          return Fk.includes(Ik)
+        }))) || void 0 === Xk ? void 0 : Xk[0];
+        if (void 0 === ik || Fk.has(ik)) return;
+        Fk.add(ik);
+        ! function(kk, Fk) {
           let {
-            afterJoin: ZC,
-            joining: QC,
-            idle: wC,
-            fetchFile: bC
-          } = zC;
-          const nC = zC => {
-            zC >= CC.length || ZC((() => {
-              wC((() => {
-                QC() ? nC(zC) : bC(CC[zC]).catch((() => {})).finally((() => {
-                  nC(zC + 1)
+            afterJoin: Ik,
+            joining: Xk,
+            idle: Tk,
+            fetchFile: ik
+          } = Fk;
+          const yk = Fk => {
+            Fk >= kk.length || Ik((() => {
+              Tk((() => {
+                Xk() ? yk(Fk) : ik(kk[Fk]).catch((() => {})).finally((() => {
+                  yk(Fk + 1)
                 }))
               }))
             }))
           };
-          nC(0)
-        }(wC.e.get(bC).filter((CC => CC !== ZC)).flatMap((zC => {
-          const ZC = (QC = (0, wC.j)(zC).src, bC = CC.canPlay, QC.find((CC => {
-            var zC;
-            const ZC = null === (zC = /\.([^.]+)$/.exec(CC.split("?", 1)[0])) || void 0 === zC ? void 0 : zC[1];
-            return void 0 !== ZC && bC(ZC.toLowerCase())
+          yk(0)
+        }(Tk.e.get(ik).filter((kk => kk !== Ik)).flatMap((Fk => {
+          const Ik = (Xk = (0, Tk.g)(Fk).src, ik = kk.canPlay, Xk.find((kk => {
+            var Fk;
+            const Ik = null === (Fk = /\.([^.]+)$/.exec(kk.split("?", 1)[0])) || void 0 === Fk ? void 0 : Fk[1];
+            return void 0 !== Ik && ik(Ik.toLowerCase())
           })));
-          var QC, bC;
-          return void 0 === ZC ? [] : [ZC]
-        })), CC)
+          var Xk, ik;
+          return void 0 === Ik ? [] : [Ik]
+        })), kk)
       }
     }({
-      afterJoin: CC => {
-        (0, bC.d)(QC.b.get("gameState"), CC)
+      afterJoin: kk => {
+        (0, ik.c)(Xk.d.get("gameState"), kk)
       },
-      joining: () => (0, bC.e)(QC.b.get("gameState")),
-      idle: ZC(239).e,
-      fetchFile: nC.c,
-      canPlay: CC => !!fC.Howler.codecs(CC)
+      joining: () => (0, ik.e)(Xk.d.get("gameState")),
+      idle: Ik(243).b,
+      fetchFile: yk.e,
+      canPlay: kk => !!lk.Howler.codecs(kk)
     })
   },
-  36664: (CC, zC, ZC) => {
-    async function QC(CC) {
-      const zC = await fetch(CC, {
+  36810: (kk, Fk, Ik) => {
+    async function Xk(kk) {
+      const Fk = await fetch(kk, {
         priority: "low"
       });
-      if (!zC.ok) throw new Error(`Fetching ${CC} failed: HTTP ${zC.status}`);
-      const ZC = zC.body.getReader();
-      for (; !(await ZC.read()).done;);
+      if (!Fk.ok) throw new Error(`Fetching ${kk} failed: HTTP ${Fk.status}`);
+      const Ik = Fk.body.getReader();
+      for (; !(await Ik.read()).done;);
     }
-    ZC.d(zC, {
-      c: () => QC
+    Ik.d(Fk, {
+      e: () => Xk
     })
   },
-  36643: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => wC
+  36777: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Tk
     });
-    const QC = ["end", "stop", "playerror"];
+    const Xk = ["end", "stop", "playerror"];
 
-    function wC(CC, zC) {
-      const ZC = () => {
-        if (function(CC) {
-            return "loaded" === CC.state() && !CC.playing() && !CC._playLock
-          }(CC)) {
-          for (const zC of QC) CC.off(zC, ZC);
-          CC.unload(), zC()
+    function Tk(kk, Fk) {
+      const Ik = () => {
+        if (function(kk) {
+            return "loaded" === kk.state() && !kk.playing() && !kk._playLock
+          }(kk)) {
+          for (const Fk of Xk) kk.off(Fk, Ik);
+          kk.unload(), Fk()
         }
       };
-      for (const wC of QC) CC.on(wC, ZC);
-      ZC()
+      for (const Tk of Xk) kk.on(Tk, Ik);
+      Ik()
     }
   },
-  4797: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      Howl: () => wC.Howl,
-      Howler: () => wC.Howler,
-      musicOutput: () => pC,
-      readyAudioContext: () => PC
+  4857: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      Howl: () => Tk.Howl,
+      Howler: () => Tk.Howler,
+      musicOutput: () => Hk,
+      readyAudioContext: () => Jk
     });
-    var QC, wC = ZC(4801),
-      bC = ZC(3419),
-      nC = ZC(4587);
-    const fC = wC.Howler;
+    var Xk, Tk = Ik(4863),
+      ik = Ik(3378),
+      yk = Ik(4636);
+    const lk = Tk.Howler;
 
-    function oC() {
-      var CC, zC;
-      if (fC.ctx || !fC.usingWebAudio || "undefined" === typeof AudioContext || !(0, nC.h)()) return;
-      const ZC = navigator.audioSession;
-      let QC;
-      "auto" === (null === ZC || void 0 === ZC ? void 0 : ZC.type) && (ZC.type = "ambient");
+    function ak() {
+      var kk, Fk;
+      if (lk.ctx || !lk.usingWebAudio || "undefined" === typeof AudioContext || !(0, yk.h)()) return;
+      const Ik = navigator.audioSession;
+      let Xk;
+      "auto" === (null === Ik || void 0 === Ik ? void 0 : Ik.type) && (Ik.type = "ambient");
       try {
-        QC = new AudioContext({
+        Xk = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const wC = QC.createGain();
-      wC.gain.setValueAtTime(fC._muted ? 0 : null !== (CC = fC._volume) && void 0 !== CC ? CC : 1, QC.currentTime), wC.connect(QC.destination), fC.ctx = QC, fC.masterGain = wC, null === (zC = fC._setup) || void 0 === zC || zC.call(fC)
+      const Tk = Xk.createGain();
+      Tk.gain.setValueAtTime(lk._muted ? 0 : null !== (kk = lk._volume) && void 0 !== kk ? kk : 1, Xk.currentTime), Tk.connect(Xk.destination), lk.ctx = Xk, lk.masterGain = Tk, null === (Fk = lk._setup) || void 0 === Fk || Fk.call(lk)
     }
-    fC._mobileUnloaded = !0;
-    const qC = fC.volume.bind(wC.Howler);
-    fC.volume = function() {
-      return oC(), qC(...arguments)
+    lk._mobileUnloaded = !0;
+    const qk = lk.volume.bind(Tk.Howler);
+    lk.volume = function() {
+      return ak(), qk(...arguments)
     };
-    const FC = fC.mute.bind(wC.Howler);
-    fC.mute = CC => (oC(), FC(CC));
-    const WC = wC.Howl.prototype,
-      NC = WC.init;
+    const Lk = lk.mute.bind(Tk.Howler);
+    lk.mute = kk => (ak(), Lk(kk));
+    const tk = Tk.Howl.prototype,
+      Zk = tk.init;
 
-    function MC() {
-      for (; fC._html5AudioPool.length < fC.html5PoolSize;) {
-        const CC = new Audio;
-        CC._unlocked = !0, fC._releaseHtml5Audio(CC)
+    function jk() {
+      for (; lk._html5AudioPool.length < lk.html5PoolSize;) {
+        const kk = new Audio;
+        kk._unlocked = !0, lk._releaseHtml5Audio(kk)
       }
-      for (const zC of fC._howls)
-        if (!zC._webAudio)
-          for (const ZC of zC._getSoundIds()) {
-            var CC;
-            const QC = null === (CC = zC._soundById(ZC)) || void 0 === CC ? void 0 : CC._node;
-            QC && !QC._unlocked && (QC._unlocked = !0, QC.load())
+      for (const Fk of lk._howls)
+        if (!Fk._webAudio)
+          for (const Ik of Fk._getSoundIds()) {
+            var kk;
+            const Xk = null === (kk = Fk._soundById(Ik)) || void 0 === kk ? void 0 : kk._node;
+            Xk && !Xk._unlocked && (Xk._unlocked = !0, Xk.load())
           }
     }
-    WC.init = function(CC) {
-      return oC(), NC.call(this, CC)
-    }, (0, nC.h)() && (fC._unlockAudio = () => {
-      const CC = fC.ctx;
-      if (fC._audioUnlocked || !CC) return;
-      fC.autoUnlock = !1;
-      const zC = CC.createBuffer(1, 1, 22050);
-      fC._scratchBuffer = zC;
-      const ZC = new AbortController;
-      let QC = "afterPaint";
-      const wC = () => {
-          var QC;
-          if (fC._audioUnlocked) return;
-          null === (QC = fC._autoResume) || void 0 === QC || QC.call(fC);
-          const wC = CC.createBufferSource();
-          wC.buffer = zC, wC.connect(CC.destination), wC.start(0), CC.resume().catch((() => {})), wC.onended = () => {
-            wC.disconnect(0), fC._audioUnlocked = !0, ZC.abort();
-            for (const CC of fC._howls) CC._emit("unlock")
+    tk.init = function(kk) {
+      return ak(), Zk.call(this, kk)
+    }, (0, yk.h)() && (lk._unlockAudio = () => {
+      const kk = lk.ctx;
+      if (lk._audioUnlocked || !kk) return;
+      lk.autoUnlock = !1;
+      const Fk = kk.createBuffer(1, 1, 22050);
+      lk._scratchBuffer = Fk;
+      const Ik = new AbortController;
+      let Xk = "afterPaint";
+      const Tk = () => {
+          var Xk;
+          if (lk._audioUnlocked) return;
+          null === (Xk = lk._autoResume) || void 0 === Xk || Xk.call(lk);
+          const Tk = kk.createBufferSource();
+          Tk.buffer = Fk, Tk.connect(kk.destination), Tk.start(0), kk.resume().catch((() => {})), Tk.onended = () => {
+            Tk.disconnect(0), lk._audioUnlocked = !0, Ik.abort();
+            for (const kk of lk._howls) kk._emit("unlock")
           }
         },
-        oC = () => {
-          MC(), wC()
+        ak = () => {
+          jk(), Tk()
         },
-        qC = zC => {
-          if (MC(), "inTap" === QC) {
-            if ("running" === CC.state) return;
-            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), wC()
-          } else "afterPaint" === QC && (QC = "queued", (0, bC.c)(zC.timeStamp, (() => {
-            QC = "inTap", wC()
+        qk = Fk => {
+          if (jk(), "inTap" === Xk) {
+            if ("running" === kk.state) return;
+            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), Tk()
+          } else "afterPaint" === Xk && (Xk = "queued", (0, ik.b)(Fk.timeStamp, (() => {
+            Xk = "inTap", Tk()
           })))
         };
-      for (const bC of ["touchstart", "touchend"]) document.addEventListener(bC, oC, {
+      for (const ik of ["touchstart", "touchend"]) document.addEventListener(ik, ak, {
         capture: !0,
-        signal: ZC.signal
+        signal: Ik.signal
       });
-      for (const bC of nC.c) document.addEventListener(bC, qC, {
+      for (const ik of yk.b) document.addEventListener(ik, qk, {
         capture: !0,
-        signal: ZC.signal
+        signal: Ik.signal
       })
     });
-    let gC = 0;
-    const SC = null === (QC = fC._autoSuspend) || void 0 === QC ? void 0 : QC.bind(wC.Howler);
+    let ek = 0;
+    const wk = null === (Xk = lk._autoSuspend) || void 0 === Xk ? void 0 : Xk.bind(Tk.Howler);
 
-    function pC() {
-      PC();
+    function Hk() {
+      Jk();
       const {
-        ctx: CC,
-        masterGain: zC
-      } = fC;
-      return CC && zC ? {
-        ctx: CC,
-        destination: zC,
-        holdAwake: CC => {
-          var zC, ZC;
-          (gC += CC ? 1 : -1, CC) ? null === (zC = fC._autoResume) || void 0 === zC || zC.call(fC): null === (ZC = fC._autoSuspend) || void 0 === ZC || ZC.call(fC)
+        ctx: kk,
+        masterGain: Fk
+      } = lk;
+      return kk && Fk ? {
+        ctx: kk,
+        destination: Fk,
+        holdAwake: kk => {
+          var Fk, Ik;
+          (ek += kk ? 1 : -1, kk) ? null === (Fk = lk._autoResume) || void 0 === Fk || Fk.call(lk): null === (Ik = lk._autoSuspend) || void 0 === Ik || Ik.call(lk)
         },
         wake: () => {
-          var zC;
-          "running" !== CC.state && (null === (zC = fC._autoResume) || void 0 === zC || zC.call(fC), CC.resume().catch((() => {})))
+          var Fk;
+          "running" !== kk.state && (null === (Fk = lk._autoResume) || void 0 === Fk || Fk.call(lk), kk.resume().catch((() => {})))
         }
       } : null
     }
 
-    function PC() {
-      var CC;
-      (fC.volume(), fC.ctx && fC.autoUnlock) && (null === (CC = fC._unlockAudio) || void 0 === CC || CC.call(fC))
+    function Jk() {
+      var kk;
+      (lk.volume(), lk.ctx && lk.autoUnlock) && (null === (kk = lk._unlockAudio) || void 0 === kk || kk.call(lk))
     }
-    SC && (fC._autoSuspend = () => gC > 0 ? wC.Howler : SC())
+    wk && (lk._autoSuspend = () => ek > 0 ? Tk.Howler : wk())
   },
-  36657: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => QC
+  36796: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Xk
     });
-    const QC = new Set(["gunSemiAutomatic", "gunSubmachineGun", "gunShotgun", "gunRifle", "gunPistol", "gunMisc", "step", "dig", "randomItems", "randomExp", "randomCash", "randomFallsmall", "note", "rpg", "phoneAndMoney"])
+    const Xk = new Set(["gunSemiAutomatic", "gunSubmachineGun", "gunShotgun", "gunRifle", "gunPistol", "gunMisc", "step", "dig", "randomItems", "randomExp", "randomCash", "randomFallsmall", "note", "rpg", "phoneAndMoney"])
   },
-  36650: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => nC,
-      d: () => wC,
-      g: () => QC
+  36789: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => yk,
+      g: () => Tk,
+      k: () => Xk
     });
 
-    function QC(CC) {
-      return CC.replace(/[_\-\s]*\d+$/, "") || CC
+    function Xk(kk) {
+      return kk.replace(/[_\-\s]*\d+$/, "") || kk
     }
 
-    function wC(CC, zC, ZC) {
-      return ZC <= 0 ? 0 : CC * ZC / Math.max(zC, ZC)
+    function Tk(kk, Fk, Ik) {
+      return Ik <= 0 ? 0 : kk * Ik / Math.max(Fk, Ik)
     }
 
-    function bC(CC, zC) {
-      const ZC = CC.getDurationMs();
-      return ZC > 0 ? CC.loudness * Math.max(0, 1 - (zC - CC.startMs) / ZC) : 0
+    function ik(kk, Fk) {
+      const Ik = kk.getDurationMs();
+      return Ik > 0 ? kk.loudness * Math.max(0, 1 - (Fk - kk.startMs) / Ik) : 0
     }
-    class nC {
+    class yk {
       constructor() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
-          zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
-        this.maxVoices = CC, this.maxPerGroup = zC, this.voices = []
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
+          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
+        this.maxVoices = kk, this.maxPerGroup = Fk, this.voices = []
       }
-      admit(CC) {
-        if (this.voices = this.voices.filter((CC => CC.isAlive())), null !== CC.group) {
-          const zC = this.voices.filter((zC => zC.group === CC.group));
-          if (zC.length >= this.maxPerGroup && !this.dropLeastWorth(zC, CC)) return !1
+      admit(kk) {
+        if (this.voices = this.voices.filter((kk => kk.isAlive())), null !== kk.group) {
+          const Fk = this.voices.filter((Fk => Fk.group === kk.group));
+          if (Fk.length >= this.maxPerGroup && !this.dropLeastWorth(Fk, kk)) return !1
         }
-        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, CC)) && (this.voices.push(CC), !0)
+        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, kk)) && (this.voices.push(kk), !0)
       }
-      dropLeastWorth(CC, zC) {
-        let ZC = null,
-          QC = 1 / 0;
-        for (const wC of CC) {
-          if (!wC.canStop()) continue;
-          const CC = bC(wC, zC.startMs);
-          CC < QC && (ZC = wC, QC = CC)
+      dropLeastWorth(kk, Fk) {
+        let Ik = null,
+          Xk = 1 / 0;
+        for (const Tk of kk) {
+          if (!Tk.canStop()) continue;
+          const kk = ik(Tk, Fk.startMs);
+          kk < Xk && (Ik = Tk, Xk = kk)
         }
-        return !(!ZC || zC.loudness < QC) && (this.voices.splice(this.voices.indexOf(ZC), 1), ZC.stop(), !0)
+        return !(!Ik || Fk.loudness < Xk) && (this.voices.splice(this.voices.indexOf(Ik), 1), Ik.stop(), !0)
       }
     }
   },
-  36673: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => bC,
-      f: () => nC,
-      i: () => QC
+  36824: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => ik,
+      h: () => yk,
+      i: () => Xk
     });
-    class QC {
-      constructor(CC) {
-        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = CC
+    class Xk {
+      constructor(kk) {
+        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = kk
       }
-      setMultiplierType(CC, zC) {
-        var ZC;
-        this.multipliers[CC] = zC, null === (ZC = this._onUpdate) || void 0 === ZC || ZC.call(this)
+      setMultiplierType(kk, Fk) {
+        var Ik;
+        this.multipliers[kk] = Fk, null === (Ik = this._onUpdate) || void 0 === Ik || Ik.call(this)
       }
-      removeMultiplier(CC) {
-        var zC;
-        delete this.multipliers[CC], null === (zC = this._onUpdate) || void 0 === zC || zC.call(this)
+      removeMultiplier(kk) {
+        var Fk;
+        delete this.multipliers[kk], null === (Fk = this._onUpdate) || void 0 === Fk || Fk.call(this)
       }
-      getMultiplierType(CC) {
-        return this.multipliers[CC]
+      getMultiplierType(kk) {
+        return this.multipliers[kk]
       }
       getTotalMultipliedVal() {
-        let CC = 1;
-        for (const zC in this.multipliers) CC *= this.multipliers[zC];
-        return CC
+        let kk = 1;
+        for (const Fk in this.multipliers) kk *= this.multipliers[Fk];
+        return kk
       }
     }
-    class wC {
+    class Tk {
       constructor() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = CC
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = kk
       }
-      setBooleanType(CC, zC) {
-        const ZC = this._getTotalBooleanVal();
-        this.booleans[CC] = !!zC;
-        const QC = this.getTotalBooleanVal();
-        var wC;
-        QC !== ZC && (null === (wC = this._onUpdate) || void 0 === wC || wC.call(this, QC, this.booleans));
-        return QC
+      setBooleanType(kk, Fk) {
+        const Ik = this._getTotalBooleanVal();
+        this.booleans[kk] = !!Fk;
+        const Xk = this.getTotalBooleanVal();
+        var Tk;
+        Xk !== Ik && (null === (Tk = this._onUpdate) || void 0 === Tk || Tk.call(this, Xk, this.booleans));
+        return Xk
       }
-      removeBoolean(CC) {
-        const zC = this._getTotalBooleanVal();
-        delete this.booleans[CC];
-        const ZC = this._getTotalBooleanVal();
-        var QC;
-        null !== ZC && ZC !== zC && (null === (QC = this._onUpdate) || void 0 === QC || QC.call(this, ZC, this.booleans));
-        return null !== ZC && void 0 !== ZC && ZC
+      removeBoolean(kk) {
+        const Fk = this._getTotalBooleanVal();
+        delete this.booleans[kk];
+        const Ik = this._getTotalBooleanVal();
+        var Xk;
+        null !== Ik && Ik !== Fk && (null === (Xk = this._onUpdate) || void 0 === Xk || Xk.call(this, Ik, this.booleans));
+        return null !== Ik && void 0 !== Ik && Ik
       }
-      getBooleanType(CC) {
-        return this.booleans[CC]
+      getBooleanType(kk) {
+        return this.booleans[kk]
       }
       getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
       forceUpdate() {
-        var CC;
-        null === (CC = this._onUpdate) || void 0 === CC || CC.call(this, this.getTotalBooleanVal(), this.booleans)
+        var kk;
+        null === (kk = this._onUpdate) || void 0 === kk || kk.call(this, this.getTotalBooleanVal(), this.booleans)
       }
       _getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
     }
-    class bC extends wC {
+    class ik extends Tk {
       getTotalBooleanVal() {
-        const CC = this._getTotalBooleanVal();
-        if (null === CC) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return CC
+        const kk = this._getTotalBooleanVal();
+        if (null === kk) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return kk
       }
       _getTotalBooleanVal() {
-        let CC = !1,
-          zC = !0;
-        for (const ZC in this.booleans) CC = !0, zC &&= this.booleans[ZC];
-        return CC ? zC : null
+        let kk = !1,
+          Fk = !0;
+        for (const Ik in this.booleans) kk = !0, Fk &&= this.booleans[Ik];
+        return kk ? Fk : null
       }
     }
-    class nC extends wC {
+    class yk extends Tk {
       getTotalBooleanVal() {
-        const CC = this._getTotalBooleanVal();
-        if (null === CC) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return CC
+        const kk = this._getTotalBooleanVal();
+        if (null === kk) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return kk
       }
       _getTotalBooleanVal() {
-        let CC = !1,
-          zC = !1;
-        for (const ZC in this.booleans) CC = !0, zC ||= this.booleans[ZC];
-        return CC ? zC : null
+        let kk = !1,
+          Fk = !1;
+        for (const Ik in this.booleans) kk = !0, Fk ||= this.booleans[Ik];
+        return kk ? Fk : null
       }
     }
   },
-  36667: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => bC,
-      g: () => QC,
-      j: () => wC
+  36816: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => ik,
+      e: () => Xk,
+      f: () => Tk
     });
-    const QC = 15,
-      wC = 3,
-      bC = 30
+    const Xk = 15,
+      Tk = 3,
+      ik = 30
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

@@ -1,8 +1,8 @@
 export const id = 221;
 export const ids = [221];
 export const modules = {
-  36521: CC => {
-    CC.exports = {
+  36640: kk => {
+    kk.exports = {
       aliceblue: [240, 248, 255],
       antiquewhite: [250, 235, 215],
       aqua: [0, 255, 255],
@@ -153,363 +153,363 @@ export const modules = {
       yellowgreen: [154, 205, 50]
     }
   },
-  36516: (CC, zC, ZC) => {
-    var QC = ZC(36521),
-      wC = ZC(36525),
-      bC = Object.hasOwnProperty,
-      nC = Object.create(null);
-    for (var fC in QC) bC.call(QC, fC) && (nC[QC[fC]] = fC);
-    var oC = CC.exports = {
+  36631: (kk, Fk, Ik) => {
+    var Xk = Ik(36640),
+      Tk = Ik(36646),
+      ik = Object.hasOwnProperty,
+      yk = Object.create(null);
+    for (var lk in Xk) ik.call(Xk, lk) && (yk[Xk[lk]] = lk);
+    var ak = kk.exports = {
       to: {},
       get: {}
     };
 
-    function qC(CC, zC, ZC) {
-      return Math.min(Math.max(zC, CC), ZC)
+    function qk(kk, Fk, Ik) {
+      return Math.min(Math.max(Fk, kk), Ik)
     }
 
-    function FC(CC) {
-      var zC = Math.round(CC).toString(16).toUpperCase();
-      return zC.length < 2 ? "0" + zC : zC
+    function Lk(kk) {
+      var Fk = Math.round(kk).toString(16).toUpperCase();
+      return Fk.length < 2 ? "0" + Fk : Fk
     }
-    oC.get = function(CC) {
-      var zC, ZC;
-      switch (CC.substring(0, 3).toLowerCase()) {
+    ak.get = function(kk) {
+      var Fk, Ik;
+      switch (kk.substring(0, 3).toLowerCase()) {
         case "hsl":
-          zC = oC.get.hsl(CC), ZC = "hsl";
+          Fk = ak.get.hsl(kk), Ik = "hsl";
           break;
         case "hwb":
-          zC = oC.get.hwb(CC), ZC = "hwb";
+          Fk = ak.get.hwb(kk), Ik = "hwb";
           break;
         default:
-          zC = oC.get.rgb(CC), ZC = "rgb"
+          Fk = ak.get.rgb(kk), Ik = "rgb"
       }
-      return zC ? {
-        model: ZC,
-        value: zC
+      return Fk ? {
+        model: Ik,
+        value: Fk
       } : null
-    }, oC.get.rgb = function(CC) {
-      if (!CC) return null;
-      var zC, ZC, wC, nC = [0, 0, 0, 1];
-      if (zC = CC.match(/^#([a-f0-9]{6})([a-f0-9]{2})?$/i)) {
-        for (wC = zC[2], zC = zC[1], ZC = 0; ZC < 3; ZC++) {
-          var fC = 2 * ZC;
-          nC[ZC] = parseInt(zC.slice(fC, fC + 2), 16)
+    }, ak.get.rgb = function(kk) {
+      if (!kk) return null;
+      var Fk, Ik, Tk, yk = [0, 0, 0, 1];
+      if (Fk = kk.match(/^#([a-f0-9]{6})([a-f0-9]{2})?$/i)) {
+        for (Tk = Fk[2], Fk = Fk[1], Ik = 0; Ik < 3; Ik++) {
+          var lk = 2 * Ik;
+          yk[Ik] = parseInt(Fk.slice(lk, lk + 2), 16)
         }
-        wC && (nC[3] = parseInt(wC, 16) / 255)
-      } else if (zC = CC.match(/^#([a-f0-9]{3,4})$/i)) {
-        for (wC = (zC = zC[1])[3], ZC = 0; ZC < 3; ZC++) nC[ZC] = parseInt(zC[ZC] + zC[ZC], 16);
-        wC && (nC[3] = parseInt(wC + wC, 16) / 255)
-      } else if (zC = CC.match(/^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/)) {
-        for (ZC = 0; ZC < 3; ZC++) nC[ZC] = parseInt(zC[ZC + 1], 0);
-        zC[4] && (zC[5] ? nC[3] = .01 * parseFloat(zC[4]) : nC[3] = parseFloat(zC[4]))
+        Tk && (yk[3] = parseInt(Tk, 16) / 255)
+      } else if (Fk = kk.match(/^#([a-f0-9]{3,4})$/i)) {
+        for (Tk = (Fk = Fk[1])[3], Ik = 0; Ik < 3; Ik++) yk[Ik] = parseInt(Fk[Ik] + Fk[Ik], 16);
+        Tk && (yk[3] = parseInt(Tk + Tk, 16) / 255)
+      } else if (Fk = kk.match(/^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/)) {
+        for (Ik = 0; Ik < 3; Ik++) yk[Ik] = parseInt(Fk[Ik + 1], 0);
+        Fk[4] && (Fk[5] ? yk[3] = .01 * parseFloat(Fk[4]) : yk[3] = parseFloat(Fk[4]))
       } else {
-        if (!(zC = CC.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/))) return (zC = CC.match(/^(\w+)$/)) ? "transparent" === zC[1] ? [0, 0, 0, 0] : bC.call(QC, zC[1]) ? ((nC = QC[zC[1]])[3] = 1, nC) : null : null;
-        for (ZC = 0; ZC < 3; ZC++) nC[ZC] = Math.round(2.55 * parseFloat(zC[ZC + 1]));
-        zC[4] && (zC[5] ? nC[3] = .01 * parseFloat(zC[4]) : nC[3] = parseFloat(zC[4]))
+        if (!(Fk = kk.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/))) return (Fk = kk.match(/^(\w+)$/)) ? "transparent" === Fk[1] ? [0, 0, 0, 0] : ik.call(Xk, Fk[1]) ? ((yk = Xk[Fk[1]])[3] = 1, yk) : null : null;
+        for (Ik = 0; Ik < 3; Ik++) yk[Ik] = Math.round(2.55 * parseFloat(Fk[Ik + 1]));
+        Fk[4] && (Fk[5] ? yk[3] = .01 * parseFloat(Fk[4]) : yk[3] = parseFloat(Fk[4]))
       }
-      for (ZC = 0; ZC < 3; ZC++) nC[ZC] = qC(nC[ZC], 0, 255);
-      return nC[3] = qC(nC[3], 0, 1), nC
-    }, oC.get.hsl = function(CC) {
-      if (!CC) return null;
-      var zC = CC.match(/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
-      if (zC) {
-        var ZC = parseFloat(zC[4]);
-        return [(parseFloat(zC[1]) % 360 + 360) % 360, qC(parseFloat(zC[2]), 0, 100), qC(parseFloat(zC[3]), 0, 100), qC(isNaN(ZC) ? 1 : ZC, 0, 1)]
-      }
-      return null
-    }, oC.get.hwb = function(CC) {
-      if (!CC) return null;
-      var zC = CC.match(/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
-      if (zC) {
-        var ZC = parseFloat(zC[4]);
-        return [(parseFloat(zC[1]) % 360 + 360) % 360, qC(parseFloat(zC[2]), 0, 100), qC(parseFloat(zC[3]), 0, 100), qC(isNaN(ZC) ? 1 : ZC, 0, 1)]
+      for (Ik = 0; Ik < 3; Ik++) yk[Ik] = qk(yk[Ik], 0, 255);
+      return yk[3] = qk(yk[3], 0, 1), yk
+    }, ak.get.hsl = function(kk) {
+      if (!kk) return null;
+      var Fk = kk.match(/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
+      if (Fk) {
+        var Ik = parseFloat(Fk[4]);
+        return [(parseFloat(Fk[1]) % 360 + 360) % 360, qk(parseFloat(Fk[2]), 0, 100), qk(parseFloat(Fk[3]), 0, 100), qk(isNaN(Ik) ? 1 : Ik, 0, 1)]
       }
       return null
-    }, oC.to.hex = function() {
-      var CC = wC(arguments);
-      return "#" + FC(CC[0]) + FC(CC[1]) + FC(CC[2]) + (CC[3] < 1 ? FC(Math.round(255 * CC[3])) : "")
-    }, oC.to.rgb = function() {
-      var CC = wC(arguments);
-      return CC.length < 4 || 1 === CC[3] ? "rgb(" + Math.round(CC[0]) + ", " + Math.round(CC[1]) + ", " + Math.round(CC[2]) + ")" : "rgba(" + Math.round(CC[0]) + ", " + Math.round(CC[1]) + ", " + Math.round(CC[2]) + ", " + CC[3] + ")"
-    }, oC.to.rgb.percent = function() {
-      var CC = wC(arguments),
-        zC = Math.round(CC[0] / 255 * 100),
-        ZC = Math.round(CC[1] / 255 * 100),
-        QC = Math.round(CC[2] / 255 * 100);
-      return CC.length < 4 || 1 === CC[3] ? "rgb(" + zC + "%, " + ZC + "%, " + QC + "%)" : "rgba(" + zC + "%, " + ZC + "%, " + QC + "%, " + CC[3] + ")"
-    }, oC.to.hsl = function() {
-      var CC = wC(arguments);
-      return CC.length < 4 || 1 === CC[3] ? "hsl(" + CC[0] + ", " + CC[1] + "%, " + CC[2] + "%)" : "hsla(" + CC[0] + ", " + CC[1] + "%, " + CC[2] + "%, " + CC[3] + ")"
-    }, oC.to.hwb = function() {
-      var CC = wC(arguments),
-        zC = "";
-      return CC.length >= 4 && 1 !== CC[3] && (zC = ", " + CC[3]), "hwb(" + CC[0] + ", " + CC[1] + "%, " + CC[2] + "%" + zC + ")"
-    }, oC.to.keyword = function(CC) {
-      return nC[CC.slice(0, 3)]
+    }, ak.get.hwb = function(kk) {
+      if (!kk) return null;
+      var Fk = kk.match(/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
+      if (Fk) {
+        var Ik = parseFloat(Fk[4]);
+        return [(parseFloat(Fk[1]) % 360 + 360) % 360, qk(parseFloat(Fk[2]), 0, 100), qk(parseFloat(Fk[3]), 0, 100), qk(isNaN(Ik) ? 1 : Ik, 0, 1)]
+      }
+      return null
+    }, ak.to.hex = function() {
+      var kk = Tk(arguments);
+      return "#" + Lk(kk[0]) + Lk(kk[1]) + Lk(kk[2]) + (kk[3] < 1 ? Lk(Math.round(255 * kk[3])) : "")
+    }, ak.to.rgb = function() {
+      var kk = Tk(arguments);
+      return kk.length < 4 || 1 === kk[3] ? "rgb(" + Math.round(kk[0]) + ", " + Math.round(kk[1]) + ", " + Math.round(kk[2]) + ")" : "rgba(" + Math.round(kk[0]) + ", " + Math.round(kk[1]) + ", " + Math.round(kk[2]) + ", " + kk[3] + ")"
+    }, ak.to.rgb.percent = function() {
+      var kk = Tk(arguments),
+        Fk = Math.round(kk[0] / 255 * 100),
+        Ik = Math.round(kk[1] / 255 * 100),
+        Xk = Math.round(kk[2] / 255 * 100);
+      return kk.length < 4 || 1 === kk[3] ? "rgb(" + Fk + "%, " + Ik + "%, " + Xk + "%)" : "rgba(" + Fk + "%, " + Ik + "%, " + Xk + "%, " + kk[3] + ")"
+    }, ak.to.hsl = function() {
+      var kk = Tk(arguments);
+      return kk.length < 4 || 1 === kk[3] ? "hsl(" + kk[0] + ", " + kk[1] + "%, " + kk[2] + "%)" : "hsla(" + kk[0] + ", " + kk[1] + "%, " + kk[2] + "%, " + kk[3] + ")"
+    }, ak.to.hwb = function() {
+      var kk = Tk(arguments),
+        Fk = "";
+      return kk.length >= 4 && 1 !== kk[3] && (Fk = ", " + kk[3]), "hwb(" + kk[0] + ", " + kk[1] + "%, " + kk[2] + "%" + Fk + ")"
+    }, ak.to.keyword = function(kk) {
+      return yk[kk.slice(0, 3)]
     }
   },
-  36512: (CC, zC, ZC) => {
-    const QC = ZC(36516),
-      wC = ZC(36535),
-      bC = ["keyword", "gray", "hex"],
-      nC = {};
-    for (const MC of Object.keys(wC)) nC[[...wC[MC].labels].sort().join("")] = MC;
-    const fC = {};
+  36624: (kk, Fk, Ik) => {
+    const Xk = Ik(36631),
+      Tk = Ik(36658),
+      ik = ["keyword", "gray", "hex"],
+      yk = {};
+    for (const jk of Object.keys(Tk)) yk[[...Tk[jk].labels].sort().join("")] = jk;
+    const lk = {};
 
-    function oC(CC, zC) {
-      if (!(this instanceof oC)) return new oC(CC, zC);
-      if (zC && zC in bC && (zC = null), zC && !(zC in wC)) throw new Error("Unknown model: " + zC);
-      let ZC, qC;
-      if (null == CC) this.model = "rgb", this.color = [0, 0, 0], this.valpha = 1;
-      else if (CC instanceof oC) this.model = CC.model, this.color = [...CC.color], this.valpha = CC.valpha;
-      else if ("string" === typeof CC) {
-        const zC = QC.get(CC);
-        if (null === zC) throw new Error("Unable to parse color from string: " + CC);
-        this.model = zC.model, qC = wC[this.model].channels, this.color = zC.value.slice(0, qC), this.valpha = "number" === typeof zC.value[qC] ? zC.value[qC] : 1
-      } else if (CC.length > 0) {
-        this.model = zC || "rgb", qC = wC[this.model].channels;
-        const ZC = Array.prototype.slice.call(CC, 0, qC);
-        this.color = NC(ZC, qC), this.valpha = "number" === typeof CC[qC] ? CC[qC] : 1
-      } else if ("number" === typeof CC) this.model = "rgb", this.color = [CC >> 16 & 255, CC >> 8 & 255, 255 & CC], this.valpha = 1;
+    function ak(kk, Fk) {
+      if (!(this instanceof ak)) return new ak(kk, Fk);
+      if (Fk && Fk in ik && (Fk = null), Fk && !(Fk in Tk)) throw new Error("Unknown model: " + Fk);
+      let Ik, qk;
+      if (null == kk) this.model = "rgb", this.color = [0, 0, 0], this.valpha = 1;
+      else if (kk instanceof ak) this.model = kk.model, this.color = [...kk.color], this.valpha = kk.valpha;
+      else if ("string" === typeof kk) {
+        const Fk = Xk.get(kk);
+        if (null === Fk) throw new Error("Unable to parse color from string: " + kk);
+        this.model = Fk.model, qk = Tk[this.model].channels, this.color = Fk.value.slice(0, qk), this.valpha = "number" === typeof Fk.value[qk] ? Fk.value[qk] : 1
+      } else if (kk.length > 0) {
+        this.model = Fk || "rgb", qk = Tk[this.model].channels;
+        const Ik = Array.prototype.slice.call(kk, 0, qk);
+        this.color = Zk(Ik, qk), this.valpha = "number" === typeof kk[qk] ? kk[qk] : 1
+      } else if ("number" === typeof kk) this.model = "rgb", this.color = [kk >> 16 & 255, kk >> 8 & 255, 255 & kk], this.valpha = 1;
       else {
         this.valpha = 1;
-        const zC = Object.keys(CC);
-        "alpha" in CC && (zC.splice(zC.indexOf("alpha"), 1), this.valpha = "number" === typeof CC.alpha ? CC.alpha : 0);
-        const QC = zC.sort().join("");
-        if (!(QC in nC)) throw new Error("Unable to parse color from object: " + JSON.stringify(CC));
-        this.model = nC[QC];
+        const Fk = Object.keys(kk);
+        "alpha" in kk && (Fk.splice(Fk.indexOf("alpha"), 1), this.valpha = "number" === typeof kk.alpha ? kk.alpha : 0);
+        const Xk = Fk.sort().join("");
+        if (!(Xk in yk)) throw new Error("Unable to parse color from object: " + JSON.stringify(kk));
+        this.model = yk[Xk];
         const {
-          labels: bC
-        } = wC[this.model], fC = [];
-        for (ZC = 0; ZC < bC.length; ZC++) fC.push(CC[bC[ZC]]);
-        this.color = NC(fC)
+          labels: ik
+        } = Tk[this.model], lk = [];
+        for (Ik = 0; Ik < ik.length; Ik++) lk.push(kk[ik[Ik]]);
+        this.color = Zk(lk)
       }
-      if (fC[this.model])
-        for (qC = wC[this.model].channels, ZC = 0; ZC < qC; ZC++) {
-          const CC = fC[this.model][ZC];
-          CC && (this.color[ZC] = CC(this.color[ZC]))
+      if (lk[this.model])
+        for (qk = Tk[this.model].channels, Ik = 0; Ik < qk; Ik++) {
+          const kk = lk[this.model][Ik];
+          kk && (this.color[Ik] = kk(this.color[Ik]))
         }
       this.valpha = Math.max(0, Math.min(1, this.valpha)), Object.freeze && Object.freeze(this)
     }
-    oC.prototype = {
+    ak.prototype = {
       toString() {
         return this.string()
       },
       toJSON() {
         return this[this.model]()
       },
-      string(CC) {
-        let zC = this.model in QC.to ? this : this.rgb();
-        zC = zC.round("number" === typeof CC ? CC : 1);
-        const ZC = 1 === zC.valpha ? zC.color : [...zC.color, this.valpha];
-        return QC.to[zC.model](ZC)
+      string(kk) {
+        let Fk = this.model in Xk.to ? this : this.rgb();
+        Fk = Fk.round("number" === typeof kk ? kk : 1);
+        const Ik = 1 === Fk.valpha ? Fk.color : [...Fk.color, this.valpha];
+        return Xk.to[Fk.model](Ik)
       },
-      percentString(CC) {
-        const zC = this.rgb().round("number" === typeof CC ? CC : 1),
-          ZC = 1 === zC.valpha ? zC.color : [...zC.color, this.valpha];
-        return QC.to.rgb.percent(ZC)
+      percentString(kk) {
+        const Fk = this.rgb().round("number" === typeof kk ? kk : 1),
+          Ik = 1 === Fk.valpha ? Fk.color : [...Fk.color, this.valpha];
+        return Xk.to.rgb.percent(Ik)
       },
       array() {
         return 1 === this.valpha ? [...this.color] : [...this.color, this.valpha]
       },
       object() {
-        const CC = {},
+        const kk = {},
           {
-            channels: zC
-          } = wC[this.model],
+            channels: Fk
+          } = Tk[this.model],
           {
-            labels: ZC
-          } = wC[this.model];
-        for (let QC = 0; QC < zC; QC++) CC[ZC[QC]] = this.color[QC];
-        return 1 !== this.valpha && (CC.alpha = this.valpha), CC
+            labels: Ik
+          } = Tk[this.model];
+        for (let Xk = 0; Xk < Fk; Xk++) kk[Ik[Xk]] = this.color[Xk];
+        return 1 !== this.valpha && (kk.alpha = this.valpha), kk
       },
       unitArray() {
-        const CC = this.rgb().color;
-        return CC[0] /= 255, CC[1] /= 255, CC[2] /= 255, 1 !== this.valpha && CC.push(this.valpha), CC
+        const kk = this.rgb().color;
+        return kk[0] /= 255, kk[1] /= 255, kk[2] /= 255, 1 !== this.valpha && kk.push(this.valpha), kk
       },
       unitObject() {
-        const CC = this.rgb().object();
-        return CC.r /= 255, CC.g /= 255, CC.b /= 255, 1 !== this.valpha && (CC.alpha = this.valpha), CC
+        const kk = this.rgb().object();
+        return kk.r /= 255, kk.g /= 255, kk.b /= 255, 1 !== this.valpha && (kk.alpha = this.valpha), kk
       },
-      round(CC) {
-        return CC = Math.max(CC || 0, 0), new oC([...this.color.map(qC(CC)), this.valpha], this.model)
+      round(kk) {
+        return kk = Math.max(kk || 0, 0), new ak([...this.color.map(qk(kk)), this.valpha], this.model)
       },
-      alpha(CC) {
-        return void 0 !== CC ? new oC([...this.color, Math.max(0, Math.min(1, CC))], this.model) : this.valpha
+      alpha(kk) {
+        return void 0 !== kk ? new ak([...this.color, Math.max(0, Math.min(1, kk))], this.model) : this.valpha
       },
-      red: FC("rgb", 0, WC(255)),
-      green: FC("rgb", 1, WC(255)),
-      blue: FC("rgb", 2, WC(255)),
-      hue: FC(["hsl", "hsv", "hsl", "hwb", "hcg"], 0, (CC => (CC % 360 + 360) % 360)),
-      saturationl: FC("hsl", 1, WC(100)),
-      lightness: FC("hsl", 2, WC(100)),
-      saturationv: FC("hsv", 1, WC(100)),
-      value: FC("hsv", 2, WC(100)),
-      chroma: FC("hcg", 1, WC(100)),
-      gray: FC("hcg", 2, WC(100)),
-      white: FC("hwb", 1, WC(100)),
-      wblack: FC("hwb", 2, WC(100)),
-      cyan: FC("cmyk", 0, WC(100)),
-      magenta: FC("cmyk", 1, WC(100)),
-      yellow: FC("cmyk", 2, WC(100)),
-      black: FC("cmyk", 3, WC(100)),
-      x: FC("xyz", 0, WC(95.047)),
-      y: FC("xyz", 1, WC(100)),
-      z: FC("xyz", 2, WC(108.833)),
-      l: FC("lab", 0, WC(100)),
-      a: FC("lab", 1),
-      b: FC("lab", 2),
-      keyword(CC) {
-        return void 0 !== CC ? new oC(CC) : wC[this.model].keyword(this.color)
+      red: Lk("rgb", 0, tk(255)),
+      green: Lk("rgb", 1, tk(255)),
+      blue: Lk("rgb", 2, tk(255)),
+      hue: Lk(["hsl", "hsv", "hsl", "hwb", "hcg"], 0, (kk => (kk % 360 + 360) % 360)),
+      saturationl: Lk("hsl", 1, tk(100)),
+      lightness: Lk("hsl", 2, tk(100)),
+      saturationv: Lk("hsv", 1, tk(100)),
+      value: Lk("hsv", 2, tk(100)),
+      chroma: Lk("hcg", 1, tk(100)),
+      gray: Lk("hcg", 2, tk(100)),
+      white: Lk("hwb", 1, tk(100)),
+      wblack: Lk("hwb", 2, tk(100)),
+      cyan: Lk("cmyk", 0, tk(100)),
+      magenta: Lk("cmyk", 1, tk(100)),
+      yellow: Lk("cmyk", 2, tk(100)),
+      black: Lk("cmyk", 3, tk(100)),
+      x: Lk("xyz", 0, tk(95.047)),
+      y: Lk("xyz", 1, tk(100)),
+      z: Lk("xyz", 2, tk(108.833)),
+      l: Lk("lab", 0, tk(100)),
+      a: Lk("lab", 1),
+      b: Lk("lab", 2),
+      keyword(kk) {
+        return void 0 !== kk ? new ak(kk) : Tk[this.model].keyword(this.color)
       },
-      hex(CC) {
-        return void 0 !== CC ? new oC(CC) : QC.to.hex(this.rgb().round().color)
+      hex(kk) {
+        return void 0 !== kk ? new ak(kk) : Xk.to.hex(this.rgb().round().color)
       },
-      hexa(CC) {
-        if (void 0 !== CC) return new oC(CC);
-        const zC = this.rgb().round().color;
-        let ZC = Math.round(255 * this.valpha).toString(16).toUpperCase();
-        return 1 === ZC.length && (ZC = "0" + ZC), QC.to.hex(zC) + ZC
+      hexa(kk) {
+        if (void 0 !== kk) return new ak(kk);
+        const Fk = this.rgb().round().color;
+        let Ik = Math.round(255 * this.valpha).toString(16).toUpperCase();
+        return 1 === Ik.length && (Ik = "0" + Ik), Xk.to.hex(Fk) + Ik
       },
       rgbNumber() {
-        const CC = this.rgb().color;
-        return (255 & CC[0]) << 16 | (255 & CC[1]) << 8 | 255 & CC[2]
+        const kk = this.rgb().color;
+        return (255 & kk[0]) << 16 | (255 & kk[1]) << 8 | 255 & kk[2]
       },
       luminosity() {
-        const CC = this.rgb().color,
-          zC = [];
-        for (const [ZC, QC] of CC.entries()) {
-          const CC = QC / 255;
-          zC[ZC] = CC <= .04045 ? CC / 12.92 : ((CC + .055) / 1.055) ** 2.4
+        const kk = this.rgb().color,
+          Fk = [];
+        for (const [Ik, Xk] of kk.entries()) {
+          const kk = Xk / 255;
+          Fk[Ik] = kk <= .04045 ? kk / 12.92 : ((kk + .055) / 1.055) ** 2.4
         }
-        return .2126 * zC[0] + .7152 * zC[1] + .0722 * zC[2]
+        return .2126 * Fk[0] + .7152 * Fk[1] + .0722 * Fk[2]
       },
-      contrast(CC) {
-        const zC = this.luminosity(),
-          ZC = CC.luminosity();
-        return zC > ZC ? (zC + .05) / (ZC + .05) : (ZC + .05) / (zC + .05)
+      contrast(kk) {
+        const Fk = this.luminosity(),
+          Ik = kk.luminosity();
+        return Fk > Ik ? (Fk + .05) / (Ik + .05) : (Ik + .05) / (Fk + .05)
       },
-      level(CC) {
-        const zC = this.contrast(CC);
-        return zC >= 7 ? "AAA" : zC >= 4.5 ? "AA" : ""
+      level(kk) {
+        const Fk = this.contrast(kk);
+        return Fk >= 7 ? "AAA" : Fk >= 4.5 ? "AA" : ""
       },
       isDark() {
-        const CC = this.rgb().color;
-        return (2126 * CC[0] + 7152 * CC[1] + 722 * CC[2]) / 1e4 < 128
+        const kk = this.rgb().color;
+        return (2126 * kk[0] + 7152 * kk[1] + 722 * kk[2]) / 1e4 < 128
       },
       isLight() {
         return !this.isDark()
       },
-      Of() {
-        const CC = this.rgb();
-        for (let zC = 0; zC < 3; zC++) CC.color[zC] = 255 - CC.color[zC];
-        return CC
+      nX() {
+        const kk = this.rgb();
+        for (let Fk = 0; Fk < 3; Fk++) kk.color[Fk] = 255 - kk.color[Fk];
+        return kk
       },
-      lighten(CC) {
-        const zC = this.hsl();
-        return zC.color[2] += zC.color[2] * CC, zC
+      lighten(kk) {
+        const Fk = this.hsl();
+        return Fk.color[2] += Fk.color[2] * kk, Fk
       },
-      darken(CC) {
-        const zC = this.hsl();
-        return zC.color[2] -= zC.color[2] * CC, zC
+      darken(kk) {
+        const Fk = this.hsl();
+        return Fk.color[2] -= Fk.color[2] * kk, Fk
       },
-      saturate(CC) {
-        const zC = this.hsl();
-        return zC.color[1] += zC.color[1] * CC, zC
+      saturate(kk) {
+        const Fk = this.hsl();
+        return Fk.color[1] += Fk.color[1] * kk, Fk
       },
-      desaturate(CC) {
-        const zC = this.hsl();
-        return zC.color[1] -= zC.color[1] * CC, zC
+      desaturate(kk) {
+        const Fk = this.hsl();
+        return Fk.color[1] -= Fk.color[1] * kk, Fk
       },
-      whiten(CC) {
-        const zC = this.hwb();
-        return zC.color[1] += zC.color[1] * CC, zC
+      whiten(kk) {
+        const Fk = this.hwb();
+        return Fk.color[1] += Fk.color[1] * kk, Fk
       },
-      blacken(CC) {
-        const zC = this.hwb();
-        return zC.color[2] += zC.color[2] * CC, zC
+      blacken(kk) {
+        const Fk = this.hwb();
+        return Fk.color[2] += Fk.color[2] * kk, Fk
       },
       grayscale() {
-        const CC = this.rgb().color,
-          zC = .3 * CC[0] + .59 * CC[1] + .11 * CC[2];
-        return oC.rgb(zC, zC, zC)
+        const kk = this.rgb().color,
+          Fk = .3 * kk[0] + .59 * kk[1] + .11 * kk[2];
+        return ak.rgb(Fk, Fk, Fk)
       },
-      fade(CC) {
-        return this.alpha(this.valpha - this.valpha * CC)
+      fade(kk) {
+        return this.alpha(this.valpha - this.valpha * kk)
       },
-      opaquer(CC) {
-        return this.alpha(this.valpha + this.valpha * CC)
+      opaquer(kk) {
+        return this.alpha(this.valpha + this.valpha * kk)
       },
-      rotate(CC) {
-        const zC = this.hsl();
-        let ZC = zC.color[0];
-        return ZC = (ZC + CC) % 360, ZC = ZC < 0 ? 360 + ZC : ZC, zC.color[0] = ZC, zC
+      rotate(kk) {
+        const Fk = this.hsl();
+        let Ik = Fk.color[0];
+        return Ik = (Ik + kk) % 360, Ik = Ik < 0 ? 360 + Ik : Ik, Fk.color[0] = Ik, Fk
       },
-      mix(CC, zC) {
-        if (!CC || !CC.rgb) throw new Error('Argument to "mix" was not a Color instance, but rather an instance of ' + typeof CC);
-        const ZC = CC.rgb(),
-          QC = this.rgb(),
-          wC = void 0 === zC ? .5 : zC,
-          bC = 2 * wC - 1,
-          nC = ZC.alpha() - QC.alpha(),
-          fC = ((bC * nC === -1 ? bC : (bC + nC) / (1 + bC * nC)) + 1) / 2,
-          qC = 1 - fC;
-        return oC.rgb(fC * ZC.red() + qC * QC.red(), fC * ZC.green() + qC * QC.green(), fC * ZC.blue() + qC * QC.blue(), ZC.alpha() * wC + QC.alpha() * (1 - wC))
+      mix(kk, Fk) {
+        if (!kk || !kk.rgb) throw new Error('Argument to "mix" was not a Color instance, but rather an instance of ' + typeof kk);
+        const Ik = kk.rgb(),
+          Xk = this.rgb(),
+          Tk = void 0 === Fk ? .5 : Fk,
+          ik = 2 * Tk - 1,
+          yk = Ik.alpha() - Xk.alpha(),
+          lk = ((ik * yk === -1 ? ik : (ik + yk) / (1 + ik * yk)) + 1) / 2,
+          qk = 1 - lk;
+        return ak.rgb(lk * Ik.red() + qk * Xk.red(), lk * Ik.green() + qk * Xk.green(), lk * Ik.blue() + qk * Xk.blue(), Ik.alpha() * Tk + Xk.alpha() * (1 - Tk))
       }
     };
-    for (const MC of Object.keys(wC)) {
-      if (bC.includes(MC)) continue;
+    for (const jk of Object.keys(Tk)) {
+      if (ik.includes(jk)) continue;
       const {
-        channels: CC
-      } = wC[MC];
-      oC.prototype[MC] = function() {
-        if (this.model === MC) return new oC(this);
-        for (var CC = arguments.length, zC = new Array(CC), ZC = 0; ZC < CC; ZC++) zC[ZC] = arguments[ZC];
-        return zC.length > 0 ? new oC(zC, MC) : new oC([...(QC = wC[this.model][MC].raw(this.color), Array.isArray(QC) ? QC : [QC]), this.valpha], MC);
-        var QC
-      }, oC[MC] = function() {
-        for (var zC = arguments.length, ZC = new Array(zC), QC = 0; QC < zC; QC++) ZC[QC] = arguments[QC];
-        let wC = ZC[0];
-        return "number" === typeof wC && (wC = NC(ZC, CC)), new oC(wC, MC)
+        channels: kk
+      } = Tk[jk];
+      ak.prototype[jk] = function() {
+        if (this.model === jk) return new ak(this);
+        for (var kk = arguments.length, Fk = new Array(kk), Ik = 0; Ik < kk; Ik++) Fk[Ik] = arguments[Ik];
+        return Fk.length > 0 ? new ak(Fk, jk) : new ak([...(Xk = Tk[this.model][jk].raw(this.color), Array.isArray(Xk) ? Xk : [Xk]), this.valpha], jk);
+        var Xk
+      }, ak[jk] = function() {
+        for (var Fk = arguments.length, Ik = new Array(Fk), Xk = 0; Xk < Fk; Xk++) Ik[Xk] = arguments[Xk];
+        let Tk = Ik[0];
+        return "number" === typeof Tk && (Tk = Zk(Ik, kk)), new ak(Tk, jk)
       }
     }
 
-    function qC(CC) {
-      return function(zC) {
-        return function(CC, zC) {
-          return Number(CC.toFixed(zC))
-        }(zC, CC)
+    function qk(kk) {
+      return function(Fk) {
+        return function(kk, Fk) {
+          return Number(kk.toFixed(Fk))
+        }(Fk, kk)
       }
     }
 
-    function FC(CC, zC, ZC) {
-      CC = Array.isArray(CC) ? CC : [CC];
-      for (const QC of CC)(fC[QC] || (fC[QC] = []))[zC] = ZC;
-      return CC = CC[0],
-        function(QC) {
-          let wC;
-          return void 0 !== QC ? (ZC && (QC = ZC(QC)), wC = this[CC](), wC.color[zC] = QC, wC) : (wC = this[CC]().color[zC], ZC && (wC = ZC(wC)), wC)
+    function Lk(kk, Fk, Ik) {
+      kk = Array.isArray(kk) ? kk : [kk];
+      for (const Xk of kk)(lk[Xk] || (lk[Xk] = []))[Fk] = Ik;
+      return kk = kk[0],
+        function(Xk) {
+          let Tk;
+          return void 0 !== Xk ? (Ik && (Xk = Ik(Xk)), Tk = this[kk](), Tk.color[Fk] = Xk, Tk) : (Tk = this[kk]().color[Fk], Ik && (Tk = Ik(Tk)), Tk)
         }
     }
 
-    function WC(CC) {
-      return function(zC) {
-        return Math.max(0, Math.min(CC, zC))
+    function tk(kk) {
+      return function(Fk) {
+        return Math.max(0, Math.min(kk, Fk))
       }
     }
 
-    function NC(CC, zC) {
-      for (let ZC = 0; ZC < zC; ZC++) "number" !== typeof CC[ZC] && (CC[ZC] = 0);
-      return CC
+    function Zk(kk, Fk) {
+      for (let Ik = 0; Ik < Fk; Ik++) "number" !== typeof kk[Ik] && (kk[Ik] = 0);
+      return kk
     }
-    CC.exports = oC
+    kk.exports = ak
   },
-  36537: (CC, zC, ZC) => {
-    const QC = ZC(36545),
-      wC = {};
-    for (const nC of Object.keys(QC)) wC[QC[nC]] = nC;
-    const bC = {
+  36662: (kk, Fk, Ik) => {
+    const Xk = Ik(36665),
+      Tk = {};
+    for (const yk of Object.keys(Xk)) Tk[Xk[yk]] = yk;
+    const ik = {
       rgb: {
         channels: 3,
         labels: "rgb"
@@ -571,422 +571,422 @@ export const modules = {
         labels: ["gray"]
       }
     };
-    CC.exports = bC;
-    for (const nC of Object.keys(bC)) {
-      if (!("channels" in bC[nC])) throw new Error("missing channels property: " + nC);
-      if (!("labels" in bC[nC])) throw new Error("missing channel labels property: " + nC);
-      if (bC[nC].labels.length !== bC[nC].channels) throw new Error("channel and label counts mismatch: " + nC);
+    kk.exports = ik;
+    for (const yk of Object.keys(ik)) {
+      if (!("channels" in ik[yk])) throw new Error("missing channels property: " + yk);
+      if (!("labels" in ik[yk])) throw new Error("missing channel labels property: " + yk);
+      if (ik[yk].labels.length !== ik[yk].channels) throw new Error("channel and label counts mismatch: " + yk);
       const {
-        channels: CC,
-        labels: zC
-      } = bC[nC];
-      delete bC[nC].channels, delete bC[nC].labels, Object.defineProperty(bC[nC], "channels", {
-        value: CC
-      }), Object.defineProperty(bC[nC], "labels", {
-        value: zC
+        channels: kk,
+        labels: Fk
+      } = ik[yk];
+      delete ik[yk].channels, delete ik[yk].labels, Object.defineProperty(ik[yk], "channels", {
+        value: kk
+      }), Object.defineProperty(ik[yk], "labels", {
+        value: Fk
       })
     }
-    bC.rgb.hsl = function(CC) {
-      const zC = CC[0] / 255,
-        ZC = CC[1] / 255,
-        QC = CC[2] / 255,
-        wC = Math.min(zC, ZC, QC),
-        bC = Math.max(zC, ZC, QC),
-        nC = bC - wC;
-      let fC, oC;
-      bC === wC ? fC = 0 : zC === bC ? fC = (ZC - QC) / nC : ZC === bC ? fC = 2 + (QC - zC) / nC : QC === bC && (fC = 4 + (zC - ZC) / nC), fC = Math.min(60 * fC, 360), fC < 0 && (fC += 360);
-      const qC = (wC + bC) / 2;
-      return oC = bC === wC ? 0 : qC <= .5 ? nC / (bC + wC) : nC / (2 - bC - wC), [fC, 100 * oC, 100 * qC]
-    }, bC.rgb.hsv = function(CC) {
-      let zC, ZC, QC, wC, bC;
-      const nC = CC[0] / 255,
-        fC = CC[1] / 255,
-        oC = CC[2] / 255,
-        qC = Math.max(nC, fC, oC),
-        FC = qC - Math.min(nC, fC, oC),
-        WC = function(CC) {
-          return (qC - CC) / 6 / FC + .5
+    ik.rgb.hsl = function(kk) {
+      const Fk = kk[0] / 255,
+        Ik = kk[1] / 255,
+        Xk = kk[2] / 255,
+        Tk = Math.min(Fk, Ik, Xk),
+        ik = Math.max(Fk, Ik, Xk),
+        yk = ik - Tk;
+      let lk, ak;
+      ik === Tk ? lk = 0 : Fk === ik ? lk = (Ik - Xk) / yk : Ik === ik ? lk = 2 + (Xk - Fk) / yk : Xk === ik && (lk = 4 + (Fk - Ik) / yk), lk = Math.min(60 * lk, 360), lk < 0 && (lk += 360);
+      const qk = (Tk + ik) / 2;
+      return ak = ik === Tk ? 0 : qk <= .5 ? yk / (ik + Tk) : yk / (2 - ik - Tk), [lk, 100 * ak, 100 * qk]
+    }, ik.rgb.hsv = function(kk) {
+      let Fk, Ik, Xk, Tk, ik;
+      const yk = kk[0] / 255,
+        lk = kk[1] / 255,
+        ak = kk[2] / 255,
+        qk = Math.max(yk, lk, ak),
+        Lk = qk - Math.min(yk, lk, ak),
+        tk = function(kk) {
+          return (qk - kk) / 6 / Lk + .5
         };
-      return 0 === FC ? (wC = 0, bC = 0) : (bC = FC / qC, zC = WC(nC), ZC = WC(fC), QC = WC(oC), nC === qC ? wC = QC - ZC : fC === qC ? wC = 1 / 3 + zC - QC : oC === qC && (wC = 2 / 3 + ZC - zC), wC < 0 ? wC += 1 : wC > 1 && (wC -= 1)), [360 * wC, 100 * bC, 100 * qC]
-    }, bC.rgb.hwb = function(CC) {
-      const zC = CC[0],
-        ZC = CC[1];
-      let QC = CC[2];
-      const wC = bC.rgb.hsl(CC)[0],
-        nC = 1 / 255 * Math.min(zC, Math.min(ZC, QC));
-      return QC = 1 - 1 / 255 * Math.max(zC, Math.max(ZC, QC)), [wC, 100 * nC, 100 * QC]
-    }, bC.rgb.cmyk = function(CC) {
-      const zC = CC[0] / 255,
-        ZC = CC[1] / 255,
-        QC = CC[2] / 255,
-        wC = Math.min(1 - zC, 1 - ZC, 1 - QC);
-      return [100 * ((1 - zC - wC) / (1 - wC) || 0), 100 * ((1 - ZC - wC) / (1 - wC) || 0), 100 * ((1 - QC - wC) / (1 - wC) || 0), 100 * wC]
-    }, bC.rgb.keyword = function(CC) {
-      const zC = wC[CC];
-      if (zC) return zC;
-      let ZC, bC = 1 / 0;
-      for (const wC of Object.keys(QC)) {
-        const zC = QC[wC],
-          oC = (fC = zC, ((nC = CC)[0] - fC[0]) ** 2 + (nC[1] - fC[1]) ** 2 + (nC[2] - fC[2]) ** 2);
-        oC < bC && (bC = oC, ZC = wC)
+      return 0 === Lk ? (Tk = 0, ik = 0) : (ik = Lk / qk, Fk = tk(yk), Ik = tk(lk), Xk = tk(ak), yk === qk ? Tk = Xk - Ik : lk === qk ? Tk = 1 / 3 + Fk - Xk : ak === qk && (Tk = 2 / 3 + Ik - Fk), Tk < 0 ? Tk += 1 : Tk > 1 && (Tk -= 1)), [360 * Tk, 100 * ik, 100 * qk]
+    }, ik.rgb.hwb = function(kk) {
+      const Fk = kk[0],
+        Ik = kk[1];
+      let Xk = kk[2];
+      const Tk = ik.rgb.hsl(kk)[0],
+        yk = 1 / 255 * Math.min(Fk, Math.min(Ik, Xk));
+      return Xk = 1 - 1 / 255 * Math.max(Fk, Math.max(Ik, Xk)), [Tk, 100 * yk, 100 * Xk]
+    }, ik.rgb.cmyk = function(kk) {
+      const Fk = kk[0] / 255,
+        Ik = kk[1] / 255,
+        Xk = kk[2] / 255,
+        Tk = Math.min(1 - Fk, 1 - Ik, 1 - Xk);
+      return [100 * ((1 - Fk - Tk) / (1 - Tk) || 0), 100 * ((1 - Ik - Tk) / (1 - Tk) || 0), 100 * ((1 - Xk - Tk) / (1 - Tk) || 0), 100 * Tk]
+    }, ik.rgb.keyword = function(kk) {
+      const Fk = Tk[kk];
+      if (Fk) return Fk;
+      let Ik, ik = 1 / 0;
+      for (const Tk of Object.keys(Xk)) {
+        const Fk = Xk[Tk],
+          ak = (lk = Fk, ((yk = kk)[0] - lk[0]) ** 2 + (yk[1] - lk[1]) ** 2 + (yk[2] - lk[2]) ** 2);
+        ak < ik && (ik = ak, Ik = Tk)
       }
-      var nC, fC;
-      return ZC
-    }, bC.keyword.rgb = function(CC) {
-      return QC[CC]
-    }, bC.rgb.xyz = function(CC) {
-      let zC = CC[0] / 255,
-        ZC = CC[1] / 255,
-        QC = CC[2] / 255;
-      zC = zC > .04045 ? ((zC + .055) / 1.055) ** 2.4 : zC / 12.92, ZC = ZC > .04045 ? ((ZC + .055) / 1.055) ** 2.4 : ZC / 12.92, QC = QC > .04045 ? ((QC + .055) / 1.055) ** 2.4 : QC / 12.92;
-      return [100 * (.4124 * zC + .3576 * ZC + .1805 * QC), 100 * (.2126 * zC + .7152 * ZC + .0722 * QC), 100 * (.0193 * zC + .1192 * ZC + .9505 * QC)]
-    }, bC.rgb.lab = function(CC) {
-      const zC = bC.rgb.xyz(CC);
-      let ZC = zC[0],
-        QC = zC[1],
-        wC = zC[2];
-      ZC /= 95.047, QC /= 100, wC /= 108.883, ZC = ZC > .008856 ? ZC ** (1 / 3) : 7.787 * ZC + 16 / 116, QC = QC > .008856 ? QC ** (1 / 3) : 7.787 * QC + 16 / 116, wC = wC > .008856 ? wC ** (1 / 3) : 7.787 * wC + 16 / 116;
-      return [116 * QC - 16, 500 * (ZC - QC), 200 * (QC - wC)]
-    }, bC.hsl.rgb = function(CC) {
-      const zC = CC[0] / 360,
-        ZC = CC[1] / 100,
-        QC = CC[2] / 100;
-      let wC, bC, nC;
-      if (0 === ZC) return nC = 255 * QC, [nC, nC, nC];
-      wC = QC < .5 ? QC * (1 + ZC) : QC + ZC - QC * ZC;
-      const fC = 2 * QC - wC,
-        oC = [0, 0, 0];
-      for (let qC = 0; qC < 3; qC++) bC = zC + 1 / 3 * -(qC - 1), bC < 0 && bC++, bC > 1 && bC--, nC = 6 * bC < 1 ? fC + 6 * (wC - fC) * bC : 2 * bC < 1 ? wC : 3 * bC < 2 ? fC + (wC - fC) * (2 / 3 - bC) * 6 : fC, oC[qC] = 255 * nC;
-      return oC
-    }, bC.hsl.hsv = function(CC) {
-      const zC = CC[0];
-      let ZC = CC[1] / 100,
-        QC = CC[2] / 100,
-        wC = ZC;
-      const bC = Math.max(QC, .01);
-      QC *= 2, ZC *= QC <= 1 ? QC : 2 - QC, wC *= bC <= 1 ? bC : 2 - bC;
-      return [zC, 100 * (0 === QC ? 2 * wC / (bC + wC) : 2 * ZC / (QC + ZC)), 100 * ((QC + ZC) / 2)]
-    }, bC.hsv.rgb = function(CC) {
-      const zC = CC[0] / 60,
-        ZC = CC[1] / 100;
-      let QC = CC[2] / 100;
-      const wC = Math.floor(zC) % 6,
-        bC = zC - Math.floor(zC),
-        nC = 255 * QC * (1 - ZC),
-        fC = 255 * QC * (1 - ZC * bC),
-        oC = 255 * QC * (1 - ZC * (1 - bC));
-      switch (QC *= 255, wC) {
+      var yk, lk;
+      return Ik
+    }, ik.keyword.rgb = function(kk) {
+      return Xk[kk]
+    }, ik.rgb.xyz = function(kk) {
+      let Fk = kk[0] / 255,
+        Ik = kk[1] / 255,
+        Xk = kk[2] / 255;
+      Fk = Fk > .04045 ? ((Fk + .055) / 1.055) ** 2.4 : Fk / 12.92, Ik = Ik > .04045 ? ((Ik + .055) / 1.055) ** 2.4 : Ik / 12.92, Xk = Xk > .04045 ? ((Xk + .055) / 1.055) ** 2.4 : Xk / 12.92;
+      return [100 * (.4124 * Fk + .3576 * Ik + .1805 * Xk), 100 * (.2126 * Fk + .7152 * Ik + .0722 * Xk), 100 * (.0193 * Fk + .1192 * Ik + .9505 * Xk)]
+    }, ik.rgb.lab = function(kk) {
+      const Fk = ik.rgb.xyz(kk);
+      let Ik = Fk[0],
+        Xk = Fk[1],
+        Tk = Fk[2];
+      Ik /= 95.047, Xk /= 100, Tk /= 108.883, Ik = Ik > .008856 ? Ik ** (1 / 3) : 7.787 * Ik + 16 / 116, Xk = Xk > .008856 ? Xk ** (1 / 3) : 7.787 * Xk + 16 / 116, Tk = Tk > .008856 ? Tk ** (1 / 3) : 7.787 * Tk + 16 / 116;
+      return [116 * Xk - 16, 500 * (Ik - Xk), 200 * (Xk - Tk)]
+    }, ik.hsl.rgb = function(kk) {
+      const Fk = kk[0] / 360,
+        Ik = kk[1] / 100,
+        Xk = kk[2] / 100;
+      let Tk, ik, yk;
+      if (0 === Ik) return yk = 255 * Xk, [yk, yk, yk];
+      Tk = Xk < .5 ? Xk * (1 + Ik) : Xk + Ik - Xk * Ik;
+      const lk = 2 * Xk - Tk,
+        ak = [0, 0, 0];
+      for (let qk = 0; qk < 3; qk++) ik = Fk + 1 / 3 * -(qk - 1), ik < 0 && ik++, ik > 1 && ik--, yk = 6 * ik < 1 ? lk + 6 * (Tk - lk) * ik : 2 * ik < 1 ? Tk : 3 * ik < 2 ? lk + (Tk - lk) * (2 / 3 - ik) * 6 : lk, ak[qk] = 255 * yk;
+      return ak
+    }, ik.hsl.hsv = function(kk) {
+      const Fk = kk[0];
+      let Ik = kk[1] / 100,
+        Xk = kk[2] / 100,
+        Tk = Ik;
+      const ik = Math.max(Xk, .01);
+      Xk *= 2, Ik *= Xk <= 1 ? Xk : 2 - Xk, Tk *= ik <= 1 ? ik : 2 - ik;
+      return [Fk, 100 * (0 === Xk ? 2 * Tk / (ik + Tk) : 2 * Ik / (Xk + Ik)), 100 * ((Xk + Ik) / 2)]
+    }, ik.hsv.rgb = function(kk) {
+      const Fk = kk[0] / 60,
+        Ik = kk[1] / 100;
+      let Xk = kk[2] / 100;
+      const Tk = Math.floor(Fk) % 6,
+        ik = Fk - Math.floor(Fk),
+        yk = 255 * Xk * (1 - Ik),
+        lk = 255 * Xk * (1 - Ik * ik),
+        ak = 255 * Xk * (1 - Ik * (1 - ik));
+      switch (Xk *= 255, Tk) {
         case 0:
-          return [QC, oC, nC];
+          return [Xk, ak, yk];
         case 1:
-          return [fC, QC, nC];
+          return [lk, Xk, yk];
         case 2:
-          return [nC, QC, oC];
+          return [yk, Xk, ak];
         case 3:
-          return [nC, fC, QC];
+          return [yk, lk, Xk];
         case 4:
-          return [oC, nC, QC];
+          return [ak, yk, Xk];
         case 5:
-          return [QC, nC, fC]
+          return [Xk, yk, lk]
       }
-    }, bC.hsv.hsl = function(CC) {
-      const zC = CC[0],
-        ZC = CC[1] / 100,
-        QC = CC[2] / 100,
-        wC = Math.max(QC, .01);
-      let bC, nC;
-      nC = (2 - ZC) * QC;
-      const fC = (2 - ZC) * wC;
-      return bC = ZC * wC, bC /= fC <= 1 ? fC : 2 - fC, bC = bC || 0, nC /= 2, [zC, 100 * bC, 100 * nC]
-    }, bC.hwb.rgb = function(CC) {
-      const zC = CC[0] / 360;
-      let ZC = CC[1] / 100,
-        QC = CC[2] / 100;
-      const wC = ZC + QC;
-      let bC;
-      wC > 1 && (ZC /= wC, QC /= wC);
-      const nC = Math.floor(6 * zC),
-        fC = 1 - QC;
-      bC = 6 * zC - nC, 0 !== (1 & nC) && (bC = 1 - bC);
-      const oC = ZC + bC * (fC - ZC);
-      let qC, FC, WC;
-      switch (nC) {
+    }, ik.hsv.hsl = function(kk) {
+      const Fk = kk[0],
+        Ik = kk[1] / 100,
+        Xk = kk[2] / 100,
+        Tk = Math.max(Xk, .01);
+      let ik, yk;
+      yk = (2 - Ik) * Xk;
+      const lk = (2 - Ik) * Tk;
+      return ik = Ik * Tk, ik /= lk <= 1 ? lk : 2 - lk, ik = ik || 0, yk /= 2, [Fk, 100 * ik, 100 * yk]
+    }, ik.hwb.rgb = function(kk) {
+      const Fk = kk[0] / 360;
+      let Ik = kk[1] / 100,
+        Xk = kk[2] / 100;
+      const Tk = Ik + Xk;
+      let ik;
+      Tk > 1 && (Ik /= Tk, Xk /= Tk);
+      const yk = Math.floor(6 * Fk),
+        lk = 1 - Xk;
+      ik = 6 * Fk - yk, 0 !== (1 & yk) && (ik = 1 - ik);
+      const ak = Ik + ik * (lk - Ik);
+      let qk, Lk, tk;
+      switch (yk) {
         default:
         case 6:
         case 0:
-          qC = fC, FC = oC, WC = ZC;
+          qk = lk, Lk = ak, tk = Ik;
           break;
         case 1:
-          qC = oC, FC = fC, WC = ZC;
+          qk = ak, Lk = lk, tk = Ik;
           break;
         case 2:
-          qC = ZC, FC = fC, WC = oC;
+          qk = Ik, Lk = lk, tk = ak;
           break;
         case 3:
-          qC = ZC, FC = oC, WC = fC;
+          qk = Ik, Lk = ak, tk = lk;
           break;
         case 4:
-          qC = oC, FC = ZC, WC = fC;
+          qk = ak, Lk = Ik, tk = lk;
           break;
         case 5:
-          qC = fC, FC = ZC, WC = oC
+          qk = lk, Lk = Ik, tk = ak
       }
-      return [255 * qC, 255 * FC, 255 * WC]
-    }, bC.cmyk.rgb = function(CC) {
-      const zC = CC[0] / 100,
-        ZC = CC[1] / 100,
-        QC = CC[2] / 100,
-        wC = CC[3] / 100;
-      return [255 * (1 - Math.min(1, zC * (1 - wC) + wC)), 255 * (1 - Math.min(1, ZC * (1 - wC) + wC)), 255 * (1 - Math.min(1, QC * (1 - wC) + wC))]
-    }, bC.xyz.rgb = function(CC) {
-      const zC = CC[0] / 100,
-        ZC = CC[1] / 100,
-        QC = CC[2] / 100;
-      let wC, bC, nC;
-      return wC = 3.2406 * zC + -1.5372 * ZC + -.4986 * QC, bC = -.9689 * zC + 1.8758 * ZC + .0415 * QC, nC = .0557 * zC + -.204 * ZC + 1.057 * QC, wC = wC > .0031308 ? 1.055 * wC ** (1 / 2.4) - .055 : 12.92 * wC, bC = bC > .0031308 ? 1.055 * bC ** (1 / 2.4) - .055 : 12.92 * bC, nC = nC > .0031308 ? 1.055 * nC ** (1 / 2.4) - .055 : 12.92 * nC, wC = Math.min(Math.max(0, wC), 1), bC = Math.min(Math.max(0, bC), 1), nC = Math.min(Math.max(0, nC), 1), [255 * wC, 255 * bC, 255 * nC]
-    }, bC.xyz.lab = function(CC) {
-      let zC = CC[0],
-        ZC = CC[1],
-        QC = CC[2];
-      zC /= 95.047, ZC /= 100, QC /= 108.883, zC = zC > .008856 ? zC ** (1 / 3) : 7.787 * zC + 16 / 116, ZC = ZC > .008856 ? ZC ** (1 / 3) : 7.787 * ZC + 16 / 116, QC = QC > .008856 ? QC ** (1 / 3) : 7.787 * QC + 16 / 116;
-      return [116 * ZC - 16, 500 * (zC - ZC), 200 * (ZC - QC)]
-    }, bC.lab.xyz = function(CC) {
-      let zC, ZC, QC;
-      ZC = (CC[0] + 16) / 116, zC = CC[1] / 500 + ZC, QC = ZC - CC[2] / 200;
-      const wC = ZC ** 3,
-        bC = zC ** 3,
-        nC = QC ** 3;
-      return ZC = wC > .008856 ? wC : (ZC - 16 / 116) / 7.787, zC = bC > .008856 ? bC : (zC - 16 / 116) / 7.787, QC = nC > .008856 ? nC : (QC - 16 / 116) / 7.787, zC *= 95.047, ZC *= 100, QC *= 108.883, [zC, ZC, QC]
-    }, bC.lab.lch = function(CC) {
-      const zC = CC[0],
-        ZC = CC[1],
-        QC = CC[2];
-      let wC;
-      wC = 360 * Math.atan2(QC, ZC) / 2 / Math.PI, wC < 0 && (wC += 360);
-      return [zC, Math.sqrt(ZC * ZC + QC * QC), wC]
-    }, bC.lch.lab = function(CC) {
-      const zC = CC[0],
-        ZC = CC[1],
-        QC = CC[2] / 360 * 2 * Math.PI;
-      return [zC, ZC * Math.cos(QC), ZC * Math.sin(QC)]
-    }, bC.rgb.ansi16 = function(CC) {
-      let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const [ZC, QC, wC] = CC;
-      let nC = null === zC ? bC.rgb.hsv(CC)[2] : zC;
-      if (nC = Math.round(nC / 50), 0 === nC) return 30;
-      let fC = 30 + (Math.round(wC / 255) << 2 | Math.round(QC / 255) << 1 | Math.round(ZC / 255));
-      return 2 === nC && (fC += 60), fC
-    }, bC.hsv.ansi16 = function(CC) {
-      return bC.rgb.ansi16(bC.hsv.rgb(CC), CC[2])
-    }, bC.rgb.ansi256 = function(CC) {
-      const zC = CC[0],
-        ZC = CC[1],
-        QC = CC[2];
-      if (zC === ZC && ZC === QC) return zC < 8 ? 16 : zC > 248 ? 231 : Math.round((zC - 8) / 247 * 24) + 232;
-      return 16 + 36 * Math.round(zC / 255 * 5) + 6 * Math.round(ZC / 255 * 5) + Math.round(QC / 255 * 5)
-    }, bC.ansi16.rgb = function(CC) {
-      let zC = CC % 10;
-      if (0 === zC || 7 === zC) return CC > 50 && (zC += 3.5), zC = zC / 10.5 * 255, [zC, zC, zC];
-      const ZC = .5 * (1 + ~~(CC > 50));
-      return [(1 & zC) * ZC * 255, (zC >> 1 & 1) * ZC * 255, (zC >> 2 & 1) * ZC * 255]
-    }, bC.ansi256.rgb = function(CC) {
-      if (CC >= 232) {
-        const zC = 10 * (CC - 232) + 8;
-        return [zC, zC, zC]
+      return [255 * qk, 255 * Lk, 255 * tk]
+    }, ik.cmyk.rgb = function(kk) {
+      const Fk = kk[0] / 100,
+        Ik = kk[1] / 100,
+        Xk = kk[2] / 100,
+        Tk = kk[3] / 100;
+      return [255 * (1 - Math.min(1, Fk * (1 - Tk) + Tk)), 255 * (1 - Math.min(1, Ik * (1 - Tk) + Tk)), 255 * (1 - Math.min(1, Xk * (1 - Tk) + Tk))]
+    }, ik.xyz.rgb = function(kk) {
+      const Fk = kk[0] / 100,
+        Ik = kk[1] / 100,
+        Xk = kk[2] / 100;
+      let Tk, ik, yk;
+      return Tk = 3.2406 * Fk + -1.5372 * Ik + -.4986 * Xk, ik = -.9689 * Fk + 1.8758 * Ik + .0415 * Xk, yk = .0557 * Fk + -.204 * Ik + 1.057 * Xk, Tk = Tk > .0031308 ? 1.055 * Tk ** (1 / 2.4) - .055 : 12.92 * Tk, ik = ik > .0031308 ? 1.055 * ik ** (1 / 2.4) - .055 : 12.92 * ik, yk = yk > .0031308 ? 1.055 * yk ** (1 / 2.4) - .055 : 12.92 * yk, Tk = Math.min(Math.max(0, Tk), 1), ik = Math.min(Math.max(0, ik), 1), yk = Math.min(Math.max(0, yk), 1), [255 * Tk, 255 * ik, 255 * yk]
+    }, ik.xyz.lab = function(kk) {
+      let Fk = kk[0],
+        Ik = kk[1],
+        Xk = kk[2];
+      Fk /= 95.047, Ik /= 100, Xk /= 108.883, Fk = Fk > .008856 ? Fk ** (1 / 3) : 7.787 * Fk + 16 / 116, Ik = Ik > .008856 ? Ik ** (1 / 3) : 7.787 * Ik + 16 / 116, Xk = Xk > .008856 ? Xk ** (1 / 3) : 7.787 * Xk + 16 / 116;
+      return [116 * Ik - 16, 500 * (Fk - Ik), 200 * (Ik - Xk)]
+    }, ik.lab.xyz = function(kk) {
+      let Fk, Ik, Xk;
+      Ik = (kk[0] + 16) / 116, Fk = kk[1] / 500 + Ik, Xk = Ik - kk[2] / 200;
+      const Tk = Ik ** 3,
+        ik = Fk ** 3,
+        yk = Xk ** 3;
+      return Ik = Tk > .008856 ? Tk : (Ik - 16 / 116) / 7.787, Fk = ik > .008856 ? ik : (Fk - 16 / 116) / 7.787, Xk = yk > .008856 ? yk : (Xk - 16 / 116) / 7.787, Fk *= 95.047, Ik *= 100, Xk *= 108.883, [Fk, Ik, Xk]
+    }, ik.lab.lch = function(kk) {
+      const Fk = kk[0],
+        Ik = kk[1],
+        Xk = kk[2];
+      let Tk;
+      Tk = 360 * Math.atan2(Xk, Ik) / 2 / Math.PI, Tk < 0 && (Tk += 360);
+      return [Fk, Math.sqrt(Ik * Ik + Xk * Xk), Tk]
+    }, ik.lch.lab = function(kk) {
+      const Fk = kk[0],
+        Ik = kk[1],
+        Xk = kk[2] / 360 * 2 * Math.PI;
+      return [Fk, Ik * Math.cos(Xk), Ik * Math.sin(Xk)]
+    }, ik.rgb.ansi16 = function(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const [Ik, Xk, Tk] = kk;
+      let yk = null === Fk ? ik.rgb.hsv(kk)[2] : Fk;
+      if (yk = Math.round(yk / 50), 0 === yk) return 30;
+      let lk = 30 + (Math.round(Tk / 255) << 2 | Math.round(Xk / 255) << 1 | Math.round(Ik / 255));
+      return 2 === yk && (lk += 60), lk
+    }, ik.hsv.ansi16 = function(kk) {
+      return ik.rgb.ansi16(ik.hsv.rgb(kk), kk[2])
+    }, ik.rgb.ansi256 = function(kk) {
+      const Fk = kk[0],
+        Ik = kk[1],
+        Xk = kk[2];
+      if (Fk === Ik && Ik === Xk) return Fk < 8 ? 16 : Fk > 248 ? 231 : Math.round((Fk - 8) / 247 * 24) + 232;
+      return 16 + 36 * Math.round(Fk / 255 * 5) + 6 * Math.round(Ik / 255 * 5) + Math.round(Xk / 255 * 5)
+    }, ik.ansi16.rgb = function(kk) {
+      let Fk = kk % 10;
+      if (0 === Fk || 7 === Fk) return kk > 50 && (Fk += 3.5), Fk = Fk / 10.5 * 255, [Fk, Fk, Fk];
+      const Ik = .5 * (1 + ~~(kk > 50));
+      return [(1 & Fk) * Ik * 255, (Fk >> 1 & 1) * Ik * 255, (Fk >> 2 & 1) * Ik * 255]
+    }, ik.ansi256.rgb = function(kk) {
+      if (kk >= 232) {
+        const Fk = 10 * (kk - 232) + 8;
+        return [Fk, Fk, Fk]
       }
-      let zC;
-      CC -= 16;
-      return [Math.floor(CC / 36) / 5 * 255, Math.floor((zC = CC % 36) / 6) / 5 * 255, zC % 6 / 5 * 255]
-    }, bC.rgb.hex = function(CC) {
-      const zC = (((255 & Math.round(CC[0])) << 16) + ((255 & Math.round(CC[1])) << 8) + (255 & Math.round(CC[2]))).toString(16).toUpperCase();
-      return "000000".substring(zC.length) + zC
-    }, bC.hex.rgb = function(CC) {
-      const zC = CC.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
-      if (!zC) return [0, 0, 0];
-      let ZC = zC[0];
-      3 === zC[0].length && (ZC = ZC.split("").map((CC => CC + CC)).join(""));
-      const QC = parseInt(ZC, 16);
-      return [QC >> 16 & 255, QC >> 8 & 255, 255 & QC]
-    }, bC.rgb.hcg = function(CC) {
-      const zC = CC[0] / 255,
-        ZC = CC[1] / 255,
-        QC = CC[2] / 255,
-        wC = Math.max(Math.max(zC, ZC), QC),
-        bC = Math.min(Math.min(zC, ZC), QC),
-        nC = wC - bC;
-      let fC, oC;
-      return fC = nC < 1 ? bC / (1 - nC) : 0, oC = nC <= 0 ? 0 : wC === zC ? (ZC - QC) / nC % 6 : wC === ZC ? 2 + (QC - zC) / nC : 4 + (zC - ZC) / nC, oC /= 6, oC %= 1, [360 * oC, 100 * nC, 100 * fC]
-    }, bC.hsl.hcg = function(CC) {
-      const zC = CC[1] / 100,
-        ZC = CC[2] / 100,
-        QC = ZC < .5 ? 2 * zC * ZC : 2 * zC * (1 - ZC);
-      let wC = 0;
-      return QC < 1 && (wC = (ZC - .5 * QC) / (1 - QC)), [CC[0], 100 * QC, 100 * wC]
-    }, bC.hsv.hcg = function(CC) {
-      const zC = CC[1] / 100,
-        ZC = CC[2] / 100,
-        QC = zC * ZC;
-      let wC = 0;
-      return QC < 1 && (wC = (ZC - QC) / (1 - QC)), [CC[0], 100 * QC, 100 * wC]
-    }, bC.hcg.rgb = function(CC) {
-      const zC = CC[0] / 360,
-        ZC = CC[1] / 100,
-        QC = CC[2] / 100;
-      if (0 === ZC) return [255 * QC, 255 * QC, 255 * QC];
-      const wC = [0, 0, 0],
-        bC = zC % 1 * 6,
-        nC = bC % 1,
-        fC = 1 - nC;
-      let oC = 0;
-      switch (Math.floor(bC)) {
+      let Fk;
+      kk -= 16;
+      return [Math.floor(kk / 36) / 5 * 255, Math.floor((Fk = kk % 36) / 6) / 5 * 255, Fk % 6 / 5 * 255]
+    }, ik.rgb.hex = function(kk) {
+      const Fk = (((255 & Math.round(kk[0])) << 16) + ((255 & Math.round(kk[1])) << 8) + (255 & Math.round(kk[2]))).toString(16).toUpperCase();
+      return "000000".substring(Fk.length) + Fk
+    }, ik.hex.rgb = function(kk) {
+      const Fk = kk.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
+      if (!Fk) return [0, 0, 0];
+      let Ik = Fk[0];
+      3 === Fk[0].length && (Ik = Ik.split("").map((kk => kk + kk)).join(""));
+      const Xk = parseInt(Ik, 16);
+      return [Xk >> 16 & 255, Xk >> 8 & 255, 255 & Xk]
+    }, ik.rgb.hcg = function(kk) {
+      const Fk = kk[0] / 255,
+        Ik = kk[1] / 255,
+        Xk = kk[2] / 255,
+        Tk = Math.max(Math.max(Fk, Ik), Xk),
+        ik = Math.min(Math.min(Fk, Ik), Xk),
+        yk = Tk - ik;
+      let lk, ak;
+      return lk = yk < 1 ? ik / (1 - yk) : 0, ak = yk <= 0 ? 0 : Tk === Fk ? (Ik - Xk) / yk % 6 : Tk === Ik ? 2 + (Xk - Fk) / yk : 4 + (Fk - Ik) / yk, ak /= 6, ak %= 1, [360 * ak, 100 * yk, 100 * lk]
+    }, ik.hsl.hcg = function(kk) {
+      const Fk = kk[1] / 100,
+        Ik = kk[2] / 100,
+        Xk = Ik < .5 ? 2 * Fk * Ik : 2 * Fk * (1 - Ik);
+      let Tk = 0;
+      return Xk < 1 && (Tk = (Ik - .5 * Xk) / (1 - Xk)), [kk[0], 100 * Xk, 100 * Tk]
+    }, ik.hsv.hcg = function(kk) {
+      const Fk = kk[1] / 100,
+        Ik = kk[2] / 100,
+        Xk = Fk * Ik;
+      let Tk = 0;
+      return Xk < 1 && (Tk = (Ik - Xk) / (1 - Xk)), [kk[0], 100 * Xk, 100 * Tk]
+    }, ik.hcg.rgb = function(kk) {
+      const Fk = kk[0] / 360,
+        Ik = kk[1] / 100,
+        Xk = kk[2] / 100;
+      if (0 === Ik) return [255 * Xk, 255 * Xk, 255 * Xk];
+      const Tk = [0, 0, 0],
+        ik = Fk % 1 * 6,
+        yk = ik % 1,
+        lk = 1 - yk;
+      let ak = 0;
+      switch (Math.floor(ik)) {
         case 0:
-          wC[0] = 1, wC[1] = nC, wC[2] = 0;
+          Tk[0] = 1, Tk[1] = yk, Tk[2] = 0;
           break;
         case 1:
-          wC[0] = fC, wC[1] = 1, wC[2] = 0;
+          Tk[0] = lk, Tk[1] = 1, Tk[2] = 0;
           break;
         case 2:
-          wC[0] = 0, wC[1] = 1, wC[2] = nC;
+          Tk[0] = 0, Tk[1] = 1, Tk[2] = yk;
           break;
         case 3:
-          wC[0] = 0, wC[1] = fC, wC[2] = 1;
+          Tk[0] = 0, Tk[1] = lk, Tk[2] = 1;
           break;
         case 4:
-          wC[0] = nC, wC[1] = 0, wC[2] = 1;
+          Tk[0] = yk, Tk[1] = 0, Tk[2] = 1;
           break;
         default:
-          wC[0] = 1, wC[1] = 0, wC[2] = fC
+          Tk[0] = 1, Tk[1] = 0, Tk[2] = lk
       }
-      return oC = (1 - ZC) * QC, [255 * (ZC * wC[0] + oC), 255 * (ZC * wC[1] + oC), 255 * (ZC * wC[2] + oC)]
-    }, bC.hcg.hsv = function(CC) {
-      const zC = CC[1] / 100,
-        ZC = zC + CC[2] / 100 * (1 - zC);
-      let QC = 0;
-      return ZC > 0 && (QC = zC / ZC), [CC[0], 100 * QC, 100 * ZC]
-    }, bC.hcg.hsl = function(CC) {
-      const zC = CC[1] / 100,
-        ZC = CC[2] / 100 * (1 - zC) + .5 * zC;
-      let QC = 0;
-      return ZC > 0 && ZC < .5 ? QC = zC / (2 * ZC) : ZC >= .5 && ZC < 1 && (QC = zC / (2 * (1 - ZC))), [CC[0], 100 * QC, 100 * ZC]
-    }, bC.hcg.hwb = function(CC) {
-      const zC = CC[1] / 100,
-        ZC = zC + CC[2] / 100 * (1 - zC);
-      return [CC[0], 100 * (ZC - zC), 100 * (1 - ZC)]
-    }, bC.hwb.hcg = function(CC) {
-      const zC = CC[1] / 100,
-        ZC = 1 - CC[2] / 100,
-        QC = ZC - zC;
-      let wC = 0;
-      return QC < 1 && (wC = (ZC - QC) / (1 - QC)), [CC[0], 100 * QC, 100 * wC]
-    }, bC.apple.rgb = function(CC) {
-      return [CC[0] / 65535 * 255, CC[1] / 65535 * 255, CC[2] / 65535 * 255]
-    }, bC.rgb.apple = function(CC) {
-      return [CC[0] / 255 * 65535, CC[1] / 255 * 65535, CC[2] / 255 * 65535]
-    }, bC.gray.rgb = function(CC) {
-      return [CC[0] / 100 * 255, CC[0] / 100 * 255, CC[0] / 100 * 255]
-    }, bC.gray.hsl = function(CC) {
-      return [0, 0, CC[0]]
-    }, bC.gray.hsv = bC.gray.hsl, bC.gray.hwb = function(CC) {
-      return [0, 100, CC[0]]
-    }, bC.gray.cmyk = function(CC) {
-      return [0, 0, 0, CC[0]]
-    }, bC.gray.lab = function(CC) {
-      return [CC[0], 0, 0]
-    }, bC.gray.hex = function(CC) {
-      const zC = 255 & Math.round(CC[0] / 100 * 255),
-        ZC = ((zC << 16) + (zC << 8) + zC).toString(16).toUpperCase();
-      return "000000".substring(ZC.length) + ZC
-    }, bC.rgb.gray = function(CC) {
-      return [(CC[0] + CC[1] + CC[2]) / 3 / 255 * 100]
+      return ak = (1 - Ik) * Xk, [255 * (Ik * Tk[0] + ak), 255 * (Ik * Tk[1] + ak), 255 * (Ik * Tk[2] + ak)]
+    }, ik.hcg.hsv = function(kk) {
+      const Fk = kk[1] / 100,
+        Ik = Fk + kk[2] / 100 * (1 - Fk);
+      let Xk = 0;
+      return Ik > 0 && (Xk = Fk / Ik), [kk[0], 100 * Xk, 100 * Ik]
+    }, ik.hcg.hsl = function(kk) {
+      const Fk = kk[1] / 100,
+        Ik = kk[2] / 100 * (1 - Fk) + .5 * Fk;
+      let Xk = 0;
+      return Ik > 0 && Ik < .5 ? Xk = Fk / (2 * Ik) : Ik >= .5 && Ik < 1 && (Xk = Fk / (2 * (1 - Ik))), [kk[0], 100 * Xk, 100 * Ik]
+    }, ik.hcg.hwb = function(kk) {
+      const Fk = kk[1] / 100,
+        Ik = Fk + kk[2] / 100 * (1 - Fk);
+      return [kk[0], 100 * (Ik - Fk), 100 * (1 - Ik)]
+    }, ik.hwb.hcg = function(kk) {
+      const Fk = kk[1] / 100,
+        Ik = 1 - kk[2] / 100,
+        Xk = Ik - Fk;
+      let Tk = 0;
+      return Xk < 1 && (Tk = (Ik - Xk) / (1 - Xk)), [kk[0], 100 * Xk, 100 * Tk]
+    }, ik.apple.rgb = function(kk) {
+      return [kk[0] / 65535 * 255, kk[1] / 65535 * 255, kk[2] / 65535 * 255]
+    }, ik.rgb.apple = function(kk) {
+      return [kk[0] / 255 * 65535, kk[1] / 255 * 65535, kk[2] / 255 * 65535]
+    }, ik.gray.rgb = function(kk) {
+      return [kk[0] / 100 * 255, kk[0] / 100 * 255, kk[0] / 100 * 255]
+    }, ik.gray.hsl = function(kk) {
+      return [0, 0, kk[0]]
+    }, ik.gray.hsv = ik.gray.hsl, ik.gray.hwb = function(kk) {
+      return [0, 100, kk[0]]
+    }, ik.gray.cmyk = function(kk) {
+      return [0, 0, 0, kk[0]]
+    }, ik.gray.lab = function(kk) {
+      return [kk[0], 0, 0]
+    }, ik.gray.hex = function(kk) {
+      const Fk = 255 & Math.round(kk[0] / 100 * 255),
+        Ik = ((Fk << 16) + (Fk << 8) + Fk).toString(16).toUpperCase();
+      return "000000".substring(Ik.length) + Ik
+    }, ik.rgb.gray = function(kk) {
+      return [(kk[0] + kk[1] + kk[2]) / 3 / 255 * 100]
     }
   },
-  36535: (CC, zC, ZC) => {
-    const QC = ZC(36537),
-      wC = ZC(36550),
-      bC = {};
-    Object.keys(QC).forEach((CC => {
-      bC[CC] = {}, Object.defineProperty(bC[CC], "channels", {
-        value: QC[CC].channels
-      }), Object.defineProperty(bC[CC], "labels", {
-        value: QC[CC].labels
+  36658: (kk, Fk, Ik) => {
+    const Xk = Ik(36662),
+      Tk = Ik(36669),
+      ik = {};
+    Object.keys(Xk).forEach((kk => {
+      ik[kk] = {}, Object.defineProperty(ik[kk], "channels", {
+        value: Xk[kk].channels
+      }), Object.defineProperty(ik[kk], "labels", {
+        value: Xk[kk].labels
       });
-      const zC = wC(CC);
-      Object.keys(zC).forEach((ZC => {
-        const QC = zC[ZC];
-        bC[CC][ZC] = function(CC) {
-          const zC = function() {
-            for (var zC = arguments.length, ZC = new Array(zC), QC = 0; QC < zC; QC++) ZC[QC] = arguments[QC];
-            const wC = ZC[0];
-            if (void 0 === wC || null === wC) return wC;
-            wC.length > 1 && (ZC = wC);
-            const bC = CC(ZC);
-            if ("object" === typeof bC)
-              for (let CC = bC.length, nC = 0; nC < CC; nC++) bC[nC] = Math.round(bC[nC]);
-            return bC
+      const Fk = Tk(kk);
+      Object.keys(Fk).forEach((Ik => {
+        const Xk = Fk[Ik];
+        ik[kk][Ik] = function(kk) {
+          const Fk = function() {
+            for (var Fk = arguments.length, Ik = new Array(Fk), Xk = 0; Xk < Fk; Xk++) Ik[Xk] = arguments[Xk];
+            const Tk = Ik[0];
+            if (void 0 === Tk || null === Tk) return Tk;
+            Tk.length > 1 && (Ik = Tk);
+            const ik = kk(Ik);
+            if ("object" === typeof ik)
+              for (let kk = ik.length, yk = 0; yk < kk; yk++) ik[yk] = Math.round(ik[yk]);
+            return ik
           };
-          return "conversion" in CC && (zC.conversion = CC.conversion), zC
-        }(QC), bC[CC][ZC].raw = function(CC) {
-          const zC = function() {
-            for (var zC = arguments.length, ZC = new Array(zC), QC = 0; QC < zC; QC++) ZC[QC] = arguments[QC];
-            const wC = ZC[0];
-            return void 0 === wC || null === wC ? wC : (wC.length > 1 && (ZC = wC), CC(ZC))
+          return "conversion" in kk && (Fk.conversion = kk.conversion), Fk
+        }(Xk), ik[kk][Ik].raw = function(kk) {
+          const Fk = function() {
+            for (var Fk = arguments.length, Ik = new Array(Fk), Xk = 0; Xk < Fk; Xk++) Ik[Xk] = arguments[Xk];
+            const Tk = Ik[0];
+            return void 0 === Tk || null === Tk ? Tk : (Tk.length > 1 && (Ik = Tk), kk(Ik))
           };
-          return "conversion" in CC && (zC.conversion = CC.conversion), zC
-        }(QC)
+          return "conversion" in kk && (Fk.conversion = kk.conversion), Fk
+        }(Xk)
       }))
-    })), CC.exports = bC
+    })), kk.exports = ik
   },
-  36550: (CC, zC, ZC) => {
-    const QC = ZC(36537);
+  36669: (kk, Fk, Ik) => {
+    const Xk = Ik(36662);
 
-    function wC(CC) {
-      const zC = function() {
-          const CC = {},
-            zC = Object.keys(QC);
-          for (let ZC = zC.length, QC = 0; QC < ZC; QC++) CC[zC[QC]] = {
+    function Tk(kk) {
+      const Fk = function() {
+          const kk = {},
+            Fk = Object.keys(Xk);
+          for (let Ik = Fk.length, Xk = 0; Xk < Ik; Xk++) kk[Fk[Xk]] = {
             distance: -1,
             parent: null
           };
-          return CC
+          return kk
         }(),
-        ZC = [CC];
-      for (zC[CC].distance = 0; ZC.length;) {
-        const CC = ZC.pop(),
-          wC = Object.keys(QC[CC]);
-        for (let QC = wC.length, bC = 0; bC < QC; bC++) {
-          const QC = wC[bC],
-            nC = zC[QC]; - 1 === nC.distance && (nC.distance = zC[CC].distance + 1, nC.parent = CC, ZC.unshift(QC))
+        Ik = [kk];
+      for (Fk[kk].distance = 0; Ik.length;) {
+        const kk = Ik.pop(),
+          Tk = Object.keys(Xk[kk]);
+        for (let Xk = Tk.length, ik = 0; ik < Xk; ik++) {
+          const Xk = Tk[ik],
+            yk = Fk[Xk]; - 1 === yk.distance && (yk.distance = Fk[kk].distance + 1, yk.parent = kk, Ik.unshift(Xk))
         }
       }
-      return zC
+      return Fk
     }
 
-    function bC(CC, zC) {
-      return function(ZC) {
-        return zC(CC(ZC))
+    function ik(kk, Fk) {
+      return function(Ik) {
+        return Fk(kk(Ik))
       }
     }
 
-    function nC(CC, zC) {
-      const ZC = [zC[CC].parent, CC];
-      let wC = QC[zC[CC].parent][CC],
-        nC = zC[CC].parent;
-      for (; zC[nC].parent;) ZC.unshift(zC[nC].parent), wC = bC(QC[zC[nC].parent][nC], wC), nC = zC[nC].parent;
-      return wC.conversion = ZC, wC
+    function yk(kk, Fk) {
+      const Ik = [Fk[kk].parent, kk];
+      let Tk = Xk[Fk[kk].parent][kk],
+        yk = Fk[kk].parent;
+      for (; Fk[yk].parent;) Ik.unshift(Fk[yk].parent), Tk = ik(Xk[Fk[yk].parent][yk], Tk), yk = Fk[yk].parent;
+      return Tk.conversion = Ik, Tk
     }
-    CC.exports = function(CC) {
-      const zC = wC(CC),
-        ZC = {},
-        QC = Object.keys(zC);
-      for (let wC = QC.length, bC = 0; bC < wC; bC++) {
-        const CC = QC[bC];
-        null !== zC[CC].parent && (ZC[CC] = nC(CC, zC))
+    kk.exports = function(kk) {
+      const Fk = Tk(kk),
+        Ik = {},
+        Xk = Object.keys(Fk);
+      for (let Tk = Xk.length, ik = 0; ik < Tk; ik++) {
+        const kk = Xk[ik];
+        null !== Fk[kk].parent && (Ik[kk] = yk(kk, Fk))
       }
-      return ZC
+      return Ik
     }
   },
-  36545: CC => {
-    CC.exports = {
+  36665: kk => {
+    kk.exports = {
       aliceblue: [240, 248, 255],
       antiquewhite: [250, 235, 215],
       aqua: [0, 255, 255],
@@ -1137,28 +1137,28 @@ export const modules = {
       yellowgreen: [154, 205, 50]
     }
   },
-  36525: (CC, zC, ZC) => {
-    var QC = ZC(36531),
-      wC = Array.prototype.concat,
-      bC = Array.prototype.slice,
-      nC = CC.exports = function(CC) {
-        for (var zC = [], ZC = 0, nC = CC.length; ZC < nC; ZC++) {
-          var fC = CC[ZC];
-          QC(fC) ? zC = wC.call(zC, bC.call(fC)) : zC.push(fC)
+  36646: (kk, Fk, Ik) => {
+    var Xk = Ik(36655),
+      Tk = Array.prototype.concat,
+      ik = Array.prototype.slice,
+      yk = kk.exports = function(kk) {
+        for (var Fk = [], Ik = 0, yk = kk.length; Ik < yk; Ik++) {
+          var lk = kk[Ik];
+          Xk(lk) ? Fk = Tk.call(Fk, ik.call(lk)) : Fk.push(lk)
         }
-        return zC
+        return Fk
       };
-    nC.wrap = function(CC) {
+    yk.wrap = function(kk) {
       return function() {
-        return CC(nC(arguments))
+        return kk(yk(arguments))
       }
     }
   },
-  36531: CC => {
-    CC.exports = function(CC) {
-      return !(!CC || "string" === typeof CC) && (CC instanceof Array || Array.isArray(CC) || CC.length >= 0 && (CC.splice instanceof Function || Object.getOwnPropertyDescriptor(CC, CC.length - 1) && "String" !== CC.constructor.name))
+  36655: kk => {
+    kk.exports = function(kk) {
+      return !(!kk || "string" === typeof kk) && (kk instanceof Array || Array.isArray(kk) || kk.length >= 0 && (kk.splice instanceof Function || Object.getOwnPropertyDescriptor(kk, kk.length - 1) && "String" !== kk.constructor.name))
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

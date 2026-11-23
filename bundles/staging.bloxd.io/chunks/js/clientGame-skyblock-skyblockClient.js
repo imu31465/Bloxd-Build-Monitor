@@ -1,597 +1,597 @@
 export const id = 25;
 export const ids = [25];
 export const modules = {
-  36483: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => MC,
-      c: () => gC,
-      d: () => NC,
-      f: () => WC
+  36597: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => jk,
+      f: () => ek,
+      g: () => Zk,
+      j: () => tk
     });
-    var QC = ZC(34153),
-      wC = ZC(36488),
-      bC = ZC(36490),
-      nC = ZC(8735),
-      fC = ZC(1383),
-      oC = ZC(48),
-      qC = ZC(60),
-      FC = ZC(1056);
+    var Xk = Ik(34164),
+      Tk = Ik(36600),
+      ik = Ik(36607),
+      yk = Ik(8691),
+      lk = Ik(1402),
+      ak = Ik(58),
+      qk = Ik(74),
+      Lk = Ik(1096);
 
-    function WC() {
-      var CC;
-      return (0, fC.f)(wC.d, (0, wC.q)()), (0, FC.jsx)(FC.Fragment, {
-        children: null === (CC = (0, wC.q)()) || void 0 === CC ? void 0 : CC.content
+    function tk() {
+      var kk;
+      return (0, lk.f)(Tk.c, (0, Tk.m)()), (0, Lk.jsx)(Lk.Fragment, {
+        children: null === (kk = (0, Tk.m)()) || void 0 === kk ? void 0 : kk.content
       })
     }
 
-    function NC(CC) {
-      var zC;
+    function Zk(kk) {
+      var Fk;
       let {
-        show: ZC
-      } = CC;
-      (0, fC.f)(wC.d, (0, wC.q)());
-      const qC = null === (zC = (0, wC.q)()) || void 0 === zC ? void 0 : zC.menu;
-      return (0, oC.useEffect)((() => {
-        var CC;
-        ZC || (null === qC || void 0 === qC || null === (CC = qC.onClose) || void 0 === CC || CC.call(qC), (0, bC.p)())
-      }), [ZC, qC]), (0, oC.useEffect)((() => ZC ? (0, nC.f)(bC.z, bC.g) : void 0), [ZC]), (0, FC.jsx)(QC.d, {
-        showing: ZC,
+        show: Ik
+      } = kk;
+      (0, lk.f)(Tk.c, (0, Tk.m)());
+      const qk = null === (Fk = (0, Tk.m)()) || void 0 === Fk ? void 0 : Fk.menu;
+      return (0, ak.useEffect)((() => {
+        var kk;
+        Ik || (null === qk || void 0 === qk || null === (kk = qk.onClose) || void 0 === kk || kk.call(qk), (0, ik.r)())
+      }), [Ik, qk]), (0, ak.useEffect)((() => Ik ? (0, yk.f)(ik.y, ik.i) : void 0), [Ik]), (0, Lk.jsx)(Xk.e, {
+        showing: Ik,
         globallyUniqueKey: "clientGameMenu",
-        children: null === qC || void 0 === qC ? void 0 : qC.content
+        children: null === qk || void 0 === qk ? void 0 : qk.content
       })
     }
 
-    function MC(CC) {
+    function jk(kk) {
       let {
-        placement: zC = "bottom"
-      } = CC;
-      return (0, FC.jsx)("div", {
-        id: `clientGameHud-${zC}`,
+        placement: Fk = "bottom"
+      } = kk;
+      return (0, Lk.jsx)("div", {
+        id: `clientGameHud-${Fk}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function gC(CC) {
+    function ek(kk) {
       let {
-        children: zC,
-        placement: ZC = "bottom"
-      } = CC;
-      const [QC, wC] = (0, oC.useState)(null);
-      return (0, oC.useEffect)((() => {
-        wC(document.getElementById(`clientGameHud-${ZC}`))
-      }), [ZC]), QC ? (0, qC.createPortal)(zC, QC) : null
+        children: Fk,
+        placement: Ik = "bottom"
+      } = kk;
+      const [Xk, Tk] = (0, ak.useState)(null);
+      return (0, ak.useEffect)((() => {
+        Tk(document.getElementById(`clientGameHud-${Ik}`))
+      }), [Ik]), Xk ? (0, qk.createPortal)(Fk, Xk) : null
     }
   },
-  4760: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => pC,
-      d: () => PC
+  4829: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Hk,
+      h: () => Jk
     });
-    var QC = ZC(1002),
-      wC = ZC.n(QC),
-      bC = ZC(48),
-      nC = ZC(1143),
-      fC = ZC(4769),
-      oC = ZC(1811),
-      qC = ZC(2369),
-      FC = ZC(4775),
-      WC = ZC(1056);
-    const NC = new WeakMap;
-    let MC = 0;
+    var Xk = Ik(1055),
+      Tk = Ik.n(Xk),
+      ik = Ik(58),
+      yk = Ik(1179),
+      lk = Ik(4833),
+      ak = Ik(1849),
+      qk = Ik(2349),
+      Lk = Ik(4837),
+      tk = Ik(1096);
+    const Zk = new WeakMap;
+    let jk = 0;
 
-    function gC(CC) {
-      let zC = NC.get(CC);
-      return void 0 === zC && (zC = MC++, NC.set(CC, zC)), zC
+    function ek(kk) {
+      let Fk = Zk.get(kk);
+      return void 0 === Fk && (Fk = jk++, Zk.set(kk, Fk)), Fk
     }
 
-    function SC(CC) {
+    function wk(kk) {
       let {
-        piece: zC
-      } = CC;
-      return "space" === zC.kind ? (0, WC.jsx)(WC.Fragment, {
-        children: zC.text
-      }) : (0, WC.jsx)("span", {
+        piece: Fk
+      } = kk;
+      return "space" === Fk.kind ? (0, tk.jsx)(tk.Fragment, {
+        children: Fk.text
+      }) : (0, tk.jsx)("span", {
         className: "DialogueWord",
         style: {
-          "--word-delay": `${zC.delayMs}ms`
+          "--word-delay": `${Fk.delayMs}ms`
         },
-        children: (0, WC.jsx)(fC.e, {
-          text: "icon" === zC.kind ? `[[${zC.icon}]]` : zC.text
+        children: (0, tk.jsx)(lk.b, {
+          text: "icon" === Fk.kind ? `[[${Fk.icon}]]` : Fk.text
         })
       })
     }
 
-    function pC(CC) {
+    function Hk(kk) {
       let {
-        display: zC
-      } = CC;
+        display: Fk
+      } = kk;
       const {
-        selectedLanguage: ZC
-      } = (0, nC.y)(), QC = (0, bC.useMemo)((() => (0, FC.c)((0, FC.f)(zC).plan.pieces)), [zC, ZC.code]);
-      return (0, WC.jsxs)("div", {
-        className: wC()("Dialogue", {
-          DialogueAnimateIn: !1 !== zC.animateIn
+        selectedLanguage: Ik
+      } = (0, yk.y)(), Xk = (0, ik.useMemo)((() => (0, Lk.d)((0, Lk.e)(Fk).plan.pieces)), [Fk, Ik.code]);
+      return (0, tk.jsxs)("div", {
+        className: Tk()("Dialogue", {
+          DialogueAnimateIn: !1 !== Fk.animateIn
         }),
-        children: [zC.speakerName && (0, WC.jsx)(oC.e, {
-          text: zC.speakerName,
+        children: [Fk.speakerName && (0, tk.jsx)(ak.c, {
+          text: Fk.speakerName,
           className: "DialogueSpeaker"
-        }), (0, WC.jsx)("p", {
+        }), (0, tk.jsx)("p", {
           className: "DialogueLine",
-          children: QC.map(((CC, zC) => 1 === CC.length && "space" === CC[0].kind ? CC[0].text : (0, WC.jsx)("span", {
+          children: Xk.map(((kk, Fk) => 1 === kk.length && "space" === kk[0].kind ? kk[0].text : (0, tk.jsx)("span", {
             className: "DialogueGlue",
-            children: CC.map(((CC, zC) => (0, WC.jsx)(SC, {
-              piece: CC
-            }, zC)))
-          }, zC)))
+            children: kk.map(((kk, Fk) => (0, tk.jsx)(wk, {
+              piece: kk
+            }, Fk)))
+          }, Fk)))
         })]
       })
     }
-    const PC = (0, bC.memo)((function() {
-      const CC = (0, qC.h)("dialogue");
-      return (0, WC.jsx)("div", {
+    const Jk = (0, ik.memo)((function() {
+      const kk = (0, qk.j)("dialogue");
+      return (0, tk.jsx)("div", {
         className: "DialogueAnchor",
         "data-camera-keeper": "",
         role: "status",
         "aria-live": "polite",
         "aria-atomic": "true",
-        children: CC && (0, WC.jsx)(pC, {
-          display: CC
-        }, gC(CC))
+        children: kk && (0, tk.jsx)(Hk, {
+          display: kk
+        }, ek(kk))
       })
     }))
   },
-  4769: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => fC
+  4833: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => lk
     });
-    var QC = ZC(48),
-      wC = ZC(310),
-      bC = ZC(1822),
-      nC = ZC(1056);
+    var Xk = Ik(58),
+      Tk = Ik(318),
+      ik = Ik(1864),
+      yk = Ik(1096);
 
-    function fC(CC) {
+    function lk(kk) {
       let {
-        text: zC
-      } = CC;
-      const ZC = [];
-      let fC = "";
-      return (0, wC.dc)(zC).forEach(((CC, zC) => {
-        if ("string" === typeof CC || !(0, bC.h)(CC.icon)) return void(fC += "string" === typeof CC ? CC : CC.icon);
-        const wC = Math.max(0, fC.trimEnd().search(/\S{1,12}$/));
-        ZC.push((0, nC.jsxs)(QC.Fragment, {
-          children: [fC.slice(0, wC), (0, nC.jsxs)("span", {
+        text: Fk
+      } = kk;
+      const Ik = [];
+      let lk = "";
+      return (0, Tk.oc)(Fk).forEach(((kk, Fk) => {
+        if ("string" === typeof kk || !(0, ik.e)(kk.icon)) return void(lk += "string" === typeof kk ? kk : kk.icon);
+        const Tk = Math.max(0, lk.trimEnd().search(/\S{1,12}$/));
+        Ik.push((0, yk.jsxs)(Xk.Fragment, {
+          children: [lk.slice(0, Tk), (0, yk.jsxs)("span", {
             className: "InlineIconTextGlue",
-            children: [fC.slice(wC), (0, nC.jsx)("span", {
+            children: [lk.slice(Tk), (0, yk.jsx)("span", {
               className: "InlineIconTextIcon",
               role: "img",
-              "aria-label": CC.icon,
-              children: (0, nC.jsx)(bC.e, {
-                itemName: CC.icon,
+              "aria-label": kk.icon,
+              children: (0, yk.jsx)(ik.d, {
+                itemName: kk.icon,
                 amount: 0
               })
             })]
           })]
-        }, zC)), fC = ""
-      })), ZC.push(fC), (0, nC.jsx)(nC.Fragment, {
-        children: ZC
+        }, Fk)), lk = ""
+      })), Ik.push(lk), (0, yk.jsx)(yk.Fragment, {
+        children: Ik
       })
     }
   },
-  34153: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => bC
+  34164: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => ik
     });
-    var QC = ZC(4473),
-      wC = ZC(4479);
+    var Xk = Ik(4525),
+      Tk = Ik(4529);
 
-    function bC(CC) {
+    function ik(kk) {
       let {
-        children: zC,
-        showing: ZC,
-        globallyUniqueKey: bC,
-        alwaysMountChildren: nC = !1,
-        doGameplayStartStopOnShow: fC = !0,
-        keepsMovement: oC = !1
-      } = CC;
-      return (0, wC.b)(!0, ZC, bC, oC), (0, QC.d)(fC, ZC), ZC || nC ? zC : null
+        children: Fk,
+        showing: Ik,
+        globallyUniqueKey: ik,
+        alwaysMountChildren: yk = !1,
+        doGameplayStartStopOnShow: lk = !0,
+        keepsMovement: ak = !1
+      } = kk;
+      return (0, Tk.e)(!0, Ik, ik, ak), (0, Xk.b)(lk, Ik), Ik || yk ? Fk : null
     }
   },
-  4775: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => EC,
-      f: () => HC
+  4837: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => bk,
+      e: () => uk
     });
-    var QC = ZC(4783),
-      wC = ZC(310);
-    const bC = 120,
-      nC = 260,
-      fC = 1.15,
-      oC = 1.2,
-      qC = 2,
-      FC = 1.08,
-      WC = .8,
-      NC = .95,
-      MC = 8,
-      gC = "[\"')\\]\u300d\u300f\uff09]*",
-      SC = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${gC}$`),
-      pC = new RegExp(`[?\uff1f]${gC}$`),
-      PC = new RegExp(`[!\uff01]${gC}$`),
-      GC = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      RC = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      AC = new RegExp(`[${RC}]`),
-      xC = new RegExp(`[${RC}]|[^${RC}]+`, "g"),
-      JC = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var Xk = Ik(4843),
+      Tk = Ik(318);
+    const ik = 120,
+      yk = 260,
+      lk = 1.15,
+      ak = 1.2,
+      qk = 2,
+      Lk = 1.08,
+      tk = .8,
+      Zk = .95,
+      jk = 8,
+      ek = "[\"')\\]\u300d\u300f\uff09]*",
+      wk = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${ek}$`),
+      Hk = new RegExp(`[?\uff1f]${ek}$`),
+      Jk = new RegExp(`[!\uff01]${ek}$`),
+      xk = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      Pk = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      Kk = new RegExp(`[${Pk}]`),
+      Qk = new RegExp(`[${Pk}]|[^${Pk}]+`, "g"),
+      sk = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function IC(CC) {
-      let zC = 2166136261;
-      for (let ZC = 0; ZC < CC.length; ZC++) zC ^= CC.charCodeAt(ZC), zC = Math.imul(zC, 16777619);
-      return (zC >>> 0) / 4294967295 * 2 - 1
+    function Vk(kk) {
+      let Fk = 2166136261;
+      for (let Ik = 0; Ik < kk.length; Ik++) Fk ^= kk.charCodeAt(Ik), Fk = Math.imul(Fk, 16777619);
+      return (Fk >>> 0) / 4294967295 * 2 - 1
     }
 
-    function iC(CC) {
-      var zC;
-      if (AC.test(CC)) return 1;
-      const ZC = CC.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        QC = ZC.replace(/[^0-9]/g, "");
-      if (QC.length > 0 && !/\p{L}/u.test(ZC)) return Math.min(QC.length, 4);
-      const wC = null !== (zC = ZC.match(JC)) && void 0 !== zC ? zC : [];
-      if (0 === wC.length) {
-        var bC, nC;
-        const CC = null !== (bC = null === (nC = ZC.match(/\p{L}/gu)) || void 0 === nC ? void 0 : nC.length) && void 0 !== bC ? bC : 0;
-        return 0 === CC ? 0 : Math.min(Math.max(1, Math.round(CC / 2.5)), MC)
+    function zk(kk) {
+      var Fk;
+      if (Kk.test(kk)) return 1;
+      const Ik = kk.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        Xk = Ik.replace(/[^0-9]/g, "");
+      if (Xk.length > 0 && !/\p{L}/u.test(Ik)) return Math.min(Xk.length, 4);
+      const Tk = null !== (Fk = Ik.match(sk)) && void 0 !== Fk ? Fk : [];
+      if (0 === Tk.length) {
+        var ik, yk;
+        const kk = null !== (ik = null === (yk = Ik.match(/\p{L}/gu)) || void 0 === yk ? void 0 : yk.length) && void 0 !== ik ? ik : 0;
+        return 0 === kk ? 0 : Math.min(Math.max(1, Math.round(kk / 2.5)), jk)
       }
-      const fC = ZC.replace(/[^\p{L}]/gu, ""),
-        oC = wC.length > 1 && "e" === wC.at(-1) && fC.endsWith("e") && !fC.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(CC.replace(/[^\p{L}]/gu, ""));
-      return Math.min(wC.length - (oC ? 1 : 0), MC)
+      const lk = Ik.replace(/[^\p{L}]/gu, ""),
+        ak = Tk.length > 1 && "e" === Tk.at(-1) && lk.endsWith("e") && !lk.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(kk.replace(/[^\p{L}]/gu, ""));
+      return Math.min(Tk.length - (ak ? 1 : 0), jk)
     }
 
-    function vC(CC) {
-      return CC.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function Sk(kk) {
+      return kk.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function eC(CC) {
-      const zC = CC.replace(/[^\p{L}]/gu, "");
-      return zC.length >= 2 && zC === zC.toUpperCase() && zC !== zC.toLowerCase()
+    function vk(kk) {
+      const Fk = kk.replace(/[^\p{L}]/gu, "");
+      return Fk.length >= 2 && Fk === Fk.toUpperCase() && Fk !== Fk.toLowerCase()
     }
 
-    function hC(CC, zC) {
-      var ZC;
-      const MC = zC && (0, QC.m)(zC),
-        gC = null !== (ZC = null === MC || void 0 === MC ? void 0 : MC.syllableMs) && void 0 !== ZC ? ZC : QC.b,
-        RC = function(CC) {
-          const zC = [];
-          for (const QC of (0, wC.dc)(CC))
-            if ("string" === typeof QC)
-              for (const CC of QC.split(/(\s+)/)) {
-                if ("" === CC) continue;
-                if (/^\s+$/.test(CC)) {
-                  zC.push({
+    function Ek(kk, Fk) {
+      var Ik;
+      const jk = Fk && (0, Xk.k)(Fk),
+        ek = null !== (Ik = null === jk || void 0 === jk ? void 0 : jk.syllableMs) && void 0 !== Ik ? Ik : Xk.b,
+        Pk = function(kk) {
+          const Fk = [];
+          for (const Xk of (0, Tk.oc)(kk))
+            if ("string" === typeof Xk)
+              for (const kk of Xk.split(/(\s+)/)) {
+                if ("" === kk) continue;
+                if (/^\s+$/.test(kk)) {
+                  Fk.push({
                     kind: "space",
-                    text: CC
+                    text: kk
                   });
                   continue
                 }
-                if (!AC.test(CC)) {
-                  zC.push({
+                if (!Kk.test(kk)) {
+                  Fk.push({
                     kind: "word",
-                    text: CC,
+                    text: kk,
                     delayMs: 0
                   });
                   continue
                 }
-                let QC = !0;
-                for (const wC of null !== (ZC = CC.match(xC)) && void 0 !== ZC ? ZC : []) {
-                  var ZC;
-                  const CC = zC.at(-1);
-                  QC || "word" !== (null === CC || void 0 === CC ? void 0 : CC.kind) || AC.test(wC) || /[\p{L}\p{N}]/u.test(wC) ? (QC || zC.push({
+                let Xk = !0;
+                for (const Tk of null !== (Ik = kk.match(Qk)) && void 0 !== Ik ? Ik : []) {
+                  var Ik;
+                  const kk = Fk.at(-1);
+                  Xk || "word" !== (null === kk || void 0 === kk ? void 0 : kk.kind) || Kk.test(Tk) || /[\p{L}\p{N}]/u.test(Tk) ? (Xk || Fk.push({
                     kind: "space",
                     text: "\u200b"
-                  }), zC.push({
+                  }), Fk.push({
                     kind: "word",
-                    text: wC,
+                    text: Tk,
                     delayMs: 0
-                  }), QC = !1) : CC.text += wC
+                  }), Xk = !1) : kk.text += Tk
                 }
-              } else zC.push({
+              } else Fk.push({
                 kind: "icon",
-                text: QC.icon,
+                text: Xk.icon,
                 delayMs: 0
               });
-          return zC
-        }(CC),
-        JC = [];
-      let hC = [];
-      for (const QC of RC) "space" !== QC.kind && (hC.push(QC), SC.test(QC.text) && (JC.push(hC), hC = []));
-      JC.push(hC);
-      const KC = [];
-      let YC = 0;
-      for (const QC of JC) {
-        var dC, mC;
-        const CC = null !== (dC = null === (mC = QC.at(-1)) || void 0 === mC ? void 0 : mC.text) && void 0 !== dC ? dC : "",
-          zC = pC.test(CC),
-          ZC = PC.test(CC),
-          wC = QC.map((CC => "word" === CC.kind ? iC(CC.text) : 1)),
-          RC = wC.findLastIndex((CC => CC > 0));
-        for (const [pC, PC] of QC.entries()) {
-          const CC = "word" === PC.kind,
-            QC = wC[pC];
-          PC.delayMs = YC;
-          for (let wC = 0; MC && wC < QC; wC++) {
+          return Fk
+        }(kk),
+        sk = [];
+      let Ek = [];
+      for (const Xk of Pk) "space" !== Xk.kind && (Ek.push(Xk), wk.test(Xk.text) && (sk.push(Ek), Ek = []));
+      sk.push(Ek);
+      const Ok = [];
+      let nk = 0;
+      for (const Xk of sk) {
+        var Gk, pk;
+        const kk = null !== (Gk = null === (pk = Xk.at(-1)) || void 0 === pk ? void 0 : pk.text) && void 0 !== Gk ? Gk : "",
+          Fk = Hk.test(kk),
+          Ik = Jk.test(kk),
+          Tk = Xk.map((kk => "word" === kk.kind ? zk(kk.text) : 1)),
+          Pk = Tk.findLastIndex((kk => kk > 0));
+        for (const [Hk, Jk] of Xk.entries()) {
+          const kk = "word" === Jk.kind,
+            Xk = Tk[Hk];
+          Jk.delayMs = nk;
+          for (let Tk = 0; jk && Tk < Xk; Tk++) {
             const {
-              intonation: bC
-            } = MC;
-            let nC = RC > 0 ? -bC.declineSemitones * (pC / RC) : 0;
-            nC += IC(`${vC(PC.text)}|${wC}`) * bC.variationSemitones;
-            const SC = Math.min(1, bC.variationSemitones);
-            let GC = MC.glideSemitones,
-              AC = 1;
-            ZC && (nC += bC.exclaimLiftSemitones, AC *= fC), zC && pC === RC && (nC += bC.questionRiseSemitones * (QC > 1 ? .5 + .5 * wC / (QC - 1) : 1), wC === QC - 1 && (GC = Math.abs(GC) + bC.questionRiseSemitones / 2)), CC && eC(PC.text) && (nC += qC * SC, AC *= oC), QC > 1 && 0 === wC && (nC += WC * SC, AC *= FC), KC.push({
-              atMs: YC + wC * gC,
-              semitones: nC,
-              glideSemitones: GC,
-              durationMs: wC < QC - 1 ? Math.min(MC.durationMs, gC * NC) : MC.durationMs,
-              level: AC
+              intonation: ik
+            } = jk;
+            let yk = Pk > 0 ? -ik.declineSemitones * (Hk / Pk) : 0;
+            yk += Vk(`${Sk(Jk.text)}|${Tk}`) * ik.variationSemitones;
+            const wk = Math.min(1, ik.variationSemitones);
+            let xk = jk.glideSemitones,
+              Kk = 1;
+            Ik && (yk += ik.exclaimLiftSemitones, Kk *= lk), Fk && Hk === Pk && (yk += ik.questionRiseSemitones * (Xk > 1 ? .5 + .5 * Tk / (Xk - 1) : 1), Tk === Xk - 1 && (xk = Math.abs(xk) + ik.questionRiseSemitones / 2)), kk && vk(Jk.text) && (yk += qk * wk, Kk *= ak), Xk > 1 && 0 === Tk && (yk += tk * wk, Kk *= Lk), Ok.push({
+              atMs: nk + Tk * ek,
+              semitones: yk,
+              glideSemitones: xk,
+              durationMs: Tk < Xk - 1 ? Math.min(jk.durationMs, ek * Zk) : jk.durationMs,
+              level: Kk
             })
           }
-          YC += QC * gC + (SC.test(PC.text) ? nC : GC.test(PC.text) ? bC : 0)
+          nk += Xk * ek + (wk.test(Jk.text) ? yk : xk.test(Jk.text) ? ik : 0)
         }
       }
       return {
-        pieces: RC.map((CC => "space" === CC.kind ? CC : "icon" === CC.kind ? {
+        pieces: Pk.map((kk => "space" === kk.kind ? kk : "icon" === kk.kind ? {
           kind: "icon",
-          icon: CC.text,
-          delayMs: CC.delayMs
+          icon: kk.text,
+          delayMs: kk.delayMs
         } : {
           kind: "word",
-          text: CC.text,
-          delayMs: CC.delayMs
+          text: kk.text,
+          delayMs: kk.delayMs
         })),
-        blips: KC
+        blips: Ok
       }
     }
-    var KC = ZC(1143),
-      YC = ZC(1192),
-      dC = ZC(1843);
+    var Ok = Ik(1179),
+      nk = Ik(1241),
+      Gk = Ik(1881);
 
-    function mC(CC) {
-      if ("string" === typeof CC) return CC;
-      const zC = YC.h.get().getCurrentLanguageCode();
-      return (0, KC.r)(zC, CC.translationKey, (0, KC.q)(CC.params, dC.d.shown))
+    function pk(kk) {
+      if ("string" === typeof kk) return kk;
+      const Fk = nk.d.get().getCurrentLanguageCode();
+      return (0, Ok.q)(Fk, kk.translationKey, (0, Ok.m)(kk.params, Gk.d.shown))
     }
 
-    function HC(CC) {
-      const zC = void 0 === CC.voice ? null : (0, QC.q)(CC.voice),
-        ZC = zC && (0, QC.m)(zC);
+    function uk(kk) {
+      const Fk = void 0 === kk.voice ? null : (0, Xk.n)(kk.voice),
+        Ik = Fk && (0, Xk.k)(Fk);
       return {
-        plan: hC(mC(CC.line), ZC),
-        synth: ZC
+        plan: Ek(pk(kk.line), Ik),
+        synth: Ik
       }
     }
 
-    function EC(CC) {
-      const zC = [];
-      let ZC = [];
-      for (const [wC, bC] of CC.entries()) {
-        var QC;
-        "space" === bC.kind && (" " !== bC.text || "icon" !== (null === (QC = CC[wC + 1]) || void 0 === QC ? void 0 : QC.kind)) ? (ZC.length > 0 && zC.push(ZC), zC.push([bC]), ZC = []) : ZC.push(bC)
+    function bk(kk) {
+      const Fk = [];
+      let Ik = [];
+      for (const [Tk, ik] of kk.entries()) {
+        var Xk;
+        "space" === ik.kind && (" " !== ik.text || "icon" !== (null === (Xk = kk[Tk + 1]) || void 0 === Xk ? void 0 : Xk.kind)) ? (Ik.length > 0 && Fk.push(Ik), Fk.push([ik]), Ik = []) : Ik.push(ik)
       }
-      return ZC.length > 0 && zC.push(ZC), zC
+      return Ik.length > 0 && Fk.push(Ik), Fk
     }
   },
-  8735: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => bC,
-      f: () => wC
+  8691: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => ik,
+      f: () => Tk
     });
-    let QC = null;
-    const wC = function(CC) {
-        const zC = {
-          cycle: CC,
+    let Xk = null;
+    const Tk = function(kk) {
+        const Fk = {
+          cycle: kk,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return QC = zC, () => {
-          QC === zC && (QC = null)
+        return Xk = Fk, () => {
+          Xk === Fk && (Xk = null)
         }
       },
-      bC = () => {
-        var CC;
-        return null !== (CC = QC) && void 0 !== CC && CC.canCycle() ? QC.cycle : null
+      ik = () => {
+        var kk;
+        return null !== (kk = Xk) && void 0 !== kk && kk.canCycle() ? Xk.cycle : null
       }
   },
-  36490: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      B: () => GC,
-      c: () => bC,
-      g: () => SC,
-      j: () => pC,
-      m: () => fC,
-      o: () => NC,
-      p: () => PC,
-      r: () => WC,
-      v: () => RC,
-      z: () => gC
+  36607: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      C: () => xk,
+      e: () => ik,
+      i: () => wk,
+      k: () => Hk,
+      o: () => lk,
+      q: () => Zk,
+      r: () => Jk,
+      v: () => tk,
+      x: () => Pk,
+      y: () => ek
     });
-    var QC = ZC(20),
-      wC = ZC(28);
-    const bC = "clientGameInventoryButtonsChanged",
-      nC = new Map;
+    var Xk = Ik(25),
+      Tk = Ik(34);
+    const ik = "clientGameInventoryButtonsChanged",
+      yk = new Map;
 
-    function fC() {
-      return [...nC.values()].sort(((CC, zC) => {
-        var ZC, QC;
-        return (null !== (ZC = CC.order) && void 0 !== ZC ? ZC : 0) - (null !== (QC = zC.order) && void 0 !== QC ? QC : 0)
+    function lk() {
+      return [...yk.values()].sort(((kk, Fk) => {
+        var Ik, Xk;
+        return (null !== (Ik = kk.order) && void 0 !== Ik ? Ik : 0) - (null !== (Xk = Fk.order) && void 0 !== Xk ? Xk : 0)
       }))
     }
-    let oC = null;
+    let ak = null;
 
-    function qC(CC) {
-      oC = CC
+    function qk(kk) {
+      ak = kk
     }
-    let FC = !1;
+    let Lk = !1;
 
-    function WC(CC) {
-      FC = !0;
+    function tk(kk) {
+      Lk = !0;
       try {
-        CC.onClick()
+        kk.onClick()
       } finally {
-        FC = !1
+        Lk = !1
       }
-      CC.panel && "clientGame" === QC.b.get("openInGameMenuName") && qC(CC.id)
+      kk.panel && "clientGame" === Xk.d.get("openInGameMenuName") && qk(kk.id)
     }
 
-    function NC() {
-      return FC
+    function Zk() {
+      return Lk
     }
 
-    function MC() {
-      return fC().filter((CC => CC.panel && !CC.disabled))
+    function jk() {
+      return lk().filter((kk => kk.panel && !kk.disabled))
     }
 
-    function gC(CC) {
-      const zC = MC(),
-        ZC = zC.findIndex((CC => CC.id === oC));
-      return !(ZC < 0 || zC.length < 2) && (WC(zC[(ZC + CC + zC.length) % zC.length]), !0)
+    function ek(kk) {
+      const Fk = jk(),
+        Ik = Fk.findIndex((kk => kk.id === ak));
+      return !(Ik < 0 || Fk.length < 2) && (tk(Fk[(Ik + kk + Fk.length) % Fk.length]), !0)
     }
 
-    function SC() {
-      return null !== oC && MC().length > 1
+    function wk() {
+      return null !== ak && jk().length > 1
     }
 
-    function pC() {
-      qC(null)
+    function Hk() {
+      qk(null)
     }
 
-    function PC() {
-      "inventory" !== QC.b.get("openInGameMenuName") && qC(null)
+    function Jk() {
+      "inventory" !== Xk.d.get("openInGameMenuName") && qk(null)
     }
 
-    function GC() {
-      const CC = oC;
-      return qC(null), CC
+    function xk() {
+      const kk = ak;
+      return qk(null), kk
     }
 
-    function RC(CC) {
-      return nC.set(CC.id, CC), wC.o.bp(bC, fC(), !0), () => {
-        nC.get(CC.id) === CC && (nC.delete(CC.id), wC.o.bp(bC, fC()))
+    function Pk(kk) {
+      return yk.set(kk.id, kk), Tk.g.GL(ik, lk(), !0), () => {
+        yk.get(kk.id) === kk && (yk.delete(kk.id), Tk.g.GL(ik, lk()))
       }
     }
   },
-  36488: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      C: () => FC,
-      d: () => fC,
-      h: () => pC,
-      k: () => PC,
-      o: () => NC,
-      q: () => qC,
-      u: () => SC,
-      y: () => MC
+  36600: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => lk,
+      e: () => Hk,
+      f: () => Jk,
+      j: () => Zk,
+      m: () => qk,
+      p: () => wk,
+      r: () => jk,
+      v: () => Lk
     });
-    var QC = ZC(20),
-      wC = ZC(28),
-      bC = ZC(1240),
-      nC = ZC(36490);
-    const fC = "clientGameUiChanged";
-    let oC = null;
+    var Xk = Ik(25),
+      Tk = Ik(34),
+      ik = Ik(1270),
+      yk = Ik(36607);
+    const lk = "clientGameUiChanged";
+    let ak = null;
 
-    function qC() {
-      return oC
+    function qk() {
+      return ak
     }
 
-    function FC(CC, zC) {
-      const ZC = {
-        content: CC,
-        menu: zC
+    function Lk(kk, Fk) {
+      const Ik = {
+        content: kk,
+        menu: Fk
       };
-      return oC = ZC, wC.o.bp(fC, oC, !0), () => {
-        oC === ZC && (oC = null, gC = !1, pC(), wC.o.bp(fC, null))
+      return ak = Ik, Tk.g.GL(lk, ak, !0), () => {
+        ak === Ik && (ak = null, ek = !1, Hk(), Tk.g.GL(lk, null))
       }
     }
-    let WC = null;
+    let tk = null;
 
-    function NC() {
-      return WC
+    function Zk() {
+      return tk
     }
 
-    function MC(CC) {
-      return WC = CC, () => {
-        WC === CC && (WC = null)
+    function jk(kk) {
+      return tk = kk, () => {
+        tk === kk && (tk = null)
       }
     }
-    let gC = !1;
+    let ek = !1;
 
-    function SC() {
-      const CC = QC.b.get("openInGameMenuName");
-      "clientGame" !== CC && (gC = "inventory" === CC), (0, nC.o)() || (0, nC.j)(), (0, bC.u)(bC.e), QC.b.set({
+    function wk() {
+      const kk = Xk.d.get("openInGameMenuName");
+      "clientGame" !== kk && (ek = "inventory" === kk), (0, yk.q)() || (0, yk.k)(), (0, ik.m)(ik.c), Xk.d.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function pC() {
-      GC(!1)
+    function Hk() {
+      xk(!1)
     }
 
-    function PC() {
-      GC(gC)
+    function Jk() {
+      xk(ek)
     }
 
-    function GC(CC) {
-      "clientGame" === QC.b.get("openInGameMenuName") && QC.b.set({
-        openInGameMenuName: CC ? "inventory" : null
-      }), CC || (0, nC.j)(), gC = !1
+    function xk(kk) {
+      "clientGame" === Xk.d.get("openInGameMenuName") && Xk.d.set({
+        openInGameMenuName: kk ? "inventory" : null
+      }), kk || (0, yk.k)(), ek = !1
     }
   },
-  38341: (CC, zC, ZC) => {
-    function QC(CC, zC, ZC) {
-      const QC = new Set,
-        wC = new ResizeObserver(ZC),
-        bC = () => {
-          const zC = new Set(document.querySelectorAll(CC));
-          let bC = !1;
-          for (const CC of QC) zC.has(CC) || (wC.unobserve(CC), QC.delete(CC), bC = !0);
-          for (const CC of zC) QC.has(CC) || (wC.observe(CC), nC.observe(CC, {
+  38503: (kk, Fk, Ik) => {
+    function Xk(kk, Fk, Ik) {
+      const Xk = new Set,
+        Tk = new ResizeObserver(Ik),
+        ik = () => {
+          const Fk = new Set(document.querySelectorAll(kk));
+          let ik = !1;
+          for (const kk of Xk) Fk.has(kk) || (Tk.unobserve(kk), Xk.delete(kk), ik = !0);
+          for (const kk of Fk) Xk.has(kk) || (Tk.observe(kk), yk.observe(kk, {
             attributes: !0,
             attributeFilter: ["class", "style"]
-          }), QC.add(CC));
-          bC && ZC()
+          }), Xk.add(kk));
+          ik && Ik()
         },
-        nC = new MutationObserver((zC => {
-          zC.some((CC => "attributes" === CC.type)) && ZC(), zC.some((zC => function(CC, zC, ZC) {
-            if ("childList" !== CC.type) return !1;
-            for (const QC of CC.addedNodes)
-              if (QC instanceof Element && (QC.matches(zC) || QC.querySelector(zC))) return !0;
-            for (const QC of CC.removedNodes)
-              if (QC instanceof Element)
-                for (const CC of ZC)
-                  if (QC.contains(CC)) return !0;
+        yk = new MutationObserver((Fk => {
+          Fk.some((kk => "attributes" === kk.type)) && Ik(), Fk.some((Fk => function(kk, Fk, Ik) {
+            if ("childList" !== kk.type) return !1;
+            for (const Xk of kk.addedNodes)
+              if (Xk instanceof Element && (Xk.matches(Fk) || Xk.querySelector(Fk))) return !0;
+            for (const Xk of kk.removedNodes)
+              if (Xk instanceof Element)
+                for (const kk of Ik)
+                  if (Xk.contains(kk)) return !0;
             return !1
-          }(zC, CC, QC))) && bC()
+          }(Fk, kk, Xk))) && ik()
         }));
-      nC.observe(document.body, {
+      yk.observe(document.body, {
         childList: !0,
         subtree: !0
       });
-      for (const fC of zC) wC.observe(fC);
-      return window.addEventListener("resize", ZC), bC(), ZC(), () => {
-        wC.disconnect(), nC.disconnect(), window.removeEventListener("resize", ZC)
+      for (const lk of Fk) Tk.observe(lk);
+      return window.addEventListener("resize", Ik), ik(), Ik(), () => {
+        Tk.disconnect(), yk.disconnect(), window.removeEventListener("resize", Ik)
       }
     }
-    ZC.d(zC, {
-      b: () => QC
+    Ik.d(Fk, {
+      b: () => Xk
     })
   },
-  8876: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => fC,
-      f: () => oC
+  8862: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => lk,
+      h: () => ak
     });
-    var QC = ZC(20),
-      wC = ZC(1275),
-      bC = ZC(77);
-    const nC = {
+    var Xk = Ik(25),
+      Tk = Ik(1301),
+      ik = Ik(95);
+    const yk = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -634,350 +634,350 @@ export const modules = {
       }
     };
 
-    function fC() {
-      return (0, bC.isMobile)() && "function" === typeof navigator.vibrate
+    function lk() {
+      return (0, ik.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const oC = new class {
-      constructor(CC) {
-        this.deps = CC, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const ak = new class {
+      constructor(kk) {
+        this.deps = kk, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(CC, zC) {
-        var ZC;
+      play(kk, Fk) {
+        var Ik;
         if (!this.deps.enabled()) return;
-        const QC = nC[CC],
-          wC = null !== zC && void 0 !== zC ? zC : QC.pattern;
-        if (null === wC) return void console.warn("No vibration pattern for", CC);
-        const bC = this.deps.now();
-        bC - this.lastAnyAt < 40 && QC.priority < this.playingPriority || bC - (null !== (ZC = this.lastAt.get(CC)) && void 0 !== ZC ? ZC : -1 / 0) < QC.minGapMs || bC < this.playingUntil && QC.priority < this.playingPriority || (this.lastAt.set(CC, bC), this.lastAnyAt = bC, this.playingUntil = bC + wC.reduce(((CC, zC) => CC + zC), 0), this.playingPriority = QC.priority, this.deps.vibrate(wC))
+        const Xk = yk[kk],
+          Tk = null !== Fk && void 0 !== Fk ? Fk : Xk.pattern;
+        if (null === Tk) return void console.warn("No vibration pattern for", kk);
+        const ik = this.deps.now();
+        ik - this.lastAnyAt < 40 && Xk.priority < this.playingPriority || ik - (null !== (Ik = this.lastAt.get(kk)) && void 0 !== Ik ? Ik : -1 / 0) < Xk.minGapMs || ik < this.playingUntil && Xk.priority < this.playingPriority || (this.lastAt.set(kk, ik), this.lastAnyAt = ik, this.playingUntil = ik + Tk.reduce(((kk, Fk) => kk + Fk), 0), this.playingPriority = Xk.priority, this.deps.vibrate(Tk))
       }
     }({
-      vibrate: CC => {
-        navigator.vibrate([...CC])
+      vibrate: kk => {
+        navigator.vibrate([...kk])
       },
       now: () => performance.now(),
-      enabled: () => fC() && QC.b.get("isTouchScreen") && QC.b.get("clientEscMenuOptions").vibration && !(0, wC.g)()
+      enabled: () => lk() && Xk.d.get("isTouchScreen") && Xk.d.get("clientEscMenuOptions").vibration && !(0, Tk.h)()
     })
   },
-  37023: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => fC,
-      f: () => nC
+  37224: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => lk,
+      i: () => yk
     });
-    var QC = ZC(37014),
-      wC = ZC(326),
-      bC = ZC(1806);
+    var Xk = Ik(37215),
+      Tk = Ik(337),
+      ik = Ik(1844);
 
-    function nC(CC) {
-      if ("Cb" in CC) return JC.createAnimationScript(CC);
-      return new qC(CC).createAnimationScript()
+    function yk(kk) {
+      if ("ki" in kk) return sk.createAnimationScript(kk);
+      return new qk(kk).createAnimationScript()
     }
 
-    function fC(CC, zC, ZC, wC) {
-      const bC = CC.Cb <= 0 ? 1 : zC + ZC * Math.max(0, wC) / CC.Cb;
-      return CC.zb === QC.g.LoopOnLastFrame ? bC % 1 : CC.zb === QC.g.NoLoop && bC >= 1 ? null : Math.min(1, bC)
+    function lk(kk, Fk, Ik, Tk) {
+      const ik = kk.ki <= 0 ? 1 : Fk + Ik * Math.max(0, Tk) / kk.ki;
+      return kk.Fi === Xk.k.LoopOnLastFrame ? ik % 1 : kk.Fi === Xk.k.NoLoop && ik >= 1 ? null : Math.min(1, ik)
     }
-    class oC {
-      createAnimationScript(CC) {
+    class ak {
+      createAnimationScript(kk) {
         const {
-          Cb: zC,
-          loop: ZC,
-          Zb: QC
-        } = CC;
+          ki: Fk,
+          loop: Ik,
+          Ii: Xk
+        } = kk;
         return {
-          Cb: Math.round(zC),
-          zb: this.createLoopMode(null !== ZC && void 0 !== ZC && ZC),
-          Zb: this.createNodeSkeletonAnimationScript(null !== QC && void 0 !== QC ? QC : null)
+          ki: Math.round(Fk),
+          Fi: this.createLoopMode(null !== Ik && void 0 !== Ik && Ik),
+          Ii: this.createNodeSkeletonAnimationScript(null !== Xk && void 0 !== Xk ? Xk : null)
         }
       }
-      createLoopMode(CC) {
-        switch (CC) {
+      createLoopMode(kk) {
+        switch (kk) {
           case !1:
-            return QC.g.NoLoop;
+            return Xk.k.NoLoop;
           case !0:
-            return QC.g.LoopOnLastFrame;
+            return Xk.k.LoopOnLastFrame;
           case "hold-on-last-frame":
-            return QC.g.HoldOnLastFrame
+            return Xk.k.HoldOnLastFrame
         }
-        throw new Error(`Invalid loop mode schema: ${CC}`)
+        throw new Error(`Invalid loop mode schema: ${kk}`)
       }
-      createNodeSkeletonAnimationScript(CC) {
-        if (null === CC) return null;
-        const zC = {};
-        for (const ZC in CC) {
-          const QC = CC[ZC];
-          zC[ZC] = this.createNodeAnimationScript(QC)
+      createNodeSkeletonAnimationScript(kk) {
+        if (null === kk) return null;
+        const Fk = {};
+        for (const Ik in kk) {
+          const Xk = kk[Ik];
+          Fk[Ik] = this.createNodeAnimationScript(Xk)
         }
-        return zC
+        return Fk
       }
-      createNodeAnimationScript(CC) {
+      createNodeAnimationScript(kk) {
         const {
-          timeline: zC
-        } = CC, ZC = zC.filter((CC => Number.isFinite(CC.timeFraction)));
-        return ZC.sort(((CC, zC) => CC.timeFraction - zC.timeFraction)), {
-          rotation: this.createTimelineFromKeyframes(ZC, "rotation", NC),
-          position: this.createTimelineFromKeyframes(ZC, "position", gC)
+          timeline: Fk
+        } = kk, Ik = Fk.filter((kk => Number.isFinite(kk.timeFraction)));
+        return Ik.sort(((kk, Fk) => kk.timeFraction - Fk.timeFraction)), {
+          rotation: this.createTimelineFromKeyframes(Ik, "rotation", Zk),
+          position: this.createTimelineFromKeyframes(Ik, "position", ek)
         }
       }
-      createTimelineFromKeyframes(CC, zC, ZC) {
-        const QC = [];
-        for (const oC of CC) {
-          const CC = oC[zC];
-          if (CC) {
-            const zC = this.createAnimationFrameWithoutPrecomputes(oC.timeFraction, CC);
-            FC(zC) && QC.push(zC)
+      createTimelineFromKeyframes(kk, Fk, Ik) {
+        const Xk = [];
+        for (const ak of kk) {
+          const kk = ak[Fk];
+          if (kk) {
+            const Fk = this.createAnimationFrameWithoutPrecomputes(ak.timeFraction, kk);
+            Lk(Fk) && Xk.push(Fk)
           }
         }
-        const wC = [];
-        for (let oC = 0; oC < QC.length; oC++) {
-          var bC, nC, fC;
-          const CC = QC[oC],
-            zC = null !== (bC = QC[oC - 1]) && void 0 !== bC ? bC : CC,
-            qC = null !== (nC = QC[oC + 1]) && void 0 !== nC ? nC : CC,
-            FC = null !== (fC = QC[oC + 2]) && void 0 !== fC ? fC : qC;
-          wC.push({
-            ...CC,
-            ...ZC(zC.post, zC.timeFraction, CC.post, CC.timeFraction, qC.pre, qC.timeFraction, FC.pre, FC.timeFraction)
+        const Tk = [];
+        for (let ak = 0; ak < Xk.length; ak++) {
+          var ik, yk, lk;
+          const kk = Xk[ak],
+            Fk = null !== (ik = Xk[ak - 1]) && void 0 !== ik ? ik : kk,
+            qk = null !== (yk = Xk[ak + 1]) && void 0 !== yk ? yk : kk,
+            Lk = null !== (lk = Xk[ak + 2]) && void 0 !== lk ? lk : qk;
+          Tk.push({
+            ...kk,
+            ...Ik(Fk.post, Fk.timeFraction, kk.post, kk.timeFraction, qk.pre, qk.timeFraction, Lk.pre, Lk.timeFraction)
           })
         }
-        return wC
+        return Tk
       }
-      createAnimationFrameWithoutPrecomputes(CC, zC) {
-        let ZC, QC, wC = null;
-        var bC;
-        if ("object" === typeof zC && "point" in zC) wC = null !== (bC = zC.nb) && void 0 !== bC ? bC : null, ZC = zC.point, QC = zC.point;
-        else if ("object" === typeof zC && "pre" in zC) {
-          var nC;
-          wC = null !== (nC = zC.nb) && void 0 !== nC ? nC : null, ZC = zC.pre, QC = zC.post
-        } else ZC = zC, QC = zC;
+      createAnimationFrameWithoutPrecomputes(kk, Fk) {
+        let Ik, Xk, Tk = null;
+        var ik;
+        if ("object" === typeof Fk && "point" in Fk) Tk = null !== (ik = Fk.ii) && void 0 !== ik ? ik : null, Ik = Fk.point, Xk = Fk.point;
+        else if ("object" === typeof Fk && "pre" in Fk) {
+          var yk;
+          Tk = null !== (yk = Fk.ii) && void 0 !== yk ? yk : null, Ik = Fk.pre, Xk = Fk.post
+        } else Ik = Fk, Xk = Fk;
         return {
-          timeFraction: CC,
-          nb: this.createLerpMode(wC),
-          pre: ZC,
-          post: QC
+          timeFraction: kk,
+          ii: this.createLerpMode(Tk),
+          pre: Ik,
+          post: Xk
         }
       }
-      createLerpMode(CC) {
-        return null === CC ? QC.f.Linear : oC.LERP_MODE_SCHEMA_MAPPING[CC]
+      createLerpMode(kk) {
+        return null === kk ? Xk.g.Linear : ak.LERP_MODE_SCHEMA_MAPPING[kk]
       }
     }
-    oC.LERP_MODE_SCHEMA_MAPPING = {
-      linear: QC.f.Linear,
-      "catmull-rom-spline": QC.f.CatmullRomSpline
+    ak.LERP_MODE_SCHEMA_MAPPING = {
+      linear: Xk.g.Linear,
+      "catmull-rom-spline": Xk.g.CatmullRomSpline
     };
-    class qC {
-      constructor(CC) {
-        this.animationSchema = CC
+    class qk {
+      constructor(kk) {
+        this.animationSchema = kk
       }
       createAnimationScript() {
         const {
-          animation_length: CC,
-          loop: zC,
-          bones: ZC
+          animation_length: kk,
+          loop: Fk,
+          bones: Ik
         } = this.animationSchema;
         return {
-          Cb: Math.round(1e3 * CC),
-          zb: this.createLoopMode(null !== zC && void 0 !== zC && zC),
-          Zb: this.createNodeSkeletonAnimationScript(null !== ZC && void 0 !== ZC ? ZC : null)
+          ki: Math.round(1e3 * kk),
+          Fi: this.createLoopMode(null !== Fk && void 0 !== Fk && Fk),
+          Ii: this.createNodeSkeletonAnimationScript(null !== Ik && void 0 !== Ik ? Ik : null)
         }
       }
-      createLoopMode(CC) {
-        switch (CC) {
+      createLoopMode(kk) {
+        switch (kk) {
           case !1:
-            return QC.g.NoLoop;
+            return Xk.k.NoLoop;
           case !0:
-            return QC.g.LoopOnLastFrame;
+            return Xk.k.LoopOnLastFrame;
           case "hold_on_last_frame":
-            return QC.g.HoldOnLastFrame
+            return Xk.k.HoldOnLastFrame
         }
-        throw new Error(`Invalid Blockbench loop mode schema: ${CC}`)
+        throw new Error(`Invalid Blockbench loop mode schema: ${kk}`)
       }
-      createNodeSkeletonAnimationScript(CC) {
-        if (null === CC) return null;
-        const zC = {};
-        for (const ZC in CC) {
-          const QC = CC[ZC];
-          zC[ZC] = this.createNodeAnimationScript(QC)
+      createNodeSkeletonAnimationScript(kk) {
+        if (null === kk) return null;
+        const Fk = {};
+        for (const Ik in kk) {
+          const Xk = kk[Ik];
+          Fk[Ik] = this.createNodeAnimationScript(Xk)
         }
-        return zC
+        return Fk
       }
-      createNodeAnimationScript(CC) {
+      createNodeAnimationScript(kk) {
         const {
-          rotation: zC,
-          position: ZC
-        } = CC;
+          rotation: Fk,
+          position: Ik
+        } = kk;
         return {
-          rotation: this.createAnimationTimeline(null !== zC && void 0 !== zC ? zC : null, pC, NC, !0),
-          position: this.createAnimationTimeline(null !== ZC && void 0 !== ZC ? ZC : null, GC, gC, !1)
+          rotation: this.createAnimationTimeline(null !== Fk && void 0 !== Fk ? Fk : null, Hk, Zk, !0),
+          position: this.createAnimationTimeline(null !== Ik && void 0 !== Ik ? Ik : null, xk, ek, !1)
         }
       }
-      createAnimationTimeline(CC, zC, ZC, QC) {
-        if (null === CC) return [];
-        if (Array.isArray(CC)) {
-          CC = {
-            "0.0": CC
+      createAnimationTimeline(kk, Fk, Ik, Xk) {
+        if (null === kk) return [];
+        if (Array.isArray(kk)) {
+          kk = {
+            "0.0": kk
           }
         }
-        const wC = Object.entries(CC).map((CC => {
-          let [ZC, QC] = CC;
-          const wC = Number(ZC) / this.animationSchema.animation_length;
-          return this.createAnimationFrameWithoutPrecomputes(wC, QC, zC)
-        })).filter(FC);
-        wC.sort(((CC, zC) => CC.timeFraction - zC.timeFraction)), QC && function(CC) {
-          for (let zC = 1; zC < CC.length; zC++) {
-            const ZC = CC[zC - 1].post,
-              QC = CC[zC],
-              wC = RC(QC.pre),
-              bC = RC(QC.post),
-              nC = xC(ZC, QC.pre);
-            xC(ZC, wC) < nC && (CC[zC] = {
-              ...QC,
-              pre: wC,
-              post: bC
+        const Tk = Object.entries(kk).map((kk => {
+          let [Ik, Xk] = kk;
+          const Tk = Number(Ik) / this.animationSchema.animation_length;
+          return this.createAnimationFrameWithoutPrecomputes(Tk, Xk, Fk)
+        })).filter(Lk);
+        Tk.sort(((kk, Fk) => kk.timeFraction - Fk.timeFraction)), Xk && function(kk) {
+          for (let Fk = 1; Fk < kk.length; Fk++) {
+            const Ik = kk[Fk - 1].post,
+              Xk = kk[Fk],
+              Tk = Pk(Xk.pre),
+              ik = Pk(Xk.post),
+              yk = Qk(Ik, Xk.pre);
+            Qk(Ik, Tk) < yk && (kk[Fk] = {
+              ...Xk,
+              pre: Tk,
+              post: ik
             })
           }
-        }(wC);
-        const bC = [];
-        for (let qC = 0; qC < wC.length; qC++) {
-          var nC, fC, oC;
-          const CC = wC[qC],
-            zC = null !== (nC = wC[qC - 1]) && void 0 !== nC ? nC : CC,
-            QC = null !== (fC = wC[qC + 1]) && void 0 !== fC ? fC : CC,
-            FC = null !== (oC = wC[qC + 2]) && void 0 !== oC ? oC : QC;
-          bC.push({
-            ...CC,
-            ...ZC(zC.post, zC.timeFraction, CC.post, CC.timeFraction, QC.pre, QC.timeFraction, FC.pre, FC.timeFraction)
+        }(Tk);
+        const ik = [];
+        for (let qk = 0; qk < Tk.length; qk++) {
+          var yk, lk, ak;
+          const kk = Tk[qk],
+            Fk = null !== (yk = Tk[qk - 1]) && void 0 !== yk ? yk : kk,
+            Xk = null !== (lk = Tk[qk + 1]) && void 0 !== lk ? lk : kk,
+            Lk = null !== (ak = Tk[qk + 2]) && void 0 !== ak ? ak : Xk;
+          ik.push({
+            ...kk,
+            ...Ik(Fk.post, Fk.timeFraction, kk.post, kk.timeFraction, Xk.pre, Xk.timeFraction, Lk.pre, Lk.timeFraction)
           })
         }
-        return bC
+        return ik
       }
-      createAnimationFrameWithoutPrecomputes(CC, zC, ZC) {
-        let QC, wC, bC = null;
-        if ("object" === typeof zC && "post" in zC) {
-          var nC;
-          bC = null !== (nC = zC.lerp_mode) && void 0 !== nC ? nC : null, wC = SC(zC.post, ZC), QC = zC.pre ? SC(zC.pre, ZC) : wC
+      createAnimationFrameWithoutPrecomputes(kk, Fk, Ik) {
+        let Xk, Tk, ik = null;
+        if ("object" === typeof Fk && "post" in Fk) {
+          var yk;
+          ik = null !== (yk = Fk.lerp_mode) && void 0 !== yk ? yk : null, Tk = wk(Fk.post, Ik), Xk = Fk.pre ? wk(Fk.pre, Ik) : Tk
         } else {
-          const CC = SC(zC, ZC);
-          wC = CC, QC = CC
+          const kk = wk(Fk, Ik);
+          Tk = kk, Xk = kk
         }
         return {
-          timeFraction: CC,
-          nb: this.createLerpMode(bC),
-          pre: QC,
-          post: wC
+          timeFraction: kk,
+          ii: this.createLerpMode(ik),
+          pre: Xk,
+          post: Tk
         }
       }
-      createLerpMode(CC) {
-        return null === CC ? QC.f.Linear : qC.LERP_MODE_SCHEMA_MAPPING[CC]
+      createLerpMode(kk) {
+        return null === kk ? Xk.g.Linear : qk.LERP_MODE_SCHEMA_MAPPING[kk]
       }
     }
 
-    function FC(CC) {
-      return Number.isFinite(CC.timeFraction) && WC(CC.pre) && WC(CC.post)
+    function Lk(kk) {
+      return Number.isFinite(kk.timeFraction) && tk(kk.pre) && tk(kk.post)
     }
 
-    function WC(CC) {
-      return Number.isFinite(CC[0]) && Number.isFinite(CC[1]) && Number.isFinite(CC[2])
+    function tk(kk) {
+      return Number.isFinite(kk[0]) && Number.isFinite(kk[1]) && Number.isFinite(kk[2])
     }
 
-    function NC(CC, zC, ZC, QC, wC, bC, nC, fC) {
-      const oC = bC - zC,
-        qC = bC - QC,
-        FC = fC - QC,
-        WC = [null, null, null];
-      for (let NC = 0; NC < WC.length; NC++) WC[NC] = MC(CC[NC], ZC[NC], wC[NC], nC[NC], oC, FC);
+    function Zk(kk, Fk, Ik, Xk, Tk, ik, yk, lk) {
+      const ak = ik - Fk,
+        qk = ik - Xk,
+        Lk = lk - Xk,
+        tk = [null, null, null];
+      for (let Zk = 0; Zk < tk.length; Zk++) tk[Zk] = jk(kk[Zk], Ik[Zk], Tk[Zk], yk[Zk], ak, Lk);
       return {
-        fb: qC,
-        ob: WC
+        yi: qk,
+        li: tk
       }
     }
 
-    function MC(CC, zC, ZC, QC, bC, nC) {
+    function jk(kk, Fk, Ik, Xk, ik, yk) {
       return {
-        Fb: wC.c.computeShortestRotation(CC, ZC) / bC,
-        Wb: wC.c.computeShortestRotation(zC, QC) / nC,
-        delta: wC.c.computeShortestRotation(zC, ZC)
+        qi: Tk.e.computeShortestRotation(kk, Ik) / ik,
+        Li: Tk.e.computeShortestRotation(Fk, Xk) / yk,
+        delta: Tk.e.computeShortestRotation(Fk, Ik)
       }
     }
 
-    function gC(CC, zC, ZC, QC, wC, bC, nC, fC) {
-      const oC = bC - zC,
-        qC = bC - QC,
-        FC = fC - QC,
-        WC = [null, null, null];
-      for (let NC = 0; NC < WC.length; NC++) WC[NC] = {
-        Fb: (wC[NC] - CC[NC]) / oC,
-        Wb: (nC[NC] - ZC[NC]) / FC,
-        delta: wC[NC] - ZC[NC]
+    function ek(kk, Fk, Ik, Xk, Tk, ik, yk, lk) {
+      const ak = ik - Fk,
+        qk = ik - Xk,
+        Lk = lk - Xk,
+        tk = [null, null, null];
+      for (let Zk = 0; Zk < tk.length; Zk++) tk[Zk] = {
+        qi: (Tk[Zk] - kk[Zk]) / ak,
+        Li: (yk[Zk] - Ik[Zk]) / Lk,
+        delta: Tk[Zk] - Ik[Zk]
       };
       return {
-        fb: qC,
-        ob: WC
+        yi: qk,
+        li: tk
       }
     }
 
-    function SC(CC, zC) {
-      return null === zC ? CC : zC(CC)
+    function wk(kk, Fk) {
+      return null === Fk ? kk : Fk(kk)
     }
 
-    function pC(CC) {
-      const [zC, ZC, QC] = CC, nC = -(0, bC.j)(zC), fC = -(0, bC.j)(ZC), oC = (0, bC.j)(QC), qC = wC.c.quaternionFromEulerZYX(nC, fC, oC);
-      return wC.c.eulerYXZFromQuaternion(qC)
+    function Hk(kk) {
+      const [Fk, Ik, Xk] = kk, yk = -(0, ik.k)(Fk), lk = -(0, ik.k)(Ik), ak = (0, ik.k)(Xk), qk = Tk.e.quaternionFromEulerZYX(yk, lk, ak);
+      return Tk.e.eulerYXZFromQuaternion(qk)
     }
-    qC.LERP_MODE_SCHEMA_MAPPING = {
-      linear: QC.f.Linear,
-      catmullrom: QC.f.CatmullRomSpline
+    qk.LERP_MODE_SCHEMA_MAPPING = {
+      linear: Xk.g.Linear,
+      catmullrom: Xk.g.CatmullRomSpline
     };
-    const PC = 1 / 16;
+    const Jk = 1 / 16;
 
-    function GC(CC) {
-      return [-CC[0] * PC, CC[1] * PC, CC[2] * PC]
+    function xk(kk) {
+      return [-kk[0] * Jk, kk[1] * Jk, kk[2] * Jk]
     }
 
-    function RC(CC) {
-      const [zC, ZC, QC] = CC;
-      return [zC >= 0 ? Math.PI - zC : -Math.PI - zC, AC(ZC + Math.PI), AC(QC + Math.PI)]
+    function Pk(kk) {
+      const [Fk, Ik, Xk] = kk;
+      return [Fk >= 0 ? Math.PI - Fk : -Math.PI - Fk, Kk(Ik + Math.PI), Kk(Xk + Math.PI)]
     }
 
-    function AC(CC) {
-      return wC.c.mod(CC + Math.PI, 2 * Math.PI) - Math.PI
+    function Kk(kk) {
+      return Tk.e.mod(kk + Math.PI, 2 * Math.PI) - Math.PI
     }
 
-    function xC(CC, zC) {
-      return Math.abs(wC.c.computeShortestRotation(CC[0], zC[0])) + Math.abs(wC.c.computeShortestRotation(CC[1], zC[1])) + Math.abs(wC.c.computeShortestRotation(CC[2], zC[2]))
+    function Qk(kk, Fk) {
+      return Math.abs(Tk.e.computeShortestRotation(kk[0], Fk[0])) + Math.abs(Tk.e.computeShortestRotation(kk[1], Fk[1])) + Math.abs(Tk.e.computeShortestRotation(kk[2], Fk[2]))
     }
-    const JC = new oC
+    const sk = new ak
   },
-  37014: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => nC,
-      d: () => bC,
-      f: () => QC,
-      g: () => wC
+  37215: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => yk,
+      c: () => ik,
+      g: () => Xk,
+      k: () => Tk
     });
-    let QC = function(CC) {
-        return CC[CC.Linear = 0] = "Linear", CC[CC.CatmullRomSpline = 1] = "CatmullRomSpline", CC
+    let Xk = function(kk) {
+        return kk[kk.Linear = 0] = "Linear", kk[kk.CatmullRomSpline = 1] = "CatmullRomSpline", kk
       }({}),
-      wC = function(CC) {
-        return CC[CC.NoLoop = 0] = "NoLoop", CC[CC.LoopOnLastFrame = 1] = "LoopOnLastFrame", CC[CC.HoldOnLastFrame = 2] = "HoldOnLastFrame", CC
+      Tk = function(kk) {
+        return kk[kk.NoLoop = 0] = "NoLoop", kk[kk.LoopOnLastFrame = 1] = "LoopOnLastFrame", kk[kk.HoldOnLastFrame = 2] = "HoldOnLastFrame", kk
       }({}),
-      bC = function(CC) {
-        return CC[CC.Movement = 0] = "Movement", CC[CC.Action = 1] = "Action", CC[CC.Emote = 2] = "Emote", CC[CC.Custom = 3] = "Custom", CC
+      ik = function(kk) {
+        return kk[kk.Movement = 0] = "Movement", kk[kk.Action = 1] = "Action", kk[kk.Emote = 2] = "Emote", kk[kk.Custom = 3] = "Custom", kk
       }({}),
-      nC = function(CC) {
-        return CC[CC.Start = 0] = "Start", CC[CC.Stop = 1] = "Stop", CC
+      yk = function(kk) {
+        return kk[kk.Start = 0] = "Start", kk[kk.Stop = 1] = "Stop", kk
       }({})
   },
-  4783: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => wC,
-      f: () => QC,
-      i: () => bC,
-      m: () => oC,
-      q: () => nC
+  4843: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => Tk,
+      d: () => Xk,
+      g: () => ik,
+      k: () => ak,
+      n: () => yk
     });
-    const QC = ["sine", "triangle", "square", "sawtooth"],
-      wC = 55,
-      bC = {
+    const Xk = ["sine", "triangle", "square", "sawtooth"],
+      Tk = 55,
+      ik = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -1116,39 +1116,39 @@ export const modules = {
         }
       };
 
-    function nC(CC) {
-      return "string" !== typeof CC ? CC : Object.hasOwn(bC, CC) ? bC[CC] : null
+    function yk(kk) {
+      return "string" !== typeof kk ? kk : Object.hasOwn(ik, kk) ? ik[kk] : null
     }
 
-    function fC(CC, zC, ZC) {
-      return Math.min(ZC, Math.max(zC, CC))
+    function lk(kk, Fk, Ik) {
+      return Math.min(Ik, Math.max(Fk, kk))
     }
 
-    function oC(CC) {
-      const zC = fC(CC.durationMs, 10, 500),
-        ZC = fC(CC.attackMs, 0, zC),
+    function ak(kk) {
+      const Fk = lk(kk.durationMs, 10, 500),
+        Ik = lk(kk.attackMs, 0, Fk),
         {
-          intonation: wC
-        } = CC;
+          intonation: Tk
+        } = kk;
       return {
-        waveform: QC.includes(CC.waveform) ? CC.waveform : "sine",
-        pitchHz: fC(CC.pitchHz, 20, 4e3),
-        glideSemitones: fC(CC.glideSemitones, -24, 24),
-        durationMs: zC,
-        attackMs: ZC,
-        releaseMs: fC(CC.releaseMs, 0, zC - ZC),
-        lowpassHz: null === CC.lowpassHz ? null : fC(CC.lowpassHz, 20, 2e4),
-        volume: fC(CC.volume, 0, 2),
+        waveform: Xk.includes(kk.waveform) ? kk.waveform : "sine",
+        pitchHz: lk(kk.pitchHz, 20, 4e3),
+        glideSemitones: lk(kk.glideSemitones, -24, 24),
+        durationMs: Fk,
+        attackMs: Ik,
+        releaseMs: lk(kk.releaseMs, 0, Fk - Ik),
+        lowpassHz: null === kk.lowpassHz ? null : lk(kk.lowpassHz, 20, 2e4),
+        volume: lk(kk.volume, 0, 2),
         intonation: {
-          variationSemitones: fC(wC.variationSemitones, 0, 6),
-          declineSemitones: fC(wC.declineSemitones, 0, 12),
-          questionRiseSemitones: fC(wC.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: fC(wC.exclaimLiftSemitones, 0, 12)
+          variationSemitones: lk(Tk.variationSemitones, 0, 6),
+          declineSemitones: lk(Tk.declineSemitones, 0, 12),
+          questionRiseSemitones: lk(Tk.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: lk(Tk.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: fC(CC.syllableMs, 25, 200)
+        syllableMs: lk(kk.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

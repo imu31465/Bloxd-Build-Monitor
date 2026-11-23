@@ -1,99 +1,99 @@
 export const id = 79;
 export const ids = [79];
 export const modules = {
-  4661: CC => {
-    function zC(CC) {
-      return CC instanceof Map ? CC.clear = CC.delete = CC.set = function() {
+  4722: kk => {
+    function Fk(kk) {
+      return kk instanceof Map ? kk.clear = kk.delete = kk.set = function() {
         throw new Error("map is read-only")
-      } : CC instanceof Set && (CC.add = CC.clear = CC.delete = function() {
+      } : kk instanceof Set && (kk.add = kk.clear = kk.delete = function() {
         throw new Error("set is read-only")
-      }), Object.freeze(CC), Object.getOwnPropertyNames(CC).forEach((ZC => {
-        const QC = CC[ZC],
-          wC = typeof QC;
-        "object" !== wC && "function" !== wC || Object.isFrozen(QC) || zC(QC)
-      })), CC
+      }), Object.freeze(kk), Object.getOwnPropertyNames(kk).forEach((Ik => {
+        const Xk = kk[Ik],
+          Tk = typeof Xk;
+        "object" !== Tk && "function" !== Tk || Object.isFrozen(Xk) || Fk(Xk)
+      })), kk
     }
-    class ZC {
-      constructor(CC) {
-        void 0 === CC.data && (CC.data = {}), this.data = CC.data, this.isMatchIgnored = !1
+    class Ik {
+      constructor(kk) {
+        void 0 === kk.data && (kk.data = {}), this.data = kk.data, this.isMatchIgnored = !1
       }
       ignoreMatch() {
         this.isMatchIgnored = !0
       }
     }
 
-    function QC(CC) {
-      return CC.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;")
+    function Xk(kk) {
+      return kk.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;")
     }
 
-    function wC(CC) {
-      const zC = Object.create(null);
-      for (const bC in CC) zC[bC] = CC[bC];
-      for (var ZC = arguments.length, QC = new Array(ZC > 1 ? ZC - 1 : 0), wC = 1; wC < ZC; wC++) QC[wC - 1] = arguments[wC];
-      return QC.forEach((function(CC) {
-        for (const ZC in CC) zC[ZC] = CC[ZC]
-      })), zC
+    function Tk(kk) {
+      const Fk = Object.create(null);
+      for (const ik in kk) Fk[ik] = kk[ik];
+      for (var Ik = arguments.length, Xk = new Array(Ik > 1 ? Ik - 1 : 0), Tk = 1; Tk < Ik; Tk++) Xk[Tk - 1] = arguments[Tk];
+      return Xk.forEach((function(kk) {
+        for (const Ik in kk) Fk[Ik] = kk[Ik]
+      })), Fk
     }
-    const bC = CC => !!CC.scope;
-    class nC {
-      constructor(CC, zC) {
-        this.buffer = "", this.classPrefix = zC.classPrefix, CC.walk(this)
+    const ik = kk => !!kk.scope;
+    class yk {
+      constructor(kk, Fk) {
+        this.buffer = "", this.classPrefix = Fk.classPrefix, kk.walk(this)
       }
-      addText(CC) {
-        this.buffer += QC(CC)
+      addText(kk) {
+        this.buffer += Xk(kk)
       }
-      openNode(CC) {
-        if (!bC(CC)) return;
-        const zC = ((CC, zC) => {
+      openNode(kk) {
+        if (!ik(kk)) return;
+        const Fk = ((kk, Fk) => {
           let {
-            prefix: ZC
-          } = zC;
-          if (CC.startsWith("language:")) return CC.replace("language:", "language-");
-          if (CC.includes(".")) {
-            const zC = CC.split(".");
-            return [`${ZC}${zC.shift()}`, ...zC.map(((CC, zC) => `${CC}${"_".repeat(zC+1)}`))].join(" ")
+            prefix: Ik
+          } = Fk;
+          if (kk.startsWith("language:")) return kk.replace("language:", "language-");
+          if (kk.includes(".")) {
+            const Fk = kk.split(".");
+            return [`${Ik}${Fk.shift()}`, ...Fk.map(((kk, Fk) => `${kk}${"_".repeat(Fk+1)}`))].join(" ")
           }
-          return `${ZC}${CC}`
-        })(CC.scope, {
+          return `${Ik}${kk}`
+        })(kk.scope, {
           prefix: this.classPrefix
         });
-        this.span(zC)
+        this.span(Fk)
       }
-      closeNode(CC) {
-        bC(CC) && (this.buffer += "</span>")
+      closeNode(kk) {
+        ik(kk) && (this.buffer += "</span>")
       }
       value() {
         return this.buffer
       }
-      span(CC) {
-        this.buffer += `<span class="${CC}">`
+      span(kk) {
+        this.buffer += `<span class="${kk}">`
       }
     }
-    const fC = function() {
-      let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const zC = {
+    const lk = function() {
+      let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const Fk = {
         children: []
       };
-      return Object.assign(zC, CC), zC
+      return Object.assign(Fk, kk), Fk
     };
-    class oC {
+    class ak {
       constructor() {
-        this.aG = fC(), this.stack = [this.aG]
+        this.vJ = lk(), this.stack = [this.vJ]
       }
       get top() {
         return this.stack[this.stack.length - 1]
       }
       get root() {
-        return this.aG
+        return this.vJ
       }
-      add(CC) {
-        this.top.children.push(CC)
+      add(kk) {
+        this.top.children.push(kk)
       }
-      openNode(CC) {
-        const zC = fC({
-          scope: CC
+      openNode(kk) {
+        const Fk = lk({
+          scope: kk
         });
-        this.add(zC), this.stack.push(zC)
+        this.add(Fk), this.stack.push(Fk)
       }
       closeNode() {
         if (this.stack.length > 1) return this.stack.pop()
@@ -102,391 +102,391 @@ export const modules = {
         for (; this.closeNode(););
       }
       toJSON() {
-        return JSON.stringify(this.aG, null, 4)
+        return JSON.stringify(this.vJ, null, 4)
       }
-      walk(CC) {
-        return this.constructor._walk(CC, this.aG)
+      walk(kk) {
+        return this.constructor._walk(kk, this.vJ)
       }
-      static _walk(CC, zC) {
-        return "string" === typeof zC ? CC.addText(zC) : zC.children && (CC.openNode(zC), zC.children.forEach((zC => this._walk(CC, zC))), CC.closeNode(zC)), CC
+      static _walk(kk, Fk) {
+        return "string" === typeof Fk ? kk.addText(Fk) : Fk.children && (kk.openNode(Fk), Fk.children.forEach((Fk => this._walk(kk, Fk))), kk.closeNode(Fk)), kk
       }
-      static _collapse(CC) {
-        "string" !== typeof CC && CC.children && (CC.children.every((CC => "string" === typeof CC)) ? CC.children = [CC.children.join("")] : CC.children.forEach((CC => {
-          oC._collapse(CC)
+      static _collapse(kk) {
+        "string" !== typeof kk && kk.children && (kk.children.every((kk => "string" === typeof kk)) ? kk.children = [kk.children.join("")] : kk.children.forEach((kk => {
+          ak._collapse(kk)
         })))
       }
     }
-    class qC extends oC {
-      constructor(CC) {
-        super(), this.options = CC
+    class qk extends ak {
+      constructor(kk) {
+        super(), this.options = kk
       }
-      addText(CC) {
-        "" !== CC && this.add(CC)
+      addText(kk) {
+        "" !== kk && this.add(kk)
       }
-      startScope(CC) {
-        this.openNode(CC)
+      startScope(kk) {
+        this.openNode(kk)
       }
       endScope() {
         this.closeNode()
       }
-      __addSublanguage(CC, zC) {
-        const ZC = CC.root;
-        zC && (ZC.scope = `language:${zC}`), this.add(ZC)
+      __addSublanguage(kk, Fk) {
+        const Ik = kk.root;
+        Fk && (Ik.scope = `language:${Fk}`), this.add(Ik)
       }
       toHTML() {
-        return new nC(this, this.options).value()
+        return new yk(this, this.options).value()
       }
       finalize() {
         return this.closeAllNodes(), !0
       }
     }
 
-    function FC(CC) {
-      return CC ? "string" === typeof CC ? CC : CC.source : null
+    function Lk(kk) {
+      return kk ? "string" === typeof kk ? kk : kk.source : null
     }
 
-    function WC(CC) {
-      return gC("(?=", CC, ")")
+    function tk(kk) {
+      return ek("(?=", kk, ")")
     }
 
-    function NC(CC) {
-      return gC("(?:", CC, ")*")
+    function Zk(kk) {
+      return ek("(?:", kk, ")*")
     }
 
-    function MC(CC) {
-      return gC("(?:", CC, ")?")
+    function jk(kk) {
+      return ek("(?:", kk, ")?")
     }
 
-    function gC() {
-      for (var CC = arguments.length, zC = new Array(CC), ZC = 0; ZC < CC; ZC++) zC[ZC] = arguments[ZC];
-      return zC.map((CC => FC(CC))).join("")
+    function ek() {
+      for (var kk = arguments.length, Fk = new Array(kk), Ik = 0; Ik < kk; Ik++) Fk[Ik] = arguments[Ik];
+      return Fk.map((kk => Lk(kk))).join("")
     }
 
-    function SC() {
-      for (var CC = arguments.length, zC = new Array(CC), ZC = 0; ZC < CC; ZC++) zC[ZC] = arguments[ZC];
-      const QC = function(CC) {
-        const zC = CC[CC.length - 1];
-        return "object" === typeof zC && zC.constructor === Object ? (CC.splice(CC.length - 1, 1), zC) : {}
-      }(zC);
-      return "(" + (QC.capture ? "" : "?:") + zC.map((CC => FC(CC))).join("|") + ")"
+    function wk() {
+      for (var kk = arguments.length, Fk = new Array(kk), Ik = 0; Ik < kk; Ik++) Fk[Ik] = arguments[Ik];
+      const Xk = function(kk) {
+        const Fk = kk[kk.length - 1];
+        return "object" === typeof Fk && Fk.constructor === Object ? (kk.splice(kk.length - 1, 1), Fk) : {}
+      }(Fk);
+      return "(" + (Xk.capture ? "" : "?:") + Fk.map((kk => Lk(kk))).join("|") + ")"
     }
 
-    function pC(CC) {
-      return new RegExp(CC.toString() + "|").exec("").length - 1
+    function Hk(kk) {
+      return new RegExp(kk.toString() + "|").exec("").length - 1
     }
-    const PC = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
+    const Jk = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
 
-    function GC(CC, zC) {
+    function xk(kk, Fk) {
       let {
-        joinWith: ZC
-      } = zC, QC = 0;
-      return CC.map((CC => {
-        QC += 1;
-        const zC = QC;
-        let ZC = FC(CC),
-          wC = "";
-        for (; ZC.length > 0;) {
-          const CC = PC.exec(ZC);
-          if (!CC) {
-            wC += ZC;
+        joinWith: Ik
+      } = Fk, Xk = 0;
+      return kk.map((kk => {
+        Xk += 1;
+        const Fk = Xk;
+        let Ik = Lk(kk),
+          Tk = "";
+        for (; Ik.length > 0;) {
+          const kk = Jk.exec(Ik);
+          if (!kk) {
+            Tk += Ik;
             break
           }
-          wC += ZC.substring(0, CC.index), ZC = ZC.substring(CC.index + CC[0].length), "\\" === CC[0][0] && CC[1] ? wC += "\\" + String(Number(CC[1]) + zC) : (wC += CC[0], "(" === CC[0] && QC++)
+          Tk += Ik.substring(0, kk.index), Ik = Ik.substring(kk.index + kk[0].length), "\\" === kk[0][0] && kk[1] ? Tk += "\\" + String(Number(kk[1]) + Fk) : (Tk += kk[0], "(" === kk[0] && Xk++)
         }
-        return wC
-      })).map((CC => `(${CC})`)).join(ZC)
+        return Tk
+      })).map((kk => `(${kk})`)).join(Ik)
     }
-    const RC = "[a-zA-Z]\\w*",
-      AC = "[a-zA-Z_]\\w*",
-      xC = "\\b\\d+(\\.\\d+)?",
-      JC = "(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)",
-      IC = "\\b(0b[01]+)",
-      iC = {
-        RM: "\\\\[\\s\\S]",
+    const Pk = "[a-zA-Z]\\w*",
+      Kk = "[a-zA-Z_]\\w*",
+      Qk = "\\b\\d+(\\.\\d+)?",
+      sk = "(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)",
+      Vk = "\\b(0b[01]+)",
+      zk = {
+        Hj: "\\\\[\\s\\S]",
         relevance: 0
       },
-      vC = {
+      Sk = {
         scope: "string",
-        RM: "'",
+        Hj: "'",
         end: "'",
         illegal: "\\n",
-        contains: [iC]
+        contains: [zk]
       },
-      eC = {
+      vk = {
         scope: "string",
-        RM: '"',
+        Hj: '"',
         end: '"',
         illegal: "\\n",
-        contains: [iC]
+        contains: [zk]
       },
-      hC = function(CC, zC) {
-        const ZC = wC({
+      Ek = function(kk, Fk) {
+        const Ik = Tk({
           scope: "comment",
-          RM: CC,
-          end: zC,
+          Hj: kk,
+          end: Fk,
           contains: []
         }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {});
-        ZC.contains.push({
+        Ik.contains.push({
           scope: "doctag",
-          RM: "[ ]*(?=(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):)",
+          Hj: "[ ]*(?=(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):)",
           end: /(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):/,
           excludeBegin: !0,
           relevance: 0
         });
-        const QC = SC("I", "a", "is", "so", "us", "to", "at", "if", "in", "it", "on", /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
-        return ZC.contains.push({
-          RM: gC(/[ ]+/, "(", QC, /[.]?[:]?([.][ ]|[ ])/, "){3}")
-        }), ZC
+        const Xk = wk("I", "a", "is", "so", "us", "to", "at", "if", "in", "it", "on", /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
+        return Ik.contains.push({
+          Hj: ek(/[ ]+/, "(", Xk, /[.]?[:]?([.][ ]|[ ])/, "){3}")
+        }), Ik
       },
-      KC = hC("//", "$"),
-      YC = hC("/\\*", "\\*/"),
-      dC = hC("#", "$"),
-      mC = {
+      Ok = Ek("//", "$"),
+      nk = Ek("/\\*", "\\*/"),
+      Gk = Ek("#", "$"),
+      pk = {
         scope: "number",
-        RM: xC,
+        Hj: Qk,
         relevance: 0
       },
-      HC = {
+      uk = {
         scope: "number",
-        RM: JC,
+        Hj: sk,
         relevance: 0
       },
-      EC = {
+      bk = {
         scope: "number",
-        RM: IC,
+        Hj: Vk,
         relevance: 0
       },
-      lC = {
+      Rk = {
         scope: "regexp",
-        RM: /\/(?=[^/\n]*\/)/,
+        Hj: /\/(?=[^/\n]*\/)/,
         end: /\/[gimuy]*/,
-        contains: [iC, {
-          RM: /\[/,
+        contains: [zk, {
+          Hj: /\[/,
           end: /\]/,
           relevance: 0,
-          contains: [iC]
+          contains: [zk]
         }]
       },
-      XC = {
+      Uk = {
         scope: "title",
-        RM: RC,
+        Hj: Pk,
         relevance: 0
       },
-      cC = {
+      Ck = {
         scope: "title",
-        RM: AC,
+        Hj: Kk,
         relevance: 0
       },
-      uC = {
-        RM: "\\.\\s*" + AC,
+      Nk = {
+        Hj: "\\.\\s*" + Kk,
         relevance: 0
       };
-    var rC = Object.freeze({
+    var ck = Object.freeze({
       __proto__: null,
-      APOS_STRING_MODE: vC,
-      BACKSLASH_ESCAPE: iC,
-      BINARY_NUMBER_MODE: EC,
-      BINARY_NUMBER_RE: IC,
-      COMMENT: hC,
-      C_BLOCK_COMMENT_MODE: YC,
-      C_LINE_COMMENT_MODE: KC,
-      C_NUMBER_MODE: HC,
-      C_NUMBER_RE: JC,
-      END_SAME_AS_BEGIN: function(CC) {
-        return Object.assign(CC, {
-          "on:begin": (CC, zC) => {
-            zC.data._beginMatch = CC[1]
+      APOS_STRING_MODE: Sk,
+      BACKSLASH_ESCAPE: zk,
+      BINARY_NUMBER_MODE: bk,
+      BINARY_NUMBER_RE: Vk,
+      COMMENT: Ek,
+      C_BLOCK_COMMENT_MODE: nk,
+      C_LINE_COMMENT_MODE: Ok,
+      C_NUMBER_MODE: uk,
+      C_NUMBER_RE: sk,
+      END_SAME_AS_BEGIN: function(kk) {
+        return Object.assign(kk, {
+          "on:begin": (kk, Fk) => {
+            Fk.data._beginMatch = kk[1]
           },
-          "on:end": (CC, zC) => {
-            zC.data._beginMatch !== CC[1] && zC.ignoreMatch()
+          "on:end": (kk, Fk) => {
+            Fk.data._beginMatch !== kk[1] && Fk.ignoreMatch()
           }
         })
       },
-      HASH_COMMENT_MODE: dC,
-      IDENT_RE: RC,
+      HASH_COMMENT_MODE: Gk,
+      IDENT_RE: Pk,
       MATCH_NOTHING_RE: /\b\B/,
-      METHOD_GUARD: uC,
-      NUMBER_MODE: mC,
-      NUMBER_RE: xC,
+      METHOD_GUARD: Nk,
+      NUMBER_MODE: pk,
+      NUMBER_RE: Qk,
       PHRASAL_WORDS_MODE: {
-        RM: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/
+        Hj: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/
       },
-      QUOTE_STRING_MODE: eC,
-      REGEXP_MODE: lC,
+      QUOTE_STRING_MODE: vk,
+      REGEXP_MODE: Rk,
       RE_STARTERS_RE: "!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~",
       SHEBANG: function() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        const zC = /^#![ ]*\//;
-        return CC.binary && (CC.RM = gC(zC, /.*\b/, CC.binary, /\b.*/)), wC({
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        const Fk = /^#![ ]*\//;
+        return kk.binary && (kk.Hj = ek(Fk, /.*\b/, kk.binary, /\b.*/)), Tk({
           scope: "meta",
-          RM: zC,
+          Hj: Fk,
           end: /$/,
           relevance: 0,
-          "on:begin": (CC, zC) => {
-            0 !== CC.index && zC.ignoreMatch()
+          "on:begin": (kk, Fk) => {
+            0 !== kk.index && Fk.ignoreMatch()
           }
-        }, CC)
+        }, kk)
       },
-      TITLE_MODE: XC,
-      UNDERSCORE_IDENT_RE: AC,
-      UNDERSCORE_TITLE_MODE: cC
+      TITLE_MODE: Uk,
+      UNDERSCORE_IDENT_RE: Kk,
+      UNDERSCORE_TITLE_MODE: Ck
     });
 
-    function sC(CC, zC) {
-      "." === CC.input[CC.index - 1] && zC.ignoreMatch()
+    function Wk(kk, Fk) {
+      "." === kk.input[kk.index - 1] && Fk.ignoreMatch()
     }
 
-    function TC(CC, zC) {
-      void 0 !== CC.className && (CC.scope = CC.className, delete CC.className)
+    function fk(kk, Fk) {
+      void 0 !== kk.className && (kk.scope = kk.className, delete kk.className)
     }
 
-    function aC(CC, zC) {
-      zC && CC.beginKeywords && (CC.RM = "\\b(" + CC.beginKeywords.split(" ").join("|") + ")(?!\\.)(?=\\b|\\s)", CC.__beforeBegin = sC, CC.keywords = CC.keywords || CC.beginKeywords, delete CC.beginKeywords, void 0 === CC.relevance && (CC.relevance = 0))
+    function Bk(kk, Fk) {
+      Fk && kk.beginKeywords && (kk.Hj = "\\b(" + kk.beginKeywords.split(" ").join("|") + ")(?!\\.)(?=\\b|\\s)", kk.__beforeBegin = Wk, kk.keywords = kk.keywords || kk.beginKeywords, delete kk.beginKeywords, void 0 === kk.relevance && (kk.relevance = 0))
     }
 
-    function tC(CC, zC) {
-      Array.isArray(CC.illegal) && (CC.illegal = SC(...CC.illegal))
+    function dk(kk, Fk) {
+      Array.isArray(kk.illegal) && (kk.illegal = wk(...kk.illegal))
     }
 
-    function DC(CC, zC) {
-      if (CC.match) {
-        if (CC.RM || CC.end) throw new Error("begin & end are not supported with match");
-        CC.RM = CC.match, delete CC.match
+    function Yk(kk, Fk) {
+      if (kk.match) {
+        if (kk.Hj || kk.end) throw new Error("begin & end are not supported with match");
+        kk.Hj = kk.match, delete kk.match
       }
     }
 
-    function jC(CC, zC) {
-      void 0 === CC.relevance && (CC.relevance = 1)
+    function Ak(kk, Fk) {
+      void 0 === kk.relevance && (kk.relevance = 1)
     }
-    const yC = (CC, zC) => {
-        if (!CC.beforeMatch) return;
-        if (CC.starts) throw new Error("beforeMatch cannot be used with starts");
-        const ZC = Object.assign({}, CC);
-        Object.keys(CC).forEach((zC => {
-          delete CC[zC]
-        })), CC.keywords = ZC.keywords, CC.RM = gC(ZC.beforeMatch, WC(ZC.RM)), CC.starts = {
+    const gk = (kk, Fk) => {
+        if (!kk.beforeMatch) return;
+        if (kk.starts) throw new Error("beforeMatch cannot be used with starts");
+        const Ik = Object.assign({}, kk);
+        Object.keys(kk).forEach((Fk => {
+          delete kk[Fk]
+        })), kk.keywords = Ik.keywords, kk.Hj = ek(Ik.beforeMatch, tk(Ik.Hj)), kk.starts = {
           relevance: 0,
-          contains: [Object.assign(ZC, {
+          contains: [Object.assign(Ik, {
             endsParent: !0
           })]
-        }, CC.relevance = 0, delete ZC.beforeMatch
+        }, kk.relevance = 0, delete Ik.beforeMatch
       },
-      LC = ["of", "and", "for", "in", "not", "or", "if", "then", "parent", "list", "value"];
+      mk = ["of", "and", "for", "in", "not", "or", "if", "then", "parent", "list", "value"];
 
-    function UC(CC, zC) {
-      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "keyword";
-      const QC = Object.create(null);
-      return "string" === typeof CC ? wC(ZC, CC.split(" ")) : Array.isArray(CC) ? wC(ZC, CC) : Object.keys(CC).forEach((function(ZC) {
-        Object.assign(QC, UC(CC[ZC], zC, ZC))
-      })), QC;
+    function hk(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "keyword";
+      const Xk = Object.create(null);
+      return "string" === typeof kk ? Tk(Ik, kk.split(" ")) : Array.isArray(kk) ? Tk(Ik, kk) : Object.keys(kk).forEach((function(Ik) {
+        Object.assign(Xk, hk(kk[Ik], Fk, Ik))
+      })), Xk;
 
-      function wC(CC, ZC) {
-        zC && (ZC = ZC.map((CC => CC.toLowerCase()))), ZC.forEach((function(zC) {
-          const ZC = zC.split("|");
-          QC[ZC[0]] = [CC, BC(ZC[0], ZC[1])]
+      function Tk(kk, Ik) {
+        Fk && (Ik = Ik.map((kk => kk.toLowerCase()))), Ik.forEach((function(Fk) {
+          const Ik = Fk.split("|");
+          Xk[Ik[0]] = [kk, rk(Ik[0], Ik[1])]
         }))
       }
     }
 
-    function BC(CC, zC) {
-      return zC ? Number(zC) : function(CC) {
-        return LC.includes(CC.toLowerCase())
-      }(CC) ? 0 : 1
+    function rk(kk, Fk) {
+      return Fk ? Number(Fk) : function(kk) {
+        return mk.includes(kk.toLowerCase())
+      }(kk) ? 0 : 1
     }
-    const OC = {},
-      kC = CC => {
-        console.error(CC)
+    const Dk = {},
+      Mk = kk => {
+        console.error(kk)
       },
-      VC = function(CC) {
-        for (var zC = arguments.length, ZC = new Array(zC > 1 ? zC - 1 : 0), QC = 1; QC < zC; QC++) ZC[QC - 1] = arguments[QC];
-        console.log(`WARN: ${CC}`, ...ZC)
+      kF = function(kk) {
+        for (var Fk = arguments.length, Ik = new Array(Fk > 1 ? Fk - 1 : 0), Xk = 1; Xk < Fk; Xk++) Ik[Xk - 1] = arguments[Xk];
+        console.log(`WARN: ${kk}`, ...Ik)
       },
-      Cz = (CC, zC) => {
-        OC[`${CC}/${zC}`] || (console.log(`Deprecated as of ${CC}. ${zC}`), OC[`${CC}/${zC}`] = !0)
+      FF = (kk, Fk) => {
+        Dk[`${kk}/${Fk}`] || (console.log(`Deprecated as of ${kk}. ${Fk}`), Dk[`${kk}/${Fk}`] = !0)
       },
-      zz = new Error;
+      IF = new Error;
 
-    function Zz(CC, zC, ZC) {
+    function XF(kk, Fk, Ik) {
       let {
-        key: QC
-      } = ZC, wC = 0;
-      const bC = CC[QC],
-        nC = {},
-        fC = {};
-      for (let oC = 1; oC <= zC.length; oC++) fC[oC + wC] = bC[oC], nC[oC + wC] = !0, wC += pC(zC[oC - 1]);
-      CC[QC] = fC, CC[QC]._emit = nC, CC[QC]._multi = !0
+        key: Xk
+      } = Ik, Tk = 0;
+      const ik = kk[Xk],
+        yk = {},
+        lk = {};
+      for (let ak = 1; ak <= Fk.length; ak++) lk[ak + Tk] = ik[ak], yk[ak + Tk] = !0, Tk += Hk(Fk[ak - 1]);
+      kk[Xk] = lk, kk[Xk]._emit = yk, kk[Xk]._multi = !0
     }
 
-    function Qz(CC) {
-      ! function(CC) {
-        CC.scope && "object" === typeof CC.scope && null !== CC.scope && (CC.beginScope = CC.scope, delete CC.scope)
-      }(CC), "string" === typeof CC.beginScope && (CC.beginScope = {
-          _wrap: CC.beginScope
-        }), "string" === typeof CC.endScope && (CC.endScope = {
-          _wrap: CC.endScope
+    function TF(kk) {
+      ! function(kk) {
+        kk.scope && "object" === typeof kk.scope && null !== kk.scope && (kk.beginScope = kk.scope, delete kk.scope)
+      }(kk), "string" === typeof kk.beginScope && (kk.beginScope = {
+          _wrap: kk.beginScope
+        }), "string" === typeof kk.endScope && (kk.endScope = {
+          _wrap: kk.endScope
         }),
-        function(CC) {
-          if (Array.isArray(CC.RM)) {
-            if (CC.skip || CC.excludeBegin || CC.returnBegin) throw kC("skip, excludeBegin, returnBegin not compatible with beginScope: {}"), zz;
-            if ("object" !== typeof CC.beginScope || null === CC.beginScope) throw kC("beginScope must be object"), zz;
-            Zz(CC, CC.RM, {
+        function(kk) {
+          if (Array.isArray(kk.Hj)) {
+            if (kk.skip || kk.excludeBegin || kk.returnBegin) throw Mk("skip, excludeBegin, returnBegin not compatible with beginScope: {}"), IF;
+            if ("object" !== typeof kk.beginScope || null === kk.beginScope) throw Mk("beginScope must be object"), IF;
+            XF(kk, kk.Hj, {
               key: "beginScope"
-            }), CC.RM = GC(CC.RM, {
+            }), kk.Hj = xk(kk.Hj, {
               joinWith: ""
             })
           }
-        }(CC),
-        function(CC) {
-          if (Array.isArray(CC.end)) {
-            if (CC.skip || CC.excludeEnd || CC.returnEnd) throw kC("skip, excludeEnd, returnEnd not compatible with endScope: {}"), zz;
-            if ("object" !== typeof CC.endScope || null === CC.endScope) throw kC("endScope must be object"), zz;
-            Zz(CC, CC.end, {
+        }(kk),
+        function(kk) {
+          if (Array.isArray(kk.end)) {
+            if (kk.skip || kk.excludeEnd || kk.returnEnd) throw Mk("skip, excludeEnd, returnEnd not compatible with endScope: {}"), IF;
+            if ("object" !== typeof kk.endScope || null === kk.endScope) throw Mk("endScope must be object"), IF;
+            XF(kk, kk.end, {
               key: "endScope"
-            }), CC.end = GC(CC.end, {
+            }), kk.end = xk(kk.end, {
               joinWith: ""
             })
           }
-        }(CC)
+        }(kk)
     }
 
-    function wz(CC) {
-      function zC(zC, ZC) {
-        return new RegExp(FC(zC), "m" + (CC.case_insensitive ? "i" : "") + (CC.unicodeRegex ? "u" : "") + (ZC ? "g" : ""))
+    function iF(kk) {
+      function Fk(Fk, Ik) {
+        return new RegExp(Lk(Fk), "m" + (kk.case_insensitive ? "i" : "") + (kk.unicodeRegex ? "u" : "") + (Ik ? "g" : ""))
       }
-      class ZC {
+      class Ik {
         constructor() {
           this.matchIndexes = {}, this.regexes = [], this.matchAt = 1, this.position = 0
         }
-        addRule(CC, zC) {
-          zC.position = this.position++, this.matchIndexes[this.matchAt] = zC, this.regexes.push([zC, CC]), this.matchAt += pC(CC) + 1
+        addRule(kk, Fk) {
+          Fk.position = this.position++, this.matchIndexes[this.matchAt] = Fk, this.regexes.push([Fk, kk]), this.matchAt += Hk(kk) + 1
         }
         compile() {
           0 === this.regexes.length && (this.exec = () => null);
-          const CC = this.regexes.map((CC => CC[1]));
-          this.matcherRe = zC(GC(CC, {
+          const kk = this.regexes.map((kk => kk[1]));
+          this.matcherRe = Fk(xk(kk, {
             joinWith: "|"
           }), !0), this.lastIndex = 0
         }
-        exec(CC) {
+        exec(kk) {
           this.matcherRe.lastIndex = this.lastIndex;
-          const zC = this.matcherRe.exec(CC);
-          if (!zC) return null;
-          const ZC = zC.findIndex(((CC, zC) => zC > 0 && void 0 !== CC)),
-            QC = this.matchIndexes[ZC];
-          return zC.splice(0, ZC), Object.assign(zC, QC)
+          const Fk = this.matcherRe.exec(kk);
+          if (!Fk) return null;
+          const Ik = Fk.findIndex(((kk, Fk) => Fk > 0 && void 0 !== kk)),
+            Xk = this.matchIndexes[Ik];
+          return Fk.splice(0, Ik), Object.assign(Fk, Xk)
         }
       }
-      class QC {
+      class Xk {
         constructor() {
           this.rules = [], this.multiRegexes = [], this.count = 0, this.lastIndex = 0, this.regexIndex = 0
         }
-        getMatcher(CC) {
-          if (this.multiRegexes[CC]) return this.multiRegexes[CC];
-          const zC = new ZC;
-          return this.rules.slice(CC).forEach((CC => {
-            let [ZC, QC] = CC;
-            return zC.addRule(ZC, QC)
-          })), zC.compile(), this.multiRegexes[CC] = zC, zC
+        getMatcher(kk) {
+          if (this.multiRegexes[kk]) return this.multiRegexes[kk];
+          const Fk = new Ik;
+          return this.rules.slice(kk).forEach((kk => {
+            let [Ik, Xk] = kk;
+            return Fk.addRule(Ik, Xk)
+          })), Fk.compile(), this.multiRegexes[kk] = Fk, Fk
         }
         resumingScanAtSamePosition() {
           return 0 !== this.regexIndex
@@ -494,81 +494,81 @@ export const modules = {
         considerAll() {
           this.regexIndex = 0
         }
-        addRule(CC, zC) {
-          this.rules.push([CC, zC]), "RM" === zC.type && this.count++
+        addRule(kk, Fk) {
+          this.rules.push([kk, Fk]), "Hj" === Fk.type && this.count++
         }
-        exec(CC) {
-          const zC = this.getMatcher(this.regexIndex);
-          zC.lastIndex = this.lastIndex;
-          let ZC = zC.exec(CC);
+        exec(kk) {
+          const Fk = this.getMatcher(this.regexIndex);
+          Fk.lastIndex = this.lastIndex;
+          let Ik = Fk.exec(kk);
           if (this.resumingScanAtSamePosition())
-            if (ZC && ZC.index === this.lastIndex);
+            if (Ik && Ik.index === this.lastIndex);
             else {
-              const zC = this.getMatcher(0);
-              zC.lastIndex = this.lastIndex + 1, ZC = zC.exec(CC)
-            } return ZC && (this.regexIndex += ZC.position + 1, this.regexIndex === this.count && this.considerAll()), ZC
+              const Fk = this.getMatcher(0);
+              Fk.lastIndex = this.lastIndex + 1, Ik = Fk.exec(kk)
+            } return Ik && (this.regexIndex += Ik.position + 1, this.regexIndex === this.count && this.considerAll()), Ik
         }
       }
-      if (CC.compilerExtensions || (CC.compilerExtensions = []), CC.contains && CC.contains.includes("self")) throw new Error("ERR: contains `self` is not supported at the top-level of a language.  See documentation.");
-      return CC.classNameAliases = wC(CC.classNameAliases || {}),
-        function ZC(bC, nC) {
-          const fC = bC;
-          if (bC.isCompiled) return fC;
-          [TC, DC, Qz, yC].forEach((CC => CC(bC, nC))), CC.compilerExtensions.forEach((CC => CC(bC, nC))), bC.__beforeBegin = null, [aC, tC, jC].forEach((CC => CC(bC, nC))), bC.isCompiled = !0;
-          let oC = null;
-          return "object" === typeof bC.keywords && bC.keywords.$pattern && (bC.keywords = Object.assign({}, bC.keywords), oC = bC.keywords.$pattern, delete bC.keywords.$pattern), oC = oC || /\w+/, bC.keywords && (bC.keywords = UC(bC.keywords, CC.case_insensitive)), fC.keywordPatternRe = zC(oC, !0), nC && (bC.RM || (bC.RM = /\B|\b/), fC.beginRe = zC(fC.RM), bC.end || bC.endsWithParent || (bC.end = /\B|\b/), bC.end && (fC.endRe = zC(fC.end)), fC.terminatorEnd = FC(fC.end) || "", bC.endsWithParent && nC.terminatorEnd && (fC.terminatorEnd += (bC.end ? "|" : "") + nC.terminatorEnd)), bC.illegal && (fC.illegalRe = zC(bC.illegal)), bC.contains || (bC.contains = []), bC.contains = [].concat(...bC.contains.map((function(CC) {
-            return function(CC) {
-              CC.variants && !CC.cachedVariants && (CC.cachedVariants = CC.variants.map((function(zC) {
-                return wC(CC, {
+      if (kk.compilerExtensions || (kk.compilerExtensions = []), kk.contains && kk.contains.includes("self")) throw new Error("ERR: contains `self` is not supported at the top-level of a language.  See documentation.");
+      return kk.classNameAliases = Tk(kk.classNameAliases || {}),
+        function Ik(ik, yk) {
+          const lk = ik;
+          if (ik.isCompiled) return lk;
+          [fk, Yk, TF, gk].forEach((kk => kk(ik, yk))), kk.compilerExtensions.forEach((kk => kk(ik, yk))), ik.__beforeBegin = null, [Bk, dk, Ak].forEach((kk => kk(ik, yk))), ik.isCompiled = !0;
+          let ak = null;
+          return "object" === typeof ik.keywords && ik.keywords.$pattern && (ik.keywords = Object.assign({}, ik.keywords), ak = ik.keywords.$pattern, delete ik.keywords.$pattern), ak = ak || /\w+/, ik.keywords && (ik.keywords = hk(ik.keywords, kk.case_insensitive)), lk.keywordPatternRe = Fk(ak, !0), yk && (ik.Hj || (ik.Hj = /\B|\b/), lk.beginRe = Fk(lk.Hj), ik.end || ik.endsWithParent || (ik.end = /\B|\b/), ik.end && (lk.endRe = Fk(lk.end)), lk.terminatorEnd = Lk(lk.end) || "", ik.endsWithParent && yk.terminatorEnd && (lk.terminatorEnd += (ik.end ? "|" : "") + yk.terminatorEnd)), ik.illegal && (lk.illegalRe = Fk(ik.illegal)), ik.contains || (ik.contains = []), ik.contains = [].concat(...ik.contains.map((function(kk) {
+            return function(kk) {
+              kk.variants && !kk.cachedVariants && (kk.cachedVariants = kk.variants.map((function(Fk) {
+                return Tk(kk, {
                   variants: null
-                }, zC)
+                }, Fk)
               })));
-              if (CC.cachedVariants) return CC.cachedVariants;
-              if (bz(CC)) return wC(CC, {
-                starts: CC.starts ? wC(CC.starts) : null
+              if (kk.cachedVariants) return kk.cachedVariants;
+              if (yF(kk)) return Tk(kk, {
+                starts: kk.starts ? Tk(kk.starts) : null
               });
-              if (Object.isFrozen(CC)) return wC(CC);
-              return CC
-            }("self" === CC ? bC : CC)
-          }))), bC.contains.forEach((function(CC) {
-            ZC(CC, fC)
-          })), bC.starts && ZC(bC.starts, nC), fC.matcher = function(CC) {
-            const zC = new QC;
-            return CC.contains.forEach((CC => zC.addRule(CC.RM, {
-              rule: CC,
-              type: "RM"
-            }))), CC.terminatorEnd && zC.addRule(CC.terminatorEnd, {
+              if (Object.isFrozen(kk)) return Tk(kk);
+              return kk
+            }("self" === kk ? ik : kk)
+          }))), ik.contains.forEach((function(kk) {
+            Ik(kk, lk)
+          })), ik.starts && Ik(ik.starts, yk), lk.matcher = function(kk) {
+            const Fk = new Xk;
+            return kk.contains.forEach((kk => Fk.addRule(kk.Hj, {
+              rule: kk,
+              type: "Hj"
+            }))), kk.terminatorEnd && Fk.addRule(kk.terminatorEnd, {
               type: "end"
-            }), CC.illegal && zC.addRule(CC.illegal, {
+            }), kk.illegal && Fk.addRule(kk.illegal, {
               type: "illegal"
-            }), zC
-          }(fC), fC
-        }(CC)
+            }), Fk
+          }(lk), lk
+        }(kk)
     }
 
-    function bz(CC) {
-      return !!CC && (CC.endsWithParent || bz(CC.starts))
+    function yF(kk) {
+      return !!kk && (kk.endsWithParent || yF(kk.starts))
     }
-    class nz extends Error {
-      constructor(CC, zC) {
-        super(CC), this.name = "HTMLInjectionError", this.html = zC
+    class lF extends Error {
+      constructor(kk, Fk) {
+        super(kk), this.name = "HTMLInjectionError", this.html = Fk
       }
     }
-    const fz = QC,
-      oz = wC,
-      qz = Symbol("nomatch"),
-      Fz = function(CC) {
-        const QC = Object.create(null),
-          wC = Object.create(null),
-          bC = [];
-        let nC = !0;
-        const fC = "Could not find the language '{}', did you forget to load/include a language module?",
-          oC = {
+    const aF = Xk,
+      qF = Tk,
+      LF = Symbol("nomatch"),
+      tF = function(kk) {
+        const Xk = Object.create(null),
+          Tk = Object.create(null),
+          ik = [];
+        let yk = !0;
+        const lk = "Could not find the language '{}', did you forget to load/include a language module?",
+          ak = {
             disableAutodetect: !0,
             name: "Plain text",
             contains: []
           };
-        let FC = {
+        let Lk = {
           ignoreUnescapedHTML: !1,
           throwUnescapedHTML: !1,
           noHighlightRe: /^(no-?highlight)$/i,
@@ -576,575 +576,575 @@ export const modules = {
           classPrefix: "hljs-",
           cssSelector: "pre code",
           languages: null,
-          __emitter: qC
+          __emitter: qk
         };
 
-        function pC(CC) {
-          return FC.noHighlightRe.test(CC)
+        function Hk(kk) {
+          return Lk.noHighlightRe.test(kk)
         }
 
-        function PC(CC, zC, ZC) {
-          let QC = "",
-            wC = "";
-          "object" === typeof zC ? (QC = CC, ZC = zC.ignoreIllegals, wC = zC.language) : (Cz("10.7.0", "highlight(lang, code, ...args) has been deprecated."), Cz("10.7.0", "Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277"), wC = CC, QC = zC), void 0 === ZC && (ZC = !0);
-          const bC = {
-            code: QC,
-            language: wC
+        function Jk(kk, Fk, Ik) {
+          let Xk = "",
+            Tk = "";
+          "object" === typeof Fk ? (Xk = kk, Ik = Fk.ignoreIllegals, Tk = Fk.language) : (FF("10.7.0", "highlight(lang, code, ...args) has been deprecated."), FF("10.7.0", "Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277"), Tk = kk, Xk = Fk), void 0 === Ik && (Ik = !0);
+          const ik = {
+            code: Xk,
+            language: Tk
           };
-          eC("before:highlight", bC);
-          const nC = bC.result ? bC.result : GC(bC.language, bC.code, ZC);
-          return nC.code = bC.code, eC("after:highlight", nC), nC
+          vk("before:highlight", ik);
+          const yk = ik.result ? ik.result : xk(ik.language, ik.code, Ik);
+          return yk.code = ik.code, vk("after:highlight", yk), yk
         }
 
-        function GC(CC, zC, wC, bC) {
-          const oC = Object.create(null);
+        function xk(kk, Fk, Tk, ik) {
+          const ak = Object.create(null);
 
-          function qC() {
-            if (!eC.keywords) return void KC.addText(YC);
-            let CC = 0;
-            eC.keywordPatternRe.lastIndex = 0;
-            let zC = eC.keywordPatternRe.exec(YC),
-              ZC = "";
-            for (; zC;) {
-              ZC += YC.substring(CC, zC.index);
-              const wC = JC.case_insensitive ? zC[0].toLowerCase() : zC[0],
-                bC = (QC = wC, eC.keywords[QC]);
-              if (bC) {
-                const [CC, QC] = bC;
-                if (KC.addText(ZC), ZC = "", oC[wC] = (oC[wC] || 0) + 1, oC[wC] <= 7 && (dC += QC), CC.startsWith("_")) ZC += zC[0];
+          function qk() {
+            if (!vk.keywords) return void Ok.addText(nk);
+            let kk = 0;
+            vk.keywordPatternRe.lastIndex = 0;
+            let Fk = vk.keywordPatternRe.exec(nk),
+              Ik = "";
+            for (; Fk;) {
+              Ik += nk.substring(kk, Fk.index);
+              const Tk = sk.case_insensitive ? Fk[0].toLowerCase() : Fk[0],
+                ik = (Xk = Tk, vk.keywords[Xk]);
+              if (ik) {
+                const [kk, Xk] = ik;
+                if (Ok.addText(Ik), Ik = "", ak[Tk] = (ak[Tk] || 0) + 1, ak[Tk] <= 7 && (Gk += Xk), kk.startsWith("_")) Ik += Fk[0];
                 else {
-                  const ZC = JC.classNameAliases[CC] || CC;
-                  NC(zC[0], ZC)
+                  const Ik = sk.classNameAliases[kk] || kk;
+                  Zk(Fk[0], Ik)
                 }
-              } else ZC += zC[0];
-              CC = eC.keywordPatternRe.lastIndex, zC = eC.keywordPatternRe.exec(YC)
+              } else Ik += Fk[0];
+              kk = vk.keywordPatternRe.lastIndex, Fk = vk.keywordPatternRe.exec(nk)
             }
-            var QC;
-            ZC += YC.substring(CC), KC.addText(ZC)
+            var Xk;
+            Ik += nk.substring(kk), Ok.addText(Ik)
           }
 
-          function WC() {
-            null != eC.subLanguage ? function() {
-              if ("" === YC) return;
-              let CC = null;
-              if ("string" === typeof eC.subLanguage) {
-                if (!QC[eC.subLanguage]) return void KC.addText(YC);
-                CC = GC(eC.subLanguage, YC, !0, hC[eC.subLanguage]), hC[eC.subLanguage] = CC._top
-              } else CC = RC(YC, eC.subLanguage.length ? eC.subLanguage : null);
-              eC.relevance > 0 && (dC += CC.relevance), KC.__addSublanguage(CC._emitter, CC.language)
-            }() : qC(), YC = ""
+          function tk() {
+            null != vk.subLanguage ? function() {
+              if ("" === nk) return;
+              let kk = null;
+              if ("string" === typeof vk.subLanguage) {
+                if (!Xk[vk.subLanguage]) return void Ok.addText(nk);
+                kk = xk(vk.subLanguage, nk, !0, Ek[vk.subLanguage]), Ek[vk.subLanguage] = kk._top
+              } else kk = Pk(nk, vk.subLanguage.length ? vk.subLanguage : null);
+              vk.relevance > 0 && (Gk += kk.relevance), Ok.__addSublanguage(kk._emitter, kk.language)
+            }() : qk(), nk = ""
           }
 
-          function NC(CC, zC) {
-            "" !== CC && (KC.startScope(zC), KC.addText(CC), KC.endScope())
+          function Zk(kk, Fk) {
+            "" !== kk && (Ok.startScope(Fk), Ok.addText(kk), Ok.endScope())
           }
 
-          function MC(CC, zC) {
-            let ZC = 1;
-            const QC = zC.length - 1;
-            for (; ZC <= QC;) {
-              if (!CC._emit[ZC]) {
-                ZC++;
+          function jk(kk, Fk) {
+            let Ik = 1;
+            const Xk = Fk.length - 1;
+            for (; Ik <= Xk;) {
+              if (!kk._emit[Ik]) {
+                Ik++;
                 continue
               }
-              const QC = JC.classNameAliases[CC[ZC]] || CC[ZC],
-                wC = zC[ZC];
-              QC ? NC(wC, QC) : (YC = wC, qC(), YC = ""), ZC++
+              const Xk = sk.classNameAliases[kk[Ik]] || kk[Ik],
+                Tk = Fk[Ik];
+              Xk ? Zk(Tk, Xk) : (nk = Tk, qk(), nk = ""), Ik++
             }
           }
 
-          function gC(CC, zC) {
-            return CC.scope && "string" === typeof CC.scope && KC.openNode(JC.classNameAliases[CC.scope] || CC.scope), CC.beginScope && (CC.beginScope._wrap ? (NC(YC, JC.classNameAliases[CC.beginScope._wrap] || CC.beginScope._wrap), YC = "") : CC.beginScope._multi && (MC(CC.beginScope, zC), YC = "")), eC = Object.create(CC, {
+          function ek(kk, Fk) {
+            return kk.scope && "string" === typeof kk.scope && Ok.openNode(sk.classNameAliases[kk.scope] || kk.scope), kk.beginScope && (kk.beginScope._wrap ? (Zk(nk, sk.classNameAliases[kk.beginScope._wrap] || kk.beginScope._wrap), nk = "") : kk.beginScope._multi && (jk(kk.beginScope, Fk), nk = "")), vk = Object.create(kk, {
               parent: {
-                value: eC
+                value: vk
               }
-            }), eC
+            }), vk
           }
 
-          function SC(CC, zC, QC) {
-            let wC = function(CC, zC) {
-              const ZC = CC && CC.exec(zC);
-              return ZC && 0 === ZC.index
-            }(CC.endRe, QC);
-            if (wC) {
-              if (CC["on:end"]) {
-                const QC = new ZC(CC);
-                CC["on:end"](zC, QC), QC.isMatchIgnored && (wC = !1)
+          function wk(kk, Fk, Xk) {
+            let Tk = function(kk, Fk) {
+              const Ik = kk && kk.exec(Fk);
+              return Ik && 0 === Ik.index
+            }(kk.endRe, Xk);
+            if (Tk) {
+              if (kk["on:end"]) {
+                const Xk = new Ik(kk);
+                kk["on:end"](Fk, Xk), Xk.isMatchIgnored && (Tk = !1)
               }
-              if (wC) {
-                for (; CC.endsParent && CC.parent;) CC = CC.parent;
-                return CC
+              if (Tk) {
+                for (; kk.endsParent && kk.parent;) kk = kk.parent;
+                return kk
               }
             }
-            if (CC.endsWithParent) return SC(CC.parent, zC, QC)
+            if (kk.endsWithParent) return wk(kk.parent, Fk, Xk)
           }
 
-          function pC(CC) {
-            return 0 === eC.matcher.regexIndex ? (YC += CC[0], 1) : (EC = !0, 0)
+          function Hk(kk) {
+            return 0 === vk.matcher.regexIndex ? (nk += kk[0], 1) : (bk = !0, 0)
           }
 
-          function PC(CC) {
-            const ZC = CC[0],
-              QC = zC.substring(CC.index),
-              wC = SC(eC, CC, QC);
-            if (!wC) return qz;
-            const bC = eC;
-            eC.endScope && eC.endScope._wrap ? (WC(), NC(ZC, eC.endScope._wrap)) : eC.endScope && eC.endScope._multi ? (WC(), MC(eC.endScope, CC)) : bC.skip ? YC += ZC : (bC.returnEnd || bC.excludeEnd || (YC += ZC), WC(), bC.excludeEnd && (YC = ZC));
+          function Jk(kk) {
+            const Ik = kk[0],
+              Xk = Fk.substring(kk.index),
+              Tk = wk(vk, kk, Xk);
+            if (!Tk) return LF;
+            const ik = vk;
+            vk.endScope && vk.endScope._wrap ? (tk(), Zk(Ik, vk.endScope._wrap)) : vk.endScope && vk.endScope._multi ? (tk(), jk(vk.endScope, kk)) : ik.skip ? nk += Ik : (ik.returnEnd || ik.excludeEnd || (nk += Ik), tk(), ik.excludeEnd && (nk = Ik));
             do {
-              eC.scope && KC.closeNode(), eC.skip || eC.subLanguage || (dC += eC.relevance), eC = eC.parent
-            } while (eC !== wC.parent);
-            return wC.starts && gC(wC.starts, CC), bC.returnEnd ? 0 : ZC.length
+              vk.scope && Ok.closeNode(), vk.skip || vk.subLanguage || (Gk += vk.relevance), vk = vk.parent
+            } while (vk !== Tk.parent);
+            return Tk.starts && ek(Tk.starts, kk), ik.returnEnd ? 0 : Ik.length
           }
-          let AC = {};
+          let Kk = {};
 
-          function xC(QC, bC) {
-            const fC = bC && bC[0];
-            if (YC += QC, null == fC) return WC(), 0;
-            if ("RM" === AC.type && "end" === bC.type && AC.index === bC.index && "" === fC) {
-              if (YC += zC.slice(bC.index, bC.index + 1), !nC) {
-                const zC = new Error(`0 width match regex (${CC})`);
-                throw zC.languageName = CC, zC.badRule = AC.rule, zC
+          function Qk(Xk, ik) {
+            const lk = ik && ik[0];
+            if (nk += Xk, null == lk) return tk(), 0;
+            if ("Hj" === Kk.type && "end" === ik.type && Kk.index === ik.index && "" === lk) {
+              if (nk += Fk.slice(ik.index, ik.index + 1), !yk) {
+                const Fk = new Error(`0 width match regex (${kk})`);
+                throw Fk.languageName = kk, Fk.badRule = Kk.rule, Fk
               }
               return 1
             }
-            if (AC = bC, "RM" === bC.type) return function(CC) {
-              const zC = CC[0],
-                QC = CC.rule,
-                wC = new ZC(QC),
-                bC = [QC.__beforeBegin, QC["on:begin"]];
-              for (const ZC of bC)
-                if (ZC && (ZC(CC, wC), wC.isMatchIgnored)) return pC(zC);
-              return QC.skip ? YC += zC : (QC.excludeBegin && (YC += zC), WC(), QC.returnBegin || QC.excludeBegin || (YC = zC)), gC(QC, CC), QC.returnBegin ? 0 : zC.length
-            }(bC);
-            if ("illegal" === bC.type && !wC) {
-              const CC = new Error('Illegal lexeme "' + fC + '" for mode "' + (eC.scope || "<unnamed>") + '"');
-              throw CC.mode = eC, CC
+            if (Kk = ik, "Hj" === ik.type) return function(kk) {
+              const Fk = kk[0],
+                Xk = kk.rule,
+                Tk = new Ik(Xk),
+                ik = [Xk.__beforeBegin, Xk["on:begin"]];
+              for (const Ik of ik)
+                if (Ik && (Ik(kk, Tk), Tk.isMatchIgnored)) return Hk(Fk);
+              return Xk.skip ? nk += Fk : (Xk.excludeBegin && (nk += Fk), tk(), Xk.returnBegin || Xk.excludeBegin || (nk = Fk)), ek(Xk, kk), Xk.returnBegin ? 0 : Fk.length
+            }(ik);
+            if ("illegal" === ik.type && !Tk) {
+              const kk = new Error('Illegal lexeme "' + lk + '" for mode "' + (vk.scope || "<unnamed>") + '"');
+              throw kk.mode = vk, kk
             }
-            if ("end" === bC.type) {
-              const CC = PC(bC);
-              if (CC !== qz) return CC
+            if ("end" === ik.type) {
+              const kk = Jk(ik);
+              if (kk !== LF) return kk
             }
-            if ("illegal" === bC.type && "" === fC) return YC += "\n", 1;
-            if (HC > 1e5 && HC > 3 * bC.index) {
+            if ("illegal" === ik.type && "" === lk) return nk += "\n", 1;
+            if (uk > 1e5 && uk > 3 * ik.index) {
               throw new Error("potential infinite loop, way more iterations than matches")
             }
-            return YC += fC, fC.length
+            return nk += lk, lk.length
           }
-          const JC = IC(CC);
-          if (!JC) throw kC(fC.replace("{}", CC)), new Error('Unknown language: "' + CC + '"');
-          const iC = wz(JC);
-          let vC = "",
-            eC = bC || iC;
-          const hC = {},
-            KC = new FC.__emitter(FC);
+          const sk = Vk(kk);
+          if (!sk) throw Mk(lk.replace("{}", kk)), new Error('Unknown language: "' + kk + '"');
+          const zk = iF(sk);
+          let Sk = "",
+            vk = ik || zk;
+          const Ek = {},
+            Ok = new Lk.__emitter(Lk);
           ! function() {
-            const CC = [];
-            for (let zC = eC; zC !== JC; zC = zC.parent) zC.scope && CC.unshift(zC.scope);
-            CC.forEach((CC => KC.openNode(CC)))
+            const kk = [];
+            for (let Fk = vk; Fk !== sk; Fk = Fk.parent) Fk.scope && kk.unshift(Fk.scope);
+            kk.forEach((kk => Ok.openNode(kk)))
           }();
-          let YC = "",
-            dC = 0,
-            mC = 0,
-            HC = 0,
-            EC = !1;
+          let nk = "",
+            Gk = 0,
+            pk = 0,
+            uk = 0,
+            bk = !1;
           try {
-            if (JC.__emitTokens) JC.__emitTokens(zC, KC);
+            if (sk.__emitTokens) sk.__emitTokens(Fk, Ok);
             else {
-              for (eC.matcher.considerAll();;) {
-                HC++, EC ? EC = !1 : eC.matcher.considerAll(), eC.matcher.lastIndex = mC;
-                const CC = eC.matcher.exec(zC);
-                if (!CC) break;
-                const ZC = xC(zC.substring(mC, CC.index), CC);
-                mC = CC.index + ZC
+              for (vk.matcher.considerAll();;) {
+                uk++, bk ? bk = !1 : vk.matcher.considerAll(), vk.matcher.lastIndex = pk;
+                const kk = vk.matcher.exec(Fk);
+                if (!kk) break;
+                const Ik = Qk(Fk.substring(pk, kk.index), kk);
+                pk = kk.index + Ik
               }
-              xC(zC.substring(mC))
+              Qk(Fk.substring(pk))
             }
-            return KC.finalize(), vC = KC.toHTML(), {
-              language: CC,
-              value: vC,
-              relevance: dC,
+            return Ok.finalize(), Sk = Ok.toHTML(), {
+              language: kk,
+              value: Sk,
+              relevance: Gk,
               illegal: !1,
-              _emitter: KC,
-              _top: eC
+              _emitter: Ok,
+              _top: vk
             }
-          } catch (lC) {
-            if (lC.message && lC.message.includes("Illegal")) return {
-              language: CC,
-              value: fz(zC),
+          } catch (Rk) {
+            if (Rk.message && Rk.message.includes("Illegal")) return {
+              language: kk,
+              value: aF(Fk),
               illegal: !0,
               relevance: 0,
               _illegalBy: {
-                message: lC.message,
-                index: mC,
-                context: zC.slice(mC - 100, mC + 100),
-                mode: lC.mode,
-                resultSoFar: vC
+                message: Rk.message,
+                index: pk,
+                context: Fk.slice(pk - 100, pk + 100),
+                mode: Rk.mode,
+                resultSoFar: Sk
               },
-              _emitter: KC
+              _emitter: Ok
             };
-            if (nC) return {
-              language: CC,
-              value: fz(zC),
+            if (yk) return {
+              language: kk,
+              value: aF(Fk),
               illegal: !1,
               relevance: 0,
-              errorRaised: lC,
-              _emitter: KC,
-              _top: eC
+              errorRaised: Rk,
+              _emitter: Ok,
+              _top: vk
             };
-            throw lC
+            throw Rk
           }
         }
 
-        function RC(CC, zC) {
-          zC = zC || FC.languages || Object.keys(QC);
-          const ZC = function(CC) {
-              const zC = {
-                value: fz(CC),
+        function Pk(kk, Fk) {
+          Fk = Fk || Lk.languages || Object.keys(Xk);
+          const Ik = function(kk) {
+              const Fk = {
+                value: aF(kk),
                 illegal: !1,
                 relevance: 0,
-                _top: oC,
-                _emitter: new FC.__emitter(FC)
+                _top: ak,
+                _emitter: new Lk.__emitter(Lk)
               };
-              return zC._emitter.addText(CC), zC
-            }(CC),
-            wC = zC.filter(IC).filter(vC).map((zC => GC(zC, CC, !1)));
-          wC.unshift(ZC);
-          const bC = wC.sort(((CC, zC) => {
-              if (CC.relevance !== zC.relevance) return zC.relevance - CC.relevance;
-              if (CC.language && zC.language) {
-                if (IC(CC.language).supersetOf === zC.language) return 1;
-                if (IC(zC.language).supersetOf === CC.language) return -1
+              return Fk._emitter.addText(kk), Fk
+            }(kk),
+            Tk = Fk.filter(Vk).filter(Sk).map((Fk => xk(Fk, kk, !1)));
+          Tk.unshift(Ik);
+          const ik = Tk.sort(((kk, Fk) => {
+              if (kk.relevance !== Fk.relevance) return Fk.relevance - kk.relevance;
+              if (kk.language && Fk.language) {
+                if (Vk(kk.language).supersetOf === Fk.language) return 1;
+                if (Vk(Fk.language).supersetOf === kk.language) return -1
               }
               return 0
             })),
-            [nC, fC] = bC,
-            qC = nC;
-          return qC.secondBest = fC, qC
+            [yk, lk] = ik,
+            qk = yk;
+          return qk.secondBest = lk, qk
         }
 
-        function AC(CC) {
-          let zC = null;
-          const ZC = function(CC) {
-            let zC = CC.className + " ";
-            zC += CC.parentNode ? CC.parentNode.className : "";
-            const ZC = FC.languageDetectRe.exec(zC);
-            if (ZC) {
-              const zC = IC(ZC[1]);
-              return zC || (VC(fC.replace("{}", ZC[1])), VC("Falling back to no-highlight mode for this block.", CC)), zC ? ZC[1] : "no-highlight"
+        function Kk(kk) {
+          let Fk = null;
+          const Ik = function(kk) {
+            let Fk = kk.className + " ";
+            Fk += kk.parentNode ? kk.parentNode.className : "";
+            const Ik = Lk.languageDetectRe.exec(Fk);
+            if (Ik) {
+              const Fk = Vk(Ik[1]);
+              return Fk || (kF(lk.replace("{}", Ik[1])), kF("Falling back to no-highlight mode for this block.", kk)), Fk ? Ik[1] : "no-highlight"
             }
-            return zC.split(/\s+/).find((CC => pC(CC) || IC(CC)))
-          }(CC);
-          if (pC(ZC)) return;
-          if (eC("before:highlightElement", {
-              el: CC,
-              language: ZC
-            }), CC.dataset.highlighted) return void console.log("Element previously highlighted. To highlight again, first unset `dataset.highlighted`.", CC);
-          if (CC.children.length > 0 && (FC.ignoreUnescapedHTML || (console.warn("One of your code blocks includes unescaped HTML. This is a potentially serious security risk."), console.warn("https://github.com/highlightjs/highlight.js/wiki/security"), console.warn("The element with unescaped HTML:"), console.warn(CC)), FC.throwUnescapedHTML)) {
-            throw new nz("One of your code blocks includes unescaped HTML.", CC.innerHTML)
+            return Fk.split(/\s+/).find((kk => Hk(kk) || Vk(kk)))
+          }(kk);
+          if (Hk(Ik)) return;
+          if (vk("before:highlightElement", {
+              el: kk,
+              language: Ik
+            }), kk.dataset.highlighted) return void console.log("Element previously highlighted. To highlight again, first unset `dataset.highlighted`.", kk);
+          if (kk.children.length > 0 && (Lk.ignoreUnescapedHTML || (console.warn("One of your code blocks includes unescaped HTML. This is a potentially serious security risk."), console.warn("https://github.com/highlightjs/highlight.js/wiki/security"), console.warn("The element with unescaped HTML:"), console.warn(kk)), Lk.throwUnescapedHTML)) {
+            throw new lF("One of your code blocks includes unescaped HTML.", kk.innerHTML)
           }
-          zC = CC;
-          const QC = zC.textContent,
-            bC = ZC ? PC(QC, {
-              language: ZC,
+          Fk = kk;
+          const Xk = Fk.textContent,
+            ik = Ik ? Jk(Xk, {
+              language: Ik,
               ignoreIllegals: !0
-            }) : RC(QC);
-          CC.innerHTML = bC.value, CC.dataset.highlighted = "yes",
-            function(CC, zC, ZC) {
-              const QC = zC && wC[zC] || ZC;
-              CC.classList.add("hljs"), CC.classList.add(`language-${QC}`)
-            }(CC, ZC, bC.language), CC.result = {
-              language: bC.language,
-              re: bC.relevance,
-              relevance: bC.relevance
-            }, bC.secondBest && (CC.secondBest = {
-              language: bC.secondBest.language,
-              relevance: bC.secondBest.relevance
-            }), eC("after:highlightElement", {
-              el: CC,
-              result: bC,
-              text: QC
+            }) : Pk(Xk);
+          kk.innerHTML = ik.value, kk.dataset.highlighted = "yes",
+            function(kk, Fk, Ik) {
+              const Xk = Fk && Tk[Fk] || Ik;
+              kk.classList.add("hljs"), kk.classList.add(`language-${Xk}`)
+            }(kk, Ik, ik.language), kk.result = {
+              language: ik.language,
+              re: ik.relevance,
+              relevance: ik.relevance
+            }, ik.secondBest && (kk.secondBest = {
+              language: ik.secondBest.language,
+              relevance: ik.secondBest.relevance
+            }), vk("after:highlightElement", {
+              el: kk,
+              result: ik,
+              text: Xk
             })
         }
-        let xC = !1;
+        let Qk = !1;
 
-        function JC() {
-          if ("loading" === document.readyState) return xC || window.addEventListener("DOMContentLoaded", (function() {
-            JC()
-          }), !1), void(xC = !0);
-          document.querySelectorAll(FC.cssSelector).forEach(AC)
+        function sk() {
+          if ("loading" === document.readyState) return Qk || window.addEventListener("DOMContentLoaded", (function() {
+            sk()
+          }), !1), void(Qk = !0);
+          document.querySelectorAll(Lk.cssSelector).forEach(Kk)
         }
 
-        function IC(CC) {
-          return CC = (CC || "").toLowerCase(), QC[CC] || QC[wC[CC]]
+        function Vk(kk) {
+          return kk = (kk || "").toLowerCase(), Xk[kk] || Xk[Tk[kk]]
         }
 
-        function iC(CC, zC) {
+        function zk(kk, Fk) {
           let {
-            languageName: ZC
-          } = zC;
-          "string" === typeof CC && (CC = [CC]), CC.forEach((CC => {
-            wC[CC.toLowerCase()] = ZC
+            languageName: Ik
+          } = Fk;
+          "string" === typeof kk && (kk = [kk]), kk.forEach((kk => {
+            Tk[kk.toLowerCase()] = Ik
           }))
         }
 
-        function vC(CC) {
-          const zC = IC(CC);
-          return zC && !zC.disableAutodetect
+        function Sk(kk) {
+          const Fk = Vk(kk);
+          return Fk && !Fk.disableAutodetect
         }
 
-        function eC(CC, zC) {
-          const ZC = CC;
-          bC.forEach((function(CC) {
-            CC[ZC] && CC[ZC](zC)
+        function vk(kk, Fk) {
+          const Ik = kk;
+          ik.forEach((function(kk) {
+            kk[Ik] && kk[Ik](Fk)
           }))
         }
-        Object.assign(CC, {
-          highlight: PC,
-          highlightAuto: RC,
-          highlightAll: JC,
-          highlightElement: AC,
-          highlightBlock: function(CC) {
-            return Cz("10.7.0", "highlightBlock will be removed entirely in v12.0"), Cz("10.7.0", "Please use highlightElement now."), AC(CC)
+        Object.assign(kk, {
+          highlight: Jk,
+          highlightAuto: Pk,
+          highlightAll: sk,
+          highlightElement: Kk,
+          highlightBlock: function(kk) {
+            return FF("10.7.0", "highlightBlock will be removed entirely in v12.0"), FF("10.7.0", "Please use highlightElement now."), Kk(kk)
           },
-          configure: function(CC) {
-            FC = oz(FC, CC)
+          configure: function(kk) {
+            Lk = qF(Lk, kk)
           },
           initHighlighting: () => {
-            JC(), Cz("10.6.0", "initHighlighting() deprecated.  Use highlightAll() now.")
+            sk(), FF("10.6.0", "initHighlighting() deprecated.  Use highlightAll() now.")
           },
           initHighlightingOnLoad: function() {
-            JC(), Cz("10.6.0", "initHighlightingOnLoad() deprecated.  Use highlightAll() now.")
+            sk(), FF("10.6.0", "initHighlightingOnLoad() deprecated.  Use highlightAll() now.")
           },
-          registerLanguage: function(zC, ZC) {
-            let wC = null;
+          registerLanguage: function(Fk, Ik) {
+            let Tk = null;
             try {
-              wC = ZC(CC)
-            } catch (bC) {
-              if (kC("Language definition for '{}' could not be registered.".replace("{}", zC)), !nC) throw bC;
-              kC(bC), wC = oC
+              Tk = Ik(kk)
+            } catch (ik) {
+              if (Mk("Language definition for '{}' could not be registered.".replace("{}", Fk)), !yk) throw ik;
+              Mk(ik), Tk = ak
             }
-            wC.name || (wC.name = zC), QC[zC] = wC, wC.rawDefinition = ZC.bind(null, CC), wC.aliases && iC(wC.aliases, {
-              languageName: zC
+            Tk.name || (Tk.name = Fk), Xk[Fk] = Tk, Tk.rawDefinition = Ik.bind(null, kk), Tk.aliases && zk(Tk.aliases, {
+              languageName: Fk
             })
           },
-          unregisterLanguage: function(CC) {
-            delete QC[CC];
-            for (const zC of Object.keys(wC)) wC[zC] === CC && delete wC[zC]
+          unregisterLanguage: function(kk) {
+            delete Xk[kk];
+            for (const Fk of Object.keys(Tk)) Tk[Fk] === kk && delete Tk[Fk]
           },
           listLanguages: function() {
-            return Object.keys(QC)
+            return Object.keys(Xk)
           },
-          getLanguage: IC,
-          registerAliases: iC,
-          autoDetection: vC,
-          inherit: oz,
-          addPlugin: function(CC) {
-            ! function(CC) {
-              CC["before:highlightBlock"] && !CC["before:highlightElement"] && (CC["before:highlightElement"] = zC => {
-                CC["before:highlightBlock"](Object.assign({
-                  block: zC.el
-                }, zC))
-              }), CC["after:highlightBlock"] && !CC["after:highlightElement"] && (CC["after:highlightElement"] = zC => {
-                CC["after:highlightBlock"](Object.assign({
-                  block: zC.el
-                }, zC))
+          getLanguage: Vk,
+          registerAliases: zk,
+          autoDetection: Sk,
+          inherit: qF,
+          addPlugin: function(kk) {
+            ! function(kk) {
+              kk["before:highlightBlock"] && !kk["before:highlightElement"] && (kk["before:highlightElement"] = Fk => {
+                kk["before:highlightBlock"](Object.assign({
+                  block: Fk.el
+                }, Fk))
+              }), kk["after:highlightBlock"] && !kk["after:highlightElement"] && (kk["after:highlightElement"] = Fk => {
+                kk["after:highlightBlock"](Object.assign({
+                  block: Fk.el
+                }, Fk))
               })
-            }(CC), bC.push(CC)
+            }(kk), ik.push(kk)
           },
-          removePlugin: function(CC) {
-            const zC = bC.indexOf(CC); - 1 !== zC && bC.splice(zC, 1)
+          removePlugin: function(kk) {
+            const Fk = ik.indexOf(kk); - 1 !== Fk && ik.splice(Fk, 1)
           }
-        }), CC.debugMode = function() {
-          nC = !1
-        }, CC.safeMode = function() {
-          nC = !0
-        }, CC.versionString = "11.11.1", CC.regex = {
-          concat: gC,
-          lookahead: WC,
-          either: SC,
-          optional: MC,
-          anyNumberOfTimes: NC
+        }), kk.debugMode = function() {
+          yk = !1
+        }, kk.safeMode = function() {
+          yk = !0
+        }, kk.versionString = "11.11.1", kk.regex = {
+          concat: ek,
+          lookahead: tk,
+          either: wk,
+          optional: jk,
+          anyNumberOfTimes: Zk
         };
-        for (const ZC in rC) "object" === typeof rC[ZC] && zC(rC[ZC]);
-        return Object.assign(CC, rC), CC
+        for (const Ik in ck) "object" === typeof ck[Ik] && Fk(ck[Ik]);
+        return Object.assign(kk, ck), kk
       },
-      Wz = Fz({});
-    Wz.newInstance = () => Fz({}), CC.exports = Wz, Wz.HighlightJS = Wz, Wz.default = Wz
+      ZF = tF({});
+    ZF.newInstance = () => tF({}), kk.exports = ZF, ZF.HighlightJS = ZF, ZF.default = ZF
   },
-  4657: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => QC
+  4714: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Xk
     });
-    const QC = ZC(4661)
+    const Xk = Ik(4722)
   },
-  4668: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => WC
+  4729: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => tk
     });
-    const QC = "[A-Za-z$_][0-9A-Za-z$_]*",
-      wC = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
-      bC = ["true", "false", "null", "undefined", "NaN", "Infinity"],
-      nC = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
-      fC = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
-      oC = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
-      qC = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
-      FC = [].concat(oC, nC, fC);
+    const Xk = "[A-Za-z$_][0-9A-Za-z$_]*",
+      Tk = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
+      ik = ["true", "false", "null", "undefined", "NaN", "Infinity"],
+      yk = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
+      lk = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
+      ak = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
+      qk = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
+      Lk = [].concat(ak, yk, lk);
 
-    function WC(CC) {
-      const zC = CC.regex,
-        ZC = QC,
-        WC = "<>",
-        NC = "</>",
-        MC = {
-          RM: /<[A-Za-z0-9\\._:-]+/,
+    function tk(kk) {
+      const Fk = kk.regex,
+        Ik = Xk,
+        tk = "<>",
+        Zk = "</>",
+        jk = {
+          Hj: /<[A-Za-z0-9\\._:-]+/,
           end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
-          isTrulyOpeningTag: (CC, zC) => {
-            const ZC = CC[0].length + CC.index,
-              QC = CC.input[ZC];
-            if ("<" === QC || "," === QC) return void zC.ignoreMatch();
-            let wC;
-            ">" === QC && (((CC, zC) => {
+          isTrulyOpeningTag: (kk, Fk) => {
+            const Ik = kk[0].length + kk.index,
+              Xk = kk.input[Ik];
+            if ("<" === Xk || "," === Xk) return void Fk.ignoreMatch();
+            let Tk;
+            ">" === Xk && (((kk, Fk) => {
               let {
-                after: ZC
-              } = zC;
-              const QC = "</" + CC[0].slice(1);
-              return -1 !== CC.input.indexOf(QC, ZC)
-            })(CC, {
-              after: ZC
-            }) || zC.ignoreMatch());
-            const bC = CC.input.substring(ZC);
-            ((wC = bC.match(/^\s*=/)) || (wC = bC.match(/^\s+extends\s+/)) && 0 === wC.index) && zC.ignoreMatch()
+                after: Ik
+              } = Fk;
+              const Xk = "</" + kk[0].slice(1);
+              return -1 !== kk.input.indexOf(Xk, Ik)
+            })(kk, {
+              after: Ik
+            }) || Fk.ignoreMatch());
+            const ik = kk.input.substring(Ik);
+            ((Tk = ik.match(/^\s*=/)) || (Tk = ik.match(/^\s+extends\s+/)) && 0 === Tk.index) && Fk.ignoreMatch()
           }
         },
-        gC = {
-          $pattern: QC,
-          keyword: wC,
-          literal: bC,
-          built_in: FC,
-          "variable.language": qC
+        ek = {
+          $pattern: Xk,
+          keyword: Tk,
+          literal: ik,
+          built_in: Lk,
+          "variable.language": qk
         },
-        SC = "[0-9](_?[0-9])*",
-        pC = `\\.(${SC})`,
-        PC = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
-        GC = {
+        wk = "[0-9](_?[0-9])*",
+        Hk = `\\.(${wk})`,
+        Jk = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
+        xk = {
           className: "number",
           variants: [{
-            RM: `(\\b(${PC})((${pC})|\\.)?|(${pC}))[eE][+-]?(${SC})\\b`
+            Hj: `(\\b(${Jk})((${Hk})|\\.)?|(${Hk}))[eE][+-]?(${wk})\\b`
           }, {
-            RM: `\\b(${PC})\\b((${pC})\\b|\\.)?|(${pC})\\b`
+            Hj: `\\b(${Jk})\\b((${Hk})\\b|\\.)?|(${Hk})\\b`
           }, {
-            RM: "\\b(0|[1-9](_?[0-9])*)n\\b"
+            Hj: "\\b(0|[1-9](_?[0-9])*)n\\b"
           }, {
-            RM: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
+            Hj: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
           }, {
-            RM: "\\b0[bB][0-1](_?[0-1])*n?\\b"
+            Hj: "\\b0[bB][0-1](_?[0-1])*n?\\b"
           }, {
-            RM: "\\b0[oO][0-7](_?[0-7])*n?\\b"
+            Hj: "\\b0[oO][0-7](_?[0-7])*n?\\b"
           }, {
-            RM: "\\b0[0-7]+n?\\b"
+            Hj: "\\b0[0-7]+n?\\b"
           }],
           relevance: 0
         },
-        RC = {
+        Pk = {
           className: "subst",
-          RM: "\\$\\{",
+          Hj: "\\$\\{",
           end: "\\}",
-          keywords: gC,
+          keywords: ek,
           contains: []
         },
-        AC = {
-          RM: ".?html`",
+        Kk = {
+          Hj: ".?html`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [CC.BACKSLASH_ESCAPE, RC],
+            contains: [kk.BACKSLASH_ESCAPE, Pk],
             subLanguage: "xml"
           }
         },
-        xC = {
-          RM: ".?css`",
+        Qk = {
+          Hj: ".?css`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [CC.BACKSLASH_ESCAPE, RC],
+            contains: [kk.BACKSLASH_ESCAPE, Pk],
             subLanguage: "css"
           }
         },
-        JC = {
-          RM: ".?gql`",
+        sk = {
+          Hj: ".?gql`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [CC.BACKSLASH_ESCAPE, RC],
+            contains: [kk.BACKSLASH_ESCAPE, Pk],
             subLanguage: "graphql"
           }
         },
-        IC = {
+        Vk = {
           className: "string",
-          RM: "`",
+          Hj: "`",
           end: "`",
-          contains: [CC.BACKSLASH_ESCAPE, RC]
+          contains: [kk.BACKSLASH_ESCAPE, Pk]
         },
-        iC = {
+        zk = {
           className: "comment",
-          variants: [CC.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
+          variants: [kk.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
             relevance: 0,
             contains: [{
-              RM: "(?=@[A-Za-z]+)",
+              Hj: "(?=@[A-Za-z]+)",
               relevance: 0,
               contains: [{
                 className: "doctag",
-                RM: "@[A-Za-z]+"
+                Hj: "@[A-Za-z]+"
               }, {
                 className: "type",
-                RM: "\\{",
+                Hj: "\\{",
                 end: "\\}",
                 excludeEnd: !0,
                 excludeBegin: !0,
                 relevance: 0
               }, {
                 className: "variable",
-                RM: ZC + "(?=\\s*(-)|$)",
+                Hj: Ik + "(?=\\s*(-)|$)",
                 endsParent: !0,
                 relevance: 0
               }, {
-                RM: /(?=[^\n])\s/,
+                Hj: /(?=[^\n])\s/,
                 relevance: 0
               }]
             }]
-          }), CC.C_BLOCK_COMMENT_MODE, CC.C_LINE_COMMENT_MODE]
+          }), kk.C_BLOCK_COMMENT_MODE, kk.C_LINE_COMMENT_MODE]
         },
-        vC = [CC.APOS_STRING_MODE, CC.QUOTE_STRING_MODE, AC, xC, JC, IC, {
+        Sk = [kk.APOS_STRING_MODE, kk.QUOTE_STRING_MODE, Kk, Qk, sk, Vk, {
           match: /\$\d+/
-        }, GC];
-      RC.contains = vC.concat({
-        RM: /\{/,
+        }, xk];
+      Pk.contains = Sk.concat({
+        Hj: /\{/,
         end: /\}/,
-        keywords: gC,
-        contains: ["self"].concat(vC)
+        keywords: ek,
+        contains: ["self"].concat(Sk)
       });
-      const eC = [].concat(iC, RC.contains),
-        hC = eC.concat([{
-          RM: /(\s*)\(/,
+      const vk = [].concat(zk, Pk.contains),
+        Ek = vk.concat([{
+          Hj: /(\s*)\(/,
           end: /\)/,
-          keywords: gC,
-          contains: ["self"].concat(eC)
+          keywords: ek,
+          contains: ["self"].concat(vk)
         }]),
-        KC = {
+        Ok = {
           className: "params",
-          RM: /(\s*)\(/,
+          Hj: /(\s*)\(/,
           end: /\)/,
           excludeBegin: !0,
           excludeEnd: !0,
-          keywords: gC,
-          contains: hC
+          keywords: ek,
+          contains: Ek
         },
-        YC = {
+        nk = {
           variants: [{
-            match: [/class/, /\s+/, ZC, /\s+/, /extends/, /\s+/, zC.concat(ZC, "(", zC.concat(/\./, ZC), ")*")],
+            match: [/class/, /\s+/, Ik, /\s+/, /extends/, /\s+/, Fk.concat(Ik, "(", Fk.concat(/\./, Ik), ")*")],
             scope: {
               1: "keyword",
               3: "title.class",
@@ -1152,24 +1152,24 @@ export const modules = {
               7: "title.class.inherited"
             }
           }, {
-            match: [/class/, /\s+/, ZC],
+            match: [/class/, /\s+/, Ik],
             scope: {
               1: "keyword",
               3: "title.class"
             }
           }]
         },
-        dC = {
+        Gk = {
           relevance: 0,
-          match: zC.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
+          match: Fk.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
           className: "title.class",
           keywords: {
-            _: [...nC, ...fC]
+            _: [...yk, ...lk]
           }
         },
-        mC = {
+        pk = {
           variants: [{
-            match: [/function/, /\s+/, ZC, /(?=\s*\()/]
+            match: [/function/, /\s+/, Ik, /(?=\s*\()/]
           }, {
             match: [/function/, /\s*(?=\()/]
           }],
@@ -1178,53 +1178,53 @@ export const modules = {
             3: "title.function"
           },
           label: "func.def",
-          contains: [KC],
+          contains: [Ok],
           illegal: /%/
         };
-      const HC = {
-        match: zC.concat(/\b/, (EC = [...oC, "super", "import"].map((CC => `${CC}\\s*\\(`)), zC.concat("(?!", EC.join("|"), ")")), ZC, zC.lookahead(/\s*\(/)),
+      const uk = {
+        match: Fk.concat(/\b/, (bk = [...ak, "super", "import"].map((kk => `${kk}\\s*\\(`)), Fk.concat("(?!", bk.join("|"), ")")), Ik, Fk.lookahead(/\s*\(/)),
         className: "title.function",
         relevance: 0
       };
-      var EC;
-      const lC = {
-          RM: zC.concat(/\./, zC.lookahead(zC.concat(ZC, /(?![0-9A-Za-z$_(])/))),
-          end: ZC,
+      var bk;
+      const Rk = {
+          Hj: Fk.concat(/\./, Fk.lookahead(Fk.concat(Ik, /(?![0-9A-Za-z$_(])/))),
+          end: Ik,
           excludeBegin: !0,
           keywords: "prototype",
           className: "property",
           relevance: 0
         },
-        XC = {
-          match: [/get|set/, /\s+/, ZC, /(?=\()/],
+        Uk = {
+          match: [/get|set/, /\s+/, Ik, /(?=\()/],
           className: {
             1: "keyword",
             3: "title.function"
           },
           contains: [{
-            RM: /\(\)/
-          }, KC]
+            Hj: /\(\)/
+          }, Ok]
         },
-        cC = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + CC.UNDERSCORE_IDENT_RE + ")\\s*=>",
-        uC = {
-          match: [/const|var|let/, /\s+/, ZC, /\s*/, /=\s*/, /(async\s*)?/, zC.lookahead(cC)],
+        Ck = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + kk.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        Nk = {
+          match: [/const|var|let/, /\s+/, Ik, /\s*/, /=\s*/, /(async\s*)?/, Fk.lookahead(Ck)],
           keywords: "async",
           className: {
             1: "keyword",
             3: "title.function"
           },
-          contains: [KC]
+          contains: [Ok]
         };
       return {
         name: "JavaScript",
         aliases: ["js", "jsx", "mjs", "cjs"],
-        keywords: gC,
+        keywords: ek,
         exports: {
-          PARAMS_CONTAINS: hC,
-          CLASS_REFERENCE: dC
+          PARAMS_CONTAINS: Ek,
+          CLASS_REFERENCE: Gk
         },
         illegal: /#(?![$_A-z])/,
-        contains: [CC.SHEBANG({
+        contains: [kk.SHEBANG({
           label: "shebang",
           binary: "node",
           relevance: 5
@@ -1232,265 +1232,265 @@ export const modules = {
           label: "use_strict",
           className: "meta",
           relevance: 10,
-          RM: /^\s*['"]use (strict|asm)['"]/
-        }, CC.APOS_STRING_MODE, CC.QUOTE_STRING_MODE, AC, xC, JC, IC, iC, {
+          Hj: /^\s*['"]use (strict|asm)['"]/
+        }, kk.APOS_STRING_MODE, kk.QUOTE_STRING_MODE, Kk, Qk, sk, Vk, zk, {
           match: /\$\d+/
-        }, GC, dC, {
+        }, xk, Gk, {
           scope: "attr",
-          match: ZC + zC.lookahead(":"),
+          match: Ik + Fk.lookahead(":"),
           relevance: 0
-        }, uC, {
-          RM: "(" + CC.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
+        }, Nk, {
+          Hj: "(" + kk.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
           keywords: "return throw case",
           relevance: 0,
-          contains: [iC, CC.REGEXP_MODE, {
+          contains: [zk, kk.REGEXP_MODE, {
             className: "function",
-            RM: cC,
+            Hj: Ck,
             returnBegin: !0,
             end: "\\s*=>",
             contains: [{
               className: "params",
               variants: [{
-                RM: CC.UNDERSCORE_IDENT_RE,
+                Hj: kk.UNDERSCORE_IDENT_RE,
                 relevance: 0
               }, {
                 className: null,
-                RM: /\(\s*\)/,
+                Hj: /\(\s*\)/,
                 skip: !0
               }, {
-                RM: /(\s*)\(/,
+                Hj: /(\s*)\(/,
                 end: /\)/,
                 excludeBegin: !0,
                 excludeEnd: !0,
-                keywords: gC,
-                contains: hC
+                keywords: ek,
+                contains: Ek
               }]
             }]
           }, {
-            RM: /,/,
+            Hj: /,/,
             relevance: 0
           }, {
             match: /\s+/,
             relevance: 0
           }, {
             variants: [{
-              RM: WC,
-              end: NC
+              Hj: tk,
+              end: Zk
             }, {
               match: /<[A-Za-z0-9\\._:-]+\s*\/>/
             }, {
-              RM: MC.RM,
-              "on:begin": MC.isTrulyOpeningTag,
-              end: MC.end
+              Hj: jk.Hj,
+              "on:begin": jk.isTrulyOpeningTag,
+              end: jk.end
             }],
             subLanguage: "xml",
             contains: [{
-              RM: MC.RM,
-              end: MC.end,
+              Hj: jk.Hj,
+              end: jk.end,
               skip: !0,
               contains: ["self"]
             }]
           }]
-        }, mC, {
+        }, pk, {
           beginKeywords: "while if switch catch for"
         }, {
-          RM: "\\b(?!function)" + CC.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
+          Hj: "\\b(?!function)" + kk.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
           returnBegin: !0,
           label: "func.def",
-          contains: [KC, CC.inherit(CC.TITLE_MODE, {
-            RM: ZC,
+          contains: [Ok, kk.inherit(kk.TITLE_MODE, {
+            Hj: Ik,
             className: "title.function"
           })]
         }, {
           match: /\.\.\./,
           relevance: 0
-        }, lC, {
-          match: "\\$" + ZC,
+        }, Rk, {
+          match: "\\$" + Ik,
           relevance: 0
         }, {
           match: [/\bconstructor(?=\s*\()/],
           className: {
             1: "title.function"
           },
-          contains: [KC]
-        }, HC, {
+          contains: [Ok]
+        }, uk, {
           relevance: 0,
           match: /\b[A-Z][A-Z_0-9]+\b/,
           className: "variable.constant"
-        }, YC, XC, {
+        }, nk, Uk, {
           match: /\$[(.]/
         }]
       }
     }
   },
-  4672: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => NC
+  4731: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Zk
     });
-    const QC = "[A-Za-z$_][0-9A-Za-z$_]*",
-      wC = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
-      bC = ["true", "false", "null", "undefined", "NaN", "Infinity"],
-      nC = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
-      fC = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
-      oC = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
-      qC = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
-      FC = [].concat(oC, nC, fC);
+    const Xk = "[A-Za-z$_][0-9A-Za-z$_]*",
+      Tk = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
+      ik = ["true", "false", "null", "undefined", "NaN", "Infinity"],
+      yk = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
+      lk = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
+      ak = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
+      qk = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
+      Lk = [].concat(ak, yk, lk);
 
-    function WC(CC) {
-      const zC = CC.regex,
-        ZC = QC,
-        WC = "<>",
-        NC = "</>",
-        MC = {
-          RM: /<[A-Za-z0-9\\._:-]+/,
+    function tk(kk) {
+      const Fk = kk.regex,
+        Ik = Xk,
+        tk = "<>",
+        Zk = "</>",
+        jk = {
+          Hj: /<[A-Za-z0-9\\._:-]+/,
           end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
-          isTrulyOpeningTag: (CC, zC) => {
-            const ZC = CC[0].length + CC.index,
-              QC = CC.input[ZC];
-            if ("<" === QC || "," === QC) return void zC.ignoreMatch();
-            let wC;
-            ">" === QC && (((CC, zC) => {
+          isTrulyOpeningTag: (kk, Fk) => {
+            const Ik = kk[0].length + kk.index,
+              Xk = kk.input[Ik];
+            if ("<" === Xk || "," === Xk) return void Fk.ignoreMatch();
+            let Tk;
+            ">" === Xk && (((kk, Fk) => {
               let {
-                after: ZC
-              } = zC;
-              const QC = "</" + CC[0].slice(1);
-              return -1 !== CC.input.indexOf(QC, ZC)
-            })(CC, {
-              after: ZC
-            }) || zC.ignoreMatch());
-            const bC = CC.input.substring(ZC);
-            ((wC = bC.match(/^\s*=/)) || (wC = bC.match(/^\s+extends\s+/)) && 0 === wC.index) && zC.ignoreMatch()
+                after: Ik
+              } = Fk;
+              const Xk = "</" + kk[0].slice(1);
+              return -1 !== kk.input.indexOf(Xk, Ik)
+            })(kk, {
+              after: Ik
+            }) || Fk.ignoreMatch());
+            const ik = kk.input.substring(Ik);
+            ((Tk = ik.match(/^\s*=/)) || (Tk = ik.match(/^\s+extends\s+/)) && 0 === Tk.index) && Fk.ignoreMatch()
           }
         },
-        gC = {
-          $pattern: QC,
-          keyword: wC,
-          literal: bC,
-          built_in: FC,
-          "variable.language": qC
+        ek = {
+          $pattern: Xk,
+          keyword: Tk,
+          literal: ik,
+          built_in: Lk,
+          "variable.language": qk
         },
-        SC = "[0-9](_?[0-9])*",
-        pC = `\\.(${SC})`,
-        PC = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
-        GC = {
+        wk = "[0-9](_?[0-9])*",
+        Hk = `\\.(${wk})`,
+        Jk = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
+        xk = {
           className: "number",
           variants: [{
-            RM: `(\\b(${PC})((${pC})|\\.)?|(${pC}))[eE][+-]?(${SC})\\b`
+            Hj: `(\\b(${Jk})((${Hk})|\\.)?|(${Hk}))[eE][+-]?(${wk})\\b`
           }, {
-            RM: `\\b(${PC})\\b((${pC})\\b|\\.)?|(${pC})\\b`
+            Hj: `\\b(${Jk})\\b((${Hk})\\b|\\.)?|(${Hk})\\b`
           }, {
-            RM: "\\b(0|[1-9](_?[0-9])*)n\\b"
+            Hj: "\\b(0|[1-9](_?[0-9])*)n\\b"
           }, {
-            RM: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
+            Hj: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
           }, {
-            RM: "\\b0[bB][0-1](_?[0-1])*n?\\b"
+            Hj: "\\b0[bB][0-1](_?[0-1])*n?\\b"
           }, {
-            RM: "\\b0[oO][0-7](_?[0-7])*n?\\b"
+            Hj: "\\b0[oO][0-7](_?[0-7])*n?\\b"
           }, {
-            RM: "\\b0[0-7]+n?\\b"
+            Hj: "\\b0[0-7]+n?\\b"
           }],
           relevance: 0
         },
-        RC = {
+        Pk = {
           className: "subst",
-          RM: "\\$\\{",
+          Hj: "\\$\\{",
           end: "\\}",
-          keywords: gC,
+          keywords: ek,
           contains: []
         },
-        AC = {
-          RM: ".?html`",
+        Kk = {
+          Hj: ".?html`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [CC.BACKSLASH_ESCAPE, RC],
+            contains: [kk.BACKSLASH_ESCAPE, Pk],
             subLanguage: "xml"
           }
         },
-        xC = {
-          RM: ".?css`",
+        Qk = {
+          Hj: ".?css`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [CC.BACKSLASH_ESCAPE, RC],
+            contains: [kk.BACKSLASH_ESCAPE, Pk],
             subLanguage: "css"
           }
         },
-        JC = {
-          RM: ".?gql`",
+        sk = {
+          Hj: ".?gql`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [CC.BACKSLASH_ESCAPE, RC],
+            contains: [kk.BACKSLASH_ESCAPE, Pk],
             subLanguage: "graphql"
           }
         },
-        IC = {
+        Vk = {
           className: "string",
-          RM: "`",
+          Hj: "`",
           end: "`",
-          contains: [CC.BACKSLASH_ESCAPE, RC]
+          contains: [kk.BACKSLASH_ESCAPE, Pk]
         },
-        iC = {
+        zk = {
           className: "comment",
-          variants: [CC.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
+          variants: [kk.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
             relevance: 0,
             contains: [{
-              RM: "(?=@[A-Za-z]+)",
+              Hj: "(?=@[A-Za-z]+)",
               relevance: 0,
               contains: [{
                 className: "doctag",
-                RM: "@[A-Za-z]+"
+                Hj: "@[A-Za-z]+"
               }, {
                 className: "type",
-                RM: "\\{",
+                Hj: "\\{",
                 end: "\\}",
                 excludeEnd: !0,
                 excludeBegin: !0,
                 relevance: 0
               }, {
                 className: "variable",
-                RM: ZC + "(?=\\s*(-)|$)",
+                Hj: Ik + "(?=\\s*(-)|$)",
                 endsParent: !0,
                 relevance: 0
               }, {
-                RM: /(?=[^\n])\s/,
+                Hj: /(?=[^\n])\s/,
                 relevance: 0
               }]
             }]
-          }), CC.C_BLOCK_COMMENT_MODE, CC.C_LINE_COMMENT_MODE]
+          }), kk.C_BLOCK_COMMENT_MODE, kk.C_LINE_COMMENT_MODE]
         },
-        vC = [CC.APOS_STRING_MODE, CC.QUOTE_STRING_MODE, AC, xC, JC, IC, {
+        Sk = [kk.APOS_STRING_MODE, kk.QUOTE_STRING_MODE, Kk, Qk, sk, Vk, {
           match: /\$\d+/
-        }, GC];
-      RC.contains = vC.concat({
-        RM: /\{/,
+        }, xk];
+      Pk.contains = Sk.concat({
+        Hj: /\{/,
         end: /\}/,
-        keywords: gC,
-        contains: ["self"].concat(vC)
+        keywords: ek,
+        contains: ["self"].concat(Sk)
       });
-      const eC = [].concat(iC, RC.contains),
-        hC = eC.concat([{
-          RM: /(\s*)\(/,
+      const vk = [].concat(zk, Pk.contains),
+        Ek = vk.concat([{
+          Hj: /(\s*)\(/,
           end: /\)/,
-          keywords: gC,
-          contains: ["self"].concat(eC)
+          keywords: ek,
+          contains: ["self"].concat(vk)
         }]),
-        KC = {
+        Ok = {
           className: "params",
-          RM: /(\s*)\(/,
+          Hj: /(\s*)\(/,
           end: /\)/,
           excludeBegin: !0,
           excludeEnd: !0,
-          keywords: gC,
-          contains: hC
+          keywords: ek,
+          contains: Ek
         },
-        YC = {
+        nk = {
           variants: [{
-            match: [/class/, /\s+/, ZC, /\s+/, /extends/, /\s+/, zC.concat(ZC, "(", zC.concat(/\./, ZC), ")*")],
+            match: [/class/, /\s+/, Ik, /\s+/, /extends/, /\s+/, Fk.concat(Ik, "(", Fk.concat(/\./, Ik), ")*")],
             scope: {
               1: "keyword",
               3: "title.class",
@@ -1498,24 +1498,24 @@ export const modules = {
               7: "title.class.inherited"
             }
           }, {
-            match: [/class/, /\s+/, ZC],
+            match: [/class/, /\s+/, Ik],
             scope: {
               1: "keyword",
               3: "title.class"
             }
           }]
         },
-        dC = {
+        Gk = {
           relevance: 0,
-          match: zC.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
+          match: Fk.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
           className: "title.class",
           keywords: {
-            _: [...nC, ...fC]
+            _: [...yk, ...lk]
           }
         },
-        mC = {
+        pk = {
           variants: [{
-            match: [/function/, /\s+/, ZC, /(?=\s*\()/]
+            match: [/function/, /\s+/, Ik, /(?=\s*\()/]
           }, {
             match: [/function/, /\s*(?=\()/]
           }],
@@ -1524,53 +1524,53 @@ export const modules = {
             3: "title.function"
           },
           label: "func.def",
-          contains: [KC],
+          contains: [Ok],
           illegal: /%/
         };
-      const HC = {
-        match: zC.concat(/\b/, (EC = [...oC, "super", "import"].map((CC => `${CC}\\s*\\(`)), zC.concat("(?!", EC.join("|"), ")")), ZC, zC.lookahead(/\s*\(/)),
+      const uk = {
+        match: Fk.concat(/\b/, (bk = [...ak, "super", "import"].map((kk => `${kk}\\s*\\(`)), Fk.concat("(?!", bk.join("|"), ")")), Ik, Fk.lookahead(/\s*\(/)),
         className: "title.function",
         relevance: 0
       };
-      var EC;
-      const lC = {
-          RM: zC.concat(/\./, zC.lookahead(zC.concat(ZC, /(?![0-9A-Za-z$_(])/))),
-          end: ZC,
+      var bk;
+      const Rk = {
+          Hj: Fk.concat(/\./, Fk.lookahead(Fk.concat(Ik, /(?![0-9A-Za-z$_(])/))),
+          end: Ik,
           excludeBegin: !0,
           keywords: "prototype",
           className: "property",
           relevance: 0
         },
-        XC = {
-          match: [/get|set/, /\s+/, ZC, /(?=\()/],
+        Uk = {
+          match: [/get|set/, /\s+/, Ik, /(?=\()/],
           className: {
             1: "keyword",
             3: "title.function"
           },
           contains: [{
-            RM: /\(\)/
-          }, KC]
+            Hj: /\(\)/
+          }, Ok]
         },
-        cC = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + CC.UNDERSCORE_IDENT_RE + ")\\s*=>",
-        uC = {
-          match: [/const|var|let/, /\s+/, ZC, /\s*/, /=\s*/, /(async\s*)?/, zC.lookahead(cC)],
+        Ck = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + kk.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        Nk = {
+          match: [/const|var|let/, /\s+/, Ik, /\s*/, /=\s*/, /(async\s*)?/, Fk.lookahead(Ck)],
           keywords: "async",
           className: {
             1: "keyword",
             3: "title.function"
           },
-          contains: [KC]
+          contains: [Ok]
         };
       return {
         name: "JavaScript",
         aliases: ["js", "jsx", "mjs", "cjs"],
-        keywords: gC,
+        keywords: ek,
         exports: {
-          PARAMS_CONTAINS: hC,
-          CLASS_REFERENCE: dC
+          PARAMS_CONTAINS: Ek,
+          CLASS_REFERENCE: Gk
         },
         illegal: /#(?![$_A-z])/,
-        contains: [CC.SHEBANG({
+        contains: [kk.SHEBANG({
           label: "shebang",
           binary: "node",
           relevance: 5
@@ -1578,151 +1578,151 @@ export const modules = {
           label: "use_strict",
           className: "meta",
           relevance: 10,
-          RM: /^\s*['"]use (strict|asm)['"]/
-        }, CC.APOS_STRING_MODE, CC.QUOTE_STRING_MODE, AC, xC, JC, IC, iC, {
+          Hj: /^\s*['"]use (strict|asm)['"]/
+        }, kk.APOS_STRING_MODE, kk.QUOTE_STRING_MODE, Kk, Qk, sk, Vk, zk, {
           match: /\$\d+/
-        }, GC, dC, {
+        }, xk, Gk, {
           scope: "attr",
-          match: ZC + zC.lookahead(":"),
+          match: Ik + Fk.lookahead(":"),
           relevance: 0
-        }, uC, {
-          RM: "(" + CC.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
+        }, Nk, {
+          Hj: "(" + kk.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
           keywords: "return throw case",
           relevance: 0,
-          contains: [iC, CC.REGEXP_MODE, {
+          contains: [zk, kk.REGEXP_MODE, {
             className: "function",
-            RM: cC,
+            Hj: Ck,
             returnBegin: !0,
             end: "\\s*=>",
             contains: [{
               className: "params",
               variants: [{
-                RM: CC.UNDERSCORE_IDENT_RE,
+                Hj: kk.UNDERSCORE_IDENT_RE,
                 relevance: 0
               }, {
                 className: null,
-                RM: /\(\s*\)/,
+                Hj: /\(\s*\)/,
                 skip: !0
               }, {
-                RM: /(\s*)\(/,
+                Hj: /(\s*)\(/,
                 end: /\)/,
                 excludeBegin: !0,
                 excludeEnd: !0,
-                keywords: gC,
-                contains: hC
+                keywords: ek,
+                contains: Ek
               }]
             }]
           }, {
-            RM: /,/,
+            Hj: /,/,
             relevance: 0
           }, {
             match: /\s+/,
             relevance: 0
           }, {
             variants: [{
-              RM: WC,
-              end: NC
+              Hj: tk,
+              end: Zk
             }, {
               match: /<[A-Za-z0-9\\._:-]+\s*\/>/
             }, {
-              RM: MC.RM,
-              "on:begin": MC.isTrulyOpeningTag,
-              end: MC.end
+              Hj: jk.Hj,
+              "on:begin": jk.isTrulyOpeningTag,
+              end: jk.end
             }],
             subLanguage: "xml",
             contains: [{
-              RM: MC.RM,
-              end: MC.end,
+              Hj: jk.Hj,
+              end: jk.end,
               skip: !0,
               contains: ["self"]
             }]
           }]
-        }, mC, {
+        }, pk, {
           beginKeywords: "while if switch catch for"
         }, {
-          RM: "\\b(?!function)" + CC.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
+          Hj: "\\b(?!function)" + kk.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
           returnBegin: !0,
           label: "func.def",
-          contains: [KC, CC.inherit(CC.TITLE_MODE, {
-            RM: ZC,
+          contains: [Ok, kk.inherit(kk.TITLE_MODE, {
+            Hj: Ik,
             className: "title.function"
           })]
         }, {
           match: /\.\.\./,
           relevance: 0
-        }, lC, {
-          match: "\\$" + ZC,
+        }, Rk, {
+          match: "\\$" + Ik,
           relevance: 0
         }, {
           match: [/\bconstructor(?=\s*\()/],
           className: {
             1: "title.function"
           },
-          contains: [KC]
-        }, HC, {
+          contains: [Ok]
+        }, uk, {
           relevance: 0,
           match: /\b[A-Z][A-Z_0-9]+\b/,
           className: "variable.constant"
-        }, YC, XC, {
+        }, nk, Uk, {
           match: /\$[(.]/
         }]
       }
     }
 
-    function NC(CC) {
-      const zC = CC.regex,
-        ZC = WC(CC),
-        nC = QC,
-        fC = ["any", "void", "number", "boolean", "string", "object", "never", "symbol", "bigint", "unknown"],
-        oC = {
-          RM: [/namespace/, /\s+/, CC.IDENT_RE],
+    function Zk(kk) {
+      const Fk = kk.regex,
+        Ik = tk(kk),
+        yk = Xk,
+        lk = ["any", "void", "number", "boolean", "string", "object", "never", "symbol", "bigint", "unknown"],
+        ak = {
+          Hj: [/namespace/, /\s+/, kk.IDENT_RE],
           beginScope: {
             1: "keyword",
             3: "title.class"
           }
         },
-        NC = {
+        Zk = {
           beginKeywords: "interface",
           end: /\{/,
           excludeEnd: !0,
           keywords: {
             keyword: "interface extends",
-            built_in: fC
+            built_in: lk
           },
-          contains: [ZC.exports.CLASS_REFERENCE]
+          contains: [Ik.exports.CLASS_REFERENCE]
         },
-        MC = {
-          $pattern: QC,
-          keyword: wC.concat(["type", "interface", "public", "private", "protected", "implements", "declare", "abstract", "readonly", "enum", "override", "satisfies"]),
-          literal: bC,
-          built_in: FC.concat(fC),
-          "variable.language": qC
+        jk = {
+          $pattern: Xk,
+          keyword: Tk.concat(["type", "interface", "public", "private", "protected", "implements", "declare", "abstract", "readonly", "enum", "override", "satisfies"]),
+          literal: ik,
+          built_in: Lk.concat(lk),
+          "variable.language": qk
         },
-        gC = {
+        ek = {
           className: "meta",
-          RM: "@" + nC
+          Hj: "@" + yk
         },
-        SC = (CC, zC, ZC) => {
-          const QC = CC.contains.findIndex((CC => CC.label === zC));
-          if (-1 === QC) throw new Error("can not find mode to replace");
-          CC.contains.splice(QC, 1, ZC)
+        wk = (kk, Fk, Ik) => {
+          const Xk = kk.contains.findIndex((kk => kk.label === Fk));
+          if (-1 === Xk) throw new Error("can not find mode to replace");
+          kk.contains.splice(Xk, 1, Ik)
         };
-      Object.assign(ZC.keywords, MC), ZC.exports.PARAMS_CONTAINS.push(gC);
-      const pC = ZC.contains.find((CC => "attr" === CC.scope)),
-        PC = Object.assign({}, pC, {
-          match: zC.concat(nC, zC.lookahead(/\s*\?:/))
+      Object.assign(Ik.keywords, jk), Ik.exports.PARAMS_CONTAINS.push(ek);
+      const Hk = Ik.contains.find((kk => "attr" === kk.scope)),
+        Jk = Object.assign({}, Hk, {
+          match: Fk.concat(yk, Fk.lookahead(/\s*\?:/))
         });
-      ZC.exports.PARAMS_CONTAINS.push([ZC.exports.CLASS_REFERENCE, pC, PC]), ZC.contains = ZC.contains.concat([gC, oC, NC, PC]), SC(ZC, "shebang", CC.SHEBANG()), SC(ZC, "use_strict", {
+      Ik.exports.PARAMS_CONTAINS.push([Ik.exports.CLASS_REFERENCE, Hk, Jk]), Ik.contains = Ik.contains.concat([ek, ak, Zk, Jk]), wk(Ik, "shebang", kk.SHEBANG()), wk(Ik, "use_strict", {
         className: "meta",
         relevance: 10,
-        RM: /^\s*['"]use strict['"]/
+        Hj: /^\s*['"]use strict['"]/
       });
-      return ZC.contains.find((CC => "func.def" === CC.label)).relevance = 0, Object.assign(ZC, {
+      return Ik.contains.find((kk => "func.def" === kk.label)).relevance = 0, Object.assign(Ik, {
         name: "TypeScript",
         aliases: ["ts", "tsx", "mts", "cts"]
-      }), ZC
+      }), Ik
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

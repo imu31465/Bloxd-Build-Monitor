@@ -1,181 +1,181 @@
 export const id = 294;
 export const ids = [294];
 export const modules = {
-  41125: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => Gz,
-      e: () => mC,
-      ChangeSet: () => HC,
-      h: () => Yz,
-      i: () => TC,
-      l: () => Ez,
-      n: () => DC,
-      o: () => dC,
-      r: () => wz,
-      u: () => Tz,
-      s: () => az,
-      v: () => Xz,
-      w: () => xz,
-      A: () => kC,
-      B: () => SC,
-      F: () => Jz,
-      I: () => eC,
-      M: () => KC,
-      P: () => lz,
-      S: () => CZ,
-      V: () => vC,
-      Y: () => zZ,
-      $: () => hC
+  41315: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => PF,
+      g: () => pk,
+      ChangeSet: () => uk,
+      h: () => nF,
+      k: () => fk,
+      m: () => bF,
+      p: () => Yk,
+      s: () => Gk,
+      u: () => iF,
+      A: () => fF,
+      y: () => BF,
+      E: () => UF,
+      F: () => sF,
+      I: () => Mk,
+      J: () => wk,
+      L: () => VF,
+      M: () => vk,
+      O: () => Ok,
+      R: () => RF,
+      V: () => FI,
+      Y: () => Sk,
+      $: () => II,
+      db: () => Ek
     });
-    let QC = [],
-      wC = [];
+    let Xk = [],
+      Tk = [];
 
-    function bC(CC) {
-      if (CC < 768) return !1;
-      for (let zC = 0, ZC = QC.length;;) {
-        let bC = zC + ZC >> 1;
-        if (CC < QC[bC]) ZC = bC;
+    function ik(kk) {
+      if (kk < 768) return !1;
+      for (let Fk = 0, Ik = Xk.length;;) {
+        let ik = Fk + Ik >> 1;
+        if (kk < Xk[ik]) Ik = ik;
         else {
-          if (!(CC >= wC[bC])) return !0;
-          zC = bC + 1
+          if (!(kk >= Tk[ik])) return !0;
+          Fk = ik + 1
         }
-        if (zC == ZC) return !1
+        if (Fk == Ik) return !1
       }
     }
 
-    function nC(CC) {
-      return CC >= 127462 && CC <= 127487
+    function yk(kk) {
+      return kk >= 127462 && kk <= 127487
     }(() => {
-      let CC = "lc,34,7n,7,7b,19,,,,2,,2,,,20,b,1c,l,g,,2t,7,2,6,2,2,,4,z,,u,r,2j,b,1m,9,9,,o,4,,9,,3,,5,17,3,3b,f,,w,1j,,,,4,8,4,,3,7,a,2,t,,1m,,,,2,4,8,,9,,a,2,q,,2,2,1l,,4,2,4,2,2,3,3,,u,2,3,,b,2,1l,,4,5,,2,4,,k,2,m,6,,,1m,,,2,,4,8,,7,3,a,2,u,,1n,,,,c,,9,,14,,3,,1l,3,5,3,,4,7,2,b,2,t,,1m,,2,,2,,3,,5,2,7,2,b,2,s,2,1l,2,,,2,4,8,,9,,a,2,t,,20,,4,,2,3,,,8,,29,,2,7,c,8,2q,,2,9,b,6,22,2,r,,,,,,1j,e,,5,,2,5,b,,10,9,,2u,4,,6,,2,2,2,p,2,4,3,g,4,d,,2,2,6,,f,,jj,3,qa,3,t,3,t,2,u,2,1s,2,,7,8,,2,b,9,,19,3,3b,2,y,,3a,3,4,2,9,,6,3,63,2,2,,1m,,,7,,,,,2,8,6,a,2,,1c,h,1r,4,1c,7,,,5,,14,9,c,2,w,4,2,2,,3,1k,,,2,3,,,3,1m,8,2,2,48,3,,d,,7,4,,6,,3,2,5i,1m,,5,ek,,5f,x,2da,3,3x,,2o,w,fe,6,2x,2,n9w,4,,a,w,2,28,2,7k,,3,,4,,p,2,5,,47,2,q,i,d,,12,8,p,b,1a,3,1c,,2,4,2,2,13,,1v,6,2,2,2,2,c,,8,,1b,,1f,,,3,2,2,5,2,,,16,2,8,,6m,,2,,4,,fn4,,kh,g,g,g,a6,2,gt,,6a,,45,5,1ae,3,,2,5,4,14,3,4,,4l,2,fx,4,ar,2,49,b,4w,,1i,f,1k,3,1d,4,2,2,1x,3,10,5,,8,1q,,c,2,1g,9,a,4,2,,2n,3,2,,,2,6,,4g,,3,8,l,2,1l,2,,,,,m,,e,7,3,5,5f,8,2,3,,,n,,29,,2,6,,,2,,,2,,2,6j,,2,4,6,2,,2,r,2,2d,8,2,,,2,2y,,,,2,6,,,2t,3,2,4,,5,77,9,,2,6t,,a,2,,,4,,40,4,2,2,4,,w,a,14,6,2,4,8,,9,6,2,3,1a,d,,2,ba,7,,6,,,2a,m,2,7,,2,,2,3e,6,3,,,2,,7,,,20,2,3,,,,9n,2,f0b,5,1n,7,t4,,1r,4,29,,f5k,2,43q,,,3,4,5,8,8,2,7,u,4,44,3,1iz,1j,4,1e,8,,e,,m,5,,f,11s,7,,h,2,7,,2,,5,79,7,c5,4,15s,7,31,7,240,5,gx7k,2o,3k,6o".split(",").map((CC => CC ? parseInt(CC, 36) : 1));
-      for (let zC = 0, ZC = 0; zC < CC.length; zC++)(zC % 2 ? wC : QC).push(ZC += CC[zC])
+      let kk = "lc,34,7n,7,7b,19,,,,2,,2,,,20,b,1c,l,g,,2t,7,2,6,2,2,,4,z,,u,r,2j,b,1m,9,9,,o,4,,9,,3,,5,17,3,3b,f,,w,1j,,,,4,8,4,,3,7,a,2,t,,1m,,,,2,4,8,,9,,a,2,q,,2,2,1l,,4,2,4,2,2,3,3,,u,2,3,,b,2,1l,,4,5,,2,4,,k,2,m,6,,,1m,,,2,,4,8,,7,3,a,2,u,,1n,,,,c,,9,,14,,3,,1l,3,5,3,,4,7,2,b,2,t,,1m,,2,,2,,3,,5,2,7,2,b,2,s,2,1l,2,,,2,4,8,,9,,a,2,t,,20,,4,,2,3,,,8,,29,,2,7,c,8,2q,,2,9,b,6,22,2,r,,,,,,1j,e,,5,,2,5,b,,10,9,,2u,4,,6,,2,2,2,p,2,4,3,g,4,d,,2,2,6,,f,,jj,3,qa,3,t,3,t,2,u,2,1s,2,,7,8,,2,b,9,,19,3,3b,2,y,,3a,3,4,2,9,,6,3,63,2,2,,1m,,,7,,,,,2,8,6,a,2,,1c,h,1r,4,1c,7,,,5,,14,9,c,2,w,4,2,2,,3,1k,,,2,3,,,3,1m,8,2,2,48,3,,d,,7,4,,6,,3,2,5i,1m,,5,ek,,5f,x,2da,3,3x,,2o,w,fe,6,2x,2,n9w,4,,a,w,2,28,2,7k,,3,,4,,p,2,5,,47,2,q,i,d,,12,8,p,b,1a,3,1c,,2,4,2,2,13,,1v,6,2,2,2,2,c,,8,,1b,,1f,,,3,2,2,5,2,,,16,2,8,,6m,,2,,4,,fn4,,kh,g,g,g,a6,2,gt,,6a,,45,5,1ae,3,,2,5,4,14,3,4,,4l,2,fx,4,ar,2,49,b,4w,,1i,f,1k,3,1d,4,2,2,1x,3,10,5,,8,1q,,c,2,1g,9,a,4,2,,2n,3,2,,,2,6,,4g,,3,8,l,2,1l,2,,,,,m,,e,7,3,5,5f,8,2,3,,,n,,29,,2,6,,,2,,,2,,2,6j,,2,4,6,2,,2,r,2,2d,8,2,,,2,2y,,,,2,6,,,2t,3,2,4,,5,77,9,,2,6t,,a,2,,,4,,40,4,2,2,4,,w,a,14,6,2,4,8,,9,6,2,3,1a,d,,2,ba,7,,6,,,2a,m,2,7,,2,,2,3e,6,3,,,2,,7,,,20,2,3,,,,9n,2,f0b,5,1n,7,t4,,1r,4,29,,f5k,2,43q,,,3,4,5,8,8,2,7,u,4,44,3,1iz,1j,4,1e,8,,e,,m,5,,f,11s,7,,h,2,7,,2,,5,79,7,c5,4,15s,7,31,7,240,5,gx7k,2o,3k,6o".split(",").map((kk => kk ? parseInt(kk, 36) : 1));
+      for (let Fk = 0, Ik = 0; Fk < kk.length; Fk++)(Fk % 2 ? Tk : Xk).push(Ik += kk[Fk])
     })();
-    const fC = 8205;
+    const lk = 8205;
 
-    function oC(CC, zC) {
-      return (!(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? qC : FC)(CC, zC, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
+    function ak(kk, Fk) {
+      return (!(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? qk : Lk)(kk, Fk, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
     }
 
-    function qC(CC, zC, ZC) {
-      if (zC == CC.length) return zC;
-      zC && NC(CC.charCodeAt(zC)) && MC(CC.charCodeAt(zC - 1)) && zC--;
-      let QC = WC(CC, zC);
-      for (zC += gC(QC); zC < CC.length;) {
-        let wC = WC(CC, zC);
-        if (QC == fC || wC == fC || ZC && bC(wC)) zC += gC(wC), QC = wC;
+    function qk(kk, Fk, Ik) {
+      if (Fk == kk.length) return Fk;
+      Fk && Zk(kk.charCodeAt(Fk)) && jk(kk.charCodeAt(Fk - 1)) && Fk--;
+      let Xk = tk(kk, Fk);
+      for (Fk += ek(Xk); Fk < kk.length;) {
+        let Tk = tk(kk, Fk);
+        if (Xk == lk || Tk == lk || Ik && ik(Tk)) Fk += ek(Tk), Xk = Tk;
         else {
-          if (!nC(wC)) break;
+          if (!yk(Tk)) break;
           {
-            let ZC = 0,
-              QC = zC - 2;
-            for (; QC >= 0 && nC(WC(CC, QC));) ZC++, QC -= 2;
-            if (ZC % 2 == 0) break;
-            zC += 2
+            let Ik = 0,
+              Xk = Fk - 2;
+            for (; Xk >= 0 && yk(tk(kk, Xk));) Ik++, Xk -= 2;
+            if (Ik % 2 == 0) break;
+            Fk += 2
           }
         }
       }
-      return zC
+      return Fk
     }
 
-    function FC(CC, zC, ZC) {
-      for (; zC > 0;) {
-        let QC = qC(CC, zC - 2, ZC);
-        if (QC < zC) return QC;
-        zC--
+    function Lk(kk, Fk, Ik) {
+      for (; Fk > 0;) {
+        let Xk = qk(kk, Fk - 2, Ik);
+        if (Xk < Fk) return Xk;
+        Fk--
       }
       return 0
     }
 
-    function WC(CC, zC) {
-      let ZC = CC.charCodeAt(zC);
-      if (!MC(ZC) || zC + 1 == CC.length) return ZC;
-      let QC = CC.charCodeAt(zC + 1);
-      return NC(QC) ? QC - 56320 + (ZC - 55296 << 10) + 65536 : ZC
+    function tk(kk, Fk) {
+      let Ik = kk.charCodeAt(Fk);
+      if (!jk(Ik) || Fk + 1 == kk.length) return Ik;
+      let Xk = kk.charCodeAt(Fk + 1);
+      return Zk(Xk) ? Xk - 56320 + (Ik - 55296 << 10) + 65536 : Ik
     }
 
-    function NC(CC) {
-      return CC >= 56320 && CC < 57344
+    function Zk(kk) {
+      return kk >= 56320 && kk < 57344
     }
 
-    function MC(CC) {
-      return CC >= 55296 && CC < 56320
+    function jk(kk) {
+      return kk >= 55296 && kk < 56320
     }
 
-    function gC(CC) {
-      return CC < 65536 ? 1 : 2
+    function ek(kk) {
+      return kk < 65536 ? 1 : 2
     }
-    class SC {
-      lineAt(CC) {
-        if (CC < 0 || CC > this.length) throw new RangeError(`Invalid position ${CC} in document of length ${this.length}`);
-        return this.lineInner(CC, !1, 1, 0)
+    class wk {
+      lineAt(kk) {
+        if (kk < 0 || kk > this.length) throw new RangeError(`Invalid position ${kk} in document of length ${this.length}`);
+        return this.lineInner(kk, !1, 1, 0)
       }
-      line(CC) {
-        if (CC < 1 || CC > this.lines) throw new RangeError(`Invalid line number ${CC} in ${this.lines}-line document`);
-        return this.lineInner(CC, !0, 1, 0)
+      line(kk) {
+        if (kk < 1 || kk > this.lines) throw new RangeError(`Invalid line number ${kk} in ${this.lines}-line document`);
+        return this.lineInner(kk, !0, 1, 0)
       }
-      replace(CC, zC, ZC) {
-        [CC, zC] = iC(this, CC, zC);
-        let QC = [];
-        return this.decompose(0, CC, QC, 2), ZC.length && ZC.decompose(0, ZC.length, QC, 3), this.decompose(zC, this.length, QC, 1), PC.from(QC, this.length - (zC - CC) + ZC.length)
+      replace(kk, Fk, Ik) {
+        [kk, Fk] = zk(this, kk, Fk);
+        let Xk = [];
+        return this.decompose(0, kk, Xk, 2), Ik.length && Ik.decompose(0, Ik.length, Xk, 3), this.decompose(Fk, this.length, Xk, 1), Jk.from(Xk, this.length - (Fk - kk) + Ik.length)
       }
-      append(CC) {
-        return this.replace(this.length, this.length, CC)
+      append(kk) {
+        return this.replace(this.length, this.length, kk)
       }
-      slice(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
-        [CC, zC] = iC(this, CC, zC);
-        let ZC = [];
-        return this.decompose(CC, zC, ZC, 0), PC.from(ZC, zC - CC)
+      slice(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
+        [kk, Fk] = zk(this, kk, Fk);
+        let Ik = [];
+        return this.decompose(kk, Fk, Ik, 0), Jk.from(Ik, Fk - kk)
       }
-      eq(CC) {
-        if (CC == this) return !0;
-        if (CC.length != this.length || CC.lines != this.lines) return !1;
-        let zC = this.scanIdentical(CC, 1),
-          ZC = this.length - this.scanIdentical(CC, -1),
-          QC = new AC(this),
-          wC = new AC(CC);
-        for (let bC = zC, nC = zC;;) {
-          if (QC.next(bC), wC.next(bC), bC = 0, QC.lineBreak != wC.lineBreak || QC.done != wC.done || QC.value != wC.value) return !1;
-          if (nC += QC.value.length, QC.done || nC >= ZC) return !0
+      eq(kk) {
+        if (kk == this) return !0;
+        if (kk.length != this.length || kk.lines != this.lines) return !1;
+        let Fk = this.scanIdentical(kk, 1),
+          Ik = this.length - this.scanIdentical(kk, -1),
+          Xk = new Kk(this),
+          Tk = new Kk(kk);
+        for (let ik = Fk, yk = Fk;;) {
+          if (Xk.next(ik), Tk.next(ik), ik = 0, Xk.lineBreak != Tk.lineBreak || Xk.done != Tk.done || Xk.value != Tk.value) return !1;
+          if (yk += Xk.value.length, Xk.done || yk >= Ik) return !0
         }
       }
       iter() {
-        return new AC(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1)
+        return new Kk(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1)
       }
-      iterRange(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
-        return new xC(this, CC, zC)
+      iterRange(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
+        return new Qk(this, kk, Fk)
       }
-      iterLines(CC, zC) {
-        let ZC;
-        if (null == CC) ZC = this.iter();
+      iterLines(kk, Fk) {
+        let Ik;
+        if (null == kk) Ik = this.iter();
         else {
-          null == zC && (zC = this.lines + 1);
-          let QC = this.line(CC).from;
-          ZC = this.iterRange(QC, Math.max(QC, zC == this.lines + 1 ? this.length : zC <= 1 ? 0 : this.line(zC - 1).to))
+          null == Fk && (Fk = this.lines + 1);
+          let Xk = this.line(kk).from;
+          Ik = this.iterRange(Xk, Math.max(Xk, Fk == this.lines + 1 ? this.length : Fk <= 1 ? 0 : this.line(Fk - 1).to))
         }
-        return new JC(ZC)
+        return new sk(Ik)
       }
       toString() {
         return this.sliceString(0)
       }
       toJSON() {
-        let CC = [];
-        return this.flatten(CC), CC
+        let kk = [];
+        return this.flatten(kk), kk
       }
       constructor() {}
-      static of (CC) {
-        if (0 == CC.length) throw new RangeError("A document must have at least one line");
-        return 1 != CC.length || CC[0] ? CC.length <= 32 ? new pC(CC) : PC.from(pC.split(CC, [])) : SC.empty
+      static of (kk) {
+        if (0 == kk.length) throw new RangeError("A document must have at least one line");
+        return 1 != kk.length || kk[0] ? kk.length <= 32 ? new Hk(kk) : Jk.from(Hk.split(kk, [])) : wk.empty
       }
     }
-    class pC extends SC {
-      constructor(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(CC) {
-          let zC = -1;
-          for (let ZC of CC) zC += ZC.length + 1;
-          return zC
-        }(CC);
-        super(), this.text = CC, this.length = zC
+    class Hk extends wk {
+      constructor(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(kk) {
+          let Fk = -1;
+          for (let Ik of kk) Fk += Ik.length + 1;
+          return Fk
+        }(kk);
+        super(), this.text = kk, this.length = Fk
       }
       get lines() {
         return this.text.length
@@ -183,629 +183,629 @@ export const modules = {
       get children() {
         return null
       }
-      lineInner(CC, zC, ZC, QC) {
-        for (let wC = 0;; wC++) {
-          let bC = this.text[wC],
-            nC = QC + bC.length;
-          if ((zC ? ZC : nC) >= CC) return new IC(QC, nC, ZC, bC);
-          QC = nC + 1, ZC++
+      lineInner(kk, Fk, Ik, Xk) {
+        for (let Tk = 0;; Tk++) {
+          let ik = this.text[Tk],
+            yk = Xk + ik.length;
+          if ((Fk ? Ik : yk) >= kk) return new Vk(Xk, yk, Ik, ik);
+          Xk = yk + 1, Ik++
         }
       }
-      decompose(CC, zC, ZC, QC) {
-        let wC = CC <= 0 && zC >= this.length ? this : new pC(RC(this.text, CC, zC), Math.min(zC, this.length) - Math.max(0, CC));
-        if (1 & QC) {
-          let CC = ZC.pop(),
-            zC = GC(wC.text, CC.text.slice(), 0, wC.length);
-          if (zC.length <= 32) ZC.push(new pC(zC, CC.length + wC.length));
+      decompose(kk, Fk, Ik, Xk) {
+        let Tk = kk <= 0 && Fk >= this.length ? this : new Hk(Pk(this.text, kk, Fk), Math.min(Fk, this.length) - Math.max(0, kk));
+        if (1 & Xk) {
+          let kk = Ik.pop(),
+            Fk = xk(Tk.text, kk.text.slice(), 0, Tk.length);
+          if (Fk.length <= 32) Ik.push(new Hk(Fk, kk.length + Tk.length));
           else {
-            let CC = zC.length >> 1;
-            ZC.push(new pC(zC.slice(0, CC)), new pC(zC.slice(CC)))
+            let kk = Fk.length >> 1;
+            Ik.push(new Hk(Fk.slice(0, kk)), new Hk(Fk.slice(kk)))
           }
-        } else ZC.push(wC)
+        } else Ik.push(Tk)
       }
-      replace(CC, zC, ZC) {
-        if (!(ZC instanceof pC)) return super.replace(CC, zC, ZC);
-        [CC, zC] = iC(this, CC, zC);
-        let QC = GC(this.text, GC(ZC.text, RC(this.text, 0, CC)), zC),
-          wC = this.length + ZC.length - (zC - CC);
-        return QC.length <= 32 ? new pC(QC, wC) : PC.from(pC.split(QC, []), wC)
+      replace(kk, Fk, Ik) {
+        if (!(Ik instanceof Hk)) return super.replace(kk, Fk, Ik);
+        [kk, Fk] = zk(this, kk, Fk);
+        let Xk = xk(this.text, xk(Ik.text, Pk(this.text, 0, kk)), Fk),
+          Tk = this.length + Ik.length - (Fk - kk);
+        return Xk.length <= 32 ? new Hk(Xk, Tk) : Jk.from(Hk.split(Xk, []), Tk)
       }
-      sliceString(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
-          ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
-        [CC, zC] = iC(this, CC, zC);
-        let QC = "";
-        for (let wC = 0, bC = 0; wC <= zC && bC < this.text.length; bC++) {
-          let nC = this.text[bC],
-            fC = wC + nC.length;
-          wC > CC && bC && (QC += ZC), CC < fC && zC > wC && (QC += nC.slice(Math.max(0, CC - wC), zC - wC)), wC = fC + 1
+      sliceString(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
+          Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
+        [kk, Fk] = zk(this, kk, Fk);
+        let Xk = "";
+        for (let Tk = 0, ik = 0; Tk <= Fk && ik < this.text.length; ik++) {
+          let yk = this.text[ik],
+            lk = Tk + yk.length;
+          Tk > kk && ik && (Xk += Ik), kk < lk && Fk > Tk && (Xk += yk.slice(Math.max(0, kk - Tk), Fk - Tk)), Tk = lk + 1
         }
-        return QC
+        return Xk
       }
-      flatten(CC) {
-        for (let zC of this.text) CC.push(zC)
+      flatten(kk) {
+        for (let Fk of this.text) kk.push(Fk)
       }
       scanIdentical() {
         return 0
       }
-      static split(CC, zC) {
-        let ZC = [],
-          QC = -1;
-        for (let wC of CC) ZC.push(wC), QC += wC.length + 1, 32 == ZC.length && (zC.push(new pC(ZC, QC)), ZC = [], QC = -1);
-        return QC > -1 && zC.push(new pC(ZC, QC)), zC
+      static split(kk, Fk) {
+        let Ik = [],
+          Xk = -1;
+        for (let Tk of kk) Ik.push(Tk), Xk += Tk.length + 1, 32 == Ik.length && (Fk.push(new Hk(Ik, Xk)), Ik = [], Xk = -1);
+        return Xk > -1 && Fk.push(new Hk(Ik, Xk)), Fk
       }
     }
-    class PC extends SC {
-      constructor(CC, zC) {
-        super(), this.children = CC, this.length = zC, this.lines = 0;
-        for (let ZC of CC) this.lines += ZC.lines
+    class Jk extends wk {
+      constructor(kk, Fk) {
+        super(), this.children = kk, this.length = Fk, this.lines = 0;
+        for (let Ik of kk) this.lines += Ik.lines
       }
-      lineInner(CC, zC, ZC, QC) {
-        for (let wC = 0;; wC++) {
-          let bC = this.children[wC],
-            nC = QC + bC.length,
-            fC = ZC + bC.lines - 1;
-          if ((zC ? fC : nC) >= CC) return bC.lineInner(CC, zC, ZC, QC);
-          QC = nC + 1, ZC = fC + 1
+      lineInner(kk, Fk, Ik, Xk) {
+        for (let Tk = 0;; Tk++) {
+          let ik = this.children[Tk],
+            yk = Xk + ik.length,
+            lk = Ik + ik.lines - 1;
+          if ((Fk ? lk : yk) >= kk) return ik.lineInner(kk, Fk, Ik, Xk);
+          Xk = yk + 1, Ik = lk + 1
         }
       }
-      decompose(CC, zC, ZC, QC) {
-        for (let wC = 0, bC = 0; bC <= zC && wC < this.children.length; wC++) {
-          let nC = this.children[wC],
-            fC = bC + nC.length;
-          if (CC <= fC && zC >= bC) {
-            let wC = QC & ((bC <= CC ? 1 : 0) | (fC >= zC ? 2 : 0));
-            bC >= CC && fC <= zC && !wC ? ZC.push(nC) : nC.decompose(CC - bC, zC - bC, ZC, wC)
+      decompose(kk, Fk, Ik, Xk) {
+        for (let Tk = 0, ik = 0; ik <= Fk && Tk < this.children.length; Tk++) {
+          let yk = this.children[Tk],
+            lk = ik + yk.length;
+          if (kk <= lk && Fk >= ik) {
+            let Tk = Xk & ((ik <= kk ? 1 : 0) | (lk >= Fk ? 2 : 0));
+            ik >= kk && lk <= Fk && !Tk ? Ik.push(yk) : yk.decompose(kk - ik, Fk - ik, Ik, Tk)
           }
-          bC = fC + 1
+          ik = lk + 1
         }
       }
-      replace(CC, zC, ZC) {
-        if ([CC, zC] = iC(this, CC, zC), ZC.lines < this.lines)
-          for (let QC = 0, wC = 0; QC < this.children.length; QC++) {
-            let bC = this.children[QC],
-              nC = wC + bC.length;
-            if (CC >= wC && zC <= nC) {
-              let fC = bC.replace(CC - wC, zC - wC, ZC),
-                oC = this.lines - bC.lines + fC.lines;
-              if (fC.lines < oC >> 4 && fC.lines > oC >> 6) {
-                let wC = this.children.slice();
-                return wC[QC] = fC, new PC(wC, this.length - (zC - CC) + ZC.length)
+      replace(kk, Fk, Ik) {
+        if ([kk, Fk] = zk(this, kk, Fk), Ik.lines < this.lines)
+          for (let Xk = 0, Tk = 0; Xk < this.children.length; Xk++) {
+            let ik = this.children[Xk],
+              yk = Tk + ik.length;
+            if (kk >= Tk && Fk <= yk) {
+              let lk = ik.replace(kk - Tk, Fk - Tk, Ik),
+                ak = this.lines - ik.lines + lk.lines;
+              if (lk.lines < ak >> 4 && lk.lines > ak >> 6) {
+                let Tk = this.children.slice();
+                return Tk[Xk] = lk, new Jk(Tk, this.length - (Fk - kk) + Ik.length)
               }
-              return super.replace(wC, nC, fC)
+              return super.replace(Tk, yk, lk)
             }
-            wC = nC + 1
+            Tk = yk + 1
           }
-        return super.replace(CC, zC, ZC)
+        return super.replace(kk, Fk, Ik)
       }
-      sliceString(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
-          ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
-        [CC, zC] = iC(this, CC, zC);
-        let QC = "";
-        for (let wC = 0, bC = 0; wC < this.children.length && bC <= zC; wC++) {
-          let nC = this.children[wC],
-            fC = bC + nC.length;
-          bC > CC && wC && (QC += ZC), CC < fC && zC > bC && (QC += nC.sliceString(CC - bC, zC - bC, ZC)), bC = fC + 1
+      sliceString(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
+          Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
+        [kk, Fk] = zk(this, kk, Fk);
+        let Xk = "";
+        for (let Tk = 0, ik = 0; Tk < this.children.length && ik <= Fk; Tk++) {
+          let yk = this.children[Tk],
+            lk = ik + yk.length;
+          ik > kk && Tk && (Xk += Ik), kk < lk && Fk > ik && (Xk += yk.sliceString(kk - ik, Fk - ik, Ik)), ik = lk + 1
         }
-        return QC
+        return Xk
       }
-      flatten(CC) {
-        for (let zC of this.children) zC.flatten(CC)
+      flatten(kk) {
+        for (let Fk of this.children) Fk.flatten(kk)
       }
-      scanIdentical(CC, zC) {
-        if (!(CC instanceof PC)) return 0;
-        let ZC = 0,
-          [QC, wC, bC, nC] = zC > 0 ? [0, 0, this.children.length, CC.children.length] : [this.children.length - 1, CC.children.length - 1, -1, -1];
-        for (;; QC += zC, wC += zC) {
-          if (QC == bC || wC == nC) return ZC;
-          let fC = this.children[QC],
-            oC = CC.children[wC];
-          if (fC != oC) return ZC + fC.scanIdentical(oC, zC);
-          ZC += fC.length + 1
+      scanIdentical(kk, Fk) {
+        if (!(kk instanceof Jk)) return 0;
+        let Ik = 0,
+          [Xk, Tk, ik, yk] = Fk > 0 ? [0, 0, this.children.length, kk.children.length] : [this.children.length - 1, kk.children.length - 1, -1, -1];
+        for (;; Xk += Fk, Tk += Fk) {
+          if (Xk == ik || Tk == yk) return Ik;
+          let lk = this.children[Xk],
+            ak = kk.children[Tk];
+          if (lk != ak) return Ik + lk.scanIdentical(ak, Fk);
+          Ik += lk.length + 1
         }
       }
-      static from(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : CC.reduce(((CC, zC) => CC + zC.length + 1), -1),
-          ZC = 0;
-        for (let NC of CC) ZC += NC.lines;
-        if (ZC < 32) {
-          let ZC = [];
-          for (let zC of CC) zC.flatten(ZC);
-          return new pC(ZC, zC)
+      static from(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : kk.reduce(((kk, Fk) => kk + Fk.length + 1), -1),
+          Ik = 0;
+        for (let Zk of kk) Ik += Zk.lines;
+        if (Ik < 32) {
+          let Ik = [];
+          for (let Fk of kk) Fk.flatten(Ik);
+          return new Hk(Ik, Fk)
         }
-        let QC = Math.max(32, ZC >> 5),
-          wC = QC << 1,
-          bC = QC >> 1,
-          nC = [],
-          fC = 0,
-          oC = -1,
-          qC = [];
+        let Xk = Math.max(32, Ik >> 5),
+          Tk = Xk << 1,
+          ik = Xk >> 1,
+          yk = [],
+          lk = 0,
+          ak = -1,
+          qk = [];
 
-        function FC(CC) {
-          let zC;
-          if (CC.lines > wC && CC instanceof PC)
-            for (let ZC of CC.children) FC(ZC);
-          else CC.lines > bC && (fC > bC || !fC) ? (WC(), nC.push(CC)) : CC instanceof pC && fC && (zC = qC[qC.length - 1]) instanceof pC && CC.lines + zC.lines <= 32 ? (fC += CC.lines, oC += CC.length + 1, qC[qC.length - 1] = new pC(zC.text.concat(CC.text), zC.length + 1 + CC.length)) : (fC + CC.lines > QC && WC(), fC += CC.lines, oC += CC.length + 1, qC.push(CC))
+        function Lk(kk) {
+          let Fk;
+          if (kk.lines > Tk && kk instanceof Jk)
+            for (let Ik of kk.children) Lk(Ik);
+          else kk.lines > ik && (lk > ik || !lk) ? (tk(), yk.push(kk)) : kk instanceof Hk && lk && (Fk = qk[qk.length - 1]) instanceof Hk && kk.lines + Fk.lines <= 32 ? (lk += kk.lines, ak += kk.length + 1, qk[qk.length - 1] = new Hk(Fk.text.concat(kk.text), Fk.length + 1 + kk.length)) : (lk + kk.lines > Xk && tk(), lk += kk.lines, ak += kk.length + 1, qk.push(kk))
         }
 
-        function WC() {
-          0 != fC && (nC.push(1 == qC.length ? qC[0] : PC.from(qC, oC)), oC = -1, fC = qC.length = 0)
+        function tk() {
+          0 != lk && (yk.push(1 == qk.length ? qk[0] : Jk.from(qk, ak)), ak = -1, lk = qk.length = 0)
         }
-        for (let NC of CC) FC(NC);
-        return WC(), 1 == nC.length ? nC[0] : new PC(nC, zC)
+        for (let Zk of kk) Lk(Zk);
+        return tk(), 1 == yk.length ? yk[0] : new Jk(yk, Fk)
       }
     }
 
-    function GC(CC, zC) {
-      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1e9;
-      for (let wC = 0, bC = 0, nC = !0; bC < CC.length && wC <= QC; bC++) {
-        let fC = CC[bC],
-          oC = wC + fC.length;
-        oC >= ZC && (oC > QC && (fC = fC.slice(0, QC - wC)), wC < ZC && (fC = fC.slice(ZC - wC)), nC ? (zC[zC.length - 1] += fC, nC = !1) : zC.push(fC)), wC = oC + 1
+    function xk(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1e9;
+      for (let Tk = 0, ik = 0, yk = !0; ik < kk.length && Tk <= Xk; ik++) {
+        let lk = kk[ik],
+          ak = Tk + lk.length;
+        ak >= Ik && (ak > Xk && (lk = lk.slice(0, Xk - Tk)), Tk < Ik && (lk = lk.slice(Ik - Tk)), yk ? (Fk[Fk.length - 1] += lk, yk = !1) : Fk.push(lk)), Tk = ak + 1
       }
-      return zC
+      return Fk
     }
 
-    function RC(CC, zC, ZC) {
-      return GC(CC, [""], zC, ZC)
+    function Pk(kk, Fk, Ik) {
+      return xk(kk, [""], Fk, Ik)
     }
-    SC.empty = new pC([""], 0);
-    class AC {
-      constructor(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        this.dir = zC, this.done = !1, this.lineBreak = !1, this.value = "", this.nodes = [CC], this.offsets = [zC > 0 ? 1 : (CC instanceof pC ? CC.text.length : CC.children.length) << 1]
+    wk.empty = new Hk([""], 0);
+    class Kk {
+      constructor(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        this.dir = Fk, this.done = !1, this.lineBreak = !1, this.value = "", this.nodes = [kk], this.offsets = [Fk > 0 ? 1 : (kk instanceof Hk ? kk.text.length : kk.children.length) << 1]
       }
-      nextInner(CC, zC) {
+      nextInner(kk, Fk) {
         for (this.done = this.lineBreak = !1;;) {
-          let ZC = this.nodes.length - 1,
-            QC = this.nodes[ZC],
-            wC = this.offsets[ZC],
-            bC = wC >> 1,
-            nC = QC instanceof pC ? QC.text.length : QC.children.length;
-          if (bC == (zC > 0 ? nC : 0)) {
-            if (0 == ZC) return this.done = !0, this.value = "", this;
-            zC > 0 && this.offsets[ZC - 1]++, this.nodes.pop(), this.offsets.pop()
-          } else if ((1 & wC) == (zC > 0 ? 0 : 1)) {
-            if (this.offsets[ZC] += zC, 0 == CC) return this.lineBreak = !0, this.value = "\n", this;
-            CC--
-          } else if (QC instanceof pC) {
-            let wC = QC.text[bC + (zC < 0 ? -1 : 0)];
-            if (this.offsets[ZC] += zC, wC.length > Math.max(0, CC)) return this.value = 0 == CC ? wC : zC > 0 ? wC.slice(CC) : wC.slice(0, wC.length - CC), this;
-            CC -= wC.length
+          let Ik = this.nodes.length - 1,
+            Xk = this.nodes[Ik],
+            Tk = this.offsets[Ik],
+            ik = Tk >> 1,
+            yk = Xk instanceof Hk ? Xk.text.length : Xk.children.length;
+          if (ik == (Fk > 0 ? yk : 0)) {
+            if (0 == Ik) return this.done = !0, this.value = "", this;
+            Fk > 0 && this.offsets[Ik - 1]++, this.nodes.pop(), this.offsets.pop()
+          } else if ((1 & Tk) == (Fk > 0 ? 0 : 1)) {
+            if (this.offsets[Ik] += Fk, 0 == kk) return this.lineBreak = !0, this.value = "\n", this;
+            kk--
+          } else if (Xk instanceof Hk) {
+            let Tk = Xk.text[ik + (Fk < 0 ? -1 : 0)];
+            if (this.offsets[Ik] += Fk, Tk.length > Math.max(0, kk)) return this.value = 0 == kk ? Tk : Fk > 0 ? Tk.slice(kk) : Tk.slice(0, Tk.length - kk), this;
+            kk -= Tk.length
           } else {
-            let wC = QC.children[bC + (zC < 0 ? -1 : 0)];
-            CC > wC.length ? (CC -= wC.length, this.offsets[ZC] += zC) : (zC < 0 && this.offsets[ZC]--, this.nodes.push(wC), this.offsets.push(zC > 0 ? 1 : (wC instanceof pC ? wC.text.length : wC.children.length) << 1))
+            let Tk = Xk.children[ik + (Fk < 0 ? -1 : 0)];
+            kk > Tk.length ? (kk -= Tk.length, this.offsets[Ik] += Fk) : (Fk < 0 && this.offsets[Ik]--, this.nodes.push(Tk), this.offsets.push(Fk > 0 ? 1 : (Tk instanceof Hk ? Tk.text.length : Tk.children.length) << 1))
           }
         }
       }
       next() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return CC < 0 && (this.nextInner(-CC, -this.dir), CC = this.value.length), this.nextInner(CC, this.dir)
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return kk < 0 && (this.nextInner(-kk, -this.dir), kk = this.value.length), this.nextInner(kk, this.dir)
       }
     }
-    class xC {
-      constructor(CC, zC, ZC) {
-        this.value = "", this.done = !1, this.cursor = new AC(CC, zC > ZC ? -1 : 1), this.pos = zC > ZC ? CC.length : 0, this.from = Math.min(zC, ZC), this.to = Math.max(zC, ZC)
+    class Qk {
+      constructor(kk, Fk, Ik) {
+        this.value = "", this.done = !1, this.cursor = new Kk(kk, Fk > Ik ? -1 : 1), this.pos = Fk > Ik ? kk.length : 0, this.from = Math.min(Fk, Ik), this.to = Math.max(Fk, Ik)
       }
-      nextInner(CC, zC) {
-        if (zC < 0 ? this.pos <= this.from : this.pos >= this.to) return this.value = "", this.done = !0, this;
-        CC += Math.max(0, zC < 0 ? this.pos - this.to : this.from - this.pos);
-        let ZC = zC < 0 ? this.pos - this.from : this.to - this.pos;
-        CC > ZC && (CC = ZC), ZC -= CC;
+      nextInner(kk, Fk) {
+        if (Fk < 0 ? this.pos <= this.from : this.pos >= this.to) return this.value = "", this.done = !0, this;
+        kk += Math.max(0, Fk < 0 ? this.pos - this.to : this.from - this.pos);
+        let Ik = Fk < 0 ? this.pos - this.from : this.to - this.pos;
+        kk > Ik && (kk = Ik), Ik -= kk;
         let {
-          value: QC
-        } = this.cursor.next(CC);
-        return this.pos += (QC.length + CC) * zC, this.value = QC.length <= ZC ? QC : zC < 0 ? QC.slice(QC.length - ZC) : QC.slice(0, ZC), this.done = !this.value, this
+          value: Xk
+        } = this.cursor.next(kk);
+        return this.pos += (Xk.length + kk) * Fk, this.value = Xk.length <= Ik ? Xk : Fk < 0 ? Xk.slice(Xk.length - Ik) : Xk.slice(0, Ik), this.done = !this.value, this
       }
       next() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return CC < 0 ? CC = Math.max(CC, this.from - this.pos) : CC > 0 && (CC = Math.min(CC, this.to - this.pos)), this.nextInner(CC, this.cursor.dir)
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return kk < 0 ? kk = Math.max(kk, this.from - this.pos) : kk > 0 && (kk = Math.min(kk, this.to - this.pos)), this.nextInner(kk, this.cursor.dir)
       }
       get lineBreak() {
         return this.cursor.lineBreak && "" != this.value
       }
     }
-    class JC {
-      constructor(CC) {
-        this.inner = CC, this.afterBreak = !0, this.value = "", this.done = !1
+    class sk {
+      constructor(kk) {
+        this.inner = kk, this.afterBreak = !0, this.value = "", this.done = !1
       }
       next() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
           {
-            done: zC,
-            lineBreak: ZC,
-            value: QC
-          } = this.inner.next(CC);
-        return zC && this.afterBreak ? (this.value = "", this.afterBreak = !1) : zC ? (this.done = !0, this.value = "") : ZC ? this.afterBreak ? this.value = "" : (this.afterBreak = !0, this.next()) : (this.value = QC, this.afterBreak = !1), this
+            done: Fk,
+            lineBreak: Ik,
+            value: Xk
+          } = this.inner.next(kk);
+        return Fk && this.afterBreak ? (this.value = "", this.afterBreak = !1) : Fk ? (this.done = !0, this.value = "") : Ik ? this.afterBreak ? this.value = "" : (this.afterBreak = !0, this.next()) : (this.value = Xk, this.afterBreak = !1), this
       }
       get lineBreak() {
         return !1
       }
     }
-    "undefined" != typeof Symbol && (SC.prototype[Symbol.iterator] = function() {
+    "undefined" != typeof Symbol && (wk.prototype[Symbol.iterator] = function() {
       return this.iter()
-    }, AC.prototype[Symbol.iterator] = xC.prototype[Symbol.iterator] = JC.prototype[Symbol.iterator] = function() {
+    }, Kk.prototype[Symbol.iterator] = Qk.prototype[Symbol.iterator] = sk.prototype[Symbol.iterator] = function() {
       return this
     });
-    class IC {
-      constructor(CC, zC, ZC, QC) {
-        this.from = CC, this.to = zC, this.number = ZC, this.text = QC
+    class Vk {
+      constructor(kk, Fk, Ik, Xk) {
+        this.from = kk, this.to = Fk, this.number = Ik, this.text = Xk
       }
       get length() {
         return this.to - this.from
       }
     }
 
-    function iC(CC, zC, ZC) {
-      return [zC = Math.max(0, Math.min(CC.length, zC)), Math.max(zC, Math.min(CC.length, ZC))]
+    function zk(kk, Fk, Ik) {
+      return [Fk = Math.max(0, Math.min(kk.length, Fk)), Math.max(Fk, Math.min(kk.length, Ik))]
     }
 
-    function vC(CC, zC) {
-      return oC(CC, zC, !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2], !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
+    function Sk(kk, Fk) {
+      return ak(kk, Fk, !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2], !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
     }
 
-    function eC(CC, zC) {
-      let ZC = CC.charCodeAt(zC);
-      if (!((QC = ZC) >= 55296 && QC < 56320) || zC + 1 == CC.length) return ZC;
-      var QC;
-      let wC = CC.charCodeAt(zC + 1);
-      return function(CC) {
-        return CC >= 56320 && CC < 57344
-      }(wC) ? wC - 56320 + (ZC - 55296 << 10) + 65536 : ZC
+    function vk(kk, Fk) {
+      let Ik = kk.charCodeAt(Fk);
+      if (!((Xk = Ik) >= 55296 && Xk < 56320) || Fk + 1 == kk.length) return Ik;
+      var Xk;
+      let Tk = kk.charCodeAt(Fk + 1);
+      return function(kk) {
+        return kk >= 56320 && kk < 57344
+      }(Tk) ? Tk - 56320 + (Ik - 55296 << 10) + 65536 : Ik
     }
 
-    function hC(CC) {
-      return CC <= 65535 ? String.fromCharCode(CC) : (CC -= 65536, String.fromCharCode(55296 + (CC >> 10), 56320 + (1023 & CC)))
+    function Ek(kk) {
+      return kk <= 65535 ? String.fromCharCode(kk) : (kk -= 65536, String.fromCharCode(55296 + (kk >> 10), 56320 + (1023 & kk)))
     }
 
-    function KC(CC) {
-      return CC < 65536 ? 1 : 2
+    function Ok(kk) {
+      return kk < 65536 ? 1 : 2
     }
-    const YC = /\r\n?|\n/;
-    var dC = function(CC) {
-      return CC[CC.Simple = 0] = "Simple", CC[CC.TrackDel = 1] = "TrackDel", CC[CC.TrackBefore = 2] = "TrackBefore", CC[CC.TrackAfter = 3] = "TrackAfter", CC
-    }(dC || (dC = {}));
-    class mC {
-      constructor(CC) {
-        this.sections = CC
+    const nk = /\r\n?|\n/;
+    var Gk = function(kk) {
+      return kk[kk.Simple = 0] = "Simple", kk[kk.TrackDel = 1] = "TrackDel", kk[kk.TrackBefore = 2] = "TrackBefore", kk[kk.TrackAfter = 3] = "TrackAfter", kk
+    }(Gk || (Gk = {}));
+    class pk {
+      constructor(kk) {
+        this.sections = kk
       }
       get length() {
-        let CC = 0;
-        for (let zC = 0; zC < this.sections.length; zC += 2) CC += this.sections[zC];
-        return CC
+        let kk = 0;
+        for (let Fk = 0; Fk < this.sections.length; Fk += 2) kk += this.sections[Fk];
+        return kk
       }
       get newLength() {
-        let CC = 0;
-        for (let zC = 0; zC < this.sections.length; zC += 2) {
-          let ZC = this.sections[zC + 1];
-          CC += ZC < 0 ? this.sections[zC] : ZC
+        let kk = 0;
+        for (let Fk = 0; Fk < this.sections.length; Fk += 2) {
+          let Ik = this.sections[Fk + 1];
+          kk += Ik < 0 ? this.sections[Fk] : Ik
         }
-        return CC
+        return kk
       }
       get empty() {
         return 0 == this.sections.length || 2 == this.sections.length && this.sections[1] < 0
       }
-      iterGaps(CC) {
-        for (let zC = 0, ZC = 0, QC = 0; zC < this.sections.length;) {
-          let wC = this.sections[zC++],
-            bC = this.sections[zC++];
-          bC < 0 ? (CC(ZC, QC, wC), QC += wC) : QC += bC, ZC += wC
+      iterGaps(kk) {
+        for (let Fk = 0, Ik = 0, Xk = 0; Fk < this.sections.length;) {
+          let Tk = this.sections[Fk++],
+            ik = this.sections[Fk++];
+          ik < 0 ? (kk(Ik, Xk, Tk), Xk += Tk) : Xk += ik, Ik += Tk
         }
       }
-      iterChangedRanges(CC) {
-        XC(this, CC, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
+      iterChangedRanges(kk) {
+        Uk(this, kk, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
       }
       get invertedDesc() {
-        let CC = [];
-        for (let zC = 0; zC < this.sections.length;) {
-          let ZC = this.sections[zC++],
-            QC = this.sections[zC++];
-          QC < 0 ? CC.push(ZC, QC) : CC.push(QC, ZC)
+        let kk = [];
+        for (let Fk = 0; Fk < this.sections.length;) {
+          let Ik = this.sections[Fk++],
+            Xk = this.sections[Fk++];
+          Xk < 0 ? kk.push(Ik, Xk) : kk.push(Xk, Ik)
         }
-        return new mC(CC)
+        return new pk(kk)
       }
-      composeDesc(CC) {
-        return this.empty ? CC : CC.empty ? this : uC(this, CC)
+      composeDesc(kk) {
+        return this.empty ? kk : kk.empty ? this : Nk(this, kk)
       }
-      mapDesc(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return CC.empty ? this : cC(this, CC, zC)
+      mapDesc(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return kk.empty ? this : Ck(this, kk, Fk)
       }
-      mapPos(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : dC.Simple,
-          QC = 0,
-          wC = 0;
-        for (let bC = 0; bC < this.sections.length;) {
-          let nC = this.sections[bC++],
-            fC = this.sections[bC++],
-            oC = QC + nC;
-          if (fC < 0) {
-            if (oC > CC) return wC + (CC - QC);
-            wC += nC
+      mapPos(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Gk.Simple,
+          Xk = 0,
+          Tk = 0;
+        for (let ik = 0; ik < this.sections.length;) {
+          let yk = this.sections[ik++],
+            lk = this.sections[ik++],
+            ak = Xk + yk;
+          if (lk < 0) {
+            if (ak > kk) return Tk + (kk - Xk);
+            Tk += yk
           } else {
-            if (ZC != dC.Simple && oC >= CC && (ZC == dC.TrackDel && QC < CC && oC > CC || ZC == dC.TrackBefore && QC < CC || ZC == dC.TrackAfter && oC > CC)) return null;
-            if (oC > CC || oC == CC && zC < 0 && !nC) return CC == QC || zC < 0 ? wC : wC + fC;
-            wC += fC
+            if (Ik != Gk.Simple && ak >= kk && (Ik == Gk.TrackDel && Xk < kk && ak > kk || Ik == Gk.TrackBefore && Xk < kk || Ik == Gk.TrackAfter && ak > kk)) return null;
+            if (ak > kk || ak == kk && Fk < 0 && !yk) return kk == Xk || Fk < 0 ? Tk : Tk + lk;
+            Tk += lk
           }
-          QC = oC
+          Xk = ak
         }
-        if (CC > QC) throw new RangeError(`Position ${CC} is out of range for changeset of length ${QC}`);
-        return wC
+        if (kk > Xk) throw new RangeError(`Position ${kk} is out of range for changeset of length ${Xk}`);
+        return Tk
       }
-      touchesRange(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : CC;
-        for (let ZC = 0, QC = 0; ZC < this.sections.length && QC <= zC;) {
-          let wC = QC + this.sections[ZC++];
-          if (this.sections[ZC++] >= 0 && QC <= zC && wC >= CC) return !(QC < CC && wC > zC) || "cover";
-          QC = wC
+      touchesRange(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : kk;
+        for (let Ik = 0, Xk = 0; Ik < this.sections.length && Xk <= Fk;) {
+          let Tk = Xk + this.sections[Ik++];
+          if (this.sections[Ik++] >= 0 && Xk <= Fk && Tk >= kk) return !(Xk < kk && Tk > Fk) || "cover";
+          Xk = Tk
         }
         return !1
       }
       toString() {
-        let CC = "";
-        for (let zC = 0; zC < this.sections.length;) {
-          let ZC = this.sections[zC++],
-            QC = this.sections[zC++];
-          CC += (CC ? " " : "") + ZC + (QC >= 0 ? ":" + QC : "")
+        let kk = "";
+        for (let Fk = 0; Fk < this.sections.length;) {
+          let Ik = this.sections[Fk++],
+            Xk = this.sections[Fk++];
+          kk += (kk ? " " : "") + Ik + (Xk >= 0 ? ":" + Xk : "")
         }
-        return CC
+        return kk
       }
       toJSON() {
         return this.sections
       }
-      static fromJSON(CC) {
-        if (!Array.isArray(CC) || CC.length % 2 || CC.some((CC => "number" != typeof CC))) throw new RangeError("Invalid JSON representation of ChangeDesc");
-        return new mC(CC)
+      static fromJSON(kk) {
+        if (!Array.isArray(kk) || kk.length % 2 || kk.some((kk => "number" != typeof kk))) throw new RangeError("Invalid JSON representation of ChangeDesc");
+        return new pk(kk)
       }
-      static create(CC) {
-        return new mC(CC)
+      static create(kk) {
+        return new pk(kk)
       }
     }
-    class HC extends mC {
-      constructor(CC, zC) {
-        super(CC), this.inserted = zC
+    class uk extends pk {
+      constructor(kk, Fk) {
+        super(kk), this.inserted = Fk
       }
-      apply(CC) {
-        if (this.length != CC.length) throw new RangeError("Applying change set to a document with the wrong length");
-        return XC(this, ((zC, ZC, QC, wC, bC) => CC = CC.replace(QC, QC + (ZC - zC), bC)), !1), CC
+      apply(kk) {
+        if (this.length != kk.length) throw new RangeError("Applying change set to a document with the wrong length");
+        return Uk(this, ((Fk, Ik, Xk, Tk, ik) => kk = kk.replace(Xk, Xk + (Ik - Fk), ik)), !1), kk
       }
-      mapDesc(CC) {
-        return cC(this, CC, arguments.length > 1 && void 0 !== arguments[1] && arguments[1], !0)
+      mapDesc(kk) {
+        return Ck(this, kk, arguments.length > 1 && void 0 !== arguments[1] && arguments[1], !0)
       }
-      invert(CC) {
-        let zC = this.sections.slice(),
-          ZC = [];
-        for (let QC = 0, wC = 0; QC < zC.length; QC += 2) {
-          let bC = zC[QC],
-            nC = zC[QC + 1];
-          if (nC >= 0) {
-            zC[QC] = nC, zC[QC + 1] = bC;
-            let fC = QC >> 1;
-            for (; ZC.length < fC;) ZC.push(SC.empty);
-            ZC.push(bC ? CC.slice(wC, wC + bC) : SC.empty)
+      invert(kk) {
+        let Fk = this.sections.slice(),
+          Ik = [];
+        for (let Xk = 0, Tk = 0; Xk < Fk.length; Xk += 2) {
+          let ik = Fk[Xk],
+            yk = Fk[Xk + 1];
+          if (yk >= 0) {
+            Fk[Xk] = yk, Fk[Xk + 1] = ik;
+            let lk = Xk >> 1;
+            for (; Ik.length < lk;) Ik.push(wk.empty);
+            Ik.push(ik ? kk.slice(Tk, Tk + ik) : wk.empty)
           }
-          wC += bC
+          Tk += ik
         }
-        return new HC(zC, ZC)
+        return new uk(Fk, Ik)
       }
-      compose(CC) {
-        return this.empty ? CC : CC.empty ? this : uC(this, CC, !0)
+      compose(kk) {
+        return this.empty ? kk : kk.empty ? this : Nk(this, kk, !0)
       }
-      map(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return CC.empty ? this : cC(this, CC, zC, !0)
+      map(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return kk.empty ? this : Ck(this, kk, Fk, !0)
       }
-      iterChanges(CC) {
-        XC(this, CC, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
+      iterChanges(kk) {
+        Uk(this, kk, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
       }
       get desc() {
-        return mC.create(this.sections)
+        return pk.create(this.sections)
       }
-      filter(CC) {
-        let zC = [],
-          ZC = [],
-          QC = [],
-          wC = new rC(this);
-        CC: for (let bC = 0, nC = 0;;) {
-          let fC = bC == CC.length ? 1e9 : CC[bC++];
-          for (; nC < fC || nC == fC && 0 == wC.len;) {
-            if (wC.done) break CC;
-            let CC = Math.min(wC.len, fC - nC);
-            EC(QC, CC, -1);
-            let bC = -1 == wC.ins ? -1 : 0 == wC.off ? wC.ins : 0;
-            EC(zC, CC, bC), bC > 0 && lC(ZC, zC, wC.text), wC.forward(CC), nC += CC
+      filter(kk) {
+        let Fk = [],
+          Ik = [],
+          Xk = [],
+          Tk = new ck(this);
+        kk: for (let ik = 0, yk = 0;;) {
+          let lk = ik == kk.length ? 1e9 : kk[ik++];
+          for (; yk < lk || yk == lk && 0 == Tk.len;) {
+            if (Tk.done) break kk;
+            let kk = Math.min(Tk.len, lk - yk);
+            bk(Xk, kk, -1);
+            let ik = -1 == Tk.ins ? -1 : 0 == Tk.off ? Tk.ins : 0;
+            bk(Fk, kk, ik), ik > 0 && Rk(Ik, Fk, Tk.text), Tk.forward(kk), yk += kk
           }
-          let oC = CC[bC++];
-          for (; nC < oC;) {
-            if (wC.done) break CC;
-            let CC = Math.min(wC.len, oC - nC);
-            EC(zC, CC, -1), EC(QC, CC, -1 == wC.ins ? -1 : 0 == wC.off ? wC.ins : 0), wC.forward(CC), nC += CC
+          let ak = kk[ik++];
+          for (; yk < ak;) {
+            if (Tk.done) break kk;
+            let kk = Math.min(Tk.len, ak - yk);
+            bk(Fk, kk, -1), bk(Xk, kk, -1 == Tk.ins ? -1 : 0 == Tk.off ? Tk.ins : 0), Tk.forward(kk), yk += kk
           }
         }
         return {
-          changes: new HC(zC, ZC),
-          filtered: mC.create(QC)
+          changes: new uk(Fk, Ik),
+          filtered: pk.create(Xk)
         }
       }
       toJSON() {
-        let CC = [];
-        for (let zC = 0; zC < this.sections.length; zC += 2) {
-          let ZC = this.sections[zC],
-            QC = this.sections[zC + 1];
-          QC < 0 ? CC.push(ZC) : 0 == QC ? CC.push([ZC]) : CC.push([ZC].concat(this.inserted[zC >> 1].toJSON()))
+        let kk = [];
+        for (let Fk = 0; Fk < this.sections.length; Fk += 2) {
+          let Ik = this.sections[Fk],
+            Xk = this.sections[Fk + 1];
+          Xk < 0 ? kk.push(Ik) : 0 == Xk ? kk.push([Ik]) : kk.push([Ik].concat(this.inserted[Fk >> 1].toJSON()))
         }
-        return CC
+        return kk
       }
-      static of (CC, zC, ZC) {
-        let QC = [],
-          wC = [],
-          bC = 0,
-          nC = null;
+      static of (kk, Fk, Ik) {
+        let Xk = [],
+          Tk = [],
+          ik = 0,
+          yk = null;
 
-        function fC() {
-          if (!(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && !QC.length) return;
-          bC < zC && EC(QC, zC - bC, -1);
-          let CC = new HC(QC, wC);
-          nC = nC ? nC.compose(CC.map(nC)) : CC, QC = [], wC = [], bC = 0
+        function lk() {
+          if (!(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && !Xk.length) return;
+          ik < Fk && bk(Xk, Fk - ik, -1);
+          let kk = new uk(Xk, Tk);
+          yk = yk ? yk.compose(kk.map(yk)) : kk, Xk = [], Tk = [], ik = 0
         }
-        return function CC(oC) {
-          if (Array.isArray(oC))
-            for (let zC of oC) CC(zC);
-          else if (oC instanceof HC) {
-            if (oC.length != zC) throw new RangeError(`Mismatched change set length (got ${oC.length}, expected ${zC})`);
-            fC(), nC = nC ? nC.compose(oC.map(nC)) : oC
+        return function kk(ak) {
+          if (Array.isArray(ak))
+            for (let Fk of ak) kk(Fk);
+          else if (ak instanceof uk) {
+            if (ak.length != Fk) throw new RangeError(`Mismatched change set length (got ${ak.length}, expected ${Fk})`);
+            lk(), yk = yk ? yk.compose(ak.map(yk)) : ak
           } else {
             let {
-              from: CC,
-              to: nC = CC,
-              insert: qC
-            } = oC;
-            if (CC > nC || CC < 0 || nC > zC) throw new RangeError(`Invalid change range ${CC} to ${nC} (in doc of length ${zC})`);
-            let FC = qC ? "string" == typeof qC ? SC.of(qC.split(ZC || YC)) : qC : SC.empty,
-              WC = FC.length;
-            if (CC == nC && 0 == WC) return;
-            CC < bC && fC(), CC > bC && EC(QC, CC - bC, -1), EC(QC, nC - CC, WC), lC(wC, QC, FC), bC = nC
+              from: kk,
+              to: yk = kk,
+              insert: qk
+            } = ak;
+            if (kk > yk || kk < 0 || yk > Fk) throw new RangeError(`Invalid change range ${kk} to ${yk} (in doc of length ${Fk})`);
+            let Lk = qk ? "string" == typeof qk ? wk.of(qk.split(Ik || nk)) : qk : wk.empty,
+              tk = Lk.length;
+            if (kk == yk && 0 == tk) return;
+            kk < ik && lk(), kk > ik && bk(Xk, kk - ik, -1), bk(Xk, yk - kk, tk), Rk(Tk, Xk, Lk), ik = yk
           }
-        }(CC), fC(!nC), nC
+        }(kk), lk(!yk), yk
       }
-      static empty(CC) {
-        return new HC(CC ? [CC, -1] : [], [])
+      static empty(kk) {
+        return new uk(kk ? [kk, -1] : [], [])
       }
-      static fromJSON(CC) {
-        if (!Array.isArray(CC)) throw new RangeError("Invalid JSON representation of ChangeSet");
-        let zC = [],
-          ZC = [];
-        for (let QC = 0; QC < CC.length; QC++) {
-          let wC = CC[QC];
-          if ("number" == typeof wC) zC.push(wC, -1);
+      static fromJSON(kk) {
+        if (!Array.isArray(kk)) throw new RangeError("Invalid JSON representation of ChangeSet");
+        let Fk = [],
+          Ik = [];
+        for (let Xk = 0; Xk < kk.length; Xk++) {
+          let Tk = kk[Xk];
+          if ("number" == typeof Tk) Fk.push(Tk, -1);
           else {
-            if (!Array.isArray(wC) || "number" != typeof wC[0] || wC.some(((CC, zC) => zC && "string" != typeof CC))) throw new RangeError("Invalid JSON representation of ChangeSet");
-            if (1 == wC.length) zC.push(wC[0], 0);
+            if (!Array.isArray(Tk) || "number" != typeof Tk[0] || Tk.some(((kk, Fk) => Fk && "string" != typeof kk))) throw new RangeError("Invalid JSON representation of ChangeSet");
+            if (1 == Tk.length) Fk.push(Tk[0], 0);
             else {
-              for (; ZC.length < QC;) ZC.push(SC.empty);
-              ZC[QC] = SC.of(wC.slice(1)), zC.push(wC[0], ZC[QC].length)
+              for (; Ik.length < Xk;) Ik.push(wk.empty);
+              Ik[Xk] = wk.of(Tk.slice(1)), Fk.push(Tk[0], Ik[Xk].length)
             }
           }
         }
-        return new HC(zC, ZC)
+        return new uk(Fk, Ik)
       }
-      static createSet(CC, zC) {
-        return new HC(CC, zC)
+      static createSet(kk, Fk) {
+        return new uk(kk, Fk)
       }
     }
 
-    function EC(CC, zC, ZC) {
-      let QC = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      if (0 == zC && ZC <= 0) return;
-      let wC = CC.length - 2;
-      wC >= 0 && ZC <= 0 && ZC == CC[wC + 1] ? CC[wC] += zC : wC >= 0 && 0 == zC && 0 == CC[wC] ? CC[wC + 1] += ZC : QC ? (CC[wC] += zC, CC[wC + 1] += ZC) : CC.push(zC, ZC)
+    function bk(kk, Fk, Ik) {
+      let Xk = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      if (0 == Fk && Ik <= 0) return;
+      let Tk = kk.length - 2;
+      Tk >= 0 && Ik <= 0 && Ik == kk[Tk + 1] ? kk[Tk] += Fk : Tk >= 0 && 0 == Fk && 0 == kk[Tk] ? kk[Tk + 1] += Ik : Xk ? (kk[Tk] += Fk, kk[Tk + 1] += Ik) : kk.push(Fk, Ik)
     }
 
-    function lC(CC, zC, ZC) {
-      if (0 == ZC.length) return;
-      let QC = zC.length - 2 >> 1;
-      if (QC < CC.length) CC[CC.length - 1] = CC[CC.length - 1].append(ZC);
+    function Rk(kk, Fk, Ik) {
+      if (0 == Ik.length) return;
+      let Xk = Fk.length - 2 >> 1;
+      if (Xk < kk.length) kk[kk.length - 1] = kk[kk.length - 1].append(Ik);
       else {
-        for (; CC.length < QC;) CC.push(SC.empty);
-        CC.push(ZC)
+        for (; kk.length < Xk;) kk.push(wk.empty);
+        kk.push(Ik)
       }
     }
 
-    function XC(CC, zC, ZC) {
-      let QC = CC.inserted;
-      for (let wC = 0, bC = 0, nC = 0; nC < CC.sections.length;) {
-        let fC = CC.sections[nC++],
-          oC = CC.sections[nC++];
-        if (oC < 0) wC += fC, bC += fC;
+    function Uk(kk, Fk, Ik) {
+      let Xk = kk.inserted;
+      for (let Tk = 0, ik = 0, yk = 0; yk < kk.sections.length;) {
+        let lk = kk.sections[yk++],
+          ak = kk.sections[yk++];
+        if (ak < 0) Tk += lk, ik += lk;
         else {
-          let qC = wC,
-            FC = bC,
-            WC = SC.empty;
-          for (; qC += fC, FC += oC, oC && QC && (WC = WC.append(QC[nC - 2 >> 1])), !(ZC || nC == CC.sections.length || CC.sections[nC + 1] < 0);) fC = CC.sections[nC++], oC = CC.sections[nC++];
-          zC(wC, qC, bC, FC, WC), wC = qC, bC = FC
+          let qk = Tk,
+            Lk = ik,
+            tk = wk.empty;
+          for (; qk += lk, Lk += ak, ak && Xk && (tk = tk.append(Xk[yk - 2 >> 1])), !(Ik || yk == kk.sections.length || kk.sections[yk + 1] < 0);) lk = kk.sections[yk++], ak = kk.sections[yk++];
+          Fk(Tk, qk, ik, Lk, tk), Tk = qk, ik = Lk
         }
       }
     }
 
-    function cC(CC, zC, ZC) {
-      let QC = [],
-        wC = arguments.length > 3 && void 0 !== arguments[3] && arguments[3] ? [] : null,
-        bC = new rC(CC),
-        nC = new rC(zC),
-        fC = 0;
-      for (let oC = -1;;) {
-        if (++fC > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - likely malformed ChangeSet");
-        if (bC.done && nC.len || nC.done && bC.len) throw new Error("Mismatched change set lengths");
-        if (-1 == bC.ins && -1 == nC.ins) {
-          let CC = Math.min(bC.len, nC.len);
-          EC(QC, CC, -1), bC.forward(CC), nC.forward(CC)
-        } else if (nC.ins >= 0 && (bC.ins < 0 || oC == bC.i || 0 == bC.off && (nC.len < bC.len || nC.len == bC.len && !ZC))) {
-          let CC = nC.len;
-          for (EC(QC, nC.ins, -1); CC;) {
-            if (++fC > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-b");
-            let zC = Math.min(bC.len, CC);
-            bC.ins >= 0 && oC < bC.i && bC.len <= zC && (EC(QC, 0, bC.ins), wC && lC(wC, QC, bC.text), oC = bC.i), bC.forward(zC), CC -= zC
+    function Ck(kk, Fk, Ik) {
+      let Xk = [],
+        Tk = arguments.length > 3 && void 0 !== arguments[3] && arguments[3] ? [] : null,
+        ik = new ck(kk),
+        yk = new ck(Fk),
+        lk = 0;
+      for (let ak = -1;;) {
+        if (++lk > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - likely malformed ChangeSet");
+        if (ik.done && yk.len || yk.done && ik.len) throw new Error("Mismatched change set lengths");
+        if (-1 == ik.ins && -1 == yk.ins) {
+          let kk = Math.min(ik.len, yk.len);
+          bk(Xk, kk, -1), ik.forward(kk), yk.forward(kk)
+        } else if (yk.ins >= 0 && (ik.ins < 0 || ak == ik.i || 0 == ik.off && (yk.len < ik.len || yk.len == ik.len && !Ik))) {
+          let kk = yk.len;
+          for (bk(Xk, yk.ins, -1); kk;) {
+            if (++lk > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-b");
+            let Fk = Math.min(ik.len, kk);
+            ik.ins >= 0 && ak < ik.i && ik.len <= Fk && (bk(Xk, 0, ik.ins), Tk && Rk(Tk, Xk, ik.text), ak = ik.i), ik.forward(Fk), kk -= Fk
           }
-          nC.next()
+          yk.next()
         } else {
-          if (!(bC.ins >= 0)) {
-            if (bC.done && nC.done) return wC ? HC.createSet(QC, wC) : mC.create(QC);
+          if (!(ik.ins >= 0)) {
+            if (ik.done && yk.done) return Tk ? uk.createSet(Xk, Tk) : pk.create(Xk);
             throw new Error("Mismatched change set lengths")
           } {
-            let CC = 0,
-              zC = bC.len;
-            for (; zC;) {
-              if (++fC > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-a");
-              if (-1 == nC.ins) {
-                let ZC = Math.min(zC, nC.len);
-                CC += ZC, zC -= ZC, nC.forward(ZC)
+            let kk = 0,
+              Fk = ik.len;
+            for (; Fk;) {
+              if (++lk > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-a");
+              if (-1 == yk.ins) {
+                let Ik = Math.min(Fk, yk.len);
+                kk += Ik, Fk -= Ik, yk.forward(Ik)
               } else {
-                if (!(0 == nC.ins && nC.len < zC)) break;
-                zC -= nC.len, nC.next()
+                if (!(0 == yk.ins && yk.len < Fk)) break;
+                Fk -= yk.len, yk.next()
               }
             }
-            EC(QC, CC, oC < bC.i ? bC.ins : 0), wC && oC < bC.i && lC(wC, QC, bC.text), oC = bC.i, bC.forward(bC.len - zC)
+            bk(Xk, kk, ak < ik.i ? ik.ins : 0), Tk && ak < ik.i && Rk(Tk, Xk, ik.text), ak = ik.i, ik.forward(ik.len - Fk)
           }
         }
       }
     }
 
-    function uC(CC, zC) {
-      let ZC = [],
-        QC = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? [] : null,
-        wC = new rC(CC),
-        bC = new rC(zC),
-        nC = 0;
-      for (let fC = !1;;) {
-        if (++nC > 2e6) throw new Error("BLOXD CODEMIRROR: composeSets exceeded max iterations - likely malformed ChangeSet");
-        if (wC.done && bC.done) return QC ? HC.createSet(ZC, QC) : mC.create(ZC);
-        if (0 == wC.ins) EC(ZC, wC.len, 0, fC), wC.next();
-        else if (0 != bC.len || bC.done) {
-          if (wC.done || bC.done) throw new Error("Mismatched change set lengths");
+    function Nk(kk, Fk) {
+      let Ik = [],
+        Xk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? [] : null,
+        Tk = new ck(kk),
+        ik = new ck(Fk),
+        yk = 0;
+      for (let lk = !1;;) {
+        if (++yk > 2e6) throw new Error("BLOXD CODEMIRROR: composeSets exceeded max iterations - likely malformed ChangeSet");
+        if (Tk.done && ik.done) return Xk ? uk.createSet(Ik, Xk) : pk.create(Ik);
+        if (0 == Tk.ins) bk(Ik, Tk.len, 0, lk), Tk.next();
+        else if (0 != ik.len || ik.done) {
+          if (Tk.done || ik.done) throw new Error("Mismatched change set lengths");
           {
-            let CC = Math.min(wC.len2, bC.len),
-              zC = ZC.length;
-            if (-1 == wC.ins) {
-              let zC = -1 == bC.ins ? -1 : bC.off ? 0 : bC.ins;
-              EC(ZC, CC, zC, fC), QC && zC && lC(QC, ZC, bC.text)
-            } else - 1 == bC.ins ? (EC(ZC, wC.off ? 0 : wC.len, CC, fC), QC && lC(QC, ZC, wC.textBit(CC))) : (EC(ZC, wC.off ? 0 : wC.len, bC.off ? 0 : bC.ins, fC), QC && !bC.off && lC(QC, ZC, bC.text));
-            fC = (wC.ins > CC || bC.ins >= 0 && bC.len > CC) && (fC || ZC.length > zC), wC.forward2(CC), bC.forward(CC)
+            let kk = Math.min(Tk.len2, ik.len),
+              Fk = Ik.length;
+            if (-1 == Tk.ins) {
+              let Fk = -1 == ik.ins ? -1 : ik.off ? 0 : ik.ins;
+              bk(Ik, kk, Fk, lk), Xk && Fk && Rk(Xk, Ik, ik.text)
+            } else - 1 == ik.ins ? (bk(Ik, Tk.off ? 0 : Tk.len, kk, lk), Xk && Rk(Xk, Ik, Tk.textBit(kk))) : (bk(Ik, Tk.off ? 0 : Tk.len, ik.off ? 0 : ik.ins, lk), Xk && !ik.off && Rk(Xk, Ik, ik.text));
+            lk = (Tk.ins > kk || ik.ins >= 0 && ik.len > kk) && (lk || Ik.length > Fk), Tk.forward2(kk), ik.forward(kk)
           }
-        } else EC(ZC, 0, bC.ins, fC), QC && lC(QC, ZC, bC.text), bC.next()
+        } else bk(Ik, 0, ik.ins, lk), Xk && Rk(Xk, Ik, ik.text), ik.next()
       }
     }
-    class rC {
-      constructor(CC) {
-        this.set = CC, this.i = 0, this.next()
+    class ck {
+      constructor(kk) {
+        this.set = kk, this.i = 0, this.next()
       }
       next() {
         let {
-          sections: CC
+          sections: kk
         } = this.set;
-        this.i < CC.length ? (this.len = CC[this.i++], this.ins = CC[this.i++]) : (this.len = 0, this.ins = -2), this.off = 0
+        this.i < kk.length ? (this.len = kk[this.i++], this.ins = kk[this.i++]) : (this.len = 0, this.ins = -2), this.off = 0
       }
       get done() {
         return -2 == this.ins
@@ -815,26 +815,26 @@ export const modules = {
       }
       get text() {
         let {
-          inserted: CC
-        } = this.set, zC = this.i - 2 >> 1;
-        return zC >= CC.length ? SC.empty : CC[zC]
+          inserted: kk
+        } = this.set, Fk = this.i - 2 >> 1;
+        return Fk >= kk.length ? wk.empty : kk[Fk]
       }
-      textBit(CC) {
+      textBit(kk) {
         let {
-          inserted: zC
-        } = this.set, ZC = this.i - 2 >> 1;
-        return ZC >= zC.length && !CC ? SC.empty : zC[ZC].slice(this.off, null == CC ? void 0 : this.off + CC)
+          inserted: Fk
+        } = this.set, Ik = this.i - 2 >> 1;
+        return Ik >= Fk.length && !kk ? wk.empty : Fk[Ik].slice(this.off, null == kk ? void 0 : this.off + kk)
       }
-      forward(CC) {
-        CC == this.len ? this.next() : (this.len -= CC, this.off += CC)
+      forward(kk) {
+        kk == this.len ? this.next() : (this.len -= kk, this.off += kk)
       }
-      forward2(CC) {
-        -1 == this.ins ? this.forward(CC) : CC == this.ins ? this.next() : (this.ins -= CC, this.off += CC)
+      forward2(kk) {
+        -1 == this.ins ? this.forward(kk) : kk == this.ins ? this.next() : (this.ins -= kk, this.off += kk)
       }
     }
-    class sC {
-      constructor(CC, zC, ZC) {
-        this.from = CC, this.to = zC, this.flags = ZC
+    class Wk {
+      constructor(kk, Fk, Ik) {
+        this.from = kk, this.to = Fk, this.flags = Ik
       }
       get anchor() {
         return 32 & this.flags ? this.to : this.from
@@ -849,27 +849,27 @@ export const modules = {
         return 8 & this.flags ? -1 : 16 & this.flags ? 1 : 0
       }
       get bidiLevel() {
-        let CC = 7 & this.flags;
-        return 7 == CC ? null : CC
+        let kk = 7 & this.flags;
+        return 7 == kk ? null : kk
       }
       get goalColumn() {
-        let CC = this.flags >> 6;
-        return 16777215 == CC ? void 0 : CC
+        let kk = this.flags >> 6;
+        return 16777215 == kk ? void 0 : kk
       }
-      map(CC) {
-        let zC, ZC, QC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-        return this.empty ? zC = ZC = CC.mapPos(this.from, QC) : (zC = CC.mapPos(this.from, 1), ZC = CC.mapPos(this.to, -1)), zC == this.from && ZC == this.to ? this : new sC(zC, ZC, this.flags)
+      map(kk) {
+        let Fk, Ik, Xk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+        return this.empty ? Fk = Ik = kk.mapPos(this.from, Xk) : (Fk = kk.mapPos(this.from, 1), Ik = kk.mapPos(this.to, -1)), Fk == this.from && Ik == this.to ? this : new Wk(Fk, Ik, this.flags)
       }
-      extend(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : CC,
-          ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        if (CC <= this.anchor && zC >= this.anchor) return TC.range(CC, zC, void 0, void 0, ZC);
-        let QC = Math.abs(CC - this.anchor) > Math.abs(zC - this.anchor) ? CC : zC;
-        return TC.range(this.anchor, QC, void 0, void 0, ZC)
+      extend(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : kk,
+          Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        if (kk <= this.anchor && Fk >= this.anchor) return fk.range(kk, Fk, void 0, void 0, Ik);
+        let Xk = Math.abs(kk - this.anchor) > Math.abs(Fk - this.anchor) ? kk : Fk;
+        return fk.range(this.anchor, Xk, void 0, void 0, Ik)
       }
-      eq(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.anchor == CC.anchor && this.head == CC.head && this.goalColumn == CC.goalColumn && (!zC || !this.empty || this.assoc == CC.assoc)
+      eq(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.anchor == kk.anchor && this.head == kk.head && this.goalColumn == kk.goalColumn && (!Fk || !this.empty || this.assoc == kk.assoc)
       }
       toJSON() {
         return {
@@ -877,447 +877,447 @@ export const modules = {
           head: this.head
         }
       }
-      static fromJSON(CC) {
-        if (!CC || "number" != typeof CC.anchor || "number" != typeof CC.head) throw new RangeError("Invalid JSON representation for SelectionRange");
-        return TC.range(CC.anchor, CC.head)
+      static fromJSON(kk) {
+        if (!kk || "number" != typeof kk.anchor || "number" != typeof kk.head) throw new RangeError("Invalid JSON representation for SelectionRange");
+        return fk.range(kk.anchor, kk.head)
       }
-      static create(CC, zC, ZC) {
-        return new sC(CC, zC, ZC)
+      static create(kk, Fk, Ik) {
+        return new Wk(kk, Fk, Ik)
       }
     }
-    class TC {
-      constructor(CC, zC) {
-        this.np = CC, this.mainIndex = zC
+    class fk {
+      constructor(kk, Fk) {
+        this.nZ = kk, this.mainIndex = Fk
       }
-      map(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-        return CC.empty ? this : TC.create(this.np.map((ZC => ZC.map(CC, zC))), this.mainIndex)
+      map(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+        return kk.empty ? this : fk.create(this.nZ.map((Ik => Ik.map(kk, Fk))), this.mainIndex)
       }
-      eq(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (this.np.length != CC.np.length || this.mainIndex != CC.mainIndex) return !1;
-        for (let ZC = 0; ZC < this.np.length; ZC++)
-          if (!this.np[ZC].eq(CC.np[ZC], zC)) return !1;
+      eq(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (this.nZ.length != kk.nZ.length || this.mainIndex != kk.mainIndex) return !1;
+        for (let Ik = 0; Ik < this.nZ.length; Ik++)
+          if (!this.nZ[Ik].eq(kk.nZ[Ik], Fk)) return !1;
         return !0
       }
       get main() {
-        return this.np[this.mainIndex]
+        return this.nZ[this.mainIndex]
       }
       asSingle() {
-        return 1 == this.np.length ? this : new TC([this.main], 0)
+        return 1 == this.nZ.length ? this : new fk([this.main], 0)
       }
-      addRange(CC) {
-        let zC = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        return TC.create([CC].concat(this.np), zC ? 0 : this.mainIndex + 1)
+      addRange(kk) {
+        let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        return fk.create([kk].concat(this.nZ), Fk ? 0 : this.mainIndex + 1)
       }
-      replaceRange(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.mainIndex,
-          ZC = this.np.slice();
-        return ZC[zC] = CC, TC.create(ZC, this.mainIndex)
+      replaceRange(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.mainIndex,
+          Ik = this.nZ.slice();
+        return Ik[Fk] = kk, fk.create(Ik, this.mainIndex)
       }
       toJSON() {
         return {
-          np: this.np.map((CC => CC.toJSON())),
+          nZ: this.nZ.map((kk => kk.toJSON())),
           main: this.mainIndex
         }
       }
-      static fromJSON(CC) {
-        if (!CC || !Array.isArray(CC.np) || "number" != typeof CC.main || CC.main >= CC.np.length) throw new RangeError("Invalid JSON representation for EditorSelection");
-        return new TC(CC.np.map((CC => sC.fromJSON(CC))), CC.main)
+      static fromJSON(kk) {
+        if (!kk || !Array.isArray(kk.nZ) || "number" != typeof kk.main || kk.main >= kk.nZ.length) throw new RangeError("Invalid JSON representation for EditorSelection");
+        return new fk(kk.nZ.map((kk => Wk.fromJSON(kk))), kk.main)
       }
-      static single(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : CC;
-        return new TC([TC.range(CC, zC)], 0)
+      static single(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : kk;
+        return new fk([fk.range(kk, Fk)], 0)
       }
-      static create(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        if (0 == CC.length) throw new RangeError("A selection needs at least one range");
-        for (let ZC = 0, QC = 0; QC < CC.length; QC++) {
-          let wC = CC[QC];
-          if (wC.empty ? wC.from <= ZC : wC.from < ZC) return TC.normalized(CC.slice(), zC);
-          ZC = wC.to
+      static create(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        if (0 == kk.length) throw new RangeError("A selection needs at least one range");
+        for (let Ik = 0, Xk = 0; Xk < kk.length; Xk++) {
+          let Tk = kk[Xk];
+          if (Tk.empty ? Tk.from <= Ik : Tk.from < Ik) return fk.normalized(kk.slice(), Fk);
+          Ik = Tk.to
         }
-        return new TC(CC, zC)
+        return new fk(kk, Fk)
       }
-      static cursor(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          ZC = arguments.length > 2 ? arguments[2] : void 0,
-          QC = arguments.length > 3 ? arguments[3] : void 0;
-        return sC.create(CC, CC, (0 == zC ? 0 : zC < 0 ? 8 : 16) | (null == ZC ? 7 : Math.min(6, ZC)) | (null !== QC && void 0 !== QC ? QC : 16777215) << 6)
+      static cursor(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          Ik = arguments.length > 2 ? arguments[2] : void 0,
+          Xk = arguments.length > 3 ? arguments[3] : void 0;
+        return Wk.create(kk, kk, (0 == Fk ? 0 : Fk < 0 ? 8 : 16) | (null == Ik ? 7 : Math.min(6, Ik)) | (null !== Xk && void 0 !== Xk ? Xk : 16777215) << 6)
       }
-      static range(CC, zC, ZC, QC, wC) {
-        let bC = (null !== ZC && void 0 !== ZC ? ZC : 16777215) << 6 | (null == QC ? 7 : Math.min(6, QC));
-        return wC || CC == zC || (wC = zC < CC ? 1 : -1), zC < CC ? sC.create(zC, CC, 48 | bC) : sC.create(CC, zC, (wC ? wC < 0 ? 8 : 16 : 0) | bC)
+      static range(kk, Fk, Ik, Xk, Tk) {
+        let ik = (null !== Ik && void 0 !== Ik ? Ik : 16777215) << 6 | (null == Xk ? 7 : Math.min(6, Xk));
+        return Tk || kk == Fk || (Tk = Fk < kk ? 1 : -1), Fk < kk ? Wk.create(Fk, kk, 48 | ik) : Wk.create(kk, Fk, (Tk ? Tk < 0 ? 8 : 16 : 0) | ik)
       }
-      static normalized(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          ZC = CC[zC];
-        CC.sort(((CC, zC) => CC.from - zC.from)), zC = CC.indexOf(ZC);
-        for (let QC = 1; QC < CC.length; QC++) {
-          let ZC = CC[QC],
-            wC = CC[QC - 1];
-          if (ZC.empty ? ZC.from <= wC.to : ZC.from < wC.to) {
-            let bC = wC.from,
-              nC = Math.max(ZC.to, wC.to);
-            QC <= zC && zC--, CC.splice(--QC, 2, ZC.anchor > ZC.head ? TC.range(nC, bC) : TC.range(bC, nC))
+      static normalized(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          Ik = kk[Fk];
+        kk.sort(((kk, Fk) => kk.from - Fk.from)), Fk = kk.indexOf(Ik);
+        for (let Xk = 1; Xk < kk.length; Xk++) {
+          let Ik = kk[Xk],
+            Tk = kk[Xk - 1];
+          if (Ik.empty ? Ik.from <= Tk.to : Ik.from < Tk.to) {
+            let ik = Tk.from,
+              yk = Math.max(Ik.to, Tk.to);
+            Xk <= Fk && Fk--, kk.splice(--Xk, 2, Ik.anchor > Ik.head ? fk.range(yk, ik) : fk.range(ik, yk))
           }
         }
-        return new TC(CC, zC)
+        return new fk(kk, Fk)
       }
     }
 
-    function aC(CC, zC) {
-      for (let ZC of CC.np)
-        if (ZC.to > zC) throw new RangeError("Selection points outside of document")
+    function Bk(kk, Fk) {
+      for (let Ik of kk.nZ)
+        if (Ik.to > Fk) throw new RangeError("Selection points outside of document")
     }
-    let tC = 0;
-    class DC {
-      constructor(CC, zC, ZC, QC, wC) {
-        this.combine = CC, this.compareInput = zC, this.compare = ZC, this.isStatic = QC, this.id = tC++, this.default = CC([]), this.extensions = "function" == typeof wC ? wC(this) : wC
+    let dk = 0;
+    class Yk {
+      constructor(kk, Fk, Ik, Xk, Tk) {
+        this.combine = kk, this.compareInput = Fk, this.compare = Ik, this.isStatic = Xk, this.id = dk++, this.default = kk([]), this.extensions = "function" == typeof Tk ? Tk(this) : Tk
       }
       get reader() {
         return this
       }
       static define() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        return new DC(CC.combine || (CC => CC), CC.compareInput || ((CC, zC) => CC === zC), CC.compare || (CC.combine ? (CC, zC) => CC === zC : jC), !!CC.static, CC.enables)
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        return new Yk(kk.combine || (kk => kk), kk.compareInput || ((kk, Fk) => kk === Fk), kk.compare || (kk.combine ? (kk, Fk) => kk === Fk : Ak), !!kk.static, kk.enables)
       }
-      of(CC) {
-        return new yC([], this, 0, CC)
+      of(kk) {
+        return new gk([], this, 0, kk)
       }
-      compute(CC, zC) {
+      compute(kk, Fk) {
         if (this.isStatic) throw new Error("Can't compute a static facet");
-        return new yC(CC, this, 1, zC)
+        return new gk(kk, this, 1, Fk)
       }
-      computeN(CC, zC) {
+      computeN(kk, Fk) {
         if (this.isStatic) throw new Error("Can't compute a static facet");
-        return new yC(CC, this, 2, zC)
+        return new gk(kk, this, 2, Fk)
       }
-      from(CC, zC) {
-        return zC || (zC = CC => CC), this.compute([CC], (ZC => zC(ZC.field(CC))))
+      from(kk, Fk) {
+        return Fk || (Fk = kk => kk), this.compute([kk], (Ik => Fk(Ik.field(kk))))
       }
     }
 
-    function jC(CC, zC) {
-      return CC == zC || CC.length == zC.length && CC.every(((CC, ZC) => CC === zC[ZC]))
+    function Ak(kk, Fk) {
+      return kk == Fk || kk.length == Fk.length && kk.every(((kk, Ik) => kk === Fk[Ik]))
     }
-    class yC {
-      constructor(CC, zC, ZC, QC) {
-        this.dependencies = CC, this.facet = zC, this.type = ZC, this.value = QC, this.id = tC++
+    class gk {
+      constructor(kk, Fk, Ik, Xk) {
+        this.dependencies = kk, this.facet = Fk, this.type = Ik, this.value = Xk, this.id = dk++
       }
-      dynamicSlot(CC) {
-        var zC;
-        let ZC = this.value,
-          QC = this.facet.compareInput,
-          wC = this.id,
-          bC = CC[wC] >> 1,
-          nC = 2 == this.type,
-          fC = !1,
-          oC = !1,
-          qC = [];
-        for (let FC of this.dependencies) "doc" == FC ? fC = !0 : "selection" == FC ? oC = !0 : 0 == (1 & (null !== (zC = CC[FC.id]) && void 0 !== zC ? zC : 1)) && qC.push(CC[FC.id]);
+      dynamicSlot(kk) {
+        var Fk;
+        let Ik = this.value,
+          Xk = this.facet.compareInput,
+          Tk = this.id,
+          ik = kk[Tk] >> 1,
+          yk = 2 == this.type,
+          lk = !1,
+          ak = !1,
+          qk = [];
+        for (let Lk of this.dependencies) "doc" == Lk ? lk = !0 : "selection" == Lk ? ak = !0 : 0 == (1 & (null !== (Fk = kk[Lk.id]) && void 0 !== Fk ? Fk : 1)) && qk.push(kk[Lk.id]);
         return {
-          create: CC => (CC.values[bC] = ZC(CC), 1),
-          update(CC, zC) {
-            if (fC && zC.docChanged || oC && (zC.docChanged || zC.selection) || UC(CC, qC)) {
-              let zC = ZC(CC);
-              if (nC ? !LC(zC, CC.values[bC], QC) : !QC(zC, CC.values[bC])) return CC.values[bC] = zC, 1
+          create: kk => (kk.values[ik] = Ik(kk), 1),
+          update(kk, Fk) {
+            if (lk && Fk.docChanged || ak && (Fk.docChanged || Fk.selection) || hk(kk, qk)) {
+              let Fk = Ik(kk);
+              if (yk ? !mk(Fk, kk.values[ik], Xk) : !Xk(Fk, kk.values[ik])) return kk.values[ik] = Fk, 1
             }
             return 0
           },
-          reconfigure: (CC, zC) => {
-            let fC, oC = zC.config.address[wC];
-            if (null != oC) {
-              let wC = Fz(zC, oC);
-              if (this.dependencies.every((ZC => ZC instanceof DC ? zC.facet(ZC) === CC.facet(ZC) : !(ZC instanceof kC) || zC.field(ZC, !1) == CC.field(ZC, !1))) || (nC ? LC(fC = ZC(CC), wC, QC) : QC(fC = ZC(CC), wC))) return CC.values[bC] = wC, 0
-            } else fC = ZC(CC);
-            return CC.values[bC] = fC, 1
+          reconfigure: (kk, Fk) => {
+            let lk, ak = Fk.config.address[Tk];
+            if (null != ak) {
+              let Tk = tF(Fk, ak);
+              if (this.dependencies.every((Ik => Ik instanceof Yk ? Fk.facet(Ik) === kk.facet(Ik) : !(Ik instanceof Mk) || Fk.field(Ik, !1) == kk.field(Ik, !1))) || (yk ? mk(lk = Ik(kk), Tk, Xk) : Xk(lk = Ik(kk), Tk))) return kk.values[ik] = Tk, 0
+            } else lk = Ik(kk);
+            return kk.values[ik] = lk, 1
           }
         }
       }
     }
 
-    function LC(CC, zC, ZC) {
-      if (CC.length != zC.length) return !1;
-      for (let QC = 0; QC < CC.length; QC++)
-        if (!ZC(CC[QC], zC[QC])) return !1;
+    function mk(kk, Fk, Ik) {
+      if (kk.length != Fk.length) return !1;
+      for (let Xk = 0; Xk < kk.length; Xk++)
+        if (!Ik(kk[Xk], Fk[Xk])) return !1;
       return !0
     }
 
-    function UC(CC, zC) {
-      let ZC = !1;
-      for (let QC of zC) 1 & qz(CC, QC) && (ZC = !0);
-      return ZC
+    function hk(kk, Fk) {
+      let Ik = !1;
+      for (let Xk of Fk) 1 & LF(kk, Xk) && (Ik = !0);
+      return Ik
     }
 
-    function BC(CC, zC, ZC) {
-      let QC = ZC.map((zC => CC[zC.id])),
-        wC = ZC.map((CC => CC.type)),
-        bC = QC.filter((CC => !(1 & CC))),
-        nC = CC[zC.id] >> 1;
+    function rk(kk, Fk, Ik) {
+      let Xk = Ik.map((Fk => kk[Fk.id])),
+        Tk = Ik.map((kk => kk.type)),
+        ik = Xk.filter((kk => !(1 & kk))),
+        yk = kk[Fk.id] >> 1;
 
-      function fC(CC) {
-        let ZC = [];
-        for (let zC = 0; zC < QC.length; zC++) {
-          let bC = Fz(CC, QC[zC]);
-          if (2 == wC[zC])
-            for (let CC of bC) ZC.push(CC);
-          else ZC.push(bC)
+      function lk(kk) {
+        let Ik = [];
+        for (let Fk = 0; Fk < Xk.length; Fk++) {
+          let ik = tF(kk, Xk[Fk]);
+          if (2 == Tk[Fk])
+            for (let kk of ik) Ik.push(kk);
+          else Ik.push(ik)
         }
-        return zC.combine(ZC)
+        return Fk.combine(Ik)
       }
       return {
-        create(CC) {
-          for (let zC of QC) qz(CC, zC);
-          return CC.values[nC] = fC(CC), 1
+        create(kk) {
+          for (let Fk of Xk) LF(kk, Fk);
+          return kk.values[yk] = lk(kk), 1
         },
-        update(CC, ZC) {
-          if (!UC(CC, bC)) return 0;
-          let QC = fC(CC);
-          return zC.compare(QC, CC.values[nC]) ? 0 : (CC.values[nC] = QC, 1)
+        update(kk, Ik) {
+          if (!hk(kk, ik)) return 0;
+          let Xk = lk(kk);
+          return Fk.compare(Xk, kk.values[yk]) ? 0 : (kk.values[yk] = Xk, 1)
         },
-        reconfigure(CC, wC) {
-          let bC = UC(CC, QC),
-            oC = wC.config.facets[zC.id],
-            qC = wC.facet(zC);
-          if (oC && !bC && jC(ZC, oC)) return CC.values[nC] = qC, 0;
-          let FC = fC(CC);
-          return zC.compare(FC, qC) ? (CC.values[nC] = qC, 0) : (CC.values[nC] = FC, 1)
+        reconfigure(kk, Tk) {
+          let ik = hk(kk, Xk),
+            ak = Tk.config.facets[Fk.id],
+            qk = Tk.facet(Fk);
+          if (ak && !ik && Ak(Ik, ak)) return kk.values[yk] = qk, 0;
+          let Lk = lk(kk);
+          return Fk.compare(Lk, qk) ? (kk.values[yk] = qk, 0) : (kk.values[yk] = Lk, 1)
         }
       }
     }
-    const OC = DC.define({
+    const Dk = Yk.define({
       static: !0
     });
-    class kC {
-      constructor(CC, zC, ZC, QC, wC) {
-        this.id = CC, this.createF = zC, this.updateF = ZC, this.compareF = QC, this.spec = wC, this.provides = void 0
+    class Mk {
+      constructor(kk, Fk, Ik, Xk, Tk) {
+        this.id = kk, this.createF = Fk, this.updateF = Ik, this.compareF = Xk, this.spec = Tk, this.provides = void 0
       }
-      static define(CC) {
-        let zC = new kC(tC++, CC.create, CC.update, CC.compare || ((CC, zC) => CC === zC), CC);
-        return CC.provide && (zC.provides = CC.provide(zC)), zC
+      static define(kk) {
+        let Fk = new Mk(dk++, kk.create, kk.update, kk.compare || ((kk, Fk) => kk === Fk), kk);
+        return kk.provide && (Fk.provides = kk.provide(Fk)), Fk
       }
-      create(CC) {
-        let zC = CC.facet(OC).find((CC => CC.field == this));
-        return ((null === zC || void 0 === zC ? void 0 : zC.create) || this.createF)(CC)
+      create(kk) {
+        let Fk = kk.facet(Dk).find((kk => kk.field == this));
+        return ((null === Fk || void 0 === Fk ? void 0 : Fk.create) || this.createF)(kk)
       }
-      slot(CC) {
-        let zC = CC[this.id] >> 1;
+      slot(kk) {
+        let Fk = kk[this.id] >> 1;
         return {
-          create: CC => (CC.values[zC] = this.create(CC), 1),
-          update: (CC, ZC) => {
-            let QC = CC.values[zC],
-              wC = this.updateF(QC, ZC);
-            return this.compareF(QC, wC) ? 0 : (CC.values[zC] = wC, 1)
+          create: kk => (kk.values[Fk] = this.create(kk), 1),
+          update: (kk, Ik) => {
+            let Xk = kk.values[Fk],
+              Tk = this.updateF(Xk, Ik);
+            return this.compareF(Xk, Tk) ? 0 : (kk.values[Fk] = Tk, 1)
           },
-          reconfigure: (CC, ZC) => {
-            let QC, wC = CC.facet(OC),
-              bC = ZC.facet(OC);
-            return (QC = wC.find((CC => CC.field == this))) && QC != bC.find((CC => CC.field == this)) ? (CC.values[zC] = QC.create(CC), 1) : null != ZC.config.address[this.id] ? (CC.values[zC] = ZC.field(this), 0) : (CC.values[zC] = this.create(CC), 1)
+          reconfigure: (kk, Ik) => {
+            let Xk, Tk = kk.facet(Dk),
+              ik = Ik.facet(Dk);
+            return (Xk = Tk.find((kk => kk.field == this))) && Xk != ik.find((kk => kk.field == this)) ? (kk.values[Fk] = Xk.create(kk), 1) : null != Ik.config.address[this.id] ? (kk.values[Fk] = Ik.field(this), 0) : (kk.values[Fk] = this.create(kk), 1)
           }
         }
       }
-      init(CC) {
-        return [this, OC.of({
+      init(kk) {
+        return [this, Dk.of({
           field: this,
-          create: CC
+          create: kk
         })]
       }
       get extension() {
         return this
       }
     }
-    const VC = 4,
-      Cz = 3,
-      zz = 2,
-      Zz = 1;
+    const kF = 4,
+      FF = 3,
+      IF = 2,
+      XF = 1;
 
-    function Qz(CC) {
-      return zC => new bz(zC, CC)
+    function TF(kk) {
+      return Fk => new yF(Fk, kk)
     }
-    const wz = {
-      highest: Qz(0),
-      high: Qz(Zz),
-      default: Qz(zz),
-      low: Qz(Cz),
-      lowest: Qz(VC)
+    const iF = {
+      highest: TF(0),
+      high: TF(XF),
+      default: TF(IF),
+      low: TF(FF),
+      lowest: TF(kF)
     };
-    class bz {
-      constructor(CC, zC) {
-        this.inner = CC, this.prec = zC
+    class yF {
+      constructor(kk, Fk) {
+        this.inner = kk, this.prec = Fk
       }
     }
-    class nz {
-      of(CC) {
-        return new fz(this, CC)
+    class lF {
+      of(kk) {
+        return new aF(this, kk)
       }
-      reconfigure(CC) {
-        return nz.reconfigure.of({
+      reconfigure(kk) {
+        return lF.reconfigure.of({
           compartment: this,
-          extension: CC
+          extension: kk
         })
       }
-      get(CC) {
-        return CC.config.compartments.get(this)
+      get(kk) {
+        return kk.config.compartments.get(this)
       }
     }
-    class fz {
-      constructor(CC, zC) {
-        this.compartment = CC, this.inner = zC
+    class aF {
+      constructor(kk, Fk) {
+        this.compartment = kk, this.inner = Fk
       }
     }
-    class oz {
-      constructor(CC, zC, ZC, QC, wC, bC) {
-        for (this.base = CC, this.compartments = zC, this.dynamicSlots = ZC, this.address = QC, this.staticValues = wC, this.facets = bC, this.statusTemplate = []; this.statusTemplate.length < ZC.length;) this.statusTemplate.push(0)
+    class qF {
+      constructor(kk, Fk, Ik, Xk, Tk, ik) {
+        for (this.base = kk, this.compartments = Fk, this.dynamicSlots = Ik, this.address = Xk, this.staticValues = Tk, this.facets = ik, this.statusTemplate = []; this.statusTemplate.length < Ik.length;) this.statusTemplate.push(0)
       }
-      staticFacet(CC) {
-        let zC = this.address[CC.id];
-        return null == zC ? CC.default : this.staticValues[zC >> 1]
+      staticFacet(kk) {
+        let Fk = this.address[kk.id];
+        return null == Fk ? kk.default : this.staticValues[Fk >> 1]
       }
-      static resolve(CC, zC, ZC) {
-        let QC = [],
-          wC = Object.create(null),
-          bC = new Map;
-        for (let WC of function(CC, zC, ZC) {
-            let QC = [
+      static resolve(kk, Fk, Ik) {
+        let Xk = [],
+          Tk = Object.create(null),
+          ik = new Map;
+        for (let tk of function(kk, Fk, Ik) {
+            let Xk = [
                 [],
                 [],
                 [],
                 [],
                 []
               ],
-              wC = new Map;
+              Tk = new Map;
 
-            function bC(CC, nC) {
-              let fC = wC.get(CC);
-              if (null != fC) {
-                if (fC <= nC) return;
-                let zC = QC[fC].indexOf(CC);
-                zC > -1 && QC[fC].splice(zC, 1), CC instanceof fz && ZC.delete(CC.compartment)
+            function ik(kk, yk) {
+              let lk = Tk.get(kk);
+              if (null != lk) {
+                if (lk <= yk) return;
+                let Fk = Xk[lk].indexOf(kk);
+                Fk > -1 && Xk[lk].splice(Fk, 1), kk instanceof aF && Ik.delete(kk.compartment)
               }
-              if (wC.set(CC, nC), Array.isArray(CC))
-                for (let zC of CC) bC(zC, nC);
-              else if (CC instanceof fz) {
-                if (ZC.has(CC.compartment)) throw new RangeError("Duplicate use of compartment in extensions");
-                let QC = zC.get(CC.compartment) || CC.inner;
-                ZC.set(CC.compartment, QC), bC(QC, nC)
-              } else if (CC instanceof bz) bC(CC.inner, CC.prec);
-              else if (CC instanceof kC) QC[nC].push(CC), CC.provides && bC(CC.provides, nC);
-              else if (CC instanceof yC) QC[nC].push(CC), CC.facet.extensions && bC(CC.facet.extensions, zz);
+              if (Tk.set(kk, yk), Array.isArray(kk))
+                for (let Fk of kk) ik(Fk, yk);
+              else if (kk instanceof aF) {
+                if (Ik.has(kk.compartment)) throw new RangeError("Duplicate use of compartment in extensions");
+                let Xk = Fk.get(kk.compartment) || kk.inner;
+                Ik.set(kk.compartment, Xk), ik(Xk, yk)
+              } else if (kk instanceof yF) ik(kk.inner, kk.prec);
+              else if (kk instanceof Mk) Xk[yk].push(kk), kk.provides && ik(kk.provides, yk);
+              else if (kk instanceof gk) Xk[yk].push(kk), kk.facet.extensions && ik(kk.facet.extensions, IF);
               else {
-                let zC = CC.extension;
-                if (!zC) throw new Error(`Unrecognized extension value in extension set (${CC}). This sometimes happens because multiple instances of @codemirror/state are loaded, breaking instanceof checks.`);
-                bC(zC, nC)
+                let Fk = kk.extension;
+                if (!Fk) throw new Error(`Unrecognized extension value in extension set (${kk}). This sometimes happens because multiple instances of @codemirror/state are loaded, breaking instanceof checks.`);
+                ik(Fk, yk)
               }
             }
-            return bC(CC, zz), QC.reduce(((CC, zC) => CC.concat(zC)))
-          }(CC, zC, bC)) WC instanceof kC ? QC.push(WC) : (wC[WC.facet.id] || (wC[WC.facet.id] = [])).push(WC);
-        let nC = Object.create(null),
-          fC = [],
-          oC = [];
-        for (let WC of QC) nC[WC.id] = oC.length << 1, oC.push((CC => WC.slot(CC)));
-        let qC = null === ZC || void 0 === ZC ? void 0 : ZC.config.facets;
-        for (let WC in wC) {
-          let CC = wC[WC],
-            zC = CC[0].facet,
-            QC = qC && qC[WC] || [];
-          if (CC.every((CC => 0 == CC.type)))
-            if (nC[zC.id] = fC.length << 1 | 1, jC(QC, CC)) fC.push(ZC.facet(zC));
+            return ik(kk, IF), Xk.reduce(((kk, Fk) => kk.concat(Fk)))
+          }(kk, Fk, ik)) tk instanceof Mk ? Xk.push(tk) : (Tk[tk.facet.id] || (Tk[tk.facet.id] = [])).push(tk);
+        let yk = Object.create(null),
+          lk = [],
+          ak = [];
+        for (let tk of Xk) yk[tk.id] = ak.length << 1, ak.push((kk => tk.slot(kk)));
+        let qk = null === Ik || void 0 === Ik ? void 0 : Ik.config.facets;
+        for (let tk in Tk) {
+          let kk = Tk[tk],
+            Fk = kk[0].facet,
+            Xk = qk && qk[tk] || [];
+          if (kk.every((kk => 0 == kk.type)))
+            if (yk[Fk.id] = lk.length << 1 | 1, Ak(Xk, kk)) lk.push(Ik.facet(Fk));
             else {
-              let QC = zC.combine(CC.map((CC => CC.value)));
-              fC.push(ZC && zC.compare(QC, ZC.facet(zC)) ? ZC.facet(zC) : QC)
+              let Xk = Fk.combine(kk.map((kk => kk.value)));
+              lk.push(Ik && Fk.compare(Xk, Ik.facet(Fk)) ? Ik.facet(Fk) : Xk)
             }
           else {
-            for (let zC of CC) 0 == zC.type ? (nC[zC.id] = fC.length << 1 | 1, fC.push(zC.value)) : (nC[zC.id] = oC.length << 1, oC.push((CC => zC.dynamicSlot(CC))));
-            nC[zC.id] = oC.length << 1, oC.push((ZC => BC(ZC, zC, CC)))
+            for (let Fk of kk) 0 == Fk.type ? (yk[Fk.id] = lk.length << 1 | 1, lk.push(Fk.value)) : (yk[Fk.id] = ak.length << 1, ak.push((kk => Fk.dynamicSlot(kk))));
+            yk[Fk.id] = ak.length << 1, ak.push((Ik => rk(Ik, Fk, kk)))
           }
         }
-        let FC = oC.map((CC => CC(nC)));
-        return new oz(CC, bC, FC, nC, fC, wC)
+        let Lk = ak.map((kk => kk(yk)));
+        return new qF(kk, ik, Lk, yk, lk, Tk)
       }
     }
 
-    function qz(CC, zC) {
-      if (1 & zC) return 2;
-      let ZC = zC >> 1,
-        QC = CC.status[ZC];
-      if (4 == QC) throw new Error("Cyclic dependency between fields and/or facets");
-      if (2 & QC) return QC;
-      CC.status[ZC] = 4;
-      let wC = CC.computeSlot(CC, CC.config.dynamicSlots[ZC]);
-      return CC.status[ZC] = 2 | wC
+    function LF(kk, Fk) {
+      if (1 & Fk) return 2;
+      let Ik = Fk >> 1,
+        Xk = kk.status[Ik];
+      if (4 == Xk) throw new Error("Cyclic dependency between fields and/or facets");
+      if (2 & Xk) return Xk;
+      kk.status[Ik] = 4;
+      let Tk = kk.computeSlot(kk, kk.config.dynamicSlots[Ik]);
+      return kk.status[Ik] = 2 | Tk
     }
 
-    function Fz(CC, zC) {
-      return 1 & zC ? CC.config.staticValues[zC >> 1] : CC.values[zC >> 1]
+    function tF(kk, Fk) {
+      return 1 & Fk ? kk.config.staticValues[Fk >> 1] : kk.values[Fk >> 1]
     }
-    const Wz = DC.define(),
-      Nz = DC.define({
-        combine: CC => CC.some((CC => CC)),
+    const ZF = Yk.define(),
+      jF = Yk.define({
+        combine: kk => kk.some((kk => kk)),
         static: !0
       }),
-      Mz = DC.define({
-        combine: CC => CC.length ? CC[0] : void 0,
+      eF = Yk.define({
+        combine: kk => kk.length ? kk[0] : void 0,
         static: !0
       }),
-      gz = DC.define(),
-      Sz = DC.define(),
-      pz = DC.define(),
-      Pz = DC.define({
-        combine: CC => !!CC.length && CC[0]
+      wF = Yk.define(),
+      HF = Yk.define(),
+      JF = Yk.define(),
+      xF = Yk.define({
+        combine: kk => !!kk.length && kk[0]
       });
-    class Gz {
-      constructor(CC, zC) {
-        this.type = CC, this.value = zC
+    class PF {
+      constructor(kk, Fk) {
+        this.type = kk, this.value = Fk
       }
       static define() {
-        return new Rz
+        return new KF
       }
     }
-    class Rz {
-      of(CC) {
-        return new Gz(this, CC)
+    class KF {
+      of(kk) {
+        return new PF(this, kk)
       }
     }
-    class Az {
-      constructor(CC) {
-        this.map = CC
+    class QF {
+      constructor(kk) {
+        this.map = kk
       }
-      of(CC) {
-        return new xz(this, CC)
+      of(kk) {
+        return new sF(this, kk)
       }
     }
-    class xz {
-      constructor(CC, zC) {
-        this.type = CC, this.value = zC
+    class sF {
+      constructor(kk, Fk) {
+        this.type = kk, this.value = Fk
       }
-      map(CC) {
-        let zC = this.type.map(this.value, CC);
-        return void 0 === zC ? void 0 : zC == this.value ? this : new xz(this.type, zC)
+      map(kk) {
+        let Fk = this.type.map(this.value, kk);
+        return void 0 === Fk ? void 0 : Fk == this.value ? this : new sF(this.type, Fk)
       }
-      is(CC) {
-        return this.type == CC
+      is(kk) {
+        return this.type == kk
       }
       static define() {
-        return new Az((arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).map || (CC => CC))
+        return new QF((arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).map || (kk => kk))
       }
-      static mapEffects(CC, zC) {
-        if (!CC.length) return CC;
-        let ZC = [];
-        for (let QC of CC) {
-          let CC = QC.map(zC);
-          CC && ZC.push(CC)
+      static mapEffects(kk, Fk) {
+        if (!kk.length) return kk;
+        let Ik = [];
+        for (let Xk of kk) {
+          let kk = Xk.map(Fk);
+          kk && Ik.push(kk)
         }
-        return ZC
+        return Ik
       }
     }
-    xz.reconfigure = xz.define(), xz.appendConfig = xz.define();
-    class Jz {
-      constructor(CC, zC, ZC, QC, wC, bC) {
-        this.startState = CC, this.changes = zC, this.selection = ZC, this.effects = QC, this.annotations = wC, this.scrollIntoView = bC, this._doc = null, this._state = null, ZC && aC(ZC, zC.newLength), wC.some((CC => CC.type == Jz.time)) || (this.annotations = wC.concat(Jz.time.of(Date.now())))
+    sF.reconfigure = sF.define(), sF.appendConfig = sF.define();
+    class VF {
+      constructor(kk, Fk, Ik, Xk, Tk, ik) {
+        this.startState = kk, this.changes = Fk, this.selection = Ik, this.effects = Xk, this.annotations = Tk, this.scrollIntoView = ik, this._doc = null, this._state = null, Ik && Bk(Ik, Fk.newLength), Tk.some((kk => kk.type == VF.time)) || (this.annotations = Tk.concat(VF.time.of(Date.now())))
       }
-      static create(CC, zC, ZC, QC, wC, bC) {
-        return new Jz(CC, zC, ZC, QC, wC, bC)
+      static create(kk, Fk, Ik, Xk, Tk, ik) {
+        return new VF(kk, Fk, Ik, Xk, Tk, ik)
       }
       get newDoc() {
         return this._doc || (this._doc = this.changes.apply(this.startState.doc))
@@ -1328,9 +1328,9 @@ export const modules = {
       get state() {
         return this._state || this.startState.applyTransaction(this), this._state
       }
-      annotation(CC) {
-        for (let zC of this.annotations)
-          if (zC.type == CC) return zC.value
+      annotation(kk) {
+        for (let Fk of this.annotations)
+          if (Fk.type == kk) return Fk.value
       }
       get docChanged() {
         return !this.changes.empty
@@ -1338,584 +1338,584 @@ export const modules = {
       get reconfigured() {
         return this.startState.config != this.state.config
       }
-      isUserEvent(CC) {
-        let zC = this.annotation(Jz.userEvent);
-        return !(!zC || !(zC == CC || zC.length > CC.length && zC.slice(0, CC.length) == CC && "." == zC[CC.length]))
+      isUserEvent(kk) {
+        let Fk = this.annotation(VF.userEvent);
+        return !(!Fk || !(Fk == kk || Fk.length > kk.length && Fk.slice(0, kk.length) == kk && "." == Fk[kk.length]))
       }
     }
 
-    function Iz(CC, zC) {
-      let ZC = [];
-      for (let QC = 0, wC = 0;;) {
-        let bC, nC;
-        if (QC < CC.length && (wC == zC.length || zC[wC] >= CC[QC])) bC = CC[QC++], nC = CC[QC++];
+    function zF(kk, Fk) {
+      let Ik = [];
+      for (let Xk = 0, Tk = 0;;) {
+        let ik, yk;
+        if (Xk < kk.length && (Tk == Fk.length || Fk[Tk] >= kk[Xk])) ik = kk[Xk++], yk = kk[Xk++];
         else {
-          if (!(wC < zC.length)) return ZC;
-          bC = zC[wC++], nC = zC[wC++]
-        }!ZC.length || ZC[ZC.length - 1] < bC ? ZC.push(bC, nC) : ZC[ZC.length - 1] < nC && (ZC[ZC.length - 1] = nC)
+          if (!(Tk < Fk.length)) return Ik;
+          ik = Fk[Tk++], yk = Fk[Tk++]
+        }!Ik.length || Ik[Ik.length - 1] < ik ? Ik.push(ik, yk) : Ik[Ik.length - 1] < yk && (Ik[Ik.length - 1] = yk)
       }
     }
 
-    function iz(CC, zC, ZC) {
-      var QC;
-      let wC, bC, nC;
-      return ZC ? (wC = zC.changes, bC = HC.empty(zC.changes.length), nC = CC.changes.compose(zC.changes)) : (wC = zC.changes.map(CC.changes), bC = CC.changes.mapDesc(zC.changes, !0), nC = CC.changes.compose(wC)), {
-        changes: nC,
-        selection: zC.selection ? zC.selection.map(bC) : null === (QC = CC.selection) || void 0 === QC ? void 0 : QC.map(wC),
-        effects: xz.mapEffects(CC.effects, wC).concat(xz.mapEffects(zC.effects, bC)),
-        annotations: CC.annotations.length ? CC.annotations.concat(zC.annotations) : zC.annotations,
-        scrollIntoView: CC.scrollIntoView || zC.scrollIntoView
+    function SF(kk, Fk, Ik) {
+      var Xk;
+      let Tk, ik, yk;
+      return Ik ? (Tk = Fk.changes, ik = uk.empty(Fk.changes.length), yk = kk.changes.compose(Fk.changes)) : (Tk = Fk.changes.map(kk.changes), ik = kk.changes.mapDesc(Fk.changes, !0), yk = kk.changes.compose(Tk)), {
+        changes: yk,
+        selection: Fk.selection ? Fk.selection.map(ik) : null === (Xk = kk.selection) || void 0 === Xk ? void 0 : Xk.map(Tk),
+        effects: sF.mapEffects(kk.effects, Tk).concat(sF.mapEffects(Fk.effects, ik)),
+        annotations: kk.annotations.length ? kk.annotations.concat(Fk.annotations) : Fk.annotations,
+        scrollIntoView: kk.scrollIntoView || Fk.scrollIntoView
       }
     }
 
-    function vz(CC, zC, ZC) {
-      let QC = zC.selection,
-        wC = Kz(zC.annotations);
-      return zC.userEvent && (wC = wC.concat(Jz.userEvent.of(zC.userEvent))), {
-        changes: zC.changes instanceof HC ? zC.changes : HC.of(zC.changes || [], ZC, CC.facet(Mz)),
-        selection: QC && (QC instanceof TC ? QC : TC.single(QC.anchor, QC.head)),
-        effects: Kz(zC.effects),
-        annotations: wC,
-        scrollIntoView: !!zC.scrollIntoView
+    function oF(kk, Fk, Ik) {
+      let Xk = Fk.selection,
+        Tk = OF(Fk.annotations);
+      return Fk.userEvent && (Tk = Tk.concat(VF.userEvent.of(Fk.userEvent))), {
+        changes: Fk.changes instanceof uk ? Fk.changes : uk.of(Fk.changes || [], Ik, kk.facet(eF)),
+        selection: Xk && (Xk instanceof fk ? Xk : fk.single(Xk.anchor, Xk.head)),
+        effects: OF(Fk.effects),
+        annotations: Tk,
+        scrollIntoView: !!Fk.scrollIntoView
       }
     }
 
-    function ez(CC, zC, ZC) {
-      let QC = vz(CC, zC.length ? zC[0] : {}, CC.doc.length);
-      zC.length && !1 === zC[0].filter && (ZC = !1);
-      for (let bC = 1; bC < zC.length; bC++) {
-        !1 === zC[bC].filter && (ZC = !1);
-        let wC = !!zC[bC].sequential;
-        QC = iz(QC, vz(CC, zC[bC], wC ? QC.changes.newLength : CC.doc.length), wC)
+    function vF(kk, Fk, Ik) {
+      let Xk = oF(kk, Fk.length ? Fk[0] : {}, kk.doc.length);
+      Fk.length && !1 === Fk[0].filter && (Ik = !1);
+      for (let ik = 1; ik < Fk.length; ik++) {
+        !1 === Fk[ik].filter && (Ik = !1);
+        let Tk = !!Fk[ik].sequential;
+        Xk = SF(Xk, oF(kk, Fk[ik], Tk ? Xk.changes.newLength : kk.doc.length), Tk)
       }
-      let wC = Jz.create(CC, QC.changes, QC.selection, QC.effects, QC.annotations, QC.scrollIntoView);
-      return function(CC) {
-        let zC = CC.startState,
-          ZC = zC.facet(pz),
-          QC = CC;
-        for (let wC = ZC.length - 1; wC >= 0; wC--) {
-          let bC = ZC[wC](CC);
-          bC && Object.keys(bC).length && (QC = iz(QC, vz(zC, bC, CC.changes.newLength), !0))
+      let Tk = VF.create(kk, Xk.changes, Xk.selection, Xk.effects, Xk.annotations, Xk.scrollIntoView);
+      return function(kk) {
+        let Fk = kk.startState,
+          Ik = Fk.facet(JF),
+          Xk = kk;
+        for (let Tk = Ik.length - 1; Tk >= 0; Tk--) {
+          let ik = Ik[Tk](kk);
+          ik && Object.keys(ik).length && (Xk = SF(Xk, oF(Fk, ik, kk.changes.newLength), !0))
         }
-        return QC == CC ? CC : Jz.create(zC, CC.changes, CC.selection, QC.effects, QC.annotations, QC.scrollIntoView)
-      }(ZC ? function(CC) {
-        let zC = CC.startState,
-          ZC = !0;
-        for (let wC of zC.facet(gz)) {
-          let zC = wC(CC);
-          if (!1 === zC) {
-            ZC = !1;
+        return Xk == kk ? kk : VF.create(Fk, kk.changes, kk.selection, Xk.effects, Xk.annotations, Xk.scrollIntoView)
+      }(Ik ? function(kk) {
+        let Fk = kk.startState,
+          Ik = !0;
+        for (let Tk of Fk.facet(wF)) {
+          let Fk = Tk(kk);
+          if (!1 === Fk) {
+            Ik = !1;
             break
           }
-          Array.isArray(zC) && (ZC = !0 === ZC ? zC : Iz(ZC, zC))
+          Array.isArray(Fk) && (Ik = !0 === Ik ? Fk : zF(Ik, Fk))
         }
-        if (!0 !== ZC) {
-          let QC, wC;
-          if (!1 === ZC) wC = CC.changes.invertedDesc, QC = HC.empty(zC.doc.length);
+        if (!0 !== Ik) {
+          let Xk, Tk;
+          if (!1 === Ik) Tk = kk.changes.invertedDesc, Xk = uk.empty(Fk.doc.length);
           else {
-            let zC = CC.changes.filter(ZC);
-            QC = zC.changes, wC = zC.filtered.mapDesc(zC.changes).invertedDesc
+            let Fk = kk.changes.filter(Ik);
+            Xk = Fk.changes, Tk = Fk.filtered.mapDesc(Fk.changes).invertedDesc
           }
-          CC = Jz.create(zC, QC, CC.selection && CC.selection.map(wC), xz.mapEffects(CC.effects, wC), CC.annotations, CC.scrollIntoView)
+          kk = VF.create(Fk, Xk, kk.selection && kk.selection.map(Tk), sF.mapEffects(kk.effects, Tk), kk.annotations, kk.scrollIntoView)
         }
-        let QC = zC.facet(Sz);
-        for (let wC = QC.length - 1; wC >= 0; wC--) {
-          let ZC = QC[wC](CC);
-          CC = ZC instanceof Jz ? ZC : Array.isArray(ZC) && 1 == ZC.length && ZC[0] instanceof Jz ? ZC[0] : ez(zC, Kz(ZC), !1)
+        let Xk = Fk.facet(HF);
+        for (let Tk = Xk.length - 1; Tk >= 0; Tk--) {
+          let Ik = Xk[Tk](kk);
+          kk = Ik instanceof VF ? Ik : Array.isArray(Ik) && 1 == Ik.length && Ik[0] instanceof VF ? Ik[0] : vF(Fk, OF(Ik), !1)
         }
-        return CC
-      }(wC) : wC)
+        return kk
+      }(Tk) : Tk)
     }
-    Jz.time = Gz.define(), Jz.userEvent = Gz.define(), Jz.addToHistory = Gz.define(), Jz.remote = Gz.define();
-    const hz = [];
+    VF.time = PF.define(), VF.userEvent = PF.define(), VF.addToHistory = PF.define(), VF.remote = PF.define();
+    const EF = [];
 
-    function Kz(CC) {
-      return null == CC ? hz : Array.isArray(CC) ? CC : [CC]
+    function OF(kk) {
+      return null == kk ? EF : Array.isArray(kk) ? kk : [kk]
     }
-    var Yz = function(CC) {
-      return CC[CC.Word = 0] = "Word", CC[CC.Space = 1] = "Space", CC[CC.Other = 2] = "Other", CC
-    }(Yz || (Yz = {}));
-    const dz = /[\u00df\u0587\u0590-\u05f4\u0600-\u06ff\u3040-\u309f\u30a0-\u30ff\u3400-\u4db5\u4e00-\u9fcc\uac00-\ud7af]/;
-    let mz;
+    var nF = function(kk) {
+      return kk[kk.Word = 0] = "Word", kk[kk.Space = 1] = "Space", kk[kk.Other = 2] = "Other", kk
+    }(nF || (nF = {}));
+    const GF = /[\u00df\u0587\u0590-\u05f4\u0600-\u06ff\u3040-\u309f\u30a0-\u30ff\u3400-\u4db5\u4e00-\u9fcc\uac00-\ud7af]/;
+    let pF;
     try {
-      mz = new RegExp("[\\p{Alphabetic}\\p{Number}_]", "u")
-    } catch (ZZ) {}
+      pF = new RegExp("[\\p{Alphabetic}\\p{Number}_]", "u")
+    } catch (XI) {}
 
-    function Hz(CC) {
-      return zC => {
-        if (!/\S/.test(zC)) return Yz.Space;
-        if (function(CC) {
-            if (mz) return mz.test(CC);
-            for (let zC = 0; zC < CC.length; zC++) {
-              let ZC = CC[zC];
-              if (/\w/.test(ZC) || ZC > "\x80" && (ZC.toUpperCase() != ZC.toLowerCase() || dz.test(ZC))) return !0
+    function uF(kk) {
+      return Fk => {
+        if (!/\S/.test(Fk)) return nF.Space;
+        if (function(kk) {
+            if (pF) return pF.test(kk);
+            for (let Fk = 0; Fk < kk.length; Fk++) {
+              let Ik = kk[Fk];
+              if (/\w/.test(Ik) || Ik > "\x80" && (Ik.toUpperCase() != Ik.toLowerCase() || GF.test(Ik))) return !0
             }
             return !1
-          }(zC)) return Yz.Word;
-        for (let ZC = 0; ZC < CC.length; ZC++)
-          if (zC.indexOf(CC[ZC]) > -1) return Yz.Word;
-        return Yz.Other
+          }(Fk)) return nF.Word;
+        for (let Ik = 0; Ik < kk.length; Ik++)
+          if (Fk.indexOf(kk[Ik]) > -1) return nF.Word;
+        return nF.Other
       }
     }
-    class Ez {
-      constructor(CC, zC, ZC, QC, wC, bC) {
-        this.config = CC, this.doc = zC, this.selection = ZC, this.values = QC, this.status = CC.statusTemplate.slice(), this.computeSlot = wC, bC && (bC._state = this);
-        for (let nC = 0; nC < this.config.dynamicSlots.length; nC++) qz(this, nC << 1);
+    class bF {
+      constructor(kk, Fk, Ik, Xk, Tk, ik) {
+        this.config = kk, this.doc = Fk, this.selection = Ik, this.values = Xk, this.status = kk.statusTemplate.slice(), this.computeSlot = Tk, ik && (ik._state = this);
+        for (let yk = 0; yk < this.config.dynamicSlots.length; yk++) LF(this, yk << 1);
         this.computeSlot = null
       }
-      field(CC) {
-        let zC = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          ZC = this.config.address[CC.id];
-        if (null != ZC) return qz(this, ZC), Fz(this, ZC);
-        if (zC) throw new RangeError("Field is not present in this state")
+      field(kk) {
+        let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          Ik = this.config.address[kk.id];
+        if (null != Ik) return LF(this, Ik), tF(this, Ik);
+        if (Fk) throw new RangeError("Field is not present in this state")
       }
       update() {
-        for (var CC = arguments.length, zC = new Array(CC), ZC = 0; ZC < CC; ZC++) zC[ZC] = arguments[ZC];
-        return ez(this, zC, !0)
+        for (var kk = arguments.length, Fk = new Array(kk), Ik = 0; Ik < kk; Ik++) Fk[Ik] = arguments[Ik];
+        return vF(this, Fk, !0)
       }
-      applyTransaction(CC) {
-        let zC, ZC = this.config,
+      applyTransaction(kk) {
+        let Fk, Ik = this.config,
           {
-            base: QC,
-            compartments: wC
-          } = ZC;
-        for (let nC of CC.effects) nC.is(nz.reconfigure) ? (ZC && (wC = new Map, ZC.compartments.forEach(((CC, zC) => wC.set(zC, CC))), ZC = null), wC.set(nC.value.compartment, nC.value.extension)) : nC.is(xz.reconfigure) ? (ZC = null, QC = nC.value) : nC.is(xz.appendConfig) && (ZC = null, QC = Kz(QC).concat(nC.value));
-        if (ZC) zC = CC.startState.values.slice();
+            base: Xk,
+            compartments: Tk
+          } = Ik;
+        for (let yk of kk.effects) yk.is(lF.reconfigure) ? (Ik && (Tk = new Map, Ik.compartments.forEach(((kk, Fk) => Tk.set(Fk, kk))), Ik = null), Tk.set(yk.value.compartment, yk.value.extension)) : yk.is(sF.reconfigure) ? (Ik = null, Xk = yk.value) : yk.is(sF.appendConfig) && (Ik = null, Xk = OF(Xk).concat(yk.value));
+        if (Ik) Fk = kk.startState.values.slice();
         else {
-          ZC = oz.resolve(QC, wC, this), zC = new Ez(ZC, this.doc, this.selection, ZC.dynamicSlots.map((() => null)), ((CC, zC) => zC.reconfigure(CC, this)), null).values
+          Ik = qF.resolve(Xk, Tk, this), Fk = new bF(Ik, this.doc, this.selection, Ik.dynamicSlots.map((() => null)), ((kk, Fk) => Fk.reconfigure(kk, this)), null).values
         }
-        let bC = CC.startState.facet(Nz) ? CC.newSelection : CC.newSelection.asSingle();
-        new Ez(ZC, CC.newDoc, bC, zC, ((zC, ZC) => ZC.update(zC, CC)), CC)
+        let ik = kk.startState.facet(jF) ? kk.newSelection : kk.newSelection.asSingle();
+        new bF(Ik, kk.newDoc, ik, Fk, ((Fk, Ik) => Ik.update(Fk, kk)), kk)
       }
-      replaceSelection(CC) {
-        return "string" == typeof CC && (CC = this.toText(CC)), this.changeByRange((zC => ({
+      replaceSelection(kk) {
+        return "string" == typeof kk && (kk = this.toText(kk)), this.changeByRange((Fk => ({
           changes: {
-            from: zC.from,
-            to: zC.to,
-            insert: CC
+            from: Fk.from,
+            to: Fk.to,
+            insert: kk
           },
-          range: TC.cursor(zC.from + CC.length)
+          range: fk.cursor(Fk.from + kk.length)
         })))
       }
-      changeByRange(CC) {
-        let zC = this.selection,
-          ZC = CC(zC.np[0]),
-          QC = this.changes(ZC.changes),
-          wC = [ZC.range],
-          bC = Kz(ZC.effects);
-        for (let nC = 1; nC < zC.np.length; nC++) {
-          let ZC = CC(zC.np[nC]),
-            fC = this.changes(ZC.changes),
-            oC = fC.map(QC);
-          for (let CC = 0; CC < nC; CC++) wC[CC] = wC[CC].map(oC);
-          let qC = QC.mapDesc(fC, !0);
-          wC.push(ZC.range.map(qC)), QC = QC.compose(oC), bC = xz.mapEffects(bC, oC).concat(xz.mapEffects(Kz(ZC.effects), qC))
+      changeByRange(kk) {
+        let Fk = this.selection,
+          Ik = kk(Fk.nZ[0]),
+          Xk = this.changes(Ik.changes),
+          Tk = [Ik.range],
+          ik = OF(Ik.effects);
+        for (let yk = 1; yk < Fk.nZ.length; yk++) {
+          let Ik = kk(Fk.nZ[yk]),
+            lk = this.changes(Ik.changes),
+            ak = lk.map(Xk);
+          for (let kk = 0; kk < yk; kk++) Tk[kk] = Tk[kk].map(ak);
+          let qk = Xk.mapDesc(lk, !0);
+          Tk.push(Ik.range.map(qk)), Xk = Xk.compose(ak), ik = sF.mapEffects(ik, ak).concat(sF.mapEffects(OF(Ik.effects), qk))
         }
         return {
-          changes: QC,
-          selection: TC.create(wC, zC.mainIndex),
-          effects: bC
+          changes: Xk,
+          selection: fk.create(Tk, Fk.mainIndex),
+          effects: ik
         }
       }
       changes() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-        return CC instanceof HC ? CC : HC.of(CC, this.doc.length, this.facet(Ez.lineSeparator))
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+        return kk instanceof uk ? kk : uk.of(kk, this.doc.length, this.facet(bF.lineSeparator))
       }
-      toText(CC) {
-        return SC.of(CC.split(this.facet(Ez.lineSeparator) || YC))
+      toText(kk) {
+        return wk.of(kk.split(this.facet(bF.lineSeparator) || nk))
       }
       sliceDoc() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.doc.length;
-        return this.doc.sliceString(CC, zC, this.lineBreak)
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.doc.length;
+        return this.doc.sliceString(kk, Fk, this.lineBreak)
       }
-      facet(CC) {
-        let zC = this.config.address[CC.id];
-        return null == zC ? CC.default : (qz(this, zC), Fz(this, zC))
+      facet(kk) {
+        let Fk = this.config.address[kk.id];
+        return null == Fk ? kk.default : (LF(this, Fk), tF(this, Fk))
       }
-      toJSON(CC) {
-        let zC = {
+      toJSON(kk) {
+        let Fk = {
           doc: this.sliceDoc(),
           selection: this.selection.toJSON()
         };
-        if (CC)
-          for (let ZC in CC) {
-            let QC = CC[ZC];
-            QC instanceof kC && null != this.config.address[QC.id] && (zC[ZC] = QC.spec.toJSON(this.field(CC[ZC]), this))
+        if (kk)
+          for (let Ik in kk) {
+            let Xk = kk[Ik];
+            Xk instanceof Mk && null != this.config.address[Xk.id] && (Fk[Ik] = Xk.spec.toJSON(this.field(kk[Ik]), this))
           }
-        return zC
+        return Fk
       }
-      static fromJSON(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          ZC = arguments.length > 2 ? arguments[2] : void 0;
-        if (!CC || "string" != typeof CC.doc) throw new RangeError("Invalid JSON representation for EditorState");
-        let QC = [];
-        if (ZC)
-          for (let wC in ZC)
-            if (Object.prototype.hasOwnProperty.call(CC, wC)) {
-              let zC = ZC[wC],
-                bC = CC[wC];
-              QC.push(zC.init((CC => zC.spec.fromJSON(bC, CC))))
-            } return Ez.create({
-          doc: CC.doc,
-          selection: TC.fromJSON(CC.selection),
-          extensions: zC.extensions ? QC.concat([zC.extensions]) : QC
+      static fromJSON(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          Ik = arguments.length > 2 ? arguments[2] : void 0;
+        if (!kk || "string" != typeof kk.doc) throw new RangeError("Invalid JSON representation for EditorState");
+        let Xk = [];
+        if (Ik)
+          for (let Tk in Ik)
+            if (Object.prototype.hasOwnProperty.call(kk, Tk)) {
+              let Fk = Ik[Tk],
+                ik = kk[Tk];
+              Xk.push(Fk.init((kk => Fk.spec.fromJSON(ik, kk))))
+            } return bF.create({
+          doc: kk.doc,
+          selection: fk.fromJSON(kk.selection),
+          extensions: Fk.extensions ? Xk.concat([Fk.extensions]) : Xk
         })
       }
       static create() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-          zC = oz.resolve(CC.extensions || [], new Map),
-          ZC = CC.doc instanceof SC ? CC.doc : SC.of((CC.doc || "").split(zC.staticFacet(Ez.lineSeparator) || YC)),
-          QC = CC.selection ? CC.selection instanceof TC ? CC.selection : TC.single(CC.selection.anchor, CC.selection.head) : TC.single(0);
-        return aC(QC, ZC.length), zC.staticFacet(Nz) || (QC = QC.asSingle()), new Ez(zC, ZC, QC, zC.dynamicSlots.map((() => null)), ((CC, zC) => zC.create(CC)), null)
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+          Fk = qF.resolve(kk.extensions || [], new Map),
+          Ik = kk.doc instanceof wk ? kk.doc : wk.of((kk.doc || "").split(Fk.staticFacet(bF.lineSeparator) || nk)),
+          Xk = kk.selection ? kk.selection instanceof fk ? kk.selection : fk.single(kk.selection.anchor, kk.selection.head) : fk.single(0);
+        return Bk(Xk, Ik.length), Fk.staticFacet(jF) || (Xk = Xk.asSingle()), new bF(Fk, Ik, Xk, Fk.dynamicSlots.map((() => null)), ((kk, Fk) => Fk.create(kk)), null)
       }
       get tabSize() {
-        return this.facet(Ez.tabSize)
+        return this.facet(bF.tabSize)
       }
       get lineBreak() {
-        return this.facet(Ez.lineSeparator) || "\n"
+        return this.facet(bF.lineSeparator) || "\n"
       }
       get readOnly() {
-        return this.facet(Pz)
+        return this.facet(xF)
       }
-      phrase(CC) {
-        for (var zC = arguments.length, ZC = new Array(zC > 1 ? zC - 1 : 0), QC = 1; QC < zC; QC++) ZC[QC - 1] = arguments[QC];
-        for (let wC of this.facet(Ez.phrases))
-          if (Object.prototype.hasOwnProperty.call(wC, CC)) {
-            CC = wC[CC];
+      phrase(kk) {
+        for (var Fk = arguments.length, Ik = new Array(Fk > 1 ? Fk - 1 : 0), Xk = 1; Xk < Fk; Xk++) Ik[Xk - 1] = arguments[Xk];
+        for (let Tk of this.facet(bF.phrases))
+          if (Object.prototype.hasOwnProperty.call(Tk, kk)) {
+            kk = Tk[kk];
             break
-          } return ZC.length && (CC = CC.replace(/\$(\$|\d*)/g, ((CC, zC) => {
-          if ("$" == zC) return "$";
-          let QC = +(zC || 1);
-          return !QC || QC > ZC.length ? CC : ZC[QC - 1]
-        }))), CC
+          } return Ik.length && (kk = kk.replace(/\$(\$|\d*)/g, ((kk, Fk) => {
+          if ("$" == Fk) return "$";
+          let Xk = +(Fk || 1);
+          return !Xk || Xk > Ik.length ? kk : Ik[Xk - 1]
+        }))), kk
       }
-      languageDataAt(CC, zC) {
-        let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
-          QC = [];
-        for (let wC of this.facet(Wz))
-          for (let bC of wC(this, zC, ZC)) Object.prototype.hasOwnProperty.call(bC, CC) && QC.push(bC[CC]);
-        return QC
+      languageDataAt(kk, Fk) {
+        let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
+          Xk = [];
+        for (let Tk of this.facet(ZF))
+          for (let ik of Tk(this, Fk, Ik)) Object.prototype.hasOwnProperty.call(ik, kk) && Xk.push(ik[kk]);
+        return Xk
       }
-      charCategorizer(CC) {
-        let zC = this.languageDataAt("wordChars", CC);
-        return Hz(zC.length ? zC[0] : "")
+      charCategorizer(kk) {
+        let Fk = this.languageDataAt("wordChars", kk);
+        return uF(Fk.length ? Fk[0] : "")
       }
-      wordAt(CC) {
+      wordAt(kk) {
         let {
-          text: zC,
-          from: ZC,
-          length: QC
-        } = this.doc.lineAt(CC), wC = this.charCategorizer(CC), bC = CC - ZC, nC = CC - ZC;
-        for (; bC > 0;) {
-          let CC = vC(zC, bC, !1);
-          if (wC(zC.slice(CC, bC)) != Yz.Word) break;
-          bC = CC
+          text: Fk,
+          from: Ik,
+          length: Xk
+        } = this.doc.lineAt(kk), Tk = this.charCategorizer(kk), ik = kk - Ik, yk = kk - Ik;
+        for (; ik > 0;) {
+          let kk = Sk(Fk, ik, !1);
+          if (Tk(Fk.slice(kk, ik)) != nF.Word) break;
+          ik = kk
         }
-        for (; nC < QC;) {
-          let CC = vC(zC, nC);
-          if (wC(zC.slice(nC, CC)) != Yz.Word) break;
-          nC = CC
+        for (; yk < Xk;) {
+          let kk = Sk(Fk, yk);
+          if (Tk(Fk.slice(yk, kk)) != nF.Word) break;
+          yk = kk
         }
-        return bC == nC ? null : TC.range(bC + ZC, nC + ZC)
+        return ik == yk ? null : fk.range(ik + Ik, yk + Ik)
       }
     }
 
-    function lz(CC, zC) {
-      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        QC = {};
-      for (let wC of CC)
-        for (let CC of Object.keys(wC)) {
-          let zC = wC[CC],
-            bC = QC[CC];
-          if (void 0 === bC) QC[CC] = zC;
-          else if (bC === zC || void 0 === zC);
+    function RF(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        Xk = {};
+      for (let Tk of kk)
+        for (let kk of Object.keys(Tk)) {
+          let Fk = Tk[kk],
+            ik = Xk[kk];
+          if (void 0 === ik) Xk[kk] = Fk;
+          else if (ik === Fk || void 0 === Fk);
           else {
-            if (!Object.hasOwnProperty.call(ZC, CC)) throw new Error("Config merge conflict for field " + CC);
-            QC[CC] = ZC[CC](bC, zC)
+            if (!Object.hasOwnProperty.call(Ik, kk)) throw new Error("Config merge conflict for field " + kk);
+            Xk[kk] = Ik[kk](ik, Fk)
           }
         }
-      for (let wC in zC) void 0 === QC[wC] && (QC[wC] = zC[wC]);
-      return QC
+      for (let Tk in Fk) void 0 === Xk[Tk] && (Xk[Tk] = Fk[Tk]);
+      return Xk
     }
-    Ez.allowMultipleSelections = Nz, Ez.tabSize = DC.define({
-      combine: CC => CC.length ? CC[0] : 4
-    }), Ez.lineSeparator = Mz, Ez.readOnly = Pz, Ez.phrases = DC.define({
-      compare(CC, zC) {
-        let ZC = Object.keys(CC),
-          QC = Object.keys(zC);
-        return ZC.length == QC.length && ZC.every((ZC => CC[ZC] == zC[ZC]))
+    bF.allowMultipleSelections = jF, bF.tabSize = Yk.define({
+      combine: kk => kk.length ? kk[0] : 4
+    }), bF.lineSeparator = eF, bF.readOnly = xF, bF.phrases = Yk.define({
+      compare(kk, Fk) {
+        let Ik = Object.keys(kk),
+          Xk = Object.keys(Fk);
+        return Ik.length == Xk.length && Ik.every((Ik => kk[Ik] == Fk[Ik]))
       }
-    }), Ez.languageData = Wz, Ez.changeFilter = gz, Ez.transactionFilter = Sz, Ez.transactionExtender = pz, nz.reconfigure = xz.define();
-    class Xz {
-      eq(CC) {
-        return this == CC
+    }), bF.languageData = ZF, bF.changeFilter = wF, bF.transactionFilter = HF, bF.transactionExtender = JF, lF.reconfigure = sF.define();
+    class UF {
+      eq(kk) {
+        return this == kk
       }
-      range(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : CC;
-        return uz.create(CC, zC, this)
-      }
-    }
-
-    function cz(CC, zC) {
-      return CC == zC || CC.constructor == zC.constructor && CC.eq(zC)
-    }
-    Xz.prototype.startSide = Xz.prototype.endSide = 0, Xz.prototype.point = !1, Xz.prototype.mapMode = dC.TrackDel;
-    class uz {
-      constructor(CC, zC, ZC) {
-        this.from = CC, this.to = zC, this.value = ZC
-      }
-      static create(CC, zC, ZC) {
-        return new uz(CC, zC, ZC)
+      range(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : kk;
+        return NF.create(kk, Fk, this)
       }
     }
 
-    function rz(CC, zC) {
-      return CC.from - zC.from || CC.value.startSide - zC.value.startSide
+    function CF(kk, Fk) {
+      return kk == Fk || kk.constructor == Fk.constructor && kk.eq(Fk)
     }
-    class sz {
-      constructor(CC, zC, ZC, QC) {
-        this.from = CC, this.to = zC, this.value = ZC, this.bQC = QC
+    UF.prototype.startSide = UF.prototype.endSide = 0, UF.prototype.point = !1, UF.prototype.mapMode = Gk.TrackDel;
+    class NF {
+      constructor(kk, Fk, Ik) {
+        this.from = kk, this.to = Fk, this.value = Ik
+      }
+      static create(kk, Fk, Ik) {
+        return new NF(kk, Fk, Ik)
+      }
+    }
+
+    function cF(kk, Fk) {
+      return kk.from - Fk.from || kk.value.startSide - Fk.value.startSide
+    }
+    class WF {
+      constructor(kk, Fk, Ik, Xk) {
+        this.from = kk, this.to = Fk, this.value = Ik, this.tXk = Xk
       }
       get length() {
         return this.to[this.to.length - 1]
       }
-      findIndex(CC, zC, ZC) {
-        let QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          wC = ZC ? this.to : this.from;
-        for (let bC = QC, nC = wC.length;;) {
-          if (bC == nC) return bC;
-          let QC = bC + nC >> 1,
-            fC = wC[QC] - CC || (ZC ? this.value[QC].endSide : this.value[QC].startSide) - zC;
-          if (QC == bC) return fC >= 0 ? bC : nC;
-          fC >= 0 ? nC = QC : bC = QC + 1
+      findIndex(kk, Fk, Ik) {
+        let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          Tk = Ik ? this.to : this.from;
+        for (let ik = Xk, yk = Tk.length;;) {
+          if (ik == yk) return ik;
+          let Xk = ik + yk >> 1,
+            lk = Tk[Xk] - kk || (Ik ? this.value[Xk].endSide : this.value[Xk].startSide) - Fk;
+          if (Xk == ik) return lk >= 0 ? ik : yk;
+          lk >= 0 ? yk = Xk : ik = Xk + 1
         }
       }
-      between(CC, zC, ZC, QC) {
-        for (let wC = this.findIndex(zC, -1e9, !0), bC = this.findIndex(ZC, 1e9, !1, wC); wC < bC; wC++)
-          if (!1 === QC(this.from[wC] + CC, this.to[wC] + CC, this.value[wC])) return !1
+      between(kk, Fk, Ik, Xk) {
+        for (let Tk = this.findIndex(Fk, -1e9, !0), ik = this.findIndex(Ik, 1e9, !1, Tk); Tk < ik; Tk++)
+          if (!1 === Xk(this.from[Tk] + kk, this.to[Tk] + kk, this.value[Tk])) return !1
       }
-      map(CC, zC) {
-        let ZC = [],
-          QC = [],
-          wC = [],
-          bC = -1,
-          nC = -1;
-        for (let fC = 0; fC < this.value.length; fC++) {
-          let oC, qC, FC = this.value[fC],
-            WC = this.from[fC] + CC,
-            NC = this.to[fC] + CC;
-          if (WC == NC) {
-            let CC = zC.mapPos(WC, FC.startSide, FC.mapMode);
-            if (null == CC) continue;
-            if (oC = qC = CC, FC.startSide != FC.endSide && (qC = zC.mapPos(WC, FC.endSide), qC < oC)) continue
-          } else if (oC = zC.mapPos(WC, FC.startSide), qC = zC.mapPos(NC, FC.endSide), oC > qC || oC == qC && FC.startSide > 0 && FC.endSide <= 0) continue;
-          (qC - oC || FC.endSide - FC.startSide) < 0 || (bC < 0 && (bC = oC), FC.point && (nC = Math.max(nC, qC - oC)), ZC.push(FC), QC.push(oC - bC), wC.push(qC - bC))
+      map(kk, Fk) {
+        let Ik = [],
+          Xk = [],
+          Tk = [],
+          ik = -1,
+          yk = -1;
+        for (let lk = 0; lk < this.value.length; lk++) {
+          let ak, qk, Lk = this.value[lk],
+            tk = this.from[lk] + kk,
+            Zk = this.to[lk] + kk;
+          if (tk == Zk) {
+            let kk = Fk.mapPos(tk, Lk.startSide, Lk.mapMode);
+            if (null == kk) continue;
+            if (ak = qk = kk, Lk.startSide != Lk.endSide && (qk = Fk.mapPos(tk, Lk.endSide), qk < ak)) continue
+          } else if (ak = Fk.mapPos(tk, Lk.startSide), qk = Fk.mapPos(Zk, Lk.endSide), ak > qk || ak == qk && Lk.startSide > 0 && Lk.endSide <= 0) continue;
+          (qk - ak || Lk.endSide - Lk.startSide) < 0 || (ik < 0 && (ik = ak), Lk.point && (yk = Math.max(yk, qk - ak)), Ik.push(Lk), Xk.push(ak - ik), Tk.push(qk - ik))
         }
         return {
-          mapped: ZC.length ? new sz(QC, wC, ZC, nC) : null,
-          pos: bC
+          mapped: Ik.length ? new WF(Xk, Tk, Ik, yk) : null,
+          pos: ik
         }
       }
     }
-    class Tz {
-      constructor(CC, zC, ZC, QC) {
-        this.chunkPos = CC, this.chunk = zC, this.nextLayer = ZC, this.bQC = QC
+    class fF {
+      constructor(kk, Fk, Ik, Xk) {
+        this.chunkPos = kk, this.chunk = Fk, this.nextLayer = Ik, this.tXk = Xk
       }
-      static create(CC, zC, ZC, QC) {
-        return new Tz(CC, zC, ZC, QC)
+      static create(kk, Fk, Ik, Xk) {
+        return new fF(kk, Fk, Ik, Xk)
       }
       get length() {
-        let CC = this.chunk.length - 1;
-        return CC < 0 ? 0 : Math.max(this.chunkEnd(CC), this.nextLayer.length)
+        let kk = this.chunk.length - 1;
+        return kk < 0 ? 0 : Math.max(this.chunkEnd(kk), this.nextLayer.length)
       }
       get size() {
-        if (this.fg) return 0;
-        let CC = this.nextLayer.size;
-        for (let zC of this.chunk) CC += zC.value.length;
-        return CC
+        if (this.ye) return 0;
+        let kk = this.nextLayer.size;
+        for (let Fk of this.chunk) kk += Fk.value.length;
+        return kk
       }
-      chunkEnd(CC) {
-        return this.chunkPos[CC] + this.chunk[CC].length
+      chunkEnd(kk) {
+        return this.chunkPos[kk] + this.chunk[kk].length
       }
-      update(CC) {
+      update(kk) {
         let {
-          add: zC = [],
-          sort: ZC = !1,
-          filterFrom: QC = 0,
-          filterTo: wC = this.length
-        } = CC, bC = CC.filter;
-        if (0 == zC.length && !bC) return this;
-        if (ZC && (zC = zC.slice().sort(rz)), this.fg) return zC.length ? Tz.of(zC) : this;
-        let nC = new Dz(this, null, -1).goto(0),
-          fC = 0,
-          oC = [],
-          qC = new az;
-        for (; nC.value || fC < zC.length;)
-          if (fC < zC.length && (nC.from - zC[fC].from || nC.startSide - zC[fC].value.startSide) >= 0) {
-            let CC = zC[fC++];
-            qC.addInner(CC.from, CC.to, CC.value) || oC.push(CC)
-          } else 1 == nC.rangeIndex && nC.chunkIndex < this.chunk.length && (fC == zC.length || this.chunkEnd(nC.chunkIndex) < zC[fC].from) && (!bC || QC > this.chunkEnd(nC.chunkIndex) || wC < this.chunkPos[nC.chunkIndex]) && qC.addChunk(this.chunkPos[nC.chunkIndex], this.chunk[nC.chunkIndex]) ? nC.nextChunk() : ((!bC || QC > nC.to || wC < nC.from || bC(nC.from, nC.to, nC.value)) && (qC.addInner(nC.from, nC.to, nC.value) || oC.push(uz.create(nC.from, nC.to, nC.value))), nC.next());
-        return qC.finishInner(this.nextLayer.fg && !oC.length ? Tz.empty : this.nextLayer.update({
-          add: oC,
-          filter: bC,
-          filterFrom: QC,
-          filterTo: wC
+          add: Fk = [],
+          sort: Ik = !1,
+          filterFrom: Xk = 0,
+          filterTo: Tk = this.length
+        } = kk, ik = kk.filter;
+        if (0 == Fk.length && !ik) return this;
+        if (Ik && (Fk = Fk.slice().sort(cF)), this.ye) return Fk.length ? fF.of(Fk) : this;
+        let yk = new YF(this, null, -1).goto(0),
+          lk = 0,
+          ak = [],
+          qk = new BF;
+        for (; yk.value || lk < Fk.length;)
+          if (lk < Fk.length && (yk.from - Fk[lk].from || yk.startSide - Fk[lk].value.startSide) >= 0) {
+            let kk = Fk[lk++];
+            qk.addInner(kk.from, kk.to, kk.value) || ak.push(kk)
+          } else 1 == yk.rangeIndex && yk.chunkIndex < this.chunk.length && (lk == Fk.length || this.chunkEnd(yk.chunkIndex) < Fk[lk].from) && (!ik || Xk > this.chunkEnd(yk.chunkIndex) || Tk < this.chunkPos[yk.chunkIndex]) && qk.addChunk(this.chunkPos[yk.chunkIndex], this.chunk[yk.chunkIndex]) ? yk.nextChunk() : ((!ik || Xk > yk.to || Tk < yk.from || ik(yk.from, yk.to, yk.value)) && (qk.addInner(yk.from, yk.to, yk.value) || ak.push(NF.create(yk.from, yk.to, yk.value))), yk.next());
+        return qk.finishInner(this.nextLayer.ye && !ak.length ? fF.empty : this.nextLayer.update({
+          add: ak,
+          filter: ik,
+          filterFrom: Xk,
+          filterTo: Tk
         }))
       }
-      map(CC) {
-        if (CC.empty || this.fg) return this;
-        let zC = [],
-          ZC = [],
-          QC = -1;
-        for (let bC = 0; bC < this.chunk.length; bC++) {
-          let wC = this.chunkPos[bC],
-            nC = this.chunk[bC],
-            fC = CC.touchesRange(wC, wC + nC.length);
-          if (!1 === fC) QC = Math.max(QC, nC.bQC), zC.push(nC), ZC.push(CC.mapPos(wC));
-          else if (!0 === fC) {
+      map(kk) {
+        if (kk.empty || this.ye) return this;
+        let Fk = [],
+          Ik = [],
+          Xk = -1;
+        for (let ik = 0; ik < this.chunk.length; ik++) {
+          let Tk = this.chunkPos[ik],
+            yk = this.chunk[ik],
+            lk = kk.touchesRange(Tk, Tk + yk.length);
+          if (!1 === lk) Xk = Math.max(Xk, yk.tXk), Fk.push(yk), Ik.push(kk.mapPos(Tk));
+          else if (!0 === lk) {
             let {
-              mapped: bC,
-              pos: fC
-            } = nC.map(wC, CC);
-            bC && (QC = Math.max(QC, bC.bQC), zC.push(bC), ZC.push(fC))
+              mapped: ik,
+              pos: lk
+            } = yk.map(Tk, kk);
+            ik && (Xk = Math.max(Xk, ik.tXk), Fk.push(ik), Ik.push(lk))
           }
         }
-        let wC = this.nextLayer.map(CC);
-        return 0 == zC.length ? wC : new Tz(ZC, zC, wC || Tz.empty, QC)
+        let Tk = this.nextLayer.map(kk);
+        return 0 == Fk.length ? Tk : new fF(Ik, Fk, Tk || fF.empty, Xk)
       }
-      between(CC, zC, ZC) {
-        if (!this.fg) {
-          for (let QC = 0; QC < this.chunk.length; QC++) {
-            let wC = this.chunkPos[QC],
-              bC = this.chunk[QC];
-            if (zC >= wC && CC <= wC + bC.length && !1 === bC.between(wC, CC - wC, zC - wC, ZC)) return
+      between(kk, Fk, Ik) {
+        if (!this.ye) {
+          for (let Xk = 0; Xk < this.chunk.length; Xk++) {
+            let Tk = this.chunkPos[Xk],
+              ik = this.chunk[Xk];
+            if (Fk >= Tk && kk <= Tk + ik.length && !1 === ik.between(Tk, kk - Tk, Fk - Tk, Ik)) return
           }
-          this.nextLayer.between(CC, zC, ZC)
+          this.nextLayer.between(kk, Fk, Ik)
         }
       }
       iter() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return jz.from([this]).goto(CC)
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return AF.from([this]).goto(kk)
       }
-      get fg() {
+      get ye() {
         return this.nextLayer == this
       }
-      static iter(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return jz.from(CC).goto(zC)
+      static iter(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return AF.from(kk).goto(Fk)
       }
-      static compare(CC, zC, ZC, QC) {
-        let wC = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
-          bC = CC.filter((CC => CC.bQC > 0 || !CC.fg && CC.bQC >= wC)),
-          nC = zC.filter((CC => CC.bQC > 0 || !CC.fg && CC.bQC >= wC)),
-          fC = tz(bC, nC, ZC),
-          oC = new Lz(bC, fC, wC),
-          qC = new Lz(nC, fC, wC);
-        ZC.iterGaps(((CC, zC, ZC) => Uz(oC, CC, qC, zC, ZC, QC))), ZC.empty && 0 == ZC.length && Uz(oC, 0, qC, 0, 0, QC)
+      static compare(kk, Fk, Ik, Xk) {
+        let Tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
+          ik = kk.filter((kk => kk.tXk > 0 || !kk.ye && kk.tXk >= Tk)),
+          yk = Fk.filter((kk => kk.tXk > 0 || !kk.ye && kk.tXk >= Tk)),
+          lk = dF(ik, yk, Ik),
+          ak = new mF(ik, lk, Tk),
+          qk = new mF(yk, lk, Tk);
+        Ik.iterGaps(((kk, Fk, Ik) => hF(ak, kk, qk, Fk, Ik, Xk))), Ik.empty && 0 == Ik.length && hF(ak, 0, qk, 0, 0, Xk)
       }
-      static eq(CC, zC) {
-        let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          QC = arguments.length > 3 ? arguments[3] : void 0;
-        null == QC && (QC = 999999999);
-        let wC = CC.filter((CC => !CC.fg && zC.indexOf(CC) < 0)),
-          bC = zC.filter((zC => !zC.fg && CC.indexOf(zC) < 0));
-        if (wC.length != bC.length) return !1;
-        if (!wC.length) return !0;
-        let nC = tz(wC, bC),
-          fC = new Lz(wC, nC, 0).goto(ZC),
-          oC = new Lz(bC, nC, 0).goto(ZC);
+      static eq(kk, Fk) {
+        let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          Xk = arguments.length > 3 ? arguments[3] : void 0;
+        null == Xk && (Xk = 999999999);
+        let Tk = kk.filter((kk => !kk.ye && Fk.indexOf(kk) < 0)),
+          ik = Fk.filter((Fk => !Fk.ye && kk.indexOf(Fk) < 0));
+        if (Tk.length != ik.length) return !1;
+        if (!Tk.length) return !0;
+        let yk = dF(Tk, ik),
+          lk = new mF(Tk, yk, 0).goto(Ik),
+          ak = new mF(ik, yk, 0).goto(Ik);
         for (;;) {
-          if (fC.to != oC.to || !Bz(fC.active, oC.active) || fC.point && (!oC.point || !cz(fC.point, oC.point))) return !1;
-          if (fC.to > QC) return !0;
-          fC.next(), oC.next()
+          if (lk.to != ak.to || !rF(lk.active, ak.active) || lk.point && (!ak.point || !CF(lk.point, ak.point))) return !1;
+          if (lk.to > Xk) return !0;
+          lk.next(), ak.next()
         }
       }
-      static spans(CC, zC, ZC, QC) {
-        let wC = new Lz(CC, null, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1).goto(zC),
-          bC = zC,
-          nC = wC.openStart;
+      static spans(kk, Fk, Ik, Xk) {
+        let Tk = new mF(kk, null, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1).goto(Fk),
+          ik = Fk,
+          yk = Tk.openStart;
         for (;;) {
-          let CC = Math.min(wC.to, ZC);
-          if (wC.point) {
-            let ZC = wC.activeForPoint(wC.to),
-              fC = wC.pointFrom < zC ? ZC.length + 1 : wC.point.startSide < 0 ? ZC.length : Math.min(ZC.length, nC);
-            QC.point(bC, CC, wC.point, ZC, fC, wC.pointRank), nC = Math.min(wC.openEnd(CC), ZC.length)
-          } else CC > bC && (QC.span(bC, CC, wC.active, nC), nC = wC.openEnd(CC));
-          if (wC.to > ZC) return nC + (wC.point && wC.to > ZC ? 1 : 0);
-          bC = wC.to, wC.next()
+          let kk = Math.min(Tk.to, Ik);
+          if (Tk.point) {
+            let Ik = Tk.activeForPoint(Tk.to),
+              lk = Tk.pointFrom < Fk ? Ik.length + 1 : Tk.point.startSide < 0 ? Ik.length : Math.min(Ik.length, yk);
+            Xk.point(ik, kk, Tk.point, Ik, lk, Tk.pointRank), yk = Math.min(Tk.openEnd(kk), Ik.length)
+          } else kk > ik && (Xk.span(ik, kk, Tk.active, yk), yk = Tk.openEnd(kk));
+          if (Tk.to > Ik) return yk + (Tk.point && Tk.to > Ik ? 1 : 0);
+          ik = Tk.to, Tk.next()
         }
       }
-      static of (CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          ZC = new az;
-        for (let QC of CC instanceof uz ? [CC] : zC ? function(CC) {
-            if (CC.length > 1)
-              for (let zC = CC[0], ZC = 1; ZC < CC.length; ZC++) {
-                let QC = CC[ZC];
-                if (rz(zC, QC) > 0) return CC.slice().sort(rz);
-                zC = QC
+      static of (kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          Ik = new BF;
+        for (let Xk of kk instanceof NF ? [kk] : Fk ? function(kk) {
+            if (kk.length > 1)
+              for (let Fk = kk[0], Ik = 1; Ik < kk.length; Ik++) {
+                let Xk = kk[Ik];
+                if (cF(Fk, Xk) > 0) return kk.slice().sort(cF);
+                Fk = Xk
               }
-            return CC
-          }(CC) : CC) ZC.add(QC.from, QC.to, QC.value);
-        return ZC.finish()
+            return kk
+          }(kk) : kk) Ik.add(Xk.from, Xk.to, Xk.value);
+        return Ik.finish()
       }
-      static join(CC) {
-        if (!CC.length) return Tz.empty;
-        let zC = CC[CC.length - 1];
-        for (let ZC = CC.length - 2; ZC >= 0; ZC--)
-          for (let QC = CC[ZC]; QC != Tz.empty; QC = QC.nextLayer) zC = new Tz(QC.chunkPos, QC.chunk, zC, Math.max(QC.bQC, zC.bQC));
-        return zC
+      static join(kk) {
+        if (!kk.length) return fF.empty;
+        let Fk = kk[kk.length - 1];
+        for (let Ik = kk.length - 2; Ik >= 0; Ik--)
+          for (let Xk = kk[Ik]; Xk != fF.empty; Xk = Xk.nextLayer) Fk = new fF(Xk.chunkPos, Xk.chunk, Fk, Math.max(Xk.tXk, Fk.tXk));
+        return Fk
       }
     }
-    Tz.empty = new Tz([], [], null, -1), Tz.empty.nextLayer = Tz.empty;
-    class az {
-      finishChunk(CC) {
-        this.chunks.push(new sz(this.from, this.to, this.value, this.bQC)), this.chunkPos.push(this.chunkStart), this.chunkStart = -1, this.setMaxPoint = Math.max(this.setMaxPoint, this.bQC), this.bQC = -1, CC && (this.from = [], this.to = [], this.value = [])
+    fF.empty = new fF([], [], null, -1), fF.empty.nextLayer = fF.empty;
+    class BF {
+      finishChunk(kk) {
+        this.chunks.push(new WF(this.from, this.to, this.value, this.tXk)), this.chunkPos.push(this.chunkStart), this.chunkStart = -1, this.setMaxPoint = Math.max(this.setMaxPoint, this.tXk), this.tXk = -1, kk && (this.from = [], this.to = [], this.value = [])
       }
       constructor() {
-        this.chunks = [], this.chunkPos = [], this.chunkStart = -1, this.last = null, this.lastFrom = -1e9, this.lastTo = -1e9, this.from = [], this.to = [], this.value = [], this.bQC = -1, this.setMaxPoint = -1, this.nextLayer = null
+        this.chunks = [], this.chunkPos = [], this.chunkStart = -1, this.last = null, this.lastFrom = -1e9, this.lastTo = -1e9, this.from = [], this.to = [], this.value = [], this.tXk = -1, this.setMaxPoint = -1, this.nextLayer = null
       }
-      add(CC, zC, ZC) {
-        this.addInner(CC, zC, ZC) || (this.nextLayer || (this.nextLayer = new az)).add(CC, zC, ZC)
+      add(kk, Fk, Ik) {
+        this.addInner(kk, Fk, Ik) || (this.nextLayer || (this.nextLayer = new BF)).add(kk, Fk, Ik)
       }
-      addInner(CC, zC, ZC) {
-        let QC = CC - this.lastTo || ZC.startSide - this.last.endSide;
-        if (QC <= 0 && (CC - this.lastFrom || ZC.startSide - this.last.startSide) < 0) throw new Error("Ranges must be added sorted by `from` position and `startSide`");
-        return !(QC < 0) && (250 == this.from.length && this.finishChunk(!0), this.chunkStart < 0 && (this.chunkStart = CC), this.from.push(CC - this.chunkStart), this.to.push(zC - this.chunkStart), this.last = ZC, this.lastFrom = CC, this.lastTo = zC, this.value.push(ZC), ZC.point && (this.bQC = Math.max(this.bQC, zC - CC)), !0)
+      addInner(kk, Fk, Ik) {
+        let Xk = kk - this.lastTo || Ik.startSide - this.last.endSide;
+        if (Xk <= 0 && (kk - this.lastFrom || Ik.startSide - this.last.startSide) < 0) throw new Error("Ranges must be added sorted by `from` position and `startSide`");
+        return !(Xk < 0) && (250 == this.from.length && this.finishChunk(!0), this.chunkStart < 0 && (this.chunkStart = kk), this.from.push(kk - this.chunkStart), this.to.push(Fk - this.chunkStart), this.last = Ik, this.lastFrom = kk, this.lastTo = Fk, this.value.push(Ik), Ik.point && (this.tXk = Math.max(this.tXk, Fk - kk)), !0)
       }
-      addChunk(CC, zC) {
-        if ((CC - this.lastTo || zC.value[0].startSide - this.last.endSide) < 0) return !1;
-        this.from.length && this.finishChunk(!0), this.setMaxPoint = Math.max(this.setMaxPoint, zC.bQC), this.chunks.push(zC), this.chunkPos.push(CC);
-        let ZC = zC.value.length - 1;
-        return this.last = zC.value[ZC], this.lastFrom = zC.from[ZC] + CC, this.lastTo = zC.to[ZC] + CC, !0
+      addChunk(kk, Fk) {
+        if ((kk - this.lastTo || Fk.value[0].startSide - this.last.endSide) < 0) return !1;
+        this.from.length && this.finishChunk(!0), this.setMaxPoint = Math.max(this.setMaxPoint, Fk.tXk), this.chunks.push(Fk), this.chunkPos.push(kk);
+        let Ik = Fk.value.length - 1;
+        return this.last = Fk.value[Ik], this.lastFrom = Fk.from[Ik] + kk, this.lastTo = Fk.to[Ik] + kk, !0
       }
       finish() {
-        return this.finishInner(Tz.empty)
+        return this.finishInner(fF.empty)
       }
-      finishInner(CC) {
-        if (this.from.length && this.finishChunk(!1), 0 == this.chunks.length) return CC;
-        let zC = Tz.create(this.chunkPos, this.chunks, this.nextLayer ? this.nextLayer.finishInner(CC) : CC, this.setMaxPoint);
-        return this.from = null, zC
+      finishInner(kk) {
+        if (this.from.length && this.finishChunk(!1), 0 == this.chunks.length) return kk;
+        let Fk = fF.create(this.chunkPos, this.chunks, this.nextLayer ? this.nextLayer.finishInner(kk) : kk, this.setMaxPoint);
+        return this.from = null, Fk
       }
     }
 
-    function tz(CC, zC, ZC) {
-      let QC = new Map;
-      for (let bC of CC)
-        for (let CC = 0; CC < bC.chunk.length; CC++) bC.chunk[CC].bQC <= 0 && QC.set(bC.chunk[CC], bC.chunkPos[CC]);
-      let wC = new Set;
-      for (let bC of zC)
-        for (let CC = 0; CC < bC.chunk.length; CC++) {
-          let zC = QC.get(bC.chunk[CC]);
-          null == zC || (ZC ? ZC.mapPos(zC) : zC) != bC.chunkPos[CC] || (null === ZC || void 0 === ZC ? void 0 : ZC.touchesRange(zC, zC + bC.chunk[CC].length)) || wC.add(bC.chunk[CC])
+    function dF(kk, Fk, Ik) {
+      let Xk = new Map;
+      for (let ik of kk)
+        for (let kk = 0; kk < ik.chunk.length; kk++) ik.chunk[kk].tXk <= 0 && Xk.set(ik.chunk[kk], ik.chunkPos[kk]);
+      let Tk = new Set;
+      for (let ik of Fk)
+        for (let kk = 0; kk < ik.chunk.length; kk++) {
+          let Fk = Xk.get(ik.chunk[kk]);
+          null == Fk || (Ik ? Ik.mapPos(Fk) : Fk) != ik.chunkPos[kk] || (null === Ik || void 0 === Ik ? void 0 : Ik.touchesRange(Fk, Fk + ik.chunk[kk].length)) || Tk.add(ik.chunk[kk])
         }
-      return wC
+      return Tk
     }
-    class Dz {
-      constructor(CC, zC, ZC) {
-        let QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.layer = CC, this.skip = zC, this.nQC = ZC, this.rank = QC
+    class YF {
+      constructor(kk, Fk, Ik) {
+        let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.layer = kk, this.skip = Fk, this.ZXk = Ik, this.rank = Xk
       }
       get startSide() {
         return this.value ? this.value.startSide : 0
@@ -1923,24 +1923,24 @@ export const modules = {
       get endSide() {
         return this.value ? this.value.endSide : 0
       }
-      goto(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        return this.chunkIndex = this.rangeIndex = 0, this.gotoInner(CC, zC, !1), this
+      goto(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        return this.chunkIndex = this.rangeIndex = 0, this.gotoInner(kk, Fk, !1), this
       }
-      gotoInner(CC, zC, ZC) {
+      gotoInner(kk, Fk, Ik) {
         for (; this.chunkIndex < this.layer.chunk.length;) {
-          let zC = this.layer.chunk[this.chunkIndex];
-          if (!(this.skip && this.skip.has(zC) || this.layer.chunkEnd(this.chunkIndex) < CC || zC.bQC < this.nQC)) break;
-          this.chunkIndex++, ZC = !1
+          let Fk = this.layer.chunk[this.chunkIndex];
+          if (!(this.skip && this.skip.has(Fk) || this.layer.chunkEnd(this.chunkIndex) < kk || Fk.tXk < this.ZXk)) break;
+          this.chunkIndex++, Ik = !1
         }
         if (this.chunkIndex < this.layer.chunk.length) {
-          let QC = this.layer.chunk[this.chunkIndex].findIndex(CC - this.layer.chunkPos[this.chunkIndex], zC, !0);
-          (!ZC || this.rangeIndex < QC) && this.setRangeIndex(QC)
+          let Xk = this.layer.chunk[this.chunkIndex].findIndex(kk - this.layer.chunkPos[this.chunkIndex], Fk, !0);
+          (!Ik || this.rangeIndex < Xk) && this.setRangeIndex(Xk)
         }
         this.next()
       }
-      forward(CC, zC) {
-        (this.to - CC || this.endSide - zC) < 0 && this.gotoInner(CC, zC, !0)
+      forward(kk, Fk) {
+        (this.to - kk || this.endSide - Fk) < 0 && this.gotoInner(kk, Fk, !0)
       }
       next() {
         for (;;) {
@@ -1948,203 +1948,203 @@ export const modules = {
             this.from = this.to = 1e9, this.value = null;
             break
           } {
-            let CC = this.layer.chunkPos[this.chunkIndex],
-              zC = this.layer.chunk[this.chunkIndex],
-              ZC = CC + zC.from[this.rangeIndex];
-            if (this.from = ZC, this.to = CC + zC.to[this.rangeIndex], this.value = zC.value[this.rangeIndex], this.setRangeIndex(this.rangeIndex + 1), this.nQC < 0 || this.value.point && this.to - this.from >= this.nQC) break
+            let kk = this.layer.chunkPos[this.chunkIndex],
+              Fk = this.layer.chunk[this.chunkIndex],
+              Ik = kk + Fk.from[this.rangeIndex];
+            if (this.from = Ik, this.to = kk + Fk.to[this.rangeIndex], this.value = Fk.value[this.rangeIndex], this.setRangeIndex(this.rangeIndex + 1), this.ZXk < 0 || this.value.point && this.to - this.from >= this.ZXk) break
           }
         }
       }
-      setRangeIndex(CC) {
-        if (CC == this.layer.chunk[this.chunkIndex].value.length) {
+      setRangeIndex(kk) {
+        if (kk == this.layer.chunk[this.chunkIndex].value.length) {
           if (this.chunkIndex++, this.skip)
             for (; this.chunkIndex < this.layer.chunk.length && this.skip.has(this.layer.chunk[this.chunkIndex]);) this.chunkIndex++;
           this.rangeIndex = 0
-        } else this.rangeIndex = CC
+        } else this.rangeIndex = kk
       }
       nextChunk() {
         this.chunkIndex++, this.rangeIndex = 0, this.next()
       }
-      compare(CC) {
-        return this.from - CC.from || this.startSide - CC.startSide || this.rank - CC.rank || this.to - CC.to || this.endSide - CC.endSide
+      compare(kk) {
+        return this.from - kk.from || this.startSide - kk.startSide || this.rank - kk.rank || this.to - kk.to || this.endSide - kk.endSide
       }
     }
-    class jz {
-      constructor(CC) {
-        this.heap = CC
+    class AF {
+      constructor(kk) {
+        this.heap = kk
       }
-      static from(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
-          QC = [];
-        for (let wC = 0; wC < CC.length; wC++)
-          for (let bC = CC[wC]; !bC.fg; bC = bC.nextLayer) bC.bQC >= ZC && QC.push(new Dz(bC, zC, ZC, wC));
-        return 1 == QC.length ? QC[0] : new jz(QC)
+      static from(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
+          Xk = [];
+        for (let Tk = 0; Tk < kk.length; Tk++)
+          for (let ik = kk[Tk]; !ik.ye; ik = ik.nextLayer) ik.tXk >= Ik && Xk.push(new YF(ik, Fk, Ik, Tk));
+        return 1 == Xk.length ? Xk[0] : new AF(Xk)
       }
       get startSide() {
         return this.value ? this.value.startSide : 0
       }
-      goto(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        for (let ZC of this.heap) ZC.goto(CC, zC);
-        for (let ZC = this.heap.length >> 1; ZC >= 0; ZC--) yz(this.heap, ZC);
+      goto(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        for (let Ik of this.heap) Ik.goto(kk, Fk);
+        for (let Ik = this.heap.length >> 1; Ik >= 0; Ik--) gF(this.heap, Ik);
         return this.next(), this
       }
-      forward(CC, zC) {
-        for (let ZC of this.heap) ZC.forward(CC, zC);
-        for (let ZC = this.heap.length >> 1; ZC >= 0; ZC--) yz(this.heap, ZC);
-        (this.to - CC || this.value.endSide - zC) < 0 && this.next()
+      forward(kk, Fk) {
+        for (let Ik of this.heap) Ik.forward(kk, Fk);
+        for (let Ik = this.heap.length >> 1; Ik >= 0; Ik--) gF(this.heap, Ik);
+        (this.to - kk || this.value.endSide - Fk) < 0 && this.next()
       }
       next() {
         if (0 == this.heap.length) this.from = this.to = 1e9, this.value = null, this.rank = -1;
         else {
-          let CC = this.heap[0];
-          this.from = CC.from, this.to = CC.to, this.value = CC.value, this.rank = CC.rank, CC.value && CC.next(), yz(this.heap, 0)
+          let kk = this.heap[0];
+          this.from = kk.from, this.to = kk.to, this.value = kk.value, this.rank = kk.rank, kk.value && kk.next(), gF(this.heap, 0)
         }
       }
     }
 
-    function yz(CC, zC) {
-      for (let ZC = CC[zC];;) {
-        let QC = 1 + (zC << 1);
-        if (QC >= CC.length) break;
-        let wC = CC[QC];
-        if (QC + 1 < CC.length && wC.compare(CC[QC + 1]) >= 0 && (wC = CC[QC + 1], QC++), ZC.compare(wC) < 0) break;
-        CC[QC] = ZC, CC[zC] = wC, zC = QC
+    function gF(kk, Fk) {
+      for (let Ik = kk[Fk];;) {
+        let Xk = 1 + (Fk << 1);
+        if (Xk >= kk.length) break;
+        let Tk = kk[Xk];
+        if (Xk + 1 < kk.length && Tk.compare(kk[Xk + 1]) >= 0 && (Tk = kk[Xk + 1], Xk++), Ik.compare(Tk) < 0) break;
+        kk[Xk] = Ik, kk[Fk] = Tk, Fk = Xk
       }
     }
-    class Lz {
-      constructor(CC, zC, ZC) {
-        this.nQC = ZC, this.active = [], this.activeTo = [], this.activeRank = [], this.minActive = -1, this.point = null, this.pointFrom = 0, this.pointRank = 0, this.to = -1e9, this.endSide = 0, this.openStart = -1, this.cursor = jz.from(CC, zC, ZC)
+    class mF {
+      constructor(kk, Fk, Ik) {
+        this.ZXk = Ik, this.active = [], this.activeTo = [], this.activeRank = [], this.minActive = -1, this.point = null, this.pointFrom = 0, this.pointRank = 0, this.to = -1e9, this.endSide = 0, this.openStart = -1, this.cursor = AF.from(kk, Fk, Ik)
       }
-      goto(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        return this.cursor.goto(CC, zC), this.active.length = this.activeTo.length = this.activeRank.length = 0, this.minActive = -1, this.to = CC, this.endSide = zC, this.openStart = -1, this.next(), this
+      goto(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        return this.cursor.goto(kk, Fk), this.active.length = this.activeTo.length = this.activeRank.length = 0, this.minActive = -1, this.to = kk, this.endSide = Fk, this.openStart = -1, this.next(), this
       }
-      forward(CC, zC) {
-        for (; this.minActive > -1 && (this.activeTo[this.minActive] - CC || this.active[this.minActive].endSide - zC) < 0;) this.removeActive(this.minActive);
-        this.cursor.forward(CC, zC)
+      forward(kk, Fk) {
+        for (; this.minActive > -1 && (this.activeTo[this.minActive] - kk || this.active[this.minActive].endSide - Fk) < 0;) this.removeActive(this.minActive);
+        this.cursor.forward(kk, Fk)
       }
-      removeActive(CC) {
-        Oz(this.active, CC), Oz(this.activeTo, CC), Oz(this.activeRank, CC), this.minActive = Vz(this.active, this.activeTo)
+      removeActive(kk) {
+        DF(this.active, kk), DF(this.activeTo, kk), DF(this.activeRank, kk), this.minActive = kI(this.active, this.activeTo)
       }
-      addActive(CC) {
-        let zC = 0,
+      addActive(kk) {
+        let Fk = 0,
           {
-            value: ZC,
-            to: QC,
-            rank: wC
+            value: Ik,
+            to: Xk,
+            rank: Tk
           } = this.cursor;
-        for (; zC < this.activeRank.length && (wC - this.activeRank[zC] || QC - this.activeTo[zC]) > 0;) zC++;
-        kz(this.active, zC, ZC), kz(this.activeTo, zC, QC), kz(this.activeRank, zC, wC), CC && kz(CC, zC, this.cursor.from), this.minActive = Vz(this.active, this.activeTo)
+        for (; Fk < this.activeRank.length && (Tk - this.activeRank[Fk] || Xk - this.activeTo[Fk]) > 0;) Fk++;
+        MF(this.active, Fk, Ik), MF(this.activeTo, Fk, Xk), MF(this.activeRank, Fk, Tk), kk && MF(kk, Fk, this.cursor.from), this.minActive = kI(this.active, this.activeTo)
       }
       next() {
-        let CC = this.to,
-          zC = this.point;
+        let kk = this.to,
+          Fk = this.point;
         this.point = null;
-        let ZC = this.openStart < 0 ? [] : null;
+        let Ik = this.openStart < 0 ? [] : null;
         for (;;) {
-          let QC = this.minActive;
-          if (QC > -1 && (this.activeTo[QC] - this.cursor.from || this.active[QC].endSide - this.cursor.startSide) < 0) {
-            if (this.activeTo[QC] > CC) {
-              this.to = this.activeTo[QC], this.endSide = this.active[QC].endSide;
+          let Xk = this.minActive;
+          if (Xk > -1 && (this.activeTo[Xk] - this.cursor.from || this.active[Xk].endSide - this.cursor.startSide) < 0) {
+            if (this.activeTo[Xk] > kk) {
+              this.to = this.activeTo[Xk], this.endSide = this.active[Xk].endSide;
               break
             }
-            this.removeActive(QC), ZC && Oz(ZC, QC)
+            this.removeActive(Xk), Ik && DF(Ik, Xk)
           } else {
             if (!this.cursor.value) {
               this.to = this.endSide = 1e9;
               break
             }
-            if (this.cursor.from > CC) {
+            if (this.cursor.from > kk) {
               this.to = this.cursor.from, this.endSide = this.cursor.startSide;
               break
             } {
-              let CC = this.cursor.value;
-              if (CC.point) {
-                if (!(zC && this.cursor.to == this.to && this.cursor.from < this.cursor.to)) {
-                  this.point = CC, this.pointFrom = this.cursor.from, this.pointRank = this.cursor.rank, this.to = this.cursor.to, this.endSide = CC.endSide, this.cursor.next(), this.forward(this.to, this.endSide);
+              let kk = this.cursor.value;
+              if (kk.point) {
+                if (!(Fk && this.cursor.to == this.to && this.cursor.from < this.cursor.to)) {
+                  this.point = kk, this.pointFrom = this.cursor.from, this.pointRank = this.cursor.rank, this.to = this.cursor.to, this.endSide = kk.endSide, this.cursor.next(), this.forward(this.to, this.endSide);
                   break
                 }
                 this.cursor.next()
-              } else this.addActive(ZC), this.cursor.next()
+              } else this.addActive(Ik), this.cursor.next()
             }
           }
         }
-        if (ZC) {
+        if (Ik) {
           this.openStart = 0;
-          for (let zC = ZC.length - 1; zC >= 0 && ZC[zC] < CC; zC--) this.openStart++
+          for (let Fk = Ik.length - 1; Fk >= 0 && Ik[Fk] < kk; Fk--) this.openStart++
         }
       }
-      activeForPoint(CC) {
+      activeForPoint(kk) {
         if (!this.active.length) return this.active;
-        let zC = [];
-        for (let ZC = this.active.length - 1; ZC >= 0 && !(this.activeRank[ZC] < this.pointRank); ZC--)(this.activeTo[ZC] > CC || this.activeTo[ZC] == CC && this.active[ZC].endSide >= this.point.endSide) && zC.push(this.active[ZC]);
-        return zC.reverse()
+        let Fk = [];
+        for (let Ik = this.active.length - 1; Ik >= 0 && !(this.activeRank[Ik] < this.pointRank); Ik--)(this.activeTo[Ik] > kk || this.activeTo[Ik] == kk && this.active[Ik].endSide >= this.point.endSide) && Fk.push(this.active[Ik]);
+        return Fk.reverse()
       }
-      openEnd(CC) {
-        let zC = 0;
-        for (let ZC = this.activeTo.length - 1; ZC >= 0 && this.activeTo[ZC] > CC; ZC--) zC++;
-        return zC
-      }
-    }
-
-    function Uz(CC, zC, ZC, QC, wC, bC) {
-      CC.goto(zC), ZC.goto(QC);
-      let nC = QC + wC,
-        fC = QC,
-        oC = QC - zC,
-        qC = !!bC.boundChange;
-      for (let FC = !1;;) {
-        let zC = CC.to + oC - ZC.to,
-          QC = zC || CC.endSide - ZC.endSide,
-          wC = QC < 0 ? CC.to + oC : ZC.to,
-          WC = Math.min(wC, nC);
-        if (CC.point || ZC.point ? (CC.point && ZC.point && cz(CC.point, ZC.point) && Bz(CC.activeForPoint(CC.to), ZC.activeForPoint(ZC.to)) || bC.comparePoint(fC, WC, CC.point, ZC.point), FC = !1) : (FC && bC.boundChange(fC), WC > fC && !Bz(CC.active, ZC.active) && bC.compareRange(fC, WC, CC.active, ZC.active), qC && WC < nC && (zC || CC.openEnd(wC) != ZC.openEnd(wC)) && (FC = !0)), wC > nC) break;
-        fC = wC, QC <= 0 && CC.next(), QC >= 0 && ZC.next()
+      openEnd(kk) {
+        let Fk = 0;
+        for (let Ik = this.activeTo.length - 1; Ik >= 0 && this.activeTo[Ik] > kk; Ik--) Fk++;
+        return Fk
       }
     }
 
-    function Bz(CC, zC) {
-      if (CC.length != zC.length) return !1;
-      for (let ZC = 0; ZC < CC.length; ZC++)
-        if (CC[ZC] != zC[ZC] && !cz(CC[ZC], zC[ZC])) return !1;
+    function hF(kk, Fk, Ik, Xk, Tk, ik) {
+      kk.goto(Fk), Ik.goto(Xk);
+      let yk = Xk + Tk,
+        lk = Xk,
+        ak = Xk - Fk,
+        qk = !!ik.boundChange;
+      for (let Lk = !1;;) {
+        let Fk = kk.to + ak - Ik.to,
+          Xk = Fk || kk.endSide - Ik.endSide,
+          Tk = Xk < 0 ? kk.to + ak : Ik.to,
+          tk = Math.min(Tk, yk);
+        if (kk.point || Ik.point ? (kk.point && Ik.point && CF(kk.point, Ik.point) && rF(kk.activeForPoint(kk.to), Ik.activeForPoint(Ik.to)) || ik.comparePoint(lk, tk, kk.point, Ik.point), Lk = !1) : (Lk && ik.boundChange(lk), tk > lk && !rF(kk.active, Ik.active) && ik.compareRange(lk, tk, kk.active, Ik.active), qk && tk < yk && (Fk || kk.openEnd(Tk) != Ik.openEnd(Tk)) && (Lk = !0)), Tk > yk) break;
+        lk = Tk, Xk <= 0 && kk.next(), Xk >= 0 && Ik.next()
+      }
+    }
+
+    function rF(kk, Fk) {
+      if (kk.length != Fk.length) return !1;
+      for (let Ik = 0; Ik < kk.length; Ik++)
+        if (kk[Ik] != Fk[Ik] && !CF(kk[Ik], Fk[Ik])) return !1;
       return !0
     }
 
-    function Oz(CC, zC) {
-      for (let ZC = zC, QC = CC.length - 1; ZC < QC; ZC++) CC[ZC] = CC[ZC + 1];
-      CC.pop()
+    function DF(kk, Fk) {
+      for (let Ik = Fk, Xk = kk.length - 1; Ik < Xk; Ik++) kk[Ik] = kk[Ik + 1];
+      kk.pop()
     }
 
-    function kz(CC, zC, ZC) {
-      for (let QC = CC.length - 1; QC >= zC; QC--) CC[QC + 1] = CC[QC];
-      CC[zC] = ZC
+    function MF(kk, Fk, Ik) {
+      for (let Xk = kk.length - 1; Xk >= Fk; Xk--) kk[Xk + 1] = kk[Xk];
+      kk[Fk] = Ik
     }
 
-    function Vz(CC, zC) {
-      let ZC = -1,
-        QC = 1e9;
-      for (let wC = 0; wC < zC.length; wC++)(zC[wC] - QC || CC[wC].endSide - CC[ZC].endSide) < 0 && (ZC = wC, QC = zC[wC]);
-      return ZC
+    function kI(kk, Fk) {
+      let Ik = -1,
+        Xk = 1e9;
+      for (let Tk = 0; Tk < Fk.length; Tk++)(Fk[Tk] - Xk || kk[Tk].endSide - kk[Ik].endSide) < 0 && (Ik = Tk, Xk = Fk[Tk]);
+      return Ik
     }
 
-    function CZ(CC, zC) {
-      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : CC.length,
-        QC = 0;
-      for (let wC = 0; wC < ZC && wC < CC.length;) 9 == CC.charCodeAt(wC) ? (QC += zC - QC % zC, wC++) : (QC++, wC = vC(CC, wC));
-      return QC
+    function FI(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : kk.length,
+        Xk = 0;
+      for (let Tk = 0; Tk < Ik && Tk < kk.length;) 9 == kk.charCodeAt(Tk) ? (Xk += Fk - Xk % Fk, Tk++) : (Xk++, Tk = Sk(kk, Tk));
+      return Xk
     }
 
-    function zZ(CC, zC, ZC, QC) {
-      for (let wC = 0, bC = 0;;) {
-        if (bC >= zC) return wC;
-        if (wC == CC.length) break;
-        bC += 9 == CC.charCodeAt(wC) ? ZC - bC % ZC : 1, wC = vC(CC, wC)
+    function II(kk, Fk, Ik, Xk) {
+      for (let Tk = 0, ik = 0;;) {
+        if (ik >= Fk) return Tk;
+        if (Tk == kk.length) break;
+        ik += 9 == kk.charCodeAt(Tk) ? Ik - ik % Ik : 1, Tk = Sk(kk, Tk)
       }
-      return !0 === QC ? -1 : CC.length
+      return !0 === Xk ? -1 : kk.length
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

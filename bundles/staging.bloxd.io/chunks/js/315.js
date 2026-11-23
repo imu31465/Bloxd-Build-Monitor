@@ -1,582 +1,582 @@
 export const id = 315;
 export const ids = [315];
 export const modules = {
-  41687: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      ReadExrDataAsync: () => Wz,
-      _ExrTextureLoader: () => Fz
+  41859: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      ReadExrDataAsync: () => ZF,
+      _ExrTextureLoader: () => tF
     });
-    var QC = ZC(38507),
-      wC = ZC(36991),
-      bC = ZC(39889);
-    const nC = 4,
-      fC = 4,
-      oC = 1,
-      qC = 2,
-      FC = 8,
-      WC = 65536,
-      NC = WC >> 3,
-      MC = 14,
-      gC = 65537,
-      SC = 1 << MC,
-      pC = SC - 1,
-      PC = 59,
-      GC = 63,
-      RC = 2 + GC - PC;
-    var AC, xC;
+    var Xk = Ik(38674),
+      Tk = Ik(37189),
+      ik = Ik(40064);
+    const yk = 4,
+      lk = 4,
+      ak = 1,
+      qk = 2,
+      Lk = 8,
+      tk = 65536,
+      Zk = tk >> 3,
+      jk = 14,
+      ek = 65537,
+      wk = 1 << jk,
+      Hk = wk - 1,
+      Jk = 59,
+      xk = 63,
+      Pk = 2 + xk - Jk;
+    var Kk, Qk;
 
-    function JC(CC, zC) {
-      const ZC = new Uint8Array(CC);
-      let QC = 0;
-      for (; 0 != ZC[zC.value + QC];) QC += 1;
-      const wC = (new TextDecoder).decode(ZC.slice(zC.value, zC.value + QC));
-      return zC.value = zC.value + QC + 1, wC
+    function sk(kk, Fk) {
+      const Ik = new Uint8Array(kk);
+      let Xk = 0;
+      for (; 0 != Ik[Fk.value + Xk];) Xk += 1;
+      const Tk = (new TextDecoder).decode(Ik.slice(Fk.value, Fk.value + Xk));
+      return Fk.value = Fk.value + Xk + 1, Tk
     }
 
-    function IC(CC, zC) {
-      const ZC = CC.getInt32(zC.value, !0);
-      return zC.value += nC, ZC
+    function Vk(kk, Fk) {
+      const Ik = kk.getInt32(Fk.value, !0);
+      return Fk.value += yk, Ik
     }
 
-    function iC(CC, zC) {
-      const ZC = CC.getUint32(zC.value, !0);
-      return zC.value += nC, ZC
+    function zk(kk, Fk) {
+      const Ik = kk.getUint32(Fk.value, !0);
+      return Fk.value += yk, Ik
     }
 
-    function vC(CC, zC) {
-      const ZC = CC.getUint8(zC.value);
-      return zC.value += oC, ZC
+    function Sk(kk, Fk) {
+      const Ik = kk.getUint8(Fk.value);
+      return Fk.value += ak, Ik
     }
 
-    function eC(CC, zC) {
-      const ZC = CC.getUint16(zC.value, !0);
-      return zC.value += qC, ZC
+    function vk(kk, Fk) {
+      const Ik = kk.getUint16(Fk.value, !0);
+      return Fk.value += qk, Ik
     }
 
-    function hC(CC, zC) {
-      const ZC = CC[zC.value];
-      return zC.value += oC, ZC
+    function Ek(kk, Fk) {
+      const Ik = kk[Fk.value];
+      return Fk.value += ak, Ik
     }
 
-    function KC(CC, zC) {
-      let ZC;
-      return ZC = "getBigInt64" in DataView.prototype ? Number(CC.getBigInt64(zC.value, !0)) : CC.getUint32(zC.value + 4, !0) + Number(CC.getUint32(zC.value, !0) << 32), zC.value += FC, ZC
+    function Ok(kk, Fk) {
+      let Ik;
+      return Ik = "getBigInt64" in DataView.prototype ? Number(kk.getBigInt64(Fk.value, !0)) : kk.getUint32(Fk.value + 4, !0) + Number(kk.getUint32(Fk.value, !0) << 32), Fk.value += Lk, Ik
     }
 
-    function YC(CC, zC) {
-      const ZC = CC.getFloat32(zC.value, !0);
-      return zC.value += fC, ZC
+    function nk(kk, Fk) {
+      const Ik = kk.getFloat32(Fk.value, !0);
+      return Fk.value += lk, Ik
     }
 
-    function dC(CC, zC) {
-      return (0, bC.e)(eC(CC, zC))
+    function Gk(kk, Fk) {
+      return (0, ik.c)(vk(kk, Fk))
     }
 
-    function mC(CC, zC) {
-      return (0, bC.k)((0, wC.Clamp)(YC(CC, zC), -bC.h, bC.h))
+    function pk(kk, Fk) {
+      return (0, ik.i)((0, Tk.Clamp)(nk(kk, Fk), -ik.f, ik.f))
     }
 
-    function HC(CC, zC, ZC, QC) {
-      switch (ZC) {
+    function uk(kk, Fk, Ik, Xk) {
+      switch (Ik) {
         case "string":
         case "stringvector":
         case "iccProfile":
-          return function(CC, zC, ZC) {
-            const QC = (new TextDecoder).decode(new Uint8Array(CC).slice(zC.value, zC.value + ZC));
-            return zC.value = zC.value + ZC, QC
-          }(CC.buffer, zC, QC);
+          return function(kk, Fk, Ik) {
+            const Xk = (new TextDecoder).decode(new Uint8Array(kk).slice(Fk.value, Fk.value + Ik));
+            return Fk.value = Fk.value + Ik, Xk
+          }(kk.buffer, Fk, Xk);
         case "chlist":
-          return function(CC, zC, ZC) {
-            const QC = zC.value,
-              wC = [];
-            for (; zC.value < QC + ZC - 1;) {
-              const ZC = JC(CC.buffer, zC),
-                QC = IC(CC, zC),
-                bC = vC(CC, zC);
-              zC.value += 3;
-              const nC = IC(CC, zC),
-                fC = IC(CC, zC);
-              wC.push({
-                name: ZC,
-                pixelType: QC,
-                pLinear: bC,
-                xSampling: nC,
-                ySampling: fC
+          return function(kk, Fk, Ik) {
+            const Xk = Fk.value,
+              Tk = [];
+            for (; Fk.value < Xk + Ik - 1;) {
+              const Ik = sk(kk.buffer, Fk),
+                Xk = Vk(kk, Fk),
+                ik = Sk(kk, Fk);
+              Fk.value += 3;
+              const yk = Vk(kk, Fk),
+                lk = Vk(kk, Fk);
+              Tk.push({
+                name: Ik,
+                pixelType: Xk,
+                pLinear: ik,
+                xSampling: yk,
+                ySampling: lk
               })
             }
-            return zC.value += 1, wC
-          }(CC, zC, QC);
+            return Fk.value += 1, Tk
+          }(kk, Fk, Xk);
         case "chromaticities":
-          return function(CC, zC) {
+          return function(kk, Fk) {
             return {
-              redX: YC(CC, zC),
-              redY: YC(CC, zC),
-              greenX: YC(CC, zC),
-              greenY: YC(CC, zC),
-              blueX: YC(CC, zC),
-              blueY: YC(CC, zC),
-              whiteX: YC(CC, zC),
-              whiteY: YC(CC, zC)
+              redX: nk(kk, Fk),
+              redY: nk(kk, Fk),
+              greenX: nk(kk, Fk),
+              greenY: nk(kk, Fk),
+              blueX: nk(kk, Fk),
+              blueY: nk(kk, Fk),
+              whiteX: nk(kk, Fk),
+              whiteY: nk(kk, Fk)
             }
-          }(CC, zC);
+          }(kk, Fk);
         case "compression":
-          return function(CC, zC) {
-            return vC(CC, zC)
-          }(CC, zC);
+          return function(kk, Fk) {
+            return Sk(kk, Fk)
+          }(kk, Fk);
         case "box2i":
-          return function(CC, zC) {
+          return function(kk, Fk) {
             return {
-              xMin: IC(CC, zC),
-              yMin: IC(CC, zC),
-              xMax: IC(CC, zC),
-              yMax: IC(CC, zC)
+              xMin: Vk(kk, Fk),
+              yMin: Vk(kk, Fk),
+              xMax: Vk(kk, Fk),
+              yMax: Vk(kk, Fk)
             }
-          }(CC, zC);
+          }(kk, Fk);
         case "lineOrder":
-          return function(CC, zC) {
-            const ZC = vC(CC, zC);
-            return xC[ZC]
-          }(CC, zC);
+          return function(kk, Fk) {
+            const Ik = Sk(kk, Fk);
+            return Qk[Ik]
+          }(kk, Fk);
         case "float":
-          return YC(CC, zC);
+          return nk(kk, Fk);
         case "v2f":
-          return function(CC, zC) {
-            return [YC(CC, zC), YC(CC, zC)]
-          }(CC, zC);
+          return function(kk, Fk) {
+            return [nk(kk, Fk), nk(kk, Fk)]
+          }(kk, Fk);
         case "v3f":
-          return function(CC, zC) {
-            return [YC(CC, zC), YC(CC, zC), YC(CC, zC)]
-          }(CC, zC);
+          return function(kk, Fk) {
+            return [nk(kk, Fk), nk(kk, Fk), nk(kk, Fk)]
+          }(kk, Fk);
         case "int":
-          return IC(CC, zC);
+          return Vk(kk, Fk);
         case "rational":
-          return function(CC, zC) {
-            return [IC(CC, zC), iC(CC, zC)]
-          }(CC, zC);
+          return function(kk, Fk) {
+            return [Vk(kk, Fk), zk(kk, Fk)]
+          }(kk, Fk);
         case "timecode":
-          return function(CC, zC) {
-            return [iC(CC, zC), iC(CC, zC)]
-          }(CC, zC);
+          return function(kk, Fk) {
+            return [zk(kk, Fk), zk(kk, Fk)]
+          }(kk, Fk);
         case "preview":
-          return zC.value += QC, "skipped";
+          return Fk.value += Xk, "skipped";
         default:
-          return void(zC.value += QC)
+          return void(Fk.value += Xk)
       }
     }
 
-    function EC(CC) {
-      for (let zC = 1; zC < CC.length; zC++) {
-        const ZC = CC[zC - 1] + CC[zC] - 128;
-        CC[zC] = ZC
+    function bk(kk) {
+      for (let Fk = 1; Fk < kk.length; Fk++) {
+        const Ik = kk[Fk - 1] + kk[Fk] - 128;
+        kk[Fk] = Ik
       }
     }
 
-    function lC(CC, zC) {
-      let ZC = 0,
-        QC = Math.floor((CC.length + 1) / 2),
-        wC = 0;
-      const bC = CC.length - 1;
-      for (; !(wC > bC) && (zC[wC++] = CC[ZC++], !(wC > bC));) zC[wC++] = CC[QC++]
-    }! function(CC) {
-      CC[CC.NO_COMPRESSION = 0] = "NO_COMPRESSION", CC[CC.RLE_COMPRESSION = 1] = "RLE_COMPRESSION", CC[CC.ZIPS_COMPRESSION = 2] = "ZIPS_COMPRESSION", CC[CC.ZIP_COMPRESSION = 3] = "ZIP_COMPRESSION", CC[CC.PIZ_COMPRESSION = 4] = "PIZ_COMPRESSION", CC[CC.PXR24_COMPRESSION = 5] = "PXR24_COMPRESSION"
-    }(AC || (AC = {})),
-    function(CC) {
-      CC[CC.INCREASING_Y = 0] = "INCREASING_Y", CC[CC.DECREASING_Y = 1] = "DECREASING_Y"
-    }(xC || (xC = {}));
-    const XC = 20000630;
+    function Rk(kk, Fk) {
+      let Ik = 0,
+        Xk = Math.floor((kk.length + 1) / 2),
+        Tk = 0;
+      const ik = kk.length - 1;
+      for (; !(Tk > ik) && (Fk[Tk++] = kk[Ik++], !(Tk > ik));) Fk[Tk++] = kk[Xk++]
+    }! function(kk) {
+      kk[kk.NO_COMPRESSION = 0] = "NO_COMPRESSION", kk[kk.RLE_COMPRESSION = 1] = "RLE_COMPRESSION", kk[kk.ZIPS_COMPRESSION = 2] = "ZIPS_COMPRESSION", kk[kk.ZIP_COMPRESSION = 3] = "ZIP_COMPRESSION", kk[kk.PIZ_COMPRESSION = 4] = "PIZ_COMPRESSION", kk[kk.PXR24_COMPRESSION = 5] = "PXR24_COMPRESSION"
+    }(Kk || (Kk = {})),
+    function(kk) {
+      kk[kk.INCREASING_Y = 0] = "INCREASING_Y", kk[kk.DECREASING_Y = 1] = "DECREASING_Y"
+    }(Qk || (Qk = {}));
+    const Uk = 20000630;
 
-    function cC(CC, zC) {
-      if (CC.getUint32(0, !0) != XC) throw new Error("Incorrect OpenEXR format");
-      const ZC = CC.getUint8(4),
-        wC = CC.getUint8(5),
-        bC = {
-          singleTile: !!(2 & wC),
-          longName: !!(4 & wC),
-          deepFormat: !!(8 & wC),
-          multiPart: !!(16 & wC)
+    function Ck(kk, Fk) {
+      if (kk.getUint32(0, !0) != Uk) throw new Error("Incorrect OpenEXR format");
+      const Ik = kk.getUint8(4),
+        Tk = kk.getUint8(5),
+        ik = {
+          singleTile: !!(2 & Tk),
+          longName: !!(4 & Tk),
+          deepFormat: !!(8 & Tk),
+          multiPart: !!(16 & Tk)
         };
-      zC.value = 8;
-      const nC = {};
-      let fC = !0;
-      for (; fC;) {
-        const ZC = JC(CC.buffer, zC);
-        if (ZC) {
-          const wC = JC(CC.buffer, zC),
-            bC = HC(CC, zC, wC, iC(CC, zC));
-          void 0 === bC ? QC.c.Warn(`Unknown header attribute type ${wC}'.`) : nC[ZC] = bC
-        } else fC = !1
+      Fk.value = 8;
+      const yk = {};
+      let lk = !0;
+      for (; lk;) {
+        const Ik = sk(kk.buffer, Fk);
+        if (Ik) {
+          const Tk = sk(kk.buffer, Fk),
+            ik = uk(kk, Fk, Tk, zk(kk, Fk));
+          void 0 === ik ? Xk.e.Warn(`Unknown header attribute type ${Tk}'.`) : yk[Ik] = ik
+        } else lk = !1
       }
-      if (0 != (-5 & wC)) throw new Error("Unsupported file format");
+      if (0 != (-5 & Tk)) throw new Error("Unsupported file format");
       return {
-        version: ZC,
-        spec: bC,
-        ...nC
-      }
-    }
-    const uC = 32768,
-      rC = 65535;
-
-    function sC(CC, zC, ZC, QC, wC) {
-      for (; ZC < CC;) zC = zC << 8 | hC(QC, wC), ZC += 8;
-      return {
-        l: zC >> (ZC -= CC) & (1 << CC) - 1,
-        c: zC,
-        lc: ZC
+        version: Ik,
+        spec: ik,
+        ...yk
       }
     }
+    const Nk = 32768,
+      ck = 65535;
 
-    function TC(CC, zC, ZC, QC) {
+    function Wk(kk, Fk, Ik, Xk, Tk) {
+      for (; Ik < kk;) Fk = Fk << 8 | Ek(Xk, Tk), Ik += 8;
       return {
-        c: CC = CC << 8 | hC(ZC, QC),
-        lc: zC += 8
+        l: Fk >> (Ik -= kk) & (1 << kk) - 1,
+        c: Fk,
+        lc: Ik
       }
     }
 
-    function aC(CC, zC, ZC, QC, wC, bC, nC, fC, oC) {
-      if (CC == zC) {
-        if (QC < 8) {
-          const CC = TC(ZC, QC, wC, bC);
-          ZC = CC.c, QC = CC.lc
+    function fk(kk, Fk, Ik, Xk) {
+      return {
+        c: kk = kk << 8 | Ek(Ik, Xk),
+        lc: Fk += 8
+      }
+    }
+
+    function Bk(kk, Fk, Ik, Xk, Tk, ik, yk, lk, ak) {
+      if (kk == Fk) {
+        if (Xk < 8) {
+          const kk = fk(Ik, Xk, Tk, ik);
+          Ik = kk.c, Xk = kk.lc
         }
-        let CC = ZC >> (QC -= 8);
-        if (CC = new Uint8Array([CC])[0], fC.value + CC > oC) return null;
-        const zC = nC[fC.value - 1];
-        for (; CC-- > 0;) nC[fC.value++] = zC
+        let kk = Ik >> (Xk -= 8);
+        if (kk = new Uint8Array([kk])[0], lk.value + kk > ak) return null;
+        const Fk = yk[lk.value - 1];
+        for (; kk-- > 0;) yk[lk.value++] = Fk
       } else {
-        if (!(fC.value < oC)) return null;
-        nC[fC.value++] = CC
+        if (!(lk.value < ak)) return null;
+        yk[lk.value++] = kk
       }
       return {
-        c: ZC,
-        lc: QC
+        c: Ik,
+        lc: Xk
       }
     }
-    const tC = new Array(59);
+    const dk = new Array(59);
 
-    function DC(CC, zC, ZC, QC, wC, bC) {
-      const nC = zC;
-      let fC = 0,
-        oC = 0;
-      for (; QC <= wC; QC++) {
-        if (nC.value - zC.value > ZC) return;
-        let qC = sC(6, fC, oC, CC, nC);
-        const FC = qC.l;
-        if (fC = qC.c, oC = qC.lc, bC[QC] = FC, FC == GC) {
-          if (nC.value - zC.value > ZC) throw new Error("Error in HufUnpackEncTable");
-          qC = sC(8, fC, oC, CC, nC);
-          let FC = qC.l + RC;
-          if (fC = qC.c, oC = qC.lc, QC + FC > wC + 1) throw new Error("Error in HufUnpackEncTable");
-          for (; FC--;) bC[QC++] = 0;
-          QC--
-        } else if (FC >= PC) {
-          let CC = FC - PC + 2;
-          if (QC + CC > wC + 1) throw new Error("Error in HufUnpackEncTable");
-          for (; CC--;) bC[QC++] = 0;
-          QC--
+    function Yk(kk, Fk, Ik, Xk, Tk, ik) {
+      const yk = Fk;
+      let lk = 0,
+        ak = 0;
+      for (; Xk <= Tk; Xk++) {
+        if (yk.value - Fk.value > Ik) return;
+        let qk = Wk(6, lk, ak, kk, yk);
+        const Lk = qk.l;
+        if (lk = qk.c, ak = qk.lc, ik[Xk] = Lk, Lk == xk) {
+          if (yk.value - Fk.value > Ik) throw new Error("Error in HufUnpackEncTable");
+          qk = Wk(8, lk, ak, kk, yk);
+          let Lk = qk.l + Pk;
+          if (lk = qk.c, ak = qk.lc, Xk + Lk > Tk + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; Lk--;) ik[Xk++] = 0;
+          Xk--
+        } else if (Lk >= Jk) {
+          let kk = Lk - Jk + 2;
+          if (Xk + kk > Tk + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; kk--;) ik[Xk++] = 0;
+          Xk--
         }
-      }! function(CC) {
-        for (let ZC = 0; ZC <= 58; ++ZC) tC[ZC] = 0;
-        for (let ZC = 0; ZC < gC; ++ZC) tC[CC[ZC]] += 1;
-        let zC = 0;
-        for (let ZC = 58; ZC > 0; --ZC) {
-          const CC = zC + tC[ZC] >> 1;
-          tC[ZC] = zC, zC = CC
+      }! function(kk) {
+        for (let Ik = 0; Ik <= 58; ++Ik) dk[Ik] = 0;
+        for (let Ik = 0; Ik < ek; ++Ik) dk[kk[Ik]] += 1;
+        let Fk = 0;
+        for (let Ik = 58; Ik > 0; --Ik) {
+          const kk = Fk + dk[Ik] >> 1;
+          dk[Ik] = Fk, Fk = kk
         }
-        for (let ZC = 0; ZC < gC; ++ZC) {
-          const zC = CC[ZC];
-          zC > 0 && (CC[ZC] = zC | tC[zC]++ << 6)
+        for (let Ik = 0; Ik < ek; ++Ik) {
+          const Fk = kk[Ik];
+          Fk > 0 && (kk[Ik] = Fk | dk[Fk]++ << 6)
         }
-      }(bC)
+      }(ik)
     }
 
-    function jC(CC) {
-      return 63 & CC
+    function Ak(kk) {
+      return 63 & kk
     }
 
-    function yC(CC) {
-      return CC >> 6
+    function gk(kk) {
+      return kk >> 6
     }
 
-    function LC(CC, zC, ZC, QC, wC, bC) {
-      const nC = ZC.value,
-        fC = iC(zC, ZC),
-        oC = iC(zC, ZC);
-      ZC.value += 4;
-      const qC = iC(zC, ZC);
-      if (ZC.value += 4, fC < 0 || fC >= gC || oC < 0 || oC >= gC) throw new Error("Wrong HUF_ENCSIZE");
-      const FC = new Array(gC),
-        WC = new Array(SC);
-      ! function(CC) {
-        for (let zC = 0; zC < SC; zC++) CC[zC] = {}, CC[zC].len = 0, CC[zC].lit = 0, CC[zC].p = null
-      }(WC);
-      if (DC(CC, ZC, QC - (ZC.value - nC), fC, oC, FC), qC > 8 * (QC - (ZC.value - nC))) throw new Error("Wrong hufUncompress");
-      ! function(CC, zC, ZC, QC) {
-        for (; zC <= ZC; zC++) {
-          const ZC = yC(CC[zC]),
-            wC = jC(CC[zC]);
-          if (ZC >> wC) throw new Error("Invalid table entry");
-          if (wC > MC) {
-            const CC = QC[ZC >> wC - MC];
-            if (CC.len) throw new Error("Invalid table entry");
-            if (CC.lit++, CC.p) {
-              const zC = CC.p;
-              CC.p = new Array(CC.lit);
-              for (let ZC = 0; ZC < CC.lit - 1; ++ZC) CC.p[ZC] = zC[ZC]
-            } else CC.p = new Array(1);
-            CC.p[CC.lit - 1] = zC
-          } else if (wC) {
-            let CC = 0;
-            for (let bC = 1 << MC - wC; bC > 0; bC--) {
-              const bC = QC[(ZC << MC - wC) + CC];
-              if (bC.len || bC.p) throw new Error("Invalid table entry");
-              bC.len = wC, bC.lit = zC, CC++
+    function mk(kk, Fk, Ik, Xk, Tk, ik) {
+      const yk = Ik.value,
+        lk = zk(Fk, Ik),
+        ak = zk(Fk, Ik);
+      Ik.value += 4;
+      const qk = zk(Fk, Ik);
+      if (Ik.value += 4, lk < 0 || lk >= ek || ak < 0 || ak >= ek) throw new Error("Wrong HUF_ENCSIZE");
+      const Lk = new Array(ek),
+        tk = new Array(wk);
+      ! function(kk) {
+        for (let Fk = 0; Fk < wk; Fk++) kk[Fk] = {}, kk[Fk].len = 0, kk[Fk].lit = 0, kk[Fk].p = null
+      }(tk);
+      if (Yk(kk, Ik, Xk - (Ik.value - yk), lk, ak, Lk), qk > 8 * (Xk - (Ik.value - yk))) throw new Error("Wrong hufUncompress");
+      ! function(kk, Fk, Ik, Xk) {
+        for (; Fk <= Ik; Fk++) {
+          const Ik = gk(kk[Fk]),
+            Tk = Ak(kk[Fk]);
+          if (Ik >> Tk) throw new Error("Invalid table entry");
+          if (Tk > jk) {
+            const kk = Xk[Ik >> Tk - jk];
+            if (kk.len) throw new Error("Invalid table entry");
+            if (kk.lit++, kk.p) {
+              const Fk = kk.p;
+              kk.p = new Array(kk.lit);
+              for (let Ik = 0; Ik < kk.lit - 1; ++Ik) kk.p[Ik] = Fk[Ik]
+            } else kk.p = new Array(1);
+            kk.p[kk.lit - 1] = Fk
+          } else if (Tk) {
+            let kk = 0;
+            for (let ik = 1 << jk - Tk; ik > 0; ik--) {
+              const ik = Xk[(Ik << jk - Tk) + kk];
+              if (ik.len || ik.p) throw new Error("Invalid table entry");
+              ik.len = Tk, ik.lit = Fk, kk++
             }
           }
         }
-      }(FC, fC, oC, WC),
-      function(CC, zC, ZC, QC, wC, bC, nC, fC, oC) {
-        let qC = 0,
-          FC = 0;
-        const WC = nC,
-          NC = Math.trunc(QC.value + (wC + 7) / 8);
-        for (; QC.value < NC;) {
-          let wC = TC(qC, FC, ZC, QC);
-          for (qC = wC.c, FC = wC.lc; FC >= MC;) {
-            const nC = zC[qC >> FC - MC & pC];
-            if (nC.len) {
-              FC -= nC.len;
-              const CC = aC(nC.lit, bC, qC, FC, ZC, QC, fC, oC, WC);
-              CC && (qC = CC.c, FC = CC.lc)
+      }(Lk, lk, ak, tk),
+      function(kk, Fk, Ik, Xk, Tk, ik, yk, lk, ak) {
+        let qk = 0,
+          Lk = 0;
+        const tk = yk,
+          Zk = Math.trunc(Xk.value + (Tk + 7) / 8);
+        for (; Xk.value < Zk;) {
+          let Tk = fk(qk, Lk, Ik, Xk);
+          for (qk = Tk.c, Lk = Tk.lc; Lk >= jk;) {
+            const yk = Fk[qk >> Lk - jk & Hk];
+            if (yk.len) {
+              Lk -= yk.len;
+              const kk = Bk(yk.lit, ik, qk, Lk, Ik, Xk, lk, ak, tk);
+              kk && (qk = kk.c, Lk = kk.lc)
             } else {
-              if (!nC.p) throw new Error("hufDecode issues");
-              let zC;
-              for (zC = 0; zC < nC.lit; zC++) {
-                const MC = jC(CC[nC.p[zC]]);
-                for (; FC < MC && QC.value < NC;) wC = TC(qC, FC, ZC, QC), qC = wC.c, FC = wC.lc;
-                if (FC >= MC && yC(CC[nC.p[zC]]) == (qC >> FC - MC & (1 << MC) - 1)) {
-                  FC -= MC;
-                  const CC = aC(nC.p[zC], bC, qC, FC, ZC, QC, fC, oC, WC);
-                  CC && (qC = CC.c, FC = CC.lc);
+              if (!yk.p) throw new Error("hufDecode issues");
+              let Fk;
+              for (Fk = 0; Fk < yk.lit; Fk++) {
+                const jk = Ak(kk[yk.p[Fk]]);
+                for (; Lk < jk && Xk.value < Zk;) Tk = fk(qk, Lk, Ik, Xk), qk = Tk.c, Lk = Tk.lc;
+                if (Lk >= jk && gk(kk[yk.p[Fk]]) == (qk >> Lk - jk & (1 << jk) - 1)) {
+                  Lk -= jk;
+                  const kk = Bk(yk.p[Fk], ik, qk, Lk, Ik, Xk, lk, ak, tk);
+                  kk && (qk = kk.c, Lk = kk.lc);
                   break
                 }
               }
-              if (zC == nC.lit) throw new Error("HufDecode issues")
+              if (Fk == yk.lit) throw new Error("HufDecode issues")
             }
           }
         }
-        const gC = 8 - wC & 7;
-        for (qC >>= gC, FC -= gC; FC > 0;) {
-          const CC = zC[qC << MC - FC & pC];
-          if (!CC.len) throw new Error("HufDecode issues");
+        const ek = 8 - Tk & 7;
+        for (qk >>= ek, Lk -= ek; Lk > 0;) {
+          const kk = Fk[qk << jk - Lk & Hk];
+          if (!kk.len) throw new Error("HufDecode issues");
           {
-            FC -= CC.len;
-            const zC = aC(CC.lit, bC, qC, FC, ZC, QC, fC, oC, WC);
-            zC && (qC = zC.c, FC = zC.lc)
+            Lk -= kk.len;
+            const Fk = Bk(kk.lit, ik, qk, Lk, Ik, Xk, lk, ak, tk);
+            Fk && (qk = Fk.c, Lk = Fk.lc)
           }
         }
-      }(FC, WC, CC, ZC, qC, oC, bC, wC, {
+      }(Lk, tk, kk, Ik, qk, ak, ik, Tk, {
         value: 0
       })
     }
 
-    function UC(CC) {
-      return 65535 & CC
+    function hk(kk) {
+      return 65535 & kk
     }
 
-    function BC(CC) {
-      const zC = UC(CC);
-      return zC > 32767 ? zC - 65536 : zC
+    function rk(kk) {
+      const Fk = hk(kk);
+      return Fk > 32767 ? Fk - 65536 : Fk
     }
 
-    function OC(CC, zC) {
-      const ZC = BC(CC),
-        QC = BC(zC),
-        wC = ZC + (1 & QC) + (QC >> 1);
+    function Dk(kk, Fk) {
+      const Ik = rk(kk),
+        Xk = rk(Fk),
+        Tk = Ik + (1 & Xk) + (Xk >> 1);
       return {
-        a: wC,
-        b: wC - QC
+        a: Tk,
+        b: Tk - Xk
       }
     }
 
-    function kC(CC, zC) {
-      const ZC = UC(CC),
-        QC = UC(zC),
-        wC = ZC - (QC >> 1) & rC;
+    function Mk(kk, Fk) {
+      const Ik = hk(kk),
+        Xk = hk(Fk),
+        Tk = Ik - (Xk >> 1) & ck;
       return {
-        a: QC + wC - uC & rC,
-        b: wC
+        a: Xk + Tk - Nk & ck,
+        b: Tk
       }
     }
 
-    function VC(CC, zC, ZC, QC, wC, bC, nC) {
-      const fC = nC < 16384,
-        oC = ZC > wC ? wC : ZC;
-      let qC, FC, WC = 1;
-      for (; WC <= oC;) WC <<= 1;
-      for (WC >>= 1, qC = WC, WC >>= 1; WC >= 1;) {
-        FC = 0;
-        const nC = FC + bC * (wC - qC),
-          oC = bC * WC,
-          NC = bC * qC,
-          MC = QC * WC,
-          gC = QC * qC;
-        let SC, pC, PC, GC;
-        for (; FC <= nC; FC += NC) {
-          let wC = FC;
-          const bC = FC + QC * (ZC - qC);
-          for (; wC <= bC; wC += gC) {
-            const ZC = wC + MC,
-              QC = wC + oC,
-              bC = QC + MC;
-            if (fC) {
-              let nC = OC(CC[wC + zC], CC[QC + zC]);
-              SC = nC.a, PC = nC.b, nC = OC(CC[ZC + zC], CC[bC + zC]), pC = nC.a, GC = nC.b, nC = OC(SC, pC), CC[wC + zC] = nC.a, CC[ZC + zC] = nC.b, nC = OC(PC, GC), CC[QC + zC] = nC.a, CC[bC + zC] = nC.b
+    function kF(kk, Fk, Ik, Xk, Tk, ik, yk) {
+      const lk = yk < 16384,
+        ak = Ik > Tk ? Tk : Ik;
+      let qk, Lk, tk = 1;
+      for (; tk <= ak;) tk <<= 1;
+      for (tk >>= 1, qk = tk, tk >>= 1; tk >= 1;) {
+        Lk = 0;
+        const yk = Lk + ik * (Tk - qk),
+          ak = ik * tk,
+          Zk = ik * qk,
+          jk = Xk * tk,
+          ek = Xk * qk;
+        let wk, Hk, Jk, xk;
+        for (; Lk <= yk; Lk += Zk) {
+          let Tk = Lk;
+          const ik = Lk + Xk * (Ik - qk);
+          for (; Tk <= ik; Tk += ek) {
+            const Ik = Tk + jk,
+              Xk = Tk + ak,
+              ik = Xk + jk;
+            if (lk) {
+              let yk = Dk(kk[Tk + Fk], kk[Xk + Fk]);
+              wk = yk.a, Jk = yk.b, yk = Dk(kk[Ik + Fk], kk[ik + Fk]), Hk = yk.a, xk = yk.b, yk = Dk(wk, Hk), kk[Tk + Fk] = yk.a, kk[Ik + Fk] = yk.b, yk = Dk(Jk, xk), kk[Xk + Fk] = yk.a, kk[ik + Fk] = yk.b
             } else {
-              let nC = kC(CC[wC + zC], CC[QC + zC]);
-              SC = nC.a, PC = nC.b, nC = kC(CC[ZC + zC], CC[bC + zC]), pC = nC.a, GC = nC.b, nC = kC(SC, pC), CC[wC + zC] = nC.a, CC[ZC + zC] = nC.b, nC = kC(PC, GC), CC[QC + zC] = nC.a, CC[bC + zC] = nC.b
+              let yk = Mk(kk[Tk + Fk], kk[Xk + Fk]);
+              wk = yk.a, Jk = yk.b, yk = Mk(kk[Ik + Fk], kk[ik + Fk]), Hk = yk.a, xk = yk.b, yk = Mk(wk, Hk), kk[Tk + Fk] = yk.a, kk[Ik + Fk] = yk.b, yk = Mk(Jk, xk), kk[Xk + Fk] = yk.a, kk[ik + Fk] = yk.b
             }
           }
-          if (ZC & WC) {
-            const ZC = wC + oC;
-            let QC;
-            QC = fC ? OC(CC[wC + zC], CC[ZC + zC]) : kC(CC[wC + zC], CC[ZC + zC]), SC = QC.a, CC[ZC + zC] = QC.b, CC[wC + zC] = SC
+          if (Ik & tk) {
+            const Ik = Tk + ak;
+            let Xk;
+            Xk = lk ? Dk(kk[Tk + Fk], kk[Ik + Fk]) : Mk(kk[Tk + Fk], kk[Ik + Fk]), wk = Xk.a, kk[Ik + Fk] = Xk.b, kk[Tk + Fk] = wk
           }
         }
-        if (wC & WC) {
-          let wC = FC;
-          const bC = FC + QC * (ZC - qC);
-          for (; wC <= bC; wC += gC) {
-            const ZC = wC + MC;
-            let QC;
-            QC = fC ? OC(CC[wC + zC], CC[ZC + zC]) : kC(CC[wC + zC], CC[ZC + zC]), SC = QC.a, CC[ZC + zC] = QC.b, CC[wC + zC] = SC
+        if (Tk & tk) {
+          let Tk = Lk;
+          const ik = Lk + Xk * (Ik - qk);
+          for (; Tk <= ik; Tk += ek) {
+            const Ik = Tk + jk;
+            let Xk;
+            Xk = lk ? Dk(kk[Tk + Fk], kk[Ik + Fk]) : Mk(kk[Tk + Fk], kk[Ik + Fk]), wk = Xk.a, kk[Ik + Fk] = Xk.b, kk[Tk + Fk] = wk
           }
         }
-        qC = WC, WC >>= 1
+        qk = tk, tk >>= 1
       }
-      return FC
+      return Lk
     }
 
-    function Cz(CC) {
-      return new DataView(CC.array.buffer, CC.offset.value, CC.size)
+    function FF(kk) {
+      return new DataView(kk.array.buffer, kk.offset.value, kk.size)
     }
 
-    function zz(CC) {
-      const zC = CC.viewer.buffer.slice(CC.offset.value, CC.offset.value + CC.size),
-        ZC = new Uint8Array(function(CC) {
-          let zC = CC.byteLength;
-          const ZC = [];
-          let QC = 0;
-          const wC = new DataView(CC);
-          for (; zC > 0;) {
-            const CC = wC.getInt8(QC++);
-            if (CC < 0) {
-              const bC = -CC;
-              zC -= bC + 1;
-              for (let CC = 0; CC < bC; CC++) ZC.push(wC.getUint8(QC++))
+    function IF(kk) {
+      const Fk = kk.viewer.buffer.slice(kk.offset.value, kk.offset.value + kk.size),
+        Ik = new Uint8Array(function(kk) {
+          let Fk = kk.byteLength;
+          const Ik = [];
+          let Xk = 0;
+          const Tk = new DataView(kk);
+          for (; Fk > 0;) {
+            const kk = Tk.getInt8(Xk++);
+            if (kk < 0) {
+              const ik = -kk;
+              Fk -= ik + 1;
+              for (let kk = 0; kk < ik; kk++) Ik.push(Tk.getUint8(Xk++))
             } else {
-              const bC = CC;
-              zC -= 2;
-              const nC = wC.getUint8(QC++);
-              for (let CC = 0; CC < bC + 1; CC++) ZC.push(nC)
+              const ik = kk;
+              Fk -= 2;
+              const yk = Tk.getUint8(Xk++);
+              for (let kk = 0; kk < ik + 1; kk++) Ik.push(yk)
             }
           }
-          return ZC
-        }(zC)),
-        QC = new Uint8Array(ZC.length);
-      return EC(ZC), lC(ZC, QC), new DataView(QC.buffer)
+          return Ik
+        }(Fk)),
+        Xk = new Uint8Array(Ik.length);
+      return bk(Ik), Rk(Ik, Xk), new DataView(Xk.buffer)
     }
 
-    function Zz(CC) {
-      const zC = CC.array.slice(CC.offset.value, CC.offset.value + CC.size),
-        ZC = fflate.unzlibSync(zC),
-        QC = new Uint8Array(ZC.length);
-      return EC(ZC), lC(ZC, QC), new DataView(QC.buffer)
+    function XF(kk) {
+      const Fk = kk.array.slice(kk.offset.value, kk.offset.value + kk.size),
+        Ik = fflate.unzlibSync(Fk),
+        Xk = new Uint8Array(Ik.length);
+      return bk(Ik), Rk(Ik, Xk), new DataView(Xk.buffer)
     }
 
-    function Qz(CC) {
-      const zC = CC.array.slice(CC.offset.value, CC.offset.value + CC.size),
-        ZC = fflate.unzlibSync(zC),
-        QC = CC.lines * CC.channels * CC.width,
-        wC = 1 == CC.type ? new Uint16Array(QC) : new Uint32Array(QC);
-      let bC = 0,
-        nC = 0;
-      const fC = new Array(4);
-      for (let oC = 0; oC < CC.lines; oC++)
-        for (let zC = 0; zC < CC.channels; zC++) {
-          let zC = 0;
-          switch (CC.type) {
+    function TF(kk) {
+      const Fk = kk.array.slice(kk.offset.value, kk.offset.value + kk.size),
+        Ik = fflate.unzlibSync(Fk),
+        Xk = kk.lines * kk.channels * kk.width,
+        Tk = 1 == kk.type ? new Uint16Array(Xk) : new Uint32Array(Xk);
+      let ik = 0,
+        yk = 0;
+      const lk = new Array(4);
+      for (let ak = 0; ak < kk.lines; ak++)
+        for (let Fk = 0; Fk < kk.channels; Fk++) {
+          let Fk = 0;
+          switch (kk.type) {
             case 1:
-              fC[0] = bC, fC[1] = fC[0] + CC.width, bC = fC[1] + CC.width;
-              for (let QC = 0; QC < CC.width; ++QC) {
-                zC += ZC[fC[0]++] << 8 | ZC[fC[1]++], wC[nC] = zC, nC++
+              lk[0] = ik, lk[1] = lk[0] + kk.width, ik = lk[1] + kk.width;
+              for (let Xk = 0; Xk < kk.width; ++Xk) {
+                Fk += Ik[lk[0]++] << 8 | Ik[lk[1]++], Tk[yk] = Fk, yk++
               }
               break;
             case 2:
-              fC[0] = bC, fC[1] = fC[0] + CC.width, fC[2] = fC[1] + CC.width, bC = fC[2] + CC.width;
-              for (let QC = 0; QC < CC.width; ++QC) {
-                zC += ZC[fC[0]++] << 24 | ZC[fC[1]++] << 16 | ZC[fC[2]++] << 8, wC[nC] = zC, nC++
+              lk[0] = ik, lk[1] = lk[0] + kk.width, lk[2] = lk[1] + kk.width, ik = lk[2] + kk.width;
+              for (let Xk = 0; Xk < kk.width; ++Xk) {
+                Fk += Ik[lk[0]++] << 24 | Ik[lk[1]++] << 16 | Ik[lk[2]++] << 8, Tk[yk] = Fk, yk++
               }
           }
         }
-      return new DataView(wC.buffer)
+      return new DataView(Tk.buffer)
     }
 
-    function wz(CC) {
-      const zC = CC.viewer,
-        ZC = {
-          value: CC.offset.value
+    function iF(kk) {
+      const Fk = kk.viewer,
+        Ik = {
+          value: kk.offset.value
         },
-        QC = new Uint16Array(CC.width * CC.scanlineBlockSize * (CC.channels * CC.type)),
-        wC = new Uint8Array(NC);
-      let bC = 0;
-      const nC = new Array(CC.channels);
-      for (let qC = 0; qC < CC.channels; qC++) nC[qC] = {}, nC[qC].start = bC, nC[qC].end = nC[qC].start, nC[qC].nx = CC.width, nC[qC].ny = CC.lines, nC[qC].size = CC.type, bC += nC[qC].nx * nC[qC].ny * nC[qC].size;
-      const fC = eC(zC, ZC),
-        oC = eC(zC, ZC);
-      if (oC >= NC) throw new Error("Wrong PIZ_COMPRESSION BITMAP_SIZE");
-      if (fC <= oC)
-        for (let qC = 0; qC < oC - fC + 1; qC++) wC[qC + fC] = vC(zC, ZC);
-      const FC = new Uint16Array(WC),
-        MC = function(CC, zC) {
-          let ZC = 0;
-          for (let wC = 0; wC < WC; ++wC)(0 == wC || CC[wC >> 3] & 1 << (7 & wC)) && (zC[ZC++] = wC);
-          const QC = ZC - 1;
-          for (; ZC < WC;) zC[ZC++] = 0;
-          return QC
-        }(wC, FC),
-        gC = iC(zC, ZC);
-      LC(CC.array, zC, ZC, gC, QC, bC);
-      for (let qC = 0; qC < CC.channels; ++qC) {
-        const CC = nC[qC];
-        for (let zC = 0; zC < nC[qC].size; ++zC) VC(QC, CC.start + zC, CC.nx, CC.size, CC.ny, CC.nx * CC.size, MC)
-      }! function(CC, zC, ZC) {
-        for (let QC = 0; QC < ZC; ++QC) zC[QC] = CC[zC[QC]]
-      }(FC, QC, bC);
-      let SC = 0;
-      const pC = new Uint8Array(QC.buffer.byteLength);
-      for (let WC = 0; WC < CC.lines; WC++)
-        for (let zC = 0; zC < CC.channels; zC++) {
-          const CC = nC[zC],
-            ZC = CC.nx * CC.size,
-            wC = new Uint8Array(QC.buffer, CC.end * qC, ZC * qC);
-          pC.set(wC, SC), SC += ZC * qC, CC.end += ZC
+        Xk = new Uint16Array(kk.width * kk.scanlineBlockSize * (kk.channels * kk.type)),
+        Tk = new Uint8Array(Zk);
+      let ik = 0;
+      const yk = new Array(kk.channels);
+      for (let qk = 0; qk < kk.channels; qk++) yk[qk] = {}, yk[qk].start = ik, yk[qk].end = yk[qk].start, yk[qk].nx = kk.width, yk[qk].ny = kk.lines, yk[qk].size = kk.type, ik += yk[qk].nx * yk[qk].ny * yk[qk].size;
+      const lk = vk(Fk, Ik),
+        ak = vk(Fk, Ik);
+      if (ak >= Zk) throw new Error("Wrong PIZ_COMPRESSION BITMAP_SIZE");
+      if (lk <= ak)
+        for (let qk = 0; qk < ak - lk + 1; qk++) Tk[qk + lk] = Sk(Fk, Ik);
+      const Lk = new Uint16Array(tk),
+        jk = function(kk, Fk) {
+          let Ik = 0;
+          for (let Tk = 0; Tk < tk; ++Tk)(0 == Tk || kk[Tk >> 3] & 1 << (7 & Tk)) && (Fk[Ik++] = Tk);
+          const Xk = Ik - 1;
+          for (; Ik < tk;) Fk[Ik++] = 0;
+          return Xk
+        }(Tk, Lk),
+        ek = zk(Fk, Ik);
+      mk(kk.array, Fk, Ik, ek, Xk, ik);
+      for (let qk = 0; qk < kk.channels; ++qk) {
+        const kk = yk[qk];
+        for (let Fk = 0; Fk < yk[qk].size; ++Fk) kF(Xk, kk.start + Fk, kk.nx, kk.size, kk.ny, kk.nx * kk.size, jk)
+      }! function(kk, Fk, Ik) {
+        for (let Xk = 0; Xk < Ik; ++Xk) Fk[Xk] = kk[Fk[Xk]]
+      }(Lk, Xk, ik);
+      let wk = 0;
+      const Hk = new Uint8Array(Xk.buffer.byteLength);
+      for (let tk = 0; tk < kk.lines; tk++)
+        for (let Fk = 0; Fk < kk.channels; Fk++) {
+          const kk = yk[Fk],
+            Ik = kk.nx * kk.size,
+            Tk = new Uint8Array(Xk.buffer, kk.end * qk, Ik * qk);
+          Hk.set(Tk, wk), wk += Ik * qk, kk.end += Ik
         }
-      return new DataView(pC.buffer)
+      return new DataView(Hk.buffer)
     }
-    var bz, nz = ZC(39913);
-    ! function(CC) {
-      CC[CC.Float = 0] = "Float", CC[CC.HalfFloat = 1] = "HalfFloat"
-    }(bz || (bz = {}));
-    class fz {}
-    async function oz(CC, zC, ZC, QC) {
-      const wC = {
+    var yF, lF = Ik(40097);
+    ! function(kk) {
+      kk[kk.Float = 0] = "Float", kk[kk.HalfFloat = 1] = "HalfFloat"
+    }(yF || (yF = {}));
+    class aF {}
+    async function qF(kk, Fk, Ik, Xk) {
+      const Tk = {
         size: 0,
-        viewer: zC,
-        array: new Uint8Array(zC.buffer),
-        offset: ZC,
-        width: CC.dataWindow.xMax - CC.dataWindow.xMin + 1,
-        height: CC.dataWindow.yMax - CC.dataWindow.yMin + 1,
-        channels: CC.channels.length,
+        viewer: Fk,
+        array: new Uint8Array(Fk.buffer),
+        offset: Ik,
+        width: kk.dataWindow.xMax - kk.dataWindow.xMin + 1,
+        height: kk.dataWindow.yMax - kk.dataWindow.yMin + 1,
+        channels: kk.channels.length,
         channelLineOffsets: {},
         scanOrder: () => 0,
         bytesPerLine: 0,
@@ -595,174 +595,174 @@ export const modules = {
         linearSpace: !1,
         textureType: 0
       };
-      switch (CC.compression) {
-        case AC.NO_COMPRESSION:
-          wC.lines = 1, wC.uncompress = Cz;
+      switch (kk.compression) {
+        case Kk.NO_COMPRESSION:
+          Tk.lines = 1, Tk.uncompress = FF;
           break;
-        case AC.RLE_COMPRESSION:
-          wC.lines = 1, wC.uncompress = zz;
+        case Kk.RLE_COMPRESSION:
+          Tk.lines = 1, Tk.uncompress = IF;
           break;
-        case AC.ZIPS_COMPRESSION:
-          wC.lines = 1, wC.uncompress = Zz, await nz.g.LoadScriptAsync(fz.FFLATEUrl);
+        case Kk.ZIPS_COMPRESSION:
+          Tk.lines = 1, Tk.uncompress = XF, await lF.h.LoadScriptAsync(aF.FFLATEUrl);
           break;
-        case AC.ZIP_COMPRESSION:
-          wC.lines = 16, wC.uncompress = Zz, await nz.g.LoadScriptAsync(fz.FFLATEUrl);
+        case Kk.ZIP_COMPRESSION:
+          Tk.lines = 16, Tk.uncompress = XF, await lF.h.LoadScriptAsync(aF.FFLATEUrl);
           break;
-        case AC.PIZ_COMPRESSION:
-          wC.lines = 32, wC.uncompress = wz;
+        case Kk.PIZ_COMPRESSION:
+          Tk.lines = 32, Tk.uncompress = iF;
           break;
-        case AC.PXR24_COMPRESSION:
-          wC.lines = 16, wC.uncompress = Qz, await nz.g.LoadScriptAsync(fz.FFLATEUrl);
+        case Kk.PXR24_COMPRESSION:
+          Tk.lines = 16, Tk.uncompress = TF, await lF.h.LoadScriptAsync(aF.FFLATEUrl);
           break;
         default:
-          throw new Error(AC[CC.compression] + " is unsupported")
+          throw new Error(Kk[kk.compression] + " is unsupported")
       }
-      wC.scanlineBlockSize = wC.lines;
-      const bC = {};
-      for (const fC of CC.channels) switch (fC.name) {
+      Tk.scanlineBlockSize = Tk.lines;
+      const ik = {};
+      for (const lk of kk.channels) switch (lk.name) {
         case "R":
         case "G":
         case "B":
         case "A":
         case "Y":
-          bC[fC.name] = !0, wC.type = fC.pixelType
+          ik[lk.name] = !0, Tk.type = lk.pixelType
       }
-      let nC = !1;
-      if (bC.R && bC.G && bC.B && bC.A) wC.outputChannels = 4, wC.decodeChannels = {
+      let yk = !1;
+      if (ik.R && ik.G && ik.B && ik.A) Tk.outputChannels = 4, Tk.decodeChannels = {
         R: 0,
         G: 1,
         B: 2,
         A: 3
       };
-      else if (bC.R && bC.G && bC.B) nC = !0, wC.outputChannels = 4, wC.decodeChannels = {
+      else if (ik.R && ik.G && ik.B) yk = !0, Tk.outputChannels = 4, Tk.decodeChannels = {
         R: 0,
         G: 1,
         B: 2,
         A: 3
       };
-      else if (bC.R && bC.G) wC.outputChannels = 2, wC.decodeChannels = {
+      else if (ik.R && ik.G) Tk.outputChannels = 2, Tk.decodeChannels = {
         R: 0,
         G: 1
       };
-      else if (bC.R) wC.outputChannels = 1, wC.decodeChannels = {
+      else if (ik.R) Tk.outputChannels = 1, Tk.decodeChannels = {
         R: 0
       };
       else {
-        if (!bC.Y) throw new Error("EXRLoader.parse: file contains unsupported data channels.");
-        wC.outputChannels = 1, wC.decodeChannels = {
+        if (!ik.Y) throw new Error("EXRLoader.parse: file contains unsupported data channels.");
+        Tk.outputChannels = 1, Tk.decodeChannels = {
           Y: 0
         }
       }
-      if (1 === wC.type) switch (QC) {
-        case bz.Float:
-          wC.getter = dC, wC.inputSize = qC;
+      if (1 === Tk.type) switch (Xk) {
+        case yF.Float:
+          Tk.getter = Gk, Tk.inputSize = qk;
           break;
-        case bz.HalfFloat:
-          wC.getter = eC, wC.inputSize = qC
+        case yF.HalfFloat:
+          Tk.getter = vk, Tk.inputSize = qk
       } else {
-        if (2 !== wC.type) throw new Error("Unsupported pixelType " + wC.type + " for " + CC.compression);
-        switch (QC) {
-          case bz.Float:
-            wC.getter = YC, wC.inputSize = fC;
+        if (2 !== Tk.type) throw new Error("Unsupported pixelType " + Tk.type + " for " + kk.compression);
+        switch (Xk) {
+          case yF.Float:
+            Tk.getter = nk, Tk.inputSize = lk;
             break;
-          case bz.HalfFloat:
-            wC.getter = mC, wC.inputSize = fC
+          case yF.HalfFloat:
+            Tk.getter = pk, Tk.inputSize = lk
         }
       }
-      wC.blockCount = wC.height / wC.scanlineBlockSize;
-      for (let fC = 0; fC < wC.blockCount; fC++) KC(zC, ZC);
-      const oC = wC.width * wC.height * wC.outputChannels;
-      switch (QC) {
-        case bz.Float:
-          wC.byteArray = new Float32Array(oC), wC.textureType = 1, nC && wC.byteArray.fill(1, 0, oC);
+      Tk.blockCount = Tk.height / Tk.scanlineBlockSize;
+      for (let lk = 0; lk < Tk.blockCount; lk++) Ok(Fk, Ik);
+      const ak = Tk.width * Tk.height * Tk.outputChannels;
+      switch (Xk) {
+        case yF.Float:
+          Tk.byteArray = new Float32Array(ak), Tk.textureType = 1, yk && Tk.byteArray.fill(1, 0, ak);
           break;
-        case bz.HalfFloat:
-          wC.byteArray = new Uint16Array(oC), wC.textureType = 2, nC && wC.byteArray.fill(15360, 0, oC);
+        case yF.HalfFloat:
+          Tk.byteArray = new Uint16Array(ak), Tk.textureType = 2, yk && Tk.byteArray.fill(15360, 0, ak);
           break;
         default:
-          throw new Error("Unsupported type: " + QC)
+          throw new Error("Unsupported type: " + Xk)
       }
-      let FC = 0;
-      for (const fC of CC.channels) void 0 !== wC.decodeChannels[fC.name] && (wC.channelLineOffsets[fC.name] = FC * wC.width), FC += 2 * fC.pixelType;
-      return wC.bytesPerLine = wC.width * FC, wC.outLineWidth = wC.width * wC.outputChannels, "INCREASING_Y" === CC.lineOrder ? wC.scanOrder = CC => CC : wC.scanOrder = CC => wC.height - 1 - CC, 4 == wC.outputChannels ? (wC.format = 5, wC.linearSpace = !0) : (wC.format = 6, wC.linearSpace = !1), wC
+      let Lk = 0;
+      for (const lk of kk.channels) void 0 !== Tk.decodeChannels[lk.name] && (Tk.channelLineOffsets[lk.name] = Lk * Tk.width), Lk += 2 * lk.pixelType;
+      return Tk.bytesPerLine = Tk.width * Lk, Tk.outLineWidth = Tk.width * Tk.outputChannels, "INCREASING_Y" === kk.lineOrder ? Tk.scanOrder = kk => kk : Tk.scanOrder = kk => Tk.height - 1 - kk, 4 == Tk.outputChannels ? (Tk.format = 5, Tk.linearSpace = !0) : (Tk.format = 6, Tk.linearSpace = !1), Tk
     }
 
-    function qz(CC, zC, ZC, QC) {
-      const wC = {
+    function LF(kk, Fk, Ik, Xk) {
+      const Tk = {
         value: 0
       };
-      for (let bC = 0; bC < CC.height / CC.scanlineBlockSize; bC++) {
-        const nC = IC(ZC, QC) - zC.dataWindow.yMin;
-        CC.size = iC(ZC, QC), CC.lines = nC + CC.scanlineBlockSize > CC.height ? CC.height - nC : CC.scanlineBlockSize;
-        const fC = CC.size < CC.lines * CC.bytesPerLine && CC.uncompress ? CC.uncompress(CC) : Cz(CC);
-        QC.value += CC.size;
-        for (let ZC = 0; ZC < CC.scanlineBlockSize; ZC++) {
-          const QC = bC * CC.scanlineBlockSize,
-            nC = ZC + CC.scanOrder(QC);
-          if (nC >= CC.height) continue;
-          const oC = ZC * CC.bytesPerLine,
-            qC = (CC.height - 1 - nC) * CC.outLineWidth;
-          for (let ZC = 0; ZC < CC.channels; ZC++) {
-            const QC = zC.channels[ZC].name,
-              bC = CC.channelLineOffsets[QC],
-              nC = CC.decodeChannels[QC];
-            if (void 0 !== nC) {
-              wC.value = oC + bC;
-              for (let zC = 0; zC < CC.width; zC++) {
-                const ZC = qC + zC * CC.outputChannels + nC;
-                CC.byteArray && (CC.byteArray[ZC] = CC.getter(fC, wC))
+      for (let ik = 0; ik < kk.height / kk.scanlineBlockSize; ik++) {
+        const yk = Vk(Ik, Xk) - Fk.dataWindow.yMin;
+        kk.size = zk(Ik, Xk), kk.lines = yk + kk.scanlineBlockSize > kk.height ? kk.height - yk : kk.scanlineBlockSize;
+        const lk = kk.size < kk.lines * kk.bytesPerLine && kk.uncompress ? kk.uncompress(kk) : FF(kk);
+        Xk.value += kk.size;
+        for (let Ik = 0; Ik < kk.scanlineBlockSize; Ik++) {
+          const Xk = ik * kk.scanlineBlockSize,
+            yk = Ik + kk.scanOrder(Xk);
+          if (yk >= kk.height) continue;
+          const ak = Ik * kk.bytesPerLine,
+            qk = (kk.height - 1 - yk) * kk.outLineWidth;
+          for (let Ik = 0; Ik < kk.channels; Ik++) {
+            const Xk = Fk.channels[Ik].name,
+              ik = kk.channelLineOffsets[Xk],
+              yk = kk.decodeChannels[Xk];
+            if (void 0 !== yk) {
+              Tk.value = ak + ik;
+              for (let Fk = 0; Fk < kk.width; Fk++) {
+                const Ik = qk + Fk * kk.outputChannels + yk;
+                kk.byteArray && (kk.byteArray[Ik] = kk.getter(lk, Tk))
               }
             }
           }
         }
       }
     }
-    fz.DefaultOutputType = bz.HalfFloat, fz.FFLATEUrl = "https://unpkg.com/fflate@0.8.2";
-    class Fz {
+    aF.DefaultOutputType = yF.HalfFloat, aF.FFLATEUrl = "https://unpkg.com/fflate@0.8.2";
+    class tF {
       constructor() {
         this.supportCascades = !1
       }
-      loadCubeData(CC, zC, ZC, QC, wC) {
+      loadCubeData(kk, Fk, Ik, Xk, Tk) {
         throw ".exr not supported in Cube."
       }
-      loadData(CC, zC, ZC) {
-        const wC = new DataView(CC.buffer),
-          bC = {
+      loadData(kk, Fk, Ik) {
+        const Tk = new DataView(kk.buffer),
+          ik = {
             value: 0
           },
-          nC = cC(wC, bC);
-        oz(nC, wC, bC, fz.DefaultOutputType).then((CC => {
-          qz(CC, nC, wC, bC);
-          const QC = nC.dataWindow.xMax - nC.dataWindow.xMin + 1,
-            fC = nC.dataWindow.yMax - nC.dataWindow.yMin + 1;
-          ZC(QC, fC, zC.generateMipMaps, !1, (() => {
-            const ZC = zC.mg();
-            zC.format = nC.format, zC.type = CC.textureType, zC.invertY = !1, zC._gammaSpace = !nC.linearSpace, CC.byteArray && ZC._uploadDataToTextureDirectly(zC, CC.byteArray, 0, 0, void 0, !0)
+          yk = Ck(Tk, ik);
+        qF(yk, Tk, ik, aF.DefaultOutputType).then((kk => {
+          LF(kk, yk, Tk, ik);
+          const Xk = yk.dataWindow.xMax - yk.dataWindow.xMin + 1,
+            lk = yk.dataWindow.yMax - yk.dataWindow.yMin + 1;
+          Ik(Xk, lk, Fk.generateMipMaps, !1, (() => {
+            const Ik = Fk.Oe();
+            Fk.format = yk.format, Fk.type = kk.textureType, Fk.invertY = !1, Fk._gammaSpace = !yk.linearSpace, kk.byteArray && Ik._uploadDataToTextureDirectly(Fk, kk.byteArray, 0, 0, void 0, !0)
           }))
-        })).catch((CC => {
-          QC.c.Error("Failed to load EXR texture: ", CC)
+        })).catch((kk => {
+          Xk.e.Error("Failed to load EXR texture: ", kk)
         }))
       }
     }
-    async function Wz(CC) {
-      const zC = new DataView(CC),
-        ZC = {
+    async function ZF(kk) {
+      const Fk = new DataView(kk),
+        Ik = {
           value: 0
         },
-        wC = cC(zC, ZC);
+        Tk = Ck(Fk, Ik);
       try {
-        const CC = await oz(wC, zC, ZC, bz.Float);
-        return qz(CC, wC, zC, ZC), CC.byteArray ? {
-          width: wC.dataWindow.xMax - wC.dataWindow.xMin + 1,
-          height: wC.dataWindow.yMax - wC.dataWindow.yMin + 1,
-          data: new Float32Array(CC.byteArray)
-        } : (QC.c.Error("Failed to decode EXR data: No byte array available."), {
+        const kk = await qF(Tk, Fk, Ik, yF.Float);
+        return LF(kk, Tk, Fk, Ik), kk.byteArray ? {
+          width: Tk.dataWindow.xMax - Tk.dataWindow.xMin + 1,
+          height: Tk.dataWindow.yMax - Tk.dataWindow.yMin + 1,
+          data: new Float32Array(kk.byteArray)
+        } : (Xk.e.Error("Failed to decode EXR data: No byte array available."), {
           width: 0,
           height: 0,
           data: null
         })
-      } catch (bC) {
-        QC.c.Error("Failed to load EXR data: ", bC)
+      } catch (ik) {
+        Xk.e.Error("Failed to load EXR data: ", ik)
       }
       return {
         width: 0,
@@ -773,4 +773,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

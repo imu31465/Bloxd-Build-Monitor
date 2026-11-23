@@ -1,30 +1,30 @@
 export const id = 54;
 export const ids = [54];
 export const modules = {
-  50754: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      startPageTexturePackFeed: () => nC
+  51002: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      startPageTexturePackFeed: () => yk
     });
-    var QC = ZC(1149),
-      wC = ZC(38),
-      bC = ZC(50746);
+    var Xk = Ik(1194),
+      Tk = Ik(41),
+      ik = Ik(50992);
 
-    function nC(CC, zC) {
-      const ZC = new bC.b({
-        store: wC.g,
-        warn: CC,
-        oneShot: zC,
-        fetchLatest: async CC => {
-          const zC = await fetch(`${QC.clientSideServerUrls.texturePackUrl}/${CC}.json`, {
+    function yk(kk, Fk) {
+      const Ik = new ik.d({
+        store: Tk.g,
+        warn: kk,
+        oneShot: Fk,
+        fetchLatest: async kk => {
+          const Fk = await fetch(`${Xk.clientSideServerUrls.texturePackUrl}/${kk}.json`, {
             cache: "reload"
           });
-          if (!zC.ok) throw new Error(`fetching texture pack ${CC} answered HTTP ${zC.status}`);
-          return await zC.json()
+          if (!Fk.ok) throw new Error(`fetching texture pack ${kk} answered HTTP ${Fk.status}`);
+          return await Fk.json()
         }
       });
-      return (0, bC.f)(ZC), ZC
+      return (0, ik.f)(Ik), Ik
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

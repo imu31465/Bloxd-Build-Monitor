@@ -1,217 +1,217 @@
 export const id = 199;
 export const ids = [199];
 export const modules = {
-  41330: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => bC
+  41529: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => ik
     });
-    var QC = ZC(48),
-      wC = ZC(2734);
+    var Xk = Ik(58),
+      Tk = Ik(2679);
 
-    function bC(CC, zC, ZC) {
-      const bC = (0, QC.useRef)(null),
+    function ik(kk, Fk, Ik) {
+      const ik = (0, Xk.useRef)(null),
         {
-          width: nC,
-          height: fC
-        } = (0, wC.e)(CC);
-      (0, QC.useEffect)((() => {
-        const ZC = zC(CC.current);
-        return bC.current = ZC, () => {
-          ZC.close(), bC.current = null
+          width: yk,
+          height: lk
+        } = (0, Tk.b)(kk);
+      (0, Xk.useEffect)((() => {
+        const Ik = Fk(kk.current);
+        return ik.current = Ik, () => {
+          Ik.close(), ik.current = null
         }
-      }), [CC, zC]), (0, QC.useEffect)((() => {
-        nC <= 0 || fC <= 0 || bC.current.resize(nC, fC)
-      }), [nC, fC]), (0, QC.useEffect)((() => {
-        bC.current.show(ZC)
-      }), [ZC])
+      }), [kk, Fk]), (0, Xk.useEffect)((() => {
+        yk <= 0 || lk <= 0 || ik.current.resize(yk, lk)
+      }), [yk, lk]), (0, Xk.useEffect)((() => {
+        ik.current.show(Ik)
+      }), [Ik])
     }
   },
-  41336: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => NC,
-      d: () => WC,
-      e: () => oC
+  41534: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Zk,
+      e: () => tk,
+      g: () => ak
     });
-    var QC = ZC(37023),
-      wC = ZC(38454);
+    var Xk = Ik(37224),
+      Tk = Ik(38621);
 
-    function bC(CC, zC) {
-      let [ZC, QC, wC] = CC;
-      return [0, .5, 1].map((CC => ({
-        timeFraction: CC,
+    function ik(kk, Fk) {
+      let [Ik, Xk, Tk] = kk;
+      return [0, .5, 1].map((kk => ({
+        timeFraction: kk,
         rotation: {
-          nb: "catmull-rom-spline",
-          point: [ZC, QC, wC + (.5 === CC ? zC : 0)]
+          ii: "catmull-rom-spline",
+          point: [Ik, Xk, Tk + (.5 === kk ? Fk : 0)]
         }
       })))
     }
 
-    function nC(CC, zC, ZC) {
+    function yk(kk, Fk, Ik) {
       return {
-        Cb: 3200,
+        ki: 3200,
         loop: !0,
-        Zb: {
+        Ii: {
           Root: {
-            timeline: [0, .5, 1].map((CC => ({
-              timeFraction: CC,
+            timeline: [0, .5, 1].map((kk => ({
+              timeFraction: kk,
               position: {
-                nb: "catmull-rom-spline",
-                point: [0, .5 === CC ? .18 : 0, 0]
+                ii: "catmull-rom-spline",
+                point: [0, .5 === kk ? .18 : 0, 0]
               }
             })))
           },
           HeadMesh: {
-            timeline: [0, .25, .75, 1].map((CC => ({
-              timeFraction: CC,
+            timeline: [0, .25, .75, 1].map((kk => ({
+              timeFraction: kk,
               rotation: {
-                nb: "catmull-rom-spline",
-                point: [0, .25 === CC ? .12 : .75 === CC ? -.12 : 0, 0]
+                ii: "catmull-rom-spline",
+                point: [0, .25 === kk ? .12 : .75 === kk ? -.12 : 0, 0]
               }
             })))
           },
           ArmLeftMesh: {
-            timeline: bC(CC, ZC)
+            timeline: ik(kk, Ik)
           },
           ArmRightMesh: {
-            timeline: bC(zC, -ZC)
+            timeline: ik(Fk, -Ik)
           }
         }
       }
     }
-    const fC = nC([0, 0, 0], [0, 0, 0], .07),
-      oC = (0, wC.b)((0, QC.f)(fC), "mobIdle"),
-      qC = nC([-.2 * Math.PI, -.15 * Math.PI, 0], [-.1 * Math.PI, .18 * Math.PI, 0], .02),
-      FC = nC([-.4 * Math.PI, -.15 * Math.PI, 0], [-.3 * Math.PI, .18 * Math.PI, 0], .02),
-      WC = (0, wC.b)((0, QC.f)(qC), "gunReady"),
-      NC = (0, wC.b)((0, QC.f)(FC), "gunAimed")
+    const lk = yk([0, 0, 0], [0, 0, 0], .07),
+      ak = (0, Tk.d)((0, Xk.i)(lk), "mobIdle"),
+      qk = yk([-.2 * Math.PI, -.15 * Math.PI, 0], [-.1 * Math.PI, .18 * Math.PI, 0], .02),
+      Lk = yk([-.4 * Math.PI, -.15 * Math.PI, 0], [-.3 * Math.PI, .18 * Math.PI, 0], .02),
+      tk = (0, Tk.d)((0, Xk.i)(qk), "gunReady"),
+      Zk = (0, Tk.d)((0, Xk.i)(Lk), "gunAimed")
   },
-  38454: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => wC,
-      c: () => bC
+  38621: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Tk,
+      f: () => ik
     });
-    const QC = new WeakMap;
+    const Xk = new WeakMap;
 
-    function wC(CC, zC) {
-      return QC.set(CC, zC), CC
+    function Tk(kk, Fk) {
+      return Xk.set(kk, Fk), kk
     }
 
-    function bC(CC) {
-      var zC;
-      return null !== (zC = QC.get(CC)) && void 0 !== zC ? zC : null
+    function ik(kk) {
+      var Fk;
+      return null !== (Fk = Xk.get(kk)) && void 0 !== Fk ? Fk : null
     }
   },
-  34194: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => nC,
-      g: () => wC,
-      i: () => FC
+  34222: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => yk,
+      f: () => Tk,
+      h: () => Lk
     });
-    var QC = ZC(1501);
+    var Xk = Ik(1518);
 
-    function wC(CC) {
-      var zC;
+    function Tk(kk) {
+      var Fk;
       return {
-        ...nC.store,
-        yaw: nC.store.yaw + (null !== (zC = QC.b[CC].previewYaw) && void 0 !== zC ? zC : 0)
+        ...yk.store,
+        yaw: yk.store.yaw + (null !== (Fk = Xk.c[kk].previewYaw) && void 0 !== Fk ? Fk : 0)
       }
     }
-    const bC = {
+    const ik = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      nC = {
-        player: bC,
+      yk = {
+        player: ik,
         store: {
-          ...bC,
+          ...ik,
           radius: 33,
           target: [0, 3.9, 0]
         }
       };
 
-    function fC(CC, zC) {
-      CC instanceof Promise ? CC.then(zC).catch((CC => {
-        console.error("Couldn't open the preview", CC)
-      })) : zC(CC)
+    function lk(kk, Fk) {
+      kk instanceof Promise ? kk.then(Fk).catch((kk => {
+        console.error("Couldn't open the preview", kk)
+      })) : Fk(kk)
     }
-    class oC {
-      constructor(CC) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, fC(CC, (CC => {
-          this.closed ? CC.close() : (this.opened = CC, null !== this.size && CC.resize(this.size.width, this.size.height), null !== this.view && CC.show(this.view))
+    class ak {
+      constructor(kk) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, lk(kk, (kk => {
+          this.closed ? kk.close() : (this.opened = kk, null !== this.size && kk.resize(this.size.width, this.size.height), null !== this.view && kk.show(this.view))
         }))
       }
-      show(CC) {
-        var zC;
-        this.view = CC, null === (zC = this.opened) || void 0 === zC || zC.show(CC)
+      show(kk) {
+        var Fk;
+        this.view = kk, null === (Fk = this.opened) || void 0 === Fk || Fk.show(kk)
       }
-      resize(CC, zC) {
-        var ZC;
+      resize(kk, Fk) {
+        var Ik;
         this.size = {
-          width: CC,
-          height: zC
-        }, null === (ZC = this.opened) || void 0 === ZC || ZC.resize(CC, zC)
+          width: kk,
+          height: Fk
+        }, null === (Ik = this.opened) || void 0 === Ik || Ik.resize(kk, Fk)
       }
       close() {
-        var CC;
-        this.closed = !0, null === (CC = this.opened) || void 0 === CC || CC.close(), this.opened = null
+        var kk;
+        this.closed = !0, null === (kk = this.opened) || void 0 === kk || kk.close(), this.opened = null
       }
     }
-    class qC {
-      constructor(CC) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(CC).then((CC => CC.ready)), fC(CC, (CC => {
-          this.closed ? CC.close() : (this.opened = CC, null !== this.size && CC.resize(this.size.width, this.size.height))
+    class qk {
+      constructor(kk) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(kk).then((kk => kk.ready)), lk(kk, (kk => {
+          this.closed ? kk.close() : (this.opened = kk, null !== this.size && kk.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var CC, zC;
-        return null !== (CC = null === (zC = this.opened) || void 0 === zC ? void 0 : zC.isReady()) && void 0 !== CC && CC
+        var kk, Fk;
+        return null !== (kk = null === (Fk = this.opened) || void 0 === Fk ? void 0 : Fk.isReady()) && void 0 !== kk && kk
       }
-      setCosmetic(CC, zC) {
-        var ZC;
-        null === (ZC = this.opened) || void 0 === ZC || ZC.setCosmetic(CC, zC)
+      setCosmetic(kk, Fk) {
+        var Ik;
+        null === (Ik = this.opened) || void 0 === Ik || Ik.setCosmetic(kk, Fk)
       }
-      playEmote(CC) {
-        var zC;
-        null === (zC = this.opened) || void 0 === zC || zC.playEmote(CC)
+      playEmote(kk) {
+        var Fk;
+        null === (Fk = this.opened) || void 0 === Fk || Fk.playEmote(kk)
       }
-      setOrbit(CC) {
-        var zC;
-        null === (zC = this.opened) || void 0 === zC || zC.setOrbit(CC)
+      setOrbit(kk) {
+        var Fk;
+        null === (Fk = this.opened) || void 0 === Fk || Fk.setOrbit(kk)
       }
       resetCamera() {
-        var CC;
-        null === (CC = this.opened) || void 0 === CC || CC.resetCamera()
+        var kk;
+        null === (kk = this.opened) || void 0 === kk || kk.resetCamera()
       }
-      async untilDrawn(CC) {
-        var zC;
-        await this.ready, await (null === (zC = this.opened) || void 0 === zC ? void 0 : zC.untilDrawn(CC))
+      async untilDrawn(kk) {
+        var Fk;
+        await this.ready, await (null === (Fk = this.opened) || void 0 === Fk ? void 0 : Fk.untilDrawn(kk))
       }
-      resize(CC, zC) {
-        var ZC;
+      resize(kk, Fk) {
+        var Ik;
         this.size = {
-          width: CC,
-          height: zC
-        }, null === (ZC = this.opened) || void 0 === ZC || ZC.resize(CC, zC)
+          width: kk,
+          height: Fk
+        }, null === (Ik = this.opened) || void 0 === Ik || Ik.resize(kk, Fk)
       }
       close() {
-        var CC;
-        this.closed = !0, null === (CC = this.opened) || void 0 === CC || CC.close(), this.opened = null
+        var kk;
+        this.closed = !0, null === (kk = this.opened) || void 0 === kk || kk.close(), this.opened = null
       }
     }
-    const FC = new class {
+    const Lk = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(CC) {
-        this.host = CC
+      setHost(kk) {
+        this.host = kk
       }
-      setDefaultHost(CC) {
-        this.makeDefault = CC
+      setDefaultHost(kk) {
+        this.makeDefault = kk
       }
       current() {
         if (null === this.host) {
@@ -220,426 +220,426 @@ export const modules = {
         }
         return this.host
       }
-      openMob(CC) {
-        return new oC(this.current().openMob(CC))
+      openMob(kk) {
+        return new ak(this.current().openMob(kk))
       }
-      openPet(CC) {
-        return new oC(this.current().openPet(CC))
+      openPet(kk) {
+        return new ak(this.current().openPet(kk))
       }
-      openMobLineup(CC) {
-        return new oC(this.current().openMobLineup(CC))
+      openMobLineup(kk) {
+        return new ak(this.current().openMobLineup(kk))
       }
-      openCharacter(CC, zC) {
-        return new qC(this.current().openCharacter(CC, zC))
+      openCharacter(kk, Fk) {
+        return new qk(this.current().openCharacter(kk, Fk))
       }
     }
   },
-  34185: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => QC.d,
-      g: () => QC.g,
-      k: () => QC.i
+  34218: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Xk.c,
+      f: () => Xk.f,
+      h: () => Xk.h
     });
-    var QC = ZC(34194);
-    class wC {
-      constructor(CC) {
-        this.load = CC, this.loaded = null, this.loading = null
+    var Xk = Ik(34222);
+    class Tk {
+      constructor(kk) {
+        this.load = kk, this.loaded = null, this.loading = null
       }
-      run(CC) {
-        return null !== this.loaded ? CC(this.loaded) : (this.loading ??= this.load().then((CC => (this.loaded = CC, CC)), (CC => {
-          throw this.loading = null, CC
-        })), this.loading.then(CC))
+      run(kk) {
+        return null !== this.loaded ? kk(this.loaded) : (this.loading ??= this.load().then((kk => (this.loaded = kk, kk)), (kk => {
+          throw this.loading = null, kk
+        })), this.loading.then(kk))
       }
     }
-    class bC {
+    class ik {
       constructor() {
-        this.mobScene = new wC((() => Promise.all([ZC.e(72), ZC.e(232), ZC.e(231), ZC.e(254), ZC.e(96), ZC.e(255), ZC.e(75), ZC.e(74), ZC.e(252), ZC.e(73), ZC.e(262), ZC.e(256), ZC.e(261), ZC.e(259), ZC.e(251), ZC.e(274), ZC.e(228), ZC.e(244), ZC.e(257), ZC.e(260), ZC.e(77), ZC.e(186), ZC.e(222), ZC.e(95), ZC.e(225), ZC.e(240), ZC.e(120), ZC.e(241), ZC.e(76), ZC.e(119), ZC.e(246)]).then((() => ZC(40923))))), this.characterScene = new wC((() => Promise.all([ZC.e(72), ZC.e(232), ZC.e(231), ZC.e(254), ZC.e(96), ZC.e(255), ZC.e(75), ZC.e(74), ZC.e(252), ZC.e(73), ZC.e(262), ZC.e(256), ZC.e(261), ZC.e(259), ZC.e(251), ZC.e(274), ZC.e(228), ZC.e(244), ZC.e(257), ZC.e(260), ZC.e(77), ZC.e(186), ZC.e(222), ZC.e(95), ZC.e(225), ZC.e(240), ZC.e(120), ZC.e(241), ZC.e(76), ZC.e(119), ZC.e(245)]).then((() => ZC(41e3)))))
+        this.mobScene = new Tk((() => Promise.all([Ik.e(72), Ik.e(232), Ik.e(231), Ik.e(254), Ik.e(96), Ik.e(255), Ik.e(75), Ik.e(74), Ik.e(252), Ik.e(73), Ik.e(262), Ik.e(256), Ik.e(261), Ik.e(259), Ik.e(251), Ik.e(274), Ik.e(228), Ik.e(244), Ik.e(257), Ik.e(260), Ik.e(77), Ik.e(186), Ik.e(222), Ik.e(95), Ik.e(225), Ik.e(240), Ik.e(120), Ik.e(241), Ik.e(76), Ik.e(119), Ik.e(246)]).then((() => Ik(41091))))), this.characterScene = new Tk((() => Promise.all([Ik.e(72), Ik.e(232), Ik.e(231), Ik.e(254), Ik.e(96), Ik.e(255), Ik.e(75), Ik.e(74), Ik.e(252), Ik.e(73), Ik.e(262), Ik.e(256), Ik.e(261), Ik.e(259), Ik.e(251), Ik.e(274), Ik.e(228), Ik.e(244), Ik.e(257), Ik.e(260), Ik.e(77), Ik.e(186), Ik.e(222), Ik.e(95), Ik.e(225), Ik.e(240), Ik.e(120), Ik.e(241), Ik.e(76), Ik.e(119), Ik.e(245)]).then((() => Ik(41185)))))
       }
-      openMob(CC) {
-        return this.mobScene.run((zC => zC.openMobPreview(CC)))
+      openMob(kk) {
+        return this.mobScene.run((Fk => Fk.openMobPreview(kk)))
       }
-      openPet(CC) {
-        return this.mobScene.run((zC => zC.openPetPreview(CC)))
+      openPet(kk) {
+        return this.mobScene.run((Fk => Fk.openPetPreview(kk)))
       }
-      openMobLineup(CC) {
-        return this.mobScene.run((zC => zC.openMobLineupPreview(CC)))
+      openMobLineup(kk) {
+        return this.mobScene.run((Fk => Fk.openMobLineupPreview(kk)))
       }
-      openCharacter(CC, zC) {
-        return this.characterScene.run((ZC => ZC.openCharacterPreview(CC, zC)))
+      openCharacter(kk, Fk) {
+        return this.characterScene.run((Ik => Ik.openCharacterPreview(kk, Fk)))
       }
     }
-    QC.i.setDefaultHost((() => new bC))
+    Xk.h.setDefaultHost((() => new ik))
   },
-  41576: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      FrontlineMvpLineup: () => WC
+  41748: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      FrontlineMvpLineup: () => tk
     });
-    var QC = ZC(48),
-      wC = ZC(1002),
-      bC = ZC.n(wC),
-      nC = ZC(34185),
-      fC = ZC(41336),
-      oC = ZC(41330),
-      qC = ZC(1056);
+    var Xk = Ik(58),
+      Tk = Ik(1055),
+      ik = Ik.n(Tk),
+      yk = Ik(34218),
+      lk = Ik(41534),
+      ak = Ik(41529),
+      qk = Ik(1096);
 
-    function FC(CC) {
-      return nC.k.openMobLineup(CC)
+    function Lk(kk) {
+      return yk.h.openMobLineup(kk)
     }
-    const WC = (0, QC.memo)((function(CC) {
+    const tk = (0, Xk.memo)((function(kk) {
       let {
-        players: zC,
-        className: ZC
-      } = CC;
-      const wC = (0, QC.useRef)(null),
-        nC = (0, QC.useMemo)((() => zC.map((CC => {
+        players: Fk,
+        className: Ik
+      } = kk;
+      const Tk = (0, Xk.useRef)(null),
+        yk = (0, Xk.useMemo)((() => Fk.map((kk => {
           let {
-            cosmetics: zC,
-            size: ZC,
-            heldGun: QC
-          } = CC;
+            cosmetics: Fk,
+            size: Ik,
+            heldGun: Xk
+          } = kk;
           return {
-            cosmetics: zC,
-            size: ZC,
-            Hx: QC.name,
-            animation: QC.aimed ? fC.c : fC.d
+            cosmetics: Fk,
+            size: Ik,
+            VK: Xk.name,
+            animation: Xk.aimed ? lk.d : lk.e
           }
-        }))), [zC]),
-        WC = function(CC) {
-          const [zC, ZC] = (0, QC.useState)([]);
-          return (0, QC.useEffect)((() => {
-            ZC(CC.map((() => !1)));
-            const zC = CC.map(((CC, zC) => {
+        }))), [Fk]),
+        tk = function(kk) {
+          const [Fk, Ik] = (0, Xk.useState)([]);
+          return (0, Xk.useEffect)((() => {
+            Ik(kk.map((() => !1)));
+            const Fk = kk.map(((kk, Fk) => {
               let {
-                showAfterMs: QC
-              } = CC;
+                showAfterMs: Xk
+              } = kk;
               return window.setTimeout((() => {
-                ZC((CC => CC.map(((CC, ZC) => CC || ZC === zC))))
-              }), QC)
+                Ik((kk => kk.map(((kk, Ik) => kk || Ik === Fk))))
+              }), Xk)
             }));
             return () => {
-              for (const CC of zC) window.clearTimeout(CC)
+              for (const kk of Fk) window.clearTimeout(kk)
             }
-          }), [CC]), zC
-        }(zC),
-        NC = (0, QC.useMemo)((() => ({
-          figures: nC,
-          shown: WC
-        })), [nC, WC]);
-      return (0, oC.c)(wC, FC, NC), (0, qC.jsx)("div", {
-        className: bC()("MobPreview", ZC),
-        ref: wC
+          }), [kk]), Fk
+        }(Fk),
+        Zk = (0, Xk.useMemo)((() => ({
+          figures: yk,
+          shown: tk
+        })), [yk, tk]);
+      return (0, ak.d)(Tk, Lk, Zk), (0, qk.jsx)("div", {
+        className: ik()("MobPreview", Ik),
+        ref: Tk
       })
     }))
   },
-  37023: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => fC,
-      f: () => nC
+  37224: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => lk,
+      i: () => yk
     });
-    var QC = ZC(37014),
-      wC = ZC(326),
-      bC = ZC(1806);
+    var Xk = Ik(37215),
+      Tk = Ik(337),
+      ik = Ik(1844);
 
-    function nC(CC) {
-      if ("Cb" in CC) return JC.createAnimationScript(CC);
-      return new qC(CC).createAnimationScript()
+    function yk(kk) {
+      if ("ki" in kk) return sk.createAnimationScript(kk);
+      return new qk(kk).createAnimationScript()
     }
 
-    function fC(CC, zC, ZC, wC) {
-      const bC = CC.Cb <= 0 ? 1 : zC + ZC * Math.max(0, wC) / CC.Cb;
-      return CC.zb === QC.g.LoopOnLastFrame ? bC % 1 : CC.zb === QC.g.NoLoop && bC >= 1 ? null : Math.min(1, bC)
+    function lk(kk, Fk, Ik, Tk) {
+      const ik = kk.ki <= 0 ? 1 : Fk + Ik * Math.max(0, Tk) / kk.ki;
+      return kk.Fi === Xk.k.LoopOnLastFrame ? ik % 1 : kk.Fi === Xk.k.NoLoop && ik >= 1 ? null : Math.min(1, ik)
     }
-    class oC {
-      createAnimationScript(CC) {
+    class ak {
+      createAnimationScript(kk) {
         const {
-          Cb: zC,
-          loop: ZC,
-          Zb: QC
-        } = CC;
+          ki: Fk,
+          loop: Ik,
+          Ii: Xk
+        } = kk;
         return {
-          Cb: Math.round(zC),
-          zb: this.createLoopMode(null !== ZC && void 0 !== ZC && ZC),
-          Zb: this.createNodeSkeletonAnimationScript(null !== QC && void 0 !== QC ? QC : null)
+          ki: Math.round(Fk),
+          Fi: this.createLoopMode(null !== Ik && void 0 !== Ik && Ik),
+          Ii: this.createNodeSkeletonAnimationScript(null !== Xk && void 0 !== Xk ? Xk : null)
         }
       }
-      createLoopMode(CC) {
-        switch (CC) {
+      createLoopMode(kk) {
+        switch (kk) {
           case !1:
-            return QC.g.NoLoop;
+            return Xk.k.NoLoop;
           case !0:
-            return QC.g.LoopOnLastFrame;
+            return Xk.k.LoopOnLastFrame;
           case "hold-on-last-frame":
-            return QC.g.HoldOnLastFrame
+            return Xk.k.HoldOnLastFrame
         }
-        throw new Error(`Invalid loop mode schema: ${CC}`)
+        throw new Error(`Invalid loop mode schema: ${kk}`)
       }
-      createNodeSkeletonAnimationScript(CC) {
-        if (null === CC) return null;
-        const zC = {};
-        for (const ZC in CC) {
-          const QC = CC[ZC];
-          zC[ZC] = this.createNodeAnimationScript(QC)
+      createNodeSkeletonAnimationScript(kk) {
+        if (null === kk) return null;
+        const Fk = {};
+        for (const Ik in kk) {
+          const Xk = kk[Ik];
+          Fk[Ik] = this.createNodeAnimationScript(Xk)
         }
-        return zC
+        return Fk
       }
-      createNodeAnimationScript(CC) {
+      createNodeAnimationScript(kk) {
         const {
-          timeline: zC
-        } = CC, ZC = zC.filter((CC => Number.isFinite(CC.timeFraction)));
-        return ZC.sort(((CC, zC) => CC.timeFraction - zC.timeFraction)), {
-          rotation: this.createTimelineFromKeyframes(ZC, "rotation", NC),
-          position: this.createTimelineFromKeyframes(ZC, "position", gC)
+          timeline: Fk
+        } = kk, Ik = Fk.filter((kk => Number.isFinite(kk.timeFraction)));
+        return Ik.sort(((kk, Fk) => kk.timeFraction - Fk.timeFraction)), {
+          rotation: this.createTimelineFromKeyframes(Ik, "rotation", Zk),
+          position: this.createTimelineFromKeyframes(Ik, "position", ek)
         }
       }
-      createTimelineFromKeyframes(CC, zC, ZC) {
-        const QC = [];
-        for (const oC of CC) {
-          const CC = oC[zC];
-          if (CC) {
-            const zC = this.createAnimationFrameWithoutPrecomputes(oC.timeFraction, CC);
-            FC(zC) && QC.push(zC)
+      createTimelineFromKeyframes(kk, Fk, Ik) {
+        const Xk = [];
+        for (const ak of kk) {
+          const kk = ak[Fk];
+          if (kk) {
+            const Fk = this.createAnimationFrameWithoutPrecomputes(ak.timeFraction, kk);
+            Lk(Fk) && Xk.push(Fk)
           }
         }
-        const wC = [];
-        for (let oC = 0; oC < QC.length; oC++) {
-          var bC, nC, fC;
-          const CC = QC[oC],
-            zC = null !== (bC = QC[oC - 1]) && void 0 !== bC ? bC : CC,
-            qC = null !== (nC = QC[oC + 1]) && void 0 !== nC ? nC : CC,
-            FC = null !== (fC = QC[oC + 2]) && void 0 !== fC ? fC : qC;
-          wC.push({
-            ...CC,
-            ...ZC(zC.post, zC.timeFraction, CC.post, CC.timeFraction, qC.pre, qC.timeFraction, FC.pre, FC.timeFraction)
+        const Tk = [];
+        for (let ak = 0; ak < Xk.length; ak++) {
+          var ik, yk, lk;
+          const kk = Xk[ak],
+            Fk = null !== (ik = Xk[ak - 1]) && void 0 !== ik ? ik : kk,
+            qk = null !== (yk = Xk[ak + 1]) && void 0 !== yk ? yk : kk,
+            Lk = null !== (lk = Xk[ak + 2]) && void 0 !== lk ? lk : qk;
+          Tk.push({
+            ...kk,
+            ...Ik(Fk.post, Fk.timeFraction, kk.post, kk.timeFraction, qk.pre, qk.timeFraction, Lk.pre, Lk.timeFraction)
           })
         }
-        return wC
+        return Tk
       }
-      createAnimationFrameWithoutPrecomputes(CC, zC) {
-        let ZC, QC, wC = null;
-        var bC;
-        if ("object" === typeof zC && "point" in zC) wC = null !== (bC = zC.nb) && void 0 !== bC ? bC : null, ZC = zC.point, QC = zC.point;
-        else if ("object" === typeof zC && "pre" in zC) {
-          var nC;
-          wC = null !== (nC = zC.nb) && void 0 !== nC ? nC : null, ZC = zC.pre, QC = zC.post
-        } else ZC = zC, QC = zC;
+      createAnimationFrameWithoutPrecomputes(kk, Fk) {
+        let Ik, Xk, Tk = null;
+        var ik;
+        if ("object" === typeof Fk && "point" in Fk) Tk = null !== (ik = Fk.ii) && void 0 !== ik ? ik : null, Ik = Fk.point, Xk = Fk.point;
+        else if ("object" === typeof Fk && "pre" in Fk) {
+          var yk;
+          Tk = null !== (yk = Fk.ii) && void 0 !== yk ? yk : null, Ik = Fk.pre, Xk = Fk.post
+        } else Ik = Fk, Xk = Fk;
         return {
-          timeFraction: CC,
-          nb: this.createLerpMode(wC),
-          pre: ZC,
-          post: QC
+          timeFraction: kk,
+          ii: this.createLerpMode(Tk),
+          pre: Ik,
+          post: Xk
         }
       }
-      createLerpMode(CC) {
-        return null === CC ? QC.f.Linear : oC.LERP_MODE_SCHEMA_MAPPING[CC]
+      createLerpMode(kk) {
+        return null === kk ? Xk.g.Linear : ak.LERP_MODE_SCHEMA_MAPPING[kk]
       }
     }
-    oC.LERP_MODE_SCHEMA_MAPPING = {
-      linear: QC.f.Linear,
-      "catmull-rom-spline": QC.f.CatmullRomSpline
+    ak.LERP_MODE_SCHEMA_MAPPING = {
+      linear: Xk.g.Linear,
+      "catmull-rom-spline": Xk.g.CatmullRomSpline
     };
-    class qC {
-      constructor(CC) {
-        this.animationSchema = CC
+    class qk {
+      constructor(kk) {
+        this.animationSchema = kk
       }
       createAnimationScript() {
         const {
-          animation_length: CC,
-          loop: zC,
-          bones: ZC
+          animation_length: kk,
+          loop: Fk,
+          bones: Ik
         } = this.animationSchema;
         return {
-          Cb: Math.round(1e3 * CC),
-          zb: this.createLoopMode(null !== zC && void 0 !== zC && zC),
-          Zb: this.createNodeSkeletonAnimationScript(null !== ZC && void 0 !== ZC ? ZC : null)
+          ki: Math.round(1e3 * kk),
+          Fi: this.createLoopMode(null !== Fk && void 0 !== Fk && Fk),
+          Ii: this.createNodeSkeletonAnimationScript(null !== Ik && void 0 !== Ik ? Ik : null)
         }
       }
-      createLoopMode(CC) {
-        switch (CC) {
+      createLoopMode(kk) {
+        switch (kk) {
           case !1:
-            return QC.g.NoLoop;
+            return Xk.k.NoLoop;
           case !0:
-            return QC.g.LoopOnLastFrame;
+            return Xk.k.LoopOnLastFrame;
           case "hold_on_last_frame":
-            return QC.g.HoldOnLastFrame
+            return Xk.k.HoldOnLastFrame
         }
-        throw new Error(`Invalid Blockbench loop mode schema: ${CC}`)
+        throw new Error(`Invalid Blockbench loop mode schema: ${kk}`)
       }
-      createNodeSkeletonAnimationScript(CC) {
-        if (null === CC) return null;
-        const zC = {};
-        for (const ZC in CC) {
-          const QC = CC[ZC];
-          zC[ZC] = this.createNodeAnimationScript(QC)
+      createNodeSkeletonAnimationScript(kk) {
+        if (null === kk) return null;
+        const Fk = {};
+        for (const Ik in kk) {
+          const Xk = kk[Ik];
+          Fk[Ik] = this.createNodeAnimationScript(Xk)
         }
-        return zC
+        return Fk
       }
-      createNodeAnimationScript(CC) {
+      createNodeAnimationScript(kk) {
         const {
-          rotation: zC,
-          position: ZC
-        } = CC;
+          rotation: Fk,
+          position: Ik
+        } = kk;
         return {
-          rotation: this.createAnimationTimeline(null !== zC && void 0 !== zC ? zC : null, pC, NC, !0),
-          position: this.createAnimationTimeline(null !== ZC && void 0 !== ZC ? ZC : null, GC, gC, !1)
+          rotation: this.createAnimationTimeline(null !== Fk && void 0 !== Fk ? Fk : null, Hk, Zk, !0),
+          position: this.createAnimationTimeline(null !== Ik && void 0 !== Ik ? Ik : null, xk, ek, !1)
         }
       }
-      createAnimationTimeline(CC, zC, ZC, QC) {
-        if (null === CC) return [];
-        if (Array.isArray(CC)) {
-          CC = {
-            "0.0": CC
+      createAnimationTimeline(kk, Fk, Ik, Xk) {
+        if (null === kk) return [];
+        if (Array.isArray(kk)) {
+          kk = {
+            "0.0": kk
           }
         }
-        const wC = Object.entries(CC).map((CC => {
-          let [ZC, QC] = CC;
-          const wC = Number(ZC) / this.animationSchema.animation_length;
-          return this.createAnimationFrameWithoutPrecomputes(wC, QC, zC)
-        })).filter(FC);
-        wC.sort(((CC, zC) => CC.timeFraction - zC.timeFraction)), QC && function(CC) {
-          for (let zC = 1; zC < CC.length; zC++) {
-            const ZC = CC[zC - 1].post,
-              QC = CC[zC],
-              wC = RC(QC.pre),
-              bC = RC(QC.post),
-              nC = xC(ZC, QC.pre);
-            xC(ZC, wC) < nC && (CC[zC] = {
-              ...QC,
-              pre: wC,
-              post: bC
+        const Tk = Object.entries(kk).map((kk => {
+          let [Ik, Xk] = kk;
+          const Tk = Number(Ik) / this.animationSchema.animation_length;
+          return this.createAnimationFrameWithoutPrecomputes(Tk, Xk, Fk)
+        })).filter(Lk);
+        Tk.sort(((kk, Fk) => kk.timeFraction - Fk.timeFraction)), Xk && function(kk) {
+          for (let Fk = 1; Fk < kk.length; Fk++) {
+            const Ik = kk[Fk - 1].post,
+              Xk = kk[Fk],
+              Tk = Pk(Xk.pre),
+              ik = Pk(Xk.post),
+              yk = Qk(Ik, Xk.pre);
+            Qk(Ik, Tk) < yk && (kk[Fk] = {
+              ...Xk,
+              pre: Tk,
+              post: ik
             })
           }
-        }(wC);
-        const bC = [];
-        for (let qC = 0; qC < wC.length; qC++) {
-          var nC, fC, oC;
-          const CC = wC[qC],
-            zC = null !== (nC = wC[qC - 1]) && void 0 !== nC ? nC : CC,
-            QC = null !== (fC = wC[qC + 1]) && void 0 !== fC ? fC : CC,
-            FC = null !== (oC = wC[qC + 2]) && void 0 !== oC ? oC : QC;
-          bC.push({
-            ...CC,
-            ...ZC(zC.post, zC.timeFraction, CC.post, CC.timeFraction, QC.pre, QC.timeFraction, FC.pre, FC.timeFraction)
+        }(Tk);
+        const ik = [];
+        for (let qk = 0; qk < Tk.length; qk++) {
+          var yk, lk, ak;
+          const kk = Tk[qk],
+            Fk = null !== (yk = Tk[qk - 1]) && void 0 !== yk ? yk : kk,
+            Xk = null !== (lk = Tk[qk + 1]) && void 0 !== lk ? lk : kk,
+            Lk = null !== (ak = Tk[qk + 2]) && void 0 !== ak ? ak : Xk;
+          ik.push({
+            ...kk,
+            ...Ik(Fk.post, Fk.timeFraction, kk.post, kk.timeFraction, Xk.pre, Xk.timeFraction, Lk.pre, Lk.timeFraction)
           })
         }
-        return bC
+        return ik
       }
-      createAnimationFrameWithoutPrecomputes(CC, zC, ZC) {
-        let QC, wC, bC = null;
-        if ("object" === typeof zC && "post" in zC) {
-          var nC;
-          bC = null !== (nC = zC.lerp_mode) && void 0 !== nC ? nC : null, wC = SC(zC.post, ZC), QC = zC.pre ? SC(zC.pre, ZC) : wC
+      createAnimationFrameWithoutPrecomputes(kk, Fk, Ik) {
+        let Xk, Tk, ik = null;
+        if ("object" === typeof Fk && "post" in Fk) {
+          var yk;
+          ik = null !== (yk = Fk.lerp_mode) && void 0 !== yk ? yk : null, Tk = wk(Fk.post, Ik), Xk = Fk.pre ? wk(Fk.pre, Ik) : Tk
         } else {
-          const CC = SC(zC, ZC);
-          wC = CC, QC = CC
+          const kk = wk(Fk, Ik);
+          Tk = kk, Xk = kk
         }
         return {
-          timeFraction: CC,
-          nb: this.createLerpMode(bC),
-          pre: QC,
-          post: wC
+          timeFraction: kk,
+          ii: this.createLerpMode(ik),
+          pre: Xk,
+          post: Tk
         }
       }
-      createLerpMode(CC) {
-        return null === CC ? QC.f.Linear : qC.LERP_MODE_SCHEMA_MAPPING[CC]
+      createLerpMode(kk) {
+        return null === kk ? Xk.g.Linear : qk.LERP_MODE_SCHEMA_MAPPING[kk]
       }
     }
 
-    function FC(CC) {
-      return Number.isFinite(CC.timeFraction) && WC(CC.pre) && WC(CC.post)
+    function Lk(kk) {
+      return Number.isFinite(kk.timeFraction) && tk(kk.pre) && tk(kk.post)
     }
 
-    function WC(CC) {
-      return Number.isFinite(CC[0]) && Number.isFinite(CC[1]) && Number.isFinite(CC[2])
+    function tk(kk) {
+      return Number.isFinite(kk[0]) && Number.isFinite(kk[1]) && Number.isFinite(kk[2])
     }
 
-    function NC(CC, zC, ZC, QC, wC, bC, nC, fC) {
-      const oC = bC - zC,
-        qC = bC - QC,
-        FC = fC - QC,
-        WC = [null, null, null];
-      for (let NC = 0; NC < WC.length; NC++) WC[NC] = MC(CC[NC], ZC[NC], wC[NC], nC[NC], oC, FC);
+    function Zk(kk, Fk, Ik, Xk, Tk, ik, yk, lk) {
+      const ak = ik - Fk,
+        qk = ik - Xk,
+        Lk = lk - Xk,
+        tk = [null, null, null];
+      for (let Zk = 0; Zk < tk.length; Zk++) tk[Zk] = jk(kk[Zk], Ik[Zk], Tk[Zk], yk[Zk], ak, Lk);
       return {
-        fb: qC,
-        ob: WC
+        yi: qk,
+        li: tk
       }
     }
 
-    function MC(CC, zC, ZC, QC, bC, nC) {
+    function jk(kk, Fk, Ik, Xk, ik, yk) {
       return {
-        Fb: wC.c.computeShortestRotation(CC, ZC) / bC,
-        Wb: wC.c.computeShortestRotation(zC, QC) / nC,
-        delta: wC.c.computeShortestRotation(zC, ZC)
+        qi: Tk.e.computeShortestRotation(kk, Ik) / ik,
+        Li: Tk.e.computeShortestRotation(Fk, Xk) / yk,
+        delta: Tk.e.computeShortestRotation(Fk, Ik)
       }
     }
 
-    function gC(CC, zC, ZC, QC, wC, bC, nC, fC) {
-      const oC = bC - zC,
-        qC = bC - QC,
-        FC = fC - QC,
-        WC = [null, null, null];
-      for (let NC = 0; NC < WC.length; NC++) WC[NC] = {
-        Fb: (wC[NC] - CC[NC]) / oC,
-        Wb: (nC[NC] - ZC[NC]) / FC,
-        delta: wC[NC] - ZC[NC]
+    function ek(kk, Fk, Ik, Xk, Tk, ik, yk, lk) {
+      const ak = ik - Fk,
+        qk = ik - Xk,
+        Lk = lk - Xk,
+        tk = [null, null, null];
+      for (let Zk = 0; Zk < tk.length; Zk++) tk[Zk] = {
+        qi: (Tk[Zk] - kk[Zk]) / ak,
+        Li: (yk[Zk] - Ik[Zk]) / Lk,
+        delta: Tk[Zk] - Ik[Zk]
       };
       return {
-        fb: qC,
-        ob: WC
+        yi: qk,
+        li: tk
       }
     }
 
-    function SC(CC, zC) {
-      return null === zC ? CC : zC(CC)
+    function wk(kk, Fk) {
+      return null === Fk ? kk : Fk(kk)
     }
 
-    function pC(CC) {
-      const [zC, ZC, QC] = CC, nC = -(0, bC.j)(zC), fC = -(0, bC.j)(ZC), oC = (0, bC.j)(QC), qC = wC.c.quaternionFromEulerZYX(nC, fC, oC);
-      return wC.c.eulerYXZFromQuaternion(qC)
+    function Hk(kk) {
+      const [Fk, Ik, Xk] = kk, yk = -(0, ik.k)(Fk), lk = -(0, ik.k)(Ik), ak = (0, ik.k)(Xk), qk = Tk.e.quaternionFromEulerZYX(yk, lk, ak);
+      return Tk.e.eulerYXZFromQuaternion(qk)
     }
-    qC.LERP_MODE_SCHEMA_MAPPING = {
-      linear: QC.f.Linear,
-      catmullrom: QC.f.CatmullRomSpline
+    qk.LERP_MODE_SCHEMA_MAPPING = {
+      linear: Xk.g.Linear,
+      catmullrom: Xk.g.CatmullRomSpline
     };
-    const PC = 1 / 16;
+    const Jk = 1 / 16;
 
-    function GC(CC) {
-      return [-CC[0] * PC, CC[1] * PC, CC[2] * PC]
+    function xk(kk) {
+      return [-kk[0] * Jk, kk[1] * Jk, kk[2] * Jk]
     }
 
-    function RC(CC) {
-      const [zC, ZC, QC] = CC;
-      return [zC >= 0 ? Math.PI - zC : -Math.PI - zC, AC(ZC + Math.PI), AC(QC + Math.PI)]
+    function Pk(kk) {
+      const [Fk, Ik, Xk] = kk;
+      return [Fk >= 0 ? Math.PI - Fk : -Math.PI - Fk, Kk(Ik + Math.PI), Kk(Xk + Math.PI)]
     }
 
-    function AC(CC) {
-      return wC.c.mod(CC + Math.PI, 2 * Math.PI) - Math.PI
+    function Kk(kk) {
+      return Tk.e.mod(kk + Math.PI, 2 * Math.PI) - Math.PI
     }
 
-    function xC(CC, zC) {
-      return Math.abs(wC.c.computeShortestRotation(CC[0], zC[0])) + Math.abs(wC.c.computeShortestRotation(CC[1], zC[1])) + Math.abs(wC.c.computeShortestRotation(CC[2], zC[2]))
+    function Qk(kk, Fk) {
+      return Math.abs(Tk.e.computeShortestRotation(kk[0], Fk[0])) + Math.abs(Tk.e.computeShortestRotation(kk[1], Fk[1])) + Math.abs(Tk.e.computeShortestRotation(kk[2], Fk[2]))
     }
-    const JC = new oC
+    const sk = new ak
   },
-  37014: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => nC,
-      d: () => bC,
-      f: () => QC,
-      g: () => wC
+  37215: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => yk,
+      c: () => ik,
+      g: () => Xk,
+      k: () => Tk
     });
-    let QC = function(CC) {
-        return CC[CC.Linear = 0] = "Linear", CC[CC.CatmullRomSpline = 1] = "CatmullRomSpline", CC
+    let Xk = function(kk) {
+        return kk[kk.Linear = 0] = "Linear", kk[kk.CatmullRomSpline = 1] = "CatmullRomSpline", kk
       }({}),
-      wC = function(CC) {
-        return CC[CC.NoLoop = 0] = "NoLoop", CC[CC.LoopOnLastFrame = 1] = "LoopOnLastFrame", CC[CC.HoldOnLastFrame = 2] = "HoldOnLastFrame", CC
+      Tk = function(kk) {
+        return kk[kk.NoLoop = 0] = "NoLoop", kk[kk.LoopOnLastFrame = 1] = "LoopOnLastFrame", kk[kk.HoldOnLastFrame = 2] = "HoldOnLastFrame", kk
       }({}),
-      bC = function(CC) {
-        return CC[CC.Movement = 0] = "Movement", CC[CC.Action = 1] = "Action", CC[CC.Emote = 2] = "Emote", CC[CC.Custom = 3] = "Custom", CC
+      ik = function(kk) {
+        return kk[kk.Movement = 0] = "Movement", kk[kk.Action = 1] = "Action", kk[kk.Emote = 2] = "Emote", kk[kk.Custom = 3] = "Custom", kk
       }({}),
-      nC = function(CC) {
-        return CC[CC.Start = 0] = "Start", CC[CC.Stop = 1] = "Stop", CC
+      yk = function(kk) {
+        return kk[kk.Start = 0] = "Start", kk[kk.Stop = 1] = "Stop", kk
       }({})
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

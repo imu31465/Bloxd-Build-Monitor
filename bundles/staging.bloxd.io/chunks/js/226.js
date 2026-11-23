@@ -1,82 +1,82 @@
 export const id = 226;
 export const ids = [226];
 export const modules = {
-  39617: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      getBlockFaces: () => NC,
-      getIngameIconUrl: () => SC,
-      getItemIconUrl: () => gC,
-      getItemTextureUrl: () => MC,
-      getParticleTextureUrl: () => pC
+  39784: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      getBlockFaces: () => Zk,
+      getIngameIconUrl: () => wk,
+      getItemIconUrl: () => ek,
+      getItemTextureUrl: () => jk,
+      getParticleTextureUrl: () => Hk
     });
-    var QC = ZC(4386),
-      wC = ZC(36897),
-      bC = ZC(9188),
-      nC = ZC(3140);
-    const fC = new Set,
-      oC = new Set;
-    let qC = null;
+    var Xk = Ik(4449),
+      Tk = Ik(37079),
+      ik = Ik(9178),
+      yk = Ik(3096);
+    const lk = new Set,
+      ak = new Set;
+    let qk = null;
 
-    function FC(CC) {
-      fC.has(CC) || (fC.add(CC), oC.add(CC), qC ??= setTimeout((() => {
-        console.warn(`Docs gallery: no default texture for ${oC.size} names`, [...oC]), oC.clear(), qC = null
+    function Lk(kk) {
+      lk.has(kk) || (lk.add(kk), ak.add(kk), qk ??= setTimeout((() => {
+        console.warn(`Docs gallery: no default texture for ${ak.size} names`, [...ak]), ak.clear(), qk = null
       }), 1e3))
     }
 
-    function WC(CC, zC) {
+    function tk(kk, Fk) {
       try {
-        return (0, bC.getDefaultTexture)(CC, zC).url
+        return (0, ik.getDefaultTexture)(kk, Fk).url
       } catch {
-        return FC(CC), null
+        return Lk(kk), null
       }
     }
 
-    function NC(CC) {
-      var zC, ZC;
-      const bC = wC.m[CC];
-      if (!bC || bC.itemTexture || !bC.textureInfo) return null;
+    function Zk(kk) {
+      var Fk, Ik;
+      const ik = Tk.j[kk];
+      if (!ik || ik.itemTexture || !ik.textureInfo) return null;
       const {
-        textureInfo: fC,
-        texturePerSide: oC
-      } = bC, qC = CC => {
-        return "string" === typeof(zC = oC && Array.isArray(fC) ? fC[oC[CC]] : fC) ? WC(zC, nC.j.BLOCK) : zC && "object" === typeof zC && "animTextures" in zC ? WC((0, QC.j)(zC), nC.j.BLOCK) : null;
-        var zC
-      }, FC = qC(2);
-      return FC ? {
-        top: FC,
-        left: null !== (zC = qC(4)) && void 0 !== zC ? zC : FC,
-        right: null !== (ZC = qC(0)) && void 0 !== ZC ? ZC : FC
+        textureInfo: lk,
+        texturePerSide: ak
+      } = ik, qk = kk => {
+        return "string" === typeof(Fk = ak && Array.isArray(lk) ? lk[ak[kk]] : lk) ? tk(Fk, yk.j.BLOCK) : Fk && "object" === typeof Fk && "animTextures" in Fk ? tk((0, Xk.i)(Fk), yk.j.BLOCK) : null;
+        var Fk
+      }, Lk = qk(2);
+      return Lk ? {
+        top: Lk,
+        left: null !== (Fk = qk(4)) && void 0 !== Fk ? Fk : Lk,
+        right: null !== (Ik = qk(0)) && void 0 !== Ik ? Ik : Lk
       } : null
     }
 
-    function MC(CC) {
-      var zC;
-      const ZC = wC.m[CC];
-      return WC(null !== (zC = null === ZC || void 0 === ZC ? void 0 : ZC.itemTexture) && void 0 !== zC ? zC : "string" === typeof(null === ZC || void 0 === ZC ? void 0 : ZC.textureInfo) ? ZC.textureInfo : CC, nC.j.ITEM)
+    function jk(kk) {
+      var Fk;
+      const Ik = Tk.j[kk];
+      return tk(null !== (Fk = null === Ik || void 0 === Ik ? void 0 : Ik.itemTexture) && void 0 !== Fk ? Fk : "string" === typeof(null === Ik || void 0 === Ik ? void 0 : Ik.textureInfo) ? Ik.textureInfo : kk, yk.j.ITEM)
     }
 
-    function gC(CC) {
-      var zC, ZC;
-      return wC.m[CC] ? null !== (zC = null === (ZC = NC(CC)) || void 0 === ZC ? void 0 : ZC.top) && void 0 !== zC ? zC : MC(CC) : null
+    function ek(kk) {
+      var Fk, Ik;
+      return Tk.j[kk] ? null !== (Fk = null === (Ik = Zk(kk)) || void 0 === Ik ? void 0 : Ik.top) && void 0 !== Fk ? Fk : jk(kk) : null
     }
 
-    function SC(CC) {
-      return WC(CC, nC.j.ICON)
+    function wk(kk) {
+      return tk(kk, yk.j.ICON)
     }
 
-    function pC(CC) {
+    function Hk(kk) {
       try {
-        return ZC(3308)(`./${CC}.png`)
+        return Ik(3260)(`./${kk}.png`)
       } catch {
-        return FC(CC), null
+        return Lk(kk), null
       }
     }
   },
-  36938: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => QC
+  37118: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => Xk
     });
-    const QC = {
+    const Xk = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -238,4 +238,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

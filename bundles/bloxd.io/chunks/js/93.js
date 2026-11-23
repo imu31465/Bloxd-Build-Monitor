@@ -1,126 +1,126 @@
 export const id = 93;
 export const ids = [93];
 export const modules = {
-  4797: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      Howl: () => wC.Howl,
-      Howler: () => wC.Howler,
-      musicOutput: () => pC,
-      readyAudioContext: () => PC
+  4857: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      Howl: () => Tk.Howl,
+      Howler: () => Tk.Howler,
+      musicOutput: () => Hk,
+      readyAudioContext: () => Jk
     });
-    var QC, wC = ZC(4801),
-      bC = ZC(3419),
-      nC = ZC(4587);
-    const fC = wC.Howler;
+    var Xk, Tk = Ik(4863),
+      ik = Ik(3378),
+      yk = Ik(4636);
+    const lk = Tk.Howler;
 
-    function oC() {
-      var CC, zC;
-      if (fC.ctx || !fC.usingWebAudio || "undefined" === typeof AudioContext || !(0, nC.h)()) return;
-      const ZC = navigator.audioSession;
-      let QC;
-      "auto" === (null === ZC || void 0 === ZC ? void 0 : ZC.type) && (ZC.type = "ambient");
+    function ak() {
+      var kk, Fk;
+      if (lk.ctx || !lk.usingWebAudio || "undefined" === typeof AudioContext || !(0, yk.h)()) return;
+      const Ik = navigator.audioSession;
+      let Xk;
+      "auto" === (null === Ik || void 0 === Ik ? void 0 : Ik.type) && (Ik.type = "ambient");
       try {
-        QC = new AudioContext({
+        Xk = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const wC = QC.createGain();
-      wC.gain.setValueAtTime(fC._muted ? 0 : null !== (CC = fC._volume) && void 0 !== CC ? CC : 1, QC.currentTime), wC.connect(QC.destination), fC.ctx = QC, fC.masterGain = wC, null === (zC = fC._setup) || void 0 === zC || zC.call(fC)
+      const Tk = Xk.createGain();
+      Tk.gain.setValueAtTime(lk._muted ? 0 : null !== (kk = lk._volume) && void 0 !== kk ? kk : 1, Xk.currentTime), Tk.connect(Xk.destination), lk.ctx = Xk, lk.masterGain = Tk, null === (Fk = lk._setup) || void 0 === Fk || Fk.call(lk)
     }
-    fC._mobileUnloaded = !0;
-    const qC = fC.volume.bind(wC.Howler);
-    fC.volume = function() {
-      return oC(), qC(...arguments)
+    lk._mobileUnloaded = !0;
+    const qk = lk.volume.bind(Tk.Howler);
+    lk.volume = function() {
+      return ak(), qk(...arguments)
     };
-    const FC = fC.mute.bind(wC.Howler);
-    fC.mute = CC => (oC(), FC(CC));
-    const WC = wC.Howl.prototype,
-      NC = WC.init;
+    const Lk = lk.mute.bind(Tk.Howler);
+    lk.mute = kk => (ak(), Lk(kk));
+    const tk = Tk.Howl.prototype,
+      Zk = tk.init;
 
-    function MC() {
-      for (; fC._html5AudioPool.length < fC.html5PoolSize;) {
-        const CC = new Audio;
-        CC._unlocked = !0, fC._releaseHtml5Audio(CC)
+    function jk() {
+      for (; lk._html5AudioPool.length < lk.html5PoolSize;) {
+        const kk = new Audio;
+        kk._unlocked = !0, lk._releaseHtml5Audio(kk)
       }
-      for (const zC of fC._howls)
-        if (!zC._webAudio)
-          for (const ZC of zC._getSoundIds()) {
-            var CC;
-            const QC = null === (CC = zC._soundById(ZC)) || void 0 === CC ? void 0 : CC._node;
-            QC && !QC._unlocked && (QC._unlocked = !0, QC.load())
+      for (const Fk of lk._howls)
+        if (!Fk._webAudio)
+          for (const Ik of Fk._getSoundIds()) {
+            var kk;
+            const Xk = null === (kk = Fk._soundById(Ik)) || void 0 === kk ? void 0 : kk._node;
+            Xk && !Xk._unlocked && (Xk._unlocked = !0, Xk.load())
           }
     }
-    WC.init = function(CC) {
-      return oC(), NC.call(this, CC)
-    }, (0, nC.h)() && (fC._unlockAudio = () => {
-      const CC = fC.ctx;
-      if (fC._audioUnlocked || !CC) return;
-      fC.autoUnlock = !1;
-      const zC = CC.createBuffer(1, 1, 22050);
-      fC._scratchBuffer = zC;
-      const ZC = new AbortController;
-      let QC = "afterPaint";
-      const wC = () => {
-          var QC;
-          if (fC._audioUnlocked) return;
-          null === (QC = fC._autoResume) || void 0 === QC || QC.call(fC);
-          const wC = CC.createBufferSource();
-          wC.buffer = zC, wC.connect(CC.destination), wC.start(0), CC.resume().catch((() => {})), wC.onended = () => {
-            wC.disconnect(0), fC._audioUnlocked = !0, ZC.abort();
-            for (const CC of fC._howls) CC._emit("unlock")
+    tk.init = function(kk) {
+      return ak(), Zk.call(this, kk)
+    }, (0, yk.h)() && (lk._unlockAudio = () => {
+      const kk = lk.ctx;
+      if (lk._audioUnlocked || !kk) return;
+      lk.autoUnlock = !1;
+      const Fk = kk.createBuffer(1, 1, 22050);
+      lk._scratchBuffer = Fk;
+      const Ik = new AbortController;
+      let Xk = "afterPaint";
+      const Tk = () => {
+          var Xk;
+          if (lk._audioUnlocked) return;
+          null === (Xk = lk._autoResume) || void 0 === Xk || Xk.call(lk);
+          const Tk = kk.createBufferSource();
+          Tk.buffer = Fk, Tk.connect(kk.destination), Tk.start(0), kk.resume().catch((() => {})), Tk.onended = () => {
+            Tk.disconnect(0), lk._audioUnlocked = !0, Ik.abort();
+            for (const kk of lk._howls) kk._emit("unlock")
           }
         },
-        oC = () => {
-          MC(), wC()
+        ak = () => {
+          jk(), Tk()
         },
-        qC = zC => {
-          if (MC(), "inTap" === QC) {
-            if ("running" === CC.state) return;
-            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), wC()
-          } else "afterPaint" === QC && (QC = "queued", (0, bC.c)(zC.timeStamp, (() => {
-            QC = "inTap", wC()
+        qk = Fk => {
+          if (jk(), "inTap" === Xk) {
+            if ("running" === kk.state) return;
+            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), Tk()
+          } else "afterPaint" === Xk && (Xk = "queued", (0, ik.b)(Fk.timeStamp, (() => {
+            Xk = "inTap", Tk()
           })))
         };
-      for (const bC of ["touchstart", "touchend"]) document.addEventListener(bC, oC, {
+      for (const ik of ["touchstart", "touchend"]) document.addEventListener(ik, ak, {
         capture: !0,
-        signal: ZC.signal
+        signal: Ik.signal
       });
-      for (const bC of nC.c) document.addEventListener(bC, qC, {
+      for (const ik of yk.b) document.addEventListener(ik, qk, {
         capture: !0,
-        signal: ZC.signal
+        signal: Ik.signal
       })
     });
-    let gC = 0;
-    const SC = null === (QC = fC._autoSuspend) || void 0 === QC ? void 0 : QC.bind(wC.Howler);
+    let ek = 0;
+    const wk = null === (Xk = lk._autoSuspend) || void 0 === Xk ? void 0 : Xk.bind(Tk.Howler);
 
-    function pC() {
-      PC();
+    function Hk() {
+      Jk();
       const {
-        ctx: CC,
-        masterGain: zC
-      } = fC;
-      return CC && zC ? {
-        ctx: CC,
-        destination: zC,
-        holdAwake: CC => {
-          var zC, ZC;
-          (gC += CC ? 1 : -1, CC) ? null === (zC = fC._autoResume) || void 0 === zC || zC.call(fC): null === (ZC = fC._autoSuspend) || void 0 === ZC || ZC.call(fC)
+        ctx: kk,
+        masterGain: Fk
+      } = lk;
+      return kk && Fk ? {
+        ctx: kk,
+        destination: Fk,
+        holdAwake: kk => {
+          var Fk, Ik;
+          (ek += kk ? 1 : -1, kk) ? null === (Fk = lk._autoResume) || void 0 === Fk || Fk.call(lk): null === (Ik = lk._autoSuspend) || void 0 === Ik || Ik.call(lk)
         },
         wake: () => {
-          var zC;
-          "running" !== CC.state && (null === (zC = fC._autoResume) || void 0 === zC || zC.call(fC), CC.resume().catch((() => {})))
+          var Fk;
+          "running" !== kk.state && (null === (Fk = lk._autoResume) || void 0 === Fk || Fk.call(lk), kk.resume().catch((() => {})))
         }
       } : null
     }
 
-    function PC() {
-      var CC;
-      (fC.volume(), fC.ctx && fC.autoUnlock) && (null === (CC = fC._unlockAudio) || void 0 === CC || CC.call(fC))
+    function Jk() {
+      var kk;
+      (lk.volume(), lk.ctx && lk.autoUnlock) && (null === (kk = lk._unlockAudio) || void 0 === kk || kk.call(lk))
     }
-    SC && (fC._autoSuspend = () => gC > 0 ? wC.Howler : SC())
+    wk && (lk._autoSuspend = () => ek > 0 ? Tk.Howler : wk())
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

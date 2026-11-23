@@ -1,144 +1,144 @@
 export const id = 205;
 export const ids = [205];
 export const modules = {
-  41295: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      loadGlbAsset: () => Rz,
-      loadGlbTree: () => Gz
+  41490: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      loadGlbAsset: () => KF,
+      loadGlbTree: () => PF
     });
-    var QC = ZC(37731),
-      wC = ZC(41298),
-      bC = ZC(36162),
-      nC = ZC.n(bC);
+    var Xk = Ik(37902),
+      Tk = Ik(41499),
+      ik = Ik(36217),
+      yk = Ik.n(ik);
 
-    function fC() {
-      return nC()('(()=>{class CC extends Error{}function zC(zC,ZC){const QC=zC._malloc(ZC);if(0===QC)throw new CC(`Draco: the decoder\'s heap refused ${ZC} bytes`);return QC}function ZC(CC){return{[CC.DT_FLOAT32]:[Float32Array,5126],[CC.DT_INT8]:[Int8Array,5120],[CC.DT_INT16]:[Int16Array,5122],[CC.DT_INT32]:[Int32Array,5124],[CC.DT_UINT8]:[Uint8Array,5121],[CC.DT_UINT16]:[Uint16Array,5123],[CC.DT_UINT32]:[Uint32Array,5125]}}function QC(zC,QC,wC,bC,nC){let fC=null,oC=null,qC=null;try{fC=new zC.Decoder,oC=new zC.DecoderBuffer,oC.Init(QC,QC.byteLength);let FC=0;const WC=fC.GetEncodedGeometryType(oC);if(WC===zC.TRIANGULAR_MESH){const ZC=new zC.Mesh;qC=ZC;const QC=fC.DecodeBufferToMesh(oC,ZC);if(!QC.ok()||0===ZC.ptr)throw new CC(QC.error_msg());FC=3*ZC.num_faces()}else{if(WC!==zC.POINT_CLOUD)throw new CC(`Draco: Cannot decode invalid geometry type ${WC}`);{const ZC=new zC.PointCloud;qC=ZC;const QC=fC.DecodeBufferToPointCloud(oC,ZC);if(!QC.ok()||!ZC.ptr)throw new CC(QC.error_msg())}}const NC=qC.num_points();if(NC!==bC.vertices||FC!==bC.indices)throw new CC(`Draco: decoded ${NC} vertices and ${FC} indices, the accessors declare ${bC.vertices} and ${bC.indices}`);const MC=ZC(zC),gC=[];for(const{kind:zC,id:ZC,components:QC}of wC){const wC=fC.GetAttributeByUniqueId(qC,ZC);if(!wC||0===wC.ptr)throw new CC(`Draco: no attribute with id ${ZC} (${zC})`);const bC=wC.data_type();if(!MC[bC])throw new CC(`Draco: Cannot decode invalid data type ${bC}`);if(wC.num_components()!==QC)throw new CC(`Draco: ${zC} decodes to ${wC.num_components()} components, its accessor declares ${QC}`);gC.push([zC,wC,bC])}return nC({dracoDecoder:fC,geometry:qC,triangles:WC===zC.TRIANGULAR_MESH,numPoints:NC,numIndices:FC,attributes:gC})}finally{qC&&zC.destroy(qC),oC&&zC.destroy(oC),fC&&zC.destroy(fC)}}const wC=self;let bC=null;self.onmessage=CC=>{let{data:nC}=CC;if("init"===nC.id){try{importScripts(nC.url),bC=DracoDecoderModule({wasmBinary:nC.wasmBinary}),wC.postMessage({id:"initDone"})}catch(WC){wC.postMessage({id:"initError",message:WC instanceof Error?WC.message:String(WC)})}return}const{seq:fC,data:oC,attributeIds:qC,expected:FC}=nC;bC?bC.then((CC=>{try{const bC=function(CC,wC,bC,nC){const fC=Object.keys(bC).map((CC=>({kind:CC,id:bC[CC],components:nC.components[CC]})));return QC(CC,wC,fC,nC,(QC=>{let{dracoDecoder:wC,geometry:bC,triangles:nC,numPoints:fC,numIndices:oC,attributes:qC}=QC;const FC=ZC(CC);let WC=null;if(nC){const ZC=4*oC,QC=zC(CC,ZC);try{wC.GetTrianglesUInt32Array(bC,ZC,QC),WC=new Uint32Array(oC),WC.set(new Uint32Array(CC.HEAPF32.buffer,QC,oC))}finally{CC._free(QC)}}const NC=[];for(const[ZC,MC,gC]of qC){const[QC]=FC[gC],nC=MC.num_components(),oC=fC*nC,qC=oC*QC.BYTES_PER_ELEMENT,WC=zC(CC,qC);try{wC.GetAttributeDataArrayForAllPoints(bC,MC,gC,qC,WC),NC.push({kind:ZC,data:new QC(CC.HEAPF32.buffer,WC,oC).slice(),size:nC,byteOffset:MC.byte_offset(),byteStride:MC.byte_stride(),normalized:MC.normalized()})}finally{CC._free(WC)}}return{indices:WC,attributes:NC,totalVertices:fC}}))}(CC,oC,qC,FC),nC=bC.attributes.map((CC=>CC.data.buffer));bC.indices&&nC.push(bC.indices.buffer),wC.postMessage({id:"decoded",seq:fC,...bC},nC)}catch(WC){wC.postMessage({id:"decodeError",seq:fC,message:WC instanceof Error?WC.message:String(WC)})}}),(CC=>{wC.postMessage({id:"decodeError",seq:fC,message:CC instanceof Error?CC.message:String(CC)})})):wC.postMessage({id:"decodeError",seq:fC,message:"Draco: the decoder module is not loaded"})}})();', "Worker", void 0, ZC.p + "dracoDecode.worker.50084743.worker.js")
+    function lk() {
+      return yk()('(()=>{class kk extends Error{}function Fk(Fk,Ik){const Xk=Fk._malloc(Ik);if(0===Xk)throw new kk(`Draco: the decoder\'s heap refused ${Ik} bytes`);return Xk}function Ik(kk){return{[kk.DT_FLOAT32]:[Float32Array,5126],[kk.DT_INT8]:[Int8Array,5120],[kk.DT_INT16]:[Int16Array,5122],[kk.DT_INT32]:[Int32Array,5124],[kk.DT_UINT8]:[Uint8Array,5121],[kk.DT_UINT16]:[Uint16Array,5123],[kk.DT_UINT32]:[Uint32Array,5125]}}function Xk(Fk,Xk,Tk,ik,yk){let lk=null,ak=null,qk=null;try{lk=new Fk.Decoder,ak=new Fk.DecoderBuffer,ak.Init(Xk,Xk.byteLength);let Lk=0;const tk=lk.GetEncodedGeometryType(ak);if(tk===Fk.TRIANGULAR_MESH){const Ik=new Fk.Mesh;qk=Ik;const Xk=lk.DecodeBufferToMesh(ak,Ik);if(!Xk.ok()||0===Ik.ptr)throw new kk(Xk.error_msg());Lk=3*Ik.num_faces()}else{if(tk!==Fk.POINT_CLOUD)throw new kk(`Draco: Cannot decode invalid geometry type ${tk}`);{const Ik=new Fk.PointCloud;qk=Ik;const Xk=lk.DecodeBufferToPointCloud(ak,Ik);if(!Xk.ok()||!Ik.ptr)throw new kk(Xk.error_msg())}}const Zk=qk.num_points();if(Zk!==ik.vertices||Lk!==ik.indices)throw new kk(`Draco: decoded ${Zk} vertices and ${Lk} indices, the accessors declare ${ik.vertices} and ${ik.indices}`);const jk=Ik(Fk),ek=[];for(const{kind:Fk,id:Ik,components:Xk}of Tk){const Tk=lk.GetAttributeByUniqueId(qk,Ik);if(!Tk||0===Tk.ptr)throw new kk(`Draco: no attribute with id ${Ik} (${Fk})`);const ik=Tk.data_type();if(!jk[ik])throw new kk(`Draco: Cannot decode invalid data type ${ik}`);if(Tk.num_components()!==Xk)throw new kk(`Draco: ${Fk} decodes to ${Tk.num_components()} components, its accessor declares ${Xk}`);ek.push([Fk,Tk,ik])}return yk({dracoDecoder:lk,geometry:qk,triangles:tk===Fk.TRIANGULAR_MESH,numPoints:Zk,numIndices:Lk,attributes:ek})}finally{qk&&Fk.destroy(qk),ak&&Fk.destroy(ak),lk&&Fk.destroy(lk)}}const Tk=self;let ik=null;self.onmessage=kk=>{let{data:yk}=kk;if("init"===yk.id){try{importScripts(yk.url),ik=DracoDecoderModule({wasmBinary:yk.wasmBinary}),Tk.postMessage({id:"initDone"})}catch(tk){Tk.postMessage({id:"initError",message:tk instanceof Error?tk.message:String(tk)})}return}const{seq:lk,data:ak,attributeIds:qk,expected:Lk}=yk;ik?ik.then((kk=>{try{const ik=function(kk,Tk,ik,yk){const lk=Object.keys(ik).map((kk=>({kind:kk,id:ik[kk],components:yk.components[kk]})));return Xk(kk,Tk,lk,yk,(Xk=>{let{dracoDecoder:Tk,geometry:ik,triangles:yk,numPoints:lk,numIndices:ak,attributes:qk}=Xk;const Lk=Ik(kk);let tk=null;if(yk){const Ik=4*ak,Xk=Fk(kk,Ik);try{Tk.GetTrianglesUInt32Array(ik,Ik,Xk),tk=new Uint32Array(ak),tk.set(new Uint32Array(kk.HEAPF32.buffer,Xk,ak))}finally{kk._free(Xk)}}const Zk=[];for(const[Ik,jk,ek]of qk){const[Xk]=Lk[ek],yk=jk.num_components(),ak=lk*yk,qk=ak*Xk.BYTES_PER_ELEMENT,tk=Fk(kk,qk);try{Tk.GetAttributeDataArrayForAllPoints(ik,jk,ek,qk,tk),Zk.push({kind:Ik,data:new Xk(kk.HEAPF32.buffer,tk,ak).slice(),size:yk,byteOffset:jk.byte_offset(),byteStride:jk.byte_stride(),normalized:jk.normalized()})}finally{kk._free(tk)}}return{indices:tk,attributes:Zk,totalVertices:lk}}))}(kk,ak,qk,Lk),yk=ik.attributes.map((kk=>kk.data.buffer));ik.indices&&yk.push(ik.indices.buffer),Tk.postMessage({id:"decoded",seq:lk,...ik},yk)}catch(tk){Tk.postMessage({id:"decodeError",seq:lk,message:tk instanceof Error?tk.message:String(tk)})}}),(kk=>{Tk.postMessage({id:"decodeError",seq:lk,message:kk instanceof Error?kk.message:String(kk)})})):Tk.postMessage({id:"decodeError",seq:lk,message:"Draco: the decoder module is not loaded"})}})();', "Worker", void 0, Ik.p + "dracoDecode.worker.5373bdac.worker.js")
     }
-    var oC = ZC(77);
-    const qC = 1e3;
-    let FC = null,
-      WC = null;
-    const NC = [],
-      MC = [];
-    let gC = 0;
-    const SC = {
+    var ak = Ik(95);
+    const qk = 1e3;
+    let Lk = null,
+      tk = null;
+    const Zk = [],
+      jk = [];
+    let ek = 0;
+    const wk = {
         decodes: 0,
         workersStarted: 0,
         mostWorkers: 0
       },
-      pC = function(CC, zC) {
-        const ZC = CC ? Math.max(1, Math.min(Math.floor(.5 * CC), 4)) : 1;
-        return zC ? Math.min(ZC, 2) : ZC
-      }("object" === typeof navigator ? navigator.hardwareConcurrency : void 0, (0, oC.isMobile)());
+      Hk = function(kk, Fk) {
+        const Ik = kk ? Math.max(1, Math.min(Math.floor(.5 * kk), 4)) : 1;
+        return Fk ? Math.min(Ik, 2) : Ik
+      }("object" === typeof navigator ? navigator.hardwareConcurrency : void 0, (0, ak.isMobile)());
 
-    function PC() {
-      if (!FC) return Promise.reject(new Error("Draco: configureDracoPool was not called"));
+    function Jk() {
+      if (!Lk) return Promise.reject(new Error("Draco: configureDracoPool was not called"));
       const {
-        scriptUrl: CC,
-        wasmBinaryUrl: zC
-      } = FC;
-      return WC ??= fetch(zC).then((CC => {
-        if (!CC.ok) throw new Error(`Draco: fetching ${zC} failed: ${CC.status}`);
-        return CC.arrayBuffer()
-      })), WC.catch((() => {
-        WC = null
-      })), SC.workersStarted++, WC.then((zC => new Promise(((ZC, QC) => {
-        const wC = new fC;
-        wC.onerror = CC => {
-          wC.onmessage = null, wC.onerror = null, wC.terminate(), QC(new Error("Draco: the decode worker failed to start" + (CC.message ? `: ${CC.message}` : " (its script did not load)")))
-        }, wC.onmessage = CC => {
+        scriptUrl: kk,
+        wasmBinaryUrl: Fk
+      } = Lk;
+      return tk ??= fetch(Fk).then((kk => {
+        if (!kk.ok) throw new Error(`Draco: fetching ${Fk} failed: ${kk.status}`);
+        return kk.arrayBuffer()
+      })), tk.catch((() => {
+        tk = null
+      })), wk.workersStarted++, tk.then((Fk => new Promise(((Ik, Xk) => {
+        const Tk = new lk;
+        Tk.onerror = kk => {
+          Tk.onmessage = null, Tk.onerror = null, Tk.terminate(), Xk(new Error("Draco: the decode worker failed to start" + (kk.message ? `: ${kk.message}` : " (its script did not load)")))
+        }, Tk.onmessage = kk => {
           let {
-            data: zC
-          } = CC;
-          wC.onmessage = null, wC.onerror = null, "initDone" === zC.id ? ZC(wC) : (wC.terminate(), QC(new Error(`Draco: ${"initError"===zC.id?zC.message:"the worker did not start"}`)))
+            data: Fk
+          } = kk;
+          Tk.onmessage = null, Tk.onerror = null, "initDone" === Fk.id ? Ik(Tk) : (Tk.terminate(), Xk(new Error(`Draco: ${"initError"===Fk.id?Fk.message:"the worker did not start"}`)))
         };
-        const bC = zC.slice(0),
-          nC = {
+        const ik = Fk.slice(0),
+          yk = {
             id: "init",
-            url: CC,
-            wasmBinary: bC
+            url: kk,
+            wasmBinary: ik
           };
-        wC.postMessage(nC, [bC])
+        Tk.postMessage(yk, [ik])
       }))))
     }
 
-    function GC(CC) {
-      const zC = NC.indexOf(CC); - 1 !== zC && NC.splice(zC, 1);
-      const ZC = MC.shift();
-      ZC && AC(ZC)
+    function xk(kk) {
+      const Fk = Zk.indexOf(kk); - 1 !== Fk && Zk.splice(Fk, 1);
+      const Ik = jk.shift();
+      Ik && Kk(Ik)
     }
 
-    function RC(CC, zC) {
-      CC.busy = !0, CC.releaseTimer && (clearTimeout(CC.releaseTimer), CC.releaseTimer = null);
-      CC.worker.then((ZC => {
-        const QC = gC++;
-        ZC.onmessage = wC => {
+    function Pk(kk, Fk) {
+      kk.busy = !0, kk.releaseTimer && (clearTimeout(kk.releaseTimer), kk.releaseTimer = null);
+      kk.worker.then((Ik => {
+        const Xk = ek++;
+        Ik.onmessage = Tk => {
           let {
-            data: bC
-          } = wC;
-          if (("decoded" === bC.id || "decodeError" === bC.id) && bC.seq === QC) {
-            if (ZC.onmessage = null, ZC.onerror = null, "decoded" === bC.id) return SC.decodes++, zC.resolve({
-              indices: bC.indices,
-              attributes: bC.attributes,
-              totalVertices: bC.totalVertices
+            data: ik
+          } = Tk;
+          if (("decoded" === ik.id || "decodeError" === ik.id) && ik.seq === Xk) {
+            if (Ik.onmessage = null, Ik.onerror = null, "decoded" === ik.id) return wk.decodes++, Fk.resolve({
+              indices: ik.indices,
+              attributes: ik.attributes,
+              totalVertices: ik.totalVertices
             }), void(() => {
-              const zC = MC.shift();
-              zC ? RC(CC, zC) : (CC.busy = !1, CC.releaseTimer = setTimeout((() => {
-                const zC = NC.indexOf(CC); - 1 !== zC && NC.splice(zC, 1), CC.worker.then((CC => {
-                  CC.terminate()
+              const Fk = jk.shift();
+              Fk ? Pk(kk, Fk) : (kk.busy = !1, kk.releaseTimer = setTimeout((() => {
+                const Fk = Zk.indexOf(kk); - 1 !== Fk && Zk.splice(Fk, 1), kk.worker.then((kk => {
+                  kk.terminate()
                 }))
-              }), qC))
+              }), qk))
             })();
-            ZC.terminate(), zC.reject(new Error(bC.message)), GC(CC)
+            Ik.terminate(), Fk.reject(new Error(ik.message)), xk(kk)
           }
-        }, ZC.onerror = QC => {
-          ZC.onmessage = null, ZC.onerror = null, ZC.terminate(), zC.reject(new Error(`Draco: the decode worker failed: ${QC.message}`)), GC(CC)
+        }, Ik.onerror = Xk => {
+          Ik.onmessage = null, Ik.onerror = null, Ik.terminate(), Fk.reject(new Error(`Draco: the decode worker failed: ${Xk.message}`)), xk(kk)
         };
-        const wC = {
+        const Tk = {
           id: "decode",
-          seq: QC,
-          data: zC.data,
-          attributeIds: zC.attributeIds,
-          expected: zC.expected
+          seq: Xk,
+          data: Fk.data,
+          attributeIds: Fk.attributeIds,
+          expected: Fk.expected
         };
-        ZC.postMessage(wC, [zC.data.buffer])
-      }), (ZC => {
-        zC.reject(ZC instanceof Error ? ZC : new Error(String(ZC))), GC(CC)
+        Ik.postMessage(Tk, [Fk.data.buffer])
+      }), (Ik => {
+        Fk.reject(Ik instanceof Error ? Ik : new Error(String(Ik))), xk(kk)
       }))
     }
 
-    function AC(CC) {
-      const zC = NC.find((CC => !CC.busy));
-      if (zC) RC(zC, CC);
+    function Kk(kk) {
+      const Fk = Zk.find((kk => !kk.busy));
+      if (Fk) Pk(Fk, kk);
       else {
-        if (NC.length < pC) {
-          const zC = {
-            worker: PC(),
+        if (Zk.length < Hk) {
+          const Fk = {
+            worker: Jk(),
             busy: !0,
             releaseTimer: null
           };
-          return NC.push(zC), SC.mostWorkers = Math.max(SC.mostWorkers, NC.length), void RC(zC, CC)
+          return Zk.push(Fk), wk.mostWorkers = Math.max(wk.mostWorkers, Zk.length), void Pk(Fk, kk)
         }
-        MC.push(CC)
+        jk.push(kk)
       }
     }
 
-    function xC(CC, zC, ZC) {
-      return new Promise(((QC, wC) => {
-        AC({
-          data: new Int8Array(CC.buffer, CC.byteOffset, CC.byteLength).slice(),
-          attributeIds: zC,
-          expected: ZC,
-          resolve: QC,
-          reject: wC
+    function Qk(kk, Fk, Ik) {
+      return new Promise(((Xk, Tk) => {
+        Kk({
+          data: new Int8Array(kk.buffer, kk.byteOffset, kk.byteLength).slice(),
+          attributeIds: Fk,
+          expected: Ik,
+          resolve: Xk,
+          reject: Tk
         })
       }))
     }
-    var JC = ZC(37329),
-      IC = ZC(37339),
-      iC = ZC(34228),
-      vC = ZC(34223);
-    const eC = {
+    var sk = Ik(37503),
+      Vk = Ik(37519),
+      zk = Ik(34262),
+      Sk = Ik(34257);
+    const vk = {
       index: -1,
       magFilter: void 0,
       minFilter: void 0,
@@ -146,323 +146,323 @@ export const modules = {
       wrapT: void 0
     };
 
-    function hC(CC) {
-      const zC = (0, vC.j)(CC.byteLength);
-      if (zC) throw new iC.n(zC);
+    function Ek(kk) {
+      const Fk = (0, Sk.f)(kk.byteLength);
+      if (Fk) throw new zk.m(Fk);
       const {
-        json: ZC,
-        bin: QC
-      } = (0, iC.x)(CC), wC = (0, vC.f)(ZC, QC);
-      if (wC) throw new iC.n(wC);
+        json: Ik,
+        bin: Xk
+      } = (0, zk.v)(kk), Tk = (0, Sk.e)(Ik, Xk);
+      if (Tk) throw new zk.m(Tk);
       try {
-        return function(CC, zC) {
-          var ZC, QC, wC, bC, nC, fC, oC, qC, FC, WC, NC, MC, gC, SC, pC;
-          const PC = new Map,
-            GC = ZC => {
-              let QC = PC.get(ZC);
-              if (!QC) {
-                var wC;
-                const bC = CC.bufferViews[ZC],
-                  nC = null !== (wC = bC.byteOffset) && void 0 !== wC ? wC : 0;
-                QC = {
-                  index: ZC,
-                  bytes: zC.subarray(nC, nC + bC.byteLength),
-                  byteStride: bC.byteStride
-                }, PC.set(ZC, QC)
+        return function(kk, Fk) {
+          var Ik, Xk, Tk, ik, yk, lk, ak, qk, Lk, tk, Zk, jk, ek, wk, Hk;
+          const Jk = new Map,
+            xk = Ik => {
+              let Xk = Jk.get(Ik);
+              if (!Xk) {
+                var Tk;
+                const ik = kk.bufferViews[Ik],
+                  yk = null !== (Tk = ik.byteOffset) && void 0 !== Tk ? Tk : 0;
+                Xk = {
+                  index: Ik,
+                  bytes: Fk.subarray(yk, yk + ik.byteLength),
+                  byteStride: ik.byteStride
+                }, Jk.set(Ik, Xk)
               }
-              return QC
+              return Xk
             },
-            RC = new Map,
-            AC = zC => {
-              let ZC = RC.get(zC);
-              if (!ZC) {
-                var QC;
-                const wC = CC.accessors[zC];
-                ZC = {
-                  index: zC,
-                  count: wC.count,
-                  type: wC.type,
-                  numComponents: iC.q[wC.type],
-                  componentType: wC.componentType,
-                  normalized: null !== (QC = wC.normalized) && void 0 !== QC && QC,
-                  byteOffset: wC.byteOffset,
-                  bufferView: void 0 === wC.bufferView ? null : GC(wC.bufferView),
-                  min: wC.min,
-                  max: wC.max
-                }, RC.set(zC, ZC)
+            Pk = new Map,
+            Kk = Fk => {
+              let Ik = Pk.get(Fk);
+              if (!Ik) {
+                var Xk;
+                const Tk = kk.accessors[Fk];
+                Ik = {
+                  index: Fk,
+                  count: Tk.count,
+                  type: Tk.type,
+                  numComponents: zk.o[Tk.type],
+                  componentType: Tk.componentType,
+                  normalized: null !== (Xk = Tk.normalized) && void 0 !== Xk && Xk,
+                  byteOffset: Tk.byteOffset,
+                  bufferView: void 0 === Tk.bufferView ? null : xk(Tk.bufferView),
+                  min: Tk.min,
+                  max: Tk.max
+                }, Pk.set(Fk, Ik)
               }
-              return ZC
+              return Ik
             },
-            xC = null !== (ZC = null === (QC = CC.extensionsUsed) || void 0 === QC ? void 0 : QC.includes("KHR_draco_mesh_compression")) && void 0 !== ZC && ZC,
-            JC = (null !== (wC = CC.meshes) && void 0 !== wC ? wC : []).map(((zC, ZC) => {
-              const QC = zC.primitives.map(((zC, ZC) => {
-                var QC, wC, bC;
-                const nC = xC ? null === (QC = zC.extensions) || void 0 === QC ? void 0 : QC.KHR_draco_mesh_compression : void 0;
-                let fC = null;
-                const oC = [];
-                if (nC) {
-                  const ZC = {
-                    vertices: CC.accessors[zC.attributes.POSITION].count,
-                    indices: void 0 === zC.indices ? 0 : CC.accessors[zC.indices].count,
+            Qk = null !== (Ik = null === (Xk = kk.extensionsUsed) || void 0 === Xk ? void 0 : Xk.includes("KHR_draco_mesh_compression")) && void 0 !== Ik && Ik,
+            sk = (null !== (Tk = kk.meshes) && void 0 !== Tk ? Tk : []).map(((Fk, Ik) => {
+              const Xk = Fk.primitives.map(((Fk, Ik) => {
+                var Xk, Tk, ik;
+                const yk = Qk ? null === (Xk = Fk.extensions) || void 0 === Xk ? void 0 : Xk.KHR_draco_mesh_compression : void 0;
+                let lk = null;
+                const ak = [];
+                if (yk) {
+                  const Ik = {
+                    vertices: kk.accessors[Fk.attributes.POSITION].count,
+                    indices: void 0 === Fk.indices ? 0 : kk.accessors[Fk.indices].count,
                     components: {}
                   };
-                  fC = {
-                    bufferView: GC(nC.bufferView),
+                  lk = {
+                    bufferView: xk(yk.bufferView),
                     attributeIds: {},
                     normalized: {},
-                    expected: ZC
+                    expected: Ik
                   };
-                  for (const [QC, wC] of iC.h) {
-                    const bC = nC.attributes[QC];
-                    if (void 0 === bC) continue;
-                    fC.attributeIds[wC] = bC;
-                    const oC = zC.attributes[QC];
-                    var qC;
-                    if (void 0 !== oC) fC.normalized[wC] = null !== (qC = CC.accessors[oC].normalized) && void 0 !== qC && qC, ZC.components[wC] = iC.q[CC.accessors[oC].type]
+                  for (const [Xk, Tk] of zk.h) {
+                    const ik = yk.attributes[Xk];
+                    if (void 0 === ik) continue;
+                    lk.attributeIds[Tk] = ik;
+                    const ak = Fk.attributes[Xk];
+                    var qk;
+                    if (void 0 !== ak) lk.normalized[Tk] = null !== (qk = kk.accessors[ak].normalized) && void 0 !== qk && qk, Ik.components[Tk] = zk.o[kk.accessors[ak].type]
                   }
                 } else
-                  for (const [CC, FC] of iC.h) {
-                    const ZC = zC.attributes[CC];
-                    void 0 !== ZC && oC.push({
-                      semantic: CC,
-                      kind: FC,
-                      accessor: AC(ZC)
+                  for (const [kk, Lk] of zk.h) {
+                    const Ik = Fk.attributes[kk];
+                    void 0 !== Ik && ak.push({
+                      semantic: kk,
+                      kind: Lk,
+                      accessor: Kk(Ik)
                     })
                   }
                 return {
-                  index: ZC,
-                  mode: null !== (wC = zC.mode) && void 0 !== wC ? wC : 4,
-                  attributes: oC,
-                  indices: nC || void 0 === zC.indices ? null : AC(zC.indices),
-                  position: void 0 === zC.attributes.POSITION ? null : AC(zC.attributes.POSITION),
-                  material: null !== (bC = zC.material) && void 0 !== bC ? bC : null,
-                  draco: fC
+                  index: Ik,
+                  mode: null !== (Tk = Fk.mode) && void 0 !== Tk ? Tk : 4,
+                  attributes: ak,
+                  indices: yk || void 0 === Fk.indices ? null : Kk(Fk.indices),
+                  position: void 0 === Fk.attributes.POSITION ? null : Kk(Fk.attributes.POSITION),
+                  material: null !== (ik = Fk.material) && void 0 !== ik ? ik : null,
+                  draco: lk
                 }
               }));
               return {
-                index: ZC,
-                name: zC.name,
-                primitives: QC,
-                extras: zC.extras
+                index: Ik,
+                name: Fk.name,
+                primitives: Xk,
+                extras: Fk.extras
               }
             })),
-            IC = (null !== (bC = CC.nodes) && void 0 !== bC ? bC : []).map(((CC, zC) => {
-              var ZC, QC;
+            Vk = (null !== (ik = kk.nodes) && void 0 !== ik ? ik : []).map(((kk, Fk) => {
+              var Ik, Xk;
               return {
-                index: zC,
-                name: CC.name,
-                children: null !== (ZC = CC.children) && void 0 !== ZC ? ZC : [],
-                mesh: null !== (QC = CC.mesh) && void 0 !== QC ? QC : null,
-                translation: CC.translation,
-                rotation: CC.rotation,
-                scale: CC.scale,
-                hasCamera: void 0 !== CC.camera,
-                extras: CC.extras
+                index: Fk,
+                name: kk.name,
+                children: null !== (Ik = kk.children) && void 0 !== Ik ? Ik : [],
+                mesh: null !== (Xk = kk.mesh) && void 0 !== Xk ? Xk : null,
+                translation: kk.translation,
+                rotation: kk.rotation,
+                scale: kk.scale,
+                hasCamera: void 0 !== kk.camera,
+                extras: kk.extras
               }
             })),
-            vC = null !== (nC = null === (fC = CC.extensionsUsed) || void 0 === fC ? void 0 : fC.includes("KHR_materials_unlit")) && void 0 !== nC && nC,
-            hC = null !== (oC = null === (qC = CC.extensionsUsed) || void 0 === qC ? void 0 : qC.includes("KHR_texture_transform")) && void 0 !== oC && oC,
-            KC = (null !== (FC = CC.materials) && void 0 !== FC ? FC : []).map(((CC, zC) => {
-              var ZC, QC, wC, bC;
-              const nC = CC.pbrMetallicRoughness,
-                fC = null === nC || void 0 === nC ? void 0 : nC.baseColorTexture;
+            Sk = null !== (yk = null === (lk = kk.extensionsUsed) || void 0 === lk ? void 0 : lk.includes("KHR_materials_unlit")) && void 0 !== yk && yk,
+            Ek = null !== (ak = null === (qk = kk.extensionsUsed) || void 0 === qk ? void 0 : qk.includes("KHR_texture_transform")) && void 0 !== ak && ak,
+            Ok = (null !== (Lk = kk.materials) && void 0 !== Lk ? Lk : []).map(((kk, Fk) => {
+              var Ik, Xk, Tk, ik;
+              const yk = kk.pbrMetallicRoughness,
+                lk = null === yk || void 0 === yk ? void 0 : yk.baseColorTexture;
               return {
-                index: zC,
-                name: CC.name,
-                extras: CC.extras,
-                unlit: vC && void 0 !== (null === (ZC = CC.extensions) || void 0 === ZC ? void 0 : ZC.KHR_materials_unlit),
-                pbr: nC ? {
-                  baseColorFactor: nC.baseColorFactor,
-                  metallicFactor: nC.metallicFactor,
-                  roughnessFactor: nC.roughnessFactor
+                index: Fk,
+                name: kk.name,
+                extras: kk.extras,
+                unlit: Sk && void 0 !== (null === (Ik = kk.extensions) || void 0 === Ik ? void 0 : Ik.KHR_materials_unlit),
+                pbr: yk ? {
+                  baseColorFactor: yk.baseColorFactor,
+                  metallicFactor: yk.metallicFactor,
+                  roughnessFactor: yk.roughnessFactor
                 } : null,
-                baseColorTexture: fC ? {
-                  texture: fC.index,
-                  transform: hC && (null === (QC = fC.extensions) || void 0 === QC ? void 0 : QC.KHR_texture_transform) || null
+                baseColorTexture: lk ? {
+                  texture: lk.index,
+                  transform: Ek && (null === (Xk = lk.extensions) || void 0 === Xk ? void 0 : Xk.KHR_texture_transform) || null
                 } : null,
-                emissiveFactor: CC.emissiveFactor,
-                alphaMode: null !== (wC = CC.alphaMode) && void 0 !== wC ? wC : "OPAQUE",
-                alphaCutoff: CC.alphaCutoff,
-                doubleSided: null !== (bC = CC.doubleSided) && void 0 !== bC && bC
+                emissiveFactor: kk.emissiveFactor,
+                alphaMode: null !== (Tk = kk.alphaMode) && void 0 !== Tk ? Tk : "OPAQUE",
+                alphaCutoff: kk.alphaCutoff,
+                doubleSided: null !== (ik = kk.doubleSided) && void 0 !== ik && ik
               }
             })),
-            YC = (null !== (WC = CC.textures) && void 0 !== WC ? WC : []).map(((zC, ZC) => {
-              var QC, wC;
-              const bC = void 0 === zC.sampler ? eC : {
-                index: zC.sampler,
-                ...null === (QC = CC.samplers) || void 0 === QC ? void 0 : QC[zC.sampler]
+            nk = (null !== (tk = kk.textures) && void 0 !== tk ? tk : []).map(((Fk, Ik) => {
+              var Xk, Tk;
+              const ik = void 0 === Fk.sampler ? vk : {
+                index: Fk.sampler,
+                ...null === (Xk = kk.samplers) || void 0 === Xk ? void 0 : Xk[Fk.sampler]
               };
               return {
-                index: ZC,
+                index: Ik,
                 sampler: {
-                  index: bC.index,
-                  magFilter: bC.magFilter,
-                  minFilter: bC.minFilter,
-                  wrapS: bC.wrapS,
-                  wrapT: bC.wrapT
+                  index: ik.index,
+                  magFilter: ik.magFilter,
+                  minFilter: ik.minFilter,
+                  wrapS: ik.wrapS,
+                  wrapT: ik.wrapT
                 },
-                image: null !== (wC = zC.source) && void 0 !== wC ? wC : -1
+                image: null !== (Tk = Fk.source) && void 0 !== Tk ? Tk : -1
               }
             })),
-            dC = (null !== (NC = CC.images) && void 0 !== NC ? NC : []).map(((CC, zC) => ({
-              index: zC,
-              name: CC.name,
-              mimeType: CC.mimeType,
-              bufferView: GC(CC.bufferView)
+            Gk = (null !== (Zk = kk.images) && void 0 !== Zk ? Zk : []).map(((kk, Fk) => ({
+              index: Fk,
+              name: kk.name,
+              mimeType: kk.mimeType,
+              bufferView: xk(kk.bufferView)
             }))),
-            mC = null !== (MC = (0, iC.w)(CC)) && void 0 !== MC ? MC : 0;
+            pk = null !== (jk = (0, zk.u)(kk)) && void 0 !== jk ? jk : 0;
           return {
-            json: CC,
-            rootNodes: null !== (gC = null === (SC = CC.scenes) || void 0 === SC || null === (pC = SC[mC]) || void 0 === pC ? void 0 : pC.nodes) && void 0 !== gC ? gC : [],
-            nodes: IC,
-            meshes: JC,
-            materials: KC,
-            textures: YC,
-            images: dC
+            json: kk,
+            rootNodes: null !== (ek = null === (wk = kk.scenes) || void 0 === wk || null === (Hk = wk[pk]) || void 0 === Hk ? void 0 : Hk.nodes) && void 0 !== ek ? ek : [],
+            nodes: Vk,
+            meshes: sk,
+            materials: Ok,
+            textures: nk,
+            images: Gk
           }
-        }(ZC, QC)
-      } catch (bC) {
-        throw bC instanceof iC.l ? bC : new iC.l(`reading the GLB failed: ${bC instanceof Error?bC.message:String(bC)}`)
+        }(Ik, Xk)
+      } catch (ik) {
+        throw ik instanceof zk.l ? ik : new zk.l(`reading the GLB failed: ${ik instanceof Error?ik.message:String(ik)}`)
       }
     }
-    async function KC(CC, zC) {
-      var ZC, QC;
-      const wC = CC.draco;
-      if (!wC) throw new iC.l("not a Draco primitive");
-      let bC;
+    async function Ok(kk, Fk) {
+      var Ik, Xk;
+      const Tk = kk.draco;
+      if (!Tk) throw new zk.l("not a Draco primitive");
+      let ik;
       try {
-        bC = await zC(wC.bufferView.bytes, wC.attributeIds, wC.expected)
-      } catch (qC) {
-        throw new iC.l(`Draco decoding failed: ${qC instanceof Error?qC.message:String(qC)}`)
+        ik = await Fk(Tk.bufferView.bytes, Tk.attributeIds, Tk.expected)
+      } catch (qk) {
+        throw new zk.l(`Draco decoding failed: ${qk instanceof Error?qk.message:String(qk)}`)
       }
       const {
-        vertices: nC,
-        indices: fC,
-        components: oC
-      } = wC.expected;
-      if (bC.totalVertices !== nC || (null !== (ZC = null === (QC = bC.indices) || void 0 === QC ? void 0 : QC.length) && void 0 !== ZC ? ZC : 0) !== fC || bC.attributes.some((CC => CC.size !== oC[CC.kind] || CC.data.length !== nC * CC.size))) throw new iC.l("Draco decoding gave other counts than the accessors declare");
-      for (const FC of bC.attributes) {
-        const CC = wC.normalized[FC.kind];
-        void 0 !== CC && (FC.normalized = CC)
+        vertices: yk,
+        indices: lk,
+        components: ak
+      } = Tk.expected;
+      if (ik.totalVertices !== yk || (null !== (Ik = null === (Xk = ik.indices) || void 0 === Xk ? void 0 : Xk.length) && void 0 !== Ik ? Ik : 0) !== lk || ik.attributes.some((kk => kk.size !== ak[kk.kind] || kk.data.length !== yk * kk.size))) throw new zk.l("Draco decoding gave other counts than the accessors declare");
+      for (const Lk of ik.attributes) {
+        const kk = Tk.normalized[Lk.kind];
+        void 0 !== kk && (Lk.normalized = kk)
       }
-      return bC
+      return ik
     }
-    const YC = new WeakMap;
+    const nk = new WeakMap;
 
-    function dC(CC, zC) {
-      var ZC;
-      const QC = null !== (ZC = YC.get(CC)) && void 0 !== ZC ? ZC : zC(CC);
-      return YC.set(CC, QC), QC
-    }
-
-    function mC(CC) {
-      const zC = CC.bufferView,
-        ZC = 5125 === CC.componentType ? Uint32Array : Uint16Array,
-        QC = zC.bytes.buffer,
-        wC = zC.bytes.byteOffset + (CC.byteOffset || 0);
-      return wC % ZC.BYTES_PER_ELEMENT !== 0 ? new ZC(QC.slice(wC, wC + CC.count * ZC.BYTES_PER_ELEMENT), 0) : new ZC(QC, wC, CC.count)
+    function Gk(kk, Fk) {
+      var Ik;
+      const Xk = null !== (Ik = nk.get(kk)) && void 0 !== Ik ? Ik : Fk(kk);
+      return nk.set(kk, Xk), Xk
     }
 
-    function HC(CC, zC) {
-      if (CC.min && CC.max) return [new Float64Array(CC.min), new Float64Array(CC.max)];
-      const ZC = zC.find((CC => {
+    function pk(kk) {
+      const Fk = kk.bufferView,
+        Ik = 5125 === kk.componentType ? Uint32Array : Uint16Array,
+        Xk = Fk.bytes.buffer,
+        Tk = Fk.bytes.byteOffset + (kk.byteOffset || 0);
+      return Tk % Ik.BYTES_PER_ELEMENT !== 0 ? new Ik(Xk.slice(Tk, Tk + kk.count * Ik.BYTES_PER_ELEMENT), 0) : new Ik(Xk, Tk, kk.count)
+    }
+
+    function uk(kk, Fk) {
+      if (kk.min && kk.max) return [new Float64Array(kk.min), new Float64Array(kk.max)];
+      const Ik = Fk.find((kk => {
           let {
-            kind: zC
-          } = CC;
-          return "position" === zC
+            kind: Fk
+          } = kk;
+          return "position" === Fk
         })),
-        QC = ZC ? (0, IC.g)(ZC, CC.count) : new Float32Array(0);
-      return (0, IC.t)(QC.length / 3, ((CC, zC) => QC[3 * CC + zC]))
+        Xk = Ik ? (0, Vk.i)(Ik, kk.count) : new Float32Array(0);
+      return (0, Vk.t)(Xk.length / 3, ((kk, Fk) => Xk[3 * kk + Fk]))
     }
 
-    function EC(CC) {
-      const zC = CC.attributes.map((CC => {
-          var zC, ZC;
+    function bk(kk) {
+      const Fk = kk.attributes.map((kk => {
+          var Fk, Ik;
           let {
-            kind: QC,
-            accessor: wC
-          } = CC;
+            kind: Xk,
+            accessor: Tk
+          } = kk;
           const {
-            bufferView: bC,
-            numComponents: nC
-          } = wC;
-          if (!bC) {
+            bufferView: ik,
+            numComponents: yk
+          } = Tk;
+          if (!ik) {
             return {
-              kind: QC,
-              data: dC(wC, (() => new Float32Array(nC * wC.count))),
+              kind: Xk,
+              data: Gk(Tk, (() => new Float32Array(yk * Tk.count))),
               offset: 0,
-              stride: 4 * nC,
-              components: nC,
+              stride: 4 * yk,
+              components: yk,
               glType: 5126,
               isNormalized: !1
             }
           }
-          const fC = null !== (zC = bC.byteStride) && void 0 !== zC ? zC : nC * iC.e[wC.componentType];
+          const lk = null !== (Fk = ik.byteStride) && void 0 !== Fk ? Fk : yk * zk.d[Tk.componentType];
           return {
-            kind: QC,
-            data: bC.bytes,
-            offset: null !== (ZC = wC.byteOffset) && void 0 !== ZC ? ZC : 0,
-            stride: fC,
-            components: nC,
-            glType: wC.componentType,
-            isNormalized: wC.normalized
+            kind: Xk,
+            data: ik.bytes,
+            offset: null !== (Ik = Tk.byteOffset) && void 0 !== Ik ? Ik : 0,
+            stride: lk,
+            components: yk,
+            glType: Tk.componentType,
+            isNormalized: Tk.normalized
           }
         })),
-        ZC = CC.indices,
-        QC = ZC && dC(ZC, mC),
-        wC = CC.position;
-      return new IC.f(zC, QC, wC.count, ...HC(wC, zC))
+        Ik = kk.indices,
+        Xk = Ik && Gk(Ik, pk),
+        Tk = kk.position;
+      return new Vk.h(Fk, Xk, Tk.count, ...uk(Tk, Fk))
     }
-    const lC = [Int8Array, Uint8Array, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array];
+    const Rk = [Int8Array, Uint8Array, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array];
 
-    function XC(CC, zC) {
-      const ZC = zC.attributes.map((CC => {
+    function Uk(kk, Fk) {
+      const Ik = Fk.attributes.map((kk => {
         let {
-          kind: zC,
-          data: ZC,
-          size: QC,
-          byteOffset: wC,
-          byteStride: bC,
-          normalized: nC
-        } = CC;
+          kind: Fk,
+          data: Ik,
+          size: Xk,
+          byteOffset: Tk,
+          byteStride: ik,
+          normalized: yk
+        } = kk;
         return {
-          kind: zC,
-          data: ZC,
-          offset: wC,
-          stride: bC,
-          components: QC,
-          glType: 5120 + lC.indexOf(ZC.constructor),
-          isNormalized: nC
+          kind: Fk,
+          data: Ik,
+          offset: Tk,
+          stride: ik,
+          components: Xk,
+          glType: 5120 + Rk.indexOf(Ik.constructor),
+          isNormalized: yk
         }
       }));
-      return new IC.f(ZC, zC.indices, zC.totalVertices, ...HC(CC.position, ZC))
+      return new Vk.h(Ik, Fk.indices, Fk.totalVertices, ...uk(kk.position, Ik))
     }
 
-    function cC(CC) {
-      const zC = CC.lastIndexOf("/");
-      return zC < 0 ? CC : CC.substring(zC + 1)
+    function Ck(kk) {
+      const Fk = kk.lastIndexOf("/");
+      return Fk < 0 ? kk : kk.substring(Fk + 1)
     }
 
-    function uC(CC) {
-      const zC = CC.lastIndexOf("/");
-      return zC < 0 ? "" : CC.substring(0, zC + 1)
+    function Nk(kk) {
+      const Fk = kk.lastIndexOf("/");
+      return Fk < 0 ? "" : kk.substring(0, Fk + 1)
     }
 
-    function rC(CC) {
-      return CC.name || `node${CC.index}`
+    function ck(kk) {
+      return kk.name || `node${kk.index}`
     }
-    const sC = {
+    const Wk = {
         rotation: [0, 1, 0, 0],
         scale: [1, 1, -1]
       },
-      TC = {
+      fk = {
         9728: 12,
         9729: 2,
         9984: 9,
         9985: 11,
         9986: 10
       },
-      aC = {
+      Bk = {
         9728: 1,
         9729: 7,
         9984: 4,
@@ -471,353 +471,353 @@ export const modules = {
         9987: 6
       };
 
-    function tC(CC) {
-      var zC, ZC, QC, wC;
-      const bC = null !== (zC = CC.minFilter) && void 0 !== zC ? zC : 9987;
-      return 9729 === (null !== (ZC = CC.magFilter) && void 0 !== ZC ? ZC : 9729) ? null !== (QC = TC[bC]) && void 0 !== QC ? QC : 3 : null !== (wC = aC[bC]) && void 0 !== wC ? wC : 4
+    function dk(kk) {
+      var Fk, Ik, Xk, Tk;
+      const ik = null !== (Fk = kk.minFilter) && void 0 !== Fk ? Fk : 9987;
+      return 9729 === (null !== (Ik = kk.magFilter) && void 0 !== Ik ? Ik : 9729) ? null !== (Xk = fk[ik]) && void 0 !== Xk ? Xk : 3 : null !== (Tk = Bk[ik]) && void 0 !== Tk ? Tk : 4
     }
-    const DC = {
+    const Yk = {
       33071: 0,
       33648: 2
     };
 
-    function jC(CC) {
-      var zC;
-      return null !== (zC = DC[null !== CC && void 0 !== CC ? CC : 10497]) && void 0 !== zC ? zC : 1
+    function Ak(kk) {
+      var Fk;
+      return null !== (Fk = Yk[null !== kk && void 0 !== kk ? kk : 10497]) && void 0 !== Fk ? Fk : 1
     }
 
-    function yC(CC) {
-      return 9728 === CC.minFilter || 9729 === CC.minFilter
+    function gk(kk) {
+      return 9728 === kk.minFilter || 9729 === kk.minFilter
     }
 
-    function LC(CC) {
-      var zC, ZC, QC;
-      const wC = Float64Array.from(null !== (zC = CC.scale) && void 0 !== zC ? zC : [1, 1, 1]);
-      return CC.hasCamera && (wC[0] = -1), {
-        translation: Float64Array.from(null !== (ZC = CC.translation) && void 0 !== ZC ? ZC : [0, 0, 0]),
-        rotation: Float64Array.from(null !== (QC = CC.rotation) && void 0 !== QC ? QC : [0, 0, 0, 1]),
-        scale: wC
+    function mk(kk) {
+      var Fk, Ik, Xk;
+      const Tk = Float64Array.from(null !== (Fk = kk.scale) && void 0 !== Fk ? Fk : [1, 1, 1]);
+      return kk.hasCamera && (Tk[0] = -1), {
+        translation: Float64Array.from(null !== (Ik = kk.translation) && void 0 !== Ik ? Ik : [0, 0, 0]),
+        rotation: Float64Array.from(null !== (Xk = kk.rotation) && void 0 !== Xk ? Xk : [0, 0, 0, 1]),
+        scale: Tk
       }
     }
 
-    function UC(CC, zC) {
+    function hk(kk, Fk) {
       let {
-        translation: ZC,
-        rotation: QC,
-        scale: wC
-      } = CC;
-      const bC = new Float32Array(16);
-      return (0, JC.b)(wC, 0, QC, 0, ZC, 0, bC), zC && (0, JC.o)(bC, zC, 0, bC), bC
+        translation: Ik,
+        rotation: Xk,
+        scale: Tk
+      } = kk;
+      const ik = new Float32Array(16);
+      return (0, sk.b)(Tk, 0, Xk, 0, Ik, 0, ik), Fk && (0, sk.l)(ik, Fk, 0, ik), ik
     }
-    class BC {
-      constructor(CC, zC, ZC, QC) {
-        this.model = CC, this.decode = zC, this.fileInfo = ZC, this.uniqueRootUrl = QC, this.primitives = void 0, this.parents = new Map, this.uses = new Map, this.own = new Map;
-        const wC = new Set,
-          bC = (zC, ZC) => {
-            const QC = CC.nodes[zC];
-            if (this.parents.has(QC)) throw new iC.l(`/nodes/${zC}: Invalid recursive node hierarchy`);
-            this.parents.set(QC, ZC);
-            const nC = null === QC.mesh ? [] : CC.meshes[QC.mesh].primitives,
-              fC = nC.map((CC => {
-                const zC = nC.length > 1;
+    class rk {
+      constructor(kk, Fk, Ik, Xk) {
+        this.model = kk, this.decode = Fk, this.fileInfo = Ik, this.uniqueRootUrl = Xk, this.primitives = void 0, this.parents = new Map, this.uses = new Map, this.own = new Map;
+        const Tk = new Set,
+          ik = (Fk, Ik) => {
+            const Xk = kk.nodes[Fk];
+            if (this.parents.has(Xk)) throw new zk.l(`/nodes/${Fk}: Invalid recursive node hierarchy`);
+            this.parents.set(Xk, Ik);
+            const yk = null === Xk.mesh ? [] : kk.meshes[Xk.mesh].primitives,
+              lk = yk.map((kk => {
+                const Fk = yk.length > 1;
                 return {
-                  name: zC ? `${rC(QC)}_primitive${CC.index}` : rC(QC),
-                  node: QC,
-                  primitive: CC,
-                  part: zC,
+                  name: Fk ? `${ck(Xk)}_primitive${kk.index}` : ck(Xk),
+                  node: Xk,
+                  primitive: kk,
+                  part: Fk,
                   geometry: null
                 }
               }));
-            this.uses.set(QC, fC);
-            const oC = null !== QC.mesh && wC.has(QC.mesh);
-            wC.add(QC.mesh), this.own.set(QC, oC ? [] : fC);
-            for (const CC of QC.children) bC(CC, QC)
+            this.uses.set(Xk, lk);
+            const ak = null !== Xk.mesh && Tk.has(Xk.mesh);
+            Tk.add(Xk.mesh), this.own.set(Xk, ak ? [] : lk);
+            for (const kk of Xk.children) ik(kk, Xk)
           };
-        for (const nC of CC.rootNodes) bC(nC, null);
-        this.primitives = CC.nodes.flatMap((CC => {
-          var zC;
-          return null !== (zC = this.own.get(CC)) && void 0 !== zC ? zC : []
+        for (const yk of kk.rootNodes) ik(yk, null);
+        this.primitives = kk.nodes.flatMap((kk => {
+          var Fk;
+          return null !== (Fk = this.own.get(kk)) && void 0 !== Fk ? Fk : []
         }))
       }
       decodeGeometries() {
-        const CC = new Map;
-        return Promise.all(this.primitives.map((async zC => {
+        const kk = new Map;
+        return Promise.all(this.primitives.map((async Fk => {
           const {
-            primitive: ZC
-          } = zC, QC = ZC.draco;
-          let wC = QC ? CC.get(QC.bufferView.index) : Promise.resolve(EC(ZC));
-          wC || (wC = KC(ZC, this.decode).then((CC => XC(ZC, CC))), CC.set(QC.bufferView.index, wC)), zC.geometry = await wC
+            primitive: Ik
+          } = Fk, Xk = Ik.draco;
+          let Tk = Xk ? kk.get(Xk.bufferView.index) : Promise.resolve(bk(Ik));
+          Tk || (Tk = Ok(Ik, this.decode).then((kk => Uk(Ik, kk))), kk.set(Xk.bufferView.index, Tk)), Fk.geometry = await Tk
         })))
       }
-      parentOf(CC) {
-        var zC;
-        return null !== (zC = this.parents.get(CC)) && void 0 !== zC ? zC : null
+      parentOf(kk) {
+        var Fk;
+        return null !== (Fk = this.parents.get(kk)) && void 0 !== Fk ? Fk : null
       }
-      meshesUnder(CC) {
-        const zC = this.model.nodes.filter((CC => this.uses.has(CC)));
-        for (const QC of zC) {
-          const zC = this.uses.get(QC),
-            ZC = zC.find((zC => zC.name === CC));
-          if (ZC) return 1 === zC.length ? this.subtree(QC) : this.own.get(QC).includes(ZC) ? [ZC] : []
+      meshesUnder(kk) {
+        const Fk = this.model.nodes.filter((kk => this.uses.has(kk)));
+        for (const Xk of Fk) {
+          const Fk = this.uses.get(Xk),
+            Ik = Fk.find((Fk => Fk.name === kk));
+          if (Ik) return 1 === Fk.length ? this.subtree(Xk) : this.own.get(Xk).includes(Ik) ? [Ik] : []
         }
-        const ZC = zC.find((zC => 1 !== this.uses.get(zC).length && rC(zC) === CC));
-        return ZC ? this.subtree(ZC) : null
+        const Ik = Fk.find((Fk => 1 !== this.uses.get(Fk).length && ck(Fk) === kk));
+        return Ik ? this.subtree(Ik) : null
       }
-      subtree(CC) {
-        return [...this.own.get(CC), ...CC.children.flatMap((CC => this.subtree(this.model.nodes[CC])))]
+      subtree(kk) {
+        return [...this.own.get(kk), ...kk.children.flatMap((kk => this.subtree(this.model.nodes[kk])))]
       }
-      worldMatrix(CC, zC, ZC) {
-        let QC = UC(LC(zC ? sC : {}), null);
-        const wC = [];
-        for (let nC = CC.part ? CC.node : this.parentOf(CC.node); nC; nC = this.parentOf(nC)) wC.unshift(nC);
-        for (const nC of wC) QC = UC(LC(nC), QC);
-        const bC = LC(CC.part ? {} : CC.node);
-        return void 0 !== ZC && bC.scale.fill(ZC), UC(bC, QC)
+      worldMatrix(kk, Fk, Ik) {
+        let Xk = hk(mk(Fk ? Wk : {}), null);
+        const Tk = [];
+        for (let yk = kk.part ? kk.node : this.parentOf(kk.node); yk; yk = this.parentOf(yk)) Tk.unshift(yk);
+        for (const yk of Tk) Xk = hk(mk(yk), Xk);
+        const ik = mk(kk.part ? {} : kk.node);
+        return void 0 !== Ik && ik.scale.fill(Ik), hk(ik, Xk)
       }
-      floats(CC) {
+      floats(kk) {
         const {
-          vertexAttributes: zC,
-          vertexCount: ZC
-        } = CC.geometry;
-        return new Map(zC.map((CC => [CC.kind, (0, IC.g)(CC, ZC)])))
+          vertexAttributes: Fk,
+          vertexCount: Ik
+        } = kk.geometry;
+        return new Map(Fk.map((kk => [kk.kind, (0, Vk.i)(kk, Ik)])))
       }
-      imageUrl(CC) {
-        return function(CC, zC, ZC) {
+      imageUrl(kk) {
+        return function(kk, Fk, Ik) {
           let {
-            name: QC
-          } = zC;
-          return `data:${CC}${QC}#image${ZC}`
-        }(this.uniqueRootUrl, this.fileInfo, CC)
+            name: Xk
+          } = Fk;
+          return `data:${kk}${Xk}#image${Ik}`
+        }(this.uniqueRootUrl, this.fileInfo, kk)
       }
-      textureDesc(CC, zC) {
-        var ZC;
+      textureDesc(kk, Fk) {
+        var Ik;
         let {
-          texture: QC,
-          transform: wC
-        } = CC;
+          texture: Xk,
+          transform: Tk
+        } = kk;
         const {
-          sampler: bC,
-          image: nC
-        } = this.model.textures[QC], {
-          bufferView: fC,
-          mimeType: oC,
-          name: qC
-        } = this.model.images[nC], FC = wC && {
-          ...wC.offset ? {
-            uOffset: wC.offset[0],
-            vOffset: wC.offset[1]
+          sampler: ik,
+          image: yk
+        } = this.model.textures[Xk], {
+          bufferView: lk,
+          mimeType: ak,
+          name: qk
+        } = this.model.images[yk], Lk = Tk && {
+          ...Tk.offset ? {
+            uOffset: Tk.offset[0],
+            vOffset: Tk.offset[1]
           } : {},
           uRotationCenter: 0,
           vRotationCenter: 0,
-          ...wC.rotation ? {
-            wAng: -wC.rotation
+          ...Tk.rotation ? {
+            wAng: -Tk.rotation
           } : {},
-          ...wC.scale ? {
-            uScale: wC.scale[0],
-            vScale: wC.scale[1]
+          ...Tk.scale ? {
+            uScale: Tk.scale[0],
+            vScale: Tk.scale[1]
           } : {}
         };
         return {
-          url: this.imageUrl(nC),
-          noMipmap: yC(bC),
+          url: this.imageUrl(yk),
+          noMipmap: gk(ik),
           invertY: !1,
-          samplingMode: tC(bC),
+          samplingMode: dk(ik),
           data: {
-            bytes: fC.bytes,
-            mimeType: oC,
-            label: qC,
-            context: `/textures/${QC}`
+            bytes: lk.bytes,
+            mimeType: ak,
+            label: qk,
+            context: `/textures/${Xk}`
           },
           sets: {
-            wrapU: jC(bC.wrapS),
-            wrapV: jC(bC.wrapT),
-            ...FC,
-            coordinatesIndex: null !== (ZC = null === wC || void 0 === wC ? void 0 : wC.texCoord) && void 0 !== ZC ? ZC : 0,
-            hasAlpha: zC
+            wrapU: Ak(ik.wrapS),
+            wrapV: Ak(ik.wrapT),
+            ...Lk,
+            coordinatesIndex: null !== (Ik = null === Tk || void 0 === Tk ? void 0 : Tk.texCoord) && void 0 !== Ik ? Ik : 0,
+            hasAlpha: Fk
           }
         }
       }
     }
-    async function OC(CC, zC, ZC, QC, wC, bC) {
-      let nC = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
-      const fC = function(CC, zC, ZC) {
-          return "string" !== typeof zC ? {
+    async function Dk(kk, Fk, Ik, Xk, Tk, ik) {
+      let yk = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
+      const lk = function(kk, Fk, Ik) {
+          return "string" !== typeof Fk ? {
             url: "",
-            rootUrl: CC,
-            name: ZC()
-          } : zC ? zC.startsWith("data:") ? {
-            url: zC,
-            rootUrl: CC,
+            rootUrl: kk,
+            name: Ik()
+          } : Fk ? Fk.startsWith("data:") ? {
+            url: Fk,
+            rootUrl: kk,
             name: ""
-          } : CC ? {
-            url: CC + zC,
-            rootUrl: CC,
-            name: zC
+          } : kk ? {
+            url: kk + Fk,
+            rootUrl: kk,
+            name: Fk
           } : {
-            url: zC,
-            rootUrl: uC(zC),
-            name: cC(zC)
+            url: Fk,
+            rootUrl: Nk(Fk),
+            name: Ck(Fk)
           } : {
-            url: CC,
-            rootUrl: uC(CC),
-            name: cC(CC)
+            url: kk,
+            rootUrl: Nk(kk),
+            name: Ck(kk)
           }
-        }(ZC, CC, wC),
-        oC = {};
-      zC.addPendingData(oC);
+        }(Ik, kk, Tk),
+        ak = {};
+      Fk.addPendingData(ak);
       try {
-        const ZC = hC(await async function(CC, zC) {
-            return "string" !== typeof zC ? zC : CC.url.startsWith("data:") ? (0, iC.s)(CC.url) : await (0, iC.t)(CC.url)
-          }(fC, CC)),
-          oC = new BC(ZC, QC, fC, function(CC, zC) {
+        const Ik = Ek(await async function(kk, Fk) {
+            return "string" !== typeof Fk ? Fk : kk.url.startsWith("data:") ? (0, zk.p)(kk.url) : await (0, zk.r)(kk.url)
+          }(lk, kk)),
+          ak = new rk(Ik, Xk, lk, function(kk, Fk) {
             let {
-              rootUrl: ZC,
-              name: QC
-            } = CC;
-            return !ZC.startsWith("file:") && QC ? ZC : `${ZC}${zC()}/`
-          }(fC, wC));
-        return await bC(oC), zC.importedMeshesFiles && (zC.loadingPluginName = "Wm", nC && zC.importedMeshesFiles.push(fC.url)), oC
+              rootUrl: Ik,
+              name: Xk
+            } = kk;
+            return !Ik.startsWith("file:") && Xk ? Ik : `${Ik}${Fk()}/`
+          }(lk, Tk));
+        return await ik(ak), Fk.importedMeshesFiles && (Fk.loadingPluginName = "vG", yk && Fk.importedMeshesFiles.push(lk.url)), ak
       } finally {
-        zC.removePendingData(oC)
+        Fk.removePendingData(ak)
       }
     }
-    var kC = ZC(37432),
-      VC = ZC(37306),
-      Cz = ZC(37721);
+    var Mk = Ik(37623),
+      kF = Ik(37479),
+      FF = Ik(37884);
 
-    function zz(CC) {
-      if (null === CC || void 0 === CC || !CC.min || !CC.max) return null;
-      const [zC, ZC, QC] = CC.min, [wC, bC, nC] = CC.max, {
-        BoundingInfo: fC,
-        Eg: oC
-      } = (0, kC.b)();
-      return new fC(new oC(zC, ZC, QC), new oC(wC, bC, nC))
+    function IF(kk) {
+      if (null === kk || void 0 === kk || !kk.min || !kk.max) return null;
+      const [Fk, Ik, Xk] = kk.min, [Tk, ik, yk] = kk.max, {
+        BoundingInfo: lk,
+        Ge: ak
+      } = (0, Mk.b)();
+      return new lk(new ak(Fk, Ik, Xk), new ak(Tk, ik, yk))
     }
 
-    function Zz(CC) {
-      (0, VC.d)(CC) || (CC.geometry && CC.geometry.useBoundingInfoFromGeometry ? CC._updateBoundingInfo() : CC.refreshBoundingInfo(!0, !0))
+    function XF(kk) {
+      (0, kF.i)(kk) || (kk.geometry && kk.geometry.useBoundingInfoFromGeometry ? kk._updateBoundingInfo() : kk.refreshBoundingInfo(!0, !0))
     }
-    class Qz {
-      constructor(CC, zC) {
-        this.sS = CC, this.decode = zC, this.bufferData = Promise.resolve(), this.viewData = new Map, this.viewBuffers = new Map, this.vertexBuffers = new Map, this.dracoGeometry = new Map
+    class TF {
+      constructor(kk, Fk) {
+        this.Yw = kk, this.decode = Fk, this.bufferData = Promise.resolve(), this.viewData = new Map, this.viewBuffers = new Map, this.vertexBuffers = new Map, this.dracoGeometry = new Map
       }
-      viewBytes(CC) {
-        let zC = this.viewData.get(CC.index);
-        return zC || (zC = this.bufferData.then((() => CC.bytes)), this.viewData.set(CC.index, zC)), zC
+      viewBytes(kk) {
+        let Fk = this.viewData.get(kk.index);
+        return Fk || (Fk = this.bufferData.then((() => kk.bytes)), this.viewData.set(kk.index, Fk)), Fk
       }
-      viewBuffer(CC) {
-        let zC = this.viewBuffers.get(CC.index);
-        return zC || (zC = this.viewBytes(CC).then((CC => new((0, kC.b)().gg)(this.sS.mg(), CC, !1))), this.viewBuffers.set(CC.index, zC)), zC
+      viewBuffer(kk) {
+        let Fk = this.viewBuffers.get(kk.index);
+        return Fk || (Fk = this.viewBytes(kk).then((kk => new((0, Mk.b)().je)(this.Yw.Oe(), kk, !1))), this.viewBuffers.set(kk.index, Fk)), Fk
       }
-      vertexBuffer(CC, zC) {
+      vertexBuffer(kk, Fk) {
         const {
-          kind: ZC,
-          data: QC
-        } = zC, wC = `${CC.index}:${ZC}`;
-        let bC = this.vertexBuffers.get(wC);
-        if (!bC) {
-          const nC = CC.bufferView;
-          bC = nC ? this.viewBuffer(nC).then((CC => this.layoutVertexBuffer(CC, zC))) : Promise.resolve(QC).then((CC => new((0, kC.b)().VertexBuffer)(this.sS.mg(), CC, ZC, !1))), this.vertexBuffers.set(wC, bC)
+          kind: Ik,
+          data: Xk
+        } = Fk, Tk = `${kk.index}:${Ik}`;
+        let ik = this.vertexBuffers.get(Tk);
+        if (!ik) {
+          const yk = kk.bufferView;
+          ik = yk ? this.viewBuffer(yk).then((kk => this.layoutVertexBuffer(kk, Fk))) : Promise.resolve(Xk).then((kk => new((0, Mk.b)().VertexBuffer)(this.Yw.Oe(), kk, Ik, !1))), this.vertexBuffers.set(Tk, ik)
         }
-        return bC
+        return ik
       }
-      layoutVertexBuffer(CC, zC) {
+      layoutVertexBuffer(kk, Fk) {
         let {
-          kind: ZC,
-          offset: QC,
-          stride: wC,
-          components: bC,
-          glType: nC,
-          isNormalized: fC
-        } = zC;
-        const oC = this.sS.mg();
-        return new((0, kC.b)().VertexBuffer)(oC, CC, ZC, !1, void 0, wC, void 0, QC, bC, nC, fC, !0, void 0, !0)
+          kind: Ik,
+          offset: Xk,
+          stride: Tk,
+          components: ik,
+          glType: yk,
+          isNormalized: lk
+        } = Fk;
+        const ak = this.Yw.Oe();
+        return new((0, Mk.b)().VertexBuffer)(ak, kk, Ik, !1, void 0, Tk, void 0, Xk, ik, yk, lk, !0, void 0, !0)
       }
-      load(CC, zC, ZC) {
-        const QC = (0, VC.d)(ZC),
-          wC = CC => {
-            QC || (ZC._delayInfo = ZC._delayInfo || [], -1 === ZC._delayInfo.indexOf(CC) && ZC._delayInfo.push(CC))
+      load(kk, Fk, Ik) {
+        const Xk = (0, kF.i)(Ik),
+          Tk = kk => {
+            Xk || (Ik._delayInfo = Ik._delayInfo || [], -1 === Ik._delayInfo.indexOf(kk) && Ik._delayInfo.push(kk))
           },
-          bC = zC.draco;
-        if (bC) {
-          for (const CC in bC.attributeIds) wC(CC);
-          let nC = this.dracoGeometry.get(bC.bufferView.index);
-          return nC || (nC = this.viewBytes(bC.bufferView).then((async () => {
-            let wC;
+          ik = Fk.draco;
+        if (ik) {
+          for (const kk in ik.attributeIds) Tk(kk);
+          let yk = this.dracoGeometry.get(ik.bufferView.index);
+          return yk || (yk = this.viewBytes(ik.bufferView).then((async () => {
+            let Tk;
             try {
-              wC = await KC(zC, this.decode)
-            } catch (oC) {
-              throw new iC.l(`${CC}: ${oC instanceof Error?oC.message:String(oC)}`)
+              Tk = await Ok(Fk, this.decode)
+            } catch (ak) {
+              throw new zk.l(`${kk}: ${ak instanceof Error?ak.message:String(ak)}`)
             }
-            const bC = XC(zC, wC);
-            if (QC) return bC;
-            const nC = zz(zC.position),
-              fC = new((0, kC.b)().MirroredGeometry)(ZC.name, this.sS);
-            nC && (fC._boundingInfo = nC, fC.useBoundingInfoFromGeometry = !0), bC.indexData && fC.setIndices(bC.indexData);
-            for (const CC of bC.vertexAttributes) fC.setVerticesBuffer(this.layoutVertexBuffer(CC.data, CC), bC.vertexCount);
-            return fC.link(bC), fC
-          })), this.dracoGeometry.set(bC.bufferView.index, nC)), nC
+            const ik = Uk(Fk, Tk);
+            if (Xk) return ik;
+            const yk = IF(Fk.position),
+              lk = new((0, Mk.b)().MirroredGeometry)(Ik.name, this.Yw);
+            yk && (lk._boundingInfo = yk, lk.useBoundingInfoFromGeometry = !0), ik.indexData && lk.setIndices(ik.indexData);
+            for (const kk of ik.vertexAttributes) lk.setVerticesBuffer(this.layoutVertexBuffer(kk.data, kk), ik.vertexCount);
+            return lk.link(ik), lk
+          })), this.dracoGeometry.set(ik.bufferView.index, yk)), yk
         }
-        const nC = [],
-          fC = EC(zC);
-        if (QC) return ZC.isUnIndexed = !fC.indexData, ZC.hasVertexAlpha = (0, Cz.f)(zC), Promise.resolve(fC);
-        const oC = new((0, kC.b)().MirroredGeometry)(ZC.name, this.sS),
+        const yk = [],
+          lk = bk(Fk);
+        if (Xk) return Ik.isUnIndexed = !lk.indexData, Ik.hasVertexAlpha = (0, FF.f)(Fk), Promise.resolve(lk);
+        const ak = new((0, Mk.b)().MirroredGeometry)(Ik.name, this.Yw),
           {
-            indexData: qC
-          } = fC;
-        qC ? nC.push(this.viewBytes(zC.indices.bufferView).then((() => {
-          oC.setIndices(qC)
-        }))) : ZC.isUnIndexed = !0;
-        for (const [FC, {
-            kind: WC,
-            accessor: NC
-          }] of zC.attributes.entries()) wC(WC), nC.push(this.vertexBuffer(NC, fC.vertexAttributes[FC]).then((CC => {
-          if ("position" === CC.getKind()) {
-            const CC = zz(NC);
-            CC && (oC._boundingInfo = CC, oC.useBoundingInfoFromGeometry = !0)
+            indexData: qk
+          } = lk;
+        qk ? yk.push(this.viewBytes(Fk.indices.bufferView).then((() => {
+          ak.setIndices(qk)
+        }))) : Ik.isUnIndexed = !0;
+        for (const [Lk, {
+            kind: tk,
+            accessor: Zk
+          }] of Fk.attributes.entries()) Tk(tk), yk.push(this.vertexBuffer(Zk, lk.vertexAttributes[Lk]).then((kk => {
+          if ("position" === kk.getKind()) {
+            const kk = IF(Zk);
+            kk && (ak._boundingInfo = kk, ak.useBoundingInfoFromGeometry = !0)
           }
-          oC.setVerticesBuffer(CC, fC.vertexCount)
+          ak.setVerticesBuffer(kk, lk.vertexCount)
         })));
-        return (0, Cz.f)(zC) && (ZC.hasVertexAlpha = !0), Promise.all(nC).then((() => (oC.link(fC), oC)))
+        return (0, FF.f)(Fk) && (Ik.hasVertexAlpha = !0), Promise.all(yk).then((() => (ak.link(lk), ak)))
       }
     }
-    var wz, bz = ZC(37193),
-      nz = ZC(36961),
-      fz = ZC(37729),
-      oz = ZC(37129),
-      qz = ZC(37175),
-      Fz = ZC(2753),
-      Wz = ZC(37167);
+    var iF, yF = Ik(37381),
+      lF = Ik(37144),
+      aF = Ik(37896),
+      qF = Ik(37324),
+      LF = Ik(37365),
+      tF = Ik(2700),
+      ZF = Ik(37352);
 
-    function Nz(CC, zC) {
-      CC.metadata = CC.metadata || {};
-      const ZC = CC._internalMetadata = CC._internalMetadata || {},
-        QC = ZC.Wm = ZC.Wm || {};
-      (QC.pointers = QC.pointers || []).push(zC)
+    function jF(kk, Fk) {
+      kk.metadata = kk.metadata || {};
+      const Ik = kk._internalMetadata = kk._internalMetadata || {},
+        Xk = Ik.vG = Ik.vG || {};
+      (Xk.pointers = Xk.pointers || []).push(Fk)
     }
 
-    function Mz(CC, zC) {
-      if (zC && Object.keys(zC).length > 0) {
-        const ZC = CC.metadata = CC.metadata || {};
-        (ZC.Wm = ZC.Wm || {}).extras = zC
+    function eF(kk, Fk) {
+      if (Fk && Object.keys(Fk).length > 0) {
+        const Ik = kk.metadata = kk.metadata || {};
+        (Ik.vG = Ik.vG || {}).extras = Fk
       }
     }
 
-    function gz(CC, zC) {
-      zC.position = CC.translation ? nz.Eg.FromArray(CC.translation) : nz.Eg.Zero(), zC.rotationQuaternion = CC.rotation ? nz.Quaternion.FromArray(CC.rotation) : nz.Quaternion.Identity(), zC.sq = CC.scale ? nz.Eg.FromArray(CC.scale) : nz.Eg.One()
+    function wF(kk, Fk) {
+      Fk.position = kk.translation ? lF.Ge.FromArray(kk.translation) : lF.Ge.Zero(), Fk.rotationQuaternion = kk.rotation ? lF.Quaternion.FromArray(kk.rotation) : lF.Quaternion.Identity(), Fk.ci = kk.scale ? lF.Ge.FromArray(kk.scale) : lF.Ge.One()
     }
-    class Sz {
-      constructor(CC, zC) {
-        if (this.sS = CC, this.meshes = [], this.transformNodes = [], this.geometries = [], this.materials = [], this.textures = [], this.rootNodes = [], this.release = null, zC) {
-          const zC = CC.mg(),
-            ZC = CC.Tm.add((() => {
+    class HF {
+      constructor(kk, Fk) {
+        if (this.Yw = kk, this.meshes = [], this.transformNodes = [], this.geometries = [], this.materials = [], this.textures = [], this.rootNodes = [], this.release = null, Fk) {
+          const Fk = kk.Oe(),
+            Ik = kk.hG.add((() => {
               this.dispose()
             })),
-            QC = zC.Yg.add((() => {
-              for (const CC of [...this.geometries, ...this.meshes, ...this.textures]) CC._rebuild()
+            Xk = Fk.Ee.add((() => {
+              for (const kk of [...this.geometries, ...this.meshes, ...this.textures]) kk._rebuild()
             }));
           this.release = () => {
-            CC.Tm.remove(ZC), zC.Yg.remove(QC)
+            kk.hG.remove(Ik), Fk.Ee.remove(Xk)
           }
         }
       }
@@ -827,267 +827,267 @@ export const modules = {
       addAllToScene() {
         if (this.release) {
           this.release(), this.release = null;
-          for (const CC of this.meshes) this.sS.zQC(CC);
-          for (const CC of this.materials) this.sS.addMaterial(CC);
-          for (const CC of this.geometries) this.sS.addGeometry(CC);
-          for (const CC of this.transformNodes) this.sS.addTransformNode(CC);
-          for (const CC of this.textures) this.sS.addTexture(CC)
+          for (const kk of this.meshes) this.Yw.lXk(kk);
+          for (const kk of this.materials) this.Yw.addMaterial(kk);
+          for (const kk of this.geometries) this.Yw.addGeometry(kk);
+          for (const kk of this.transformNodes) this.Yw.addTransformNode(kk);
+          for (const kk of this.textures) this.Yw.addTexture(kk)
         }
       }
       dispose() {
-        var CC;
-        for (const zC of [this.meshes, this.materials, this.geometries, this.transformNodes, this.textures]) {
-          for (const CC of zC.slice()) CC.dispose();
-          zC.length = 0
+        var kk;
+        for (const Fk of [this.meshes, this.materials, this.geometries, this.transformNodes, this.textures]) {
+          for (const kk of Fk.slice()) kk.dispose();
+          Fk.length = 0
         }
-        null === (CC = this.release) || void 0 === CC || CC.call(this), this.release = null
+        null === (kk = this.release) || void 0 === kk || kk.call(this), this.release = null
       }
     }
-    class pz {
-      constructor(CC, zC, ZC, QC, wC, bC, nC) {
-        this.asset = CC, this.sS = zC, this.tree = ZC, this.geometryData = wC, this.materials = bC, this.lite = nC, this.container = void 0, this.root = null, this.nodeObjects = new Map, this.nodePrimitives = new Map, this.materialData = new Map, this.container = QC ? ZC : null
+    class JF {
+      constructor(kk, Fk, Ik, Xk, Tk, ik, yk) {
+        this.asset = kk, this.Yw = Fk, this.tree = Ik, this.geometryData = Tk, this.materials = ik, this.lite = yk, this.container = void 0, this.root = null, this.nodeObjects = new Map, this.nodePrimitives = new Map, this.materialData = new Map, this.container = Xk ? Ik : null
       }
-      create(CC) {
-        if (this.lite) return CC();
-        const zC = this.sS;
-        zC._blockEntityCollection = !!this.container;
+      create(kk) {
+        if (this.lite) return kk();
+        const Fk = this.Yw;
+        Fk._blockEntityCollection = !!this.container;
         try {
-          const zC = CC();
-          return this.container && (zC._parentContainer = this.container), zC
+          const Fk = kk();
+          return this.container && (Fk._parentContainer = this.container), Fk
         } finally {
-          zC._blockEntityCollection = !1
+          Fk._blockEntityCollection = !1
         }
       }
-      node(CC, zC) {
-        return this.create((() => this.lite ? zC ? (0, fz.g)(this.lite, CC) : (0, fz.p)(this.lite, CC) : zC ? new((0, kC.b)().Mesh)(CC, this.sS) : new((0, kC.b)().TransformNode)(CC, this.sS)))
+      node(kk, Fk) {
+        return this.create((() => this.lite ? Fk ? (0, aF.c)(this.lite, kk) : (0, aF.n)(this.lite, kk) : Fk ? new((0, Mk.b)().Mesh)(kk, this.Yw) : new((0, Mk.b)().TransformNode)(kk, this.Yw)))
       }
       async load() {
-        var CC;
+        var kk;
         this.asset.model.json.nodes && this.createRoot();
-        const zC = this.lite ? null : this.sS,
-          ZC = null !== (CC = null === zC || void 0 === zC ? void 0 : zC.blockMaterialDirtyMechanism) && void 0 !== CC && CC;
-        let QC;
-        zC && (zC.blockMaterialDirtyMechanism = !0);
+        const Fk = this.lite ? null : this.Yw,
+          Ik = null !== (kk = null === Fk || void 0 === Fk ? void 0 : Fk.blockMaterialDirtyMechanism) && void 0 !== kk && kk;
+        let Xk;
+        Fk && (Fk.blockMaterialDirtyMechanism = !0);
         try {
-          QC = this.loadScene()
+          Xk = this.loadScene()
         } finally {
-          null === zC || void 0 === zC || zC._forceBlockMaterialDirtyMechanism(ZC)
+          null === Fk || void 0 === Fk || Fk._forceBlockMaterialDirtyMechanism(Ik)
         }
-        await QC;
+        await Xk;
         const {
-          root: wC,
-          tree: bC
+          root: Tk,
+          tree: ik
         } = this;
-        wC && (wC.IK(!0), bC.meshes.push(wC), bC.rootNodes.push(wC));
-        for (const fC of this.asset.model.nodes) {
-          const CC = this.nodeObjects.get(fC.index);
-          CC && ["TransformNode", "LiteNode"].includes(CC.getClassName()) && bC.transformNodes.push(CC);
-          for (const zC of null !== (nC = this.nodePrimitives.get(fC.index)) && void 0 !== nC ? nC : []) {
-            var nC;
-            bC.meshes.push(zC);
-            const CC = zC.geometry;
-            CC && !bC.geometries.includes(CC) && bC.geometries.push(CC)
+        Tk && (Tk.Av(!0), ik.meshes.push(Tk), ik.rootNodes.push(Tk));
+        for (const lk of this.asset.model.nodes) {
+          const kk = this.nodeObjects.get(lk.index);
+          kk && ["TransformNode", "LiteNode"].includes(kk.getClassName()) && ik.transformNodes.push(kk);
+          for (const Fk of null !== (yk = this.nodePrimitives.get(lk.index)) && void 0 !== yk ? yk : []) {
+            var yk;
+            ik.meshes.push(Fk);
+            const kk = Fk.geometry;
+            kk && !ik.geometries.includes(kk) && ik.geometries.push(kk)
           }
         }
       }
       createRoot() {
-        const CC = this.node("__root__", !0);
-        this.root = CC, CC.IK(!1), this.sS.useRightHandedSystem || gz(sC, CC)
+        const kk = this.node("__root__", !0);
+        this.root = kk, kk.Av(!1), this.Yw.useRightHandedSystem || wF(Wk, kk)
       }
       loadScene() {
-        const CC = [];
-        for (const zC of this.asset.model.rootNodes) CC.push(this.loadNode(this.asset.model.nodes[zC], (CC => {
-          CC.parent = this.root
+        const kk = [];
+        for (const Fk of this.asset.model.rootNodes) kk.push(this.loadNode(this.asset.model.nodes[Fk], (kk => {
+          kk.parent = this.root
         })));
-        return CC.push(Promise.resolve()), Promise.all(CC).then((() => {}))
+        return kk.push(Promise.resolve()), Promise.all(kk).then((() => {}))
       }
-      loadNode(CC, zC) {
-        const ZC = `/nodes/${CC.index}`,
-          QC = [],
-          wC = wC => {
-            if (Nz(wC, ZC), gz(CC, wC), CC.hasCamera && !this.sS.useRightHandedSystem) {
+      loadNode(kk, Fk) {
+        const Ik = `/nodes/${kk.index}`,
+          Xk = [],
+          Tk = Tk => {
+            if (jF(Tk, Ik), wF(kk, Tk), kk.hasCamera && !this.Yw.useRightHandedSystem) {
               const {
-                sq: CC
-              } = wC;
-              CC.set(-1, CC.y, CC.z)
+                ci: kk
+              } = Tk;
+              kk.set(-1, kk.y, kk.z)
             }
-            for (const zC of CC.children) QC.push(this.loadNode(this.asset.model.nodes[zC], (CC => {
-              CC.parent = wC
+            for (const Fk of kk.children) Xk.push(this.loadNode(this.asset.model.nodes[Fk], (kk => {
+              kk.parent = Tk
             })));
-            (ZC => {
-              Mz(ZC, CC.extras), zC(ZC)
-            })(wC)
+            (Ik => {
+              eF(Ik, kk.extras), Fk(Ik)
+            })(Tk)
           };
-        if (null === CC.mesh) {
-          const zC = this.node(rC(CC), !1);
-          this.nodeObjects.set(CC.index, zC), wC(zC)
+        if (null === kk.mesh) {
+          const Fk = this.node(ck(kk), !1);
+          this.nodeObjects.set(kk.index, Fk), Tk(Fk)
         } else {
-          const zC = this.asset.model.meshes[CC.mesh];
-          QC.push(this.loadMesh(`/meshes/${zC.index}`, CC, zC, wC))
+          const Fk = this.asset.model.meshes[kk.mesh];
+          Xk.push(this.loadMesh(`/meshes/${Fk.index}`, kk, Fk, Tk))
         }
-        return Promise.all(QC).then((() => {
-          for (const ZC of null !== (zC = this.nodePrimitives.get(CC.index)) && void 0 !== zC ? zC : []) {
-            var zC;
-            Zz(ZC)
+        return Promise.all(Xk).then((() => {
+          for (const Ik of null !== (Fk = this.nodePrimitives.get(kk.index)) && void 0 !== Fk ? Fk : []) {
+            var Fk;
+            XF(Ik)
           }
-          return this.nodeObjects.get(CC.index)
+          return this.nodeObjects.get(kk.index)
         }))
       }
-      loadMesh(CC, zC, ZC, QC) {
-        const wC = [],
-          bC = rC(zC);
-        if (1 === ZC.primitives.length) {
-          const QC = ZC.primitives[0];
-          wC.push(this.loadPrimitive(`${CC}/primitives/${QC.index}`, bC, QC, (CC => {
-            this.nodeObjects.set(zC.index, CC), this.nodePrimitives.set(zC.index, [CC])
+      loadMesh(kk, Fk, Ik, Xk) {
+        const Tk = [],
+          ik = ck(Fk);
+        if (1 === Ik.primitives.length) {
+          const Xk = Ik.primitives[0];
+          Tk.push(this.loadPrimitive(`${kk}/primitives/${Xk.index}`, ik, Xk, (kk => {
+            this.nodeObjects.set(Fk.index, kk), this.nodePrimitives.set(Fk.index, [kk])
           })))
         } else {
-          const QC = this.node(bC, !1);
-          this.nodeObjects.set(zC.index, QC);
-          const nC = [];
-          this.nodePrimitives.set(zC.index, nC);
-          for (const zC of ZC.primitives) wC.push(this.loadPrimitive(`${CC}/primitives/${zC.index}`, `${bC}_primitive${zC.index}`, zC, (CC => {
-            CC.parent = QC, nC.push(CC)
+          const Xk = this.node(ik, !1);
+          this.nodeObjects.set(Fk.index, Xk);
+          const yk = [];
+          this.nodePrimitives.set(Fk.index, yk);
+          for (const Fk of Ik.primitives) Tk.push(this.loadPrimitive(`${kk}/primitives/${Fk.index}`, `${ik}_primitive${Fk.index}`, Fk, (kk => {
+            kk.parent = Xk, yk.push(kk)
           })))
         }
-        const nC = this.nodeObjects.get(zC.index);
-        return QC(nC), Promise.all(wC).then((() => nC))
+        const yk = this.nodeObjects.get(Fk.index);
+        return Xk(yk), Promise.all(Tk).then((() => yk))
       }
-      loadPrimitive(CC, zC, ZC, QC) {
-        const wC = [],
-          bC = this.node(zC, !0);
-        if (bC.sideOrientation = this.sS.useRightHandedSystem ? oz.e.CounterClockWiseSideOrientation : oz.e.ClockWiseSideOrientation, wC.push(this.geometryData.load(CC, ZC, bC).then((CC => {
-            if ((0, VC.d)(bC)) {
-              var zC, ZC;
-              const QC = CC;
-              bC.replaceModel(QC, Int32Array.of(0, null !== (zC = null === (ZC = QC.indexData) || void 0 === ZC ? void 0 : ZC.length) && void 0 !== zC ? zC : QC.vertexCount, 0, QC.vertexCount))
-            } else this.create((() => (CC.applyToMesh(bC), CC)))
+      loadPrimitive(kk, Fk, Ik, Xk) {
+        const Tk = [],
+          ik = this.node(Fk, !0);
+        if (ik.sideOrientation = this.Yw.useRightHandedSystem ? qF.d.CounterClockWiseSideOrientation : qF.d.ClockWiseSideOrientation, Tk.push(this.geometryData.load(kk, Ik, ik).then((kk => {
+            if ((0, kF.i)(ik)) {
+              var Fk, Ik;
+              const Xk = kk;
+              ik.replaceModel(Xk, Int32Array.of(0, null !== (Fk = null === (Ik = Xk.indexData) || void 0 === Ik ? void 0 : Ik.length) && void 0 !== Fk ? Fk : Xk.vertexCount, 0, Xk.vertexCount))
+            } else this.create((() => (kk.applyToMesh(ik), kk)))
           }))), this.materials) {
-          const CC = 0 === ZC.mode ? oz.e.PointListDrawMode : oz.e.TriangleFillMode,
-            zC = null === ZC.material ? null : this.asset.model.materials[ZC.material];
-          wC.push(this.loadMaterial(zC, CC, (CC => {
-            bC.material = CC
+          const kk = 0 === Ik.mode ? qF.d.PointListDrawMode : qF.d.TriangleFillMode,
+            Fk = null === Ik.material ? null : this.asset.model.materials[Ik.material];
+          Tk.push(this.loadMaterial(Fk, kk, (kk => {
+            ik.material = kk
           })))
         }
-        return Nz(bC, CC), QC(bC), Promise.all(wC).then((() => bC))
+        return jF(ik, kk), Xk(ik), Promise.all(Tk).then((() => ik))
       }
-      loadMaterial(CC, zC, ZC) {
-        var QC;
-        const wC = `${null!==(QC=null===CC||void 0===CC?void 0:CC.index)&&void 0!==QC?QC:"default"}:${zC}`;
-        let bC = this.materialData.get(wC);
-        return bC || (bC = this.createMaterial(CC, zC), this.materialData.set(wC, bC)), ZC(bC.material), bC.promise
+      loadMaterial(kk, Fk, Ik) {
+        var Xk;
+        const Tk = `${null!==(Xk=null===kk||void 0===kk?void 0:kk.index)&&void 0!==Xk?Xk:"default"}:${Fk}`;
+        let ik = this.materialData.get(Tk);
+        return ik || (ik = this.createMaterial(kk, Fk), this.materialData.set(Tk, ik)), Ik(ik.material), ik.promise
       }
-      createMaterial(CC, zC) {
-        const ZC = CC ? CC.name || `material${CC.index}` : "__GLTFLoader._default",
+      createMaterial(kk, Fk) {
+        const Ik = kk ? kk.name || `material${kk.index}` : "__GLTFLoader._default",
           {
-            style: QC,
-            unlit: wC
+            style: Xk,
+            unlit: Tk
           } = this.materials;
-        let bC;
-        const nC = this.create((() => {
-          const nC = (0, Wz.d)({
-            name: ZC,
-            sS: this.sS,
+        let ik;
+        const yk = this.create((() => {
+          const yk = (0, ZF.e)({
+            name: Ik,
+            Yw: this.Yw,
             sets: {
-              ...(0, Cz.b)(this.asset, CC, QC, wC),
-              fillMode: zC
+              ...(0, FF.d)(this.asset, kk, Xk, Tk),
+              fillMode: Fk
             },
             unrendered: !0
           });
-          return bC = nC.model, nC.mirror
+          return ik = yk.model, yk.mirror
         }));
-        let fC = Promise.resolve();
-        if (CC) {
-          const zC = `/materials/${CC.index}`,
-            QC = bC.diffuseTexture;
-          if (QC && !QC.mirror) fC = new Promise((CC => setTimeout(CC)));
-          else if (QC) {
-            const wC = QC.mirror;
-            wC._parentContainer = this.container, wC.name = `${ZC} (Base Color)`, Nz(wC, `${zC}${CC.unlit?"":"/pbrMetallicRoughness"}/baseColorTexture`), this.tree.textures.push(wC), fC = (0, qz.y)(QC)
+        let lk = Promise.resolve();
+        if (kk) {
+          const Fk = `/materials/${kk.index}`,
+            Xk = ik.diffuseTexture;
+          if (Xk && !Xk.mirror) lk = new Promise((kk => setTimeout(kk)));
+          else if (Xk) {
+            const Tk = Xk.mirror;
+            Tk._parentContainer = this.container, Tk.name = `${Ik} (Base Color)`, jF(Tk, `${Fk}${kk.unlit?"":"/pbrMetallicRoughness"}/baseColorTexture`), this.tree.textures.push(Tk), lk = (0, LF.t)(Xk)
           }
-          Mz(nC, CC.extras), Nz(nC, zC)
+          eF(yk, kk.extras), jF(yk, Fk)
         }
-        return this.tree.materials.push(nC), {
-          material: nC,
-          promise: fC
+        return this.tree.materials.push(yk), {
+          material: yk,
+          promise: lk
         }
       }
     }
 
-    function Pz() {
-      bz.i.dracoDecodes = SC.decodes, bz.i.dracoWorkersStarted = SC.workersStarted, bz.i.dracoMostWorkers = SC.mostWorkers
+    function xF() {
+      yF.h.dracoDecodes = wk.decodes, yF.h.dracoWorkersStarted = wk.workersStarted, yF.h.dracoMostWorkers = wk.mostWorkers
     }
-    async function Gz(CC, zC, ZC, wC, bC) {
+    async function PF(kk, Fk, Ik, Tk, ik) {
       try {
-        return await async function(CC, zC, ZC, wC, bC, nC) {
-          var fC;
-          let oC;
-          const qC = null === (fC = (0, Fz.e)()) || void 0 === fC ? void 0 : fC.Vg,
-            FC = null !== qC && void 0 !== qC && qC.CS && zC === qC.Km() ? qC : null,
-            WC = bC && !FC;
-          return await OC(CC, zC, ZC, wC, QC.b, (CC => (oC = new Sz(zC, WC), new pz(CC, zC, oC, WC, new Qz(zC, wC), nC, FC).load())), !bC), oC
-        }(CC, zC, ZC, xC, wC, bC)
+        return await async function(kk, Fk, Ik, Tk, ik, yk) {
+          var lk;
+          let ak;
+          const qk = null === (lk = (0, tF.e)()) || void 0 === lk ? void 0 : lk.Xw,
+            Lk = null !== qk && void 0 !== qk && qk.Tw && Fk === qk.mG() ? qk : null,
+            tk = ik && !Lk;
+          return await Dk(kk, Fk, Ik, Tk, Xk.e, (kk => (ak = new HF(Fk, tk), new JF(kk, Fk, ak, tk, new TF(Fk, Tk), yk, Lk).load())), !ik), ak
+        }(kk, Fk, Ik, Qk, Tk, ik)
       } finally {
-        Pz()
+        xF()
       }
     }
-    async function Rz(CC, zC, ZC, wC) {
+    async function KF(kk, Fk, Ik, Tk) {
       try {
-        return await OC(CC, zC, ZC, xC, QC.b, (CC => wC(CC, new Qz(zC, xC))))
+        return await Dk(kk, Fk, Ik, Qk, Xk.e, (kk => Tk(kk, new TF(Fk, Qk))))
       } finally {
-        Pz()
+        xF()
       }
     }
-    wz = wC.d, FC || (FC = {
-      scriptUrl: new URL(wz.scriptUrl, location.href).href,
-      wasmBinaryUrl: new URL(wz.wasmBinaryUrl, location.href).href
+    iF = Tk.d, Lk || (Lk = {
+      scriptUrl: new URL(iF.scriptUrl, location.href).href,
+      wasmBinaryUrl: new URL(iF.wasmBinaryUrl, location.href).href
     })
   },
-  41298: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => nC
+  41499: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => yk
     });
-    var QC = ZC(113),
-      wC = ZC(1032);
+    var Xk = Ik(129),
+      Tk = Ik(1078);
 
-    function bC(CC) {
-      return (0, QC.e)() ? `https://${wC.c.discordDomain}/${CC.href}` : CC.href
+    function ik(kk) {
+      return (0, Xk.e)() ? `https://${Tk.e.discordDomain}/${kk.href}` : kk.href
     }
-    const nC = {
-      scriptUrl: bC(new ZC.U(ZC(41302))),
-      wasmBinaryUrl: bC(new ZC.U(ZC(41310)))
+    const yk = {
+      scriptUrl: ik(new Ik.U(Ik(41502))),
+      wasmBinaryUrl: ik(new Ik.U(Ik(41511)))
     }
   },
-  36162: CC => {
-    CC.exports = function(CC, zC, ZC, QC) {
-      var wC = self || window;
+  36217: kk => {
+    kk.exports = function(kk, Fk, Ik, Xk) {
+      var Tk = self || window;
       try {
         try {
-          var bC;
+          var ik;
           try {
-            bC = new wC.Blob([CC])
-          } catch (qC) {
-            (bC = new(wC.BlobBuilder || wC.WebKitBlobBuilder || wC.MozBlobBuilder || wC.MSBlobBuilder)).append(CC), bC = bC.getBlob()
+            ik = new Tk.Blob([kk])
+          } catch (qk) {
+            (ik = new(Tk.BlobBuilder || Tk.WebKitBlobBuilder || Tk.MozBlobBuilder || Tk.MSBlobBuilder)).append(kk), ik = ik.getBlob()
           }
-          var nC = wC.URL || wC.webkitURL,
-            fC = nC.createObjectURL(bC),
-            oC = new wC[zC](fC, ZC);
-          return nC.revokeObjectURL(fC), oC
-        } catch (qC) {
-          return new wC[zC]("data:application/javascript,".concat(encodeURIComponent(CC)), ZC)
+          var yk = Tk.URL || Tk.webkitURL,
+            lk = yk.createObjectURL(ik),
+            ak = new Tk[Fk](lk, Ik);
+          return yk.revokeObjectURL(lk), ak
+        } catch (qk) {
+          return new Tk[Fk]("data:application/javascript,".concat(encodeURIComponent(kk)), Ik)
         }
-      } catch (qC) {
-        if (!QC) throw Error("Inline worker is not supported");
-        return new wC[zC](QC, ZC)
+      } catch (qk) {
+        if (!Xk) throw Error("Inline worker is not supported");
+        return new Tk[Fk](Xk, Ik)
       }
     }
   },
-  41310: (CC, zC, ZC) => {
-    CC.exports = ZC.p + "static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm"
+  41502: (kk, Fk, Ik) => {
+    kk.exports = Ik.p + "static/media/draco_wasm_wrapper_gltf_v2_1.8b33994b6159ad3fc976.js"
   },
-  41302: (CC, zC, ZC) => {
-    CC.exports = ZC.p + "static/media/draco_wasm_wrapper_gltf_v2_1.8b33994b6159ad3fc976.js"
+  41511: (kk, Fk, Ik) => {
+    kk.exports = Ik.p + "static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm"
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

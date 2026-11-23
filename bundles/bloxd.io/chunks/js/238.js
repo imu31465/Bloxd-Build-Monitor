@@ -1,248 +1,248 @@
 export const id = 238;
 export const ids = [238];
 export const modules = {
-  37590: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => wC
+  37780: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => Tk
     });
-    var QC = ZC(37596);
-    class wC {
-      static GetPlanes(CC) {
-        const zC = [];
-        for (let ZC = 0; ZC < 6; ZC++) zC.push(new QC.d(0, 0, 0, 0));
-        return wC.GetPlanesToRef(CC, zC), zC
+    var Xk = Ik(37785);
+    class Tk {
+      static GetPlanes(kk) {
+        const Fk = [];
+        for (let Ik = 0; Ik < 6; Ik++) Fk.push(new Xk.e(0, 0, 0, 0));
+        return Tk.GetPlanesToRef(kk, Fk), Fk
       }
-      static GetNearPlaneToRef(CC, zC) {
-        const ZC = CC.m;
-        zC.normal.x = ZC[3] + ZC[2], zC.normal.y = ZC[7] + ZC[6], zC.normal.z = ZC[11] + ZC[10], zC.d = ZC[15] + ZC[14], zC.normalize()
+      static GetNearPlaneToRef(kk, Fk) {
+        const Ik = kk.m;
+        Fk.normal.x = Ik[3] + Ik[2], Fk.normal.y = Ik[7] + Ik[6], Fk.normal.z = Ik[11] + Ik[10], Fk.d = Ik[15] + Ik[14], Fk.normalize()
       }
-      static GetFarPlaneToRef(CC, zC) {
-        const ZC = CC.m;
-        zC.normal.x = ZC[3] - ZC[2], zC.normal.y = ZC[7] - ZC[6], zC.normal.z = ZC[11] - ZC[10], zC.d = ZC[15] - ZC[14], zC.normalize()
+      static GetFarPlaneToRef(kk, Fk) {
+        const Ik = kk.m;
+        Fk.normal.x = Ik[3] - Ik[2], Fk.normal.y = Ik[7] - Ik[6], Fk.normal.z = Ik[11] - Ik[10], Fk.d = Ik[15] - Ik[14], Fk.normalize()
       }
-      static GetLeftPlaneToRef(CC, zC) {
-        const ZC = CC.m;
-        zC.normal.x = ZC[3] + ZC[0], zC.normal.y = ZC[7] + ZC[4], zC.normal.z = ZC[11] + ZC[8], zC.d = ZC[15] + ZC[12], zC.normalize()
+      static GetLeftPlaneToRef(kk, Fk) {
+        const Ik = kk.m;
+        Fk.normal.x = Ik[3] + Ik[0], Fk.normal.y = Ik[7] + Ik[4], Fk.normal.z = Ik[11] + Ik[8], Fk.d = Ik[15] + Ik[12], Fk.normalize()
       }
-      static GetRightPlaneToRef(CC, zC) {
-        const ZC = CC.m;
-        zC.normal.x = ZC[3] - ZC[0], zC.normal.y = ZC[7] - ZC[4], zC.normal.z = ZC[11] - ZC[8], zC.d = ZC[15] - ZC[12], zC.normalize()
+      static GetRightPlaneToRef(kk, Fk) {
+        const Ik = kk.m;
+        Fk.normal.x = Ik[3] - Ik[0], Fk.normal.y = Ik[7] - Ik[4], Fk.normal.z = Ik[11] - Ik[8], Fk.d = Ik[15] - Ik[12], Fk.normalize()
       }
-      static GetTopPlaneToRef(CC, zC) {
-        const ZC = CC.m;
-        zC.normal.x = ZC[3] - ZC[1], zC.normal.y = ZC[7] - ZC[5], zC.normal.z = ZC[11] - ZC[9], zC.d = ZC[15] - ZC[13], zC.normalize()
+      static GetTopPlaneToRef(kk, Fk) {
+        const Ik = kk.m;
+        Fk.normal.x = Ik[3] - Ik[1], Fk.normal.y = Ik[7] - Ik[5], Fk.normal.z = Ik[11] - Ik[9], Fk.d = Ik[15] - Ik[13], Fk.normalize()
       }
-      static GetBottomPlaneToRef(CC, zC) {
-        const ZC = CC.m;
-        zC.normal.x = ZC[3] + ZC[1], zC.normal.y = ZC[7] + ZC[5], zC.normal.z = ZC[11] + ZC[9], zC.d = ZC[15] + ZC[13], zC.normalize()
+      static GetBottomPlaneToRef(kk, Fk) {
+        const Ik = kk.m;
+        Fk.normal.x = Ik[3] + Ik[1], Fk.normal.y = Ik[7] + Ik[5], Fk.normal.z = Ik[11] + Ik[9], Fk.d = Ik[15] + Ik[13], Fk.normalize()
       }
-      static GetPlanesToRef(CC, zC) {
-        wC.GetNearPlaneToRef(CC, zC[0]), wC.GetFarPlaneToRef(CC, zC[1]), wC.GetLeftPlaneToRef(CC, zC[2]), wC.GetRightPlaneToRef(CC, zC[3]), wC.GetTopPlaneToRef(CC, zC[4]), wC.GetBottomPlaneToRef(CC, zC[5])
+      static GetPlanesToRef(kk, Fk) {
+        Tk.GetNearPlaneToRef(kk, Fk[0]), Tk.GetFarPlaneToRef(kk, Fk[1]), Tk.GetLeftPlaneToRef(kk, Fk[2]), Tk.GetRightPlaneToRef(kk, Fk[3]), Tk.GetTopPlaneToRef(kk, Fk[4]), Tk.GetBottomPlaneToRef(kk, Fk[5])
       }
-      static IsPointInFrustum(CC, zC) {
-        for (let ZC = 0; ZC < 6; ZC++)
-          if (zC[ZC].dotCoordinate(CC) < 0) return !1;
+      static IsPointInFrustum(kk, Fk) {
+        for (let Ik = 0; Ik < 6; Ik++)
+          if (Fk[Ik].dotCoordinate(kk) < 0) return !1;
         return !0
       }
     }
   },
-  37596: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => wC
+  37785: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Tk
     });
-    var QC = ZC(36963);
-    class wC {
-      constructor(CC, zC, ZC, wC) {
-        this.normal = new QC.r(CC, zC, ZC), this.d = wC
+    var Xk = Ik(37153);
+    class Tk {
+      constructor(kk, Fk, Ik, Tk) {
+        this.normal = new Xk.t(kk, Fk, Ik), this.d = Tk
       }
-      VZC() {
+      iXk() {
         return [this.normal.x, this.normal.y, this.normal.z, this.d]
       }
       clone() {
-        return new wC(this.normal.x, this.normal.y, this.normal.z, this.d)
+        return new Tk(this.normal.x, this.normal.y, this.normal.z, this.d)
       }
       getClassName() {
         return "Plane"
       }
       getHashCode() {
-        let CC = this.normal.getHashCode();
-        return CC = 397 * CC ^ this.d, CC
+        let kk = this.normal.getHashCode();
+        return kk = 397 * kk ^ this.d, kk
       }
       normalize() {
-        const CC = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
-        let zC = 0;
-        return 0 !== CC && (zC = 1 / CC), this.normal.x *= zC, this.normal.y *= zC, this.normal.z *= zC, this.d *= zC, this
+        const kk = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
+        let Fk = 0;
+        return 0 !== kk && (Fk = 1 / kk), this.normal.x *= Fk, this.normal.y *= Fk, this.normal.z *= Fk, this.d *= Fk, this
       }
-      transform(CC) {
-        const zC = wC._TmpMatrix;
-        CC.invertToRef(zC);
-        const ZC = zC.m,
-          QC = this.normal.x,
-          bC = this.normal.y,
-          nC = this.normal.z,
-          fC = this.d,
-          oC = QC * ZC[0] + bC * ZC[1] + nC * ZC[2] + fC * ZC[3],
-          qC = QC * ZC[4] + bC * ZC[5] + nC * ZC[6] + fC * ZC[7],
-          FC = QC * ZC[8] + bC * ZC[9] + nC * ZC[10] + fC * ZC[11],
-          WC = QC * ZC[12] + bC * ZC[13] + nC * ZC[14] + fC * ZC[15];
-        return new wC(oC, qC, FC, WC)
+      transform(kk) {
+        const Fk = Tk._TmpMatrix;
+        kk.invertToRef(Fk);
+        const Ik = Fk.m,
+          Xk = this.normal.x,
+          ik = this.normal.y,
+          yk = this.normal.z,
+          lk = this.d,
+          ak = Xk * Ik[0] + ik * Ik[1] + yk * Ik[2] + lk * Ik[3],
+          qk = Xk * Ik[4] + ik * Ik[5] + yk * Ik[6] + lk * Ik[7],
+          Lk = Xk * Ik[8] + ik * Ik[9] + yk * Ik[10] + lk * Ik[11],
+          tk = Xk * Ik[12] + ik * Ik[13] + yk * Ik[14] + lk * Ik[15];
+        return new Tk(ak, qk, Lk, tk)
       }
-      dotCoordinate(CC) {
-        return this.normal.x * CC.x + this.normal.y * CC.y + this.normal.z * CC.z + this.d
+      dotCoordinate(kk) {
+        return this.normal.x * kk.x + this.normal.y * kk.y + this.normal.z * kk.z + this.d
       }
-      copyFromPoints(CC, zC, ZC) {
-        const QC = zC.x - CC.x,
-          wC = zC.y - CC.y,
-          bC = zC.z - CC.z,
-          nC = ZC.x - CC.x,
-          fC = ZC.y - CC.y,
-          oC = ZC.z - CC.z,
-          qC = wC * oC - bC * fC,
-          FC = bC * nC - QC * oC,
-          WC = QC * fC - wC * nC,
-          NC = Math.sqrt(qC * qC + FC * FC + WC * WC);
-        let MC;
-        return MC = 0 !== NC ? 1 / NC : 0, this.normal.x = qC * MC, this.normal.y = FC * MC, this.normal.z = WC * MC, this.d = -(this.normal.x * CC.x + this.normal.y * CC.y + this.normal.z * CC.z), this
+      copyFromPoints(kk, Fk, Ik) {
+        const Xk = Fk.x - kk.x,
+          Tk = Fk.y - kk.y,
+          ik = Fk.z - kk.z,
+          yk = Ik.x - kk.x,
+          lk = Ik.y - kk.y,
+          ak = Ik.z - kk.z,
+          qk = Tk * ak - ik * lk,
+          Lk = ik * yk - Xk * ak,
+          tk = Xk * lk - Tk * yk,
+          Zk = Math.sqrt(qk * qk + Lk * Lk + tk * tk);
+        let jk;
+        return jk = 0 !== Zk ? 1 / Zk : 0, this.normal.x = qk * jk, this.normal.y = Lk * jk, this.normal.z = tk * jk, this.d = -(this.normal.x * kk.x + this.normal.y * kk.y + this.normal.z * kk.z), this
       }
-      isFrontFacingTo(CC, zC) {
-        return QC.r.Dot(this.normal, CC) <= zC
+      isFrontFacingTo(kk, Fk) {
+        return Xk.t.Dot(this.normal, kk) <= Fk
       }
-      signedDistanceTo(CC) {
-        return QC.r.Dot(CC, this.normal) + this.d
+      signedDistanceTo(kk) {
+        return Xk.t.Dot(kk, this.normal) + this.d
       }
-      static FromArray(CC) {
-        return new wC(CC[0], CC[1], CC[2], CC[3])
+      static FromArray(kk) {
+        return new Tk(kk[0], kk[1], kk[2], kk[3])
       }
-      static FromPoints(CC, zC, ZC) {
-        const QC = new wC(0, 0, 0, 0);
-        return QC.copyFromPoints(CC, zC, ZC), QC
+      static FromPoints(kk, Fk, Ik) {
+        const Xk = new Tk(0, 0, 0, 0);
+        return Xk.copyFromPoints(kk, Fk, Ik), Xk
       }
-      static FromPositionAndNormal(CC, zC) {
-        const ZC = new wC(0, 0, 0, 0);
-        return this.FromPositionAndNormalToRef(CC, zC, ZC)
+      static FromPositionAndNormal(kk, Fk) {
+        const Ik = new Tk(0, 0, 0, 0);
+        return this.FromPositionAndNormalToRef(kk, Fk, Ik)
       }
-      static FromPositionAndNormalToRef(CC, zC, ZC) {
-        return ZC.normal.Av(zC), ZC.normal.normalize(), ZC.d = -CC.dot(ZC.normal), ZC
+      static FromPositionAndNormalToRef(kk, Fk, Ik) {
+        return Ik.normal.kS(Fk), Ik.normal.normalize(), Ik.d = -kk.dot(Ik.normal), Ik
       }
-      static SignedDistanceToPlaneFromPositionAndNormal(CC, zC, ZC) {
-        const wC = -(zC.x * CC.x + zC.y * CC.y + zC.z * CC.z);
-        return QC.r.Dot(ZC, zC) + wC
+      static SignedDistanceToPlaneFromPositionAndNormal(kk, Fk, Ik) {
+        const Tk = -(Fk.x * kk.x + Fk.y * kk.y + Fk.z * kk.z);
+        return Xk.t.Dot(Ik, Fk) + Tk
       }
     }
-    wC._TmpMatrix = QC.b.Identity()
+    Tk._TmpMatrix = Xk.c.Identity()
   },
-  38501: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => bC
+  38666: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => ik
     });
-    var QC = ZC(38507);
-    const wC = (CC, zC, ZC) => CC ? CC.getClassName && "Mesh" === CC.getClassName() ? null : !CC.getClassName || "SubMesh" !== CC.getClassName() && "PhysicsBody" !== CC.getClassName() ? CC.clone ? CC.clone() : Array.isArray(CC) ? CC.slice() : ZC && "object" === typeof CC ? {
-      ...CC
-    } : null : CC.clone(zC) : null;
-    class bC {
-      static DeepCopy(CC, zC, ZC, bC) {
-        let nC = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const fC = function(CC) {
-          const zC = [];
+    var Xk = Ik(38674);
+    const Tk = (kk, Fk, Ik) => kk ? kk.getClassName && "Mesh" === kk.getClassName() ? null : !kk.getClassName || "SubMesh" !== kk.getClassName() && "PhysicsBody" !== kk.getClassName() ? kk.clone ? kk.clone() : Array.isArray(kk) ? kk.slice() : Ik && "object" === typeof kk ? {
+      ...kk
+    } : null : kk.clone(Fk) : null;
+    class ik {
+      static DeepCopy(kk, Fk, Ik, ik) {
+        let yk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const lk = function(kk) {
+          const Fk = [];
           do {
-            const ZC = Object.getOwnPropertyNames(CC);
-            for (const CC of ZC) - 1 === zC.indexOf(CC) && zC.push(CC)
-          } while (CC = Object.getPrototypeOf(CC));
-          return zC
-        }(CC);
-        for (const qC of fC) {
-          if ("_" === qC[0] && (!bC || -1 === bC.indexOf(qC))) continue;
-          if (qC.endsWith("Observable")) continue;
-          if (ZC && -1 !== ZC.indexOf(qC)) continue;
-          const fC = CC[qC],
-            FC = typeof fC;
-          if ("function" !== FC) try {
-            if ("object" === FC)
-              if (fC instanceof Uint8Array) zC[qC] = Uint8Array.from(fC);
-              else if (fC instanceof Array) {
-              if (zC[qC] = [], fC.length > 0)
-                if ("object" == typeof fC[0])
-                  for (let CC = 0; CC < fC.length; CC++) {
-                    const ZC = wC(fC[CC], zC, nC); - 1 === zC[qC].indexOf(ZC) && zC[qC].push(ZC)
-                  } else zC[qC] = fC.slice(0)
-            } else zC[qC] = wC(fC, zC, nC);
-            else zC[qC] = fC
-          } catch (oC) {
-            QC.c.Warn(oC.message)
+            const Ik = Object.getOwnPropertyNames(kk);
+            for (const kk of Ik) - 1 === Fk.indexOf(kk) && Fk.push(kk)
+          } while (kk = Object.getPrototypeOf(kk));
+          return Fk
+        }(kk);
+        for (const qk of lk) {
+          if ("_" === qk[0] && (!ik || -1 === ik.indexOf(qk))) continue;
+          if (qk.endsWith("Observable")) continue;
+          if (Ik && -1 !== Ik.indexOf(qk)) continue;
+          const lk = kk[qk],
+            Lk = typeof lk;
+          if ("function" !== Lk) try {
+            if ("object" === Lk)
+              if (lk instanceof Uint8Array) Fk[qk] = Uint8Array.from(lk);
+              else if (lk instanceof Array) {
+              if (Fk[qk] = [], lk.length > 0)
+                if ("object" == typeof lk[0])
+                  for (let kk = 0; kk < lk.length; kk++) {
+                    const Ik = Tk(lk[kk], Fk, yk); - 1 === Fk[qk].indexOf(Ik) && Fk[qk].push(Ik)
+                  } else Fk[qk] = lk.slice(0)
+            } else Fk[qk] = Tk(lk, Fk, yk);
+            else Fk[qk] = lk
+          } catch (ak) {
+            Xk.e.Warn(ak.message)
           }
         }
       }
     }
   },
-  37731: (CC, zC, ZC) => {
-    function QC() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (CC => {
-        const zC = 16 * Math.random() | 0;
-        return ("x" === CC ? zC : 3 & zC | 8).toString(16)
+  37902: (kk, Fk, Ik) => {
+    function Xk() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (kk => {
+        const Fk = 16 * Math.random() | 0;
+        return ("x" === kk ? Fk : 3 & Fk | 8).toString(16)
       }))
     }
-    ZC.d(zC, {
-      b: () => QC
+    Ik.d(Fk, {
+      e: () => Xk
     })
   },
-  38507: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => QC
+  38674: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Xk
     });
-    class QC {
-      static _CheckLimit(CC, zC) {
-        let ZC = QC._LogLimitOutputs[CC];
-        return ZC ? ZC.current++ : (ZC = {
-          limit: zC,
+    class Xk {
+      static _CheckLimit(kk, Fk) {
+        let Ik = Xk._LogLimitOutputs[kk];
+        return Ik ? Ik.current++ : (Ik = {
+          limit: Fk,
           current: 1
-        }, QC._LogLimitOutputs[CC] = ZC), ZC.current <= ZC.limit
+        }, Xk._LogLimitOutputs[kk] = Ik), Ik.current <= Ik.limit
       }
-      static _GenerateLimitMessage(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const ZC = QC._LogLimitOutputs[CC];
-        if (!ZC || !QC.MessageLimitReached) return;
-        const wC = this._Levels[zC];
-        ZC.current === ZC.limit && QC[wC.name](QC.MessageLimitReached.replace(/%LIMIT%/g, "" + ZC.limit).replace(/%TYPE%/g, wC.name ?? ""))
+      static _GenerateLimitMessage(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const Ik = Xk._LogLimitOutputs[kk];
+        if (!Ik || !Xk.MessageLimitReached) return;
+        const Tk = this._Levels[Fk];
+        Ik.current === Ik.limit && Xk[Tk.name](Xk.MessageLimitReached.replace(/%LIMIT%/g, "" + Ik.limit).replace(/%TYPE%/g, Tk.name ?? ""))
       }
-      static _AddLogEntry(CC) {
-        QC._LogCache = CC + QC._LogCache, QC.OnNewCacheEntry && QC.OnNewCacheEntry(CC)
+      static _AddLogEntry(kk) {
+        Xk._LogCache = kk + Xk._LogCache, Xk.OnNewCacheEntry && Xk.OnNewCacheEntry(kk)
       }
-      static _FormatMessage(CC) {
-        const zC = CC => CC < 10 ? "0" + CC : "" + CC,
-          ZC = new Date;
-        return "[" + zC(ZC.getHours()) + ":" + zC(ZC.getMinutes()) + ":" + zC(ZC.getSeconds()) + "]: " + CC
+      static _FormatMessage(kk) {
+        const Fk = kk => kk < 10 ? "0" + kk : "" + kk,
+          Ik = new Date;
+        return "[" + Fk(Ik.getHours()) + ":" + Fk(Ik.getMinutes()) + ":" + Fk(Ik.getSeconds()) + "]: " + kk
       }
-      static _LogDisabled(CC, zC) {}
+      static _LogDisabled(kk, Fk) {}
       static _LogEnabled() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          zC = arguments.length > 1 ? arguments[1] : void 0,
-          ZC = arguments.length > 2 ? arguments[2] : void 0;
-        const wC = Array.isArray(zC) ? zC[0] : zC;
-        if (void 0 !== ZC && !QC._CheckLimit(wC, ZC)) return;
-        const bC = QC._FormatMessage(wC),
-          nC = this._Levels[CC],
-          fC = Array.isArray(zC) ? zC.slice(1) : [];
-        nC.logFunc && nC.logFunc("BJS - " + bC, ...fC);
-        const oC = `<div style='color:${nC.color}'>${bC}</div><br>`;
-        QC._AddLogEntry(oC), QC._GenerateLimitMessage(wC, CC)
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Fk = arguments.length > 1 ? arguments[1] : void 0,
+          Ik = arguments.length > 2 ? arguments[2] : void 0;
+        const Tk = Array.isArray(Fk) ? Fk[0] : Fk;
+        if (void 0 !== Ik && !Xk._CheckLimit(Tk, Ik)) return;
+        const ik = Xk._FormatMessage(Tk),
+          yk = this._Levels[kk],
+          lk = Array.isArray(Fk) ? Fk.slice(1) : [];
+        yk.logFunc && yk.logFunc("BJS - " + ik, ...lk);
+        const ak = `<div style='color:${yk.color}'>${ik}</div><br>`;
+        Xk._AddLogEntry(ak), Xk._GenerateLimitMessage(Tk, kk)
       }
       static get LogCache() {
-        return QC._LogCache
+        return Xk._LogCache
       }
       static ClearLogCache() {
-        QC._LogCache = "", QC._LogLimitOutputs = {}, QC.errorsCount = 0
+        Xk._LogCache = "", Xk._LogLimitOutputs = {}, Xk.errorsCount = 0
       }
-      static set LogLevels(CC) {
-        QC.Log = QC._LogDisabled, QC.Warn = QC._LogDisabled, QC.Error = QC._LogDisabled;
-        const zC = [QC.MessageLogLevel, QC.WarningLogLevel, QC.ErrorLogLevel];
-        for (const ZC of zC)
-          if ((CC & ZC) === ZC) {
-            const CC = this._Levels[ZC];
-            QC[CC.name] = QC._LogEnabled.bind(QC, ZC)
+      static set LogLevels(kk) {
+        Xk.Log = Xk._LogDisabled, Xk.Warn = Xk._LogDisabled, Xk.Error = Xk._LogDisabled;
+        const Fk = [Xk.MessageLogLevel, Xk.WarningLogLevel, Xk.ErrorLogLevel];
+        for (const Ik of Fk)
+          if ((kk & Ik) === Ik) {
+            const kk = this._Levels[Ik];
+            Xk[kk.name] = Xk._LogEnabled.bind(Xk, Ik)
           }
       }
     }
-    QC.NoneLogLevel = 0, QC.MessageLogLevel = 1, QC.WarningLogLevel = 2, QC.ErrorLogLevel = 4, QC.AllLogLevel = 7, QC.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", QC._LogCache = "", QC._LogLimitOutputs = {}, QC._Levels = [{}, {
+    Xk.NoneLogLevel = 0, Xk.MessageLogLevel = 1, Xk.WarningLogLevel = 2, Xk.ErrorLogLevel = 4, Xk.AllLogLevel = 7, Xk.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Xk._LogCache = "", Xk._LogLimitOutputs = {}, Xk._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -254,8 +254,8 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], QC.errorsCount = 0, QC.Log = QC._LogEnabled.bind(QC, QC.MessageLogLevel), QC.Warn = QC._LogEnabled.bind(QC, QC.WarningLogLevel), QC.Error = QC._LogEnabled.bind(QC, QC.ErrorLogLevel)
+    }], Xk.errorsCount = 0, Xk.Log = Xk._LogEnabled.bind(Xk, Xk.MessageLogLevel), Xk.Warn = Xk._LogEnabled.bind(Xk, Xk.WarningLogLevel), Xk.Error = Xk._LogEnabled.bind(Xk, Xk.ErrorLogLevel)
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

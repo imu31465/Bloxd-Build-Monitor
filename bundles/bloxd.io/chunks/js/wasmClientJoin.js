@@ -1,31 +1,31 @@
 export const id = 57;
 export const ids = [57];
 export const modules = {
-  40457: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => wC,
-      f: () => FC
+  40623: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => Tk,
+      c: () => Lk
     });
-    const QC = new TextDecoder;
+    const Xk = new TextDecoder;
 
-    function wC(CC) {
-      const zC = new bC(CC),
-        ZC = zC.value();
-      if (zC.at !== CC.length) throw new Error(`msgpack: ${CC.length-zC.at} bytes after the value`);
-      return ZC
+    function Tk(kk) {
+      const Fk = new ik(kk),
+        Ik = Fk.value();
+      if (Fk.at !== kk.length) throw new Error(`msgpack: ${kk.length-Fk.at} bytes after the value`);
+      return Ik
     }
-    class bC {
-      constructor(CC) {
-        this.bytes = CC, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(CC.buffer, CC.byteOffset, CC.byteLength)
+    class ik {
+      constructor(kk) {
+        this.bytes = kk, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(kk.buffer, kk.byteOffset, kk.byteLength)
       }
       value() {
-        const CC = this.u8();
-        if (CC <= 127) return CC;
-        if (CC >= 224) return CC - 256;
-        if (CC >= 128 && CC <= 143) return this.map(15 & CC);
-        if (CC >= 144 && CC <= 159) return this.array(15 & CC);
-        if (CC >= 160 && CC <= 191) return this.str(31 & CC);
-        switch (CC) {
+        const kk = this.u8();
+        if (kk <= 127) return kk;
+        if (kk >= 224) return kk - 256;
+        if (kk >= 128 && kk <= 143) return this.map(15 & kk);
+        if (kk >= 144 && kk <= 159) return this.array(15 & kk);
+        if (kk >= 160 && kk <= 191) return this.str(31 & kk);
+        switch (kk) {
           case 192:
             return null;
           case 194:
@@ -89,13 +89,13 @@ export const modules = {
           case 223:
             return this.map(this.u32());
           default:
-            throw new Error(`msgpack: unknown byte 0x${CC.toString(16)} at ${this.at-1}`)
+            throw new Error(`msgpack: unknown byte 0x${kk.toString(16)} at ${this.at-1}`)
         }
       }
-      take(CC) {
-        const zC = this.at;
-        if (zC + CC > this.bytes.length) throw new Error(`msgpack: ${CC} bytes past the end at ${zC}`);
-        return this.at = zC + CC, zC
+      take(kk) {
+        const Fk = this.at;
+        if (Fk + kk > this.bytes.length) throw new Error(`msgpack: ${kk} bytes past the end at ${Fk}`);
+        return this.at = Fk + kk, Fk
       }
       u8() {
         return this.view.getUint8(this.take(1))
@@ -106,323 +106,323 @@ export const modules = {
       u32() {
         return this.view.getUint32(this.take(4), !1)
       }
-      int64(CC) {
-        const zC = this.take(8);
-        return CC ? this.view.getBigInt64(zC, !1) : this.view.getBigUint64(zC, !1)
+      int64(kk) {
+        const Fk = this.take(8);
+        return kk ? this.view.getBigInt64(Fk, !1) : this.view.getBigUint64(Fk, !1)
       }
-      str(CC) {
-        const zC = this.take(CC),
-          ZC = this.bytes;
-        if (CC < 16) {
-          let wC = "";
-          for (let bC = zC; bC < zC + CC; bC++) {
-            const nC = ZC[bC];
-            if (nC >= 128) return QC.decode(ZC.subarray(zC, zC + CC));
-            wC += String.fromCharCode(nC)
+      str(kk) {
+        const Fk = this.take(kk),
+          Ik = this.bytes;
+        if (kk < 16) {
+          let Tk = "";
+          for (let ik = Fk; ik < Fk + kk; ik++) {
+            const yk = Ik[ik];
+            if (yk >= 128) return Xk.decode(Ik.subarray(Fk, Fk + kk));
+            Tk += String.fromCharCode(yk)
           }
-          return wC
+          return Tk
         }
-        return QC.decode(ZC.subarray(zC, zC + CC))
+        return Xk.decode(Ik.subarray(Fk, Fk + kk))
       }
-      bin(CC) {
-        const zC = this.take(CC);
-        return this.bytes.subarray(zC, zC + CC)
+      bin(kk) {
+        const Fk = this.take(kk);
+        return this.bytes.subarray(Fk, Fk + kk)
       }
       enter() {
         if (++this.depth > 512) throw new Error("msgpack: nested too deep")
       }
-      array(CC) {
+      array(kk) {
         this.enter();
-        const zC = [];
-        for (let ZC = 0; ZC < CC; ZC++) zC.push(this.value());
-        return this.depth--, zC
+        const Fk = [];
+        for (let Ik = 0; Ik < kk; Ik++) Fk.push(this.value());
+        return this.depth--, Fk
       }
-      map(CC) {
+      map(kk) {
         this.enter();
-        const zC = {};
-        for (let ZC = 0; ZC < CC; ZC++) {
-          const CC = this.value(),
-            ZC = this.value();
-          zC["__proto__" === CC ? "__proto_" : String(CC)] = ZC
+        const Fk = {};
+        for (let Ik = 0; Ik < kk; Ik++) {
+          const kk = this.value(),
+            Ik = this.value();
+          Fk["__proto__" === kk ? "__proto_" : String(kk)] = Ik
         }
-        return this.depth--, zC
+        return this.depth--, Fk
       }
-      ext(CC) {
-        const zC = this.view.getInt8(this.take(1)),
-          ZC = this.take(CC);
-        if (0 !== zC) {
-          if (-1 === zC) {
-            if (1 === CC) return new Date(NaN);
-            if (4 === CC) return new Date(1e3 * this.view.getUint32(ZC, !1));
-            if (8 === CC) {
-              const CC = this.view.getUint32(ZC, !1),
-                zC = CC >>> 2,
-                QC = 4294967296 * (3 & CC) + this.view.getUint32(ZC + 4, !1);
-              return new Date(1e3 * QC + zC / 1e6)
+      ext(kk) {
+        const Fk = this.view.getInt8(this.take(1)),
+          Ik = this.take(kk);
+        if (0 !== Fk) {
+          if (-1 === Fk) {
+            if (1 === kk) return new Date(NaN);
+            if (4 === kk) return new Date(1e3 * this.view.getUint32(Ik, !1));
+            if (8 === kk) {
+              const kk = this.view.getUint32(Ik, !1),
+                Fk = kk >>> 2,
+                Xk = 4294967296 * (3 & kk) + this.view.getUint32(Ik + 4, !1);
+              return new Date(1e3 * Xk + Fk / 1e6)
             }
-            if (12 === CC) {
-              const CC = this.view.getUint32(ZC, !1),
-                zC = 4294967296 * this.view.getInt32(ZC + 4, !1) + this.view.getUint32(ZC + 8, !1);
-              return new Date(1e3 * zC + CC / 1e6)
+            if (12 === kk) {
+              const kk = this.view.getUint32(Ik, !1),
+                Fk = 4294967296 * this.view.getInt32(Ik + 4, !1) + this.view.getUint32(Ik + 8, !1);
+              return new Date(1e3 * Fk + kk / 1e6)
             }
           }
-          throw new Error(`msgpack: ext type ${zC} of ${CC} bytes`)
+          throw new Error(`msgpack: ext type ${Fk} of ${kk} bytes`)
         }
       }
     }
-    const nC = new TextEncoder,
-      fC = -(2n ** 63n),
-      oC = 2n ** 63n - 1n,
-      qC = 2n ** 64n - 1n;
+    const yk = new TextEncoder,
+      lk = -(2n ** 63n),
+      ak = 2n ** 63n - 1n,
+      qk = 2n ** 64n - 1n;
 
-    function FC(CC) {
-      const zC = new WC;
-      return zC.value(CC, 0), zC.bytes()
+    function Lk(kk) {
+      const Fk = new tk;
+      return Fk.value(kk, 0), Fk.bytes()
     }
-    class WC {
+    class tk {
       constructor() {
         this.buf = new Uint8Array(64), this.view = new DataView(this.buf.buffer), this.at = 0
       }
       bytes() {
         return this.buf.subarray(0, this.at)
       }
-      value(CC, zC) {
-        if (zC > 512) throw new Error("msgpack: nested too deep");
-        switch (typeof CC) {
+      value(kk, Fk) {
+        if (Fk > 512) throw new Error("msgpack: nested too deep");
+        switch (typeof kk) {
           case "undefined":
             return this.u8(212), this.u8(0), void this.u8(0);
           case "boolean":
-            return void this.u8(CC ? 195 : 194);
+            return void this.u8(kk ? 195 : 194);
           case "number":
-            return void this.number(CC);
+            return void this.number(kk);
           case "bigint":
-            return void this.bigint(CC);
+            return void this.bigint(kk);
           case "string":
-            return void this.string(CC);
+            return void this.string(kk);
           case "object":
-            if (null === CC) this.u8(192);
-            else if (CC instanceof Uint8Array) this.head(CC.length, 196, -1, 197, 198), this.room(CC.length), this.buf.set(CC, this.at), this.at += CC.length;
-            else if (Array.isArray(CC)) {
-              this.head(CC.length, 220, 144, 220, 221);
-              for (const ZC of CC) this.value(ZC, zC + 1)
+            if (null === kk) this.u8(192);
+            else if (kk instanceof Uint8Array) this.head(kk.length, 196, -1, 197, 198), this.room(kk.length), this.buf.set(kk, this.at), this.at += kk.length;
+            else if (Array.isArray(kk)) {
+              this.head(kk.length, 220, 144, 220, 221);
+              for (const Ik of kk) this.value(Ik, Fk + 1)
             } else {
-              var ZC, QC;
-              if (Object.getPrototypeOf(CC) !== Object.prototype && null !== Object.getPrototypeOf(CC)) throw new Error(`msgpack: can't encode a ${null!==(ZC=null===(QC=CC.constructor)||void 0===QC?void 0:QC.name)&&void 0!==ZC?ZC:"object"}`);
+              var Ik, Xk;
+              if (Object.getPrototypeOf(kk) !== Object.prototype && null !== Object.getPrototypeOf(kk)) throw new Error(`msgpack: can't encode a ${null!==(Ik=null===(Xk=kk.constructor)||void 0===Xk?void 0:Xk.name)&&void 0!==Ik?Ik:"object"}`);
               {
-                const ZC = Object.keys(CC);
-                this.head(ZC.length, 222, 128, 222, 223);
-                for (const QC of ZC) this.string(QC), this.value(CC[QC], zC + 1)
+                const Ik = Object.keys(kk);
+                this.head(Ik.length, 222, 128, 222, 223);
+                for (const Xk of Ik) this.string(Xk), this.value(kk[Xk], Fk + 1)
               }
             }
             return;
           default:
-            throw new Error("msgpack: can't encode a " + typeof CC)
+            throw new Error("msgpack: can't encode a " + typeof kk)
         }
       }
-      number(CC) {
-        Number.isInteger(CC) && CC >= -2147483648 && CC <= 4294967295 ? CC >= 0 ? CC < 128 ? this.u8(CC) : CC < 256 ? (this.u8(204), this.u8(CC)) : CC < 65536 ? (this.u8(205), this.u16(CC)) : (this.u8(206), this.u32(CC)) : CC >= -32 ? this.u8(CC + 256) : CC >= -128 ? (this.u8(208), this.u8(CC + 256)) : CC >= -32768 ? (this.u8(209), this.u16(CC + 65536)) : (this.u8(210), this.u32(CC >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, CC, !1), this.at += 8)
+      number(kk) {
+        Number.isInteger(kk) && kk >= -2147483648 && kk <= 4294967295 ? kk >= 0 ? kk < 128 ? this.u8(kk) : kk < 256 ? (this.u8(204), this.u8(kk)) : kk < 65536 ? (this.u8(205), this.u16(kk)) : (this.u8(206), this.u32(kk)) : kk >= -32 ? this.u8(kk + 256) : kk >= -128 ? (this.u8(208), this.u8(kk + 256)) : kk >= -32768 ? (this.u8(209), this.u16(kk + 65536)) : (this.u8(210), this.u32(kk >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, kk, !1), this.at += 8)
       }
-      bigint(CC) {
-        const zC = CC >= fC && CC <= oC;
-        if (!zC && (CC < 0n || CC > qC)) throw new Error("msgpack: a BigInt past 64 bits");
-        this.u8(zC ? 211 : 207), this.room(8), zC ? this.view.setBigInt64(this.at, CC, !1) : this.view.setBigUint64(this.at, CC, !1), this.at += 8
+      bigint(kk) {
+        const Fk = kk >= lk && kk <= ak;
+        if (!Fk && (kk < 0n || kk > qk)) throw new Error("msgpack: a BigInt past 64 bits");
+        this.u8(Fk ? 211 : 207), this.room(8), Fk ? this.view.setBigInt64(this.at, kk, !1) : this.view.setBigUint64(this.at, kk, !1), this.at += 8
       }
-      string(CC) {
-        const zC = nC.encode(CC);
-        this.head(zC.length, 217, 160, 218, 219), this.room(zC.length), this.buf.set(zC, this.at), this.at += zC.length
+      string(kk) {
+        const Fk = yk.encode(kk);
+        this.head(Fk.length, 217, 160, 218, 219), this.room(Fk.length), this.buf.set(Fk, this.at), this.at += Fk.length
       }
-      head(CC, zC, ZC, QC, wC) {
-        ZC >= 0 && CC < (160 === ZC ? 32 : 16) ? this.u8(ZC | CC) : zC !== QC && CC < 256 ? (this.u8(zC), this.u8(CC)) : CC < 65536 ? (this.u8(QC), this.u16(CC)) : (this.u8(wC), this.u32(CC))
+      head(kk, Fk, Ik, Xk, Tk) {
+        Ik >= 0 && kk < (160 === Ik ? 32 : 16) ? this.u8(Ik | kk) : Fk !== Xk && kk < 256 ? (this.u8(Fk), this.u8(kk)) : kk < 65536 ? (this.u8(Xk), this.u16(kk)) : (this.u8(Tk), this.u32(kk))
       }
-      room(CC) {
-        if (this.at + CC <= this.buf.length) return;
-        let zC = 2 * this.buf.length;
-        for (; zC < this.at + CC;) zC *= 2;
-        const ZC = new Uint8Array(zC);
-        ZC.set(this.buf.subarray(0, this.at)), this.buf = ZC, this.view = new DataView(ZC.buffer)
+      room(kk) {
+        if (this.at + kk <= this.buf.length) return;
+        let Fk = 2 * this.buf.length;
+        for (; Fk < this.at + kk;) Fk *= 2;
+        const Ik = new Uint8Array(Fk);
+        Ik.set(this.buf.subarray(0, this.at)), this.buf = Ik, this.view = new DataView(Ik.buffer)
       }
-      u8(CC) {
-        this.room(1), this.buf[this.at++] = CC
+      u8(kk) {
+        this.room(1), this.buf[this.at++] = kk
       }
-      u16(CC) {
-        this.room(2), this.view.setUint16(this.at, CC, !1), this.at += 2
+      u16(kk) {
+        this.room(2), this.view.setUint16(this.at, kk, !1), this.at += 2
       }
-      u32(CC) {
-        this.room(4), this.view.setUint32(this.at, CC, !1), this.at += 4
+      u32(kk) {
+        this.room(4), this.view.setUint32(this.at, kk, !1), this.at += 4
       }
     }
   },
-  50717: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      joinRoom: () => WC,
-      leaveHeldSeat: () => PC,
-      resumeRoom: () => MC
+  50964: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      joinRoom: () => tk,
+      leaveHeldSeat: () => Jk,
+      resumeRoom: () => jk
     });
-    var QC = ZC(134),
-      wC = ZC(1152),
-      bC = ZC(36369),
-      nC = ZC(40457),
-      fC = ZC(4727),
-      oC = ZC(40521),
-      qC = ZC(40745);
-    const FC = Uint8Array.of(13, ...(0, nC.f)(QC.g));
-    async function WC(CC, zC) {
-      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+    var Xk = Ik(149),
+      Tk = Ik(1199),
+      ik = Ik(36486),
+      yk = Ik(40623),
+      lk = Ik(4797),
+      ak = Ik(40689),
+      qk = Ik(40917);
+    const Lk = Uint8Array.of(13, ...(0, yk.c)(Xk.f));
+    async function tk(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
       try {
-        return await NC(CC, zC, ZC)
-      } catch (wC) {
-        var QC;
-        const bC = await (null === (QC = zC.optionsAfterRefusal) || void 0 === QC ? void 0 : QC.call(zC, wC));
-        if (!bC) throw wC;
-        return NC(CC, {
-          ...zC,
-          joinOptions: bC
+        return await Zk(kk, Fk, Ik)
+      } catch (Tk) {
+        var Xk;
+        const ik = await (null === (Xk = Fk.optionsAfterRefusal) || void 0 === Xk ? void 0 : Xk.call(Fk, Tk));
+        if (!ik) throw Tk;
+        return Zk(kk, {
+          ...Fk,
+          joinOptions: ik
         }, {
-          ...ZC,
+          ...Ik,
           early: void 0
         })
       }
     }
-    async function NC(CC, zC, ZC) {
-      var QC;
+    async function Zk(kk, Fk, Ik) {
+      var Xk;
       const {
-        signal: bC
-      } = ZC, nC = () => (0, qC.l)(zC.endpoint, zC.roomName, zC.joinOptions, ZC), {
-        early: fC
-      } = ZC, oC = fC ? null !== (QC = await fC.take(bC)) && void 0 !== QC ? QC : await fC.reserveInstead(nC, bC) : await nC();
-      return (0, wC.n)(bC), pC(CC, zC.endpoint, oC, ZC, !1)
+        signal: ik
+      } = Ik, yk = () => (0, qk.f)(Fk.endpoint, Fk.roomName, Fk.joinOptions, Ik), {
+        early: lk
+      } = Ik, ak = lk ? null !== (Xk = await lk.take(ik)) && void 0 !== Xk ? Xk : await lk.reserveInstead(yk, ik) : await yk();
+      return (0, Tk.m)(ik), Hk(kk, Fk.endpoint, ak, Ik, !1)
     }
-    async function MC(CC, zC, ZC, QC) {
-      let bC = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-      const nC = await (0, qC.i)(zC, ZC, QC, bC);
-      return (0, wC.n)(bC.signal), pC(CC, zC, nC, bC, !0)
-    }
-
-    function gC(CC, zC, ZC) {
-      const QC = (0, qC.p)(CC, zC);
-      return ZC.createSocket ? ZC.createSocket(QC) : new WebSocket(QC)
+    async function jk(kk, Fk, Ik, Xk) {
+      let ik = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      const yk = await (0, qk.e)(Fk, Ik, Xk, ik);
+      return (0, Tk.m)(ik.signal), Hk(kk, Fk, yk, ik, !0)
     }
 
-    function SC(CC, zC, ZC) {
-      var QC;
-      let wC = !1;
-      return (null !== (QC = CC.setTimer) && void 0 !== QC ? QC : (CC, zC) => {
-        setTimeout(CC, zC)
+    function ek(kk, Fk, Ik) {
+      const Xk = (0, qk.i)(kk, Fk);
+      return Ik.createSocket ? Ik.createSocket(Xk) : new WebSocket(Xk)
+    }
+
+    function wk(kk, Fk, Ik) {
+      var Xk;
+      let Tk = !1;
+      return (null !== (Xk = kk.setTimer) && void 0 !== Xk ? Xk : (kk, Fk) => {
+        setTimeout(kk, Fk)
       })((() => {
-        wC || zC()
-      }), ZC), () => {
-        wC = !0
+        Tk || Fk()
+      }), Ik), () => {
+        Tk = !0
       }
     }
-    async function pC(CC, zC, ZC, QC, nC) {
+    async function Hk(kk, Fk, Ik, Xk, yk) {
       const {
-        signal: qC
-      } = QC, WC = gC(zC, ZC, QC);
-      let NC = !1,
-        MC = null,
-        pC = null;
-      const PC = [];
-      let GC = !1,
-        RC = !1;
-      const AC = CC => {
-        var zC;
-        RC = !0, null === (zC = pC) || void 0 === zC || zC.reject(new oC.d("the room socket closed before the resume", "closed", CC.code))
+        signal: qk
+      } = Xk, tk = ek(Fk, Ik, Xk);
+      let Zk = !1,
+        jk = null,
+        Hk = null;
+      const Jk = [];
+      let xk = !1,
+        Pk = !1;
+      const Kk = kk => {
+        var Fk;
+        Pk = !0, null === (Fk = Hk) || void 0 === Fk || Fk.reject(new ak.b("the room socket closed before the resume", "closed", kk.code))
       };
-      nC && WC.addEventListener("close", AC);
-      const xC = (CC, zC) => {
-          var ZC;
-          if (CC === (nC ? fC.J.Resumed : fC.J.Activated)) GC = !0, null === (ZC = pC) || void 0 === ZC || ZC.resolve();
-          else if (!nC || CC !== fC.J.ResumeRefused && CC !== fC.J.Activated)
-            if (CC === fC.J.Error) {
-              var QC;
-              null === (QC = pC) || void 0 === QC || QC.reject(new oC.d(`the room refused the join (code ${zC})`, "roomError", zC))
+      yk && tk.addEventListener("close", Kk);
+      const Qk = (kk, Fk) => {
+          var Ik;
+          if (kk === (yk ? lk.I.Resumed : lk.I.Activated)) xk = !0, null === (Ik = Hk) || void 0 === Ik || Ik.resolve();
+          else if (!yk || kk !== lk.I.ResumeRefused && kk !== lk.I.Activated)
+            if (kk === lk.I.Error) {
+              var Xk;
+              null === (Xk = Hk) || void 0 === Xk || Xk.reject(new ak.b(`the room refused the join (code ${Fk})`, "roomError", Fk))
             } else {
-              var wC;
-              null === (wC = pC) || void 0 === wC || wC.reject(new oC.d("the room socket closed before the join", "closed", zC, null, NC))
+              var Tk;
+              null === (Tk = Hk) || void 0 === Tk || Tk.reject(new ak.b("the room socket closed before the join", "closed", Fk, null, Zk))
             }
           else {
-            var bC;
-            null === (bC = pC) || void 0 === bC || bC.reject(new oC.r("the core refused the resume: it held no game"))
+            var ik;
+            null === (ik = Hk) || void 0 === ik || ik.reject(new ak.m("the core refused the resume: it held no game"))
           }
         },
-        JC = CC.onConnection(((CC, zC, ZC) => {
-          null === MC ? PC.push([CC, zC, ZC]) : CC === MC && xC(zC, ZC)
+        sk = kk.onConnection(((kk, Fk, Ik) => {
+          null === jk ? Jk.push([kk, Fk, Ik]) : kk === jk && Qk(Fk, Ik)
         })),
-        IC = CC.attachSocket(WC);
-      if (null === IC) throw JC(), new oC.d("the core could not take the room socket", "attach");
-      var iC;
-      (MC = IC, nC) && (null === (iC = QC.onAttached) || void 0 === iC || iC.call(QC));
-      const vC = nC ? null : new bC.b((() => {
-        var zC, ZC;
-        null === (zC = CC.flushNet) || void 0 === zC || zC.call(CC), null === (ZC = pC) || void 0 === ZC || ZC.reject(new bC.f(NC ? "socket" : "socket_unopened"))
+        Vk = kk.attachSocket(tk);
+      if (null === Vk) throw sk(), new ak.b("the core could not take the room socket", "attach");
+      var zk;
+      (jk = Vk, yk) && (null === (zk = Xk.onAttached) || void 0 === zk || zk.call(Xk));
+      const Sk = yk ? null : new ik.e((() => {
+        var Fk, Ik;
+        null === (Fk = kk.flushNet) || void 0 === Fk || Fk.call(kk), null === (Ik = Hk) || void 0 === Ik || Ik.reject(new ik.f(Zk ? "socket" : "socket_unopened"))
       }));
-      WC.addEventListener("open", (() => {
-        NC = !0, null === vC || void 0 === vC || vC.socketOpened()
+      tk.addEventListener("open", (() => {
+        Zk = !0, null === Sk || void 0 === Sk || Sk.socketOpened()
       }), {
         once: !0
       });
-      let eC = !1;
-      const hC = () => {
-        if (eC) return;
-        if (eC = !0, JC(), nC && (WC.removeEventListener("close", AC), !GC && !(null !== qC && void 0 !== qC && qC.aborted && (0, wC.g)(qC) instanceof oC.t))) return void(RC || CC.closeSocket(IC));
-        GC && CC.leaveRoom(IC) || CC.sendRaw(IC, oC.m) ? SC(QC, (() => {
-          CC.closeSocket(IC)
-        }), oC.g) : CC.closeSocket(IC)
+      let vk = !1;
+      const Ek = () => {
+        if (vk) return;
+        if (vk = !0, sk(), yk && (tk.removeEventListener("close", Kk), !xk && !(null !== qk && void 0 !== qk && qk.aborted && (0, Tk.e)(qk) instanceof ak.o))) return void(Pk || kk.closeSocket(Vk));
+        xk && kk.leaveRoom(Vk) || kk.sendRaw(Vk, ak.i) ? wk(Xk, (() => {
+          kk.closeSocket(Vk)
+        }), ak.f) : kk.closeSocket(Vk)
       };
       try {
-        await new Promise(((zC, ZC) => {
-          const QC = () => {
-            var zC;
-            nC && (null === (zC = CC.flushNet) || void 0 === zC || zC.call(CC));
-            ZC((0, wC.g)(qC))
+        await new Promise(((Fk, Ik) => {
+          const Xk = () => {
+            var Fk;
+            yk && (null === (Fk = kk.flushNet) || void 0 === Fk || Fk.call(kk));
+            Ik((0, Tk.e)(qk))
           };
-          null === qC || void 0 === qC || qC.addEventListener("abort", QC, {
+          null === qk || void 0 === qk || qk.addEventListener("abort", Xk, {
             once: !0
-          }), pC = {
+          }), Hk = {
             resolve: () => {
-              null === qC || void 0 === qC || qC.removeEventListener("abort", QC), zC()
+              null === qk || void 0 === qk || qk.removeEventListener("abort", Xk), Fk()
             },
-            reject: CC => {
-              null === qC || void 0 === qC || qC.removeEventListener("abort", QC), ZC(CC)
+            reject: kk => {
+              null === qk || void 0 === qk || qk.removeEventListener("abort", Xk), Ik(kk)
             }
           };
-          for (const [CC, wC, bC] of PC.splice(0)) CC === MC && xC(wC, bC)
-        })), null === vC || void 0 === vC || vC.answered()
-      } catch (KC) {
-        throw hC(), KC
+          for (const [kk, Tk, ik] of Jk.splice(0)) kk === jk && Qk(Tk, ik)
+        })), null === Sk || void 0 === Sk || Sk.answered()
+      } catch (Ok) {
+        throw Ek(), Ok
       } finally {
-        null === vC || void 0 === vC || vC.stop()
+        null === Sk || void 0 === Sk || Sk.stop()
       }
-      nC && WC.removeEventListener("close", AC);
+      yk && tk.removeEventListener("close", Kk);
       return {
-        conn: IC,
-        seat: ZC,
-        leave: hC,
+        conn: Vk,
+        seat: Ik,
+        leave: Ek,
         detach: () => {
-          eC = !0, JC()
+          vk = !0, sk()
         },
-        endJoinAd: () => !eC && CC.sendRaw(IC, FC)
+        endJoinAd: () => !vk && kk.sendRaw(Vk, Lk)
       }
     }
-    async function PC(CC, zC, ZC) {
-      let QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    async function Jk(kk, Fk, Ik) {
+      let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       try {
-        const wC = gC(CC, await (0, qC.i)(CC, zC, ZC, QC), QC);
-        wC.binaryType = "arraybuffer", await new Promise((CC => {
-          const zC = SC(QC, (() => {
-            wC.close(), CC()
-          }), oC.g);
-          wC.addEventListener("open", (() => {
-            wC.send(oC.m)
-          })), wC.addEventListener("close", (() => {
-            zC(), CC()
+        const Tk = ek(kk, await (0, qk.e)(kk, Fk, Ik, Xk), Xk);
+        Tk.binaryType = "arraybuffer", await new Promise((kk => {
+          const Fk = wk(Xk, (() => {
+            Tk.close(), kk()
+          }), ak.f);
+          Tk.addEventListener("open", (() => {
+            Tk.send(ak.i)
+          })), Tk.addEventListener("close", (() => {
+            Fk(), kk()
           }))
         }))
-      } catch (wC) {
-        console.warn("[bloxd-wasm-client] the held seat of a game left while it reconnected couldn't be released", wC)
+      } catch (Tk) {
+        console.warn("[bloxd-wasm-client] the held seat of a game left while it reconnected couldn't be released", Tk)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

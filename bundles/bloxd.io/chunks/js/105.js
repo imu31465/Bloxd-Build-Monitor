@@ -1,184 +1,184 @@
 export const id = 105;
 export const ids = [105];
 export const modules = {
-  4876: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => WC,
-      h: () => FC,
-      j: () => NC
+  4931: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => tk,
+      i: () => Lk,
+      j: () => Zk
     });
-    ZC(4880);
-    var QC = ZC(1143),
-      wC = ZC(1002),
-      bC = ZC.n(wC),
-      nC = ZC(1321),
-      fC = (ZC(48), ZC(4300)),
-      oC = ZC(1013),
-      qC = ZC(1056);
+    Ik(4936);
+    var Xk = Ik(1179),
+      Tk = Ik(1055),
+      ik = Ik.n(Tk),
+      yk = Ik(1333),
+      lk = (Ik(58), Ik(4338)),
+      ak = Ik(1066),
+      qk = Ik(1096);
 
-    function FC(CC) {
+    function Lk(kk) {
       let {
-        children: zC,
-        label: ZC,
-        className: wC,
-        circleInfoText: fC,
-        disabled: FC,
-        onLabelClick: WC
-      } = CC;
+        children: Fk,
+        label: Ik,
+        className: Tk,
+        circleInfoText: lk,
+        disabled: Lk,
+        onLabelClick: tk
+      } = kk;
       const {
-        t: NC
-      } = (0, QC.y)(), MC = (0, qC.jsxs)("div", {
-        className: bC()("Label", {
-          ClickableLabel: void 0 !== WC
+        t: Zk
+      } = (0, Xk.y)(), jk = (0, qk.jsxs)("div", {
+        className: ik()("Label", {
+          ClickableLabel: void 0 !== tk
         }),
-        onClick: WC,
-        children: [NC(ZC), fC && (0, qC.jsx)(oC.c, {
+        onClick: tk,
+        children: [Zk(Ik), lk && (0, qk.jsx)(ak.e, {
           name: "circle-info"
         })]
       });
-      return (0, qC.jsxs)("div", {
-        className: bC()("LabeledInput", {
-          [wC]: wC,
-          DisabledLabelInput: FC
+      return (0, qk.jsxs)("div", {
+        className: ik()("LabeledInput", {
+          [Tk]: Tk,
+          DisabledLabelInput: Lk
         }),
-        children: [fC && (0, qC.jsx)(nC.d, {
-          tooltipInner: (0, qC.jsx)("div", {
+        children: [lk && (0, qk.jsx)(yk.g, {
+          tooltipInner: (0, qk.jsx)("div", {
             className: "LabeledInputTooltip",
-            children: NC(fC)
+            children: Zk(lk)
           }),
-          children: MC
-        }), !fC && MC, zC]
+          children: jk
+        }), !lk && jk, Fk]
       })
     }
 
-    function WC(CC) {
+    function tk(kk) {
       let {
-        checked: zC,
-        setChecked: ZC
-      } = CC;
-      return (0, qC.jsx)("div", {
+        checked: Fk,
+        setChecked: Ik
+      } = kk;
+      return (0, qk.jsx)("div", {
         className: "OtherInput ClickableOtherInput",
         "data-pad-focusable": !0,
-        onClick: CC => {
-          ZC(!zC)
+        onClick: kk => {
+          Ik(!Fk)
         },
-        children: (0, qC.jsx)(fC.e, {
-          checked: zC,
-          onChange: CC => {
-            ZC(CC.target.checked)
+        children: (0, qk.jsx)(lk.d, {
+          checked: Fk,
+          onChange: kk => {
+            Ik(kk.target.checked)
           },
           disabled: !1
         })
       })
     }
 
-    function NC(CC) {
+    function Zk(kk) {
       let {
-        checked: zC,
-        setChecked: ZC,
-        disabled: QC
-      } = CC;
-      return (0, qC.jsx)("div", {
-        className: bC()("SwitchContainer", {
-          SwitchContainerDisabled: QC
+        checked: Fk,
+        setChecked: Ik,
+        disabled: Xk
+      } = kk;
+      return (0, qk.jsx)("div", {
+        className: ik()("SwitchContainer", {
+          SwitchContainerDisabled: Xk
         }),
         onClick: () => {
-          QC || ZC(!zC)
+          Xk || Ik(!Fk)
         },
-        children: (0, qC.jsx)(fC.e, {
+        children: (0, qk.jsx)(lk.d, {
           className: "SwitchCheckbox",
-          checked: zC,
-          onChange: CC => {
-            ZC(CC.target.checked)
+          checked: Fk,
+          onChange: kk => {
+            Ik(kk.target.checked)
           },
-          disabled: !!QC
+          disabled: !!Xk
         })
       })
     }
   },
-  4887: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => qC
+  4938: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => qk
     });
-    var QC = ZC(1002),
-      wC = ZC.n(QC),
-      bC = ZC(4562),
-      nC = ZC(1143),
-      fC = ZC(1056);
-    const oC = [...bC.j, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
+    var Xk = Ik(1055),
+      Tk = Ik.n(Xk),
+      ik = Ik(4612),
+      yk = Ik(1179),
+      lk = Ik(1096);
+    const ak = [...ik.i, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
 
-    function qC(CC) {
+    function qk(kk) {
       const {
-        disabled: zC,
-        hideWrapper: ZC
-      } = CC, {
-        t: QC
-      } = (0, nC.y)(), qC = CC.advancedMode ? oC.map((zC => [zC, CC.callbacks[zC]])) : bC.j.map((zC => [zC, CC.callbacks[zC]])), WC = (0, fC.jsx)("div", {
-        className: wC()("PluginsGrid", {
-          SectionBody: !ZC
+        disabled: Fk,
+        hideWrapper: Ik
+      } = kk, {
+        t: Xk
+      } = (0, yk.y)(), qk = kk.advancedMode ? ak.map((Fk => [Fk, kk.callbacks[Fk]])) : ik.i.map((Fk => [Fk, kk.callbacks[Fk]])), tk = (0, lk.jsx)("div", {
+        className: Tk()("PluginsGrid", {
+          SectionBody: !Ik
         }),
-        children: qC.map((CC => {
-          let [ZC, QC] = CC;
-          return (0, fC.jsx)(FC, {
-            plugin: ZC,
-            callbacks: QC,
-            disabled: zC
-          }, ZC)
+        children: qk.map((kk => {
+          let [Ik, Xk] = kk;
+          return (0, lk.jsx)(Lk, {
+            plugin: Ik,
+            callbacks: Xk,
+            disabled: Fk
+          }, Ik)
         }))
       });
-      return ZC ? WC : (0, fC.jsxs)("div", {
+      return Ik ? tk : (0, lk.jsxs)("div", {
         className: "BloxdForm",
-        children: [(0, fC.jsx)("div", {
+        children: [(0, lk.jsx)("div", {
           className: "SectionTitle",
-          children: QC("worldBuilder:pluginsSection")
-        }), WC]
+          children: Xk("worldBuilder:pluginsSection")
+        }), tk]
       })
     }
 
-    function FC(CC) {
+    function Lk(kk) {
       let {
-        plugin: zC,
+        plugin: Fk,
         callbacks: {
-          isEnabled: ZC,
-          IK: QC
+          isEnabled: Ik,
+          Av: Xk
         },
-        disabled: bC
-      } = CC;
+        disabled: ik
+      } = kk;
       const {
-        t: oC
-      } = (0, nC.y)(), qC = ZC();
-      return (0, fC.jsxs)("div", {
-        className: wC()("PluginCard", {
-          PluginCardEnabled: qC,
-          PluginCardDisabledForm: bC
+        t: ak
+      } = (0, yk.y)(), qk = Ik();
+      return (0, lk.jsxs)("div", {
+        className: Tk()("PluginCard", {
+          PluginCardEnabled: qk,
+          PluginCardDisabledForm: ik
         }),
         "data-pad-focusable": !0,
-        "aria-disabled": bC || void 0,
+        "aria-disabled": ik || void 0,
         onClick: () => {
-          bC || QC(!qC)
+          ik || Xk(!qk)
         },
-        children: [(0, fC.jsx)("div", {
+        children: [(0, lk.jsx)("div", {
           className: "PluginCardIcon",
-          children: (0, fC.jsx)("img", {
-            src: `/textures/games/classic/customGames/${zC}.png`,
-            alt: zC
+          children: (0, lk.jsx)("img", {
+            src: `/textures/games/classic/customGames/${Fk}.png`,
+            alt: Fk
           })
-        }), (0, fC.jsxs)("div", {
+        }), (0, lk.jsxs)("div", {
           className: "PluginCardBody",
-          children: [(0, fC.jsx)("div", {
+          children: [(0, lk.jsx)("div", {
             className: "PluginCardTitle",
-            children: oC(WC[zC])
-          }), (0, fC.jsx)("div", {
+            children: ak(tk[Fk])
+          }), (0, lk.jsx)("div", {
             className: "PluginCardDescription",
-            children: oC(NC[zC])
+            children: ak(Zk[Fk])
           })]
-        }), (0, fC.jsx)("span", {
+        }), (0, lk.jsx)("span", {
           className: "PluginCardToggleLabel",
-          children: oC(qC ? "general:on" : "general:off")
+          children: ak(qk ? "general:on" : "general:off")
         })]
       })
     }
-    const WC = {
+    const tk = {
         fallDamage: "classic:enableFallDamage",
         tpRequests: "classic:enableTpRequests",
         spawnProtection: "classic:enableSpawnProtection",
@@ -187,7 +187,7 @@ export const modules = {
         survivalGuns: "classic:enableSurvivalGuns",
         dayNight: "classic:enableDayNight"
       },
-      NC = {
+      Zk = {
         fallDamage: "classic:enableFallDamageDescription",
         tpRequests: "classic:enableTpRequestsDescription",
         spawnProtection: "classic:enableSpawnProtectionDescription",
@@ -197,656 +197,656 @@ export const modules = {
         dayNight: "classic:enableDayNightDescription"
       }
   },
-  4873: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      k: () => wz,
-      e: () => Qz,
-      h: () => Zz,
-      l: () => bz
+  4929: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      f: () => iF,
+      d: () => TF,
+      e: () => XF,
+      i: () => yF
     });
-    var QC = ZC(48),
-      wC = ZC(1307),
-      bC = ZC(1388),
-      nC = ZC(1593),
-      fC = ZC(1143),
-      oC = ZC(1295),
-      qC = ZC(1321),
-      FC = ZC(1013),
-      WC = ZC(1169),
-      NC = ZC(1002),
-      MC = ZC.n(NC),
-      gC = ZC(310),
-      SC = ZC(4562),
-      pC = ZC(1183),
-      PC = ZC(4876),
-      GC = ZC(3113),
-      RC = ZC(4887),
-      AC = ZC(1056);
+    var Xk = Ik(58),
+      Tk = Ik(1324),
+      ik = Ik(1406),
+      yk = Ik(1617),
+      lk = Ik(1179),
+      ak = Ik(1318),
+      qk = Ik(1333),
+      Lk = Ik(1066),
+      tk = Ik(1217),
+      Zk = Ik(1055),
+      jk = Ik.n(Zk),
+      ek = Ik(318),
+      wk = Ik(4612),
+      Hk = Ik(1231),
+      Jk = Ik(4931),
+      xk = Ik(3065),
+      Pk = Ik(4938),
+      Kk = Ik(1096);
 
-    function xC(CC) {
+    function Qk(kk) {
       let {
-        icon: zC,
-        title: ZC,
-        disabled: QC,
-        children: wC
-      } = CC;
-      return (0, AC.jsxs)("div", {
-        className: MC()("ManageCard", {
-          ManageCardDisabled: QC
+        icon: Fk,
+        title: Ik,
+        disabled: Xk,
+        children: Tk
+      } = kk;
+      return (0, Kk.jsxs)("div", {
+        className: jk()("ManageCard", {
+          ManageCardDisabled: Xk
         }),
-        children: [(0, AC.jsxs)("div", {
+        children: [(0, Kk.jsxs)("div", {
           className: "ManageCardHead",
-          children: [(0, AC.jsx)("div", {
+          children: [(0, Kk.jsx)("div", {
             className: "ManageCardIcon",
-            children: (0, AC.jsx)(FC.c, {
-              name: zC
+            children: (0, Kk.jsx)(Lk.e, {
+              name: Fk
             })
-          }), (0, AC.jsx)("div", {
-            children: (0, AC.jsx)("h2", {
+          }), (0, Kk.jsx)("div", {
+            children: (0, Kk.jsx)("h2", {
               className: "ManageCardTitle",
-              children: ZC
+              children: Ik
             })
           })]
-        }), (0, AC.jsxs)("div", {
+        }), (0, Kk.jsxs)("div", {
           className: "ManageCardBody",
-          children: [wC, QC && (0, AC.jsx)("div", {
+          children: [Tk, Xk && (0, Kk.jsx)("div", {
             className: "ManageCardDisabledOverlay"
           })]
         })]
       })
     }
 
-    function JC(CC) {
+    function sk(kk) {
       let {
-        label: zC,
-        caption: ZC,
-        children: QC
-      } = CC;
-      return (0, AC.jsxs)("div", {
+        label: Fk,
+        caption: Ik,
+        children: Xk
+      } = kk;
+      return (0, Kk.jsxs)("div", {
         className: "ManageStackedField",
-        children: [(0, AC.jsx)("div", {
+        children: [(0, Kk.jsx)("div", {
           className: "ManageStackedFieldLabel",
-          children: zC
-        }), QC, ZC && (0, AC.jsx)("div", {
+          children: Fk
+        }), Xk, Ik && (0, Kk.jsx)("div", {
           className: "ManageStackedFieldCaption",
-          children: ZC
+          children: Ik
         })]
       })
     }
 
-    function IC(CC) {
+    function Vk(kk) {
       let {
-        label: zC,
-        caption: ZC,
-        disabled: QC,
-        children: wC
-      } = CC;
-      return (0, AC.jsxs)("div", {
-        className: MC()("ManageField", {
-          ManageFieldDisabled: QC
+        label: Fk,
+        caption: Ik,
+        disabled: Xk,
+        children: Tk
+      } = kk;
+      return (0, Kk.jsxs)("div", {
+        className: jk()("ManageField", {
+          ManageFieldDisabled: Xk
         }),
-        children: [(0, AC.jsxs)("div", {
+        children: [(0, Kk.jsxs)("div", {
           className: "ManageFieldText",
-          children: [(0, AC.jsx)("div", {
+          children: [(0, Kk.jsx)("div", {
             className: "ManageFieldLabel",
-            children: zC
-          }), (0, AC.jsx)("div", {
+            children: Fk
+          }), (0, Kk.jsx)("div", {
             className: "ManageFieldCaption",
-            children: ZC
+            children: Ik
           })]
-        }), (0, AC.jsx)("div", {
+        }), (0, Kk.jsx)("div", {
           className: "ManageFieldControl",
-          children: wC
+          children: Tk
         })]
       })
     }
 
-    function iC(CC) {
-      var zC, ZC;
+    function zk(kk) {
+      var Fk, Ik;
       let {
-        schematicData: QC,
-        updateSchematicData: wC,
-        publishFormEnabled: bC,
-        formEnabled: nC
-      } = CC;
+        schematicData: Xk,
+        updateSchematicData: Tk,
+        publishFormEnabled: ik,
+        formEnabled: yk
+      } = kk;
       const {
-        t: oC
-      } = (0, fC.y)(), qC = !bC, FC = {
+        t: ak
+      } = (0, lk.y)(), qk = !ik, Lk = {
         tpRequests: {
-          isEnabled: () => !QC.disableTpRequests,
-          IK: CC => wC("disableTpRequests", !CC)
+          isEnabled: () => !Xk.disableTpRequests,
+          Av: kk => Tk("disableTpRequests", !kk)
         },
         spawnProtection: {
-          isEnabled: () => !QC.disableSpawnProtection,
-          IK: CC => wC("disableSpawnProtection", !CC)
+          isEnabled: () => !Xk.disableSpawnProtection,
+          Av: kk => Tk("disableSpawnProtection", !kk)
         },
         spawnReset: {
-          isEnabled: () => !!QC.enableSpawnReset,
-          IK: CC => wC("enableSpawnReset", CC)
+          isEnabled: () => !!Xk.enableSpawnReset,
+          Av: kk => Tk("enableSpawnReset", kk)
         },
         smpMarketplace: {
-          isEnabled: () => !!QC.enableSmpMarketplace,
-          IK: CC => wC("enableSmpMarketplace", CC)
+          isEnabled: () => !!Xk.enableSmpMarketplace,
+          Av: kk => Tk("enableSmpMarketplace", kk)
         },
         survivalGuns: {
-          isEnabled: () => !!QC.enableSurvivalGuns,
-          IK: CC => wC("enableSurvivalGuns", CC)
+          isEnabled: () => !!Xk.enableSurvivalGuns,
+          Av: kk => Tk("enableSurvivalGuns", kk)
         },
         fallDamage: {
-          isEnabled: () => !QC.disableFallDamage,
-          IK: CC => wC("disableFallDamage", !CC)
+          isEnabled: () => !Xk.disableFallDamage,
+          Av: kk => Tk("disableFallDamage", !kk)
         },
         dayNight: {
-          isEnabled: () => !!QC.enableDayNight,
-          IK: CC => wC("enableDayNight", CC)
+          isEnabled: () => !!Xk.enableDayNight,
+          Av: kk => Tk("enableDayNight", kk)
         }
       };
-      return (0, AC.jsxs)(AC.Fragment, {
-        children: [!1 === QC.schematicContainsSpawnBlock && (0, AC.jsx)("div", {
+      return (0, Kk.jsxs)(Kk.Fragment, {
+        children: [!1 === Xk.schematicContainsSpawnBlock && (0, Kk.jsx)("div", {
           className: "ManageWarningBanner",
-          children: oC("worldBuilder:mustContainSpawnBlock")
-        }), (0, AC.jsxs)("div", {
+          children: ak("worldBuilder:mustContainSpawnBlock")
+        }), (0, Kk.jsxs)("div", {
           className: "ManageSettingsGrid",
-          children: [(0, AC.jsxs)(xC, {
+          children: [(0, Kk.jsxs)(Qk, {
             icon: "globe",
-            title: oC("worldBuilder:worldRulesSection"),
-            disabled: !nC,
-            children: [(0, AC.jsx)(IC, {
-              label: oC("classic:defaultGamemode"),
-              caption: oC("classic:defaultGamemodeDescription"),
-              disabled: qC,
-              children: (0, AC.jsx)(GC.b, {
+            title: ak("worldBuilder:worldRulesSection"),
+            disabled: !yk,
+            children: [(0, Kk.jsx)(Vk, {
+              label: ak("classic:defaultGamemode"),
+              caption: ak("classic:defaultGamemodeDescription"),
+              disabled: qk,
+              children: (0, Kk.jsx)(xk.e, {
                 controlClassName: "ManageDropdown",
-                options: SC.H.map((CC => ({
-                  value: CC,
-                  label: gC.q[CC]
+                options: wk.x.map((kk => ({
+                  value: kk,
+                  label: ek.t[kk]
                 }))),
-                value: QC.defaultGamemode,
-                onChange: CC => wC("defaultGamemode", CC.value)
+                value: Xk.defaultGamemode,
+                onChange: kk => Tk("defaultGamemode", kk.value)
               })
-            }), (0, AC.jsx)(IC, {
-              label: oC("classic:voidDeathHeight"),
-              caption: oC("classic:voidDeathHeightDescription"),
-              disabled: qC,
-              children: (0, AC.jsxs)("div", {
+            }), (0, Kk.jsx)(Vk, {
+              label: ak("classic:voidDeathHeight"),
+              caption: ak("classic:voidDeathHeightDescription"),
+              disabled: qk,
+              children: (0, Kk.jsxs)("div", {
                 className: "ManageNumberField",
-                children: [(0, AC.jsx)("input", {
+                children: [(0, Kk.jsx)("input", {
                   type: "number",
-                  max: pC.G,
-                  value: null !== (zC = QC.voidDeathHeight) && void 0 !== zC ? zC : "",
-                  onChange: CC => {
-                    const zC = parseInt(CC.target.value);
-                    wC("voidDeathHeight", zC)
+                  max: Hk.K,
+                  value: null !== (Fk = Xk.voidDeathHeight) && void 0 !== Fk ? Fk : "",
+                  onChange: kk => {
+                    const Fk = parseInt(kk.target.value);
+                    Tk("voidDeathHeight", Fk)
                   }
-                }), (0, AC.jsx)("span", {
+                }), (0, Kk.jsx)("span", {
                   className: "ManageFieldUnit",
-                  children: oC("worldBuilder:blocksUnit")
+                  children: ak("worldBuilder:blocksUnit")
                 })]
               })
-            }), (0, AC.jsx)(IC, {
-              label: oC("classic:worldBorder"),
-              caption: oC("classic:worldBorderDescription"),
-              disabled: qC,
-              children: (0, AC.jsxs)("div", {
+            }), (0, Kk.jsx)(Vk, {
+              label: ak("classic:worldBorder"),
+              caption: ak("classic:worldBorderDescription"),
+              disabled: qk,
+              children: (0, Kk.jsxs)("div", {
                 className: "ManageNumberField",
-                children: [(0, AC.jsx)("input", {
+                children: [(0, Kk.jsx)("input", {
                   type: "number",
-                  min: pC.Q,
-                  max: pC.K,
-                  placeholder: oC("worldBuilder:noWorldBorderLimit"),
-                  value: null !== (ZC = QC.worldBorder) && void 0 !== ZC ? ZC : "",
-                  onChange: CC => {
-                    const zC = parseInt(CC.target.value);
-                    wC("worldBorder", isNaN(zC) ? null : zC)
+                  min: Hk.Q,
+                  max: Hk.L,
+                  placeholder: ak("worldBuilder:noWorldBorderLimit"),
+                  value: null !== (Ik = Xk.worldBorder) && void 0 !== Ik ? Ik : "",
+                  onChange: kk => {
+                    const Fk = parseInt(kk.target.value);
+                    Tk("worldBorder", isNaN(Fk) ? null : Fk)
                   }
-                }), (0, AC.jsx)("span", {
+                }), (0, Kk.jsx)("span", {
                   className: "ManageFieldUnit",
-                  children: oC("worldBuilder:blocksUnit")
+                  children: ak("worldBuilder:blocksUnit")
                 })]
               })
-            }), (0, AC.jsx)(IC, {
-              label: oC("classic:disableMobs"),
-              caption: oC("classic:disableMobsDescription"),
-              disabled: qC,
-              children: (0, AC.jsx)(PC.j, {
-                checked: QC.disableMobs,
-                setChecked: CC => wC("disableMobs", CC),
-                disabled: qC
+            }), (0, Kk.jsx)(Vk, {
+              label: ak("classic:disableMobs"),
+              caption: ak("classic:disableMobsDescription"),
+              disabled: qk,
+              children: (0, Kk.jsx)(Jk.j, {
+                checked: Xk.disableMobs,
+                setChecked: kk => Tk("disableMobs", kk),
+                disabled: qk
               })
             })]
-          }), (0, AC.jsxs)(xC, {
+          }), (0, Kk.jsxs)(Qk, {
             icon: "user-group",
-            title: oC("worldBuilder:playerAndLobbySection"),
-            disabled: !nC,
-            children: [(0, AC.jsx)(IC, {
-              label: oC("classic:disableKeepInventory"),
-              caption: oC("classic:disableKeepInventoryDescription"),
-              disabled: qC,
-              children: (0, AC.jsx)(PC.j, {
-                checked: QC.disableKeepInventory,
-                setChecked: CC => wC("disableKeepInventory", CC),
-                disabled: qC
+            title: ak("worldBuilder:playerAndLobbySection"),
+            disabled: !yk,
+            children: [(0, Kk.jsx)(Vk, {
+              label: ak("classic:disableKeepInventory"),
+              caption: ak("classic:disableKeepInventoryDescription"),
+              disabled: qk,
+              children: (0, Kk.jsx)(Jk.j, {
+                checked: Xk.disableKeepInventory,
+                setChecked: kk => Tk("disableKeepInventory", kk),
+                disabled: qk
               })
-            }), (0, AC.jsx)(IC, {
-              label: oC("classic:persistInventory"),
-              caption: oC("classic:persistInventoryDescription"),
-              disabled: qC,
-              children: (0, AC.jsx)(GC.b, {
+            }), (0, Kk.jsx)(Vk, {
+              label: ak("classic:persistInventory"),
+              caption: ak("classic:persistInventoryDescription"),
+              disabled: qk,
+              children: (0, Kk.jsx)(xk.e, {
                 controlClassName: "ManageDropdown",
-                options: SC.m.map((CC => ({
-                  value: CC,
-                  label: gC.i[CC]
+                options: wk.j.map((kk => ({
+                  value: kk,
+                  label: ek.l[kk]
                 }))),
-                value: QC.persistInventory,
-                onChange: CC => wC("persistInventory", CC.value)
+                value: Xk.persistInventory,
+                onChange: kk => Tk("persistInventory", kk.value)
               })
-            }), (0, AC.jsx)(IC, {
-              label: oC("classic:persistWorld"),
-              caption: oC("classic:persistWorldDescription"),
-              disabled: qC,
-              children: (0, AC.jsx)(PC.j, {
-                checked: QC.persistWorld,
-                setChecked: CC => wC("persistWorld", CC),
-                disabled: qC
+            }), (0, Kk.jsx)(Vk, {
+              label: ak("classic:persistWorld"),
+              caption: ak("classic:persistWorldDescription"),
+              disabled: qk,
+              children: (0, Kk.jsx)(Jk.j, {
+                checked: Xk.persistWorld,
+                setChecked: kk => Tk("persistWorld", kk),
+                disabled: qk
               })
-            }), (0, AC.jsx)(IC, {
-              label: oC("classic:disableLobbySpawn"),
-              caption: oC("classic:disableLobbySpawnDescription"),
-              disabled: qC,
-              children: (0, AC.jsx)(PC.j, {
-                checked: QC.disableLobbySpawn,
-                setChecked: CC => wC("disableLobbySpawn", CC),
-                disabled: qC
+            }), (0, Kk.jsx)(Vk, {
+              label: ak("classic:disableLobbySpawn"),
+              caption: ak("classic:disableLobbySpawnDescription"),
+              disabled: qk,
+              children: (0, Kk.jsx)(Jk.j, {
+                checked: Xk.disableLobbySpawn,
+                setChecked: kk => Tk("disableLobbySpawn", kk),
+                disabled: qk
               })
-            }), (0, AC.jsx)(IC, {
-              label: oC("classic:hideLobbyCode"),
-              caption: oC("classic:hideLobbyCodeDescription"),
-              disabled: qC,
-              children: (0, AC.jsx)(PC.j, {
-                checked: QC.hideLobbyCode,
-                setChecked: CC => wC("hideLobbyCode", CC),
-                disabled: qC
+            }), (0, Kk.jsx)(Vk, {
+              label: ak("classic:hideLobbyCode"),
+              caption: ak("classic:hideLobbyCodeDescription"),
+              disabled: qk,
+              children: (0, Kk.jsx)(Jk.j, {
+                checked: Xk.hideLobbyCode,
+                setChecked: kk => Tk("hideLobbyCode", kk),
+                disabled: qk
               })
             })]
           })]
-        }), (0, AC.jsx)(xC, {
+        }), (0, Kk.jsx)(Qk, {
           icon: "layer-group",
-          title: oC("worldBuilder:pluginsSection"),
-          disabled: !nC,
-          children: (0, AC.jsx)(RC.e, {
-            callbacks: FC,
-            disabled: qC,
+          title: ak("worldBuilder:pluginsSection"),
+          disabled: !yk,
+          children: (0, Kk.jsx)(Pk.e, {
+            callbacks: Lk,
+            disabled: qk,
             advancedMode: !0,
             hideWrapper: !0
           })
         })]
       })
     }
-    var vC = ZC(4893),
-      eC = ZC(4300),
-      hC = ZC(1439),
-      KC = ZC(3452),
-      YC = ZC(1076),
-      dC = ZC(4847),
-      mC = ZC(4895),
-      HC = ZC(1392);
-    const EC = 50,
-      lC = .3;
-    async function XC(CC) {
-      const zC = await
-      function(CC) {
-        return new Promise(((zC, ZC) => {
-          const QC = new FileReader;
-          QC.onload = () => zC(QC.result), QC.onerror = ZC, QC.readAsDataURL(CC)
+    var Sk = Ik(4942),
+      vk = Ik(4338),
+      Ek = Ik(1453),
+      Ok = Ik(3428),
+      nk = Ik(1118),
+      Gk = Ik(4911),
+      pk = Ik(4944),
+      uk = Ik(1415);
+    const bk = 50,
+      Rk = .3;
+    async function Uk(kk) {
+      const Fk = await
+      function(kk) {
+        return new Promise(((Fk, Ik) => {
+          const Xk = new FileReader;
+          Xk.onload = () => Fk(Xk.result), Xk.onerror = Ik, Xk.readAsDataURL(kk)
         }))
-      }(CC), ZC = await
-      function(CC) {
-        return new Promise(((zC, ZC) => {
-          const QC = new Image;
-          QC.onload = () => zC(QC), QC.onerror = () => ZC(new Error("Failed to load image")), QC.src = CC
+      }(kk), Ik = await
+      function(kk) {
+        return new Promise(((Fk, Ik) => {
+          const Xk = new Image;
+          Xk.onload = () => Fk(Xk), Xk.onerror = () => Ik(new Error("Failed to load image")), Xk.src = kk
         }))
-      }(zC);
-      if (ZC.naturalHeight > ZC.naturalWidth) throw new cC;
-      const QC = 1024 * EC,
+      }(Fk);
+      if (Ik.naturalHeight > Ik.naturalWidth) throw new Ck;
+      const Xk = 1024 * bk,
         {
-          dataUrl: wC,
-          finalQuality: bC
-        } = function(CC, zC) {
-          const ZC = document.createElement("canvas");
-          ZC.width = CC.naturalWidth, ZC.height = CC.naturalHeight, ZC.getContext("2d").drawImage(CC, 0, 0);
-          let QC = .92,
-            wC = ZC.toDataURL("image/jpeg", QC);
-          for (; .75 * wC.length > zC && QC > .05;) QC -= .05, wC = ZC.toDataURL("image/jpeg", QC);
+          dataUrl: Tk,
+          finalQuality: ik
+        } = function(kk, Fk) {
+          const Ik = document.createElement("canvas");
+          Ik.width = kk.naturalWidth, Ik.height = kk.naturalHeight, Ik.getContext("2d").drawImage(kk, 0, 0);
+          let Xk = .92,
+            Tk = Ik.toDataURL("image/jpeg", Xk);
+          for (; .75 * Tk.length > Fk && Xk > .05;) Xk -= .05, Tk = Ik.toDataURL("image/jpeg", Xk);
           return {
-            dataUrl: wC,
-            finalQuality: QC
+            dataUrl: Tk,
+            finalQuality: Xk
           }
-        }(ZC, QC);
-      if (Math.ceil(.75 * wC.length) > QC) throw new uC;
+        }(Ik, Xk);
+      if (Math.ceil(.75 * Tk.length) > Xk) throw new Nk;
       return {
-        base64Jpg: wC,
-        heavilyCompressed: bC < lC
+        base64Jpg: Tk,
+        heavilyCompressed: ik < Rk
       }
     }
-    class cC extends Error {}
-    class uC extends Error {}
-    var rC = function(CC) {
-      return CC[CC.NOT_LOGGED_IN = 0] = "NOT_LOGGED_IN", CC[CC.THUMBNAIL_LIMIT_REACHED = 1] = "THUMBNAIL_LIMIT_REACHED", CC
-    }(rC || {});
+    class Ck extends Error {}
+    class Nk extends Error {}
+    var ck = function(kk) {
+      return kk[kk.NOT_LOGGED_IN = 0] = "NOT_LOGGED_IN", kk[kk.THUMBNAIL_LIMIT_REACHED = 1] = "THUMBNAIL_LIMIT_REACHED", kk
+    }(ck || {});
 
-    function sC(CC) {
-      var zC;
+    function Wk(kk) {
+      var Fk;
       let {
-        schematicId: ZC,
-        hasReadUploadPolicy: wC,
-        onPolicyValidationError: oC,
-        onThumbnailReady: qC
-      } = CC;
+        schematicId: Ik,
+        hasReadUploadPolicy: Tk,
+        onPolicyValidationError: ak,
+        onThumbnailReady: qk
+      } = kk;
       const {
-        t: NC
-      } = (0, fC.y)(), [gC, SC] = (0, QC.useState)(null), [pC, PC] = (0, QC.useState)(""), [GC, RC] = (0, QC.useState)(""), [xC, JC] = (0, QC.useState)(!0), [IC, iC] = (0, QC.useState)(!1), vC = (0, QC.useRef)(!1), [eC, hC] = (0, QC.useState)(null), [KC, YC] = (0, QC.useState)(!1), [dC, HC] = (0, QC.useState)(!1), EC = (0, QC.useRef)(0), {
-        getRootProps: lC,
-        getInputProps: rC,
-        isDragActive: sC
-      } = (0, mC.d)({
+        t: Zk
+      } = (0, lk.y)(), [ek, wk] = (0, Xk.useState)(null), [Hk, Jk] = (0, Xk.useState)(""), [xk, Pk] = (0, Xk.useState)(""), [Qk, sk] = (0, Xk.useState)(!0), [Vk, zk] = (0, Xk.useState)(!1), Sk = (0, Xk.useRef)(!1), [vk, Ek] = (0, Xk.useState)(null), [Ok, nk] = (0, Xk.useState)(!1), [Gk, uk] = (0, Xk.useState)(!1), bk = (0, Xk.useRef)(0), {
+        getRootProps: Rk,
+        getInputProps: ck,
+        isDragActive: Wk
+      } = (0, pk.c)({
         accept: {
           "image/*": [".png", ".jpg", ".jpeg", ".webp", ".gif", ".bmp"]
         },
         multiple: !1,
-        onDrop: async CC => {
-          if (0 === CC.length) return;
-          const zC = CC[0],
-            ZC = ++EC.current;
-          hC(null), YC(!1), SC(null), PC(zC.name);
+        onDrop: async kk => {
+          if (0 === kk.length) return;
+          const Fk = kk[0],
+            Ik = ++bk.current;
+          Ek(null), nk(!1), wk(null), Jk(Fk.name);
           try {
-            const CC = await XC(zC);
-            if (ZC !== EC.current) return;
-            SC(CC), YC(CC.heavilyCompressed)
-          } catch (QC) {
-            if (ZC !== EC.current) return;
-            hC(NC(QC instanceof cC ? "thumbnail:portraitImagesNotAllowed" : QC instanceof uC ? "thumbnail:couldNotCompressImage" : "thumbnail:failedToUploadImage"))
+            const kk = await Uk(Fk);
+            if (Ik !== bk.current) return;
+            wk(kk), nk(kk.heavilyCompressed)
+          } catch (Xk) {
+            if (Ik !== bk.current) return;
+            Ek(Zk(Xk instanceof Ck ? "thumbnail:portraitImagesNotAllowed" : Xk instanceof Nk ? "thumbnail:couldNotCompressImage" : "thumbnail:failedToUploadImage"))
           }
         },
         useFsAccessApi: !1
-      }), TC = pC.length <= 30 ? pC : `${pC.slice(0,27)}...`, aC = null !== (zC = null === gC || void 0 === gC ? void 0 : gC.base64Jpg) && void 0 !== zC ? zC : null, tC = GC.trim(), DC = tC.length >= WC.r && tC.length <= WC.n, jC = dC && !gC && !eC, yC = dC && !DC;
-      return (0, AC.jsxs)("div", {
+      }), fk = Hk.length <= 30 ? Hk : `${Hk.slice(0,27)}...`, Bk = null !== (Fk = null === ek || void 0 === ek ? void 0 : ek.base64Jpg) && void 0 !== Fk ? Fk : null, dk = xk.trim(), Yk = dk.length >= tk.m && dk.length <= tk.j, Ak = Gk && !ek && !vk, gk = Gk && !Yk;
+      return (0, Kk.jsxs)("div", {
         className: "ThumbnailUploadContainer",
-        children: [(0, AC.jsxs)("div", {
-          ...lC({
-            className: MC()("ThumbnailUploadDropzone", {
-              ActiveDrag: sC,
-              ValidationError: jC
+        children: [(0, Kk.jsxs)("div", {
+          ...Rk({
+            className: jk()("ThumbnailUploadDropzone", {
+              ActiveDrag: Wk,
+              ValidationError: Ak
             })
           }),
-          children: [(0, AC.jsx)("input", {
-            ...rC()
-          }), !sC && aC ? (0, AC.jsxs)(AC.Fragment, {
-            children: [(0, AC.jsxs)("div", {
+          children: [(0, Kk.jsx)("input", {
+            ...ck()
+          }), !Wk && Bk ? (0, Kk.jsxs)(Kk.Fragment, {
+            children: [(0, Kk.jsxs)("div", {
               className: "ThumbnailAspectPreviews",
-              children: [(0, AC.jsxs)("div", {
+              children: [(0, Kk.jsxs)("div", {
                 className: "ThumbnailAspectPreview",
-                children: [(0, AC.jsx)("div", {
+                children: [(0, Kk.jsx)("div", {
                   className: "ThumbnailAspectLabel",
                   children: "1:1"
-                }), (0, AC.jsx)("div", {
+                }), (0, Kk.jsx)("div", {
                   className: "ThumbnailAspectFrame Square",
-                  children: (0, AC.jsx)("img", {
-                    src: aC,
+                  children: (0, Kk.jsx)("img", {
+                    src: Bk,
                     alt: "1:1 preview"
                   })
                 })]
-              }), (0, AC.jsxs)("div", {
+              }), (0, Kk.jsxs)("div", {
                 className: "ThumbnailAspectPreview",
-                children: [(0, AC.jsx)("div", {
+                children: [(0, Kk.jsx)("div", {
                   className: "ThumbnailAspectLabel",
                   children: "16:9"
-                }), (0, AC.jsx)("div", {
+                }), (0, Kk.jsx)("div", {
                   className: "ThumbnailAspectFrame Wide",
-                  children: (0, AC.jsx)("img", {
-                    src: aC,
+                  children: (0, Kk.jsx)("img", {
+                    src: Bk,
                     alt: "16:9 preview"
                   })
                 })]
               })]
-            }), (0, AC.jsxs)("div", {
-              children: [(0, AC.jsx)("div", {
+            }), (0, Kk.jsxs)("div", {
+              children: [(0, Kk.jsx)("div", {
                 className: "ThumbnailUploadInstructions Active",
-                children: TC
-              }), (0, AC.jsx)("div", {
+                children: fk
+              }), (0, Kk.jsx)("div", {
                 className: "ThumbnailUploadInstructions Preview",
-                children: NC("thumbnail:preview")
+                children: Zk("thumbnail:preview")
               })]
             })]
-          }) : (0, AC.jsxs)(AC.Fragment, {
-            children: [(0, AC.jsx)("div", {
+          }) : (0, Kk.jsxs)(Kk.Fragment, {
+            children: [(0, Kk.jsx)("div", {
               className: "ThumbnailUploadIcon",
-              children: (0, AC.jsx)(FC.c, {
+              children: (0, Kk.jsx)(Lk.e, {
                 name: "image"
               })
-            }), (0, AC.jsx)("div", {
+            }), (0, Kk.jsx)("div", {
               className: "ThumbnailUploadInstructions",
-              children: NC("thumbnail:dragImageHere")
+              children: Zk("thumbnail:dragImageHere")
             })]
           })]
-        }), jC && (0, AC.jsx)("div", {
+        }), Ak && (0, Kk.jsx)("div", {
           className: "ThumbnailUploadError",
-          children: NC("thumbnail:imageRequired")
-        }), (0, AC.jsx)(nC.c, {
-          className: MC()("ThumbnailUploadNameInput", {
-            ValidationError: yC
+          children: Zk("thumbnail:imageRequired")
+        }), (0, Kk.jsx)(yk.c, {
+          className: jk()("ThumbnailUploadNameInput", {
+            ValidationError: gk
           }),
-          placeholderText: NC("thumbnail:thumbnailName"),
-          defaultValue: GC,
-          onValueChange: CC => {
-            RC(CC)
+          placeholderText: Zk("thumbnail:thumbnailName"),
+          defaultValue: xk,
+          onValueChange: kk => {
+            Pk(kk)
           },
-          maxLength: WC.n
-        }), yC && (0, AC.jsx)("div", {
+          maxLength: tk.j
+        }), gk && (0, Kk.jsx)("div", {
           className: "ThumbnailUploadError",
-          children: NC("thumbnail:nameRequired", {
-            min: WC.r,
-            max: WC.n
+          children: Zk("thumbnail:nameRequired", {
+            min: tk.m,
+            max: tk.j
           })
-        }), (0, AC.jsxs)("label", {
+        }), (0, Kk.jsxs)("label", {
           className: "ThumbnailUploadCheckbox",
-          children: [(0, AC.jsx)("input", {
+          children: [(0, Kk.jsx)("input", {
             type: "checkbox",
-            checked: xC,
-            onChange: CC => {
-              JC(CC.target.checked)
+            checked: Qk,
+            onChange: kk => {
+              sk(kk.target.checked)
             }
-          }), NC("thumbnail:setAsThumbnailOnceApproved")]
-        }), KC && (0, AC.jsx)("div", {
+          }), Zk("thumbnail:setAsThumbnailOnceApproved")]
+        }), Ok && (0, Kk.jsx)("div", {
           className: "ThumbnailUploadWarning",
-          children: NC("thumbnail:heavyCompressionWarning")
-        }), eC && (0, AC.jsx)("div", {
+          children: Zk("thumbnail:heavyCompressionWarning")
+        }), vk && (0, Kk.jsx)("div", {
           className: "ThumbnailUploadError",
-          children: eC
-        }), (0, AC.jsx)(bC.o, {
-          disabled: IC,
+          children: vk
+        }), (0, Kk.jsx)(ik.m, {
+          disabled: Vk,
           className: "ThumbnailUploadButton",
           onClick: async () => {
-            if (HC(!0), !vC.current && gC && DC && wC) {
-              vC.current = !0, iC(!0), hC(null);
+            if (uk(!0), !Sk.current && ek && Yk && Tk) {
+              Sk.current = !0, zk(!0), Ek(null);
               try {
-                await qC(gC.base64Jpg, tC, xC ? ZC : null)
-              } catch (CC) {
-                hC(CC.errorMessageForUser ? NC(CC.errorMessageForUser, CC.errorMessageTranslationParams) : NC("thumbnail:failedToUploadImage"))
+                await qk(ek.base64Jpg, dk, Qk ? Ik : null)
+              } catch (kk) {
+                Ek(kk.errorMessageForUser ? Zk(kk.errorMessageForUser, kk.errorMessageTranslationParams) : Zk("thumbnail:failedToUploadImage"))
               } finally {
-                vC.current = !1, iC(!1)
+                Sk.current = !1, zk(!1)
               }
-            } else wC || oC()
+            } else Tk || ak()
           },
-          children: NC(IC ? "thumbnail:processing" : "thumbnail:uploadThumbnail")
+          children: Zk(Vk ? "thumbnail:processing" : "thumbnail:uploadThumbnail")
         })]
       })
     }
-    const TC = 2e3;
+    const fk = 2e3;
 
-    function aC(CC) {
+    function Bk(kk) {
       let {
-        schematicId: zC,
-        ownedThumbnailCount: ZC,
-        onClose: wC,
-        onThumbnailReady: bC
-      } = CC;
+        schematicId: Fk,
+        ownedThumbnailCount: Ik,
+        onClose: Tk,
+        onThumbnailReady: ik
+      } = kk;
       const {
-        t: nC
-      } = (0, fC.y)(), {
-        userContext: oC
-      } = (0, YC.e)(), [qC, NC] = (0, QC.useState)(!1), [gC, SC] = (0, QC.useState)(!1), [pC, PC] = (0, QC.useState)(!1), GC = (0, QC.useRef)();
-      (0, QC.useEffect)((() => () => {
-        clearTimeout(GC.current)
+        t: yk
+      } = (0, lk.y)(), {
+        userContext: ak
+      } = (0, nk.d)(), [qk, Zk] = (0, Xk.useState)(!1), [ek, wk] = (0, Xk.useState)(!1), [Hk, Jk] = (0, Xk.useState)(!1), xk = (0, Xk.useRef)();
+      (0, Xk.useEffect)((() => () => {
+        clearTimeout(xk.current)
       }), []);
-      const RC = function(CC, zC) {
-        const ZC = [];
-        return CC.isLoggedIn() || ZC.push(rC.NOT_LOGGED_IN), zC >= WC.cb && ZC.push(rC.THUMBNAIL_LIMIT_REACHED), ZC
-      }(oC, ZC);
-      if (RC.length > 0) {
-        const CC = {
-          [rC.NOT_LOGGED_IN]: {
+      const Pk = function(kk, Fk) {
+        const Ik = [];
+        return kk.isLoggedIn() || Ik.push(ck.NOT_LOGGED_IN), Fk >= tk.U && Ik.push(ck.THUMBNAIL_LIMIT_REACHED), Ik
+      }(ak, Ik);
+      if (Pk.length > 0) {
+        const kk = {
+          [ck.NOT_LOGGED_IN]: {
             key: "thumbnail:mustBeLoggedInToUpload"
           },
-          [rC.THUMBNAIL_LIMIT_REACHED]: {
+          [ck.THUMBNAIL_LIMIT_REACHED]: {
             key: "thumbnail:thumbnailLimitReachedPleaseDelete",
             params: {
-              max: WC.cb
+              max: tk.U
             }
           }
         };
-        return (0, AC.jsxs)("div", {
+        return (0, Kk.jsxs)("div", {
           className: "ThumbnailUploaderInner",
-          children: [(0, AC.jsx)("h1", {
+          children: [(0, Kk.jsx)("h1", {
             className: "SchematicPopupTitle",
-            children: nC("thumbnail:cannotUploadThumbnail")
-          }), RC.map(((zC, ZC) => {
-            const QC = CC[zC];
-            return (0, AC.jsxs)("div", {
+            children: yk("thumbnail:cannotUploadThumbnail")
+          }), Pk.map(((Fk, Ik) => {
+            const Xk = kk[Fk];
+            return (0, Kk.jsxs)("div", {
               className: "CannotUploadThumbnailItem",
-              children: [(0, AC.jsx)(FC.c, {
+              children: [(0, Kk.jsx)(Lk.e, {
                 name: "triangle-exclamation"
-              }), (0, AC.jsx)("span", {
-                children: nC(QC.key, QC.params)
+              }), (0, Kk.jsx)("span", {
+                children: yk(Xk.key, Xk.params)
               })]
-            }, ZC)
+            }, Ik)
           }))]
         })
       }
-      return (0, AC.jsxs)("div", {
-        className: MC()("ThumbnailUploaderInner", {
-          ThumbnailUploaderSuccess: qC
+      return (0, Kk.jsxs)("div", {
+        className: jk()("ThumbnailUploaderInner", {
+          ThumbnailUploaderSuccess: qk
         }),
-        children: [qC && (0, AC.jsxs)("div", {
+        children: [qk && (0, Kk.jsxs)("div", {
           className: "ThumbnailUploadSuccessOverlay",
-          children: [(0, AC.jsxs)("div", {
+          children: [(0, Kk.jsxs)("div", {
             className: "ThumbnailUploadSuccessIcon FullyFancyText AnimFadeInScaleUp",
-            children: [(0, AC.jsx)(FC.c, {
+            children: [(0, Kk.jsx)(Lk.e, {
               name: "check"
-            }), (0, AC.jsx)(HC.c, {})]
-          }), (0, AC.jsx)("div", {
+            }), (0, Kk.jsx)(uk.d, {})]
+          }), (0, Kk.jsx)("div", {
             className: "ThumbnailUploadSuccessText AnimFadeInScaleUp",
-            children: nC("thumbnail:thumbnailUploaded")
+            children: yk("thumbnail:thumbnailUploaded")
           })]
-        }), (0, AC.jsx)("h1", {
+        }), (0, Kk.jsx)("h1", {
           className: "SchematicPopupTitle",
-          children: nC("thumbnail:uploadThumbnail")
-        }), (0, AC.jsxs)("div", {
+          children: yk("thumbnail:uploadThumbnail")
+        }), (0, Kk.jsxs)("div", {
           className: "ThumbnailUploaderBody",
-          children: [(0, AC.jsxs)("div", {
+          children: [(0, Kk.jsxs)("div", {
             className: "ThumbnailUploaderLeft",
-            children: [(0, AC.jsx)("h3", {
+            children: [(0, Kk.jsx)("h3", {
               className: "SchematicPopupSubtitle",
-              children: nC("thumbnail:chooseImage", {
-                maxSizeKb: EC
+              children: yk("thumbnail:chooseImage", {
+                maxSizeKb: bk
               })
-            }), (0, AC.jsx)(sC, {
-              schematicId: zC,
-              hasReadUploadPolicy: gC,
+            }), (0, Kk.jsx)(Wk, {
+              schematicId: Fk,
+              hasReadUploadPolicy: ek,
               onPolicyValidationError: () => {
-                PC(!0)
+                Jk(!0)
               },
-              onThumbnailReady: async (CC, zC, ZC) => {
-                await bC(CC, zC, ZC), NC(!0), GC.current = setTimeout(wC, TC)
+              onThumbnailReady: async (kk, Fk, Ik) => {
+                await ik(kk, Fk, Ik), Zk(!0), xk.current = setTimeout(Tk, fk)
               }
             })]
-          }), (0, AC.jsxs)("div", {
+          }), (0, Kk.jsxs)("div", {
             className: "ThumbnailUploadPolicy",
-            children: [(0, AC.jsx)("h3", {
+            children: [(0, Kk.jsx)("h3", {
               className: "ThumbnailUploadPolicyTitle",
-              children: nC("thumbnail:uploadPolicy")
-            }), (0, AC.jsxs)("ul", {
+              children: yk("thumbnail:uploadPolicy")
+            }), (0, Kk.jsxs)("ul", {
               className: "ThumbnailUploadPolicyList",
-              children: [(0, AC.jsxs)("li", {
+              children: [(0, Kk.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem Allowed",
-                children: [(0, AC.jsx)(FC.c, {
+                children: [(0, Kk.jsx)(Lk.e, {
                   name: "check"
-                }), (0, AC.jsx)("span", {
-                  children: nC("thumbnail:policyFollowGuidelines")
+                }), (0, Kk.jsx)("span", {
+                  children: yk("thumbnail:policyFollowGuidelines")
                 })]
-              }), (0, AC.jsxs)("li", {
+              }), (0, Kk.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem Allowed",
-                children: [(0, AC.jsx)(FC.c, {
+                children: [(0, Kk.jsx)(Lk.e, {
                   name: "check"
-                }), (0, AC.jsx)("span", {
-                  children: nC("thumbnail:policyInGameAssets")
+                }), (0, Kk.jsx)("span", {
+                  children: yk("thumbnail:policyInGameAssets")
                 })]
-              }), (0, AC.jsxs)("li", {
+              }), (0, Kk.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem Allowed",
-                children: [(0, AC.jsx)(FC.c, {
+                children: [(0, Kk.jsx)(Lk.e, {
                   name: "check"
-                }), (0, AC.jsx)("span", {
-                  children: nC("thumbnail:policyLimitText")
+                }), (0, Kk.jsx)("span", {
+                  children: yk("thumbnail:policyLimitText")
                 })]
-              }), (0, AC.jsxs)("li", {
+              }), (0, Kk.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, AC.jsx)(FC.c, {
+                children: [(0, Kk.jsx)(Lk.e, {
                   name: "x"
-                }), (0, AC.jsx)("span", {
-                  children: nC("thumbnail:policyCopyrightContent")
+                }), (0, Kk.jsx)("span", {
+                  children: yk("thumbnail:policyCopyrightContent")
                 })]
-              }), (0, AC.jsxs)("li", {
+              }), (0, Kk.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, AC.jsx)(FC.c, {
+                children: [(0, Kk.jsx)(Lk.e, {
                   name: "x"
-                }), (0, AC.jsx)("span", {
-                  children: nC("thumbnail:policyOutOfGameAssets")
+                }), (0, Kk.jsx)("span", {
+                  children: yk("thumbnail:policyOutOfGameAssets")
                 })]
-              }), (0, AC.jsxs)("li", {
+              }), (0, Kk.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, AC.jsx)(FC.c, {
+                children: [(0, Kk.jsx)(Lk.e, {
                   name: "x"
-                }), (0, AC.jsx)("span", {
-                  children: nC("thumbnail:policyBloxdTags")
+                }), (0, Kk.jsx)("span", {
+                  children: yk("thumbnail:policyBloxdTags")
                 })]
-              }), (0, AC.jsxs)("li", {
+              }), (0, Kk.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, AC.jsx)(FC.c, {
+                children: [(0, Kk.jsx)(Lk.e, {
                   name: "x"
-                }), (0, AC.jsx)("span", {
-                  children: nC("thumbnail:policyMustReflectGame")
+                }), (0, Kk.jsx)("span", {
+                  children: yk("thumbnail:policyMustReflectGame")
                 })]
               })]
-            }), (0, AC.jsxs)("label", {
-              className: MC()("ThumbnailUploadCheckbox Policy", {
-                ValidationError: pC && !gC
+            }), (0, Kk.jsxs)("label", {
+              className: jk()("ThumbnailUploadCheckbox Policy", {
+                ValidationError: Hk && !ek
               }),
-              children: [(0, AC.jsx)("input", {
+              children: [(0, Kk.jsx)("input", {
                 type: "checkbox",
-                checked: gC,
-                onChange: CC => {
-                  SC(CC.target.checked)
+                checked: ek,
+                onChange: kk => {
+                  wk(kk.target.checked)
                 }
-              }), nC("thumbnail:agreeToUploadPolicy")]
-            }), pC && !gC && (0, AC.jsx)("div", {
+              }), yk("thumbnail:agreeToUploadPolicy")]
+            }), Hk && !ek && (0, Kk.jsx)("div", {
               className: "ThumbnailPolicyError",
-              children: nC("thumbnail:policyRequired")
+              children: yk("thumbnail:policyRequired")
             })]
           })]
         })]
       })
     }
-    var tC = ZC(1149);
-    const DC = {
+    var dk = Ik(1194);
+    const Yk = {
       "custom-game-bad-thumbnail": {
         reason: "thumbnail:rejectionInappropriate",
         tips: ["thumbnail:rejectionInappropriateTip1", "thumbnail:rejectionInappropriateTip2", "thumbnail:rejectionInappropriateTip3"]
@@ -877,207 +877,207 @@ export const modules = {
       }
     };
 
-    function jC(CC) {
-      var zC, ZC;
+    function Ak(kk) {
+      var Fk, Ik;
       let {
-        schematicData: nC,
-        updateSchematicData: qC,
-        publishFormEnabled: WC,
-        onClose: NC
-      } = CC;
+        schematicData: yk,
+        updateSchematicData: qk,
+        publishFormEnabled: tk,
+        onClose: Zk
+      } = kk;
       const {
-        t: gC
-      } = (0, fC.y)(), {
-        userContext: SC,
-        isUserContextUpdating: pC
-      } = (0, YC.e)(), PC = (0, KC.e)(), [GC, RC] = (0, QC.useState)([]), [xC, JC] = (0, QC.useState)([]), [IC, iC] = (0, QC.useState)(!0), [vC, eC] = (0, QC.useState)(null !== (zC = nC.customThumbnailId) && void 0 !== zC ? zC : null), [mC, HC] = (0, QC.useState)(null), EC = (0, QC.useRef)(null !== (ZC = nC.customThumbnailId) && void 0 !== ZC ? ZC : null), lC = (0, QC.useRef)(0), XC = (0, QC.useRef)(null), cC = (0, QC.useRef)(null), uC = (0, QC.useRef)(null), rC = (0, QC.useRef)(!1);
+        t: ek
+      } = (0, lk.y)(), {
+        userContext: wk,
+        isUserContextUpdating: Hk
+      } = (0, nk.d)(), Jk = (0, Ok.d)(), [xk, Pk] = (0, Xk.useState)([]), [Qk, sk] = (0, Xk.useState)([]), [Vk, zk] = (0, Xk.useState)(!0), [Sk, vk] = (0, Xk.useState)(null !== (Fk = yk.customThumbnailId) && void 0 !== Fk ? Fk : null), [pk, uk] = (0, Xk.useState)(null), bk = (0, Xk.useRef)(null !== (Ik = yk.customThumbnailId) && void 0 !== Ik ? Ik : null), Rk = (0, Xk.useRef)(0), Uk = (0, Xk.useRef)(null), Ck = (0, Xk.useRef)(null), Nk = (0, Xk.useRef)(null), ck = (0, Xk.useRef)(!1);
 
-      function sC(CC, zC) {
-        uC.current && (clearTimeout(uC.current), uC.current = null), HC(CC), null !== CC && zC && (uC.current = setTimeout((() => {
-          HC(null), uC.current = null
+      function Wk(kk, Fk) {
+        Nk.current && (clearTimeout(Nk.current), Nk.current = null), uk(kk), null !== kk && Fk && (Nk.current = setTimeout((() => {
+          uk(null), Nk.current = null
         }), 5e3))
-      }(0, QC.useEffect)((() => () => {
-        clearTimeout(cC.current), clearTimeout(uC.current)
+      }(0, Xk.useEffect)((() => () => {
+        clearTimeout(Ck.current), clearTimeout(Nk.current)
       }), []);
-      const TC = (0, QC.useCallback)((() => {
-        iC(!0), hC.d.getOwnedThumbnails(SC).then((CC => {
-          const zC = [],
-            ZC = [];
-          for (const QC of CC.thumbnails) QC.rejectionPolicyId ? zC.push(QC) : ZC.push(QC);
-          zC.sort(((CC, zC) => CC.lastUpdatedAt - zC.lastUpdatedAt)), ZC.sort(((CC, zC) => {
-            const ZC = CC.approved ? 1 : 0,
-              QC = (zC.approved ? 1 : 0) - ZC;
-            return 0 !== QC ? QC : zC.lastUpdatedAt - CC.lastUpdatedAt
-          })), JC(zC), RC(ZC)
-        })).catch((CC => {
-          console.error("Failed to fetch thumbnails:", CC)
+      const fk = (0, Xk.useCallback)((() => {
+        zk(!0), Ek.e.getOwnedThumbnails(wk).then((kk => {
+          const Fk = [],
+            Ik = [];
+          for (const Xk of kk.thumbnails) Xk.rejectionPolicyId ? Fk.push(Xk) : Ik.push(Xk);
+          Fk.sort(((kk, Fk) => kk.lastUpdatedAt - Fk.lastUpdatedAt)), Ik.sort(((kk, Fk) => {
+            const Ik = kk.approved ? 1 : 0,
+              Xk = (Fk.approved ? 1 : 0) - Ik;
+            return 0 !== Xk ? Xk : Fk.lastUpdatedAt - kk.lastUpdatedAt
+          })), sk(Fk), Pk(Ik)
+        })).catch((kk => {
+          console.error("Failed to fetch thumbnails:", kk)
         })).finally((() => {
-          iC(!1)
+          zk(!1)
         }))
-      }), [SC]);
-      async function DC(CC, zC, ZC) {
-        return hC.d.uploadSchematicThumbnail(SC, CC, zC, ZC).then((() => {
-          sC({
-            text: gC("thumbnail:uploadedAwaitingModeration"),
+      }), [wk]);
+      async function Yk(kk, Fk, Ik) {
+        return Ek.e.uploadSchematicThumbnail(wk, kk, Fk, Ik).then((() => {
+          Wk({
+            text: ek("thumbnail:uploadedAwaitingModeration"),
             type: "success"
-          }, !0), TC()
+          }, !0), fk()
         }))
       }
 
-      function jC() {
-        lC.current = Date.now(), cC.current = null;
-        const CC = XC.current;
-        XC.current = null, sC({
-          text: gC("thumbnail:settingThumbnail"),
+      function Ak() {
+        Rk.current = Date.now(), Ck.current = null;
+        const kk = Uk.current;
+        Uk.current = null, Wk({
+          text: ek("thumbnail:settingThumbnail"),
           type: "info"
-        }, !1), hC.d.setSchematicThumbnail(SC, nC.schematicId, CC).then((() => {
-          PC.current && (sC({
-            text: gC("thumbnail:thumbnailUpdated"),
+        }, !1), Ek.e.setSchematicThumbnail(wk, yk.schematicId, kk).then((() => {
+          Jk.current && (Wk({
+            text: ek("thumbnail:thumbnailUpdated"),
             type: "success"
-          }, !0), EC.current = CC, qC("customThumbnailId", CC), qC("customThumbnailBlurhash", void 0), qC("customThumbnailVariants", void 0))
-        })).catch((CC => {
-          PC.current && (sC({
-            text: CC.errorMessageForUser ? gC(CC.errorMessageForUser, CC.errorMessageTranslationParams) : gC("thumbnail:failedToSetThumbnail"),
+          }, !0), bk.current = kk, qk("customThumbnailId", kk), qk("customThumbnailBlurhash", void 0), qk("customThumbnailVariants", void 0))
+        })).catch((kk => {
+          Jk.current && (Wk({
+            text: kk.errorMessageForUser ? ek(kk.errorMessageForUser, kk.errorMessageTranslationParams) : ek("thumbnail:failedToSetThumbnail"),
             type: "error"
-          }, !0), eC(EC.current))
+          }, !0), vk(bk.current))
         }))
       }
 
-      function UC(CC) {
-        eC(CC), XC.current = CC;
-        const zC = Date.now() - lC.current;
-        zC >= 1e3 ? jC() : (sC({
-          text: gC("thumbnail:settingThumbnail"),
+      function hk(kk) {
+        vk(kk), Uk.current = kk;
+        const Fk = Date.now() - Rk.current;
+        Fk >= 1e3 ? Ak() : (Wk({
+          text: ek("thumbnail:settingThumbnail"),
           type: "info"
-        }, !1), cC.current || (cC.current = setTimeout((() => {
-          jC()
-        }), 1e3 - zC)))
+        }, !1), Ck.current || (Ck.current = setTimeout((() => {
+          Ak()
+        }), 1e3 - Fk)))
       }
-      return (0, QC.useEffect)((() => {
-        !1 === pC && TC()
-      }), [pC, TC]), xC.length > 0 ? (0, AC.jsx)(yC, {
-        rejectedThumbnails: xC,
-        userContext: SC,
-        isMountedRef: PC,
-        onAcknowledged: TC
-      }) : (0, AC.jsxs)("div", {
+      return (0, Xk.useEffect)((() => {
+        !1 === Hk && fk()
+      }), [Hk, fk]), Qk.length > 0 ? (0, Kk.jsx)(gk, {
+        rejectedThumbnails: Qk,
+        userContext: wk,
+        isMountedRef: Jk,
+        onAcknowledged: fk
+      }) : (0, Kk.jsxs)("div", {
         className: "BloxdForm ThumbnailSection",
-        children: [(0, AC.jsxs)("div", {
+        children: [(0, Kk.jsxs)("div", {
           className: "SectionTitle",
-          children: [gC("thumbnail:gameThumbnail"), mC && (0, AC.jsx)("span", {
-            className: MC()("ThumbnailActionMsg", `ThumbnailActionMsg--${mC.type}`),
-            children: mC.text
+          children: [ek("thumbnail:gameThumbnail"), pk && (0, Kk.jsx)("span", {
+            className: jk()("ThumbnailActionMsg", `ThumbnailActionMsg--${pk.type}`),
+            children: pk.text
           })]
-        }), (0, AC.jsx)("div", {
+        }), (0, Kk.jsx)("div", {
           className: "SectionBody",
-          children: (0, AC.jsxs)("div", {
+          children: (0, Kk.jsxs)("div", {
             className: "ThumbnailGrid",
-            children: [(0, AC.jsxs)("div", {
-              className: MC()("ThumbnailGridItem ThumbnailGridItemDefault", {
-                ThumbnailGridItemSelected: null === vC
+            children: [(0, Kk.jsxs)("div", {
+              className: jk()("ThumbnailGridItem ThumbnailGridItemDefault", {
+                ThumbnailGridItemSelected: null === Sk
               }),
-              onClick: () => UC(null),
-              children: [(0, AC.jsx)(dC.d, {
+              onClick: () => hk(null),
+              children: [(0, Kk.jsx)(Gk.b, {
                 game: {
-                  schematicId: nC.schematicId,
-                  imageBlurhash: nC.imageBlurhash
+                  schematicId: yk.schematicId,
+                  imageBlurhash: yk.imageBlurhash
                 }
-              }), (0, AC.jsx)("div", {
+              }), (0, Kk.jsx)("div", {
                 className: "ThumbnailGridItemLabel ThumbnailDefaultLabel",
-                children: gC("general:default")
+                children: ek("general:default")
               })]
-            }), IC && (0, AC.jsx)(oC.d, {}), GC.map(((CC, zC) => (0, AC.jsxs)("div", {
-              className: MC()("ThumbnailGridItem", {
-                ThumbnailGridItemSelected: vC === CC.id,
-                ThumbnailGridItemPending: !CC.approved
+            }), Vk && (0, Kk.jsx)(ak.c, {}), xk.map(((kk, Fk) => (0, Kk.jsxs)("div", {
+              className: jk()("ThumbnailGridItem", {
+                ThumbnailGridItemSelected: Sk === kk.id,
+                ThumbnailGridItemPending: !kk.approved
               }),
               onClick: () => {
-                CC.approved && UC(CC.id)
+                kk.approved && hk(kk.id)
               },
-              children: [CC.approved && (0, AC.jsx)("img", {
-                src: `${tC.clientSideServerUrls.s3Url}/customThumbnails/${CC.id}.jpg`,
+              children: [kk.approved && (0, Kk.jsx)("img", {
+                src: `${dk.clientSideServerUrls.s3Url}/customThumbnails/${kk.id}.jpg`,
                 alt: "Thumbnail"
-              }), CC.approved && (0, AC.jsx)("div", {
+              }), kk.approved && (0, Kk.jsx)("div", {
                 className: "ThumbnailGridItemLabel",
-                children: CC.name
-              }), CC.id && (0, AC.jsx)(bC.I, {
+                children: kk.name
+              }), kk.id && (0, Kk.jsx)(ik.G, {
                 className: "ThumbnailDeleteButton",
-                onClick: zC => async function(CC, zC, ZC) {
-                  CC.stopPropagation();
-                  const QC = await wC.NotificationProvider.showCustomPopup({
-                      body: CC => (0, AC.jsx)(LC, {
-                        thumbnailId: zC,
-                        thumbnailName: ZC,
-                        onClose: zC => {
-                          zC && (rC.current = !0), CC()
+                onClick: Fk => async function(kk, Fk, Ik) {
+                  kk.stopPropagation();
+                  const Xk = await Tk.NotificationProvider.showCustomPopup({
+                      body: kk => (0, Kk.jsx)(mk, {
+                        thumbnailId: Fk,
+                        thumbnailName: Ik,
+                        onClose: Fk => {
+                          Fk && (ck.current = !0), kk()
                         }
                       }),
                       middleScreenPopupClassName: "ThumbnailDeleteConfirmPopup",
-                      onClose: NC
+                      onClose: Zk
                     }).getResult(),
-                    bC = rC.current;
-                  rC.current = !1, bC && !0 === QC && (PC.current && sC({
-                    text: gC("thumbnail:deletingThumbnail"),
+                    ik = ck.current;
+                  ck.current = !1, ik && !0 === Xk && (Jk.current && Wk({
+                    text: ek("thumbnail:deletingThumbnail"),
                     type: "info"
-                  }, !1), hC.d.deleteSchematicThumbnail(SC, zC).then((() => {
-                    PC.current && (sC({
-                      text: gC("thumbnail:thumbnailDeleted"),
+                  }, !1), Ek.e.deleteSchematicThumbnail(wk, Fk).then((() => {
+                    Jk.current && (Wk({
+                      text: ek("thumbnail:thumbnailDeleted"),
                       type: "success"
-                    }, !0), EC.current === zC && UC(null), TC())
-                  })).catch((CC => {
-                    PC.current && sC({
-                      text: CC.errorMessageForUser ? gC(CC.errorMessageForUser, CC.errorMessageTranslationParams) : gC("thumbnail:failedToDeleteThumbnail"),
+                    }, !0), bk.current === Fk && hk(null), fk())
+                  })).catch((kk => {
+                    Jk.current && Wk({
+                      text: kk.errorMessageForUser ? ek(kk.errorMessageForUser, kk.errorMessageTranslationParams) : ek("thumbnail:failedToDeleteThumbnail"),
                       type: "error"
                     }, !0)
                   })))
-                }(zC, CC.id, CC.name),
-                children: (0, AC.jsx)(FC.c, {
+                }(Fk, kk.id, kk.name),
+                children: (0, Kk.jsx)(Lk.e, {
                   name: "trash-can"
                 })
-              }), !CC.approved && (0, AC.jsx)("div", {
+              }), !kk.approved && (0, Kk.jsx)("div", {
                 className: "ThumbnailUnapprovedIcon",
-                children: (0, AC.jsx)(FC.c, {
+                children: (0, Kk.jsx)(Lk.e, {
                   name: "hourglass-clock"
                 })
-              }), !CC.approved && (0, AC.jsxs)("div", {
+              }), !kk.approved && (0, Kk.jsxs)("div", {
                 className: "ThumbnailGridItemLabel ThumbnailPendingLabel",
-                children: [CC.name, (0, AC.jsx)("br", {}), gC("thumbnail:pendingApproval")]
+                children: [kk.name, (0, Kk.jsx)("br", {}), ek("thumbnail:pendingApproval")]
               })]
-            }, zC))), (0, AC.jsxs)("div", {
-              className: MC()("ThumbnailGridItem ThumbnailUploadTile", {
-                ThumbnailUploadTileDisabled: !WC
+            }, Fk))), (0, Kk.jsxs)("div", {
+              className: jk()("ThumbnailGridItem ThumbnailUploadTile", {
+                ThumbnailUploadTileDisabled: !tk
               }),
               onClick: () => {
-                WC && function(CC) {
+                tk && function(kk) {
                   let {
-                    schematicId: zC,
-                    ownedThumbnailCount: ZC,
-                    onThumbnailReady: QC,
-                    onClose: bC
-                  } = CC;
-                  wC.NotificationProvider.showCustomPopup({
-                    body: CC => (0, AC.jsx)(aC, {
-                      schematicId: zC,
-                      ownedThumbnailCount: ZC,
-                      onClose: CC,
-                      onThumbnailReady: QC
+                    schematicId: Fk,
+                    ownedThumbnailCount: Ik,
+                    onThumbnailReady: Xk,
+                    onClose: ik
+                  } = kk;
+                  Tk.NotificationProvider.showCustomPopup({
+                    body: kk => (0, Kk.jsx)(Bk, {
+                      schematicId: Fk,
+                      ownedThumbnailCount: Ik,
+                      onClose: kk,
+                      onThumbnailReady: Xk
                     }),
                     middleScreenPopupClassName: "SchematicThumbnailPopup",
-                    onClose: bC,
+                    onClose: ik,
                     unlockPointerKey: "schematicThumbnailUploaderPopup"
                   })
                 }({
-                  schematicId: nC.schematicId,
-                  ownedThumbnailCount: GC.length,
-                  onThumbnailReady: DC,
-                  onClose: NC
+                  schematicId: yk.schematicId,
+                  ownedThumbnailCount: xk.length,
+                  onThumbnailReady: Yk,
+                  onClose: Zk
                 })
               },
-              children: [(0, AC.jsx)(FC.c, {
+              children: [(0, Kk.jsx)(Lk.e, {
                 name: "plus"
-              }), (0, AC.jsx)("div", {
+              }), (0, Kk.jsx)("div", {
                 className: "ThumbnailGridItemLabel",
-                children: gC("thumbnail:uploadThumbnail")
+                children: ek("thumbnail:uploadThumbnail")
               })]
             })]
           })
@@ -1085,640 +1085,640 @@ export const modules = {
       })
     }
 
-    function yC(CC) {
+    function gk(kk) {
       let {
-        rejectedThumbnails: zC,
-        userContext: ZC,
-        isMountedRef: wC,
-        onAcknowledged: nC
-      } = CC;
+        rejectedThumbnails: Fk,
+        userContext: Ik,
+        isMountedRef: Tk,
+        onAcknowledged: yk
+      } = kk;
       const {
-        t: qC
-      } = (0, fC.y)(), [WC, NC] = (0, QC.useState)(!1), [MC, gC] = (0, QC.useState)(!1), SC = function(CC) {
-        const zC = new Map;
-        for (const ZC of CC) {
-          const CC = ZC.rejectionPolicyId,
-            QC = zC.get(CC);
-          QC ? QC.push(ZC) : zC.set(CC, [ZC])
+        t: qk
+      } = (0, lk.y)(), [tk, Zk] = (0, Xk.useState)(!1), [jk, ek] = (0, Xk.useState)(!1), wk = function(kk) {
+        const Fk = new Map;
+        for (const Ik of kk) {
+          const kk = Ik.rejectionPolicyId,
+            Xk = Fk.get(kk);
+          Xk ? Xk.push(Ik) : Fk.set(kk, [Ik])
         }
-        return zC
-      }(zC);
-      return (0, AC.jsxs)("div", {
+        return Fk
+      }(Fk);
+      return (0, Kk.jsxs)("div", {
         className: "ThumbnailRejectionNotice",
-        children: [(0, AC.jsxs)("div", {
+        children: [(0, Kk.jsxs)("div", {
           className: "ThumbnailRejectionNoticeTitle",
-          children: [(0, AC.jsx)(FC.c, {
+          children: [(0, Kk.jsx)(Lk.e, {
             name: "triangle-exclamation"
-          }), " ", qC("thumbnail:thumbnailsRejected"), " ", (0, AC.jsx)(FC.c, {
+          }), " ", qk("thumbnail:thumbnailsRejected"), " ", (0, Kk.jsx)(Lk.e, {
             name: "triangle-exclamation"
           })]
-        }), (0, AC.jsx)("div", {
+        }), (0, Kk.jsx)("div", {
           className: "ThumbnailRejectionNoticeSubtitle",
-          children: qC("thumbnail:thumbnailsRejectedDescription")
-        }), (0, AC.jsx)("div", {
+          children: qk("thumbnail:thumbnailsRejectedDescription")
+        }), (0, Kk.jsx)("div", {
           className: "ThumbnailRejectionNoticeList",
-          children: [...SC.entries()].map((CC => {
-            let [zC, ZC] = CC;
-            const QC = DC[zC];
-            return (0, AC.jsxs)("div", {
+          children: [...wk.entries()].map((kk => {
+            let [Fk, Ik] = kk;
+            const Xk = Yk[Fk];
+            return (0, Kk.jsxs)("div", {
               className: "ThumbnailRejectionNoticeGroup",
-              children: [(0, AC.jsx)("div", {
+              children: [(0, Kk.jsx)("div", {
                 className: "ThumbnailRejectionNoticeItems",
-                children: ZC.map((CC => (0, AC.jsxs)("div", {
+                children: Ik.map((kk => (0, Kk.jsxs)("div", {
                   className: "ThumbnailRejectionNoticeItem",
-                  children: [(0, AC.jsx)("div", {
+                  children: [(0, Kk.jsx)("div", {
                     className: "ThumbnailRejectionNoticeItemIcon",
-                    children: (0, AC.jsx)(FC.c, {
+                    children: (0, Kk.jsx)(Lk.e, {
                       name: "image-slash"
                     })
-                  }), (0, AC.jsx)("div", {
+                  }), (0, Kk.jsx)("div", {
                     className: "ThumbnailRejectionNoticeItemDetails",
-                    children: (0, AC.jsx)("div", {
+                    children: (0, Kk.jsx)("div", {
                       className: "ThumbnailRejectionNoticeItemName",
-                      children: CC.name
+                      children: kk.name
                     })
                   })]
-                }, CC.id)))
-              }), (0, AC.jsxs)("div", {
+                }, kk.id)))
+              }), (0, Kk.jsxs)("div", {
                 className: "ThumbnailRejectionNoticeGroupReason",
-                children: [qC("thumbnail:rejectionReason"), " ", QC ? qC(QC.reason) : zC]
-              }), QC && (0, AC.jsx)("ul", {
+                children: [qk("thumbnail:rejectionReason"), " ", Xk ? qk(Xk.reason) : Fk]
+              }), Xk && (0, Kk.jsx)("ul", {
                 className: "ThumbnailRejectionNoticeGroupTips",
-                children: QC.tips.map((CC => (0, AC.jsx)("li", {
-                  children: qC(CC)
-                }, CC)))
+                children: Xk.tips.map((kk => (0, Kk.jsx)("li", {
+                  children: qk(kk)
+                }, kk)))
               })]
-            }, zC)
+            }, Fk)
           }))
-        }), (0, AC.jsxs)("label", {
+        }), (0, Kk.jsxs)("label", {
           className: "ThumbnailRejectionNoticeCheckbox",
-          children: [(0, AC.jsx)(eC.e, {
-            checked: WC,
-            onChange: CC => NC(CC.target.checked),
-            disabled: MC
-          }), (0, AC.jsx)("span", {
-            children: qC("thumbnail:haveReadRejectionReasons")
+          children: [(0, Kk.jsx)(vk.d, {
+            checked: tk,
+            onChange: kk => Zk(kk.target.checked),
+            disabled: jk
+          }), (0, Kk.jsx)("span", {
+            children: qk("thumbnail:haveReadRejectionReasons")
           })]
-        }), (0, AC.jsx)(bC.o, {
+        }), (0, Kk.jsx)(ik.m, {
           onClick: async function() {
-            gC(!0);
-            const CC = await Promise.allSettled(zC.map((CC => hC.d.deleteSchematicThumbnail(ZC, CC.id))));
-            if (!wC.current) return;
-            const QC = CC.filter((CC => "rejected" === CC.status));
-            QC.length > 0 && console.error("Some rejected thumbnails failed to delete:", QC), nC()
+            ek(!0);
+            const kk = await Promise.allSettled(Fk.map((kk => Ek.e.deleteSchematicThumbnail(Ik, kk.id))));
+            if (!Tk.current) return;
+            const Xk = kk.filter((kk => "rejected" === kk.status));
+            Xk.length > 0 && console.error("Some rejected thumbnails failed to delete:", Xk), yk()
           },
-          disabled: !WC || MC,
+          disabled: !tk || jk,
           className: "ThumbnailRejectionNoticeAcceptButton",
-          children: MC ? (0, AC.jsx)(oC.d, {}) : qC("general:accept")
+          children: jk ? (0, Kk.jsx)(ak.c, {}) : qk("general:accept")
         })]
       })
     }
 
-    function LC(CC) {
+    function mk(kk) {
       let {
-        thumbnailId: zC,
-        thumbnailName: ZC,
-        onClose: QC
-      } = CC;
+        thumbnailId: Fk,
+        thumbnailName: Ik,
+        onClose: Xk
+      } = kk;
       const {
-        t: wC
-      } = (0, fC.y)();
-      return (0, AC.jsxs)("div", {
+        t: Tk
+      } = (0, lk.y)();
+      return (0, Kk.jsxs)("div", {
         className: "ThumbnailDeleteConfirm",
-        children: [(0, AC.jsx)("div", {
+        children: [(0, Kk.jsx)("div", {
           className: "ThumbnailDeleteConfirmTitle",
-          children: wC("thumbnail:deleteThumbnail")
-        }), (0, AC.jsxs)("div", {
+          children: Tk("thumbnail:deleteThumbnail")
+        }), (0, Kk.jsxs)("div", {
           className: "ThumbnailDeleteConfirmImageContainer",
-          children: [(0, AC.jsx)("img", {
+          children: [(0, Kk.jsx)("img", {
             className: "ThumbnailDeleteConfirmImage",
-            src: `${tC.clientSideServerUrls.s3Url}/customThumbnails/${zC}.jpg`,
+            src: `${dk.clientSideServerUrls.s3Url}/customThumbnails/${Fk}.jpg`,
             alt: "Thumbnail to delete"
-          }), (0, AC.jsx)("div", {
+          }), (0, Kk.jsx)("div", {
             className: "ThumbnailGridItemLabel",
-            children: ZC
+            children: Ik
           })]
-        }), (0, AC.jsx)("div", {
+        }), (0, Kk.jsx)("div", {
           className: "ThumbnailDeleteConfirmSubtitle",
-          children: wC("thumbnail:deleteThumbnailConfirmation")
-        }), (0, AC.jsxs)("div", {
+          children: Tk("thumbnail:deleteThumbnailConfirmation")
+        }), (0, Kk.jsxs)("div", {
           className: "ThumbnailDeleteConfirmButtons",
-          children: [(0, AC.jsxs)(bC.I, {
+          children: [(0, Kk.jsxs)(ik.G, {
             className: "ThumbnailDeleteConfirmButton",
-            onClick: () => QC(!0),
-            children: [(0, AC.jsx)(FC.c, {
+            onClick: () => Xk(!0),
+            children: [(0, Kk.jsx)(Lk.e, {
               name: "trash-can"
-            }), " ", wC("general:delete")]
-          }), (0, AC.jsx)(bC.i, {
+            }), " ", Tk("general:delete")]
+          }), (0, Kk.jsx)(ik.g, {
             className: "ThumbnailDeleteConfirmButton",
-            onClick: () => QC(!1),
-            children: wC("general:cancel")
+            onClick: () => Xk(!1),
+            children: Tk("general:cancel")
           })]
         })]
       })
     }
-    var UC = ZC(2063),
-      BC = ZC(4925),
-      OC = ZC(4933),
-      kC = ZC(4985);
+    var hk = Ik(2071),
+      rk = Ik(4976),
+      Dk = Ik(4978),
+      Mk = Ik(5030);
 
-    function VC(CC) {
+    function kF(kk) {
       let {
-        schematicData: zC,
-        setTexturePack: ZC,
-        initializeTexturePack: wC,
-        publishFormEnabled: bC
-      } = CC;
+        schematicData: Fk,
+        setTexturePack: Ik,
+        initializeTexturePack: Tk,
+        publishFormEnabled: ik
+      } = kk;
       const {
-        t: nC
-      } = (0, fC.y)(), [oC, qC] = (0, QC.useState)(null), [FC, WC] = (0, QC.useState)(null), [NC, gC] = (0, QC.useState)(!1), SC = (0, KC.e)(), pC = bC && !NC, PC = zC.customTexturePackKey;
+        t: yk
+      } = (0, lk.y)(), [ak, qk] = (0, Xk.useState)(null), [Lk, tk] = (0, Xk.useState)(null), [Zk, ek] = (0, Xk.useState)(!1), wk = (0, Ok.d)(), Hk = ik && !Zk, Jk = Fk.customTexturePackKey;
 
-      function GC(CC) {
-        var zC;
-        qC(CC.metaData.id), WC(null !== (zC = CC.metaData.fromFolderName) && void 0 !== zC ? zC : null), (CC.metaData.id !== UC.q.CUSTOM || CC.metaData.fromFolderName) && ZC(CC)
+      function xk(kk) {
+        var Fk;
+        qk(kk.metaData.id), tk(null !== (Fk = kk.metaData.fromFolderName) && void 0 !== Fk ? Fk : null), (kk.metaData.id !== hk.l.CUSTOM || kk.metaData.fromFolderName) && Ik(kk)
       }
-      return (0, QC.useEffect)((() => {
-        PC && (gC(!0), (0, BC.d)(PC).then((CC => {
-          var zC;
-          SC.current && (CC ? (qC(CC.metaData.id), WC(null !== (zC = CC.metaData.fromFolderName) && void 0 !== zC ? zC : null), wC(CC)) : console.error(`No texture pack at ${PC}`))
-        })).catch((CC => {
-          console.error("Error fetching texture pack: ", CC)
+      return (0, Xk.useEffect)((() => {
+        Jk && (ek(!0), (0, rk.c)(Jk).then((kk => {
+          var Fk;
+          wk.current && (kk ? (qk(kk.metaData.id), tk(null !== (Fk = kk.metaData.fromFolderName) && void 0 !== Fk ? Fk : null), Tk(kk)) : console.error(`No texture pack at ${Jk}`))
+        })).catch((kk => {
+          console.error("Error fetching texture pack: ", kk)
         })).finally((() => {
-          gC(!1)
+          ek(!1)
         })))
-      }), [PC, wC, SC]), (0, AC.jsxs)("div", {
+      }), [Jk, Tk, wk]), (0, Kk.jsxs)("div", {
         className: "BloxdForm TexturePackSection",
-        children: [(0, AC.jsx)("div", {
+        children: [(0, Kk.jsx)("div", {
           className: "SectionTitle",
-          children: nC("customTexturePack:customTexturePack")
-        }), (0, AC.jsxs)("div", {
+          children: yk("customTexturePack:customTexturePack")
+        }), (0, Kk.jsxs)("div", {
           className: "TexturePackList",
-          children: [(0, AC.jsx)("div", {
-            className: MC()("TexturePack", {
-              Selected: null === oC && !NC,
-              Disabled: !pC
+          children: [(0, Kk.jsx)("div", {
+            className: jk()("TexturePack", {
+              Selected: null === ak && !Zk,
+              Disabled: !Hk
             }),
             onClick: () => {
-              pC && (qC(null), ZC(null), WC(null))
+              Hk && (qk(null), Ik(null), tk(null))
             },
-            children: (0, AC.jsx)("div", {
+            children: (0, Kk.jsx)("div", {
               className: "TexturePackName",
               children: "No Override"
             })
-          }), Object.values(UC.q).map((CC => (0, AC.jsx)(OC.f, {
-            id: CC,
-            isSelected: CC === oC,
-            setSelected: GC,
-            disabled: !pC
-          }, CC)))]
-        }), oC === UC.q.CUSTOM && (0, AC.jsx)(kC.c, {
-          folderName: FC,
-          onTexturePackUpdated: GC,
-          disabled: !pC,
+          }), Object.values(hk.l).map((kk => (0, Kk.jsx)(Dk.g, {
+            id: kk,
+            isSelected: kk === ak,
+            setSelected: xk,
+            disabled: !Hk
+          }, kk)))]
+        }), ak === hk.l.CUSTOM && (0, Kk.jsx)(Mk.d, {
+          folderName: Lk,
+          onTexturePackUpdated: xk,
+          disabled: !Hk,
           maxFileSizeMb: 25,
           packOwner: "customGame"
         })]
       })
     }
-    var Cz = ZC(5024);
+    var FF = Ik(5073);
 
-    function zz(CC) {
-      var zC;
+    function IF(kk) {
+      var Fk;
       let {
-        gameCategory: ZC,
-        setGameCategory: QC,
-        disabled: wC
-      } = CC;
-      const nC = null !== (zC = (0, gC.hb)(ZC)) && void 0 !== zC ? zC : "other";
-      return (0, AC.jsxs)("div", {
+        gameCategory: Ik,
+        setGameCategory: Xk,
+        disabled: Tk
+      } = kk;
+      const yk = null !== (Fk = (0, ek.ib)(Ik)) && void 0 !== Fk ? Fk : "other";
+      return (0, Kk.jsxs)("div", {
         className: "GameCategoryPicker",
-        children: [(0, AC.jsx)(PC.h, {
+        children: [(0, Kk.jsx)(Jk.i, {
           label: "worldBuilder:gameCategoryGroup",
           className: "GameCategoryGroup",
-          disabled: wC,
-          children: (0, AC.jsx)(GC.b, {
-            options: gC.X.map((CC => ({
-              value: CC,
-              label: gC.V[CC]
+          disabled: Tk,
+          children: (0, Kk.jsx)(xk.e, {
+            options: ek.$.map((kk => ({
+              value: kk,
+              label: ek.Z[kk]
             }))),
-            value: nC,
-            onChange: CC => {
-              CC.value !== nC && QC(gC.Q[CC.value][0])
+            value: yk,
+            onChange: kk => {
+              kk.value !== yk && Xk(ek.U[kk.value][0])
             }
           })
-        }), (0, AC.jsx)(PC.h, {
+        }), (0, Kk.jsx)(Jk.i, {
           label: "worldBuilder:gameCategory",
           className: "GameCategory",
-          disabled: wC,
-          children: (0, AC.jsx)("div", {
+          disabled: Tk,
+          children: (0, Kk.jsx)("div", {
             className: "GameCategoryOptions",
-            children: gC.Q[nC].map((CC => (0, AC.jsx)(bC.O, {
-              active: CC === ZC,
+            children: ek.U[yk].map((kk => (0, Kk.jsx)(ik.Q, {
+              active: kk === Ik,
               onClick: () => {
-                QC(CC)
+                Xk(kk)
               },
-              children: (0, gC.eb)(CC)
-            }, CC)))
+              children: (0, ek.eb)(kk)
+            }, kk)))
           })
         })]
       })
     }
 
-    function Zz(CC) {
+    function XF(kk) {
       let {
-        editor: zC,
-        onClose: ZC
-      } = CC;
+        editor: Fk,
+        onClose: Ik
+      } = kk;
       const {
-        t: QC
-      } = (0, fC.y)(), {
-        schematicData: wC,
-        updateSchematicData: bC,
-        publishFormEnabled: oC,
-        formEnabled: qC
-      } = zC;
-      return (0, AC.jsxs)(AC.Fragment, {
-        children: [(0, AC.jsxs)(xC, {
+        t: Xk
+      } = (0, lk.y)(), {
+        schematicData: Tk,
+        updateSchematicData: ik,
+        publishFormEnabled: ak,
+        formEnabled: qk
+      } = Fk;
+      return (0, Kk.jsxs)(Kk.Fragment, {
+        children: [(0, Kk.jsxs)(Qk, {
           icon: "pen-to-square",
-          title: QC("worldBuilder:basicsSection"),
-          disabled: !qC,
-          children: [(0, AC.jsx)(JC, {
-            label: QC("general:name"),
-            caption: QC("worldBuilder:schematicNameTagsHint"),
-            children: (0, AC.jsx)(nC.c, {
+          title: Xk("worldBuilder:basicsSection"),
+          disabled: !qk,
+          children: [(0, Kk.jsx)(sk, {
+            label: Xk("general:name"),
+            caption: Xk("worldBuilder:schematicNameTagsHint"),
+            children: (0, Kk.jsx)(yk.c, {
               className: "SchematicPageName",
-              defaultValue: wC.name,
-              onValueChange: CC => bC("name", CC),
-              placeholderText: QC("worldBuilder:schematicNamePlaceholder"),
-              maxLength: WC.xb
+              defaultValue: Tk.name,
+              onValueChange: kk => ik("name", kk),
+              placeholderText: Xk("worldBuilder:schematicNamePlaceholder"),
+              maxLength: tk.pb
             })
-          }), (0, AC.jsx)(JC, {
-            label: QC("general:description"),
-            children: (0, AC.jsx)(nC.c, {
+          }), (0, Kk.jsx)(sk, {
+            label: Xk("general:description"),
+            children: (0, Kk.jsx)(yk.c, {
               className: "SchematicPageDescription",
               useTextarea: !0,
-              defaultValue: wC.description,
-              onValueChange: CC => bC("description", CC),
-              placeholderText: QC("worldBuilder:schematicDescriptionPlaceholder"),
-              maxLength: WC.tb
+              defaultValue: Tk.description,
+              onValueChange: kk => ik("description", kk),
+              placeholderText: Xk("worldBuilder:schematicDescriptionPlaceholder"),
+              maxLength: tk.ob
             })
-          }), (0, AC.jsx)(zz, {
-            gameCategory: wC.gameCategory,
-            setGameCategory: CC => bC("gameCategory", CC),
-            disabled: !oC
-          }), !0 === wC.gamePublished && (0, AC.jsx)(jC, {
-            schematicData: wC,
-            updateSchematicData: bC,
-            publishFormEnabled: oC,
+          }), (0, Kk.jsx)(IF, {
+            gameCategory: Tk.gameCategory,
+            setGameCategory: kk => ik("gameCategory", kk),
+            disabled: !ak
+          }), !0 === Tk.gamePublished && (0, Kk.jsx)(Ak, {
+            schematicData: Tk,
+            updateSchematicData: ik,
+            publishFormEnabled: ak,
             onClose: function() {
-              null === ZC || void 0 === ZC || ZC()
+              null === Ik || void 0 === Ik || Ik()
             }
           })]
-        }), (0, AC.jsx)(iC, {
-          schematicData: wC,
-          updateSchematicData: bC,
-          publishFormEnabled: oC,
-          formEnabled: qC
-        }), !0 === wC.gamePublished && (0, AC.jsx)(xC, {
+        }), (0, Kk.jsx)(zk, {
+          schematicData: Tk,
+          updateSchematicData: ik,
+          publishFormEnabled: ak,
+          formEnabled: qk
+        }), !0 === Tk.gamePublished && (0, Kk.jsx)(Qk, {
           icon: "palette",
-          title: QC("worldBuilder:texturePackSection"),
-          disabled: !qC,
-          children: (0, AC.jsx)(VC, {
-            schematicData: wC,
-            setTexturePack: zC.setTexturePack,
-            initializeTexturePack: zC.initializeTexturePack,
-            publishFormEnabled: oC
+          title: Xk("worldBuilder:texturePackSection"),
+          disabled: !qk,
+          children: (0, Kk.jsx)(kF, {
+            schematicData: Tk,
+            setTexturePack: Fk.setTexturePack,
+            initializeTexturePack: Fk.initializeTexturePack,
+            publishFormEnabled: ak
           })
         })]
       })
     }
 
-    function Qz(CC) {
+    function TF(kk) {
       let {
-        editor: zC
-      } = CC;
+        editor: Fk
+      } = kk;
       const {
-        t: ZC
-      } = (0, fC.y)(), {
-        schematicData: QC,
-        formEnabled: wC,
-        hasUnsavedChanges: nC
-      } = zC, WC = wC && nC;
-      return (0, AC.jsxs)("footer", {
+        t: Ik
+      } = (0, lk.y)(), {
+        schematicData: Xk,
+        formEnabled: Tk,
+        hasUnsavedChanges: yk
+      } = Fk, tk = Tk && yk;
+      return (0, Kk.jsxs)("footer", {
         className: "SchematicPageFooter",
-        children: [wC && nC && (0, AC.jsxs)("div", {
+        children: [Tk && yk && (0, Kk.jsxs)("div", {
           className: "SchematicPageFooterStatus",
-          children: [(0, AC.jsx)("span", {
+          children: [(0, Kk.jsx)("span", {
             className: "SchematicPageFooterStatusDot"
-          }), ZC("worldBuilder:unsavedChanges")]
-        }), (0, AC.jsx)(qC.d, {
-          tooltipInner: (0, AC.jsx)("div", {
+          }), Ik("worldBuilder:unsavedChanges")]
+        }), (0, Kk.jsx)(qk.g, {
+          tooltipInner: (0, Kk.jsx)("div", {
             className: "SaveButtonTooltip",
-            children: ZC(wC && !nC ? "worldBuilder:saveChangesNoneDescription" : "worldBuilder:saveChangesDescription")
+            children: Ik(Tk && !yk ? "worldBuilder:saveChangesNoneDescription" : "worldBuilder:saveChangesDescription")
           }),
-          children: (0, AC.jsxs)(bC.g, {
+          children: (0, Kk.jsxs)(ik.d, {
             className: "SaveChangesButton",
-            onClick: () => zC.saveSchematic(QC.gamePublished),
-            disabled: !WC,
-            children: [(0, AC.jsxs)("span", {
-              className: wC ? "" : "SaveChangesButtonBodyHidden",
-              children: [(0, AC.jsx)(FC.c, {
+            onClick: () => Fk.saveSchematic(Xk.gamePublished),
+            disabled: !tk,
+            children: [(0, Kk.jsxs)("span", {
+              className: Tk ? "" : "SaveChangesButtonBodyHidden",
+              children: [(0, Kk.jsx)(Lk.e, {
                 name: "wrench"
-              }), " ", ZC("worldBuilder:saveChanges")]
-            }), !wC && (0, AC.jsx)(oC.d, {})]
+              }), " ", Ik("worldBuilder:saveChanges")]
+            }), !Tk && (0, Kk.jsx)(ak.c, {})]
           })
         })]
       })
     }
 
-    function wz(CC) {
+    function iF(kk) {
       let {
-        schematic: zC,
-        onSchematicUpdate: ZC,
-        onClose: wC,
-        inSourceWorld: nC
-      } = CC;
+        schematic: Fk,
+        onSchematicUpdate: Ik,
+        onClose: Tk,
+        inSourceWorld: yk
+      } = kk;
       const {
-        t: oC
-      } = (0, fC.y)();
+        t: ak
+      } = (0, lk.y)();
 
-      function qC() {
-        null === wC || void 0 === wC || wC()
+      function qk() {
+        null === Tk || void 0 === Tk || Tk()
       }
-      const FC = (0, Cz.c)(zC, {
-        onNavigateAway: qC,
-        inSourceWorld: nC
+      const Lk = (0, FF.b)(Fk, {
+        onNavigateAway: qk,
+        inSourceWorld: yk
       });
-      return (0, QC.useEffect)((() => {
-        null === ZC || void 0 === ZC || ZC(FC.schematicData)
-      }), [FC.schematicData, ZC]), (0, AC.jsxs)("div", {
+      return (0, Xk.useEffect)((() => {
+        null === Ik || void 0 === Ik || Ik(Lk.schematicData)
+      }), [Lk.schematicData, Ik]), (0, Kk.jsxs)("div", {
         className: "SchematicPage SchematicPagePopupVariant",
-        children: [(0, AC.jsxs)("div", {
+        children: [(0, Kk.jsxs)("div", {
           className: "SchematicPageBody",
-          children: [(0, AC.jsx)(bC.c, {
-            onClick: qC,
-            children: oC("worldBuilder:back")
-          }), (0, AC.jsx)(xC, {
+          children: [(0, Kk.jsx)(ik.c, {
+            onClick: qk,
+            children: ak("worldBuilder:back")
+          }), (0, Kk.jsx)(Qk, {
             icon: "rocket-launch",
-            title: oC("worldBuilder:actionsSection"),
-            disabled: !FC.formEnabled,
-            children: (0, AC.jsx)(vC.c, {
-              editor: FC
+            title: ak("worldBuilder:actionsSection"),
+            disabled: !Lk.formEnabled,
+            children: (0, Kk.jsx)(Sk.d, {
+              editor: Lk
             })
-          }), (0, AC.jsx)(Zz, {
-            editor: FC,
-            onClose: qC
+          }), (0, Kk.jsx)(XF, {
+            editor: Lk,
+            onClose: qk
           })]
-        }), (0, AC.jsx)(Qz, {
-          editor: FC
+        }), (0, Kk.jsx)(TF, {
+          editor: Lk
         })]
       })
     }
 
-    function bz(CC) {
+    function yF(kk) {
       let {
-        schematic: zC,
-        onSchematicUpdate: ZC,
-        onClose: QC,
-        inSourceWorld: bC
-      } = CC;
-      wC.NotificationProvider.showCustomPopup({
-        body: CC => (0, AC.jsx)(wz, {
-          schematic: zC,
-          onSchematicUpdate: ZC,
-          onClose: CC,
-          inSourceWorld: bC
+        schematic: Fk,
+        onSchematicUpdate: Ik,
+        onClose: Xk,
+        inSourceWorld: ik
+      } = kk;
+      Tk.NotificationProvider.showCustomPopup({
+        body: kk => (0, Kk.jsx)(iF, {
+          schematic: Fk,
+          onSchematicUpdate: Ik,
+          onClose: kk,
+          inSourceWorld: ik
         }),
         middleScreenPopupClassName: "SchematicPopup",
-        onClose: QC,
+        onClose: Xk,
         unlockPointerKey: "schematicPagePopup"
       })
     }
   },
-  4893: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => WC
+  4942: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => tk
     });
-    var QC = ZC(1002),
-      wC = ZC.n(QC),
-      bC = ZC(1143),
-      nC = ZC(1013),
-      fC = ZC(1388),
-      oC = ZC(1321),
-      qC = ZC(1295),
-      FC = ZC(1056);
+    var Xk = Ik(1055),
+      Tk = Ik.n(Xk),
+      ik = Ik(1179),
+      yk = Ik(1066),
+      lk = Ik(1406),
+      ak = Ik(1333),
+      qk = Ik(1318),
+      Lk = Ik(1096);
 
-    function WC(CC) {
+    function tk(kk) {
       let {
-        editor: zC,
-        className: ZC
-      } = CC;
+        editor: Fk,
+        className: Ik
+      } = kk;
       const {
-        t: QC
-      } = (0, bC.y)(), {
-        schematicData: WC,
-        formEnabled: NC,
-        publishFormEnabled: MC
-      } = zC, gC = !NC || !MC;
-      return (0, FC.jsxs)("div", {
-        className: wC()("PublishButtonContainer", ZC),
-        children: [zC.canEditSourceWorld && (0, FC.jsxs)(fC.g, {
-          onClick: zC.editSourceWorld,
-          disabled: gC,
-          children: [(0, FC.jsx)(nC.c, {
+        t: Xk
+      } = (0, ik.y)(), {
+        schematicData: tk,
+        formEnabled: Zk,
+        publishFormEnabled: jk
+      } = Fk, ek = !Zk || !jk;
+      return (0, Lk.jsxs)("div", {
+        className: Tk()("PublishButtonContainer", Ik),
+        children: [Fk.canEditSourceWorld && (0, Lk.jsxs)(lk.d, {
+          onClick: Fk.editSourceWorld,
+          disabled: ek,
+          children: [(0, Lk.jsx)(yk.e, {
             name: "edit"
-          }), " ", QC("worldBuilder:editSourceWorld")]
-        }), !WC.gamePublished && (0, FC.jsx)(oC.d, {
-          tooltipInner: (0, FC.jsx)("div", {
+          }), " ", Xk("worldBuilder:editSourceWorld")]
+        }), !tk.gamePublished && (0, Lk.jsx)(ak.g, {
+          tooltipInner: (0, Lk.jsx)("div", {
             className: "PublishButtonTooltip",
-            children: QC("worldBuilder:publishAsGameDescription")
+            children: Xk("worldBuilder:publishAsGameDescription")
           }),
-          children: (0, FC.jsxs)(fC.o, {
-            onClick: () => zC.saveSchematic(!0),
-            disabled: gC,
-            children: [(0, FC.jsx)(nC.c, {
+          children: (0, Lk.jsxs)(lk.m, {
+            onClick: () => Fk.saveSchematic(!0),
+            disabled: ek,
+            children: [(0, Lk.jsx)(yk.e, {
               name: "rocket-launch"
-            }), " ", QC("worldBuilder:publishAsGame"), " ", (0, FC.jsx)(nC.c, {
+            }), " ", Xk("worldBuilder:publishAsGame"), " ", (0, Lk.jsx)(yk.e, {
               name: "info-circle"
             })]
           })
-        }), !0 === WC.gamePublished && (0, FC.jsxs)(FC.Fragment, {
-          children: [(0, FC.jsx)(oC.d, {
-            tooltipInner: (0, FC.jsx)("div", {
+        }), !0 === tk.gamePublished && (0, Lk.jsxs)(Lk.Fragment, {
+          children: [(0, Lk.jsx)(ak.g, {
+            tooltipInner: (0, Lk.jsx)("div", {
               className: "PublishButtonTooltip",
-              children: QC("worldBuilder:unpublishAsGameDescription")
+              children: Xk("worldBuilder:unpublishAsGameDescription")
             }),
-            children: (0, FC.jsxs)(fC.I, {
-              onClick: zC.unpublishSchematic,
-              disabled: gC,
-              children: [(0, FC.jsx)(nC.c, {
+            children: (0, Lk.jsxs)(lk.G, {
+              onClick: Fk.unpublishSchematic,
+              disabled: ek,
+              children: [(0, Lk.jsx)(yk.e, {
                 name: "rocket-launch"
-              }), " ", QC("worldBuilder:unpublishAsGame"), " ", (0, FC.jsx)(nC.c, {
+              }), " ", Xk("worldBuilder:unpublishAsGame"), " ", (0, Lk.jsx)(yk.e, {
                 name: "info-circle"
               })]
             })
-          }), (0, FC.jsxs)(fC.g, {
-            onClick: zC.playGame,
-            disabled: gC,
-            children: [(0, FC.jsx)(nC.c, {
+          }), (0, Lk.jsxs)(lk.d, {
+            onClick: Fk.playGame,
+            disabled: ek,
+            children: [(0, Lk.jsx)(yk.e, {
               name: "joystick"
-            }), " ", QC("general:playGame")]
+            }), " ", Xk("general:playGame")]
           })]
-        }), !NC && (0, FC.jsx)(qC.d, {
+        }), !Zk && (0, Lk.jsx)(qk.c, {
           loaderType: "Secondary"
         })]
       })
     }
   },
-  4925: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => wC
+  4976: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Tk
     });
-    var QC = ZC(1149);
-    async function wC(CC) {
-      const zC = await fetch(`${QC.clientSideServerUrls.s3Url}/${CC}`, {
+    var Xk = Ik(1194);
+    async function Tk(kk) {
+      const Fk = await fetch(`${Xk.clientSideServerUrls.s3Url}/${kk}`, {
         headers: {
           Accept: "application/json"
         }
       });
-      if (404 === zC.status || 403 === zC.status) return null;
-      if (!zC.ok) throw new Error(`Failed to download the texture pack (${zC.status})`);
-      return await zC.json()
+      if (404 === Fk.status || 403 === Fk.status) return null;
+      if (!Fk.ok) throw new Error(`Failed to download the texture pack (${Fk.status})`);
+      return await Fk.json()
     }
   },
-  5024: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => pC
+  5073: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => Hk
     });
-    var QC = ZC(48),
-      wC = ZC(1284),
-      bC = ZC(970),
-      nC = ZC(134),
-      fC = ZC(1479),
-      oC = ZC(20),
-      qC = ZC(1840),
-      FC = ZC(1439),
-      WC = ZC(4525),
-      NC = ZC(1307),
-      MC = ZC(1076),
-      gC = ZC(1453);
+    var Xk = Ik(58),
+      Tk = Ik(1308),
+      ik = Ik(1018),
+      yk = Ik(149),
+      lk = Ik(1511),
+      ak = Ik(25),
+      qk = Ik(1875),
+      Lk = Ik(1453),
+      tk = Ik(4584),
+      Zk = Ik(1324),
+      jk = Ik(1118),
+      ek = Ik(1475);
 
-    function SC(CC, zC) {
+    function wk(kk, Fk) {
       return {
-        schematicId: CC.schematicId,
-        name: CC.name,
-        description: CC.description,
-        gamePublished: zC,
-        gameCategory: CC.gameCategory,
-        defaultGamemode: CC.defaultGamemode,
-        voidDeathHeight: CC.voidDeathHeight,
-        disableKeepInventory: CC.disableKeepInventory,
-        disableTpRequests: CC.disableTpRequests,
-        disableLobbySpawn: CC.disableLobbySpawn,
-        disableMobs: CC.disableMobs,
-        disableSpawnProtection: CC.disableSpawnProtection,
-        disableFallDamage: CC.disableFallDamage,
-        worldBorder: CC.worldBorder,
-        hideLobbyCode: CC.hideLobbyCode,
-        enableSmpMarketplace: CC.enableSmpMarketplace,
-        enableSurvivalGuns: CC.enableSurvivalGuns,
-        enableSpawnReset: CC.enableSpawnReset,
-        enableDayNight: CC.enableDayNight,
-        persistWorld: CC.persistWorld,
-        persistInventory: CC.persistInventory
+        schematicId: kk.schematicId,
+        name: kk.name,
+        description: kk.description,
+        gamePublished: Fk,
+        gameCategory: kk.gameCategory,
+        defaultGamemode: kk.defaultGamemode,
+        voidDeathHeight: kk.voidDeathHeight,
+        disableKeepInventory: kk.disableKeepInventory,
+        disableTpRequests: kk.disableTpRequests,
+        disableLobbySpawn: kk.disableLobbySpawn,
+        disableMobs: kk.disableMobs,
+        disableSpawnProtection: kk.disableSpawnProtection,
+        disableFallDamage: kk.disableFallDamage,
+        worldBorder: kk.worldBorder,
+        hideLobbyCode: kk.hideLobbyCode,
+        enableSmpMarketplace: kk.enableSmpMarketplace,
+        enableSurvivalGuns: kk.enableSurvivalGuns,
+        enableSpawnReset: kk.enableSpawnReset,
+        enableDayNight: kk.enableDayNight,
+        persistWorld: kk.persistWorld,
+        persistInventory: kk.persistInventory
       }
     }
 
-    function pC(CC) {
+    function Hk(kk) {
       let {
-        onNavigateAway: zC,
-        inSourceWorld: ZC = !1
+        onNavigateAway: Fk,
+        inSourceWorld: Ik = !1
       } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
       const {
-        userContext: pC
-      } = (0, MC.e)(), PC = (0, gC.useNavigatePreserveSearch)(), [GC, RC] = (0, QC.useState)({
-        ...CC
-      }), [AC, xC] = (0, QC.useState)("Enter"), [JC, IC] = (0, QC.useState)(void 0), iC = (0, QC.useRef)(SC(CC, CC.gamePublished)), vC = (0, QC.useRef)(void 0), eC = "Enter" === AC, hC = pC.playerHasRank("developer") || pC.playerHasRank("admin") || "Enter" === AC && !1 !== GC.schematicContainsSpawnBlock, KC = void 0 !== JC && JC !== vC.current || JSON.stringify(SC(GC, GC.gamePublished)) !== JSON.stringify(iC.current);
+        userContext: Hk
+      } = (0, jk.d)(), Jk = (0, ek.useNavigatePreserveSearch)(), [xk, Pk] = (0, Xk.useState)({
+        ...kk
+      }), [Kk, Qk] = (0, Xk.useState)("Enter"), [sk, Vk] = (0, Xk.useState)(void 0), zk = (0, Xk.useRef)(wk(kk, kk.gamePublished)), Sk = (0, Xk.useRef)(void 0), vk = "Enter" === Kk, Ek = Hk.playerHasRank("developer") || Hk.playerHasRank("admin") || "Enter" === Kk && !1 !== xk.schematicContainsSpawnBlock, Ok = void 0 !== sk && sk !== Sk.current || JSON.stringify(wk(xk, xk.gamePublished)) !== JSON.stringify(zk.current);
 
-      function YC(CC, zC) {
-        RC((ZC => ({
-          ...ZC,
-          [CC]: zC
+      function nk(kk, Fk) {
+        Pk((Ik => ({
+          ...Ik,
+          [kk]: Fk
         })))
       }
-      const dC = (0, QC.useCallback)((CC => {
-        vC.current = CC, IC(CC)
+      const Gk = (0, Xk.useCallback)((kk => {
+        Sk.current = kk, Vk(kk)
       }), []);
 
-      function mC(CC) {
-        xC("Loading");
-        const zC = SC(GC, CC),
-          ZC = JC !== vC.current ? JC : void 0;
-        FC.d.updateSchematic(pC, zC, ZC).then((ZC => {
+      function pk(kk) {
+        Qk("Loading");
+        const Fk = wk(xk, kk),
+          Ik = sk !== Sk.current ? sk : void 0;
+        Lk.e.updateSchematic(Hk, Fk, Ik).then((Ik => {
           let {
-            customTexturePackKey: QC
-          } = ZC;
-          xC("Success"), YC("customTexturePackKey", QC), iC.current = zC, vC.current = void 0, IC(void 0), setTimeout((() => {
-            YC("gamePublished", CC), xC("Enter")
+            customTexturePackKey: Xk
+          } = Ik;
+          Qk("Success"), nk("customTexturePackKey", Xk), zk.current = Fk, Sk.current = void 0, Vk(void 0), setTimeout((() => {
+            nk("gamePublished", kk), Qk("Enter")
           }), 1e3)
-        })).catch((CC => {
-          var zC;
-          (console.error("Failed to save schematic:", CC), xC("Error"), CC instanceof nC.d && CC.errorMessageForUser) && NC.NotificationProvider.showAlertPopup({
+        })).catch((kk => {
+          var Fk;
+          (console.error("Failed to save schematic:", kk), Qk("Error"), kk instanceof yk.b && kk.errorMessageForUser) && Zk.NotificationProvider.showAlertPopup({
             title: "worldBuilder:changesNotSaved",
-            subtitle: CC.errorMessageForUser,
+            subtitle: kk.errorMessageForUser,
             textOpts: {
-              subtitle: null !== (zC = CC.errorMessageTranslationParams) && void 0 !== zC ? zC : void 0
+              subtitle: null !== (Fk = kk.errorMessageTranslationParams) && void 0 !== Fk ? Fk : void 0
             },
             confirmText: "general:ok"
           });
           setTimeout((() => {
-            xC("Enter")
+            Qk("Enter")
           }), 1e3)
         }))
       }
       return {
-        schematicData: GC,
-        updateSchematicData: YC,
-        setTexturePack: IC,
-        initializeTexturePack: dC,
-        updateState: AC,
-        formEnabled: eC,
-        publishFormEnabled: hC,
-        hasUnsavedChanges: KC,
-        canEditSourceWorld: !ZC,
-        saveSchematic: mC,
+        schematicData: xk,
+        updateSchematicData: nk,
+        setTexturePack: Vk,
+        initializeTexturePack: Gk,
+        updateState: Kk,
+        formEnabled: vk,
+        publishFormEnabled: Ek,
+        hasUnsavedChanges: Ok,
+        canEditSourceWorld: !Ik,
+        saveSchematic: pk,
         unpublishSchematic: function() {
-          NC.NotificationProvider.showPromptPopup({
+          Zk.NotificationProvider.showPromptPopup({
             icon: "rocket-launch",
             title: "worldBuilder:unpublishAsGameConfirmTitle",
             subtitle: "worldBuilder:unpublishAsGameConfirmSubtitle",
             confirmText: "worldBuilder:unpublishAsGame",
             cancelText: "general:cancel",
             unlockPointerKey: "unpublishGamePrompt"
-          }).getResult().then((CC => {
-            !0 === CC && mC(!1)
+          }).getResult().then((kk => {
+            !0 === kk && pk(!1)
           }))
         },
         editSourceWorld: function() {
-          xC("Loading"), WC.d.getSourceWorld(GC.schematicId).then((CC => {
-            qC.gameBridge.send("leaveGame", {
+          Qk("Loading"), tk.c.getSourceWorld(xk.schematicId).then((kk => {
+            qk.gameBridge.send("leaveGame", {
               reloadPath: "/"
-            }), (0, oC.g)("other"), PC((0, wC.b)("classic", CC)), null === zC || void 0 === zC || zC()
-          })).catch((CC => {
-            console.error("Failed to get source world:", CC), xC("Error"), setTimeout((() => {
-              xC("Enter")
+            }), (0, ak.h)("other"), Jk((0, Tk.e)("classic", kk)), null === Fk || void 0 === Fk || Fk()
+          })).catch((kk => {
+            console.error("Failed to get source world:", kk), Qk("Error"), setTimeout((() => {
+              Qk("Enter")
             }), 1e3)
           }))
         },
         playGame: function() {
-          qC.gameBridge.send("leaveGame", {
+          qk.gameBridge.send("leaveGame", {
             reloadPath: "/"
-          }), PC((0, fC.v)((0, bC.r)(GC.schematicId), GC)), null === zC || void 0 === zC || zC()
+          }), Jk((0, lk.F)((0, ik.r)(xk.schematicId), xk)), null === Fk || void 0 === Fk || Fk()
         }
       }
     }
   },
-  4880: () => {}
+  4936: () => {}
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

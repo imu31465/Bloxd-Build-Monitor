@@ -1,243 +1,243 @@
 export const id = 122;
 export const ids = [122, 396];
 export const modules = {
-  36221: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      default: () => lz
+  36319: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      default: () => RF
     });
-    var QC = ZC(310),
-      wC = ZC(3464),
-      bC = ZC(3498),
-      nC = ZC(3490),
-      fC = ZC(3487),
-      oC = ZC(1143),
-      qC = ZC(38),
-      FC = ZC(1645),
-      WC = ZC(1321),
-      NC = ZC(1388),
-      MC = ZC(1002),
-      gC = ZC.n(MC),
-      SC = ZC(1593),
-      pC = ZC(48),
-      PC = ZC(60),
-      GC = ZC(2311),
-      RC = ZC(1284),
-      AC = ZC(1542),
-      xC = ZC(1076),
-      JC = ZC(3403),
-      IC = ZC(4491),
-      iC = ZC(3450),
-      vC = ZC(1811),
-      eC = ZC(3460),
-      hC = ZC(1657),
-      KC = ZC(1439),
-      YC = ZC(2086),
-      dC = ZC(1295),
-      mC = ZC(2575),
-      HC = ZC(4971),
-      EC = ZC(1056);
-    const lC = 15e3,
-      XC = 2500;
+    var Xk = Ik(318),
+      Tk = Ik(3442),
+      ik = Ik(3488),
+      yk = Ik(3482),
+      lk = Ik(3475),
+      ak = Ik(1179),
+      qk = Ik(41),
+      Lk = Ik(1665),
+      tk = Ik(1333),
+      Zk = Ik(1406),
+      jk = Ik(1055),
+      ek = Ik.n(jk),
+      wk = Ik(1617),
+      Hk = Ik(58),
+      Jk = Ik(74),
+      xk = Ik(2291),
+      Pk = Ik(1308),
+      Kk = Ik(1560),
+      Qk = Ik(1118),
+      sk = Ik(3352),
+      Vk = Ik(4543),
+      zk = Ik(3420),
+      Sk = Ik(1849),
+      vk = Ik(3437),
+      Ek = Ik(1673),
+      Ok = Ik(1453),
+      nk = Ik(2089),
+      Gk = Ik(1318),
+      pk = Ik(2525),
+      uk = Ik(5016),
+      bk = Ik(1096);
+    const Rk = 15e3,
+      Uk = 2500;
 
-    function cC(CC) {
-      var zC;
+    function Ck(kk) {
+      var Fk;
       let {
-        eventName: ZC
-      } = CC;
+        eventName: Ik
+      } = kk;
       const {
-        t: QC
-      } = (0, oC.y)(), wC = hC.g[ZC], [bC, nC] = (0, pC.useState)((() => Date.now() >= wC.endsAt.getTime())), [fC, qC] = (0, pC.useState)("overall"), FC = function(CC, zC) {
+        t: Xk
+      } = (0, ak.y)(), Tk = Ek.f[Ik], [ik, yk] = (0, Hk.useState)((() => Date.now() >= Tk.endsAt.getTime())), [lk, qk] = (0, Hk.useState)("overall"), Lk = function(kk, Fk) {
         const {
-          userContext: ZC,
-          isUserContextUpdating: QC
-        } = (0, xC.e)(), wC = `${CC}:${zC}`, [bC, nC] = (0, pC.useState)({
-          requestKey: wC,
+          userContext: Ik,
+          isUserContextUpdating: Xk
+        } = (0, Qk.d)(), Tk = `${kk}:${Fk}`, [ik, yk] = (0, Hk.useState)({
+          requestKey: Tk,
           leaderboard: {
             status: "loading"
           }
         });
-        return (0, pC.useEffect)((() => {
-          if (QC) return;
-          let bC, fC = !1;
-          const oC = async () => {
+        return (0, Hk.useEffect)((() => {
+          if (Xk) return;
+          let ik, lk = !1;
+          const ak = async () => {
             if ("visible" === document.visibilityState) try {
-              const QC = await KC.d.getGameEventLeaderboard(ZC, {
-                event: CC,
-                scope: zC
+              const Xk = await Ok.e.getGameEventLeaderboard(Ik, {
+                event: kk,
+                scope: Fk
               });
-              fC || nC({
-                requestKey: wC,
+              lk || yk({
+                requestKey: Tk,
                 leaderboard: {
                   status: "loaded",
-                  leaderboard: QC
+                  leaderboard: Xk
                 }
               })
             } catch {
-              fC || nC((CC => CC.requestKey === wC && "loaded" === CC.leaderboard.status ? CC : {
-                requestKey: wC,
+              lk || yk((kk => kk.requestKey === Tk && "loaded" === kk.leaderboard.status ? kk : {
+                requestKey: Tk,
                 leaderboard: {
                   status: "unavailable"
                 }
               }))
             }
-            fC || (bC = setTimeout(oC, lC))
+            lk || (ik = setTimeout(ak, Rk))
           };
-          return oC(), () => {
-            fC = !0, clearTimeout(bC)
+          return ak(), () => {
+            lk = !0, clearTimeout(ik)
           }
-        }), [CC, zC, wC, ZC, QC]), bC.requestKey === wC ? bC.leaderboard : {
+        }), [kk, Fk, Tk, Ik, Xk]), ik.requestKey === Tk ? ik.leaderboard : {
           status: "loading"
         }
-      }(ZC, fC), WC = function(CC) {
-        const zC = (0, pC.useRef)(null),
-          ZC = (0, pC.useRef)(0),
-          QC = (0, pC.useRef)(),
-          [wC, bC] = (0, pC.useState)({});
-        return (0, pC.useEffect)((() => {
-          const wC = null === CC || void 0 === CC ? void 0 : CC.entries;
-          if (!wC) return;
-          const nC = new Map(wC.map((CC => [CC.player.name, CC.value]))),
-            fC = zC.current;
-          if (zC.current = nC, null === fC) return;
-          const oC = {};
-          for (const [CC, zC] of nC) {
-            const QC = fC.get(CC);
-            void 0 !== QC && zC > QC && (oC[CC] = {
-              amount: zC - QC,
-              key: ZC.current++
+      }(Ik, lk), tk = function(kk) {
+        const Fk = (0, Hk.useRef)(null),
+          Ik = (0, Hk.useRef)(0),
+          Xk = (0, Hk.useRef)(),
+          [Tk, ik] = (0, Hk.useState)({});
+        return (0, Hk.useEffect)((() => {
+          const Tk = null === kk || void 0 === kk ? void 0 : kk.entries;
+          if (!Tk) return;
+          const yk = new Map(Tk.map((kk => [kk.player.name, kk.value]))),
+            lk = Fk.current;
+          if (Fk.current = yk, null === lk) return;
+          const ak = {};
+          for (const [kk, Fk] of yk) {
+            const Xk = lk.get(kk);
+            void 0 !== Xk && Fk > Xk && (ak[kk] = {
+              amount: Fk - Xk,
+              key: Ik.current++
             })
           }
-          0 !== Object.keys(oC).length && (bC(oC), clearTimeout(QC.current), QC.current = setTimeout((() => {
-            bC({})
-          }), XC))
-        }), [CC]), (0, pC.useEffect)((() => () => {
-          clearTimeout(QC.current)
-        }), []), wC
-      }("loaded" === FC.status ? FC.leaderboard : null), NC = function(CC) {
-        const [zC, ZC] = (0, pC.useState)(null), QC = "loaded" === CC.status ? CC.leaderboard.goalProgress : void 0;
-        return (0, pC.useEffect)((() => {
-          QC && ZC(QC)
-        }), [QC]), zC
-      }(FC), MC = YC.f[`profileEffect_${wC.prizePack}`];
-      if (bC) return null;
-      const SC = "loaded" === FC.status ? FC.leaderboard : null,
-        PC = null !== (zC = null === SC || void 0 === SC ? void 0 : SC.entries) && void 0 !== zC ? zC : null,
-        GC = null !== SC && void 0 !== SC && SC.own && null !== PC && !PC.some((CC => CC.isOwn)) ? SC.own : null;
-      return (0, EC.jsx)("section", {
+          0 !== Object.keys(ak).length && (ik(ak), clearTimeout(Xk.current), Xk.current = setTimeout((() => {
+            ik({})
+          }), Uk))
+        }), [kk]), (0, Hk.useEffect)((() => () => {
+          clearTimeout(Xk.current)
+        }), []), Tk
+      }("loaded" === Lk.status ? Lk.leaderboard : null), Zk = function(kk) {
+        const [Fk, Ik] = (0, Hk.useState)(null), Xk = "loaded" === kk.status ? kk.leaderboard.goalProgress : void 0;
+        return (0, Hk.useEffect)((() => {
+          Xk && Ik(Xk)
+        }), [Xk]), Fk
+      }(Lk), jk = nk.d[`profileEffect_${Tk.prizePack}`];
+      if (ik) return null;
+      const wk = "loaded" === Lk.status ? Lk.leaderboard : null,
+        Jk = null !== (Fk = null === wk || void 0 === wk ? void 0 : wk.entries) && void 0 !== Fk ? Fk : null,
+        xk = null !== wk && void 0 !== wk && wk.own && null !== Jk && !Jk.some((kk => kk.isOwn)) ? wk.own : null;
+      return (0, bk.jsx)("section", {
         className: "GameEventPanel AnimFadeIn",
-        children: (0, EC.jsxs)("div", {
+        children: (0, bk.jsxs)("div", {
           className: "GameEventPanelCard",
-          children: [(0, EC.jsxs)("div", {
+          children: [(0, bk.jsxs)("div", {
             className: "GameEventPanelInfo",
-            children: [(0, EC.jsxs)("div", {
+            children: [(0, bk.jsxs)("div", {
               className: "GameEventPanelStatus",
-              children: [(0, EC.jsxs)("span", {
+              children: [(0, bk.jsxs)("span", {
                 className: "GameEventPanelLive",
-                children: [(0, EC.jsx)("span", {
+                children: [(0, bk.jsx)("span", {
                   className: "GameEventPanelLiveDot"
-                }), QC("gameEvents:live")]
-              }), (0, EC.jsxs)("span", {
+                }), Xk("gameEvents:live")]
+              }), (0, bk.jsxs)("span", {
                 className: "GameEventPanelEndsIn",
-                children: [QC("gameEvents:endsIn"), (0, EC.jsx)(iC.b, {
-                  toTime: wC.endsAt,
+                children: [Xk("gameEvents:endsIn"), (0, bk.jsx)(zk.b, {
+                  toTime: Tk.endsAt,
                   onReachEndOfCountdown: () => {
-                    nC(!0)
+                    yk(!0)
                   }
                 })]
               })]
-            }), (0, EC.jsx)("h2", {
+            }), (0, bk.jsx)("h2", {
               className: "GameEventPanelTitle",
-              children: QC(wC.titleKey)
-            }), (0, EC.jsxs)("div", {
+              children: Xk(Tk.titleKey)
+            }), (0, bk.jsxs)("div", {
               className: "GameEventPanelPrize",
-              children: [(0, EC.jsxs)("div", {
+              children: [(0, bk.jsxs)("div", {
                 className: "GameEventPanelPrizeSummary",
-                children: [MC && (0, EC.jsx)("div", {
+                children: [jk && (0, bk.jsx)("div", {
                   className: "GameEventPanelPrizePreview",
-                  children: (0, EC.jsx)(MC, {})
-                }), (0, EC.jsxs)("div", {
+                  children: (0, bk.jsx)(jk, {})
+                }), (0, bk.jsxs)("div", {
                   className: "GameEventPanelPrizeText",
-                  children: [(0, EC.jsx)("div", {
+                  children: [(0, bk.jsx)("div", {
                     className: "GameEventPanelPrizeLabel",
-                    children: QC("gameEvents:prize")
-                  }), (0, EC.jsx)("div", {
+                    children: Xk("gameEvents:prize")
+                  }), (0, bk.jsx)("div", {
                     className: "GameEventPanelPrizeName",
-                    children: QC(wC.prizeNameKey)
+                    children: Xk(Tk.prizeNameKey)
                   })]
                 })]
-              }), (0, EC.jsx)(uC, {
-                event: wC,
-                progress: NC
+              }), (0, bk.jsx)(Nk, {
+                event: Tk,
+                progress: Zk
               })]
             })]
-          }), (0, EC.jsxs)("div", {
+          }), (0, bk.jsxs)("div", {
             className: "GameEventPanelLeaderboard",
-            children: [(0, EC.jsxs)("div", {
+            children: [(0, bk.jsxs)("div", {
               className: "GameEventPanelLeaderboardHeader",
-              children: [(0, EC.jsx)("h3", {
+              children: [(0, bk.jsx)("h3", {
                 className: "GameEventPanelLeaderboardTitle",
-                children: QC(wC.leaderboard.titleKey)
-              }), (0, EC.jsx)(HC.b, {
-                ariaLabel: QC("gameEvents:leaderboardScope"),
-                options: hC.e.map((CC => ({
-                  value: CC,
-                  label: QC(`gameEvents:${CC}Scope`)
+                children: Xk(Tk.leaderboard.titleKey)
+              }), (0, bk.jsx)(uk.b, {
+                ariaLabel: Xk("gameEvents:leaderboardScope"),
+                options: Ek.c.map((kk => ({
+                  value: kk,
+                  label: Xk(`gameEvents:${kk}Scope`)
                 }))),
-                value: fC,
-                onChange: qC
+                value: lk,
+                onChange: qk
               })]
-            }), "loading" === FC.status && (0, EC.jsx)("div", {
+            }), "loading" === Lk.status && (0, bk.jsx)("div", {
               className: "GameEventPanelLeaderboardLoader AnimFadeIn",
-              children: (0, EC.jsx)(dC.d, {})
-            }), ("unavailable" === FC.status || "loaded" === FC.status && null === PC) && (0, EC.jsx)("div", {
+              children: (0, bk.jsx)(Gk.c, {})
+            }), ("unavailable" === Lk.status || "loaded" === Lk.status && null === Jk) && (0, bk.jsx)("div", {
               className: "GameEventPanelLeaderboardMessage",
-              children: QC("gameEvents:leaderboardUnavailable")
-            }), null !== PC && 0 === PC.length && (0, EC.jsx)("div", {
+              children: Xk("gameEvents:leaderboardUnavailable")
+            }), null !== Jk && 0 === Jk.length && (0, bk.jsx)("div", {
               className: "GameEventPanelLeaderboardMessage",
-              children: QC("friends" === fC ? "gameEvents:friendsLeaderboardEmpty" : "gameEvents:leaderboardEmpty")
-            }), null !== PC && PC.length > 0 && (0, EC.jsx)("ol", {
+              children: Xk("friends" === lk ? "gameEvents:friendsLeaderboardEmpty" : "gameEvents:leaderboardEmpty")
+            }), null !== Jk && Jk.length > 0 && (0, bk.jsx)("ol", {
               className: "GameEventPanelRows",
-              children: PC.map((CC => {
-                const zC = WC[CC.player.name];
-                return (0, EC.jsxs)("li", {
-                  className: gC()("GameEventPanelRow", {
-                    GameEventPanelRowOwn: CC.isOwn,
-                    GameEventPanelRowTop: CC.rank <= 3
+              children: Jk.map((kk => {
+                const Fk = tk[kk.player.name];
+                return (0, bk.jsxs)("li", {
+                  className: ek()("GameEventPanelRow", {
+                    GameEventPanelRowOwn: kk.isOwn,
+                    GameEventPanelRowTop: kk.rank <= 3
                   }),
-                  children: [(0, EC.jsxs)("span", {
+                  children: [(0, bk.jsxs)("span", {
                     className: "GameEventPanelRank",
-                    children: ["#", CC.rank]
-                  }), (0, EC.jsx)("div", {
+                    children: ["#", kk.rank]
+                  }), (0, bk.jsx)("div", {
                     className: "GameEventPanelPlayer",
-                    children: (0, EC.jsx)(mC.f, {
+                    children: (0, bk.jsx)(pk.g, {
                       playerSocialPreview: {
-                        ...CC.player,
+                        ...kk.player,
                         location: {
                           status: "offline"
                         }
                       },
                       showLocation: !1
                     })
-                  }), void 0 !== zC && (0, EC.jsxs)("span", {
+                  }), void 0 !== Fk && (0, bk.jsxs)("span", {
                     className: "GameEventPanelGain",
-                    children: ["+", zC.amount.toLocaleString()]
-                  }, zC.key), (0, EC.jsx)("span", {
+                    children: ["+", Fk.amount.toLocaleString()]
+                  }, Fk.key), (0, bk.jsx)("span", {
                     className: "GameEventPanelScore",
-                    children: CC.value.toLocaleString()
+                    children: kk.value.toLocaleString()
                   })]
-                }, CC.player.name)
+                }, kk.player.name)
               }))
-            }), GC && (0, EC.jsxs)("div", {
+            }), xk && (0, bk.jsxs)("div", {
               className: "GameEventPanelRow GameEventPanelRowOwn GameEventPanelOwnRow",
-              children: [(0, EC.jsxs)("span", {
+              children: [(0, bk.jsxs)("span", {
                 className: "GameEventPanelRank",
-                children: ["#", GC.rank.toLocaleString()]
-              }), (0, EC.jsx)("span", {
+                children: ["#", xk.rank.toLocaleString()]
+              }), (0, bk.jsx)("span", {
                 className: "GameEventPanelPlayer",
-                children: QC("gameEvents:yourPlace")
-              }), (0, EC.jsx)("span", {
+                children: Xk("gameEvents:yourPlace")
+              }), (0, bk.jsx)("span", {
                 className: "GameEventPanelScore",
-                children: GC.value.toLocaleString()
+                children: xk.value.toLocaleString()
               })]
             })]
           })]
@@ -245,355 +245,355 @@ export const modules = {
       })
     }
 
-    function uC(CC) {
+    function Nk(kk) {
       let {
-        event: zC,
-        progress: ZC
-      } = CC;
+        event: Fk,
+        progress: Ik
+      } = kk;
       const {
-        t: QC
-      } = (0, oC.y)(), wC = null !== ZC && zC.prizeGoals.some(((CC, zC) => ZC[zC] >= CC.target));
-      return (0, EC.jsxs)("div", {
+        t: Xk
+      } = (0, ak.y)(), Tk = null !== Ik && Fk.prizeGoals.some(((kk, Fk) => Ik[Fk] >= kk.target));
+      return (0, bk.jsxs)("div", {
         className: "GameEventPanelGoals",
-        children: [(0, EC.jsx)("div", {
+        children: [(0, bk.jsx)("div", {
           className: "GameEventPanelGoalsHeading",
-          children: QC(wC ? "gameEvents:prizeEarned" : "gameEvents:goalsHeading")
-        }), (0, EC.jsx)("div", {
+          children: Xk(Tk ? "gameEvents:prizeEarned" : "gameEvents:goalsHeading")
+        }), (0, bk.jsx)("div", {
           className: "GameEventPanelGoalRow",
-          children: zC.prizeGoals.map(((CC, zC) => {
-            const wC = null === ZC ? null : Math.min(ZC[zC], CC.target);
-            return (0, EC.jsxs)(pC.Fragment, {
-              children: [zC > 0 && (0, EC.jsx)("div", {
+          children: Fk.prizeGoals.map(((kk, Fk) => {
+            const Tk = null === Ik ? null : Math.min(Ik[Fk], kk.target);
+            return (0, bk.jsxs)(Hk.Fragment, {
+              children: [Fk > 0 && (0, bk.jsx)("div", {
                 className: "GameEventPanelGoalsOr",
-                children: QC("gameEvents:goalsOr")
-              }), (0, EC.jsxs)("div", {
-                className: gC()("GameEventPanelGoal", {
-                  GameEventPanelGoalDone: wC === CC.target
+                children: Xk("gameEvents:goalsOr")
+              }), (0, bk.jsxs)("div", {
+                className: ek()("GameEventPanelGoal", {
+                  GameEventPanelGoalDone: Tk === kk.target
                 }),
-                children: [(0, EC.jsx)("span", {
+                children: [(0, bk.jsx)("span", {
                   className: "GameEventPanelGoalLabel",
-                  children: QC(CC.labelKey)
-                }), (0, EC.jsxs)("div", {
+                  children: Xk(kk.labelKey)
+                }), (0, bk.jsxs)("div", {
                   className: "GameEventPanelGoalBar",
-                  children: [(0, EC.jsx)("div", {
+                  children: [(0, bk.jsx)("div", {
                     className: "GameEventPanelGoalBarFill",
                     style: {
-                      width: (null !== wC && void 0 !== wC ? wC : 0) / CC.target * 100 + "%"
+                      width: (null !== Tk && void 0 !== Tk ? Tk : 0) / kk.target * 100 + "%"
                     }
-                  }), null !== wC && (0, EC.jsxs)("span", {
+                  }), null !== Tk && (0, bk.jsxs)("span", {
                     className: "GameEventPanelGoalCount",
-                    children: [wC.toLocaleString(), " / ", CC.target.toLocaleString()]
+                    children: [Tk.toLocaleString(), " / ", kk.target.toLocaleString()]
                   })]
                 })]
               })]
-            }, CC.board)
+            }, kk.board)
           }))
         })]
       })
     }
-    var rC = ZC(1479),
-      sC = ZC(1529),
-      TC = ZC(991),
-      aC = ZC(696),
-      tC = ZC(3448);
+    var ck = Ik(1511),
+      Wk = Ik(1545),
+      fk = Ik(1041),
+      Bk = Ik(743),
+      dk = Ik(3414);
 
-    function DC(CC) {
+    function Yk(kk) {
       let {
-        gameNameWithVariation: zC
-      } = CC;
-      const ZC = (0, rC.A)(zC),
-        [QC, wC] = (0, pC.useState)(null);
-      if ((0, pC.useEffect)((() => {
-          if (!ZC) return;
-          let CC = !0;
-          return (0, sC.k)(ZC).then((zC => {
-            CC && wC(zC)
-          })).catch((CC => {
-            console.error(`Failed to load the page copy for ${ZC.name}`, CC)
+        gameNameWithVariation: Fk
+      } = kk;
+      const Ik = (0, ck.J)(Fk),
+        [Xk, Tk] = (0, Hk.useState)(null);
+      if ((0, Hk.useEffect)((() => {
+          if (!Ik) return;
+          let kk = !0;
+          return (0, Wk.e)(Ik).then((Fk => {
+            kk && Tk(Fk)
+          })).catch((kk => {
+            console.error(`Failed to load the page copy for ${Ik.name}`, kk)
           })), () => {
-            CC = !1
+            kk = !1
           }
-        }), [ZC]), !ZC || !QC || QC.name !== ZC.name) return null;
-      const bC = (0, sC.g)(QC),
-        nC = new Set((0, TC.e)((0, aC.i)()).map((CC => (0, rC.r)(CC)))),
-        fC = QC.similarGames.filter((CC => nC.has((0, rC.r)(CC))));
-      return (0, EC.jsx)("div", {
+        }), [Ik]), !Ik || !Xk || Xk.name !== Ik.name) return null;
+      const ik = (0, Wk.d)(Xk),
+        yk = new Set((0, fk.d)((0, Bk.k)()).map((kk => (0, ck.C)(kk)))),
+        lk = Xk.similarGames.filter((kk => yk.has((0, ck.C)(kk))));
+      return (0, bk.jsx)("div", {
         className: "GamePageContent",
-        children: (0, EC.jsxs)("div", {
+        children: (0, bk.jsxs)("div", {
           className: "GamePageContentColumns",
-          children: [(0, EC.jsxs)("section", {
+          children: [(0, bk.jsxs)("section", {
             className: "GamePageContentSection",
-            children: [(0, EC.jsx)("h2", {
-              children: bC.whatIs
-            }), QC.whatIs.map((CC => (0, EC.jsx)("p", {
-              children: CC
-            }, CC)))]
-          }), (0, EC.jsxs)("section", {
+            children: [(0, bk.jsx)("h2", {
+              children: ik.whatIs
+            }), Xk.whatIs.map((kk => (0, bk.jsx)("p", {
+              children: kk
+            }, kk)))]
+          }), (0, bk.jsxs)("section", {
             className: "GamePageContentSection",
-            children: [(0, EC.jsx)("h2", {
-              children: bC.howToPlay
-            }), QC.howToPlay.map((CC => (0, EC.jsx)("p", {
-              children: CC
-            }, CC)))]
-          }), (0, EC.jsxs)("section", {
+            children: [(0, bk.jsx)("h2", {
+              children: ik.howToPlay
+            }), Xk.howToPlay.map((kk => (0, bk.jsx)("p", {
+              children: kk
+            }, kk)))]
+          }), (0, bk.jsxs)("section", {
             className: "GamePageContentSection",
-            children: [(0, EC.jsx)("h2", {
-              children: bC.features
-            }), (0, EC.jsx)("ul", {
-              children: QC.features.map((CC => (0, EC.jsx)("li", {
-                children: CC
-              }, CC)))
+            children: [(0, bk.jsx)("h2", {
+              children: ik.features
+            }), (0, bk.jsx)("ul", {
+              children: Xk.features.map((kk => (0, bk.jsx)("li", {
+                children: kk
+              }, kk)))
             })]
-          }), (0, EC.jsxs)("aside", {
+          }), (0, bk.jsxs)("aside", {
             className: "GamePageContentSection",
-            children: [(0, EC.jsx)("h2", {
-              children: bC.tips
-            }), (0, EC.jsx)("ul", {
-              children: QC.tips.map((CC => (0, EC.jsx)("li", {
-                children: CC
-              }, CC)))
+            children: [(0, bk.jsx)("h2", {
+              children: ik.tips
+            }), (0, bk.jsx)("ul", {
+              children: Xk.tips.map((kk => (0, bk.jsx)("li", {
+                children: kk
+              }, kk)))
             })]
-          }), (0, EC.jsxs)("section", {
+          }), (0, bk.jsxs)("section", {
             className: "GamePageContentSection GamePageContentFaq",
-            children: [(0, EC.jsx)("h2", {
-              children: bC.faq
-            }), QC.faq.map((CC => {
+            children: [(0, bk.jsx)("h2", {
+              children: ik.faq
+            }), Xk.faq.map((kk => {
               let {
-                question: zC,
-                answer: ZC
-              } = CC;
-              return (0, EC.jsxs)("div", {
+                question: Fk,
+                answer: Ik
+              } = kk;
+              return (0, bk.jsxs)("div", {
                 className: "GamePageContentFaqItem",
-                children: [(0, EC.jsx)("h3", {
-                  children: zC
-                }), (0, EC.jsx)("p", {
-                  children: ZC
+                children: [(0, bk.jsx)("h3", {
+                  children: Fk
+                }), (0, bk.jsx)("p", {
+                  children: Ik
                 })]
-              }, zC)
+              }, Fk)
             }))]
-          }), fC.length > 0 && (0, EC.jsxs)("nav", {
+          }), lk.length > 0 && (0, bk.jsxs)("nav", {
             className: "GamePageContentSection GamePageContentSimilarGamesSection",
-            children: [(0, EC.jsx)("h2", {
-              children: bC.similarGames
-            }), (0, EC.jsx)("ul", {
+            children: [(0, bk.jsx)("h2", {
+              children: ik.similarGames
+            }), (0, bk.jsx)("ul", {
               className: "GamePageContentSimilarGames",
-              children: fC.map((CC => (0, EC.jsx)("li", {
-                children: (0, EC.jsx)(tC.d, {
+              children: lk.map((kk => (0, bk.jsx)("li", {
+                children: (0, bk.jsx)(dk.c, {
                   source: {
                     type: "game",
-                    gameNameWithVariation: CC
+                    gameNameWithVariation: kk
                   },
                   entrySource: "other",
                   gameWidth: "100%",
                   useLongRatio: !0
                 })
-              }, CC)))
+              }, kk)))
             })]
           })]
         })
       })
     }
-    var jC = ZC(1013),
-      yC = ZC(77),
-      LC = ZC(1078),
-      UC = ZC(34202),
-      BC = ZC(1575),
-      OC = ZC(1463),
-      kC = ZC(1453),
-      VC = ZC(1540),
-      Cz = ZC(1394),
-      zz = ZC(1307),
-      Zz = ZC(36223),
-      Qz = ZC(1178),
-      wz = ZC(970),
-      bz = ZC(326),
-      nz = ZC(979),
-      fz = ZC(1477),
-      oz = ZC(8912),
-      qz = ZC(20),
-      Fz = ZC(2465),
-      Wz = ZC(728),
-      Nz = ZC(1169),
-      Mz = ZC(6513),
-      gz = ZC(3452);
+    var Ak = Ik(1066),
+      gk = Ik(95),
+      mk = Ik(1120),
+      hk = Ik(34231),
+      rk = Ik(1597),
+      Dk = Ik(1485),
+      Mk = Ik(1475),
+      kF = Ik(1556),
+      FF = Ik(1420),
+      IF = Ik(1324),
+      XF = Ik(36327),
+      TF = Ik(1223),
+      iF = Ik(1018),
+      yF = Ik(337),
+      lF = Ik(1023),
+      aF = Ik(1504),
+      qF = Ik(8898),
+      LF = Ik(25),
+      tF = Ik(2438),
+      ZF = Ik(768),
+      jF = Ik(1217),
+      eF = Ik(6501),
+      wF = Ik(3428);
 
-    function Sz(CC) {
+    function HF(kk) {
       let {
-        preview: zC,
-        isBroken: ZC
-      } = CC;
-      const QC = null === zC ? null : (0, bC.g)(zC, "small"),
-        nC = (0, wC.e)(null !== QC && void 0 !== QC ? QC : bC.p);
-      return null === zC ? (0, EC.jsx)("div", {
-        className: gC()("FeaturedGamesPopupSlotThumbnail FeaturedGamesPopupSlotThumbnailEmpty", {
-          FeaturedGamesPopupSlotThumbnailBroken: ZC
+        preview: Fk,
+        isBroken: Ik
+      } = kk;
+      const Xk = null === Fk ? null : (0, ik.h)(Fk, "small"),
+        yk = (0, Tk.e)(null !== Xk && void 0 !== Xk ? Xk : ik.s);
+      return null === Fk ? (0, bk.jsx)("div", {
+        className: ek()("FeaturedGamesPopupSlotThumbnail FeaturedGamesPopupSlotThumbnailEmpty", {
+          FeaturedGamesPopupSlotThumbnailBroken: Ik
         }),
-        children: (0, EC.jsx)(jC.c, {
-          name: ZC ? "triangle-exclamation" : "star"
+        children: (0, bk.jsx)(Ak.e, {
+          name: Ik ? "triangle-exclamation" : "star"
         })
-      }) : (0, EC.jsx)("div", {
-        className: gC()("FeaturedGamesPopupSlotThumbnail", fC.k),
-        style: (0, fC.g)(nC),
+      }) : (0, bk.jsx)("div", {
+        className: ek()("FeaturedGamesPopupSlotThumbnail", lk.g),
+        style: (0, lk.f)(yk),
         role: "img",
-        "aria-label": zC.name,
-        children: (0, EC.jsx)(fC.d, {
-          image: nC
+        "aria-label": Fk.name,
+        children: (0, bk.jsx)(lk.d, {
+          image: yk
         })
       })
     }
 
-    function pz(CC) {
+    function JF(kk) {
       let {
-        schematicId: zC,
-        gameName: ZC
-      } = CC;
+        schematicId: Fk,
+        gameName: Ik
+      } = kk;
       const {
-        userContext: wC
-      } = (0, xC.e)(), bC = (0, gz.e)(), [nC, fC] = (0, pC.useState)(null), [oC, qC] = (0, pC.useState)(null), [FC, WC] = (0, pC.useState)(!1), MC = (0, pC.useCallback)((() => {
-        qC(null), KC.d.getFeaturedGames(wC).then((CC => {
-          bC.current && fC(CC.slots)
-        })).catch((CC => {
-          console.error("Failed to get featured games", CC), bC.current && qC("Failed to load featured games")
+        userContext: Tk
+      } = (0, Qk.d)(), ik = (0, wF.d)(), [yk, lk] = (0, Hk.useState)(null), [ak, qk] = (0, Hk.useState)(null), [Lk, tk] = (0, Hk.useState)(!1), jk = (0, Hk.useCallback)((() => {
+        qk(null), Ok.e.getFeaturedGames(Tk).then((kk => {
+          ik.current && lk(kk.slots)
+        })).catch((kk => {
+          console.error("Failed to get featured games", kk), ik.current && qk("Failed to load featured games")
         }))
-      }), [wC, bC]);
-      (0, pC.useEffect)((() => {
-        MC()
-      }), [MC]);
-      const gC = (CC, zC) => {
-        FC || (WC(!0), KC.d.setFeaturedGame(wC, CC, zC).then((() => {
-          bC.current && MC()
-        })).catch((CC => {
-          console.error("Failed to set featured game", CC), bC.current && qC("Failed to update the featured slot")
+      }), [Tk, ik]);
+      (0, Hk.useEffect)((() => {
+        jk()
+      }), [jk]);
+      const ek = (kk, Fk) => {
+        Lk || (tk(!0), Ok.e.setFeaturedGame(Tk, kk, Fk).then((() => {
+          ik.current && jk()
+        })).catch((kk => {
+          console.error("Failed to set featured game", kk), ik.current && qk("Failed to update the featured slot")
         })).finally((() => {
-          bC.current && WC(!1)
+          ik.current && tk(!1)
         })))
       };
-      return (0, EC.jsxs)("div", {
+      return (0, bk.jsxs)("div", {
         className: "FeaturedGamesPopupBody",
-        children: [(0, EC.jsx)("h1", {
+        children: [(0, bk.jsx)("h1", {
           className: "FeaturedGamesPopupTitle",
           children: "Featured Games"
-        }), !nC && !oC && (0, EC.jsx)("div", {
+        }), !yk && !ak && (0, bk.jsx)("div", {
           className: "FeaturedGamesPopupLoader",
-          children: (0, EC.jsx)(dC.d, {})
-        }), oC && (0, EC.jsx)("div", {
+          children: (0, bk.jsx)(Gk.c, {})
+        }), ak && (0, bk.jsx)("div", {
           className: "FeaturedGamesPopupError",
-          children: oC
-        }), nC && (0, EC.jsxs)(EC.Fragment, {
-          children: [(0, EC.jsx)("div", {
+          children: ak
+        }), yk && (0, bk.jsxs)(bk.Fragment, {
+          children: [(0, bk.jsx)("div", {
             className: "FeaturedGamesPopupSlots",
-            children: nC.map((CC => {
-              const ZC = CC.schematicId === zC,
-                wC = null === CC.schematicId,
+            children: yk.map((kk => {
+              const Ik = kk.schematicId === Fk,
+                Tk = null === kk.schematicId,
                 {
-                  categoryGroup: bC
-                } = QC.J[CC.slotId];
-              return (0, EC.jsxs)("div", {
+                  categoryGroup: ik
+                } = Xk.N[kk.slotId];
+              return (0, bk.jsxs)("div", {
                 className: "FeaturedGamesPopupSlot",
-                children: [(0, EC.jsx)(Sz, {
-                  preview: CC.preview,
-                  isBroken: !wC
-                }), (0, EC.jsxs)("div", {
+                children: [(0, bk.jsx)(HF, {
+                  preview: kk.preview,
+                  isBroken: !Tk
+                }), (0, bk.jsxs)("div", {
                   className: "FeaturedGamesPopupSlotText",
-                  children: [(0, EC.jsxs)("div", {
+                  children: [(0, bk.jsxs)("div", {
                     className: "FeaturedGamesPopupSlotLabel",
-                    children: [(0, QC.jb)(bC), " \xb7 position", " ", (0, QC.M)(CC.slotId, QC.Nb) + 1, " of", " ", (0, QC.Jb)(bC, QC.Nb)]
-                  }), wC && (0, EC.jsx)("div", {
+                    children: [(0, Xk.mb)(ik), " \xb7 position", " ", (0, Xk.P)(kk.slotId, Xk.Ub) + 1, " of", " ", (0, Xk.Sb)(ik, Xk.Ub)]
+                  }), Tk && (0, bk.jsx)("div", {
                     className: "FeaturedGamesPopupSlotEmpty",
                     children: "Empty"
-                  }), !wC && null !== CC.preview && (0, EC.jsx)("div", {
+                  }), !Tk && null !== kk.preview && (0, bk.jsx)("div", {
                     className: "FeaturedGamesPopupSlotGame",
-                    children: CC.preview.name
-                  }), !wC && null === CC.preview && (0, EC.jsxs)("div", {
+                    children: kk.preview.name
+                  }), !Tk && null === kk.preview && (0, bk.jsxs)("div", {
                     className: "FeaturedGamesPopupSlotMissing",
-                    children: [(0, EC.jsx)(jC.c, {
+                    children: [(0, bk.jsx)(Ak.e, {
                       name: "triangle-exclamation"
                     }), " Pinned game is no longer published"]
                   })]
-                }), (0, EC.jsxs)("div", {
+                }), (0, bk.jsxs)("div", {
                   className: "FeaturedGamesPopupSlotActions",
-                  children: [wC && (0, EC.jsxs)(NC.t, {
+                  children: [Tk && (0, bk.jsxs)(Zk.q, {
                     className: "FeaturedGamesPopupSlotButton",
                     onClick: () => {
-                      gC(CC.slotId, zC)
+                      ek(kk.slotId, Fk)
                     },
-                    disabled: FC,
-                    children: [(0, EC.jsx)(jC.c, {
+                    disabled: Lk,
+                    children: [(0, bk.jsx)(Ak.e, {
                       name: "star"
                     }), " Feature here"]
-                  }), !wC && !ZC && (0, EC.jsxs)(NC.O, {
+                  }), !Tk && !Ik && (0, bk.jsxs)(Zk.Q, {
                     className: "FeaturedGamesPopupSlotButton",
                     onClick: () => {
-                      gC(CC.slotId, zC)
+                      ek(kk.slotId, Fk)
                     },
-                    disabled: FC,
-                    children: [(0, EC.jsx)(jC.c, {
+                    disabled: Lk,
+                    children: [(0, bk.jsx)(Ak.e, {
                       name: "star"
                     }), " Replace"]
-                  }), !wC && (0, EC.jsxs)(NC.I, {
+                  }), !Tk && (0, bk.jsxs)(Zk.G, {
                     className: "FeaturedGamesPopupSlotButton",
                     onClick: () => {
-                      gC(CC.slotId, null)
+                      ek(kk.slotId, null)
                     },
-                    disabled: FC,
-                    children: [(0, EC.jsx)(jC.c, {
+                    disabled: Lk,
+                    children: [(0, bk.jsx)(Ak.e, {
                       name: "xmark"
                     }), " Clear"]
                   })]
                 })]
-              }, CC.slotId)
+              }, kk.slotId)
             }))
-          }), (0, EC.jsx)("p", {
+          }), (0, bk.jsx)("p", {
             className: "FeaturedGamesPopupHint",
             children: "A game leaves its slot once it ranks higher on its own."
           })]
         })]
       })
     }
-    var Pz = ZC(4613),
-      Gz = ZC(4527),
-      Rz = ZC(3419);
-    const Az = 8,
-      xz = 12;
+    var xF = Ik(4663),
+      PF = Ik(4587),
+      KF = Ik(3378);
+    const QF = 8,
+      sF = 12;
 
-    function Jz(CC) {
+    function VF(kk) {
       let {
-        customLobbies: zC,
-        favouriteLobbies: ZC,
-        toggleLikeLobby: QC,
-        showReport: wC
-      } = CC;
-      const [bC, nC] = (0, pC.useState)(Az);
-      return (0, pC.useEffect)((() => {
-        if (bC >= zC.length) return;
-        let CC = !0;
-        return (0, Rz.e)().then((() => {
-          CC && nC(bC + xz)
+        customLobbies: Fk,
+        favouriteLobbies: Ik,
+        toggleLikeLobby: Xk,
+        showReport: Tk
+      } = kk;
+      const [ik, yk] = (0, Hk.useState)(QF);
+      return (0, Hk.useEffect)((() => {
+        if (ik >= Fk.length) return;
+        let kk = !0;
+        return (0, KF.e)().then((() => {
+          kk && yk(ik + sF)
         })), () => {
-          CC = !1
+          kk = !1
         }
-      }), [bC, zC.length]), (0, EC.jsx)(EC.Fragment, {
-        children: zC.slice(0, bC).map((CC => (0, EC.jsx)(Gz.h, {
-          customLobby: CC,
-          favouriteLobbies: ZC,
-          toggleLikeLobby: QC,
-          showReport: wC
-        }, CC.name)))
+      }), [ik, Fk.length]), (0, bk.jsx)(bk.Fragment, {
+        children: Fk.slice(0, ik).map((kk => (0, bk.jsx)(PF.f, {
+          customLobby: kk,
+          favouriteLobbies: Ik,
+          toggleLikeLobby: Xk,
+          showReport: Tk
+        }, kk.name)))
       })
     }
-    var Iz = ZC(4530),
-      iz = ZC(4547),
-      vz = ZC(4509),
-      ez = ZC(3521),
-      hz = ZC(8907),
-      Kz = ZC(193);
-    const Yz = {
-      skyblock: [ZC(36247).c]
+    var zF = Ik(4595),
+      SF = Ik(4607),
+      oF = Ik(4562),
+      vF = Ik(3520),
+      EF = Ik(8895),
+      OF = Ik(207);
+    const nF = {
+      skyblock: [Ik(36363).e]
     };
-    var dz = ZC(600);
-    const mz = {
+    var GF = Ik(628);
+    const pF = {
       listedVariations: null,
-      backgroundImage: bC.p,
+      backgroundImage: ik.s,
       badges: [],
       category: null,
       title: null,
@@ -609,363 +609,363 @@ export const modules = {
       countdownInformation: null
     };
 
-    function Hz(CC, zC) {
-      const ZC = Wz.f[CC.schematicId];
+    function uF(kk, Fk) {
+      const Ik = ZF.g[kk.schematicId];
       return {
         listedVariations: [],
-        backgroundImage: (0, bC.g)(CC, "large"),
+        backgroundImage: (0, ik.h)(kk, "large"),
         badges: [],
-        category: CC.gameCategory,
-        title: void 0 !== (null === ZC || void 0 === ZC ? void 0 : ZC.title) ? zC(ZC.title) : CC.name,
+        category: kk.gameCategory,
+        title: void 0 !== (null === Ik || void 0 === Ik ? void 0 : Ik.title) ? Fk(Ik.title) : kk.name,
         variationTitle: null,
-        description: void 0 !== (null === ZC || void 0 === ZC ? void 0 : ZC.description) ? zC(ZC.description) : CC.description,
-        ownerSocialPreviewWithoutLocation: "owner" in CC ? CC.owner : null,
-        ccu: CC.ccu,
-        favourites: CC.favourites,
+        description: void 0 !== (null === Ik || void 0 === Ik ? void 0 : Ik.description) ? Fk(Ik.description) : kk.description,
+        ownerSocialPreviewWithoutLocation: "owner" in kk ? kk.owner : null,
+        ccu: kk.ccu,
+        favourites: kk.favourites,
         isFavourite: null,
-        useRejoinLastLobbyButton: "persistWorld" in CC ? CC.persistWorld : null,
+        useRejoinLastLobbyButton: "persistWorld" in kk ? kk.persistWorld : null,
         showWorldsInsteadOfCustomLobbies: !1,
         canCreateCustomLobbies: !0,
         countdownInformation: null
       }
     }
 
-    function Ez(CC) {
-      var zC, ZC, QC;
-      return null !== (zC = null !== (ZC = (0, Kz.n)() ? function(CC) {
-        for (const [zC, ZC] of Object.entries(Yz)) {
-          const QC = [zC, ...ZC.map((CC => (0, bz.Bb)(zC, CC)))];
-          if (QC.includes(CC)) return QC
+    function bF(kk) {
+      var Fk, Ik, Xk;
+      return null !== (Fk = null !== (Ik = (0, OF.h)() ? function(kk) {
+        for (const [Fk, Ik] of Object.entries(nF)) {
+          const Xk = [Fk, ...Ik.map((kk => (0, yF.$b)(Fk, kk)))];
+          if (Xk.includes(kk)) return Xk
         }
         return null
-      }(CC) : null) && void 0 !== ZC ? ZC : null === (QC = Wz.d[CC]) || void 0 === QC ? void 0 : QC.listedVariations) && void 0 !== zC ? zC : null
+      }(kk) : null) && void 0 !== Ik ? Ik : null === (Xk = ZF.e[kk]) || void 0 === Xk ? void 0 : Xk.listedVariations) && void 0 !== Fk ? Fk : null
     }
 
-    function lz() {
+    function RF() {
       const {
-        gameNameWithVariation: CC
-      } = (0, OC.C)();
-      if ((0, pC.useEffect)(ez.m, []), CC && (0, Qz.r)(CC)) return (0, EC.jsx)(Xz, {
-        urlId: CC
-      }, CC);
-      const zC = CC && (0, wz.i)(CC) ? CC : "firstParty";
-      return (0, EC.jsx)(cz, {}, zC)
+        gameNameWithVariation: kk
+      } = (0, Dk.A)();
+      if ((0, Hk.useEffect)(vF.p, []), kk && (0, TF.r)(kk)) return (0, bk.jsx)(UF, {
+        urlId: kk
+      }, kk);
+      const Fk = kk && (0, iF.j)(kk) ? kk : "firstParty";
+      return (0, bk.jsx)(CF, {}, Fk)
     }
 
-    function Xz(CC) {
+    function UF(kk) {
       let {
-        urlId: zC
-      } = CC;
+        urlId: Fk
+      } = kk;
       const {
-        userContext: ZC,
-        isUserContextUpdating: QC
-      } = (0, xC.e)(), wC = (0, pC.useMemo)((() => (0, BC.k)(zC)), [zC]);
-      (0, pC.useMemo)((() => {
-        if (null === wC) return;
-        const CC = LC.userContextManager.peekCurrentUserContext();
-        (null !== CC ? KC.d.getGame(CC, wC.schematicId) : LC.userContextManager.getCurrentUserContext().then((CC => KC.d.getGame(CC, wC.schematicId)))).catch((CC => {
-          console.error(`Failed to get the custom game ${wC.schematicId}`, CC), (0, BC.h)(zC)
+        userContext: Ik,
+        isUserContextUpdating: Xk
+      } = (0, Qk.d)(), Tk = (0, Hk.useMemo)((() => (0, rk.e)(Fk)), [Fk]);
+      (0, Hk.useMemo)((() => {
+        if (null === Tk) return;
+        const kk = mk.userContextManager.peekCurrentUserContext();
+        (null !== kk ? Ok.e.getGame(kk, Tk.schematicId) : mk.userContextManager.getCurrentUserContext().then((kk => Ok.e.getGame(kk, Tk.schematicId)))).catch((kk => {
+          console.error(`Failed to get the custom game ${Tk.schematicId}`, kk), (0, rk.d)(Fk)
         }))
-      }), [wC, zC]);
-      const [bC, nC] = (0, pC.useState)(null), fC = (0, UC.e)();
-      (0, pC.useEffect)((() => {
-        if (null !== wC || QC) return;
-        let CC = !0;
-        return KC.d.getGameByUrlId(ZC, zC).then((ZC => {
-          CC && nC({
-            urlId: zC,
-            game: ZC
+      }), [Tk, Fk]);
+      const [ik, yk] = (0, Hk.useState)(null), lk = (0, hk.c)();
+      (0, Hk.useEffect)((() => {
+        if (null !== Tk || Xk) return;
+        let kk = !0;
+        return Ok.e.getGameByUrlId(Ik, Fk).then((Ik => {
+          kk && yk({
+            urlId: Fk,
+            game: Ik
           })
-        })).catch((ZC => {
-          console.error(`Failed to find the custom game with urlId ${zC}`, ZC), CC && (0, kC.navigateToHomePage)()
+        })).catch((Ik => {
+          console.error(`Failed to find the custom game with urlId ${Fk}`, Ik), kk && (0, Mk.navigateToHomePage)()
         })), () => {
-          CC = !1
+          kk = !1
         }
-      }), [zC, wC, QC, ZC]);
-      const oC = null !== wC && void 0 !== wC ? wC : (null === bC || void 0 === bC ? void 0 : bC.urlId) === zC ? bC.game : null;
-      return null === oC ? (0, EC.jsx)(dC.d, {}) : fC ? (0, EC.jsx)(cz, {
-        gameNameWithVariation: (0, wz.r)(oC.schematicId),
-        knownCustomGame: oC
-      }, oC.schematicId) : null
+      }), [Fk, Tk, Xk, Ik]);
+      const ak = null !== Tk && void 0 !== Tk ? Tk : (null === ik || void 0 === ik ? void 0 : ik.urlId) === Fk ? ik.game : null;
+      return null === ak ? (0, bk.jsx)(Gk.c, {}) : lk ? (0, bk.jsx)(CF, {
+        gameNameWithVariation: (0, iF.r)(ak.schematicId),
+        knownCustomGame: ak
+      }, ak.schematicId) : null
     }
 
-    function cz(CC) {
-      var zC, ZC, nC, MC, hC, YC, dC, HC;
+    function CF(kk) {
+      var Fk, Ik, yk, jk, Ek, nk, Gk, uk;
       let {
-        gameNameWithVariation: lC,
-        knownCustomGame: XC = null
-      } = CC;
+        gameNameWithVariation: Rk,
+        knownCustomGame: Uk = null
+      } = kk;
       const {
-        t: uC
-      } = (0, oC.y)();
-      (0, Fz.j)();
-      const sC = (0, Fz.r)(),
+        t: Nk
+      } = (0, ak.y)();
+      (0, tF.e)();
+      const Wk = (0, tF.l)(),
         {
-          userContext: TC,
-          isUserContextUpdating: aC
-        } = (0, xC.e)(),
-        tC = (0, vz.h)(),
-        LC = (0, kC.useNavigatePreserveSearch)(),
-        UC = (0, OC.C)(),
-        BC = (0, pC.useMemo)((() => lC ? {
-          gameNameWithVariation: lC
-        } : UC), [lC, UC]),
-        Cz = (0, oz.b)(BC),
-        Qz = (0, pC.useMemo)((() => {
-          const CC = function(CC) {
-            var zC, ZC;
-            const QC = Ez(CC);
-            if (!QC || 0 === QC.length || QC.includes(CC)) return CC;
-            const wC = qC.i.getItem((0, GC.k)(CC));
-            if (wC && QC.includes(wC)) return wC;
-            return null !== (zC = null === (ZC = Wz.d[CC]) || void 0 === ZC ? void 0 : ZC.defaultListedVariation) && void 0 !== zC ? zC : QC[0]
-          }(Cz.gameNameWithVariation);
-          return CC === Cz.gameNameWithVariation ? Cz : {
-            ...Cz,
-            gameNameWithVariation: CC
+          userContext: fk,
+          isUserContextUpdating: Bk
+        } = (0, Qk.d)(),
+        dk = (0, oF.f)(),
+        mk = (0, Mk.useNavigatePreserveSearch)(),
+        hk = (0, Dk.A)(),
+        rk = (0, Hk.useMemo)((() => Rk ? {
+          gameNameWithVariation: Rk
+        } : hk), [Rk, hk]),
+        FF = (0, qF.d)(rk),
+        TF = (0, Hk.useMemo)((() => {
+          const kk = function(kk) {
+            var Fk, Ik;
+            const Xk = bF(kk);
+            if (!Xk || 0 === Xk.length || Xk.includes(kk)) return kk;
+            const Tk = qk.j.getItem((0, xk.h)(kk));
+            if (Tk && Xk.includes(Tk)) return Tk;
+            return null !== (Fk = null === (Ik = ZF.e[kk]) || void 0 === Ik ? void 0 : Ik.defaultListedVariation) && void 0 !== Fk ? Fk : Xk[0]
+          }(FF.gameNameWithVariation);
+          return kk === FF.gameNameWithVariation ? FF : {
+            ...FF,
+            gameNameWithVariation: kk
           }
-        }), [Cz]);
-      (0, pC.useEffect)((() => {
-        const CC = Cz.gameNameWithVariation;
-        Qz.gameNameWithVariation !== CC && CC !== (0, bz.Cb)(CC) && LC((0, rC.v)(Qz.gameNameWithVariation), {
+        }), [FF]);
+      (0, Hk.useEffect)((() => {
+        const kk = FF.gameNameWithVariation;
+        TF.gameNameWithVariation !== kk && kk !== (0, yF.dc)(kk) && mk((0, ck.F)(TF.gameNameWithVariation), {
           replace: !0
         })
-      }), [Qz.gameNameWithVariation, Cz.gameNameWithVariation, LC]);
-      const [gz, Sz] = (0, pC.useState)(""), Rz = pC.useRef(null), [Az, xz] = (0, pC.useState)(), ez = (0, wz.i)(Qz.gameNameWithVariation), Kz = (0, pC.useMemo)((() => ez ? null : function(CC, zC, ZC) {
-        var QC, wC;
-        const nC = Wz.d[CC];
-        return (0, dz.H)(nC) ? null : {
-          listedVariations: Ez(CC),
-          backgroundImage: (0, bC.k)(CC, (0, bC.e)(nC)),
-          badges: (0, FC.filterBadges)(nC.badges),
-          category: nC.type,
-          title: ZC(nC.title),
-          variationTitle: nC.variationTitle ? ZC(nC.variationTitle) : null,
-          description: ZC(nC.description),
+      }), [TF.gameNameWithVariation, FF.gameNameWithVariation, mk]);
+      const [wF, HF] = (0, Hk.useState)(""), KF = Hk.useRef(null), [QF, sF] = (0, Hk.useState)(), vF = (0, iF.j)(TF.gameNameWithVariation), OF = (0, Hk.useMemo)((() => vF ? null : function(kk, Fk, Ik) {
+        var Xk, Tk;
+        const yk = ZF.e[kk];
+        return (0, GF.Q)(yk) ? null : {
+          listedVariations: bF(kk),
+          backgroundImage: (0, ik.m)(kk, (0, ik.e)(yk)),
+          badges: (0, Lk.filterBadges)(yk.badges),
+          category: yk.type,
+          title: Ik(yk.title),
+          variationTitle: yk.variationTitle ? Ik(yk.variationTitle) : null,
+          description: Ik(yk.description),
           ownerSocialPreviewWithoutLocation: null,
-          ccu: null !== zC ? null !== (QC = zC[CC]) && void 0 !== QC ? QC : 0 : null,
+          ccu: null !== Fk ? null !== (Xk = Fk[kk]) && void 0 !== Xk ? Xk : 0 : null,
           favourites: null,
           isFavourite: null,
-          useRejoinLastLobbyButton: nC.useRejoinLastLobbyButton,
-          showWorldsInsteadOfCustomLobbies: nC.showWorldsInsteadOfCustomLobbies,
-          canCreateCustomLobbies: null === (wC = nC.canCreateCustomLobbies) || void 0 === wC || wC,
-          countdownInformation: (0, GC.h)(CC)
+          useRejoinLastLobbyButton: yk.useRejoinLastLobbyButton,
+          showWorldsInsteadOfCustomLobbies: yk.showWorldsInsteadOfCustomLobbies,
+          canCreateCustomLobbies: null === (Tk = yk.canCreateCustomLobbies) || void 0 === Tk || Tk,
+          countdownInformation: (0, xk.d)(kk)
         }
-      }(Qz.gameNameWithVariation, sC, uC)), [ez, Qz.gameNameWithVariation, sC, uC]), [Yz, lz] = (0, pC.useState)(!1), [Xz, cz] = (0, pC.useState)((() => XC ? Hz(XC, uC) : mz)), rz = null !== Kz && void 0 !== Kz ? Kz : Xz, [sz] = (0, pC.useState)(rz === mz), Tz = (0, wC.e)(rz.backgroundImage, {
+      }(TF.gameNameWithVariation, Wk, Nk)), [vF, TF.gameNameWithVariation, Wk, Nk]), [nF, RF] = (0, Hk.useState)(!1), [UF, CF] = (0, Hk.useState)((() => Uk ? uF(Uk, Nk) : pF)), cF = null !== OF && void 0 !== OF ? OF : UF, [WF] = (0, Hk.useState)(cF === pF), fF = (0, Tk.e)(cF.backgroundImage, {
         keepPrevious: !0,
         decode: !0
       }), {
-        recentlyPlayedPublicLobbies: az,
-        recentlyPlayedCustomLobbies: tz
-      } = (0, pC.useMemo)((() => function(CC, zC, ZC, QC) {
-        var wC;
-        const bC = CC => {
-            const ZC = (0, wz.m)(CC),
-              QC = zC.find((zC => "custom" === zC.type ? zC.schematicId === ZC : zC.gameNameWithVariation === CC));
-            return QC ? [...QC.recentLobbies] : []
+        recentlyPlayedPublicLobbies: BF,
+        recentlyPlayedCustomLobbies: dF
+      } = (0, Hk.useMemo)((() => function(kk, Fk, Ik, Xk) {
+        var Tk;
+        const ik = kk => {
+            const Ik = (0, iF.n)(kk),
+              Xk = Fk.find((Fk => "custom" === Fk.type ? Fk.schematicId === Ik : Fk.gameNameWithVariation === kk));
+            return Xk ? [...Xk.recentLobbies] : []
           },
-          nC = (0, FC.getRecentGameNameWithVariationLobbiesKey)(CC),
-          fC = null !== (wC = qC.i.getItem(nC)) && void 0 !== wC ? wC : [],
-          oC = [...bC(CC), ...fC],
-          WC = [];
-        for (const qC of oC)(0, Nz.U)(qC) && !WC.includes(qC) && WC.push(qC);
-        let NC = oC;
-        if (ZC) {
-          const CC = bC("classic_worlds"),
-            zC = oC.filter((zC => !CC.includes(zC)));
-          NC = [...CC, ...zC]
+          yk = (0, Lk.getRecentGameNameWithVariationLobbiesKey)(kk),
+          lk = null !== (Tk = qk.j.getItem(yk)) && void 0 !== Tk ? Tk : [],
+          ak = [...ik(kk), ...lk],
+          tk = [];
+        for (const qk of ak)(0, jF.K)(qk) && !tk.includes(qk) && tk.push(qk);
+        let Zk = ak;
+        if (Ik) {
+          const kk = ik("classic_worlds"),
+            Fk = ak.filter((Fk => !kk.includes(Fk)));
+          Zk = [...kk, ...Fk]
         }
-        const MC = [],
-          gC = !1 === QC ? [] : NC;
-        for (const qC of gC)(0, Nz.U)(qC) || MC.includes(qC) || MC.push(qC);
+        const jk = [],
+          ek = !1 === Xk ? [] : Zk;
+        for (const qk of ek)(0, jF.K)(qk) || jk.includes(qk) || jk.push(qk);
         return {
-          recentlyPlayedPublicLobbies: WC,
-          recentlyPlayedCustomLobbies: MC
+          recentlyPlayedPublicLobbies: tk,
+          recentlyPlayedCustomLobbies: jk
         }
-      }(Qz.gameNameWithVariation, tC, rz.showWorldsInsteadOfCustomLobbies, rz.canCreateCustomLobbies)), [Qz.gameNameWithVariation, tC, rz.showWorldsInsteadOfCustomLobbies, rz.canCreateCustomLobbies]), [Dz, jz] = (0, pC.useState)(!0), [yz, Lz] = (0, pC.useState)([]), [Uz, Bz] = (0, pC.useState)(null), [Oz, kz] = (0, pC.useState)("explore"), Vz = (0, pC.useRef)(!1), CZ = (0, pC.useCallback)((CC => {
-        (0, PC.unstable_batchedUpdates)((() => {
-          xz(CC), cz((zC => ({
-            ...Hz(CC, uC),
-            isFavourite: zC.isFavourite
+      }(TF.gameNameWithVariation, dk, cF.showWorldsInsteadOfCustomLobbies, cF.canCreateCustomLobbies)), [TF.gameNameWithVariation, dk, cF.showWorldsInsteadOfCustomLobbies, cF.canCreateCustomLobbies]), [YF, AF] = (0, Hk.useState)(!0), [gF, mF] = (0, Hk.useState)([]), [hF, rF] = (0, Hk.useState)(null), [DF, MF] = (0, Hk.useState)("explore"), kI = (0, Hk.useRef)(!1), FI = (0, Hk.useCallback)((kk => {
+        (0, Jk.unstable_batchedUpdates)((() => {
+          sF(kk), CF((Fk => ({
+            ...uF(kk, Nk),
+            isFavourite: Fk.isFavourite
           })))
         }))
-      }), [uC]);
-      (0, pC.useEffect)((() => {
-        null === qz.b.get("gameEntrySource") && (0, qz.g)("gameInformationPageDirect")
+      }), [Nk]);
+      (0, Hk.useEffect)((() => {
+        null === LF.d.get("gameEntrySource") && (0, LF.h)("gameInformationPageDirect")
       }), []);
-      const zZ = (0, pC.useRef)(null);
-      (0, pC.useEffect)((() => {
-        const CC = CC => {
-            zZ.current = CC.target instanceof Element ? CC.target.closest("a, button") : null
+      const II = (0, Hk.useRef)(null);
+      (0, Hk.useEffect)((() => {
+        const kk = kk => {
+            II.current = kk.target instanceof Element ? kk.target.closest("a, button") : null
           },
-          zC = CC => {
-            "Tab" === CC.key && (zZ.current = null)
+          Fk = kk => {
+            "Tab" === kk.key && (II.current = null)
           };
-        return document.addEventListener("pointerdown", CC, !0), document.addEventListener("keydown", zC, !0), () => {
-          document.removeEventListener("pointerdown", CC, !0), document.removeEventListener("keydown", zC, !0)
+        return document.addEventListener("pointerdown", kk, !0), document.addEventListener("keydown", Fk, !0), () => {
+          document.removeEventListener("pointerdown", kk, !0), document.removeEventListener("keydown", Fk, !0)
         }
-      }), []), (0, JC.d)("Enter", (CC => {
-        const zC = CC.target instanceof Element ? CC.target : null;
-        if (CC.defaultPrevented || null !== zC && void 0 !== zC && zC.closest("input, textarea, select")) return;
-        const ZC = null === zC || void 0 === zC ? void 0 : zC.closest("a, button");
-        ZC && ZC !== zZ.current || (CC.preventDefault(), FZ())
-      })), (0, IC.e)(kC.navigateToHomePage);
-      const ZZ = az.length > 0 || tz.length > 0,
-        QZ = !rz.useRejoinLastLobbyButton || 0 === az.length,
-        wZ = ez && null === rz.ownerSocialPreviewWithoutLocation,
-        bZ = TC.getPlayerName() === (null === Az || void 0 === Az || null === (zC = Az.owner) || void 0 === zC ? void 0 : zC.name),
-        nZ = null !== (ZC = null === (nC = rz.badges.find((CC => "event" === CC.type))) || void 0 === nC ? void 0 : nC.event) && void 0 !== ZC ? ZC : null,
-        fZ = QZ ? NC.o : NC.g,
-        oZ = (0, EC.jsx)(WC.d, {
-          tooltipInner: (0, EC.jsx)("div", {
-            children: uC("homePage:quickPlayInfo")
+      }), []), (0, sk.b)("Enter", (kk => {
+        const Fk = kk.target instanceof Element ? kk.target : null;
+        if (kk.defaultPrevented || null !== Fk && void 0 !== Fk && Fk.closest("input, textarea, select")) return;
+        const Ik = null === Fk || void 0 === Fk ? void 0 : Fk.closest("a, button");
+        Ik && Ik !== II.current || (kk.preventDefault(), tI())
+      })), (0, Vk.b)(Mk.navigateToHomePage);
+      const XI = BF.length > 0 || dF.length > 0,
+        TI = !cF.useRejoinLastLobbyButton || 0 === BF.length,
+        iI = vF && null === cF.ownerSocialPreviewWithoutLocation,
+        yI = fk.getPlayerName() === (null === QF || void 0 === QF || null === (Fk = QF.owner) || void 0 === Fk ? void 0 : Fk.name),
+        lI = null !== (Ik = null === (yk = cF.badges.find((kk => "event" === kk.type))) || void 0 === yk ? void 0 : yk.event) && void 0 !== Ik ? Ik : null,
+        aI = TI ? Zk.m : Zk.d,
+        qI = (0, bk.jsx)(tk.g, {
+          tooltipInner: (0, bk.jsx)("div", {
+            children: Nk("homePage:quickPlayInfo")
           }),
           hoverOnly: !0,
-          children: (0, EC.jsx)(fZ, {
+          children: (0, bk.jsx)(aI, {
             className: "GameInformationButton",
-            padDefaultFocus: QZ,
+            padDefaultFocus: TI,
             showPress: !0,
             onClick: () => {
-              FZ()
+              tI()
             },
-            children: (0, EC.jsxs)("div", {
+            children: (0, bk.jsxs)("div", {
               className: "GameInformationButtonInner",
-              children: [QZ && (0, EC.jsxs)(EC.Fragment, {
-                children: [(0, EC.jsx)(jC.c, {
+              children: [TI && (0, bk.jsxs)(bk.Fragment, {
+                children: [(0, bk.jsx)(Ak.e, {
                   name: "play"
                 }), " "]
-              }), uC("homePage:quickPlay")]
+              }), Nk("homePage:quickPlay")]
             })
           })
         });
-      (0, pC.useEffect)((() => {
-        if (!ez || aC) return;
-        let CC = !0;
-        const zC = (0, wz.m)(Qz.gameNameWithVariation);
-        return KC.d.getGame(TC, zC).then((zC => {
-          CC && CZ(zC)
-        })).catch((zC => {
-          console.error("Failed to get Custom Game information", zC), CC && (0, kC.navigateToHomePage)()
-        })), KC.d.getFavouriteGames(TC).then((ZC => {
-          CC && cz((CC => ({
-            ...CC,
-            isFavourite: ZC.includes(zC)
+      (0, Hk.useEffect)((() => {
+        if (!vF || Bk) return;
+        let kk = !0;
+        const Fk = (0, iF.n)(TF.gameNameWithVariation);
+        return Ok.e.getGame(fk, Fk).then((Fk => {
+          kk && FI(Fk)
+        })).catch((Fk => {
+          console.error("Failed to get Custom Game information", Fk), kk && (0, Mk.navigateToHomePage)()
+        })), Ok.e.getFavouriteGames(fk).then((Ik => {
+          kk && CF((kk => ({
+            ...kk,
+            isFavourite: Ik.includes(Fk)
           })))
-        })).catch((zC => {
-          console.error("Failed to get favourite games", zC), CC && lz(!0)
+        })).catch((Fk => {
+          console.error("Failed to get favourite games", Fk), kk && RF(!0)
         })), () => {
-          CC = !1
+          kk = !1
         }
-      }), [ez, aC, Qz.gameNameWithVariation, CZ, TC]);
-      const qZ = !ez && null === Kz;
+      }), [vF, Bk, TF.gameNameWithVariation, FI, fk]);
+      const LI = !vF && null === OF;
 
-      function FZ(CC) {
-        (0, hz.g)(), LC((0, RC.b)(Qz.gameNameWithVariation, CC))
-      }(0, pC.useEffect)((() => {
-        qZ && (0, kC.navigateToHomePage)()
-      }), [qZ]), (0, pC.useEffect)((() => {
-        if (!1 === rz.canCreateCustomLobbies) return;
-        let CC = !0;
-        return null !== rz.showWorldsInsteadOfCustomLobbies && !1 === aC && (jz(!0), KC.d.getFavouriteLobbies(TC).then((CC => {
-          Bz(CC)
-        })), KC.d.getOpenCustomLobbies(TC, {
-          gameNameWithVariation: rz.showWorldsInsteadOfCustomLobbies ? "classic" : Qz.gameNameWithVariation,
-          onlyOwnedLobbies: "owned" === Oz,
-          onlyFavouriteLobbies: "favourite" === Oz
-        }).then((zC => {
-          CC && (0, PC.unstable_batchedUpdates)((() => {
-            Lz(zC), jz(!1)
+      function tI(kk) {
+        (0, EF.e)(), mk((0, Pk.e)(TF.gameNameWithVariation, kk))
+      }(0, Hk.useEffect)((() => {
+        LI && (0, Mk.navigateToHomePage)()
+      }), [LI]), (0, Hk.useEffect)((() => {
+        if (!1 === cF.canCreateCustomLobbies) return;
+        let kk = !0;
+        return null !== cF.showWorldsInsteadOfCustomLobbies && !1 === Bk && (AF(!0), Ok.e.getFavouriteLobbies(fk).then((kk => {
+          rF(kk)
+        })), Ok.e.getOpenCustomLobbies(fk, {
+          gameNameWithVariation: cF.showWorldsInsteadOfCustomLobbies ? "classic" : TF.gameNameWithVariation,
+          onlyOwnedLobbies: "owned" === DF,
+          onlyFavouriteLobbies: "favourite" === DF
+        }).then((Fk => {
+          kk && (0, Jk.unstable_batchedUpdates)((() => {
+            mF(Fk), AF(!1)
           }))
-        })).catch((zC => {
-          console.error("Failed to get open custom lobbies", zC), CC && jz(!1)
+        })).catch((Fk => {
+          console.error("Failed to get open custom lobbies", Fk), kk && AF(!1)
         }))), () => {
-          CC = !1
+          kk = !1
         }
-      }), [aC, Qz, Oz, rz.showWorldsInsteadOfCustomLobbies, rz.canCreateCustomLobbies, TC]);
-      const WZ = (0, pC.useCallback)((async CC => {
+      }), [Bk, TF, DF, cF.showWorldsInsteadOfCustomLobbies, cF.canCreateCustomLobbies, fk]);
+      const ZI = (0, Hk.useCallback)((async kk => {
           try {
-            if (!Uz) return;
-            Uz.includes(CC) ? (KC.d.unfavouriteLobby(TC, CC), Bz(Uz.filter((zC => zC !== CC)))) : (KC.d.favouriteLobby(TC, CC).catch((CC => {
-              console.error("Failed to favourite lobby", CC)
-            })), Bz([...Uz, CC]))
-          } catch (zC) {
-            console.error("Failed to like lobby", zC)
+            if (!hF) return;
+            hF.includes(kk) ? (Ok.e.unfavouriteLobby(fk, kk), rF(hF.filter((Fk => Fk !== kk)))) : (Ok.e.favouriteLobby(fk, kk).catch((kk => {
+              console.error("Failed to favourite lobby", kk)
+            })), rF([...hF, kk]))
+          } catch (Fk) {
+            console.error("Failed to like lobby", Fk)
           }
-        }), [TC, Uz]),
-        NZ = (null === Az || void 0 === Az ? void 0 : Az.schematicId) === (0, wz.m)(Cz.gameNameWithVariation) ? Az : null,
-        MZ = NZ && (0, rC.E)(Cz.gameNameWithVariation, (CC => uC(CC)), NZ);
-      (0, VC.f)(NZ && (0, rC.v)(Cz.gameNameWithVariation, NZ));
-      const gZ = yC.featureFlags.canUseCustomLobbies && !0 === rz.canCreateCustomLobbies,
-        SZ = (0, EC.jsx)("div", {
+        }), [fk, hF]),
+        jI = (null === QF || void 0 === QF ? void 0 : QF.schematicId) === (0, iF.n)(FF.gameNameWithVariation) ? QF : null,
+        eI = jI && (0, ck.N)(FF.gameNameWithVariation, (kk => Nk(kk)), jI);
+      (0, kF.e)(jI && (0, ck.F)(FF.gameNameWithVariation, jI));
+      const wI = gk.featureFlags.canUseCustomLobbies && !0 === cF.canCreateCustomLobbies,
+        HI = (0, bk.jsx)("div", {
           className: "GameInformationPageContentAnchor",
-          children: (0, EC.jsx)(DC, {
-            gameNameWithVariation: Qz.gameNameWithVariation
+          children: (0, bk.jsx)(Yk, {
+            gameNameWithVariation: TF.gameNameWithVariation
           })
         });
-      return (0, EC.jsx)(EC.Fragment, {
-        children: (0, EC.jsxs)("article", {
-          className: gC()("GameInformation", {
-            GameInformationFadeIn: sz,
-            GameInformationReleaseCountdown: "releaseCountdown" === (null === (MC = rz.countdownInformation) || void 0 === MC ? void 0 : MC.type)
+      return (0, bk.jsx)(bk.Fragment, {
+        children: (0, bk.jsxs)("article", {
+          className: ek()("GameInformation", {
+            GameInformationFadeIn: WF,
+            GameInformationReleaseCountdown: "releaseCountdown" === (null === (jk = cF.countdownInformation) || void 0 === jk ? void 0 : jk.type)
           }),
-          children: [MZ && (0, EC.jsx)(AC.d, {
-            meta: MZ
-          }), (0, EC.jsxs)("div", {
+          children: [eI && (0, bk.jsx)(Kk.d, {
+            meta: eI
+          }), (0, bk.jsxs)("div", {
             className: "GameInformationInner",
-            children: [(0, EC.jsxs)("div", {
+            children: [(0, bk.jsxs)("div", {
               className: "GameInformationTop",
-              children: [(0, EC.jsxs)("div", {
+              children: [(0, bk.jsxs)("div", {
                 className: "GameInformationTopBackgroundContainer",
-                children: [(0, EC.jsx)("div", {
+                children: [(0, bk.jsx)("div", {
                   className: "GameInformationTopBackgroundColor"
-                }), (0, EC.jsx)("div", {
-                  className: gC()("GameInformationTopBackgroundImage", fC.k),
-                  style: (0, fC.g)(Tz),
-                  children: (0, EC.jsx)(fC.d, {
-                    image: Tz
+                }), (0, bk.jsx)("div", {
+                  className: ek()("GameInformationTopBackgroundImage", lk.g),
+                  style: (0, lk.f)(fF),
+                  children: (0, bk.jsx)(lk.d, {
+                    image: fF
                   })
                 })]
-              }), (0, EC.jsxs)("div", {
+              }), (0, bk.jsxs)("div", {
                 className: "GameInformationTopLeft",
-                children: [(0, EC.jsx)(Pz.d, {}), (0, EC.jsxs)("div", {
+                children: [(0, bk.jsx)(xF.e, {}), (0, bk.jsxs)("div", {
                   className: "GameInformationTopLeftBody",
-                  children: [(0, EC.jsxs)("div", {
+                  children: [(0, bk.jsxs)("div", {
                     className: "GameInformationHeader",
-                    children: [(0, EC.jsxs)("div", {
-                      className: gC()("GameInformationHeaderTagList", {
-                        GameInformationHeaderTagListPending: wZ
+                    children: [(0, bk.jsxs)("div", {
+                      className: ek()("GameInformationHeaderTagList", {
+                        GameInformationHeaderTagListPending: iI
                       }),
-                      children: [rz.badges.map((CC => (0, EC.jsx)("div", {
-                        className: `GameInformationHeaderTag AnimFadeInScaleUp ${CC.type}`,
-                        children: (0, EC.jsx)(eC.e, {
-                          badge: CC
+                      children: [cF.badges.map((kk => (0, bk.jsx)("div", {
+                        className: `GameInformationHeaderTag AnimFadeInScaleUp ${kk.type}`,
+                        children: (0, bk.jsx)(vk.c, {
+                          badge: kk
                         })
-                      }, CC.type))), ez && (0, EC.jsx)("div", {
+                      }, kk.type))), vF && (0, bk.jsx)("div", {
                         className: "GameInformationHeaderTag playerCrafted AnimFadeInScaleUp",
-                        children: (0, EC.jsx)(vC.e, {
-                          text: (0, QC.bb)({
+                        children: (0, bk.jsx)(Sk.c, {
+                          text: (0, Xk.bb)({
                             type: "playerCrafted"
                           })
                         })
-                      }), rz.category && (0, EC.jsx)("div", {
+                      }), cF.category && (0, bk.jsx)("div", {
                         className: "GameInformationHeaderTag CustomGameCategory AnimFadeInScaleUp",
-                        children: (0, EC.jsx)(vC.e, {
+                        children: (0, bk.jsx)(Sk.c, {
                           text: [{
-                            str: (0, QC.eb)(rz.category).toUpperCase()
+                            str: (0, Xk.eb)(cF.category).toUpperCase()
                           }]
                         })
-                      }), null !== rz.ccu && (0, EC.jsxs)("div", {
+                      }), null !== cF.ccu && (0, bk.jsxs)("div", {
                         className: "CustomGameChip CustomGameChipCcu AnimFadeIn",
-                        children: [(0, EC.jsx)(jC.c, {
+                        children: [(0, bk.jsx)(Ak.e, {
                           name: "user"
-                        }), (0, Nz.Z)(rz.ccu), " online"]
-                      }), null !== rz.ownerSocialPreviewWithoutLocation && (0, EC.jsxs)("div", {
+                        }), (0, jF.Q)(cF.ccu), " online"]
+                      }), null !== cF.ownerSocialPreviewWithoutLocation && (0, bk.jsxs)("div", {
                         className: "CustomGameChip CustomGameChipOwner AnimFadeIn",
-                        children: [(0, EC.jsx)("span", {
+                        children: [(0, bk.jsx)("span", {
                           children: "Made by"
-                        }), (0, EC.jsx)(mC.f, {
+                        }), (0, bk.jsx)(pk.g, {
                           playerSocialPreview: {
-                            ...rz.ownerSocialPreviewWithoutLocation,
+                            ...cF.ownerSocialPreviewWithoutLocation,
                             location: {
                               status: "offline"
                             }
@@ -973,402 +973,402 @@ export const modules = {
                           showLocation: !1,
                           linkToProfile: !0
                         })]
-                      }), wZ && (0, EC.jsxs)("div", {
+                      }), iI && (0, bk.jsxs)("div", {
                         className: "CustomGameChip CustomGameChipOwner",
-                        children: [(0, EC.jsx)("span", {
+                        children: [(0, bk.jsx)("span", {
                           children: "Made by"
-                        }), (0, EC.jsx)("div", {
+                        }), (0, bk.jsx)("div", {
                           className: "CustomGameChipOwnerPlaceholder"
                         })]
-                      }), null !== rz.favourites && (null !== rz.isFavourite || ez && !Yz) && (0, EC.jsx)(NC.x, {
+                      }), null !== cF.favourites && (null !== cF.isFavourite || vF && !nF) && (0, bk.jsx)(Zk.t, {
                         onClick: () => {
                           ! function() {
-                            if (!0 !== Vz.current && (Vz.current = !0, null !== rz.isFavourite)) {
-                              const CC = (0, wz.m)(Qz.gameNameWithVariation);
-                              let zC;
-                              rz.isFavourite ? (zC = -1, KC.d.unfavouriteGame(TC, CC).catch((CC => {
-                                console.error("Failed to get unfavourite game", CC)
+                            if (!0 !== kI.current && (kI.current = !0, null !== cF.isFavourite)) {
+                              const kk = (0, iF.n)(TF.gameNameWithVariation);
+                              let Fk;
+                              cF.isFavourite ? (Fk = -1, Ok.e.unfavouriteGame(fk, kk).catch((kk => {
+                                console.error("Failed to get unfavourite game", kk)
                               })).finally((() => {
-                                Vz.current = !1
-                              }))) : (zC = 1, KC.d.favouriteGame(TC, CC).catch((CC => {
-                                console.error("Failed to get favourite game", CC)
+                                kI.current = !1
+                              }))) : (Fk = 1, Ok.e.favouriteGame(fk, kk).catch((kk => {
+                                console.error("Failed to get favourite game", kk)
                               })).finally((() => {
-                                Vz.current = !1
-                              }))), cz((CC => ({
-                                ...CC,
-                                isFavourite: !CC.isFavourite
-                              }))), cz((CC => ({
-                                ...CC,
-                                favourites: CC.favourites + zC
+                                kI.current = !1
+                              }))), CF((kk => ({
+                                ...kk,
+                                isFavourite: !kk.isFavourite
+                              }))), CF((kk => ({
+                                ...kk,
+                                favourites: kk.favourites + Fk
                               })))
                             }
                           }()
                         },
-                        isLiked: null !== (hC = rz.isFavourite) && void 0 !== hC && hC,
-                        disabled: null === rz.isFavourite,
-                        className: gC()("CustomGameChip AnimFadeIn", {
-                          CustomGameChipPending: null === rz.isFavourite
+                        isLiked: null !== (Ek = cF.isFavourite) && void 0 !== Ek && Ek,
+                        disabled: null === cF.isFavourite,
+                        className: ek()("CustomGameChip AnimFadeIn", {
+                          CustomGameChipPending: null === cF.isFavourite
                         })
-                      }, null === rz.isFavourite ? "pending" : "known"), ez && !wZ && yC.featureFlags.useSocialFeatures && !bZ && (0, EC.jsx)(Iz.b, {
+                      }, null === cF.isFavourite ? "pending" : "known"), vF && !iI && gk.featureFlags.useSocialFeatures && !yI && (0, bk.jsx)(zF.e, {
                         targetType: "customGame",
-                        targetId: (0, wz.m)(Qz.gameNameWithVariation),
+                        targetId: (0, iF.n)(TF.gameNameWithVariation),
                         className: "CustomGameChip AnimFadeIn"
-                      }), (TC.playerHasRank("developer") || TC.playerHasRank("admin") && bZ) && (0, EC.jsxs)(NC.o, {
+                      }), (fk.playerHasRank("developer") || fk.playerHasRank("admin") && yI) && (0, bk.jsxs)(Zk.m, {
                         className: "CustomGameChip AnimFadeIn",
                         onClick: () => {
-                          LC((0, fz.o)((0, nz.f)(Qz.gameNameWithVariation, !0)))
+                          mk((0, aF.m)((0, lF.d)(TF.gameNameWithVariation, !0)))
                         },
-                        children: [(0, EC.jsx)(jC.c, {
+                        children: [(0, bk.jsx)(Ak.e, {
                           name: "star-christmas"
-                        }), " ", uC("studio:viewInStudio")]
-                      }), ez && TC.playerHasRank("developer") && (0, EC.jsxs)(NC.g, {
+                        }), " ", Nk("studio:viewInStudio")]
+                      }), vF && fk.playerHasRank("developer") && (0, bk.jsxs)(Zk.d, {
                         className: "CustomGameChip AnimFadeIn",
                         onClick: () => {
-                          (0, Mz.e)({
-                            schematicId: (0, wz.m)(Qz.gameNameWithVariation),
+                          (0, eF.d)({
+                            schematicId: (0, iF.n)(TF.gameNameWithVariation),
                             canOverride: !0
                           })
                         },
-                        children: [(0, EC.jsx)(jC.c, {
+                        children: [(0, bk.jsx)(Ak.e, {
                           name: "circle-info"
                         }), " Approval Info"]
-                      }), ez && TC.playerHasRank("developer") && (0, EC.jsxs)(NC.g, {
+                      }), vF && fk.playerHasRank("developer") && (0, bk.jsxs)(Zk.d, {
                         className: "CustomGameChip AnimFadeIn",
                         onClick: () => {
-                          zz.NotificationProvider.showCustomPopup({
-                            body: () => (0, EC.jsx)(pz, {
-                              schematicId: (0, wz.m)(Qz.gameNameWithVariation),
-                              gameName: rz.title
+                          IF.NotificationProvider.showCustomPopup({
+                            body: () => (0, bk.jsx)(JF, {
+                              schematicId: (0, iF.n)(TF.gameNameWithVariation),
+                              gameName: cF.title
                             }),
                             middleScreenPopupClassName: "FeaturedGamesPopup",
                             onClose: () => {},
                             unlockPointerKey: "featuredGamesPopup"
                           })
                         },
-                        children: [(0, EC.jsx)(jC.c, {
+                        children: [(0, bk.jsx)(Ak.e, {
                           name: "star"
                         }), " Featured Games"]
-                      }), "updateCountdown" === (null === (YC = rz.countdownInformation) || void 0 === YC ? void 0 : YC.type) && (0, EC.jsxs)("div", {
+                      }), "updateCountdown" === (null === (nk = cF.countdownInformation) || void 0 === nk ? void 0 : nk.type) && (0, bk.jsxs)("div", {
                         className: "CustomGameChip GameChipUpdateCountdown AnimFadeIn",
-                        children: [(0, EC.jsxs)("div", {
+                        children: [(0, bk.jsxs)("div", {
                           className: "GameChipUpdateCountdownTop",
-                          children: ["Update in ", (0, EC.jsx)(iC.b, {
-                            toTime: rz.countdownInformation.countdownToTime
+                          children: ["Update in ", (0, bk.jsx)(zk.b, {
+                            toTime: cF.countdownInformation.countdownToTime
                           })]
-                        }), (0, EC.jsx)("div", {
+                        }), (0, bk.jsx)("div", {
                           className: "GameChipUpdateCountdownBottom",
-                          children: rz.countdownInformation.previewText
+                          children: cF.countdownInformation.previewText
                         })]
                       })]
-                    }, wZ ? "pending" : "shown"), (0, EC.jsxs)("header", {
+                    }, iI ? "pending" : "shown"), (0, bk.jsxs)("header", {
                       className: "GameInformationTitle",
-                      children: [(0, EC.jsx)("div", {
+                      children: [(0, bk.jsx)("div", {
                         className: "GameInformationTitleAndChips",
-                        children: (0, EC.jsxs)("h1", {
+                        children: (0, bk.jsxs)("h1", {
                           className: "GameInformationTitleText FullyFancyText",
-                          children: [rz.title, " ", rz.variationTitle && (null === (dC = Wz.d[Qz.gameNameWithVariation]) || void 0 === dC ? void 0 : dC.variationThumbnailUseBigRatio) && (0, EC.jsx)("span", {
+                          children: [cF.title, " ", cF.variationTitle && (null === (Gk = ZF.e[TF.gameNameWithVariation]) || void 0 === Gk ? void 0 : Gk.variationThumbnailUseBigRatio) && (0, bk.jsx)("span", {
                             className: "GameInformationTitleVariation",
-                            children: rz.variationTitle
+                            children: cF.variationTitle
                           })]
                         })
-                      }), rz.listedVariations && rz.listedVariations.length > 0 && (0, EC.jsx)("div", {
-                        className: gC()("GameInformationVariationList", {
-                          GameInformationVariationListBig: null === (HC = Wz.d[Qz.gameNameWithVariation]) || void 0 === HC ? void 0 : HC.variationThumbnailUseBigRatio
+                      }), cF.listedVariations && cF.listedVariations.length > 0 && (0, bk.jsx)("div", {
+                        className: ek()("GameInformationVariationList", {
+                          GameInformationVariationListBig: null === (uk = ZF.e[TF.gameNameWithVariation]) || void 0 === uk ? void 0 : uk.variationThumbnailUseBigRatio
                         }),
-                        children: rz.listedVariations.map((CC => {
-                          var zC, ZC;
-                          return (0, EC.jsxs)(uz, {
-                            variation: CC,
-                            isSelected: Qz.gameNameWithVariation === CC,
-                            children: [null !== sC && (0, EC.jsx)("div", {
+                        children: cF.listedVariations.map((kk => {
+                          var Fk, Ik;
+                          return (0, bk.jsxs)(NF, {
+                            variation: kk,
+                            isSelected: TF.gameNameWithVariation === kk,
+                            children: [null !== Wk && (0, bk.jsx)("div", {
                               className: "GameInformationVariationCCU AnimFadeIn",
-                              children: (0, EC.jsxs)("div", {
+                              children: (0, bk.jsxs)("div", {
                                 className: "GameInformationVariationCCUInner",
-                                children: [(0, EC.jsx)(jC.c, {
+                                children: [(0, bk.jsx)(Ak.e, {
                                   name: "user"
-                                }), " ", (0, Nz.Z)(null !== (zC = sC[CC]) && void 0 !== zC ? zC : 0)]
+                                }), " ", (0, jF.Q)(null !== (Fk = Wk[kk]) && void 0 !== Fk ? Fk : 0)]
                               })
-                            }), (0, EC.jsx)("div", {
+                            }), (0, bk.jsx)("div", {
                               className: "GameInformationVariationTitle SmallTextBold",
-                              children: uC(null !== (ZC = Wz.d[CC].variationTitle) && void 0 !== ZC ? ZC : Wz.d[CC].title)
-                            }), (0, EC.jsx)("div", {
+                              children: Nk(null !== (Ik = ZF.e[kk].variationTitle) && void 0 !== Ik ? Ik : ZF.e[kk].title)
+                            }), (0, bk.jsx)("div", {
                               className: "ThumbnailBadgesContainer",
-                              children: (0, FC.filterBadges)(Wz.d[CC].badges).map((CC => (0, EC.jsx)("div", {
-                                className: "ThumbnailBadgeContainer " + CC.type,
-                                children: (0, EC.jsx)("div", {
+                              children: (0, Lk.filterBadges)(ZF.e[kk].badges).map((kk => (0, bk.jsx)("div", {
+                                className: "ThumbnailBadgeContainer " + kk.type,
+                                children: (0, bk.jsx)("div", {
                                   className: "ThumbnailBadgeMain",
-                                  children: (0, EC.jsx)(eC.e, {
-                                    badge: CC
+                                  children: (0, bk.jsx)(vk.c, {
+                                    badge: kk
                                   })
                                 })
-                              }, CC.type)))
+                              }, kk.type)))
                             })]
-                          }, CC)
+                          }, kk)
                         }))
                       })]
-                    }), rz.description && (0, EC.jsx)("p", {
+                    }), cF.description && (0, bk.jsx)("p", {
                       className: "GameInformationDescription",
-                      children: rz.description
+                      children: cF.description
                     })]
-                  }), (0, EC.jsxs)("div", {
+                  }), (0, bk.jsxs)("div", {
                     className: "GameInformationButtonRows",
-                    children: [(0, EC.jsxs)("div", {
+                    children: [(0, bk.jsxs)("div", {
                       className: "GameInformationButtonRow GameInformationButtonRowPrimary",
-                      children: [!QZ && (0, EC.jsx)(WC.d, {
-                        tooltipInner: (0, EC.jsx)("div", {
-                          children: uC("homePage:rejoinLobbyNumberInfo")
+                      children: [!TI && (0, bk.jsx)(tk.g, {
+                        tooltipInner: (0, bk.jsx)("div", {
+                          children: Nk("homePage:rejoinLobbyNumberInfo")
                         }),
                         hoverOnly: !0,
-                        children: (0, EC.jsx)(NC.o, {
+                        children: (0, bk.jsx)(Zk.m, {
                           className: "GameInformationButton",
                           padDefaultFocus: !0,
                           showPress: !0,
                           onClick: () => {
-                            FZ(az[0])
+                            tI(BF[0])
                           },
-                          children: (0, EC.jsxs)("div", {
+                          children: (0, bk.jsxs)("div", {
                             className: "GameInformationButtonInner",
-                            children: [(0, EC.jsx)(jC.c, {
+                            children: [(0, bk.jsx)(Ak.e, {
                               name: "play"
-                            }), " ", uC("homePage:rejoinLobbyNumber", {
-                              number: az[0]
+                            }), " ", Nk("homePage:rejoinLobbyNumber", {
+                              number: BF[0]
                             })]
                           })
                         })
-                      }), QZ && oZ]
-                    }), (0, EC.jsxs)("div", {
+                      }), TI && qI]
+                    }), (0, bk.jsxs)("div", {
                       className: "GameInformationButtonRow GameInformationButtonRowSecondary",
-                      children: [!QZ && oZ, (0, EC.jsxs)("div", {
+                      children: [!TI && qI, (0, bk.jsxs)("div", {
                         className: "JoinLobbyContainer",
-                        children: [(0, EC.jsx)(jC.c, {
+                        children: [(0, bk.jsx)(Ak.e, {
                           name: "magnifying-glass",
                           className: "JoinLobbyInputIcon"
-                        }), (0, EC.jsx)(SC.c, {
+                        }), (0, bk.jsx)(wk.c, {
                           className: "JoinLobbyInput",
-                          placeholderText: uC("homePage:lobbyName"),
-                          maxLength: Nz.W,
-                          domRef: Rz,
-                          onValueChange: CC => {
-                            CC = (0, Nz.Ab)(CC), Sz(CC)
+                          placeholderText: Nk("homePage:lobbyName"),
+                          maxLength: jF.M,
+                          domRef: KF,
+                          onValueChange: kk => {
+                            kk = (0, jF.qb)(kk), HF(kk)
                           },
                           onEnter: () => {
-                            0 === gz.length ? FZ(az[0]) : FZ(gz)
+                            0 === wF.length ? tI(BF[0]) : tI(wF)
                           }
-                        }), (0, EC.jsx)(NC.g, {
+                        }), (0, bk.jsx)(Zk.d, {
                           className: "JoinLobbyButton",
                           showPress: !0,
                           onClick: () => {
-                            0 === gz.length ? FZ(az[0]) : FZ(gz)
+                            0 === wF.length ? tI(BF[0]) : tI(wF)
                           },
-                          children: uC("general:join")
+                          children: Nk("general:join")
                         })]
                       })]
-                    }), (0, EC.jsxs)("section", {
-                      className: gC()("LobbyCollection RecentLobbyCollection", {
-                        LobbyCollectionHidden: !ZZ
+                    }), (0, bk.jsxs)("section", {
+                      className: ek()("LobbyCollection RecentLobbyCollection", {
+                        LobbyCollectionHidden: !XI
                       }),
-                      children: [(0, EC.jsx)("div", {
+                      children: [(0, bk.jsx)("div", {
                         className: "LobbyCollectionHeader RecentLobbyCollectionHeader",
-                        children: (0, EC.jsxs)("div", {
+                        children: (0, bk.jsxs)("div", {
                           className: "LobbyCollectionTitle",
-                          children: [(0, EC.jsx)(jC.c, {
+                          children: [(0, bk.jsx)(Ak.e, {
                             name: "clock-rotate-left"
-                          }), ZZ && (0, EC.jsx)("h2", {
+                          }), XI && (0, bk.jsx)("h2", {
                             className: "VisuallyHidden",
-                            children: uC("homePage:recentlyPlayedLobbies")
+                            children: Nk("homePage:recentlyPlayedLobbies")
                           })]
                         })
-                      }), (0, EC.jsx)(iz.b, {
-                        lobbyGroups: [az, tz],
-                        onLobbyClick: CC => {
-                          FZ(CC)
+                      }), (0, bk.jsx)(SF.e, {
+                        lobbyGroups: [BF, dF],
+                        onLobbyClick: kk => {
+                          tI(kk)
                         },
-                        keyPrefix: Qz.gameNameWithVariation
+                        keyPrefix: TF.gameNameWithVariation
                       })]
                     })]
                   })]
                 })]
-              }), null !== nZ && (0, EC.jsx)(cC, {
-                eventName: nZ
+              }), null !== lI && (0, bk.jsx)(Ck, {
+                eventName: lI
               })]
-            }), gZ && (0, EC.jsx)("div", {
+            }), wI && (0, bk.jsx)("div", {
               className: "GameInformationBottom",
-              children: (0, EC.jsxs)("section", {
+              children: (0, bk.jsxs)("section", {
                 className: "LobbyCollection",
-                children: [(0, EC.jsxs)("div", {
-                  className: gC()("LobbyCollectionHeader", {
-                    SandboxWorldsLobbyCollectionHeader: !0 === rz.showWorldsInsteadOfCustomLobbies
+                children: [(0, bk.jsxs)("div", {
+                  className: ek()("LobbyCollectionHeader", {
+                    SandboxWorldsLobbyCollectionHeader: !0 === cF.showWorldsInsteadOfCustomLobbies
                   }),
-                  children: [!0 === rz.showWorldsInsteadOfCustomLobbies && (0, EC.jsxs)("h2", {
+                  children: [!0 === cF.showWorldsInsteadOfCustomLobbies && (0, bk.jsxs)("h2", {
                     className: "LobbyCollectionTitle",
-                    children: [(0, EC.jsx)(jC.c, {
+                    children: [(0, bk.jsx)(Ak.e, {
                       name: "planet-ringed",
                       kit: "duotone"
-                    }), (0, EC.jsxs)("div", {
+                    }), (0, bk.jsxs)("div", {
                       className: "LobbyCollectionTitleText",
-                      children: [(0, EC.jsx)("div", {
+                      children: [(0, bk.jsx)("div", {
                         className: "LobbyCollectionTitleTextBackground"
-                      }), uC("game:worlds")]
+                      }), Nk("game:worlds")]
                     })]
-                  }), !1 === rz.showWorldsInsteadOfCustomLobbies && (0, EC.jsxs)("h2", {
+                  }), !1 === cF.showWorldsInsteadOfCustomLobbies && (0, bk.jsxs)("h2", {
                     className: "LobbyCollectionTitle",
-                    children: [(0, EC.jsx)(jC.c, {
+                    children: [(0, bk.jsx)(Ak.e, {
                       name: "joystick"
-                    }), (0, EC.jsxs)("div", {
+                    }), (0, bk.jsxs)("div", {
                       className: "LobbyCollectionTitleText",
-                      children: [(0, EC.jsx)("div", {
+                      children: [(0, bk.jsx)("div", {
                         className: "LobbyCollectionTitleTextBackground"
-                      }), uC("homePage:customLobbies")]
+                      }), Nk("homePage:customLobbies")]
                     })]
-                  }), (0, EC.jsx)(NC.O, {
+                  }), (0, bk.jsx)(Zk.Q, {
                     onClick: () => {
-                      kz("explore")
+                      MF("explore")
                     },
-                    active: "explore" === Oz,
-                    children: uC("general:explore")
-                  }), (0, EC.jsx)(NC.O, {
+                    active: "explore" === DF,
+                    children: Nk("general:explore")
+                  }), (0, bk.jsx)(Zk.Q, {
                     onClick: () => {
-                      kz("favourite")
+                      MF("favourite")
                     },
-                    active: "favourite" === Oz,
-                    children: uC("homePage:favouriteLobbies")
-                  }), (0, EC.jsx)(NC.O, {
+                    active: "favourite" === DF,
+                    children: Nk("homePage:favouriteLobbies")
+                  }), (0, bk.jsx)(Zk.Q, {
                     onClick: () => {
-                      kz("owned")
+                      MF("owned")
                     },
-                    active: "owned" === Oz,
-                    children: uC("homePage:ownedLobbies")
+                    active: "owned" === DF,
+                    children: Nk("homePage:ownedLobbies")
                   })]
-                }), (0, EC.jsxs)("div", {
+                }), (0, bk.jsxs)("div", {
                   className: "CustomLobbyList",
-                  children: [(0, EC.jsxs)("div", {
+                  children: [(0, bk.jsxs)("div", {
                     className: "CustomLobbyListInner",
-                    children: [(0, EC.jsx)(Gz.d, {
+                    children: [(0, bk.jsx)(PF.c, {
                       label: "Create",
                       onClick: () => {
-                        zz.NotificationProvider.showCustomPopup({
-                          body: CC => (0, EC.jsx)(Zz.CreateCustomLobby, {
-                            gameNameWithVariation: Qz.gameNameWithVariation,
-                            close: CC
+                        IF.NotificationProvider.showCustomPopup({
+                          body: kk => (0, bk.jsx)(XF.CreateCustomLobby, {
+                            gameNameWithVariation: TF.gameNameWithVariation,
+                            close: kk
                           }),
                           middleScreenPopupClassName: "CreateCustomLobbyPopup"
                         })
                       }
-                    }), !0 === Dz && (0, EC.jsx)(Gz.i, {}), !1 === Dz && (0, EC.jsx)(Jz, {
-                      customLobbies: yz,
-                      favouriteLobbies: Uz,
-                      toggleLikeLobby: WZ,
-                      showReport: yC.featureFlags.useSocialFeatures && "owned" !== Oz
+                    }), !0 === YF && (0, bk.jsx)(PF.g, {}), !1 === YF && (0, bk.jsx)(VF, {
+                      customLobbies: gF,
+                      favouriteLobbies: hF,
+                      toggleLikeLobby: ZI,
+                      showReport: gk.featureFlags.useSocialFeatures && "owned" !== DF
                     })]
-                  }), SZ]
+                  }), HI]
                 })]
               })
             })]
-          }), !gZ && SZ]
+          }), !wI && HI]
         })
       })
     }
 
-    function uz(CC) {
+    function NF(kk) {
       let {
-        variation: zC,
-        isSelected: ZC,
-        children: QC
-      } = CC;
-      const oC = Wz.d[zC],
-        FC = (0, bC.k)(zC, (0, bC.n)(oC)),
-        WC = (0, wC.e)(FC),
-        NC = (0, nC.g)([(0, bC.i)(zC, (0, bC.e)(oC))]);
-      return (0, EC.jsxs)(kC.LinkPreserveSearch, {
-        to: (0, rC.v)(zC),
+        variation: Fk,
+        isSelected: Ik,
+        children: Xk
+      } = kk;
+      const ak = ZF.e[Fk],
+        Lk = (0, ik.m)(Fk, (0, ik.p)(ak)),
+        tk = (0, Tk.e)(Lk),
+        Zk = (0, yk.d)([(0, ik.k)(Fk, (0, ik.e)(ak))]);
+      return (0, bk.jsxs)(Mk.LinkPreserveSearch, {
+        to: (0, ck.F)(Fk),
         replace: !0,
-        className: gC()("GameInformationVariation", fC.k, {
-          SelectedGameInformationVariation: ZC
+        className: ek()("GameInformationVariation", lk.g, {
+          SelectedGameInformationVariation: Ik
         }),
-        onClick: CC => {
-          if (!(0, Cz.d)(CC)) return;
-          const ZC = (0, GC.k)(zC);
-          qC.i.setItem(ZC, zC)
+        onClick: kk => {
+          if (!(0, FF.e)(kk)) return;
+          const Ik = (0, xk.h)(Fk);
+          qk.j.setItem(Ik, Fk)
         },
-        onMouseEnter: NC.start,
-        onMouseLeave: NC.cancel,
-        onFocus: NC.start,
-        onBlur: NC.cancel,
-        style: (0, fC.g)(WC),
-        children: [(0, EC.jsx)(fC.d, {
-          image: WC
-        }), QC]
+        onMouseEnter: Zk.start,
+        onMouseLeave: Zk.cancel,
+        onFocus: Zk.start,
+        onBlur: Zk.cancel,
+        style: (0, lk.f)(tk),
+        children: [(0, bk.jsx)(lk.d, {
+          image: tk
+        }), Xk]
       })
     }
   },
-  6513: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => GC
+  6501: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => xk
     });
-    var QC = ZC(48),
-      wC = ZC(1388),
-      bC = ZC(1439),
-      nC = ZC(3452),
-      fC = ZC(1076),
-      oC = ZC(1295),
-      qC = ZC(1321),
-      FC = ZC(1013),
-      WC = ZC(1002),
-      NC = ZC.n(WC),
-      MC = ZC(6505),
-      gC = ZC(1056);
+    var Xk = Ik(58),
+      Tk = Ik(1406),
+      ik = Ik(1453),
+      yk = Ik(3428),
+      lk = Ik(1118),
+      ak = Ik(1318),
+      qk = Ik(1333),
+      Lk = Ik(1066),
+      tk = Ik(1055),
+      Zk = Ik.n(tk),
+      jk = Ik(6498),
+      ek = Ik(1096);
 
-    function SC(CC) {
+    function wk(kk) {
       let {
-        info: zC,
-        className: ZC
-      } = CC;
+        info: Fk,
+        className: Ik
+      } = kk;
       const {
-        statusText: QC,
-        rowText: wC
-      } = (0, MC.g)();
-      return (0, gC.jsxs)("div", {
-        className: NC()("GameApprovalInfoDetails", ZC),
-        children: [(0, gC.jsxs)("div", {
-          className: NC()("GameApprovalInfoSummary", zC.overallPassed ? "Passed" : "Failed"),
-          children: [(0, gC.jsx)(FC.c, {
-            name: zC.overallPassed ? "circle-check" : "circle-xmark"
-          }), (0, gC.jsx)("span", {
-            children: QC(zC.status)
+        statusText: Xk,
+        rowText: Tk
+      } = (0, jk.g)();
+      return (0, ek.jsxs)("div", {
+        className: Zk()("GameApprovalInfoDetails", Ik),
+        children: [(0, ek.jsxs)("div", {
+          className: Zk()("GameApprovalInfoSummary", Fk.overallPassed ? "Passed" : "Failed"),
+          children: [(0, ek.jsx)(Lk.e, {
+            name: Fk.overallPassed ? "circle-check" : "circle-xmark"
+          }), (0, ek.jsx)("span", {
+            children: Xk(Fk.status)
           })]
-        }), zC.rows.length > 0 && (0, gC.jsx)("div", {
+        }), Fk.rows.length > 0 && (0, ek.jsx)("div", {
           className: "GameApprovalInfoRows",
-          children: zC.rows.map((CC => {
+          children: Fk.rows.map((kk => {
             const {
-              label: zC,
-              value: ZC
-            } = wC(CC);
-            return (0, gC.jsxs)("div", {
-              className: NC()("GameApprovalInfoRow", CC.passed ? "Passed" : "Failed"),
-              children: [(0, gC.jsx)(FC.c, {
-                name: CC.passed ? "check" : "xmark"
-              }), (0, gC.jsxs)("div", {
+              label: Fk,
+              value: Ik
+            } = Tk(kk);
+            return (0, ek.jsxs)("div", {
+              className: Zk()("GameApprovalInfoRow", kk.passed ? "Passed" : "Failed"),
+              children: [(0, ek.jsx)(Lk.e, {
+                name: kk.passed ? "check" : "xmark"
+              }), (0, ek.jsxs)("div", {
                 className: "GameApprovalInfoRowText",
-                children: [(0, gC.jsx)("div", {
+                children: [(0, ek.jsx)("div", {
                   className: "GameApprovalInfoRowLabel",
-                  children: zC
-                }), null !== ZC && (0, gC.jsx)("div", {
+                  children: Fk
+                }), null !== Ik && (0, ek.jsx)("div", {
                   className: "GameApprovalInfoRowValue",
-                  children: ZC
+                  children: Ik
                 })]
               })]
-            }, CC.kind)
+            }, kk.kind)
           }))
         })]
       })
     }
-    var pC = ZC(1143),
-      PC = ZC(1307);
+    var Hk = Ik(1179),
+      Jk = Ik(1324);
 
-    function GC(CC) {
-      PC.NotificationProvider.showCustomPopup({
-        body: () => (0, gC.jsx)(RC, {
-          ...CC
+    function xk(kk) {
+      Jk.NotificationProvider.showCustomPopup({
+        body: () => (0, ek.jsx)(Pk, {
+          ...kk
         }),
         middleScreenPopupClassName: "ApprovalInfoPopup",
         onClose: () => {},
@@ -1376,92 +1376,92 @@ export const modules = {
       })
     }
 
-    function RC(CC) {
+    function Pk(kk) {
       let {
-        schematicId: zC,
-        canOverride: ZC,
-        onApprovalChanged: WC
-      } = CC;
+        schematicId: Fk,
+        canOverride: Ik,
+        onApprovalChanged: tk
+      } = kk;
       const {
-        t: NC
-      } = (0, pC.y)(), {
-        userContext: MC
-      } = (0, fC.e)(), PC = (0, nC.e)(), [GC, RC] = (0, QC.useState)(null), [AC, xC] = (0, QC.useState)(null), [JC, IC] = (0, QC.useState)(!1), iC = (0, QC.useCallback)((() => {
-        xC(null), bC.d.getGameApprovalInfo(MC, zC).then((CC => {
-          PC.current && RC(CC)
-        })).catch((CC => {
-          console.error("Failed to get game approval info", CC), PC.current && xC(NC("studio:approvalLoadFailed"))
+        t: Zk
+      } = (0, Hk.y)(), {
+        userContext: jk
+      } = (0, lk.d)(), Jk = (0, yk.d)(), [xk, Pk] = (0, Xk.useState)(null), [Kk, Qk] = (0, Xk.useState)(null), [sk, Vk] = (0, Xk.useState)(!1), zk = (0, Xk.useCallback)((() => {
+        Qk(null), ik.e.getGameApprovalInfo(jk, Fk).then((kk => {
+          Jk.current && Pk(kk)
+        })).catch((kk => {
+          console.error("Failed to get game approval info", kk), Jk.current && Qk(Zk("studio:approvalLoadFailed"))
         }))
-      }), [MC, zC, PC, NC]);
-      (0, QC.useEffect)((() => {
-        iC()
-      }), [iC]);
-      const vC = CC => {
-        JC || (IC(!0), bC.d.setGameApproval(MC, zC, CC).then((() => {
-          null === WC || void 0 === WC || WC(), PC.current && iC()
-        })).catch((CC => {
-          console.error("Failed to set game approval", CC)
+      }), [jk, Fk, Jk, Zk]);
+      (0, Xk.useEffect)((() => {
+        zk()
+      }), [zk]);
+      const Sk = kk => {
+        sk || (Vk(!0), ik.e.setGameApproval(jk, Fk, kk).then((() => {
+          null === tk || void 0 === tk || tk(), Jk.current && zk()
+        })).catch((kk => {
+          console.error("Failed to set game approval", kk)
         })).finally((() => {
-          PC.current && IC(!1)
+          Jk.current && Vk(!1)
         })))
       };
-      return (0, gC.jsxs)("div", {
+      return (0, ek.jsxs)("div", {
         className: "ApprovalInfoPopupBody",
-        children: [(0, gC.jsx)("h1", {
+        children: [(0, ek.jsx)("h1", {
           className: "ApprovalInfoPopupTitle",
-          children: NC("studio:approvalTitle")
-        }), !GC && !AC && (0, gC.jsx)("div", {
+          children: Zk("studio:approvalTitle")
+        }), !xk && !Kk && (0, ek.jsx)("div", {
           className: "ApprovalInfoPopupLoader",
-          children: (0, gC.jsx)(oC.d, {})
-        }), AC && (0, gC.jsx)("div", {
+          children: (0, ek.jsx)(ak.c, {})
+        }), Kk && (0, ek.jsx)("div", {
           className: "ApprovalInfoPopupError",
-          children: AC
-        }), GC && (0, gC.jsxs)(gC.Fragment, {
-          children: [(0, gC.jsx)(SC, {
-            info: GC
-          }), ZC && (0, gC.jsxs)("div", {
+          children: Kk
+        }), xk && (0, ek.jsxs)(ek.Fragment, {
+          children: [(0, ek.jsx)(wk, {
+            info: xk
+          }), Ik && (0, ek.jsxs)("div", {
             className: "ApprovalInfoPopupActions",
-            children: [!0 !== GC.manualOverride && (0, gC.jsx)(qC.d, {
-              tooltipInner: (0, gC.jsx)("div", {
-                children: NC("studio:approvalApproveTooltip")
+            children: [!0 !== xk.manualOverride && (0, ek.jsx)(qk.g, {
+              tooltipInner: (0, ek.jsx)("div", {
+                children: Zk("studio:approvalApproveTooltip")
               }),
-              children: (0, gC.jsxs)(wC.o, {
+              children: (0, ek.jsxs)(Tk.m, {
                 className: "ApprovalInfoPopupActionButton",
                 onClick: () => {
-                  vC(!0)
+                  Sk(!0)
                 },
-                disabled: JC,
-                children: [(0, gC.jsx)(FC.c, {
+                disabled: sk,
+                children: [(0, ek.jsx)(Lk.e, {
                   name: "check"
-                }), " ", NC("studio:approvalApprove")]
+                }), " ", Zk("studio:approvalApprove")]
               })
-            }), !1 !== GC.manualOverride && (0, gC.jsx)(qC.d, {
-              tooltipInner: (0, gC.jsx)("div", {
-                children: NC("studio:approvalDenyTooltip")
+            }), !1 !== xk.manualOverride && (0, ek.jsx)(qk.g, {
+              tooltipInner: (0, ek.jsx)("div", {
+                children: Zk("studio:approvalDenyTooltip")
               }),
-              children: (0, gC.jsxs)(wC.I, {
+              children: (0, ek.jsxs)(Tk.G, {
                 className: "ApprovalInfoPopupActionButton",
                 onClick: () => {
-                  vC(!1)
+                  Sk(!1)
                 },
-                disabled: JC,
-                children: [(0, gC.jsx)(FC.c, {
+                disabled: sk,
+                children: [(0, ek.jsx)(Lk.e, {
                   name: "xmark"
-                }), " ", NC("studio:approvalDeny")]
+                }), " ", Zk("studio:approvalDeny")]
               })
-            }), null !== GC.manualOverride && (0, gC.jsx)(qC.d, {
-              tooltipInner: (0, gC.jsx)("div", {
-                children: NC("studio:approvalClearOverrideTooltip")
+            }), null !== xk.manualOverride && (0, ek.jsx)(qk.g, {
+              tooltipInner: (0, ek.jsx)("div", {
+                children: Zk("studio:approvalClearOverrideTooltip")
               }),
-              children: (0, gC.jsxs)(wC.g, {
+              children: (0, ek.jsxs)(Tk.d, {
                 className: "ApprovalInfoPopupActionButton",
                 onClick: () => {
-                  vC(null)
+                  Sk(null)
                 },
-                disabled: JC,
-                children: [(0, gC.jsx)(FC.c, {
+                disabled: sk,
+                children: [(0, ek.jsx)(Lk.e, {
                   name: "arrows-rotate"
-                }), " ", NC("studio:approvalClearOverride")]
+                }), " ", Zk("studio:approvalClearOverride")]
               })
             })]
           })]
@@ -1469,14 +1469,14 @@ export const modules = {
       })
     }
   },
-  6505: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => fC,
-      g: () => nC
+  6498: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => lk,
+      g: () => yk
     });
-    var QC = ZC(326),
-      wC = ZC(1143);
-    const bC = {
+    var Xk = Ik(337),
+      Tk = Ik(1179);
+    const ik = {
       manuallyApproved: "studio:approvalStatusManuallyApproved",
       manuallyAndAutoApproved: "studio:approvalStatusManuallyAndAutoApproved",
       manuallyDenied: "studio:approvalStatusManuallyDenied",
@@ -1485,60 +1485,60 @@ export const modules = {
       notIndexed: "studio:approvalStatusNotIndexed"
     };
 
-    function nC() {
+    function yk() {
       const {
-        t: CC,
-        selectedLanguage: zC
-      } = (0, wC.y)();
+        t: kk,
+        selectedLanguage: Fk
+      } = (0, Tk.y)();
       return {
-        statusText: zC => CC(bC[zC]),
-        rowText: ZC => {
-          const bC = (CC, ZC) => (0, QC.U)((0, wC.m)(zC.code, CC), 0, ZC);
-          switch (ZC.kind) {
+        statusText: Fk => kk(ik[Fk]),
+        rowText: Ik => {
+          const ik = (kk, Ik) => (0, Xk.gb)((0, Tk.l)(Fk.code, kk), 0, Ik);
+          switch (Ik.kind) {
             case "ownerAccountAge": {
-              const zC = ZC.ownerIsLoggedIn ? "studio:approvalAccountAgeLoggedIn" : "studio:approvalAccountAgeNotLoggedIn";
+              const Fk = Ik.ownerIsLoggedIn ? "studio:approvalAccountAgeLoggedIn" : "studio:approvalAccountAgeNotLoggedIn";
               return {
-                label: CC("studio:approvalAccountAgeLabel"),
-                value: CC(zC, {
-                  age: bC(zC, ZC.accountAgeMs),
-                  days: ZC.minAccountAgeDays
+                label: kk("studio:approvalAccountAgeLabel"),
+                value: kk(Fk, {
+                  age: ik(Fk, Ik.accountAgeMs),
+                  days: Ik.minAccountAgeDays
                 })
               }
             }
             case "sinceUnbannedOrUnmuted":
               return {
-                label: CC("studio:approvalSinceUnbannedLabel"), value: CC("studio:approvalSinceUnbannedValue", {
-                  time: bC("studio:approvalSinceUnbannedValue", ZC.sinceMs),
-                  days: ZC.minDays
+                label: kk("studio:approvalSinceUnbannedLabel"), value: kk("studio:approvalSinceUnbannedValue", {
+                  time: ik("studio:approvalSinceUnbannedValue", Ik.sinceMs),
+                  days: Ik.minDays
                 })
               };
             case "reportHold": {
               const {
-                detail: zC
-              } = ZC;
-              if (null === zC) return {
-                label: CC("studio:approvalUnderInvestigation"),
+                detail: Fk
+              } = Ik;
+              if (null === Fk) return {
+                label: kk("studio:approvalUnderInvestigation"),
                 value: null
               };
-              const QC = zC.weightedReporters.toFixed(1),
-                wC = zC.threshold.toFixed(1),
-                nC = CC("studio:approvalReportHoldLabel", {
-                  hours: zC.windowHours
+              const Xk = Fk.weightedReporters.toFixed(1),
+                Tk = Fk.threshold.toFixed(1),
+                yk = kk("studio:approvalReportHoldLabel", {
+                  hours: Fk.windowHours
                 });
-              if (null === zC.heldUntil) return {
-                label: nC,
-                value: CC("studio:approvalReportHoldValue", {
-                  weightedReporters: QC,
-                  threshold: wC
+              if (null === Fk.heldUntil) return {
+                label: yk,
+                value: kk("studio:approvalReportHoldValue", {
+                  weightedReporters: Xk,
+                  threshold: Tk
                 })
               };
-              const fC = "studio:approvalReportHoldValueHeld";
+              const lk = "studio:approvalReportHoldValueHeld";
               return {
-                label: nC,
-                value: CC(fC, {
-                  weightedReporters: QC,
-                  threshold: wC,
-                  time: bC(fC, zC.heldUntil - Date.now())
+                label: yk,
+                value: kk(lk, {
+                  weightedReporters: Xk,
+                  threshold: Tk,
+                  time: ik(lk, Fk.heldUntil - Date.now())
                 })
               }
             }
@@ -1547,85 +1547,85 @@ export const modules = {
       }
     }
 
-    function fC(CC) {
-      return null === CC.manualOverride && CC.rows.some((CC => "reportHold" === CC.kind && !CC.passed))
+    function lk(kk) {
+      return null === kk.manualOverride && kk.rows.some((kk => "reportHold" === kk.kind && !kk.passed))
     }
   },
-  34202: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => bC
+  34231: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => ik
     });
-    var QC = ZC(48),
-      wC = ZC(3419);
+    var Xk = Ik(58),
+      Tk = Ik(3378);
 
-    function bC() {
-      const [CC, zC] = (0, QC.useState)(!1);
-      return (0, QC.useLayoutEffect)((() => {
-        let CC = !0;
-        return (0, wC.e)().then((() => {
-          CC && zC(!0)
+    function ik() {
+      const [kk, Fk] = (0, Xk.useState)(!1);
+      return (0, Xk.useLayoutEffect)((() => {
+        let kk = !0;
+        return (0, Tk.e)().then((() => {
+          kk && Fk(!0)
         })), () => {
-          CC = !1
+          kk = !1
         }
-      }), []), CC
+      }), []), kk
     }
   },
-  8912: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => nC
+  8898: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => yk
     });
-    var QC = ZC(1284),
-      wC = ZC(1169),
-      bC = ZC(600);
+    var Xk = Ik(1308),
+      Tk = Ik(1217),
+      ik = Ik(628);
 
-    function nC(CC) {
-      return CC = function(CC, zC) {
-        var ZC;
-        const QC = new URLSearchParams(zC),
-          wC = QC.get("lobby"),
-          bC = QC.get("vm"),
-          nC = null !== (ZC = wC) && void 0 !== ZC ? ZC : CC.lobbyName,
-          fC = null !== bC && void 0 !== bC ? bC : CC.directJoinVmUrl;
-        if (nC === CC.lobbyName && fC === CC.directJoinVmUrl) return CC;
+    function yk(kk) {
+      return kk = function(kk, Fk) {
+        var Ik;
+        const Xk = new URLSearchParams(Fk),
+          Tk = Xk.get("lobby"),
+          ik = Xk.get("vm"),
+          yk = null !== (Ik = Tk) && void 0 !== Ik ? Ik : kk.lobbyName,
+          lk = null !== ik && void 0 !== ik ? ik : kk.directJoinVmUrl;
+        if (yk === kk.lobbyName && lk === kk.directJoinVmUrl) return kk;
         return {
-          ...CC,
-          lobbyName: nC,
-          directJoinVmUrl: fC
+          ...kk,
+          lobbyName: yk,
+          directJoinVmUrl: lk
         }
-      }(CC, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), CC = function(CC) {
-        if ((0, bC.H)(CC.directJoinVmUrl)) return CC;
-        const zC = (0, wC.hb)(CC.directJoinVmUrl);
-        null === zC && (CC.directJoinVmUrl = void 0);
-        return CC
-      }(CC = function(CC) {
-        if ((0, bC.H)(CC.gameNameWithVariation)) return CC;
-        return CC.gameNameWithVariation = (0, QC.k)(CC.gameNameWithVariation), CC
-      }(CC))
+      }(kk, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), kk = function(kk) {
+        if ((0, ik.Q)(kk.directJoinVmUrl)) return kk;
+        const Fk = (0, Tk.Z)(kk.directJoinVmUrl);
+        null === Fk && (kk.directJoinVmUrl = void 0);
+        return kk
+      }(kk = function(kk) {
+        if ((0, ik.Q)(kk.gameNameWithVariation)) return kk;
+        return kk.gameNameWithVariation = (0, Xk.n)(kk.gameNameWithVariation), kk
+      }(kk))
     }
   },
-  8907: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => bC,
-      g: () => wC
+  8895: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => ik,
+      e: () => Tk
     });
-    let QC = !1;
+    let Xk = !1;
 
-    function wC() {
-      QC = !0
+    function Tk() {
+      Xk = !0
     }
 
-    function bC() {
-      return QC
+    function ik() {
+      return Xk
     }
   },
-  36247: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => wC,
-      g: () => QC
+  36363: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Tk,
+      f: () => Xk
     });
-    const QC = "skyblockSkills",
-      wC = "skills_test_gym"
+    const Xk = "skyblockSkills",
+      Tk = "skills_test_gym"
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

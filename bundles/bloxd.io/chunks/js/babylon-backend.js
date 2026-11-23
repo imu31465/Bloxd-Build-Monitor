@@ -1,100 +1,100 @@
 export const id = 0;
 export const ids = [0];
 export const modules = {
-  40956: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      CapeMaterialPlugin: () => AC,
-      HueTintMaterialPlugin: () => xC,
-      LifeformMaterialPlugin: () => JC,
-      OverlayMaterialPlugin: () => IC
+  41123: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      CapeMaterialPlugin: () => Kk,
+      HueTintMaterialPlugin: () => Qk,
+      LifeformMaterialPlugin: () => sk,
+      OverlayMaterialPlugin: () => Vk
     });
-    var QC = ZC(40958),
-      wC = ZC(37849);
-    class bC extends((0, QC.g)(wC.e)) {}(0, QC.i)(wC.e, bC);
-    var nC = ZC(37040);
-    class fC extends((0, QC.g)(nC.f)) {}(0, QC.i)(nC.f, fC);
-    var oC = ZC(37677);
-    class qC extends((0, QC.g)(oC.d)) {}(0, QC.i)(oC.d, qC);
-    var FC = ZC(37290),
-      WC = ZC(40092),
-      NC = ZC(37285);
-    class MC extends((0, QC.g)(NC.d)) {
-      constructor(CC, zC, ZC) {
-        super(CC, zC, ZC), (0, FC.g)(CC)
+    var Xk = Ik(41132),
+      Tk = Ik(38010);
+    class ik extends((0, Xk.g)(Tk.d)) {}(0, Xk.h)(Tk.d, ik);
+    var yk = Ik(37236);
+    class lk extends((0, Xk.g)(yk.f)) {}(0, Xk.h)(yk.f, lk);
+    var ak = Ik(37835);
+    class qk extends((0, Xk.g)(ak.e)) {}(0, Xk.h)(ak.e, qk);
+    var Lk = Ik(37461),
+      tk = Ik(40269),
+      Zk = Ik(37457);
+    class jk extends((0, Xk.g)(Zk.e)) {
+      constructor(kk, Fk, Ik) {
+        super(kk, Fk, Ik), (0, Lk.h)(kk)
       }
-      dispose(CC) {
-        (0, FC.k)(this._material), super.dispose(CC)
+      dispose(kk) {
+        (0, Lk.l)(this._material), super.dispose(kk)
       }
-    }(0, QC.i)(NC.d, MC), (0, NC.f)({
-      disableUnusedSpecularTerm: QC.c,
-      isLightingDisabled: CC => CC instanceof WC.StandardMaterial && CC.disableLighting
+    }(0, Xk.h)(Zk.e, jk), (0, Zk.f)({
+      disableUnusedSpecularTerm: Xk.d,
+      isLightingDisabled: kk => kk instanceof tk.StandardMaterial && kk.disableLighting
     });
-    var gC = ZC(38517);
-    class SC extends((0, QC.g)(gC.c)) {}(0, QC.i)(gC.c, SC);
-    var pC = ZC(38623),
-      PC = ZC(37149),
-      GC = ZC(37973),
-      RC = ZC(37086);
-    class AC extends((0, QC.g)(pC.e)) {}(0, QC.i)(pC.e, AC);
-    class xC extends((0, QC.g)(PC.b)) {}(0, QC.i)(PC.b, xC);
-    class JC extends((0, QC.g)(GC.q)) {}(0, QC.i)(GC.q, JC);
-    class IC extends((0, QC.g)(RC.e)) {}(0, QC.i)(RC.e, IC)
+    var ek = Ik(38684);
+    class wk extends((0, Xk.g)(ek.d)) {}(0, Xk.h)(ek.d, wk);
+    var Hk = Ik(38791),
+      Jk = Ik(37340),
+      xk = Ik(38126),
+      Pk = Ik(37286);
+    class Kk extends((0, Xk.g)(Hk.d)) {}(0, Xk.h)(Hk.d, Kk);
+    class Qk extends((0, Xk.g)(Jk.d)) {}(0, Xk.h)(Jk.d, Qk);
+    class sk extends((0, Xk.g)(xk.m)) {}(0, Xk.h)(xk.m, sk);
+    class Vk extends((0, Xk.g)(Pk.d)) {}(0, Xk.h)(Pk.d, Vk)
   },
-  41355: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      addBabylonLights: () => xz,
-      default: () => iz
+  41559: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      addBabylonLights: () => sF,
+      default: () => SF
     });
-    var QC = ZC(41362),
-      wC = (ZC(39791), ZC(40948), ZC(40308), ZC(41375)),
-      bC = ZC(37138),
-      nC = ZC(36961),
-      fC = ZC(41392),
-      oC = ZC(41394),
-      qC = ZC(37083),
-      FC = (ZC(40958), ZC(41402)),
-      WC = ZC(41396),
-      NC = ZC(38548),
-      MC = ZC(41411),
-      gC = ZC(39674),
-      SC = ZC(38529);
-    const pC = "gpuParticles",
-      PC = SC.x,
-      GC = CC => CC / 4,
-      RC = CC => `gpuParticleSystem[${CC>>2}].${"xyzw"[3&CC]}`,
-      AC = `\nprecision highp float;\nprecision highp int;\nprecision highp usampler2D;\n\n#define MAX_STOPS ${SC.d}\n#define COLOR_POSITIONS ${GC(PC.colorPositions)}\n#define COLOR1 ${GC(PC.color1)}\n#define COLOR2 ${GC(PC.color2)}\n#define VELOCITY ${GC(PC.Np)}\n#define REMAP ${GC(PC.remap)}\n#define RECORDS_PER_ROW ${SC.n}\n\nuniform mat4 gpuParticleView;\nuniform mat4 gpuParticleProjection;\nuniform vec4 gpuParticleSystem[${SC.r/4}];\n// The records' frame offset and the system's clock; the slot drawn first (the oldest) and the slots in use.\nuniform vec4 gpuParticleFrame;\nuniform vec2 gpuParticleRange;\nuniform usampler2D gpuParticleRecords;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvec3 gravity() { return vec3(${RC(PC.gravity)}, ${RC(PC.gravity+1)}, ${RC(PC.gravity+2)}); }\nint colorCount() { return int(${RC(PC.colorCount)}); }\nvec4 colorDead() { return gpuParticleSystem[${GC(PC.colorDead)}]; }\nint velocityCount() { return int(${RC(PC.velocityCount)}); }\nint remapCount() { return int(${RC(PC.remapCount)}); }\n\nuint hash(uint v) {\n\tuint state = v * 747796405u + 2891336453u;\n\t// (state >> 28) + 4 as constant shifts: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 shifts by a variable amount wrongly\n\tuint top = state >> 28u;\n\tuint bits0 = state >> 4u;\n\tuint bits1 = (top & 1u) != 0u ? bits0 >> 1u : bits0;\n\tuint bits2 = (top & 2u) != 0u ? bits1 >> 2u : bits1;\n\tuint bits3 = (top & 4u) != 0u ? bits2 >> 4u : bits2;\n\tuint word = (((top & 8u) != 0u ? bits3 >> 8u : bits3) ^ state) * 277803737u;\n\treturn (word >> 22u) ^ word;\n}\n\n// The particle's own random pick for a gradient stop, as Babylon picks one when the particle reaches it.\nfloat random(uint seed, int stop) {\n\treturn float(hash(seed ^ (uint(stop) * 0x9e3779b9u)) >> 8u) / 16777216.0;\n}\n\nfloat colourPosition(int i) {\n\treturn gpuParticleSystem[COLOR_POSITIONS + i / 4][i % 4];\n}\n\nvec4 stopColour(int i, uint seed) {\n\treturn mix(gpuParticleSystem[COLOR1 + i], gpuParticleSystem[COLOR2 + i], random(seed, i));\n}\n\nfloat velocityFactor(int i, uint seed) {\n\tvec4 stop = gpuParticleSystem[VELOCITY + i];\n\treturn mix(stop.y, stop.z, random(seed, MAX_STOPS + i));\n}\n\nvec4 colourAt(vec4 colour0, float age, float ratio, uint seed) {\n\tint n = colorCount();\n\tvec4 colour;\n\tif (n == 0) {\n\t\tcolour = mix(colour0, colorDead(), ratio);\n\t} else if (age == 0.0) {\n\t\treturn stopColour(0, seed);\n\t} else if (ratio < colourPosition(0)) {\n\t\tcolour = stopColour(min(1, n - 1), seed);\n\t} else {\n\t\tcolour = stopColour(n - 1, seed);\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tfloat a = colourPosition(i);\n\t\t\tfloat b = colourPosition(i + 1);\n\t\t\tif (ratio >= a && ratio <= b) {\n\t\t\t\tfloat scale = b > a ? (ratio - a) / (b - a) : 0.0;\n\t\t\t\tcolour = mix(stopColour(i, seed), stopColour(i + 1, seed), scale);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\tcolour.a = max(colour.a, 0.0);\n\treturn colour;\n}\n\nvec3 travel(float alpha, float beta, vec3 d, vec3 g, float s0, float s1) {\n\tfloat ds = s1 - s0;\n\tfloat ds2 = (s1 * s1 - s0 * s0) * 0.5;\n\tfloat ds3 = (s1 * s1 * s1 - s0 * s0 * s0) / 3.0;\n\treturn d * (alpha * ds) + (g * alpha + d * beta) * ds2 + g * (beta * ds3);\n}\n\nvec3 displacement(vec3 d, float age, float life, uint seed) {\n\tvec3 g = gravity();\n\tint n = velocityCount();\n\tif (n == 0) {\n\t\treturn d * age + g * (0.5 * age * age);\n\t}\n\tvec3 total = vec3(0.0);\n\tfloat beforeFirst = min(age, gpuParticleSystem[VELOCITY].x * life);\n\tif (beforeFirst > 0.0) {\n\t\ttotal += travel(velocityFactor(min(1, n - 1), seed), 0.0, d, g, 0.0, beforeFirst);\n\t}\n\tfor (int i = 0; i + 1 < n; i++) {\n\t\tfloat a = gpuParticleSystem[VELOCITY + i].x * life;\n\t\tfloat b = gpuParticleSystem[VELOCITY + i + 1].x * life;\n\t\tfloat lo = max(a, 0.0);\n\t\tfloat hi = min(b, age);\n\t\tif (hi > lo) {\n\t\t\tfloat fa = velocityFactor(i, seed);\n\t\t\tfloat beta = (velocityFactor(i + 1, seed) - fa) / (b - a);\n\t\t\ttotal += travel(fa - beta * a, beta, d, g, lo, hi);\n\t\t}\n\t}\n\tfloat afterLast = max(gpuParticleSystem[VELOCITY + n - 1].x * life, 0.0);\n\tif (age > afterLast) {\n\t\ttotal += travel(velocityFactor(n - 1, seed), 0.0, d, g, afterLast, age);\n\t}\n\treturn total;\n}\n\nvec4 remapAt(float age, float ratio) {\n\tint n = remapCount();\n\tif (n == 0 || age == 0.0) {\n\t\treturn vec4(0.0, 1.0, 0.0, 1.0);\n\t}\n\tvec2 stop = gpuParticleSystem[REMAP + n - 1].yz;\n\tif (ratio < gpuParticleSystem[REMAP].x) {\n\t\tstop = gpuParticleSystem[REMAP].yz;\n\t} else {\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tvec4 a = gpuParticleSystem[REMAP + i];\n\t\t\tvec4 b = gpuParticleSystem[REMAP + i + 1];\n\t\t\tif (ratio >= a.x && ratio <= b.x) {\n\t\t\t\tstop = mix(a.yz, b.yz, b.x > a.x ? (ratio - a.x) / (b.x - a.x) : 0.0);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn vec4(stop.x, stop.y - stop.x, 0.0, 1.0);\n}\n\nvoid main(void) {\n\t// No division by a variable: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 is suspected of dividing by a uniform wrongly\n\tint count = int(gpuParticleRange.y);\n\tint unwrapped = int(gpuParticleRange.x) + gl_InstanceID;\n\t// One wrap, as start < count and the draw's instances are count (gpuParticleRing.ts)\n\tint slot = unwrapped >= count ? unwrapped - count : unwrapped;\n\tivec2 at = ivec2((slot % RECORDS_PER_ROW) * 4, slot / RECORDS_PER_ROW);\n\tvec4 spawn = uintBitsToFloat(texelFetch(gpuParticleRecords, at, 0));\n\tvec4 velocity = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(1, 0), 0));\n\tuvec4 sizeSeed = texelFetch(gpuParticleRecords, at + ivec2(2, 0), 0);\n\tvec4 colour0 = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(3, 0), 0));\n\tfloat age = gpuParticleFrame.w - spawn.w;\n\tfloat life = velocity.w;\n\t// The strip's corners: (0, 0), (1, 0), (0, 1), (1, 1).\n\tvec2 corner = vec2(float(gl_VertexID & 1), float(gl_VertexID >> 1));\n\tvUV = corner;\n\tif (!(age >= 0.0 && age < life)) {\n\t\t// Dead, or not yet written: outside the clip volume.\n\t\tgl_Position = vec4(0.0, 0.0, 2.0, 1.0);\n\t\tvColor = vec4(0.0);\n\t\tvRemap = vec4(0.0, 1.0, 0.0, 1.0);\n\t\treturn;\n\t}\n\tfloat ratio = age / life;\n\tuint seed = sizeSeed.y;\n\tvec3 centre = gpuParticleFrame.xyz + spawn.xyz + displacement(velocity.xyz, age, life, seed);\n\t// particles.vertex's billboard: the corner offset in view space.\n\tvec3 viewPos = (gpuParticleView * vec4(centre, 1.0)).xyz + vec3((corner - 0.5) * uintBitsToFloat(sizeSeed.x), 0.0);\n\tgl_Position = gpuParticleProjection * vec4(viewPos, 1.0);\n\tvColor = colourAt(colour0, age, ratio, seed);\n\tvRemap = remapAt(age, ratio);\n}\n`;
-    gC.b.ShadersStore[`${pC}VertexShader`] = AC, gC.b.ShadersStore[`${pC}PixelShader`] = "\nprecision highp float;\n\nuniform sampler2D gpuParticleTexture;\nuniform sampler2D gpuParticleRampTexture;\nuniform float gpuParticleRamp;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvoid main(void) {\n\tvec4 textureColour = texture2D(gpuParticleTexture, vUV);\n\tvec4 colour = textureColour * vColor;\n\tif (gpuParticleRamp != 0.0) {\n\t\tfloat alpha = colour.a;\n\t\tfloat index = clamp((alpha - vRemap.x) / vRemap.y, 0.0, 1.0);\n\t\tvec4 rampColour = texture2D(gpuParticleRampTexture, vec2(1.0 - index, 0.0));\n\t\tcolour = vec4(colour.rgb * rampColour.rgb, clamp((alpha * rampColour.a - vRemap.z) / vRemap.w, 0.0, 1.0));\n\t}\n#ifdef MULTIPLY_PASS\n\t// The MULTIPLY pass of BLENDMULTIPLYMODE, which MULTIPLYADD draws before its ADD pass.\n\tfloat sourceAlpha = vColor.a * textureColour.a;\n\tcolour.rgb = colour.rgb * sourceAlpha + vec3(1.0 - sourceAlpha);\n#endif\n\tgl_FragColor = colour;\n}\n";
-    const xC = ["gpuParticleView", "gpuParticleProjection", "gpuParticleSystem", "gpuParticleFrame", "gpuParticleRange", "gpuParticleRamp"],
-      JC = ["gpuParticleTexture", "gpuParticleRampTexture", "gpuParticleRecords"];
-    var IC = ZC(38523),
-      iC = ZC(41418);
-    class vC extends IC.d {
-      constructor(CC, zC, ZC, QC) {
-        super(CC, zC, ZC), this.renderer = ZC, this.sS = QC, this.id = void 0, this.renderingGroupId = 0, this.layerMask = 268435455, this.records = void 0, this.uniforms = new Float32Array(SC.r), this.uniformBits = new Uint32Array(this.uniforms.buffer), this.ramp = null, this.rampTexels = (0, iC.e)(), this.engine = void 0, this.animatedFrame = -1, this.uploadSlots = (CC, zC) => {
+    var Xk = Ik(41561),
+      Tk = (Ik(39980), Ik(41117), Ik(40498), Ik(41573)),
+      ik = Ik(37327),
+      yk = Ik(37144),
+      lk = Ik(41586),
+      ak = Ik(41591),
+      qk = Ik(37277),
+      Lk = (Ik(41132), Ik(41601)),
+      tk = Ik(41599),
+      Zk = Ik(38714),
+      jk = Ik(41604),
+      ek = Ik(39837),
+      wk = Ik(38700);
+    const Hk = "gpuParticles",
+      Jk = wk.t,
+      xk = kk => kk / 4,
+      Pk = kk => `gpuParticleSystem[${kk>>2}].${"xyzw"[3&kk]}`,
+      Kk = `\nprecision highp float;\nprecision highp int;\nprecision highp usampler2D;\n\n#define MAX_STOPS ${wk.c}\n#define COLOR_POSITIONS ${xk(Jk.colorPositions)}\n#define COLOR1 ${xk(Jk.color1)}\n#define COLOR2 ${xk(Jk.color2)}\n#define VELOCITY ${xk(Jk.TH)}\n#define REMAP ${xk(Jk.remap)}\n#define RECORDS_PER_ROW ${wk.l}\n\nuniform mat4 gpuParticleView;\nuniform mat4 gpuParticleProjection;\nuniform vec4 gpuParticleSystem[${wk.p/4}];\n// The records' frame offset and the system's clock; the slot drawn first (the oldest) and the slots in use.\nuniform vec4 gpuParticleFrame;\nuniform vec2 gpuParticleRange;\nuniform usampler2D gpuParticleRecords;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvec3 gravity() { return vec3(${Pk(Jk.gravity)}, ${Pk(Jk.gravity+1)}, ${Pk(Jk.gravity+2)}); }\nint colorCount() { return int(${Pk(Jk.colorCount)}); }\nvec4 colorDead() { return gpuParticleSystem[${xk(Jk.colorDead)}]; }\nint velocityCount() { return int(${Pk(Jk.velocityCount)}); }\nint remapCount() { return int(${Pk(Jk.remapCount)}); }\n\nuint hash(uint v) {\n\tuint state = v * 747796405u + 2891336453u;\n\t// (state >> 28) + 4 as constant shifts: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 shifts by a variable amount wrongly\n\tuint top = state >> 28u;\n\tuint bits0 = state >> 4u;\n\tuint bits1 = (top & 1u) != 0u ? bits0 >> 1u : bits0;\n\tuint bits2 = (top & 2u) != 0u ? bits1 >> 2u : bits1;\n\tuint bits3 = (top & 4u) != 0u ? bits2 >> 4u : bits2;\n\tuint word = (((top & 8u) != 0u ? bits3 >> 8u : bits3) ^ state) * 277803737u;\n\treturn (word >> 22u) ^ word;\n}\n\n// The particle's own random pick for a gradient stop, as Babylon picks one when the particle reaches it.\nfloat random(uint seed, int stop) {\n\treturn float(hash(seed ^ (uint(stop) * 0x9e3779b9u)) >> 8u) / 16777216.0;\n}\n\nfloat colourPosition(int i) {\n\treturn gpuParticleSystem[COLOR_POSITIONS + i / 4][i % 4];\n}\n\nvec4 stopColour(int i, uint seed) {\n\treturn mix(gpuParticleSystem[COLOR1 + i], gpuParticleSystem[COLOR2 + i], random(seed, i));\n}\n\nfloat velocityFactor(int i, uint seed) {\n\tvec4 stop = gpuParticleSystem[VELOCITY + i];\n\treturn mix(stop.y, stop.z, random(seed, MAX_STOPS + i));\n}\n\nvec4 colourAt(vec4 colour0, float age, float ratio, uint seed) {\n\tint n = colorCount();\n\tvec4 colour;\n\tif (n == 0) {\n\t\tcolour = mix(colour0, colorDead(), ratio);\n\t} else if (age == 0.0) {\n\t\treturn stopColour(0, seed);\n\t} else if (ratio < colourPosition(0)) {\n\t\tcolour = stopColour(min(1, n - 1), seed);\n\t} else {\n\t\tcolour = stopColour(n - 1, seed);\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tfloat a = colourPosition(i);\n\t\t\tfloat b = colourPosition(i + 1);\n\t\t\tif (ratio >= a && ratio <= b) {\n\t\t\t\tfloat scale = b > a ? (ratio - a) / (b - a) : 0.0;\n\t\t\t\tcolour = mix(stopColour(i, seed), stopColour(i + 1, seed), scale);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\tcolour.a = max(colour.a, 0.0);\n\treturn colour;\n}\n\nvec3 travel(float alpha, float beta, vec3 d, vec3 g, float s0, float s1) {\n\tfloat ds = s1 - s0;\n\tfloat ds2 = (s1 * s1 - s0 * s0) * 0.5;\n\tfloat ds3 = (s1 * s1 * s1 - s0 * s0 * s0) / 3.0;\n\treturn d * (alpha * ds) + (g * alpha + d * beta) * ds2 + g * (beta * ds3);\n}\n\nvec3 displacement(vec3 d, float age, float life, uint seed) {\n\tvec3 g = gravity();\n\tint n = velocityCount();\n\tif (n == 0) {\n\t\treturn d * age + g * (0.5 * age * age);\n\t}\n\tvec3 total = vec3(0.0);\n\tfloat beforeFirst = min(age, gpuParticleSystem[VELOCITY].x * life);\n\tif (beforeFirst > 0.0) {\n\t\ttotal += travel(velocityFactor(min(1, n - 1), seed), 0.0, d, g, 0.0, beforeFirst);\n\t}\n\tfor (int i = 0; i + 1 < n; i++) {\n\t\tfloat a = gpuParticleSystem[VELOCITY + i].x * life;\n\t\tfloat b = gpuParticleSystem[VELOCITY + i + 1].x * life;\n\t\tfloat lo = max(a, 0.0);\n\t\tfloat hi = min(b, age);\n\t\tif (hi > lo) {\n\t\t\tfloat fa = velocityFactor(i, seed);\n\t\t\tfloat beta = (velocityFactor(i + 1, seed) - fa) / (b - a);\n\t\t\ttotal += travel(fa - beta * a, beta, d, g, lo, hi);\n\t\t}\n\t}\n\tfloat afterLast = max(gpuParticleSystem[VELOCITY + n - 1].x * life, 0.0);\n\tif (age > afterLast) {\n\t\ttotal += travel(velocityFactor(n - 1, seed), 0.0, d, g, afterLast, age);\n\t}\n\treturn total;\n}\n\nvec4 remapAt(float age, float ratio) {\n\tint n = remapCount();\n\tif (n == 0 || age == 0.0) {\n\t\treturn vec4(0.0, 1.0, 0.0, 1.0);\n\t}\n\tvec2 stop = gpuParticleSystem[REMAP + n - 1].yz;\n\tif (ratio < gpuParticleSystem[REMAP].x) {\n\t\tstop = gpuParticleSystem[REMAP].yz;\n\t} else {\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tvec4 a = gpuParticleSystem[REMAP + i];\n\t\t\tvec4 b = gpuParticleSystem[REMAP + i + 1];\n\t\t\tif (ratio >= a.x && ratio <= b.x) {\n\t\t\t\tstop = mix(a.yz, b.yz, b.x > a.x ? (ratio - a.x) / (b.x - a.x) : 0.0);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn vec4(stop.x, stop.y - stop.x, 0.0, 1.0);\n}\n\nvoid main(void) {\n\t// No division by a variable: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 is suspected of dividing by a uniform wrongly\n\tint count = int(gpuParticleRange.y);\n\tint unwrapped = int(gpuParticleRange.x) + gl_InstanceID;\n\t// One wrap, as start < count and the draw's instances are count (gpuParticleRing.ts)\n\tint slot = unwrapped >= count ? unwrapped - count : unwrapped;\n\tivec2 at = ivec2((slot % RECORDS_PER_ROW) * 4, slot / RECORDS_PER_ROW);\n\tvec4 spawn = uintBitsToFloat(texelFetch(gpuParticleRecords, at, 0));\n\tvec4 velocity = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(1, 0), 0));\n\tuvec4 sizeSeed = texelFetch(gpuParticleRecords, at + ivec2(2, 0), 0);\n\tvec4 colour0 = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(3, 0), 0));\n\tfloat age = gpuParticleFrame.w - spawn.w;\n\tfloat life = velocity.w;\n\t// The strip's corners: (0, 0), (1, 0), (0, 1), (1, 1).\n\tvec2 corner = vec2(float(gl_VertexID & 1), float(gl_VertexID >> 1));\n\tvUV = corner;\n\tif (!(age >= 0.0 && age < life)) {\n\t\t// Dead, or not yet written: outside the clip volume.\n\t\tgl_Position = vec4(0.0, 0.0, 2.0, 1.0);\n\t\tvColor = vec4(0.0);\n\t\tvRemap = vec4(0.0, 1.0, 0.0, 1.0);\n\t\treturn;\n\t}\n\tfloat ratio = age / life;\n\tuint seed = sizeSeed.y;\n\tvec3 centre = gpuParticleFrame.xyz + spawn.xyz + displacement(velocity.xyz, age, life, seed);\n\t// particles.vertex's billboard: the corner offset in view space.\n\tvec3 viewPos = (gpuParticleView * vec4(centre, 1.0)).xyz + vec3((corner - 0.5) * uintBitsToFloat(sizeSeed.x), 0.0);\n\tgl_Position = gpuParticleProjection * vec4(viewPos, 1.0);\n\tvColor = colourAt(colour0, age, ratio, seed);\n\tvRemap = remapAt(age, ratio);\n}\n`;
+    ek.b.ShadersStore[`${Hk}VertexShader`] = Kk, ek.b.ShadersStore[`${Hk}PixelShader`] = "\nprecision highp float;\n\nuniform sampler2D gpuParticleTexture;\nuniform sampler2D gpuParticleRampTexture;\nuniform float gpuParticleRamp;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvoid main(void) {\n\tvec4 textureColour = texture2D(gpuParticleTexture, vUV);\n\tvec4 colour = textureColour * vColor;\n\tif (gpuParticleRamp != 0.0) {\n\t\tfloat alpha = colour.a;\n\t\tfloat index = clamp((alpha - vRemap.x) / vRemap.y, 0.0, 1.0);\n\t\tvec4 rampColour = texture2D(gpuParticleRampTexture, vec2(1.0 - index, 0.0));\n\t\tcolour = vec4(colour.rgb * rampColour.rgb, clamp((alpha * rampColour.a - vRemap.z) / vRemap.w, 0.0, 1.0));\n\t}\n#ifdef MULTIPLY_PASS\n\t// The MULTIPLY pass of BLENDMULTIPLYMODE, which MULTIPLYADD draws before its ADD pass.\n\tfloat sourceAlpha = vColor.a * textureColour.a;\n\tcolour.rgb = colour.rgb * sourceAlpha + vec3(1.0 - sourceAlpha);\n#endif\n\tgl_FragColor = colour;\n}\n";
+    const Qk = ["gpuParticleView", "gpuParticleProjection", "gpuParticleSystem", "gpuParticleFrame", "gpuParticleRange", "gpuParticleRamp"],
+      sk = ["gpuParticleTexture", "gpuParticleRampTexture", "gpuParticleRecords"];
+    var Vk = Ik(38691),
+      zk = Ik(41612);
+    class Sk extends Vk.c {
+      constructor(kk, Fk, Ik, Xk) {
+        super(kk, Fk, Ik), this.renderer = Ik, this.Yw = Xk, this.id = void 0, this.renderingGroupId = 0, this.layerMask = 268435455, this.records = void 0, this.uniforms = new Float32Array(wk.p), this.uniformBits = new Uint32Array(this.uniforms.buffer), this.ramp = null, this.rampTexels = (0, zk.e)(), this.engine = void 0, this.animatedFrame = -1, this.uploadSlots = (kk, Fk) => {
           const {
-            engine: ZC
-          } = this, QC = ZC._gl;
-          ZC._bindTextureDirectly(QC.TEXTURE_2D, this.records, !0), ZC._unpackFlipY(!1);
-          const wC = this.ring.recordBits;
-          for (let bC = CC; bC < zC;) {
-            const CC = Math.floor(bC / SC.n),
-              ZC = Math.min(zC, (CC + 1) * SC.n);
-            QC.texSubImage2D(QC.TEXTURE_2D, 0, bC % SC.n * 4, CC, 4 * (ZC - bC), 1, QC.RGBA_INTEGER, QC.UNSIGNED_INT, wC, bC * SC.e), bC = ZC
+            engine: Ik
+          } = this, Xk = Ik._gl;
+          Ik._bindTextureDirectly(Xk.TEXTURE_2D, this.records, !0), Ik._unpackFlipY(!1);
+          const Tk = this.ring.recordBits;
+          for (let ik = kk; ik < Fk;) {
+            const kk = Math.floor(ik / wk.l),
+              Ik = Math.min(Fk, (kk + 1) * wk.l);
+            Xk.texSubImage2D(Xk.TEXTURE_2D, 0, ik % wk.l * 4, kk, 4 * (Ik - ik), 1, Xk.RGBA_INTEGER, Xk.UNSIGNED_INT, Tk, ik * wk.f), ik = Ik
           }
-          ZC._bindTextureDirectly(QC.TEXTURE_2D, null)
-        }, this.id = CC;
-        const wC = QC.mg();
-        this.engine = wC;
-        const bC = Math.max(1, zC),
-          nC = Math.min(bC, SC.n);
-        this.records = wC.createRawTexture(null, 4 * nC, Math.ceil(bC / nC), FC.d.TEXTUREFORMAT_RGBA_INTEGER, !1, !1, FC.d.TEXTURE_NEAREST_SAMPLINGMODE, null, FC.d.TEXTURETYPE_UNSIGNED_INTEGER)
+          Ik._bindTextureDirectly(Xk.TEXTURE_2D, null)
+        }, this.id = kk;
+        const Tk = Xk.Oe();
+        this.engine = Tk;
+        const ik = Math.max(1, Fk),
+          yk = Math.min(ik, wk.l);
+        this.records = Tk.createRawTexture(null, 4 * yk, Math.ceil(ik / yk), Lk.d.TEXTUREFORMAT_RGBA_INTEGER, !1, !1, Lk.d.TEXTURE_NEAREST_SAMPLINGMODE, null, Lk.d.TEXTURETYPE_UNSIGNED_INTEGER)
       }
       animate() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.sS.getAnimationRatio() || 1;
-        const zC = this.sS.getFrameId();
-        if (zC === this.animatedFrame) return !1;
-        const ZC = super.animate(CC);
-        return ZC && (this.animatedFrame = zC, this.ring.takeUploads(this.uploadSlots)), ZC
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.Yw.getAnimationRatio() || 1;
+        const Fk = this.Yw.getFrameId();
+        if (Fk === this.animatedFrame) return !1;
+        const Ik = super.animate(kk);
+        return Ik && (this.animatedFrame = Fk, this.ring.takeUploads(this.uploadSlots)), Ik
       }
       render() {
         return this.renderer.render(this)
@@ -103,741 +103,741 @@ export const modules = {
       clone() {
         return null
       }
-      prepareDraw(CC) {
-        (0, iC.h)(this, this.uniforms, this.uniformBits, CC);
-        for (const ZC of SC.t) this.uniforms[ZC] = this.uniformBits[ZC];
-        var zC;
-        (0, iC.j)(this, this.rampTexels) && (0 === this.rampTexels.key.length ? (null === (zC = this.ramp) || void 0 === zC || zC.dispose(), this.ramp = null) : this.ramp ? this.ramp.update(this.rampTexels.texels) : this.ramp = WC.b.CreateRGBATexture(this.rampTexels.texels, SC.k, 1, this.sS, !1, !1, FC.d.TEXTURE_NEAREST_SAMPLINGMODE))
+      prepareDraw(kk) {
+        (0, zk.h)(this, this.uniforms, this.uniformBits, kk);
+        for (const Ik of wk.r) this.uniforms[Ik] = this.uniformBits[Ik];
+        var Fk;
+        (0, zk.i)(this, this.rampTexels) && (0 === this.rampTexels.key.length ? (null === (Fk = this.ramp) || void 0 === Fk || Fk.dispose(), this.ramp = null) : this.ramp ? this.ramp.update(this.rampTexels.texels) : this.ramp = tk.b.CreateRGBATexture(this.rampTexels.texels, wk.j, 1, this.Yw, !1, !1, Lk.d.TEXTURE_NEAREST_SAMPLINGMODE))
       }
       releaseGl() {
-        var CC;
-        this.records.dispose(), null === (CC = this.ramp) || void 0 === CC || CC.dispose(), this.ramp = null
+        var kk;
+        this.records.dispose(), null === (kk = this.ramp) || void 0 === kk || kk.dispose(), this.ramp = null
       }
     }
-    const eC = "the context was lost before the programs linked";
-    class hC {
-      constructor(CC, zC) {
-        this.sS = CC, this.reportFailure = zC, this.failed = !1, this.engine = void 0, this.effect = void 0, this.multiplyEffect = void 0, this.whiteRamp = void 0, this.vertexBuffers = {}, this.frame = new Float32Array(4), this.warnOnce = (0, MC.b)(), this.engine = CC.mg(), this.effect = this.createEffect(""), this.multiplyEffect = this.createEffect("#define MULTIPLY_PASS"), this.whiteRamp = WC.b.CreateRGBATexture(new Uint8Array([255, 255, 255, 255]), 1, 1, CC, !1, !1, FC.d.TEXTURE_NEAREST_SAMPLINGMODE), this.awaitLink(this.effect), this.awaitLink(this.multiplyEffect)
+    const vk = "the context was lost before the programs linked";
+    class Ek {
+      constructor(kk, Fk) {
+        this.Yw = kk, this.reportFailure = Fk, this.failed = !1, this.engine = void 0, this.effect = void 0, this.multiplyEffect = void 0, this.whiteRamp = void 0, this.vertexBuffers = {}, this.frame = new Float32Array(4), this.warnOnce = (0, jk.d)(), this.engine = kk.Oe(), this.effect = this.createEffect(""), this.multiplyEffect = this.createEffect("#define MULTIPLY_PASS"), this.whiteRamp = tk.b.CreateRGBATexture(new Uint8Array([255, 255, 255, 255]), 1, 1, kk, !1, !1, Lk.d.TEXTURE_NEAREST_SAMPLINGMODE), this.awaitLink(this.effect), this.awaitLink(this.multiplyEffect)
       }
-      DH(CC, zC) {
-        const ZC = SC.n * this.engine.getCaps().maxTextureSize;
-        zC > ZC && this.warnOnce(`capacity:${CC}`, `particle system ${CC} holds ${ZC} particles, not ${zC}: its records texture's limit`);
-        const QC = new vC(CC, Math.min(zC, ZC), this, this.sS);
-        return this.sS.addParticleSystem(QC), QC
+      kR(kk, Fk) {
+        const Ik = wk.l * this.engine.getCaps().maxTextureSize;
+        Fk > Ik && this.warnOnce(`capacity:${kk}`, `particle system ${kk} holds ${Ik} particles, not ${Fk}: its records texture's limit`);
+        const Xk = new Sk(kk, Math.min(Fk, Ik), this, this.Yw);
+        return this.Yw.addParticleSystem(Xk), Xk
       }
-      canDraw(CC) {
-        var zC, ZC;
-        if (this.failed || null === (zC = CC.texture) || void 0 === zC || null === (ZC = zC.mirror) || void 0 === ZC || !ZC.isReady()) return !1;
-        for (const QC of (0, NC.i)(CC.blendMode))
-          if (!this.effectFor(QC).isReady()) return !1;
+      canDraw(kk) {
+        var Fk, Ik;
+        if (this.failed || null === (Fk = kk.texture) || void 0 === Fk || null === (Ik = Fk.mirror) || void 0 === Ik || !Ik.isReady()) return !1;
+        for (const Xk of (0, Zk.l)(kk.blendMode))
+          if (!this.effectFor(Xk).isReady()) return !1;
         return !0
       }
-      disposeStopped(CC) {
-        this.sS._toBeDisposed.push(CC)
+      disposeStopped(kk) {
+        this.Yw._toBeDisposed.push(kk)
       }
-      remove(CC) {
-        this.sS.removeParticleSystem(CC), CC.releaseGl()
+      remove(kk) {
+        this.Yw.removeParticleSystem(kk), kk.releaseGl()
       }
-      render(CC) {
-        var zC;
-        if (!CC.isReady() || !CC.hasLiveParticles()) return 0;
+      render(kk) {
+        var Fk;
+        if (!kk.isReady() || !kk.hasLiveParticles()) return 0;
         const {
-          engine: ZC,
-          sS: QC,
-          frame: wC
+          engine: Ik,
+          Yw: Xk,
+          frame: Tk
         } = this;
-        CC.prepareDraw(this.warnOnce), CC.drawOffset(wC, 0), wC[3] = CC.drawTime();
-        const bC = CC.ring.drawStart(),
-          nC = CC.ring.drawCount(),
-          fC = null !== (zC = CC.ramp) && void 0 !== zC ? zC : this.whiteRamp;
-        ZC.setState(!1);
-        for (const oC of (0, NC.i)(CC.blendMode)) {
-          const zC = this.effectFor(oC);
-          ZC.enableEffect(zC), zC.setTexture("gpuParticleTexture", CC.texture.mirror), zC.setTexture("gpuParticleRampTexture", fC), zC._bindTexture("gpuParticleRecords", CC.records), zC.setMatrix("gpuParticleView", QC.getViewMatrix()), zC.setMatrix("gpuParticleProjection", QC.getProjectionMatrix()), zC.setFloatArray4("gpuParticleSystem", CC.uniforms), zC.setFloat4("gpuParticleFrame", wC[0], wC[1], wC[2], wC[3]), zC.setFloat2("gpuParticleRange", bC, nC), zC.setFloat("gpuParticleRamp", CC.uniforms[SC.x.ramp]), ZC.bindBuffers(this.vertexBuffers, null, zC), ZC.setAlphaMode((0, NC.h)(oC)), ZC.drawArraysType(FC.d.MATERIAL_TriangleStripDrawMode, 0, 4, nC), zC._bindTexture("gpuParticleRecords", null)
+        kk.prepareDraw(this.warnOnce), kk.drawOffset(Tk, 0), Tk[3] = kk.drawTime();
+        const ik = kk.ring.drawStart(),
+          yk = kk.ring.drawCount(),
+          lk = null !== (Fk = kk.ramp) && void 0 !== Fk ? Fk : this.whiteRamp;
+        Ik.setState(!1);
+        for (const ak of (0, Zk.l)(kk.blendMode)) {
+          const Fk = this.effectFor(ak);
+          Ik.enableEffect(Fk), Fk.setTexture("gpuParticleTexture", kk.texture.mirror), Fk.setTexture("gpuParticleRampTexture", lk), Fk._bindTexture("gpuParticleRecords", kk.records), Fk.setMatrix("gpuParticleView", Xk.getViewMatrix()), Fk.setMatrix("gpuParticleProjection", Xk.getProjectionMatrix()), Fk.setFloatArray4("gpuParticleSystem", kk.uniforms), Fk.setFloat4("gpuParticleFrame", Tk[0], Tk[1], Tk[2], Tk[3]), Fk.setFloat2("gpuParticleRange", ik, yk), Fk.setFloat("gpuParticleRamp", kk.uniforms[wk.t.ramp]), Ik.bindBuffers(this.vertexBuffers, null, Fk), Ik.setAlphaMode((0, Zk.h)(ak)), Ik.drawArraysType(Lk.d.MATERIAL_TriangleStripDrawMode, 0, 4, yk), Fk._bindTexture("gpuParticleRecords", null)
         }
-        return ZC.setAlphaMode(FC.d.ALPHA_DISABLE), nC
+        return Ik.setAlphaMode(Lk.d.ALPHA_DISABLE), yk
       }
-      awaitLink(CC) {
-        const zC = CC.getPipelineContext(),
-          ZC = this.gl();
-        !this.failed && ZC && (!zC || zC.isParallelCompiled && !zC.program ? this.warnOnce("asyncProgram", "GPU particles: Babylon made a particle program asynchronously, so a failed link shows only after the first systems are made") : zC.isParallelCompiled && zC.program && (ZC.getProgramParameter(zC.program, ZC.LINK_STATUS) || this.fail(function(CC, zC, ZC) {
-          if (CC.isContextLost()) return eC;
-          for (const [QC, wC] of [
-              ["VERTEX SHADER", zC.vertexShader],
-              ["FRAGMENT SHADER", zC.fragmentShader]
+      awaitLink(kk) {
+        const Fk = kk.getPipelineContext(),
+          Ik = this.gl();
+        !this.failed && Ik && (!Fk || Fk.isParallelCompiled && !Fk.program ? this.warnOnce("asyncProgram", "GPU particles: Babylon made a particle program asynchronously, so a failed link shows only after the first systems are made") : Fk.isParallelCompiled && Fk.program && (Ik.getProgramParameter(Fk.program, Ik.LINK_STATUS) || this.fail(function(kk, Fk, Ik) {
+          if (kk.isContextLost()) return vk;
+          for (const [Xk, Tk] of [
+              ["VERTEX SHADER", Fk.vertexShader],
+              ["FRAGMENT SHADER", Fk.fragmentShader]
             ]) {
-            const zC = wC && !CC.getShaderParameter(wC, CC.COMPILE_STATUS) ? CC.getShaderInfoLog(wC) : null;
-            if (zC) return `${QC} ${zC}`
+            const Fk = Tk && !kk.getShaderParameter(Tk, kk.COMPILE_STATUS) ? kk.getShaderInfoLog(Tk) : null;
+            if (Fk) return `${Xk} ${Fk}`
           }
-          return CC.getProgramInfoLog(ZC) || "a program did not link"
-        }(ZC, zC, zC.program))))
+          return kk.getProgramInfoLog(Ik) || "a program did not link"
+        }(Ik, Fk, Fk.program))))
       }
       gl() {
         return this.engine._gl
       }
-      effectFor(CC) {
-        return CC === NC.e ? this.multiplyEffect : this.effect
+      effectFor(kk) {
+        return kk === Zk.b ? this.multiplyEffect : this.effect
       }
-      createEffect(CC) {
-        return this.engine.createEffect(pC, [], xC, JC, CC, void 0, void 0, ((CC, zC) => {
-          var ZC;
-          this.fail(null !== (ZC = this.gl()) && void 0 !== ZC && ZC.isContextLost() ? eC : function(CC) {
-            const zC = CC.split("\n    at ")[0];
-            return /^\S*@\S*:\d+:\d+/.test(zC) ? "a program failed, its log not in this browser's stack" : zC.replace(/^Error: /, "")
-          }(zC))
+      createEffect(kk) {
+        return this.engine.createEffect(Hk, [], Qk, sk, kk, void 0, void 0, ((kk, Fk) => {
+          var Ik;
+          this.fail(null !== (Ik = this.gl()) && void 0 !== Ik && Ik.isContextLost() ? vk : function(kk) {
+            const Fk = kk.split("\n    at ")[0];
+            return /^\S*@\S*:\d+:\d+/.test(Fk) ? "a program failed, its log not in this browser's stack" : Fk.replace(/^Error: /, "")
+          }(Fk))
         }))
       }
-      fail(CC) {
+      fail(kk) {
         if (!this.failed) {
-          this.failed = !0, console.warn(`GPU particles cannot compile here, so new particle systems are Babylon's: ${CC}`), this.reportFailure(CC);
-          for (const CC of this.sS.Ix.slice()) CC instanceof vC && CC.disposeOnStop && CC.dispose()
+          this.failed = !0, console.warn(`GPU particles cannot compile here, so new particle systems are Babylon's: ${kk}`), this.reportFailure(kk);
+          for (const kk of this.Yw.jK.slice()) kk instanceof Sk && kk.disposeOnStop && kk.dispose()
         }
       }
     }
-    var KC = ZC(39635);
-    class YC extends KC.d {
+    var Ok = Ik(39806);
+    class nk extends Ok.c {
       createEffect() {
-        const CC = super.createEffect(...arguments);
-        return mC(CC), dC.has(CC) || (dC.add(CC), CC.onCompileObservable.add((() => {
-          mC(CC)
-        }))), CC
+        const kk = super.createEffect(...arguments);
+        return pk(kk), Gk.has(kk) || (Gk.add(kk), kk.onCompileObservable.add((() => {
+          pk(kk)
+        }))), kk
       }
     }
-    const dC = new WeakSet;
+    const Gk = new WeakSet;
 
-    function mC(CC) {
-      CC._vertexSourceCodeBeforeMigration = "", CC._fragmentSourceCodeBeforeMigration = ""
+    function pk(kk) {
+      kk._vertexSourceCodeBeforeMigration = "", kk._fragmentSourceCodeBeforeMigration = ""
     }
-    var HC = ZC(40031),
-      EC = ZC(40946),
-      lC = ZC(39766),
-      XC = ZC(39984),
-      cC = ZC(39978),
-      uC = ZC(39902),
-      rC = ZC(40992),
-      sC = ZC(37456),
-      TC = ZC(41422),
-      aC = ZC(41429),
-      tC = ZC(41434),
-      DC = ZC(39925),
-      jC = ZC(2837),
-      yC = ZC(37353),
-      LC = ZC(40136),
-      UC = ZC(37423),
-      BC = ZC(37373);
+    var uk = Ik(40201),
+      bk = Ik(41114),
+      Rk = Ik(39947),
+      Uk = Ik(40161),
+      Ck = Ik(40157),
+      Nk = Ik(40082),
+      ck = Ik(41170),
+      Wk = Ik(37643),
+      fk = Ik(41615),
+      Bk = Ik(41620),
+      dk = Ik(41629),
+      Yk = Ik(40107),
+      Ak = Ik(2786),
+      gk = Ik(37533),
+      mk = Ik(40312),
+      hk = Ik(37610),
+      rk = Ik(37556);
 
-    function OC(CC) {
-      if (CC.visibility < 1 || !CC.isVisible || !CC.isEnabled() || CC.metadata[BC.e] || !CC.isReady()) return !0;
-      const zC = CC.Zx;
-      if (!zC || 0 === zC.length) return !0;
-      for (let ZC = 0; ZC < zC.length; ZC++) {
-        const QC = zC[ZC],
-          wC = QC.cg();
-        if (!wC || !wC.isReadyForSubMesh(CC, QC, !1)) return !0
+    function Dk(kk) {
+      if (kk.visibility < 1 || !kk.isVisible || !kk.isEnabled() || kk.metadata[rk.f] || !kk.isReady()) return !0;
+      const Fk = kk.lK;
+      if (!Fk || 0 === Fk.length) return !0;
+      for (let Ik = 0; Ik < Fk.length; Ik++) {
+        const Xk = Fk[Ik],
+          Tk = Xk.Ue();
+        if (!Tk || !Tk.isReadyForSubMesh(kk, Xk, !1)) return !0
       }
       return !1
     }
-    class kC {
-      constructor(CC, zC) {
-        this.MN = CC, this.culled = 0, this.armed = !1, this.vis = null, this.eye = [0, 0, 0], this.passable = new Set, this.meshes = [], this.cellSlots = new Int32Array(256), this.count = 0, zC.onBeforeActiveMeshesEvaluationObservable.add((() => {
+    class Mk {
+      constructor(kk, Fk) {
+        this.qZ = kk, this.culled = 0, this.armed = !1, this.vis = null, this.eye = [0, 0, 0], this.passable = new Set, this.meshes = [], this.cellSlots = new Int32Array(256), this.count = 0, Fk.onBeforeActiveMeshesEvaluationObservable.add((() => {
           this.armed = !0
         }))
       }
-      RM(CC) {
-        var zC;
-        const ZC = this.armed;
-        if (this.armed = !1, this.vis = null, !ZC) return !1;
+      Hj(kk) {
+        var Fk;
+        const Ik = this.armed;
+        if (this.armed = !1, this.vis = null, !Ik) return !1;
         this.culled = 0;
         const {
-          MN: QC
-        } = this, wC = null === (zC = QC.JA) || void 0 === zC ? void 0 : zC.visibility;
-        if (!wC || !CC || QC.Vg.CS) return !1;
-        if (!(QC.fN.fQC[0] >= UC.e)) return !1;
-        const bC = CC.getProjectionMatrix().m;
-        if (0 !== bC[15]) return !1;
-        const nC = QC.YN,
-          fC = CC.globalPosition,
-          oC = this.eye;
-        return oC[0] = fC.x + nC[0], oC[1] = fC.y + nC[1], oC[2] = fC.z + nC[2], !!wC.eyeClear(oC[0], oC[1], oC[2], CC.minZ, bC, QC.fN) && (this.vis = wC, this.passable.clear(), this.count = 0, !0)
+          qZ: Xk
+        } = this, Tk = null === (Fk = Xk.Bx) || void 0 === Fk ? void 0 : Fk.visibility;
+        if (!Tk || !kk || Xk.Xw.Tw) return !1;
+        if (!(Xk.XZ.jXk[0] >= hk.h)) return !1;
+        const ik = kk.getProjectionMatrix().m;
+        if (0 !== ik[15]) return !1;
+        const yk = Xk.SZ,
+          lk = kk.globalPosition,
+          ak = this.eye;
+        return ak[0] = lk.x + yk[0], ak[1] = lk.y + yk[1], ak[2] = lk.z + yk[2], !!Tk.eyeClear(ak[0], ak[1], ak[2], kk.minZ, ik, Xk.XZ) && (this.vis = Tk, this.passable.clear(), this.count = 0, !0)
       }
-      see(CC, zC) {
-        const ZC = this.count++;
-        if (ZC === this.cellSlots.length) {
-          const CC = new Int32Array(2 * ZC);
-          CC.set(this.cellSlots), this.cellSlots = CC
+      see(kk, Fk) {
+        const Ik = this.count++;
+        if (Ik === this.cellSlots.length) {
+          const kk = new Int32Array(2 * Ik);
+          kk.set(this.cellSlots), this.cellSlots = kk
         }
-        this.cellSlots[ZC] = zC, this.meshes[ZC] = CC
+        this.cellSlots[Ik] = Fk, this.meshes[Ik] = kk
       }
-      seeThrough(CC) {
-        this.passable.add(CC)
+      seeThrough(kk) {
+        this.passable.add(kk)
       }
-      finish(CC, zC) {
+      finish(kk, Fk) {
         const {
-          vis: ZC,
-          eye: QC,
-          meshes: wC,
-          count: bC,
-          cellSlots: nC
+          vis: Ik,
+          eye: Xk,
+          meshes: Tk,
+          count: ik,
+          cellSlots: yk
         } = this, {
-          fN: fC
-        } = this.MN, [oC, qC] = fC.fQC, FC = null !== ZC && ZC.update(QC[0], QC[1], QC[2], fC.WCC, oC, qC, this.passable);
-        let WC = 0;
-        for (let NC = 0; NC < bC; NC++) {
-          const QC = wC[NC];
-          if (FC) {
-            const CC = 3 * nC[NC];
-            if (CC >= 0 && !ZC.isDrawn(zC[CC], zC[CC + 1], zC[CC + 2])) {
-              WC++;
+          XZ: lk
+        } = this.qZ, [ak, qk] = lk.jXk, Lk = null !== Ik && Ik.update(Xk[0], Xk[1], Xk[2], lk.xkk, ak, qk, this.passable);
+        let tk = 0;
+        for (let Zk = 0; Zk < ik; Zk++) {
+          const Xk = Tk[Zk];
+          if (Lk) {
+            const kk = 3 * yk[Zk];
+            if (kk >= 0 && !Ik.isDrawn(Fk[kk], Fk[kk + 1], Fk[kk + 2])) {
+              tk++;
               continue
             }
           }
-          DC.i.prototype.push.call(CC, QC)
+          Yk.f.prototype.push.call(kk, Xk)
         }
-        wC.fill(null, 0, bC), this.count = 0, this.vis = null, this.culled = WC
+        Tk.fill(null, 0, ik), this.count = 0, this.vis = null, this.culled = tk
       }
     }
-    var VC = ZC(37404),
-      Cz = ZC(37363),
-      zz = ZC(40110),
-      Zz = ZC(41438),
-      Qz = ZC(40119),
-      wz = ZC(40046);
-    let bz = 1;
-    const nz = new WeakSet;
+    var kF = Ik(37592),
+      FF = Ik(37543),
+      IF = Ik(40295),
+      XF = Ik(41632),
+      TF = Ik(40297),
+      iF = Ik(40218);
+    let yF = 1;
+    const lF = new WeakSet;
 
-    function fz() {
-      return bz
+    function aF() {
+      return yF
     }
 
-    function oz() {
-      bz = bz >= 1073741823 ? 1 : bz + 1
+    function qF() {
+      yF = yF >= 1073741823 ? 1 : yF + 1
     }
 
-    function qz(CC) {
-      const zC = CC.metadata;
-      if (!zC || !0 !== zC[yC.o]) return;
-      const ZC = zC[yC.q],
-        QC = null === ZC || void 0 === ZC ? void 0 : ZC._noaStamps;
-      if (!ZC || !QC) return;
-      const wC = ZC.entries.indexOf(CC);
-      wC >= 0 && (QC[wC] = 0)
+    function LF(kk) {
+      const Fk = kk.metadata;
+      if (!Fk || !0 !== Fk[gk.t]) return;
+      const Ik = Fk[gk.x],
+        Xk = null === Ik || void 0 === Ik ? void 0 : Ik._noaStamps;
+      if (!Ik || !Xk) return;
+      const Tk = Ik.entries.indexOf(kk);
+      Tk >= 0 && (Xk[Tk] = 0)
     }
 
-    function Fz(CC) {
-      const zC = CC.Zx;
-      for (let ZC = 0; ZC < zC.length; ZC++) {
-        const CC = zC[ZC].cg();
-        if (CC && !CC.isFrozen) return !1
+    function tF(kk) {
+      const Fk = kk.lK;
+      for (let Ik = 0; Ik < Fk.length; Ik++) {
+        const kk = Fk[Ik].Ue();
+        if (kk && !kk.isFrozen) return !1
       }
-      for (let ZC = 0; ZC < zC.length; ZC++) {
-        const CC = zC[ZC].cg();
-        CC && nz.add(CC)
+      for (let Ik = 0; Ik < Fk.length; Ik++) {
+        const kk = Fk[Ik].Ue();
+        kk && lF.add(kk)
       }
       return !0
     }
-    let Wz = !1;
-    const Nz = new WeakSet;
+    let ZF = !1;
+    const jF = new WeakSet;
 
-    function Mz(CC, zC) {
-      const ZC = CC[zC];
-      if ("function" !== typeof ZC) throw new Error(`terrainDrawState: Babylon has no ${zC} to hook`);
-      return ZC
+    function eF(kk, Fk) {
+      const Ik = kk[Fk];
+      if ("function" !== typeof Ik) throw new Error(`terrainDrawState: Babylon has no ${Fk} to hook`);
+      return Ik
     }
 
-    function gz(CC, zC, ZC, QC, wC) {
-      const bC = ZC.fN.WCC,
-        nC = new Map;
-      let fC = 0;
-      const oC = new kC(ZC, CC),
-        qC = new VC.d(bC, CC.mg());
-      ! function(CC) {
-        if (Nz.has(CC) || (Nz.add(CC), CC.onContextLostObservable.add(oz), CC.Yg.add(oz)), Wz) return;
-        Wz = !0;
-        const zC = Zz.c.prototype,
-          ZC = Mz(zC, "_markSubMeshesAsDirty");
-        Object.assign(zC, {
-          _markSubMeshesAsDirty(CC) {
-            ZC.call(this, CC), qz(this)
+    function wF(kk, Fk, Ik, Xk, Tk) {
+      const ik = Ik.XZ.xkk,
+        yk = new Map;
+      let lk = 0;
+      const ak = new Mk(Ik, kk),
+        qk = new kF.c(ik, kk.Oe());
+      ! function(kk) {
+        if (jF.has(kk) || (jF.add(kk), kk.onContextLostObservable.add(qF), kk.Ee.add(qF)), ZF) return;
+        ZF = !0;
+        const Fk = XF.c.prototype,
+          Ik = eF(Fk, "_markSubMeshesAsDirty");
+        Object.assign(Fk, {
+          _markSubMeshesAsDirty(kk) {
+            Ik.call(this, kk), LF(this)
           }
         });
-        const QC = Mz(wz.d.prototype, "_syncParentEnabledState");
-        Object.assign(wz.d.prototype, {
+        const Xk = eF(iF.b.prototype, "_syncParentEnabledState");
+        Object.assign(iF.b.prototype, {
           _syncParentEnabledState() {
-            QC.call(this), qz(this)
+            Xk.call(this), LF(this)
           }
         });
-        const wC = Mz(Qz.d.prototype, "resetDrawCache");
-        Qz.d.prototype.resetDrawCache = function(CC, zC) {
-          wC.call(this, CC, zC), qz(this.getMesh())
+        const Tk = eF(TF.b.prototype, "resetDrawCache");
+        TF.b.prototype.resetDrawCache = function(kk, Fk) {
+          Tk.call(this, kk, Fk), LF(this.getMesh())
         };
-        const bC = zz.d.prototype,
-          nC = Mz(bC, "markDirty");
-        bC.markDirty = function(CC) {
-          nC.call(this, CC), nz.has(this) && oz()
+        const ik = IF.c.prototype,
+          yk = eF(ik, "markDirty");
+        ik.markDirty = function(kk) {
+          yk.call(this, kk), lF.has(this) && qF()
         };
-        const fC = Mz(bC, "_markAllSubMeshesAsDirty");
-        Object.assign(bC, {
-          _markAllSubMeshesAsDirty(CC) {
-            fC.call(this, CC), nz.has(this) && oz()
+        const lk = eF(ik, "_markAllSubMeshesAsDirty");
+        Object.assign(ik, {
+          _markAllSubMeshesAsDirty(kk) {
+            lk.call(this, kk), lF.has(this) && qF()
           }
         })
-      }(CC.mg());
-      let FC = new Float64Array(384),
-        WC = new Int32Array(64),
-        NC = new Uint8Array(64),
-        MC = new Float64Array(64),
-        gC = new Int32Array(192),
-        SC = 0;
-      const pC = [],
-        PC = new Float64Array(24),
-        GC = () => {
-          const CC = pC.pop();
-          return void 0 !== CC ? (WC[CC] = 0, CC) : (SC === WC.length && (FC = Sz(FC, new Float64Array(2 * FC.length)), WC = Sz(WC, new Int32Array(2 * WC.length)), NC = Sz(NC, new Uint8Array(2 * NC.length)), MC = Sz(MC, new Float64Array(2 * MC.length)), gC = Sz(gC, new Int32Array(2 * gC.length))), SC++)
+      }(kk.Oe());
+      let Lk = new Float64Array(384),
+        tk = new Int32Array(64),
+        Zk = new Uint8Array(64),
+        jk = new Float64Array(64),
+        ek = new Int32Array(192),
+        wk = 0;
+      const Hk = [],
+        Jk = new Float64Array(24),
+        xk = () => {
+          const kk = Hk.pop();
+          return void 0 !== kk ? (tk[kk] = 0, kk) : (wk === tk.length && (Lk = HF(Lk, new Float64Array(2 * Lk.length)), tk = HF(tk, new Int32Array(2 * tk.length)), Zk = HF(Zk, new Uint8Array(2 * Zk.length)), jk = HF(jk, new Float64Array(2 * jk.length)), ek = HF(ek, new Int32Array(2 * ek.length))), wk++)
         },
-        RC = CC => {
-          const zC = 6 * CC._noaSlot,
-            ZC = CC.SQC[0],
-            QC = CC.SQC[1];
-          FC[zC] = ZC.x, FC[zC + 1] = ZC.y, FC[zC + 2] = ZC.z, FC[zC + 3] = QC.x, FC[zC + 4] = QC.y, FC[zC + 5] = QC.z
+        Pk = kk => {
+          const Fk = 6 * kk._noaSlot,
+            Ik = kk.KXk[0],
+            Xk = kk.KXk[1];
+          Lk[Fk] = Ik.x, Lk[Fk + 1] = Ik.y, Lk[Fk + 2] = Ik.z, Lk[Fk + 3] = Xk.x, Lk[Fk + 4] = Xk.y, Lk[Fk + 5] = Xk.z
         },
-        AC = (CC, zC, ZC) => {
-          if (!ZC) return oC.see(CC, -1), !1;
-          const QC = OC(CC);
-          return QC && oC.seeThrough(MC[zC]), oC.see(CC, zC), !QC
+        Kk = (kk, Fk, Ik) => {
+          if (!Ik) return ak.see(kk, -1), !1;
+          const Xk = Dk(kk);
+          return Xk && ak.seeThrough(jk[Fk]), ak.see(kk, Fk), !Xk
         };
-      let xC = -1;
-      return CC.getActiveMeshCandidates = () => {
-        const ZC = CC.frustumPlanes,
-          QC = zC._selectionContent;
-        QC.reset(), (ZC => {
-          const QC = CC.frustumPlanes;
-          fC = fC + 1 | 0 || 1;
-          const wC = zC.blocks,
-            bC = oC.RM(CC.activeCamera),
-            nC = bC && !0;
-          if (nC) {
-            const zC = CC.mg().currentRenderPassId;
-            zC !== xC && (xC = zC, oz())
+      let Qk = -1;
+      return kk.getActiveMeshCandidates = () => {
+        const Ik = kk.frustumPlanes,
+          Xk = Fk._selectionContent;
+        Xk.reset(), (Ik => {
+          const Xk = kk.frustumPlanes;
+          lk = lk + 1 | 0 || 1;
+          const Tk = Fk.blocks,
+            ik = ak.Hj(kk.activeCamera),
+            yk = ik && !0;
+          if (yk) {
+            const Fk = kk.Oe().currentRenderPassId;
+            Fk !== Qk && (Qk = Fk, qF())
           }
-          const qC = fz(),
-            MC = nC && !1;
-          wC.length > 0 && function(CC, zC) {
-            for (let ZC = 0; ZC < 6; ZC++) {
-              const QC = CC[ZC],
-                wC = QC.normal;
-              zC[4 * ZC] = wC.x, zC[4 * ZC + 1] = wC.y, zC[4 * ZC + 2] = wC.z, zC[4 * ZC + 3] = QC.d
+          const qk = aF(),
+            jk = yk && !1;
+          Tk.length > 0 && function(kk, Fk) {
+            for (let Ik = 0; Ik < 6; Ik++) {
+              const Xk = kk[Ik],
+                Tk = Xk.normal;
+              Fk[4 * Ik] = Tk.x, Fk[4 * Ik + 1] = Tk.y, Fk[4 * Ik + 2] = Tk.z, Fk[4 * Ik + 3] = Xk.d
             }
-          }(QC, PC);
-          const SC = FC,
-            pC = WC,
-            GC = NC;
-          for (let CC = 0; CC < wC.length; CC++) {
-            const zC = wC[CC];
-            if (!LC.b.IsInFrustum(zC.SQC, QC)) continue;
-            const FC = zC.entries;
+          }(Xk, Jk);
+          const wk = Lk,
+            Hk = tk,
+            xk = Zk;
+          for (let kk = 0; kk < Tk.length; kk++) {
+            const Fk = Tk[kk];
+            if (!mk.d.IsInFrustum(Fk.KXk, Xk)) continue;
+            const Lk = Fk.entries;
             {
-              const CC = zC._noaSlots,
-                QC = zC._noaStamps,
-                wC = zC._noaTerrain;
-              for (let zC = 0; zC < FC.length; zC++) {
-                const WC = CC[zC];
-                if (pC[WC] !== fC && (pC[WC] = fC, GC[WC] = pz(SC, 6 * WC, PC) ? 1 : 0), 0 === GC[WC]) continue;
-                const NC = FC[zC];
-                if (nC && QC[zC] === qC) MC && 1 === wC[zC] && OC(NC) && 0, oC.see(NC, 1 === wC[zC] ? WC : -1);
-                else if (nC) {
-                  QC[zC] = qC;
-                  const CC = !0 === NC.metadata[Cz.l];
-                  wC[zC] = CC ? 1 : 0;
-                  const ZC = AC(NC, WC, CC);
-                  !CC || ZC && Fz(NC) || (QC[zC] = 0)
-                } else bC ? AC(NC, WC, !0 === NC.metadata[Cz.l]) : DC.i.prototype.push.call(ZC, NC)
+              const kk = Fk._noaSlots,
+                Xk = Fk._noaStamps,
+                Tk = Fk._noaTerrain;
+              for (let Fk = 0; Fk < Lk.length; Fk++) {
+                const tk = kk[Fk];
+                if (Hk[tk] !== lk && (Hk[tk] = lk, xk[tk] = JF(wk, 6 * tk, Jk) ? 1 : 0), 0 === xk[tk]) continue;
+                const Zk = Lk[Fk];
+                if (yk && Xk[Fk] === qk) jk && 1 === Tk[Fk] && Dk(Zk) && 0, ak.see(Zk, 1 === Tk[Fk] ? tk : -1);
+                else if (yk) {
+                  Xk[Fk] = qk;
+                  const kk = !0 === Zk.metadata[FF.m];
+                  Tk[Fk] = kk ? 1 : 0;
+                  const Ik = Kk(Zk, tk, kk);
+                  !kk || Ik && tF(Zk) || (Xk[Fk] = 0)
+                } else ik ? Kk(Zk, tk, !0 === Zk.metadata[FF.m]) : Yk.f.prototype.push.call(Ik, Zk)
               }
               continue
             }
           }
-          bC && oC.finish(ZC, gC)
-        })(QC), qC.apply(QC, CC.activeCamera);
-        const bC = zC.gQC;
-        for (let CC = 0; CC < bC.length; CC++) {
-          const zC = bC[CC];
-          zC.isEnabled() && DC.i.prototype.push.call(QC, zC)
+          ik && ak.finish(Ik, ek)
+        })(Xk), qk.apply(Xk, kk.activeCamera);
+        const ik = Fk.PXk;
+        for (let kk = 0; kk < ik.length; kk++) {
+          const Fk = ik[kk];
+          Fk.isEnabled() && Yk.f.prototype.push.call(Xk, Fk)
         }
-        return wC(QC, ZC), QC
+        return Tk(Xk, Ik), Xk
       }, {
-        pQC: () => oC.culled,
-        zQC: (CC, zC) => {
-          const wC = Math.floor(zC[0] / bC),
-            fC = Math.floor(zC[1] / bC),
-            oC = Math.floor(zC[2] / bC),
-            qC = `${wC}|${fC}|${oC}`;
-          let FC = nC.get(qC);
-          if (!FC) {
-            const CC = [0, 0, 0];
-            ZC.wzC([wC * bC - 1, fC * bC - 1, oC * bC - 1], null, CC), FC = Object.assign(QC(CC, bC + 2), {
-              PQC: qC,
-              GQC: 0,
+        QXk: () => ak.culled,
+        lXk: (kk, Fk) => {
+          const Tk = Math.floor(Fk[0] / ik),
+            lk = Math.floor(Fk[1] / ik),
+            ak = Math.floor(Fk[2] / ik),
+            qk = `${Tk}|${lk}|${ak}`;
+          let Lk = yk.get(qk);
+          if (!Lk) {
+            const kk = [0, 0, 0];
+            Ik.ZFk([Tk * ik - 1, lk * ik - 1, ak * ik - 1], null, kk), Lk = Object.assign(Xk(kk, ik + 2), {
+              sXk: qk,
+              VXk: 0,
               _selectionId: 0,
               _inFrustum: !1,
-              _noaSlot: GC()
-            }), RC(FC), MC[FC._noaSlot] = (0, jC.f)(wC, fC, oC), gC[3 * FC._noaSlot] = wC, gC[3 * FC._noaSlot + 1] = fC, gC[3 * FC._noaSlot + 2] = oC, nC.set(qC, FC)
+              _noaSlot: xk()
+            }), Pk(Lk), jk[Lk._noaSlot] = (0, Ak.l)(Tk, lk, ak), ek[3 * Lk._noaSlot] = Tk, ek[3 * Lk._noaSlot + 1] = lk, ek[3 * Lk._noaSlot + 2] = ak, yk.set(qk, Lk)
           }
-          FC.GQC++, CC.metadata[yC.s] = FC
+          Lk.VXk++, kk.metadata[gk.z] = Lk
         },
-        IH: CC => {
-          const zC = CC.metadata[yC.s];
-          zC && (zC.GQC--, zC.GQC <= 0 && (nC.delete(zC.PQC), pC.push(zC._noaSlot)), CC.metadata[yC.s] = null)
+        zp: kk => {
+          const Fk = kk.metadata[gk.z];
+          Fk && (Fk.VXk--, Fk.VXk <= 0 && (yk.delete(Fk.sXk), Hk.push(Fk._noaSlot)), kk.metadata[gk.z] = null)
         },
-        MQC: (CC, zC) => {
-          const ZC = CC,
-            QC = zC.metadata[yC.s];
-          (ZC._noaSlots ??= []).push(QC._noaSlot), (ZC._noaStamps ??= []).push(0), (ZC._noaTerrain ??= []).push(0), ZC.entries.push(zC)
+        xXk: (kk, Fk) => {
+          const Ik = kk,
+            Xk = Fk.metadata[gk.z];
+          (Ik._noaSlots ??= []).push(Xk._noaSlot), (Ik._noaStamps ??= []).push(0), (Ik._noaTerrain ??= []).push(0), Ik.entries.push(Fk)
         },
-        removeEntry: (CC, zC) => {
-          const ZC = CC,
-            QC = ZC.entries,
-            wC = QC.indexOf(zC);
-          if (wC < 0) return;
-          const bC = ZC._noaSlots,
-            nC = ZC._noaStamps,
-            fC = ZC._noaTerrain,
-            oC = QC.length - 1;
-          QC[wC] = QC[oC], bC[wC] = bC[oC], nC[wC] = nC[oC], fC[wC] = fC[oC], QC.pop(), bC.pop(), nC.pop(), fC.pop()
+        removeEntry: (kk, Fk) => {
+          const Ik = kk,
+            Xk = Ik.entries,
+            Tk = Xk.indexOf(Fk);
+          if (Tk < 0) return;
+          const ik = Ik._noaSlots,
+            yk = Ik._noaStamps,
+            lk = Ik._noaTerrain,
+            ak = Xk.length - 1;
+          Xk[Tk] = Xk[ak], ik[Tk] = ik[ak], yk[Tk] = yk[ak], lk[Tk] = lk[ak], Xk.pop(), ik.pop(), yk.pop(), lk.pop()
         },
-        y_: CC => {
-          for (const zC of nC.values()) {
-            zC.nQC.RQC(CC), zC.bQC.RQC(CC);
-            for (const ZC of zC.SQC) ZC.RQC(CC);
-            RC(zC)
+        y5: kk => {
+          for (const Fk of yk.values()) {
+            Fk.ZXk.zXk(kk), Fk.tXk.zXk(kk);
+            for (const Ik of Fk.KXk) Ik.zXk(kk);
+            Pk(Fk)
           }
         }
       }
     }
 
-    function Sz(CC, zC) {
-      return zC.set(CC), zC
+    function HF(kk, Fk) {
+      return Fk.set(kk), Fk
     }
 
-    function pz(CC, zC, ZC) {
-      const QC = CC[zC],
-        wC = CC[zC + 1],
-        bC = CC[zC + 2],
-        nC = CC[zC + 3],
-        fC = CC[zC + 4],
-        oC = CC[zC + 5];
-      for (let qC = 0; qC < 24; qC += 4) {
-        const CC = ZC[qC],
-          zC = ZC[qC + 1],
-          FC = ZC[qC + 2];
-        if (!(CC * (CC >= 0 ? nC : QC) + zC * (zC >= 0 ? fC : wC) + FC * (FC >= 0 ? oC : bC) + ZC[qC + 3] >= 0)) return !1
+    function JF(kk, Fk, Ik) {
+      const Xk = kk[Fk],
+        Tk = kk[Fk + 1],
+        ik = kk[Fk + 2],
+        yk = kk[Fk + 3],
+        lk = kk[Fk + 4],
+        ak = kk[Fk + 5];
+      for (let qk = 0; qk < 24; qk += 4) {
+        const kk = Ik[qk],
+          Fk = Ik[qk + 1],
+          Lk = Ik[qk + 2];
+        if (!(kk * (kk >= 0 ? yk : Xk) + Fk * (Fk >= 0 ? lk : Tk) + Lk * (Lk >= 0 ? ak : ik) + Ik[qk + 3] >= 0)) return !1
       }
       return !0
     }
-    var Pz = ZC(37604);
-    class Gz {
-      constructor(CC, zC) {
-        var ZC = CC.sS;
-        ZC.sZC(new tC.e(ZC));
-        var QC = new TC.c(oC);
-        ZC.xQC = QC, QC.blocks = [];
-        var wC, bC = {},
-          fC = [];
-        this.textPlanes = fC, this.pQC = () => wC.pQC(), this.y_ = CC => {
-          FC(QC, CC), wC.y_(CC)
-        }, this.zQC = (zC, ZC, nC) => {
-          if (!zC.metadata) throw new Error("Mesh should have mesh.metadata property");
-          if (!zC.metadata[yC.q] && !zC.metadata[yC.n]) {
-            if (!ZC) {
-              var oC = QC.gQC;
-              if (zC.metadata[yC.x] && !zC.parent) {
-                oC = fC;
-                var FC = zC.WE().IQC;
-                zC.metadata[yC.y] = FC.center.length() + FC.radius, zC.Hg = !0
+    var xF = Ik(37788);
+    class PF {
+      constructor(kk, Fk) {
+        var Ik = kk.Yw;
+        Ik.AIk(new dk.e(Ik));
+        var Xk = new fk.e(ak);
+        Ik.oXk = Xk, Xk.blocks = [];
+        var Tk, ik = {},
+          lk = [];
+        this.textPlanes = lk, this.QXk = () => Tk.QXk(), this.y5 = kk => {
+          Lk(Xk, kk), Tk.y5(kk)
+        }, this.lXk = (Fk, Ik, yk) => {
+          if (!Fk.metadata) throw new Error("Mesh should have mesh.metadata property");
+          if (!Fk.metadata[gk.x] && !Fk.metadata[gk.r]) {
+            if (!Ik) {
+              var ak = Xk.PXk;
+              if (Fk.metadata[gk.D] && !Fk.parent) {
+                ak = lk;
+                var Lk = Fk.vR().EXk;
+                Fk.metadata[gk.E] = Lk.center.length() + Lk.radius, Fk.ne = !0
               }
-              return oC.push(zC), zC.metadata[yC.g] = oC, void(zC.metadata[yC.n] = !0)
+              return ak.push(Fk), Fk.metadata[gk.l] = ak, void(Fk.metadata[gk.r] = !0)
             }
-            var NC = Math.floor(nC[0] / qC),
-              MC = Math.floor(nC[1] / qC),
-              gC = Math.floor(nC[2] / qC),
-              SC = NC + "|" + MC + "|" + gC,
-              pC = bC[SC];
-            if (!pC) {
-              var PC = [NC * qC, MC * qC, gC * qC],
-                GC = [0, 0, 0];
-              CC.MN.wzC(PC, null, GC), pC = WC(GC, qC), QC.blocks.push(pC), bC[SC] = pC, pC.PQC = SC
+            var Zk = Math.floor(yk[0] / qk),
+              jk = Math.floor(yk[1] / qk),
+              ek = Math.floor(yk[2] / qk),
+              wk = Zk + "|" + jk + "|" + ek,
+              Hk = ik[wk];
+            if (!Hk) {
+              var Jk = [Zk * qk, jk * qk, ek * qk],
+                xk = [0, 0, 0];
+              kk.qZ.ZFk(Jk, null, xk), Hk = tk(xk, qk), Xk.blocks.push(Hk), ik[wk] = Hk, Hk.sXk = wk
             }
-            wC.zQC(zC, nC), wC.MQC(pC, zC), pC.GQC = (pC.GQC || 0) + 1, zC.metadata[yC.q] = pC, zC.metadata[yC.o] = !0, zC.Hg = !0
+            Tk.lXk(Fk, yk), Tk.xXk(Hk, Fk), Hk.VXk = (Hk.VXk || 0) + 1, Fk.metadata[gk.x] = Hk, Fk.metadata[gk.t] = !0, Fk.ne = !0
           }
-        }, this.IH = CC => {
-          if (CC.metadata) {
-            CC.metadata[yC.n] && ((0, jC.i)(CC.metadata[yC.g], CC), CC.metadata[yC.n] = !1), CC.metadata[yC.g] === fC && (CC.Hg = !1), CC.metadata[yC.g] = void 0, CC.metadata[yC.y] = void 0;
-            var zC = CC.metadata[yC.q];
-            zC && zC.entries && (CC.metadata[yC.o] && wC.removeEntry(zC, CC), zC.GQC--, zC.GQC <= 0 && (delete bC[zC.PQC], (0, jC.i)(QC.blocks, zC))), wC.IH(CC), CC.metadata[yC.q] = null, CC.metadata[yC.o] = !1
+        }, this.zp = kk => {
+          if (kk.metadata) {
+            kk.metadata[gk.r] && ((0, Ak.t)(kk.metadata[gk.l], kk), kk.metadata[gk.r] = !1), kk.metadata[gk.l] === lk && (kk.ne = !1), kk.metadata[gk.l] = void 0, kk.metadata[gk.E] = void 0;
+            var Fk = kk.metadata[gk.x];
+            Fk && Fk.entries && (kk.metadata[gk.t] && Tk.removeEntry(Fk, kk), Fk.VXk--, Fk.VXk <= 0 && (delete ik[Fk.sXk], (0, Ak.t)(Xk.blocks, Fk))), Tk.zp(kk), kk.metadata[gk.x] = null, kk.metadata[gk.t] = !1
           }
-        }, this.S_ = function(CC) {
-          let zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          if (CC.metadata[yC.q]) {
-            if (CC.metadata[yC.o] === zC) return;
-            var ZC = CC.metadata[yC.q];
-            ZC && ZC.entries && (zC ? wC.MQC(ZC, CC) : wC.removeEntry(ZC, CC)), CC.metadata[yC.o] = zC
+        }, this.K3 = function(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          if (kk.metadata[gk.x]) {
+            if (kk.metadata[gk.t] === Fk) return;
+            var Ik = kk.metadata[gk.x];
+            Ik && Ik.entries && (Fk ? Tk.xXk(Ik, kk) : Tk.removeEntry(Ik, kk)), kk.metadata[gk.t] = Fk
           } else {
-            if (CC.metadata[yC.n] === zC) return;
-            var bC = CC.metadata[yC.g] || QC.gQC;
-            zC ? bC.push(CC) : (0, jC.i)(bC, CC), CC.metadata[yC.n] = zC
+            if (kk.metadata[gk.r] === Fk) return;
+            var ik = kk.metadata[gk.l] || Xk.PXk;
+            Fk ? ik.push(kk) : (0, Ak.t)(ik, kk), kk.metadata[gk.r] = Fk
           }
         };
-        var oC = () => {},
-          qC = zC * CC.MN.fN.WCC,
-          FC = (CC, zC) => {
-            CC.blocks.forEach((CC => {
-              CC.nQC.RQC(zC), CC.bQC.RQC(zC), CC.SQC.forEach((CC => CC.RQC(zC))), CC.blocks && FC(CC, zC)
+        var ak = () => {},
+          qk = Fk * kk.qZ.XZ.xkk,
+          Lk = (kk, Fk) => {
+            kk.blocks.forEach((kk => {
+              kk.ZXk.zXk(Fk), kk.tXk.zXk(Fk), kk.KXk.forEach((kk => kk.zXk(Fk))), kk.blocks && Lk(kk, Fk)
             }))
           },
-          WC = (CC, zC) => {
-            var ZC = new nC.Eg(CC[0], CC[1], CC[2]),
-              QC = new nC.Eg(CC[0] + zC, CC[1] + zC, CC[2] + zC);
-            return new aC.b(ZC, QC, void 0, void 0, void 0, oC)
+          tk = (kk, Fk) => {
+            var Ik = new yk.Ge(kk[0], kk[1], kk[2]),
+              Xk = new yk.Ge(kk[0] + Fk, kk[1] + Fk, kk[2] + Fk);
+            return new Bk.b(Ik, Xk, void 0, void 0, void 0, ak)
           };
-        wC = gz(ZC, QC, CC.MN, WC, ((CC, zC) => {
-          for (var ZC = 0; ZC < fC.length; ZC++) {
-            var QC = fC[ZC];
-            QC.isEnabled(!1) && ((0, Pz.b)(QC, zC) && DC.i.prototype.push.call(CC, QC))
+        Tk = wF(Ik, Xk, kk.qZ, tk, ((kk, Fk) => {
+          for (var Ik = 0; Ik < lk.length; Ik++) {
+            var Xk = lk[Ik];
+            Xk.isEnabled(!1) && ((0, xF.c)(Xk, Fk) && Yk.f.prototype.push.call(kk, Xk))
           }
         }))
       }
     }
 
-    function Rz(CC) {
+    function KF(kk) {
       const {
-        holderPosition: zC,
-        holderRotation: ZC,
-        Vk: QC,
-        fov: wC,
-        near: bC,
-        far: nC
-      } = CC.model.Lk, fC = CC.dQC;
-      fC.position.L_(zC[0], zC[1], zC[2]), fC.rotation.L_(ZC[0], ZC[1], ZC[2]);
-      const oC = CC.camera;
-      oC.position.L_(QC[0], QC[1], QC[2]), oC.fov = wC, oC.minZ = bC, oC.maxZ = nC
+        holderPosition: Fk,
+        holderRotation: Ik,
+        KD: Xk,
+        fov: Tk,
+        near: ik,
+        far: yk
+      } = kk.model.PD, lk = kk.RXk;
+      lk.position.t5(Fk[0], Fk[1], Fk[2]), lk.rotation.t5(Ik[0], Ik[1], Ik[2]);
+      const ak = kk.camera;
+      ak.position.t5(Xk[0], Xk[1], Xk[2]), ak.fov = Tk, ak.minZ = ik, ak.maxZ = yk
     }
 
-    function Az(CC) {
-      const zC = CC.mg(),
-        ZC = zC,
-        QC = ZC._gl;
-      if (!QC || ZC.fS < 2 || zC.BZC || QC.getParameter(QC.DEPTH_BITS) < 24) return !1;
-      const wC = CC._renderingManager,
-        bC = wC.getRenderingGroup(-1),
-        nC = wC.getRenderingGroup(0),
-        fC = XC.b.prototype.render;
-      return bC.render = function(CC, zC, ZC, QC, wC, bC, oC, qC, FC) {
-        (CC || nC._empty) && fC.call(this, CC, zC, ZC, QC, wC, bC, oC, qC, FC)
-      }, nC.render = function(CC, ZC, wC, nC) {
-        let oC = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          qC = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          WC = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
-          NC = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
-          MC = arguments.length > 8 ? arguments[8] : void 0;
-        CC ? fC.call(this, CC, ZC, wC, nC, oC, qC, WC, NC, MC) : (zC.setAlphaMode(FC.d.ALPHA_DISABLE), fC.call(this, null, !1, !1, nC, oC, qC, WC, !1), bC._empty || (QC.depthRange(1, 1), fC.call(bC, null, ZC, wC, nC, oC, qC, WC, NC, MC), QC.depthRange(0, 1)), fC.call(this, null, ZC, wC, nC, !1, !1, !1, NC, MC))
+    function QF(kk) {
+      const Fk = kk.Oe(),
+        Ik = Fk,
+        Xk = Ik._gl;
+      if (!Xk || Ik.tw < 2 || Fk.IXk || Xk.getParameter(Xk.DEPTH_BITS) < 24) return !1;
+      const Tk = kk._renderingManager,
+        ik = Tk.getRenderingGroup(-1),
+        yk = Tk.getRenderingGroup(0),
+        lk = Uk.d.prototype.render;
+      return ik.render = function(kk, Fk, Ik, Xk, Tk, ik, ak, qk, Lk) {
+        (kk || yk._empty) && lk.call(this, kk, Fk, Ik, Xk, Tk, ik, ak, qk, Lk)
+      }, yk.render = function(kk, Ik, Tk, yk) {
+        let ak = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          qk = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          tk = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
+          Zk = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
+          jk = arguments.length > 8 ? arguments[8] : void 0;
+        kk ? lk.call(this, kk, Ik, Tk, yk, ak, qk, tk, Zk, jk) : (Fk.setAlphaMode(Lk.d.ALPHA_DISABLE), lk.call(this, null, !1, !1, yk, ak, qk, tk, !1), ik._empty || (Xk.depthRange(1, 1), lk.call(ik, null, Ik, Tk, yk, ak, qk, tk, Zk, jk), Xk.depthRange(0, 1)), lk.call(this, null, Ik, Tk, yk, !1, !1, !1, Zk, jk))
       }, !0
     }
 
-    function xz(CC, zC) {
-      return [zC, sC.h].map(((zC, ZC) => {
-        const QC = new wC.e("light", nC.Eg.FromArray(zC), CC);
-        return QC.diffuse = bC.Color3.FromArray([1, 1, 1]), QC.specular = bC.Color3.FromArray([1, 1, 1]), QC.intensity = sC.e[ZC], QC
+    function sF(kk, Fk) {
+      return [Fk, Wk.d].map(((Fk, Ik) => {
+        const Xk = new Tk.e("light", yk.Ge.FromArray(Fk), kk);
+        return Xk.diffuse = ik.Color3.FromArray([1, 1, 1]), Xk.specular = ik.Color3.FromArray([1, 1, 1]), Xk.intensity = Wk.c[Ik], Xk
       }))
     }
-    class Jz extends oC.c {
+    class VF extends ak.e {
       constructor() {
         super(...arguments), this.heldTexture = null
       }
       get texture() {
         return this.heldTexture
       }
-      set texture(CC) {
-        var zC;
-        this.heldTexture = CC, this.particleTexture = null !== (zC = null === CC || void 0 === CC ? void 0 : CC.mirror) && void 0 !== zC ? zC : null
+      set texture(kk) {
+        var Fk;
+        this.heldTexture = kk, this.particleTexture = null !== (Fk = null === kk || void 0 === kk ? void 0 : kk.mirror) && void 0 !== Fk ? Fk : null
       }
       isEmitting() {
         return this.isStarted() && !this._stopped
       }
       dispose() {
-        let CC = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-          zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          ZC = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        CC && (this.particleTexture = null, (0, qC.C)(this.heldTexture), this.heldTexture = null), super.dispose(CC, zC, ZC)
+        let kk = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
+          Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          Ik = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        kk && (this.particleTexture = null, (0, qk.A)(this.heldTexture), this.heldTexture = null), super.dispose(kk, Fk, Ik)
       }
     }
-    const Iz = QC.c.Zero();
-    const iz = {
-      gZC: function(CC, zC) {
-        return new YC(CC, zC.FZC, {
-          preserveDrawingBuffer: zC.preserveDrawingBuffer,
+    const zF = Xk.c.Zero();
+    const SF = {
+      QIk: function(kk, Fk) {
+        return new nk(kk, Fk.JIk, {
+          preserveDrawingBuffer: Fk.preserveDrawingBuffer,
           powerPreference: "high-performance",
           alpha: !1,
           stencil: !1
         })
       },
-      EQC: function(CC, zC) {
-        ! function(CC, zC, ZC) {
-          const QC = new uC.e(CC.engine);
-          CC.sS = QC, QC.detachControl(), QC.autoClear = !1, cC.b.MIN_RENDERINGGROUPS = -1;
-          for (let bC = cC.b.MIN_RENDERINGGROUPS; bC <= 1; bC++) QC.setRenderingOrder(bC, XC.b.PainterSortCompare, XC.b.PainterSortCompare, XC.b.PainterSortCompare);
-          QC.setRenderingAutoClearDepthStencil(0, !1), lC.b.Enabled = !1, CC.hQC = new Gz(CC, Math.round(zC.KQC)), CC.dQC = new EC.c("camHolder", QC), CC.camera = new HC.d("camera", new nC.Eg(0, 0, 0), QC), CC.camera.parent = CC.dQC, Rz(CC), (0, sC.l)(CC, ((CC, zC, ZC) => (0, rC.f)(zC, ZC, CC.sS))), QC.clearColor = bC.e.FromArray(zC.clearColor), QC.ambientColor = bC.Color3.FromArray(zC.ambientColor);
-          const wC = ZC(QC, zC.HQC);
-          QC.onNewLightAddedObservable.add((CC => {
-            wC.some((zC => zC === CC)) || console.error(`Light "${CC.name}" was added to the scene after startup; terrain, block models and Lite will ignore it. Add it in addNoaLights (renderingCamera.ts) and addBabylonLights (babylonBackend.ts).`)
-          })), QC.skipPointerMovePicking = !0
-        }(CC, zC, xz), Az(CC.sS)
+      NXk: function(kk, Fk) {
+        ! function(kk, Fk, Ik) {
+          const Xk = new Nk.c(kk.engine);
+          kk.Yw = Xk, Xk.detachControl(), Xk.autoClear = !1, Ck.e.MIN_RENDERINGGROUPS = -1;
+          for (let ik = Ck.e.MIN_RENDERINGGROUPS; ik <= 1; ik++) Xk.setRenderingOrder(ik, Uk.d.PainterSortCompare, Uk.d.PainterSortCompare, Uk.d.PainterSortCompare);
+          Xk.setRenderingAutoClearDepthStencil(0, !1), Rk.e.Enabled = !1, kk.pXk = new PF(kk, Math.round(Fk.uXk)), kk.RXk = new bk.b("camHolder", Xk), kk.camera = new uk.e("camera", new yk.Ge(0, 0, 0), Xk), kk.camera.parent = kk.RXk, KF(kk), (0, Wk.e)(kk, ((kk, Fk, Ik) => (0, ck.k)(Fk, Ik, kk.Yw))), Xk.clearColor = ik.b.FromArray(Fk.clearColor), Xk.ambientColor = ik.Color3.FromArray(Fk.ambientColor);
+          const Tk = Ik(Xk, Fk.CXk);
+          Xk.onNewLightAddedObservable.add((kk => {
+            Tk.some((Fk => Fk === kk)) || console.error(`Light "${kk.name}" was added to the scene after startup; terrain, block models and Lite will ignore it. Add it in addNoaLights (renderingCamera.ts) and addBabylonLights (babylonBackend.ts).`)
+          })), Xk.skipPointerMovePicking = !0
+        }(kk, Fk, sF), QF(kk.Yw)
       },
-      YQC: Rz,
-      setBabylonFog: function(CC, zC, ZC, QC) {
-        const wC = CC.sS;
-        wC.fogMode = 3, wC.fogStart = zC, wC.fogEnd = ZC, wC.fogColor.set(QC[0], QC[1], QC[2])
+      bXk: KF,
+      setBabylonFog: function(kk, Fk, Ik, Xk) {
+        const Tk = kk.Yw;
+        Tk.fogMode = 3, Tk.fogStart = Fk, Tk.fogEnd = Ik, Tk.fogColor.set(Xk[0], Xk[1], Xk[2])
       },
-      XQC: function(CC, zC, ZC) {
-        return CC.engine.fS >= 2 && (CC.uQC || (CC.uQC = new hC(CC.sS, CC.rQC)), !CC.uQC.failed) ? CC.uQC.DH(zC, ZC) : new Jz(zC, ZC, CC.sS)
+      WXk: function(kk, Fk, Ik) {
+        return kk.engine.tw >= 2 && (kk.fXk || (kk.fXk = new Ek(kk.Yw, kk.BXk)), !kk.fXk.failed) ? kk.fXk.kR(Fk, Ik) : new VF(Fk, Ik, kk.Yw)
       },
-      TQC: function(CC, zC) {
-        CC.sS.Ix.forEach((ZC => {
-          if (ZC instanceof vC) return void ZC.y_(zC, CC.MN.YN);
-          const QC = ZC;
-          if (QC.emitter.getConnectedParticleSystems)
-            for (const CC of QC._particles) CC.position.set(CC.position.x - zC[0], CC.position.y - zC[1], CC.position.z - zC[2]);
+      YXk: function(kk, Fk) {
+        kk.Yw.jK.forEach((Ik => {
+          if (Ik instanceof Sk) return void Ik.y5(Fk, kk.qZ.SZ);
+          const Xk = Ik;
+          if (Xk.emitter.getConnectedParticleSystems)
+            for (const kk of Xk._particles) kk.position.set(kk.position.x - Fk[0], kk.position.y - Fk[1], kk.position.z - Fk[2]);
           else {
-            if (!QC.worldOffset) throw new Error("Particle system has no world offset");
-            QC.worldOffset.x = -CC.MN.YN[0], QC.worldOffset.y = -CC.MN.YN[1], QC.worldOffset.z = -CC.MN.YN[2]
+            if (!Xk.worldOffset) throw new Error("Particle system has no world offset");
+            Xk.worldOffset.x = -kk.qZ.SZ[0], Xk.worldOffset.y = -kk.qZ.SZ[1], Xk.worldOffset.z = -kk.qZ.SZ[2]
           }
         }))
       },
-      linesFromArrays: function(CC, zC, ZC) {
-        const QC = new fC.d(zC, CC.sS, null, void 0, void 0, !1);
-        return (0, rC.e)(zC, ZC, CC.sS, QC), QC
+      linesFromArrays: function(kk, Fk, Ik) {
+        const Xk = new lk.d(Fk, kk.Yw, null, void 0, void 0, !1);
+        return (0, ck.g)(Fk, Ik, kk.Yw, Xk), Xk
       },
-      aS: qz,
-      sQC: function(CC, zC) {
-        return Iz.origin.Av(zC.origin), Iz.direction.Av(zC.direction), Iz.length = zC.length, Iz.epsilon = zC.epsilon, Iz.sQC(CC, !1, void 0, !1, void 0, !0).pickedPoint
+      Aw: LF,
+      dXk: function(kk, Fk) {
+        return zF.origin.kS(Fk.origin), zF.direction.kS(Fk.direction), zF.length = Fk.length, zF.epsilon = Fk.epsilon, zF.dXk(kk, !1, void 0, !1, void 0, !0).pickedPoint
       }
     }
   },
-  40958: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => TC,
-      g: () => GC,
-      i: () => LC
+  41132: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => fk,
+      g: () => xk,
+      h: () => mk
     });
-    var QC = ZC(40092),
-      wC = ZC(40963),
-      bC = ZC(40994),
-      nC = ZC(40968),
-      fC = ZC(37648),
-      oC = ZC(37660),
-      qC = ZC(37666),
-      FC = ZC(37670),
-      WC = ZC(37076),
-      NC = ZC(37083),
-      MC = ZC(40970),
-      gC = ZC(37061),
-      SC = ZC(37063),
-      pC = ZC(37050);
+    var Xk = Ik(40269),
+      Tk = Ik(41139),
+      ik = Ik(41178),
+      yk = Ik(41147),
+      lk = Ik(37815),
+      ak = Ik(37821),
+      qk = Ik(37823),
+      Lk = Ik(37829),
+      tk = Ik(37270),
+      Zk = Ik(37277),
+      jk = Ik(41149),
+      ek = Ik(37255),
+      wk = Ik(37259),
+      Hk = Ik(37249);
 
-    function PC(CC, zC) {
-      return Object.assign((function(CC, ZC, QC, wC) {
-        return zC(this.featureState, CC, ZC, QC, wC)
+    function Jk(kk, Fk) {
+      return Object.assign((function(kk, Ik, Xk, Tk) {
+        return Fk(this.featureState, kk, Ik, Xk, Tk)
       }), {
-        Qg: CC
+        Ie: kk
       })
     }
 
-    function GC(CC) {
-      const zC = class extends MC.e {
-          constructor(zC, ZC) {
-            const QC = (0, SC.Y)(zC),
-              wC = QC && (0, SC.x)(QC, CC.name);
-            for (var bC = arguments.length, nC = new Array(bC > 2 ? bC - 2 : 0), fC = 2; fC < bC; fC++) nC[fC - 2] = arguments[fC];
-            super(zC, CC.name, CC.priority, wC ? wC.defines : CC.defines(...nC), !1), this.featureState = void 0, this.featureState = ZC, this._pluginManager._addPlugin(this), this._enable(!0), (0, SC.B)(this._material, CC, this.featureState, this._pluginDefineNames)
+    function xk(kk) {
+      const Fk = class extends jk.d {
+          constructor(Fk, Ik) {
+            const Xk = (0, wk.X)(Fk),
+              Tk = Xk && (0, wk.B)(Xk, kk.name);
+            for (var ik = arguments.length, yk = new Array(ik > 2 ? ik - 2 : 0), lk = 2; lk < ik; lk++) yk[lk - 2] = arguments[lk];
+            super(Fk, kk.name, kk.priority, Tk ? Tk.defines : kk.defines(...yk), !1), this.featureState = void 0, this.featureState = Ik, this._pluginManager._addPlugin(this), this._enable(!0), (0, wk.D)(this._material, kk, this.featureState, this._pluginDefineNames)
           }
           getClassName() {
-            return CC.className
+            return kk.className
           }
-          isCompatible(CC) {
-            return CC === pC.e.GLSL || CC === pC.e.WGSL
+          isCompatible(kk) {
+            return kk === Hk.e.GLSL || kk === Hk.e.WGSL
           }
         },
-        ZC = (0, gC.l)(CC);
-      for (const [QC, wC] of Object.entries(gC.e)) {
-        const bC = CC[QC];
-        if (bC) {
-          const CC = ZC[QC];
-          Object.defineProperty(zC.prototype, wC, {
-            value: PC(bC, CC),
+        Ik = (0, ek.i)(kk);
+      for (const [Xk, Tk] of Object.entries(ek.e)) {
+        const ik = kk[Xk];
+        if (ik) {
+          const kk = Ik[Xk];
+          Object.defineProperty(Fk.prototype, Tk, {
+            value: Jk(ik, kk),
             writable: !0,
             configurable: !0
           })
         }
       }
-      return zC
+      return Fk
     }
-    class RC extends(GC(fC.d)) {}
-    var AC = ZC(39635),
-      xC = ZC(40977);
-    const JC = new WeakMap;
+    class Pk extends(xk(lk.b)) {}
+    var Kk = Ik(39806),
+      Qk = Ik(41155);
+    const sk = new WeakMap;
 
-    function IC(CC, zC, ZC) {
-      let QC = JC.get(ZC);
-      QC || (QC = new Map, JC.set(ZC, QC));
+    function Vk(kk, Fk, Ik) {
+      let Xk = sk.get(Ik);
+      Xk || (Xk = new Map, sk.set(Ik, Xk));
       const {
-        url: wC
-      } = CC;
-      let bC = QC.get(wC);
-      return bC || (bC = async function(CC, zC, ZC) {
-        var QC;
+        url: Tk
+      } = kk;
+      let ik = Xk.get(Tk);
+      return ik || (ik = async function(kk, Fk, Ik) {
+        var Xk;
         const {
-          width: wC,
-          height: bC
-        } = CC.getSize(), fC = Math.round(bC / wC), oC = CC.getInternalTexture(), qC = zC && zC.byteLength === wC * wC * fC * 4 ? zC : null !== (QC = iC.get(oC)) && void 0 !== QC ? QC : CC._readPixelsSync(), FC = new xC.d(qC, wC, wC, fC, AC.d.TEXTUREFORMAT_RGBA, ZC, !0, !1, nC.e.NEAREST_NEAREST_MIPLINEAR);
-        iC.has(oC) || (! function(CC, zC) {
-          const ZC = zC.createRawTexture(new Uint8Array(4), 1, 1, AC.d.TEXTUREFORMAT_RGBA, !1, !1, nC.e.NEAREST_SAMPLINGMODE);
-          CC._hardwareTexture.release(), zC.unbindAllTextures(), ZC._swapAndDie(CC, !1)
-        }(oC, ZC.mg()), iC.set(oC, qC));
-        return FC
-      }(CC, zC, ZC), QC.set(wC, bC), bC.catch((() => {
-        QC.delete(wC)
-      }))), bC
+          width: Tk,
+          height: ik
+        } = kk.getSize(), lk = Math.round(ik / Tk), ak = kk.getInternalTexture(), qk = Fk && Fk.byteLength === Tk * Tk * lk * 4 ? Fk : null !== (Xk = zk.get(ak)) && void 0 !== Xk ? Xk : kk._readPixelsSync(), Lk = new Qk.c(qk, Tk, Tk, lk, Kk.c.TEXTUREFORMAT_RGBA, Ik, !0, !1, yk.c.NEAREST_NEAREST_MIPLINEAR);
+        zk.has(ak) || (! function(kk, Fk) {
+          const Ik = Fk.createRawTexture(new Uint8Array(4), 1, 1, Kk.c.TEXTUREFORMAT_RGBA, !1, !1, yk.c.NEAREST_SAMPLINGMODE);
+          kk._hardwareTexture.release(), Fk.unbindAllTextures(), Ik._swapAndDie(kk, !1)
+        }(ak, Ik.Oe()), zk.set(ak, qk));
+        return Lk
+      }(kk, Fk, Ik), Xk.set(Tk, ik), ik.catch((() => {
+        Xk.delete(Tk)
+      }))), ik
     }
-    const iC = new WeakMap;
-    var vC = ZC(37673);
-    class eC extends(GC(oC.j)) {
-      constructor(CC, zC) {
-        super(CC, zC), zC.textures.forEach(((CC, zC) => {
-          CC.mirror.onLoadObservable.add((CC => {
-            this.setTextureArrayData(CC, zC).catch((CC => {
-              console.error(`Failed to build texture array for atlas ${zC}`, CC)
+    const zk = new WeakMap;
+    var Sk = Ik(37832);
+    class vk extends(xk(ak.l)) {
+      constructor(kk, Fk) {
+        super(kk, Fk), Fk.textures.forEach(((kk, Fk) => {
+          kk.mirror.onLoadObservable.add((kk => {
+            this.setTextureArrayData(kk, Fk).catch((kk => {
+              console.error(`Failed to build texture array for atlas ${Fk}`, kk)
             }))
           }))
-        })), (0, vC.k)(zC, CC.shaderLanguage)
+        })), (0, Sk.h)(Fk, kk.shaderLanguage)
       }
-      async setTextureArrayData(CC, zC) {
-        var ZC, QC;
-        const wC = this.featureState,
+      async setTextureArrayData(kk, Fk) {
+        var Ik, Xk;
+        const Tk = this.featureState,
           {
-            width: bC,
-            height: nC
-          } = CC.getSize(),
-          fC = wC.useWebGL2 ? await IC(CC, null !== (ZC = null === (QC = wC.sources.pixels) || void 0 === QC ? void 0 : QC[zC]) && void 0 !== ZC ? ZC : null, this._material.Km()) : null;
-        (0, vC.d)(this._material, wC, zC, fC, bC, Math.round(nC / bC), this._material.shaderLanguage)
+            width: ik,
+            height: yk
+          } = kk.getSize(),
+          lk = Tk.useWebGL2 ? await Vk(kk, null !== (Ik = null === (Xk = Tk.sources.pixels) || void 0 === Xk ? void 0 : Xk[Fk]) && void 0 !== Ik ? Ik : null, this._material.mG()) : null;
+        (0, Sk.e)(this._material, Tk, Fk, lk, ik, Math.round(yk / ik), this._material.shaderLanguage)
       }
     }
-    var hC = ZC(40985),
-      KC = ZC(40127),
-      YC = ZC(36961),
-      dC = ZC(40988),
-      mC = ZC(40235),
-      HC = ZC(40119),
-      EC = ZC(40946),
-      lC = ZC(37432),
-      XC = ZC(40992);
-    class cC extends hC.c {
+    var Ek = Ik(41158),
+      Ok = Ik(40308),
+      nk = Ik(37144),
+      Gk = Ik(41165),
+      pk = Ik(40427),
+      uk = Ik(40297),
+      bk = Ik(41114),
+      Rk = Ik(37623),
+      Uk = Ik(41170);
+    class Ck extends Ek.c {
       getData() {
         return null
       }
@@ -846,416 +846,416 @@ export const modules = {
         super._rebuild()
       }
     }
-    const uC = {
-      Mesh: dC.e,
-      TransformNode: EC.c,
-      gg: hC.c,
-      VertexBuffer: hC.f,
-      BoundingInfo: KC.d,
-      Eg: YC.Eg,
-      ArenaBuffer: cC,
-      SubMesh: HC.d,
-      VertexData: mC.e,
-      MirroredGeometry: XC.d,
-      meshFromArrays: XC.e,
-      plainMeshFromArrays: XC.f
+    const Nk = {
+      Mesh: Gk.c,
+      TransformNode: bk.b,
+      je: Ek.c,
+      VertexBuffer: Ek.g,
+      BoundingInfo: Ok.d,
+      Ge: nk.Ge,
+      ArenaBuffer: Ck,
+      SubMesh: uk.b,
+      VertexData: pk.c,
+      MirroredGeometry: Uk.c,
+      meshFromArrays: Uk.g,
+      plainMeshFromArrays: Uk.k
     };
-    (0, lC.e)(uC);
-    var rC = ZC(37290);
-    class sC extends(GC(FC.f)) {
-      constructor(CC, zC) {
-        if (super(CC, zC), CC instanceof QC.StandardMaterial && zC.dirLightCount > 0) {
-          const zC = CC,
-            ZC = zC._blockDirtyMechanism;
-          zC._blockDirtyMechanism = !0, CC.disableLighting = !0, zC._blockDirtyMechanism = ZC;
-          const QC = (0, SC.Y)(CC);
-          QC && (QC.disableLighting = !0, (0, SC.W)(QC))
-        }(0, rC.g)(CC)
+    (0, Rk.f)(Nk);
+    var ck = Ik(37461);
+    class Wk extends(xk(Lk.e)) {
+      constructor(kk, Fk) {
+        if (super(kk, Fk), kk instanceof Xk.StandardMaterial && Fk.dirLightCount > 0) {
+          const Fk = kk,
+            Ik = Fk._blockDirtyMechanism;
+          Fk._blockDirtyMechanism = !0, kk.disableLighting = !0, Fk._blockDirtyMechanism = Ik;
+          const Xk = (0, wk.X)(kk);
+          Xk && (Xk.disableLighting = !0, (0, wk.W)(Xk))
+        }(0, ck.h)(kk)
       }
-      dispose(CC) {
-        (0, rC.k)(this._material), super.dispose(CC)
+      dispose(kk) {
+        (0, ck.l)(this._material), super.dispose(kk)
       }
     }
 
-    function TC(CC, zC) {
-      if (!(zC instanceof QC.StandardMaterial) || zC.specularTexture) return;
+    function fk(kk, Fk) {
+      if (!(Fk instanceof Xk.StandardMaterial) || Fk.specularTexture) return;
       const {
-        r: ZC,
-        g: wC,
-        b: bC
-      } = zC.specularColor;
-      0 === ZC && 0 === wC && 0 === bC && (CC.SPECULARTERM = !1)
-    }(0, FC.d)({
-      disableUnusedSpecularTerm: TC
+        r: Ik,
+        g: Tk,
+        b: ik
+      } = Fk.specularColor;
+      0 === Ik && 0 === Tk && 0 === ik && (kk.SPECULARTERM = !1)
+    }(0, Lk.c)({
+      disableUnusedSpecularTerm: fk
     });
-    var aC = ZC(37175),
-      tC = ZC(37450);
-    const DC = new RegExp(`^#define ${qC.e}\\s*$`, "m");
-    class jC extends(GC(qC.g)) {
-      constructor(CC, zC) {
-        super(CC, zC), this.Sg = !1, zC.ditherOnlyWhileFading && (tC.g.add(CC), this.prewarmDitherTwins(CC))
+    var Bk = Ik(37365),
+      dk = Ik(37633);
+    const Yk = new RegExp(`^#define ${qk.d}\\s*$`, "m");
+    class Ak extends(xk(qk.h)) {
+      constructor(kk, Fk) {
+        super(kk, Fk), this.ee = !1, Fk.ditherOnlyWhileFading && (dk.e.add(kk), this.prewarmDitherTwins(kk))
       }
-      prewarmDitherTwins(CC) {
-        const zC = new WeakSet;
-        CC.onEffectCreatedObservable.add((ZC => {
+      prewarmDitherTwins(kk) {
+        const Fk = new WeakSet;
+        kk.onEffectCreatedObservable.add((Ik => {
           let {
-            effect: QC,
-            subMesh: wC
-          } = ZC;
-          if (this.featureState.prewarmingDither || zC.has(QC)) return;
-          zC.add(QC);
-          const bC = null === wC || void 0 === wC ? void 0 : wC.getMesh();
-          bC && !DC.test(QC.defines) && CC.Km().onAfterRenderObservable.addOnce((() => {
-            this.prewarmDither(bC) || zC.delete(QC)
+            effect: Xk,
+            subMesh: Tk
+          } = Ik;
+          if (this.featureState.prewarmingDither || Fk.has(Xk)) return;
+          Fk.add(Xk);
+          const ik = null === Tk || void 0 === Tk ? void 0 : Tk.getMesh();
+          ik && !Yk.test(Xk.defines) && kk.mG().onAfterRenderObservable.addOnce((() => {
+            this.prewarmDither(ik) || Fk.delete(Xk)
           }))
         }))
       }
-      prewarmDither(CC) {
-        if (this.Sg || CC.GJ()) return !1;
-        const zC = new HC.d(0, 0, 0, 0, 0, CC, void 0, !1, !1);
+      prewarmDither(kk) {
+        if (this.ee || kk.Hs()) return !1;
+        const Fk = new uk.b(0, 0, 0, 0, 0, kk, void 0, !1, !1);
         this.featureState.prewarmingDither = !0;
         try {
-          this._material.isReadyForSubMesh(CC, zC)
+          this._material.isReadyForSubMesh(kk, Fk)
         } finally {
           this.featureState.prewarmingDither = !1
         }
-        return null !== zC.effect
+        return null !== Fk.effect
       }
-      dispose(CC) {
-        this.Sg = !0, super.dispose(CC)
+      dispose(kk) {
+        this.ee = !0, super.dispose(kk)
       }
     }
-    const yC = new Map;
+    const gk = new Map;
 
-    function LC(CC, zC) {
-      yC.set(CC, zC)
+    function mk(kk, Fk) {
+      gk.set(kk, Fk)
     }
-    LC(fC.d, RC), LC(oC.j, eC), LC(qC.g, jC), LC(FC.f, sC), (0, WC.c)({
-      create: (CC, zC) => {
-        const ZC = new QC.StandardMaterial(CC.name, zC);
-        return (0, aC.u)(CC, ZC), ZC.detailMap._pluginDefineNames
+    mk(lk.b, Pk), mk(ak.l, vk), mk(qk.h, Ak), mk(Lk.e, Wk), (0, tk.d)({
+      create: (kk, Fk) => {
+        const Ik = new Xk.StandardMaterial(kk.name, Fk);
+        return (0, Bk.q)(kk, Ik), Ik.detailMap._pluginDefineNames
       },
-      write: (CC, zC, ZC) => {
-        (0, aC.X)(CC.mirror, zC, ZC)
+      write: (kk, Fk, Ik) => {
+        (0, Bk.X)(kk.mirror, Fk, Ik)
       },
-      addFeature: (CC, zC, ZC) => {
-        const QC = yC.get(zC.feature);
-        if (!QC) throw new Error(`${zC.feature.name} has no plugin class (registerPluginClass)`);
-        new QC(CC.mirror, zC.state, ...ZC)
+      addFeature: (kk, Fk, Ik) => {
+        const Xk = gk.get(Fk.feature);
+        if (!Xk) throw new Error(`${Fk.feature.name} has no plugin class (registerPluginClass)`);
+        new Xk(kk.mirror, Fk.state, ...Ik)
       },
-      texture: (CC, zC, ZC) => {
+      texture: (kk, Fk, Ik) => {
         let {
-          url: QC,
-          noMipmap: wC,
-          invertY: bC,
-          samplingMode: fC,
-          data: oC,
-          sets: qC
-        } = ZC;
-        if (!oC) {
-          const ZC = new nC.e(QC, zC, wC, bC, fC);
-          return Object.assign(ZC, qC), void(0, NC.L)(CC, ZC)
+          url: Xk,
+          noMipmap: Tk,
+          invertY: ik,
+          samplingMode: lk,
+          data: ak,
+          sets: qk
+        } = Ik;
+        if (!ak) {
+          const Ik = new yk.c(Xk, Fk, Tk, ik, lk);
+          return Object.assign(Ik, qk), void(0, Zk.H)(kk, Ik)
         }
-        const FC = {},
-          WC = new Promise(((CC, zC) => {
-            FC.onLoad = CC, FC.onError = (CC, ZC) => {
-              zC(new Error(`${oC.context}: ${(null===ZC||void 0===ZC?void 0:ZC.message)||CC||"Failed to load texture"}`))
+        const Lk = {},
+          tk = new Promise(((kk, Fk) => {
+            Lk.onLoad = kk, Lk.onError = (kk, Ik) => {
+              Fk(new Error(`${ak.context}: ${(null===Ik||void 0===Ik?void 0:Ik.message)||kk||"Failed to load texture"}`))
             }
           })),
           {
-            mimeType: MC,
-            bytes: gC,
-            label: SC
-          } = oC,
-          pC = {
-            noMipmap: wC,
+            mimeType: jk,
+            bytes: ek,
+            label: wk
+          } = ak,
+          Hk = {
+            noMipmap: Tk,
             invertY: !1,
-            samplingMode: fC,
-            ...FC,
-            mimeType: MC,
+            samplingMode: lk,
+            ...Lk,
+            mimeType: jk,
             loaderOptions: void 0,
             useSRGBBuffer: !1
           },
-          PC = new nC.e(null, zC, pC);
-        aC.w.set(PC, WC), Object.assign(PC, qC), PC.updateURL(QC, gC);
-        const GC = PC.getInternalTexture();
-        GC && (GC.label = SC), CC.uvSet = PC.coordinatesIndex, CC.matrix.set((0, aC.P)(PC)), (0, NC.L)(CC, PC)
+          Jk = new yk.c(null, Fk, Hk);
+        Bk.r.set(Jk, tk), Object.assign(Jk, qk), Jk.updateURL(Xk, ek);
+        const xk = Jk.getInternalTexture();
+        xk && (xk.label = wk), kk.uvSet = Jk.coordinatesIndex, kk.matrix.set((0, Bk.P)(Jk)), (0, Zk.H)(kk, Jk)
       },
-      cube: (CC, zC, ZC) => {
+      cube: (kk, Fk, Ik) => {
         let {
-          rootUrl: QC,
-          files: bC,
-          noMipmap: fC,
-          luminance: oC
-        } = ZC;
+          rootUrl: Xk,
+          files: ik,
+          noMipmap: lk,
+          luminance: ak
+        } = Ik;
         const {
-          samplingMode: qC
-        } = CC.sampler, FC = qC === (0, NC.y)(fC) ? null : () => {
-          (0, aC.L)(WC, qC)
-        }, WC = new wC.c(QC, zC, null, fC, bC, FC, null, (0, NC.u)(oC));
-        WC.coordinatesMode = nC.e.SKYBOX_MODE, (0, NC.L)(CC, WC)
+          samplingMode: qk
+        } = kk.sampler, Lk = qk === (0, Zk.z)(lk) ? null : () => {
+          (0, Bk.O)(tk, qk)
+        }, tk = new Tk.c(Xk, Fk, null, lk, ik, Lk, null, (0, Zk.x)(ak));
+        tk.coordinatesMode = yk.c.SKYBOX_MODE, (0, Zk.H)(kk, tk)
       },
-      canvas: (CC, zC, ZC) => {
+      canvas: (kk, Fk, Ik) => {
         let {
-          width: QC,
-          height: wC,
-          mipmaps: fC,
-          samplingMode: oC,
-          hasAlpha: qC = !1,
-          wrap: FC = nC.e.CLAMP_ADDRESSMODE
-        } = ZC;
-        const WC = new bC.d(zC, {
-          width: QC,
-          height: wC
-        }, CC, fC, oC);
-        WC.hasAlpha = qC, WC.wrapU = FC, WC.wrapV = FC;
-        const NC = (0, aC.C)(WC);
-        return (0, aC.F)(NC, WC), NC
+          width: Xk,
+          height: Tk,
+          mipmaps: lk,
+          samplingMode: ak,
+          hasAlpha: qk = !1,
+          wrap: Lk = yk.c.CLAMP_ADDRESSMODE
+        } = Ik;
+        const tk = new ik.d(Fk, {
+          width: Xk,
+          height: Tk
+        }, kk, lk, ak);
+        tk.hasAlpha = qk, tk.wrapU = Lk, tk.wrapV = Lk;
+        const Zk = (0, Bk.B)(tk);
+        return (0, Bk.E)(Zk, tk), Zk
       }
     })
   },
-  40992: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => FC,
-      e: () => WC,
-      f: () => NC
+  41170: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Lk,
+      g: () => tk,
+      k: () => Zk
     });
-    var QC = ZC(40985),
-      wC = ZC(39882),
-      bC = ZC(40127),
-      nC = ZC(40244),
-      fC = ZC(40988),
-      oC = ZC(40235),
-      qC = ZC(37339);
-    class FC extends nC.c {
+    var Xk = Ik(41158),
+      Tk = Ik(40056),
+      ik = Ik(40308),
+      yk = Ik(40429),
+      lk = Ik(41165),
+      ak = Ik(40427),
+      qk = Ik(37519);
+    class Lk extends yk.d {
       constructor() {
-        super(...arguments), this.model = null, this.onGeometryUpdated = (CC, zC) => {
-          this.releaseUnlessInstanced(zC)
+        super(...arguments), this.model = null, this.onGeometryUpdated = (kk, Fk) => {
+          this.releaseUnlessInstanced(Fk)
         }, this.onLinked = null
       }
-      link(CC) {
-        var zC;
-        (0, qC.n)(CC), this.model = CC, null === (zC = this.onLinked) || void 0 === zC || zC.call(this, CC)
+      link(kk) {
+        var Fk;
+        (0, qk.o)(kk), this.model = kk, null === (Fk = this.onLinked) || void 0 === Fk || Fk.call(this, kk)
       }
       relink() {
         this.release();
-        const CC = [];
-        for (const wC of Object.values(this._vertexBuffers))
-          if (!wC.getIsInstanced()) {
+        const kk = [];
+        for (const Tk of Object.values(this._vertexBuffers))
+          if (!Tk.getIsInstanced()) {
             const {
-              byteOffset: zC,
-              byteStride: ZC,
-              type: QC,
-              normalized: bC
-            } = wC;
-            CC.push({
-              kind: wC.getKind(),
-              data: wC.getData(),
-              offset: zC,
-              stride: ZC,
-              components: wC.getSize(),
-              glType: QC,
-              isNormalized: bC
+              byteOffset: Fk,
+              byteStride: Ik,
+              type: Xk,
+              normalized: ik
+            } = Tk;
+            kk.push({
+              kind: Tk.getKind(),
+              data: Tk.getData(),
+              offset: Fk,
+              stride: Ik,
+              components: Tk.getSize(),
+              glType: Xk,
+              isNormalized: ik
             })
-          } const zC = this._indices.length ? this._indices : null,
+          } const Fk = this._indices.length ? this._indices : null,
           {
-            minimum: ZC,
-            maximum: QC
+            minimum: Ik,
+            maximum: Xk
           } = this.extend;
-        this.link(new qC.f(CC, zC, this.getTotalVertices(), new Float64Array(ZC.VZC()), new Float64Array(QC.VZC())))
+        this.link(new qk.h(kk, Fk, this.getTotalVertices(), new Float64Array(Ik.iXk()), new Float64Array(Xk.iXk())))
       }
-      copy(CC) {
-        if (!this.model) return super.copy(CC);
-        const zC = new FC(CC, this.Km()),
-          ZC = this.CQC(void 0, !0);
-        ZC && zC.setIndices(ZC);
-        let nC = !1;
-        for (const bC in this._vertexBuffers) {
-          const CC = this._vertexBuffers[bC],
-            ZC = CC.getData();
-          if (!ZC) continue;
-          const fC = CC.getSize(),
+      copy(kk) {
+        if (!this.model) return super.copy(kk);
+        const Fk = new Lk(kk, this.mG()),
+          Ik = this.yXk(void 0, !0);
+        Ik && Fk.setIndices(Ik);
+        let yk = !1;
+        for (const ik in this._vertexBuffers) {
+          const kk = this._vertexBuffers[ik],
+            Ik = kk.getData();
+          if (!Ik) continue;
+          const lk = kk.getSize(),
             {
-              type: oC,
-              byteOffset: qC,
-              byteStride: FC,
-              normalized: WC
-            } = CC;
-          nC ||= CC.isUpdatable();
-          const NC = CC.getIsInstanced() ? (ZC instanceof Array ? 4 * ZC.length : ZC.byteLength) / FC : this.getTotalVertices(),
-            MC = (0, wC.o)(ZC, fC, oC, qC, FC, NC, !0),
-            gC = {
-              updatable: CC.isUpdatable(),
-              stride: fC,
-              type: oC,
-              normalized: WC,
+              type: ak,
+              byteOffset: qk,
+              byteStride: Lk,
+              normalized: tk
+            } = kk;
+          yk ||= kk.isUpdatable();
+          const Zk = kk.getIsInstanced() ? (Ik instanceof Array ? 4 * Ik.length : Ik.byteLength) / Lk : this.getTotalVertices(),
+            jk = (0, Tk.l)(Ik, lk, ak, qk, Lk, Zk, !0),
+            ek = {
+              updatable: kk.isUpdatable(),
+              stride: lk,
+              type: ak,
+              normalized: tk,
               takeBufferOwnership: !0,
-              instanced: CC.getIsInstanced()
+              instanced: kk.getIsInstanced()
             };
-          zC.setVerticesBuffer(new QC.f(this.mg(), MC, bC, gC), NC)
+          Fk.setVerticesBuffer(new Xk.g(this.Oe(), jk, ik, ek), Zk)
         }
-        return zC._updatable = nC, zC._boundingInfo = new bC.d(this.extend.minimum, this.extend.maximum), zC.relink(), zC
+        return Fk._updatable = yk, Fk._boundingInfo = new ik.d(this.extend.minimum, this.extend.maximum), Fk.relink(), Fk
       }
-      static mergeMeshes(CC, zC, ZC, QC, wC, bC) {
-        const oC = CC[0].Km(),
-          qC = new fC.e(CC[0].name + "_merged", oC),
-          WC = new FC(nC.c.RandomId(), oC, void 0, !1, qC);
+      static mergeMeshes(kk, Fk, Ik, Xk, Tk, ik) {
+        const ak = kk[0].mG(),
+          qk = new lk.c(kk[0].name + "_merged", ak),
+          tk = new Lk(yk.d.RandomId(), ak, void 0, !1, qk);
         try {
-          if (!fC.e.MergeMeshes(CC, zC, ZC, qC, wC, bC)) return qC.dispose(), null
-        } catch (NC) {
-          throw qC.dispose(), NC
+          if (!lk.c.MergeMeshes(kk, Fk, Ik, qk, Tk, ik)) return qk.dispose(), null
+        } catch (Zk) {
+          throw qk.dispose(), Zk
         }
-        return WC.relink(), qC
+        return tk.relink(), qk
       }
-      removeVerticesData(CC) {
-        this.releaseUnlessInstanced(CC), super.removeVerticesData(CC)
+      removeVerticesData(kk) {
+        this.releaseUnlessInstanced(kk), super.removeVerticesData(kk)
       }
       dispose() {
         this.release(), super.dispose()
       }
-      releaseUnlessInstanced(CC) {
-        var zC;
-        CC && null !== (zC = this.getVertexBuffer(CC)) && void 0 !== zC && zC.getIsInstanced() || this.release()
+      releaseUnlessInstanced(kk) {
+        var Fk;
+        kk && null !== (Fk = this.getVertexBuffer(kk)) && void 0 !== Fk && Fk.getIsInstanced() || this.release()
       }
       release() {
-        this.model && ((0, qC.x)(this.model), this.model = null)
+        this.model && ((0, qk.u)(this.model), this.model = null)
       }
     }
 
-    function WC(CC, zC, ZC) {
-      let QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new fC.e(CC, ZC);
-      const wC = (0, qC.j)(zC),
+    function tk(kk, Fk, Ik) {
+      let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new lk.c(kk, Ik);
+      const Tk = (0, qk.l)(Fk),
         {
-          positions: bC,
-          normals: WC,
-          uvs: NC,
-          indices: MC,
-          named: gC = {}
-        } = zC,
-        SC = new oC.e;
-      SC.positions = bC, SC.normals = null !== WC && void 0 !== WC ? WC : null, SC.uvs = null !== NC && void 0 !== NC ? NC : null, SC.indices = MC;
-      const pC = new FC(nC.c.RandomId(), ZC, SC, !1, QC);
+          positions: ik,
+          normals: tk,
+          uvs: Zk,
+          indices: jk,
+          named: ek = {}
+        } = Fk,
+        wk = new ak.c;
+      wk.positions = ik, wk.normals = null !== tk && void 0 !== tk ? tk : null, wk.uvs = null !== Zk && void 0 !== Zk ? Zk : null, wk.indices = jk;
+      const Hk = new Lk(yk.d.RandomId(), Ik, wk, !1, Xk);
       for (const {
-          kind: nC,
-          components: fC
+          kind: yk,
+          components: lk
         }
-        of wC.vertexAttributes) nC in gC && QC.setVerticesData(nC, gC[nC], !1, fC);
-      return pC.link(wC), QC
+        of Tk.vertexAttributes) yk in ek && Xk.setVerticesData(yk, ek[yk], !1, lk);
+      return Hk.link(Tk), Xk
     }
 
-    function NC(CC, zC, ZC) {
-      let QC = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      const wC = new fC.e(CC, ZC),
+    function Zk(kk, Fk, Ik) {
+      let Xk = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      const Tk = new lk.c(kk, Ik),
         {
-          positions: bC,
-          normals: nC,
-          uvs: qC,
-          indices: FC
-        } = zC;
-      return Object.assign(new oC.e, {
-        positions: bC,
-        normals: nC,
-        uvs: qC,
-        indices: FC
-      }).applyToMesh(wC, QC), wC
+          positions: ik,
+          normals: yk,
+          uvs: qk,
+          indices: Lk
+        } = Fk;
+      return Object.assign(new ak.c, {
+        positions: ik,
+        normals: yk,
+        uvs: qk,
+        indices: Lk
+      }).applyToMesh(Tk, Xk), Tk
     }
   },
-  41418: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => pC,
-      e: () => fC,
-      h: () => nC,
-      j: () => qC
+  41612: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Hk,
+      e: () => lk,
+      h: () => yk,
+      i: () => qk
     });
-    var QC = ZC(37138),
-      wC = ZC(38538),
-      bC = ZC(38529);
+    var Xk = Ik(37327),
+      Tk = Ik(38706),
+      ik = Ik(38700);
 
-    function nC(CC, zC, ZC, QC) {
-      const wC = bC.x;
-      zC.fill(0), CC.gravity.toArray(zC, wC.gravity), CC.colorDead.toArray(zC, wC.colorDead), ZC[wC.ramp] = CC.useRampGradients ? 1 : 0;
-      const nC = CC.getColorGradients(),
-        fC = NC(CC, nC, "colour", QC);
-      ZC[wC.colorCount] = fC;
-      for (let bC = 0; bC < fC; bC++) {
-        var oC;
-        const CC = nC[MC(nC, bC)];
-        zC[wC.colorPositions + bC] = CC.gradient, CC.color1.toArray(zC, wC.color1 + 4 * bC), (null !== (oC = CC.color2) && void 0 !== oC ? oC : CC.color1).toArray(zC, wC.color2 + 4 * bC)
+    function yk(kk, Fk, Ik, Xk) {
+      const Tk = ik.t;
+      Fk.fill(0), kk.gravity.toArray(Fk, Tk.gravity), kk.colorDead.toArray(Fk, Tk.colorDead), Ik[Tk.ramp] = kk.useRampGradients ? 1 : 0;
+      const yk = kk.getColorGradients(),
+        lk = Zk(kk, yk, "colour", Xk);
+      Ik[Tk.colorCount] = lk;
+      for (let ik = 0; ik < lk; ik++) {
+        var ak;
+        const kk = yk[jk(yk, ik)];
+        Fk[Tk.colorPositions + ik] = kk.gradient, kk.color1.toArray(Fk, Tk.color1 + 4 * ik), (null !== (ak = kk.color2) && void 0 !== ak ? ak : kk.color1).toArray(Fk, Tk.color2 + 4 * ik)
       }
-      const qC = CC.getVelocityGradients(),
-        FC = NC(CC, qC, "Np", QC);
-      ZC[wC.velocityCount] = FC;
-      for (let bC = 0; bC < FC; bC++) GC(zC, wC.Np + 4 * bC, qC[MC(qC, bC)]);
-      const WC = CC.useRampGradients ? CC.getColorRemapGradients() : null,
-        gC = NC(CC, WC, "colour remap", QC);
-      ZC[wC.remapCount] = gC;
-      for (let bC = 0; bC < gC; bC++) GC(zC, wC.remap + 4 * bC, WC[MC(WC, bC)])
+      const qk = kk.getVelocityGradients(),
+        Lk = Zk(kk, qk, "TH", Xk);
+      Ik[Tk.velocityCount] = Lk;
+      for (let ik = 0; ik < Lk; ik++) xk(Fk, Tk.TH + 4 * ik, qk[jk(qk, ik)]);
+      const tk = kk.useRampGradients ? kk.getColorRemapGradients() : null,
+        ek = Zk(kk, tk, "colour remap", Xk);
+      Ik[Tk.remapCount] = ek;
+      for (let ik = 0; ik < ek; ik++) xk(Fk, Tk.remap + 4 * ik, tk[jk(tk, ik)])
     }
 
-    function fC() {
+    function lk() {
       return {
         key: [],
-        texels: new Uint8Array(4 * bC.k)
+        texels: new Uint8Array(4 * ik.j)
       }
     }
-    const oC = [];
+    const ak = [];
 
-    function qC(CC, zC) {
-      return FC(CC, oC), !PC(oC, zC.key) && (zC.key.length = 0, zC.key.push(...oC), zC.key.length > 0 && function(CC, zC) {
-        for (let ZC = 0; ZC < bC.k; ZC++) wC.k.GetCurrentGradient(ZC / bC.k, CC, ((CC, zC, ZC) => {
-          QC.Color3.LerpToRef(CC.color, zC.color, ZC, WC)
-        })), zC[4 * ZC] = 255 * WC.r, zC[4 * ZC + 1] = 255 * WC.g, zC[4 * ZC + 2] = 255 * WC.b, zC[4 * ZC + 3] = 255
-      }(CC.getRampGradients(), zC.texels), !0)
+    function qk(kk, Fk) {
+      return Lk(kk, ak), !Jk(ak, Fk.key) && (Fk.key.length = 0, Fk.key.push(...ak), Fk.key.length > 0 && function(kk, Fk) {
+        for (let Ik = 0; Ik < ik.j; Ik++) Tk.e.GetCurrentGradient(Ik / ik.j, kk, ((kk, Fk, Ik) => {
+          Xk.Color3.LerpToRef(kk.color, Fk.color, Ik, tk)
+        })), Fk[4 * Ik] = 255 * tk.r, Fk[4 * Ik + 1] = 255 * tk.g, Fk[4 * Ik + 2] = 255 * tk.b, Fk[4 * Ik + 3] = 255
+      }(kk.getRampGradients(), Fk.texels), !0)
     }
 
-    function FC(CC, zC) {
-      zC.length = 0;
-      const ZC = CC.useRampGradients ? CC.getRampGradients() : null;
-      if (null !== ZC && void 0 !== ZC && ZC.length) {
-        zC.push(ZC.length);
-        for (const CC of ZC) zC.push(CC.gradient, CC.color.r, CC.color.g, CC.color.b)
+    function Lk(kk, Fk) {
+      Fk.length = 0;
+      const Ik = kk.useRampGradients ? kk.getRampGradients() : null;
+      if (null !== Ik && void 0 !== Ik && Ik.length) {
+        Fk.push(Ik.length);
+        for (const kk of Ik) Fk.push(kk.gradient, kk.color.r, kk.color.g, kk.color.b)
       }
     }
-    const WC = new QC.Color3;
+    const tk = new Xk.Color3;
 
-    function NC(CC, zC, ZC, QC) {
-      return zC ? zC.length > bC.d ? (QC(`particleStops:${ZC}`, `GPU particles use the first 2 and last ${bC.d-2} of more than ${bC.d} ${ZC} gradient stops (${CC.name})`), bC.d) : zC.length : 0
+    function Zk(kk, Fk, Ik, Xk) {
+      return Fk ? Fk.length > ik.c ? (Xk(`particleStops:${Ik}`, `GPU particles use the first 2 and last ${ik.c-2} of more than ${ik.c} ${Ik} gradient stops (${kk.name})`), ik.c) : Fk.length : 0
     }
 
-    function MC(CC, zC) {
-      return zC < 2 || CC.length <= bC.d ? zC : CC.length - bC.d + zC
+    function jk(kk, Fk) {
+      return Fk < 2 || kk.length <= ik.c ? Fk : kk.length - ik.c + Fk
     }
-    const gC = new Float32Array(bC.r),
-      SC = new Uint32Array(gC.buffer);
+    const ek = new Float32Array(ik.p),
+      wk = new Uint32Array(ek.buffer);
 
-    function pC(CC, zC, ZC) {
-      return nC(CC, gC, SC, ZC), zC && PC(SC, zC) ? null : SC.slice()
+    function Hk(kk, Fk, Ik) {
+      return yk(kk, ek, wk, Ik), Fk && Jk(wk, Fk) ? null : wk.slice()
     }
 
-    function PC(CC, zC) {
-      if (CC.length !== zC.length) return !1;
-      for (let ZC = 0; ZC < CC.length; ZC++)
-        if (CC[ZC] !== zC[ZC]) return !1;
+    function Jk(kk, Fk) {
+      if (kk.length !== Fk.length) return !1;
+      for (let Ik = 0; Ik < kk.length; Ik++)
+        if (kk[Ik] !== Fk[Ik]) return !1;
       return !0
     }
 
-    function GC(CC, zC, ZC) {
-      var QC;
-      CC[zC] = ZC.gradient, CC[zC + 1] = ZC.factor1, CC[zC + 2] = null !== (QC = ZC.factor2) && void 0 !== QC ? QC : ZC.factor1
+    function xk(kk, Fk, Ik) {
+      var Xk;
+      kk[Fk] = Ik.gradient, kk[Fk + 1] = Ik.factor1, kk[Fk + 2] = null !== (Xk = Ik.factor2) && void 0 !== Xk ? Xk : Ik.factor1
     }
   },
-  41411: (CC, zC, ZC) => {
-    function QC() {
-      let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-      const zC = new Set;
-      return (ZC, QC) => {
-        zC.has(ZC) || (zC.add(ZC), console.warn(CC + QC))
+  41604: (kk, Fk, Ik) => {
+    function Xk() {
+      let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      const Fk = new Set;
+      return (Ik, Xk) => {
+        Fk.has(Ik) || (Fk.add(Ik), console.warn(kk + Xk))
       }
     }
-    ZC.d(zC, {
-      b: () => QC
+    Ik.d(Fk, {
+      d: () => Xk
     })
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

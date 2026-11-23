@@ -1,2445 +1,2445 @@
 export const id = 185;
 export const ids = [185];
 export const modules = {
-  9178: (CC, zC) => {
-    zC.discordURLBuilder = function(CC) {
-      var zC;
-      const ZC = (null === (zC = null === window || void 0 === window ? void 0 : window.location) || void 0 === zC ? void 0 : zC.hostname) || "localhost",
-        QC = CC.hostname.split("."),
-        wC = !CC.hostname.includes("trycloudflare.com") && !CC.hostname.includes("discordsays.com") && QC.length > 2 ? `/${QC[0]}` : "";
-      return CC.pathname.startsWith("/.proxy") ? `${CC.protocol}//${ZC}${wC}${CC.pathname}${CC.search}` : `${CC.protocol}//${ZC}/.proxy/colyseus${wC}${CC.pathname}${CC.search}`
+  9163: (kk, Fk) => {
+    Fk.discordURLBuilder = function(kk) {
+      var Fk;
+      const Ik = (null === (Fk = null === window || void 0 === window ? void 0 : window.location) || void 0 === Fk ? void 0 : Fk.hostname) || "localhost",
+        Xk = kk.hostname.split("."),
+        Tk = !kk.hostname.includes("trycloudflare.com") && !kk.hostname.includes("discordsays.com") && Xk.length > 2 ? `/${Xk[0]}` : "";
+      return kk.pathname.startsWith("/.proxy") ? `${kk.protocol}//${Ik}${Tk}${kk.pathname}${kk.search}` : `${kk.protocol}//${Ik}/.proxy/colyseus${Tk}${kk.pathname}${kk.search}`
     }
   },
-  9165: (CC, zC, ZC) => {
-    var QC, wC, bC, nC, fC = ZC(9079),
-      oC = ZC(9170),
-      qC = ZC(9127);
-    QC = new WeakMap, wC = new WeakMap, bC = new WeakMap, nC = new WeakMap, zC.Auth = class {
-      constructor(CC) {
-        this.http = CC, this.settings = {
+  9155: (kk, Fk, Ik) => {
+    var Xk, Tk, ik, yk, lk = Ik(9070),
+      ak = Ik(9158),
+      qk = Ik(9130);
+    Xk = new WeakMap, Tk = new WeakMap, ik = new WeakMap, yk = new WeakMap, Fk.Auth = class {
+      constructor(kk) {
+        this.http = kk, this.settings = {
           path: "/auth",
           key: "colyseus-auth-token"
-        }, QC.set(this, !1), wC.set(this, void 0), bC.set(this, void 0), nC.set(this, qC.createNanoEvents()), oC.getItem(this.settings.key, (CC => this.token = CC))
+        }, Xk.set(this, !1), Tk.set(this, void 0), ik.set(this, void 0), yk.set(this, qk.createNanoEvents()), ak.getItem(this.settings.key, (kk => this.token = kk))
       }
-      set token(CC) {
-        this.http.authToken = CC
+      set token(kk) {
+        this.http.authToken = kk
       }
       get token() {
         return this.http.authToken
       }
-      onChange(CC) {
-        const zC = fC.__classPrivateFieldGet(this, nC, "f").on("change", CC);
-        return fC.__classPrivateFieldGet(this, QC, "f") || fC.__classPrivateFieldSet(this, wC, new Promise(((CC, zC) => {
-          this.getUserData().then((CC => {
-            this.emitChange(Object.assign(Object.assign({}, CC), {
+      onChange(kk) {
+        const Fk = lk.__classPrivateFieldGet(this, yk, "f").on("change", kk);
+        return lk.__classPrivateFieldGet(this, Xk, "f") || lk.__classPrivateFieldSet(this, Tk, new Promise(((kk, Fk) => {
+          this.getUserData().then((kk => {
+            this.emitChange(Object.assign(Object.assign({}, kk), {
               token: this.token
             }))
-          })).catch((CC => {
+          })).catch((kk => {
             this.emitChange({
               user: null,
               token: void 0
             })
           })).finally((() => {
-            CC()
+            kk()
           }))
-        })), "f"), fC.__classPrivateFieldSet(this, QC, !0, "f"), zC
+        })), "f"), lk.__classPrivateFieldSet(this, Xk, !0, "f"), Fk
       }
       getUserData() {
-        return fC.__awaiter(this, void 0, void 0, (function*() {
+        return lk.__awaiter(this, void 0, void 0, (function*() {
           if (this.token) return (yield this.http.get(`${this.settings.path}/userdata`)).data;
           throw new Error("missing auth.token")
         }))
       }
-      registerWithEmailAndPassword(CC, zC, ZC) {
-        return fC.__awaiter(this, void 0, void 0, (function*() {
-          const QC = (yield this.http.post(`${this.settings.path}/register`, {
+      registerWithEmailAndPassword(kk, Fk, Ik) {
+        return lk.__awaiter(this, void 0, void 0, (function*() {
+          const Xk = (yield this.http.post(`${this.settings.path}/register`, {
             body: {
-              email: CC,
-              password: zC,
-              options: ZC
+              email: kk,
+              password: Fk,
+              options: Ik
             }
           })).data;
-          return this.emitChange(QC), QC
+          return this.emitChange(Xk), Xk
         }))
       }
-      signInWithEmailAndPassword(CC, zC) {
-        return fC.__awaiter(this, void 0, void 0, (function*() {
-          const ZC = (yield this.http.post(`${this.settings.path}/login`, {
+      signInWithEmailAndPassword(kk, Fk) {
+        return lk.__awaiter(this, void 0, void 0, (function*() {
+          const Ik = (yield this.http.post(`${this.settings.path}/login`, {
             body: {
-              email: CC,
-              password: zC
+              email: kk,
+              password: Fk
             }
           })).data;
-          return this.emitChange(ZC), ZC
+          return this.emitChange(Ik), Ik
         }))
       }
-      signInAnonymously(CC) {
-        return fC.__awaiter(this, void 0, void 0, (function*() {
-          const zC = (yield this.http.post(`${this.settings.path}/anonymous`, {
+      signInAnonymously(kk) {
+        return lk.__awaiter(this, void 0, void 0, (function*() {
+          const Fk = (yield this.http.post(`${this.settings.path}/anonymous`, {
             body: {
-              options: CC
+              options: kk
             }
           })).data;
-          return this.emitChange(zC), zC
+          return this.emitChange(Fk), Fk
         }))
       }
-      sendPasswordResetEmail(CC) {
-        return fC.__awaiter(this, void 0, void 0, (function*() {
+      sendPasswordResetEmail(kk) {
+        return lk.__awaiter(this, void 0, void 0, (function*() {
           return (yield this.http.post(`${this.settings.path}/forgot-password`, {
             body: {
-              email: CC
+              email: kk
             }
           })).data
         }))
       }
-      signInWithProvider(CC) {
-        return fC.__awaiter(this, arguments, void 0, (function*(CC) {
-          let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          return new Promise(((ZC, QC) => {
-            const wC = zC.width || 480,
-              nC = zC.height || 768,
-              oC = this.token ? `?token=${this.token}` : "",
-              qC = `Login with ${CC[0].toUpperCase()+CC.substring(1)}`,
-              FC = this.http.client.getHttpEndpoint(`${zC.prefix||`${this.settings.path}/provider`}/${CC}${oC}`),
-              WC = screen.width / 2 - wC / 2,
-              NC = screen.height / 2 - nC / 2;
-            fC.__classPrivateFieldSet(this, bC, window.open(FC, qC, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + wC + ", height=" + nC + ", top=" + NC + ", left=" + WC), "f");
-            const MC = CC => {
-                void 0 === CC.data.user && void 0 === CC.data.token || (clearInterval(gC), fC.__classPrivateFieldGet(this, bC, "f").close(), fC.__classPrivateFieldSet(this, bC, void 0, "f"), window.removeEventListener("message", MC), void 0 !== CC.data.error ? QC(CC.data.error) : (ZC(CC.data), this.emitChange(CC.data)))
+      signInWithProvider(kk) {
+        return lk.__awaiter(this, arguments, void 0, (function*(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          return new Promise(((Ik, Xk) => {
+            const Tk = Fk.width || 480,
+              yk = Fk.height || 768,
+              ak = this.token ? `?token=${this.token}` : "",
+              qk = `Login with ${kk[0].toUpperCase()+kk.substring(1)}`,
+              Lk = this.http.client.getHttpEndpoint(`${Fk.prefix||`${this.settings.path}/provider`}/${kk}${ak}`),
+              tk = screen.width / 2 - Tk / 2,
+              Zk = screen.height / 2 - yk / 2;
+            lk.__classPrivateFieldSet(this, ik, window.open(Lk, qk, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + Tk + ", height=" + yk + ", top=" + Zk + ", left=" + tk), "f");
+            const jk = kk => {
+                void 0 === kk.data.user && void 0 === kk.data.token || (clearInterval(ek), lk.__classPrivateFieldGet(this, ik, "f").close(), lk.__classPrivateFieldSet(this, ik, void 0, "f"), window.removeEventListener("message", jk), void 0 !== kk.data.error ? Xk(kk.data.error) : (Ik(kk.data), this.emitChange(kk.data)))
               },
-              gC = setInterval((() => {
-                fC.__classPrivateFieldGet(this, bC, "f") && !fC.__classPrivateFieldGet(this, bC, "f").closed || (fC.__classPrivateFieldSet(this, bC, void 0, "f"), QC("wZ"), window.removeEventListener("message", MC))
+              ek = setInterval((() => {
+                lk.__classPrivateFieldGet(this, ik, "f") && !lk.__classPrivateFieldGet(this, ik, "f").closed || (lk.__classPrivateFieldSet(this, ik, void 0, "f"), Xk("iI"), window.removeEventListener("message", jk))
               }), 200);
-            window.addEventListener("message", MC)
+            window.addEventListener("message", jk)
           }))
         }))
       }
       signOut() {
-        return fC.__awaiter(this, void 0, void 0, (function*() {
+        return lk.__awaiter(this, void 0, void 0, (function*() {
           this.emitChange({
             user: null,
             token: null
           })
         }))
       }
-      emitChange(CC) {
-        void 0 !== CC.token && (this.token = CC.token, null === CC.token ? oC.removeItem(this.settings.key) : oC.setItem(this.settings.key, CC.token)), fC.__classPrivateFieldGet(this, nC, "f").emit("change", CC)
+      emitChange(kk) {
+        void 0 !== kk.token && (this.token = kk.token, null === kk.token ? ak.removeItem(this.settings.key) : ak.setItem(this.settings.key, kk.token)), lk.__classPrivateFieldGet(this, yk, "f").emit("change", kk)
       }
     }
   },
-  9071: (CC, zC, ZC) => {
-    var QC, wC = ZC(9079),
-      bC = ZC(9081),
-      nC = ZC(9086),
-      fC = ZC(9151),
-      oC = ZC(9165),
-      qC = ZC(9178);
-    class FC extends Error {
-      constructor(CC, zC) {
-        super(CC), this.code = zC, this.name = "MatchMakeError", Object.setPrototypeOf(this, FC.prototype)
+  9066: (kk, Fk, Ik) => {
+    var Xk, Tk = Ik(9070),
+      ik = Ik(9077),
+      yk = Ik(9080),
+      lk = Ik(9148),
+      ak = Ik(9155),
+      qk = Ik(9163);
+    class Lk extends Error {
+      constructor(kk, Fk) {
+        super(kk), this.code = Fk, this.name = "MatchMakeError", Object.setPrototypeOf(this, Lk.prototype)
       }
     }
-    const WC = "undefined" !== typeof window && "undefined" !== typeof(null === (QC = null === window || void 0 === window ? void 0 : window.location) || void 0 === QC ? void 0 : QC.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
-    class NC {
+    const tk = "undefined" !== typeof window && "undefined" !== typeof(null === (Xk = null === window || void 0 === window ? void 0 : window.location) || void 0 === Xk ? void 0 : Xk.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
+    class Zk {
       constructor() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : WC,
-          zC = arguments.length > 1 ? arguments[1] : void 0;
-        var ZC, QC;
-        if ("string" === typeof CC) {
-          const zC = CC.startsWith("/") ? new URL(CC, WC) : new URL(CC),
-            ZC = "https:" === zC.protocol || "wss:" === zC.protocol,
-            QC = Number(zC.port || (ZC ? 443 : 80));
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : tk,
+          Fk = arguments.length > 1 ? arguments[1] : void 0;
+        var Ik, Xk;
+        if ("string" === typeof kk) {
+          const Fk = kk.startsWith("/") ? new URL(kk, tk) : new URL(kk),
+            Ik = "https:" === Fk.protocol || "wss:" === Fk.protocol,
+            Xk = Number(Fk.port || (Ik ? 443 : 80));
           this.settings = {
-            hostname: zC.hostname,
-            pathname: zC.pathname,
-            port: QC,
-            secure: ZC,
-            searchParams: zC.searchParams.toString() || void 0
+            hostname: Fk.hostname,
+            pathname: Fk.pathname,
+            port: Xk,
+            secure: Ik,
+            searchParams: Fk.searchParams.toString() || void 0
           }
-        } else void 0 === CC.port && (CC.port = CC.secure ? 443 : 80), void 0 === CC.pathname && (CC.pathname = ""), this.settings = CC;
-        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new fC.HTTP(this, (null === zC || void 0 === zC ? void 0 : zC.headers) || {}), this.auth = new oC.Auth(this.http), this.urlBuilder = null === zC || void 0 === zC ? void 0 : zC.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (QC = null === (ZC = null === window || void 0 === window ? void 0 : window.location) || void 0 === ZC ? void 0 : ZC.hostname) || void 0 === QC ? void 0 : QC.includes("discordsays.com")) && (this.urlBuilder = qC.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
+        } else void 0 === kk.port && (kk.port = kk.secure ? 443 : 80), void 0 === kk.pathname && (kk.pathname = ""), this.settings = kk;
+        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new lk.HTTP(this, (null === Fk || void 0 === Fk ? void 0 : Fk.headers) || {}), this.auth = new ak.Auth(this.http), this.urlBuilder = null === Fk || void 0 === Fk ? void 0 : Fk.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (Xk = null === (Ik = null === window || void 0 === window ? void 0 : window.location) || void 0 === Ik ? void 0 : Ik.hostname) || void 0 === Xk ? void 0 : Xk.includes("discordsays.com")) && (this.urlBuilder = qk.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
       }
-      joinOrCreate(CC) {
-        return wC.__awaiter(this, arguments, void 0, (function*(CC) {
-          let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            ZC = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinOrCreate", CC, zC, ZC)
+      joinOrCreate(kk) {
+        return Tk.__awaiter(this, arguments, void 0, (function*(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            Ik = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinOrCreate", kk, Fk, Ik)
         }))
       }
-      create(CC) {
-        return wC.__awaiter(this, arguments, void 0, (function*(CC) {
-          let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            ZC = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("create", CC, zC, ZC)
+      create(kk) {
+        return Tk.__awaiter(this, arguments, void 0, (function*(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            Ik = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("create", kk, Fk, Ik)
         }))
       }
-      join(CC) {
-        return wC.__awaiter(this, arguments, void 0, (function*(CC) {
-          let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            ZC = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("join", CC, zC, ZC)
+      join(kk) {
+        return Tk.__awaiter(this, arguments, void 0, (function*(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            Ik = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("join", kk, Fk, Ik)
         }))
       }
-      joinById(CC) {
-        return wC.__awaiter(this, arguments, void 0, (function*(CC) {
-          let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            ZC = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinById", CC, zC, ZC)
+      joinById(kk) {
+        return Tk.__awaiter(this, arguments, void 0, (function*(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            Ik = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinById", kk, Fk, Ik)
         }))
       }
-      reconnect(CC, zC) {
-        return wC.__awaiter(this, void 0, void 0, (function*() {
-          if ("string" === typeof CC && "string" === typeof zC) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
-          const [ZC, QC] = CC.split(":");
-          if (!ZC || !QC) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
-          return yield this.createMatchMakeRequest("reconnect", ZC, {
-            reconnectionToken: QC
-          }, zC)
+      reconnect(kk, Fk) {
+        return Tk.__awaiter(this, void 0, void 0, (function*() {
+          if ("string" === typeof kk && "string" === typeof Fk) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
+          const [Ik, Xk] = kk.split(":");
+          if (!Ik || !Xk) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
+          return yield this.createMatchMakeRequest("reconnect", Ik, {
+            reconnectionToken: Xk
+          }, Fk)
         }))
       }
-      consumeSeatReservation(CC, zC, ZC) {
-        return wC.__awaiter(this, void 0, void 0, (function*() {
-          const QC = this.createRoom(CC.room.name, zC);
-          QC.roomId = CC.room.roomId, QC.sessionId = CC.sessionId;
-          const nC = {
-            sessionId: QC.sessionId
+      consumeSeatReservation(kk, Fk, Ik) {
+        return Tk.__awaiter(this, void 0, void 0, (function*() {
+          const Xk = this.createRoom(kk.room.name, Fk);
+          Xk.roomId = kk.room.roomId, Xk.sessionId = kk.sessionId;
+          const yk = {
+            sessionId: Xk.sessionId
           };
-          CC.reconnectionToken && (nC.reconnectionToken = CC.reconnectionToken);
-          const fC = ZC || QC;
-          return QC.connect(this.buildEndpoint(CC.room, nC, CC.protocol), CC.devMode && (() => wC.__awaiter(this, void 0, void 0, (function*() {
-            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${QC.roomId}'...`);
-            let ZC = 0;
-            const bC = () => wC.__awaiter(this, void 0, void 0, (function*() {
-              ZC++;
+          kk.reconnectionToken && (yk.reconnectionToken = kk.reconnectionToken);
+          const lk = Ik || Xk;
+          return Xk.connect(this.buildEndpoint(kk.room, yk, kk.protocol), kk.devMode && (() => Tk.__awaiter(this, void 0, void 0, (function*() {
+            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${Xk.roomId}'...`);
+            let Ik = 0;
+            const ik = () => Tk.__awaiter(this, void 0, void 0, (function*() {
+              Ik++;
               try {
-                yield this.consumeSeatReservation(CC, zC, fC), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${QC.roomId}'`)
-              } catch (wC) {
-                ZC < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${ZC} out of 8)`), setTimeout(bC, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
+                yield this.consumeSeatReservation(kk, Fk, lk), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${Xk.roomId}'`)
+              } catch (Tk) {
+                Ik < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${Ik} out of 8)`), setTimeout(ik, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
               }
             }));
-            setTimeout(bC, 2e3)
-          }))), fC, CC, this.http.headers), new Promise(((CC, zC) => {
-            const ZC = (CC, ZC) => zC(new bC.ServerError(CC, ZC));
-            fC.onError.once(ZC), fC.onJoin.once((() => {
-              fC.onError.remove(ZC), setTimeout((() => {
+            setTimeout(ik, 2e3)
+          }))), lk, kk, this.http.headers), new Promise(((kk, Fk) => {
+            const Ik = (kk, Ik) => Fk(new ik.ServerError(kk, Ik));
+            lk.onError.once(Ik), lk.onJoin.once((() => {
+              lk.onError.remove(Ik), setTimeout((() => {
                 try {
-                  const CC = [96, 98, 63, 61, 198, 165, 255, 148, 109, 255, 166, 172, 119, 97, 118, 161, 237, 220, 8, 144];
-                  CC && fC.VK(128, new Uint8Array(CC))
+                  const kk = [96, 98, 63, 61, 198, 165, 255, 148, 109, 255, 166, 172, 119, 97, 118, 161, 237, 220, 8, 144];
+                  kk && lk.aE(128, new Uint8Array(kk))
                 } catch {}
-              }), 3e3), CC(fC)
+              }), 3e3), kk(lk)
             }))
           }))
         }))
       }
-      createMatchMakeRequest(CC, zC) {
-        return wC.__awaiter(this, arguments, void 0, (function*(CC, zC) {
-          let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            QC = arguments.length > 3 ? arguments[3] : void 0,
-            wC = arguments.length > 4 ? arguments[4] : void 0;
-          const bC = (yield this.http.post(`matchmake/${CC}/${zC}`, {
+      createMatchMakeRequest(kk, Fk) {
+        return Tk.__awaiter(this, arguments, void 0, (function*(kk, Fk) {
+          let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+            Xk = arguments.length > 3 ? arguments[3] : void 0,
+            Tk = arguments.length > 4 ? arguments[4] : void 0;
+          const ik = (yield this.http.post(`matchmake/${kk}/${Fk}`, {
             headers: {
               "X-Requested-With": "XMLHtttpRequest",
               Accept: "application/json",
               "Content-Type": "application/json"
             },
-            body: JSON.stringify(ZC)
+            body: JSON.stringify(Ik)
           })).data;
-          if (bC.error) throw new FC(bC.error, bC.code);
-          return "reconnect" === CC && (bC.reconnectionToken = ZC.reconnectionToken), yield this.consumeSeatReservation(bC, QC, wC)
+          if (ik.error) throw new Lk(ik.error, ik.code);
+          return "reconnect" === kk && (ik.reconnectionToken = Ik.reconnectionToken), yield this.consumeSeatReservation(ik, Xk, Tk)
         }))
       }
-      createRoom(CC, zC) {
-        return new nC.OW(CC, zC)
+      createRoom(kk, Fk) {
+        return new yk.dt(kk, Fk)
       }
-      buildEndpoint(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
-          QC = this.settings.searchParams || "";
-        this.http.authToken && (zC._authToken = this.http.authToken);
-        for (const nC in zC) zC.hasOwnProperty(nC) && (QC += (QC ? "&" : "") + `${nC}=${zC[nC]}`);
-        "h3" === ZC && (ZC = "http");
-        let wC = this.settings.secure ? `${ZC}s://` : `${ZC}://`;
-        CC.publicAddress ? wC += `${CC.publicAddress}` : wC += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
-        const bC = `${wC}/${CC.processId}/${CC.roomId}?${QC}`;
-        return this.urlBuilder ? this.urlBuilder(new URL(bC)) : bC
+      buildEndpoint(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
+          Xk = this.settings.searchParams || "";
+        this.http.authToken && (Fk._authToken = this.http.authToken);
+        for (const yk in Fk) Fk.hasOwnProperty(yk) && (Xk += (Xk ? "&" : "") + `${yk}=${Fk[yk]}`);
+        "h3" === Ik && (Ik = "http");
+        let Tk = this.settings.secure ? `${Ik}s://` : `${Ik}://`;
+        kk.publicAddress ? Tk += `${kk.publicAddress}` : Tk += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
+        const ik = `${Tk}/${kk.processId}/${kk.roomId}?${Xk}`;
+        return this.urlBuilder ? this.urlBuilder(new URL(ik)) : ik
       }
       getHttpEndpoint() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-        const zC = CC.startsWith("/") ? CC : `/${CC}`;
-        let ZC = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${zC}`;
-        return this.settings.searchParams && (ZC += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(ZC)) : ZC
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+        const Fk = kk.startsWith("/") ? kk : `/${kk}`;
+        let Ik = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${Fk}`;
+        return this.settings.searchParams && (Ik += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(Ik)) : Ik
       }
       getEndpointPort() {
         return 80 !== this.settings.port && 443 !== this.settings.port ? `:${this.settings.port}` : ""
       }
     }
-    NC.VERSION = "0.16.22", zC.Client = NC, zC.MatchMakeError = FC
+    Zk.VERSION = "0.16.22", Fk.Client = Zk, Fk.MatchMakeError = Lk
   },
-  9090: (CC, zC, ZC) => {
-    var QC = ZC(9098),
-      wC = ZC(9106);
-    zC.Connection = class {
-      constructor(CC) {
-        if (this.events = {}, "h3" === CC) this.transport = new QC.H3TransportTransport(this.events);
-        else this.transport = new wC.WebSocketTransport(this.events)
+  9083: (kk, Fk, Ik) => {
+    var Xk = Ik(9092),
+      Tk = Ik(9105);
+    Fk.Connection = class {
+      constructor(kk) {
+        if (this.events = {}, "h3" === kk) this.transport = new Xk.H3TransportTransport(this.events);
+        else this.transport = new Tk.WebSocketTransport(this.events)
       }
-      connect(CC, zC) {
-        this.transport.connect.call(this.transport, CC, zC)
+      connect(kk, Fk) {
+        this.transport.connect.call(this.transport, kk, Fk)
       }
-      send(CC) {
-        this.transport.send(CC)
+      send(kk) {
+        this.transport.send(kk)
       }
-      sendUnreliable(CC) {
-        this.transport.sendUnreliable(CC)
+      sendUnreliable(kk) {
+        this.transport.sendUnreliable(kk)
       }
-      close(CC, zC) {
-        this.transport.close(CC, zC)
+      close(kk, Fk) {
+        this.transport.close(kk, Fk)
       }
       get isOpen() {
         return this.transport.isOpen
       }
     }
   },
-  9151: (CC, zC, ZC) => {
-    var QC = ZC(9081);
+  9148: (kk, Fk, Ik) => {
+    var Xk = Ik(9077);
 
-    function wC(CC) {
-      var zC = Object.create(null);
-      return CC && Object.keys(CC).forEach((function(ZC) {
-        if ("default" !== ZC) {
-          var QC = Object.getOwnPropertyDescriptor(CC, ZC);
-          Object.defineProperty(zC, ZC, QC.get ? QC : {
+    function Tk(kk) {
+      var Fk = Object.create(null);
+      return kk && Object.keys(kk).forEach((function(Ik) {
+        if ("default" !== Ik) {
+          var Xk = Object.getOwnPropertyDescriptor(kk, Ik);
+          Object.defineProperty(Fk, Ik, Xk.get ? Xk : {
             enumerable: !0,
             get: function() {
-              return CC[ZC]
+              return kk[Ik]
             }
           })
         }
-      })), zC.default = CC, Object.freeze(zC)
+      })), Fk.default = kk, Object.freeze(Fk)
     }
-    var bC = wC(ZC(9158));
-    zC.HTTP = class {
-      constructor(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.client = CC, this.headers = zC
+    var ik = Tk(Ik(9150));
+    Fk.HTTP = class {
+      constructor(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.client = kk, this.headers = Fk
       }
-      get(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("get", CC, zC)
+      get(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("get", kk, Fk)
       }
-      post(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("post", CC, zC)
+      post(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("post", kk, Fk)
       }
-      del(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("del", CC, zC)
+      del(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("del", kk, Fk)
       }
-      put(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("put", CC, zC)
+      put(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("put", kk, Fk)
       }
-      request(CC, zC) {
-        let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        return bC[CC](this.client.getHttpEndpoint(zC), this.getOptions(ZC)).catch((CC => {
-          var zC;
-          if (CC.aborted) throw new QC.AbortError("Request aborted");
-          const ZC = CC.statusCode,
-            wC = (null === (zC = CC.data) || void 0 === zC ? void 0 : zC.error) || CC.statusMessage || CC.message;
-          if (!ZC && !wC) throw CC;
-          throw new QC.ServerError(ZC, wC)
+      request(kk, Fk) {
+        let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        return ik[kk](this.client.getHttpEndpoint(Fk), this.getOptions(Ik)).catch((kk => {
+          var Fk;
+          if (kk.aborted) throw new Xk.AbortError("Request aborted");
+          const Ik = kk.statusCode,
+            Tk = (null === (Fk = kk.data) || void 0 === Fk ? void 0 : Fk.error) || kk.statusMessage || kk.message;
+          if (!Ik && !Tk) throw kk;
+          throw new Xk.ServerError(Ik, Tk)
         }))
       }
-      getOptions(CC) {
-        return CC.headers = Object.assign({}, this.headers, CC.headers), this.authToken && (CC.headers.Authorization = `Bearer ${this.authToken}`), "undefined" !== typeof cc && cc.sys && cc.sys.isNative || (CC.withCredentials = !0), CC
+      getOptions(kk) {
+        return kk.headers = Object.assign({}, this.headers, kk.headers), this.authToken && (kk.headers.Authorization = `Bearer ${this.authToken}`), "undefined" !== typeof cc && cc.sys && cc.sys.isNative || (kk.withCredentials = !0), kk
       }
     }
   },
-  9111: (CC, zC) => {
-    var ZC, QC;
-    zC.Protocol = void 0, (ZC = zC.Protocol || (zC.Protocol = {}))[ZC.HANDSHAKE = 9] = "HANDSHAKE", ZC[ZC.JOIN_ROOM = 10] = "JOIN_ROOM", ZC[ZC.ERROR = 11] = "ERROR", ZC[ZC.LEAVE_ROOM = 12] = "LEAVE_ROOM", ZC[ZC.ROOM_DATA = 13] = "ROOM_DATA", ZC[ZC.ROOM_STATE = 14] = "ROOM_STATE", ZC[ZC.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", ZC[ZC.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", ZC[ZC.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", zC.ErrorCode = void 0, (QC = zC.ErrorCode || (zC.ErrorCode = {}))[QC.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", QC[QC.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", QC[QC.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", QC[QC.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", QC[QC.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", QC[QC.AUTH_FAILED = 4215] = "AUTH_FAILED", QC[QC.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
+  9118: (kk, Fk) => {
+    var Ik, Xk;
+    Fk.Protocol = void 0, (Ik = Fk.Protocol || (Fk.Protocol = {}))[Ik.HANDSHAKE = 9] = "HANDSHAKE", Ik[Ik.JOIN_ROOM = 10] = "JOIN_ROOM", Ik[Ik.ERROR = 11] = "ERROR", Ik[Ik.LEAVE_ROOM = 12] = "LEAVE_ROOM", Ik[Ik.ROOM_DATA = 13] = "ROOM_DATA", Ik[Ik.ROOM_STATE = 14] = "ROOM_STATE", Ik[Ik.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", Ik[Ik.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", Ik[Ik.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", Fk.ErrorCode = void 0, (Xk = Fk.ErrorCode || (Fk.ErrorCode = {}))[Xk.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", Xk[Xk.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", Xk[Xk.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", Xk[Xk.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", Xk[Xk.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", Xk[Xk.AUTH_FAILED = 4215] = "AUTH_FAILED", Xk[Xk.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
   },
-  9086: (CC, zC, ZC) => {
-    var QC = ZC(9090),
-      wC = ZC(9111),
-      bC = ZC(9118),
-      nC = ZC(9127),
-      fC = ZC(9134),
-      oC = ZC(9102),
-      qC = ZC(9139),
-      FC = ZC(9081),
-      WC = ZC(9144);
-    class NC {
-      constructor(CC, zC) {
-        this.onStateChange = fC.createSignal(), this.onError = fC.createSignal(), this.oR = fC.createSignal(), this.onJoin = fC.createSignal(), this.hasJoined = !1, this.onMessageHandlers = nC.createNanoEvents(), this.roomId = null, this.name = CC, this.packr = new WC.Packr, this.packr.encode(void 0), zC && (this.JG = new(bC.getSerializer("schema")), this.rootSchema = zC, this.JG.state = new zC), this.onError(((CC, zC) => {
-          var ZC;
-          return null === (ZC = console.warn) || void 0 === ZC ? void 0 : ZC.call(console, `colyseus.js - onError => (${CC}) ${zC}`)
-        })), this.oR((() => this.xG()))
+  9080: (kk, Fk, Ik) => {
+    var Xk = Ik(9083),
+      Tk = Ik(9118),
+      ik = Ik(9121),
+      yk = Ik(9130),
+      lk = Ik(9135),
+      ak = Ik(9098),
+      qk = Ik(9137),
+      Lk = Ik(9077),
+      tk = Ik(9144);
+    class Zk {
+      constructor(kk, Fk) {
+        this.onStateChange = lk.createSignal(), this.onError = lk.createSignal(), this.NJ = lk.createSignal(), this.onJoin = lk.createSignal(), this.hasJoined = !1, this.onMessageHandlers = yk.createNanoEvents(), this.roomId = null, this.name = kk, this.packr = new tk.Packr, this.packr.encode(void 0), Fk && (this.LJ = new(ik.getSerializer("schema")), this.rootSchema = Fk, this.LJ.state = new Fk), this.onError(((kk, Fk) => {
+          var Ik;
+          return null === (Ik = console.warn) || void 0 === Ik ? void 0 : Ik.call(console, `colyseus.js - onError => (${kk}) ${Fk}`)
+        })), this.NJ((() => this.qJ()))
       }
-      connect(CC, zC) {
-        let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
-          wC = arguments.length > 3 ? arguments[3] : void 0,
-          bC = arguments.length > 4 ? arguments[4] : void 0;
-        const nC = new QC.Connection(wC.protocol);
-        if (ZC.connection = nC, nC.events.onmessage = NC.prototype.onMessageCallback.bind(ZC), nC.events.onclose = function(CC) {
-            var QC;
-            if (!ZC.hasJoined) return null === (QC = console.warn) || void 0 === QC || QC.call(console, `Room connection was closed unexpectedly (${CC.code}): ${CC.reason}`), void ZC.onError.invoke(CC.code, CC.reason);
-            CC.code === FC.CloseCode.DEVMODE_RESTART && zC ? zC() : (ZC.oR.invoke(CC.code, CC.reason), ZC.destroy())
-          }, nC.events.onerror = function(CC) {
-            var zC;
-            null === (zC = console.warn) || void 0 === zC || zC.call(console, `Room, onError (${CC.code}): ${CC.reason}`), ZC.onError.invoke(CC.code, CC.reason)
-          }, "h3" === wC.protocol) {
-          const zC = new URL(CC);
-          nC.connect(zC.origin, wC)
-        } else nC.connect(CC, bC)
+      connect(kk, Fk) {
+        let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
+          Tk = arguments.length > 3 ? arguments[3] : void 0,
+          ik = arguments.length > 4 ? arguments[4] : void 0;
+        const yk = new Xk.Connection(Tk.protocol);
+        if (Ik.connection = yk, yk.events.onmessage = Zk.prototype.onMessageCallback.bind(Ik), yk.events.onclose = function(kk) {
+            var Xk;
+            if (!Ik.hasJoined) return null === (Xk = console.warn) || void 0 === Xk || Xk.call(console, `Room connection was closed unexpectedly (${kk.code}): ${kk.reason}`), void Ik.onError.invoke(kk.code, kk.reason);
+            kk.code === Lk.CloseCode.DEVMODE_RESTART && Fk ? Fk() : (Ik.NJ.invoke(kk.code, kk.reason), Ik.destroy())
+          }, yk.events.onerror = function(kk) {
+            var Fk;
+            null === (Fk = console.warn) || void 0 === Fk || Fk.call(console, `Room, onError (${kk.code}): ${kk.reason}`), Ik.onError.invoke(kk.code, kk.reason)
+          }, "h3" === Tk.protocol) {
+          const Fk = new URL(kk);
+          yk.connect(Fk.origin, Tk)
+        } else yk.connect(kk, ik)
       }
       leave() {
-        let CC = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return new Promise((zC => {
-          this.oR((CC => zC(CC))), this.connection ? CC ? (this.packr.buffer[0] = wC.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.oR.invoke(FC.CloseCode.CONSENTED)
+        let kk = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return new Promise((Fk => {
+          this.NJ((kk => Fk(kk))), this.connection ? kk ? (this.packr.buffer[0] = Tk.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.NJ.invoke(Lk.CloseCode.CONSENTED)
         }))
       }
-      fR(CC, zC) {
-        return this.onMessageHandlers.on(this.getMessageHandlerKey(CC), zC)
+      bJ(kk, Fk) {
+        return this.onMessageHandlers.on(this.getMessageHandlerKey(kk), Fk)
       }
-      send(CC, zC) {
-        const ZC = {
+      send(kk, Fk) {
+        const Ik = {
           offset: 1
         };
-        this.packr.buffer[0] = wC.Protocol.ROOM_DATA, "string" === typeof CC ? oC.encode.string(this.packr.buffer, CC, ZC) : oC.encode.number(this.packr.buffer, CC, ZC), this.packr.position = 0;
-        const QC = void 0 !== zC ? this.packr.pack(zC, 2048 + ZC.offset) : this.packr.buffer.subarray(0, ZC.offset);
-        this.connection.send(QC)
+        this.packr.buffer[0] = Tk.Protocol.ROOM_DATA, "string" === typeof kk ? ak.encode.string(this.packr.buffer, kk, Ik) : ak.encode.number(this.packr.buffer, kk, Ik), this.packr.position = 0;
+        const Xk = void 0 !== Fk ? this.packr.pack(Fk, 2048 + Ik.offset) : this.packr.buffer.subarray(0, Ik.offset);
+        this.connection.send(Xk)
       }
-      sendUnreliable(CC, zC) {
-        const ZC = {
+      sendUnreliable(kk, Fk) {
+        const Ik = {
           offset: 1
         };
-        this.packr.buffer[0] = wC.Protocol.ROOM_DATA, "string" === typeof CC ? oC.encode.string(this.packr.buffer, CC, ZC) : oC.encode.number(this.packr.buffer, CC, ZC), this.packr.position = 0;
-        const QC = void 0 !== zC ? this.packr.pack(zC, 2048 + ZC.offset) : this.packr.buffer.subarray(0, ZC.offset);
-        this.connection.sendUnreliable(QC)
+        this.packr.buffer[0] = Tk.Protocol.ROOM_DATA, "string" === typeof kk ? ak.encode.string(this.packr.buffer, kk, Ik) : ak.encode.number(this.packr.buffer, kk, Ik), this.packr.position = 0;
+        const Xk = void 0 !== Fk ? this.packr.pack(Fk, 2048 + Ik.offset) : this.packr.buffer.subarray(0, Ik.offset);
+        this.connection.sendUnreliable(Xk)
       }
-      VK(CC, zC) {
-        const ZC = {
+      aE(kk, Fk) {
+        const Ik = {
           offset: 1
         };
-        if (this.packr.buffer[0] = wC.Protocol.ROOM_DATA_BYTES, "string" === typeof CC ? oC.encode.string(this.packr.buffer, CC, ZC) : oC.encode.number(this.packr.buffer, CC, ZC), zC.byteLength + ZC.offset > this.packr.buffer.byteLength) {
-          const CC = new Uint8Array(ZC.offset + zC.byteLength);
-          CC.set(this.packr.buffer), this.packr.useBuffer(CC)
+        if (this.packr.buffer[0] = Tk.Protocol.ROOM_DATA_BYTES, "string" === typeof kk ? ak.encode.string(this.packr.buffer, kk, Ik) : ak.encode.number(this.packr.buffer, kk, Ik), Fk.byteLength + Ik.offset > this.packr.buffer.byteLength) {
+          const kk = new Uint8Array(Ik.offset + Fk.byteLength);
+          kk.set(this.packr.buffer), this.packr.useBuffer(kk)
         }
-        this.packr.buffer.set(zC, ZC.offset), this.connection.send(this.packr.buffer.subarray(0, ZC.offset + zC.byteLength))
+        this.packr.buffer.set(Fk, Ik.offset), this.connection.send(this.packr.buffer.subarray(0, Ik.offset + Fk.byteLength))
       }
       get state() {
-        return this.JG.getState()
+        return this.LJ.getState()
       }
-      xG() {
-        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.oR.clear(), this.onMessageHandlers.events = {}, this.JG instanceof qC.Qm && (this.JG.wg.root.callbacks = {})
+      qJ() {
+        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.NJ.clear(), this.onMessageHandlers.events = {}, this.LJ instanceof qk.QG && (this.LJ.Xe.root.callbacks = {})
       }
-      onMessageCallback(CC) {
-        const zC = new Uint8Array(CC.data),
-          ZC = {
+      onMessageCallback(kk) {
+        const Fk = new Uint8Array(kk.data),
+          Ik = {
             offset: 1
           },
-          QC = zC[0];
-        if (QC === wC.Protocol.JOIN_ROOM) {
-          const CC = oC.decode.utf8Read(zC, ZC, zC[ZC.offset++]);
-          if (this.serializerId = oC.decode.utf8Read(zC, ZC, zC[ZC.offset++]), !this.JG) {
-            const CC = bC.getSerializer(this.serializerId);
-            this.JG = new CC
+          Xk = Fk[0];
+        if (Xk === Tk.Protocol.JOIN_ROOM) {
+          const kk = ak.decode.utf8Read(Fk, Ik, Fk[Ik.offset++]);
+          if (this.serializerId = ak.decode.utf8Read(Fk, Ik, Fk[Ik.offset++]), !this.LJ) {
+            const kk = ik.getSerializer(this.serializerId);
+            this.LJ = new kk
           }
-          zC.byteLength > ZC.offset && this.JG.handshake && this.JG.handshake(zC, ZC), this.reconnectionToken = `${this.roomId}:${CC}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = wC.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
-        } else if (QC === wC.Protocol.ERROR) {
-          const CC = oC.decode.number(zC, ZC),
-            QC = oC.decode.string(zC, ZC);
-          this.onError.invoke(CC, QC)
-        } else if (QC === wC.Protocol.LEAVE_ROOM) this.leave();
-        else if (QC === wC.Protocol.ROOM_STATE) this.JG.setState(zC, ZC), this.onStateChange.invoke(this.JG.getState());
-        else if (QC === wC.Protocol.ROOM_STATE_PATCH) this.JG.patch(zC, ZC), this.onStateChange.invoke(this.JG.getState());
-        else if (QC === wC.Protocol.ROOM_DATA) {
-          const CC = oC.decode.stringCheck(zC, ZC) ? oC.decode.string(zC, ZC) : oC.decode.number(zC, ZC),
-            QC = zC.byteLength > ZC.offset ? WC.unpack(zC, {
-              start: ZC.offset
+          Fk.byteLength > Ik.offset && this.LJ.handshake && this.LJ.handshake(Fk, Ik), this.reconnectionToken = `${this.roomId}:${kk}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = Tk.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
+        } else if (Xk === Tk.Protocol.ERROR) {
+          const kk = ak.decode.number(Fk, Ik),
+            Xk = ak.decode.string(Fk, Ik);
+          this.onError.invoke(kk, Xk)
+        } else if (Xk === Tk.Protocol.LEAVE_ROOM) this.leave();
+        else if (Xk === Tk.Protocol.ROOM_STATE) this.LJ.setState(Fk, Ik), this.onStateChange.invoke(this.LJ.getState());
+        else if (Xk === Tk.Protocol.ROOM_STATE_PATCH) this.LJ.patch(Fk, Ik), this.onStateChange.invoke(this.LJ.getState());
+        else if (Xk === Tk.Protocol.ROOM_DATA) {
+          const kk = ak.decode.stringCheck(Fk, Ik) ? ak.decode.string(Fk, Ik) : ak.decode.number(Fk, Ik),
+            Xk = Fk.byteLength > Ik.offset ? tk.unpack(Fk, {
+              start: Ik.offset
             }) : void 0;
-          this.dispatchMessage(CC, QC)
-        } else if (QC === wC.Protocol.ROOM_DATA_BYTES) {
-          const CC = oC.decode.stringCheck(zC, ZC) ? oC.decode.string(zC, ZC) : oC.decode.number(zC, ZC);
-          this.dispatchMessage(CC, zC.subarray(ZC.offset))
+          this.dispatchMessage(kk, Xk)
+        } else if (Xk === Tk.Protocol.ROOM_DATA_BYTES) {
+          const kk = ak.decode.stringCheck(Fk, Ik) ? ak.decode.string(Fk, Ik) : ak.decode.number(Fk, Ik);
+          this.dispatchMessage(kk, Fk.subarray(Ik.offset))
         }
       }
-      dispatchMessage(CC, zC) {
-        var ZC;
-        const QC = this.getMessageHandlerKey(CC);
-        this.onMessageHandlers.events[QC] ? this.onMessageHandlers.emit(QC, zC) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", CC, zC) : null === (ZC = console.warn) || void 0 === ZC || ZC.call(console, `colyseus.js: onMessage() not registered for type '${CC}'.`)
+      dispatchMessage(kk, Fk) {
+        var Ik;
+        const Xk = this.getMessageHandlerKey(kk);
+        this.onMessageHandlers.events[Xk] ? this.onMessageHandlers.emit(Xk, Fk) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", kk, Fk) : null === (Ik = console.warn) || void 0 === Ik || Ik.call(console, `colyseus.js: onMessage() not registered for type '${kk}'.`)
       }
       destroy() {
-        this.JG && this.JG.teardown()
+        this.LJ && this.LJ.teardown()
       }
-      getMessageHandlerKey(CC) {
-        switch (typeof CC) {
+      getMessageHandlerKey(kk) {
+        switch (typeof kk) {
           case "string":
-            return CC;
+            return kk;
           case "number":
-            return `i${CC}`;
+            return `i${kk}`;
           default:
             throw new Error("invalid message type.")
         }
       }
     }
-    zC.OW = NC
+    Fk.dt = Zk
   },
-  9170: (CC, zC, ZC) => {
-    var QC = ZC(9079);
-    let wC;
+  9158: (kk, Fk, Ik) => {
+    var Xk = Ik(9070);
+    let Tk;
 
-    function bC() {
-      if (!wC) try {
-        wC = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
-      } catch (CC) {}
-      return wC || "undefined" === typeof globalThis.indexedDB || (wC = new nC), wC || (wC = {
+    function ik() {
+      if (!Tk) try {
+        Tk = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
+      } catch (kk) {}
+      return Tk || "undefined" === typeof globalThis.indexedDB || (Tk = new yk), Tk || (Tk = {
         cache: {},
-        setItem: function(CC, zC) {
-          this.cache[CC] = zC
+        setItem: function(kk, Fk) {
+          this.cache[kk] = Fk
         },
-        getItem: function(CC) {
-          this.cache[CC]
+        getItem: function(kk) {
+          this.cache[kk]
         },
-        removeItem: function(CC) {
-          delete this.cache[CC]
+        removeItem: function(kk) {
+          delete this.cache[kk]
         }
-      }), wC
+      }), Tk
     }
-    class nC {
+    class yk {
       constructor() {
-        this.dbPromise = new Promise((CC => {
-          const zC = indexedDB.open("_colyseus_storage", 1);
-          zC.onupgradeneeded = () => zC.result.createObjectStore("store"), zC.onsuccess = () => CC(zC.result)
+        this.dbPromise = new Promise((kk => {
+          const Fk = indexedDB.open("_colyseus_storage", 1);
+          Fk.onupgradeneeded = () => Fk.result.createObjectStore("store"), Fk.onsuccess = () => kk(Fk.result)
         }))
       }
-      tx(CC, zC) {
-        return QC.__awaiter(this, void 0, void 0, (function*() {
-          const ZC = (yield this.dbPromise).transaction("store", CC).objectStore("store");
-          return zC(ZC)
+      tx(kk, Fk) {
+        return Xk.__awaiter(this, void 0, void 0, (function*() {
+          const Ik = (yield this.dbPromise).transaction("store", kk).objectStore("store");
+          return Fk(Ik)
         }))
       }
-      setItem(CC, zC) {
-        return this.tx("readwrite", (ZC => ZC.put(zC, CC))).then()
+      setItem(kk, Fk) {
+        return this.tx("readwrite", (Ik => Ik.put(Fk, kk))).then()
       }
-      getItem(CC) {
-        return QC.__awaiter(this, void 0, void 0, (function*() {
-          const zC = yield this.tx("readonly", (zC => zC.get(CC)));
-          return new Promise((CC => {
-            zC.onsuccess = () => CC(zC.result)
+      getItem(kk) {
+        return Xk.__awaiter(this, void 0, void 0, (function*() {
+          const Fk = yield this.tx("readonly", (Fk => Fk.get(kk)));
+          return new Promise((kk => {
+            Fk.onsuccess = () => kk(Fk.result)
           }))
         }))
       }
-      removeItem(CC) {
-        return this.tx("readwrite", (zC => zC.delete(CC))).then()
+      removeItem(kk) {
+        return this.tx("readwrite", (Fk => Fk.delete(kk))).then()
       }
     }
-    zC.getItem = function(CC, zC) {
-      const ZC = bC().getItem(CC);
-      "undefined" !== typeof Promise && ZC instanceof Promise ? ZC.then((CC => zC(CC))) : zC(ZC)
-    }, zC.removeItem = function(CC) {
-      bC().removeItem(CC)
-    }, zC.setItem = function(CC, zC) {
-      bC().setItem(CC, zC)
+    Fk.getItem = function(kk, Fk) {
+      const Ik = ik().getItem(kk);
+      "undefined" !== typeof Promise && Ik instanceof Promise ? Ik.then((kk => Fk(kk))) : Fk(Ik)
+    }, Fk.removeItem = function(kk) {
+      ik().removeItem(kk)
+    }, Fk.setItem = function(kk, Fk) {
+      ik().setItem(kk, Fk)
     }
   },
-  9127: (CC, zC) => {
-    zC.createNanoEvents = () => ({
-      emit(CC) {
-        let zC = this.events[CC] || [];
-        for (var ZC = arguments.length, QC = new Array(ZC > 1 ? ZC - 1 : 0), wC = 1; wC < ZC; wC++) QC[wC - 1] = arguments[wC];
-        for (let bC = 0, nC = zC.length; bC < nC; bC++) zC[bC](...QC)
+  9130: (kk, Fk) => {
+    Fk.createNanoEvents = () => ({
+      emit(kk) {
+        let Fk = this.events[kk] || [];
+        for (var Ik = arguments.length, Xk = new Array(Ik > 1 ? Ik - 1 : 0), Tk = 1; Tk < Ik; Tk++) Xk[Tk - 1] = arguments[Tk];
+        for (let ik = 0, yk = Fk.length; ik < yk; ik++) Fk[ik](...Xk)
       },
       events: {},
-      on(CC, zC) {
-        var ZC;
-        return (null === (ZC = this.events[CC]) || void 0 === ZC ? void 0 : ZC.push(zC)) || (this.events[CC] = [zC]), () => {
-          var ZC;
-          this.events[CC] = null === (ZC = this.events[CC]) || void 0 === ZC ? void 0 : ZC.filter((CC => zC !== CC))
+      on(kk, Fk) {
+        var Ik;
+        return (null === (Ik = this.events[kk]) || void 0 === Ik ? void 0 : Ik.push(Fk)) || (this.events[kk] = [Fk]), () => {
+          var Ik;
+          this.events[kk] = null === (Ik = this.events[kk]) || void 0 === Ik ? void 0 : Ik.filter((kk => Fk !== kk))
         }
       }
     })
   },
-  9134: (CC, zC) => {
-    class ZC {
+  9135: (kk, Fk) => {
+    class Ik {
       constructor() {
         this.handlers = []
       }
-      register(CC) {
-        return this.handlers.push(CC), this
+      register(kk) {
+        return this.handlers.push(kk), this
       }
       invoke() {
-        for (var CC = arguments.length, zC = new Array(CC), ZC = 0; ZC < CC; ZC++) zC[ZC] = arguments[ZC];
-        this.handlers.forEach((CC => CC.apply(this, zC)))
+        for (var kk = arguments.length, Fk = new Array(kk), Ik = 0; Ik < kk; Ik++) Fk[Ik] = arguments[Ik];
+        this.handlers.forEach((kk => kk.apply(this, Fk)))
       }
       invokeAsync() {
-        for (var CC = arguments.length, zC = new Array(CC), ZC = 0; ZC < CC; ZC++) zC[ZC] = arguments[ZC];
-        return Promise.all(this.handlers.map((CC => CC.apply(this, zC))))
+        for (var kk = arguments.length, Fk = new Array(kk), Ik = 0; Ik < kk; Ik++) Fk[Ik] = arguments[Ik];
+        return Promise.all(this.handlers.map((kk => kk.apply(this, Fk))))
       }
-      remove(CC) {
-        const zC = this.handlers.indexOf(CC);
-        this.handlers[zC] = this.handlers[this.handlers.length - 1], this.handlers.pop()
+      remove(kk) {
+        const Fk = this.handlers.indexOf(kk);
+        this.handlers[Fk] = this.handlers[this.handlers.length - 1], this.handlers.pop()
       }
       clear() {
         this.handlers = []
       }
     }
-    zC.EventEmitter = ZC, zC.createSignal = function() {
-      const CC = new ZC;
+    Fk.EventEmitter = Ik, Fk.createSignal = function() {
+      const kk = new Ik;
 
-      function zC(zC) {
-        return CC.register(zC, null === this)
+      function Fk(Fk) {
+        return kk.register(Fk, null === this)
       }
-      return zC.once = zC => {
-        const ZC = function() {
-          for (var QC = arguments.length, wC = new Array(QC), bC = 0; bC < QC; bC++) wC[bC] = arguments[bC];
-          zC.apply(this, wC), CC.remove(ZC)
+      return Fk.once = Fk => {
+        const Ik = function() {
+          for (var Xk = arguments.length, Tk = new Array(Xk), ik = 0; ik < Xk; ik++) Tk[ik] = arguments[ik];
+          Fk.apply(this, Tk), kk.remove(Ik)
         };
-        CC.register(ZC)
-      }, zC.remove = zC => CC.remove(zC), zC.invoke = function() {
-        return CC.invoke(...arguments)
-      }, zC.invokeAsync = function() {
-        return CC.invokeAsync(...arguments)
-      }, zC.clear = () => CC.clear(), zC
+        kk.register(Ik)
+      }, Fk.remove = Fk => kk.remove(Fk), Fk.invoke = function() {
+        return kk.invoke(...arguments)
+      }, Fk.invokeAsync = function() {
+        return kk.invokeAsync(...arguments)
+      }, Fk.clear = () => kk.clear(), Fk
     }
   },
-  9081: (CC, zC) => {
-    var ZC;
-    zC.CloseCode = void 0, (ZC = zC.CloseCode || (zC.CloseCode = {}))[ZC.CONSENTED = 4e3] = "CONSENTED", ZC[ZC.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
-    class QC extends Error {
-      constructor(CC, zC) {
-        super(zC), this.name = "ServerError", this.code = CC
+  9077: (kk, Fk) => {
+    var Ik;
+    Fk.CloseCode = void 0, (Ik = Fk.CloseCode || (Fk.CloseCode = {}))[Ik.CONSENTED = 4e3] = "CONSENTED", Ik[Ik.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
+    class Xk extends Error {
+      constructor(kk, Fk) {
+        super(Fk), this.name = "ServerError", this.code = kk
       }
     }
-    class wC extends Error {
-      constructor(CC) {
-        super(CC), this.name = "AbortError"
+    class Tk extends Error {
+      constructor(kk) {
+        super(kk), this.name = "AbortError"
       }
     }
-    zC.AbortError = wC, zC.ServerError = QC
+    Fk.AbortError = Tk, Fk.ServerError = Xk
   },
-  9057: (CC, zC, ZC) => {
-    ZC(9066);
-    var QC = ZC(9071),
-      wC = ZC(9111),
-      bC = ZC(9086),
-      nC = ZC(9165),
-      fC = ZC(9081),
-      oC = ZC(9139),
-      qC = ZC(9184),
-      FC = ZC(9118);
-    FC.registerSerializer("schema", oC.Qm), FC.registerSerializer("none", qC.NoneSerializer), zC.Client = QC.Client, zC.MatchMakeError = QC.MatchMakeError, Object.defineProperty(zC, "ErrorCode", {
+  9054: (kk, Fk, Ik) => {
+    Ik(9061);
+    var Xk = Ik(9066),
+      Tk = Ik(9118),
+      ik = Ik(9080),
+      yk = Ik(9155),
+      lk = Ik(9077),
+      ak = Ik(9137),
+      qk = Ik(9172),
+      Lk = Ik(9121);
+    Lk.registerSerializer("schema", ak.QG), Lk.registerSerializer("none", qk.NoneSerializer), Fk.Client = Xk.Client, Fk.MatchMakeError = Xk.MatchMakeError, Object.defineProperty(Fk, "ErrorCode", {
       enumerable: !0,
       get: function() {
-        return wC.ErrorCode
+        return Tk.ErrorCode
       }
-    }), Object.defineProperty(zC, "Protocol", {
+    }), Object.defineProperty(Fk, "Protocol", {
       enumerable: !0,
       get: function() {
-        return wC.Protocol
+        return Tk.Protocol
       }
-    }), zC.OW = bC.OW, zC.Auth = nC.Auth, zC.ServerError = fC.ServerError, zC.Qm = oC.Qm, zC.getStateCallbacks = oC.getStateCallbacks, zC.registerSerializer = FC.registerSerializer
+    }), Fk.dt = ik.dt, Fk.Auth = yk.Auth, Fk.ServerError = lk.ServerError, Fk.QG = ak.QG, Fk.getStateCallbacks = ak.getStateCallbacks, Fk.registerSerializer = Lk.registerSerializer
   },
-  9066: () => {
-    ArrayBuffer.isView || (ArrayBuffer.isView = CC => null !== CC && "object" === typeof CC && CC.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
+  9061: () => {
+    ArrayBuffer.isView || (ArrayBuffer.isView = kk => null !== kk && "object" === typeof kk && kk.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
   },
-  9184: (CC, zC) => {
-    zC.NoneSerializer = class {
-      setState(CC) {}
+  9172: (kk, Fk) => {
+    Fk.NoneSerializer = class {
+      setState(kk) {}
       getState() {
         return null
       }
-      patch(CC) {}
+      patch(kk) {}
       teardown() {}
-      handshake(CC) {}
+      handshake(kk) {}
     }
   },
-  9139: (CC, zC, ZC) => {
-    var QC = ZC(9102);
-    zC.Qm = class {
-      setState(CC, zC) {
-        this.wg.decode(CC, zC)
+  9137: (kk, Fk, Ik) => {
+    var Xk = Ik(9098);
+    Fk.QG = class {
+      setState(kk, Fk) {
+        this.Xe.decode(kk, Fk)
       }
       getState() {
         return this.state
       }
-      patch(CC, zC) {
-        return this.wg.decode(CC, zC)
+      patch(kk, Fk) {
+        return this.Xe.decode(kk, Fk)
       }
       teardown() {
-        this.wg.root.clearRefs()
+        this.Xe.root.clearRefs()
       }
-      handshake(CC, zC) {
-        this.state ? (QC.Reflection.decode(CC, zC), this.wg = new QC.Decoder(this.state)) : (this.wg = QC.Reflection.decode(CC, zC), this.state = this.wg.state)
+      handshake(kk, Fk) {
+        this.state ? (Xk.Reflection.decode(kk, Fk), this.Xe = new Xk.Decoder(this.state)) : (this.Xe = Xk.Reflection.decode(kk, Fk), this.state = this.Xe.state)
       }
-    }, zC.getStateCallbacks = function(CC) {
+    }, Fk.getStateCallbacks = function(kk) {
       try {
-        return QC.getDecoderStateCallbacks(CC.JG.wg)
-      } catch (zC) {
+        return Xk.getDecoderStateCallbacks(kk.LJ.Xe)
+      } catch (Fk) {
         return
       }
     }
   },
-  9118: (CC, zC) => {
-    const ZC = {};
-    zC.getSerializer = function(CC) {
-      const zC = ZC[CC];
-      if (!zC) throw new Error("missing serializer: " + CC);
-      return zC
-    }, zC.registerSerializer = function(CC, zC) {
-      ZC[CC] = zC
+  9121: (kk, Fk) => {
+    const Ik = {};
+    Fk.getSerializer = function(kk) {
+      const Fk = Ik[kk];
+      if (!Fk) throw new Error("missing serializer: " + kk);
+      return Fk
+    }, Fk.registerSerializer = function(kk, Fk) {
+      Ik[kk] = Fk
     }
   },
-  9098: (CC, zC, ZC) => {
-    var QC = ZC(9079),
-      wC = ZC(9102);
-    zC.H3TransportTransport = class {
-      constructor(CC) {
-        this.events = CC, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
+  9092: (kk, Fk, Ik) => {
+    var Xk = Ik(9070),
+      Tk = Ik(9098);
+    Fk.H3TransportTransport = class {
+      constructor(kk) {
+        this.events = kk, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
       }
-      connect(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const ZC = zC.fingerprint && {
+      connect(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const Ik = Fk.fingerprint && {
           serverCertificateHashes: [{
             algorithm: "sha-256",
-            value: new Uint8Array(zC.fingerprint).buffer
+            value: new Uint8Array(Fk.fingerprint).buffer
           }]
         } || void 0;
-        this.wt = new WebTransport(CC, ZC), this.wt.ready.then((CC => {
-          console.log("WebTransport ready!", CC), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
-          this.wt.incomingBidirectionalStreams.getReader().read().then((CC => {
-            this.reader = CC.value.readable.getReader(), this.writer = CC.value.writable.getWriter(), this.sendSeatReservation(zC.room.roomId, zC.sessionId, zC.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
-          })).catch((CC => {
-            console.error("failed to read incoming stream", CC), console.error("TODO: close the connection")
+        this.wt = new WebTransport(kk, Ik), this.wt.ready.then((kk => {
+          console.log("WebTransport ready!", kk), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
+          this.wt.incomingBidirectionalStreams.getReader().read().then((kk => {
+            this.reader = kk.value.readable.getReader(), this.writer = kk.value.writable.getWriter(), this.sendSeatReservation(Fk.room.roomId, Fk.sessionId, Fk.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
+          })).catch((kk => {
+            console.error("failed to read incoming stream", kk), console.error("TODO: close the connection")
           }))
-        })).catch((CC => {
-          console.log("WebTransport not ready!", CC), this._close()
-        })), this.wt.closed.then((CC => {
-          console.log("WebTransport closed w/ success", CC), this.events.onclose({
-            code: CC.closeCode,
-            reason: CC.reason
+        })).catch((kk => {
+          console.log("WebTransport not ready!", kk), this._close()
+        })), this.wt.closed.then((kk => {
+          console.log("WebTransport closed w/ success", kk), this.events.onclose({
+            code: kk.closeCode,
+            reason: kk.reason
           })
-        })).catch((CC => {
-          console.log("WebTransport closed w/ error", CC), this.events.onerror(CC), this.events.onclose({
-            code: CC.closeCode,
-            reason: CC.reason
+        })).catch((kk => {
+          console.log("WebTransport closed w/ error", kk), this.events.onerror(kk), this.events.onclose({
+            code: kk.closeCode,
+            reason: kk.reason
           })
         })).finally((() => {
           this._close()
         }))
       }
-      send(CC) {
-        const zC = wC.encode.number(this.lengthPrefixBuffer, CC.length, {
+      send(kk) {
+        const Fk = Tk.encode.number(this.lengthPrefixBuffer, kk.length, {
             offset: 0
           }),
-          ZC = new Uint8Array(zC + CC.length);
-        ZC.set(this.lengthPrefixBuffer.subarray(0, zC), 0), ZC.set(CC, zC), this.writer.write(ZC)
+          Ik = new Uint8Array(Fk + kk.length);
+        Ik.set(this.lengthPrefixBuffer.subarray(0, Fk), 0), Ik.set(kk, Fk), this.writer.write(Ik)
       }
-      sendUnreliable(CC) {
-        const zC = wC.encode.number(this.lengthPrefixBuffer, CC.length, {
+      sendUnreliable(kk) {
+        const Fk = Tk.encode.number(this.lengthPrefixBuffer, kk.length, {
             offset: 0
           }),
-          ZC = new Uint8Array(zC + CC.length);
-        ZC.set(this.lengthPrefixBuffer.subarray(0, zC), 0), ZC.set(CC, zC), this.unreliableWriter.write(ZC)
+          Ik = new Uint8Array(Fk + kk.length);
+        Ik.set(this.lengthPrefixBuffer.subarray(0, Fk), 0), Ik.set(kk, Fk), this.unreliableWriter.write(Ik)
       }
-      close(CC, zC) {
+      close(kk, Fk) {
         try {
           this.wt.close({
-            closeCode: CC,
-            reason: zC
+            closeCode: kk,
+            reason: Fk
           })
-        } catch (ZC) {
-          console.error(ZC)
+        } catch (Ik) {
+          console.error(Ik)
         }
       }
       readIncomingData() {
-        return QC.__awaiter(this, void 0, void 0, (function*() {
-          let CC;
+        return Xk.__awaiter(this, void 0, void 0, (function*() {
+          let kk;
           for (; this.isOpen;) {
             try {
-              CC = yield this.reader.read();
-              const zC = CC.value,
-                ZC = {
+              kk = yield this.reader.read();
+              const Fk = kk.value,
+                Ik = {
                   offset: 0
                 };
               do {
-                const CC = wC.decode.number(zC, ZC);
+                const kk = Tk.decode.number(Fk, Ik);
                 this.events.onmessage({
-                  data: zC.subarray(ZC.offset, ZC.offset + CC)
-                }), ZC.offset += CC
-              } while (ZC.offset < zC.length)
-            } catch (zC) {
-              -1 === zC.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", zC);
+                  data: Fk.subarray(Ik.offset, Ik.offset + kk)
+                }), Ik.offset += kk
+              } while (Ik.offset < Fk.length)
+            } catch (Fk) {
+              -1 === Fk.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", Fk);
               break
             }
-            if (CC.done) break
+            if (kk.done) break
           }
         }))
       }
       readIncomingUnreliableData() {
-        return QC.__awaiter(this, void 0, void 0, (function*() {
-          let CC;
+        return Xk.__awaiter(this, void 0, void 0, (function*() {
+          let kk;
           for (; this.isOpen;) {
             try {
-              CC = yield this.unreliableReader.read();
-              const zC = CC.value,
-                ZC = {
+              kk = yield this.unreliableReader.read();
+              const Fk = kk.value,
+                Ik = {
                   offset: 0
                 };
               do {
-                const CC = wC.decode.number(zC, ZC);
+                const kk = Tk.decode.number(Fk, Ik);
                 this.events.onmessage({
-                  data: zC.subarray(ZC.offset, ZC.offset + CC)
-                }), ZC.offset += CC
-              } while (ZC.offset < zC.length)
-            } catch (zC) {
-              -1 === zC.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", zC);
+                  data: Fk.subarray(Ik.offset, Ik.offset + kk)
+                }), Ik.offset += kk
+              } while (Ik.offset < Fk.length)
+            } catch (Fk) {
+              -1 === Fk.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", Fk);
               break
             }
-            if (CC.done) break
+            if (kk.done) break
           }
         }))
       }
-      sendSeatReservation(CC, zC, ZC) {
-        const QC = {
+      sendSeatReservation(kk, Fk, Ik) {
+        const Xk = {
             offset: 0
           },
-          bC = [];
-        wC.encode.string(bC, CC, QC), wC.encode.string(bC, zC, QC), ZC && wC.encode.string(bC, ZC, QC), this.writer.write(new Uint8Array(bC).buffer)
+          ik = [];
+        Tk.encode.string(ik, kk, Xk), Tk.encode.string(ik, Fk, Xk), Ik && Tk.encode.string(ik, Ik, Xk), this.writer.write(new Uint8Array(ik).buffer)
       }
       _close() {
         this.isOpen = !1
       }
     }
   },
-  9106: (CC, zC, ZC) => {
-    var QC = ZC(9108);
-    const wC = globalThis.WebSocket || QC;
-    zC.WebSocketTransport = class {
-      constructor(CC) {
-        this.events = CC
+  9105: (kk, Fk, Ik) => {
+    var Xk = Ik(9111);
+    const Tk = globalThis.WebSocket || Xk;
+    Fk.WebSocketTransport = class {
+      constructor(kk) {
+        this.events = kk
       }
-      send(CC) {
-        this.ws.send(CC)
+      send(kk) {
+        this.ws.send(kk)
       }
-      sendUnreliable(CC) {
+      sendUnreliable(kk) {
         console.warn("colyseus.js: The WebSocket transport does not support unreliable messages")
       }
-      connect(CC, zC) {
+      connect(kk, Fk) {
         try {
-          this.ws = new wC(CC, {
-            headers: zC,
+          this.ws = new Tk(kk, {
+            headers: Fk,
             protocols: this.protocols
           })
-        } catch (ZC) {
-          this.ws = new wC(CC, this.protocols)
+        } catch (Ik) {
+          this.ws = new Tk(kk, this.protocols)
         }
         this.ws.binaryType = "arraybuffer", this.ws.onopen = this.events.onopen, this.ws.onmessage = this.events.onmessage, this.ws.onclose = this.events.onclose, this.ws.onerror = this.events.onerror
       }
-      close(CC, zC) {
-        this.ws.close(CC, zC)
+      close(kk, Fk) {
+        this.ws.close(kk, Fk)
       }
       get isOpen() {
-        return this.ws.readyState === wC.OPEN
+        return this.ws.readyState === Tk.OPEN
       }
     }
   },
-  9108: CC => {
-    CC.exports = function() {
+  9111: kk => {
+    kk.exports = function() {
       throw new Error("ws does not work in the browser. Browser clients must use the native WebSocket object")
     }
   },
-  9158: (CC, zC, ZC) => {
-    function QC(CC, zC) {
-      zC.headers = CC.headers || {}, zC.statusMessage = CC.statusText, zC.statusCode = CC.status, zC.data = CC.response
+  9150: (kk, Fk, Ik) => {
+    function Xk(kk, Fk) {
+      Fk.headers = kk.headers || {}, Fk.statusMessage = kk.statusText, Fk.statusCode = kk.status, Fk.data = kk.response
     }
 
-    function wC(CC, zC, ZC) {
-      return new Promise((function(wC, bC) {
-        ZC = ZC || {};
-        var nC, fC, oC, qC = new XMLHttpRequest,
-          FC = ZC.body,
-          WC = ZC.headers || {};
-        for (nC in ZC.timeout && (qC.timeout = ZC.timeout), qC.ontimeout = qC.onerror = function(CC) {
-            CC.timeout = "timeout" == CC.type, bC(CC)
-          }, qC.onabort = function(CC) {
-            CC.aborted = !0, bC(CC)
-          }, qC.open(CC, zC.href || zC), qC.onload = function() {
-            for (oC = qC.getAllResponseHeaders().trim().split(/[\r\n]+/), QC(qC, qC); fC = oC.shift();) fC = fC.split(": "), qC.headers[fC.shift().toLowerCase()] = fC.join(": ");
-            if ((fC = qC.headers["content-type"]) && ~fC.indexOf("application/json")) try {
-              qC.data = JSON.parse(qC.data, ZC.reviver)
-            } catch (CC) {
-              return QC(qC, CC), bC(CC)
-            }(qC.status >= 400 ? bC : wC)(qC)
-          }, typeof FormData < "u" && FC instanceof FormData || FC && "object" == typeof FC && (WC["content-type"] = "application/json", FC = JSON.stringify(FC)), qC.withCredentials = !!ZC.withCredentials, WC) qC.setRequestHeader(nC, WC[nC]);
-        qC.send(FC), ZC.signal && ZC.signal.addEventListener("abort", (function() {
-          qC.abort()
+    function Tk(kk, Fk, Ik) {
+      return new Promise((function(Tk, ik) {
+        Ik = Ik || {};
+        var yk, lk, ak, qk = new XMLHttpRequest,
+          Lk = Ik.body,
+          tk = Ik.headers || {};
+        for (yk in Ik.timeout && (qk.timeout = Ik.timeout), qk.ontimeout = qk.onerror = function(kk) {
+            kk.timeout = "timeout" == kk.type, ik(kk)
+          }, qk.onabort = function(kk) {
+            kk.aborted = !0, ik(kk)
+          }, qk.open(kk, Fk.href || Fk), qk.onload = function() {
+            for (ak = qk.getAllResponseHeaders().trim().split(/[\r\n]+/), Xk(qk, qk); lk = ak.shift();) lk = lk.split(": "), qk.headers[lk.shift().toLowerCase()] = lk.join(": ");
+            if ((lk = qk.headers["content-type"]) && ~lk.indexOf("application/json")) try {
+              qk.data = JSON.parse(qk.data, Ik.reviver)
+            } catch (kk) {
+              return Xk(qk, kk), ik(kk)
+            }(qk.status >= 400 ? ik : Tk)(qk)
+          }, typeof FormData < "u" && Lk instanceof FormData || Lk && "object" == typeof Lk && (tk["content-type"] = "application/json", Lk = JSON.stringify(Lk)), qk.withCredentials = !!Ik.withCredentials, tk) qk.setRequestHeader(yk, tk[yk]);
+        qk.send(Lk), Ik.signal && Ik.signal.addEventListener("abort", (function() {
+          qk.abort()
         }))
       }))
     }
-    ZC.r(zC), ZC.d(zC, {
-      del: () => oC,
-      get: () => bC,
-      patch: () => fC,
-      post: () => nC,
-      put: () => qC,
-      send: () => wC
+    Ik.r(Fk), Ik.d(Fk, {
+      del: () => ak,
+      get: () => ik,
+      patch: () => lk,
+      post: () => yk,
+      put: () => qk,
+      send: () => Tk
     });
-    var bC = wC.bind(wC, "GET"),
-      nC = wC.bind(wC, "POST"),
-      fC = wC.bind(wC, "PATCH"),
-      oC = wC.bind(wC, "DELETE"),
-      qC = wC.bind(wC, "PUT")
+    var ik = Tk.bind(Tk, "GET"),
+      yk = Tk.bind(Tk, "POST"),
+      lk = Tk.bind(Tk, "PATCH"),
+      ak = Tk.bind(Tk, "DELETE"),
+      qk = Tk.bind(Tk, "PUT")
   },
-  9144: (CC, zC, ZC) => {
-    var QC, wC, bC;
-    ZC.r(zC), ZC.d(zC, {
-      ALWAYS: () => yz,
-      C1: () => xC,
-      DECIMAL_FIT: () => Uz,
-      DECIMAL_ROUND: () => Lz,
-      Decoder: () => oz,
-      Encoder: () => Dz,
-      FLOAT32_OPTIONS: () => Mz,
-      NEVER: () => jz,
-      Packr: () => Ez,
-      RESERVE_START_SPACE: () => kz,
-      RESET_BUFFER_MODE: () => Oz,
-      REUSE_BUFFER_MODE: () => Bz,
-      Unpackr: () => hC,
-      addExtension: () => rz,
-      clearSource: () => nz,
-      decode: () => Nz,
-      decodeIter: () => Vz,
-      encode: () => tz,
-      encodeIter: () => CZ,
-      isNativeAccelerationEnabled: () => sC,
-      mapsAsObjects: () => ZZ,
-      pack: () => az,
-      roundFloat32: () => Rz,
-      unpack: () => Fz,
-      unpackMultiple: () => Wz,
-      useRecords: () => zZ
+  9144: (kk, Fk, Ik) => {
+    var Xk, Tk, ik;
+    Ik.r(Fk), Ik.d(Fk, {
+      ALWAYS: () => gF,
+      C1: () => Qk,
+      DECIMAL_FIT: () => hF,
+      DECIMAL_ROUND: () => mF,
+      Decoder: () => qF,
+      Encoder: () => YF,
+      FLOAT32_OPTIONS: () => eF,
+      NEVER: () => AF,
+      Packr: () => bF,
+      RESERVE_START_SPACE: () => MF,
+      RESET_BUFFER_MODE: () => DF,
+      REUSE_BUFFER_MODE: () => rF,
+      Unpackr: () => Ek,
+      addExtension: () => cF,
+      clearSource: () => lF,
+      decode: () => jF,
+      decodeIter: () => kI,
+      encode: () => dF,
+      encodeIter: () => FI,
+      isNativeAccelerationEnabled: () => Wk,
+      mapsAsObjects: () => XI,
+      pack: () => BF,
+      roundFloat32: () => KF,
+      unpack: () => tF,
+      unpackMultiple: () => ZF,
+      useRecords: () => II
     });
     try {
-      QC = new TextDecoder
-    } catch (QZ) {}
-    var nC = 0;
-    const fC = [];
-    var oC, qC, FC, WC, NC, MC = fC,
-      gC = 0,
-      SC = {},
-      pC = 0,
-      PC = 0,
-      GC = [],
-      RC = {
+      Xk = new TextDecoder
+    } catch (TI) {}
+    var yk = 0;
+    const lk = [];
+    var ak, qk, Lk, tk, Zk, jk = lk,
+      ek = 0,
+      wk = {},
+      Hk = 0,
+      Jk = 0,
+      xk = [],
+      Pk = {
         useRecords: !1,
         mapsAsObjects: !0
       };
-    class AC {}
-    const xC = new AC;
-    xC.name = "MessagePack 0xC1";
-    var JC, IC, iC, vC = !1,
-      eC = 2;
+    class Kk {}
+    const Qk = new Kk;
+    Qk.name = "MessagePack 0xC1";
+    var sk, Vk, zk, Sk = !1,
+      vk = 2;
     try {
       new Function("")
-    } catch (QZ) {
-      eC = 1 / 0
+    } catch (TI) {
+      vk = 1 / 0
     }
-    class hC {
-      constructor(CC) {
-        CC && (!1 === CC.useRecords && void 0 === CC.mapsAsObjects && (CC.mapsAsObjects = !0), CC.sequential && !1 !== CC.trusted && (CC.trusted = !0, CC.structures || 0 == CC.useRecords || (CC.structures = [], CC.maxSharedStructures || (CC.maxSharedStructures = 0))), CC.structures ? CC.structures.sharedLength = CC.structures.length : CC.getStructures && ((CC.structures = []).uninitialized = !0, CC.structures.sharedLength = 0), CC.int64AsNumber && (CC.int64AsType = "number")), Object.assign(this, CC)
+    class Ek {
+      constructor(kk) {
+        kk && (!1 === kk.useRecords && void 0 === kk.mapsAsObjects && (kk.mapsAsObjects = !0), kk.sequential && !1 !== kk.trusted && (kk.trusted = !0, kk.structures || 0 == kk.useRecords || (kk.structures = [], kk.maxSharedStructures || (kk.maxSharedStructures = 0))), kk.structures ? kk.structures.sharedLength = kk.structures.length : kk.getStructures && ((kk.structures = []).uninitialized = !0, kk.structures.sharedLength = 0), kk.int64AsNumber && (kk.int64AsType = "number")), Object.assign(this, kk)
       }
-      unpack(CC, zC) {
-        if (wC) return bz((() => (nz(), this ? this.unpack(CC, zC) : hC.prototype.unpack.call(RC, CC, zC))));
-        CC.buffer || CC.constructor !== ArrayBuffer || (CC = "undefined" !== typeof Buffer ? Buffer.from(CC) : new Uint8Array(CC)), "object" === typeof zC ? (bC = zC.end || CC.length, nC = zC.start || 0) : (nC = 0, bC = zC > -1 ? zC : CC.length), gC = 0, PC = 0, qC = null, MC = fC, FC = null, wC = CC;
+      unpack(kk, Fk) {
+        if (Tk) return yF((() => (lF(), this ? this.unpack(kk, Fk) : Ek.prototype.unpack.call(Pk, kk, Fk))));
+        kk.buffer || kk.constructor !== ArrayBuffer || (kk = "undefined" !== typeof Buffer ? Buffer.from(kk) : new Uint8Array(kk)), "object" === typeof Fk ? (ik = Fk.end || kk.length, yk = Fk.start || 0) : (yk = 0, ik = Fk > -1 ? Fk : kk.length), ek = 0, Jk = 0, qk = null, jk = lk, Lk = null, Tk = kk;
         try {
-          NC = CC.dataView || (CC.dataView = new DataView(CC.buffer, CC.byteOffset, CC.byteLength))
-        } catch (QZ) {
-          if (wC = null, CC instanceof Uint8Array) throw QZ;
-          throw new Error("Source must be a Uint8Array or Buffer but was a " + (CC && "object" == typeof CC ? CC.constructor.name : typeof CC))
+          Zk = kk.dataView || (kk.dataView = new DataView(kk.buffer, kk.byteOffset, kk.byteLength))
+        } catch (TI) {
+          if (Tk = null, kk instanceof Uint8Array) throw TI;
+          throw new Error("Source must be a Uint8Array or Buffer but was a " + (kk && "object" == typeof kk ? kk.constructor.name : typeof kk))
         }
-        if (this instanceof hC) {
-          if (SC = this, this.structures) return oC = this.structures, KC(zC);
-          (!oC || oC.length > 0) && (oC = [])
-        } else SC = RC, (!oC || oC.length > 0) && (oC = []);
-        return KC(zC)
+        if (this instanceof Ek) {
+          if (wk = this, this.structures) return ak = this.structures, Ok(Fk);
+          (!ak || ak.length > 0) && (ak = [])
+        } else wk = Pk, (!ak || ak.length > 0) && (ak = []);
+        return Ok(Fk)
       }
-      unpackMultiple(CC, zC) {
-        let ZC, QC = 0;
+      unpackMultiple(kk, Fk) {
+        let Ik, Xk = 0;
         try {
-          vC = !0;
-          let wC = CC.length,
-            bC = this ? this.unpack(CC, wC) : qz.unpack(CC, wC);
-          if (!zC) {
-            for (ZC = [bC]; nC < wC;) QC = nC, ZC.push(KC());
-            return ZC
+          Sk = !0;
+          let Tk = kk.length,
+            ik = this ? this.unpack(kk, Tk) : LF.unpack(kk, Tk);
+          if (!Fk) {
+            for (Ik = [ik]; yk < Tk;) Xk = yk, Ik.push(Ok());
+            return Ik
           }
-          if (!1 === zC(bC, QC, nC)) return;
-          for (; nC < wC;)
-            if (QC = nC, !1 === zC(KC(), QC, nC)) return
-        } catch (QZ) {
-          throw QZ.lastPosition = QC, QZ.values = ZC, QZ
+          if (!1 === Fk(ik, Xk, yk)) return;
+          for (; yk < Tk;)
+            if (Xk = yk, !1 === Fk(Ok(), Xk, yk)) return
+        } catch (TI) {
+          throw TI.lastPosition = Xk, TI.values = Ik, TI
         } finally {
-          vC = !1, nz()
+          Sk = !1, lF()
         }
       }
-      _mergeStructures(CC, zC) {
-        IC && (CC = IC.call(this, CC)), CC = CC || [], Object.isFrozen(CC) && (CC = CC.map((CC => CC.slice(0))));
-        for (let ZC = 0, QC = CC.length; ZC < QC; ZC++) {
-          let zC = CC[ZC];
-          zC && (zC.isShared = !0, ZC >= 32 && (zC.highByte = ZC - 32 >> 5))
+      _mergeStructures(kk, Fk) {
+        Vk && (kk = Vk.call(this, kk)), kk = kk || [], Object.isFrozen(kk) && (kk = kk.map((kk => kk.slice(0))));
+        for (let Ik = 0, Xk = kk.length; Ik < Xk; Ik++) {
+          let Fk = kk[Ik];
+          Fk && (Fk.isShared = !0, Ik >= 32 && (Fk.highByte = Ik - 32 >> 5))
         }
-        CC.sharedLength = CC.length;
-        for (let ZC in zC || [])
-          if (ZC >= 0) {
-            let QC = CC[ZC],
-              wC = zC[ZC];
-            wC && (QC && ((CC.restoreStructures || (CC.restoreStructures = []))[ZC] = QC), CC[ZC] = wC)
-          } return this.structures = CC
+        kk.sharedLength = kk.length;
+        for (let Ik in Fk || [])
+          if (Ik >= 0) {
+            let Xk = kk[Ik],
+              Tk = Fk[Ik];
+            Tk && (Xk && ((kk.restoreStructures || (kk.restoreStructures = []))[Ik] = Xk), kk[Ik] = Tk)
+          } return this.structures = kk
       }
-      decode(CC, zC) {
-        return this.unpack(CC, zC)
+      decode(kk, Fk) {
+        return this.unpack(kk, Fk)
       }
     }
 
-    function KC(CC) {
+    function Ok(kk) {
       try {
-        if (!SC.trusted && !vC) {
-          let CC = oC.sharedLength || 0;
-          CC < oC.length && (oC.length = CC)
+        if (!wk.trusted && !Sk) {
+          let kk = ak.sharedLength || 0;
+          kk < ak.length && (ak.length = kk)
         }
-        let zC;
-        if (SC.randomAccessStructure && wC[nC] < 64 && wC[nC] >= 32 && JC ? (zC = JC(wC, nC, bC, SC), wC = null, CC && CC.lazy || !zC || (zC = zC.toJSON()), nC = bC) : zC = dC(), FC && (nC = FC.postBundlePosition, FC = null), vC && (oC.restoreStructures = null), nC == bC) oC && oC.restoreStructures && YC(), oC = null, wC = null, WC && (WC = null);
+        let Fk;
+        if (wk.randomAccessStructure && Tk[yk] < 64 && Tk[yk] >= 32 && sk ? (Fk = sk(Tk, yk, ik, wk), Tk = null, kk && kk.lazy || !Fk || (Fk = Fk.toJSON()), yk = ik) : Fk = Gk(), Lk && (yk = Lk.postBundlePosition, Lk = null), Sk && (ak.restoreStructures = null), yk == ik) ak && ak.restoreStructures && nk(), ak = null, Tk = null, tk && (tk = null);
         else {
-          if (nC > bC) throw new Error("Unexpected end of MessagePack data");
-          if (!vC) {
-            let CC;
+          if (yk > ik) throw new Error("Unexpected end of MessagePack data");
+          if (!Sk) {
+            let kk;
             try {
-              CC = JSON.stringify(zC, ((CC, zC) => "bigint" === typeof zC ? `${zC}n` : zC)).slice(0, 100)
-            } catch (QZ) {
-              CC = "(JSON view not available " + QZ + ")"
+              kk = JSON.stringify(Fk, ((kk, Fk) => "bigint" === typeof Fk ? `${Fk}n` : Fk)).slice(0, 100)
+            } catch (TI) {
+              kk = "(JSON view not available " + TI + ")"
             }
-            throw new Error("Data read, but end of buffer not reached " + CC)
+            throw new Error("Data read, but end of buffer not reached " + kk)
           }
         }
-        return zC
-      } catch (QZ) {
-        throw oC && oC.restoreStructures && YC(), nz(), (QZ instanceof RangeError || QZ.message.startsWith("Unexpected end of buffer") || nC > bC) && (QZ.incomplete = !0), QZ
+        return Fk
+      } catch (TI) {
+        throw ak && ak.restoreStructures && nk(), lF(), (TI instanceof RangeError || TI.message.startsWith("Unexpected end of buffer") || yk > ik) && (TI.incomplete = !0), TI
       }
     }
 
-    function YC() {
-      for (let CC in oC.restoreStructures) oC[CC] = oC.restoreStructures[CC];
-      oC.restoreStructures = null
+    function nk() {
+      for (let kk in ak.restoreStructures) ak[kk] = ak.restoreStructures[kk];
+      ak.restoreStructures = null
     }
 
-    function dC() {
-      let CC = wC[nC++];
-      if (CC < 160) {
-        if (CC < 128) {
-          if (CC < 64) return CC;
+    function Gk() {
+      let kk = Tk[yk++];
+      if (kk < 160) {
+        if (kk < 128) {
+          if (kk < 64) return kk;
           {
-            let zC = oC[63 & CC] || SC.getStructures && lC()[63 & CC];
-            return zC ? (zC.read || (zC.read = HC(zC, 63 & CC)), zC.read()) : CC
+            let Fk = ak[63 & kk] || wk.getStructures && Rk()[63 & kk];
+            return Fk ? (Fk.read || (Fk.read = uk(Fk, 63 & kk)), Fk.read()) : kk
           }
         }
-        if (CC < 144) {
-          if (CC -= 128, SC.mapsAsObjects) {
-            let zC = {};
-            for (let ZC = 0; ZC < CC; ZC++) {
-              let CC = kC();
-              "__proto__" === CC && (CC = "__proto_"), zC[CC] = dC()
+        if (kk < 144) {
+          if (kk -= 128, wk.mapsAsObjects) {
+            let Fk = {};
+            for (let Ik = 0; Ik < kk; Ik++) {
+              let kk = Mk();
+              "__proto__" === kk && (kk = "__proto_"), Fk[kk] = Gk()
             }
-            return zC
+            return Fk
           } {
-            let zC = new Map;
-            for (let ZC = 0; ZC < CC; ZC++) zC.set(dC(), dC());
-            return zC
+            let Fk = new Map;
+            for (let Ik = 0; Ik < kk; Ik++) Fk.set(Gk(), Gk());
+            return Fk
           }
         } {
-          CC -= 144;
-          let zC = new Array(CC);
-          for (let ZC = 0; ZC < CC; ZC++) zC[ZC] = dC();
-          return SC.freezeData ? Object.freeze(zC) : zC
+          kk -= 144;
+          let Fk = new Array(kk);
+          for (let Ik = 0; Ik < kk; Ik++) Fk[Ik] = Gk();
+          return wk.freezeData ? Object.freeze(Fk) : Fk
         }
       }
-      if (CC < 192) {
-        let zC = CC - 160;
-        if (PC >= nC) return qC.slice(nC - pC, (nC += zC) - pC);
-        if (0 == PC && bC < 140) {
-          let CC = zC < 16 ? yC(zC) : jC(zC);
-          if (null != CC) return CC
+      if (kk < 192) {
+        let Fk = kk - 160;
+        if (Jk >= yk) return qk.slice(yk - Hk, (yk += Fk) - Hk);
+        if (0 == Jk && ik < 140) {
+          let kk = Fk < 16 ? gk(Fk) : Ak(Fk);
+          if (null != kk) return kk
         }
-        return XC(zC)
+        return Uk(Fk)
       } {
-        let zC;
-        switch (CC) {
+        let Fk;
+        switch (kk) {
           case 192:
             return null;
           case 193:
-            return FC ? (zC = dC(), zC > 0 ? FC[1].slice(FC.position1, FC.position1 += zC) : FC[0].slice(FC.position0, FC.position0 -= zC)) : xC;
+            return Lk ? (Fk = Gk(), Fk > 0 ? Lk[1].slice(Lk.position1, Lk.position1 += Fk) : Lk[0].slice(Lk.position0, Lk.position0 -= Fk)) : Qk;
           case 194:
             return !1;
           case 195:
             return !0;
           case 196:
-            if (zC = wC[nC++], void 0 === zC) throw new Error("Unexpected end of buffer");
-            return UC(zC);
+            if (Fk = Tk[yk++], void 0 === Fk) throw new Error("Unexpected end of buffer");
+            return hk(Fk);
           case 197:
-            return zC = NC.getUint16(nC), nC += 2, UC(zC);
+            return Fk = Zk.getUint16(yk), yk += 2, hk(Fk);
           case 198:
-            return zC = NC.getUint32(nC), nC += 4, UC(zC);
+            return Fk = Zk.getUint32(yk), yk += 4, hk(Fk);
           case 199:
-            return BC(wC[nC++]);
+            return rk(Tk[yk++]);
           case 200:
-            return zC = NC.getUint16(nC), nC += 2, BC(zC);
+            return Fk = Zk.getUint16(yk), yk += 2, rk(Fk);
           case 201:
-            return zC = NC.getUint32(nC), nC += 4, BC(zC);
+            return Fk = Zk.getUint32(yk), yk += 4, rk(Fk);
           case 202:
-            if (zC = NC.getFloat32(nC), SC.useFloat32 > 2) {
-              let CC = fz[(127 & wC[nC]) << 1 | wC[nC + 1] >> 7];
-              return nC += 4, (CC * zC + (zC > 0 ? .5 : -.5) | 0) / CC
+            if (Fk = Zk.getFloat32(yk), wk.useFloat32 > 2) {
+              let kk = aF[(127 & Tk[yk]) << 1 | Tk[yk + 1] >> 7];
+              return yk += 4, (kk * Fk + (Fk > 0 ? .5 : -.5) | 0) / kk
             }
-            return nC += 4, zC;
+            return yk += 4, Fk;
           case 203:
-            return zC = NC.getFloat64(nC), nC += 8, zC;
+            return Fk = Zk.getFloat64(yk), yk += 8, Fk;
           case 204:
-            return wC[nC++];
+            return Tk[yk++];
           case 205:
-            return zC = NC.getUint16(nC), nC += 2, zC;
+            return Fk = Zk.getUint16(yk), yk += 2, Fk;
           case 206:
-            return zC = NC.getUint32(nC), nC += 4, zC;
+            return Fk = Zk.getUint32(yk), yk += 4, Fk;
           case 207:
-            return "number" === SC.int64AsType ? (zC = 4294967296 * NC.getUint32(nC), zC += NC.getUint32(nC + 4)) : "string" === SC.int64AsType ? zC = NC.getBigUint64(nC).toString() : "auto" === SC.int64AsType ? (zC = NC.getBigUint64(nC), zC <= BigInt(2) << BigInt(52) && (zC = Number(zC))) : zC = NC.getBigUint64(nC), nC += 8, zC;
+            return "number" === wk.int64AsType ? (Fk = 4294967296 * Zk.getUint32(yk), Fk += Zk.getUint32(yk + 4)) : "string" === wk.int64AsType ? Fk = Zk.getBigUint64(yk).toString() : "auto" === wk.int64AsType ? (Fk = Zk.getBigUint64(yk), Fk <= BigInt(2) << BigInt(52) && (Fk = Number(Fk))) : Fk = Zk.getBigUint64(yk), yk += 8, Fk;
           case 208:
-            return NC.getInt8(nC++);
+            return Zk.getInt8(yk++);
           case 209:
-            return zC = NC.getInt16(nC), nC += 2, zC;
+            return Fk = Zk.getInt16(yk), yk += 2, Fk;
           case 210:
-            return zC = NC.getInt32(nC), nC += 4, zC;
+            return Fk = Zk.getInt32(yk), yk += 4, Fk;
           case 211:
-            return "number" === SC.int64AsType ? (zC = 4294967296 * NC.getInt32(nC), zC += NC.getUint32(nC + 4)) : "string" === SC.int64AsType ? zC = NC.getBigInt64(nC).toString() : "auto" === SC.int64AsType ? (zC = NC.getBigInt64(nC), zC >= BigInt(-2) << BigInt(52) && zC <= BigInt(2) << BigInt(52) && (zC = Number(zC))) : zC = NC.getBigInt64(nC), nC += 8, zC;
+            return "number" === wk.int64AsType ? (Fk = 4294967296 * Zk.getInt32(yk), Fk += Zk.getUint32(yk + 4)) : "string" === wk.int64AsType ? Fk = Zk.getBigInt64(yk).toString() : "auto" === wk.int64AsType ? (Fk = Zk.getBigInt64(yk), Fk >= BigInt(-2) << BigInt(52) && Fk <= BigInt(2) << BigInt(52) && (Fk = Number(Fk))) : Fk = Zk.getBigInt64(yk), yk += 8, Fk;
           case 212:
-            if (zC = wC[nC++], 114 == zC) return Cz(63 & wC[nC++]);
+            if (Fk = Tk[yk++], 114 == Fk) return FF(63 & Tk[yk++]);
             {
-              let CC = GC[zC];
-              if (CC) return CC.read ? (nC++, CC.read(dC())) : CC.noBuffer ? (nC++, CC()) : CC(wC.subarray(nC, ++nC));
-              throw new Error("Unknown extension " + zC)
+              let kk = xk[Fk];
+              if (kk) return kk.read ? (yk++, kk.read(Gk())) : kk.noBuffer ? (yk++, kk()) : kk(Tk.subarray(yk, ++yk));
+              throw new Error("Unknown extension " + Fk)
             }
           case 213:
-            return zC = wC[nC], 114 == zC ? (nC++, Cz(63 & wC[nC++], wC[nC++])) : BC(2);
+            return Fk = Tk[yk], 114 == Fk ? (yk++, FF(63 & Tk[yk++], Tk[yk++])) : rk(2);
           case 214:
-            return BC(4);
+            return rk(4);
           case 215:
-            return BC(8);
+            return rk(8);
           case 216:
-            return BC(16);
+            return rk(16);
           case 217:
-            return zC = wC[nC++], PC >= nC ? qC.slice(nC - pC, (nC += zC) - pC) : cC(zC);
+            return Fk = Tk[yk++], Jk >= yk ? qk.slice(yk - Hk, (yk += Fk) - Hk) : Ck(Fk);
           case 218:
-            return zC = NC.getUint16(nC), PC >= (nC += 2) ? qC.slice(nC - pC, (nC += zC) - pC) : uC(zC);
+            return Fk = Zk.getUint16(yk), Jk >= (yk += 2) ? qk.slice(yk - Hk, (yk += Fk) - Hk) : Nk(Fk);
           case 219:
-            return zC = NC.getUint32(nC), PC >= (nC += 4) ? qC.slice(nC - pC, (nC += zC) - pC) : rC(zC);
+            return Fk = Zk.getUint32(yk), Jk >= (yk += 4) ? qk.slice(yk - Hk, (yk += Fk) - Hk) : ck(Fk);
           case 220:
-            return zC = NC.getUint16(nC), nC += 2, aC(zC);
+            return Fk = Zk.getUint16(yk), yk += 2, Bk(Fk);
           case 221:
-            return zC = NC.getUint32(nC), nC += 4, aC(zC);
+            return Fk = Zk.getUint32(yk), yk += 4, Bk(Fk);
           case 222:
-            return zC = NC.getUint16(nC), nC += 2, tC(zC);
+            return Fk = Zk.getUint16(yk), yk += 2, dk(Fk);
           case 223:
-            return zC = NC.getUint32(nC), nC += 4, tC(zC);
+            return Fk = Zk.getUint32(yk), yk += 4, dk(Fk);
           default:
-            if (CC >= 224) return CC - 256;
-            if (void 0 === CC) {
-              let CC = new Error("Unexpected end of MessagePack data");
-              throw CC.incomplete = !0, CC
+            if (kk >= 224) return kk - 256;
+            if (void 0 === kk) {
+              let kk = new Error("Unexpected end of MessagePack data");
+              throw kk.incomplete = !0, kk
             }
-            throw new Error("Unknown MessagePack token " + CC)
+            throw new Error("Unknown MessagePack token " + kk)
         }
       }
     }
-    const mC = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
+    const pk = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
 
-    function HC(CC, zC) {
-      function ZC() {
-        if (ZC.count++ > eC) {
-          let ZC = CC.read = new Function("r", "return function(){return " + (SC.freezeData ? "Object.freeze" : "") + "({" + CC.map((CC => "__proto__" === CC ? "__proto_:r()" : mC.test(CC) ? CC + ":r()" : "[" + JSON.stringify(CC) + "]:r()")).join(",") + "})}")(dC);
-          return 0 === CC.highByte && (CC.read = EC(zC, CC.read)), ZC()
+    function uk(kk, Fk) {
+      function Ik() {
+        if (Ik.count++ > vk) {
+          let Ik = kk.read = new Function("r", "return function(){return " + (wk.freezeData ? "Object.freeze" : "") + "({" + kk.map((kk => "__proto__" === kk ? "__proto_:r()" : pk.test(kk) ? kk + ":r()" : "[" + JSON.stringify(kk) + "]:r()")).join(",") + "})}")(Gk);
+          return 0 === kk.highByte && (kk.read = bk(Fk, kk.read)), Ik()
         }
-        let QC = {};
-        for (let zC = 0, ZC = CC.length; zC < ZC; zC++) {
-          let ZC = CC[zC];
-          "__proto__" === ZC && (ZC = "__proto_"), QC[ZC] = dC()
+        let Xk = {};
+        for (let Fk = 0, Ik = kk.length; Fk < Ik; Fk++) {
+          let Ik = kk[Fk];
+          "__proto__" === Ik && (Ik = "__proto_"), Xk[Ik] = Gk()
         }
-        return SC.freezeData ? Object.freeze(QC) : QC
+        return wk.freezeData ? Object.freeze(Xk) : Xk
       }
-      return ZC.count = 0, 0 === CC.highByte ? EC(zC, ZC) : ZC
+      return Ik.count = 0, 0 === kk.highByte ? bk(Fk, Ik) : Ik
     }
-    const EC = (CC, zC) => function() {
-      let ZC = wC[nC++];
-      if (0 === ZC) return zC();
-      let QC = CC < 32 ? -(CC + (ZC << 5)) : CC + (ZC << 5),
-        bC = oC[QC] || lC()[QC];
-      if (!bC) throw new Error("Record id is not defined for " + QC);
-      return bC.read || (bC.read = HC(bC, CC)), bC.read()
+    const bk = (kk, Fk) => function() {
+      let Ik = Tk[yk++];
+      if (0 === Ik) return Fk();
+      let Xk = kk < 32 ? -(kk + (Ik << 5)) : kk + (Ik << 5),
+        ik = ak[Xk] || Rk()[Xk];
+      if (!ik) throw new Error("Record id is not defined for " + Xk);
+      return ik.read || (ik.read = uk(ik, kk)), ik.read()
     };
 
-    function lC() {
-      let CC = bz((() => (wC = null, SC.getStructures())));
-      return oC = SC._mergeStructures(CC, oC)
+    function Rk() {
+      let kk = yF((() => (Tk = null, wk.getStructures())));
+      return ak = wk._mergeStructures(kk, ak)
     }
-    var XC = TC,
-      cC = TC,
-      uC = TC,
-      rC = TC;
-    let sC = !1;
+    var Uk = fk,
+      Ck = fk,
+      Nk = fk,
+      ck = fk;
+    let Wk = !1;
 
-    function TC(CC) {
-      let zC;
-      if (CC < 16 && (zC = yC(CC))) return zC;
-      if (CC > 64 && QC) return QC.decode(wC.subarray(nC, nC += CC));
-      const ZC = nC + CC,
-        bC = [];
-      for (zC = ""; nC < ZC;) {
-        const CC = wC[nC++];
-        if (0 === (128 & CC)) bC.push(CC);
-        else if (192 === (224 & CC)) {
-          const zC = 63 & wC[nC++];
-          bC.push((31 & CC) << 6 | zC)
-        } else if (224 === (240 & CC)) {
-          const zC = 63 & wC[nC++],
-            ZC = 63 & wC[nC++];
-          bC.push((31 & CC) << 12 | zC << 6 | ZC)
-        } else if (240 === (248 & CC)) {
-          let zC = (7 & CC) << 18 | (63 & wC[nC++]) << 12 | (63 & wC[nC++]) << 6 | 63 & wC[nC++];
-          zC > 65535 && (zC -= 65536, bC.push(zC >>> 10 & 1023 | 55296), zC = 56320 | 1023 & zC), bC.push(zC)
-        } else bC.push(CC);
-        bC.length >= 4096 && (zC += DC.apply(String, bC), bC.length = 0)
+    function fk(kk) {
+      let Fk;
+      if (kk < 16 && (Fk = gk(kk))) return Fk;
+      if (kk > 64 && Xk) return Xk.decode(Tk.subarray(yk, yk += kk));
+      const Ik = yk + kk,
+        ik = [];
+      for (Fk = ""; yk < Ik;) {
+        const kk = Tk[yk++];
+        if (0 === (128 & kk)) ik.push(kk);
+        else if (192 === (224 & kk)) {
+          const Fk = 63 & Tk[yk++];
+          ik.push((31 & kk) << 6 | Fk)
+        } else if (224 === (240 & kk)) {
+          const Fk = 63 & Tk[yk++],
+            Ik = 63 & Tk[yk++];
+          ik.push((31 & kk) << 12 | Fk << 6 | Ik)
+        } else if (240 === (248 & kk)) {
+          let Fk = (7 & kk) << 18 | (63 & Tk[yk++]) << 12 | (63 & Tk[yk++]) << 6 | 63 & Tk[yk++];
+          Fk > 65535 && (Fk -= 65536, ik.push(Fk >>> 10 & 1023 | 55296), Fk = 56320 | 1023 & Fk), ik.push(Fk)
+        } else ik.push(kk);
+        ik.length >= 4096 && (Fk += Yk.apply(String, ik), ik.length = 0)
       }
-      return bC.length > 0 && (zC += DC.apply(String, bC)), zC
+      return ik.length > 0 && (Fk += Yk.apply(String, ik)), Fk
     }
 
-    function aC(CC) {
-      let zC = new Array(CC);
-      for (let ZC = 0; ZC < CC; ZC++) zC[ZC] = dC();
-      return SC.freezeData ? Object.freeze(zC) : zC
+    function Bk(kk) {
+      let Fk = new Array(kk);
+      for (let Ik = 0; Ik < kk; Ik++) Fk[Ik] = Gk();
+      return wk.freezeData ? Object.freeze(Fk) : Fk
     }
 
-    function tC(CC) {
-      if (SC.mapsAsObjects) {
-        let zC = {};
-        for (let ZC = 0; ZC < CC; ZC++) {
-          let CC = kC();
-          "__proto__" === CC && (CC = "__proto_"), zC[CC] = dC()
+    function dk(kk) {
+      if (wk.mapsAsObjects) {
+        let Fk = {};
+        for (let Ik = 0; Ik < kk; Ik++) {
+          let kk = Mk();
+          "__proto__" === kk && (kk = "__proto_"), Fk[kk] = Gk()
         }
-        return zC
+        return Fk
       } {
-        let zC = new Map;
-        for (let ZC = 0; ZC < CC; ZC++) zC.set(dC(), dC());
-        return zC
+        let Fk = new Map;
+        for (let Ik = 0; Ik < kk; Ik++) Fk.set(Gk(), Gk());
+        return Fk
       }
     }
-    var DC = String.fromCharCode;
+    var Yk = String.fromCharCode;
 
-    function jC(CC) {
-      let zC = nC,
-        ZC = new Array(CC);
-      for (let QC = 0; QC < CC; QC++) {
-        const CC = wC[nC++];
-        if ((128 & CC) > 0) return void(nC = zC);
-        ZC[QC] = CC
+    function Ak(kk) {
+      let Fk = yk,
+        Ik = new Array(kk);
+      for (let Xk = 0; Xk < kk; Xk++) {
+        const kk = Tk[yk++];
+        if ((128 & kk) > 0) return void(yk = Fk);
+        Ik[Xk] = kk
       }
-      return DC.apply(String, ZC)
+      return Yk.apply(String, Ik)
     }
 
-    function yC(CC) {
-      if (CC < 4) {
-        if (CC < 2) {
-          if (0 === CC) return "";
+    function gk(kk) {
+      if (kk < 4) {
+        if (kk < 2) {
+          if (0 === kk) return "";
           {
-            let CC = wC[nC++];
-            return (128 & CC) > 1 ? void(nC -= 1) : DC(CC)
+            let kk = Tk[yk++];
+            return (128 & kk) > 1 ? void(yk -= 1) : Yk(kk)
           }
         } {
-          let zC = wC[nC++],
-            ZC = wC[nC++];
-          if ((128 & zC) > 0 || (128 & ZC) > 0) return void(nC -= 2);
-          if (CC < 3) return DC(zC, ZC);
-          let QC = wC[nC++];
-          return (128 & QC) > 0 ? void(nC -= 3) : DC(zC, ZC, QC)
+          let Fk = Tk[yk++],
+            Ik = Tk[yk++];
+          if ((128 & Fk) > 0 || (128 & Ik) > 0) return void(yk -= 2);
+          if (kk < 3) return Yk(Fk, Ik);
+          let Xk = Tk[yk++];
+          return (128 & Xk) > 0 ? void(yk -= 3) : Yk(Fk, Ik, Xk)
         }
       } {
-        let zC = wC[nC++],
-          ZC = wC[nC++],
-          QC = wC[nC++],
-          bC = wC[nC++];
-        if ((128 & zC) > 0 || (128 & ZC) > 0 || (128 & QC) > 0 || (128 & bC) > 0) return void(nC -= 4);
-        if (CC < 6) {
-          if (4 === CC) return DC(zC, ZC, QC, bC);
+        let Fk = Tk[yk++],
+          Ik = Tk[yk++],
+          Xk = Tk[yk++],
+          ik = Tk[yk++];
+        if ((128 & Fk) > 0 || (128 & Ik) > 0 || (128 & Xk) > 0 || (128 & ik) > 0) return void(yk -= 4);
+        if (kk < 6) {
+          if (4 === kk) return Yk(Fk, Ik, Xk, ik);
           {
-            let CC = wC[nC++];
-            return (128 & CC) > 0 ? void(nC -= 5) : DC(zC, ZC, QC, bC, CC)
+            let kk = Tk[yk++];
+            return (128 & kk) > 0 ? void(yk -= 5) : Yk(Fk, Ik, Xk, ik, kk)
           }
         }
-        if (CC < 8) {
-          let fC = wC[nC++],
-            oC = wC[nC++];
-          if ((128 & fC) > 0 || (128 & oC) > 0) return void(nC -= 6);
-          if (CC < 7) return DC(zC, ZC, QC, bC, fC, oC);
-          let qC = wC[nC++];
-          return (128 & qC) > 0 ? void(nC -= 7) : DC(zC, ZC, QC, bC, fC, oC, qC)
+        if (kk < 8) {
+          let lk = Tk[yk++],
+            ak = Tk[yk++];
+          if ((128 & lk) > 0 || (128 & ak) > 0) return void(yk -= 6);
+          if (kk < 7) return Yk(Fk, Ik, Xk, ik, lk, ak);
+          let qk = Tk[yk++];
+          return (128 & qk) > 0 ? void(yk -= 7) : Yk(Fk, Ik, Xk, ik, lk, ak, qk)
         } {
-          let fC = wC[nC++],
-            oC = wC[nC++],
-            qC = wC[nC++],
-            FC = wC[nC++];
-          if ((128 & fC) > 0 || (128 & oC) > 0 || (128 & qC) > 0 || (128 & FC) > 0) return void(nC -= 8);
-          if (CC < 10) {
-            if (8 === CC) return DC(zC, ZC, QC, bC, fC, oC, qC, FC);
+          let lk = Tk[yk++],
+            ak = Tk[yk++],
+            qk = Tk[yk++],
+            Lk = Tk[yk++];
+          if ((128 & lk) > 0 || (128 & ak) > 0 || (128 & qk) > 0 || (128 & Lk) > 0) return void(yk -= 8);
+          if (kk < 10) {
+            if (8 === kk) return Yk(Fk, Ik, Xk, ik, lk, ak, qk, Lk);
             {
-              let CC = wC[nC++];
-              return (128 & CC) > 0 ? void(nC -= 9) : DC(zC, ZC, QC, bC, fC, oC, qC, FC, CC)
+              let kk = Tk[yk++];
+              return (128 & kk) > 0 ? void(yk -= 9) : Yk(Fk, Ik, Xk, ik, lk, ak, qk, Lk, kk)
             }
           }
-          if (CC < 12) {
-            let WC = wC[nC++],
-              NC = wC[nC++];
-            if ((128 & WC) > 0 || (128 & NC) > 0) return void(nC -= 10);
-            if (CC < 11) return DC(zC, ZC, QC, bC, fC, oC, qC, FC, WC, NC);
-            let MC = wC[nC++];
-            return (128 & MC) > 0 ? void(nC -= 11) : DC(zC, ZC, QC, bC, fC, oC, qC, FC, WC, NC, MC)
+          if (kk < 12) {
+            let tk = Tk[yk++],
+              Zk = Tk[yk++];
+            if ((128 & tk) > 0 || (128 & Zk) > 0) return void(yk -= 10);
+            if (kk < 11) return Yk(Fk, Ik, Xk, ik, lk, ak, qk, Lk, tk, Zk);
+            let jk = Tk[yk++];
+            return (128 & jk) > 0 ? void(yk -= 11) : Yk(Fk, Ik, Xk, ik, lk, ak, qk, Lk, tk, Zk, jk)
           } {
-            let WC = wC[nC++],
-              NC = wC[nC++],
-              MC = wC[nC++],
-              gC = wC[nC++];
-            if ((128 & WC) > 0 || (128 & NC) > 0 || (128 & MC) > 0 || (128 & gC) > 0) return void(nC -= 12);
-            if (CC < 14) {
-              if (12 === CC) return DC(zC, ZC, QC, bC, fC, oC, qC, FC, WC, NC, MC, gC);
+            let tk = Tk[yk++],
+              Zk = Tk[yk++],
+              jk = Tk[yk++],
+              ek = Tk[yk++];
+            if ((128 & tk) > 0 || (128 & Zk) > 0 || (128 & jk) > 0 || (128 & ek) > 0) return void(yk -= 12);
+            if (kk < 14) {
+              if (12 === kk) return Yk(Fk, Ik, Xk, ik, lk, ak, qk, Lk, tk, Zk, jk, ek);
               {
-                let CC = wC[nC++];
-                return (128 & CC) > 0 ? void(nC -= 13) : DC(zC, ZC, QC, bC, fC, oC, qC, FC, WC, NC, MC, gC, CC)
+                let kk = Tk[yk++];
+                return (128 & kk) > 0 ? void(yk -= 13) : Yk(Fk, Ik, Xk, ik, lk, ak, qk, Lk, tk, Zk, jk, ek, kk)
               }
             } {
-              let SC = wC[nC++],
-                pC = wC[nC++];
-              if ((128 & SC) > 0 || (128 & pC) > 0) return void(nC -= 14);
-              if (CC < 15) return DC(zC, ZC, QC, bC, fC, oC, qC, FC, WC, NC, MC, gC, SC, pC);
-              let PC = wC[nC++];
-              return (128 & PC) > 0 ? void(nC -= 15) : DC(zC, ZC, QC, bC, fC, oC, qC, FC, WC, NC, MC, gC, SC, pC, PC)
+              let wk = Tk[yk++],
+                Hk = Tk[yk++];
+              if ((128 & wk) > 0 || (128 & Hk) > 0) return void(yk -= 14);
+              if (kk < 15) return Yk(Fk, Ik, Xk, ik, lk, ak, qk, Lk, tk, Zk, jk, ek, wk, Hk);
+              let Jk = Tk[yk++];
+              return (128 & Jk) > 0 ? void(yk -= 15) : Yk(Fk, Ik, Xk, ik, lk, ak, qk, Lk, tk, Zk, jk, ek, wk, Hk, Jk)
             }
           }
         }
       }
     }
 
-    function LC() {
-      let CC, zC = wC[nC++];
-      if (zC < 192) CC = zC - 160;
-      else switch (zC) {
+    function mk() {
+      let kk, Fk = Tk[yk++];
+      if (Fk < 192) kk = Fk - 160;
+      else switch (Fk) {
         case 217:
-          CC = wC[nC++];
+          kk = Tk[yk++];
           break;
         case 218:
-          CC = NC.getUint16(nC), nC += 2;
+          kk = Zk.getUint16(yk), yk += 2;
           break;
         case 219:
-          CC = NC.getUint32(nC), nC += 4;
+          kk = Zk.getUint32(yk), yk += 4;
           break;
         default:
           throw new Error("Expected string")
       }
-      return TC(CC)
+      return fk(kk)
     }
 
-    function UC(CC) {
-      return SC.copyBuffers ? Uint8Array.prototype.slice.call(wC, nC, nC += CC) : wC.subarray(nC, nC += CC)
+    function hk(kk) {
+      return wk.copyBuffers ? Uint8Array.prototype.slice.call(Tk, yk, yk += kk) : Tk.subarray(yk, yk += kk)
     }
 
-    function BC(CC) {
-      let zC = wC[nC++];
-      if (GC[zC]) {
-        let ZC;
-        return GC[zC](wC.subarray(nC, ZC = nC += CC), (CC => {
-          nC = CC;
+    function rk(kk) {
+      let Fk = Tk[yk++];
+      if (xk[Fk]) {
+        let Ik;
+        return xk[Fk](Tk.subarray(yk, Ik = yk += kk), (kk => {
+          yk = kk;
           try {
-            return dC()
+            return Gk()
           } finally {
-            nC = ZC
+            yk = Ik
           }
         }))
       }
-      throw new Error("Unknown extension type " + zC)
+      throw new Error("Unknown extension type " + Fk)
     }
-    var OC = new Array(4096);
+    var Dk = new Array(4096);
 
-    function kC() {
-      let CC = wC[nC++];
-      if (!(CC >= 160 && CC < 192)) return nC--, VC(dC());
-      if (CC -= 160, PC >= nC) return qC.slice(nC - pC, (nC += CC) - pC);
-      if (!(0 == PC && bC < 180)) return XC(CC);
-      let zC, ZC = 4095 & (CC << 5 ^ (CC > 1 ? NC.getUint16(nC) : CC > 0 ? wC[nC] : 0)),
-        QC = OC[ZC],
-        fC = nC,
-        oC = nC + CC - 3,
-        FC = 0;
-      if (QC && QC.bytes == CC) {
-        for (; fC < oC;) {
-          if (zC = NC.getUint32(fC), zC != QC[FC++]) {
-            fC = 1879048192;
+    function Mk() {
+      let kk = Tk[yk++];
+      if (!(kk >= 160 && kk < 192)) return yk--, kF(Gk());
+      if (kk -= 160, Jk >= yk) return qk.slice(yk - Hk, (yk += kk) - Hk);
+      if (!(0 == Jk && ik < 180)) return Uk(kk);
+      let Fk, Ik = 4095 & (kk << 5 ^ (kk > 1 ? Zk.getUint16(yk) : kk > 0 ? Tk[yk] : 0)),
+        Xk = Dk[Ik],
+        lk = yk,
+        ak = yk + kk - 3,
+        Lk = 0;
+      if (Xk && Xk.bytes == kk) {
+        for (; lk < ak;) {
+          if (Fk = Zk.getUint32(lk), Fk != Xk[Lk++]) {
+            lk = 1879048192;
             break
           }
-          fC += 4
+          lk += 4
         }
-        for (oC += 3; fC < oC;)
-          if (zC = wC[fC++], zC != QC[FC++]) {
-            fC = 1879048192;
+        for (ak += 3; lk < ak;)
+          if (Fk = Tk[lk++], Fk != Xk[Lk++]) {
+            lk = 1879048192;
             break
-          } if (fC === oC) return nC = fC, QC.string;
-        oC -= 3, fC = nC
+          } if (lk === ak) return yk = lk, Xk.string;
+        ak -= 3, lk = yk
       }
-      for (QC = [], OC[ZC] = QC, QC.bytes = CC; fC < oC;) zC = NC.getUint32(fC), QC.push(zC), fC += 4;
-      for (oC += 3; fC < oC;) zC = wC[fC++], QC.push(zC);
-      let WC = CC < 16 ? yC(CC) : jC(CC);
-      return QC.string = null != WC ? WC : XC(CC)
+      for (Xk = [], Dk[Ik] = Xk, Xk.bytes = kk; lk < ak;) Fk = Zk.getUint32(lk), Xk.push(Fk), lk += 4;
+      for (ak += 3; lk < ak;) Fk = Tk[lk++], Xk.push(Fk);
+      let tk = kk < 16 ? gk(kk) : Ak(kk);
+      return Xk.string = null != tk ? tk : Uk(kk)
     }
 
-    function VC(CC) {
-      if ("string" === typeof CC) return CC;
-      if ("number" === typeof CC || "boolean" === typeof CC || "bigint" === typeof CC) return CC.toString();
-      if (null == CC) return CC + "";
-      if (SC.allowArraysInMapKeys && Array.isArray(CC) && CC.flat().every((CC => ["string", "number", "boolean", "bigint"].includes(typeof CC)))) return CC.flat().toString();
-      throw new Error("Invalid property type for record: " + typeof CC)
+    function kF(kk) {
+      if ("string" === typeof kk) return kk;
+      if ("number" === typeof kk || "boolean" === typeof kk || "bigint" === typeof kk) return kk.toString();
+      if (null == kk) return kk + "";
+      if (wk.allowArraysInMapKeys && Array.isArray(kk) && kk.flat().every((kk => ["string", "number", "boolean", "bigint"].includes(typeof kk)))) return kk.flat().toString();
+      throw new Error("Invalid property type for record: " + typeof kk)
     }
-    const Cz = (CC, zC) => {
-      let ZC = dC().map(VC),
-        QC = CC;
-      void 0 !== zC && (CC = CC < 32 ? -((zC << 5) + CC) : (zC << 5) + CC, ZC.highByte = zC);
-      let wC = oC[CC];
-      return wC && (wC.isShared || vC) && ((oC.restoreStructures || (oC.restoreStructures = []))[CC] = wC), oC[CC] = ZC, ZC.read = HC(ZC, QC), ZC.read()
+    const FF = (kk, Fk) => {
+      let Ik = Gk().map(kF),
+        Xk = kk;
+      void 0 !== Fk && (kk = kk < 32 ? -((Fk << 5) + kk) : (Fk << 5) + kk, Ik.highByte = Fk);
+      let Tk = ak[kk];
+      return Tk && (Tk.isShared || Sk) && ((ak.restoreStructures || (ak.restoreStructures = []))[kk] = Tk), ak[kk] = Ik, Ik.read = uk(Ik, Xk), Ik.read()
     };
-    GC[0] = () => {}, GC[0].noBuffer = !0, GC[66] = CC => {
-      let zC = CC.length,
-        ZC = BigInt(128 & CC[0] ? CC[0] - 256 : CC[0]);
-      for (let QC = 1; QC < zC; QC++) ZC <<= BigInt(8), ZC += BigInt(CC[QC]);
-      return ZC
+    xk[0] = () => {}, xk[0].noBuffer = !0, xk[66] = kk => {
+      let Fk = kk.length,
+        Ik = BigInt(128 & kk[0] ? kk[0] - 256 : kk[0]);
+      for (let Xk = 1; Xk < Fk; Xk++) Ik <<= BigInt(8), Ik += BigInt(kk[Xk]);
+      return Ik
     };
-    let zz = {
+    let IF = {
       Error: Error,
       TypeError: TypeError,
       ReferenceError: ReferenceError
     };
-    GC[101] = () => {
-      let CC = dC();
-      return (zz[CC[0]] || Error)(CC[1], {
-        cause: CC[2]
+    xk[101] = () => {
+      let kk = Gk();
+      return (IF[kk[0]] || Error)(kk[1], {
+        cause: kk[2]
       })
-    }, GC[105] = CC => {
-      if (!1 === SC.structuredClone) throw new Error("Structured clone extension is disabled");
-      let zC = NC.getUint32(nC - 4);
-      WC || (WC = new Map);
-      let ZC, QC = wC[nC];
-      ZC = QC >= 144 && QC < 160 || 220 == QC || 221 == QC ? [] : {};
-      let bC = {
-        target: ZC
+    }, xk[105] = kk => {
+      if (!1 === wk.structuredClone) throw new Error("Structured clone extension is disabled");
+      let Fk = Zk.getUint32(yk - 4);
+      tk || (tk = new Map);
+      let Ik, Xk = Tk[yk];
+      Ik = Xk >= 144 && Xk < 160 || 220 == Xk || 221 == Xk ? [] : {};
+      let ik = {
+        target: Ik
       };
-      WC.set(zC, bC);
-      let fC = dC();
-      return bC.used ? Object.assign(ZC, fC) : (bC.target = fC, fC)
-    }, GC[112] = CC => {
-      if (!1 === SC.structuredClone) throw new Error("Structured clone extension is disabled");
-      let zC = NC.getUint32(nC - 4),
-        ZC = WC.get(zC);
-      return ZC.used = !0, ZC.target
-    }, GC[115] = () => new Set(dC());
-    const Zz = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((CC => CC + "Array"));
-    let Qz = "object" === typeof globalThis ? globalThis : window;
-    GC[116] = CC => {
-      let zC = CC[0],
-        ZC = Zz[zC];
-      if (!ZC) {
-        if (16 === zC) {
-          let zC = new ArrayBuffer(CC.length - 1);
-          return new Uint8Array(zC).set(CC.subarray(1)), zC
+      tk.set(Fk, ik);
+      let lk = Gk();
+      return ik.used ? Object.assign(Ik, lk) : (ik.target = lk, lk)
+    }, xk[112] = kk => {
+      if (!1 === wk.structuredClone) throw new Error("Structured clone extension is disabled");
+      let Fk = Zk.getUint32(yk - 4),
+        Ik = tk.get(Fk);
+      return Ik.used = !0, Ik.target
+    }, xk[115] = () => new Set(Gk());
+    const XF = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((kk => kk + "Array"));
+    let TF = "object" === typeof globalThis ? globalThis : window;
+    xk[116] = kk => {
+      let Fk = kk[0],
+        Ik = XF[Fk];
+      if (!Ik) {
+        if (16 === Fk) {
+          let Fk = new ArrayBuffer(kk.length - 1);
+          return new Uint8Array(Fk).set(kk.subarray(1)), Fk
         }
-        throw new Error("Could not find typed array for code " + zC)
+        throw new Error("Could not find typed array for code " + Fk)
       }
-      return new Qz[ZC](Uint8Array.prototype.slice.call(CC, 1).buffer)
-    }, GC[120] = () => {
-      let CC = dC();
-      return new RegExp(CC[0], CC[1])
+      return new TF[Ik](Uint8Array.prototype.slice.call(kk, 1).buffer)
+    }, xk[120] = () => {
+      let kk = Gk();
+      return new RegExp(kk[0], kk[1])
     };
-    const wz = [];
+    const iF = [];
 
-    function bz(CC) {
-      iC && iC();
-      let zC = bC,
-        ZC = nC,
-        QC = gC,
-        fC = pC,
-        GC = PC,
-        RC = qC,
-        AC = MC,
-        xC = WC,
-        JC = FC,
-        IC = new Uint8Array(wC.slice(0, bC)),
-        eC = oC,
-        hC = oC.slice(0, oC.length),
-        KC = SC,
-        YC = vC,
-        dC = CC();
-      return bC = zC, nC = ZC, gC = QC, pC = fC, PC = GC, qC = RC, MC = AC, WC = xC, FC = JC, wC = IC, vC = YC, (oC = eC).splice(0, oC.length, ...hC), SC = KC, NC = new DataView(wC.buffer, wC.byteOffset, wC.byteLength), dC
+    function yF(kk) {
+      zk && zk();
+      let Fk = ik,
+        Ik = yk,
+        Xk = ek,
+        lk = Hk,
+        xk = Jk,
+        Pk = qk,
+        Kk = jk,
+        Qk = tk,
+        sk = Lk,
+        Vk = new Uint8Array(Tk.slice(0, ik)),
+        vk = ak,
+        Ek = ak.slice(0, ak.length),
+        Ok = wk,
+        nk = Sk,
+        Gk = kk();
+      return ik = Fk, yk = Ik, ek = Xk, Hk = lk, Jk = xk, qk = Pk, jk = Kk, tk = Qk, Lk = sk, Tk = Vk, Sk = nk, (ak = vk).splice(0, ak.length, ...Ek), wk = Ok, Zk = new DataView(Tk.buffer, Tk.byteOffset, Tk.byteLength), Gk
     }
 
-    function nz() {
-      wC = null, WC = null, oC = null
+    function lF() {
+      Tk = null, tk = null, ak = null
     }
-    GC[98] = CC => {
-      let zC = (CC[0] << 24) + (CC[1] << 16) + (CC[2] << 8) + CC[3],
-        ZC = nC;
-      return nC += zC - CC.length, FC = wz, (FC = [LC(), LC()]).position0 = 0, FC.position1 = 0, FC.postBundlePosition = nC, nC = ZC, dC()
-    }, GC[255] = CC => 4 == CC.length ? new Date(1e3 * (16777216 * CC[0] + (CC[1] << 16) + (CC[2] << 8) + CC[3])) : 8 == CC.length ? new Date(((CC[0] << 22) + (CC[1] << 14) + (CC[2] << 6) + (CC[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & CC[3]) + 16777216 * CC[4] + (CC[5] << 16) + (CC[6] << 8) + CC[7])) : 12 == CC.length ? new Date(((CC[0] << 24) + (CC[1] << 16) + (CC[2] << 8) + CC[3]) / 1e6 + 1e3 * ((128 & CC[4] ? -281474976710656 : 0) + 1099511627776 * CC[6] + 4294967296 * CC[7] + 16777216 * CC[8] + (CC[9] << 16) + (CC[10] << 8) + CC[11])) : new Date("invalid");
-    const fz = new Array(147);
-    for (let wZ = 0; wZ < 256; wZ++) fz[wZ] = +("1e" + Math.floor(45.15 - .30103 * wZ));
-    const oz = hC;
-    var qz = new hC({
+    xk[98] = kk => {
+      let Fk = (kk[0] << 24) + (kk[1] << 16) + (kk[2] << 8) + kk[3],
+        Ik = yk;
+      return yk += Fk - kk.length, Lk = iF, (Lk = [mk(), mk()]).position0 = 0, Lk.position1 = 0, Lk.postBundlePosition = yk, yk = Ik, Gk()
+    }, xk[255] = kk => 4 == kk.length ? new Date(1e3 * (16777216 * kk[0] + (kk[1] << 16) + (kk[2] << 8) + kk[3])) : 8 == kk.length ? new Date(((kk[0] << 22) + (kk[1] << 14) + (kk[2] << 6) + (kk[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & kk[3]) + 16777216 * kk[4] + (kk[5] << 16) + (kk[6] << 8) + kk[7])) : 12 == kk.length ? new Date(((kk[0] << 24) + (kk[1] << 16) + (kk[2] << 8) + kk[3]) / 1e6 + 1e3 * ((128 & kk[4] ? -281474976710656 : 0) + 1099511627776 * kk[6] + 4294967296 * kk[7] + 16777216 * kk[8] + (kk[9] << 16) + (kk[10] << 8) + kk[11])) : new Date("invalid");
+    const aF = new Array(147);
+    for (let iI = 0; iI < 256; iI++) aF[iI] = +("1e" + Math.floor(45.15 - .30103 * iI));
+    const qF = Ek;
+    var LF = new Ek({
       useRecords: !1
     });
-    const Fz = qz.unpack,
-      Wz = qz.unpackMultiple,
-      Nz = qz.unpack,
-      Mz = {
+    const tF = LF.unpack,
+      ZF = LF.unpackMultiple,
+      jF = LF.unpack,
+      eF = {
         NEVER: 0,
         ALWAYS: 1,
         DECIMAL_ROUND: 3,
         DECIMAL_FIT: 4
       };
-    let gz, Sz, pz, Pz = new Float32Array(1),
-      Gz = new Uint8Array(Pz.buffer, 0, 4);
+    let wF, HF, JF, xF = new Float32Array(1),
+      PF = new Uint8Array(xF.buffer, 0, 4);
 
-    function Rz(CC) {
-      Pz[0] = CC;
-      let zC = fz[(127 & Gz[3]) << 1 | Gz[2] >> 7];
-      return (zC * CC + (CC > 0 ? .5 : -.5) | 0) / zC
+    function KF(kk) {
+      xF[0] = kk;
+      let Fk = aF[(127 & PF[3]) << 1 | PF[2] >> 7];
+      return (Fk * kk + (kk > 0 ? .5 : -.5) | 0) / Fk
     }
     try {
-      gz = new TextEncoder
-    } catch (QZ) {}
-    const Az = "undefined" !== typeof Buffer,
-      xz = Az ? function(CC) {
-        return Buffer.allocUnsafeSlow(CC)
+      wF = new TextEncoder
+    } catch (TI) {}
+    const QF = "undefined" !== typeof Buffer,
+      sF = QF ? function(kk) {
+        return Buffer.allocUnsafeSlow(kk)
       } : Uint8Array,
-      Jz = Az ? Buffer : Uint8Array,
-      Iz = Az ? 4294967296 : 2144337920;
-    let iz, vz, ez, hz, Kz, Yz = 0,
-      dz = null;
-    const mz = /[\u0080-\uFFFF]/,
-      Hz = Symbol("record-id");
-    class Ez extends hC {
-      constructor(CC) {
-        let zC, ZC, QC, wC;
-        super(CC), this.offset = 0;
-        let bC = Jz.prototype.utf8Write ? function(CC, zC) {
-            return iz.utf8Write(CC, zC, iz.byteLength - zC)
-          } : !(!gz || !gz.encodeInto) && function(CC, zC) {
-            return gz.encodeInto(CC, iz.subarray(zC)).written
+      VF = QF ? Buffer : Uint8Array,
+      zF = QF ? 4294967296 : 2144337920;
+    let SF, oF, vF, EF, OF, nF = 0,
+      GF = null;
+    const pF = /[\u0080-\uFFFF]/,
+      uF = Symbol("record-id");
+    class bF extends Ek {
+      constructor(kk) {
+        let Fk, Ik, Xk, Tk;
+        super(kk), this.offset = 0;
+        let ik = VF.prototype.utf8Write ? function(kk, Fk) {
+            return SF.utf8Write(kk, Fk, SF.byteLength - Fk)
+          } : !(!wF || !wF.encodeInto) && function(kk, Fk) {
+            return wF.encodeInto(kk, SF.subarray(Fk)).written
           },
-          nC = this;
-        CC || (CC = {});
-        let fC = CC && CC.sequential,
-          oC = CC.structures || CC.saveStructures,
-          qC = CC.maxSharedStructures;
-        if (null == qC && (qC = oC ? 32 : 0), qC > 8160) throw new Error("Maximum maxSharedStructure is 8160");
-        CC.structuredClone && void 0 == CC.moreTypes && (this.moreTypes = !0);
-        let FC = CC.maxOwnStructures;
-        null == FC && (FC = oC ? 32 : 64), this.structures || 0 == CC.useRecords || (this.structures = []);
-        let WC = qC > 32 || FC + qC > 64,
-          NC = qC + 64,
-          MC = qC + FC + 64;
-        if (MC > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
-        let gC = [],
-          SC = 0,
-          pC = 0;
-        this.pack = this.encode = function(CC, bC) {
-          if (iz || (iz = new xz(8192), ez = iz.dataView || (iz.dataView = new DataView(iz.buffer, 0, 8192)), Yz = 0), hz = iz.length - 10, hz - Yz < 2048 ? (iz = new xz(iz.length), ez = iz.dataView || (iz.dataView = new DataView(iz.buffer, 0, iz.length)), hz = iz.length - 10, Yz = 0) : Yz = Yz + 7 & 2147483640, zC = Yz, bC & kz && (Yz += 255 & bC), wC = nC.structuredClone ? new Map : null, nC.bundleStrings && "string" !== typeof CC ? (dz = [], dz.size = 1 / 0) : dz = null, QC = nC.structures, QC) {
-            QC.uninitialized && (QC = nC._mergeStructures(nC.getStructures()));
-            let CC = QC.sharedLength || 0;
-            if (CC > qC) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + QC.sharedLength);
-            if (!QC.transitions) {
-              QC.transitions = Object.create(null);
-              for (let zC = 0; zC < CC; zC++) {
-                let CC = QC[zC];
-                if (!CC) continue;
-                let ZC, wC = QC.transitions;
-                for (let zC = 0, QC = CC.length; zC < QC; zC++) {
-                  let QC = CC[zC];
-                  ZC = wC[QC], ZC || (ZC = wC[QC] = Object.create(null)), wC = ZC
+          yk = this;
+        kk || (kk = {});
+        let lk = kk && kk.sequential,
+          ak = kk.structures || kk.saveStructures,
+          qk = kk.maxSharedStructures;
+        if (null == qk && (qk = ak ? 32 : 0), qk > 8160) throw new Error("Maximum maxSharedStructure is 8160");
+        kk.structuredClone && void 0 == kk.moreTypes && (this.moreTypes = !0);
+        let Lk = kk.maxOwnStructures;
+        null == Lk && (Lk = ak ? 32 : 64), this.structures || 0 == kk.useRecords || (this.structures = []);
+        let tk = qk > 32 || Lk + qk > 64,
+          Zk = qk + 64,
+          jk = qk + Lk + 64;
+        if (jk > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
+        let ek = [],
+          wk = 0,
+          Hk = 0;
+        this.pack = this.encode = function(kk, ik) {
+          if (SF || (SF = new sF(8192), vF = SF.dataView || (SF.dataView = new DataView(SF.buffer, 0, 8192)), nF = 0), EF = SF.length - 10, EF - nF < 2048 ? (SF = new sF(SF.length), vF = SF.dataView || (SF.dataView = new DataView(SF.buffer, 0, SF.length)), EF = SF.length - 10, nF = 0) : nF = nF + 7 & 2147483640, Fk = nF, ik & MF && (nF += 255 & ik), Tk = yk.structuredClone ? new Map : null, yk.bundleStrings && "string" !== typeof kk ? (GF = [], GF.size = 1 / 0) : GF = null, Xk = yk.structures, Xk) {
+            Xk.uninitialized && (Xk = yk._mergeStructures(yk.getStructures()));
+            let kk = Xk.sharedLength || 0;
+            if (kk > qk) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + Xk.sharedLength);
+            if (!Xk.transitions) {
+              Xk.transitions = Object.create(null);
+              for (let Fk = 0; Fk < kk; Fk++) {
+                let kk = Xk[Fk];
+                if (!kk) continue;
+                let Ik, Tk = Xk.transitions;
+                for (let Fk = 0, Xk = kk.length; Fk < Xk; Fk++) {
+                  let Xk = kk[Fk];
+                  Ik = Tk[Xk], Ik || (Ik = Tk[Xk] = Object.create(null)), Tk = Ik
                 }
-                wC[Hz] = zC + 64
+                Tk[uF] = Fk + 64
               }
-              this.lastNamedStructuresLength = CC
+              this.lastNamedStructuresLength = kk
             }
-            fC || (QC.nextId = CC + 64)
+            lk || (Xk.nextId = kk + 64)
           }
-          let oC;
-          ZC && (ZC = !1);
+          let ak;
+          Ik && (Ik = !1);
           try {
-            nC.randomAccessStructure && CC && CC.constructor && CC.constructor === Object ? hC(CC) : RC(CC);
-            let ZC = dz;
-            if (dz && uz(zC, RC, 0), wC && wC.idsToInsert) {
-              let CC = wC.idsToInsert.sort(((CC, zC) => CC.offset > zC.offset ? 1 : -1)),
-                QC = CC.length,
-                bC = -1;
-              for (; ZC && QC > 0;) {
-                let wC = CC[--QC].offset + zC;
-                wC < ZC.stringsPosition + zC && -1 === bC && (bC = 0), wC > ZC.position + zC ? bC >= 0 && (bC += 6) : (bC >= 0 && (ez.setUint32(ZC.position + zC, ez.getUint32(ZC.position + zC) + bC), bC = -1), ZC = ZC.previous, QC++)
+            yk.randomAccessStructure && kk && kk.constructor && kk.constructor === Object ? Ek(kk) : Pk(kk);
+            let Ik = GF;
+            if (GF && NF(Fk, Pk, 0), Tk && Tk.idsToInsert) {
+              let kk = Tk.idsToInsert.sort(((kk, Fk) => kk.offset > Fk.offset ? 1 : -1)),
+                Xk = kk.length,
+                ik = -1;
+              for (; Ik && Xk > 0;) {
+                let Tk = kk[--Xk].offset + Fk;
+                Tk < Ik.stringsPosition + Fk && -1 === ik && (ik = 0), Tk > Ik.position + Fk ? ik >= 0 && (ik += 6) : (ik >= 0 && (vF.setUint32(Ik.position + Fk, vF.getUint32(Ik.position + Fk) + ik), ik = -1), Ik = Ik.previous, Xk++)
               }
-              bC >= 0 && ZC && ez.setUint32(ZC.position + zC, ez.getUint32(ZC.position + zC) + bC), Yz += 6 * CC.length, Yz > hz && iC(Yz), nC.offset = Yz;
-              let fC = function(CC, zC) {
-                let ZC, QC = 6 * zC.length,
-                  wC = CC.length - QC;
-                for (; ZC = zC.pop();) {
-                  let zC = ZC.offset,
-                    bC = ZC.id;
-                  CC.copyWithin(zC + QC, zC, wC), QC -= 6;
-                  let nC = zC + QC;
-                  CC[nC++] = 214, CC[nC++] = 105, CC[nC++] = bC >> 24, CC[nC++] = bC >> 16 & 255, CC[nC++] = bC >> 8 & 255, CC[nC++] = 255 & bC, wC = zC
+              ik >= 0 && Ik && vF.setUint32(Ik.position + Fk, vF.getUint32(Ik.position + Fk) + ik), nF += 6 * kk.length, nF > EF && zk(nF), yk.offset = nF;
+              let lk = function(kk, Fk) {
+                let Ik, Xk = 6 * Fk.length,
+                  Tk = kk.length - Xk;
+                for (; Ik = Fk.pop();) {
+                  let Fk = Ik.offset,
+                    ik = Ik.id;
+                  kk.copyWithin(Fk + Xk, Fk, Tk), Xk -= 6;
+                  let yk = Fk + Xk;
+                  kk[yk++] = 214, kk[yk++] = 105, kk[yk++] = ik >> 24, kk[yk++] = ik >> 16 & 255, kk[yk++] = ik >> 8 & 255, kk[yk++] = 255 & ik, Tk = Fk
                 }
-                return CC
-              }(iz.subarray(zC, Yz), CC);
-              return wC = null, fC
+                return kk
+              }(SF.subarray(Fk, nF), kk);
+              return Tk = null, lk
             }
-            return nC.offset = Yz, bC & Bz ? (iz.start = zC, iz.end = Yz, iz) : iz.subarray(zC, Yz)
-          } catch (QZ) {
-            throw oC = QZ, QZ
+            return yk.offset = nF, ik & rF ? (SF.start = Fk, SF.end = nF, SF) : SF.subarray(Fk, nF)
+          } catch (TI) {
+            throw ak = TI, TI
           } finally {
-            if (QC && (PC(), ZC && nC.saveStructures)) {
-              let ZC = QC.sharedLength || 0,
-                wC = iz.subarray(zC, Yz),
-                fC = sz(QC, nC);
-              if (!oC) return !1 === nC.saveStructures(fC, fC.isCompatible) ? nC.pack(CC, bC) : (nC.lastNamedStructuresLength = ZC, iz.length > 1073741824 && (iz = null), wC)
+            if (Xk && (Jk(), Ik && yk.saveStructures)) {
+              let Ik = Xk.sharedLength || 0,
+                Tk = SF.subarray(Fk, nF),
+                lk = WF(Xk, yk);
+              if (!ak) return !1 === yk.saveStructures(lk, lk.isCompatible) ? yk.pack(kk, ik) : (yk.lastNamedStructuresLength = Ik, SF.length > 1073741824 && (SF = null), Tk)
             }
-            iz.length > 1073741824 && (iz = null), bC & Oz && (Yz = zC)
+            SF.length > 1073741824 && (SF = null), ik & DF && (nF = Fk)
           }
         };
-        const PC = () => {
-            pC < 10 && pC++;
-            let CC = QC.sharedLength || 0;
-            if (QC.length > CC && !fC && (QC.length = CC), SC > 1e4) QC.transitions = null, pC = 0, SC = 0, gC.length > 0 && (gC = []);
-            else if (gC.length > 0 && !fC) {
-              for (let CC = 0, zC = gC.length; CC < zC; CC++) gC[CC][Hz] = 0;
-              gC = []
+        const Jk = () => {
+            Hk < 10 && Hk++;
+            let kk = Xk.sharedLength || 0;
+            if (Xk.length > kk && !lk && (Xk.length = kk), wk > 1e4) Xk.transitions = null, Hk = 0, wk = 0, ek.length > 0 && (ek = []);
+            else if (ek.length > 0 && !lk) {
+              for (let kk = 0, Fk = ek.length; kk < Fk; kk++) ek[kk][uF] = 0;
+              ek = []
             }
           },
-          GC = CC => {
-            var zC = CC.length;
-            zC < 16 ? iz[Yz++] = 144 | zC : zC < 65536 ? (iz[Yz++] = 220, iz[Yz++] = zC >> 8, iz[Yz++] = 255 & zC) : (iz[Yz++] = 221, ez.setUint32(Yz, zC), Yz += 4);
-            for (let ZC = 0; ZC < zC; ZC++) RC(CC[ZC])
+          xk = kk => {
+            var Fk = kk.length;
+            Fk < 16 ? SF[nF++] = 144 | Fk : Fk < 65536 ? (SF[nF++] = 220, SF[nF++] = Fk >> 8, SF[nF++] = 255 & Fk) : (SF[nF++] = 221, vF.setUint32(nF, Fk), nF += 4);
+            for (let Ik = 0; Ik < Fk; Ik++) Pk(kk[Ik])
           },
-          RC = CC => {
-            Yz > hz && (iz = iC(Yz));
-            var ZC, QC = typeof CC;
-            if ("string" === QC) {
-              let QC, wC = CC.length;
-              if (dz && wC >= 4 && wC < 4096) {
-                if ((dz.size += wC) > 21760) {
-                  let CC, ZC, QC = (dz[0] ? 3 * dz[0].length + dz[1].length : 0) + 10;
-                  Yz + QC > hz && (iz = iC(Yz + QC)), dz.position ? (ZC = dz, iz[Yz] = 200, Yz += 3, iz[Yz++] = 98, CC = Yz - zC, Yz += 4, uz(zC, RC, 0), ez.setUint16(CC + zC - 3, Yz - zC - CC)) : (iz[Yz++] = 214, iz[Yz++] = 98, CC = Yz - zC, Yz += 4), dz = ["", ""], dz.previous = ZC, dz.size = 0, dz.position = CC
+          Pk = kk => {
+            nF > EF && (SF = zk(nF));
+            var Ik, Xk = typeof kk;
+            if ("string" === Xk) {
+              let Xk, Tk = kk.length;
+              if (GF && Tk >= 4 && Tk < 4096) {
+                if ((GF.size += Tk) > 21760) {
+                  let kk, Ik, Xk = (GF[0] ? 3 * GF[0].length + GF[1].length : 0) + 10;
+                  nF + Xk > EF && (SF = zk(nF + Xk)), GF.position ? (Ik = GF, SF[nF] = 200, nF += 3, SF[nF++] = 98, kk = nF - Fk, nF += 4, NF(Fk, Pk, 0), vF.setUint16(kk + Fk - 3, nF - Fk - kk)) : (SF[nF++] = 214, SF[nF++] = 98, kk = nF - Fk, nF += 4), GF = ["", ""], GF.previous = Ik, GF.size = 0, GF.position = kk
                 }
-                let ZC = mz.test(CC);
-                return dz[ZC ? 0 : 1] += CC, iz[Yz++] = 193, void RC(ZC ? -wC : wC)
+                let Ik = pF.test(kk);
+                return GF[Ik ? 0 : 1] += kk, SF[nF++] = 193, void Pk(Ik ? -Tk : Tk)
               }
-              QC = wC < 32 ? 1 : wC < 256 ? 2 : wC < 65536 ? 3 : 5;
-              let nC = 3 * wC;
-              if (Yz + nC > hz && (iz = iC(Yz + nC)), wC < 64 || !bC) {
-                let zC, bC, nC, fC = Yz + QC;
-                for (zC = 0; zC < wC; zC++) bC = CC.charCodeAt(zC), bC < 128 ? iz[fC++] = bC : bC < 2048 ? (iz[fC++] = bC >> 6 | 192, iz[fC++] = 63 & bC | 128) : 55296 === (64512 & bC) && 56320 === (64512 & (nC = CC.charCodeAt(zC + 1))) ? (bC = 65536 + ((1023 & bC) << 10) + (1023 & nC), zC++, iz[fC++] = bC >> 18 | 240, iz[fC++] = bC >> 12 & 63 | 128, iz[fC++] = bC >> 6 & 63 | 128, iz[fC++] = 63 & bC | 128) : (iz[fC++] = bC >> 12 | 224, iz[fC++] = bC >> 6 & 63 | 128, iz[fC++] = 63 & bC | 128);
-                ZC = fC - Yz - QC
-              } else ZC = bC(CC, Yz + QC);
-              ZC < 32 ? iz[Yz++] = 160 | ZC : ZC < 256 ? (QC < 2 && iz.copyWithin(Yz + 2, Yz + 1, Yz + 1 + ZC), iz[Yz++] = 217, iz[Yz++] = ZC) : ZC < 65536 ? (QC < 3 && iz.copyWithin(Yz + 3, Yz + 2, Yz + 2 + ZC), iz[Yz++] = 218, iz[Yz++] = ZC >> 8, iz[Yz++] = 255 & ZC) : (QC < 5 && iz.copyWithin(Yz + 5, Yz + 3, Yz + 3 + ZC), iz[Yz++] = 219, ez.setUint32(Yz, ZC), Yz += 4), Yz += ZC
-            } else if ("number" === QC)
-              if (CC >>> 0 === CC) CC < 32 || CC < 128 && !1 === this.useRecords || CC < 64 && !this.randomAccessStructure ? iz[Yz++] = CC : CC < 256 ? (iz[Yz++] = 204, iz[Yz++] = CC) : CC < 65536 ? (iz[Yz++] = 205, iz[Yz++] = CC >> 8, iz[Yz++] = 255 & CC) : (iz[Yz++] = 206, ez.setUint32(Yz, CC), Yz += 4);
-              else if ((CC | 0) === CC) CC >= -32 ? iz[Yz++] = 256 + CC : CC >= -128 ? (iz[Yz++] = 208, iz[Yz++] = CC + 256) : CC >= -32768 ? (iz[Yz++] = 209, ez.setInt16(Yz, CC), Yz += 2) : (iz[Yz++] = 210, ez.setInt32(Yz, CC), Yz += 4);
+              Xk = Tk < 32 ? 1 : Tk < 256 ? 2 : Tk < 65536 ? 3 : 5;
+              let yk = 3 * Tk;
+              if (nF + yk > EF && (SF = zk(nF + yk)), Tk < 64 || !ik) {
+                let Fk, ik, yk, lk = nF + Xk;
+                for (Fk = 0; Fk < Tk; Fk++) ik = kk.charCodeAt(Fk), ik < 128 ? SF[lk++] = ik : ik < 2048 ? (SF[lk++] = ik >> 6 | 192, SF[lk++] = 63 & ik | 128) : 55296 === (64512 & ik) && 56320 === (64512 & (yk = kk.charCodeAt(Fk + 1))) ? (ik = 65536 + ((1023 & ik) << 10) + (1023 & yk), Fk++, SF[lk++] = ik >> 18 | 240, SF[lk++] = ik >> 12 & 63 | 128, SF[lk++] = ik >> 6 & 63 | 128, SF[lk++] = 63 & ik | 128) : (SF[lk++] = ik >> 12 | 224, SF[lk++] = ik >> 6 & 63 | 128, SF[lk++] = 63 & ik | 128);
+                Ik = lk - nF - Xk
+              } else Ik = ik(kk, nF + Xk);
+              Ik < 32 ? SF[nF++] = 160 | Ik : Ik < 256 ? (Xk < 2 && SF.copyWithin(nF + 2, nF + 1, nF + 1 + Ik), SF[nF++] = 217, SF[nF++] = Ik) : Ik < 65536 ? (Xk < 3 && SF.copyWithin(nF + 3, nF + 2, nF + 2 + Ik), SF[nF++] = 218, SF[nF++] = Ik >> 8, SF[nF++] = 255 & Ik) : (Xk < 5 && SF.copyWithin(nF + 5, nF + 3, nF + 3 + Ik), SF[nF++] = 219, vF.setUint32(nF, Ik), nF += 4), nF += Ik
+            } else if ("number" === Xk)
+              if (kk >>> 0 === kk) kk < 32 || kk < 128 && !1 === this.useRecords || kk < 64 && !this.randomAccessStructure ? SF[nF++] = kk : kk < 256 ? (SF[nF++] = 204, SF[nF++] = kk) : kk < 65536 ? (SF[nF++] = 205, SF[nF++] = kk >> 8, SF[nF++] = 255 & kk) : (SF[nF++] = 206, vF.setUint32(nF, kk), nF += 4);
+              else if ((kk | 0) === kk) kk >= -32 ? SF[nF++] = 256 + kk : kk >= -128 ? (SF[nF++] = 208, SF[nF++] = kk + 256) : kk >= -32768 ? (SF[nF++] = 209, vF.setInt16(nF, kk), nF += 2) : (SF[nF++] = 210, vF.setInt32(nF, kk), nF += 4);
             else {
-              let zC;
-              if ((zC = this.useFloat32) > 0 && CC < 4294967296 && CC >= -2147483648) {
-                let ZC;
-                if (iz[Yz++] = 202, ez.setFloat32(Yz, CC), zC < 4 || ((ZC = CC * fz[(127 & iz[Yz]) << 1 | iz[Yz + 1] >> 7]) | 0) === ZC) return void(Yz += 4);
-                Yz--
+              let Fk;
+              if ((Fk = this.useFloat32) > 0 && kk < 4294967296 && kk >= -2147483648) {
+                let Ik;
+                if (SF[nF++] = 202, vF.setFloat32(nF, kk), Fk < 4 || ((Ik = kk * aF[(127 & SF[nF]) << 1 | SF[nF + 1] >> 7]) | 0) === Ik) return void(nF += 4);
+                nF--
               }
-              iz[Yz++] = 203, ez.setFloat64(Yz, CC), Yz += 8
-            } else if ("object" === QC || "function" === QC)
-              if (CC) {
-                if (wC) {
-                  let ZC = wC.get(CC);
-                  if (ZC) {
-                    if (!ZC.id) {
-                      let CC = wC.idsToInsert || (wC.idsToInsert = []);
-                      ZC.id = CC.push(ZC)
+              SF[nF++] = 203, vF.setFloat64(nF, kk), nF += 8
+            } else if ("object" === Xk || "function" === Xk)
+              if (kk) {
+                if (Tk) {
+                  let Ik = Tk.get(kk);
+                  if (Ik) {
+                    if (!Ik.id) {
+                      let kk = Tk.idsToInsert || (Tk.idsToInsert = []);
+                      Ik.id = kk.push(Ik)
                     }
-                    return iz[Yz++] = 214, iz[Yz++] = 112, ez.setUint32(Yz, ZC.id), void(Yz += 4)
+                    return SF[nF++] = 214, SF[nF++] = 112, vF.setUint32(nF, Ik.id), void(nF += 4)
                   }
-                  wC.set(CC, {
-                    offset: Yz - zC
+                  Tk.set(kk, {
+                    offset: nF - Fk
                   })
                 }
-                let bC = CC.constructor;
-                if (bC === Object) IC(CC);
-                else if (bC === Array) GC(CC);
-                else if (bC === Map)
-                  if (this.mapAsEmptyObject) iz[Yz++] = 128;
+                let ik = kk.constructor;
+                if (ik === Object) Vk(kk);
+                else if (ik === Array) xk(kk);
+                else if (ik === Map)
+                  if (this.mapAsEmptyObject) SF[nF++] = 128;
                   else {
-                    (ZC = CC.size) < 16 ? iz[Yz++] = 128 | ZC : ZC < 65536 ? (iz[Yz++] = 222, iz[Yz++] = ZC >> 8, iz[Yz++] = 255 & ZC) : (iz[Yz++] = 223, ez.setUint32(Yz, ZC), Yz += 4);
-                    for (let [zC, ZC] of CC) RC(zC), RC(ZC)
+                    (Ik = kk.size) < 16 ? SF[nF++] = 128 | Ik : Ik < 65536 ? (SF[nF++] = 222, SF[nF++] = Ik >> 8, SF[nF++] = 255 & Ik) : (SF[nF++] = 223, vF.setUint32(nF, Ik), nF += 4);
+                    for (let [Fk, Ik] of kk) Pk(Fk), Pk(Ik)
                   }
                 else {
-                  for (let zC = 0, ZC = Sz.length; zC < ZC; zC++) {
-                    if (CC instanceof pz[zC]) {
-                      let ZC = Sz[zC];
-                      if (ZC.write) {
-                        ZC.type && (iz[Yz++] = 212, iz[Yz++] = ZC.type, iz[Yz++] = 0);
-                        let zC = ZC.write.call(this, CC);
-                        return void(zC === CC ? Array.isArray(CC) ? GC(CC) : IC(CC) : RC(zC))
+                  for (let Fk = 0, Ik = HF.length; Fk < Ik; Fk++) {
+                    if (kk instanceof JF[Fk]) {
+                      let Ik = HF[Fk];
+                      if (Ik.write) {
+                        Ik.type && (SF[nF++] = 212, SF[nF++] = Ik.type, SF[nF++] = 0);
+                        let Fk = Ik.write.call(this, kk);
+                        return void(Fk === kk ? Array.isArray(kk) ? xk(kk) : Vk(kk) : Pk(Fk))
                       }
-                      let QC, wC = iz,
-                        bC = ez,
-                        nC = Yz;
-                      iz = null;
+                      let Xk, Tk = SF,
+                        ik = vF,
+                        yk = nF;
+                      SF = null;
                       try {
-                        QC = ZC.pack.call(this, CC, (CC => (iz = wC, wC = null, Yz += CC, Yz > hz && iC(Yz), {
-                          target: iz,
-                          targetView: ez,
-                          position: Yz - CC
-                        })), RC)
+                        Xk = Ik.pack.call(this, kk, (kk => (SF = Tk, Tk = null, nF += kk, nF > EF && zk(nF), {
+                          target: SF,
+                          targetView: vF,
+                          position: nF - kk
+                        })), Pk)
                       } finally {
-                        wC && (iz = wC, ez = bC, Yz = nC, hz = iz.length - 10)
+                        Tk && (SF = Tk, vF = ik, nF = yk, EF = SF.length - 10)
                       }
-                      return void(QC && (QC.length + Yz > hz && iC(QC.length + Yz), Yz = cz(QC, iz, Yz, ZC.type)))
+                      return void(Xk && (Xk.length + nF > EF && zk(Xk.length + nF), nF = CF(Xk, SF, nF, Ik.type)))
                     }
                   }
-                  if (Array.isArray(CC)) GC(CC);
+                  if (Array.isArray(kk)) xk(kk);
                   else {
-                    if (CC.toJSON) {
-                      const zC = CC.toJSON();
-                      if (zC !== CC) return RC(zC)
+                    if (kk.toJSON) {
+                      const Fk = kk.toJSON();
+                      if (Fk !== kk) return Pk(Fk)
                     }
-                    if ("function" === QC) return RC(this.writeFunction && this.writeFunction(CC));
-                    IC(CC)
+                    if ("function" === Xk) return Pk(this.writeFunction && this.writeFunction(kk));
+                    Vk(kk)
                   }
                 }
-              } else iz[Yz++] = 192;
-            else if ("boolean" === QC) iz[Yz++] = CC ? 195 : 194;
-            else if ("bigint" === QC) {
-              if (CC < BigInt(1) << BigInt(63) && CC >= -(BigInt(1) << BigInt(63))) iz[Yz++] = 211, ez.setBigInt64(Yz, CC);
-              else if (CC < BigInt(1) << BigInt(64) && CC > 0) iz[Yz++] = 207, ez.setBigUint64(Yz, CC);
+              } else SF[nF++] = 192;
+            else if ("boolean" === Xk) SF[nF++] = kk ? 195 : 194;
+            else if ("bigint" === Xk) {
+              if (kk < BigInt(1) << BigInt(63) && kk >= -(BigInt(1) << BigInt(63))) SF[nF++] = 211, vF.setBigInt64(nF, kk);
+              else if (kk < BigInt(1) << BigInt(64) && kk > 0) SF[nF++] = 207, vF.setBigUint64(nF, kk);
               else {
                 if (!this.largeBigIntToFloat) {
-                  if (this.largeBigIntToString) return RC(CC.toString());
-                  if (this.useBigIntExtension && CC < BigInt(2) ** BigInt(1023) && CC > -(BigInt(2) ** BigInt(1023))) {
-                    iz[Yz++] = 199, Yz++, iz[Yz++] = 66;
-                    let zC, ZC = [];
+                  if (this.largeBigIntToString) return Pk(kk.toString());
+                  if (this.useBigIntExtension && kk < BigInt(2) ** BigInt(1023) && kk > -(BigInt(2) ** BigInt(1023))) {
+                    SF[nF++] = 199, nF++, SF[nF++] = 66;
+                    let Fk, Ik = [];
                     do {
-                      let QC = CC & BigInt(255);
-                      zC = (QC & BigInt(128)) === (CC < BigInt(0) ? BigInt(128) : BigInt(0)), ZC.push(QC), CC >>= BigInt(8)
-                    } while (CC !== BigInt(0) && CC !== BigInt(-1) || !zC);
-                    iz[Yz - 2] = ZC.length;
-                    for (let CC = ZC.length; CC > 0;) iz[Yz++] = Number(ZC[--CC]);
+                      let Xk = kk & BigInt(255);
+                      Fk = (Xk & BigInt(128)) === (kk < BigInt(0) ? BigInt(128) : BigInt(0)), Ik.push(Xk), kk >>= BigInt(8)
+                    } while (kk !== BigInt(0) && kk !== BigInt(-1) || !Fk);
+                    SF[nF - 2] = Ik.length;
+                    for (let kk = Ik.length; kk > 0;) SF[nF++] = Number(Ik[--kk]);
                     return
                   }
-                  throw new RangeError(CC + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
+                  throw new RangeError(kk + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
                 }
-                iz[Yz++] = 203, ez.setFloat64(Yz, Number(CC))
+                SF[nF++] = 203, vF.setFloat64(nF, Number(kk))
               }
-              Yz += 8
+              nF += 8
             } else {
-              if ("undefined" !== QC) throw new Error("Unknown type: " + QC);
-              this.encodeUndefinedAsNil ? iz[Yz++] = 192 : (iz[Yz++] = 212, iz[Yz++] = 0, iz[Yz++] = 0)
+              if ("undefined" !== Xk) throw new Error("Unknown type: " + Xk);
+              this.encodeUndefinedAsNil ? SF[nF++] = 192 : (SF[nF++] = 212, SF[nF++] = 0, SF[nF++] = 0)
             }
           },
-          AC = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? CC => {
-            let zC;
+          Kk = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? kk => {
+            let Fk;
             if (this.skipValues) {
-              zC = [];
-              for (let ZC in CC) "function" === typeof CC.hasOwnProperty && !CC.hasOwnProperty(ZC) || this.skipValues.includes(CC[ZC]) || zC.push(ZC)
-            } else zC = Object.keys(CC);
-            let ZC, QC = zC.length;
-            if (QC < 16 ? iz[Yz++] = 128 | QC : QC < 65536 ? (iz[Yz++] = 222, iz[Yz++] = QC >> 8, iz[Yz++] = 255 & QC) : (iz[Yz++] = 223, ez.setUint32(Yz, QC), Yz += 4), this.coercibleKeyAsNumber)
-              for (let wC = 0; wC < QC; wC++) {
-                ZC = zC[wC];
-                let QC = Number(ZC);
-                RC(isNaN(QC) ? ZC : QC), RC(CC[ZC])
+              Fk = [];
+              for (let Ik in kk) "function" === typeof kk.hasOwnProperty && !kk.hasOwnProperty(Ik) || this.skipValues.includes(kk[Ik]) || Fk.push(Ik)
+            } else Fk = Object.keys(kk);
+            let Ik, Xk = Fk.length;
+            if (Xk < 16 ? SF[nF++] = 128 | Xk : Xk < 65536 ? (SF[nF++] = 222, SF[nF++] = Xk >> 8, SF[nF++] = 255 & Xk) : (SF[nF++] = 223, vF.setUint32(nF, Xk), nF += 4), this.coercibleKeyAsNumber)
+              for (let Tk = 0; Tk < Xk; Tk++) {
+                Ik = Fk[Tk];
+                let Xk = Number(Ik);
+                Pk(isNaN(Xk) ? Ik : Xk), Pk(kk[Ik])
               } else
-                for (let wC = 0; wC < QC; wC++) RC(ZC = zC[wC]), RC(CC[ZC])
-          } : CC => {
-            iz[Yz++] = 222;
-            let ZC = Yz - zC;
-            Yz += 2;
-            let QC = 0;
-            for (let zC in CC)("function" !== typeof CC.hasOwnProperty || CC.hasOwnProperty(zC)) && (RC(zC), RC(CC[zC]), QC++);
-            if (QC > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
-            iz[ZC++ + zC] = QC >> 8, iz[ZC + zC] = 255 & QC
+                for (let Tk = 0; Tk < Xk; Tk++) Pk(Ik = Fk[Tk]), Pk(kk[Ik])
+          } : kk => {
+            SF[nF++] = 222;
+            let Ik = nF - Fk;
+            nF += 2;
+            let Xk = 0;
+            for (let Fk in kk)("function" !== typeof kk.hasOwnProperty || kk.hasOwnProperty(Fk)) && (Pk(Fk), Pk(kk[Fk]), Xk++);
+            if (Xk > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
+            SF[Ik++ + Fk] = Xk >> 8, SF[Ik + Fk] = 255 & Xk
           },
-          xC = !1 === this.useRecords ? AC : CC.progressiveRecords && !WC ? CC => {
-            let ZC, wC, bC = QC.transitions || (QC.transitions = Object.create(null)),
-              nC = Yz++ - zC;
-            for (let fC in CC)
-              if ("function" !== typeof CC.hasOwnProperty || CC.hasOwnProperty(fC)) {
-                if (ZC = bC[fC], ZC) bC = ZC;
+          Qk = !1 === this.useRecords ? Kk : kk.progressiveRecords && !tk ? kk => {
+            let Ik, Tk, ik = Xk.transitions || (Xk.transitions = Object.create(null)),
+              yk = nF++ - Fk;
+            for (let lk in kk)
+              if ("function" !== typeof kk.hasOwnProperty || kk.hasOwnProperty(lk)) {
+                if (Ik = ik[lk], Ik) ik = Ik;
                 else {
-                  let oC = Object.keys(CC),
-                    qC = bC;
-                  bC = QC.transitions;
-                  let FC = 0;
-                  for (let CC = 0, zC = oC.length; CC < zC; CC++) {
-                    let zC = oC[CC];
-                    ZC = bC[zC], ZC || (ZC = bC[zC] = Object.create(null), FC++), bC = ZC
+                  let ak = Object.keys(kk),
+                    qk = ik;
+                  ik = Xk.transitions;
+                  let Lk = 0;
+                  for (let kk = 0, Fk = ak.length; kk < Fk; kk++) {
+                    let Fk = ak[kk];
+                    Ik = ik[Fk], Ik || (Ik = ik[Fk] = Object.create(null), Lk++), ik = Ik
                   }
-                  nC + zC + 1 == Yz ? (Yz--, vC(bC, oC, FC)) : eC(bC, oC, nC, FC), wC = !0, bC = qC[fC]
+                  yk + Fk + 1 == nF ? (nF--, Sk(ik, ak, Lk)) : vk(ik, ak, yk, Lk), Tk = !0, ik = qk[lk]
                 }
-                RC(CC[fC])
-              } if (!wC) {
-              let ZC = bC[Hz];
-              ZC ? iz[nC + zC] = ZC : eC(bC, Object.keys(CC), nC, 0)
+                Pk(kk[lk])
+              } if (!Tk) {
+              let Ik = ik[uF];
+              Ik ? SF[yk + Fk] = Ik : vk(ik, Object.keys(kk), yk, 0)
             }
-          } : CC => {
-            let zC, ZC = QC.transitions || (QC.transitions = Object.create(null)),
-              wC = 0;
-            for (let QC in CC)("function" !== typeof CC.hasOwnProperty || CC.hasOwnProperty(QC)) && (zC = ZC[QC], zC || (zC = ZC[QC] = Object.create(null), wC++), ZC = zC);
-            let bC = ZC[Hz];
-            bC ? bC >= 96 && WC ? (iz[Yz++] = 96 + (31 & (bC -= 96)), iz[Yz++] = bC >> 5) : iz[Yz++] = bC : vC(ZC, ZC.__keys__ || Object.keys(CC), wC);
-            for (let QC in CC)("function" !== typeof CC.hasOwnProperty || CC.hasOwnProperty(QC)) && RC(CC[QC])
+          } : kk => {
+            let Fk, Ik = Xk.transitions || (Xk.transitions = Object.create(null)),
+              Tk = 0;
+            for (let Xk in kk)("function" !== typeof kk.hasOwnProperty || kk.hasOwnProperty(Xk)) && (Fk = Ik[Xk], Fk || (Fk = Ik[Xk] = Object.create(null), Tk++), Ik = Fk);
+            let ik = Ik[uF];
+            ik ? ik >= 96 && tk ? (SF[nF++] = 96 + (31 & (ik -= 96)), SF[nF++] = ik >> 5) : SF[nF++] = ik : Sk(Ik, Ik.__keys__ || Object.keys(kk), Tk);
+            for (let Xk in kk)("function" !== typeof kk.hasOwnProperty || kk.hasOwnProperty(Xk)) && Pk(kk[Xk])
           },
-          JC = "function" == typeof this.useRecords && this.useRecords,
-          IC = JC ? CC => {
-            JC(CC) ? xC(CC) : AC(CC)
-          } : xC,
-          iC = CC => {
-            let ZC;
-            if (CC > 16777216) {
-              if (CC - zC > Iz) throw new Error("Packed buffer would be larger than maximum buffer size");
-              ZC = Math.min(Iz, 4096 * Math.round(Math.max((CC - zC) * (CC > 67108864 ? 1.25 : 2), 4194304) / 4096))
-            } else ZC = 1 + (Math.max(CC - zC << 2, iz.length - 1) >> 12) << 12;
-            let QC = new xz(ZC);
-            return ez = QC.dataView || (QC.dataView = new DataView(QC.buffer, 0, ZC)), CC = Math.min(CC, iz.length), iz.copy ? iz.copy(QC, 0, zC, CC) : QC.set(iz.slice(zC, CC)), Yz -= zC, zC = 0, hz = QC.length - 10, iz = QC
+          sk = "function" == typeof this.useRecords && this.useRecords,
+          Vk = sk ? kk => {
+            sk(kk) ? Qk(kk) : Kk(kk)
+          } : Qk,
+          zk = kk => {
+            let Ik;
+            if (kk > 16777216) {
+              if (kk - Fk > zF) throw new Error("Packed buffer would be larger than maximum buffer size");
+              Ik = Math.min(zF, 4096 * Math.round(Math.max((kk - Fk) * (kk > 67108864 ? 1.25 : 2), 4194304) / 4096))
+            } else Ik = 1 + (Math.max(kk - Fk << 2, SF.length - 1) >> 12) << 12;
+            let Xk = new sF(Ik);
+            return vF = Xk.dataView || (Xk.dataView = new DataView(Xk.buffer, 0, Ik)), kk = Math.min(kk, SF.length), SF.copy ? SF.copy(Xk, 0, Fk, kk) : Xk.set(SF.slice(Fk, kk)), nF -= Fk, Fk = 0, EF = Xk.length - 10, SF = Xk
           },
-          vC = (CC, zC, wC) => {
-            let bC = QC.nextId;
-            bC || (bC = 64), bC < NC && this.shouldShareStructure && !this.shouldShareStructure(zC) ? (bC = QC.nextOwnId, bC < MC || (bC = NC), QC.nextOwnId = bC + 1) : (bC >= MC && (bC = NC), QC.nextId = bC + 1);
-            let nC = zC.highByte = bC >= 96 && WC ? bC - 96 >> 5 : -1;
-            CC[Hz] = bC, CC.__keys__ = zC, QC[bC - 64] = zC, bC < NC ? (zC.isShared = !0, QC.sharedLength = bC - 63, ZC = !0, nC >= 0 ? (iz[Yz++] = 96 + (31 & bC), iz[Yz++] = nC) : iz[Yz++] = bC) : (nC >= 0 ? (iz[Yz++] = 213, iz[Yz++] = 114, iz[Yz++] = 96 + (31 & bC), iz[Yz++] = nC) : (iz[Yz++] = 212, iz[Yz++] = 114, iz[Yz++] = bC), wC && (SC += pC * wC), gC.length >= FC && (gC.shift()[Hz] = 0), gC.push(CC), RC(zC))
+          Sk = (kk, Fk, Tk) => {
+            let ik = Xk.nextId;
+            ik || (ik = 64), ik < Zk && this.shouldShareStructure && !this.shouldShareStructure(Fk) ? (ik = Xk.nextOwnId, ik < jk || (ik = Zk), Xk.nextOwnId = ik + 1) : (ik >= jk && (ik = Zk), Xk.nextId = ik + 1);
+            let yk = Fk.highByte = ik >= 96 && tk ? ik - 96 >> 5 : -1;
+            kk[uF] = ik, kk.__keys__ = Fk, Xk[ik - 64] = Fk, ik < Zk ? (Fk.isShared = !0, Xk.sharedLength = ik - 63, Ik = !0, yk >= 0 ? (SF[nF++] = 96 + (31 & ik), SF[nF++] = yk) : SF[nF++] = ik) : (yk >= 0 ? (SF[nF++] = 213, SF[nF++] = 114, SF[nF++] = 96 + (31 & ik), SF[nF++] = yk) : (SF[nF++] = 212, SF[nF++] = 114, SF[nF++] = ik), Tk && (wk += Hk * Tk), ek.length >= Lk && (ek.shift()[uF] = 0), ek.push(kk), Pk(Fk))
           },
-          eC = (CC, ZC, QC, wC) => {
-            let bC = iz,
-              nC = Yz,
-              fC = hz,
-              oC = zC;
-            iz = vz, Yz = 0, zC = 0, iz || (vz = iz = new xz(8192)), hz = iz.length - 10, vC(CC, ZC, wC), vz = iz;
-            let qC = Yz;
-            if (iz = bC, Yz = nC, hz = fC, zC = oC, qC > 1) {
-              let CC = Yz + qC - 1;
-              CC > hz && iC(CC);
-              let ZC = QC + zC;
-              iz.copyWithin(ZC + qC, ZC + 1, Yz), iz.set(vz.slice(0, qC), ZC), Yz = CC
-            } else iz[QC + zC] = vz[0]
+          vk = (kk, Ik, Xk, Tk) => {
+            let ik = SF,
+              yk = nF,
+              lk = EF,
+              ak = Fk;
+            SF = oF, nF = 0, Fk = 0, SF || (oF = SF = new sF(8192)), EF = SF.length - 10, Sk(kk, Ik, Tk), oF = SF;
+            let qk = nF;
+            if (SF = ik, nF = yk, EF = lk, Fk = ak, qk > 1) {
+              let kk = nF + qk - 1;
+              kk > EF && zk(kk);
+              let Ik = Xk + Fk;
+              SF.copyWithin(Ik + qk, Ik + 1, nF), SF.set(oF.slice(0, qk), Ik), nF = kk
+            } else SF[Xk + Fk] = oF[0]
           },
-          hC = CC => {
-            let wC = Kz(CC, iz, zC, Yz, QC, iC, ((CC, zC, QC) => {
-              if (QC) return ZC = !0;
-              Yz = zC;
-              let wC = iz;
-              return RC(CC), PC(), wC !== iz ? {
-                position: Yz,
-                targetView: ez,
-                target: iz
-              } : Yz
+          Ek = kk => {
+            let Tk = OF(kk, SF, Fk, nF, Xk, zk, ((kk, Fk, Xk) => {
+              if (Xk) return Ik = !0;
+              nF = Fk;
+              let Tk = SF;
+              return Pk(kk), Jk(), Tk !== SF ? {
+                position: nF,
+                targetView: vF,
+                target: SF
+              } : nF
             }), this);
-            if (0 === wC) return IC(CC);
-            Yz = wC
+            if (0 === Tk) return Vk(kk);
+            nF = Tk
           }
       }
-      useBuffer(CC) {
-        iz = CC, ez = iz.dataView || (iz.dataView = new DataView(iz.buffer, iz.byteOffset, iz.byteLength)), Yz = 0
+      useBuffer(kk) {
+        SF = kk, vF = SF.dataView || (SF.dataView = new DataView(SF.buffer, SF.byteOffset, SF.byteLength)), nF = 0
       }
-      set position(CC) {
-        Yz = CC
+      set position(kk) {
+        nF = kk
       }
       get position() {
-        return Yz
+        return nF
       }
-      set buffer(CC) {
-        iz = CC
+      set buffer(kk) {
+        SF = kk
       }
       get buffer() {
-        return iz
+        return SF
       }
       clearSharedData() {
         this.structures && (this.structures = []), this.typedStructs && (this.typedStructs = [])
       }
     }
 
-    function lz(CC, zC, ZC, QC) {
-      let wC = CC.byteLength;
-      if (wC + 1 < 256) {
+    function RF(kk, Fk, Ik, Xk) {
+      let Tk = kk.byteLength;
+      if (Tk + 1 < 256) {
         var {
-          target: bC,
-          position: nC
-        } = ZC(4 + wC);
-        bC[nC++] = 199, bC[nC++] = wC + 1
-      } else if (wC + 1 < 65536) {
+          target: ik,
+          position: yk
+        } = Ik(4 + Tk);
+        ik[yk++] = 199, ik[yk++] = Tk + 1
+      } else if (Tk + 1 < 65536) {
         var {
-          target: bC,
-          position: nC
-        } = ZC(5 + wC);
-        bC[nC++] = 200, bC[nC++] = wC + 1 >> 8, bC[nC++] = wC + 1 & 255
+          target: ik,
+          position: yk
+        } = Ik(5 + Tk);
+        ik[yk++] = 200, ik[yk++] = Tk + 1 >> 8, ik[yk++] = Tk + 1 & 255
       } else {
         var {
-          target: bC,
-          position: nC,
-          targetView: fC
-        } = ZC(7 + wC);
-        bC[nC++] = 201, fC.setUint32(nC, wC + 1), nC += 4
+          target: ik,
+          position: yk,
+          targetView: lk
+        } = Ik(7 + Tk);
+        ik[yk++] = 201, lk.setUint32(yk, Tk + 1), yk += 4
       }
-      bC[nC++] = 116, bC[nC++] = zC, CC.buffer || (CC = new Uint8Array(CC)), bC.set(new Uint8Array(CC.buffer, CC.byteOffset, CC.byteLength), nC)
+      ik[yk++] = 116, ik[yk++] = Fk, kk.buffer || (kk = new Uint8Array(kk)), ik.set(new Uint8Array(kk.buffer, kk.byteOffset, kk.byteLength), yk)
     }
 
-    function Xz(CC, zC) {
-      let ZC = CC.byteLength;
-      var QC, wC;
-      if (ZC < 256) {
+    function UF(kk, Fk) {
+      let Ik = kk.byteLength;
+      var Xk, Tk;
+      if (Ik < 256) {
         var {
-          target: QC,
-          position: wC
-        } = zC(ZC + 2);
-        QC[wC++] = 196, QC[wC++] = ZC
-      } else if (ZC < 65536) {
+          target: Xk,
+          position: Tk
+        } = Fk(Ik + 2);
+        Xk[Tk++] = 196, Xk[Tk++] = Ik
+      } else if (Ik < 65536) {
         var {
-          target: QC,
-          position: wC
-        } = zC(ZC + 3);
-        QC[wC++] = 197, QC[wC++] = ZC >> 8, QC[wC++] = 255 & ZC
+          target: Xk,
+          position: Tk
+        } = Fk(Ik + 3);
+        Xk[Tk++] = 197, Xk[Tk++] = Ik >> 8, Xk[Tk++] = 255 & Ik
       } else {
         var {
-          target: QC,
-          position: wC,
-          targetView: bC
-        } = zC(ZC + 5);
-        QC[wC++] = 198, bC.setUint32(wC, ZC), wC += 4
+          target: Xk,
+          position: Tk,
+          targetView: ik
+        } = Fk(Ik + 5);
+        Xk[Tk++] = 198, ik.setUint32(Tk, Ik), Tk += 4
       }
-      QC.set(CC, wC)
+      Xk.set(kk, Tk)
     }
 
-    function cz(CC, zC, ZC, QC) {
-      let wC = CC.length;
-      switch (wC) {
+    function CF(kk, Fk, Ik, Xk) {
+      let Tk = kk.length;
+      switch (Tk) {
         case 1:
-          zC[ZC++] = 212;
+          Fk[Ik++] = 212;
           break;
         case 2:
-          zC[ZC++] = 213;
+          Fk[Ik++] = 213;
           break;
         case 4:
-          zC[ZC++] = 214;
+          Fk[Ik++] = 214;
           break;
         case 8:
-          zC[ZC++] = 215;
+          Fk[Ik++] = 215;
           break;
         case 16:
-          zC[ZC++] = 216;
+          Fk[Ik++] = 216;
           break;
         default:
-          wC < 256 ? (zC[ZC++] = 199, zC[ZC++] = wC) : wC < 65536 ? (zC[ZC++] = 200, zC[ZC++] = wC >> 8, zC[ZC++] = 255 & wC) : (zC[ZC++] = 201, zC[ZC++] = wC >> 24, zC[ZC++] = wC >> 16 & 255, zC[ZC++] = wC >> 8 & 255, zC[ZC++] = 255 & wC)
+          Tk < 256 ? (Fk[Ik++] = 199, Fk[Ik++] = Tk) : Tk < 65536 ? (Fk[Ik++] = 200, Fk[Ik++] = Tk >> 8, Fk[Ik++] = 255 & Tk) : (Fk[Ik++] = 201, Fk[Ik++] = Tk >> 24, Fk[Ik++] = Tk >> 16 & 255, Fk[Ik++] = Tk >> 8 & 255, Fk[Ik++] = 255 & Tk)
       }
-      return zC[ZC++] = QC, zC.set(CC, ZC), ZC += wC
+      return Fk[Ik++] = Xk, Fk.set(kk, Ik), Ik += Tk
     }
 
-    function uz(CC, zC, ZC) {
-      if (dz.length > 0) {
-        ez.setUint32(dz.position + CC, Yz + ZC - dz.position - CC), dz.stringsPosition = Yz - CC;
-        let QC = dz;
-        dz = null, zC(QC[0]), zC(QC[1])
+    function NF(kk, Fk, Ik) {
+      if (GF.length > 0) {
+        vF.setUint32(GF.position + kk, nF + Ik - GF.position - kk), GF.stringsPosition = nF - kk;
+        let Xk = GF;
+        GF = null, Fk(Xk[0]), Fk(Xk[1])
       }
     }
 
-    function rz(CC) {
-      if (CC.Class) {
-        if (!CC.pack && !CC.write) throw new Error("Extension has no pack or write function");
-        if (CC.pack && !CC.type) throw new Error("Extension has no type (numeric code to identify the extension)");
-        pz.unshift(CC.Class), Sz.unshift(CC)
-      }! function(CC) {
-        CC.unpack ? GC[CC.type] = CC.unpack : GC[CC.type] = CC
-      }(CC)
+    function cF(kk) {
+      if (kk.Class) {
+        if (!kk.pack && !kk.write) throw new Error("Extension has no pack or write function");
+        if (kk.pack && !kk.type) throw new Error("Extension has no type (numeric code to identify the extension)");
+        JF.unshift(kk.Class), HF.unshift(kk)
+      }! function(kk) {
+        kk.unpack ? xk[kk.type] = kk.unpack : xk[kk.type] = kk
+      }(kk)
     }
 
-    function sz(CC, zC) {
-      return CC.isCompatible = CC => {
-        let ZC = !CC || (zC.lastNamedStructuresLength || 0) === CC.length;
-        return ZC || zC._mergeStructures(CC), ZC
-      }, CC
+    function WF(kk, Fk) {
+      return kk.isCompatible = kk => {
+        let Ik = !kk || (Fk.lastNamedStructuresLength || 0) === kk.length;
+        return Ik || Fk._mergeStructures(kk), Ik
+      }, kk
     }
-    pz = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, AC], Sz = [{
-      pack(CC, zC, ZC) {
-        let QC = CC.getTime() / 1e3;
-        if ((this.useTimestamp32 || 0 === CC.getMilliseconds()) && QC >= 0 && QC < 4294967296) {
+    JF = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, Kk], HF = [{
+      pack(kk, Fk, Ik) {
+        let Xk = kk.getTime() / 1e3;
+        if ((this.useTimestamp32 || 0 === kk.getMilliseconds()) && Xk >= 0 && Xk < 4294967296) {
           let {
-            target: CC,
-            targetView: ZC,
-            position: wC
-          } = zC(6);
-          CC[wC++] = 214, CC[wC++] = 255, ZC.setUint32(wC, QC)
-        } else if (QC > 0 && QC < 4294967296) {
+            target: kk,
+            targetView: Ik,
+            position: Tk
+          } = Fk(6);
+          kk[Tk++] = 214, kk[Tk++] = 255, Ik.setUint32(Tk, Xk)
+        } else if (Xk > 0 && Xk < 4294967296) {
           let {
-            target: ZC,
-            targetView: wC,
-            position: bC
-          } = zC(10);
-          ZC[bC++] = 215, ZC[bC++] = 255, wC.setUint32(bC, 4e6 * CC.getMilliseconds() + (QC / 1e3 / 4294967296 | 0)), wC.setUint32(bC + 4, QC)
-        } else if (isNaN(QC)) {
-          if (this.onInvalidDate) return zC(0), ZC(this.onInvalidDate());
+            target: Ik,
+            targetView: Tk,
+            position: ik
+          } = Fk(10);
+          Ik[ik++] = 215, Ik[ik++] = 255, Tk.setUint32(ik, 4e6 * kk.getMilliseconds() + (Xk / 1e3 / 4294967296 | 0)), Tk.setUint32(ik + 4, Xk)
+        } else if (isNaN(Xk)) {
+          if (this.onInvalidDate) return Fk(0), Ik(this.onInvalidDate());
           let {
-            target: CC,
-            targetView: QC,
-            position: wC
-          } = zC(3);
-          CC[wC++] = 212, CC[wC++] = 255, CC[wC++] = 255
+            target: kk,
+            targetView: Xk,
+            position: Tk
+          } = Fk(3);
+          kk[Tk++] = 212, kk[Tk++] = 255, kk[Tk++] = 255
         } else {
           let {
-            target: ZC,
-            targetView: wC,
-            position: bC
-          } = zC(15);
-          ZC[bC++] = 199, ZC[bC++] = 12, ZC[bC++] = 255, wC.setUint32(bC, 1e6 * CC.getMilliseconds()), wC.setBigInt64(bC + 4, BigInt(Math.floor(QC)))
+            target: Ik,
+            targetView: Tk,
+            position: ik
+          } = Fk(15);
+          Ik[ik++] = 199, Ik[ik++] = 12, Ik[ik++] = 255, Tk.setUint32(ik, 1e6 * kk.getMilliseconds()), Tk.setBigInt64(ik + 4, BigInt(Math.floor(Xk)))
         }
       }
     }, {
-      pack(CC, zC, ZC) {
-        if (this.setAsEmptyObject) return zC(0), ZC({});
-        let QC = Array.from(CC),
+      pack(kk, Fk, Ik) {
+        if (this.setAsEmptyObject) return Fk(0), Ik({});
+        let Xk = Array.from(kk),
           {
-            target: wC,
-            position: bC
-          } = zC(this.moreTypes ? 3 : 0);
-        this.moreTypes && (wC[bC++] = 212, wC[bC++] = 115, wC[bC++] = 0), ZC(QC)
+            target: Tk,
+            position: ik
+          } = Fk(this.moreTypes ? 3 : 0);
+        this.moreTypes && (Tk[ik++] = 212, Tk[ik++] = 115, Tk[ik++] = 0), Ik(Xk)
       }
     }, {
-      pack(CC, zC, ZC) {
+      pack(kk, Fk, Ik) {
         let {
-          target: QC,
-          position: wC
-        } = zC(this.moreTypes ? 3 : 0);
-        this.moreTypes && (QC[wC++] = 212, QC[wC++] = 101, QC[wC++] = 0), ZC([CC.name, CC.message, CC.cause])
+          target: Xk,
+          position: Tk
+        } = Fk(this.moreTypes ? 3 : 0);
+        this.moreTypes && (Xk[Tk++] = 212, Xk[Tk++] = 101, Xk[Tk++] = 0), Ik([kk.name, kk.message, kk.cause])
       }
     }, {
-      pack(CC, zC, ZC) {
+      pack(kk, Fk, Ik) {
         let {
-          target: QC,
-          position: wC
-        } = zC(this.moreTypes ? 3 : 0);
-        this.moreTypes && (QC[wC++] = 212, QC[wC++] = 120, QC[wC++] = 0), ZC([CC.source, CC.flags])
+          target: Xk,
+          position: Tk
+        } = Fk(this.moreTypes ? 3 : 0);
+        this.moreTypes && (Xk[Tk++] = 212, Xk[Tk++] = 120, Xk[Tk++] = 0), Ik([kk.source, kk.flags])
       }
     }, {
-      pack(CC, zC) {
-        this.moreTypes ? lz(CC, 16, zC) : Xz(Az ? Buffer.from(CC) : new Uint8Array(CC), zC)
+      pack(kk, Fk) {
+        this.moreTypes ? RF(kk, 16, Fk) : UF(QF ? Buffer.from(kk) : new Uint8Array(kk), Fk)
       }
     }, {
-      pack(CC, zC) {
-        let ZC = CC.constructor;
-        ZC !== Jz && this.moreTypes ? lz(CC, Zz.indexOf(ZC.name), zC) : Xz(CC, zC)
+      pack(kk, Fk) {
+        let Ik = kk.constructor;
+        Ik !== VF && this.moreTypes ? RF(kk, XF.indexOf(Ik.name), Fk) : UF(kk, Fk)
       }
     }, {
-      pack(CC, zC) {
+      pack(kk, Fk) {
         let {
-          target: ZC,
-          position: QC
-        } = zC(1);
-        ZC[QC] = 193
+          target: Ik,
+          position: Xk
+        } = Fk(1);
+        Ik[Xk] = 193
       }
     }];
-    let Tz = new Ez({
+    let fF = new bF({
       useRecords: !1
     });
-    const az = Tz.pack,
-      tz = Tz.pack,
-      Dz = Ez,
+    const BF = fF.pack,
+      dF = fF.pack,
+      YF = bF,
       {
-        NEVER: jz,
-        ALWAYS: yz,
-        DECIMAL_ROUND: Lz,
-        DECIMAL_FIT: Uz
-      } = Mz,
-      Bz = 512,
-      Oz = 1024,
-      kz = 2048;
-    const Vz = function(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (!CC || "object" !== typeof CC) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
-        const ZC = new hC(zC);
-        let QC;
-        const wC = CC => {
-          let zC;
-          QC && (CC = Buffer.concat([QC, CC]), QC = void 0);
+        NEVER: AF,
+        ALWAYS: gF,
+        DECIMAL_ROUND: mF,
+        DECIMAL_FIT: hF
+      } = eF,
+      rF = 512,
+      DF = 1024,
+      MF = 2048;
+    const kI = function(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (!kk || "object" !== typeof kk) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
+        const Ik = new Ek(Fk);
+        let Xk;
+        const Tk = kk => {
+          let Fk;
+          Xk && (kk = Buffer.concat([Xk, kk]), Xk = void 0);
           try {
-            zC = ZC.unpackMultiple(CC)
-          } catch (wC) {
-            if (!wC.incomplete) throw wC;
-            QC = CC.slice(wC.lastPosition), zC = wC.values
+            Fk = Ik.unpackMultiple(kk)
+          } catch (Tk) {
+            if (!Tk.incomplete) throw Tk;
+            Xk = kk.slice(Tk.lastPosition), Fk = Tk.values
           }
-          return zC
+          return Fk
         };
-        return "function" === typeof CC[Symbol.iterator] ? function*() {
-          for (const zC of CC) yield* wC(zC)
-        }() : "function" === typeof CC[Symbol.asyncIterator] ? async function*() {
-          for await (const zC of CC) yield* wC(zC)
+        return "function" === typeof kk[Symbol.iterator] ? function*() {
+          for (const Fk of kk) yield* Tk(Fk)
+        }() : "function" === typeof kk[Symbol.asyncIterator] ? async function*() {
+          for await (const Fk of kk) yield* Tk(Fk)
         }(): void 0
       },
-      CZ = function(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (CC && "object" === typeof CC) {
-          if ("function" === typeof CC[Symbol.iterator]) return function*(CC, zC) {
-            const ZC = new Ez(zC);
-            for (const QC of CC) yield ZC.pack(QC)
-          }(CC, zC);
-          if ("function" === typeof CC.then || "function" === typeof CC[Symbol.asyncIterator]) return async function*(CC, zC) {
-            const ZC = new Ez(zC);
-            for await (const QC of CC) yield ZC.pack(QC)
-          }(CC, zC);
+      FI = function(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (kk && "object" === typeof kk) {
+          if ("function" === typeof kk[Symbol.iterator]) return function*(kk, Fk) {
+            const Ik = new bF(Fk);
+            for (const Xk of kk) yield Ik.pack(Xk)
+          }(kk, Fk);
+          if ("function" === typeof kk.then || "function" === typeof kk[Symbol.asyncIterator]) return async function*(kk, Fk) {
+            const Ik = new bF(Fk);
+            for await (const Xk of kk) yield Ik.pack(Xk)
+          }(kk, Fk);
           throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a Promise")
         }
         throw new Error("first argument must be an Iterable, Async Iterable, or a Promise for an Async Iterable")
       },
-      zZ = !1,
-      ZZ = !0
+      II = !1,
+      XI = !0
   },
-  9102: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      $changes: () => SC,
-      $childType: () => pC,
-      $decoder: () => FC,
-      $deleteByIndex: () => MC,
-      $encoder: () => qC,
-      $filter: () => WC,
-      $getByIndex: () => NC,
-      $numFields: () => eC,
-      $refId: () => fC,
-      $track: () => oC,
-      $values: () => xC,
-      ArraySchema: () => ZQ,
-      Callbacks: () => Zw,
-      ChangeTree: () => YZ,
-      CollectionSchema: () => bQ,
-      Decoder: () => LQ,
-      Encoder: () => tQ,
-      FieldBuilder: () => oQ,
-      MapSchema: () => wQ,
-      Metadata: () => Lz,
-      OPERATION: () => wC,
-      Reflection: () => kQ,
-      ReflectionField: () => BQ,
-      ReflectionType: () => OQ,
-      Root: () => dQ,
-      Schema: () => KQ,
-      SetSchema: () => nQ,
-      StateCallbackStrategy: () => zw,
-      StateView: () => XQ,
-      StreamSchema: () => fQ,
-      TypeContext: () => sz,
-      createPool: () => ww,
-      decode: () => Rz,
-      decodeKeyValueOperation: () => BZ,
-      decodeSchemaOperation: () => UZ,
-      defineCustomTypes: () => Iz,
-      defineTypes: () => vQ,
-      deprecated: () => IQ,
-      dumpChanges: () => hQ,
-      encode: () => zz,
-      encodeArray: () => uZ,
-      encodeIndexedEntry: () => XZ,
-      encodeKeyValueOperation: () => cZ,
-      encodeMapEntry: () => lZ,
-      encodeSchemaOperation: () => EZ,
-      og: () => SQ,
-      fullStateOnly: () => RQ,
-      getDecoderStateCallbacks: () => VQ,
-      getEncodeDescriptor: () => CZ,
-      getRawChangesCallback: () => Cw,
-      isBuilder: () => qQ,
-      patchOnly: () => GQ,
-      registerType: () => Jz,
-      schema: () => eQ,
-      t: () => MQ,
-      type: () => AQ,
-      unreliable: () => PQ,
-      view: () => pQ
+  9098: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      $changes: () => wk,
+      $childType: () => Hk,
+      $decoder: () => Lk,
+      $deleteByIndex: () => jk,
+      $encoder: () => qk,
+      $filter: () => tk,
+      $getByIndex: () => Zk,
+      $numFields: () => vk,
+      $refId: () => lk,
+      $track: () => ak,
+      $values: () => Qk,
+      ArraySchema: () => XX,
+      Callbacks: () => XT,
+      ChangeTree: () => nI,
+      CollectionSchema: () => yX,
+      Decoder: () => mX,
+      Encoder: () => dX,
+      FieldBuilder: () => qX,
+      MapSchema: () => iX,
+      Metadata: () => mF,
+      OPERATION: () => Tk,
+      Reflection: () => MX,
+      ReflectionField: () => rX,
+      ReflectionType: () => DX,
+      Root: () => GX,
+      Schema: () => OX,
+      SetSchema: () => lX,
+      StateCallbackStrategy: () => IT,
+      StateView: () => UX,
+      StreamSchema: () => aX,
+      TypeContext: () => WF,
+      createPool: () => iT,
+      decode: () => KF,
+      decodeKeyValueOperation: () => rI,
+      decodeSchemaOperation: () => hI,
+      defineCustomTypes: () => zF,
+      defineTypes: () => oX,
+      deprecated: () => zX,
+      dumpChanges: () => EX,
+      encode: () => IF,
+      encodeArray: () => NI,
+      encodeIndexedEntry: () => UI,
+      encodeKeyValueOperation: () => CI,
+      encodeMapEntry: () => RI,
+      encodeSchemaOperation: () => bI,
+      le: () => HX,
+      fullStateOnly: () => KX,
+      getDecoderStateCallbacks: () => kT,
+      getEncodeDescriptor: () => FI,
+      getRawChangesCallback: () => FT,
+      isBuilder: () => LX,
+      patchOnly: () => PX,
+      registerType: () => VF,
+      schema: () => vX,
+      t: () => eX,
+      type: () => QX,
+      unreliable: () => xX,
+      view: () => JX
     });
-    const QC = 255;
-    var wC;
+    const Xk = 255;
+    var Tk;
 
-    function bC(CC) {
-      Object.defineProperty(CC, Symbol.metadata, {
+    function ik(kk) {
+      Object.defineProperty(kk, Symbol.metadata, {
         value: void 0,
         writable: !0,
         configurable: !0,
         enumerable: !1
       })
-    }! function(CC) {
-      CC[CC.ADD = 128] = "ADD", CC[CC.REPLACE = 0] = "REPLACE", CC[CC.DELETE = 64] = "DELETE", CC[CC.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", CC[CC.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", CC[CC.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", CC[CC.CLEAR = 10] = "CLEAR", CC[CC.REVERSE = 15] = "REVERSE", CC[CC.MOVE = 32] = "MOVE", CC[CC.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", CC[CC.ADD_BY_REFID = 129] = "ADD_BY_REFID"
-    }(wC || (wC = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
-    const nC = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
+    }! function(kk) {
+      kk[kk.ADD = 128] = "ADD", kk[kk.REPLACE = 0] = "REPLACE", kk[kk.DELETE = 64] = "DELETE", kk[kk.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", kk[kk.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", kk[kk.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", kk[kk.CLEAR = 10] = "CLEAR", kk[kk.REVERSE = 15] = "REVERSE", kk[kk.MOVE = 32] = "MOVE", kk[kk.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", kk[kk.ADD_BY_REFID = 129] = "ADD_BY_REFID"
+    }(Tk || (Tk = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
+    const yk = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
     if ("function" === typeof Symbol && "function" !== typeof Symbol.for) {
-      const CC = "colyseus.symbolRegistry",
-        zC = nC[CC] || (nC[CC] = Object.create(null));
-      Symbol.for = function(CC) {
-        return zC[CC] || (zC[CC] = Symbol(CC))
-      }, Symbol.keyFor = function(CC) {
-        for (const ZC in zC)
-          if (zC[ZC] === CC) return ZC
+      const kk = "colyseus.symbolRegistry",
+        Fk = yk[kk] || (yk[kk] = Object.create(null));
+      Symbol.for = function(kk) {
+        return Fk[kk] || (Fk[kk] = Symbol(kk))
+      }, Symbol.keyFor = function(kk) {
+        for (const Ik in Fk)
+          if (Fk[Ik] === kk) return Ik
       }
     }
-    const fC = Symbol.for("$refId"),
-      oC = "~track",
-      qC = "~encoder",
-      FC = "~decoder",
-      WC = "~filter",
-      NC = "~getByIndex",
-      MC = "~deleteByIndex",
-      gC = "~resyncPrune",
-      SC = Symbol.for("$changes"),
-      pC = Symbol.for("$childType"),
-      PC = Symbol.for("$proxyTarget"),
-      GC = "~onEncodeEnd",
-      RC = "~reset",
-      AC = "~onDecodeEnd",
-      xC = Symbol.for("$values"),
-      JC = "~builder",
-      IC = "~descriptors",
-      iC = "~__encodeDescriptor",
-      vC = "~encoders",
-      eC = "~__numFields",
-      hC = "~__refTypeFieldIndexes",
-      KC = "~__viewFieldIndexes",
-      YC = "$__fieldIndexesByViewTag",
-      dC = "~__unreliableFieldIndexes",
-      mC = "~__patchOnlyFieldIndexes",
-      HC = "~__fullSyncSkipIndexes",
-      EC = "~__fullStateOnlyFieldIndexes",
-      lC = "~__streamFieldIndexes",
-      XC = "~__streamPriorities";
-    let cC;
+    const lk = Symbol.for("$refId"),
+      ak = "~track",
+      qk = "~encoder",
+      Lk = "~decoder",
+      tk = "~filter",
+      Zk = "~getByIndex",
+      jk = "~deleteByIndex",
+      ek = "~resyncPrune",
+      wk = Symbol.for("$changes"),
+      Hk = Symbol.for("$childType"),
+      Jk = Symbol.for("$proxyTarget"),
+      xk = "~onEncodeEnd",
+      Pk = "~reset",
+      Kk = "~onDecodeEnd",
+      Qk = Symbol.for("$values"),
+      sk = "~builder",
+      Vk = "~descriptors",
+      zk = "~__encodeDescriptor",
+      Sk = "~encoders",
+      vk = "~__numFields",
+      Ek = "~__refTypeFieldIndexes",
+      Ok = "~__viewFieldIndexes",
+      nk = "$__fieldIndexesByViewTag",
+      Gk = "~__unreliableFieldIndexes",
+      pk = "~__patchOnlyFieldIndexes",
+      uk = "~__fullSyncSkipIndexes",
+      bk = "~__fullStateOnlyFieldIndexes",
+      Rk = "~__streamFieldIndexes",
+      Uk = "~__streamPriorities";
+    let Ck;
     try {
-      cC = new TextEncoder
-    } catch (bw) {}
-    const uC = new ArrayBuffer(8),
-      rC = new Int32Array(uC),
-      sC = new Float32Array(uC),
-      TC = new Float64Array(uC),
-      aC = new BigInt64Array(uC),
-      tC = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(CC, zC) {
-        for (var ZC = 0, QC = 0, wC = 0, bC = CC.length; wC < bC; wC++)(ZC = CC.charCodeAt(wC)) < 128 ? QC += 1 : ZC < 2048 ? QC += 2 : ZC < 55296 || ZC >= 57344 ? QC += 3 : (wC++, QC += 4);
-        return QC
+      Ck = new TextEncoder
+    } catch (yT) {}
+    const Nk = new ArrayBuffer(8),
+      ck = new Int32Array(Nk),
+      Wk = new Float32Array(Nk),
+      fk = new Float64Array(Nk),
+      Bk = new BigInt64Array(Nk),
+      dk = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(kk, Fk) {
+        for (var Ik = 0, Xk = 0, Tk = 0, ik = kk.length; Tk < ik; Tk++)(Ik = kk.charCodeAt(Tk)) < 128 ? Xk += 1 : Ik < 2048 ? Xk += 2 : Ik < 55296 || Ik >= 57344 ? Xk += 3 : (Tk++, Xk += 4);
+        return Xk
       };
 
-    function DC(CC, zC, ZC) {
-      for (var QC = 0, wC = 0, bC = zC.length; wC < bC; wC++)(QC = zC.charCodeAt(wC)) < 128 ? CC[ZC.offset++] = QC : QC < 2048 ? (CC[ZC.offset] = 192 | QC >> 6, CC[ZC.offset + 1] = 128 | 63 & QC, ZC.offset += 2) : QC < 55296 || QC >= 57344 ? (CC[ZC.offset] = 224 | QC >> 12, CC[ZC.offset + 1] = 128 | QC >> 6 & 63, CC[ZC.offset + 2] = 128 | 63 & QC, ZC.offset += 3) : (wC++, QC = 65536 + ((1023 & QC) << 10 | 1023 & zC.charCodeAt(wC)), CC[ZC.offset] = 240 | QC >> 18, CC[ZC.offset + 1] = 128 | QC >> 12 & 63, CC[ZC.offset + 2] = 128 | QC >> 6 & 63, CC[ZC.offset + 3] = 128 | 63 & QC, ZC.offset += 4)
+    function Yk(kk, Fk, Ik) {
+      for (var Xk = 0, Tk = 0, ik = Fk.length; Tk < ik; Tk++)(Xk = Fk.charCodeAt(Tk)) < 128 ? kk[Ik.offset++] = Xk : Xk < 2048 ? (kk[Ik.offset] = 192 | Xk >> 6, kk[Ik.offset + 1] = 128 | 63 & Xk, Ik.offset += 2) : Xk < 55296 || Xk >= 57344 ? (kk[Ik.offset] = 224 | Xk >> 12, kk[Ik.offset + 1] = 128 | Xk >> 6 & 63, kk[Ik.offset + 2] = 128 | 63 & Xk, Ik.offset += 3) : (Tk++, Xk = 65536 + ((1023 & Xk) << 10 | 1023 & Fk.charCodeAt(Tk)), kk[Ik.offset] = 240 | Xk >> 18, kk[Ik.offset + 1] = 128 | Xk >> 12 & 63, kk[Ik.offset + 2] = 128 | Xk >> 6 & 63, kk[Ik.offset + 3] = 128 | 63 & Xk, Ik.offset += 4)
     }
 
-    function jC(CC, zC, ZC) {
-      CC[ZC.offset++] = 255 & zC
+    function Ak(kk, Fk, Ik) {
+      kk[Ik.offset++] = 255 & Fk
     }
 
-    function yC(CC, zC, ZC) {
-      CC[ZC.offset++] = 255 & zC, CC[ZC.offset++] = zC >> 8 & 255
+    function gk(kk, Fk, Ik) {
+      kk[Ik.offset++] = 255 & Fk, kk[Ik.offset++] = Fk >> 8 & 255
     }
 
-    function LC(CC, zC, ZC) {
-      CC[ZC.offset++] = 255 & zC, CC[ZC.offset++] = zC >> 8 & 255
+    function mk(kk, Fk, Ik) {
+      kk[Ik.offset++] = 255 & Fk, kk[Ik.offset++] = Fk >> 8 & 255
     }
 
-    function UC(CC, zC, ZC) {
-      CC[ZC.offset++] = 255 & zC, CC[ZC.offset++] = zC >> 8 & 255, CC[ZC.offset++] = zC >> 16 & 255, CC[ZC.offset++] = zC >> 24 & 255
+    function hk(kk, Fk, Ik) {
+      kk[Ik.offset++] = 255 & Fk, kk[Ik.offset++] = Fk >> 8 & 255, kk[Ik.offset++] = Fk >> 16 & 255, kk[Ik.offset++] = Fk >> 24 & 255
     }
 
-    function BC(CC, zC, ZC) {
-      const QC = zC >> 24,
-        wC = zC >> 16,
-        bC = zC >> 8,
-        nC = zC;
-      CC[ZC.offset++] = 255 & nC, CC[ZC.offset++] = 255 & bC, CC[ZC.offset++] = 255 & wC, CC[ZC.offset++] = 255 & QC
+    function rk(kk, Fk, Ik) {
+      const Xk = Fk >> 24,
+        Tk = Fk >> 16,
+        ik = Fk >> 8,
+        yk = Fk;
+      kk[Ik.offset++] = 255 & yk, kk[Ik.offset++] = 255 & ik, kk[Ik.offset++] = 255 & Tk, kk[Ik.offset++] = 255 & Xk
     }
 
-    function OC(CC, zC, ZC) {
-      const QC = Math.floor(zC / Math.pow(2, 32));
-      BC(CC, zC >>> 0, ZC), BC(CC, QC, ZC)
+    function Dk(kk, Fk, Ik) {
+      const Xk = Math.floor(Fk / Math.pow(2, 32));
+      rk(kk, Fk >>> 0, Ik), rk(kk, Xk, Ik)
     }
 
-    function kC(CC, zC, ZC) {
-      const QC = zC / Math.pow(2, 32) | 0;
-      BC(CC, zC >>> 0, ZC), BC(CC, QC, ZC)
+    function Mk(kk, Fk, Ik) {
+      const Xk = Fk / Math.pow(2, 32) | 0;
+      rk(kk, Fk >>> 0, Ik), rk(kk, Xk, Ik)
     }
 
-    function VC(CC, zC, ZC) {
-      sC[0] = zC, UC(CC, rC[0], ZC)
+    function kF(kk, Fk, Ik) {
+      Wk[0] = Fk, hk(kk, ck[0], Ik)
     }
 
-    function Cz(CC, zC, ZC) {
-      TC[0] = zC, UC(CC, rC[0], ZC), UC(CC, rC[1], ZC)
+    function FF(kk, Fk, Ik) {
+      fk[0] = Fk, hk(kk, ck[0], Ik), hk(kk, ck[1], Ik)
     }
-    const zz = {
-        int8: jC,
-        uint8: function(CC, zC, ZC) {
-          CC[ZC.offset++] = 255 & zC
+    const IF = {
+        int8: Ak,
+        uint8: function(kk, Fk, Ik) {
+          kk[Ik.offset++] = 255 & Fk
         },
-        int16: yC,
-        uint16: LC,
-        int32: UC,
-        uint32: BC,
-        int64: OC,
-        uint64: kC,
-        bigint64: function(CC, zC, ZC) {
-          aC[0] = BigInt.asIntN(64, zC), UC(CC, rC[0], ZC), UC(CC, rC[1], ZC)
+        int16: gk,
+        uint16: mk,
+        int32: hk,
+        uint32: rk,
+        int64: Dk,
+        uint64: Mk,
+        bigint64: function(kk, Fk, Ik) {
+          Bk[0] = BigInt.asIntN(64, Fk), hk(kk, ck[0], Ik), hk(kk, ck[1], Ik)
         },
-        biguint64: function(CC, zC, ZC) {
-          aC[0] = BigInt.asIntN(64, zC), UC(CC, rC[0], ZC), UC(CC, rC[1], ZC)
+        biguint64: function(kk, Fk, Ik) {
+          Bk[0] = BigInt.asIntN(64, Fk), hk(kk, ck[0], Ik), hk(kk, ck[1], Ik)
         },
-        float32: VC,
-        float64: Cz,
-        boolean: function(CC, zC, ZC) {
-          CC[ZC.offset++] = zC ? 1 : 0
+        float32: kF,
+        float64: FF,
+        boolean: function(kk, Fk, Ik) {
+          kk[Ik.offset++] = Fk ? 1 : 0
         },
-        string: function(CC, zC, ZC) {
-          zC || (zC = "");
-          let QC = tC(zC, "utf8"),
-            wC = 0;
-          if (QC < 32) CC[ZC.offset++] = 160 | QC, wC = 1;
-          else if (QC < 256) CC[ZC.offset++] = 217, CC[ZC.offset++] = QC, wC = 2;
-          else if (QC < 65536) CC[ZC.offset++] = 218, LC(CC, QC, ZC), wC = 3;
+        string: function(kk, Fk, Ik) {
+          Fk || (Fk = "");
+          let Xk = dk(Fk, "utf8"),
+            Tk = 0;
+          if (Xk < 32) kk[Ik.offset++] = 160 | Xk, Tk = 1;
+          else if (Xk < 256) kk[Ik.offset++] = 217, kk[Ik.offset++] = Xk, Tk = 2;
+          else if (Xk < 65536) kk[Ik.offset++] = 218, mk(kk, Xk, Ik), Tk = 3;
           else {
-            if (!(QC < 4294967296)) throw new Error("String too long");
-            CC[ZC.offset++] = 219, BC(CC, QC, ZC), wC = 5
+            if (!(Xk < 4294967296)) throw new Error("String too long");
+            kk[Ik.offset++] = 219, rk(kk, Xk, Ik), Tk = 5
           }
-          return DC(CC, zC, ZC), wC + QC
+          return Yk(kk, Fk, Ik), Tk + Xk
         },
-        number: function CC(zC, ZC, QC) {
-          return isNaN(ZC) ? CC(zC, 0, QC) : isFinite(ZC) ? ZC !== (0 | ZC) ? Math.abs(ZC) <= 34028235e31 && (sC[0] = ZC, Math.abs(Math.abs(sC[0]) - Math.abs(ZC)) < 1e-4) ? (zC[QC.offset++] = 202, VC(zC, ZC, QC), 5) : (zC[QC.offset++] = 203, Cz(zC, ZC, QC), 9) : ZC >= 0 ? ZC < 128 ? (zC[QC.offset++] = 255 & ZC, 1) : ZC < 256 ? (zC[QC.offset++] = 204, zC[QC.offset++] = 255 & ZC, 2) : ZC < 65536 ? (zC[QC.offset++] = 205, LC(zC, ZC, QC), 3) : ZC < 4294967296 ? (zC[QC.offset++] = 206, BC(zC, ZC, QC), 5) : (zC[QC.offset++] = 207, kC(zC, ZC, QC), 9) : ZC >= -32 ? (zC[QC.offset++] = 224 | ZC + 32, 1) : ZC >= -128 ? (zC[QC.offset++] = 208, jC(zC, ZC, QC), 2) : ZC >= -32768 ? (zC[QC.offset++] = 209, yC(zC, ZC, QC), 3) : ZC >= -2147483648 ? (zC[QC.offset++] = 210, UC(zC, ZC, QC), 5) : (zC[QC.offset++] = 211, OC(zC, ZC, QC), 9) : CC(zC, ZC > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, QC)
+        number: function kk(Fk, Ik, Xk) {
+          return isNaN(Ik) ? kk(Fk, 0, Xk) : isFinite(Ik) ? Ik !== (0 | Ik) ? Math.abs(Ik) <= 34028235e31 && (Wk[0] = Ik, Math.abs(Math.abs(Wk[0]) - Math.abs(Ik)) < 1e-4) ? (Fk[Xk.offset++] = 202, kF(Fk, Ik, Xk), 5) : (Fk[Xk.offset++] = 203, FF(Fk, Ik, Xk), 9) : Ik >= 0 ? Ik < 128 ? (Fk[Xk.offset++] = 255 & Ik, 1) : Ik < 256 ? (Fk[Xk.offset++] = 204, Fk[Xk.offset++] = 255 & Ik, 2) : Ik < 65536 ? (Fk[Xk.offset++] = 205, mk(Fk, Ik, Xk), 3) : Ik < 4294967296 ? (Fk[Xk.offset++] = 206, rk(Fk, Ik, Xk), 5) : (Fk[Xk.offset++] = 207, Mk(Fk, Ik, Xk), 9) : Ik >= -32 ? (Fk[Xk.offset++] = 224 | Ik + 32, 1) : Ik >= -128 ? (Fk[Xk.offset++] = 208, Ak(Fk, Ik, Xk), 2) : Ik >= -32768 ? (Fk[Xk.offset++] = 209, gk(Fk, Ik, Xk), 3) : Ik >= -2147483648 ? (Fk[Xk.offset++] = 210, hk(Fk, Ik, Xk), 5) : (Fk[Xk.offset++] = 211, Dk(Fk, Ik, Xk), 9) : kk(Fk, Ik > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, Xk)
         },
-        utf8Write: DC,
-        utf8Length: tC
+        utf8Write: Yk,
+        utf8Length: dk
       },
-      Zz = new ArrayBuffer(8),
-      Qz = new Int32Array(Zz),
-      wz = new Float32Array(Zz),
-      bz = new Float64Array(Zz),
-      nz = new BigUint64Array(Zz),
-      fz = new BigInt64Array(Zz);
+      XF = new ArrayBuffer(8),
+      TF = new Int32Array(XF),
+      iF = new Float32Array(XF),
+      yF = new Float64Array(XF),
+      lF = new BigUint64Array(XF),
+      aF = new BigInt64Array(XF);
 
-    function oz(CC, zC, ZC) {
-      ZC > CC.length - zC.offset && (ZC = CC.length - zC.offset);
-      for (var QC = "", wC = 0, bC = zC.offset, nC = zC.offset + ZC; bC < nC; bC++) {
-        var fC = CC[bC];
-        if (0 !== (128 & fC))
-          if (192 !== (224 & fC))
-            if (224 !== (240 & fC)) {
-              if (240 !== (248 & fC)) {
-                console.error("decode.utf8Read(): Invalid byte " + fC + " at offset " + bC + ". Skip to end of string: " + (zC.offset + ZC));
+    function qF(kk, Fk, Ik) {
+      Ik > kk.length - Fk.offset && (Ik = kk.length - Fk.offset);
+      for (var Xk = "", Tk = 0, ik = Fk.offset, yk = Fk.offset + Ik; ik < yk; ik++) {
+        var lk = kk[ik];
+        if (0 !== (128 & lk))
+          if (192 !== (224 & lk))
+            if (224 !== (240 & lk)) {
+              if (240 !== (248 & lk)) {
+                console.error("decode.utf8Read(): Invalid byte " + lk + " at offset " + ik + ". Skip to end of string: " + (Fk.offset + Ik));
                 break
-              }(wC = (7 & fC) << 18 | (63 & CC[++bC]) << 12 | (63 & CC[++bC]) << 6 | 63 & CC[++bC]) >= 65536 ? (wC -= 65536, QC += String.fromCharCode(55296 + (wC >>> 10), 56320 + (1023 & wC))) : QC += String.fromCharCode(wC)
-            } else QC += String.fromCharCode((15 & fC) << 12 | (63 & CC[++bC]) << 6 | 63 & CC[++bC]);
-        else QC += String.fromCharCode((31 & fC) << 6 | 63 & CC[++bC]);
-        else QC += String.fromCharCode(fC)
+              }(Tk = (7 & lk) << 18 | (63 & kk[++ik]) << 12 | (63 & kk[++ik]) << 6 | 63 & kk[++ik]) >= 65536 ? (Tk -= 65536, Xk += String.fromCharCode(55296 + (Tk >>> 10), 56320 + (1023 & Tk))) : Xk += String.fromCharCode(Tk)
+            } else Xk += String.fromCharCode((15 & lk) << 12 | (63 & kk[++ik]) << 6 | 63 & kk[++ik]);
+        else Xk += String.fromCharCode((31 & lk) << 6 | 63 & kk[++ik]);
+        else Xk += String.fromCharCode(lk)
       }
-      return zC.offset += ZC, QC
+      return Fk.offset += Ik, Xk
     }
 
-    function qz(CC, zC) {
-      return Fz(CC, zC) << 24 >> 24
+    function LF(kk, Fk) {
+      return tF(kk, Fk) << 24 >> 24
     }
 
-    function Fz(CC, zC) {
-      return CC[zC.offset++]
+    function tF(kk, Fk) {
+      return kk[Fk.offset++]
     }
 
-    function Wz(CC, zC) {
-      return Nz(CC, zC) << 16 >> 16
+    function ZF(kk, Fk) {
+      return jF(kk, Fk) << 16 >> 16
     }
 
-    function Nz(CC, zC) {
-      return CC[zC.offset++] | CC[zC.offset++] << 8
+    function jF(kk, Fk) {
+      return kk[Fk.offset++] | kk[Fk.offset++] << 8
     }
 
-    function Mz(CC, zC) {
-      return CC[zC.offset++] | CC[zC.offset++] << 8 | CC[zC.offset++] << 16 | CC[zC.offset++] << 24
+    function eF(kk, Fk) {
+      return kk[Fk.offset++] | kk[Fk.offset++] << 8 | kk[Fk.offset++] << 16 | kk[Fk.offset++] << 24
     }
 
-    function gz(CC, zC) {
-      return Mz(CC, zC) >>> 0
+    function wF(kk, Fk) {
+      return eF(kk, Fk) >>> 0
     }
 
-    function Sz(CC, zC) {
-      return Qz[0] = Mz(CC, zC), wz[0]
+    function HF(kk, Fk) {
+      return TF[0] = eF(kk, Fk), iF[0]
     }
 
-    function pz(CC, zC) {
-      return Qz[0] = Mz(CC, zC), Qz[1] = Mz(CC, zC), bz[0]
+    function JF(kk, Fk) {
+      return TF[0] = eF(kk, Fk), TF[1] = eF(kk, Fk), yF[0]
     }
 
-    function Pz(CC, zC) {
-      const ZC = gz(CC, zC);
-      return Mz(CC, zC) * Math.pow(2, 32) + ZC
+    function xF(kk, Fk) {
+      const Ik = wF(kk, Fk);
+      return eF(kk, Fk) * Math.pow(2, 32) + Ik
     }
 
-    function Gz(CC, zC) {
-      const ZC = gz(CC, zC);
-      return gz(CC, zC) * Math.pow(2, 32) + ZC
+    function PF(kk, Fk) {
+      const Ik = wF(kk, Fk);
+      return wF(kk, Fk) * Math.pow(2, 32) + Ik
     }
-    const Rz = {
-        utf8Read: oz,
-        int8: qz,
-        uint8: Fz,
-        int16: Wz,
-        uint16: Nz,
-        int32: Mz,
-        uint32: gz,
-        float32: Sz,
-        float64: pz,
-        int64: Pz,
-        uint64: Gz,
-        bigint64: function(CC, zC) {
-          return Qz[0] = Mz(CC, zC), Qz[1] = Mz(CC, zC), fz[0]
+    const KF = {
+        utf8Read: qF,
+        int8: LF,
+        uint8: tF,
+        int16: ZF,
+        uint16: jF,
+        int32: eF,
+        uint32: wF,
+        float32: HF,
+        float64: JF,
+        int64: xF,
+        uint64: PF,
+        bigint64: function(kk, Fk) {
+          return TF[0] = eF(kk, Fk), TF[1] = eF(kk, Fk), aF[0]
         },
-        biguint64: function(CC, zC) {
-          return Qz[0] = Mz(CC, zC), Qz[1] = Mz(CC, zC), nz[0]
+        biguint64: function(kk, Fk) {
+          return TF[0] = eF(kk, Fk), TF[1] = eF(kk, Fk), lF[0]
         },
-        boolean: function(CC, zC) {
-          return Fz(CC, zC) > 0
+        boolean: function(kk, Fk) {
+          return tF(kk, Fk) > 0
         },
-        string: function(CC, zC) {
-          const ZC = CC[zC.offset++];
-          let QC;
-          return ZC < 192 ? QC = 31 & ZC : 217 === ZC ? QC = Fz(CC, zC) : 218 === ZC ? QC = Nz(CC, zC) : 219 === ZC && (QC = gz(CC, zC)), oz(CC, zC, QC)
+        string: function(kk, Fk) {
+          const Ik = kk[Fk.offset++];
+          let Xk;
+          return Ik < 192 ? Xk = 31 & Ik : 217 === Ik ? Xk = tF(kk, Fk) : 218 === Ik ? Xk = jF(kk, Fk) : 219 === Ik && (Xk = wF(kk, Fk)), qF(kk, Fk, Xk)
         },
-        number: function(CC, zC) {
-          const ZC = CC[zC.offset++];
-          return ZC < 128 ? ZC : 202 === ZC ? Sz(CC, zC) : 203 === ZC ? pz(CC, zC) : 204 === ZC ? Fz(CC, zC) : 205 === ZC ? Nz(CC, zC) : 206 === ZC ? gz(CC, zC) : 207 === ZC ? Gz(CC, zC) : 208 === ZC ? qz(CC, zC) : 209 === ZC ? Wz(CC, zC) : 210 === ZC ? Mz(CC, zC) : 211 === ZC ? Pz(CC, zC) : ZC > 223 ? -1 * (255 - ZC + 1) : void 0
+        number: function(kk, Fk) {
+          const Ik = kk[Fk.offset++];
+          return Ik < 128 ? Ik : 202 === Ik ? HF(kk, Fk) : 203 === Ik ? JF(kk, Fk) : 204 === Ik ? tF(kk, Fk) : 205 === Ik ? jF(kk, Fk) : 206 === Ik ? wF(kk, Fk) : 207 === Ik ? PF(kk, Fk) : 208 === Ik ? LF(kk, Fk) : 209 === Ik ? ZF(kk, Fk) : 210 === Ik ? eF(kk, Fk) : 211 === Ik ? xF(kk, Fk) : Ik > 223 ? -1 * (255 - Ik + 1) : void 0
         },
-        stringCheck: function(CC, zC) {
-          const ZC = CC[zC.offset];
-          return ZC < 192 && ZC > 160 || 217 === ZC || 218 === ZC || 219 === ZC
+        stringCheck: function(kk, Fk) {
+          const Ik = kk[Fk.offset];
+          return Ik < 192 && Ik > 160 || 217 === Ik || 218 === Ik || 219 === Ik
         }
       },
-      Az = {},
-      xz = new Map;
+      QF = {},
+      sF = new Map;
 
-    function Jz(CC, zC) {
-      zC.constructor && (Object.prototype.hasOwnProperty.call(zC, "constructor") && null == zC.constructor[Symbol.metadata] && bC(zC.constructor), xz.set(zC.constructor, CC), Az[CC] = zC), zC.encode && (zz[CC] = zC.encode), zC.decode && (Rz[CC] = zC.decode)
+    function VF(kk, Fk) {
+      Fk.constructor && (Object.prototype.hasOwnProperty.call(Fk, "constructor") && null == Fk.constructor[Symbol.metadata] && ik(Fk.constructor), sF.set(Fk.constructor, kk), QF[kk] = Fk), Fk.encode && (IF[kk] = Fk.encode), Fk.decode && (KF[kk] = Fk.decode)
     }
 
-    function Iz(CC) {
-      for (const zC in CC) Jz(zC, CC[zC]);
-      return CC => AQ(CC)
+    function zF(kk) {
+      for (const Fk in kk) VF(Fk, kk[Fk]);
+      return kk => QX(kk)
     }
-    const iz = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
+    const SF = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
 
-    function vz() {
+    function oF() {
       return {
         pendingByView: new Map,
         sentByView: new Map,
@@ -2450,160 +2450,160 @@ export const modules = {
       }
     }
 
-    function ez(CC) {
-      return CC._stream ??= vz()
+    function vF(kk) {
+      return kk._stream ??= oF()
     }
 
-    function hz(CC, zC, ZC) {
-      0 === zC.activeViews.size && ez(CC).broadcastPending.add(ZC)
+    function EF(kk, Fk, Ik) {
+      0 === Fk.activeViews.size && vF(kk).broadcastPending.add(Ik)
     }
 
-    function Kz(CC, zC, ZC, QC) {
-      const bC = CC._stream;
-      if (void 0 === bC) return !0;
-      let nC = !1;
-      return bC.broadcastPending.delete(QC) ? nC = !0 : bC.sentBroadcast.delete(QC) && bC.broadcastDeletes.add(QC), zC.forEachActiveView((CC => {
-        const zC = bC.pendingByView.get(CC.id);
-        if (zC?.has(QC)) return zC.delete(QC), void(nC = !0);
-        const fC = bC.sentByView.get(CC.id);
-        if (fC?.has(QC)) {
-          fC.delete(QC);
-          let zC = CC.changes.get(ZC);
-          void 0 === zC && (zC = new Map, CC.changes.set(ZC, zC)), zC.set(QC, wC.DELETE)
+    function OF(kk, Fk, Ik, Xk) {
+      const ik = kk._stream;
+      if (void 0 === ik) return !0;
+      let yk = !1;
+      return ik.broadcastPending.delete(Xk) ? yk = !0 : ik.sentBroadcast.delete(Xk) && ik.broadcastDeletes.add(Xk), Fk.forEachActiveView((kk => {
+        const Fk = ik.pendingByView.get(kk.id);
+        if (Fk?.has(Xk)) return Fk.delete(Xk), void(yk = !0);
+        const lk = ik.sentByView.get(kk.id);
+        if (lk?.has(Xk)) {
+          lk.delete(Xk);
+          let Fk = kk.changes.get(Ik);
+          void 0 === Fk && (Fk = new Map, kk.changes.set(Ik, Fk)), Fk.set(Xk, Tk.DELETE)
         }
-      })), nC
+      })), yk
     }
 
-    function Yz(CC, zC) {
-      const ZC = CC._stream?.pendingByView;
-      if (void 0 === ZC) return !1;
-      for (const [QC, wC] of ZC)
-        if (wC.size > 0 && void 0 !== zC.activeViews.get(QC)?.deref()) return !0;
+    function nF(kk, Fk) {
+      const Ik = kk._stream?.pendingByView;
+      if (void 0 === Ik) return !1;
+      for (const [Xk, Tk] of Ik)
+        if (Tk.size > 0 && void 0 !== Fk.activeViews.get(Xk)?.deref()) return !0;
       return !1
     }
 
-    function dz(CC) {
-      const zC = CC._stream;
-      return void 0 !== zC && (zC.broadcastPending.size > 0 || zC.broadcastDeletes.size > 0)
+    function GF(kk) {
+      const Fk = kk._stream;
+      return void 0 !== Fk && (Fk.broadcastPending.size > 0 || Fk.broadcastDeletes.size > 0)
     }
 
-    function mz(CC, zC, ZC) {
-      const QC = ez(CC);
-      let wC = QC.pendingByView.get(zC);
-      void 0 === wC && (wC = new Set, QC.pendingByView.set(zC, wC)), wC.add(ZC)
+    function pF(kk, Fk, Ik) {
+      const Xk = vF(kk);
+      let Tk = Xk.pendingByView.get(Fk);
+      void 0 === Tk && (Tk = new Set, Xk.pendingByView.set(Fk, Tk)), Tk.add(Ik)
     }
 
-    function Hz(CC, zC) {
-      const ZC = CC._stream;
-      void 0 !== ZC && (ZC.pendingByView.delete(zC), ZC.sentByView.delete(zC), ZC.priorityByView?.delete(zC))
+    function uF(kk, Fk) {
+      const Ik = kk._stream;
+      void 0 !== Ik && (Ik.pendingByView.delete(Fk), Ik.sentByView.delete(Fk), Ik.priorityByView?.delete(Fk))
     }
-    const Ez = {
+    const bF = {
       8: "uint8",
       16: "uint16",
       32: "uint32"
     };
 
-    function lz(CC) {
-      if (null == CC || "object" !== typeof CC) throw new Error("t.quantized(): options object with { min, max } is required.");
+    function RF(kk) {
+      if (null == kk || "object" !== typeof kk) throw new Error("t.quantized(): options object with { min, max } is required.");
       const {
-        min: zC,
-        max: ZC
-      } = CC;
-      if ("number" !== typeof zC || "number" !== typeof ZC || !(ZC > zC) || !Number.isFinite(zC) || !Number.isFinite(ZC)) throw new Error(`t.quantized(): require finite min < max (got min=${zC}, max=${ZC}).`);
-      const QC = CC.bits ?? 16;
-      if (8 !== QC && 16 !== QC && 32 !== QC) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${QC}).`);
-      const wC = CC.mode ?? "clamp";
-      if ("clamp" !== wC && "wrap" !== wC) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(wC)}).`);
-      const bC = "wrap" === wC,
-        nC = Math.pow(2, QC);
+        min: Fk,
+        max: Ik
+      } = kk;
+      if ("number" !== typeof Fk || "number" !== typeof Ik || !(Ik > Fk) || !Number.isFinite(Fk) || !Number.isFinite(Ik)) throw new Error(`t.quantized(): require finite min < max (got min=${Fk}, max=${Ik}).`);
+      const Xk = kk.bits ?? 16;
+      if (8 !== Xk && 16 !== Xk && 32 !== Xk) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${Xk}).`);
+      const Tk = kk.mode ?? "clamp";
+      if ("clamp" !== Tk && "wrap" !== Tk) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(Tk)}).`);
+      const ik = "wrap" === Tk,
+        yk = Math.pow(2, Xk);
       return {
-        min: zC,
-        max: ZC,
-        bits: QC,
-        wrap: bC,
-        wire: Ez[QC],
-        range: ZC - zC,
-        span: bC ? nC : zC === -ZC ? nC - 2 : nC - 1
+        min: Fk,
+        max: Ik,
+        bits: Xk,
+        wrap: ik,
+        wire: bF[Xk],
+        range: Ik - Fk,
+        span: ik ? yk : Fk === -Ik ? yk - 2 : yk - 1
       }
     }
 
-    function Xz(CC) {
-      return null !== CC && "object" === typeof CC && void 0 !== CC.quantized
+    function UF(kk) {
+      return null !== kk && "object" === typeof kk && void 0 !== kk.quantized
     }
 
-    function cz(CC, zC) {
-      if (CC.wrap) {
-        if (!Number.isFinite(zC)) return 0;
-        const ZC = CC.range;
-        let QC = (zC - CC.min) % ZC;
-        QC < 0 && (QC += ZC);
-        const wC = CC.span;
-        return Math.floor(QC / ZC * wC + .5) % wC
+    function CF(kk, Fk) {
+      if (kk.wrap) {
+        if (!Number.isFinite(Fk)) return 0;
+        const Ik = kk.range;
+        let Xk = (Fk - kk.min) % Ik;
+        Xk < 0 && (Xk += Ik);
+        const Tk = kk.span;
+        return Math.floor(Xk / Ik * Tk + .5) % Tk
       }
-      if (zC !== zC) return 0;
-      const ZC = zC < CC.min ? CC.min : zC > CC.max ? CC.max : zC;
-      return Math.floor((ZC - CC.min) / CC.range * CC.span + .5)
+      if (Fk !== Fk) return 0;
+      const Ik = Fk < kk.min ? kk.min : Fk > kk.max ? kk.max : Fk;
+      return Math.floor((Ik - kk.min) / kk.range * kk.span + .5)
     }
 
-    function uz(CC, zC) {
-      return CC.min + zC / CC.span * CC.range
+    function NF(kk, Fk) {
+      return kk.min + Fk / kk.span * kk.range
     }
 
-    function rz(CC) {
-      const zC = zz[CC.wire];
-      return (ZC, QC, wC) => zC(ZC, cz(CC, QC), wC)
+    function cF(kk) {
+      const Fk = IF[kk.wire];
+      return (Ik, Xk, Tk) => Fk(Ik, CF(kk, Xk), Tk)
     }
-    class sz {
+    class WF {
       types = {};
       schemas = new Map;
       hasFilters = !1;
       static inheritedTypes = new WeakMap;
       static cachedContexts = new WeakMap;
-      static register(CC) {
-        const zC = Object.getPrototypeOf(CC);
-        if (zC !== KQ) {
-          let ZC = sz.inheritedTypes.get(zC);
-          ZC || (ZC = new Set, sz.inheritedTypes.set(zC, ZC)), ZC.add(CC)
+      static register(kk) {
+        const Fk = Object.getPrototypeOf(kk);
+        if (Fk !== OX) {
+          let Ik = WF.inheritedTypes.get(Fk);
+          Ik || (Ik = new Set, WF.inheritedTypes.set(Fk, Ik)), Ik.add(kk)
         }
       }
-      static cache(CC) {
-        let zC = sz.cachedContexts.get(CC);
-        return zC || (zC = new sz(CC), sz.cachedContexts.set(CC, zC)), zC
+      static cache(kk) {
+        let Fk = WF.cachedContexts.get(kk);
+        return Fk || (Fk = new WF(kk), WF.cachedContexts.set(kk, Fk)), Fk
       }
-      constructor(CC) {
-        CC && this.discoverTypes(CC)
+      constructor(kk) {
+        kk && this.discoverTypes(kk)
       }
-      has(CC) {
-        return this.schemas.has(CC)
+      has(kk) {
+        return this.schemas.has(kk)
       }
-      get(CC) {
-        return this.types[CC]
+      get(kk) {
+        return this.types[kk]
       }
-      add(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
-        return !this.schemas.has(CC) && (this.types[zC] = CC, null == CC[Symbol.metadata] && Lz.initialize(CC), this.schemas.set(CC, zC), !0)
+      add(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
+        return !this.schemas.has(kk) && (this.types[Fk] = kk, null == kk[Symbol.metadata] && mF.initialize(kk), this.schemas.set(kk, Fk), !0)
       }
-      getTypeId(CC) {
-        return this.schemas.get(CC)
+      getTypeId(kk) {
+        return this.schemas.get(kk)
       }
-      discoverTypes(CC) {
-        if (!this.add(CC)) return;
-        sz.inheritedTypes.get(CC)?.forEach((CC => {
-          this.discoverTypes(CC)
+      discoverTypes(kk) {
+        if (!this.add(kk)) return;
+        WF.inheritedTypes.get(kk)?.forEach((kk => {
+          this.discoverTypes(kk)
         }));
-        let zC = CC;
+        let Fk = kk;
         for (;
-          (zC = Object.getPrototypeOf(zC)) && zC !== KQ && zC !== Function.prototype;) this.discoverTypes(zC);
-        const ZC = CC[Symbol.metadata];
-        (ZC[KC] || ZC[lC]) && (this.hasFilters = !0);
-        for (const QC in ZC) {
-          const CC = ZC[QC].type;
-          if ("string" !== typeof CC && !Xz(CC))
-            if ("function" === typeof CC) this.discoverTypes(CC);
+          (Fk = Object.getPrototypeOf(Fk)) && Fk !== OX && Fk !== Function.prototype;) this.discoverTypes(Fk);
+        const Ik = kk[Symbol.metadata];
+        (Ik[Ok] || Ik[Rk]) && (this.hasFilters = !0);
+        for (const Xk in Ik) {
+          const kk = Ik[Xk].type;
+          if ("string" !== typeof kk && !UF(kk))
+            if ("function" === typeof kk) this.discoverTypes(kk);
             else {
-              const zC = Object.values(CC)[0];
-              if ("string" === typeof zC) continue;
-              this.discoverTypes(zC)
+              const Fk = Object.values(kk)[0];
+              if ("string" === typeof Fk) continue;
+              this.discoverTypes(Fk)
             }
         }
       }
@@ -2612,303 +2612,303 @@ export const modules = {
       }
     }
 
-    function Tz(CC) {
-      const zC = tz(CC);
-      return zC ? {
-        complexTypeKlass: Az[zC],
-        childType: CC[zC]
+    function fF(kk) {
+      const Fk = dF(kk);
+      return Fk ? {
+        complexTypeKlass: QF[Fk],
+        childType: kk[Fk]
       } : {
         complexTypeKlass: !1,
-        childType: CC
+        childType: kk
       }
     }
 
-    function az(CC, zC) {
-      const ZC = Dz(CC),
-        QC = tz(ZC),
-        wC = QC && tz(ZC[QC]);
-      if (wC) throw new Error(`${zC?`${zC}: `:""}@colyseus/schema: nested collections are not supported ("${QC}" of "${wC}"). Collections can only hold primitive types or Schema classes, wrap the inner ${wC} in a Schema class.`);
-      return ZC
+    function BF(kk, Fk) {
+      const Ik = YF(kk),
+        Xk = dF(Ik),
+        Tk = Xk && dF(Ik[Xk]);
+      if (Tk) throw new Error(`${Fk?`${Fk}: `:""}@colyseus/schema: nested collections are not supported ("${Xk}" of "${Tk}"). Collections can only hold primitive types or Schema classes, wrap the inner ${Tk} in a Schema class.`);
+      return Ik
     }
 
-    function tz(CC) {
-      return "object" === typeof CC && null !== CC ? Object.keys(CC).find((CC => void 0 !== Az[CC])) : void 0
+    function dF(kk) {
+      return "object" === typeof kk && null !== kk ? Object.keys(kk).find((kk => void 0 !== QF[kk])) : void 0
     }
 
-    function Dz(CC) {
-      if ("object" !== typeof CC || null === CC) return CC;
-      if (Array.isArray(CC)) return {
-        array: Dz(CC[0])
+    function YF(kk) {
+      if ("object" !== typeof kk || null === kk) return kk;
+      if (Array.isArray(kk)) return {
+        array: YF(kk[0])
       };
-      const zC = function(CC) {
-        const zC = Object.keys(CC),
-          ZC = zC.filter((CC => /\d+/.test(CC)));
-        if (ZC.length > 0 && ZC.length === zC.length / 2 && CC[CC[ZC[0]]] == ZC[0]) return "number";
-        if (zC.length > 0 && zC.every((zC => CC[zC] === zC))) return "string"
-      }(CC);
-      if (zC) return zC;
-      if (Xz(CC)) return "string" === typeof CC.quantized.wire ? CC : {
-        quantized: lz(CC.quantized)
+      const Fk = function(kk) {
+        const Fk = Object.keys(kk),
+          Ik = Fk.filter((kk => /\d+/.test(kk)));
+        if (Ik.length > 0 && Ik.length === Fk.length / 2 && kk[kk[Ik[0]]] == Ik[0]) return "number";
+        if (Fk.length > 0 && Fk.every((Fk => kk[Fk] === Fk))) return "string"
+      }(kk);
+      if (Fk) return Fk;
+      if (UF(kk)) return "string" === typeof kk.quantized.wire ? kk : {
+        quantized: RF(kk.quantized)
       };
-      if (void 0 !== CC.type) return Dz(CC.type);
-      const ZC = tz(CC);
-      return ZC && (CC[ZC] = Dz(CC[ZC])), CC
+      if (void 0 !== kk.type) return YF(kk.type);
+      const Ik = dF(kk);
+      return Ik && (kk[Ik] = YF(kk[Ik])), kk
     }
-    const jz = [hC, dC, mC, HC, EC, lC, vC];
+    const AF = [Ek, Gk, pk, uk, bk, Rk, Sk];
 
-    function yz(CC, zC, ZC) {
-      CC[zC] || Object.defineProperty(CC, zC, {
+    function gF(kk, Fk, Ik) {
+      kk[Fk] || Object.defineProperty(kk, Fk, {
         value: [],
         enumerable: !1,
         configurable: !0,
         writable: !0
-      }), CC[zC].push(ZC)
+      }), kk[Fk].push(Ik)
     }
-    const Lz = {
-        addField(CC, zC, ZC, QC, wC) {
-          if (zC >= 63) throw new Error(`Can't define field '${ZC}'.\nSchema instances may only have up to 63 fields.`);
-          CC[zC] = Object.assign(CC[zC] || {}, {
-            type: QC,
-            index: zC,
-            name: ZC
-          }), Object.defineProperty(CC, IC, {
-            value: CC[IC] || {},
+    const mF = {
+        addField(kk, Fk, Ik, Xk, Tk) {
+          if (Fk >= 63) throw new Error(`Can't define field '${Ik}'.\nSchema instances may only have up to 63 fields.`);
+          kk[Fk] = Object.assign(kk[Fk] || {}, {
+            type: Xk,
+            index: Fk,
+            name: Ik
+          }), Object.defineProperty(kk, Vk, {
+            value: kk[Vk] || {},
             enumerable: !1,
             configurable: !0
-          }), CC[IC][ZC] = wC || {
+          }), kk[Vk][Ik] = Tk || {
             value: void 0,
             writable: !0,
             enumerable: !0,
             configurable: !0
-          }, Object.defineProperty(CC, eC, {
-            value: zC,
+          }, Object.defineProperty(kk, vk, {
+            value: Fk,
             enumerable: !1,
             configurable: !0
-          }), Object.defineProperty(CC, ZC, {
-            value: zC,
+          }), Object.defineProperty(kk, Ik, {
+            value: Fk,
             enumerable: !1,
             configurable: !0
-          }), "string" === typeof CC[zC].type || Xz(CC[zC].type) || (void 0 === CC[hC] && Object.defineProperty(CC, hC, {
+          }), "string" === typeof kk[Fk].type || UF(kk[Fk].type) || (void 0 === kk[Ek] && Object.defineProperty(kk, Ek, {
             value: [],
             enumerable: !1,
             configurable: !0
-          }), CC[hC].push(zC));
-          const bC = CC[zC].type;
-          if (bC && "object" === typeof bC && void 0 !== bC.stream) {
-            if (void 0 !== bC.array) throw new Error(iz);
-            CC[zC].stream = !0, CC[lC] || Object.defineProperty(CC, lC, {
+          }), kk[Ek].push(Fk));
+          const ik = kk[Fk].type;
+          if (ik && "object" === typeof ik && void 0 !== ik.stream) {
+            if (void 0 !== ik.array) throw new Error(SF);
+            kk[Fk].stream = !0, kk[Rk] || Object.defineProperty(kk, Rk, {
               value: [],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), CC[lC].includes(zC) || CC[lC].push(zC);
-            const wC = QC?.priority;
-            "function" === typeof wC && Lz.setStreamPriority(CC, ZC, wC)
+            }), kk[Rk].includes(Fk) || kk[Rk].push(Fk);
+            const Tk = Xk?.priority;
+            "function" === typeof Tk && mF.setStreamPriority(kk, Ik, Tk)
           }
         },
-        setTag(CC, zC, ZC) {
-          const QC = CC[zC];
-          if (CC[QC].tag = ZC, CC[KC] || (Object.defineProperty(CC, KC, {
+        setTag(kk, Fk, Ik) {
+          const Xk = kk[Fk];
+          if (kk[Xk].tag = Ik, kk[Ok] || (Object.defineProperty(kk, Ok, {
               value: [],
               enumerable: !1,
               configurable: !0
-            }), Object.defineProperty(CC, YC, {
+            }), Object.defineProperty(kk, nk, {
               value: {},
               enumerable: !1,
               configurable: !0
-            })), CC[KC].push(QC), ZC < 0) CC[YC][ZC] || (CC[YC][ZC] = []), CC[YC][ZC].push(QC);
+            })), kk[Ok].push(Xk), Ik < 0) kk[nk][Ik] || (kk[nk][Ik] = []), kk[nk][Ik].push(Xk);
           else
-            for (let wC = ZC; wC > 0; wC &= wC - 1) {
-              const zC = wC & -wC;
-              CC[YC][zC] || (CC[YC][zC] = []), CC[YC][zC].push(QC)
+            for (let Tk = Ik; Tk > 0; Tk &= Tk - 1) {
+              const Fk = Tk & -Tk;
+              kk[nk][Fk] || (kk[nk][Fk] = []), kk[nk][Fk].push(Xk)
             }
         },
-        setUnreliable(CC, zC) {
-          const ZC = CC[zC];
-          if ("string" !== typeof CC[ZC].type) throw new Error(`@unreliable cannot be applied to ref-type field "${zC}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
-          CC[ZC].unreliable = !0, CC[dC] || Object.defineProperty(CC, dC, {
+        setUnreliable(kk, Fk) {
+          const Ik = kk[Fk];
+          if ("string" !== typeof kk[Ik].type) throw new Error(`@unreliable cannot be applied to ref-type field "${Fk}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
+          kk[Ik].unreliable = !0, kk[Gk] || Object.defineProperty(kk, Gk, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), CC[dC].push(ZC)
+          }), kk[Gk].push(Ik)
         },
-        setPatchOnly(CC, zC) {
-          const ZC = CC[zC];
-          if (CC[ZC].fullStateOnly) throw new Error(`field "${zC}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          CC[ZC].patchOnly = !0, yz(CC, mC, ZC), yz(CC, HC, ZC)
+        setPatchOnly(kk, Fk) {
+          const Ik = kk[Fk];
+          if (kk[Ik].fullStateOnly) throw new Error(`field "${Fk}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          kk[Ik].patchOnly = !0, gF(kk, pk, Ik), gF(kk, uk, Ik)
         },
-        setDeprecated(CC, zC) {
-          const ZC = CC[zC];
-          CC[ZC].deprecated = !0, yz(CC, HC, ZC), Object.defineProperty(CC, ZC, {
-            value: CC[ZC],
+        setDeprecated(kk, Fk) {
+          const Ik = kk[Fk];
+          kk[Ik].deprecated = !0, gF(kk, uk, Ik), Object.defineProperty(kk, Ik, {
+            value: kk[Ik],
             enumerable: !1,
             configurable: !0
           })
         },
-        setFullStateOnly(CC, zC) {
-          const ZC = CC[zC];
-          if (CC[ZC].patchOnly) throw new Error(`field "${zC}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          CC[ZC].fullStateOnly = !0, yz(CC, EC, ZC)
+        setFullStateOnly(kk, Fk) {
+          const Ik = kk[Fk];
+          if (kk[Ik].patchOnly) throw new Error(`field "${Fk}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          kk[Ik].fullStateOnly = !0, gF(kk, bk, Ik)
         },
-        setStream(CC, zC) {
-          const ZC = CC[zC];
-          CC[ZC].stream = !0, CC[lC] || Object.defineProperty(CC, lC, {
+        setStream(kk, Fk) {
+          const Ik = kk[Fk];
+          kk[Ik].stream = !0, kk[Rk] || Object.defineProperty(kk, Rk, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), CC[lC].push(ZC)
+          }), kk[Rk].push(Ik)
         },
-        setStreamPriority(CC, zC, ZC) {
-          const QC = CC[zC];
-          CC[XC] || Object.defineProperty(CC, XC, {
+        setStreamPriority(kk, Fk, Ik) {
+          const Xk = kk[Fk];
+          kk[Uk] || Object.defineProperty(kk, Uk, {
             value: {},
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), CC[XC][QC] = ZC
+          }), kk[Uk][Xk] = Ik
         },
-        getStreamPriority: (CC, zC) => CC?.[XC]?.[zC],
-        defineField(CC, zC, ZC, QC, wC) {
-          const bC = az(wC, `${CC.name}.${QC}`),
+        getStreamPriority: (kk, Fk) => kk?.[Uk]?.[Fk],
+        defineField(kk, Fk, Ik, Xk, Tk) {
+          const ik = BF(Tk, `${kk.name}.${Xk}`),
             {
-              complexTypeKlass: nC,
-              childType: fC
-            } = Tz(bC);
-          Lz.addField(zC, ZC, QC, bC, JQ(QC, ZC, fC, nC)), zC[IC][QC] && Object.defineProperty(CC.prototype, QC, zC[IC][QC]), ("string" === typeof bC || Xz(bC)) && (zC[vC] || Object.defineProperty(zC, vC, {
+              complexTypeKlass: yk,
+              childType: lk
+            } = fF(ik);
+          mF.addField(Fk, Ik, Xk, ik, VX(Xk, Ik, lk, yk)), Fk[Vk][Xk] && Object.defineProperty(kk.prototype, Xk, Fk[Vk][Xk]), ("string" === typeof ik || UF(ik)) && (Fk[Sk] || Object.defineProperty(Fk, Sk, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), zC[vC][ZC] = "string" === typeof bC ? zz[bC] : rz(bC.quantized))
+          }), Fk[Sk][Ik] = "string" === typeof ik ? IF[ik] : cF(ik.quantized))
         },
-        setFields(CC, zC) {
-          const ZC = CC.prototype.constructor;
-          sz.register(ZC);
-          const QC = Object.getPrototypeOf(ZC),
-            wC = QC && QC[Symbol.metadata],
-            bC = Lz.initialize(ZC);
-          ZC[oC] || (ZC[oC] = KQ[oC]), ZC[qC] || (ZC[qC] = KQ[qC]), ZC[FC] || (ZC[FC] = KQ[FC]), ZC.prototype.toJSON || (ZC.prototype.toJSON = KQ.prototype.toJSON);
-          let nC = bC[eC] ?? (wC && wC[eC]) ?? -1;
-          nC++, bC[vC] || Object.defineProperty(bC, vC, {
-            value: wC?.[vC] ? [...wC[vC]] : [],
+        setFields(kk, Fk) {
+          const Ik = kk.prototype.constructor;
+          WF.register(Ik);
+          const Xk = Object.getPrototypeOf(Ik),
+            Tk = Xk && Xk[Symbol.metadata],
+            ik = mF.initialize(Ik);
+          Ik[ak] || (Ik[ak] = OX[ak]), Ik[qk] || (Ik[qk] = OX[qk]), Ik[Lk] || (Ik[Lk] = OX[Lk]), Ik.prototype.toJSON || (Ik.prototype.toJSON = OX.prototype.toJSON);
+          let yk = ik[vk] ?? (Tk && Tk[vk]) ?? -1;
+          yk++, ik[Sk] || Object.defineProperty(ik, Sk, {
+            value: Tk?.[Sk] ? [...Tk[Sk]] : [],
             enumerable: !1,
             configurable: !0,
             writable: !0
           });
-          for (const fC in zC) {
-            if (void 0 !== bC[fC]) throw new Error(`@colyseus/schema: Duplicate '${fC}' definition on '${ZC.name||"(anonymous)"}'.`);
-            Lz.defineField(ZC, bC, nC, fC, zC[fC]), nC++
+          for (const lk in Fk) {
+            if (void 0 !== ik[lk]) throw new Error(`@colyseus/schema: Duplicate '${lk}' definition on '${Ik.name||"(anonymous)"}'.`);
+            mF.defineField(Ik, ik, yk, lk, Fk[lk]), yk++
           }
-          return CC
+          return kk
         },
-        isDeprecated: (CC, zC) => !0 === CC[zC].deprecated,
-        initialize(CC) {
-          const zC = Object.getPrototypeOf(CC),
-            ZC = zC[Symbol.metadata];
-          let QC = CC[Symbol.metadata] ?? Object.create(null);
-          if (zC !== KQ && QC === ZC && (QC = Object.create(null), ZC)) {
-            Object.setPrototypeOf(QC, ZC), Object.defineProperty(QC, eC, {
-              value: ZC[eC],
+        isDeprecated: (kk, Fk) => !0 === kk[Fk].deprecated,
+        initialize(kk) {
+          const Fk = Object.getPrototypeOf(kk),
+            Ik = Fk[Symbol.metadata];
+          let Xk = kk[Symbol.metadata] ?? Object.create(null);
+          if (Fk !== OX && Xk === Ik && (Xk = Object.create(null), Ik)) {
+            Object.setPrototypeOf(Xk, Ik), Object.defineProperty(Xk, vk, {
+              value: Ik[vk],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), void 0 !== ZC[KC] && (Object.defineProperty(QC, KC, {
-              value: [...ZC[KC]],
+            }), void 0 !== Ik[Ok] && (Object.defineProperty(Xk, Ok, {
+              value: [...Ik[Ok]],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), Object.defineProperty(QC, YC, {
+            }), Object.defineProperty(Xk, nk, {
               value: {
-                ...ZC[YC]
+                ...Ik[nk]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             }));
-            for (const CC of jz) {
-              const zC = ZC[CC];
-              void 0 !== zC && Object.defineProperty(QC, CC, {
-                value: [...zC],
+            for (const kk of AF) {
+              const Fk = Ik[kk];
+              void 0 !== Fk && Object.defineProperty(Xk, kk, {
+                value: [...Fk],
                 enumerable: !1,
                 configurable: !0,
                 writable: !0
               })
             }
-            Object.defineProperty(QC, IC, {
+            Object.defineProperty(Xk, Vk, {
               value: {
-                ...ZC[IC]
+                ...Ik[Vk]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             })
           }
-          return Object.defineProperty(CC, Symbol.metadata, {
-            value: QC,
+          return Object.defineProperty(kk, Symbol.metadata, {
+            value: Xk,
             writable: !1,
             configurable: !0
-          }), QC
+          }), Xk
         },
-        isValidInstance: CC => CC.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(CC.constructor[Symbol.metadata], eC),
-        getFields(CC) {
-          const zC = CC[Symbol.metadata],
-            ZC = {};
-          for (let QC = 0; QC <= zC[eC]; QC++) ZC[zC[QC].name] = zC[QC].type;
-          return ZC
+        isValidInstance: kk => kk.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(kk.constructor[Symbol.metadata], vk),
+        getFields(kk) {
+          const Fk = kk[Symbol.metadata],
+            Ik = {};
+          for (let Xk = 0; Xk <= Fk[vk]; Xk++) Ik[Fk[Xk].name] = Fk[Xk].type;
+          return Ik
         },
-        hasViewTagAtIndex: (CC, zC) => CC?.[KC]?.includes(zC),
-        hasUnreliableAtIndex: (CC, zC) => CC?.[dC]?.includes(zC),
-        hasPatchOnlyAtIndex: (CC, zC) => CC?.[mC]?.includes(zC),
-        hasFullStateOnlyAtIndex: (CC, zC) => CC?.[EC]?.includes(zC),
-        hasStreamAtIndex: (CC, zC) => CC?.[lC]?.includes(zC)
+        hasViewTagAtIndex: (kk, Fk) => kk?.[Ok]?.includes(Fk),
+        hasUnreliableAtIndex: (kk, Fk) => kk?.[Gk]?.includes(Fk),
+        hasPatchOnlyAtIndex: (kk, Fk) => kk?.[pk]?.includes(Fk),
+        hasFullStateOnlyAtIndex: (kk, Fk) => kk?.[bk]?.includes(Fk),
+        hasStreamAtIndex: (kk, Fk) => kk?.[Rk]?.includes(Fk)
       },
-      Uz = (CC, zC, ZC) => CC(zC, ZC);
-    class Bz {
+      hF = (kk, Fk, Ik) => kk(Fk, Ik);
+    class rF {
       dirtyLow = 0;
       dirtyHigh = 0;
       ops;
-      constructor(CC) {
-        this.ops = new Uint8Array(Math.max(CC + 1, 1))
+      constructor(kk) {
+        this.ops = new Uint8Array(Math.max(kk + 1, 1))
       }
-      record(CC, zC) {
-        const ZC = this.ops[CC];
-        0 === ZC ? this.ops[CC] = zC : (ZC === wC.DELETE || ZC === wC.ADD && zC === wC.DELETE_AND_ADD) && (this.ops[CC] = wC.DELETE_AND_ADD), CC < 32 ? this.dirtyLow |= 1 << CC : this.dirtyHigh |= 1 << CC - 32
+      record(kk, Fk) {
+        const Ik = this.ops[kk];
+        0 === Ik ? this.ops[kk] = Fk : (Ik === Tk.DELETE || Ik === Tk.ADD && Fk === Tk.DELETE_AND_ADD) && (this.ops[kk] = Tk.DELETE_AND_ADD), kk < 32 ? this.dirtyLow |= 1 << kk : this.dirtyHigh |= 1 << kk - 32
       }
-      recordDelete(CC, zC) {
-        this.ops[CC] = zC, CC < 32 ? this.dirtyLow |= 1 << CC : this.dirtyHigh |= 1 << CC - 32
+      recordDelete(kk, Fk) {
+        this.ops[kk] = Fk, kk < 32 ? this.dirtyLow |= 1 << kk : this.dirtyHigh |= 1 << kk - 32
       }
-      recordRaw(CC, zC) {
-        this.record(CC, zC)
+      recordRaw(kk, Fk) {
+        this.record(kk, Fk)
       }
-      operationAt(CC) {
-        const zC = this.ops[CC];
-        return 0 === zC ? void 0 : zC
+      operationAt(kk) {
+        const Fk = this.ops[kk];
+        return 0 === Fk ? void 0 : Fk
       }
-      setOperationAt(CC, zC) {
-        this.ops[CC] = zC
+      setOperationAt(kk, Fk) {
+        this.ops[kk] = Fk
       }
-      forEach(CC) {
-        this.forEachWithCtx(CC, Uz)
+      forEach(kk) {
+        this.forEachWithCtx(kk, hF)
       }
-      forEachWithCtx(CC, zC) {
-        let ZC = this.dirtyLow,
-          QC = this.dirtyHigh;
-        const wC = this.ops;
-        for (; 0 !== ZC;) {
-          const QC = ZC & -ZC,
-            bC = 31 - Math.clz32(QC);
-          ZC ^= QC, zC(CC, bC, wC[bC])
+      forEachWithCtx(kk, Fk) {
+        let Ik = this.dirtyLow,
+          Xk = this.dirtyHigh;
+        const Tk = this.ops;
+        for (; 0 !== Ik;) {
+          const Xk = Ik & -Ik,
+            ik = 31 - Math.clz32(Xk);
+          Ik ^= Xk, Fk(kk, ik, Tk[ik])
         }
-        for (; 0 !== QC;) {
-          const ZC = QC & -QC,
-            bC = 31 - Math.clz32(ZC) + 32;
-          QC ^= ZC, zC(CC, bC, wC[bC])
+        for (; 0 !== Xk;) {
+          const Ik = Xk & -Xk,
+            ik = 31 - Math.clz32(Ik) + 32;
+          Xk ^= Ik, Fk(kk, ik, Tk[ik])
         }
       }
       size() {
-        return kz(this.dirtyLow) + kz(this.dirtyHigh)
+        return MF(this.dirtyLow) + MF(this.dirtyHigh)
       }
       has() {
         return 0 !== (this.dirtyLow | this.dirtyHigh)
@@ -2917,359 +2917,359 @@ export const modules = {
         this.dirtyLow = 0, this.dirtyHigh = 0, this.ops.fill(0)
       }
     }
-    class Oz {
-      rg = new Map;
+    class DF {
+      Ne = new Map;
       pureOps = [];
-      record(CC, zC) {
-        const ZC = this.rg.get(CC);
-        void 0 === ZC ? this.rg.set(CC, zC) : (ZC === wC.DELETE || ZC === wC.ADD && zC === wC.DELETE_AND_ADD) && this.rg.set(CC, wC.DELETE_AND_ADD)
+      record(kk, Fk) {
+        const Ik = this.Ne.get(kk);
+        void 0 === Ik ? this.Ne.set(kk, Fk) : (Ik === Tk.DELETE || Ik === Tk.ADD && Fk === Tk.DELETE_AND_ADD) && this.Ne.set(kk, Tk.DELETE_AND_ADD)
       }
-      recordDelete(CC, zC) {
-        this.rg.set(CC, zC)
+      recordDelete(kk, Fk) {
+        this.Ne.set(kk, Fk)
       }
-      recordRaw(CC, zC) {
-        this.rg.set(CC, zC)
+      recordRaw(kk, Fk) {
+        this.Ne.set(kk, Fk)
       }
-      recordPure(CC) {
-        this.pureOps.push([this.rg.size, CC])
+      recordPure(kk) {
+        this.pureOps.push([this.Ne.size, kk])
       }
-      operationAt(CC) {
-        return this.rg.get(CC)
+      operationAt(kk) {
+        return this.Ne.get(kk)
       }
-      setOperationAt(CC, zC) {
-        this.rg.has(CC) && this.rg.set(CC, zC)
+      setOperationAt(kk, Fk) {
+        this.Ne.has(kk) && this.Ne.set(kk, Fk)
       }
-      forEach(CC) {
-        this.forEachWithCtx(CC, Uz)
+      forEach(kk) {
+        this.forEachWithCtx(kk, hF)
       }
-      forEachWithCtx(CC, zC) {
-        const ZC = this.pureOps;
-        if (ZC.length > 0) {
-          let QC = 0,
-            wC = 0;
-          for (const [bC, nC] of this.rg) {
-            for (; QC < ZC.length && ZC[QC][0] <= wC;) {
-              const wC = ZC[QC++][1];
-              zC(CC, -wC, wC)
+      forEachWithCtx(kk, Fk) {
+        const Ik = this.pureOps;
+        if (Ik.length > 0) {
+          let Xk = 0,
+            Tk = 0;
+          for (const [ik, yk] of this.Ne) {
+            for (; Xk < Ik.length && Ik[Xk][0] <= Tk;) {
+              const Tk = Ik[Xk++][1];
+              Fk(kk, -Tk, Tk)
             }
-            zC(CC, bC, nC), wC++
+            Fk(kk, ik, yk), Tk++
           }
-          for (; QC < ZC.length;) {
-            const wC = ZC[QC++][1];
-            zC(CC, -wC, wC)
+          for (; Xk < Ik.length;) {
+            const Tk = Ik[Xk++][1];
+            Fk(kk, -Tk, Tk)
           }
         } else
-          for (const [QC, wC] of this.rg) zC(CC, QC, wC)
+          for (const [Xk, Tk] of this.Ne) Fk(kk, Xk, Tk)
       }
       size() {
-        return this.rg.size + this.pureOps.length
+        return this.Ne.size + this.pureOps.length
       }
       has() {
-        return this.rg.size > 0 || this.pureOps.length > 0
+        return this.Ne.size > 0 || this.pureOps.length > 0
       }
       reset() {
-        this.rg.clear(), this.pureOps.length = 0
+        this.Ne.clear(), this.pureOps.length = 0
       }
-      shift(CC) {
-        const zC = new Map;
-        for (const [ZC, QC] of this.rg) zC.set(ZC + CC, QC);
-        this.rg = zC
+      shift(kk) {
+        const Fk = new Map;
+        for (const [Ik, Xk] of this.Ne) Fk.set(Ik + kk, Xk);
+        this.Ne = Fk
       }
     }
 
-    function kz(CC) {
-      return 16843009 * ((CC = (858993459 & (CC -= CC >>> 1 & 1431655765)) + (CC >>> 2 & 858993459)) + (CC >>> 4) & 252645135) >>> 24
+    function MF(kk) {
+      return 16843009 * ((kk = (858993459 & (kk -= kk >>> 1 & 1431655765)) + (kk >>> 2 & 858993459)) + (kk >>> 4) & 252645135) >>> 24
     }
 
-    function Vz(CC) {
-      if (void 0 === CC) return 0;
-      let zC = 0;
-      for (let ZC = 0, QC = CC.length; ZC < QC; ZC++) {
-        const QC = CC[ZC];
-        QC < 32 && (zC |= 1 << QC)
+    function kI(kk) {
+      if (void 0 === kk) return 0;
+      let Fk = 0;
+      for (let Ik = 0, Xk = kk.length; Ik < Xk; Ik++) {
+        const Xk = kk[Ik];
+        Xk < 32 && (Fk |= 1 << Xk)
       }
-      return zC
+      return Fk
     }
 
-    function CZ(CC) {
-      const zC = CC.constructor;
-      if (Object.prototype.hasOwnProperty.call(zC, iC)) return zC[iC];
-      const ZC = zC[Symbol.metadata],
-        QC = Lz.isValidInstance(CC),
-        wC = (ZC?.[KC]?.length ?? 0) > 0,
-        bC = function(CC) {
-          const zC = [],
-            ZC = [],
-            QC = [],
-            wC = [],
-            bC = CC?.[eC];
-          if (void 0 === bC) return {
-            names: zC,
-            types: ZC,
-            tags: QC,
-            encoders: wC
+    function FI(kk) {
+      const Fk = kk.constructor;
+      if (Object.prototype.hasOwnProperty.call(Fk, zk)) return Fk[zk];
+      const Ik = Fk[Symbol.metadata],
+        Xk = mF.isValidInstance(kk),
+        Tk = (Ik?.[Ok]?.length ?? 0) > 0,
+        ik = function(kk) {
+          const Fk = [],
+            Ik = [],
+            Xk = [],
+            Tk = [],
+            ik = kk?.[vk];
+          if (void 0 === ik) return {
+            names: Fk,
+            types: Ik,
+            tags: Xk,
+            encoders: Tk
           };
-          const nC = CC[vC];
-          for (let fC = 0; fC <= bC; fC++) {
-            const bC = CC[fC];
-            void 0 !== bC ? (zC[fC] = bC.name, ZC[fC] = bC.type, QC[fC] = bC.tag, wC[fC] = nC?.[fC]) : (zC[fC] = void 0, ZC[fC] = void 0, QC[fC] = void 0, wC[fC] = void 0)
+          const yk = kk[Sk];
+          for (let lk = 0; lk <= ik; lk++) {
+            const ik = kk[lk];
+            void 0 !== ik ? (Fk[lk] = ik.name, Ik[lk] = ik.type, Xk[lk] = ik.tag, Tk[lk] = yk?.[lk]) : (Fk[lk] = void 0, Ik[lk] = void 0, Xk[lk] = void 0, Tk[lk] = void 0)
           }
           return {
-            names: zC,
-            types: ZC,
-            tags: QC,
-            encoders: wC
+            names: Fk,
+            types: Ik,
+            tags: Xk,
+            encoders: Tk
           }
-        }(ZC),
-        nC = QC && !wC ? void 0 : zC[WC],
-        fC = {
-          encoder: zC[qC],
-          filter: nC,
-          metadata: ZC,
-          isSchema: QC,
-          filterBitmask: QC ? Vz(ZC?.[KC]) : 0,
-          hasAnyFullStateOnly: (ZC?.[EC]?.length ?? 0) > 0,
-          hasAnyUnreliable: (ZC?.[dC]?.length ?? 0) > 0,
-          hasAnyStream: (ZC?.[lC]?.length ?? 0) > 0,
-          hasAnyView: wC,
-          fullStateOnlyBitmask: Vz(ZC?.[EC]),
-          unreliableBitmask: Vz(ZC?.[dC]),
-          streamBitmask: Vz(ZC?.[lC]),
-          names: bC.names,
-          types: bC.types,
-          tags: bC.tags,
-          encoders: bC.encoders
+        }(Ik),
+        yk = Xk && !Tk ? void 0 : Fk[tk],
+        lk = {
+          encoder: Fk[qk],
+          filter: yk,
+          metadata: Ik,
+          isSchema: Xk,
+          filterBitmask: Xk ? kI(Ik?.[Ok]) : 0,
+          hasAnyFullStateOnly: (Ik?.[bk]?.length ?? 0) > 0,
+          hasAnyUnreliable: (Ik?.[Gk]?.length ?? 0) > 0,
+          hasAnyStream: (Ik?.[Rk]?.length ?? 0) > 0,
+          hasAnyView: Tk,
+          fullStateOnlyBitmask: kI(Ik?.[bk]),
+          unreliableBitmask: kI(Ik?.[Gk]),
+          streamBitmask: kI(Ik?.[Rk]),
+          names: ik.names,
+          types: ik.types,
+          tags: ik.tags,
+          encoders: ik.encoders
         };
-      return Object.defineProperty(zC, iC, {
-        value: fC,
+      return Object.defineProperty(Fk, zk, {
+        value: lk,
         enumerable: !1,
         writable: !0,
         configurable: !0
-      }), fC
+      }), lk
     }
 
-    function zZ(CC, zC) {
-      if (void 0 !== CC.parentRef && zC(CC.parentRef, CC._parentIndex)) return !0;
-      for (let ZC = CC.extraParents; void 0 !== ZC; ZC = ZC.next)
-        if (zC(ZC.ref, ZC.index)) return !0;
+    function II(kk, Fk) {
+      if (void 0 !== kk.parentRef && Fk(kk.parentRef, kk._parentIndex)) return !0;
+      for (let Ik = kk.extraParents; void 0 !== Ik; Ik = Ik.next)
+        if (Fk(Ik.ref, Ik.index)) return !0;
       return !1
     }
-    const ZZ = (CC, zC) => {
-        CC.isFieldUnreliable(zC) ? CC.ensureUnreliableRecorder().record(zC, wC.ADD) : CC.record(zC, wC.ADD)
+    const XI = (kk, Fk) => {
+        kk.isFieldUnreliable(Fk) ? kk.ensureUnreliableRecorder().record(Fk, Tk.ADD) : kk.record(Fk, Tk.ADD)
       },
-      QZ = (CC, zC) => CC(zC);
+      TI = (kk, Fk) => kk(Fk);
 
-    function wZ(CC, zC, ZC) {
-      const QC = CC.refTarget;
-      if (void 0 !== QC[pC]) {
-        if (CC.isPatchOnly) return;
-        if (Array.isArray(QC.items)) {
-          const CC = QC.items;
-          for (let QC = 0, wC = CC.length; QC < wC; QC++) void 0 !== CC[QC] && ZC(zC, QC)
-        } else if (void 0 !== QC.journal)
-          for (const [CC, wC] of QC.journal.keyByIndex) QC.$items.has(wC) && ZC(zC, CC);
-        else if (void 0 !== QC.$items)
-          for (const CC of QC.$items.keys()) ZC(zC, CC)
+    function iI(kk, Fk, Ik) {
+      const Xk = kk.refTarget;
+      if (void 0 !== Xk[Hk]) {
+        if (kk.isPatchOnly) return;
+        if (Array.isArray(Xk.items)) {
+          const kk = Xk.items;
+          for (let Xk = 0, Tk = kk.length; Xk < Tk; Xk++) void 0 !== kk[Xk] && Ik(Fk, Xk)
+        } else if (void 0 !== Xk.journal)
+          for (const [kk, Tk] of Xk.journal.keyByIndex) Xk.$items.has(Tk) && Ik(Fk, kk);
+        else if (void 0 !== Xk.$items)
+          for (const kk of Xk.$items.keys()) Ik(Fk, kk)
       } else {
-        const wC = CC.metadata;
-        if (!wC) return;
-        const bC = wC[eC] ?? -1,
-          nC = wC[HC],
-          fC = CC.encDescriptor.names;
-        for (let CC = 0; CC <= bC; CC++) {
-          const wC = fC[CC];
-          if (void 0 === wC) continue;
-          if (nC && nC.includes(CC)) continue;
-          const bC = QC[wC];
-          void 0 !== bC && null !== bC && ZC(zC, CC)
+        const Tk = kk.metadata;
+        if (!Tk) return;
+        const ik = Tk[vk] ?? -1,
+          yk = Tk[uk],
+          lk = kk.encDescriptor.names;
+        for (let kk = 0; kk <= ik; kk++) {
+          const Tk = lk[kk];
+          if (void 0 === Tk) continue;
+          if (yk && yk.includes(kk)) continue;
+          const ik = Xk[Tk];
+          void 0 !== ik && null !== ik && Ik(Fk, kk)
         }
       }
     }
 
-    function bZ(CC, zC, ZC, QC) {
-      ! function(CC, zC, ZC) {
-        if (!zC) return;
-        const QC = zC[SC],
-          wC = !QC._isSchema;
-        let bC;
-        wC ? (zC = QC.parent, ZC = QC.parentIndex, bC = zC?.[SC].metadata) : bC = QC.metadata;
-        const nC = (bC?.[mC]?.includes(ZC) ? iZ : 0) | (bC?.[EC]?.includes(ZC) ? vZ : 0),
-          fC = QC.flags & KZ | nC,
-          oC = CC.flags;
-        CC.flags = oC | fC;
-        fC & ~oC & vZ && (CC.reset(), CC.unreliableRecorder?.reset());
-        const qC = CC.root?.types;
-        if (!qC?.hasFilters) return;
-        const FC = bC?.[KC]?.includes(ZC) ?? !1,
-          WC = bC?.[lC]?.includes(ZC) ?? !1,
-          NC = QC.isFiltered || FC || WC;
-        if (CC.isFiltered = NC, WC && !wC) {
-          CC.isStreamCollection = !0;
-          const zC = ez(CC.ref);
-          if (void 0 === zC.priority) {
-            const CC = Lz.getStreamPriority(bC, ZC);
-            void 0 !== CC && (zC.priority = CC)
+    function yI(kk, Fk, Ik, Xk) {
+      ! function(kk, Fk, Ik) {
+        if (!Fk) return;
+        const Xk = Fk[wk],
+          Tk = !Xk._isSchema;
+        let ik;
+        Tk ? (Fk = Xk.parent, Ik = Xk.parentIndex, ik = Fk?.[wk].metadata) : ik = Xk.metadata;
+        const yk = (ik?.[pk]?.includes(Ik) ? SI : 0) | (ik?.[bk]?.includes(Ik) ? oI : 0),
+          lk = Xk.flags & OI | yk,
+          ak = kk.flags;
+        kk.flags = ak | lk;
+        lk & ~ak & oI && (kk.reset(), kk.unreliableRecorder?.reset());
+        const qk = kk.root?.types;
+        if (!qk?.hasFilters) return;
+        const Lk = ik?.[Ok]?.includes(Ik) ?? !1,
+          tk = ik?.[Rk]?.includes(Ik) ?? !1,
+          Zk = Xk.isFiltered || Lk || tk;
+        if (kk.isFiltered = Zk, tk && !Tk) {
+          kk.isStreamCollection = !0;
+          const Fk = vF(kk.ref);
+          if (void 0 === Fk.priority) {
+            const kk = mF.getStreamPriority(ik, Ik);
+            void 0 !== kk && (Fk.priority = kk)
           }
-          CC.root?.registerStream(CC.ref)
+          kk.root?.registerStream(kk.ref)
         }
-        if (NC) {
-          const zC = fZ(CC);
-          CC.isVisibilitySharedWithParent = QC.isFiltered && zC && !WC && (!FC || wC && bC[ZC].tag !== gQ)
+        if (Zk) {
+          const Fk = aI(kk);
+          kk.isVisibilitySharedWithParent = Xk.isFiltered && Fk && !tk && (!Lk || Tk && ik[Ik].tag !== wX)
         }
-      }(CC, zC, ZC), CC.isFullStateOnly || (CC.has() && CC.root?.enqueueChangeTree(CC), CC.unreliableRecorder?.has() && CC.root?.enqueueUnreliable(CC), CC.has() || CC.unreliableRecorder?.has() || CC.root?.enqueueChangeTree(CC))
+      }(kk, Fk, Ik), kk.isFullStateOnly || (kk.has() && kk.root?.enqueueChangeTree(kk), kk.unreliableRecorder?.has() && kk.root?.enqueueUnreliable(kk), kk.has() || kk.unreliableRecorder?.has() || kk.root?.enqueueChangeTree(kk))
     }
 
-    function nZ(CC) {
-      const zC = CC.pendingFilterRefresh;
-      for (let ZC = 0; ZC < zC.length; ZC++) {
-        const CC = zC[ZC];
-        0 !== (CC.flags & hZ) && oZ(CC)
+    function lI(kk) {
+      const Fk = kk.pendingFilterRefresh;
+      for (let Ik = 0; Ik < Fk.length; Ik++) {
+        const kk = Fk[Ik];
+        0 !== (kk.flags & EI) && qI(kk)
       }
-      zC.length = 0
+      Fk.length = 0
     }
 
-    function fZ(CC) {
-      return CC._isSchema || "string" !== typeof CC.refTarget[pC]
+    function aI(kk) {
+      return kk._isSchema || "string" !== typeof kk.refTarget[Hk]
     }
 
-    function oZ(CC) {
-      CC.flags &= ~hZ;
-      const zC = CC.root;
-      if (void 0 === zC || void 0 === CC.parentRef) return;
-      const ZC = fZ(CC);
-      let QC = MZ(CC, CC.parentRef, CC._parentIndex, ZC);
-      for (let bC = CC.extraParents; void 0 !== bC && QC !== NZ; bC = bC.next) QC |= MZ(CC, bC.ref, bC.index, ZC);
-      if (0 === QC) return;
-      CC.isVisibilitySharedWithParent = 0 !== (QC & WZ);
-      const wC = 0 === (QC & FZ);
-      wC !== CC.isFiltered && (CC.isFiltered = wC, wC || CC.isFullStateOnly || (CC.forEachLiveWithCtx(CC, ZZ), CC.has() && zC.enqueueChangeTree(CC), CC.unreliableRecorder?.has() && zC.enqueueUnreliable(CC)), CC.forEachChildWithCtx(CC, gZ))
+    function qI(kk) {
+      kk.flags &= ~EI;
+      const Fk = kk.root;
+      if (void 0 === Fk || void 0 === kk.parentRef) return;
+      const Ik = aI(kk);
+      let Xk = eI(kk, kk.parentRef, kk._parentIndex, Ik);
+      for (let ik = kk.extraParents; void 0 !== ik && Xk !== jI; ik = ik.next) Xk |= eI(kk, ik.ref, ik.index, Ik);
+      if (0 === Xk) return;
+      kk.isVisibilitySharedWithParent = 0 !== (Xk & ZI);
+      const Tk = 0 === (Xk & tI);
+      Tk !== kk.isFiltered && (kk.isFiltered = Tk, Tk || kk.isFullStateOnly || (kk.forEachLiveWithCtx(kk, XI), kk.has() && Fk.enqueueChangeTree(kk), kk.unreliableRecorder?.has() && Fk.enqueueUnreliable(kk)), kk.forEachChildWithCtx(kk, wI))
     }
-    const qZ = 1,
-      FZ = 2,
-      WZ = 4,
-      NZ = qZ | FZ | WZ;
+    const LI = 1,
+      tI = 2,
+      ZI = 4,
+      jI = LI | tI | ZI;
 
-    function MZ(CC, zC, ZC, QC) {
-      const wC = zC[SC];
-      if (wC.root !== CC.root || ! function(CC, zC, ZC) {
-          const QC = zC.refTarget;
-          if (zC.isArray) {
-            const zC = QC.items,
-              wC = zC[ZC];
-            if (void 0 !== wC && wC[SC] === CC) return !0;
-            for (let ZC = 0, QC = zC.length; ZC < QC; ZC++) {
-              const QC = zC[ZC];
-              if (void 0 !== QC && QC[SC] === CC) return !0
+    function eI(kk, Fk, Ik, Xk) {
+      const Tk = Fk[wk];
+      if (Tk.root !== kk.root || ! function(kk, Fk, Ik) {
+          const Xk = Fk.refTarget;
+          if (Fk.isArray) {
+            const Fk = Xk.items,
+              Tk = Fk[Ik];
+            if (void 0 !== Tk && Tk[wk] === kk) return !0;
+            for (let Ik = 0, Xk = Fk.length; Ik < Xk; Ik++) {
+              const Xk = Fk[Ik];
+              if (void 0 !== Xk && Xk[wk] === kk) return !0
             }
             return !1
           }
-          const wC = zC.getValue(ZC);
-          return void 0 !== wC && wC[SC] === CC
-        }(CC, wC, ZC)) return 0;
-      wC.flags & hZ && oZ(wC);
-      let bC = qZ;
-      if (wC._isSchema) {
-        void 0 !== wC.encDescriptor.tags[ZC] || wC.isFieldStream(ZC) || (wC.isFiltered ? QC && (bC |= WZ) : bC |= FZ)
-      } else if (wC.isFiltered) {
-        if (QC && !wC.isStreamCollection) {
-          const CC = wC.parent?.[SC];
-          (CC?._isSchema ? CC.encDescriptor.tags[wC.parentIndex] : void 0) !== gQ && (bC |= WZ)
+          const Tk = Fk.getValue(Ik);
+          return void 0 !== Tk && Tk[wk] === kk
+        }(kk, Tk, Ik)) return 0;
+      Tk.flags & EI && qI(Tk);
+      let ik = LI;
+      if (Tk._isSchema) {
+        void 0 !== Tk.encDescriptor.tags[Ik] || Tk.isFieldStream(Ik) || (Tk.isFiltered ? Xk && (ik |= ZI) : ik |= tI)
+      } else if (Tk.isFiltered) {
+        if (Xk && !Tk.isStreamCollection) {
+          const kk = Tk.parent?.[wk];
+          (kk?._isSchema ? kk.encDescriptor.tags[Tk.parentIndex] : void 0) !== wX && (ik |= ZI)
         }
-      } else bC |= FZ;
-      return bC
+      } else ik |= tI;
+      return ik
     }
-    const gZ = (CC, zC, ZC) => {
-      oZ(zC)
+    const wI = (kk, Fk, Ik) => {
+      qI(Fk)
     };
 
-    function SZ(CC, zC, ZC, QC) {
-      if (CC.addParent(zC, QC), !ZC) return;
-      const wC = ZC.add(CC);
-      ZC !== CC.root && (CC.root = ZC, bZ(CC, zC, QC));
-      const bC = zC?.[SC];
-      if (void 0 !== bC && void 0 !== bC.subscribedViews && void 0 !== zC[pC] && function(CC, zC, ZC, QC) {
-          const wC = CC.subscribedViews;
-          if (void 0 === wC) return;
-          const bC = CC.isStreamCollection,
-            nC = bC ? CC.ref : void 0,
-            fC = bC ? void 0 : ZC[SC];
-          for (let oC = 0, qC = wC.length; oC < qC; oC++) {
-            let CC = wC[oC];
-            for (; 0 !== CC;) {
-              const ZC = CC & -CC;
-              CC ^= ZC;
-              const qC = 32 * oC + (31 - Math.clz32(ZC)),
-                FC = QC.activeViews.get(qC),
-                WC = FC?.deref();
-              void 0 !== WC ? bC ? mz(nC, qC, zC) : void 0 !== fC && WC.markVisible(fC) : wC[oC] &= ~ZC
+    function HI(kk, Fk, Ik, Xk) {
+      if (kk.addParent(Fk, Xk), !Ik) return;
+      const Tk = Ik.add(kk);
+      Ik !== kk.root && (kk.root = Ik, yI(kk, Fk, Xk));
+      const ik = Fk?.[wk];
+      if (void 0 !== ik && void 0 !== ik.subscribedViews && void 0 !== Fk[Hk] && function(kk, Fk, Ik, Xk) {
+          const Tk = kk.subscribedViews;
+          if (void 0 === Tk) return;
+          const ik = kk.isStreamCollection,
+            yk = ik ? kk.ref : void 0,
+            lk = ik ? void 0 : Ik[wk];
+          for (let ak = 0, qk = Tk.length; ak < qk; ak++) {
+            let kk = Tk[ak];
+            for (; 0 !== kk;) {
+              const Ik = kk & -kk;
+              kk ^= Ik;
+              const qk = 32 * ak + (31 - Math.clz32(Ik)),
+                Lk = Xk.activeViews.get(qk),
+                tk = Lk?.deref();
+              void 0 !== tk ? ik ? pF(yk, qk, Fk) : void 0 !== lk && tk.markVisible(lk) : Tk[ak] &= ~Ik
             }
           }
-        }(bC, QC, CC.ref, ZC), wC) {
-        let zC = RZ[AZ];
-        void 0 === zC && (zC = {
+        }(ik, Xk, kk.ref, Ik), Tk) {
+        let Fk = KI[QI];
+        void 0 === Fk && (Fk = {
           parentRef: void 0,
           root: void 0
-        }, RZ[AZ] = zC), zC.parentRef = CC.ref, zC.root = ZC, AZ++, PZ(CC, zC, xZ), AZ--
+        }, KI[QI] = Fk), Fk.parentRef = kk.ref, Fk.root = Ik, QI++, xI(kk, Fk, sI), QI--
       }
     }
 
-    function pZ(CC, zC, ZC) {
-      CC(zC, ZC)
+    function JI(kk, Fk, Ik) {
+      kk(Fk, Ik)
     }
 
-    function PZ(CC, zC, ZC) {
-      const QC = CC.refTarget;
-      if (QC[pC]) {
-        if ("string" !== typeof QC[pC]) {
-          const CC = QC.items;
-          if (void 0 !== CC)
-            for (let QC = 0, wC = CC.length; QC < wC; QC++) {
-              const wC = CC[QC];
-              wC && ZC(zC, wC[SC], QC)
+    function xI(kk, Fk, Ik) {
+      const Xk = kk.refTarget;
+      if (Xk[Hk]) {
+        if ("string" !== typeof Xk[Hk]) {
+          const kk = Xk.items;
+          if (void 0 !== kk)
+            for (let Xk = 0, Tk = kk.length; Xk < Tk; Xk++) {
+              const Tk = kk[Xk];
+              Tk && Ik(Fk, Tk[wk], Xk)
             } else {
-              const CC = QC.$items,
-                wC = QC._collectionIndexes;
-              for (const QC of CC.keys()) {
-                const bC = CC.get(QC);
-                bC && ZC(zC, bC[SC], wC?.[QC] ?? QC)
+              const kk = Xk.$items,
+                Tk = Xk._collectionIndexes;
+              for (const Xk of kk.keys()) {
+                const ik = kk.get(Xk);
+                ik && Ik(Fk, ik[wk], Tk?.[Xk] ?? Xk)
               }
             }
         }
       } else {
-        const wC = CC.metadata,
-          bC = wC?.[hC];
-        if (!bC) return;
-        const nC = CC.encDescriptor.names;
-        for (let CC = 0, fC = bC.length; CC < fC; CC++) {
-          const wC = bC[CC],
-            fC = QC[nC[wC]];
-          fC && ZC(zC, fC[SC], wC)
+        const Tk = kk.metadata,
+          ik = Tk?.[Ek];
+        if (!ik) return;
+        const yk = kk.encDescriptor.names;
+        for (let kk = 0, lk = ik.length; kk < lk; kk++) {
+          const Tk = ik[kk],
+            lk = Xk[yk[Tk]];
+          lk && Ik(Fk, lk[wk], Tk)
         }
       }
     }
 
-    function GZ(CC, zC, ZC) {
-      zC.root !== CC ? zC.setRoot(CC) : CC.add(zC)
+    function PI(kk, Fk, Ik) {
+      Fk.root !== kk ? Fk.setRoot(kk) : kk.add(Fk)
     }
-    const RZ = [];
-    let AZ = 0;
+    const KI = [];
+    let QI = 0;
 
-    function xZ(CC, zC, ZC) {
-      if (zC.root === CC.root) return CC.root.add(zC), void CC.root.moveNextToParent(zC);
-      zC.setParent(CC.parentRef, CC.root, ZC)
+    function sI(kk, Fk, Ik) {
+      if (Fk.root === kk.root) return kk.root.add(Fk), void kk.root.moveNextToParent(Fk);
+      Fk.setParent(kk.parentRef, kk.root, Ik)
     }
 
-    function JZ(CC, zC, ZC) {
-      const QC = (3 & ZC) << 3;
-      return ZC < 4 ? CC >>> QC & 255 : zC >>> QC & 255
+    function VI(kk, Fk, Ik) {
+      const Xk = (3 & Ik) << 3;
+      return Ik < 4 ? kk >>> Xk & 255 : Fk >>> Xk & 255
     }
-    const IZ = (CC, zC, ZC) => CC(zC, ZC);
-    const iZ = 16,
-      vZ = 32,
-      eZ = 128,
-      hZ = 256,
-      KZ = iZ | vZ;
-    class YZ {
+    const zI = (kk, Fk, Ik) => kk(Fk, Ik);
+    const SI = 16,
+      oI = 32,
+      vI = 128,
+      EI = 256,
+      OI = SI | oI;
+    class nI {
       ref;
       refTarget;
       get isArray() {
@@ -3302,183 +3302,183 @@ export const modules = {
       get isFiltered() {
         return 0 !== (1 & this.flags)
       }
-      set isFiltered(CC) {
-        this.flags = CC ? 1 | this.flags : -2 & this.flags
+      set isFiltered(kk) {
+        this.flags = kk ? 1 | this.flags : -2 & this.flags
       }
       get isVisibilitySharedWithParent() {
         return 0 !== (2 & this.flags)
       }
-      set isVisibilitySharedWithParent(CC) {
-        this.flags = CC ? 2 | this.flags : -3 & this.flags
+      set isVisibilitySharedWithParent(kk) {
+        this.flags = kk ? 2 | this.flags : -3 & this.flags
       }
       get isNew() {
         return 0 !== (4 & this.flags)
       }
-      set isNew(CC) {
-        this.flags = CC ? 4 | this.flags : -5 & this.flags
+      set isNew(kk) {
+        this.flags = kk ? 4 | this.flags : -5 & this.flags
       }
       get isUnreliable() {
         return 0 !== (8 & this.flags)
       }
-      set isUnreliable(CC) {
-        this.flags = CC ? 8 | this.flags : -9 & this.flags
+      set isUnreliable(kk) {
+        this.flags = kk ? 8 | this.flags : -9 & this.flags
       }
       get isPatchOnly() {
-        return 0 !== (this.flags & iZ)
+        return 0 !== (this.flags & SI)
       }
-      set isPatchOnly(CC) {
-        this.flags = CC ? this.flags | iZ : this.flags & ~iZ
+      set isPatchOnly(kk) {
+        this.flags = kk ? this.flags | SI : this.flags & ~SI
       }
       get isFullStateOnly() {
-        return 0 !== (this.flags & vZ)
+        return 0 !== (this.flags & oI)
       }
-      set isFullStateOnly(CC) {
-        this.flags = CC ? this.flags | vZ : this.flags & ~vZ
+      set isFullStateOnly(kk) {
+        this.flags = kk ? this.flags | oI : this.flags & ~oI
       }
       get isStreamCollection() {
         return 0 !== (64 & this.flags)
       }
-      set isStreamCollection(CC) {
-        this.flags = CC ? 64 | this.flags : -65 & this.flags
+      set isStreamCollection(kk) {
+        this.flags = kk ? 64 | this.flags : -65 & this.flags
       }
       get needsRestage() {
-        return 0 !== (this.flags & eZ)
+        return 0 !== (this.flags & vI)
       }
-      set needsRestage(CC) {
-        this.flags = CC ? this.flags | eZ : -129 & this.flags
+      set needsRestage(kk) {
+        this.flags = kk ? this.flags | vI : -129 & this.flags
       }
       get hasFilteredFields() {
         return this.isFiltered || this.encDescriptor.hasAnyView
       }
       ensureUnreliableRecorder() {
-        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new Bz(this.metadata?.[eC] ?? 0) : new Oz), this.unreliableRecorder
+        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new rF(this.metadata?.[vk] ?? 0) : new DF), this.unreliableRecorder
       }
-      isFieldUnreliable(CC) {
-        const zC = this.encDescriptor;
-        return !!zC.hasAnyUnreliable && (CC < 32 ? 0 !== (zC.unreliableBitmask & 1 << CC) : Lz.hasUnreliableAtIndex(this.metadata, CC))
+      isFieldUnreliable(kk) {
+        const Fk = this.encDescriptor;
+        return !!Fk.hasAnyUnreliable && (kk < 32 ? 0 !== (Fk.unreliableBitmask & 1 << kk) : mF.hasUnreliableAtIndex(this.metadata, kk))
       }
-      isFieldFullStateOnly(CC) {
+      isFieldFullStateOnly(kk) {
         if (this.isFullStateOnly) return !0;
-        const zC = this.encDescriptor;
-        return !!zC.hasAnyFullStateOnly && (CC < 32 ? 0 !== (zC.fullStateOnlyBitmask & 1 << CC) : Lz.hasFullStateOnlyAtIndex(this.metadata, CC))
+        const Fk = this.encDescriptor;
+        return !!Fk.hasAnyFullStateOnly && (kk < 32 ? 0 !== (Fk.fullStateOnlyBitmask & 1 << kk) : mF.hasFullStateOnlyAtIndex(this.metadata, kk))
       }
-      isFieldStream(CC) {
-        const zC = this.encDescriptor;
-        return !!zC.hasAnyStream && (CC < 32 ? 0 !== (zC.streamBitmask & 1 << CC) : Lz.hasStreamAtIndex(this.metadata, CC))
+      isFieldStream(kk) {
+        const Fk = this.encDescriptor;
+        return !!Fk.hasAnyStream && (kk < 32 ? 0 !== (Fk.streamBitmask & 1 << kk) : mF.hasStreamAtIndex(this.metadata, kk))
       }
-      constructor(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : CC;
-        this.ref = CC, this.refTarget = zC;
-        const ZC = CZ(CC);
-        this.encDescriptor = ZC, this.metadata = ZC.metadata;
-        const QC = ZC.isSchema;
-        if (this._isSchema = QC, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, QC) {
-          const CC = this.metadata?.[eC] ?? 0;
-          CC > 7 && (this.ops = new Uint8Array(CC + 1))
+      constructor(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : kk;
+        this.ref = kk, this.refTarget = Fk;
+        const Ik = FI(kk);
+        this.encDescriptor = Ik, this.metadata = Ik.metadata;
+        const Xk = Ik.isSchema;
+        if (this._isSchema = Xk, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, Xk) {
+          const kk = this.metadata?.[vk] ?? 0;
+          kk > 7 && (this.ops = new Uint8Array(kk + 1))
         } else this.collDirty = new Map
       }
-      _opAt(CC) {
-        const zC = this.ops;
-        if (void 0 !== zC) return zC[CC];
-        const ZC = (3 & CC) << 3;
-        return CC < 4 ? this.opsLow >>> ZC & 255 : this.opsHigh >>> ZC & 255
+      _opAt(kk) {
+        const Fk = this.ops;
+        if (void 0 !== Fk) return Fk[kk];
+        const Ik = (3 & kk) << 3;
+        return kk < 4 ? this.opsLow >>> Ik & 255 : this.opsHigh >>> Ik & 255
       }
-      _opPut(CC, zC) {
-        const ZC = this.ops;
-        if (void 0 !== ZC) return void(ZC[CC] = zC);
-        const QC = (3 & CC) << 3,
-          wC = ~(255 << QC);
-        CC < 4 ? this.opsLow = this.opsLow & wC | zC << QC : this.opsHigh = this.opsHigh & wC | zC << QC
+      _opPut(kk, Fk) {
+        const Ik = this.ops;
+        if (void 0 !== Ik) return void(Ik[kk] = Fk);
+        const Xk = (3 & kk) << 3,
+          Tk = ~(255 << Xk);
+        kk < 4 ? this.opsLow = this.opsLow & Tk | Fk << Xk : this.opsHigh = this.opsHigh & Tk | Fk << Xk
       }
-      _markDirty(CC) {
-        CC < 32 ? this.dirtyLow |= 1 << CC : this.dirtyHigh |= 1 << CC - 32
+      _markDirty(kk) {
+        kk < 32 ? this.dirtyLow |= 1 << kk : this.dirtyHigh |= 1 << kk - 32
       }
-      record(CC, zC) {
+      record(kk, Fk) {
         if (this._isSchema) {
-          const ZC = this._opAt(CC);
-          0 === ZC ? this._opPut(CC, zC) : (ZC === wC.DELETE || ZC === wC.ADD && zC === wC.DELETE_AND_ADD) && this._opPut(CC, wC.DELETE_AND_ADD), this._markDirty(CC)
+          const Ik = this._opAt(kk);
+          0 === Ik ? this._opPut(kk, Fk) : (Ik === Tk.DELETE || Ik === Tk.ADD && Fk === Tk.DELETE_AND_ADD) && this._opPut(kk, Tk.DELETE_AND_ADD), this._markDirty(kk)
         } else {
-          const ZC = this.collDirty,
-            QC = ZC.get(CC);
-          let bC;
-          bC = void 0 === QC ? zC : QC === wC.DELETE || QC === wC.ADD && zC === wC.DELETE_AND_ADD ? wC.DELETE_AND_ADD : QC, ZC.set(CC, bC)
+          const Ik = this.collDirty,
+            Xk = Ik.get(kk);
+          let ik;
+          ik = void 0 === Xk ? Fk : Xk === Tk.DELETE || Xk === Tk.ADD && Fk === Tk.DELETE_AND_ADD ? Tk.DELETE_AND_ADD : Xk, Ik.set(kk, ik)
         }
       }
-      recordDelete(CC, zC) {
-        this._isSchema ? (this._opPut(CC, zC), this._markDirty(CC)) : this.collDirty.set(CC, zC)
+      recordDelete(kk, Fk) {
+        this._isSchema ? (this._opPut(kk, Fk), this._markDirty(kk)) : this.collDirty.set(kk, Fk)
       }
-      recordRaw(CC, zC) {
-        this._isSchema ? (this._opPut(CC, zC), this._markDirty(CC)) : this.collDirty.set(CC, zC)
+      recordRaw(kk, Fk) {
+        this._isSchema ? (this._opPut(kk, Fk), this._markDirty(kk)) : this.collDirty.set(kk, Fk)
       }
-      recordPure(CC) {
+      recordPure(kk) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): pure operations are not supported");
-        (this.collPureOps ??= []).push([this.collDirty.size, CC])
+        (this.collPureOps ??= []).push([this.collDirty.size, kk])
       }
-      operationAt(CC) {
+      operationAt(kk) {
         if (this._isSchema) {
-          const zC = this._opAt(CC);
-          return 0 === zC ? void 0 : zC
+          const Fk = this._opAt(kk);
+          return 0 === Fk ? void 0 : Fk
         }
-        return this.collDirty.get(CC)
+        return this.collDirty.get(kk)
       }
-      setOperationAt(CC, zC) {
-        if (this._isSchema) this._opPut(CC, zC);
+      setOperationAt(kk, Fk) {
+        if (this._isSchema) this._opPut(kk, Fk);
         else {
-          const ZC = this.collDirty;
-          ZC.has(CC) && ZC.set(CC, zC)
+          const Ik = this.collDirty;
+          Ik.has(kk) && Ik.set(kk, Fk)
         }
       }
-      forEach(CC) {
-        this.forEachWithCtx(CC, IZ)
+      forEach(kk) {
+        this.forEachWithCtx(kk, zI)
       }
-      forEachWithCtx(CC, zC) {
+      forEachWithCtx(kk, Fk) {
         if (this._isSchema) {
-          let ZC = this.dirtyLow,
-            QC = this.dirtyHigh;
-          const wC = this.ops;
-          if (void 0 !== wC) {
-            for (; 0 !== ZC;) {
-              const QC = ZC & -ZC,
-                bC = 31 - Math.clz32(QC);
-              ZC ^= QC, zC(CC, bC, wC[bC])
+          let Ik = this.dirtyLow,
+            Xk = this.dirtyHigh;
+          const Tk = this.ops;
+          if (void 0 !== Tk) {
+            for (; 0 !== Ik;) {
+              const Xk = Ik & -Ik,
+                ik = 31 - Math.clz32(Xk);
+              Ik ^= Xk, Fk(kk, ik, Tk[ik])
             }
-            for (; 0 !== QC;) {
-              const ZC = QC & -QC,
-                bC = 31 - Math.clz32(ZC) + 32;
-              QC ^= ZC, zC(CC, bC, wC[bC])
+            for (; 0 !== Xk;) {
+              const Ik = Xk & -Xk,
+                ik = 31 - Math.clz32(Ik) + 32;
+              Xk ^= Ik, Fk(kk, ik, Tk[ik])
             }
           } else {
-            const QC = this.opsLow,
-              wC = this.opsHigh;
-            for (; 0 !== ZC;) {
-              const bC = ZC & -ZC,
-                nC = 31 - Math.clz32(bC);
-              ZC ^= bC, zC(CC, nC, JZ(QC, wC, nC))
+            const Xk = this.opsLow,
+              Tk = this.opsHigh;
+            for (; 0 !== Ik;) {
+              const ik = Ik & -Ik,
+                yk = 31 - Math.clz32(ik);
+              Ik ^= ik, Fk(kk, yk, VI(Xk, Tk, yk))
             }
           }
           return
         }
-        const ZC = this.collDirty,
-          QC = this.collPureOps;
-        if (void 0 !== QC && QC.length > 0) {
-          let wC = 0,
-            bC = 0;
-          for (const [nC, fC] of ZC) {
-            for (; wC < QC.length && QC[wC][0] <= bC;) {
-              const ZC = QC[wC++][1];
-              zC(CC, -ZC, ZC)
+        const Ik = this.collDirty,
+          Xk = this.collPureOps;
+        if (void 0 !== Xk && Xk.length > 0) {
+          let Tk = 0,
+            ik = 0;
+          for (const [yk, lk] of Ik) {
+            for (; Tk < Xk.length && Xk[Tk][0] <= ik;) {
+              const Ik = Xk[Tk++][1];
+              Fk(kk, -Ik, Ik)
             }
-            zC(CC, nC, fC), bC++
+            Fk(kk, yk, lk), ik++
           }
-          for (; wC < QC.length;) {
-            const ZC = QC[wC++][1];
-            zC(CC, -ZC, ZC)
+          for (; Tk < Xk.length;) {
+            const Ik = Xk[Tk++][1];
+            Fk(kk, -Ik, Ik)
           }
         } else
-          for (const [wC, bC] of ZC) zC(CC, wC, bC)
+          for (const [Tk, ik] of Ik) Fk(kk, Tk, ik)
       }
       size() {
-        return this._isSchema ? kz(this.dirtyLow) + kz(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
+        return this._isSchema ? MF(this.dirtyLow) + MF(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
       }
       has() {
         return this._isSchema ? 0 !== (this.dirtyLow | this.dirtyHigh) : this.collDirty.size > 0 || void 0 !== this.collPureOps && this.collPureOps.length > 0
@@ -3491,81 +3491,81 @@ export const modules = {
         if (void 0 !== this.root) throw new Error(`@colyseus/schema: cannot recycle an attached ChangeTree (${this.ref?.constructor?.name}). Remove the instance from its parent collection before releasing it to a pool.`);
         this.reset(), this.unreliableRecorder?.reset(), this.flags = 132, this._fullSyncGen = 0, this.parentRef = void 0, this._parentIndex = void 0, this.extraParents = void 0, this.changesNode = void 0, this.unreliableChangesNode = void 0, this.paused = !1, this.visibleViews = void 0, this.tagViews = void 0, this.subscribedViews = void 0
       }
-      insertAt(CC, zC) {
+      insertAt(kk, Fk) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): insertAt is not supported");
-        const ZC = this.collDirty,
-          QC = new Map,
-          bC = !this.paused && !this.isFullStateOnly;
-        if (CC > 0)
-          for (const [wC, nC] of ZC) wC < CC && QC.set(wC, nC);
-        if (bC)
-          for (let nC = 0; nC < zC; nC++) QC.set(CC + nC, wC.ADD);
-        for (const [wC, nC] of ZC) wC >= CC && QC.set(wC + zC, nC);
-        this.collDirty = QC, bC && this.root?.enqueueChangeTree(this)
+        const Ik = this.collDirty,
+          Xk = new Map,
+          ik = !this.paused && !this.isFullStateOnly;
+        if (kk > 0)
+          for (const [Tk, yk] of Ik) Tk < kk && Xk.set(Tk, yk);
+        if (ik)
+          for (let yk = 0; yk < Fk; yk++) Xk.set(kk + yk, Tk.ADD);
+        for (const [Tk, yk] of Ik) Tk >= kk && Xk.set(Tk + Fk, yk);
+        this.collDirty = Xk, ik && this.root?.enqueueChangeTree(this)
       }
-      removeAt(CC, zC) {
+      removeAt(kk, Fk) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): removeAt is not supported");
-        const ZC = this.collDirty,
-          QC = CC + zC;
-        let wC = !1;
-        for (const nC of ZC.keys())
-          if (nC >= QC) {
-            wC = !0;
+        const Ik = this.collDirty,
+          Xk = kk + Fk;
+        let Tk = !1;
+        for (const yk of Ik.keys())
+          if (yk >= Xk) {
+            Tk = !0;
             break
-          } if (!wC) {
-          for (let zC = CC; zC < QC; zC++) ZC.delete(zC);
+          } if (!Tk) {
+          for (let Fk = kk; Fk < Xk; Fk++) Ik.delete(Fk);
           return
         }
-        const bC = new Map;
-        for (const [nC, fC] of ZC) nC < CC ? bC.set(nC, fC) : nC >= QC && bC.set(nC - zC, fC);
-        this.collDirty = bC
+        const ik = new Map;
+        for (const [yk, lk] of Ik) yk < kk ? ik.set(yk, lk) : yk >= Xk && ik.set(yk - Fk, lk);
+        this.collDirty = ik
       }
-      unshift(CC) {
-        this.insertAt(0, CC)
+      unshift(kk) {
+        this.insertAt(0, kk)
       }
-      setRoot(CC) {
-        ! function(CC, zC) {
-          CC.root = zC;
-          const ZC = zC.add(CC);
-          bZ(CC, CC.parent, CC.parentIndex), ZC && PZ(CC, zC, GZ)
-        }(this, CC)
+      setRoot(kk) {
+        ! function(kk, Fk) {
+          kk.root = Fk;
+          const Ik = Fk.add(kk);
+          yI(kk, kk.parent, kk.parentIndex), Ik && xI(kk, Fk, PI)
+        }(this, kk)
       }
-      setParent(CC, zC, ZC) {
-        SZ(this, CC, zC, ZC)
+      setParent(kk, Fk, Ik) {
+        HI(this, kk, Fk, Ik)
       }
-      forEachChild(CC) {
-        PZ(this, CC, pZ)
+      forEachChild(kk) {
+        xI(this, kk, JI)
       }
-      forEachChildWithCtx(CC, zC) {
-        PZ(this, CC, zC)
+      forEachChildWithCtx(kk, Fk) {
+        xI(this, kk, Fk)
       }
-      forEachLive(CC) {
-        wZ(this, CC, QZ)
+      forEachLive(kk) {
+        iI(this, kk, TI)
       }
-      forEachLiveWithCtx(CC, zC) {
-        wZ(this, CC, zC)
+      forEachLiveWithCtx(kk, Fk) {
+        iI(this, kk, Fk)
       }
-      operation(CC) {
-        this.paused || this.isFullStateOnly || (this.recordPure(CC), this.root?.enqueueChangeTree(this))
+      operation(kk) {
+        this.paused || this.isFullStateOnly || (this.recordPure(kk), this.root?.enqueueChangeTree(this))
       }
-      _routeAndRecord(CC, zC, ZC) {
-        if (!this.paused && !this.isFieldFullStateOnly(CC)) {
-          if (this.isFieldUnreliable(CC) && !this.isNew) {
-            const QC = this.ensureUnreliableRecorder();
-            return ZC ? QC.recordRaw(CC, zC) : QC.record(CC, zC), void this.root?.enqueueUnreliable(this)
+      _routeAndRecord(kk, Fk, Ik) {
+        if (!this.paused && !this.isFieldFullStateOnly(kk)) {
+          if (this.isFieldUnreliable(kk) && !this.isNew) {
+            const Xk = this.ensureUnreliableRecorder();
+            return Ik ? Xk.recordRaw(kk, Fk) : Xk.record(kk, Fk), void this.root?.enqueueUnreliable(this)
           }
-          ZC ? this.recordRaw(CC, zC) : this.record(CC, zC), this.root?.enqueueChangeTree(this)
+          Ik ? this.recordRaw(kk, Fk) : this.record(kk, Fk), this.root?.enqueueChangeTree(this)
         }
       }
-      change(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wC.ADD;
-        this._routeAndRecord(CC, zC, !1)
+      change(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Tk.ADD;
+        this._routeAndRecord(kk, Fk, !1)
       }
-      indexedOperation(CC, zC) {
-        this._routeAndRecord(CC, zC, !0)
+      indexedOperation(kk, Fk) {
+        this._routeAndRecord(kk, Fk, !0)
       }
-      getChange(CC) {
-        return this.operationAt(CC)
+      getChange(kk) {
+        return this.operationAt(kk)
       }
       pause() {
         this.paused = !0
@@ -3573,60 +3573,60 @@ export const modules = {
       resume() {
         this.paused = !1
       }
-      untracked(CC) {
-        const zC = this.paused;
+      untracked(kk) {
+        const Fk = this.paused;
         this.paused = !0;
         try {
-          return CC()
+          return kk()
         } finally {
-          this.paused = zC
+          this.paused = Fk
         }
       }
-      markDirty(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wC.ADD;
-        const ZC = this.paused;
+      markDirty(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Tk.ADD;
+        const Ik = this.paused;
         this.paused = !1;
         try {
-          this.change(CC, zC)
+          this.change(kk, Fk)
         } finally {
-          this.paused = ZC
+          this.paused = Ik
         }
       }
-      getValue(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.refTarget[NC](CC, zC)
+      getValue(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.refTarget[Zk](kk, Fk)
       }
-      delete(CC, zC) {
-        if (void 0 === CC) {
+      delete(kk, Fk) {
+        if (void 0 === kk) {
           try {
-            throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${CC}'`)
-          } catch (bw) {
-            console.warn(bw)
+            throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${kk}'`)
+          } catch (yT) {
+            console.warn(yT)
           }
           return
         }
-        if (this.paused || this.isFieldFullStateOnly(CC)) return this.getValue(CC);
-        const ZC = this.isFieldUnreliable(CC) && !this.isNew;
-        ZC ? this.ensureUnreliableRecorder().recordDelete(CC, zC ?? wC.DELETE) : this.recordDelete(CC, zC ?? wC.DELETE);
-        const QC = this.getValue(CC);
-        return QC && QC[SC] && this.root?.remove(QC[SC]), ZC ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), QC
+        if (this.paused || this.isFieldFullStateOnly(kk)) return this.getValue(kk);
+        const Ik = this.isFieldUnreliable(kk) && !this.isNew;
+        Ik ? this.ensureUnreliableRecorder().recordDelete(kk, Fk ?? Tk.DELETE) : this.recordDelete(kk, Fk ?? Tk.DELETE);
+        const Xk = this.getValue(kk);
+        return Xk && Xk[wk] && this.root?.remove(Xk[wk]), Ik ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), Xk
       }
       endEncode() {
-        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[GC]?.(), this.isNew = !1
+        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[xk]?.(), this.isNew = !1
       }
       endEncodeUnreliable() {
-        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[GC]?.()
+        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[xk]?.()
       }
       discard() {
-        this._isSchema || this.refTarget[GC]?.(), this.reset(), this.unreliableRecorder?.reset()
+        this._isSchema || this.refTarget[xk]?.(), this.reset(), this.unreliableRecorder?.reset()
       }
       discardAll() {
-        const CC = CC => {
-          if (CC < 0) return;
-          const zC = this.getValue(CC);
-          zC && zC[SC] && zC[SC].discardAll()
+        const kk = kk => {
+          if (kk < 0) return;
+          const Fk = this.getValue(kk);
+          Fk && Fk[wk] && Fk[wk].discardAll()
         };
-        this.forEach(CC), this.unreliableRecorder?.forEach(CC), this.discard()
+        this.forEach(kk), this.unreliableRecorder?.forEach(kk), this.discard()
       }
       get changed() {
         return this.has() || (this.unreliableRecorder?.has() ?? !1)
@@ -3637,89 +3637,89 @@ export const modules = {
       get parentIndex() {
         return this._parentIndex
       }
-      addParent(CC, zC) {
-        ! function(CC, zC, ZC) {
-          if (CC.parentRef) {
-            if (CC.parentRef[SC] === zC[SC]) return void(CC._parentIndex = ZC);
-            if (zZ(CC, ((CC, ZC) => CC[SC] === zC[SC]))) return void(CC._parentIndex = ZC)
+      addParent(kk, Fk) {
+        ! function(kk, Fk, Ik) {
+          if (kk.parentRef) {
+            if (kk.parentRef[wk] === Fk[wk]) return void(kk._parentIndex = Ik);
+            if (II(kk, ((kk, Ik) => kk[wk] === Fk[wk]))) return void(kk._parentIndex = Ik)
           }
-          void 0 === CC.parentRef ? (CC.parentRef = zC, CC._parentIndex = ZC) : (CC.extraParents = {
-            ref: CC.parentRef,
-            index: CC._parentIndex,
-            next: CC.extraParents
-          }, CC.parentRef = zC, CC._parentIndex = ZC)
-        }(this, CC, zC)
+          void 0 === kk.parentRef ? (kk.parentRef = Fk, kk._parentIndex = Ik) : (kk.extraParents = {
+            ref: kk.parentRef,
+            index: kk._parentIndex,
+            next: kk.extraParents
+          }, kk.parentRef = Fk, kk._parentIndex = Ik)
+        }(this, kk, Fk)
       }
-      setParentIndex(CC, zC) {
-        ! function(CC, zC, ZC) {
-          if (void 0 !== CC.extraParents)
-            if (CC.parentRef[SC] !== zC[SC]) {
-              for (let QC = CC.extraParents; void 0 !== QC; QC = QC.next)
-                if (QC.ref[SC] === zC[SC]) return void(QC.index = ZC)
-            } else CC._parentIndex = ZC;
-          else CC._parentIndex = ZC
-        }(this, CC, zC)
+      setParentIndex(kk, Fk) {
+        ! function(kk, Fk, Ik) {
+          if (void 0 !== kk.extraParents)
+            if (kk.parentRef[wk] !== Fk[wk]) {
+              for (let Xk = kk.extraParents; void 0 !== Xk; Xk = Xk.next)
+                if (Xk.ref[wk] === Fk[wk]) return void(Xk.index = Ik)
+            } else kk._parentIndex = Ik;
+          else kk._parentIndex = Ik
+        }(this, kk, Fk)
       }
       removeParent() {
-        return function(CC, zC) {
-          if (CC.parentRef && CC.parentRef[SC] === zC[SC]) return CC.extraParents ? (CC.parentRef = CC.extraParents.ref, CC._parentIndex = CC.extraParents.index, CC.extraParents = CC.extraParents.next) : (CC.parentRef = void 0, CC._parentIndex = void 0), !0;
-          let ZC = CC.extraParents,
-            QC = null;
-          for (; ZC;) {
-            if (ZC.ref[SC] === zC[SC]) return QC ? QC.next = ZC.next : CC.extraParents = ZC.next, !0;
-            QC = ZC, ZC = ZC.next
+        return function(kk, Fk) {
+          if (kk.parentRef && kk.parentRef[wk] === Fk[wk]) return kk.extraParents ? (kk.parentRef = kk.extraParents.ref, kk._parentIndex = kk.extraParents.index, kk.extraParents = kk.extraParents.next) : (kk.parentRef = void 0, kk._parentIndex = void 0), !0;
+          let Ik = kk.extraParents,
+            Xk = null;
+          for (; Ik;) {
+            if (Ik.ref[wk] === Fk[wk]) return Xk ? Xk.next = Ik.next : kk.extraParents = Ik.next, !0;
+            Xk = Ik, Ik = Ik.next
           }
-          return void 0 === CC.parentRef
+          return void 0 === kk.parentRef
         }(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.parent)
       }
-      findParent(CC) {
-        return function(CC, zC) {
-          if (void 0 !== CC.parentRef && zC(CC.parentRef, CC._parentIndex)) return {
-            ref: CC.parentRef,
-            index: CC._parentIndex
+      findParent(kk) {
+        return function(kk, Fk) {
+          if (void 0 !== kk.parentRef && Fk(kk.parentRef, kk._parentIndex)) return {
+            ref: kk.parentRef,
+            index: kk._parentIndex
           };
-          for (let ZC = CC.extraParents; void 0 !== ZC; ZC = ZC.next)
-            if (zC(ZC.ref, ZC.index)) return {
-              ref: ZC.ref,
-              index: ZC.index
+          for (let Ik = kk.extraParents; void 0 !== Ik; Ik = Ik.next)
+            if (Fk(Ik.ref, Ik.index)) return {
+              ref: Ik.ref,
+              index: Ik.index
             }
-        }(this, CC)
+        }(this, kk)
       }
-      hasParent(CC) {
-        return zZ(this, CC)
+      hasParent(kk) {
+        return II(this, kk)
       }
-      indexInParent(CC) {
-        return function(CC, zC) {
-          if (CC.parentRef && CC.parentRef[SC] === zC[SC]) return CC._parentIndex;
-          for (let ZC = CC.extraParents; void 0 !== ZC; ZC = ZC.next)
-            if (ZC.ref[SC] === zC[SC]) return ZC.index
-        }(this, CC)
+      indexInParent(kk) {
+        return function(kk, Fk) {
+          if (kk.parentRef && kk.parentRef[wk] === Fk[wk]) return kk._parentIndex;
+          for (let Ik = kk.extraParents; void 0 !== Ik; Ik = Ik.next)
+            if (Ik.ref[wk] === Fk[wk]) return Ik.index
+        }(this, kk)
       }
       getAllParents() {
-        return function(CC) {
-          const zC = [];
-          CC.parentRef && zC.push({
-            ref: CC.parentRef,
-            index: CC._parentIndex
+        return function(kk) {
+          const Fk = [];
+          kk.parentRef && Fk.push({
+            ref: kk.parentRef,
+            index: kk._parentIndex
           });
-          let ZC = CC.extraParents;
-          for (; ZC;) zC.push({
-            ref: ZC.ref,
-            index: ZC.index
-          }), ZC = ZC.next;
-          return zC
+          let Ik = kk.extraParents;
+          for (; Ik;) Fk.push({
+            ref: Ik.ref,
+            index: Ik.index
+          }), Ik = Ik.next;
+          return Fk
         }(this)
       }
     }
-    class dZ {
+    class GI {
       ref;
       root = void 0;
       parentRef = void 0;
       paused = !1;
       isNew = !1;
       flags = 0;
-      constructor(CC) {
-        this.ref = CC
+      constructor(kk) {
+        this.ref = kk
       }
       change() {}
       delete() {}
@@ -3738,606 +3738,606 @@ export const modules = {
       discardAll() {}
       pause() {}
       resume() {}
-      untracked(CC) {
-        return CC()
+      untracked(kk) {
+        return kk()
       }
       markDirty() {}
-      forEachChild(CC) {
-        const zC = this.ref;
-        if (zC[pC]) {
-          if ("string" !== typeof zC[pC])
-            for (const [ZC, QC] of zC.entries()) QC && CC(QC[SC], zC._collectionIndexes?.[ZC] ?? ZC);
+      forEachChild(kk) {
+        const Fk = this.ref;
+        if (Fk[Hk]) {
+          if ("string" !== typeof Fk[Hk])
+            for (const [Ik, Xk] of Fk.entries()) Xk && kk(Xk[wk], Fk._collectionIndexes?.[Ik] ?? Ik);
           return
         }
-        const ZC = zC.constructor,
-          QC = ZC?.[Symbol.metadata];
-        if (!QC) return;
-        const wC = QC[hC] ?? [];
-        for (let bC = 0; bC < wC.length; bC++) {
-          const ZC = wC[bC],
-            nC = zC[QC[ZC].name];
-          nC && CC(nC[SC], ZC)
+        const Ik = Fk.constructor,
+          Xk = Ik?.[Symbol.metadata];
+        if (!Xk) return;
+        const Tk = Xk[Ek] ?? [];
+        for (let ik = 0; ik < Tk.length; ik++) {
+          const Ik = Tk[ik],
+            yk = Fk[Xk[Ik].name];
+          yk && kk(yk[wk], Ik)
         }
       }
-      forEachChildWithCtx(CC, zC) {
-        this.forEachChild(((ZC, QC) => zC(CC, ZC, QC)))
+      forEachChildWithCtx(kk, Fk) {
+        this.forEachChild(((Ik, Xk) => Fk(kk, Ik, Xk)))
       }
       forEachLive() {}
       forEachLiveWithCtx() {}
       forEach() {}
     }
 
-    function mZ(CC) {
-      let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : CC;
-      var ZC;
-      Object.defineProperty(CC, SC, {
-        value: (ZC = zC, new dZ(ZC)),
+    function pI(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : kk;
+      var Ik;
+      Object.defineProperty(kk, wk, {
+        value: (Ik = Fk, new GI(Ik)),
         enumerable: !1,
         writable: !0
       })
     }
 
-    function HZ(CC, zC, ZC, QC, bC, nC, oC) {
-      void 0 !== oC ? oC(zC, QC, nC) : "string" === typeof ZC ? zz[ZC]?.(zC, QC, nC) : null != ZC[Symbol.metadata] ? (zz.number(zC, QC[fC], nC), (bC & wC.ADD) === wC.ADD && CC.tryEncodeTypeId(zC, ZC, QC.constructor, nC)) : zz.number(zC, QC[fC], nC)
+    function uI(kk, Fk, Ik, Xk, ik, yk, ak) {
+      void 0 !== ak ? ak(Fk, Xk, yk) : "string" === typeof Ik ? IF[Ik]?.(Fk, Xk, yk) : null != Ik[Symbol.metadata] ? (IF.number(Fk, Xk[lk], yk), (ik & Tk.ADD) === Tk.ADD && kk.tryEncodeTypeId(Fk, Ik, Xk.constructor, yk)) : IF.number(Fk, Xk[lk], yk)
     }
-    const EZ = function(CC, zC, ZC, QC, bC, nC, fC, oC) {
-        if (zC[nC.offset++] = 255 & (QC | bC), bC === wC.DELETE) return;
-        const qC = ZC.encDescriptor,
-          FC = ZC.ref,
-          WC = FC[xC][QC] ?? FC[qC.names[QC]];
-        HZ(CC, zC, qC.types[QC], WC, bC, nC, qC.encoders[QC])
+    const bI = function(kk, Fk, Ik, Xk, ik, yk, lk, ak) {
+        if (Fk[yk.offset++] = 255 & (Xk | ik), ik === Tk.DELETE) return;
+        const qk = Ik.encDescriptor,
+          Lk = Ik.ref,
+          tk = Lk[Qk][Xk] ?? Lk[qk.names[Xk]];
+        uI(kk, Fk, qk.types[Xk], tk, ik, yk, qk.encoders[Xk])
       },
-      lZ = function(CC, zC, ZC, QC, bC, nC) {
-        if (zC[nC.offset++] = 255 & bC, zz.number(zC, QC, nC), bC === wC.DELETE) return;
-        const fC = ZC.ref;
-        if ((bC & wC.ADD) === wC.ADD) {
-          const CC = fC.$indexes.get(QC);
-          zz.string(zC, CC, nC)
+      RI = function(kk, Fk, Ik, Xk, ik, yk) {
+        if (Fk[yk.offset++] = 255 & ik, IF.number(Fk, Xk, yk), ik === Tk.DELETE) return;
+        const lk = Ik.ref;
+        if ((ik & Tk.ADD) === Tk.ADD) {
+          const kk = lk.$indexes.get(Xk);
+          IF.string(Fk, kk, yk)
         }
-        HZ(CC, zC, fC[pC], fC[NC](QC), bC, nC)
+        uI(kk, Fk, lk[Hk], lk[Zk](Xk), ik, yk)
       },
-      XZ = function(CC, zC, ZC, QC, bC, nC) {
-        if (zC[nC.offset++] = 255 & bC, zz.number(zC, QC, nC), bC === wC.DELETE) return;
-        const fC = ZC.ref;
-        HZ(CC, zC, fC[pC], fC[NC](QC), bC, nC)
+      UI = function(kk, Fk, Ik, Xk, ik, yk) {
+        if (Fk[yk.offset++] = 255 & ik, IF.number(Fk, Xk, yk), ik === Tk.DELETE) return;
+        const lk = Ik.ref;
+        uI(kk, Fk, lk[Hk], lk[Zk](Xk), ik, yk)
       },
-      cZ = function(CC, zC, ZC, QC, bC, nC) {
-        const fC = ZC.ref;
-        (bC & wC.ADD) === wC.ADD && "function" === typeof fC.set ? lZ(CC, zC, ZC, QC, bC, nC) : XZ(CC, zC, ZC, QC, bC, nC)
+      CI = function(kk, Fk, Ik, Xk, ik, yk) {
+        const lk = Ik.ref;
+        (ik & Tk.ADD) === Tk.ADD && "function" === typeof lk.set ? RI(kk, Fk, Ik, Xk, ik, yk) : UI(kk, Fk, Ik, Xk, ik, yk)
       },
-      uZ = function(CC, zC, ZC, QC, bC, nC, oC, qC) {
-        const FC = ZC.refTarget,
-          WC = FC[pC],
-          MC = "string" !== typeof WC;
-        let gC;
-        if (qC && ZC.isFiltered && MC) {
-          const CC = FC.tmpItems[QC];
-          if (!CC) return;
-          if (gC = CC[fC], bC === wC.DELETE) bC = wC.DELETE_BY_REFID;
-          else if ((bC & wC.ADD) === wC.ADD) bC = wC.ADD_BY_REFID;
-          else if ((bC & wC.MOVE) === wC.MOVE) return
-        } else if (bC === wC.DELETE && MC) {
-          const CC = FC.tmpItems[QC];
-          if (!CC) return;
-          gC = CC[fC], bC = wC.DELETE_BY_REFID
-        } else gC = QC;
-        if (zC[nC.offset++] = 255 & bC, zz.number(zC, gC, nC), bC === wC.DELETE || bC === wC.DELETE_BY_REFID) return;
-        HZ(CC, zC, WC, FC[NC](QC, oC), bC, nC)
+      NI = function(kk, Fk, Ik, Xk, ik, yk, ak, qk) {
+        const Lk = Ik.refTarget,
+          tk = Lk[Hk],
+          jk = "string" !== typeof tk;
+        let ek;
+        if (qk && Ik.isFiltered && jk) {
+          const kk = Lk.tmpItems[Xk];
+          if (!kk) return;
+          if (ek = kk[lk], ik === Tk.DELETE) ik = Tk.DELETE_BY_REFID;
+          else if ((ik & Tk.ADD) === Tk.ADD) ik = Tk.ADD_BY_REFID;
+          else if ((ik & Tk.MOVE) === Tk.MOVE) return
+        } else if (ik === Tk.DELETE && jk) {
+          const kk = Lk.tmpItems[Xk];
+          if (!kk) return;
+          ek = kk[lk], ik = Tk.DELETE_BY_REFID
+        } else ek = Xk;
+        if (Fk[yk.offset++] = 255 & ik, IF.number(Fk, ek, yk), ik === Tk.DELETE || ik === Tk.DELETE_BY_REFID) return;
+        uI(kk, Fk, tk, Lk[Zk](Xk, ak), ik, yk)
       };
 
-    function rZ(CC, zC, ZC, QC, bC, nC, oC) {
-      const qC = CC.resyncVisited;
-      let FC = qC.get(CC.currentRefId);
-      if (void 0 === FC && qC.set(CC.currentRefId, FC = new Set), FC.add(QC), void 0 !== bC && ZC === wC.ADD && bC !== nC) {
-        const ZC = bC[fC];
-        void 0 !== ZC && (CC.root.removeRef(ZC), oC?.push({
-          ref: zC,
-          refId: CC.currentRefId,
-          op: wC.DELETE,
-          dynamicIndex: QC,
+    function cI(kk, Fk, Ik, Xk, ik, yk, ak) {
+      const qk = kk.resyncVisited;
+      let Lk = qk.get(kk.currentRefId);
+      if (void 0 === Lk && qk.set(kk.currentRefId, Lk = new Set), Lk.add(Xk), void 0 !== ik && Ik === Tk.ADD && ik !== yk) {
+        const Ik = ik[lk];
+        void 0 !== Ik && (kk.root.removeRef(Ik), ak?.push({
+          ref: Fk,
+          refId: kk.currentRefId,
+          op: Tk.DELETE,
+          dynamicIndex: Xk,
           value: void 0,
-          previousValue: bC
+          previousValue: ik
         }))
       }
     }
 
-    function sZ(CC, zC, ZC, QC) {
-      const wC = zC[fC];
-      if (void 0 === wC || ZC.has(wC)) return;
-      ZC.add(wC);
-      const bC = zC.constructor[Symbol.metadata],
-        nC = bC?.[hC];
-      if (void 0 === nC) return;
-      const oC = bC[mC];
-      for (let fC = 0; fC < nC.length; fC++) {
-        const wC = nC[fC];
-        if (void 0 !== oC && oC.includes(wC)) continue;
-        const qC = bC[wC],
-          FC = zC[qC.name];
-        FC && (KQ.is(qC.type) ? sZ(CC, FC, ZC, QC) : TZ(CC, FC, ZC, QC))
+    function WI(kk, Fk, Ik, Xk) {
+      const Tk = Fk[lk];
+      if (void 0 === Tk || Ik.has(Tk)) return;
+      Ik.add(Tk);
+      const ik = Fk.constructor[Symbol.metadata],
+        yk = ik?.[Ek];
+      if (void 0 === yk) return;
+      const ak = ik[pk];
+      for (let lk = 0; lk < yk.length; lk++) {
+        const Tk = yk[lk];
+        if (void 0 !== ak && ak.includes(Tk)) continue;
+        const qk = ik[Tk],
+          Lk = Fk[qk.name];
+        Lk && (OX.is(qk.type) ? WI(kk, Lk, Ik, Xk) : fI(kk, Lk, Ik, Xk))
       }
     }
 
-    function TZ(CC, zC, ZC, QC) {
-      const bC = zC[PC] ?? zC,
-        nC = bC[fC];
-      if (void 0 === nC || ZC.has(nC)) return;
-      ZC.add(nC);
-      const oC = CC.resyncVisited.get(nC);
-      if (void 0 === oC) return;
-      const qC = CC.root;
-      bC[gC](oC, ((CC, ZC) => {
-        QC?.push({
-          ref: zC,
-          refId: nC,
-          op: wC.DELETE,
-          dynamicIndex: ZC,
+    function fI(kk, Fk, Ik, Xk) {
+      const ik = Fk[Jk] ?? Fk,
+        yk = ik[lk];
+      if (void 0 === yk || Ik.has(yk)) return;
+      Ik.add(yk);
+      const ak = kk.resyncVisited.get(yk);
+      if (void 0 === ak) return;
+      const qk = kk.root;
+      ik[ek](ak, ((kk, Ik) => {
+        Xk?.push({
+          ref: Fk,
+          refId: yk,
+          op: Tk.DELETE,
+          dynamicIndex: Ik,
           value: void 0,
-          previousValue: CC
+          previousValue: kk
         });
-        const bC = CC?.[fC];
-        void 0 !== bC && qC.removeRef(bC)
-      }), (zC => {
-        KQ.isSchema(zC) && sZ(CC, zC, ZC, QC)
+        const ik = kk?.[lk];
+        void 0 !== ik && qk.removeRef(ik)
+      }), (Fk => {
+        OX.isSchema(Fk) && WI(kk, Fk, Ik, Xk)
       }))
     }
-    const aZ = 1,
-      tZ = 2,
-      DZ = 3,
-      jZ = 4,
-      yZ = 5;
+    const BI = 1,
+      dI = 2,
+      YI = 3,
+      AI = 4,
+      gI = 5;
 
-    function LZ(CC, zC, ZC, QC, bC, nC, oC, qC, FC) {
-      const WC = CC.root;
-      let NC;
-      if ((zC & wC.DELETE) === wC.DELETE) {
-        const CC = bC?.[fC];
-        void 0 !== CC && WC.removeRef(CC), zC !== wC.DELETE_AND_ADD && ZC[MC](QC), NC = void 0
+    function mI(kk, Fk, Ik, Xk, ik, yk, ak, qk, Lk) {
+      const tk = kk.root;
+      let Zk;
+      if ((Fk & Tk.DELETE) === Tk.DELETE) {
+        const kk = ik?.[lk];
+        void 0 !== kk && tk.removeRef(kk), Fk !== Tk.DELETE_AND_ADD && Ik[jk](Xk), Zk = void 0
       }
-      if (zC === wC.DELETE);
-      else if ("string" === typeof nC) NC = Rz[nC](oC, qC);
-      else if (Xz(nC)) NC = function(CC, zC, ZC) {
-        return uz(CC, (0, Rz[CC.wire])(zC, ZC))
-      }(nC.quantized, oC, qC);
-      else if (KQ.is(nC)) {
-        const ZC = Rz.number(oC, qC);
-        if (NC = WC.refs.get(ZC), (zC & wC.ADD) === wC.ADD) {
-          const QC = CC.getInstanceType(oC, qC, nC);
-          NC || (NC = CC.createInstanceOfType(QC)), WC.addRef(ZC, NC, NC !== bC || zC === wC.DELETE_AND_ADD && NC === bC)
+      if (Fk === Tk.DELETE);
+      else if ("string" === typeof yk) Zk = KF[yk](ak, qk);
+      else if (UF(yk)) Zk = function(kk, Fk, Ik) {
+        return NF(kk, (0, KF[kk.wire])(Fk, Ik))
+      }(yk.quantized, ak, qk);
+      else if (OX.is(yk)) {
+        const Ik = KF.number(ak, qk);
+        if (Zk = tk.refs.get(Ik), (Fk & Tk.ADD) === Tk.ADD) {
+          const Xk = kk.getInstanceType(ak, qk, yk);
+          Zk || (Zk = kk.createInstanceOfType(Xk)), tk.addRef(Ik, Zk, Zk !== ik || Fk === Tk.DELETE_AND_ADD && Zk === ik)
         }
       } else {
-        const ZC = (gC = Object.keys(nC)[0], Az[gC]),
-          QC = Rz.number(oC, qC);
-        null !== CC.resyncVisited && function(CC, zC) {
-          const ZC = CC.resyncVisited;
-          ZC.has(zC) || ZC.set(zC, new Set)
-        }(CC, QC);
-        const MC = WC.refs.has(QC) ? bC || WC.refs.get(QC) : ZC.constructor.initializeForDecoder();
-        if (NC = MC.clone(!0), NC[pC] = Object.values(nC)[0], bC) {
-          let CC = bC[fC];
-          if (void 0 !== CC && QC !== CC) {
-            (zC & wC.DELETE) !== wC.DELETE && WC.removeRef(CC);
-            const ZC = bC.entries();
-            let QC;
+        const Ik = (ek = Object.keys(yk)[0], QF[ek]),
+          Xk = KF.number(ak, qk);
+        null !== kk.resyncVisited && function(kk, Fk) {
+          const Ik = kk.resyncVisited;
+          Ik.has(Fk) || Ik.set(Fk, new Set)
+        }(kk, Xk);
+        const jk = tk.refs.has(Xk) ? ik || tk.refs.get(Xk) : Ik.constructor.initializeForDecoder();
+        if (Zk = jk.clone(!0), Zk[Hk] = Object.values(yk)[0], ik) {
+          let kk = ik[lk];
+          if (void 0 !== kk && Xk !== kk) {
+            (Fk & Tk.DELETE) !== Tk.DELETE && tk.removeRef(kk);
+            const Ik = ik.entries();
+            let Xk;
             for (;
-              (QC = ZC.next()) && !QC.done;) {
-              const [zC, ZC] = QC.value;
-              "object" === typeof ZC && (CC = ZC[fC]), FC?.push({
-                ref: bC,
-                refId: CC,
-                op: wC.DELETE,
-                field: zC,
+              (Xk = Ik.next()) && !Xk.done;) {
+              const [Fk, Ik] = Xk.value;
+              "object" === typeof Ik && (kk = Ik[lk]), Lk?.push({
+                ref: ik,
+                refId: kk,
+                op: Tk.DELETE,
+                field: Fk,
                 value: void 0,
-                previousValue: ZC
+                previousValue: Ik
               })
             }
           }
         }
-        WC.addRef(QC, NC, MC !== bC || zC === wC.DELETE_AND_ADD && MC === bC)
+        tk.addRef(Xk, Zk, jk !== ik || Fk === Tk.DELETE_AND_ADD && jk === ik)
       }
-      var gC;
-      return NC
+      var ek;
+      return Zk
     }
-    const UZ = function(CC, zC, ZC, QC, wC) {
-        const bC = zC[ZC.offset++],
-          nC = QC.constructor[Symbol.metadata],
-          fC = bC >> 6 << 6,
-          oC = bC % (fC || 255),
-          qC = nC[oC];
-        if (void 0 === qC) return console.warn("@colyseus/schema: field not defined at", {
-          index: oC,
-          ref: QC.constructor.name,
-          metadata: nC
+    const hI = function(kk, Fk, Ik, Xk, Tk) {
+        const ik = Fk[Ik.offset++],
+          yk = Xk.constructor[Symbol.metadata],
+          lk = ik >> 6 << 6,
+          ak = ik % (lk || 255),
+          qk = yk[ak];
+        if (void 0 === qk) return console.warn("@colyseus/schema: field not defined at", {
+          index: ak,
+          ref: Xk.constructor.name,
+          metadata: yk
         }), -1;
-        const FC = !0 === qC.deprecated,
-          WC = FC ? void 0 : QC[NC](oC),
-          MC = LZ(CC, fC, QC, oC, WC, qC.type, zC, ZC, wC);
-        FC || (null !== MC && void 0 !== MC && (QC[qC.name] = MC), WC !== MC && wC?.push({
-          ref: QC,
-          refId: CC.currentRefId,
-          op: fC,
-          field: qC.name,
-          value: MC,
-          previousValue: WC
+        const Lk = !0 === qk.deprecated,
+          tk = Lk ? void 0 : Xk[Zk](ak),
+          jk = mI(kk, lk, Xk, ak, tk, qk.type, Fk, Ik, Tk);
+        Lk || (null !== jk && void 0 !== jk && (Xk[qk.name] = jk), tk !== jk && Tk?.push({
+          ref: Xk,
+          refId: kk.currentRefId,
+          op: lk,
+          field: qk.name,
+          value: jk,
+          previousValue: tk
         }))
       },
-      BZ = function(CC, zC, ZC, QC, bC) {
-        const nC = QC[PC] ?? QC,
-          fC = zC[ZC.offset++];
-        if (fC === wC.CLEAR) return CC.removeChildRefs(nC, bC), void nC.clear();
-        const oC = Rz.number(zC, ZC),
-          qC = nC[pC],
-          FC = nC.constructor.COLLECTION_KIND;
-        let WC;
-        (fC & wC.ADD) === wC.ADD ? FC === aZ ? (WC = Rz.string(zC, ZC), nC.setIndex(oC, WC)) : WC = oC : WC = nC.getIndex(oC);
-        const MC = nC[NC](oC),
-          gC = LZ(CC, fC, QC, oC, MC, qC, zC, ZC, bC);
-        if (null !== CC.resyncVisited && rZ(CC, QC, fC, WC, MC, gC, bC), null !== gC && void 0 !== gC) switch (FC) {
-          case aZ:
-            nC.$items.set(WC, gC);
+      rI = function(kk, Fk, Ik, Xk, ik) {
+        const yk = Xk[Jk] ?? Xk,
+          lk = Fk[Ik.offset++];
+        if (lk === Tk.CLEAR) return kk.removeChildRefs(yk, ik), void yk.clear();
+        const ak = KF.number(Fk, Ik),
+          qk = yk[Hk],
+          Lk = yk.constructor.COLLECTION_KIND;
+        let tk;
+        (lk & Tk.ADD) === Tk.ADD ? Lk === BI ? (tk = KF.string(Fk, Ik), yk.setIndex(ak, tk)) : tk = ak : tk = yk.getIndex(ak);
+        const jk = yk[Zk](ak),
+          ek = mI(kk, lk, Xk, ak, jk, qk, Fk, Ik, ik);
+        if (null !== kk.resyncVisited && cI(kk, Xk, lk, tk, jk, ek, ik), null !== ek && void 0 !== ek) switch (Lk) {
+          case BI:
+            yk.$items.set(tk, ek);
             break;
-          case tZ:
-            nC.$setAt(oC, gC, null !== CC.resyncVisited && fC === wC.ADD ? wC.REPLACE : fC);
+          case dI:
+            yk.$setAt(ak, ek, null !== kk.resyncVisited && lk === Tk.ADD ? Tk.REPLACE : lk);
             break;
-          case DZ:
-          case jZ:
-          case yZ:
-            nC.$items.has(oC) || (nC.$items.set(oC, gC), "number" === typeof nC.$refId && oC >= nC.$refId && (nC.$refId = oC + 1));
+          case YI:
+          case AI:
+          case gI:
+            yk.$items.has(ak) || (yk.$items.set(ak, ek), "number" === typeof yk.$refId && ak >= yk.$refId && (yk.$refId = ak + 1));
             break;
           default:
-            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${nC.constructor?.name} \u2014 item at index ${oC} was not stored.`)
+            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${yk.constructor?.name} \u2014 item at index ${ak} was not stored.`)
         }
-        MC !== gC && bC?.push({
-          ref: QC,
-          refId: CC.currentRefId,
-          op: fC,
-          dynamicIndex: WC,
-          value: gC,
-          previousValue: MC
+        jk !== ek && ik?.push({
+          ref: Xk,
+          refId: kk.currentRefId,
+          op: lk,
+          dynamicIndex: tk,
+          value: ek,
+          previousValue: jk
         })
       },
-      OZ = function(CC, zC, ZC, QC, bC) {
-        const nC = QC[PC] ?? QC;
-        let fC, oC = zC[ZC.offset++];
-        if (oC === wC.CLEAR) return CC.removeChildRefs(nC, bC), void nC.clear();
-        if (oC === wC.REVERSE) return void nC.items.reverse();
-        if (oC === wC.DELETE_BY_REFID) {
-          const oC = Rz.number(zC, ZC),
-            qC = CC.root.refs.get(oC);
-          if (void 0 === qC) return;
-          if (CC.root.removeRef(oC), fC = nC.findIndex((CC => CC === qC)), -1 === fC) return;
-          return nC[MC](fC), void bC?.push({
-            ref: QC,
-            refId: CC.currentRefId,
-            op: wC.DELETE,
-            dynamicIndex: fC,
+      DI = function(kk, Fk, Ik, Xk, ik) {
+        const yk = Xk[Jk] ?? Xk;
+        let lk, ak = Fk[Ik.offset++];
+        if (ak === Tk.CLEAR) return kk.removeChildRefs(yk, ik), void yk.clear();
+        if (ak === Tk.REVERSE) return void yk.items.reverse();
+        if (ak === Tk.DELETE_BY_REFID) {
+          const ak = KF.number(Fk, Ik),
+            qk = kk.root.refs.get(ak);
+          if (void 0 === qk) return;
+          if (kk.root.removeRef(ak), lk = yk.findIndex((kk => kk === qk)), -1 === lk) return;
+          return yk[jk](lk), void ik?.push({
+            ref: Xk,
+            refId: kk.currentRefId,
+            op: Tk.DELETE,
+            dynamicIndex: lk,
             value: void 0,
-            previousValue: qC
+            previousValue: qk
           })
         }
-        if (oC === wC.ADD_BY_REFID) {
-          const QC = Rz.number(zC, ZC),
-            wC = CC.root.refs.get(QC);
-          wC && (fC = nC.findIndex((CC => CC === wC))), -1 !== fC && void 0 !== fC || (fC = nC.length)
-        } else fC = Rz.number(zC, ZC);
-        const qC = nC[pC];
-        let FC = fC;
-        const WC = nC.items[fC],
-          NC = LZ(CC, oC, QC, fC, WC, qC, zC, ZC, bC);
-        null !== CC.resyncVisited && rZ(CC, QC, oC, fC, WC, NC, bC), null !== NC && void 0 !== NC && NC !== WC && nC.$setAt(fC, NC, null !== CC.resyncVisited && oC === wC.ADD ? wC.REPLACE : oC), WC !== NC && bC?.push({
-          ref: QC,
-          refId: CC.currentRefId,
-          op: oC,
-          dynamicIndex: FC,
-          value: NC,
-          previousValue: WC
+        if (ak === Tk.ADD_BY_REFID) {
+          const Xk = KF.number(Fk, Ik),
+            Tk = kk.root.refs.get(Xk);
+          Tk && (lk = yk.findIndex((kk => kk === Tk))), -1 !== lk && void 0 !== lk || (lk = yk.length)
+        } else lk = KF.number(Fk, Ik);
+        const qk = yk[Hk];
+        let Lk = lk;
+        const tk = yk.items[lk],
+          Zk = mI(kk, ak, Xk, lk, tk, qk, Fk, Ik, ik);
+        null !== kk.resyncVisited && cI(kk, Xk, ak, lk, tk, Zk, ik), null !== Zk && void 0 !== Zk && Zk !== tk && yk.$setAt(lk, Zk, null !== kk.resyncVisited && ak === Tk.ADD ? Tk.REPLACE : ak), tk !== Zk && ik?.push({
+          ref: Xk,
+          refId: kk.currentRefId,
+          op: ak,
+          dynamicIndex: Lk,
+          value: Zk,
+          previousValue: tk
         })
       };
-    class kZ extends Error {}
+    class MI extends Error {}
 
-    function VZ(CC, zC, ZC, QC) {
-      if (!(CC instanceof zC)) throw new kZ(`a '${zC.name}' was expected, but '${CC&&CC.constructor.name}' was provided in ${ZC.constructor.name}#${QC}`)
+    function kX(kk, Fk, Ik, Xk) {
+      if (!(kk instanceof Fk)) throw new MI(`a '${Fk.name}' was expected, but '${kk&&kk.constructor.name}' was provided in ${Ik.constructor.name}#${Xk}`)
     }
-    const CQ = (CC, zC) => {
-        const ZC = CC.toString(),
-          QC = zC.toString();
-        return ZC < QC ? -1 : ZC > QC ? 1 : 0
+    const FX = (kk, Fk) => {
+        const Ik = kk.toString(),
+          Xk = Fk.toString();
+        return Ik < Xk ? -1 : Ik > Xk ? 1 : 0
       },
-      zQ = {
-        get: (CC, zC) => "symbol" === typeof zC || isNaN(zC) ? Reflect.get(CC, zC) : CC.items[zC],
-        set: (CC, zC, ZC) => {
-          if ("symbol" !== typeof zC && !isNaN(zC)) {
-            if (void 0 === ZC || null === ZC) CC.$deleteAt(zC);
+      IX = {
+        get: (kk, Fk) => "symbol" === typeof Fk || isNaN(Fk) ? Reflect.get(kk, Fk) : kk.items[Fk],
+        set: (kk, Fk, Ik) => {
+          if ("symbol" !== typeof Fk && !isNaN(Fk)) {
+            if (void 0 === Ik || null === Ik) kk.$deleteAt(Fk);
             else {
-              let QC;
-              if (ZC[SC]) {
-                VZ(ZC, CC[pC], CC, zC);
-                const bC = CC.items[zC];
-                CC.isMovingItems ? (QC = CC.$wireIndex(Number(zC)), void 0 !== bC ? ZC[SC].isNew ? CC[SC].indexedOperation(QC, wC.MOVE_AND_ADD) : (CC[SC].getChange(QC) & wC.DELETE) === wC.DELETE ? CC[SC].indexedOperation(QC, wC.DELETE_AND_MOVE) : CC[SC].indexedOperation(QC, wC.MOVE) : ZC[SC].isNew && CC[SC].indexedOperation(QC, wC.ADD), ZC[SC].setParent(CC, CC[SC].root, QC)) : QC = CC.$changeAt(Number(zC), ZC), void 0 !== bC && bC[SC].root?.remove(bC[SC])
-              } else QC = CC.$changeAt(Number(zC), ZC);
-              CC.items[zC] = ZC, void 0 !== QC && (CC.tmpItems[QC] = ZC)
+              let Xk;
+              if (Ik[wk]) {
+                kX(Ik, kk[Hk], kk, Fk);
+                const ik = kk.items[Fk];
+                kk.isMovingItems ? (Xk = kk.$wireIndex(Number(Fk)), void 0 !== ik ? Ik[wk].isNew ? kk[wk].indexedOperation(Xk, Tk.MOVE_AND_ADD) : (kk[wk].getChange(Xk) & Tk.DELETE) === Tk.DELETE ? kk[wk].indexedOperation(Xk, Tk.DELETE_AND_MOVE) : kk[wk].indexedOperation(Xk, Tk.MOVE) : Ik[wk].isNew && kk[wk].indexedOperation(Xk, Tk.ADD), Ik[wk].setParent(kk, kk[wk].root, Xk)) : Xk = kk.$changeAt(Number(Fk), Ik), void 0 !== ik && ik[wk].root?.remove(ik[wk])
+              } else Xk = kk.$changeAt(Number(Fk), Ik);
+              kk.items[Fk] = Ik, void 0 !== Xk && (kk.tmpItems[Xk] = Ik)
             }
             return !0
           }
-          return Reflect.set(CC, zC, ZC)
+          return Reflect.set(kk, Fk, Ik)
         },
-        deleteProperty: (CC, zC) => ("number" === typeof zC ? CC.$deleteAt(zC) : delete CC[zC], !0),
-        has: (CC, zC) => "symbol" === typeof zC || isNaN(Number(zC)) ? Reflect.has(CC, zC) : Reflect.has(CC.items, zC)
+        deleteProperty: (kk, Fk) => ("number" === typeof Fk ? kk.$deleteAt(Fk) : delete kk[Fk], !0),
+        has: (kk, Fk) => "symbol" === typeof Fk || isNaN(Number(Fk)) ? Reflect.has(kk, Fk) : Reflect.has(kk.items, Fk)
       };
-    class ZQ {
-      [SC];
-      [fC];
-      [PC];
-      [pC];
+    class XX {
+      [wk];
+      [lk];
+      [Jk];
+      [Hk];
       items = [];
       tmpItems = [];
       deletedIndexes = [];
       isMovingItems = !1;
       _needsCompaction = !1;
-      static[qC] = uZ;
-      static[FC] = OZ;
-      static COLLECTION_KIND = tZ;
-      static[WC](CC, zC, ZC) {
-        if (!ZC) return !0;
-        const QC = CC[PC] ?? CC;
-        return "string" === typeof QC[pC] || ZC.isChangeTreeVisible(QC.tmpItems[zC]?.[SC])
+      static[qk] = NI;
+      static[Lk] = DI;
+      static COLLECTION_KIND = dI;
+      static[tk](kk, Fk, Ik) {
+        if (!Ik) return !0;
+        const Xk = kk[Jk] ?? kk;
+        return "string" === typeof Xk[Hk] || Ik.isChangeTreeVisible(Xk.tmpItems[Fk]?.[wk])
       }
-      static is(CC) {
-        return Array.isArray(CC) || void 0 !== CC.array
+      static is(kk) {
+        return Array.isArray(kk) || void 0 !== kk.array
       }
-      static from(CC) {
-        return new ZQ(...Array.from(CC))
+      static from(kk) {
+        return new XX(...Array.from(kk))
       }
       constructor() {
-        this[pC] = void 0, this[PC] = this;
-        const CC = new Proxy(this, zQ);
-        return Object.defineProperty(this, SC, {
-          value: new YZ(CC, this),
+        this[Hk] = void 0, this[Jk] = this;
+        const kk = new Proxy(this, IX);
+        return Object.defineProperty(this, wk, {
+          value: new nI(kk, this),
           enumerable: !1,
           writable: !0
-        }), arguments.length > 0 && this.push(...arguments), CC
+        }), arguments.length > 0 && this.push(...arguments), kk
       }
       static initializeForDecoder() {
-        const CC = Object.create(ZQ.prototype);
-        CC.items = [], CC.isMovingItems = !1, CC._needsCompaction = !1, CC[pC] = void 0, CC[PC] = CC;
-        const zC = new Proxy(CC, zQ);
-        return mZ(CC, zC), zC
+        const kk = Object.create(XX.prototype);
+        kk.items = [], kk.isMovingItems = !1, kk._needsCompaction = !1, kk[Hk] = void 0, kk[Jk] = kk;
+        const Fk = new Proxy(kk, IX);
+        return pI(kk, Fk), Fk
       }
-      set length(CC) {
-        0 === CC ? this.clear() : CC < this.items.length ? this.splice(CC, this.length - CC) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
+      set length(kk) {
+        0 === kk ? this.clear() : kk < this.items.length ? this.splice(kk, this.length - kk) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
       }
       get length() {
         return this.items.length
       }
       pauseTracking() {
-        this[SC].pause()
+        this[wk].pause()
       }
       resumeTracking() {
-        this[SC].resume()
+        this[wk].resume()
       }
-      untracked(CC) {
-        return this[SC].untracked(CC)
+      untracked(kk) {
+        return this[wk].untracked(kk)
       }
       get isTrackingPaused() {
-        return this[SC].paused
+        return this[wk].paused
       }
       push() {
-        const CC = this[PC],
-          zC = CC.items,
-          ZC = CC.tmpItems,
-          QC = CC[SC],
-          bC = CC[pC];
-        let nC = ZC.length;
-        for (let fC = 0, oC = arguments.length; fC < oC; fC++, nC++) {
-          const oC = fC < 0 || arguments.length <= fC ? void 0 : arguments[fC];
-          if (void 0 === oC || null === oC) return;
-          "object" === typeof oC && bC && VZ(oC, bC, CC, fC), QC.indexedOperation(nC, wC.ADD), zC.push(oC), ZC.push(oC), oC[SC]?.setParent(this, QC.root, nC)
+        const kk = this[Jk],
+          Fk = kk.items,
+          Ik = kk.tmpItems,
+          Xk = kk[wk],
+          ik = kk[Hk];
+        let yk = Ik.length;
+        for (let lk = 0, ak = arguments.length; lk < ak; lk++, yk++) {
+          const ak = lk < 0 || arguments.length <= lk ? void 0 : arguments[lk];
+          if (void 0 === ak || null === ak) return;
+          "object" === typeof ak && ik && kX(ak, ik, kk, lk), Xk.indexedOperation(yk, Tk.ADD), Fk.push(ak), Ik.push(ak), ak[wk]?.setParent(this, Xk.root, yk)
         }
-        return nC
+        return yk
       }
       pop() {
-        const CC = this[PC],
-          zC = CC.tmpItems,
-          ZC = CC.deletedIndexes;
-        let QC = -1;
-        for (let bC = zC.length - 1; bC >= 0; bC--)
-          if (!0 !== ZC[bC]) {
-            QC = bC;
+        const kk = this[Jk],
+          Fk = kk.tmpItems,
+          Ik = kk.deletedIndexes;
+        let Xk = -1;
+        for (let ik = Fk.length - 1; ik >= 0; ik--)
+          if (!0 !== Ik[ik]) {
+            Xk = ik;
             break
-          } if (QC < 0) return;
-        const wC = CC.$isUnsentAdd(QC);
-        return CC[SC].delete(QC), wC ? CC.$cancelAdd(QC) : ZC[QC] = !0, CC.items.pop()
+          } if (Xk < 0) return;
+        const Tk = kk.$isUnsentAdd(Xk);
+        return kk[wk].delete(Xk), Tk ? kk.$cancelAdd(Xk) : Ik[Xk] = !0, kk.items.pop()
       }
-      at(CC) {
-        return CC < 0 && (CC += this.length), this.items[CC]
+      at(kk) {
+        return kk < 0 && (kk += this.length), this.items[kk]
       }
-      $wireIndex(CC) {
-        const zC = this.deletedIndexes;
-        if (0 === zC.length) return CC;
-        const ZC = this.tmpItems;
-        let QC = 0;
-        for (let wC = 0; wC < ZC.length; wC++)
-          if (!0 !== zC[wC]) {
-            if (QC === CC) return wC;
-            QC++
-          } return ZC.length + (CC - QC)
+      $wireIndex(kk) {
+        const Fk = this.deletedIndexes;
+        if (0 === Fk.length) return kk;
+        const Ik = this.tmpItems;
+        let Xk = 0;
+        for (let Tk = 0; Tk < Ik.length; Tk++)
+          if (!0 !== Fk[Tk]) {
+            if (Xk === kk) return Tk;
+            Xk++
+          } return Ik.length + (kk - Xk)
       }
-      $isUnsentAdd(CC) {
-        const zC = this[SC];
-        return 0 === (576 & zC.flags) && !zC.paused && "string" !== typeof this[pC] && zC.operationAt(CC) === wC.ADD
+      $isUnsentAdd(kk) {
+        const Fk = this[wk];
+        return 0 === (576 & Fk.flags) && !Fk.paused && "string" !== typeof this[Hk] && Fk.operationAt(kk) === Tk.ADD
       }
-      $cancelAdd(CC) {
-        let zC = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const ZC = this[SC],
-          QC = this.tmpItems[CC];
-        this.tmpItems.splice(CC, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(CC, 1), ZC.removeAt(CC, 1);
-        const wC = QC?.[SC];
-        void 0 !== wC && void 0 === wC.root && wC.removeParent(this), zC && this.$reindexChildren(CC)
+      $cancelAdd(kk) {
+        let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const Ik = this[wk],
+          Xk = this.tmpItems[kk];
+        this.tmpItems.splice(kk, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(kk, 1), Ik.removeAt(kk, 1);
+        const Tk = Xk?.[wk];
+        void 0 !== Tk && void 0 === Tk.root && Tk.removeParent(this), Fk && this.$reindexChildren(kk)
       }
-      $reindexChildren(CC, zC) {
-        if (!this[SC].hasFilteredFields) return;
-        if ("string" === typeof this[pC]) return;
-        const ZC = this.tmpItems,
-          QC = ZC.length;
-        if (void 0 !== zC)
-          for (; CC < QC && ZC[CC] === zC[CC];) CC++;
-        for (let wC = CC; wC < QC; wC++) ZC[wC]?.[SC]?.setParentIndex(this, wC)
+      $reindexChildren(kk, Fk) {
+        if (!this[wk].hasFilteredFields) return;
+        if ("string" === typeof this[Hk]) return;
+        const Ik = this.tmpItems,
+          Xk = Ik.length;
+        if (void 0 !== Fk)
+          for (; kk < Xk && Ik[kk] === Fk[kk];) kk++;
+        for (let Tk = kk; Tk < Xk; Tk++) Ik[Tk]?.[wk]?.setParentIndex(this, Tk)
       }
-      $changeAt(CC, zC) {
-        if (void 0 === zC || null === zC) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
-        if (this.items[CC] === zC) return;
-        const ZC = void 0 !== this.items[CC] ? "object" === typeof zC ? wC.DELETE_AND_ADD : wC.REPLACE : wC.ADD,
-          QC = this.$wireIndex(CC),
-          bC = this[SC];
-        return bC.change(QC, ZC), zC[SC]?.setParent(this, bC.root, QC), QC
+      $changeAt(kk, Fk) {
+        if (void 0 === Fk || null === Fk) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
+        if (this.items[kk] === Fk) return;
+        const Ik = void 0 !== this.items[kk] ? "object" === typeof Fk ? Tk.DELETE_AND_ADD : Tk.REPLACE : Tk.ADD,
+          Xk = this.$wireIndex(kk),
+          ik = this[wk];
+        return ik.change(Xk, Ik), Fk[wk]?.setParent(this, ik.root, Xk), Xk
       }
-      $deleteAt(CC, zC) {
-        this[SC].delete(this.$wireIndex(CC), zC)
+      $deleteAt(kk, Fk) {
+        this[wk].delete(this.$wireIndex(kk), Fk)
       }
-      $setAt(CC, zC, ZC) {
-        ZC === wC.ADD && void 0 !== this.items[CC] ? this.items.splice(CC, 0, zC) : ZC === wC.DELETE_AND_MOVE ? (this.items.splice(CC, 1), this.items[CC] = zC) : (CC > this.items.length && (this._needsCompaction = !0), this.items[CC] = zC)
+      $setAt(kk, Fk, Ik) {
+        Ik === Tk.ADD && void 0 !== this.items[kk] ? this.items.splice(kk, 0, Fk) : Ik === Tk.DELETE_AND_MOVE ? (this.items.splice(kk, 1), this.items[kk] = Fk) : (kk > this.items.length && (this._needsCompaction = !0), this.items[kk] = Fk)
       }
       clear() {
-        const CC = this[PC];
-        if (0 === CC.items.length) return;
-        const zC = CC[SC];
-        zC.forEachChild(((CC, ZC) => {
-          zC.root?.remove(CC)
-        })), zC.discard(), zC.operation(wC.CLEAR), CC.items.length = 0, CC.tmpItems.length = 0
-      } [RC]() {
-        const CC = this[PC] ?? this,
-          zC = CC[SC];
-        if (zC.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
-        const ZC = CC.items;
-        for (let QC = 0; QC < ZC.length; QC++) ZC[QC]?.[RC]?.();
-        CC.items.length = 0, CC.tmpItems.length = 0, CC.deletedIndexes.length = 0, zC.recycle(), CC[fC] = void 0
+        const kk = this[Jk];
+        if (0 === kk.items.length) return;
+        const Fk = kk[wk];
+        Fk.forEachChild(((kk, Ik) => {
+          Fk.root?.remove(kk)
+        })), Fk.discard(), Fk.operation(Tk.CLEAR), kk.items.length = 0, kk.tmpItems.length = 0
+      } [Pk]() {
+        const kk = this[Jk] ?? this,
+          Fk = kk[wk];
+        if (Fk.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
+        const Ik = kk.items;
+        for (let Xk = 0; Xk < Ik.length; Xk++) Ik[Xk]?.[Pk]?.();
+        kk.items.length = 0, kk.tmpItems.length = 0, kk.deletedIndexes.length = 0, Fk.recycle(), kk[lk] = void 0
       }
       concat() {
-        return new ZQ(...this.items.concat(...arguments))
+        return new XX(...this.items.concat(...arguments))
       }
-      join(CC) {
-        return this.items.join(CC)
+      join(kk) {
+        return this.items.join(kk)
       }
       reverse() {
-        const CC = this[PC],
-          zC = CC[SC];
-        if (zC.has() || CC.deletedIndexes.length > 0) {
-          const zC = CC.items.slice().reverse();
-          return this.clear(), this.push(...zC), this
+        const kk = this[Jk],
+          Fk = kk[wk];
+        if (Fk.has() || kk.deletedIndexes.length > 0) {
+          const Fk = kk.items.slice().reverse();
+          return this.clear(), this.push(...Fk), this
         }
-        return zC.operation(wC.REVERSE), CC.items.reverse(), CC.tmpItems.reverse(), CC.$reindexChildren(0), this
+        return Fk.operation(Tk.REVERSE), kk.items.reverse(), kk.tmpItems.reverse(), kk.$reindexChildren(0), this
       }
       shift() {
-        const CC = this[PC],
-          zC = CC.items;
-        if (0 === zC.length) return;
-        const ZC = CC[SC],
-          QC = CC.deletedIndexes;
-        let bC = 0;
-        for (; !0 === QC[bC];) bC++;
-        const nC = CC.$isUnsentAdd(bC);
-        return ZC.delete(bC, wC.DELETE), nC ? CC.$cancelAdd(bC) : QC[bC] = !0, zC.shift()
+        const kk = this[Jk],
+          Fk = kk.items;
+        if (0 === Fk.length) return;
+        const Ik = kk[wk],
+          Xk = kk.deletedIndexes;
+        let ik = 0;
+        for (; !0 === Xk[ik];) ik++;
+        const yk = kk.$isUnsentAdd(ik);
+        return Ik.delete(ik, Tk.DELETE), yk ? kk.$cancelAdd(ik) : Xk[ik] = !0, Fk.shift()
       }
-      slice(CC, zC) {
-        const ZC = new ZQ;
-        return ZC.push(...this.items.slice(CC, zC)), ZC
+      slice(kk, Fk) {
+        const Ik = new XX;
+        return Ik.push(...this.items.slice(kk, Fk)), Ik
       }
       sort() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : CQ;
-        const zC = this[PC];
-        zC.isMovingItems = !0;
-        const ZC = zC[SC];
-        return zC.items.sort(CC).forEach(((CC, zC) => ZC.change(zC, wC.REPLACE))), zC.tmpItems.sort(CC), zC.$reindexChildren(0), zC.isMovingItems = !1, this
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : FX;
+        const Fk = this[Jk];
+        Fk.isMovingItems = !0;
+        const Ik = Fk[wk];
+        return Fk.items.sort(kk).forEach(((kk, Fk) => Ik.change(Fk, Tk.REPLACE))), Fk.tmpItems.sort(kk), Fk.$reindexChildren(0), Fk.isMovingItems = !1, this
       }
-      splice(CC, zC) {
-        const ZC = this[PC],
-          QC = ZC[SC],
-          bC = ZC.items,
-          nC = ZC.tmpItems,
-          fC = ZC.deletedIndexes,
-          oC = bC.length,
-          qC = nC.length;
-        for (var FC = arguments.length, WC = new Array(FC > 2 ? FC - 2 : 0), NC = 2; NC < FC; NC++) WC[NC - 2] = arguments[NC];
-        const MC = WC.length,
-          gC = [];
-        for (let wC = 0; wC < qC; wC++) !0 !== fC[wC] && gC.push(wC);
-        let pC;
-        if (oC > CC) {
-          void 0 === zC && (zC = oC - CC);
-          for (let bC = CC; bC < CC + zC; bC++) {
-            const CC = gC[bC],
-              zC = ZC.$isUnsentAdd(CC);
-            QC.delete(CC, wC.DELETE), zC ? (pC ??= []).push(CC) : fC[CC] = !0
+      splice(kk, Fk) {
+        const Ik = this[Jk],
+          Xk = Ik[wk],
+          ik = Ik.items,
+          yk = Ik.tmpItems,
+          lk = Ik.deletedIndexes,
+          ak = ik.length,
+          qk = yk.length;
+        for (var Lk = arguments.length, tk = new Array(Lk > 2 ? Lk - 2 : 0), Zk = 2; Zk < Lk; Zk++) tk[Zk - 2] = arguments[Zk];
+        const jk = tk.length,
+          ek = [];
+        for (let Tk = 0; Tk < qk; Tk++) !0 !== lk[Tk] && ek.push(Tk);
+        let Hk;
+        if (ak > kk) {
+          void 0 === Fk && (Fk = ak - kk);
+          for (let ik = kk; ik < kk + Fk; ik++) {
+            const kk = ek[ik],
+              Fk = Ik.$isUnsentAdd(kk);
+            Xk.delete(kk, Tk.DELETE), Fk ? (Hk ??= []).push(kk) : lk[kk] = !0
           }
-        } else zC = 0;
-        if (MC > 0) {
-          const bC = gC[CC] ?? oC,
-            qC = Math.min(MC, zC);
-          for (let CC = 0; CC < qC; CC++) {
-            const zC = bC + CC;
-            let ZC;
-            const oC = void 0 !== pC ? pC.indexOf(zC) : -1; - 1 !== oC ? (pC.splice(oC, 1), ZC = wC.ADD) : ZC = fC[zC] ? wC.DELETE_AND_ADD : wC.ADD, QC.indexedOperation(zC, ZC), nC[zC] = WC[CC], fC[zC] = !1, WC[CC][SC]?.setParent(this, QC.root, zC)
+        } else Fk = 0;
+        if (jk > 0) {
+          const ik = ek[kk] ?? ak,
+            qk = Math.min(jk, Fk);
+          for (let kk = 0; kk < qk; kk++) {
+            const Fk = ik + kk;
+            let Ik;
+            const ak = void 0 !== Hk ? Hk.indexOf(Fk) : -1; - 1 !== ak ? (Hk.splice(ak, 1), Ik = Tk.ADD) : Ik = lk[Fk] ? Tk.DELETE_AND_ADD : Tk.ADD, Xk.indexedOperation(Fk, Ik), yk[Fk] = tk[kk], lk[Fk] = !1, tk[kk][wk]?.setParent(this, Xk.root, Fk)
           }
-          const FC = MC - qC;
-          if (FC > 0) {
-            const CC = bC + qC;
-            QC.insertAt(CC, FC);
-            for (let zC = 0; zC < FC; zC++) WC[qC + zC][SC]?.setParent(this, QC.root, CC + zC);
-            fC.length > 0 && fC.splice(CC, 0, ...new Array(FC).fill(!1)), nC.splice(CC, 0, ...WC.slice(qC)), ZC.$reindexChildren(CC + FC)
+          const Lk = jk - qk;
+          if (Lk > 0) {
+            const kk = ik + qk;
+            Xk.insertAt(kk, Lk);
+            for (let Fk = 0; Fk < Lk; Fk++) tk[qk + Fk][wk]?.setParent(this, Xk.root, kk + Fk);
+            lk.length > 0 && lk.splice(kk, 0, ...new Array(Lk).fill(!1)), yk.splice(kk, 0, ...tk.slice(qk)), Ik.$reindexChildren(kk + Lk)
           }
         }
-        if (void 0 !== pC && pC.length > 0) {
-          for (let CC = pC.length - 1; CC >= 0; CC--) ZC.$cancelAdd(pC[CC], !1);
-          ZC.$reindexChildren(pC[0])
+        if (void 0 !== Hk && Hk.length > 0) {
+          for (let kk = Hk.length - 1; kk >= 0; kk--) Ik.$cancelAdd(Hk[kk], !1);
+          Ik.$reindexChildren(Hk[0])
         }
-        return QC.root?.enqueueChangeTree(QC), bC.splice(CC, zC, ...WC)
+        return Xk.root?.enqueueChangeTree(Xk), ik.splice(kk, Fk, ...tk)
       }
       unshift() {
-        const CC = this[PC],
-          zC = CC[SC];
-        zC.unshift(arguments.length);
-        for (let QC = 0; QC < arguments.length; QC++)(QC < 0 || arguments.length <= QC ? void 0 : arguments[QC])?.[SC]?.setParent(this, zC.root, QC);
-        const ZC = CC.deletedIndexes;
-        return ZC.length > 0 && ZC.unshift(...new Array(arguments.length).fill(!1)), CC.tmpItems.unshift(...arguments), CC.$reindexChildren(arguments.length), CC.items.unshift(...arguments)
+        const kk = this[Jk],
+          Fk = kk[wk];
+        Fk.unshift(arguments.length);
+        for (let Xk = 0; Xk < arguments.length; Xk++)(Xk < 0 || arguments.length <= Xk ? void 0 : arguments[Xk])?.[wk]?.setParent(this, Fk.root, Xk);
+        const Ik = kk.deletedIndexes;
+        return Ik.length > 0 && Ik.unshift(...new Array(arguments.length).fill(!1)), kk.tmpItems.unshift(...arguments), kk.$reindexChildren(arguments.length), kk.items.unshift(...arguments)
       }
-      indexOf(CC, zC) {
-        return this.items.indexOf(CC, zC)
+      indexOf(kk, Fk) {
+        return this.items.indexOf(kk, Fk)
       }
-      lastIndexOf(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
-        return this.items.lastIndexOf(CC, zC)
+      lastIndexOf(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
+        return this.items.lastIndexOf(kk, Fk)
       }
-      every(CC, zC) {
-        return this.items.every(CC, zC)
+      every(kk, Fk) {
+        return this.items.every(kk, Fk)
       }
-      some(CC, zC) {
-        return this.items.some(CC, zC)
+      some(kk, Fk) {
+        return this.items.some(kk, Fk)
       }
-      forEach(CC, zC) {
-        return this.items.forEach(CC, zC)
+      forEach(kk, Fk) {
+        return this.items.forEach(kk, Fk)
       }
-      map(CC, zC) {
-        return this.items.map(CC, zC)
+      map(kk, Fk) {
+        return this.items.map(kk, Fk)
       }
-      filter(CC, zC) {
-        return this.items.filter(CC, zC)
+      filter(kk, Fk) {
+        return this.items.filter(kk, Fk)
       }
-      reduce(CC, zC) {
+      reduce(kk, Fk) {
         return this.items.reduce.apply(this.items, arguments)
       }
-      reduceRight(CC, zC) {
+      reduceRight(kk, Fk) {
         return this.items.reduceRight.apply(this.items, arguments)
       }
-      find(CC, zC) {
-        return this.items.find(CC, zC)
+      find(kk, Fk) {
+        return this.items.find(kk, Fk)
       }
-      findIndex(CC, zC) {
-        return this.items.findIndex(CC, zC)
+      findIndex(kk, Fk) {
+        return this.items.findIndex(kk, Fk)
       }
-      fill(CC, zC, ZC) {
+      fill(kk, Fk, Ik) {
         throw new Error("ArraySchema#fill() not implemented")
       }
-      copyWithin(CC, zC, ZC) {
+      copyWithin(kk, Fk, Ik) {
         throw new Error("ArraySchema#copyWithin() not implemented")
       }
       toString() {
@@ -4349,7 +4349,7 @@ export const modules = {
         return this.items[Symbol.iterator]()
       }
       static get[Symbol.species]() {
-        return ZQ
+        return XX
       } [Symbol.unscopables];
       entries() {
         return this.items.entries()
@@ -4360,118 +4360,118 @@ export const modules = {
       values() {
         return this.items.values()
       }
-      includes(CC, zC) {
-        return this.items.includes(CC, zC)
+      includes(kk, Fk) {
+        return this.items.includes(kk, Fk)
       }
-      flatMap(CC, zC) {
+      flatMap(kk, Fk) {
         throw new Error("ArraySchema#flatMap() is not supported.")
       }
-      flat(CC) {
+      flat(kk) {
         throw new Error("ArraySchema#flat() is not supported.")
       }
       findLast() {
         return this.items.findLast.apply(this.items, arguments)
       }
       findLastIndex() {
-        for (var CC = arguments.length, zC = new Array(CC), ZC = 0; ZC < CC; ZC++) zC[ZC] = arguments[ZC];
+        for (var kk = arguments.length, Fk = new Array(kk), Ik = 0; Ik < kk; Ik++) Fk[Ik] = arguments[Ik];
         return this.items.findLastIndex.apply(this.items, arguments)
       }
-      with(CC, zC) {
-        const ZC = this.items.slice();
-        return CC < 0 && (CC += this.length), ZC[CC] = zC, new ZQ(...ZC)
+      with(kk, Fk) {
+        const Ik = this.items.slice();
+        return kk < 0 && (kk += this.length), Ik[kk] = Fk, new XX(...Ik)
       }
       toReversed() {
         return this.items.slice().reverse()
       }
-      toSorted(CC) {
-        return this.items.slice().sort(CC)
+      toSorted(kk) {
+        return this.items.slice().sort(kk)
       }
-      toSpliced(CC, zC) {
-        for (var ZC = arguments.length, QC = new Array(ZC > 2 ? ZC - 2 : 0), wC = 2; wC < ZC; wC++) QC[wC - 2] = arguments[wC];
-        const bC = this.items.slice();
-        return bC.splice.apply(bC, arguments), bC
+      toSpliced(kk, Fk) {
+        for (var Ik = arguments.length, Xk = new Array(Ik > 2 ? Ik - 2 : 0), Tk = 2; Tk < Ik; Tk++) Xk[Tk - 2] = arguments[Tk];
+        const ik = this.items.slice();
+        return ik.splice.apply(ik, arguments), ik
       }
       shuffle() {
-        return this.move((CC => {
-          let zC = this.items.length;
-          for (; 0 != zC;) {
-            let CC = Math.floor(Math.random() * zC);
-            zC--, [this[zC], this[CC]] = [this[CC], this[zC]]
+        return this.move((kk => {
+          let Fk = this.items.length;
+          for (; 0 != Fk;) {
+            let kk = Math.floor(Math.random() * Fk);
+            Fk--, [this[Fk], this[kk]] = [this[kk], this[Fk]]
           }
         }))
       }
-      move(CC) {
-        return this.isMovingItems = !0, CC(this), this.isMovingItems = !1, this
-      } [NC](CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const ZC = this[PC] ?? this;
-        return zC || ZC.deletedIndexes[CC] ? ZC.items[CC] : ZC.tmpItems[CC] || ZC.items[CC]
-      } [MC](CC) {
-        const zC = this[PC] ?? this;
-        zC.items[CC] = void 0, zC._needsCompaction = !0
-      } [GC]() {
-        const CC = this.tmpItems;
-        this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, CC), this.deletedIndexes.length = 0)
-      } [AC]() {
-        const CC = this[PC] ?? this;
-        CC._needsCompaction && (CC._needsCompaction = !1, CC.items = CC.items.filter((CC => void 0 !== CC)))
-      } [gC](CC, zC, ZC) {
-        const QC = this[PC] ?? this,
-          wC = QC.items;
-        let bC = !1;
-        for (let nC = 0; nC < wC.length; nC++) {
-          const fC = wC[nC];
-          CC.has(nC) ? ZC(fC) : (bC = !0, zC(fC, nC), QC[MC](nC))
+      move(kk) {
+        return this.isMovingItems = !0, kk(this), this.isMovingItems = !1, this
+      } [Zk](kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const Ik = this[Jk] ?? this;
+        return Fk || Ik.deletedIndexes[kk] ? Ik.items[kk] : Ik.tmpItems[kk] || Ik.items[kk]
+      } [jk](kk) {
+        const Fk = this[Jk] ?? this;
+        Fk.items[kk] = void 0, Fk._needsCompaction = !0
+      } [xk]() {
+        const kk = this.tmpItems;
+        this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, kk), this.deletedIndexes.length = 0)
+      } [Kk]() {
+        const kk = this[Jk] ?? this;
+        kk._needsCompaction && (kk._needsCompaction = !1, kk.items = kk.items.filter((kk => void 0 !== kk)))
+      } [ek](kk, Fk, Ik) {
+        const Xk = this[Jk] ?? this,
+          Tk = Xk.items;
+        let ik = !1;
+        for (let yk = 0; yk < Tk.length; yk++) {
+          const lk = Tk[yk];
+          kk.has(yk) ? Ik(lk) : (ik = !0, Fk(lk, yk), Xk[jk](yk))
         }
-        bC && QC[AC]()
+        ik && Xk[Kk]()
       }
       toArray() {
         return this.items.slice(0)
       }
       toJSON() {
-        return this.toArray().map((CC => "function" === typeof CC.toJSON ? CC.toJSON() : CC))
+        return this.toArray().map((kk => "function" === typeof kk.toJSON ? kk.toJSON() : kk))
       }
-      clone(CC) {
-        let zC;
-        return CC ? (zC = new ZQ, zC.push(...this.items)) : zC = new ZQ(...this.map((CC => CC[SC] ? CC.clone() : CC))), zC
+      clone(kk) {
+        let Fk;
+        return kk ? (Fk = new XX, Fk.push(...this.items)) : Fk = new XX(...this.map((kk => kk[wk] ? kk.clone() : kk))), Fk
       }
     }
-    Jz("array", {
-      constructor: ZQ
+    VF("array", {
+      constructor: XX
     });
-    class QQ {
+    class TX {
       keyByIndex = new Map;
       indexByKey = Object.create(null);
       nextIndex = 0;
       snapshots;
-      indexOf(CC) {
-        const zC = this.indexByKey[CC];
-        return void 0 === zC ? void 0 : zC
+      indexOf(kk) {
+        const Fk = this.indexByKey[kk];
+        return void 0 === Fk ? void 0 : Fk
       }
-      assign(CC) {
-        const zC = this.nextIndex++;
-        return this.indexByKey[CC] = zC, this.keyByIndex.set(zC, CC), zC
+      assign(kk) {
+        const Fk = this.nextIndex++;
+        return this.indexByKey[kk] = Fk, this.keyByIndex.set(Fk, kk), Fk
       }
-      snapshot(CC, zC) {
-        (this.snapshots ??= new Map).set(CC, zC)
+      snapshot(kk, Fk) {
+        (this.snapshots ??= new Map).set(kk, Fk)
       }
-      forgetSnapshot(CC) {
-        this.snapshots?.delete(CC)
+      forgetSnapshot(kk) {
+        this.snapshots?.delete(kk)
       }
-      snapshotAt(CC) {
-        return this.snapshots?.get(CC)
+      snapshotAt(kk) {
+        return this.snapshots?.get(kk)
       }
-      setIndex(CC, zC) {
-        this.keyByIndex.set(CC, zC), this.indexByKey[zC] = CC
+      setIndex(kk, Fk) {
+        this.keyByIndex.set(kk, Fk), this.indexByKey[Fk] = kk
       }
-      keyOf(CC) {
-        return this.keyByIndex.get(CC)
+      keyOf(kk) {
+        return this.keyByIndex.get(kk)
       }
       cleanupAfterEncode() {
         if (void 0 !== this.snapshots) {
-          for (const [CC] of this.snapshots) {
-            const zC = this.keyByIndex.get(CC);
-            void 0 !== zC && (delete this.indexByKey[zC], this.keyByIndex.delete(CC))
+          for (const [kk] of this.snapshots) {
+            const Fk = this.keyByIndex.get(kk);
+            void 0 !== Fk && (delete this.indexByKey[Fk], this.keyByIndex.delete(kk))
           }
           this.snapshots.clear()
         }
@@ -4480,25 +4480,25 @@ export const modules = {
         this.indexByKey = Object.create(null), this.keyByIndex.clear(), this.snapshots?.clear(), this.nextIndex = 0
       }
     }
-    class wQ {
-      [SC];
-      [fC];
+    class iX {
+      [wk];
+      [lk];
       childType;
-      [pC];
+      [Hk];
       $items = new Map;
-      journal = new QQ;
+      journal = new TX;
       _stream;
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(CC) {
-        (this._stream ??= vz()).maxPerTick = CC
+      set maxPerTick(kk) {
+        (this._stream ??= oF()).maxPerTick = kk
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(CC) {
-        (this._stream ??= vz()).priority = CC
+      set priority(kk) {
+        (this._stream ??= oF()).priority = kk
       }
       get $indexes() {
         return this.journal.keyByIndex
@@ -4506,30 +4506,30 @@ export const modules = {
       get _collectionIndexes() {
         return this.journal.indexByKey
       }
-      static[qC] = lZ;
-      static[FC] = BZ;
-      static COLLECTION_KIND = aZ;
-      static[WC](CC, zC, ZC) {
-        if (!ZC || "string" === typeof CC[pC]) return !0;
-        const QC = CC[NC](zC) ?? CC.journal.snapshotAt(zC);
-        return ZC.isChangeTreeVisible(QC[SC])
+      static[qk] = RI;
+      static[Lk] = rI;
+      static COLLECTION_KIND = BI;
+      static[tk](kk, Fk, Ik) {
+        if (!Ik || "string" === typeof kk[Hk]) return !0;
+        const Xk = kk[Zk](Fk) ?? kk.journal.snapshotAt(Fk);
+        return Ik.isChangeTreeVisible(Xk[wk])
       }
-      static is(CC) {
-        return void 0 !== CC.map
+      static is(kk) {
+        return void 0 !== kk.map
       }
-      constructor(CC) {
-        if (Object.defineProperty(this, SC, {
-            value: new YZ(this),
+      constructor(kk) {
+        if (Object.defineProperty(this, wk, {
+            value: new nI(this),
             enumerable: !1,
             writable: !0
-          }), this[pC] = void 0, CC)
-          if (CC instanceof Map || CC instanceof wQ) CC.forEach(((CC, zC) => this.set(zC, CC)));
+          }), this[Hk] = void 0, kk)
+          if (kk instanceof Map || kk instanceof iX) kk.forEach(((kk, Fk) => this.set(Fk, kk)));
           else
-            for (const zC in CC) this.set(zC, CC[zC])
+            for (const Fk in kk) this.set(Fk, kk[Fk])
       }
       static initializeForDecoder() {
-        const CC = Object.create(wQ.prototype);
-        return CC.$items = new Map, CC.journal = new QQ, CC[pC] = void 0, mZ(CC), CC
+        const kk = Object.create(iX.prototype);
+        return kk.$items = new Map, kk.journal = new TX, kk[Hk] = void 0, pI(kk), kk
       } [Symbol.iterator]() {
         return this.$items[Symbol.iterator]()
       }
@@ -4537,61 +4537,61 @@ export const modules = {
         return this.$items[Symbol.toStringTag]
       }
       static get[Symbol.species]() {
-        return wQ
+        return iX
       }
-      set(CC, zC) {
-        if (void 0 === zC || null === zC) throw new Error(`MapSchema#set('${CC}', ${zC}): trying to set ${zC} value on '${CC}'.`);
-        "object" === typeof zC && this[pC] && VZ(zC, this[pC], this, CC), CC = CC.toString();
-        const ZC = this[SC],
-          QC = void 0 !== zC[SC],
-          bC = this.journal;
-        let nC, fC = bC.indexOf(CC);
-        if (void 0 !== fC) {
-          nC = wC.REPLACE;
-          const ZC = this.$items.get(CC);
-          if (ZC === zC) return;
-          QC && (nC = wC.DELETE_AND_ADD, void 0 !== ZC && ZC[SC].root?.remove(ZC[SC])), void 0 !== bC.snapshotAt(fC) && bC.forgetSnapshot(fC)
-        } else fC = bC.assign(CC), nC = wC.ADD;
-        return this.$items.set(CC, zC), nC === wC.ADD && ZC.isStreamCollection ? void 0 !== ZC.root && hz(this, ZC.root, fC) : ZC.change(fC, nC), QC && zC[SC].setParent(this, ZC.root, fC), this
+      set(kk, Fk) {
+        if (void 0 === Fk || null === Fk) throw new Error(`MapSchema#set('${kk}', ${Fk}): trying to set ${Fk} value on '${kk}'.`);
+        "object" === typeof Fk && this[Hk] && kX(Fk, this[Hk], this, kk), kk = kk.toString();
+        const Ik = this[wk],
+          Xk = void 0 !== Fk[wk],
+          ik = this.journal;
+        let yk, lk = ik.indexOf(kk);
+        if (void 0 !== lk) {
+          yk = Tk.REPLACE;
+          const Ik = this.$items.get(kk);
+          if (Ik === Fk) return;
+          Xk && (yk = Tk.DELETE_AND_ADD, void 0 !== Ik && Ik[wk].root?.remove(Ik[wk])), void 0 !== ik.snapshotAt(lk) && ik.forgetSnapshot(lk)
+        } else lk = ik.assign(kk), yk = Tk.ADD;
+        return this.$items.set(kk, Fk), yk === Tk.ADD && Ik.isStreamCollection ? void 0 !== Ik.root && EF(this, Ik.root, lk) : Ik.change(lk, yk), Xk && Fk[wk].setParent(this, Ik.root, lk), this
       }
-      get(CC) {
-        return this.$items.get(CC)
+      get(kk) {
+        return this.$items.get(kk)
       }
-      getOrInsert(CC, zC) {
-        return this.$items.has(CC) ? this.$items.get(CC) : (this.set(CC, zC), zC)
+      getOrInsert(kk, Fk) {
+        return this.$items.has(kk) ? this.$items.get(kk) : (this.set(kk, Fk), Fk)
       }
-      getOrInsertComputed(CC, zC) {
-        if (this.$items.has(CC)) return this.$items.get(CC);
-        const ZC = zC(CC);
-        return this.set(CC, ZC), ZC
+      getOrInsertComputed(kk, Fk) {
+        if (this.$items.has(kk)) return this.$items.get(kk);
+        const Ik = Fk(kk);
+        return this.set(kk, Ik), Ik
       }
-      delete(CC) {
-        if (!this.$items.has(CC)) return !1;
-        const zC = this.journal.indexOf(CC),
-          ZC = this.$items.get(CC),
-          QC = this[SC];
-        if (QC.isStreamCollection) {
-          const wC = QC.root;
-          let bC = !1;
-          return void 0 !== wC && (bC = Kz(this, wC, this[fC], zC)), void 0 !== ZC?.[SC] && wC?.remove(ZC[SC]), this.$items.delete(CC), bC || this.journal.snapshot(zC, ZC), !0
+      delete(kk) {
+        if (!this.$items.has(kk)) return !1;
+        const Fk = this.journal.indexOf(kk),
+          Ik = this.$items.get(kk),
+          Xk = this[wk];
+        if (Xk.isStreamCollection) {
+          const Tk = Xk.root;
+          let ik = !1;
+          return void 0 !== Tk && (ik = OF(this, Tk, this[lk], Fk)), void 0 !== Ik?.[wk] && Tk?.remove(Ik[wk]), this.$items.delete(kk), ik || this.journal.snapshot(Fk, Ik), !0
         }
-        return this.journal.snapshot(zC, ZC), QC.delete(zC), this.$items.delete(CC)
+        return this.journal.snapshot(Fk, Ik), Xk.delete(Fk), this.$items.delete(kk)
       }
       clear() {
-        const CC = this[SC];
-        CC.discard(), CC.forEachChild(((zC, ZC) => {
-          CC.root?.remove(zC)
-        })), this.journal.reset(), this.$items.clear(), CC.operation(wC.CLEAR)
-      } [RC]() {
-        const CC = this[SC];
-        if (CC.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
-        this.$items.forEach((CC => CC?.[RC]?.())), this.$items.clear(), this.journal.reset(), CC.recycle(), this[fC] = void 0
+        const kk = this[wk];
+        kk.discard(), kk.forEachChild(((Fk, Ik) => {
+          kk.root?.remove(Fk)
+        })), this.journal.reset(), this.$items.clear(), kk.operation(Tk.CLEAR)
+      } [Pk]() {
+        const kk = this[wk];
+        if (kk.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
+        this.$items.forEach((kk => kk?.[Pk]?.())), this.$items.clear(), this.journal.reset(), kk.recycle(), this[lk] = void 0
       }
-      has(CC) {
-        return this.$items.has(CC)
+      has(kk) {
+        return this.$items.has(kk)
       }
-      forEach(CC) {
-        this.$items.forEach(CC)
+      forEach(kk) {
+        this.$items.forEach(kk)
       }
       entries() {
         return this.$items.entries()
@@ -4606,69 +4606,69 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[SC].pause()
+        this[wk].pause()
       }
       resumeTracking() {
-        this[SC].resume()
+        this[wk].resume()
       }
-      untracked(CC) {
-        return this[SC].untracked(CC)
+      untracked(kk) {
+        return this[wk].untracked(kk)
       }
       get isTrackingPaused() {
-        return this[SC].paused
+        return this[wk].paused
       }
-      setIndex(CC, zC) {
-        this.journal.setIndex(CC, zC)
+      setIndex(kk, Fk) {
+        this.journal.setIndex(kk, Fk)
       }
-      getIndex(CC) {
-        return this.journal.keyOf(CC)
-      } [NC](CC) {
-        const zC = this.journal.keyOf(CC);
-        return void 0 !== zC ? this.$items.get(zC) : void 0
-      } [MC](CC) {
-        const zC = this.journal.keyOf(CC);
-        void 0 !== zC && (this.$items.delete(zC), this.journal.keyByIndex.delete(CC))
-      } [gC](CC, zC, ZC) {
-        let QC = null;
-        if (this.$items.forEach(((wC, bC) => {
-            CC.has(bC) ? ZC(wC) : ((QC ??= new Set).add(bC), zC(wC, bC))
-          })), null !== QC) {
-          QC.forEach((CC => {
-            this.$items.delete(CC), delete this.journal.indexByKey[CC]
+      getIndex(kk) {
+        return this.journal.keyOf(kk)
+      } [Zk](kk) {
+        const Fk = this.journal.keyOf(kk);
+        return void 0 !== Fk ? this.$items.get(Fk) : void 0
+      } [jk](kk) {
+        const Fk = this.journal.keyOf(kk);
+        void 0 !== Fk && (this.$items.delete(Fk), this.journal.keyByIndex.delete(kk))
+      } [ek](kk, Fk, Ik) {
+        let Xk = null;
+        if (this.$items.forEach(((Tk, ik) => {
+            kk.has(ik) ? Ik(Tk) : ((Xk ??= new Set).add(ik), Fk(Tk, ik))
+          })), null !== Xk) {
+          Xk.forEach((kk => {
+            this.$items.delete(kk), delete this.journal.indexByKey[kk]
           }));
-          const CC = [];
-          this.journal.keyByIndex.forEach(((zC, ZC) => {
-            QC.has(zC) && CC.push(ZC)
+          const kk = [];
+          this.journal.keyByIndex.forEach(((Fk, Ik) => {
+            Xk.has(Fk) && kk.push(Ik)
           }));
-          for (let zC = 0; zC < CC.length; zC++) this.journal.keyByIndex.delete(CC[zC])
+          for (let Fk = 0; Fk < kk.length; Fk++) this.journal.keyByIndex.delete(kk[Fk])
         }
-      } [GC]() {
+      } [xk]() {
         this.journal.cleanupAfterEncode()
       }
-      _dropView(CC) {
-        Hz(this, CC)
+      _dropView(kk) {
+        uF(this, kk)
       }
       _unregister() {}
       toJSON() {
-        return Object.fromEntries(Array.from(this, (CC => {
-          let [zC, ZC] = CC;
-          return [zC, "function" === typeof ZC.toJSON ? ZC.toJSON() : ZC]
+        return Object.fromEntries(Array.from(this, (kk => {
+          let [Fk, Ik] = kk;
+          return [Fk, "function" === typeof Ik.toJSON ? Ik.toJSON() : Ik]
         })))
       }
-      clone(CC) {
-        let zC;
-        return CC ? zC = Object.assign(new wQ, this) : (zC = new wQ, this.forEach(((CC, ZC) => {
-          CC[SC] ? zC.set(ZC, CC.clone()) : zC.set(ZC, CC)
-        }))), zC
+      clone(kk) {
+        let Fk;
+        return kk ? Fk = Object.assign(new iX, this) : (Fk = new iX, this.forEach(((kk, Ik) => {
+          kk[wk] ? Fk.set(Ik, kk.clone()) : Fk.set(Ik, kk)
+        }))), Fk
       }
     }
-    Jz("map", {
-      constructor: wQ
+    VF("map", {
+      constructor: iX
     });
-    class bQ {
-      [SC];
-      [fC];
-      [pC];
+    class yX {
+      [wk];
+      [lk];
+      [Hk];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4676,79 +4676,79 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(CC) {
-        (this._stream ??= vz()).maxPerTick = CC
+      set maxPerTick(kk) {
+        (this._stream ??= oF()).maxPerTick = kk
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(CC) {
-        (this._stream ??= vz()).priority = CC
+      set priority(kk) {
+        (this._stream ??= oF()).priority = kk
       }
-      static[qC] = XZ;
-      static[FC] = BZ;
-      static COLLECTION_KIND = jZ;
-      static[WC](CC, zC, ZC) {
-        return !ZC || "string" === typeof CC[pC] || ZC.isChangeTreeVisible((CC[NC](zC) ?? CC.deletedItems[zC])[SC])
+      static[qk] = UI;
+      static[Lk] = rI;
+      static COLLECTION_KIND = AI;
+      static[tk](kk, Fk, Ik) {
+        return !Ik || "string" === typeof kk[Hk] || Ik.isChangeTreeVisible((kk[Zk](Fk) ?? kk.deletedItems[Fk])[wk])
       }
-      static is(CC) {
-        return void 0 !== CC.collection
+      static is(kk) {
+        return void 0 !== kk.collection
       }
-      constructor(CC) {
-        Object.defineProperty(this, SC, {
-          value: new YZ(this),
+      constructor(kk) {
+        Object.defineProperty(this, wk, {
+          value: new nI(this),
           enumerable: !1,
           writable: !0
-        }), this[pC] = void 0, CC && CC.forEach((CC => this.add(CC)))
+        }), this[Hk] = void 0, kk && kk.forEach((kk => this.add(kk)))
       }
       static initializeForDecoder() {
-        const CC = Object.create(bQ.prototype);
-        return CC.$items = new Map, CC.deletedItems = {}, CC.$refId = 0, CC[pC] = void 0, mZ(CC), CC
+        const kk = Object.create(yX.prototype);
+        return kk.$items = new Map, kk.deletedItems = {}, kk.$refId = 0, kk[Hk] = void 0, pI(kk), kk
       }
-      add(CC) {
-        const zC = this.$refId++,
-          ZC = this[SC];
-        return this.$items.set(zC, CC), ZC.isStreamCollection ? void 0 !== ZC.root && hz(this, ZC.root, zC) : ZC.change(zC), void 0 !== CC[SC] && CC[SC].setParent(this, ZC.root, zC), zC
+      add(kk) {
+        const Fk = this.$refId++,
+          Ik = this[wk];
+        return this.$items.set(Fk, kk), Ik.isStreamCollection ? void 0 !== Ik.root && EF(this, Ik.root, Fk) : Ik.change(Fk), void 0 !== kk[wk] && kk[wk].setParent(this, Ik.root, Fk), Fk
       }
-      at(CC) {
-        const zC = Array.from(this.$items.keys())[CC];
-        return this.$items.get(zC)
+      at(kk) {
+        const Fk = Array.from(this.$items.keys())[kk];
+        return this.$items.get(Fk)
       }
       entries() {
         return this.$items.entries()
       }
-      delete(CC) {
-        const zC = this.$items.entries();
-        let ZC, QC;
+      delete(kk) {
+        const Fk = this.$items.entries();
+        let Ik, Xk;
         for (;
-          (QC = zC.next()) && !QC.done;)
-          if (CC === QC.value[1]) {
-            ZC = QC.value[0];
+          (Xk = Fk.next()) && !Xk.done;)
+          if (kk === Xk.value[1]) {
+            Ik = Xk.value[0];
             break
-          } if (void 0 === ZC) return !1;
-        const wC = this[SC];
-        if (wC.isStreamCollection) {
-          const CC = wC.root,
-            zC = this.$items.get(ZC);
-          return void 0 !== CC && Kz(this, CC, this[fC], ZC), void 0 !== zC?.[SC] && CC?.remove(zC[SC]), this.deletedItems[ZC] = zC, this.$items.delete(ZC)
+          } if (void 0 === Ik) return !1;
+        const Tk = this[wk];
+        if (Tk.isStreamCollection) {
+          const kk = Tk.root,
+            Fk = this.$items.get(Ik);
+          return void 0 !== kk && OF(this, kk, this[lk], Ik), void 0 !== Fk?.[wk] && kk?.remove(Fk[wk]), this.deletedItems[Ik] = Fk, this.$items.delete(Ik)
         }
-        return this.deletedItems[ZC] = wC.delete(ZC), this.$items.delete(ZC)
+        return this.deletedItems[Ik] = Tk.delete(Ik), this.$items.delete(Ik)
       }
       clear() {
-        const CC = this[SC];
-        CC.discard(), CC.forEachChild(((zC, ZC) => {
-          CC.root?.remove(zC)
-        })), this.$items.clear(), CC.operation(wC.CLEAR)
-      } [RC]() {
-        const CC = this[SC];
-        if (CC.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
-        this.$items.forEach((CC => CC?.[RC]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, CC.recycle(), this[fC] = void 0
+        const kk = this[wk];
+        kk.discard(), kk.forEachChild(((Fk, Ik) => {
+          kk.root?.remove(Fk)
+        })), this.$items.clear(), kk.operation(Tk.CLEAR)
+      } [Pk]() {
+        const kk = this[wk];
+        if (kk.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
+        this.$items.forEach((kk => kk?.[Pk]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, kk.recycle(), this[lk] = void 0
       }
-      has(CC) {
-        return Array.from(this.$items.values()).some((zC => zC === CC))
+      has(kk) {
+        return Array.from(this.$items.values()).some((Fk => Fk === kk))
       }
-      forEach(CC) {
-        this.$items.forEach(((zC, ZC, QC) => CC(zC, ZC, this)))
+      forEach(kk) {
+        this.$items.forEach(((Fk, Ik, Xk) => kk(Fk, Ik, this)))
       }
       values() {
         return this.$items.values()
@@ -4757,62 +4757,62 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[SC].pause()
+        this[wk].pause()
       }
       resumeTracking() {
-        this[SC].resume()
+        this[wk].resume()
       }
-      untracked(CC) {
-        return this[SC].untracked(CC)
+      untracked(kk) {
+        return this[wk].untracked(kk)
       }
       get isTrackingPaused() {
-        return this[SC].paused
+        return this[wk].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(CC, zC) {}
-      getIndex(CC) {
-        return CC
-      } [NC](CC) {
-        return this.$items.get(CC)
-      } [MC](CC) {
-        this.$items.delete(CC)
-      } [gC](CC, zC, ZC) {
-        let QC = null;
-        if (this.$items.forEach(((wC, bC) => {
-            CC.has(bC) ? ZC(wC) : ((QC ??= []).push(bC), zC(wC, bC))
-          })), null !== QC)
-          for (let wC = 0; wC < QC.length; wC++) this[MC](QC[wC])
-      } [GC]() {
-        for (const CC in this.deletedItems) delete this.deletedItems[CC]
+      setIndex(kk, Fk) {}
+      getIndex(kk) {
+        return kk
+      } [Zk](kk) {
+        return this.$items.get(kk)
+      } [jk](kk) {
+        this.$items.delete(kk)
+      } [ek](kk, Fk, Ik) {
+        let Xk = null;
+        if (this.$items.forEach(((Tk, ik) => {
+            kk.has(ik) ? Ik(Tk) : ((Xk ??= []).push(ik), Fk(Tk, ik))
+          })), null !== Xk)
+          for (let Tk = 0; Tk < Xk.length; Tk++) this[jk](Xk[Tk])
+      } [xk]() {
+        for (const kk in this.deletedItems) delete this.deletedItems[kk]
       }
-      _dropView(CC) {
-        Hz(this, CC)
+      _dropView(kk) {
+        uF(this, kk)
       }
       _unregister() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const CC = [];
-        return this.forEach(((zC, ZC) => {
-          CC.push("function" === typeof zC.toJSON ? zC.toJSON() : zC)
-        })), CC
+        const kk = [];
+        return this.forEach(((Fk, Ik) => {
+          kk.push("function" === typeof Fk.toJSON ? Fk.toJSON() : Fk)
+        })), kk
       }
-      clone(CC) {
-        let zC;
-        return CC ? zC = Object.assign(new bQ, this) : (zC = new bQ, this.forEach((CC => {
-          CC[SC] ? zC.add(CC.clone()) : zC.add(CC)
-        }))), zC
+      clone(kk) {
+        let Fk;
+        return kk ? Fk = Object.assign(new yX, this) : (Fk = new yX, this.forEach((kk => {
+          kk[wk] ? Fk.add(kk.clone()) : Fk.add(kk)
+        }))), Fk
       }
     }
-    Jz("collection", {
-      constructor: bQ
+    VF("collection", {
+      constructor: yX
     });
-    class nQ {
-      [SC];
-      [fC];
-      [pC];
+    class lX {
+      [wk];
+      [lk];
+      [Hk];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4820,81 +4820,81 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(CC) {
-        (this._stream ??= vz()).maxPerTick = CC
+      set maxPerTick(kk) {
+        (this._stream ??= oF()).maxPerTick = kk
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(CC) {
-        (this._stream ??= vz()).priority = CC
+      set priority(kk) {
+        (this._stream ??= oF()).priority = kk
       }
-      static[qC] = XZ;
-      static[FC] = BZ;
-      static COLLECTION_KIND = DZ;
-      static[WC](CC, zC, ZC) {
-        return !ZC || "string" === typeof CC[pC] || ZC.isVisible((CC[NC](zC) ?? CC.deletedItems[zC])[SC])
+      static[qk] = UI;
+      static[Lk] = rI;
+      static COLLECTION_KIND = YI;
+      static[tk](kk, Fk, Ik) {
+        return !Ik || "string" === typeof kk[Hk] || Ik.isVisible((kk[Zk](Fk) ?? kk.deletedItems[Fk])[wk])
       }
-      static is(CC) {
-        return void 0 !== CC.set
+      static is(kk) {
+        return void 0 !== kk.set
       }
-      constructor(CC) {
-        Object.defineProperty(this, SC, {
-          value: new YZ(this),
+      constructor(kk) {
+        Object.defineProperty(this, wk, {
+          value: new nI(this),
           enumerable: !1,
           writable: !0
-        }), this[pC] = void 0, CC && CC.forEach((CC => this.add(CC)))
+        }), this[Hk] = void 0, kk && kk.forEach((kk => this.add(kk)))
       }
       static initializeForDecoder() {
-        const CC = Object.create(nQ.prototype);
-        return CC.$items = new Map, CC.deletedItems = {}, CC.$refId = 0, CC[pC] = void 0, mZ(CC), CC
+        const kk = Object.create(lX.prototype);
+        return kk.$items = new Map, kk.deletedItems = {}, kk.$refId = 0, kk[Hk] = void 0, pI(kk), kk
       }
-      add(CC) {
-        if (this.has(CC)) return !1;
-        const zC = this.$refId++,
-          ZC = this[SC];
-        return this.$items.set(zC, CC), ZC.isStreamCollection ? void 0 !== ZC.root && hz(this, ZC.root, zC) : ZC.change(zC, wC.ADD), void 0 !== CC[SC] && CC[SC].setParent(this, ZC.root, zC), zC
+      add(kk) {
+        if (this.has(kk)) return !1;
+        const Fk = this.$refId++,
+          Ik = this[wk];
+        return this.$items.set(Fk, kk), Ik.isStreamCollection ? void 0 !== Ik.root && EF(this, Ik.root, Fk) : Ik.change(Fk, Tk.ADD), void 0 !== kk[wk] && kk[wk].setParent(this, Ik.root, Fk), Fk
       }
       entries() {
         return this.$items.entries()
       }
-      delete(CC) {
-        const zC = this.$items.entries();
-        let ZC, QC;
+      delete(kk) {
+        const Fk = this.$items.entries();
+        let Ik, Xk;
         for (;
-          (QC = zC.next()) && !QC.done;)
-          if (CC === QC.value[1]) {
-            ZC = QC.value[0];
+          (Xk = Fk.next()) && !Xk.done;)
+          if (kk === Xk.value[1]) {
+            Ik = Xk.value[0];
             break
-          } if (void 0 === ZC) return !1;
-        const wC = this[SC];
-        if (wC.isStreamCollection) {
-          const CC = wC.root,
-            zC = this.$items.get(ZC);
-          return void 0 !== CC && Kz(this, CC, this[fC], ZC), void 0 !== zC?.[SC] && CC?.remove(zC[SC]), this.deletedItems[ZC] = zC, this.$items.delete(ZC)
+          } if (void 0 === Ik) return !1;
+        const Tk = this[wk];
+        if (Tk.isStreamCollection) {
+          const kk = Tk.root,
+            Fk = this.$items.get(Ik);
+          return void 0 !== kk && OF(this, kk, this[lk], Ik), void 0 !== Fk?.[wk] && kk?.remove(Fk[wk]), this.deletedItems[Ik] = Fk, this.$items.delete(Ik)
         }
-        return this.deletedItems[ZC] = wC.delete(ZC), this.$items.delete(ZC)
+        return this.deletedItems[Ik] = Tk.delete(Ik), this.$items.delete(Ik)
       }
       clear() {
-        const CC = this[SC];
-        CC.discard(), this.$items.clear(), CC.operation(wC.CLEAR)
-      } [RC]() {
-        const CC = this[SC];
-        if (CC.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
-        this.$items.forEach((CC => CC?.[RC]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, CC.recycle(), this[fC] = void 0
+        const kk = this[wk];
+        kk.discard(), this.$items.clear(), kk.operation(Tk.CLEAR)
+      } [Pk]() {
+        const kk = this[wk];
+        if (kk.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
+        this.$items.forEach((kk => kk?.[Pk]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, kk.recycle(), this[lk] = void 0
       }
-      has(CC) {
-        const zC = this.$items.values();
-        let ZC, QC = !1;
+      has(kk) {
+        const Fk = this.$items.values();
+        let Ik, Xk = !1;
         for (;
-          (ZC = zC.next()) && !ZC.done;)
-          if (CC === ZC.value) {
-            QC = !0;
+          (Ik = Fk.next()) && !Ik.done;)
+          if (kk === Ik.value) {
+            Xk = !0;
             break
-          } return QC
+          } return Xk
       }
-      forEach(CC) {
-        this.$items.forEach(((zC, ZC, QC) => CC(zC, ZC, this)))
+      forEach(kk) {
+        this.$items.forEach(((Fk, Ik, Xk) => kk(Fk, Ik, this)))
       }
       values() {
         return this.$items.values()
@@ -4903,62 +4903,62 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[SC].pause()
+        this[wk].pause()
       }
       resumeTracking() {
-        this[SC].resume()
+        this[wk].resume()
       }
-      untracked(CC) {
-        return this[SC].untracked(CC)
+      untracked(kk) {
+        return this[wk].untracked(kk)
       }
       get isTrackingPaused() {
-        return this[SC].paused
+        return this[wk].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(CC, zC) {}
-      getIndex(CC) {
-        return CC
-      } [NC](CC) {
-        return this.$items.get(CC)
-      } [MC](CC) {
-        this.$items.delete(CC)
-      } [gC](CC, zC, ZC) {
-        let QC = null;
-        if (this.$items.forEach(((wC, bC) => {
-            CC.has(bC) ? ZC(wC) : ((QC ??= []).push(bC), zC(wC, bC))
-          })), null !== QC)
-          for (let wC = 0; wC < QC.length; wC++) this[MC](QC[wC])
-      } [GC]() {
-        for (const CC in this.deletedItems) delete this.deletedItems[CC]
+      setIndex(kk, Fk) {}
+      getIndex(kk) {
+        return kk
+      } [Zk](kk) {
+        return this.$items.get(kk)
+      } [jk](kk) {
+        this.$items.delete(kk)
+      } [ek](kk, Fk, Ik) {
+        let Xk = null;
+        if (this.$items.forEach(((Tk, ik) => {
+            kk.has(ik) ? Ik(Tk) : ((Xk ??= []).push(ik), Fk(Tk, ik))
+          })), null !== Xk)
+          for (let Tk = 0; Tk < Xk.length; Tk++) this[jk](Xk[Tk])
+      } [xk]() {
+        for (const kk in this.deletedItems) delete this.deletedItems[kk]
       }
-      _dropView(CC) {
-        Hz(this, CC)
+      _dropView(kk) {
+        uF(this, kk)
       }
       _unregister() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const CC = [];
-        return this.forEach(((zC, ZC) => {
-          CC.push("function" === typeof zC.toJSON ? zC.toJSON() : zC)
-        })), CC
+        const kk = [];
+        return this.forEach(((Fk, Ik) => {
+          kk.push("function" === typeof Fk.toJSON ? Fk.toJSON() : Fk)
+        })), kk
       }
-      clone(CC) {
-        let zC;
-        return CC ? zC = Object.assign(new nQ, this) : (zC = new nQ, this.forEach((CC => {
-          CC[SC] ? zC.add(CC.clone()) : zC.add(CC)
-        }))), zC
+      clone(kk) {
+        let Fk;
+        return kk ? Fk = Object.assign(new lX, this) : (Fk = new lX, this.forEach((kk => {
+          kk[wk] ? Fk.add(kk.clone()) : Fk.add(kk)
+        }))), Fk
       }
     }
-    Jz("set", {
-      constructor: nQ
+    VF("set", {
+      constructor: lX
     });
-    class fQ {
-      [SC];
-      [fC];
-      [pC];
+    class aX {
+      [wk];
+      [lk];
+      [Hk];
       $items = new Map;
       $nextPosition = 0;
       _itemIndex = new Map;
@@ -4966,81 +4966,81 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(CC) {
-        (this._stream ??= vz()).maxPerTick = CC
+      set maxPerTick(kk) {
+        (this._stream ??= oF()).maxPerTick = kk
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(CC) {
-        (this._stream ??= vz()).priority = CC
+      set priority(kk) {
+        (this._stream ??= oF()).priority = kk
       }
       static $isStream = !0;
-      static[qC] = XZ;
-      static[FC] = BZ;
-      static COLLECTION_KIND = yZ;
-      static[WC](CC, zC, ZC) {
-        if (!ZC) return !0;
-        const QC = CC[NC](zC);
-        return void 0 !== QC && ZC.isVisible(QC[SC])
+      static[qk] = UI;
+      static[Lk] = rI;
+      static COLLECTION_KIND = gI;
+      static[tk](kk, Fk, Ik) {
+        if (!Ik) return !0;
+        const Xk = kk[Zk](Fk);
+        return void 0 !== Xk && Ik.isVisible(Xk[wk])
       }
-      static is(CC) {
-        return CC && void 0 !== CC.stream
+      static is(kk) {
+        return kk && void 0 !== kk.stream
       }
       constructor() {
-        Object.defineProperty(this, SC, {
-          value: new YZ(this),
+        Object.defineProperty(this, wk, {
+          value: new nI(this),
           enumerable: !1,
           writable: !0
-        }), this[pC] = void 0
+        }), this[Hk] = void 0
       }
       static initializeForDecoder() {
-        const CC = Object.create(fQ.prototype);
-        return CC.$items = new Map, CC.$nextPosition = 0, CC._itemIndex = new Map, CC[pC] = void 0, mZ(CC), CC
+        const kk = Object.create(aX.prototype);
+        return kk.$items = new Map, kk.$nextPosition = 0, kk._itemIndex = new Map, kk[Hk] = void 0, pI(kk), kk
       }
-      add(CC) {
-        if (this._itemIndex.has(CC)) return -1;
-        const zC = this.$nextPosition++;
-        this.$items.set(zC, CC), this._itemIndex.set(CC, zC);
-        const ZC = this[SC].root;
-        return void 0 !== CC[SC] && CC[SC].setParent(this, ZC, zC), void 0 !== ZC && hz(this, ZC, zC), zC
+      add(kk) {
+        if (this._itemIndex.has(kk)) return -1;
+        const Fk = this.$nextPosition++;
+        this.$items.set(Fk, kk), this._itemIndex.set(kk, Fk);
+        const Ik = this[wk].root;
+        return void 0 !== kk[wk] && kk[wk].setParent(this, Ik, Fk), void 0 !== Ik && EF(this, Ik, Fk), Fk
       }
-      remove(CC) {
-        const zC = this._itemIndex.get(CC);
-        if (void 0 === zC) return !1;
-        this._itemIndex.delete(CC), this.$items.delete(zC);
-        const ZC = this[SC].root;
-        return void 0 !== ZC && (Kz(this, ZC, this[fC], zC), void 0 !== CC[SC] && ZC.remove(CC[SC])), !0
+      remove(kk) {
+        const Fk = this._itemIndex.get(kk);
+        if (void 0 === Fk) return !1;
+        this._itemIndex.delete(kk), this.$items.delete(Fk);
+        const Ik = this[wk].root;
+        return void 0 !== Ik && (OF(this, Ik, this[lk], Fk), void 0 !== kk[wk] && Ik.remove(kk[wk])), !0
       }
-      has(CC) {
-        return this._itemIndex.has(CC)
+      has(kk) {
+        return this._itemIndex.has(kk)
       }
       clear() {
-        const CC = this[SC].root;
-        if (void 0 !== CC) {
-          ! function(CC, zC, ZC) {
-            const QC = CC._stream;
-            if (void 0 !== QC) {
-              QC.broadcastPending.clear();
-              for (const CC of QC.sentBroadcast) QC.broadcastDeletes.add(CC);
-              QC.sentBroadcast.clear(), zC.forEachActiveView((CC => {
-                QC.pendingByView.get(CC.id)?.clear();
-                const zC = QC.sentByView.get(CC.id);
-                if (void 0 !== zC && zC.size > 0) {
-                  let QC = CC.changes.get(ZC);
-                  void 0 === QC && (QC = new Map, CC.changes.set(ZC, QC));
-                  for (const CC of zC) QC.set(CC, wC.DELETE);
-                  zC.clear()
+        const kk = this[wk].root;
+        if (void 0 !== kk) {
+          ! function(kk, Fk, Ik) {
+            const Xk = kk._stream;
+            if (void 0 !== Xk) {
+              Xk.broadcastPending.clear();
+              for (const kk of Xk.sentBroadcast) Xk.broadcastDeletes.add(kk);
+              Xk.sentBroadcast.clear(), Fk.forEachActiveView((kk => {
+                Xk.pendingByView.get(kk.id)?.clear();
+                const Fk = Xk.sentByView.get(kk.id);
+                if (void 0 !== Fk && Fk.size > 0) {
+                  let Xk = kk.changes.get(Ik);
+                  void 0 === Xk && (Xk = new Map, kk.changes.set(Ik, Xk));
+                  for (const kk of Fk) Xk.set(kk, Tk.DELETE);
+                  Fk.clear()
                 }
               }))
             }
-          }(this, CC, this[fC]);
-          for (const zC of this.$items.values()) void 0 !== zC[SC] && CC.remove(zC[SC])
+          }(this, kk, this[lk]);
+          for (const Fk of this.$items.values()) void 0 !== Fk[wk] && kk.remove(Fk[wk])
         }
         this.$items.clear(), this._itemIndex.clear()
       }
-      forEach(CC) {
-        for (const [zC, ZC] of this.$items) CC(ZC, zC, this)
+      forEach(kk) {
+        for (const [Fk, Ik] of this.$items) kk(Ik, Fk, this)
       }
       values() {
         return this.$items.values()
@@ -5056,43 +5056,43 @@ export const modules = {
       get length() {
         return this.$items.size
       }
-      setIndex(CC, zC) {}
-      getIndex(CC) {
-        return CC
-      } [NC](CC) {
-        return this.$items.get(CC)
-      } [MC](CC) {
-        const zC = this.$items.get(CC);
-        void 0 !== zC && (this._itemIndex.delete(zC), this.$items.delete(CC))
-      } [gC]() {} [GC]() {}
+      setIndex(kk, Fk) {}
+      getIndex(kk) {
+        return kk
+      } [Zk](kk) {
+        return this.$items.get(kk)
+      } [jk](kk) {
+        const Fk = this.$items.get(kk);
+        void 0 !== Fk && (this._itemIndex.delete(Fk), this.$items.delete(kk))
+      } [ek]() {} [xk]() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const CC = [];
-        return this.forEach((zC => {
-          CC.push("function" === typeof zC?.toJSON ? zC.toJSON() : zC)
-        })), CC
+        const kk = [];
+        return this.forEach((Fk => {
+          kk.push("function" === typeof Fk?.toJSON ? Fk.toJSON() : Fk)
+        })), kk
       }
-      clone(CC) {
-        if (CC) {
-          return Object.assign(new fQ, this)
+      clone(kk) {
+        if (kk) {
+          return Object.assign(new aX, this)
         }
-        const zC = new fQ;
-        return zC.maxPerTick = this.maxPerTick, this.forEach((CC => {
-          zC.add("function" === typeof CC?.clone ? CC.clone() : CC)
-        })), zC
+        const Fk = new aX;
+        return Fk.maxPerTick = this.maxPerTick, this.forEach((kk => {
+          Fk.add("function" === typeof kk?.clone ? kk.clone() : kk)
+        })), Fk
       }
-      _dropView(CC) {
-        Hz(this, CC)
+      _dropView(kk) {
+        uF(this, kk)
       }
       _unregister() {}
     }
-    Jz("stream", {
-      constructor: fQ
+    VF("stream", {
+      constructor: aX
     });
-    class oQ {
-      [JC] = !0;
+    class qX {
+      [sk] = !0;
       _type;
       _default = void 0;
       _hasDefault = !1;
@@ -5106,14 +5106,14 @@ export const modules = {
       _optional = !1;
       _noSync = !1;
       _streamPriority = void 0;
-      constructor(CC) {
-        this._type = CC
+      constructor(kk) {
+        this._type = kk
       }
-      default (CC) {
-        return this._default = CC, this._hasDefault = !0, this
+      default (kk) {
+        return this._default = kk, this._hasDefault = !0, this
       }
-      view(CC) {
-        return this._view = CC ?? -1, this
+      view(kk) {
+        return this._view = kk ?? -1, this
       }
       unreliable() {
         return this._unreliable = !0, this
@@ -5128,16 +5128,16 @@ export const modules = {
         return this._noSync = !0, this
       }
       stream() {
-        const CC = this._type;
-        if (CC && "object" === typeof CC && void 0 !== CC.array) throw new Error(iz);
+        const kk = this._type;
+        if (kk && "object" === typeof kk && void 0 !== kk.array) throw new Error(SF);
         return this._stream = !0, this
       }
-      priority(CC) {
-        return this._streamPriority = CC, this
+      priority(kk) {
+        return this._streamPriority = kk, this
       }
       deprecated() {
-        let CC = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return this._deprecated = !0, this._deprecatedThrows = CC, this
+        let kk = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return this._deprecated = !0, this._deprecatedThrows = kk, this
       }
       optional() {
         return this._optional = !0, this
@@ -5161,135 +5161,135 @@ export const modules = {
       }
     }
 
-    function qQ(CC) {
-      return null != CC && !0 === CC[JC]
+    function LX(kk) {
+      return null != kk && !0 === kk[sk]
     }
 
-    function FQ(CC) {
-      return () => new oQ(CC)
+    function tX(kk) {
+      return () => new qX(kk)
     }
 
-    function WQ(CC) {
-      if (qQ(CC)) {
-        const zC = CC._type;
-        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof zC?`use the type name instead: t.array("${zC}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
+    function ZX(kk) {
+      if (LX(kk)) {
+        const Fk = kk._type;
+        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof Fk?`use the type name instead: t.array("${Fk}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
       }
-      return CC
+      return kk
     }
 
-    function NQ(CC) {
-      return new oQ({
-        quantized: lz(CC)
+    function jX(kk) {
+      return new qX({
+        quantized: RF(kk)
       })
     }
-    const MQ = Object.freeze({
-        string: FQ("string"),
-        number: FQ("number"),
-        boolean: FQ("boolean"),
-        int8: FQ("int8"),
-        uint8: FQ("uint8"),
-        int16: FQ("int16"),
-        uint16: FQ("uint16"),
-        int32: FQ("int32"),
-        uint32: FQ("uint32"),
-        int64: FQ("int64"),
-        uint64: FQ("uint64"),
-        float32: FQ("float32"),
-        float64: FQ("float64"),
-        bigint64: FQ("bigint64"),
-        biguint64: FQ("biguint64"),
-        ref: CC => new oQ(CC),
-        array: CC => new oQ({
-          array: WQ(CC)
+    const eX = Object.freeze({
+        string: tX("string"),
+        number: tX("number"),
+        boolean: tX("boolean"),
+        int8: tX("int8"),
+        uint8: tX("uint8"),
+        int16: tX("int16"),
+        uint16: tX("uint16"),
+        int32: tX("int32"),
+        uint32: tX("uint32"),
+        int64: tX("int64"),
+        uint64: tX("uint64"),
+        float32: tX("float32"),
+        float64: tX("float64"),
+        bigint64: tX("bigint64"),
+        biguint64: tX("biguint64"),
+        ref: kk => new qX(kk),
+        array: kk => new qX({
+          array: ZX(kk)
         }),
-        map: CC => new oQ({
-          map: WQ(CC)
+        map: kk => new qX({
+          map: ZX(kk)
         }),
-        set: CC => new oQ({
-          set: WQ(CC)
+        set: kk => new qX({
+          set: ZX(kk)
         }),
-        collection: CC => new oQ({
-          collection: WQ(CC)
+        collection: kk => new qX({
+          collection: ZX(kk)
         }),
-        stream: CC => {
-          const zC = new oQ({
-            stream: WQ(CC)
+        stream: kk => {
+          const Fk = new qX({
+            stream: ZX(kk)
           });
-          return zC._stream = !0, zC
+          return Fk._stream = !0, Fk
         },
-        quantized: NQ,
-        angle: CC => NQ({
+        quantized: jX,
+        angle: kk => jX({
           min: 0,
           max: 2 * Math.PI,
           mode: "wrap",
-          bits: CC?.bits ?? 16
+          bits: kk?.bits ?? 16
         })
       }),
-      gQ = -1;
+      wX = -1;
 
-    function SQ(CC) {
-      return sz.register(CC), CC
+    function HX(kk) {
+      return WF.register(kk), kk
     }
 
-    function pQ() {
-      let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : gQ;
-      return function(zC, ZC) {
-        const QC = Lz.initialize(zC.constructor);
-        Lz.setTag(QC, ZC, CC)
+    function JX() {
+      let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : wX;
+      return function(Fk, Ik) {
+        const Xk = mF.initialize(Fk.constructor);
+        mF.setTag(Xk, Ik, kk)
       }
     }
 
-    function PQ(CC, zC) {
-      const ZC = Lz.initialize(CC.constructor);
-      Lz.setUnreliable(ZC, zC)
+    function xX(kk, Fk) {
+      const Ik = mF.initialize(kk.constructor);
+      mF.setUnreliable(Ik, Fk)
     }
 
-    function GQ(CC, zC) {
-      const ZC = Lz.initialize(CC.constructor);
-      Lz.setPatchOnly(ZC, zC)
+    function PX(kk, Fk) {
+      const Ik = mF.initialize(kk.constructor);
+      mF.setPatchOnly(Ik, Fk)
     }
 
-    function RQ(CC, zC) {
-      const ZC = Lz.initialize(CC.constructor);
-      Lz.setFullStateOnly(ZC, zC)
+    function KX(kk, Fk) {
+      const Ik = mF.initialize(kk.constructor);
+      mF.setFullStateOnly(Ik, Fk)
     }
 
-    function AQ(CC, zC) {
-      return function(ZC, QC) {
-        const wC = ZC.constructor;
-        if (!CC) throw new Error(`${wC.name}: @type() reference provided for "${QC}" is undefined. Make sure you don't have any circular dependencies.`);
-        CC = az(CC, `${wC.name}.${QC}`), sz.register(wC);
-        const bC = Object.getPrototypeOf(wC)[Symbol.metadata],
-          nC = Lz.initialize(wC);
-        let fC = nC[QC];
-        if (void 0 !== nC[fC]) {
-          if (nC[fC].deprecated) return;
-          if (void 0 !== nC[fC].type) {
-            const CC = new Error(`@colyseus/schema: Duplicate '${QC}' definition on '${wC.name}'.\nCheck @type() annotation`);
-            throw new Error(`${CC.message} ${CC.stack.split("\n")[4].trim()}`)
+    function QX(kk, Fk) {
+      return function(Ik, Xk) {
+        const Tk = Ik.constructor;
+        if (!kk) throw new Error(`${Tk.name}: @type() reference provided for "${Xk}" is undefined. Make sure you don't have any circular dependencies.`);
+        kk = BF(kk, `${Tk.name}.${Xk}`), WF.register(Tk);
+        const ik = Object.getPrototypeOf(Tk)[Symbol.metadata],
+          yk = mF.initialize(Tk);
+        let lk = yk[Xk];
+        if (void 0 !== yk[lk]) {
+          if (yk[lk].deprecated) return;
+          if (void 0 !== yk[lk].type) {
+            const kk = new Error(`@colyseus/schema: Duplicate '${Xk}' definition on '${Tk.name}'.\nCheck @type() annotation`);
+            throw new Error(`${kk.message} ${kk.stack.split("\n")[4].trim()}`)
           }
-        } else fC = nC[eC] ?? (bC && bC[eC]) ?? -1, fC++;
-        if (zC && zC.manual) Lz.addField(nC, fC, QC, CC, {
+        } else lk = yk[vk] ?? (ik && ik[vk]) ?? -1, lk++;
+        if (Fk && Fk.manual) mF.addField(yk, lk, Xk, kk, {
           enumerable: !0,
           configurable: !0,
           writable: !0
         });
         else {
           const {
-            complexTypeKlass: zC,
-            childType: ZC
-          } = Tz(CC);
-          Lz.addField(nC, fC, QC, CC, JQ(QC, fC, ZC, zC))
+            complexTypeKlass: Fk,
+            childType: Ik
+          } = fF(kk);
+          mF.addField(yk, lk, Xk, kk, VX(Xk, lk, Ik, Fk))
         }
-        nC[IC][QC] && Object.defineProperty(ZC, QC, nC[IC][QC]), ("string" === typeof CC || Xz(CC)) && (nC[vC] || Object.defineProperty(nC, vC, {
+        yk[Vk][Xk] && Object.defineProperty(Ik, Xk, yk[Vk][Xk]), ("string" === typeof kk || UF(kk)) && (yk[Sk] || Object.defineProperty(yk, Sk, {
           value: [],
           enumerable: !1,
           configurable: !0,
           writable: !0
-        }), nC[vC][fC] = "string" === typeof CC ? zz[CC] : rz(CC.quantized))
+        }), yk[Sk][lk] = "string" === typeof kk ? IF[kk] : cF(kk.quantized))
       }
     }
-    const xQ = {
+    const sX = {
       number: "number",
       int8: "number",
       uint8: "number",
@@ -5307,432 +5307,432 @@ export const modules = {
       boolean: "boolean"
     };
 
-    function JQ(CC, zC, ZC, QC) {
-      let bC;
-      return bC = QC ? function(CC, zC, ZC, QC) {
-        const bC = QC.constructor === ZQ,
-          nC = QC.constructor === wQ;
-        return function(CC) {
-          const QC = this[xC],
-            fC = QC[zC];
-          if (CC !== fC) {
-            if (void 0 !== CC && null !== CC) {
-              if (!bC || CC instanceof ZQ)
-                if (!nC || CC instanceof wQ) CC[pC] = ZC;
+    function VX(kk, Fk, Ik, Xk) {
+      let ik;
+      return ik = Xk ? function(kk, Fk, Ik, Xk) {
+        const ik = Xk.constructor === XX,
+          yk = Xk.constructor === iX;
+        return function(kk) {
+          const Xk = this[Qk],
+            lk = Xk[Fk];
+          if (kk !== lk) {
+            if (void 0 !== kk && null !== kk) {
+              if (!ik || kk instanceof XX)
+                if (!yk || kk instanceof iX) kk[Hk] = Ik;
                 else {
-                  const zC = new wQ;
-                  if (zC[pC] = ZC, CC instanceof Map) CC.forEach(((CC, ZC) => zC.set(ZC, CC)));
+                  const Fk = new iX;
+                  if (Fk[Hk] = Ik, kk instanceof Map) kk.forEach(((kk, Ik) => Fk.set(Ik, kk)));
                   else
-                    for (const ZC in CC) zC.set(ZC, CC[ZC]);
-                  CC = zC
+                    for (const Ik in kk) Fk.set(Ik, kk[Ik]);
+                  kk = Fk
                 }
               else {
-                const zC = new ZQ;
-                zC[pC] = ZC, zC.push(...CC), CC = zC
+                const Fk = new XX;
+                Fk[Hk] = Ik, Fk.push(...kk), kk = Fk
               }
-              const QC = this[SC],
-                qC = this.constructor;
-              void 0 !== fC && null !== fC && fC[SC] ? (QC.root?.remove(fC[SC]), qC[oC](QC, zC, wC.DELETE_AND_ADD)) : qC[oC](QC, zC, wC.ADD), CC[SC]?.setParent(this, QC.root, zC)
-            } else void 0 !== fC && null !== fC && this[SC].delete(zC);
-            QC[zC] = CC
+              const Xk = this[wk],
+                qk = this.constructor;
+              void 0 !== lk && null !== lk && lk[wk] ? (Xk.root?.remove(lk[wk]), qk[ak](Xk, Fk, Tk.DELETE_AND_ADD)) : qk[ak](Xk, Fk, Tk.ADD), kk[wk]?.setParent(this, Xk.root, Fk)
+            } else void 0 !== lk && null !== lk && this[wk].delete(Fk);
+            Xk[Fk] = kk
           }
         }
-      }(0, zC, ZC, QC) : "string" === typeof ZC ? function(CC, zC, ZC) {
-        const QC = xQ[ZC],
-          bC = "string" === ZC,
-          nC = "boolean" === ZC;
-        return function(ZC) {
-          const fC = this[xC],
-            qC = fC[zC];
-          if (ZC !== qC) {
-            if (void 0 !== ZC && null !== ZC) {
-              if (!nC && void 0 !== QC && typeof ZC !== QC && (!bC || null !== ZC)) {
-                const zC = ZC && ZC.constructor ? ` (${ZC.constructor.name})` : "";
-                throw new kZ(`a '${QC}' was expected, but '${JSON.stringify(ZC)}'${zC} was provided in ${this.constructor.name}#${CC}`)
+      }(0, Fk, Ik, Xk) : "string" === typeof Ik ? function(kk, Fk, Ik) {
+        const Xk = sX[Ik],
+          ik = "string" === Ik,
+          yk = "boolean" === Ik;
+        return function(Ik) {
+          const lk = this[Qk],
+            qk = lk[Fk];
+          if (Ik !== qk) {
+            if (void 0 !== Ik && null !== Ik) {
+              if (!yk && void 0 !== Xk && typeof Ik !== Xk && (!ik || null !== Ik)) {
+                const Fk = Ik && Ik.constructor ? ` (${Ik.constructor.name})` : "";
+                throw new MI(`a '${Xk}' was expected, but '${JSON.stringify(Ik)}'${Fk} was provided in ${this.constructor.name}#${kk}`)
               }
-              this.constructor[oC](this[SC], zC, wC.ADD)
-            } else void 0 !== qC && null !== qC && this[SC].delete(zC);
-            fC[zC] = ZC
+              this.constructor[ak](this[wk], Fk, Tk.ADD)
+            } else void 0 !== qk && null !== qk && this[wk].delete(Fk);
+            lk[Fk] = Ik
           }
         }
-      }(CC, zC, ZC) : Xz(ZC) ? function(CC, zC, ZC) {
-        return function(QC) {
-          const bC = this[xC],
-            nC = bC[zC];
-          if (void 0 !== QC && null !== QC) {
-            if ("number" !== typeof QC) throw new kZ(`a 'number' was expected, but '${JSON.stringify(QC)}' was provided in ${this.constructor.name}#${CC}`);
-            if ((QC = uz(ZC, cz(ZC, QC))) === nC) return;
-            this.constructor[oC](this[SC], zC, wC.ADD)
+      }(kk, Fk, Ik) : UF(Ik) ? function(kk, Fk, Ik) {
+        return function(Xk) {
+          const ik = this[Qk],
+            yk = ik[Fk];
+          if (void 0 !== Xk && null !== Xk) {
+            if ("number" !== typeof Xk) throw new MI(`a 'number' was expected, but '${JSON.stringify(Xk)}' was provided in ${this.constructor.name}#${kk}`);
+            if ((Xk = NF(Ik, CF(Ik, Xk))) === yk) return;
+            this.constructor[ak](this[wk], Fk, Tk.ADD)
           } else {
-            if (QC === nC) return;
-            void 0 !== nC && null !== nC && this[SC].delete(zC)
+            if (Xk === yk) return;
+            void 0 !== yk && null !== yk && this[wk].delete(Fk)
           }
-          bC[zC] = QC
+          ik[Fk] = Xk
         }
-      }(CC, zC, ZC.quantized) : function(CC, zC, ZC) {
-        return function(QC) {
-          const bC = this[xC],
-            nC = bC[zC];
-          if (QC !== nC) {
-            if (void 0 !== QC && null !== QC) {
-              VZ(QC, ZC, this, CC);
-              const bC = this[SC],
-                fC = this.constructor;
-              void 0 !== nC && null !== nC && nC[SC] ? (bC.root?.remove(nC[SC]), fC[oC](bC, zC, wC.DELETE_AND_ADD)) : fC[oC](bC, zC, wC.ADD), QC[SC]?.setParent(this, bC.root, zC)
-            } else void 0 !== nC && null !== nC && this[SC].delete(zC);
-            bC[zC] = QC
+      }(kk, Fk, Ik.quantized) : function(kk, Fk, Ik) {
+        return function(Xk) {
+          const ik = this[Qk],
+            yk = ik[Fk];
+          if (Xk !== yk) {
+            if (void 0 !== Xk && null !== Xk) {
+              kX(Xk, Ik, this, kk);
+              const ik = this[wk],
+                lk = this.constructor;
+              void 0 !== yk && null !== yk && yk[wk] ? (ik.root?.remove(yk[wk]), lk[ak](ik, Fk, Tk.DELETE_AND_ADD)) : lk[ak](ik, Fk, Tk.ADD), Xk[wk]?.setParent(this, ik.root, Fk)
+            } else void 0 !== yk && null !== yk && this[wk].delete(Fk);
+            ik[Fk] = Xk
           }
         }
-      }(CC, zC, ZC), {
+      }(kk, Fk, Ik), {
         get: function() {
-          return this[xC][zC]
+          return this[Qk][Fk]
         },
-        set: bC,
+        set: ik,
         enumerable: !0,
         configurable: !0
       }
     }
 
-    function IQ() {
-      let CC = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-      return function(zC, ZC) {
-        const QC = Lz.initialize(zC.constructor);
-        Lz.setDeprecated(QC, ZC), CC && (QC[IC] ??= {}, QC[IC][ZC] = {
+    function zX() {
+      let kk = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+      return function(Fk, Ik) {
+        const Xk = mF.initialize(Fk.constructor);
+        mF.setDeprecated(Xk, Ik), kk && (Xk[Vk] ??= {}, Xk[Vk][Ik] = {
           get: function() {
-            throw new Error(`${ZC} is deprecated.`)
+            throw new Error(`${Ik} is deprecated.`)
           },
-          set: function(CC) {},
+          set: function(kk) {},
           enumerable: !1,
           configurable: !0
-        }, Object.defineProperty(zC, ZC, QC[IC][ZC]))
+        }, Object.defineProperty(Fk, Ik, Xk[Vk][Ik]))
       }
     }
-    let iQ = !1;
+    let SX = !1;
 
-    function vQ(CC, zC, ZC) {
-      iQ || (iQ = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
-      for (let QC in zC) AQ(zC[QC], ZC)(CC.prototype, QC);
-      return CC
+    function oX(kk, Fk, Ik) {
+      SX || (SX = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
+      for (let Xk in Fk) QX(Fk[Xk], Ik)(kk.prototype, Xk);
+      return kk
     }
 
-    function eQ(CC, zC) {
-      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : KQ;
-      if (null == CC || "object" !== typeof CC) throw new Error(`schema(): first argument must be a fields object (got ${typeof CC}).`);
-      const QC = {},
-        wC = {},
-        bC = {},
-        nC = {},
-        fC = (CC, zC) => {
-          if (zC.hasDefault)((CC, zC) => {
-            "function" === typeof zC ? nC[CC] = zC : zC && "function" === typeof zC.clone ? nC[CC] = () => zC.clone() : bC[CC] = zC
-          })(CC, zC.default);
-          else if (!zC.optional) {
-            const ZC = function(CC) {
-              if (CC && "object" === typeof CC) {
-                if (void 0 !== CC.array) return () => new ZQ;
-                if (void 0 !== CC.map) return () => new wQ;
-                if (void 0 !== CC.set) return () => new nQ;
-                if (void 0 !== CC.collection) return () => new bQ;
-                if (void 0 !== CC.stream) return () => new fQ
-              } else if ("function" === typeof CC && KQ.is(CC) && (!CC.prototype.initialize || 0 === CC.prototype.initialize.length)) return () => new CC
-            }(zC.type);
-            ZC && (nC[CC] = ZC)
+    function vX(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : OX;
+      if (null == kk || "object" !== typeof kk) throw new Error(`schema(): first argument must be a fields object (got ${typeof kk}).`);
+      const Xk = {},
+        Tk = {},
+        ik = {},
+        yk = {},
+        lk = (kk, Fk) => {
+          if (Fk.hasDefault)((kk, Fk) => {
+            "function" === typeof Fk ? yk[kk] = Fk : Fk && "function" === typeof Fk.clone ? yk[kk] = () => Fk.clone() : ik[kk] = Fk
+          })(kk, Fk.default);
+          else if (!Fk.optional) {
+            const Ik = function(kk) {
+              if (kk && "object" === typeof kk) {
+                if (void 0 !== kk.array) return () => new XX;
+                if (void 0 !== kk.map) return () => new iX;
+                if (void 0 !== kk.set) return () => new lX;
+                if (void 0 !== kk.collection) return () => new yX;
+                if (void 0 !== kk.stream) return () => new aX
+              } else if ("function" === typeof kk && OX.is(kk) && (!kk.prototype.initialize || 0 === kk.prototype.initialize.length)) return () => new kk
+            }(Fk.type);
+            Ik && (yk[kk] = Ik)
           }
         },
-        oC = {},
-        qC = [],
-        FC = [],
-        WC = {},
-        NC = [],
-        MC = [],
-        gC = {},
-        SC = [];
-      for (const xC in CC) {
-        const ZC = CC[xC],
-          bC = `schema(${zC?`'${zC}'`:""}): field '${xC}'`;
-        if (qQ(ZC)) {
-          const CC = ZC.toDefinition();
-          if (CC.noSync) {
-            if (void 0 !== CC.view || CC.unreliable || CC.patchOnly || CC.fullStateOnly || CC.stream) throw new Error(`${bC} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
-            fC(xC, CC);
+        ak = {},
+        qk = [],
+        Lk = [],
+        tk = {},
+        Zk = [],
+        jk = [],
+        ek = {},
+        wk = [];
+      for (const Qk in kk) {
+        const Ik = kk[Qk],
+          ik = `schema(${Fk?`'${Fk}'`:""}): field '${Qk}'`;
+        if (LX(Ik)) {
+          const kk = Ik.toDefinition();
+          if (kk.noSync) {
+            if (void 0 !== kk.view || kk.unreliable || kk.patchOnly || kk.fullStateOnly || kk.stream) throw new Error(`${ik} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
+            lk(Qk, kk);
             continue
           }
-          if (CC.patchOnly && CC.fullStateOnly) throw new Error(`${bC} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
-          const zC = az(CC.type, bC);
-          if ("function" === typeof zC && !KQ.is(zC)) throw new Error(`${bC} is a synced ref to non-Schema class '${zC.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
-          QC[xC] = zC, void 0 !== CC.view && (oC[xC] = CC.view), CC.unreliable && qC.push(xC), CC.patchOnly && FC.push(xC), CC.deprecated && (WC[xC] = CC.deprecatedThrows), CC.fullStateOnly && NC.push(xC), CC.stream && MC.push(xC), void 0 !== CC.streamPriority && (gC[xC] = CC.streamPriority), CC.optional && SC.push(xC), fC(xC, CC)
+          if (kk.patchOnly && kk.fullStateOnly) throw new Error(`${ik} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
+          const Fk = BF(kk.type, ik);
+          if ("function" === typeof Fk && !OX.is(Fk)) throw new Error(`${ik} is a synced ref to non-Schema class '${Fk.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
+          Xk[Qk] = Fk, void 0 !== kk.view && (ak[Qk] = kk.view), kk.unreliable && qk.push(Qk), kk.patchOnly && Lk.push(Qk), kk.deprecated && (tk[Qk] = kk.deprecatedThrows), kk.fullStateOnly && Zk.push(Qk), kk.stream && jk.push(Qk), void 0 !== kk.streamPriority && (ek[Qk] = kk.streamPriority), kk.optional && wk.push(Qk), lk(Qk, kk)
         } else {
-          if ("function" !== typeof ZC) throw new Error(`${bC} must be a t.* builder, Schema subclass, or method (got ${typeof ZC}).`);
-          KQ.is(ZC) ? (QC[xC] = ZC, ZC.prototype.initialize && 0 !== ZC.prototype.initialize.length || (nC[xC] = () => new ZC)) : wC[xC] = ZC
+          if ("function" !== typeof Ik) throw new Error(`${ik} must be a t.* builder, Schema subclass, or method (got ${typeof Ik}).`);
+          OX.is(Ik) ? (Xk[Qk] = Ik, Ik.prototype.initialize && 0 !== Ik.prototype.initialize.length || (yk[Qk] = () => new Ik)) : Tk[Qk] = Ik
         }
       }
-      const pC = CC => {
-          for (const zC in bC) CC[zC] = bC[zC];
-          for (const zC in nC) CC[zC] = nC[zC]()
+      const Hk = kk => {
+          for (const Fk in ik) kk[Fk] = ik[Fk];
+          for (const Fk in yk) kk[Fk] = yk[Fk]()
         },
-        PC = () => {
-          const CC = {};
-          return pC(CC), CC
+        Jk = () => {
+          const kk = {};
+          return Hk(kk), kk
         },
-        GC = "function" === typeof wC.initialize,
-        RC = wC.initialize ?? ZC._initialize,
-        AC = class extends ZC {
+        xk = "function" === typeof Tk.initialize,
+        Pk = Tk.initialize ?? Ik._initialize,
+        Kk = class extends Ik {
           constructor() {
-            for (var CC = arguments.length, zC = new Array(CC), ZC = 0; ZC < CC; ZC++) zC[ZC] = arguments[ZC];
-            const wC = zC[0];
-            void 0 === wC ? (super(), pC(this)) : super(Object.assign(PC(), GC ? (CC => {
-              const zC = Object.keys(QC),
-                ZC = {};
-              for (const QC in CC) zC.includes(QC) || (ZC[QC] = CC[QC]);
-              return ZC
-            })(wC) : wC)), RC && new.target === AC && RC.apply(this, zC)
+            for (var kk = arguments.length, Fk = new Array(kk), Ik = 0; Ik < kk; Ik++) Fk[Ik] = arguments[Ik];
+            const Tk = Fk[0];
+            void 0 === Tk ? (super(), Hk(this)) : super(Object.assign(Jk(), xk ? (kk => {
+              const Fk = Object.keys(Xk),
+                Ik = {};
+              for (const Xk in kk) Fk.includes(Xk) || (Ik[Xk] = kk[Xk]);
+              return Ik
+            })(Tk) : Tk)), Pk && new.target === Kk && Pk.apply(this, Fk)
           }
         };
-      zC && Object.defineProperty(AC, "name", {
-        value: zC
-      }), Lz.setFields(AC, QC), AC._getDefaultValues = PC, AC._initialize = RC, Object.assign(AC.prototype, wC);
-      for (const xC in oC) pQ(oC[xC])(AC.prototype, xC);
-      for (const xC of qC) PQ(AC.prototype, xC);
-      for (const xC of FC) GQ(AC.prototype, xC);
-      for (const xC in WC) IQ(WC[xC])(AC.prototype, xC);
-      if (NC.length > 0 || MC.length > 0) {
-        const CC = AC[Symbol.metadata];
-        for (const zC of NC) Lz.setFullStateOnly(CC, zC);
-        for (const zC of MC) Lz.setStream(CC, zC);
-        for (const zC in gC) Lz.setStreamPriority(CC, zC, gC[zC])
+      Fk && Object.defineProperty(Kk, "name", {
+        value: Fk
+      }), mF.setFields(Kk, Xk), Kk._getDefaultValues = Jk, Kk._initialize = Pk, Object.assign(Kk.prototype, Tk);
+      for (const Qk in ak) JX(ak[Qk])(Kk.prototype, Qk);
+      for (const Qk of qk) xX(Kk.prototype, Qk);
+      for (const Qk of Lk) PX(Kk.prototype, Qk);
+      for (const Qk in tk) zX(tk[Qk])(Kk.prototype, Qk);
+      if (Zk.length > 0 || jk.length > 0) {
+        const kk = Kk[Symbol.metadata];
+        for (const Fk of Zk) mF.setFullStateOnly(kk, Fk);
+        for (const Fk of jk) mF.setStream(kk, Fk);
+        for (const Fk in ek) mF.setStreamPriority(kk, Fk, ek[Fk])
       }
-      if (SC.length > 0) {
-        const CC = AC[Symbol.metadata];
-        for (const zC of SC) CC[CC[zC]].optional = !0
+      if (wk.length > 0) {
+        const kk = Kk[Symbol.metadata];
+        for (const Fk of wk) kk[kk[Fk]].optional = !0
       }
-      return AC.extend = (CC, zC) => eQ(CC, zC, AC), AC
+      return Kk.extend = (kk, Fk) => vX(kk, Fk, Kk), Kk
     }
 
-    function hQ(CC) {
-      const zC = CC[SC].root,
-        ZC = {
+    function EX(kk) {
+      const Fk = kk[wk].root,
+        Ik = {
           ops: {},
           refs: []
         };
-      let QC = zC.changes.next;
-      for (; QC;) {
-        const CC = QC.changeTree;
-        void 0 !== CC ? (ZC.refs.push(`refId#${CC.ref[fC]}`), CC.forEach(((CC, zC) => {
-          if (CC < 0 || !zC) return;
-          const QC = wC[zC];
-          ZC.ops[QC] || (ZC.ops[QC] = 0), ZC.ops[QC]++
-        })), QC = QC.next) : QC = QC.next
+      let Xk = Fk.changes.next;
+      for (; Xk;) {
+        const kk = Xk.changeTree;
+        void 0 !== kk ? (Ik.refs.push(`refId#${kk.ref[lk]}`), kk.forEach(((kk, Fk) => {
+          if (kk < 0 || !Fk) return;
+          const Xk = Tk[Fk];
+          Ik.ops[Xk] || (Ik.ops[Xk] = 0), Ik.ops[Xk]++
+        })), Xk = Xk.next) : Xk = Xk.next
       }
-      return ZC
+      return Ik
     }
-    class KQ {
-      static[qC] = EZ;
-      static[FC] = UZ;
-      [fC];
-      [xC];
-      static initialize(CC) {
-        Object.defineProperty(CC, SC, {
-          value: new YZ(CC),
+    class OX {
+      static[qk] = bI;
+      static[Lk] = hI;
+      [lk];
+      [Qk];
+      static initialize(kk) {
+        Object.defineProperty(kk, wk, {
+          value: new nI(kk),
           enumerable: !1,
           writable: !0
-        }), CC[xC] = []
+        }), kk[Qk] = []
       }
       static initializeForDecoder() {
-        const CC = Object.create(this.prototype);
-        return mZ(CC), CC[xC] = [], CC
+        const kk = Object.create(this.prototype);
+        return pI(kk), kk[Qk] = [], kk
       }
-      static reset(CC) {
-        const zC = CC?.[SC];
-        if (void 0 === zC || "function" !== typeof zC.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
-        if (void 0 !== zC.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${CC.constructor.name}) with multiple parents.`);
-        CC[RC]()
-      } [RC]() {
-        const CC = this.constructor[Symbol.metadata],
-          zC = CC?.[hC] ?? [],
-          ZC = this[xC];
-        for (let QC = 0; QC < zC.length; QC++) {
-          const CC = ZC[zC[QC]];
-          CC?.[RC]?.()
+      static reset(kk) {
+        const Fk = kk?.[wk];
+        if (void 0 === Fk || "function" !== typeof Fk.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
+        if (void 0 !== Fk.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${kk.constructor.name}) with multiple parents.`);
+        kk[Pk]()
+      } [Pk]() {
+        const kk = this.constructor[Symbol.metadata],
+          Fk = kk?.[Ek] ?? [],
+          Ik = this[Qk];
+        for (let Xk = 0; Xk < Fk.length; Xk++) {
+          const kk = Ik[Fk[Xk]];
+          kk?.[Pk]?.()
         }
-        this[SC].recycle(), this[fC] = void 0
+        this[wk].recycle(), this[lk] = void 0
       }
-      static is(CC) {
-        const zC = CC[Symbol.metadata];
-        return "object" === typeof zC && null !== zC
+      static is(kk) {
+        const Fk = kk[Symbol.metadata];
+        return "object" === typeof Fk && null !== Fk
       }
-      static isSchema(CC) {
-        return "function" === typeof CC?.assign
+      static isSchema(kk) {
+        return "function" === typeof kk?.assign
       }
-      static[oC](CC, zC) {
-        let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : wC.ADD;
-        CC.change(zC, ZC)
+      static[ak](kk, Fk) {
+        let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Tk.ADD;
+        kk.change(Fk, Ik)
       }
-      static[WC](CC, zC, ZC) {
-        const QC = CC.constructor[Symbol.metadata],
-          wC = QC[zC]?.tag;
-        return void 0 === ZC ? void 0 === wC : void 0 === wC || (wC === gQ ? ZC.isChangeTreeVisible(CC[SC]) : ZC.hasTagOnTree(CC[SC], wC))
+      static[tk](kk, Fk, Ik) {
+        const Xk = kk.constructor[Symbol.metadata],
+          Tk = Xk[Fk]?.tag;
+        return void 0 === Ik ? void 0 === Tk : void 0 === Tk || (Tk === wX ? Ik.isChangeTreeVisible(kk[wk]) : Ik.hasTagOnTree(kk[wk], Tk))
       }
-      constructor(CC) {
-        KQ.initialize(this), CC && KQ.assignProps(this, CC)
+      constructor(kk) {
+        OX.initialize(this), kk && OX.assignProps(this, kk)
       }
-      assign(CC) {
-        return KQ.assignProps(this, CC), this
+      assign(kk) {
+        return OX.assignProps(this, kk), this
       }
-      static assignProps(CC, zC) {
-        const ZC = CC.constructor[Symbol.metadata];
-        if (ZC && void 0 !== ZC[eC])
-          for (let wC = 0; wC <= ZC[eC]; wC++) {
-            const QC = ZC[wC];
-            if (!QC) continue;
-            const bC = zC[QC.name];
-            void 0 !== bC && (CC[QC.name] = bC)
+      static assignProps(kk, Fk) {
+        const Ik = kk.constructor[Symbol.metadata];
+        if (Ik && void 0 !== Ik[vk])
+          for (let Tk = 0; Tk <= Ik[vk]; Tk++) {
+            const Xk = Ik[Tk];
+            if (!Xk) continue;
+            const ik = Fk[Xk.name];
+            void 0 !== ik && (kk[Xk.name] = ik)
           }
-        const QC = Object.keys(zC);
-        for (let wC = 0; wC < QC.length; wC++) {
-          const bC = QC[wC];
-          ZC && void 0 !== ZC[bC] || (CC[bC] = zC[bC])
+        const Xk = Object.keys(Fk);
+        for (let Tk = 0; Tk < Xk.length; Tk++) {
+          const ik = Xk[Tk];
+          Ik && void 0 !== Ik[ik] || (kk[ik] = Fk[ik])
         }
       }
-      restore(CC) {
-        const zC = this.constructor[Symbol.metadata];
-        for (const ZC in zC) {
-          const QC = zC[ZC],
-            wC = QC.name,
-            bC = QC.type,
-            nC = CC[wC];
-          if (void 0 !== nC && null !== nC)
-            if ("string" === typeof bC) this[wC] = nC;
-            else if (KQ.is(bC)) {
-            const CC = new bC;
-            CC.restore(nC), this[wC] = CC
-          } else if ("object" === typeof bC) {
-            const CC = Object.keys(bC)[0],
-              zC = bC[CC];
-            if ("map" === CC) {
-              const CC = this[wC];
-              for (const ZC in nC)
-                if (KQ.is(zC)) {
-                  const QC = new zC;
-                  QC.restore(nC[ZC]), CC.set(ZC, QC)
-                } else CC.set(ZC, nC[ZC])
-            } else if ("array" === CC) {
-              const CC = this[wC];
-              for (let ZC = 0; ZC < nC.length; ZC++)
-                if (KQ.is(zC)) {
-                  const QC = new zC;
-                  QC.restore(nC[ZC]), CC.push(QC)
-                } else CC.push(nC[ZC])
+      restore(kk) {
+        const Fk = this.constructor[Symbol.metadata];
+        for (const Ik in Fk) {
+          const Xk = Fk[Ik],
+            Tk = Xk.name,
+            ik = Xk.type,
+            yk = kk[Tk];
+          if (void 0 !== yk && null !== yk)
+            if ("string" === typeof ik) this[Tk] = yk;
+            else if (OX.is(ik)) {
+            const kk = new ik;
+            kk.restore(yk), this[Tk] = kk
+          } else if ("object" === typeof ik) {
+            const kk = Object.keys(ik)[0],
+              Fk = ik[kk];
+            if ("map" === kk) {
+              const kk = this[Tk];
+              for (const Ik in yk)
+                if (OX.is(Fk)) {
+                  const Xk = new Fk;
+                  Xk.restore(yk[Ik]), kk.set(Ik, Xk)
+                } else kk.set(Ik, yk[Ik])
+            } else if ("array" === kk) {
+              const kk = this[Tk];
+              for (let Ik = 0; Ik < yk.length; Ik++)
+                if (OX.is(Fk)) {
+                  const Xk = new Fk;
+                  Xk.restore(yk[Ik]), kk.push(Xk)
+                } else kk.push(yk[Ik])
             }
           }
         }
         return this
       }
-      setDirty(CC, zC) {
-        const ZC = this.constructor[Symbol.metadata];
-        this[SC].change(ZC[ZC[CC]].index, zC)
+      setDirty(kk, Fk) {
+        const Ik = this.constructor[Symbol.metadata];
+        this[wk].change(Ik[Ik[kk]].index, Fk)
       }
       pauseTracking() {
-        this[SC].pause()
+        this[wk].pause()
       }
       resumeTracking() {
-        this[SC].resume()
+        this[wk].resume()
       }
-      untracked(CC) {
-        return this[SC].untracked(CC)
+      untracked(kk) {
+        return this[wk].untracked(kk)
       }
       get isTrackingPaused() {
-        return this[SC].paused
+        return this[wk].paused
       }
       clone() {
-        const CC = Object.create(this.constructor.prototype);
-        KQ.initialize(CC);
-        const zC = this.constructor[Symbol.metadata];
-        for (const ZC in zC) {
-          const QC = zC[ZC].name;
-          "object" === typeof this[QC] && "function" === typeof this[QC]?.clone ? CC[QC] = this[QC].clone() : CC[QC] = this[QC]
+        const kk = Object.create(this.constructor.prototype);
+        OX.initialize(kk);
+        const Fk = this.constructor[Symbol.metadata];
+        for (const Ik in Fk) {
+          const Xk = Fk[Ik].name;
+          "object" === typeof this[Xk] && "function" === typeof this[Xk]?.clone ? kk[Xk] = this[Xk].clone() : kk[Xk] = this[Xk]
         }
-        return CC
+        return kk
       }
       toJSON() {
-        const CC = {},
-          zC = this.constructor[Symbol.metadata];
-        for (const ZC in zC) {
-          const QC = zC[ZC],
-            wC = QC.name;
-          QC.deprecated || null === this[wC] || "undefined" === typeof this[wC] || (CC[wC] = "function" === typeof this[wC].toJSON ? this[wC].toJSON() : this[wC])
+        const kk = {},
+          Fk = this.constructor[Symbol.metadata];
+        for (const Ik in Fk) {
+          const Xk = Fk[Ik],
+            Tk = Xk.name;
+          Xk.deprecated || null === this[Tk] || "undefined" === typeof this[Tk] || (kk[Tk] = "function" === typeof this[Tk].toJSON ? this[Tk].toJSON() : this[Tk])
         }
-        return CC
+        return kk
       }
       discardAllChanges() {
-        this[SC].discardAll()
-      } [NC](CC) {
-        return this[this.constructor[Symbol.metadata][CC].name]
-      } [MC](CC) {
-        this[this.constructor[Symbol.metadata][CC].name] = void 0
+        this[wk].discardAll()
+      } [Zk](kk) {
+        return this[this.constructor[Symbol.metadata][kk].name]
+      } [jk](kk) {
+        this[this.constructor[Symbol.metadata][kk].name] = void 0
       }
-      static debugRefIds(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          QC = arguments.length > 3 ? arguments[3] : void 0,
-          wC = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
-        const bC = zC ? ` - ${JSON.stringify(CC.toJSON())}` : "",
-          nC = CC[SC],
-          oC = CC[fC],
-          qC = QC ? QC.root.refCount[oC] : nC.refCount,
-          FC = qC > 1 ? ` [\xd7${qC}]` : "";
-        let WC = `${function(CC){return new Array(CC).fill(0).map(((zC,ZC)=>ZC===CC-1?"\u2514\u2500 ":"   ")).join("")}(ZC)}${wC}${CC.constructor.name} (refId: ${oC})${FC}${bC}\n`;
-        return nC.forEachChild(((wC, bC) => {
-          let nC = bC;
-          "number" === typeof bC && CC.$indexes && (nC = CC.$indexes.get(bC) ?? bC);
-          const fC = void 0 !== CC.forEach && void 0 !== nC ? `["${nC}"]: ` : "";
-          WC += this.debugRefIds(wC.ref, zC, ZC + 1, QC, fC)
-        })), WC
+      static debugRefIds(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          Xk = arguments.length > 3 ? arguments[3] : void 0,
+          Tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
+        const ik = Fk ? ` - ${JSON.stringify(kk.toJSON())}` : "",
+          yk = kk[wk],
+          ak = kk[lk],
+          qk = Xk ? Xk.root.refCount[ak] : yk.refCount,
+          Lk = qk > 1 ? ` [\xd7${qk}]` : "";
+        let tk = `${function(kk){return new Array(kk).fill(0).map(((Fk,Ik)=>Ik===kk-1?"\u2514\u2500 ":"   ")).join("")}(Ik)}${Tk}${kk.constructor.name} (refId: ${ak})${Lk}${ik}\n`;
+        return yk.forEachChild(((Tk, ik) => {
+          let yk = ik;
+          "number" === typeof ik && kk.$indexes && (yk = kk.$indexes.get(ik) ?? ik);
+          const lk = void 0 !== kk.forEach && void 0 !== yk ? `["${yk}"]: ` : "";
+          tk += this.debugRefIds(Tk.ref, Fk, Ik + 1, Xk, lk)
+        })), tk
       }
-      static debugRefIdEncodingOrder(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
-        const ZC = [],
-          QC = CC[SC];
-        if ("changes" === zC) {
-          let CC = QC.root.changes?.next;
-          for (; CC;) CC.changeTree && ZC.push(CC.changeTree.ref[fC]), CC = CC.next;
-          return ZC
+      static debugRefIdEncodingOrder(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
+        const Ik = [],
+          Xk = kk[wk];
+        if ("changes" === Fk) {
+          let kk = Xk.root.changes?.next;
+          for (; kk;) kk.changeTree && Ik.push(kk.changeTree.ref[lk]), kk = kk.next;
+          return Ik
         }
-        const wC = "allFilteredChanges" === zC,
-          bC = new Set,
-          nC = CC => {
-            bC.has(CC) || (bC.add(CC), CC.isFiltered === wC && ZC.push(CC.ref[fC]), CC.forEachChild(((CC, zC) => nC(CC))))
+        const Tk = "allFilteredChanges" === Fk,
+          ik = new Set,
+          yk = kk => {
+            ik.has(kk) || (ik.add(kk), kk.isFiltered === Tk && Ik.push(kk.ref[lk]), kk.forEachChild(((kk, Fk) => yk(kk))))
           };
-        return nC(QC), ZC
+        return yk(Xk), Ik
       }
-      static debugRefIdsFromDecoder(CC) {
-        return this.debugRefIds(CC.state, !1, 0, CC)
+      static debugRefIdsFromDecoder(kk) {
+        return this.debugRefIds(kk.state, !1, 0, kk)
       }
-      static debugChanges(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const ZC = CC[SC],
-          QC = zC ? "allChanges" : "changes";
-        let bC = `${CC.constructor.name} (${CC[fC]}) -> .${QC}:\n`;
-        return zC ? ZC.forEachLive((CC => {
-          bC += `- [${CC}]: ADD (${JSON.stringify(ZC.getValue(Number(CC),!0))})\n`
-        })) : ZC.forEach(((CC, zC) => {
-          CC < 0 || !zC || (bC += `- [${CC}]: ${wC[zC]} (${JSON.stringify(ZC.getValue(Number(CC),!1))})\n`)
-        })), bC
+      static debugChanges(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const Ik = kk[wk],
+          Xk = Fk ? "allChanges" : "changes";
+        let ik = `${kk.constructor.name} (${kk[lk]}) -> .${Xk}:\n`;
+        return Fk ? Ik.forEachLive((kk => {
+          ik += `- [${kk}]: ADD (${JSON.stringify(Ik.getValue(Number(kk),!0))})\n`
+        })) : Ik.forEach(((kk, Fk) => {
+          kk < 0 || !Fk || (ik += `- [${kk}]: ${Tk[Fk]} (${JSON.stringify(Ik.getValue(Number(kk),!1))})\n`)
+        })), ik
       }
     }
-    bC(KQ);
-    const YQ = {
+    ik(OX);
+    const nX = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class dQ {
+    class GX {
       types;
       nextUniqueId = 0;
       changeTrees = {};
       get refCount() {
-        const CC = {};
-        for (const zC in this.changeTrees) CC[zC] = this.changeTrees[zC].refCount;
-        return CC
+        const kk = {};
+        for (const Fk in this.changeTrees) kk[Fk] = this.changeTrees[Fk].refCount;
+        return kk
       }
       changes = {
         next: void 0,
@@ -5745,8 +5745,8 @@ export const modules = {
         nextPosition: 0
       };
       pendingFilterRefresh = [];
-      enqueueFilterRefresh(CC) {
-        this.types.hasFilters && (CC.flags & hZ || (CC.flags |= hZ, this.pendingFilterRefresh.push(CC)))
+      enqueueFilterRefresh(kk) {
+        this.types.hasFilters && (kk.flags & EI || (kk.flags |= EI, this.pendingFilterRefresh.push(kk)))
       }
       _nodePool = [];
       _nextViewId = 0;
@@ -5754,144 +5754,144 @@ export const modules = {
       acquireViewId() {
         return this._freeViewIds.length > 0 ? this._freeViewIds.pop() : this._nextViewId++
       }
-      releaseViewId(CC) {
-        this._freeViewIds.push(CC)
+      releaseViewId(kk) {
+        this._freeViewIds.push(kk)
       }
       activeViews = new Map;
       streamTrees = new Set;
-      registerView(CC) {
-        this.activeViews.set(CC.id, new WeakRef(CC))
+      registerView(kk) {
+        this.activeViews.set(kk.id, new WeakRef(kk))
       }
-      unregisterView(CC) {
-        this.activeViews.delete(CC.id);
-        const zC = CC.id;
-        for (const ZC of this.streamTrees) ZC._dropView(zC)
+      unregisterView(kk) {
+        this.activeViews.delete(kk.id);
+        const Fk = kk.id;
+        for (const Ik of this.streamTrees) Ik._dropView(Fk)
       }
-      forEachActiveView(CC) {
-        for (const [zC, ZC] of this.activeViews) {
-          const QC = ZC.deref();
-          if (void 0 !== QC) CC(QC);
+      forEachActiveView(kk) {
+        for (const [Fk, Ik] of this.activeViews) {
+          const Xk = Ik.deref();
+          if (void 0 !== Xk) kk(Xk);
           else {
-            this.activeViews.delete(zC);
-            for (const CC of this.streamTrees) CC._dropView(zC)
+            this.activeViews.delete(Fk);
+            for (const kk of this.streamTrees) kk._dropView(Fk)
           }
         }
       }
-      registerStream(CC) {
-        this.streamTrees.add(CC)
+      registerStream(kk) {
+        this.streamTrees.add(kk)
       }
-      unregisterStream(CC) {
-        this.streamTrees.delete(CC)
+      unregisterStream(kk) {
+        this.streamTrees.delete(kk)
       }
-      constructor(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        this.types = CC, this.nextUniqueId = zC
+      constructor(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        this.types = kk, this.nextUniqueId = Fk
       }
-      add(CC) {
-        const zC = CC.ref;
-        void 0 === zC[fC] && (YQ.value = this.nextUniqueId++, Object.defineProperty(zC, fC, YQ));
-        const ZC = zC[fC],
-          QC = void 0 === this.changeTrees[ZC];
-        QC && (this.changeTrees[ZC] = CC), CC.needsRestage && (CC.needsRestage = !1, CC.forEachLiveWithCtx(CC, ZZ));
-        const wC = QC ? 0 : CC.refCount;
-        return CC.refCount = wC + 1, wC > 0 && this.enqueueFilterRefresh(CC), QC
+      add(kk) {
+        const Fk = kk.ref;
+        void 0 === Fk[lk] && (nX.value = this.nextUniqueId++, Object.defineProperty(Fk, lk, nX));
+        const Ik = Fk[lk],
+          Xk = void 0 === this.changeTrees[Ik];
+        Xk && (this.changeTrees[Ik] = kk), kk.needsRestage && (kk.needsRestage = !1, kk.forEachLiveWithCtx(kk, XI));
+        const Tk = Xk ? 0 : kk.refCount;
+        return kk.refCount = Tk + 1, Tk > 0 && this.enqueueFilterRefresh(kk), Xk
       }
-      remove(CC) {
-        const zC = CC.refCount - 1;
-        if (zC <= 0) {
-          if (CC.root = void 0, delete this.changeTrees[CC.ref[fC]], CC.isStreamCollection) {
-            const zC = CC.ref;
-            zC._unregister?.(), this.unregisterStream(zC)
+      remove(kk) {
+        const Fk = kk.refCount - 1;
+        if (Fk <= 0) {
+          if (kk.root = void 0, delete this.changeTrees[kk.ref[lk]], kk.isStreamCollection) {
+            const Fk = kk.ref;
+            Fk._unregister?.(), this.unregisterStream(Fk)
           }
-          this.removeFromQueue(CC), this.removeFromUnreliableQueue(CC), CC.refCount = 0, CC.needsRestage = !0, CC.forEachChild(((zC, ZC) => {
-            zC.removeParent(CC.ref) && (void 0 === zC.parentRef || zC.refCount > 0 ? this.remove(zC) : this.moveNextToParent(zC))
+          this.removeFromQueue(kk), this.removeFromUnreliableQueue(kk), kk.refCount = 0, kk.needsRestage = !0, kk.forEachChild(((Fk, Ik) => {
+            Fk.removeParent(kk.ref) && (void 0 === Fk.parentRef || Fk.refCount > 0 ? this.remove(Fk) : this.moveNextToParent(Fk))
           }))
-        } else CC.refCount = zC, this.enqueueFilterRefresh(CC), this.recursivelyMoveNextToParent(CC);
-        return zC
+        } else kk.refCount = Fk, this.enqueueFilterRefresh(kk), this.recursivelyMoveNextToParent(kk);
+        return Fk
       }
-      recursivelyMoveNextToParent(CC) {
-        this.moveNextToParent(CC), CC.forEachChild(((CC, zC) => this.recursivelyMoveNextToParent(CC)))
+      recursivelyMoveNextToParent(kk) {
+        this.moveNextToParent(kk), kk.forEachChild(((kk, Fk) => this.recursivelyMoveNextToParent(kk)))
       }
-      moveNextToParent(CC) {
-        CC.changesNode && this._moveNextToParentInList(this.changes, CC, CC.changesNode, "changesNode"), CC.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, CC, CC.unreliableChangesNode, "unreliableChangesNode")
+      moveNextToParent(kk) {
+        kk.changesNode && this._moveNextToParentInList(this.changes, kk, kk.changesNode, "changesNode"), kk.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, kk, kk.unreliableChangesNode, "unreliableChangesNode")
       }
-      _moveNextToParentInList(CC, zC, ZC, QC) {
-        const wC = zC.parent;
-        if (!wC || !wC[SC]) return;
-        const bC = wC[SC][QC];
-        bC && bC !== ZC && (ZC.position > bC.position || (ZC.prev ? ZC.prev.next = ZC.next : CC.next = ZC.next, ZC.next ? ZC.next.prev = ZC.prev : CC.tail = ZC.prev, ZC.prev = CC.tail, ZC.next = void 0, CC.tail.next = ZC, CC.tail = ZC, ZC.position = CC.nextPosition++))
+      _moveNextToParentInList(kk, Fk, Ik, Xk) {
+        const Tk = Fk.parent;
+        if (!Tk || !Tk[wk]) return;
+        const ik = Tk[wk][Xk];
+        ik && ik !== Ik && (Ik.position > ik.position || (Ik.prev ? Ik.prev.next = Ik.next : kk.next = Ik.next, Ik.next ? Ik.next.prev = Ik.prev : kk.tail = Ik.prev, Ik.prev = kk.tail, Ik.next = void 0, kk.tail.next = Ik, kk.tail = Ik, Ik.position = kk.nextPosition++))
       }
-      enqueueChangeTree(CC) {
-        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : CC.changesNode) || (CC.changesNode = this._appendToList(this.changes, CC))
+      enqueueChangeTree(kk) {
+        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : kk.changesNode) || (kk.changesNode = this._appendToList(this.changes, kk))
       }
-      enqueueUnreliable(CC) {
-        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : CC.unreliableChangesNode) || (CC.unreliableChangesNode = this._appendToList(this.unreliableChanges, CC))
+      enqueueUnreliable(kk) {
+        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : kk.unreliableChangesNode) || (kk.unreliableChangesNode = this._appendToList(this.unreliableChanges, kk))
       }
-      _appendToList(CC, zC) {
-        const ZC = this._nodePool;
-        let QC;
-        return ZC.length > 0 ? (QC = ZC.pop(), QC.changeTree = zC, QC.next = void 0, QC.prev = void 0) : QC = {
-          changeTree: zC,
+      _appendToList(kk, Fk) {
+        const Ik = this._nodePool;
+        let Xk;
+        return Ik.length > 0 ? (Xk = Ik.pop(), Xk.changeTree = Fk, Xk.next = void 0, Xk.prev = void 0) : Xk = {
+          changeTree: Fk,
           next: void 0,
           prev: void 0,
           position: 0
-        }, CC.next ? (QC.prev = CC.tail, CC.tail.next = QC, CC.tail = QC) : (CC.nextPosition = 0, CC.next = QC, CC.tail = QC), QC.position = CC.nextPosition++, QC
+        }, kk.next ? (Xk.prev = kk.tail, kk.tail.next = Xk, kk.tail = Xk) : (kk.nextPosition = 0, kk.next = Xk, kk.tail = Xk), Xk.position = kk.nextPosition++, Xk
       }
-      releaseNode(CC) {
-        CC.changeTree = void 0, CC.prev = void 0, CC.next = void 0, this._nodePool.push(CC)
+      releaseNode(kk) {
+        kk.changeTree = void 0, kk.prev = void 0, kk.next = void 0, this._nodePool.push(kk)
       }
-      removeFromQueue(CC) {
-        return this._removeNode(this.changes, CC, CC.changesNode, "changesNode")
+      removeFromQueue(kk) {
+        return this._removeNode(this.changes, kk, kk.changesNode, "changesNode")
       }
-      removeFromUnreliableQueue(CC) {
-        return this._removeNode(this.unreliableChanges, CC, CC.unreliableChangesNode, "unreliableChangesNode")
+      removeFromUnreliableQueue(kk) {
+        return this._removeNode(this.unreliableChanges, kk, kk.unreliableChangesNode, "unreliableChangesNode")
       }
-      _removeNode(CC, zC, ZC, QC) {
-        return !(!ZC || ZC.changeTree !== zC) && (ZC.prev ? ZC.prev.next = ZC.next : CC.next = ZC.next, ZC.next ? ZC.next.prev = ZC.prev : CC.tail = ZC.prev, zC[QC] = void 0, this.releaseNode(ZC), !0)
+      _removeNode(kk, Fk, Ik, Xk) {
+        return !(!Ik || Ik.changeTree !== Fk) && (Ik.prev ? Ik.prev.next = Ik.next : kk.next = Ik.next, Ik.next ? Ik.next.prev = Ik.prev : kk.tail = Ik.prev, Fk[Xk] = void 0, this.releaseNode(Ik), !0)
       }
     }
 
-    function mQ(CC, zC) {
-      if (-1 === zC || zC >= CC.length) return !1;
-      const ZC = CC.length - 1;
-      for (let QC = zC; QC < ZC; QC++) CC[QC] = CC[QC + 1];
-      return CC.length = ZC, !0
+    function pX(kk, Fk) {
+      if (-1 === Fk || Fk >= kk.length) return !1;
+      const Ik = kk.length - 1;
+      for (let Xk = Fk; Xk < Ik; Xk++) kk[Xk] = kk[Xk + 1];
+      return kk.length = Ik, !0
     }
 
-    function HQ(CC, zC, ZC) {
-      const QC = ~ZC,
-        wC = CC.changeTrees;
-      for (const bC in wC) {
-        const CC = wC[bC],
-          ZC = CC.visibleViews;
-        void 0 !== ZC && zC < ZC.length && (ZC[zC] &= QC);
-        const nC = CC.subscribedViews;
-        void 0 !== nC && zC < nC.length && (nC[zC] &= QC);
-        const fC = CC.tagViews;
-        void 0 !== fC && fC.forEach((CC => {
-          zC < CC.length && (CC[zC] &= QC)
+    function uX(kk, Fk, Ik) {
+      const Xk = ~Ik,
+        Tk = kk.changeTrees;
+      for (const ik in Tk) {
+        const kk = Tk[ik],
+          Ik = kk.visibleViews;
+        void 0 !== Ik && Fk < Ik.length && (Ik[Fk] &= Xk);
+        const yk = kk.subscribedViews;
+        void 0 !== yk && Fk < yk.length && (yk[Fk] &= Xk);
+        const lk = kk.tagViews;
+        void 0 !== lk && lk.forEach((kk => {
+          Fk < kk.length && (kk[Fk] &= Xk)
         }))
       }
     }
-    const EQ = new FinalizationRegistry((CC => {
+    const bX = new FinalizationRegistry((kk => {
       let {
-        root: zC,
-        id: ZC,
-        slot: QC,
-        bit: wC
-      } = CC;
-      HQ(zC, QC, wC), zC.activeViews.delete(ZC);
-      for (const bC of zC.streamTrees) bC._dropView(ZC);
-      zC.releaseViewId(ZC)
+        root: Fk,
+        id: Ik,
+        slot: Xk,
+        bit: Tk
+      } = kk;
+      uX(Fk, Xk, Tk), Fk.activeViews.delete(Ik);
+      for (const ik of Fk.streamTrees) ik._dropView(Ik);
+      Fk.releaseViewId(Ik)
     }));
 
-    function lQ(CC) {
-      if (void 0 === CC) return "undefined";
-      if (null === CC) return "null";
-      const zC = typeof CC;
-      return "string" === zC ? JSON.stringify(CC.length > 30 ? `${CC.slice(0,30)}\u2026` : CC) : "object" !== zC && "function" !== zC ? `${zC} ${String(CC)}` : Array.isArray(CC) ? `Array(${CC.length})` : CC.constructor?.name ?? "Object"
+    function RX(kk) {
+      if (void 0 === kk) return "undefined";
+      if (null === kk) return "null";
+      const Fk = typeof kk;
+      return "string" === Fk ? JSON.stringify(kk.length > 30 ? `${kk.slice(0,30)}\u2026` : kk) : "object" !== Fk && "function" !== Fk ? `${Fk} ${String(kk)}` : Array.isArray(kk) ? `Array(${kk.length})` : kk.constructor?.name ?? "Object"
     }
-    class XQ {
+    class UX {
       iterable;
       items;
       id = -1;
@@ -5900,385 +5900,385 @@ export const modules = {
       _bit = 0;
       changes = new Map;
       constructor() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this.iterable = CC, CC && (this.items = [])
+        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this.iterable = kk, kk && (this.items = [])
       }
-      _bindRoot(CC) {
-        void 0 === this._root && (this._root = CC, this.id = CC.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), CC.registerView(this), EQ.register(this, {
-          root: CC,
+      _bindRoot(kk) {
+        void 0 === this._root && (this._root = kk, this.id = kk.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), kk.registerView(this), bX.register(this, {
+          root: kk,
           id: this.id,
           slot: this._slot,
           bit: this._bit
         }, this))
       }
       dispose() {
-        void 0 !== this._root && (this._root.unregisterView(this), HQ(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), EQ.unregister(this), this._root = void 0, this.id = -1)
+        void 0 !== this._root && (this._root.unregisterView(this), uX(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), bX.unregister(this), this._root = void 0, this.id = -1)
       }
-      isVisible(CC) {
-        const zC = CC.visibleViews,
-          ZC = this._slot;
-        return void 0 !== zC && ZC < zC.length && 0 !== (zC[ZC] & this._bit)
+      isVisible(kk) {
+        const Fk = kk.visibleViews,
+          Ik = this._slot;
+        return void 0 !== Fk && Ik < Fk.length && 0 !== (Fk[Ik] & this._bit)
       }
-      markVisible(CC) {
-        const zC = this._slot;
-        let ZC = CC.visibleViews;
-        for (void 0 === ZC && (ZC = CC.visibleViews = []); ZC.length <= zC;) ZC.push(0);
-        ZC[zC] |= this._bit
+      markVisible(kk) {
+        const Fk = this._slot;
+        let Ik = kk.visibleViews;
+        for (void 0 === Ik && (Ik = kk.visibleViews = []); Ik.length <= Fk;) Ik.push(0);
+        Ik[Fk] |= this._bit
       }
-      unmarkVisible(CC) {
-        const zC = CC.visibleViews;
-        if (void 0 === zC) return;
-        const ZC = this._slot;
-        ZC < zC.length && (zC[ZC] &= ~this._bit)
+      unmarkVisible(kk) {
+        const Fk = kk.visibleViews;
+        if (void 0 === Fk) return;
+        const Ik = this._slot;
+        Ik < Fk.length && (Fk[Ik] &= ~this._bit)
       }
-      isSubscribed(CC) {
-        const zC = CC.subscribedViews,
-          ZC = this._slot;
-        return void 0 !== zC && ZC < zC.length && 0 !== (zC[ZC] & this._bit)
+      isSubscribed(kk) {
+        const Fk = kk.subscribedViews,
+          Ik = this._slot;
+        return void 0 !== Fk && Ik < Fk.length && 0 !== (Fk[Ik] & this._bit)
       }
-      _setSubscribed(CC) {
-        const zC = this._slot;
-        let ZC = CC.subscribedViews;
-        for (void 0 === ZC && (ZC = CC.subscribedViews = []); ZC.length <= zC;) ZC.push(0);
-        ZC[zC] |= this._bit
+      _setSubscribed(kk) {
+        const Fk = this._slot;
+        let Ik = kk.subscribedViews;
+        for (void 0 === Ik && (Ik = kk.subscribedViews = []); Ik.length <= Fk;) Ik.push(0);
+        Ik[Fk] |= this._bit
       }
-      _clearSubscribed(CC) {
-        const zC = CC.subscribedViews;
-        if (void 0 === zC) return;
-        const ZC = this._slot;
-        ZC < zC.length && (zC[ZC] &= ~this._bit)
+      _clearSubscribed(kk) {
+        const Fk = kk.subscribedViews;
+        if (void 0 === Fk) return;
+        const Ik = this._slot;
+        Ik < Fk.length && (Fk[Ik] &= ~this._bit)
       }
-      hasTagOnTree(CC, zC) {
-        const ZC = CC.tagViews;
-        if (void 0 === ZC) return !1;
-        const QC = this._slot,
-          wC = this._bit;
-        for (let bC = zC; 0 !== bC; bC &= bC - 1) {
-          const CC = ZC.get(bC & -bC);
-          if (void 0 !== CC && QC < CC.length && 0 !== (CC[QC] & wC)) return !0
+      hasTagOnTree(kk, Fk) {
+        const Ik = kk.tagViews;
+        if (void 0 === Ik) return !1;
+        const Xk = this._slot,
+          Tk = this._bit;
+        for (let ik = Fk; 0 !== ik; ik &= ik - 1) {
+          const kk = Ik.get(ik & -ik);
+          if (void 0 !== kk && Xk < kk.length && 0 !== (kk[Xk] & Tk)) return !0
         }
         return !1
       }
-      addTag(CC, zC) {
-        if (zC === gQ) return;
-        let ZC = CC.tagViews;
-        void 0 === ZC && (ZC = CC.tagViews = new Map);
-        const QC = this._slot,
-          wC = this._bit;
-        for (let bC = zC; bC > 0; bC &= bC - 1) {
-          const CC = bC & -bC;
-          let zC = ZC.get(CC);
-          for (void 0 === zC && (zC = [], ZC.set(CC, zC)); zC.length <= QC;) zC.push(0);
-          zC[QC] |= wC
+      addTag(kk, Fk) {
+        if (Fk === wX) return;
+        let Ik = kk.tagViews;
+        void 0 === Ik && (Ik = kk.tagViews = new Map);
+        const Xk = this._slot,
+          Tk = this._bit;
+        for (let ik = Fk; ik > 0; ik &= ik - 1) {
+          const kk = ik & -ik;
+          let Fk = Ik.get(kk);
+          for (void 0 === Fk && (Fk = [], Ik.set(kk, Fk)); Fk.length <= Xk;) Fk.push(0);
+          Fk[Xk] |= Tk
         }
       }
-      removeTag(CC, zC) {
-        if (zC === gQ) return;
-        const ZC = CC.tagViews;
-        if (void 0 === ZC) return;
-        const QC = this._slot,
-          wC = ~this._bit;
-        for (let bC = zC; bC > 0; bC &= bC - 1) {
-          const CC = ZC.get(bC & -bC);
-          void 0 !== CC && QC < CC.length && (CC[QC] &= wC)
+      removeTag(kk, Fk) {
+        if (Fk === wX) return;
+        const Ik = kk.tagViews;
+        if (void 0 === Ik) return;
+        const Xk = this._slot,
+          Tk = ~this._bit;
+        for (let ik = Fk; ik > 0; ik &= ik - 1) {
+          const kk = Ik.get(ik & -ik);
+          void 0 !== kk && Xk < kk.length && (kk[Xk] &= Tk)
         }
       }
-      removeAllTagsOnTree(CC) {
-        const zC = CC.tagViews;
-        if (void 0 === zC) return;
-        const ZC = this._slot,
-          QC = ~this._bit;
-        zC.forEach((CC => {
-          ZC < CC.length && (CC[ZC] &= QC)
+      removeAllTagsOnTree(kk) {
+        const Fk = kk.tagViews;
+        if (void 0 === Fk) return;
+        const Ik = this._slot,
+          Xk = ~this._bit;
+        Fk.forEach((kk => {
+          Ik < kk.length && (kk[Ik] &= Xk)
         }))
       }
-      add(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : gQ,
-          ZC = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        return this._add(CC, zC, ZC, !1)
+      add(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wX,
+          Ik = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        return this._add(kk, Fk, Ik, !1)
       }
-      _addImmediate(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : gQ;
-        this._add(CC, zC, !0, !0)
+      _addImmediate(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wX;
+        this._add(kk, Fk, !0, !0)
       }
-      _add(CC, zC, ZC, QC) {
-        const bC = CC?.[SC];
-        if (!bC) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${lQ(CC)}`), !1;
-        const nC = bC.parent;
-        if (!nC && 0 !== CC[fC]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${bC.ref.constructor.name}" instance to the state before calling view.add()`);
-        void 0 === this._root && void 0 !== bC.root && this._bindRoot(bC.root);
-        const oC = nC?.[SC];
-        if (!QC && oC?.isStreamCollection) return mz(nC, this.id, bC.parentIndex), !0;
-        const qC = CC.constructor[Symbol.metadata],
-          FC = this.isVisible(bC);
-        if (!this.iterable || !ZC || FC && -1 !== this.items.indexOf(CC) || this.items.push(CC), this.markVisible(bC), ZC && nC && this.addParentOf(bC, zC), !QC && bC.isStreamCollection) return !0;
-        if (zC === gQ && bC.isNew) return this._markSubtreeVisible(bC, zC), !1;
-        let WC = this.changes.get(CC[fC]);
-        void 0 === WC && (WC = new Map, this.changes.set(CC[fC], WC));
-        let NC = !1;
-        const MC = bC.encDescriptor.tags;
-        if (bC.forEachChild(((CC, ZC) => {
-            const QC = MC[ZC];
-            if (void 0 !== QC) {
-              if (!(QC === gQ || zC !== gQ && 0 !== (QC & zC))) return
+      _add(kk, Fk, Ik, Xk) {
+        const ik = kk?.[wk];
+        if (!ik) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${RX(kk)}`), !1;
+        const yk = ik.parent;
+        if (!yk && 0 !== kk[lk]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${ik.ref.constructor.name}" instance to the state before calling view.add()`);
+        void 0 === this._root && void 0 !== ik.root && this._bindRoot(ik.root);
+        const ak = yk?.[wk];
+        if (!Xk && ak?.isStreamCollection) return pF(yk, this.id, ik.parentIndex), !0;
+        const qk = kk.constructor[Symbol.metadata],
+          Lk = this.isVisible(ik);
+        if (!this.iterable || !Ik || Lk && -1 !== this.items.indexOf(kk) || this.items.push(kk), this.markVisible(ik), Ik && yk && this.addParentOf(ik, Fk), !Xk && ik.isStreamCollection) return !0;
+        if (Fk === wX && ik.isNew) return this._markSubtreeVisible(ik, Fk), !1;
+        let tk = this.changes.get(kk[lk]);
+        void 0 === tk && (tk = new Map, this.changes.set(kk[lk], tk));
+        let Zk = !1;
+        const jk = ik.encDescriptor.tags;
+        if (ik.forEachChild(((kk, Ik) => {
+            const Xk = jk[Ik];
+            if (void 0 !== Xk) {
+              if (!(Xk === wX || Fk !== wX && 0 !== (Xk & Fk))) return
             }
-            this.add(CC.ref, zC, !1) && (NC = !0)
-          })), zC !== gQ) {
-          this.addTag(bC, zC);
-          const CC = qC?.[YC];
-          if (void 0 !== CC)
-            for (let ZC = zC; ZC > 0; ZC &= ZC - 1) CC[ZC & -ZC]?.forEach((CC => {
-              bC.getChange(CC) !== wC.DELETE && WC.set(CC, wC.ADD)
+            this.add(kk.ref, Fk, !1) && (Zk = !0)
+          })), Fk !== wX) {
+          this.addTag(ik, Fk);
+          const kk = qk?.[nk];
+          if (void 0 !== kk)
+            for (let Ik = Fk; Ik > 0; Ik &= Ik - 1) kk[Ik & -Ik]?.forEach((kk => {
+              ik.getChange(kk) !== Tk.DELETE && tk.set(kk, Tk.ADD)
             }))
         }
-        if ((zC === gQ || !FC) && (!bC.isNew || NC))
-          if (bC.isArray && "string" !== typeof bC.refTarget[pC]) bC.refTarget.items.length > 0 && (WC.set(-1, wC.ADD), NC = !0);
+        if ((Fk === wX || !Lk) && (!ik.isNew || Zk))
+          if (ik.isArray && "string" !== typeof ik.refTarget[Hk]) ik.refTarget.items.length > 0 && (tk.set(-1, Tk.ADD), Zk = !0);
           else {
-            const CC = bC.encDescriptor.tags;
-            bC.forEachLive((ZC => {
-              const QC = CC[ZC];
-              (void 0 === QC || QC === gQ || zC !== gQ && 0 !== (QC & zC)) && (WC.set(ZC, wC.ADD), NC = !0)
+            const kk = ik.encDescriptor.tags;
+            ik.forEachLive((Ik => {
+              const Xk = kk[Ik];
+              (void 0 === Xk || Xk === wX || Fk !== wX && 0 !== (Xk & Fk)) && (tk.set(Ik, Tk.ADD), Zk = !0)
             }))
-          } return NC
+          } return Zk
       }
-      _markSubtreeVisible(CC, zC) {
-        const ZC = CC.encDescriptor.tags;
-        CC.forEachChild(((CC, QC) => {
-          const wC = ZC[QC];
-          if (void 0 !== wC) {
-            if (!(wC === gQ || zC !== gQ && 0 !== (wC & zC))) return
+      _markSubtreeVisible(kk, Fk) {
+        const Ik = kk.encDescriptor.tags;
+        kk.forEachChild(((kk, Xk) => {
+          const Tk = Ik[Xk];
+          if (void 0 !== Tk) {
+            if (!(Tk === wX || Fk !== wX && 0 !== (Tk & Fk))) return
           }
-          CC.isNew ? (this.markVisible(CC), this._markSubtreeVisible(CC, zC)) : this._add(CC.ref, zC, !1, !1)
+          kk.isNew ? (this.markVisible(kk), this._markSubtreeVisible(kk, Fk)) : this._add(kk.ref, Fk, !1, !1)
         }))
       }
-      addParentOf(CC, zC) {
-        const ZC = CC.parent[SC],
-          QC = CC.parentIndex;
-        this.isVisible(ZC) || this.markVisible(ZC);
-        const bC = ZC.parent?.[SC];
-        if (bC && this.addParentOf(ZC, zC), ZC.hasFilteredFields && ZC.getChange(QC) !== wC.DELETE) {
-          let bC = this.changes.get(ZC.ref[fC]);
-          void 0 === bC && (bC = new Map, this.changes.set(ZC.ref[fC], bC));
-          const nC = ZC.encDescriptor.tags[QC];
-          void 0 !== nC && nC !== gQ && 0 !== (nC & zC) && this.addTag(ZC, zC), bC.set(ZC.isArray ? CC : QC, wC.ADD)
+      addParentOf(kk, Fk) {
+        const Ik = kk.parent[wk],
+          Xk = kk.parentIndex;
+        this.isVisible(Ik) || this.markVisible(Ik);
+        const ik = Ik.parent?.[wk];
+        if (ik && this.addParentOf(Ik, Fk), Ik.hasFilteredFields && Ik.getChange(Xk) !== Tk.DELETE) {
+          let ik = this.changes.get(Ik.ref[lk]);
+          void 0 === ik && (ik = new Map, this.changes.set(Ik.ref[lk], ik));
+          const yk = Ik.encDescriptor.tags[Xk];
+          void 0 !== yk && yk !== wX && 0 !== (yk & Fk) && this.addTag(Ik, Fk), ik.set(Ik.isArray ? kk : Xk, Tk.ADD)
         }
       }
-      _touchAncestorsOf(CC) {
-        let zC = CC.parent?.[SC];
-        if (void 0 === zC) return;
-        const ZC = [];
-        for (; void 0 !== zC;) {
-          if (zC.hasFilteredFields) {
-            const CC = zC.ref[fC];
-            if (this.changes.has(CC)) break;
-            ZC.push(zC)
+      _touchAncestorsOf(kk) {
+        let Fk = kk.parent?.[wk];
+        if (void 0 === Fk) return;
+        const Ik = [];
+        for (; void 0 !== Fk;) {
+          if (Fk.hasFilteredFields) {
+            const kk = Fk.ref[lk];
+            if (this.changes.has(kk)) break;
+            Ik.push(Fk)
           }
-          zC = zC.parent?.[SC]
+          Fk = Fk.parent?.[wk]
         }
-        for (let QC = ZC.length - 1; QC >= 0; QC--) this.changes.set(ZC[QC].ref[fC], new Map)
+        for (let Xk = Ik.length - 1; Xk >= 0; Xk--) this.changes.set(Ik[Xk].ref[lk], new Map)
       }
-      remove(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : gQ,
-          ZC = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const QC = CC?.[SC];
-        if (!QC) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${lQ(CC)}`), this;
-        const bC = QC.parent?.[SC];
-        if (bC?.isStreamCollection) return this.unmarkVisible(QC), this.iterable && !ZC && mQ(this.items, this.items.indexOf(CC)),
-          function(CC, zC, ZC, QC, bC) {
-            const nC = CC._stream;
-            if (void 0 === nC) return !1;
-            const fC = nC.pendingByView.get(zC);
-            if (fC?.has(QC)) return fC.delete(QC), !1;
-            const oC = nC.sentByView.get(zC);
-            if (oC?.has(QC)) {
-              oC.delete(QC);
-              let CC = bC.get(ZC);
-              return void 0 === CC && (CC = new Map, bC.set(ZC, CC)), CC.set(QC, wC.DELETE), !0
+      remove(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wX,
+          Ik = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const Xk = kk?.[wk];
+        if (!Xk) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${RX(kk)}`), this;
+        const ik = Xk.parent?.[wk];
+        if (ik?.isStreamCollection) return this.unmarkVisible(Xk), this.iterable && !Ik && pX(this.items, this.items.indexOf(kk)),
+          function(kk, Fk, Ik, Xk, ik) {
+            const yk = kk._stream;
+            if (void 0 === yk) return !1;
+            const lk = yk.pendingByView.get(Fk);
+            if (lk?.has(Xk)) return lk.delete(Xk), !1;
+            const ak = yk.sentByView.get(Fk);
+            if (ak?.has(Xk)) {
+              ak.delete(Xk);
+              let kk = ik.get(Ik);
+              return void 0 === kk && (kk = new Map, ik.set(Ik, kk)), kk.set(Xk, Tk.DELETE), !0
             }
-          }(QC.parent, this.id, QC.parent[fC], QC.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(QC), this;
-        if (QC.isStreamCollection) {
-          this.unmarkVisible(QC), this.iterable && !ZC && mQ(this.items, this.items.indexOf(CC));
-          const zC = QC.ref,
-            bC = zC._stream;
-          if (void 0 !== bC) {
-            bC.pendingByView.get(this.id)?.clear();
-            const CC = bC.sentByView.get(this.id);
-            if (void 0 !== CC && CC.size > 0) {
-              const ZC = zC[fC];
-              let QC = this.changes.get(ZC);
-              void 0 === QC && (QC = new Map, this.changes.set(ZC, QC));
-              for (const zC of CC) QC.set(zC, wC.DELETE);
-              CC.clear()
+          }(Xk.parent, this.id, Xk.parent[lk], Xk.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(Xk), this;
+        if (Xk.isStreamCollection) {
+          this.unmarkVisible(Xk), this.iterable && !Ik && pX(this.items, this.items.indexOf(kk));
+          const Fk = Xk.ref,
+            ik = Fk._stream;
+          if (void 0 !== ik) {
+            ik.pendingByView.get(this.id)?.clear();
+            const kk = ik.sentByView.get(this.id);
+            if (void 0 !== kk && kk.size > 0) {
+              const Ik = Fk[lk];
+              let Xk = this.changes.get(Ik);
+              void 0 === Xk && (Xk = new Map, this.changes.set(Ik, Xk));
+              for (const Fk of kk) Xk.set(Fk, Tk.DELETE);
+              kk.clear()
             }
           }
           return this
         }
-        this.unmarkVisible(QC), this.iterable && !ZC && mQ(this.items, this.items.indexOf(CC));
-        const nC = QC.ref,
-          oC = nC.constructor[Symbol.metadata],
-          qC = nC[fC];
-        this._touchAncestorsOf(QC);
-        let FC = this.changes.get(qC);
-        if (void 0 === FC && (FC = new Map, this.changes.set(qC, FC)), zC === gQ) {
-          const CC = QC.parent;
-          if (CC && !Lz.isValidInstance(CC) && QC.isFiltered) {
-            const zC = bC.isArray ? QC : QC.parentIndex,
-              ZC = CC[fC];
-            let nC = this.changes.get(ZC);
-            void 0 === nC ? (nC = new Map, this.changes.set(ZC, nC)) : nC.get(zC) === wC.ADD && this._dropPendingEntries(QC), nC.set(zC, wC.DELETE), this._recursiveDeleteVisibleChangeTree(QC)
-          } else oC?.[KC]?.forEach((CC => this._removeViewField(QC, FC, CC)))
+        this.unmarkVisible(Xk), this.iterable && !Ik && pX(this.items, this.items.indexOf(kk));
+        const yk = Xk.ref,
+          ak = yk.constructor[Symbol.metadata],
+          qk = yk[lk];
+        this._touchAncestorsOf(Xk);
+        let Lk = this.changes.get(qk);
+        if (void 0 === Lk && (Lk = new Map, this.changes.set(qk, Lk)), Fk === wX) {
+          const kk = Xk.parent;
+          if (kk && !mF.isValidInstance(kk) && Xk.isFiltered) {
+            const Fk = ik.isArray ? Xk : Xk.parentIndex,
+              Ik = kk[lk];
+            let yk = this.changes.get(Ik);
+            void 0 === yk ? (yk = new Map, this.changes.set(Ik, yk)) : yk.get(Fk) === Tk.ADD && this._dropPendingEntries(Xk), yk.set(Fk, Tk.DELETE), this._recursiveDeleteVisibleChangeTree(Xk)
+          } else ak?.[Ok]?.forEach((kk => this._removeViewField(Xk, Lk, kk)))
         } else {
-          const CC = oC?.[YC];
-          if (void 0 !== CC)
-            for (let ZC = zC; ZC > 0; ZC &= ZC - 1) CC[ZC & -ZC]?.forEach((CC => this._removeViewField(QC, FC, CC)))
+          const kk = ak?.[nk];
+          if (void 0 !== kk)
+            for (let Ik = Fk; Ik > 0; Ik &= Ik - 1) kk[Ik & -Ik]?.forEach((kk => this._removeViewField(Xk, Lk, kk)))
         }
-        return void 0 === zC ? this.removeAllTagsOnTree(QC) : this.removeTag(QC, zC), this
+        return void 0 === Fk ? this.removeAllTagsOnTree(Xk) : this.removeTag(Xk, Fk), this
       }
-      has(CC) {
-        return this.isVisible(CC[SC])
+      has(kk) {
+        return this.isVisible(kk[wk])
       }
-      hasTag(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : gQ;
-        return this.hasTagOnTree(CC[SC], zC)
+      hasTag(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wX;
+        return this.hasTagOnTree(kk[wk], Fk)
       }
-      subscribe(CC, zC) {
-        const ZC = CC?.[SC];
-        if (!ZC) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${lQ(CC)}`), this;
-        if (void 0 === this._root && void 0 !== ZC.root && this._bindRoot(ZC.root), void 0 !== zC)
-          if (ZC.isStreamCollection) {
-            const ZC = ez(CC);
-            null === zC ? ZC.priorityByView?.delete(this.id) : (ZC.priorityByView ??= new Map).set(this.id, zC)
+      subscribe(kk, Fk) {
+        const Ik = kk?.[wk];
+        if (!Ik) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${RX(kk)}`), this;
+        if (void 0 === this._root && void 0 !== Ik.root && this._bindRoot(Ik.root), void 0 !== Fk)
+          if (Ik.isStreamCollection) {
+            const Ik = vF(kk);
+            null === Fk ? Ik.priorityByView?.delete(this.id) : (Ik.priorityByView ??= new Map).set(this.id, Fk)
           } else {
-            const zC = CC?.constructor?.name ?? "collection",
-              QC = ZC.parent;
-            if (void 0 === QC) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${zC} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
+            const Fk = kk?.constructor?.name ?? "collection",
+              Xk = Ik.parent;
+            if (void 0 === Xk) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${Fk} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
             else {
-              const CC = QC?.constructor?.[Symbol.metadata]?.[ZC.parentIndex]?.name,
-                wC = CC ? `${QC.constructor.name}#${CC}` : zC;
-              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${wC} is a ${zC}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
+              const kk = Xk?.constructor?.[Symbol.metadata]?.[Ik.parentIndex]?.name,
+                Tk = kk ? `${Xk.constructor.name}#${kk}` : Fk;
+              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${Tk} is a ${Fk}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
             }
-          } if (this.isSubscribed(ZC)) return this;
-        const QC = void 0 !== ZC.parent && !this.isVisible(ZC);
-        if (QC ? (this.addParentOf(ZC, gQ), this._add(CC, gQ, !1, !1)) : this.markVisible(ZC), this._setSubscribed(ZC), ZC.isStreamCollection) {
-          const zC = CC;
-          ZC.forEachChild(((CC, ZC) => {
-            mz(zC, this.id, ZC)
+          } if (this.isSubscribed(Ik)) return this;
+        const Xk = void 0 !== Ik.parent && !this.isVisible(Ik);
+        if (Xk ? (this.addParentOf(Ik, wX), this._add(kk, wX, !1, !1)) : this.markVisible(Ik), this._setSubscribed(Ik), Ik.isStreamCollection) {
+          const Fk = kk;
+          Ik.forEachChild(((kk, Ik) => {
+            pF(Fk, this.id, Ik)
           }))
-        } else QC || ZC.forEachChild((CC => {
-          this.markVisible(CC)
+        } else Xk || Ik.forEachChild((kk => {
+          this.markVisible(kk)
         }));
         return this
       }
-      unsubscribe(CC) {
-        const zC = CC?.[SC];
-        if (!zC) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${lQ(CC)}`), this;
-        if (!this.isSubscribed(zC)) return this;
-        this._clearSubscribed(zC);
-        const ZC = zC.ref[fC];
-        if (zC.isStreamCollection) {
-          const zC = CC._stream;
-          if (void 0 !== zC) {
-            zC.pendingByView.get(this.id)?.clear();
-            const CC = zC.sentByView.get(this.id);
-            if (void 0 !== CC && CC.size > 0) {
-              let zC = this.changes.get(ZC);
-              void 0 === zC && (zC = new Map, this.changes.set(ZC, zC));
-              for (const ZC of CC) zC.set(ZC, wC.DELETE);
-              CC.clear()
+      unsubscribe(kk) {
+        const Fk = kk?.[wk];
+        if (!Fk) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${RX(kk)}`), this;
+        if (!this.isSubscribed(Fk)) return this;
+        this._clearSubscribed(Fk);
+        const Ik = Fk.ref[lk];
+        if (Fk.isStreamCollection) {
+          const Fk = kk._stream;
+          if (void 0 !== Fk) {
+            Fk.pendingByView.get(this.id)?.clear();
+            const kk = Fk.sentByView.get(this.id);
+            if (void 0 !== kk && kk.size > 0) {
+              let Fk = this.changes.get(Ik);
+              void 0 === Fk && (Fk = new Map, this.changes.set(Ik, Fk));
+              for (const Ik of kk) Fk.set(Ik, Tk.DELETE);
+              kk.clear()
             }
           }
         } else {
-          const CC = zC.isArray;
-          let QC = this.changes.get(ZC);
-          zC.forEachChild(((zC, bC) => {
-            void 0 === QC && (QC = new Map, this.changes.set(ZC, QC)), QC.set(CC ? zC : bC, wC.DELETE), this.unmarkVisible(zC)
+          const kk = Fk.isArray;
+          let Xk = this.changes.get(Ik);
+          Fk.forEachChild(((Fk, ik) => {
+            void 0 === Xk && (Xk = new Map, this.changes.set(Ik, Xk)), Xk.set(kk ? Fk : ik, Tk.DELETE), this.unmarkVisible(Fk)
           }))
         }
-        return this.unmarkVisible(zC), this
+        return this.unmarkVisible(Fk), this
       }
       clear() {
         if (!this.iterable) throw new Error("StateView#clear() is only available for iterable StateView's. Use StateView(iterable: true) constructor.");
-        for (let CC = 0, zC = this.items.length; CC < zC; CC++) this.remove(this.items[CC], gQ, !0);
+        for (let kk = 0, Fk = this.items.length; kk < Fk; kk++) this.remove(this.items[kk], wX, !0);
         this.items.length = 0
       }
-      isChangeTreeVisible(CC) {
-        let zC = this.isVisible(CC);
-        if (!zC && CC.isVisibilitySharedWithParent)
-          if (this.isVisible(CC.parent[SC])) this.markVisible(CC), zC = !0;
+      isChangeTreeVisible(kk) {
+        let Fk = this.isVisible(kk);
+        if (!Fk && kk.isVisibilitySharedWithParent)
+          if (this.isVisible(kk.parent[wk])) this.markVisible(kk), Fk = !0;
           else
-            for (let ZC = CC.extraParents; void 0 !== ZC; ZC = ZC.next) {
-              const QC = ZC.ref[SC];
-              if (QC.isFiltered && this.isVisible(QC)) {
-                this.markVisible(CC), zC = !0;
+            for (let Ik = kk.extraParents; void 0 !== Ik; Ik = Ik.next) {
+              const Xk = Ik.ref[wk];
+              if (Xk.isFiltered && this.isVisible(Xk)) {
+                this.markVisible(kk), Fk = !0;
                 break
               }
             }
-        return zC
+        return Fk
       }
-      _recursiveDeleteVisibleChangeTree(CC) {
-        CC.forEachChild((CC => {
-          this.unmarkVisible(CC), this._recursiveDeleteVisibleChangeTree(CC)
+      _recursiveDeleteVisibleChangeTree(kk) {
+        kk.forEachChild((kk => {
+          this.unmarkVisible(kk), this._recursiveDeleteVisibleChangeTree(kk)
         }))
       }
-      _dropPendingEntries(CC) {
-        this.changes.delete(CC.ref[fC]), CC.forEachChild((CC => this._dropPendingEntries(CC)))
+      _dropPendingEntries(kk) {
+        this.changes.delete(kk.ref[lk]), kk.forEachChild((kk => this._dropPendingEntries(kk)))
       }
-      _removeViewField(CC, zC, ZC) {
-        const QC = zC.get(ZC) === wC.ADD;
-        zC.set(ZC, wC.DELETE);
-        const bC = CC.ref[CC.encDescriptor.names[ZC]],
-          nC = bC?.[SC];
-        nC && (this.unmarkVisible(nC), this._recursiveDeleteVisibleChangeTree(nC), QC && this._dropPendingEntries(nC))
+      _removeViewField(kk, Fk, Ik) {
+        const Xk = Fk.get(Ik) === Tk.ADD;
+        Fk.set(Ik, Tk.DELETE);
+        const ik = kk.ref[kk.encDescriptor.names[Ik]],
+          yk = ik?.[wk];
+        yk && (this.unmarkVisible(yk), this._recursiveDeleteVisibleChangeTree(yk), Xk && this._dropPendingEntries(yk))
       }
     }
 
-    function cQ(CC) {
-      CC.structSwitchEmitted || (CC.shouldEmitSwitch && (CC.buffer[CC.it.offset++] = 255, zz.number(CC.buffer, CC.ref[fC], CC.it)), CC.structSwitchEmitted = !0)
+    function CX(kk) {
+      kk.structSwitchEmitted || (kk.shouldEmitSwitch && (kk.buffer[kk.it.offset++] = 255, IF.number(kk.buffer, kk.ref[lk], kk.it)), kk.structSwitchEmitted = !0)
     }
 
-    function uQ(CC, zC) {
-      TQ(CC, zC, wC.ADD)
+    function NX(kk, Fk) {
+      fX(kk, Fk, Tk.ADD)
     }
 
-    function rQ(CC, zC) {
-      if (zC._fullSyncGen === CC.gen) return;
-      zC._fullSyncGen = CC.gen;
-      if (!CC.hasView || CC.view.isChangeTreeVisible(zC)) {
-        const ZC = zC.encDescriptor;
-        CC.changeTree = zC, CC.ref = zC.ref, CC.encoder = ZC.encoder, CC.filter = ZC.filter, CC.metadata = ZC.metadata, CC.treeIsFiltered = zC.isFiltered, CC.isSchema = ZC.isSchema, CC.filterBitmask = ZC.filterBitmask, CC.tags = ZC.tags, CC.structSwitchEmitted = !1, CC.shouldEmitSwitch = CC.hasView || CC.it.offset > CC.initialOffset || zC !== CC.rootChangeTree, zC.isArray && zC.collDirty.size > 0 && (zC.flags |= 512), wZ(zC, CC, uQ)
+    function cX(kk, Fk) {
+      if (Fk._fullSyncGen === kk.gen) return;
+      Fk._fullSyncGen = kk.gen;
+      if (!kk.hasView || kk.view.isChangeTreeVisible(Fk)) {
+        const Ik = Fk.encDescriptor;
+        kk.changeTree = Fk, kk.ref = Fk.ref, kk.encoder = Ik.encoder, kk.filter = Ik.filter, kk.metadata = Ik.metadata, kk.treeIsFiltered = Fk.isFiltered, kk.isSchema = Ik.isSchema, kk.filterBitmask = Ik.filterBitmask, kk.tags = Ik.tags, kk.structSwitchEmitted = !1, kk.shouldEmitSwitch = kk.hasView || kk.it.offset > kk.initialOffset || Fk !== kk.rootChangeTree, Fk.isArray && Fk.collDirty.size > 0 && (Fk.flags |= 512), iI(Fk, kk, NX)
       }
-      PZ(zC, CC, sQ)
+      xI(Fk, kk, WX)
     }
 
-    function sQ(CC, zC, ZC) {
-      rQ(CC, zC)
+    function WX(kk, Fk, Ik) {
+      cX(kk, Fk)
     }
 
-    function TQ(CC, zC, ZC) {
-      if (zC < 0) {
-        if (CC.treeIsFiltered !== CC.emitFiltered) return;
-        return cQ(CC), void(CC.buffer[CC.it.offset++] = 255 & Math.abs(zC))
+    function fX(kk, Fk, Ik) {
+      if (Fk < 0) {
+        if (kk.treeIsFiltered !== kk.emitFiltered) return;
+        return CX(kk), void(kk.buffer[kk.it.offset++] = 255 & Math.abs(Fk))
       }
-      if ((CC.isSchema ? CC.treeIsFiltered || (zC < 32 ? 0 !== (CC.filterBitmask & 1 << zC) : void 0 !== CC.tags[zC]) : CC.treeIsFiltered) !== CC.emitFiltered) return;
-      const QC = CC.isEncodeAll ? wC.ADD : ZC;
-      void 0 !== QC && (void 0 === CC.filter || CC.filter(CC.ref, zC, CC.view)) && (cQ(CC), CC.encoder(CC.self, CC.buffer, CC.changeTree, zC, QC, CC.it, CC.isEncodeAll, CC.hasView, CC.metadata))
+      if ((kk.isSchema ? kk.treeIsFiltered || (Fk < 32 ? 0 !== (kk.filterBitmask & 1 << Fk) : void 0 !== kk.tags[Fk]) : kk.treeIsFiltered) !== kk.emitFiltered) return;
+      const Xk = kk.isEncodeAll ? Tk.ADD : Ik;
+      void 0 !== Xk && (void 0 === kk.filter || kk.filter(kk.ref, Fk, kk.view)) && (CX(kk), kk.encoder(kk.self, kk.buffer, kk.changeTree, Fk, Xk, kk.it, kk.isEncodeAll, kk.hasView, kk.metadata))
     }
 
-    function aQ(CC, zC) {
-      const ZC = new Uint8Array(CC.length + zC.length);
-      return ZC.set(CC, 0), ZC.set(zC, CC.length), ZC
+    function BX(kk, Fk) {
+      const Ik = new Uint8Array(kk.length + Fk.length);
+      return Ik.set(kk, 0), Ik.set(Fk, kk.length), Ik
     }
-    class tQ {
+    class dX {
       static BUFFER_SIZE = 16384;
-      sharedBuffer = new Uint8Array(tQ.BUFFER_SIZE);
+      sharedBuffer = new Uint8Array(dX.BUFFER_SIZE);
       context;
       state;
       root;
-      constructor(CC, zC) {
-        this.context = sz.cache(CC.constructor), this.root = zC ?? new dQ(this.context), this.setState(CC)
+      constructor(kk, Fk) {
+        this.context = WF.cache(kk.constructor), this.root = Fk ?? new GX(this.context), this.setState(kk)
       }
-      setState(CC) {
-        this.state = CC, this.state[SC].setRoot(this.root)
+      setState(kk) {
+        this.state = kk, this.state[wk].setRoot(this.root)
       }
       _encodeCtx = {
         self: void 0,
@@ -6306,271 +6306,271 @@ export const modules = {
       };
       _fullSyncGen = 0;
       encode() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          zC = arguments.length > 1 ? arguments[1] : void 0,
-          ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : CC.offset;
-        return this._encodeChannel(CC, zC, ZC, QC, !1)
+          Fk = arguments.length > 1 ? arguments[1] : void 0,
+          Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : kk.offset;
+        return this._encodeChannel(kk, Fk, Ik, Xk, !1)
       }
       encodeUnreliable() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          zC = arguments.length > 1 ? arguments[1] : void 0,
-          ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : CC.offset;
-        return this._encodeChannel(CC, zC, ZC, QC, !0)
+          Fk = arguments.length > 1 ? arguments[1] : void 0,
+          Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : kk.offset;
+        return this._encodeChannel(kk, Fk, Ik, Xk, !0)
       }
-      _encodeChannel(CC, zC, ZC, QC, wC) {
-        this.root.pendingFilterRefresh.length > 0 && nZ(this.root);
-        const bC = void 0 !== zC,
-          nC = this.state[SC],
-          fC = this._encodeCtx;
-        fC.self = this, fC.buffer = ZC, fC.it = CC, fC.view = zC, fC.isEncodeAll = !1, fC.hasView = bC, fC.emitFiltered = bC;
-        let oC = wC ? this.root.unreliableChanges : this.root.changes;
-        for (; oC = oC.next;) {
-          const ZC = oC.changeTree;
-          if (bC && !zC.isChangeTreeVisible(ZC)) continue;
-          const qC = wC ? ZC.unreliableRecorder : ZC;
-          if (!qC || !qC.has()) continue;
-          const FC = ZC.encDescriptor;
-          fC.changeTree = ZC, fC.ref = ZC.ref, fC.encoder = FC.encoder, fC.filter = FC.filter, fC.metadata = FC.metadata, fC.treeIsFiltered = ZC.isFiltered, fC.isSchema = FC.isSchema, fC.filterBitmask = FC.filterBitmask, fC.tags = FC.tags, fC.structSwitchEmitted = !1, fC.isRootTree = ZC === nC, fC.shouldEmitSwitch = bC || CC.offset > QC || !fC.isRootTree, qC.forEachWithCtx(fC, TQ)
+      _encodeChannel(kk, Fk, Ik, Xk, Tk) {
+        this.root.pendingFilterRefresh.length > 0 && lI(this.root);
+        const ik = void 0 !== Fk,
+          yk = this.state[wk],
+          lk = this._encodeCtx;
+        lk.self = this, lk.buffer = Ik, lk.it = kk, lk.view = Fk, lk.isEncodeAll = !1, lk.hasView = ik, lk.emitFiltered = ik;
+        let ak = Tk ? this.root.unreliableChanges : this.root.changes;
+        for (; ak = ak.next;) {
+          const Ik = ak.changeTree;
+          if (ik && !Fk.isChangeTreeVisible(Ik)) continue;
+          const qk = Tk ? Ik.unreliableRecorder : Ik;
+          if (!qk || !qk.has()) continue;
+          const Lk = Ik.encDescriptor;
+          lk.changeTree = Ik, lk.ref = Ik.ref, lk.encoder = Lk.encoder, lk.filter = Lk.filter, lk.metadata = Lk.metadata, lk.treeIsFiltered = Ik.isFiltered, lk.isSchema = Lk.isSchema, lk.filterBitmask = Lk.filterBitmask, lk.tags = Lk.tags, lk.structSwitchEmitted = !1, lk.isRootTree = Ik === yk, lk.shouldEmitSwitch = ik || kk.offset > Xk || !lk.isRootTree, qk.forEachWithCtx(lk, fX)
         }
-        return wC || bC || !this._isStreamBroadcastMode || this._emitStreamBroadcast(ZC, CC), CC.offset > ZC.byteLength ? (ZC = this._resizeBuffer(ZC, CC.offset), CC.offset = QC, this._encodeChannel(CC, zC, ZC, QC, wC)) : ZC.subarray(0, CC.offset)
+        return Tk || ik || !this._isStreamBroadcastMode || this._emitStreamBroadcast(Ik, kk), kk.offset > Ik.byteLength ? (Ik = this._resizeBuffer(Ik, kk.offset), kk.offset = Xk, this._encodeChannel(kk, Fk, Ik, Xk, Tk)) : Ik.subarray(0, kk.offset)
       }
-      encodeFullSync(CC, zC, ZC, QC) {
-        let wC = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : CC.offset;
-        this.root.pendingFilterRefresh.length > 0 && nZ(this.root);
-        const bC = void 0 !== QC,
-          nC = this.state[SC],
-          fC = this._encodeCtx;
-        return fC.self = this, fC.buffer = zC, fC.it = CC, fC.view = QC, fC.isEncodeAll = !0, fC.hasView = bC, fC.emitFiltered = ZC, fC.gen = ++this._fullSyncGen, fC.initialOffset = wC, fC.rootChangeTree = nC, rQ(fC, nC), CC.offset > zC.byteLength ? (zC = this._resizeBuffer(zC, CC.offset), CC.offset = wC, this.encodeFullSync(CC, zC, ZC, QC, wC)) : zC.subarray(0, CC.offset)
+      encodeFullSync(kk, Fk, Ik, Xk) {
+        let Tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : kk.offset;
+        this.root.pendingFilterRefresh.length > 0 && lI(this.root);
+        const ik = void 0 !== Xk,
+          yk = this.state[wk],
+          lk = this._encodeCtx;
+        return lk.self = this, lk.buffer = Fk, lk.it = kk, lk.view = Xk, lk.isEncodeAll = !0, lk.hasView = ik, lk.emitFiltered = Ik, lk.gen = ++this._fullSyncGen, lk.initialOffset = Tk, lk.rootChangeTree = yk, cX(lk, yk), kk.offset > Fk.byteLength ? (Fk = this._resizeBuffer(Fk, kk.offset), kk.offset = Tk, this.encodeFullSync(kk, Fk, Ik, Xk, Tk)) : Fk.subarray(0, kk.offset)
       }
-      _resizeBuffer(CC, zC) {
-        const ZC = Math.ceil(zC / tQ.BUFFER_SIZE) * tQ.BUFFER_SIZE,
-          QC = new Uint8Array(ZC);
-        return QC.set(CC), CC === this.sharedBuffer && (this.sharedBuffer = QC), QC
+      _resizeBuffer(kk, Fk) {
+        const Ik = Math.ceil(Fk / dX.BUFFER_SIZE) * dX.BUFFER_SIZE,
+          Xk = new Uint8Array(Ik);
+        return Xk.set(kk), kk === this.sharedBuffer && (this.sharedBuffer = Xk), Xk
       }
       encodeAll() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
-        return this.encodeFullSync(CC, zC, !1)
+          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
+        return this.encodeFullSync(kk, Fk, !1)
       }
-      encodeAllView(CC, zC, ZC) {
-        let QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const wC = ZC.offset;
-        return QC = this.encodeFullSync(ZC, QC, !0, CC, wC), aQ(QC.subarray(0, zC), QC.subarray(wC, ZC.offset))
+      encodeAllView(kk, Fk, Ik) {
+        let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const Tk = Ik.offset;
+        return Xk = this.encodeFullSync(Ik, Xk, !0, kk, Tk), BX(Xk.subarray(0, Fk), Xk.subarray(Tk, Ik.offset))
       }
-      ensureCapacity(CC, zC) {
-        if (zC + tQ.BUFFER_SIZE <= CC.byteLength) return CC;
-        const ZC = Math.ceil((zC + tQ.BUFFER_SIZE) / tQ.BUFFER_SIZE) * tQ.BUFFER_SIZE,
-          QC = new Uint8Array(ZC);
-        return QC.set(CC.subarray(0, zC)), CC === this.sharedBuffer && (this.sharedBuffer = QC), QC
+      ensureCapacity(kk, Fk) {
+        if (Fk + dX.BUFFER_SIZE <= kk.byteLength) return kk;
+        const Ik = Math.ceil((Fk + dX.BUFFER_SIZE) / dX.BUFFER_SIZE) * dX.BUFFER_SIZE,
+          Xk = new Uint8Array(Ik);
+        return Xk.set(kk.subarray(0, Fk)), kk === this.sharedBuffer && (this.sharedBuffer = Xk), Xk
       }
-      encodeView(CC, zC, ZC) {
-        let QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
-          bC = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-        const nC = ZC.offset;
-        this._emitStreamPriority(CC);
-        for (const oC of CC.changes.keys()) {
-          const zC = CC.changes.get(oC),
-            bC = this.root.changeTrees[oC];
-          if (void 0 === bC) {
-            CC.changes.delete(oC);
+      encodeView(kk, Fk, Ik) {
+        let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
+          ik = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+        const yk = Ik.offset;
+        this._emitStreamPriority(kk);
+        for (const ak of kk.changes.keys()) {
+          const Fk = kk.changes.get(ak),
+            ik = this.root.changeTrees[ak];
+          if (void 0 === ik) {
+            kk.changes.delete(ak);
             continue
           }
-          if (0 === zC.size) continue;
-          const nC = bC.encDescriptor,
-            qC = nC.encoder,
-            FC = nC.metadata,
-            WC = bC.ref,
-            MC = bC.refTarget;
-          QC = this.ensureCapacity(QC, ZC.offset), QC[ZC.offset++] = 255, zz.number(QC, WC[fC], ZC);
-          for (const [oC, gC] of zC) {
-            let zC;
-            if (-1 === oC) {
-              const CC = MC.tmpItems,
-                zC = MC.deletedIndexes;
-              for (let nC = 0; nC < CC.length; nC++) void 0 !== CC[nC] && !0 !== zC[nC] && qC(this, QC, bC, nC, wC.ADD, ZC, !1, !0, FC);
+          if (0 === Fk.size) continue;
+          const yk = ik.encDescriptor,
+            qk = yk.encoder,
+            Lk = yk.metadata,
+            tk = ik.ref,
+            jk = ik.refTarget;
+          Xk = this.ensureCapacity(Xk, Ik.offset), Xk[Ik.offset++] = 255, IF.number(Xk, tk[lk], Ik);
+          for (const [ak, ek] of Fk) {
+            let Fk;
+            if (-1 === ak) {
+              const kk = jk.tmpItems,
+                Fk = jk.deletedIndexes;
+              for (let yk = 0; yk < kk.length; yk++) void 0 !== kk[yk] && !0 !== Fk[yk] && qk(this, Xk, ik, yk, Tk.ADD, Ik, !1, !0, Lk);
               continue
             }
-            if ("number" === typeof oC) zC = oC;
+            if ("number" === typeof ak) Fk = ak;
             else {
-              const ZC = oC.indexInParent(WC);
-              if (void 0 === ZC) continue;
-              if (zC = ZC, gC === wC.ADD && bC.getChange(zC) === wC.DELETE) {
-                CC.changes.delete(oC.ref[fC]);
+              const Ik = ak.indexInParent(tk);
+              if (void 0 === Ik) continue;
+              if (Fk = Ik, ek === Tk.ADD && ik.getChange(Fk) === Tk.DELETE) {
+                kk.changes.delete(ak.ref[lk]);
                 continue
               }
             }
-            qC(this, QC, bC, zC, void 0 !== MC[NC](zC) && gC || wC.DELETE, ZC, !1, !0, FC)
+            qk(this, Xk, ik, Fk, void 0 !== jk[Zk](Fk) && ek || Tk.DELETE, Ik, !1, !0, Lk)
           }
         }
-        return CC.changes.clear(), QC = this.encode(ZC, CC, QC), bC ? aQ(QC.subarray(0, zC), QC.subarray(nC, ZC.offset)) : QC.subarray(nC, ZC.offset)
+        return kk.changes.clear(), Xk = this.encode(Ik, kk, Xk), ik ? BX(Xk.subarray(0, Fk), Xk.subarray(yk, Ik.offset)) : Xk.subarray(yk, Ik.offset)
       }
-      encodeUnreliableView(CC, zC, ZC) {
-        let QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const wC = ZC.offset;
-        return QC = this.encodeUnreliable(ZC, CC, QC, wC), aQ(QC.subarray(0, zC), QC.subarray(wC, ZC.offset))
+      encodeUnreliableView(kk, Fk, Ik) {
+        let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const Tk = Ik.offset;
+        return Xk = this.encodeUnreliable(Ik, kk, Xk, Tk), BX(Xk.subarray(0, Fk), Xk.subarray(Tk, Ik.offset))
       }
-      _emitStreamBroadcast(CC, zC) {
-        const ZC = this.root.streamTrees;
-        for (const QC of ZC) {
-          const ZC = QC,
-            bC = ZC[SC],
-            nC = ZC[fC];
-          if (void 0 === nC) continue;
-          const oC = ZC._stream,
-            qC = oC.broadcastDeletes,
-            FC = oC.broadcastPending,
-            WC = oC.sentBroadcast,
-            MC = qC.size > 0,
-            gC = FC.size > 0,
-            pC = bC.encDescriptor,
-            PC = pC.encoder,
-            GC = pC.metadata;
-          if (MC || gC) {
-            if (CC[zC.offset++] = 255, zz.number(CC, nC, zC), MC) {
-              for (const ZC of qC) PC(this, CC, bC, ZC, wC.DELETE, zC, !1, !1, GC);
-              qC.clear()
+      _emitStreamBroadcast(kk, Fk) {
+        const Ik = this.root.streamTrees;
+        for (const Xk of Ik) {
+          const Ik = Xk,
+            ik = Ik[wk],
+            yk = Ik[lk];
+          if (void 0 === yk) continue;
+          const ak = Ik._stream,
+            qk = ak.broadcastDeletes,
+            Lk = ak.broadcastPending,
+            tk = ak.sentBroadcast,
+            jk = qk.size > 0,
+            ek = Lk.size > 0,
+            Hk = ik.encDescriptor,
+            Jk = Hk.encoder,
+            xk = Hk.metadata;
+          if (jk || ek) {
+            if (kk[Fk.offset++] = 255, IF.number(kk, yk, Fk), jk) {
+              for (const Ik of qk) Jk(this, kk, ik, Ik, Tk.DELETE, Fk, !1, !1, xk);
+              qk.clear()
             }
-            const QC = oC.maxPerTick,
-              gC = [];
-            let pC = 0;
-            const RC = [];
-            for (const nC of FC) {
-              if (pC >= QC) break;
-              const fC = ZC[NC](nC);
-              void 0 !== fC ? (PC(this, CC, bC, nC, wC.ADD, zC, !1, !1, GC), WC.add(nC), gC.push(fC), RC.push(nC), pC++) : RC.push(nC)
+            const Xk = ak.maxPerTick,
+              ek = [];
+            let Hk = 0;
+            const Pk = [];
+            for (const yk of Lk) {
+              if (Hk >= Xk) break;
+              const lk = Ik[Zk](yk);
+              void 0 !== lk ? (Jk(this, kk, ik, yk, Tk.ADD, Fk, !1, !1, xk), tk.add(yk), ek.push(lk), Pk.push(yk), Hk++) : Pk.push(yk)
             }
-            for (const CC of RC) FC.delete(CC);
-            for (const ZC of gC) {
-              const QC = ZC[SC];
-              if (void 0 === QC) continue;
-              const bC = ZC[fC];
-              if (void 0 === bC) continue;
-              CC[zC.offset++] = 255, zz.number(CC, bC, zC);
-              const nC = QC.encDescriptor,
-                oC = nC.encoder,
-                qC = nC.metadata;
-              QC.forEachLive((ZC => {
-                Lz.hasUnreliableAtIndex(qC, ZC) || oC(this, CC, QC, ZC, wC.ADD, zC, !1, !1, qC)
+            for (const kk of Pk) Lk.delete(kk);
+            for (const Ik of ek) {
+              const Xk = Ik[wk];
+              if (void 0 === Xk) continue;
+              const ik = Ik[lk];
+              if (void 0 === ik) continue;
+              kk[Fk.offset++] = 255, IF.number(kk, ik, Fk);
+              const yk = Xk.encDescriptor,
+                ak = yk.encoder,
+                qk = yk.metadata;
+              Xk.forEachLive((Ik => {
+                mF.hasUnreliableAtIndex(qk, Ik) || ak(this, kk, Xk, Ik, Tk.ADD, Fk, !1, !1, qk)
               }))
             }
           }
-          for (const QC of WC) {
-            const wC = ZC[NC](QC);
-            if (void 0 === wC) continue;
-            const bC = wC[SC];
-            if (void 0 === bC || !bC.has()) continue;
-            const nC = wC[fC];
-            if (void 0 === nC) continue;
-            CC[zC.offset++] = 255, zz.number(CC, nC, zC);
-            const oC = bC.encDescriptor,
-              qC = oC.encoder,
-              FC = oC.metadata;
-            bC.forEach(((ZC, QC) => {
-              ZC < 0 || Lz.hasUnreliableAtIndex(FC, ZC) || qC(this, CC, bC, ZC, QC, zC, !1, !1, FC)
+          for (const Xk of tk) {
+            const Tk = Ik[Zk](Xk);
+            if (void 0 === Tk) continue;
+            const ik = Tk[wk];
+            if (void 0 === ik || !ik.has()) continue;
+            const yk = Tk[lk];
+            if (void 0 === yk) continue;
+            kk[Fk.offset++] = 255, IF.number(kk, yk, Fk);
+            const ak = ik.encDescriptor,
+              qk = ak.encoder,
+              Lk = ak.metadata;
+            ik.forEach(((Ik, Xk) => {
+              Ik < 0 || mF.hasUnreliableAtIndex(Lk, Ik) || qk(this, kk, ik, Ik, Xk, Fk, !1, !1, Lk)
             }))
           }
         }
       }
-      _emitStreamPriority(CC) {
-        const zC = this.root.streamTrees;
-        if (0 === zC.size) return;
-        const ZC = CC.id;
-        for (const QC of zC) {
-          const zC = QC,
-            bC = zC._stream,
-            nC = bC.pendingByView.get(ZC);
-          if (void 0 === nC || 0 === nC.size) continue;
-          const oC = bC.priorityByView?.get(ZC),
-            qC = void 0 !== oC,
-            FC = bC.priority,
-            WC = bC.maxPerTick,
-            MC = [],
-            gC = [];
-          if (qC || void 0 !== FC) {
-            const ZC = [],
-              QC = [];
-            let wC = 0;
-            for (const bC of nC) {
-              const nC = zC[NC](bC);
-              if (void 0 === nC) {
-                gC.push(bC);
+      _emitStreamPriority(kk) {
+        const Fk = this.root.streamTrees;
+        if (0 === Fk.size) return;
+        const Ik = kk.id;
+        for (const Xk of Fk) {
+          const Fk = Xk,
+            ik = Fk._stream,
+            yk = ik.pendingByView.get(Ik);
+          if (void 0 === yk || 0 === yk.size) continue;
+          const ak = ik.priorityByView?.get(Ik),
+            qk = void 0 !== ak,
+            Lk = ik.priority,
+            tk = ik.maxPerTick,
+            jk = [],
+            ek = [];
+          if (qk || void 0 !== Lk) {
+            const Ik = [],
+              Xk = [];
+            let Tk = 0;
+            for (const ik of yk) {
+              const yk = Fk[Zk](ik);
+              if (void 0 === yk) {
+                ek.push(ik);
                 continue
               }
-              const fC = qC ? oC(nC) : FC(CC, nC);
-              if (wC < WC) {
-                let CC = wC++;
-                for (; CC > 0 && QC[CC - 1] < fC;) QC[CC] = QC[CC - 1], ZC[CC] = ZC[CC - 1], CC--;
-                QC[CC] = fC, ZC[CC] = bC
-              } else if (fC > QC[WC - 1]) {
-                let CC = WC - 1;
-                for (; CC > 0 && QC[CC - 1] < fC;) QC[CC] = QC[CC - 1], ZC[CC] = ZC[CC - 1], CC--;
-                QC[CC] = fC, ZC[CC] = bC
+              const lk = qk ? ak(yk) : Lk(kk, yk);
+              if (Tk < tk) {
+                let kk = Tk++;
+                for (; kk > 0 && Xk[kk - 1] < lk;) Xk[kk] = Xk[kk - 1], Ik[kk] = Ik[kk - 1], kk--;
+                Xk[kk] = lk, Ik[kk] = ik
+              } else if (lk > Xk[tk - 1]) {
+                let kk = tk - 1;
+                for (; kk > 0 && Xk[kk - 1] < lk;) Xk[kk] = Xk[kk - 1], Ik[kk] = Ik[kk - 1], kk--;
+                Xk[kk] = lk, Ik[kk] = ik
               }
             }
-            for (let CC = 0; CC < wC; CC++) MC.push(ZC[CC])
+            for (let kk = 0; kk < Tk; kk++) jk.push(Ik[kk])
           } else
-            for (const CC of nC) {
-              if (MC.length >= WC) break;
-              MC.push(CC)
+            for (const kk of yk) {
+              if (jk.length >= tk) break;
+              jk.push(kk)
             }
-          for (const CC of gC) nC.delete(CC);
-          const pC = MC.length;
-          let PC = bC.sentByView.get(ZC);
-          void 0 === PC && (PC = new Set, bC.sentByView.set(ZC, PC));
-          for (let ZC = 0; ZC < pC; ZC++) {
-            const QC = MC[ZC],
-              bC = zC[NC](QC);
-            if (void 0 === bC) {
-              nC.delete(QC);
+          for (const kk of ek) yk.delete(kk);
+          const Hk = jk.length;
+          let Jk = ik.sentByView.get(Ik);
+          void 0 === Jk && (Jk = new Set, ik.sentByView.set(Ik, Jk));
+          for (let Ik = 0; Ik < Hk; Ik++) {
+            const Xk = jk[Ik],
+              ik = Fk[Zk](Xk);
+            if (void 0 === ik) {
+              yk.delete(Xk);
               continue
             }
-            CC._addImmediate(bC);
-            const oC = bC[SC];
-            if (void 0 !== oC) {
-              const zC = bC[fC];
-              let ZC = CC.changes.get(zC);
-              void 0 === ZC && (ZC = new Map, CC.changes.set(zC, ZC));
-              const QC = oC.metadata;
-              oC.forEachLive((CC => {
-                Lz.hasUnreliableAtIndex(QC, CC) || ZC.set(CC, wC.ADD)
+            kk._addImmediate(ik);
+            const ak = ik[wk];
+            if (void 0 !== ak) {
+              const Fk = ik[lk];
+              let Ik = kk.changes.get(Fk);
+              void 0 === Ik && (Ik = new Map, kk.changes.set(Fk, Ik));
+              const Xk = ak.metadata;
+              ak.forEachLive((kk => {
+                mF.hasUnreliableAtIndex(Xk, kk) || Ik.set(kk, Tk.ADD)
               }))
             }
-            nC.delete(QC), PC.add(QC)
+            yk.delete(Xk), Jk.add(Xk)
           }
         }
       }
       discardChanges() {
-        const CC = this.root.changes;
-        let zC = CC.next;
-        const ZC = this.root;
-        for (; zC;) {
-          const CC = zC.next;
-          zC.changeTree.endEncode(), ZC.releaseNode(zC), zC = CC
+        const kk = this.root.changes;
+        let Fk = kk.next;
+        const Ik = this.root;
+        for (; Fk;) {
+          const kk = Fk.next;
+          Fk.changeTree.endEncode(), Ik.releaseNode(Fk), Fk = kk
         }
-        CC.next = void 0, CC.tail = void 0
+        kk.next = void 0, kk.tail = void 0
       }
       discardUnreliableChanges() {
-        const CC = this.root.unreliableChanges;
-        let zC = CC.next;
-        const ZC = this.root;
-        for (; zC;) {
-          const CC = zC.next;
-          zC.changeTree.endEncodeUnreliable(), ZC.releaseNode(zC), zC = CC
+        const kk = this.root.unreliableChanges;
+        let Fk = kk.next;
+        const Ik = this.root;
+        for (; Fk;) {
+          const kk = Fk.next;
+          Fk.changeTree.endEncodeUnreliable(), Ik.releaseNode(Fk), Fk = kk
         }
-        CC.next = void 0, CC.tail = void 0
+        kk.next = void 0, kk.tail = void 0
       }
-      tryEncodeTypeId(CC, zC, ZC, QC) {
-        const wC = this.context.getTypeId(zC),
-          bC = this.context.getTypeId(ZC);
-        void 0 !== bC ? wC !== bC && (CC[QC.offset++] = 213, zz.number(CC, bC, QC)) : console.warn(`@colyseus/schema WARNING: Class "${ZC.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
+      tryEncodeTypeId(kk, Fk, Ik, Xk) {
+        const Tk = this.context.getTypeId(Fk),
+          ik = this.context.getTypeId(Ik);
+        void 0 !== ik ? Tk !== ik && (kk[Xk.offset++] = 213, IF.number(kk, ik, Xk)) : console.warn(`@colyseus/schema WARNING: Class "${Ik.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
       }
       get hasChanges() {
         return void 0 !== this.root.changes.next || this._hasStreamBacklog()
@@ -6579,28 +6579,28 @@ export const modules = {
         return 0 === this.root.activeViews.size && this.root.streamTrees.size > 0
       }
       _hasStreamBacklog() {
-        const CC = this.root;
-        if (0 === CC.streamTrees.size) return !1;
-        const zC = 0 === CC.activeViews.size;
-        for (const ZC of CC.streamTrees)
-          if (zC ? dz(ZC) : Yz(ZC, CC)) return !0;
+        const kk = this.root;
+        if (0 === kk.streamTrees.size) return !1;
+        const Fk = 0 === kk.activeViews.size;
+        for (const Ik of kk.streamTrees)
+          if (Fk ? GF(Ik) : nF(Ik, kk)) return !0;
         return !1
       }
       get hasUnreliableChanges() {
         return void 0 !== this.root.unreliableChanges.next
       }
     }
-    class DQ extends Error {
-      constructor(CC) {
-        super(CC), this.name = "DecodingWarning"
+    class YX extends Error {
+      constructor(kk) {
+        super(kk), this.name = "DecodingWarning"
       }
     }
-    const jQ = {
+    const AX = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class yQ {
+    class gX {
       refs = new Map;
       refCount = {};
       deletedRefs = new Set;
@@ -6609,1181 +6609,1181 @@ export const modules = {
       getNextUniqueId() {
         return this.nextUniqueId++
       }
-      addRef(CC, zC) {
-        let ZC = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        this.refs.set(CC, zC), void 0 === zC[fC] ? (jQ.value = CC, Object.defineProperty(zC, fC, jQ)) : zC[fC] !== CC && (zC[fC] = CC), ZC && (this.refCount[CC] = (this.refCount[CC] || 0) + 1), this.deletedRefs.has(CC) && this.deletedRefs.delete(CC)
+      addRef(kk, Fk) {
+        let Ik = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        this.refs.set(kk, Fk), void 0 === Fk[lk] ? (AX.value = kk, Object.defineProperty(Fk, lk, AX)) : Fk[lk] !== kk && (Fk[lk] = kk), Ik && (this.refCount[kk] = (this.refCount[kk] || 0) + 1), this.deletedRefs.has(kk) && this.deletedRefs.delete(kk)
       }
-      removeRef(CC) {
-        const zC = this.refCount[CC];
-        if (void 0 !== zC)
-          if (0 !== zC)(this.refCount[CC] = zC - 1) <= 0 && this.deletedRefs.add(CC);
+      removeRef(kk) {
+        const Fk = this.refCount[kk];
+        if (void 0 !== Fk)
+          if (0 !== Fk)(this.refCount[kk] = Fk - 1) <= 0 && this.deletedRefs.add(kk);
           else try {
-            const zC = this.refs.get(CC);
-            throw new DQ(`trying to remove refId '${CC}' with 0 refCount (${zC.constructor.name}: ${JSON.stringify(zC)})`)
-          } catch (bw) {
-            console.warn(bw)
+            const Fk = this.refs.get(kk);
+            throw new YX(`trying to remove refId '${kk}' with 0 refCount (${Fk.constructor.name}: ${JSON.stringify(Fk)})`)
+          } catch (yT) {
+            console.warn(yT)
           } else try {
-            throw new DQ("trying to remove refId that doesn't exist: " + CC)
-          } catch (bw) {
-            console.warn(bw)
+            throw new YX("trying to remove refId that doesn't exist: " + kk)
+          } catch (yT) {
+            console.warn(yT)
           }
       }
       clearRefs() {
         this.refs.clear(), this.deletedRefs.clear(), this.callbacks = {}, this.refCount = {}
       }
       garbageCollectDeletedRefs() {
-        this.deletedRefs.forEach((CC => {
-          if (this.refCount[CC] > 0) return;
-          const zC = this.refs.get(CC),
-            ZC = zC.constructor[Symbol.metadata];
-          if (null != ZC)
-            for (const QC in ZC) {
-              const CC = zC[ZC[QC].name];
-              if ("object" === typeof CC && CC) {
-                const zC = CC[fC];
-                void 0 === zC || this.deletedRefs.has(zC) || this.removeRef(zC)
+        this.deletedRefs.forEach((kk => {
+          if (this.refCount[kk] > 0) return;
+          const Fk = this.refs.get(kk),
+            Ik = Fk.constructor[Symbol.metadata];
+          if (null != Ik)
+            for (const Xk in Ik) {
+              const kk = Fk[Ik[Xk].name];
+              if ("object" === typeof kk && kk) {
+                const Fk = kk[lk];
+                void 0 === Fk || this.deletedRefs.has(Fk) || this.removeRef(Fk)
               }
-            } else "function" === typeof zC[pC] && Array.from(zC.values()).forEach((CC => {
-              const zC = CC[fC];
-              void 0 === zC || this.deletedRefs.has(zC) || this.removeRef(zC)
+            } else "function" === typeof Fk[Hk] && Array.from(Fk.values()).forEach((kk => {
+              const Fk = kk[lk];
+              void 0 === Fk || this.deletedRefs.has(Fk) || this.removeRef(Fk)
             }));
-          this.refs.delete(CC), delete this.refCount[CC], delete this.callbacks[CC]
+          this.refs.delete(kk), delete this.refCount[kk], delete this.callbacks[kk]
         })), this.deletedRefs.clear()
       }
-      addCallback(CC, zC, ZC) {
-        if (void 0 === CC) {
-          const CC = "number" === typeof zC ? wC[zC] : zC;
-          throw new Error(`Can't addCallback on '${CC}' (refId is undefined)`)
+      addCallback(kk, Fk, Ik) {
+        if (void 0 === kk) {
+          const kk = "number" === typeof Fk ? Tk[Fk] : Fk;
+          throw new Error(`Can't addCallback on '${kk}' (refId is undefined)`)
         }
-        return this.callbacks[CC] || (this.callbacks[CC] = {}), this.callbacks[CC][zC] || (this.callbacks[CC][zC] = []), this.callbacks[CC][zC].push(ZC), () => this.removeCallback(CC, zC, ZC)
+        return this.callbacks[kk] || (this.callbacks[kk] = {}), this.callbacks[kk][Fk] || (this.callbacks[kk][Fk] = []), this.callbacks[kk][Fk].push(Ik), () => this.removeCallback(kk, Fk, Ik)
       }
-      removeCallback(CC, zC, ZC) {
-        const QC = this.callbacks?.[CC]?.[zC]?.indexOf(ZC);
-        void 0 !== QC && -1 !== QC && mQ(this.callbacks[CC][zC], QC)
+      removeCallback(kk, Fk, Ik) {
+        const Xk = this.callbacks?.[kk]?.[Fk]?.indexOf(Ik);
+        void 0 !== Xk && -1 !== Xk && pX(this.callbacks[kk][Fk], Xk)
       }
     }
-    class LQ {
+    class mX {
       context;
       state;
       root;
       currentRefId = 0;
-      qm;
+      sG;
       resyncVisited = null;
       resyncDamaged = !1;
-      constructor(CC, zC) {
-        this.setState(CC), this.context = zC || new sz(CC.constructor)
+      constructor(kk, Fk) {
+        this.setState(kk), this.context = Fk || new WF(kk.constructor)
       }
-      setState(CC) {
-        this.state = CC, this.root = new yQ, this.root.addRef(0, CC)
+      setState(kk) {
+        this.state = kk, this.root = new gX, this.root.addRef(0, kk)
       }
-      decode(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      decode(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
             offset: 0
           },
-          ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
-        const wC = void 0 !== this.qm ? [] : null,
-          bC = this.root,
-          nC = CC.byteLength;
-        let fC = ZC.constructor[FC];
-        for (this.currentRefId = 0; zC.offset < nC;) {
-          if (CC[zC.offset] == QC) {
-            zC.offset++, ZC[AC]?.();
-            const QC = Rz.number(CC, zC),
-              wC = bC.refs.get(QC);
-            wC ? (ZC = wC, fC = ZC.constructor[FC], this.currentRefId = QC) : (console.error(`"refId" not found: ${QC}`, {
-              previousRef: ZC,
+          Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
+        const Tk = void 0 !== this.sG ? [] : null,
+          ik = this.root,
+          yk = kk.byteLength;
+        let lk = Ik.constructor[Lk];
+        for (this.currentRefId = 0; Fk.offset < yk;) {
+          if (kk[Fk.offset] == Xk) {
+            Fk.offset++, Ik[Kk]?.();
+            const Xk = KF.number(kk, Fk),
+              Tk = ik.refs.get(Xk);
+            Tk ? (Ik = Tk, lk = Ik.constructor[Lk], this.currentRefId = Xk) : (console.error(`"refId" not found: ${Xk}`, {
+              previousRef: Ik,
               previousRefId: this.currentRefId
-            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(CC, zC, nC));
+            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(kk, Fk, yk));
             continue
-          } - 1 !== fC(this, CC, zC, ZC, wC) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(CC, zC, nC))
+          } - 1 !== lk(this, kk, Fk, Ik, Tk) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(kk, Fk, yk))
         }
-        return ZC[AC]?.(), null !== this.resyncVisited && function(CC, zC) {
-          CC.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : sZ(CC, CC.state, new Set, zC)
-        }(this, wC), null !== wC && this.qm?.(wC), bC.garbageCollectDeletedRefs(), wC
+        return Ik[Kk]?.(), null !== this.resyncVisited && function(kk, Fk) {
+          kk.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : WI(kk, kk.state, new Set, Fk)
+        }(this, Tk), null !== Tk && this.sG?.(Tk), ik.garbageCollectDeletedRefs(), Tk
       }
-      decodeResync(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      decodeResync(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
           offset: 0
         };
         this.resyncVisited = new Map, this.resyncDamaged = !1;
         try {
-          return this.decode(CC, zC)
+          return this.decode(kk, Fk)
         } finally {
           this.resyncVisited = null
         }
       }
-      skipCurrentStructure(CC, zC, ZC) {
+      skipCurrentStructure(kk, Fk, Ik) {
         null !== this.resyncVisited && (this.resyncDamaged = !0);
-        const wC = {
-          offset: zC.offset
+        const Tk = {
+          offset: Fk.offset
         };
-        for (; zC.offset < ZC && (CC[zC.offset] !== QC || (wC.offset = zC.offset + 1, !this.root.refs.has(Rz.number(CC, wC))));) zC.offset++
+        for (; Fk.offset < Ik && (kk[Fk.offset] !== Xk || (Tk.offset = Fk.offset + 1, !this.root.refs.has(KF.number(kk, Tk))));) Fk.offset++
       }
-      getInstanceType(CC, zC, ZC) {
-        let QC;
-        if (213 === CC[zC.offset]) {
-          zC.offset++;
-          const ZC = Rz.number(CC, zC);
-          QC = this.context.get(ZC)
+      getInstanceType(kk, Fk, Ik) {
+        let Xk;
+        if (213 === kk[Fk.offset]) {
+          Fk.offset++;
+          const Ik = KF.number(kk, Fk);
+          Xk = this.context.get(Ik)
         }
-        return QC || ZC
+        return Xk || Ik
       }
-      createInstanceOfType(CC) {
-        return CC.initializeForDecoder()
+      createInstanceOfType(kk) {
+        return kk.initializeForDecoder()
       }
-      removeChildRefs(CC, zC) {
-        const ZC = "string" !== typeof CC[pC],
-          QC = CC[fC];
-        CC.forEach(((bC, nC) => {
-          zC?.push({
-            ref: CC,
-            refId: QC,
-            op: wC.DELETE,
-            field: nC,
+      removeChildRefs(kk, Fk) {
+        const Ik = "string" !== typeof kk[Hk],
+          Xk = kk[lk];
+        kk.forEach(((ik, yk) => {
+          Fk?.push({
+            ref: kk,
+            refId: Xk,
+            op: Tk.DELETE,
+            field: yk,
             value: void 0,
-            previousValue: bC
-          }), ZC && this.root.removeRef(bC[fC])
+            previousValue: ik
+          }), Ik && this.root.removeRef(ik[lk])
         }))
       }
     }
-    const UQ = eQ({
-        min: MQ.float64(),
-        max: MQ.float64(),
-        bits: MQ.uint8(),
-        mode: MQ.uint8()
+    const hX = vX({
+        min: eX.float64(),
+        max: eX.float64(),
+        bits: eX.uint8(),
+        mode: eX.uint8()
       }, "QuantizedDescriptor"),
-      BQ = eQ({
-        name: MQ.string(),
-        type: MQ.string(),
-        referencedType: MQ.number(),
-        childPrimitive: MQ.string(),
-        quantized: MQ.ref(UQ).optional()
+      rX = vX({
+        name: eX.string(),
+        type: eX.string(),
+        referencedType: eX.number(),
+        childPrimitive: eX.string(),
+        quantized: eX.ref(hX).optional()
       }, "ReflectionField"),
-      OQ = eQ({
-        id: MQ.number(),
-        extendsId: MQ.number(),
-        fields: MQ.array(BQ)
+      DX = vX({
+        id: eX.number(),
+        extendsId: eX.number(),
+        fields: eX.array(rX)
       }, "ReflectionType"),
-      kQ = eQ({
-        types: MQ.array(OQ),
-        rootType: MQ.number()
+      MX = vX({
+        types: eX.array(DX),
+        rootType: eX.number()
       }, "Reflection");
 
-    function VQ(CC) {
-      const zC = CC.root,
-        ZC = zC.callbacks,
-        QC = new WeakMap;
-      let bC;
+    function kT(kk) {
+      const Fk = kk.root,
+        Ik = Fk.callbacks,
+        Xk = new WeakMap;
+      let ik;
 
-      function nC(CC, ZC) {
-        let qC = ZC.instance?.constructor[Symbol.metadata] || CC,
-          FC = ZC.instance && "function" === typeof ZC.instance.forEach || CC && !KQ.is(CC);
-        if (qC && !FC) {
-          const CC = function(CC, wC, nC, oC) {
-            return oC && void 0 !== ZC.instance[wC] && !QC.has(bC) && nC(ZC.instance[wC], void 0), zC.addCallback(CC[fC], wC, nC)
+      function yk(kk, Ik) {
+        let qk = Ik.instance?.constructor[Symbol.metadata] || kk,
+          Lk = Ik.instance && "function" === typeof Ik.instance.forEach || kk && !OX.is(kk);
+        if (qk && !Lk) {
+          const kk = function(kk, Tk, yk, ak) {
+            return ak && void 0 !== Ik.instance[Tk] && !Xk.has(ik) && yk(Ik.instance[Tk], void 0), Fk.addCallback(kk[lk], Tk, yk)
           };
           return new Proxy({
-            listen: function(zC, wC) {
-              let nC = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-              if (ZC.instance) return CC(ZC.instance, zC, wC, nC);
+            listen: function(Fk, Tk) {
+              let yk = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+              if (Ik.instance) return kk(Ik.instance, Fk, Tk, yk);
               {
-                let fC = () => {};
-                return ZC.onInstanceAvailable(((ZC, oC) => {
-                  fC = CC(ZC, zC, wC, nC && oC && !QC.has(bC))
-                })), () => fC()
+                let lk = () => {};
+                return Ik.onInstanceAvailable(((Ik, ak) => {
+                  lk = kk(Ik, Fk, Tk, yk && ak && !Xk.has(ik))
+                })), () => lk()
               }
             },
-            onChange: function(CC) {
-              return zC.addCallback(ZC.instance[fC], wC.REPLACE, CC)
+            onChange: function(kk) {
+              return Fk.addCallback(Ik.instance[lk], Tk.REPLACE, kk)
             },
-            bindTo: function(CC, QC) {
-              return QC || (QC = Object.keys(qC).map((CC => qC[CC].name))), zC.addCallback(ZC.instance[fC], wC.REPLACE, (() => {
-                QC.forEach((zC => CC[zC] = ZC.instance[zC]))
+            bindTo: function(kk, Xk) {
+              return Xk || (Xk = Object.keys(qk).map((kk => qk[kk].name))), Fk.addCallback(Ik.instance[lk], Tk.REPLACE, (() => {
+                Xk.forEach((Fk => kk[Fk] = Ik.instance[Fk]))
               }))
             }
           }, {
-            get(CC, zC) {
-              const QC = qC[qC[zC]];
-              if (QC) {
-                const CC = ZC.instance?.[zC],
-                  wC = QC => {
-                    const wC = oC(ZC.instance).listen(zC, ((CC, zC) => {
-                      QC(CC, !1), wC?.()
+            get(kk, Fk) {
+              const Xk = qk[qk[Fk]];
+              if (Xk) {
+                const kk = Ik.instance?.[Fk],
+                  Tk = Xk => {
+                    const Tk = ak(Ik.instance).listen(Fk, ((kk, Fk) => {
+                      Xk(kk, !1), Tk?.()
                     }), !1);
-                    void 0 !== CC?.[fC] && QC(CC, !0)
+                    void 0 !== kk?.[lk] && Xk(kk, !0)
                   };
-                return nC(QC.type, {
-                  instance: void 0 !== CC?.[fC] && CC,
-                  parentInstance: ZC.instance,
-                  onInstanceAvailable: wC
+                return yk(Xk.type, {
+                  instance: void 0 !== kk?.[lk] && kk,
+                  parentInstance: Ik.instance,
+                  onInstanceAvailable: Tk
                 })
               }
-              return CC[zC]
+              return kk[Fk]
             },
-            has: (CC, zC) => void 0 !== qC[zC],
-            set(CC, zC, ZC) {
+            has: (kk, Fk) => void 0 !== qk[Fk],
+            set(kk, Fk, Ik) {
               throw new Error("not allowed")
             },
-            deleteProperty(CC, zC) {
+            deleteProperty(kk, Fk) {
               throw new Error("not allowed")
             }
           })
         } {
-          const CC = function(CC, ZC, nC) {
-              return nC && CC.forEach(((CC, zC) => ZC(CC, zC))), zC.addCallback(CC[fC], wC.ADD, ((CC, zC) => {
-                QC.set(ZC, !0), bC = ZC, ZC(CC, zC), QC.delete(ZC), bC = void 0
+          const kk = function(kk, Ik, yk) {
+              return yk && kk.forEach(((kk, Fk) => Ik(kk, Fk))), Fk.addCallback(kk[lk], Tk.ADD, ((kk, Fk) => {
+                Xk.set(Ik, !0), ik = Ik, Ik(kk, Fk), Xk.delete(Ik), ik = void 0
               }))
             },
-            nC = function(CC, ZC) {
-              return zC.addCallback(CC[fC], wC.DELETE, ZC)
+            yk = function(kk, Ik) {
+              return Fk.addCallback(kk[lk], Tk.DELETE, Ik)
             },
-            oC = function(CC, ZC) {
-              return zC.addCallback(CC[fC], wC.REPLACE, ZC)
+            ak = function(kk, Ik) {
+              return Fk.addCallback(kk[lk], Tk.REPLACE, Ik)
             };
           return new Proxy({
-            xR: function(zC) {
-              let wC = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-              if (ZC.instance) return CC(ZC.instance, zC, wC && !QC.has(bC));
-              if (ZC.onInstanceAvailable) {
-                let nC = () => {};
-                return ZC.onInstanceAvailable(((ZC, fC) => {
-                  nC = CC(ZC, zC, wC && fC && !QC.has(bC))
-                })), () => nC()
+            mJ: function(Fk) {
+              let Tk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+              if (Ik.instance) return kk(Ik.instance, Fk, Tk && !Xk.has(ik));
+              if (Ik.onInstanceAvailable) {
+                let yk = () => {};
+                return Ik.onInstanceAvailable(((Ik, lk) => {
+                  yk = kk(Ik, Fk, Tk && lk && !Xk.has(ik))
+                })), () => yk()
               }
             },
-            lY: function(CC) {
-              if (ZC.instance) return nC(ZC.instance, CC);
-              if (ZC.onInstanceAvailable) {
-                let zC = () => {};
-                return ZC.onInstanceAvailable((ZC => {
-                  zC = nC(ZC, CC)
-                })), () => zC()
+            iG: function(kk) {
+              if (Ik.instance) return yk(Ik.instance, kk);
+              if (Ik.onInstanceAvailable) {
+                let Fk = () => {};
+                return Ik.onInstanceAvailable((Ik => {
+                  Fk = yk(Ik, kk)
+                })), () => Fk()
               }
             },
-            onChange: function(CC) {
-              if (ZC.instance) return oC(ZC.instance, CC);
-              if (ZC.onInstanceAvailable) {
-                let zC = () => {};
-                return ZC.onInstanceAvailable((ZC => {
-                  zC = oC(ZC, CC)
-                })), () => zC()
+            onChange: function(kk) {
+              if (Ik.instance) return ak(Ik.instance, kk);
+              if (Ik.onInstanceAvailable) {
+                let Fk = () => {};
+                return Ik.onInstanceAvailable((Ik => {
+                  Fk = ak(Ik, kk)
+                })), () => Fk()
               }
             }
           }, {
-            get(CC, zC) {
-              if (!CC[zC]) throw new Error(`Can't access '${zC}' through callback proxy. access the instance directly.`);
-              return CC[zC]
+            get(kk, Fk) {
+              if (!kk[Fk]) throw new Error(`Can't access '${Fk}' through callback proxy. access the instance directly.`);
+              return kk[Fk]
             },
-            has: (CC, zC) => void 0 !== CC[zC],
-            set(CC, zC, ZC) {
+            has: (kk, Fk) => void 0 !== kk[Fk],
+            set(kk, Fk, Ik) {
               throw new Error("not allowed")
             },
-            deleteProperty(CC, zC) {
+            deleteProperty(kk, Fk) {
               throw new Error("not allowed")
             }
           })
         }
       }
 
-      function oC(CC) {
-        return nC(void 0, {
-          instance: CC
+      function ak(kk) {
+        return yk(void 0, {
+          instance: kk
         })
       }
-      return CC.qm = function(CC) {
-        const zC = new Set;
-        for (let QC = 0, bC = CC.length; QC < bC; QC++) {
-          const bC = CC[QC],
-            nC = bC.refId,
-            oC = bC.ref,
-            qC = ZC[nC];
-          if (qC) {
-            if ((bC.op & wC.DELETE) === wC.DELETE && KQ.isSchema(bC.previousValue)) {
-              const CC = ZC[bC.previousValue[fC]]?.[wC.DELETE];
-              for (let zC = CC?.length - 1; zC >= 0; zC--) CC[zC]()
+      return kk.sG = function(kk) {
+        const Fk = new Set;
+        for (let Xk = 0, ik = kk.length; Xk < ik; Xk++) {
+          const ik = kk[Xk],
+            yk = ik.refId,
+            ak = ik.ref,
+            qk = Ik[yk];
+          if (qk) {
+            if ((ik.op & Tk.DELETE) === Tk.DELETE && OX.isSchema(ik.previousValue)) {
+              const kk = Ik[ik.previousValue[lk]]?.[Tk.DELETE];
+              for (let Fk = kk?.length - 1; Fk >= 0; Fk--) kk[Fk]()
             }
-            if (KQ.isSchema(oC)) {
-              if (!zC.has(nC)) {
-                const CC = qC?.[wC.REPLACE];
-                for (let zC = CC?.length - 1; zC >= 0; zC--) CC[zC]()
+            if (OX.isSchema(ak)) {
+              if (!Fk.has(yk)) {
+                const kk = qk?.[Tk.REPLACE];
+                for (let Fk = kk?.length - 1; Fk >= 0; Fk--) kk[Fk]()
               }
-              if (qC.hasOwnProperty(bC.field)) {
-                const CC = qC[bC.field];
-                for (let zC = CC?.length - 1; zC >= 0; zC--) CC[zC](bC.value, bC.previousValue)
+              if (qk.hasOwnProperty(ik.field)) {
+                const kk = qk[ik.field];
+                for (let Fk = kk?.length - 1; Fk >= 0; Fk--) kk[Fk](ik.value, ik.previousValue)
               }
             } else {
-              if ((bC.op & wC.DELETE) === wC.DELETE) {
-                if (void 0 !== bC.previousValue) {
-                  const CC = qC[wC.DELETE];
-                  for (let zC = CC?.length - 1; zC >= 0; zC--) CC[zC](bC.previousValue, bC.dynamicIndex ?? bC.field)
+              if ((ik.op & Tk.DELETE) === Tk.DELETE) {
+                if (void 0 !== ik.previousValue) {
+                  const kk = qk[Tk.DELETE];
+                  for (let Fk = kk?.length - 1; Fk >= 0; Fk--) kk[Fk](ik.previousValue, ik.dynamicIndex ?? ik.field)
                 }
-                if ((bC.op & wC.ADD) === wC.ADD) {
-                  const CC = qC[wC.ADD];
-                  for (let zC = CC?.length - 1; zC >= 0; zC--) CC[zC](bC.value, bC.dynamicIndex ?? bC.field)
+                if ((ik.op & Tk.ADD) === Tk.ADD) {
+                  const kk = qk[Tk.ADD];
+                  for (let Fk = kk?.length - 1; Fk >= 0; Fk--) kk[Fk](ik.value, ik.dynamicIndex ?? ik.field)
                 }
-              } else if ((bC.op & wC.ADD) === wC.ADD && bC.previousValue !== bC.value) {
-                const CC = qC[wC.ADD];
-                for (let zC = CC?.length - 1; zC >= 0; zC--) CC[zC](bC.value, bC.dynamicIndex ?? bC.field)
+              } else if ((ik.op & Tk.ADD) === Tk.ADD && ik.previousValue !== ik.value) {
+                const kk = qk[Tk.ADD];
+                for (let Fk = kk?.length - 1; Fk >= 0; Fk--) kk[Fk](ik.value, ik.dynamicIndex ?? ik.field)
               }
-              if (bC.value !== bC.previousValue && (void 0 !== bC.value || void 0 !== bC.previousValue)) {
-                const CC = qC[wC.REPLACE];
-                for (let zC = CC?.length - 1; zC >= 0; zC--) CC[zC](bC.value, bC.dynamicIndex ?? bC.field)
+              if (ik.value !== ik.previousValue && (void 0 !== ik.value || void 0 !== ik.previousValue)) {
+                const kk = qk[Tk.REPLACE];
+                for (let Fk = kk?.length - 1; Fk >= 0; Fk--) kk[Fk](ik.value, ik.dynamicIndex ?? ik.field)
               }
             }
-            zC.add(nC)
+            Fk.add(yk)
           }
         }
-      }, oC
+      }, ak
     }
 
-    function Cw(CC, zC) {
-      CC.qm = zC
+    function FT(kk, Fk) {
+      kk.sG = Fk
     }
-    kQ.encode = function(CC) {
-      let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    MX.encode = function(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         offset: 0
       };
-      const ZC = CC.context,
-        QC = new kQ,
-        wC = new tQ(QC),
-        bC = ZC.schemas.get(CC.state.constructor);
-      bC > 0 && (QC.rootType = bC);
-      const nC = new Set,
-        fC = {},
-        oC = CC => {
-          if (void 0 === CC.extendsId || nC.has(CC.extendsId)) {
-            nC.add(CC.id), QC.types.push(CC);
-            const zC = fC[CC.id];
-            void 0 !== zC && (delete fC[CC.id], zC.forEach((CC => oC(CC))))
-          } else void 0 === fC[CC.extendsId] && (fC[CC.extendsId] = []), fC[CC.extendsId].push(CC)
+      const Ik = kk.context,
+        Xk = new MX,
+        Tk = new dX(Xk),
+        ik = Ik.schemas.get(kk.state.constructor);
+      ik > 0 && (Xk.rootType = ik);
+      const yk = new Set,
+        lk = {},
+        ak = kk => {
+          if (void 0 === kk.extendsId || yk.has(kk.extendsId)) {
+            yk.add(kk.id), Xk.types.push(kk);
+            const Fk = lk[kk.id];
+            void 0 !== Fk && (delete lk[kk.id], Fk.forEach((kk => ak(kk))))
+          } else void 0 === lk[kk.extendsId] && (lk[kk.extendsId] = []), lk[kk.extendsId].push(kk)
         };
-      ZC.schemas.forEach(((CC, zC) => {
-        const QC = new OQ;
-        QC.id = Number(CC);
-        const wC = Object.getPrototypeOf(zC);
-        wC !== KQ && (QC.extendsId = ZC.schemas.get(wC));
-        const bC = zC[Symbol.metadata];
-        if (bC !== wC[Symbol.metadata]) {
-          const CC = bC[eC] ?? -1;
-          for (let zC = 0; zC <= CC; zC++) {
-            const CC = bC[zC];
-            if (void 0 === CC) continue;
-            const wC = CC.name;
-            if (!Object.prototype.hasOwnProperty.call(bC, wC)) continue;
-            const nC = new BQ;
-            let fC;
-            if (nC.name = wC, "string" === typeof CC.type) fC = CC.type;
-            else if (Xz(CC.type)) {
-              const zC = CC.type.quantized;
-              fC = "quantized";
-              const ZC = new UQ;
-              ZC.min = zC.min, ZC.max = zC.max, ZC.bits = zC.bits, ZC.mode = zC.wrap ? 1 : 0, nC.quantized = ZC
+      Ik.schemas.forEach(((kk, Fk) => {
+        const Xk = new DX;
+        Xk.id = Number(kk);
+        const Tk = Object.getPrototypeOf(Fk);
+        Tk !== OX && (Xk.extendsId = Ik.schemas.get(Tk));
+        const ik = Fk[Symbol.metadata];
+        if (ik !== Tk[Symbol.metadata]) {
+          const kk = ik[vk] ?? -1;
+          for (let Fk = 0; Fk <= kk; Fk++) {
+            const kk = ik[Fk];
+            if (void 0 === kk) continue;
+            const Tk = kk.name;
+            if (!Object.prototype.hasOwnProperty.call(ik, Tk)) continue;
+            const yk = new rX;
+            let lk;
+            if (yk.name = Tk, "string" === typeof kk.type) lk = kk.type;
+            else if (UF(kk.type)) {
+              const Fk = kk.type.quantized;
+              lk = "quantized";
+              const Ik = new hX;
+              Ik.min = Fk.min, Ik.max = Fk.max, Ik.bits = Fk.bits, Ik.mode = Fk.wrap ? 1 : 0, yk.quantized = Ik
             } else {
-              let zC;
-              KQ.is(CC.type) ? (fC = "ref", zC = CC.type) : (fC = Object.keys(CC.type)[0], "string" === typeof CC.type[fC] ? nC.childPrimitive = CC.type[fC] : zC = CC.type[fC]), nC.referencedType = zC ? ZC.getTypeId(zC) : -1
+              let Fk;
+              OX.is(kk.type) ? (lk = "ref", Fk = kk.type) : (lk = Object.keys(kk.type)[0], "string" === typeof kk.type[lk] ? yk.childPrimitive = kk.type[lk] : Fk = kk.type[lk]), yk.referencedType = Fk ? Ik.getTypeId(Fk) : -1
             }
-            nC.type = fC, QC.fields.push(nC)
+            yk.type = lk, Xk.fields.push(yk)
           }
         }
-        oC(QC)
+        ak(Xk)
       }));
-      for (const qC in fC) fC[qC].forEach((CC => QC.types.push(CC)));
-      return wC.encodeAll(zC).slice(0, zC.offset)
-    }, kQ.decode = function(CC, zC) {
-      const ZC = new kQ;
-      new LQ(ZC).decode(CC, zC);
-      const QC = new sz;
-      ZC.types.forEach((CC => {
-        const zC = QC.get(CC.extendsId) ?? KQ,
-          ZC = class extends zC {};
-        sz.register(ZC), QC.add(ZC, CC.id)
+      for (const qk in lk) lk[qk].forEach((kk => Xk.types.push(kk)));
+      return Tk.encodeAll(Fk).slice(0, Fk.offset)
+    }, MX.decode = function(kk, Fk) {
+      const Ik = new MX;
+      new mX(Ik).decode(kk, Fk);
+      const Xk = new WF;
+      Ik.types.forEach((kk => {
+        const Fk = Xk.get(kk.extendsId) ?? OX,
+          Ik = class extends Fk {};
+        WF.register(Ik), Xk.add(Ik, kk.id)
       }), {});
-      ZC.types.forEach((CC => {
-        const zC = QC.get(CC.id),
-          wC = Lz.initialize(zC),
-          bC = [];
-        let nC = CC;
+      Ik.types.forEach((kk => {
+        const Fk = Xk.get(kk.id),
+          Tk = mF.initialize(Fk),
+          ik = [];
+        let yk = kk;
         do {
-          bC.push(nC), nC = ZC.types.find((CC => CC.id === nC.extendsId))
-        } while (nC);
-        let fC = 0;
-        bC.reverse().forEach((CC => {
-          ((CC, zC, ZC) => {
-            zC.fields.forEach(((zC, wC) => {
-              const bC = ZC + wC;
-              if (void 0 !== zC.quantized) {
-                const ZC = zC.quantized;
-                Lz.addField(CC, bC, zC.name, {
-                  quantized: lz({
-                    min: ZC.min,
-                    max: ZC.max,
-                    bits: ZC.bits,
-                    mode: 1 === ZC.mode ? "wrap" : "clamp"
+          ik.push(yk), yk = Ik.types.find((kk => kk.id === yk.extendsId))
+        } while (yk);
+        let lk = 0;
+        ik.reverse().forEach((kk => {
+          ((kk, Fk, Ik) => {
+            Fk.fields.forEach(((Fk, Tk) => {
+              const ik = Ik + Tk;
+              if (void 0 !== Fk.quantized) {
+                const Ik = Fk.quantized;
+                mF.addField(kk, ik, Fk.name, {
+                  quantized: RF({
+                    min: Ik.min,
+                    max: Ik.max,
+                    bits: Ik.bits,
+                    mode: 1 === Ik.mode ? "wrap" : "clamp"
                   })
                 })
-              } else if (void 0 !== zC.referencedType) {
-                const ZC = zC.type,
-                  wC = QC.get(zC.referencedType) ?? zC.childPrimitive;
-                "ref" === ZC ? Lz.addField(CC, bC, zC.name, wC) : Lz.addField(CC, bC, zC.name, {
-                  [ZC]: wC
+              } else if (void 0 !== Fk.referencedType) {
+                const Ik = Fk.type,
+                  Tk = Xk.get(Fk.referencedType) ?? Fk.childPrimitive;
+                "ref" === Ik ? mF.addField(kk, ik, Fk.name, Tk) : mF.addField(kk, ik, Fk.name, {
+                  [Ik]: Tk
                 })
-              } else Lz.addField(CC, bC, zC.name, zC.type)
+              } else mF.addField(kk, ik, Fk.name, Fk.type)
             }))
-          })(wC, CC, fC), fC += CC.fields.length
+          })(Tk, kk, lk), lk += kk.fields.length
         }))
       }));
-      const wC = new(QC.get(ZC.rootType || 0));
-      return new LQ(wC, QC)
-    }, kQ.makeEncodable = function(CC) {
-      const zC = CC[Symbol.metadata];
-      if (!zC) return CC;
-      const ZC = zC[eC];
-      if (void 0 === ZC) return CC;
-      for (let QC = 0; QC <= ZC; QC++) {
-        const ZC = zC[QC];
-        ZC && Lz.defineField(CC, zC, QC, ZC.name, ZC.type)
+      const Tk = new(Xk.get(Ik.rootType || 0));
+      return new mX(Tk, Xk)
+    }, MX.makeEncodable = function(kk) {
+      const Fk = kk[Symbol.metadata];
+      if (!Fk) return kk;
+      const Ik = Fk[vk];
+      if (void 0 === Ik) return kk;
+      for (let Xk = 0; Xk <= Ik; Xk++) {
+        const Ik = Fk[Xk];
+        Ik && mF.defineField(kk, Fk, Xk, Ik.name, Ik.type)
       }
-      return Object.prototype.hasOwnProperty.call(CC, iC) && delete CC[iC], CC
+      return Object.prototype.hasOwnProperty.call(kk, zk) && delete kk[zk], kk
     };
-    class zw {
-      wg;
+    class IT {
+      Xe;
       uniqueRefIds = new Set;
       isTriggering = !1;
-      constructor(CC) {
-        this.wg = CC, this.wg.qm = this.qm.bind(this)
+      constructor(kk) {
+        this.Xe = kk, this.Xe.sG = this.sG.bind(this)
       }
       get callbacks() {
-        return this.wg.root.callbacks
+        return this.Xe.root.callbacks
       }
       get state() {
-        return this.wg.state
+        return this.Xe.state
       }
-      addCallback(CC, zC, ZC) {
-        return this.wg.root.addCallback(CC, zC, ZC)
+      addCallback(kk, Fk, Ik) {
+        return this.Xe.root.addCallback(kk, Fk, Ik)
       }
-      addCallbackOrWaitCollectionAvailable(CC, zC, ZC, QC) {
-        let bC = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          nC = () => {};
-        const oC = () => nC(),
-          qC = CC[zC];
-        if (qC && void 0 !== qC[fC]) return bC = bC && !1 === this.isTriggering, ZC === wC.ADD && bC && qC.forEach(((CC, zC) => {
-          QC(CC, zC)
-        })), this.addCallback(qC[fC], ZC, QC);
+      addCallbackOrWaitCollectionAvailable(kk, Fk, Ik, Xk) {
+        let ik = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          yk = () => {};
+        const ak = () => yk(),
+          qk = kk[Fk];
+        if (qk && void 0 !== qk[lk]) return ik = ik && !1 === this.isTriggering, Ik === Tk.ADD && ik && qk.forEach(((kk, Fk) => {
+          Xk(kk, Fk)
+        })), this.addCallback(qk[lk], Ik, Xk);
         {
-          let wC;
-          return wC = this.addCallback(CC[fC], zC, ((CC, zC) => {
-            null !== CC && void 0 !== CC && (wC(), nC = this.addCallback(CC[fC], ZC, QC))
-          })), nC = wC, oC
+          let Tk;
+          return Tk = this.addCallback(kk[lk], Fk, ((kk, Fk) => {
+            null !== kk && void 0 !== kk && (Tk(), yk = this.addCallback(kk[lk], Ik, Xk))
+          })), yk = Tk, ak
         }
       }
       listen() {
         return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.listenInstance(this.state, arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2]) : this.listenInstance(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2], arguments.length <= 3 ? void 0 : arguments[3])
       }
-      listenInstance(CC, zC, ZC) {
-        let QC = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        QC = QC && !1 === this.isTriggering;
-        const wC = CC[zC];
-        return QC && null !== wC && void 0 !== wC && ZC(wC, void 0), this.addCallback(CC[fC], zC, ZC)
+      listenInstance(kk, Fk, Ik) {
+        let Xk = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        Xk = Xk && !1 === this.isTriggering;
+        const Tk = kk[Fk];
+        return Xk && null !== Tk && void 0 !== Tk && Ik(Tk, void 0), this.addCallback(kk[lk], Fk, Ik)
       }
       onChange() {
         if (2 === arguments.length && "string" !== typeof(arguments.length <= 0 ? void 0 : arguments[0])) {
-          const CC = arguments.length <= 0 ? void 0 : arguments[0],
-            zC = arguments.length <= 1 ? void 0 : arguments[1];
-          return this.addCallback(CC[fC], wC.REPLACE, zC)
+          const kk = arguments.length <= 0 ? void 0 : arguments[0],
+            Fk = arguments.length <= 1 ? void 0 : arguments[1];
+          return this.addCallback(kk[lk], Tk.REPLACE, Fk)
         }
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], wC.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], wC.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Tk.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Tk.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      xR() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], wC.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], wC.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
+      mJ() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Tk.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Tk.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
       }
-      lY() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], wC.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], wC.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
+      iG() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Tk.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Tk.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      bindTo(CC, zC, ZC) {
-        let QC = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        const bC = CC.constructor[Symbol.metadata];
-        ZC || (ZC = Object.keys(bC).filter((CC => !isNaN(Number(CC)))).map((CC => bC[CC].name)));
-        const nC = () => {
-          for (const QC of ZC) {
-            const ZC = CC[QC];
-            void 0 !== ZC && (zC[QC] = ZC)
+      bindTo(kk, Fk, Ik) {
+        let Xk = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        const ik = kk.constructor[Symbol.metadata];
+        Ik || (Ik = Object.keys(ik).filter((kk => !isNaN(Number(kk)))).map((kk => ik[kk].name)));
+        const yk = () => {
+          for (const Xk of Ik) {
+            const Ik = kk[Xk];
+            void 0 !== Ik && (Fk[Xk] = Ik)
           }
         };
-        return QC && nC(), this.addCallback(CC[fC], wC.REPLACE, nC)
+        return Xk && yk(), this.addCallback(kk[lk], Tk.REPLACE, yk)
       }
-      qm(CC) {
+      sG(kk) {
         this.uniqueRefIds.clear(), this.isTriggering = !0;
-        for (let zC = 0, ZC = CC.length; zC < ZC; zC++) {
-          const ZC = CC[zC],
-            QC = ZC.refId,
-            bC = ZC.ref,
-            nC = this.callbacks[QC];
-          if (nC) {
-            if ((ZC.op & wC.DELETE) === wC.DELETE && KQ.isSchema(ZC.previousValue)) {
-              const CC = ZC.previousValue[fC],
-                zC = this.callbacks[CC]?.[wC.DELETE];
-              if (zC)
-                for (let ZC = zC.length - 1; ZC >= 0; ZC--) try {
-                  zC[ZC]()
-                } catch (bw) {
-                  console.error(bw)
+        for (let Fk = 0, Ik = kk.length; Fk < Ik; Fk++) {
+          const Ik = kk[Fk],
+            Xk = Ik.refId,
+            ik = Ik.ref,
+            yk = this.callbacks[Xk];
+          if (yk) {
+            if ((Ik.op & Tk.DELETE) === Tk.DELETE && OX.isSchema(Ik.previousValue)) {
+              const kk = Ik.previousValue[lk],
+                Fk = this.callbacks[kk]?.[Tk.DELETE];
+              if (Fk)
+                for (let Ik = Fk.length - 1; Ik >= 0; Ik--) try {
+                  Fk[Ik]()
+                } catch (yT) {
+                  console.error(yT)
                 }
             }
-            if (KQ.isSchema(bC)) {
-              if (!this.uniqueRefIds.has(QC)) {
-                const CC = nC[wC.REPLACE];
-                if (CC)
-                  for (let zC = CC.length - 1; zC >= 0; zC--) try {
-                    CC[zC]()
-                  } catch (bw) {
-                    console.error(bw)
+            if (OX.isSchema(ik)) {
+              if (!this.uniqueRefIds.has(Xk)) {
+                const kk = yk[Tk.REPLACE];
+                if (kk)
+                  for (let Fk = kk.length - 1; Fk >= 0; Fk--) try {
+                    kk[Fk]()
+                  } catch (yT) {
+                    console.error(yT)
                   }
               }
-              const CC = nC[ZC.field];
-              if (CC)
-                for (let zC = CC.length - 1; zC >= 0; zC--) try {
-                  CC[zC](ZC.value, ZC.previousValue)
-                } catch (bw) {
-                  console.error(bw)
+              const kk = yk[Ik.field];
+              if (kk)
+                for (let Fk = kk.length - 1; Fk >= 0; Fk--) try {
+                  kk[Fk](Ik.value, Ik.previousValue)
+                } catch (yT) {
+                  console.error(yT)
                 }
             } else {
-              const CC = ZC.dynamicIndex ?? ZC.field;
-              if ((ZC.op & wC.DELETE) === wC.DELETE) {
-                if (void 0 !== ZC.previousValue) {
-                  const zC = nC[wC.DELETE];
-                  if (zC)
-                    for (let QC = zC.length - 1; QC >= 0; QC--) try {
-                      zC[QC](ZC.previousValue, CC)
-                    } catch (bw) {
-                      console.error(bw)
+              const kk = Ik.dynamicIndex ?? Ik.field;
+              if ((Ik.op & Tk.DELETE) === Tk.DELETE) {
+                if (void 0 !== Ik.previousValue) {
+                  const Fk = yk[Tk.DELETE];
+                  if (Fk)
+                    for (let Xk = Fk.length - 1; Xk >= 0; Xk--) try {
+                      Fk[Xk](Ik.previousValue, kk)
+                    } catch (yT) {
+                      console.error(yT)
                     }
                 }
-                if ((ZC.op & wC.ADD) === wC.ADD) {
-                  const zC = nC[wC.ADD];
-                  if (zC)
-                    for (let QC = zC.length - 1; QC >= 0; QC--) try {
-                      zC[QC](ZC.value, CC)
-                    } catch (bw) {
-                      console.error(bw)
+                if ((Ik.op & Tk.ADD) === Tk.ADD) {
+                  const Fk = yk[Tk.ADD];
+                  if (Fk)
+                    for (let Xk = Fk.length - 1; Xk >= 0; Xk--) try {
+                      Fk[Xk](Ik.value, kk)
+                    } catch (yT) {
+                      console.error(yT)
                     }
                 }
-              } else if ((ZC.op & wC.ADD) === wC.ADD && ZC.previousValue !== ZC.value) {
-                const zC = nC[wC.ADD];
-                if (zC)
-                  for (let QC = zC.length - 1; QC >= 0; QC--) try {
-                    zC[QC](ZC.value, CC)
-                  } catch (bw) {
-                    console.error(bw)
+              } else if ((Ik.op & Tk.ADD) === Tk.ADD && Ik.previousValue !== Ik.value) {
+                const Fk = yk[Tk.ADD];
+                if (Fk)
+                  for (let Xk = Fk.length - 1; Xk >= 0; Xk--) try {
+                    Fk[Xk](Ik.value, kk)
+                  } catch (yT) {
+                    console.error(yT)
                   }
               }
-              if (ZC.value !== ZC.previousValue) {
-                const zC = nC[wC.REPLACE];
-                if (zC)
-                  for (let QC = zC.length - 1; QC >= 0; QC--) try {
-                    zC[QC](CC, ZC.value)
-                  } catch (bw) {
-                    console.error(bw)
+              if (Ik.value !== Ik.previousValue) {
+                const Fk = yk[Tk.REPLACE];
+                if (Fk)
+                  for (let Xk = Fk.length - 1; Xk >= 0; Xk--) try {
+                    Fk[Xk](kk, Ik.value)
+                  } catch (yT) {
+                    console.error(yT)
                   }
               }
             }
-            this.uniqueRefIds.add(QC)
+            this.uniqueRefIds.add(Xk)
           }
         }
         this.isTriggering = !1
       }
     }
-    const Zw = {
-      get(CC) {
-        if (CC instanceof LQ) return new zw(CC);
-        if ("wg" in CC.JG) return new zw(CC.JG.wg);
+    const XT = {
+      get(kk) {
+        if (kk instanceof mX) return new IT(kk);
+        if ("Xe" in kk.LJ) return new IT(kk.LJ.Xe);
         throw new Error("Invalid room or decoder")
       },
-      getLegacy(CC) {
-        if (CC instanceof LQ) return VQ(CC);
-        if ("wg" in CC.JG) return VQ(CC.JG.wg);
+      getLegacy(kk) {
+        if (kk instanceof mX) return kT(kk);
+        if ("Xe" in kk.LJ) return kT(kk.LJ.Xe);
         throw new Error("Invalid room or decoder")
       },
-      getRawChanges: (CC, zC) => Cw(CC, zC)
+      getRawChanges: (kk, Fk) => FT(kk, Fk)
     };
-    class Qw {
+    class TT {
       _free = [];
       _factory;
       _maxSize;
-      constructor(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this._factory = CC, this._maxSize = zC.maxSize ?? 1 / 0;
-        const ZC = zC.preallocate ?? 0;
-        for (let QC = 0; QC < ZC; QC++) this._free.push(CC())
+      constructor(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this._factory = kk, this._maxSize = Fk.maxSize ?? 1 / 0;
+        const Ik = Fk.preallocate ?? 0;
+        for (let Xk = 0; Xk < Ik; Xk++) this._free.push(kk())
       }
       acquire() {
         return this._free.length > 0 ? this._free.pop() : this._factory()
       }
-      release(CC) {
-        KQ.reset(CC), this._free.length < this._maxSize && this._free.push(CC)
+      release(kk) {
+        OX.reset(kk), this._free.length < this._maxSize && this._free.push(kk)
       }
       get size() {
         return this._free.length
       }
     }
 
-    function ww(CC) {
-      return new Qw((() => new CC), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
+    function iT(kk) {
+      return new TT((() => new kk), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
     }
-    Jz("map", {
-      constructor: wQ
-    }), Jz("array", {
-      constructor: ZQ
-    }), Jz("set", {
-      constructor: nQ
-    }), Jz("collection", {
-      constructor: bQ
+    VF("map", {
+      constructor: iX
+    }), VF("array", {
+      constructor: XX
+    }), VF("set", {
+      constructor: lX
+    }), VF("collection", {
+      constructor: yX
     })
   },
-  9079: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      __addDisposableResource: () => XC,
-      __assign: () => bC,
-      __asyncDelegator: () => vC,
-      __asyncGenerator: () => iC,
-      __asyncValues: () => eC,
-      __await: () => IC,
-      __awaiter: () => gC,
-      __classPrivateFieldGet: () => HC,
-      __classPrivateFieldIn: () => lC,
-      __classPrivateFieldSet: () => EC,
-      __createBinding: () => pC,
-      __decorate: () => fC,
-      __disposeResources: () => uC,
-      __esDecorate: () => qC,
-      __exportStar: () => PC,
-      __extends: () => wC,
-      __generator: () => SC,
-      __importDefault: () => mC,
-      __importStar: () => dC,
-      __makeTemplateObject: () => hC,
-      __metadata: () => MC,
-      __param: () => oC,
-      __propKey: () => WC,
-      __read: () => RC,
-      __rest: () => nC,
-      __rewriteRelativeImportExtension: () => rC,
-      __runInitializers: () => FC,
-      __setFunctionName: () => NC,
-      __spread: () => AC,
-      __spreadArray: () => JC,
-      __spreadArrays: () => xC,
-      __values: () => GC,
-      default: () => sC
+  9070: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      __addDisposableResource: () => Uk,
+      __assign: () => ik,
+      __asyncDelegator: () => Sk,
+      __asyncGenerator: () => zk,
+      __asyncValues: () => vk,
+      __await: () => Vk,
+      __awaiter: () => ek,
+      __classPrivateFieldGet: () => uk,
+      __classPrivateFieldIn: () => Rk,
+      __classPrivateFieldSet: () => bk,
+      __createBinding: () => Hk,
+      __decorate: () => lk,
+      __disposeResources: () => Nk,
+      __esDecorate: () => qk,
+      __exportStar: () => Jk,
+      __extends: () => Tk,
+      __generator: () => wk,
+      __importDefault: () => pk,
+      __importStar: () => Gk,
+      __makeTemplateObject: () => Ek,
+      __metadata: () => jk,
+      __param: () => ak,
+      __propKey: () => tk,
+      __read: () => Pk,
+      __rest: () => yk,
+      __rewriteRelativeImportExtension: () => ck,
+      __runInitializers: () => Lk,
+      __setFunctionName: () => Zk,
+      __spread: () => Kk,
+      __spreadArray: () => sk,
+      __spreadArrays: () => Qk,
+      __values: () => xk,
+      default: () => Wk
     });
-    var QC = function(CC, zC) {
-      return QC = Object.setPrototypeOf || {
+    var Xk = function(kk, Fk) {
+      return Xk = Object.setPrototypeOf || {
         __proto__: []
       }
-      instanceof Array && function(CC, zC) {
-        CC.__proto__ = zC
-      } || function(CC, zC) {
-        for (var ZC in zC) Object.prototype.hasOwnProperty.call(zC, ZC) && (CC[ZC] = zC[ZC])
-      }, QC(CC, zC)
+      instanceof Array && function(kk, Fk) {
+        kk.__proto__ = Fk
+      } || function(kk, Fk) {
+        for (var Ik in Fk) Object.prototype.hasOwnProperty.call(Fk, Ik) && (kk[Ik] = Fk[Ik])
+      }, Xk(kk, Fk)
     };
 
-    function wC(CC, zC) {
-      if ("function" !== typeof zC && null !== zC) throw new TypeError("Class extends value " + String(zC) + " is not a constructor or null");
+    function Tk(kk, Fk) {
+      if ("function" !== typeof Fk && null !== Fk) throw new TypeError("Class extends value " + String(Fk) + " is not a constructor or null");
 
-      function ZC() {
-        this.constructor = CC
+      function Ik() {
+        this.constructor = kk
       }
-      QC(CC, zC), CC.prototype = null === zC ? Object.create(zC) : (ZC.prototype = zC.prototype, new ZC)
+      Xk(kk, Fk), kk.prototype = null === Fk ? Object.create(Fk) : (Ik.prototype = Fk.prototype, new Ik)
     }
-    var bC = function() {
-      return bC = Object.assign || function(CC) {
-        for (var zC, ZC = 1, QC = arguments.length; ZC < QC; ZC++)
-          for (var wC in zC = arguments[ZC]) Object.prototype.hasOwnProperty.call(zC, wC) && (CC[wC] = zC[wC]);
-        return CC
-      }, bC.apply(this, arguments)
+    var ik = function() {
+      return ik = Object.assign || function(kk) {
+        for (var Fk, Ik = 1, Xk = arguments.length; Ik < Xk; Ik++)
+          for (var Tk in Fk = arguments[Ik]) Object.prototype.hasOwnProperty.call(Fk, Tk) && (kk[Tk] = Fk[Tk]);
+        return kk
+      }, ik.apply(this, arguments)
     };
 
-    function nC(CC, zC) {
-      var ZC = {};
-      for (var QC in CC) Object.prototype.hasOwnProperty.call(CC, QC) && zC.indexOf(QC) < 0 && (ZC[QC] = CC[QC]);
-      if (null != CC && "function" === typeof Object.getOwnPropertySymbols) {
-        var wC = 0;
-        for (QC = Object.getOwnPropertySymbols(CC); wC < QC.length; wC++) zC.indexOf(QC[wC]) < 0 && Object.prototype.propertyIsEnumerable.call(CC, QC[wC]) && (ZC[QC[wC]] = CC[QC[wC]])
+    function yk(kk, Fk) {
+      var Ik = {};
+      for (var Xk in kk) Object.prototype.hasOwnProperty.call(kk, Xk) && Fk.indexOf(Xk) < 0 && (Ik[Xk] = kk[Xk]);
+      if (null != kk && "function" === typeof Object.getOwnPropertySymbols) {
+        var Tk = 0;
+        for (Xk = Object.getOwnPropertySymbols(kk); Tk < Xk.length; Tk++) Fk.indexOf(Xk[Tk]) < 0 && Object.prototype.propertyIsEnumerable.call(kk, Xk[Tk]) && (Ik[Xk[Tk]] = kk[Xk[Tk]])
       }
-      return ZC
+      return Ik
     }
 
-    function fC(CC, zC, ZC, QC) {
-      var wC, bC = arguments.length,
-        nC = bC < 3 ? zC : null === QC ? QC = Object.getOwnPropertyDescriptor(zC, ZC) : QC;
-      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) nC = Reflect.decorate(CC, zC, ZC, QC);
+    function lk(kk, Fk, Ik, Xk) {
+      var Tk, ik = arguments.length,
+        yk = ik < 3 ? Fk : null === Xk ? Xk = Object.getOwnPropertyDescriptor(Fk, Ik) : Xk;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) yk = Reflect.decorate(kk, Fk, Ik, Xk);
       else
-        for (var fC = CC.length - 1; fC >= 0; fC--)(wC = CC[fC]) && (nC = (bC < 3 ? wC(nC) : bC > 3 ? wC(zC, ZC, nC) : wC(zC, ZC)) || nC);
-      return bC > 3 && nC && Object.defineProperty(zC, ZC, nC), nC
+        for (var lk = kk.length - 1; lk >= 0; lk--)(Tk = kk[lk]) && (yk = (ik < 3 ? Tk(yk) : ik > 3 ? Tk(Fk, Ik, yk) : Tk(Fk, Ik)) || yk);
+      return ik > 3 && yk && Object.defineProperty(Fk, Ik, yk), yk
     }
 
-    function oC(CC, zC) {
-      return function(ZC, QC) {
-        zC(ZC, QC, CC)
+    function ak(kk, Fk) {
+      return function(Ik, Xk) {
+        Fk(Ik, Xk, kk)
       }
     }
 
-    function qC(CC, zC, ZC, QC, wC, bC) {
-      function nC(CC) {
-        if (void 0 !== CC && "function" !== typeof CC) throw new TypeError("Function expected");
-        return CC
+    function qk(kk, Fk, Ik, Xk, Tk, ik) {
+      function yk(kk) {
+        if (void 0 !== kk && "function" !== typeof kk) throw new TypeError("Function expected");
+        return kk
       }
-      for (var fC, oC = QC.kind, qC = "getter" === oC ? "get" : "setter" === oC ? "set" : "value", FC = !zC && CC ? QC.static ? CC : CC.prototype : null, WC = zC || (FC ? Object.getOwnPropertyDescriptor(FC, QC.name) : {}), NC = !1, MC = ZC.length - 1; MC >= 0; MC--) {
-        var gC = {};
-        for (var SC in QC) gC[SC] = "access" === SC ? {} : QC[SC];
-        for (var SC in QC.access) gC.access[SC] = QC.access[SC];
-        gC.addInitializer = function(CC) {
-          if (NC) throw new TypeError("Cannot add initializers after decoration has completed");
-          bC.push(nC(CC || null))
+      for (var lk, ak = Xk.kind, qk = "getter" === ak ? "get" : "setter" === ak ? "set" : "value", Lk = !Fk && kk ? Xk.static ? kk : kk.prototype : null, tk = Fk || (Lk ? Object.getOwnPropertyDescriptor(Lk, Xk.name) : {}), Zk = !1, jk = Ik.length - 1; jk >= 0; jk--) {
+        var ek = {};
+        for (var wk in Xk) ek[wk] = "access" === wk ? {} : Xk[wk];
+        for (var wk in Xk.access) ek.access[wk] = Xk.access[wk];
+        ek.addInitializer = function(kk) {
+          if (Zk) throw new TypeError("Cannot add initializers after decoration has completed");
+          ik.push(yk(kk || null))
         };
-        var pC = (0, ZC[MC])("accessor" === oC ? {
-          get: WC.get,
-          set: WC.set
-        } : WC[qC], gC);
-        if ("accessor" === oC) {
-          if (void 0 === pC) continue;
-          if (null === pC || "object" !== typeof pC) throw new TypeError("Object expected");
-          (fC = nC(pC.get)) && (WC.get = fC), (fC = nC(pC.set)) && (WC.set = fC), (fC = nC(pC.init)) && wC.unshift(fC)
-        } else(fC = nC(pC)) && ("field" === oC ? wC.unshift(fC) : WC[qC] = fC)
+        var Hk = (0, Ik[jk])("accessor" === ak ? {
+          get: tk.get,
+          set: tk.set
+        } : tk[qk], ek);
+        if ("accessor" === ak) {
+          if (void 0 === Hk) continue;
+          if (null === Hk || "object" !== typeof Hk) throw new TypeError("Object expected");
+          (lk = yk(Hk.get)) && (tk.get = lk), (lk = yk(Hk.set)) && (tk.set = lk), (lk = yk(Hk.init)) && Tk.unshift(lk)
+        } else(lk = yk(Hk)) && ("field" === ak ? Tk.unshift(lk) : tk[qk] = lk)
       }
-      FC && Object.defineProperty(FC, QC.name, WC), NC = !0
+      Lk && Object.defineProperty(Lk, Xk.name, tk), Zk = !0
     }
 
-    function FC(CC, zC, ZC) {
-      for (var QC = arguments.length > 2, wC = 0; wC < zC.length; wC++) ZC = QC ? zC[wC].call(CC, ZC) : zC[wC].call(CC);
-      return QC ? ZC : void 0
+    function Lk(kk, Fk, Ik) {
+      for (var Xk = arguments.length > 2, Tk = 0; Tk < Fk.length; Tk++) Ik = Xk ? Fk[Tk].call(kk, Ik) : Fk[Tk].call(kk);
+      return Xk ? Ik : void 0
     }
 
-    function WC(CC) {
-      return "symbol" === typeof CC ? CC : "".concat(CC)
+    function tk(kk) {
+      return "symbol" === typeof kk ? kk : "".concat(kk)
     }
 
-    function NC(CC, zC, ZC) {
-      return "symbol" === typeof zC && (zC = zC.description ? "[".concat(zC.description, "]") : ""), Object.defineProperty(CC, "name", {
+    function Zk(kk, Fk, Ik) {
+      return "symbol" === typeof Fk && (Fk = Fk.description ? "[".concat(Fk.description, "]") : ""), Object.defineProperty(kk, "name", {
         configurable: !0,
-        value: ZC ? "".concat(ZC, " ", zC) : zC
+        value: Ik ? "".concat(Ik, " ", Fk) : Fk
       })
     }
 
-    function MC(CC, zC) {
-      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(CC, zC)
+    function jk(kk, Fk) {
+      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(kk, Fk)
     }
 
-    function gC(CC, zC, ZC, QC) {
-      return new(ZC || (ZC = Promise))((function(wC, bC) {
-        function nC(CC) {
+    function ek(kk, Fk, Ik, Xk) {
+      return new(Ik || (Ik = Promise))((function(Tk, ik) {
+        function yk(kk) {
           try {
-            oC(QC.next(CC))
-          } catch (zC) {
-            bC(zC)
+            ak(Xk.next(kk))
+          } catch (Fk) {
+            ik(Fk)
           }
         }
 
-        function fC(CC) {
+        function lk(kk) {
           try {
-            oC(QC.throw(CC))
-          } catch (zC) {
-            bC(zC)
+            ak(Xk.throw(kk))
+          } catch (Fk) {
+            ik(Fk)
           }
         }
 
-        function oC(CC) {
-          var zC;
-          CC.done ? wC(CC.value) : (zC = CC.value, zC instanceof ZC ? zC : new ZC((function(CC) {
-            CC(zC)
-          }))).then(nC, fC)
+        function ak(kk) {
+          var Fk;
+          kk.done ? Tk(kk.value) : (Fk = kk.value, Fk instanceof Ik ? Fk : new Ik((function(kk) {
+            kk(Fk)
+          }))).then(yk, lk)
         }
-        oC((QC = QC.apply(CC, zC || [])).next())
+        ak((Xk = Xk.apply(kk, Fk || [])).next())
       }))
     }
 
-    function SC(CC, zC) {
-      var ZC, QC, wC, bC = {
+    function wk(kk, Fk) {
+      var Ik, Xk, Tk, ik = {
           label: 0,
           sent: function() {
-            if (1 & wC[0]) throw wC[1];
-            return wC[1]
+            if (1 & Tk[0]) throw Tk[1];
+            return Tk[1]
           },
           trys: [],
           ops: []
         },
-        nC = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
-      return nC.next = fC(0), nC.throw = fC(1), nC.return = fC(2), "function" === typeof Symbol && (nC[Symbol.iterator] = function() {
+        yk = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
+      return yk.next = lk(0), yk.throw = lk(1), yk.return = lk(2), "function" === typeof Symbol && (yk[Symbol.iterator] = function() {
         return this
-      }), nC;
+      }), yk;
 
-      function fC(fC) {
-        return function(oC) {
-          return function(fC) {
-            if (ZC) throw new TypeError("Generator is already executing.");
-            for (; nC && (nC = 0, fC[0] && (bC = 0)), bC;) try {
-              if (ZC = 1, QC && (wC = 2 & fC[0] ? QC.return : fC[0] ? QC.throw || ((wC = QC.return) && wC.call(QC), 0) : QC.next) && !(wC = wC.call(QC, fC[1])).done) return wC;
-              switch (QC = 0, wC && (fC = [2 & fC[0], wC.value]), fC[0]) {
+      function lk(lk) {
+        return function(ak) {
+          return function(lk) {
+            if (Ik) throw new TypeError("Generator is already executing.");
+            for (; yk && (yk = 0, lk[0] && (ik = 0)), ik;) try {
+              if (Ik = 1, Xk && (Tk = 2 & lk[0] ? Xk.return : lk[0] ? Xk.throw || ((Tk = Xk.return) && Tk.call(Xk), 0) : Xk.next) && !(Tk = Tk.call(Xk, lk[1])).done) return Tk;
+              switch (Xk = 0, Tk && (lk = [2 & lk[0], Tk.value]), lk[0]) {
                 case 0:
                 case 1:
-                  wC = fC;
+                  Tk = lk;
                   break;
                 case 4:
-                  return bC.label++, {
-                    value: fC[1],
+                  return ik.label++, {
+                    value: lk[1],
                     done: !1
                   };
                 case 5:
-                  bC.label++, QC = fC[1], fC = [0];
+                  ik.label++, Xk = lk[1], lk = [0];
                   continue;
                 case 7:
-                  fC = bC.ops.pop(), bC.trys.pop();
+                  lk = ik.ops.pop(), ik.trys.pop();
                   continue;
                 default:
-                  if (!(wC = (wC = bC.trys).length > 0 && wC[wC.length - 1]) && (6 === fC[0] || 2 === fC[0])) {
-                    bC = 0;
+                  if (!(Tk = (Tk = ik.trys).length > 0 && Tk[Tk.length - 1]) && (6 === lk[0] || 2 === lk[0])) {
+                    ik = 0;
                     continue
                   }
-                  if (3 === fC[0] && (!wC || fC[1] > wC[0] && fC[1] < wC[3])) {
-                    bC.label = fC[1];
+                  if (3 === lk[0] && (!Tk || lk[1] > Tk[0] && lk[1] < Tk[3])) {
+                    ik.label = lk[1];
                     break
                   }
-                  if (6 === fC[0] && bC.label < wC[1]) {
-                    bC.label = wC[1], wC = fC;
+                  if (6 === lk[0] && ik.label < Tk[1]) {
+                    ik.label = Tk[1], Tk = lk;
                     break
                   }
-                  if (wC && bC.label < wC[2]) {
-                    bC.label = wC[2], bC.ops.push(fC);
+                  if (Tk && ik.label < Tk[2]) {
+                    ik.label = Tk[2], ik.ops.push(lk);
                     break
                   }
-                  wC[2] && bC.ops.pop(), bC.trys.pop();
+                  Tk[2] && ik.ops.pop(), ik.trys.pop();
                   continue
               }
-              fC = zC.call(CC, bC)
-            } catch (oC) {
-              fC = [6, oC], QC = 0
+              lk = Fk.call(kk, ik)
+            } catch (ak) {
+              lk = [6, ak], Xk = 0
             } finally {
-              ZC = wC = 0
+              Ik = Tk = 0
             }
-            if (5 & fC[0]) throw fC[1];
+            if (5 & lk[0]) throw lk[1];
             return {
-              value: fC[0] ? fC[1] : void 0,
+              value: lk[0] ? lk[1] : void 0,
               done: !0
             }
-          }([fC, oC])
+          }([lk, ak])
         }
       }
     }
-    var pC = Object.create ? function(CC, zC, ZC, QC) {
-      void 0 === QC && (QC = ZC);
-      var wC = Object.getOwnPropertyDescriptor(zC, ZC);
-      wC && !("get" in wC ? !zC.__esModule : wC.writable || wC.configurable) || (wC = {
+    var Hk = Object.create ? function(kk, Fk, Ik, Xk) {
+      void 0 === Xk && (Xk = Ik);
+      var Tk = Object.getOwnPropertyDescriptor(Fk, Ik);
+      Tk && !("get" in Tk ? !Fk.__esModule : Tk.writable || Tk.configurable) || (Tk = {
         enumerable: !0,
         get: function() {
-          return zC[ZC]
+          return Fk[Ik]
         }
-      }), Object.defineProperty(CC, QC, wC)
-    } : function(CC, zC, ZC, QC) {
-      void 0 === QC && (QC = ZC), CC[QC] = zC[ZC]
+      }), Object.defineProperty(kk, Xk, Tk)
+    } : function(kk, Fk, Ik, Xk) {
+      void 0 === Xk && (Xk = Ik), kk[Xk] = Fk[Ik]
     };
 
-    function PC(CC, zC) {
-      for (var ZC in CC) "default" === ZC || Object.prototype.hasOwnProperty.call(zC, ZC) || pC(zC, CC, ZC)
+    function Jk(kk, Fk) {
+      for (var Ik in kk) "default" === Ik || Object.prototype.hasOwnProperty.call(Fk, Ik) || Hk(Fk, kk, Ik)
     }
 
-    function GC(CC) {
-      var zC = "function" === typeof Symbol && Symbol.iterator,
-        ZC = zC && CC[zC],
-        QC = 0;
-      if (ZC) return ZC.call(CC);
-      if (CC && "number" === typeof CC.length) return {
+    function xk(kk) {
+      var Fk = "function" === typeof Symbol && Symbol.iterator,
+        Ik = Fk && kk[Fk],
+        Xk = 0;
+      if (Ik) return Ik.call(kk);
+      if (kk && "number" === typeof kk.length) return {
         next: function() {
-          return CC && QC >= CC.length && (CC = void 0), {
-            value: CC && CC[QC++],
-            done: !CC
+          return kk && Xk >= kk.length && (kk = void 0), {
+            value: kk && kk[Xk++],
+            done: !kk
           }
         }
       };
-      throw new TypeError(zC ? "Object is not iterable." : "Symbol.iterator is not defined.")
+      throw new TypeError(Fk ? "Object is not iterable." : "Symbol.iterator is not defined.")
     }
 
-    function RC(CC, zC) {
-      var ZC = "function" === typeof Symbol && CC[Symbol.iterator];
-      if (!ZC) return CC;
-      var QC, wC, bC = ZC.call(CC),
-        nC = [];
+    function Pk(kk, Fk) {
+      var Ik = "function" === typeof Symbol && kk[Symbol.iterator];
+      if (!Ik) return kk;
+      var Xk, Tk, ik = Ik.call(kk),
+        yk = [];
       try {
         for (;
-          (void 0 === zC || zC-- > 0) && !(QC = bC.next()).done;) nC.push(QC.value)
-      } catch (fC) {
-        wC = {
-          error: fC
+          (void 0 === Fk || Fk-- > 0) && !(Xk = ik.next()).done;) yk.push(Xk.value)
+      } catch (lk) {
+        Tk = {
+          error: lk
         }
       } finally {
         try {
-          QC && !QC.done && (ZC = bC.return) && ZC.call(bC)
+          Xk && !Xk.done && (Ik = ik.return) && Ik.call(ik)
         } finally {
-          if (wC) throw wC.error
+          if (Tk) throw Tk.error
         }
       }
-      return nC
+      return yk
     }
 
-    function AC() {
-      for (var CC = [], zC = 0; zC < arguments.length; zC++) CC = CC.concat(RC(arguments[zC]));
-      return CC
+    function Kk() {
+      for (var kk = [], Fk = 0; Fk < arguments.length; Fk++) kk = kk.concat(Pk(arguments[Fk]));
+      return kk
     }
 
-    function xC() {
-      for (var CC = 0, zC = 0, ZC = arguments.length; zC < ZC; zC++) CC += arguments[zC].length;
-      var QC = Array(CC),
-        wC = 0;
-      for (zC = 0; zC < ZC; zC++)
-        for (var bC = arguments[zC], nC = 0, fC = bC.length; nC < fC; nC++, wC++) QC[wC] = bC[nC];
-      return QC
+    function Qk() {
+      for (var kk = 0, Fk = 0, Ik = arguments.length; Fk < Ik; Fk++) kk += arguments[Fk].length;
+      var Xk = Array(kk),
+        Tk = 0;
+      for (Fk = 0; Fk < Ik; Fk++)
+        for (var ik = arguments[Fk], yk = 0, lk = ik.length; yk < lk; yk++, Tk++) Xk[Tk] = ik[yk];
+      return Xk
     }
 
-    function JC(CC, zC, ZC) {
-      if (ZC || 2 === arguments.length)
-        for (var QC, wC = 0, bC = zC.length; wC < bC; wC++) !QC && wC in zC || (QC || (QC = Array.prototype.slice.call(zC, 0, wC)), QC[wC] = zC[wC]);
-      return CC.concat(QC || Array.prototype.slice.call(zC))
+    function sk(kk, Fk, Ik) {
+      if (Ik || 2 === arguments.length)
+        for (var Xk, Tk = 0, ik = Fk.length; Tk < ik; Tk++) !Xk && Tk in Fk || (Xk || (Xk = Array.prototype.slice.call(Fk, 0, Tk)), Xk[Tk] = Fk[Tk]);
+      return kk.concat(Xk || Array.prototype.slice.call(Fk))
     }
 
-    function IC(CC) {
-      return this instanceof IC ? (this.v = CC, this) : new IC(CC)
+    function Vk(kk) {
+      return this instanceof Vk ? (this.v = kk, this) : new Vk(kk)
     }
 
-    function iC(CC, zC, ZC) {
+    function zk(kk, Fk, Ik) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var QC, wC = ZC.apply(CC, zC || []),
-        bC = [];
-      return QC = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), nC("next"), nC("throw"), nC("return", (function(CC) {
-        return function(zC) {
-          return Promise.resolve(zC).then(CC, qC)
+      var Xk, Tk = Ik.apply(kk, Fk || []),
+        ik = [];
+      return Xk = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), yk("next"), yk("throw"), yk("return", (function(kk) {
+        return function(Fk) {
+          return Promise.resolve(Fk).then(kk, qk)
         }
-      })), QC[Symbol.asyncIterator] = function() {
+      })), Xk[Symbol.asyncIterator] = function() {
         return this
-      }, QC;
+      }, Xk;
 
-      function nC(CC, zC) {
-        wC[CC] && (QC[CC] = function(zC) {
-          return new Promise((function(ZC, QC) {
-            bC.push([CC, zC, ZC, QC]) > 1 || fC(CC, zC)
+      function yk(kk, Fk) {
+        Tk[kk] && (Xk[kk] = function(Fk) {
+          return new Promise((function(Ik, Xk) {
+            ik.push([kk, Fk, Ik, Xk]) > 1 || lk(kk, Fk)
           }))
-        }, zC && (QC[CC] = zC(QC[CC])))
+        }, Fk && (Xk[kk] = Fk(Xk[kk])))
       }
 
-      function fC(CC, zC) {
+      function lk(kk, Fk) {
         try {
-          (ZC = wC[CC](zC)).value instanceof IC ? Promise.resolve(ZC.value.v).then(oC, qC) : FC(bC[0][2], ZC)
-        } catch (QC) {
-          FC(bC[0][3], QC)
+          (Ik = Tk[kk](Fk)).value instanceof Vk ? Promise.resolve(Ik.value.v).then(ak, qk) : Lk(ik[0][2], Ik)
+        } catch (Xk) {
+          Lk(ik[0][3], Xk)
         }
-        var ZC
+        var Ik
       }
 
-      function oC(CC) {
-        fC("next", CC)
+      function ak(kk) {
+        lk("next", kk)
       }
 
-      function qC(CC) {
-        fC("throw", CC)
+      function qk(kk) {
+        lk("throw", kk)
       }
 
-      function FC(CC, zC) {
-        CC(zC), bC.shift(), bC.length && fC(bC[0][0], bC[0][1])
+      function Lk(kk, Fk) {
+        kk(Fk), ik.shift(), ik.length && lk(ik[0][0], ik[0][1])
       }
     }
 
-    function vC(CC) {
-      var zC, ZC;
-      return zC = {}, QC("next"), QC("throw", (function(CC) {
-        throw CC
-      })), QC("return"), zC[Symbol.iterator] = function() {
+    function Sk(kk) {
+      var Fk, Ik;
+      return Fk = {}, Xk("next"), Xk("throw", (function(kk) {
+        throw kk
+      })), Xk("return"), Fk[Symbol.iterator] = function() {
         return this
-      }, zC;
+      }, Fk;
 
-      function QC(QC, wC) {
-        zC[QC] = CC[QC] ? function(zC) {
-          return (ZC = !ZC) ? {
-            value: IC(CC[QC](zC)),
+      function Xk(Xk, Tk) {
+        Fk[Xk] = kk[Xk] ? function(Fk) {
+          return (Ik = !Ik) ? {
+            value: Vk(kk[Xk](Fk)),
             done: !1
-          } : wC ? wC(zC) : zC
-        } : wC
+          } : Tk ? Tk(Fk) : Fk
+        } : Tk
       }
     }
 
-    function eC(CC) {
+    function vk(kk) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var zC, ZC = CC[Symbol.asyncIterator];
-      return ZC ? ZC.call(CC) : (CC = GC(CC), zC = {}, QC("next"), QC("throw"), QC("return"), zC[Symbol.asyncIterator] = function() {
+      var Fk, Ik = kk[Symbol.asyncIterator];
+      return Ik ? Ik.call(kk) : (kk = xk(kk), Fk = {}, Xk("next"), Xk("throw"), Xk("return"), Fk[Symbol.asyncIterator] = function() {
         return this
-      }, zC);
+      }, Fk);
 
-      function QC(ZC) {
-        zC[ZC] = CC[ZC] && function(zC) {
-          return new Promise((function(QC, wC) {
-            (function(CC, zC, ZC, QC) {
-              Promise.resolve(QC).then((function(zC) {
-                CC({
-                  value: zC,
-                  done: ZC
+      function Xk(Ik) {
+        Fk[Ik] = kk[Ik] && function(Fk) {
+          return new Promise((function(Xk, Tk) {
+            (function(kk, Fk, Ik, Xk) {
+              Promise.resolve(Xk).then((function(Fk) {
+                kk({
+                  value: Fk,
+                  done: Ik
                 })
-              }), zC)
-            })(QC, wC, (zC = CC[ZC](zC)).done, zC.value)
+              }), Fk)
+            })(Xk, Tk, (Fk = kk[Ik](Fk)).done, Fk.value)
           }))
         }
       }
     }
 
-    function hC(CC, zC) {
-      return Object.defineProperty ? Object.defineProperty(CC, "raw", {
-        value: zC
-      }) : CC.raw = zC, CC
+    function Ek(kk, Fk) {
+      return Object.defineProperty ? Object.defineProperty(kk, "raw", {
+        value: Fk
+      }) : kk.raw = Fk, kk
     }
-    var KC = Object.create ? function(CC, zC) {
-        Object.defineProperty(CC, "default", {
+    var Ok = Object.create ? function(kk, Fk) {
+        Object.defineProperty(kk, "default", {
           enumerable: !0,
-          value: zC
+          value: Fk
         })
-      } : function(CC, zC) {
-        CC.default = zC
+      } : function(kk, Fk) {
+        kk.default = Fk
       },
-      YC = function(CC) {
-        return YC = Object.getOwnPropertyNames || function(CC) {
-          var zC = [];
-          for (var ZC in CC) Object.prototype.hasOwnProperty.call(CC, ZC) && (zC[zC.length] = ZC);
-          return zC
-        }, YC(CC)
+      nk = function(kk) {
+        return nk = Object.getOwnPropertyNames || function(kk) {
+          var Fk = [];
+          for (var Ik in kk) Object.prototype.hasOwnProperty.call(kk, Ik) && (Fk[Fk.length] = Ik);
+          return Fk
+        }, nk(kk)
       };
 
-    function dC(CC) {
-      if (CC && CC.__esModule) return CC;
-      var zC = {};
-      if (null != CC)
-        for (var ZC = YC(CC), QC = 0; QC < ZC.length; QC++) "default" !== ZC[QC] && pC(zC, CC, ZC[QC]);
-      return KC(zC, CC), zC
+    function Gk(kk) {
+      if (kk && kk.__esModule) return kk;
+      var Fk = {};
+      if (null != kk)
+        for (var Ik = nk(kk), Xk = 0; Xk < Ik.length; Xk++) "default" !== Ik[Xk] && Hk(Fk, kk, Ik[Xk]);
+      return Ok(Fk, kk), Fk
     }
 
-    function mC(CC) {
-      return CC && CC.__esModule ? CC : {
-        default: CC
+    function pk(kk) {
+      return kk && kk.__esModule ? kk : {
+        default: kk
       }
     }
 
-    function HC(CC, zC, ZC, QC) {
-      if ("a" === ZC && !QC) throw new TypeError("Private accessor was defined without a getter");
-      if ("function" === typeof zC ? CC !== zC || !QC : !zC.has(CC)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
-      return "m" === ZC ? QC : "a" === ZC ? QC.call(CC) : QC ? QC.value : zC.get(CC)
+    function uk(kk, Fk, Ik, Xk) {
+      if ("a" === Ik && !Xk) throw new TypeError("Private accessor was defined without a getter");
+      if ("function" === typeof Fk ? kk !== Fk || !Xk : !Fk.has(kk)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+      return "m" === Ik ? Xk : "a" === Ik ? Xk.call(kk) : Xk ? Xk.value : Fk.get(kk)
     }
 
-    function EC(CC, zC, ZC, QC, wC) {
-      if ("m" === QC) throw new TypeError("Private method is not writable");
-      if ("a" === QC && !wC) throw new TypeError("Private accessor was defined without a setter");
-      if ("function" === typeof zC ? CC !== zC || !wC : !zC.has(CC)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
-      return "a" === QC ? wC.call(CC, ZC) : wC ? wC.value = ZC : zC.set(CC, ZC), ZC
+    function bk(kk, Fk, Ik, Xk, Tk) {
+      if ("m" === Xk) throw new TypeError("Private method is not writable");
+      if ("a" === Xk && !Tk) throw new TypeError("Private accessor was defined without a setter");
+      if ("function" === typeof Fk ? kk !== Fk || !Tk : !Fk.has(kk)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+      return "a" === Xk ? Tk.call(kk, Ik) : Tk ? Tk.value = Ik : Fk.set(kk, Ik), Ik
     }
 
-    function lC(CC, zC) {
-      if (null === zC || "object" !== typeof zC && "function" !== typeof zC) throw new TypeError("Cannot use 'in' operator on non-object");
-      return "function" === typeof CC ? zC === CC : CC.has(zC)
+    function Rk(kk, Fk) {
+      if (null === Fk || "object" !== typeof Fk && "function" !== typeof Fk) throw new TypeError("Cannot use 'in' operator on non-object");
+      return "function" === typeof kk ? Fk === kk : kk.has(Fk)
     }
 
-    function XC(CC, zC, ZC) {
-      if (null !== zC && void 0 !== zC) {
-        if ("object" !== typeof zC && "function" !== typeof zC) throw new TypeError("Object expected.");
-        var QC, wC;
-        if (ZC) {
+    function Uk(kk, Fk, Ik) {
+      if (null !== Fk && void 0 !== Fk) {
+        if ("object" !== typeof Fk && "function" !== typeof Fk) throw new TypeError("Object expected.");
+        var Xk, Tk;
+        if (Ik) {
           if (!Symbol.asyncDispose) throw new TypeError("Symbol.asyncDispose is not defined.");
-          QC = zC[Symbol.asyncDispose]
+          Xk = Fk[Symbol.asyncDispose]
         }
-        if (void 0 === QC) {
+        if (void 0 === Xk) {
           if (!Symbol.dispose) throw new TypeError("Symbol.dispose is not defined.");
-          QC = zC[Symbol.dispose], ZC && (wC = QC)
+          Xk = Fk[Symbol.dispose], Ik && (Tk = Xk)
         }
-        if ("function" !== typeof QC) throw new TypeError("Object not disposable.");
-        wC && (QC = function() {
+        if ("function" !== typeof Xk) throw new TypeError("Object not disposable.");
+        Tk && (Xk = function() {
           try {
-            wC.call(this)
-          } catch (CC) {
-            return Promise.reject(CC)
+            Tk.call(this)
+          } catch (kk) {
+            return Promise.reject(kk)
           }
-        }), CC.stack.push({
-          value: zC,
-          dispose: QC,
-          async: ZC
+        }), kk.stack.push({
+          value: Fk,
+          dispose: Xk,
+          async: Ik
         })
-      } else ZC && CC.stack.push({
+      } else Ik && kk.stack.push({
         async: !0
       });
-      return zC
+      return Fk
     }
-    var cC = "function" === typeof SuppressedError ? SuppressedError : function(CC, zC, ZC) {
-      var QC = new Error(ZC);
-      return QC.name = "SuppressedError", QC.error = CC, QC.suppressed = zC, QC
+    var Ck = "function" === typeof SuppressedError ? SuppressedError : function(kk, Fk, Ik) {
+      var Xk = new Error(Ik);
+      return Xk.name = "SuppressedError", Xk.error = kk, Xk.suppressed = Fk, Xk
     };
 
-    function uC(CC) {
-      function zC(zC) {
-        CC.error = CC.hasError ? new cC(zC, CC.error, "An error was suppressed during disposal.") : zC, CC.hasError = !0
+    function Nk(kk) {
+      function Fk(Fk) {
+        kk.error = kk.hasError ? new Ck(Fk, kk.error, "An error was suppressed during disposal.") : Fk, kk.hasError = !0
       }
-      var ZC, QC = 0;
-      return function wC() {
-        for (; ZC = CC.stack.pop();) try {
-          if (!ZC.async && 1 === QC) return QC = 0, CC.stack.push(ZC), Promise.resolve().then(wC);
-          if (ZC.dispose) {
-            var bC = ZC.dispose.call(ZC.value);
-            if (ZC.async) return QC |= 2, Promise.resolve(bC).then(wC, (function(CC) {
-              return zC(CC), wC()
+      var Ik, Xk = 0;
+      return function Tk() {
+        for (; Ik = kk.stack.pop();) try {
+          if (!Ik.async && 1 === Xk) return Xk = 0, kk.stack.push(Ik), Promise.resolve().then(Tk);
+          if (Ik.dispose) {
+            var ik = Ik.dispose.call(Ik.value);
+            if (Ik.async) return Xk |= 2, Promise.resolve(ik).then(Tk, (function(kk) {
+              return Fk(kk), Tk()
             }))
-          } else QC |= 1
-        } catch (nC) {
-          zC(nC)
+          } else Xk |= 1
+        } catch (yk) {
+          Fk(yk)
         }
-        if (1 === QC) return CC.hasError ? Promise.reject(CC.error) : Promise.resolve();
-        if (CC.hasError) throw CC.error
+        if (1 === Xk) return kk.hasError ? Promise.reject(kk.error) : Promise.resolve();
+        if (kk.hasError) throw kk.error
       }()
     }
 
-    function rC(CC, zC) {
-      return "string" === typeof CC && /^\.\.?\//.test(CC) ? CC.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(CC, ZC, QC, wC, bC) {
-        return ZC ? zC ? ".jsx" : ".js" : !QC || wC && bC ? QC + wC + "." + bC.toLowerCase() + "js" : CC
-      })) : CC
+    function ck(kk, Fk) {
+      return "string" === typeof kk && /^\.\.?\//.test(kk) ? kk.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(kk, Ik, Xk, Tk, ik) {
+        return Ik ? Fk ? ".jsx" : ".js" : !Xk || Tk && ik ? Xk + Tk + "." + ik.toLowerCase() + "js" : kk
+      })) : kk
     }
-    const sC = {
-      __extends: wC,
-      __assign: bC,
-      __rest: nC,
-      __decorate: fC,
-      __param: oC,
-      __esDecorate: qC,
-      __runInitializers: FC,
-      __propKey: WC,
-      __setFunctionName: NC,
-      __metadata: MC,
-      __awaiter: gC,
-      __generator: SC,
-      __createBinding: pC,
-      __exportStar: PC,
-      __values: GC,
-      __read: RC,
-      __spread: AC,
-      __spreadArrays: xC,
-      __spreadArray: JC,
-      __await: IC,
-      __asyncGenerator: iC,
-      __asyncDelegator: vC,
-      __asyncValues: eC,
-      __makeTemplateObject: hC,
-      __importStar: dC,
-      __importDefault: mC,
-      __classPrivateFieldGet: HC,
-      __classPrivateFieldSet: EC,
-      __classPrivateFieldIn: lC,
-      __addDisposableResource: XC,
-      __disposeResources: uC,
-      __rewriteRelativeImportExtension: rC
+    const Wk = {
+      __extends: Tk,
+      __assign: ik,
+      __rest: yk,
+      __decorate: lk,
+      __param: ak,
+      __esDecorate: qk,
+      __runInitializers: Lk,
+      __propKey: tk,
+      __setFunctionName: Zk,
+      __metadata: jk,
+      __awaiter: ek,
+      __generator: wk,
+      __createBinding: Hk,
+      __exportStar: Jk,
+      __values: xk,
+      __read: Pk,
+      __spread: Kk,
+      __spreadArrays: Qk,
+      __spreadArray: sk,
+      __await: Vk,
+      __asyncGenerator: zk,
+      __asyncDelegator: Sk,
+      __asyncValues: vk,
+      __makeTemplateObject: Ek,
+      __importStar: Gk,
+      __importDefault: pk,
+      __classPrivateFieldGet: uk,
+      __classPrivateFieldSet: bk,
+      __classPrivateFieldIn: Rk,
+      __addDisposableResource: Uk,
+      __disposeResources: Nk,
+      __rewriteRelativeImportExtension: ck
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

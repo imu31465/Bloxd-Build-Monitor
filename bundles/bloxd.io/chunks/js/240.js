@@ -1,15 +1,15 @@
 export const id = 240;
 export const ids = [240];
 export const modules = {
-  37640: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => WC,
-      f: () => nC
+  37811: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => tk,
+      d: () => yk
     });
-    var QC = ZC(9217),
-      wC = ZC(9194),
-      bC = ZC(326);
-    const nC = {
+    var Xk = Ik(9210),
+      Tk = Ik(9183),
+      ik = Ik(337);
+    const yk = {
       "Maple Door": {
         positions: [{
           block: "Maple Door",
@@ -2948,52 +2948,52 @@ export const modules = {
           z: 0
         }]
       },
-      ...fC("White"),
-      ...fC("Orange"),
-      ...fC("Magenta"),
-      ...fC("Light Blue"),
-      ...fC("Yellow"),
-      ...fC("Lime"),
-      ...fC("Pink"),
-      ...fC("Gray"),
-      ...fC("Light Gray"),
-      ...fC("Cyan"),
-      ...fC("Purple"),
-      ...fC("Blue"),
-      ...fC("Brown"),
-      ...fC("Green"),
-      ...fC("Red"),
-      ...fC("Black"),
-      ...fC("Draugr"),
-      ...fC("Skull"),
-      ...fC("Rainbow"),
-      ...oC("Sheep"),
-      ...oC("Cow"),
-      ...oC("Pig"),
-      ...oC("Horse"),
-      ...oC("Camel"),
-      ...oC("Wolf"),
-      ...oC("Deer"),
-      ...oC("Wildcat"),
-      ...qC("Radar"),
-      ...qC("Inactive Radar"),
-      ...qC("Active Radar"),
-      ...FC("Magenta"),
-      ...FC("Light Gray"),
-      ...FC("Red"),
-      ...FC("White"),
-      ...FC("Orange"),
-      ...FC("Light Blue"),
-      ...FC("Yellow"),
-      ...FC("Lime"),
-      ...FC("Pink"),
-      ...FC("Gray"),
-      ...FC("Cyan"),
-      ...FC("Purple"),
-      ...FC("Blue"),
-      ...FC("Brown"),
-      ...FC("Green"),
-      ...FC("Black"),
+      ...lk("White"),
+      ...lk("Orange"),
+      ...lk("Magenta"),
+      ...lk("Light Blue"),
+      ...lk("Yellow"),
+      ...lk("Lime"),
+      ...lk("Pink"),
+      ...lk("Gray"),
+      ...lk("Light Gray"),
+      ...lk("Cyan"),
+      ...lk("Purple"),
+      ...lk("Blue"),
+      ...lk("Brown"),
+      ...lk("Green"),
+      ...lk("Red"),
+      ...lk("Black"),
+      ...lk("Draugr"),
+      ...lk("Skull"),
+      ...lk("Rainbow"),
+      ...ak("Sheep"),
+      ...ak("Cow"),
+      ...ak("Pig"),
+      ...ak("Horse"),
+      ...ak("Camel"),
+      ...ak("Wolf"),
+      ...ak("Deer"),
+      ...ak("Wildcat"),
+      ...qk("Radar"),
+      ...qk("Inactive Radar"),
+      ...qk("Active Radar"),
+      ...Lk("Magenta"),
+      ...Lk("Light Gray"),
+      ...Lk("Red"),
+      ...Lk("White"),
+      ...Lk("Orange"),
+      ...Lk("Light Blue"),
+      ...Lk("Yellow"),
+      ...Lk("Lime"),
+      ...Lk("Pink"),
+      ...Lk("Gray"),
+      ...Lk("Cyan"),
+      ...Lk("Purple"),
+      ...Lk("Blue"),
+      ...Lk("Brown"),
+      ...Lk("Green"),
+      ...Lk("Black"),
       "Auto Miner": {
         positions: [{
           block: "Auto Miner",
@@ -3107,11 +3107,11 @@ export const modules = {
         }]
       },
       ... function() {
-        const CC = "Lunite Auto Miner";
+        const kk = "Lunite Auto Miner";
         return {
-          [CC]: {
+          [kk]: {
             positions: [{
-              block: CC,
+              block: kk,
               x: 0,
               y: 0,
               z: 0
@@ -3137,9 +3137,9 @@ export const modules = {
               z: -2
             }]
           },
-          [`${CC}|meta|rot2`]: {
+          [`${kk}|meta|rot2`]: {
             positions: [{
-              block: `${CC}|meta|rot2`,
+              block: `${kk}|meta|rot2`,
               x: 0,
               y: 0,
               z: 0
@@ -3165,9 +3165,9 @@ export const modules = {
               z: 0
             }]
           },
-          [`${CC}|meta|rot3`]: {
+          [`${kk}|meta|rot3`]: {
             positions: [{
-              block: `${CC}|meta|rot3`,
+              block: `${kk}|meta|rot3`,
               x: 0,
               y: 0,
               z: 0
@@ -3193,9 +3193,9 @@ export const modules = {
               z: 2
             }]
           },
-          [`${CC}|meta|rot4`]: {
+          [`${kk}|meta|rot4`]: {
             positions: [{
-              block: `${CC}|meta|rot4`,
+              block: `${kk}|meta|rot4`,
               x: 0,
               y: 0,
               z: 0
@@ -3224,74 +3224,74 @@ export const modules = {
         }
       }(),
       ... function() {
-        const CC = {
-            1: CC => ({
+        const kk = {
+            1: kk => ({
               x: 0,
-              z: CC
+              z: kk
             }),
-            2: CC => ({
-              x: CC,
+            2: kk => ({
+              x: kk,
               z: 0
             }),
-            3: CC => ({
+            3: kk => ({
               x: 0,
-              z: -CC
+              z: -kk
             }),
-            4: CC => ({
-              x: -CC,
+            4: kk => ({
+              x: -kk,
               z: 0
             })
           },
-          zC = {};
-        for (let ZC = 1; ZC <= 4; ZC++) {
-          const wC = 1 === ZC ? "" : `|meta|rot${ZC}`;
-          zC[`${QC.c[0].block}${wC}`] = {
-            positions: QC.c.map((zC => {
+          Fk = {};
+        for (let Ik = 1; Ik <= 4; Ik++) {
+          const Tk = 1 === Ik ? "" : `|meta|rot${Ik}`;
+          Fk[`${Xk.b[0].block}${Tk}`] = {
+            positions: Xk.b.map((Fk => {
               let {
-                block: QC,
-                y: bC,
-                z: nC
-              } = zC;
+                block: Xk,
+                y: ik,
+                z: yk
+              } = Fk;
               return {
-                block: `${QC}${wC}`,
-                y: bC,
-                ...CC[ZC](nC)
+                block: `${Xk}${Tk}`,
+                y: ik,
+                ...kk[Ik](yk)
               }
             }))
           }
         }
-        return zC
+        return Fk
       }(),
       ... function() {
-        const CC = {};
-        for (let zC = 1; zC <= QC.n; zC++) {
-          const ZC = (0, QC.gc)(zC),
-            wC = QC.r[zC - 1],
-            bC = [{
-              block: ZC,
+        const kk = {};
+        for (let Fk = 1; Fk <= Xk.k; Fk++) {
+          const Ik = (0, Xk.ic)(Fk),
+            Tk = Xk.n[Fk - 1],
+            ik = [{
+              block: Ik,
               x: 0,
               y: 0,
               z: 0
             }];
-          for (const CC of QC.h)
-            for (let zC = 1; zC <= wC; zC++) {
-              if ("southwest" === CC && 1 === zC) continue;
+          for (const kk of Xk.f)
+            for (let Fk = 1; Fk <= Tk; Fk++) {
+              if ("southwest" === kk && 1 === Fk) continue;
               const {
-                x: ZC,
-                z: wC
-              } = QC.k[CC];
-              bC.push({
-                block: (0, QC.fc)(CC, zC),
-                x: ZC,
-                y: zC - 1,
-                z: wC
+                x: Ik,
+                z: Tk
+              } = Xk.j[kk];
+              ik.push({
+                block: (0, Xk.gc)(kk, Fk),
+                x: Ik,
+                y: Fk - 1,
+                z: Tk
               })
             }
-          CC[ZC] = {
-            positions: bC
+          kk[Ik] = {
+            positions: ik
           }
         }
-        return CC
+        return kk
       }(),
       "Solar Panel": {
         positions: [{
@@ -3405,159 +3405,159 @@ export const modules = {
       }
     };
 
-    function fC(CC) {
+    function lk(kk) {
       return {
-        [`${CC} Banner`]: {
+        [`${kk} Banner`]: {
           positions: [{
-            block: `${CC} Banner`,
+            block: `${kk} Banner`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${CC} Banner Flag|meta|rot1|bot`,
+            block: `_${kk} Banner Flag|meta|rot1|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${CC} Banner|meta|rot2|bot`]: {
+        [`${kk} Banner|meta|rot2|bot`]: {
           positions: [{
-            block: `${CC} Banner|meta|rot2|bot`,
+            block: `${kk} Banner|meta|rot2|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${CC} Banner Flag|meta|rot2|bot`,
+            block: `_${kk} Banner Flag|meta|rot2|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${CC} Banner|meta|rot3|bot`]: {
+        [`${kk} Banner|meta|rot3|bot`]: {
           positions: [{
-            block: `${CC} Banner|meta|rot3|bot`,
+            block: `${kk} Banner|meta|rot3|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${CC} Banner Flag|meta|rot3|bot`,
+            block: `_${kk} Banner Flag|meta|rot3|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${CC} Banner|meta|rot4|bot`]: {
+        [`${kk} Banner|meta|rot4|bot`]: {
           positions: [{
-            block: `${CC} Banner|meta|rot4|bot`,
+            block: `${kk} Banner|meta|rot4|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${CC} Banner Flag|meta|rot4|bot`,
+            block: `_${kk} Banner Flag|meta|rot4|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${CC} Banner|meta|rot1|side`]: {
+        [`${kk} Banner|meta|rot1|side`]: {
           positions: [{
-            block: `${CC} Banner|meta|rot1|side`,
+            block: `${kk} Banner|meta|rot1|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${CC} Banner Flag|meta|rot1|side`,
+            block: `_${kk} Banner Flag|meta|rot1|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${CC} Banner|meta|rot2|side`]: {
+        [`${kk} Banner|meta|rot2|side`]: {
           positions: [{
-            block: `${CC} Banner|meta|rot2|side`,
+            block: `${kk} Banner|meta|rot2|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${CC} Banner Flag|meta|rot2|side`,
+            block: `_${kk} Banner Flag|meta|rot2|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${CC} Banner|meta|rot3|side`]: {
+        [`${kk} Banner|meta|rot3|side`]: {
           positions: [{
-            block: `${CC} Banner|meta|rot3|side`,
+            block: `${kk} Banner|meta|rot3|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${CC} Banner Flag|meta|rot3|side`,
+            block: `_${kk} Banner Flag|meta|rot3|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${CC} Banner|meta|rot4|side`]: {
+        [`${kk} Banner|meta|rot4|side`]: {
           positions: [{
-            block: `${CC} Banner|meta|rot4|side`,
+            block: `${kk} Banner|meta|rot4|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${CC} Banner Flag|meta|rot4|side`,
+            block: `_${kk} Banner Flag|meta|rot4|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${CC} Banner|meta|rot1|top`]: {
+        [`${kk} Banner|meta|rot1|top`]: {
           positions: [{
-            block: `${CC} Banner|meta|rot1|top`,
+            block: `${kk} Banner|meta|rot1|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${CC} Banner Flag`,
+            block: `_${kk} Banner Flag`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${CC} Banner|meta|rot2|top`]: {
+        [`${kk} Banner|meta|rot2|top`]: {
           positions: [{
-            block: `${CC} Banner|meta|rot2|top`,
+            block: `${kk} Banner|meta|rot2|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${CC} Banner Flag|meta|rot2|top`,
+            block: `_${kk} Banner Flag|meta|rot2|top`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${CC} Banner|meta|rot3|top`]: {
+        [`${kk} Banner|meta|rot3|top`]: {
           positions: [{
-            block: `${CC} Banner|meta|rot3|top`,
+            block: `${kk} Banner|meta|rot3|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${CC} Banner Flag|meta|rot3|top`,
+            block: `_${kk} Banner Flag|meta|rot3|top`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${CC} Banner|meta|rot4|top`]: {
+        [`${kk} Banner|meta|rot4|top`]: {
           positions: [{
-            block: `${CC} Banner|meta|rot4|top`,
+            block: `${kk} Banner|meta|rot4|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${CC} Banner Flag|meta|rot4|top`,
+            block: `_${kk} Banner Flag|meta|rot4|top`,
             x: 0,
             y: -1,
             z: 0
@@ -3566,96 +3566,96 @@ export const modules = {
       }
     }
 
-    function oC(CC) {
-      const zC = (0, bC.Gb)(CC);
+    function ak(kk) {
+      const Fk = (0, ik.hc)(kk);
       return {
-        [zC]: {
+        [Fk]: {
           positions: [{
-            block: zC,
+            block: Fk,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${zC} Top Left`,
+            block: `_${Fk} Top Left`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${zC} Top Right`,
+            block: `_${Fk} Top Right`,
             x: -1,
             y: 1,
             z: 0
           }, {
-            block: `_${zC} Bottom Right`,
+            block: `_${Fk} Bottom Right`,
             x: -1,
             y: 0,
             z: 0
           }]
         },
-        [`${zC}|meta|rot2`]: {
+        [`${Fk}|meta|rot2`]: {
           positions: [{
-            block: `${zC}|meta|rot2`,
+            block: `${Fk}|meta|rot2`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${zC} Top Left|meta|rot2`,
+            block: `_${Fk} Top Left|meta|rot2`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${zC} Top Right|meta|rot2`,
+            block: `_${Fk} Top Right|meta|rot2`,
             x: 0,
             y: 1,
             z: 1
           }, {
-            block: `_${zC} Bottom Right|meta|rot2`,
+            block: `_${Fk} Bottom Right|meta|rot2`,
             x: 0,
             y: 0,
             z: 1
           }]
         },
-        [`${zC}|meta|rot3`]: {
+        [`${Fk}|meta|rot3`]: {
           positions: [{
-            block: `${zC}|meta|rot3`,
+            block: `${Fk}|meta|rot3`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${zC} Top Left|meta|rot3`,
+            block: `_${Fk} Top Left|meta|rot3`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${zC} Top Right|meta|rot3`,
+            block: `_${Fk} Top Right|meta|rot3`,
             x: 1,
             y: 1,
             z: 0
           }, {
-            block: `_${zC} Bottom Right|meta|rot3`,
+            block: `_${Fk} Bottom Right|meta|rot3`,
             x: 1,
             y: 0,
             z: 0
           }]
         },
-        [`${zC}|meta|rot4`]: {
+        [`${Fk}|meta|rot4`]: {
           positions: [{
-            block: `${zC}|meta|rot4`,
+            block: `${Fk}|meta|rot4`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${zC} Top Left|meta|rot4`,
+            block: `_${Fk} Top Left|meta|rot4`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${zC} Top Right|meta|rot4`,
+            block: `_${Fk} Top Right|meta|rot4`,
             x: 0,
             y: 1,
             z: -1
           }, {
-            block: `_${zC} Bottom Right|meta|rot4`,
+            block: `_${Fk} Bottom Right|meta|rot4`,
             x: 0,
             y: 0,
             z: -1
@@ -3664,77 +3664,77 @@ export const modules = {
       }
     }
 
-    function qC(CC) {
-      const zC = `_${CC} Back`,
-        ZC = `_${CC} Dish`;
+    function qk(kk) {
+      const Fk = `_${kk} Back`,
+        Ik = `_${kk} Dish`;
       return {
-        [CC]: {
+        [kk]: {
           positions: [{
-            block: CC,
+            block: kk,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: zC,
+            block: Fk,
             x: 0,
             y: 0,
             z: -1
           }, {
-            block: ZC,
+            block: Ik,
             x: 0,
             y: 1,
             z: -1
           }]
         },
-        [`${CC}|meta|rot2`]: {
+        [`${kk}|meta|rot2`]: {
           positions: [{
-            block: `${CC}|meta|rot2`,
+            block: `${kk}|meta|rot2`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${zC}|meta|rot2`,
+            block: `${Fk}|meta|rot2`,
             x: -1,
             y: 0,
             z: 0
           }, {
-            block: `${ZC}|meta|rot2`,
+            block: `${Ik}|meta|rot2`,
             x: -1,
             y: 1,
             z: 0
           }]
         },
-        [`${CC}|meta|rot3`]: {
+        [`${kk}|meta|rot3`]: {
           positions: [{
-            block: `${CC}|meta|rot3`,
+            block: `${kk}|meta|rot3`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${zC}|meta|rot3`,
+            block: `${Fk}|meta|rot3`,
             x: 0,
             y: 0,
             z: 1
           }, {
-            block: `${ZC}|meta|rot3`,
+            block: `${Ik}|meta|rot3`,
             x: 0,
             y: 1,
             z: 1
           }]
         },
-        [`${CC}|meta|rot4`]: {
+        [`${kk}|meta|rot4`]: {
           positions: [{
-            block: `${CC}|meta|rot4`,
+            block: `${kk}|meta|rot4`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${zC}|meta|rot4`,
+            block: `${Fk}|meta|rot4`,
             x: 1,
             y: 0,
             z: 0
           }, {
-            block: `${ZC}|meta|rot4`,
+            block: `${Ik}|meta|rot4`,
             x: 1,
             y: 1,
             z: 0
@@ -3743,22 +3743,22 @@ export const modules = {
       }
     }
 
-    function FC(CC) {
-      const zC = `Small ${CC} Pod`;
+    function Lk(kk) {
+      const Fk = `Small ${kk} Pod`;
       return {
-        [zC]: {
+        [Fk]: {
           positions: [{
-            block: zC,
+            block: Fk,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_Small ${CC} Pod Mid`,
+            block: `_Small ${kk} Pod Mid`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_Small ${CC} Pod Top`,
+            block: `_Small ${kk} Pod Top`,
             x: 0,
             y: 2,
             z: 0
@@ -3766,280 +3766,280 @@ export const modules = {
         }
       }
     }
-    for (const NC in nC) {
-      for (const CC of nC[NC].positions)
-        if (CC.id = wC.g[CC.block].id, NC === CC.block && (0 !== CC.x || 0 !== CC.y || 0 !== CC.z)) throw new Error(`Multiblock "${NC}" has main block "${CC.block}" at non-origin position (${CC.x}, ${CC.y}, ${CC.z}) - if you need to do something like this, you'll need to rethink your approach: Banners are a good template to follow.`);
-      nC[wC.g[NC].id] = nC[NC]
+    for (const Zk in yk) {
+      for (const kk of yk[Zk].positions)
+        if (kk.id = Tk.g[kk.block].id, Zk === kk.block && (0 !== kk.x || 0 !== kk.y || 0 !== kk.z)) throw new Error(`Multiblock "${Zk}" has main block "${kk.block}" at non-origin position (${kk.x}, ${kk.y}, ${kk.z}) - if you need to do something like this, you'll need to rethink your approach: Banners are a good template to follow.`);
+      yk[Tk.g[Zk].id] = yk[Zk]
     }
-    const WC = {};
-    for (const NC in nC)
+    const tk = {};
+    for (const Zk in yk)
       for (const {
-          block: CC,
-          x: zC,
-          y: ZC,
-          z: QC
+          block: kk,
+          x: Fk,
+          y: Ik,
+          z: Xk
         }
-        of nC[NC].positions) {
-        const bC = {
-          mainMultiblock: NC,
-          compX: zC,
-          compY: ZC,
-          compZ: QC
+        of yk[Zk].positions) {
+        const ik = {
+          mainMultiblock: Zk,
+          compX: Fk,
+          compY: Ik,
+          compZ: Xk
         };
-        WC[CC] = bC, WC[wC.g[CC].id] = bC
+        tk[kk] = ik, tk[Tk.g[kk].id] = ik
       }
   },
-  38047: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => oC,
-      g: () => fC
+  38209: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => ak,
+      f: () => lk
     });
-    var QC = ZC(9194),
-      wC = ZC(9243),
-      bC = ZC(9252);
-    const nC = wC.w.map((CC => {
+    var Xk = Ik(9183),
+      Tk = Ik(9241),
+      ik = Ik(9244);
+    const yk = Tk.m.map((kk => {
       let {
-        dx: zC,
-        dz: ZC
-      } = CC;
-      return [zC, 0, ZC]
+        dx: Fk,
+        dz: Ik
+      } = kk;
+      return [Fk, 0, Ik]
     }));
 
-    function fC(CC) {
-      const zC = QC.g[CC];
-      return !!zC && CC !== QC.d && !zC.model && !zC.NM && !1 !== zC.solid && !zC.qp
+    function lk(kk) {
+      const Fk = Xk.g[kk];
+      return !!Fk && kk !== Xk.d && !Fk.model && !Fk.qj && !1 !== Fk.solid && !Fk.Re
     }
-    class oC {
-      constructor(CC) {
-        this.model = CC, this.reshapeOffsets = [...nC, [0, -1, 0]]
+    class ak {
+      constructor(kk) {
+        this.model = kk, this.reshapeOffsets = [...yk, [0, -1, 0]]
       }
-      handles(CC) {
-        const zC = QC.g[CC];
-        return (null === zC || void 0 === zC ? void 0 : zC.model) === this.model && void 0 !== zC.attachedTop
+      handles(kk) {
+        const Fk = Xk.g[kk];
+        return (null === Fk || void 0 === Fk ? void 0 : Fk.model) === this.model && void 0 !== Fk.attachedTop
       }
-      affects(CC) {
-        return this.handles(CC) || fC(CC) || (0, bC.A)(QC.g[CC])
+      affects(kk) {
+        return this.handles(kk) || lk(kk) || (0, ik.s)(Xk.g[kk])
       }
-      shape(CC, zC, ZC, nC, oC) {
-        let qC = this.handles(CC(zC, ZC + 1, nC)) ? wC.m : 0;
-        return wC.w.forEach(((oC, FC) => {
+      shape(kk, Fk, Ik, yk, ak) {
+        let qk = this.handles(kk(Fk, Ik + 1, yk)) ? Tk.f : 0;
+        return Tk.m.forEach(((ak, Lk) => {
           let {
-            dx: WC,
-            dz: NC
-          } = oC;
-          const MC = CC(zC + WC, ZC, nC + NC);
-          (this.handles(MC) || fC(MC) || function(CC, zC) {
-            const ZC = QC.g[CC];
-            return (0, bC.A)(ZC) && (0, bC.y)(ZC.meta.rot) === (0 !== wC.w[zC].dx)
-          }(MC, FC)) && (qC |= 1 << FC)
-        })), (0, QC.k)((0, wC.q)(QC.g[oC].meta.rootName, qC))
+            dx: tk,
+            dz: Zk
+          } = ak;
+          const jk = kk(Fk + tk, Ik, yk + Zk);
+          (this.handles(jk) || lk(jk) || function(kk, Fk) {
+            const Ik = Xk.g[kk];
+            return (0, ik.s)(Ik) && (0, ik.n)(Ik.meta.rot) === (0 !== Tk.m[Fk].dx)
+          }(jk, Lk)) && (qk |= 1 << Lk)
+        })), (0, Xk.j)((0, Tk.i)(Xk.g[ak].meta.rootName, qk))
       }
     }
   },
-  37834: (CC, zC, ZC) => {
-    function QC(CC, zC) {
-      var ZC;
-      zC || (zC = {});
-      const QC = null !== (ZC = zC.customAttributes) && void 0 !== ZC ? ZC : {};
-      var wC, bC, nC;
-      "Gun" === (null === CC || void 0 === CC ? void 0 : CC.type) && (QC.shotsLeft = null !== (wC = null !== (bC = QC.shotsLeft) && void 0 !== bC ? bC : null === (nC = QC.gunStats) || void 0 === nC ? void 0 : nC.clipSize) && void 0 !== wC ? wC : CC.clipSize);
-      if (QC.enchantmentTier && (QC.enchantmentTier = QC.enchantmentTier.toString()), QC.enchantments)
-        for (const WC in QC.enchantments) {
-          const CC = QC.enchantments[WC];
-          if ("number" !== typeof CC) {
-            const zC = parseInt(CC);
-            isNaN(zC) || zC < 0 ? QC.enchantments[WC] = void 0 : QC.enchantments[WC] = zC > 1e9 ? 1e9 : zC
+  38e3: (kk, Fk, Ik) => {
+    function Xk(kk, Fk) {
+      var Ik;
+      Fk || (Fk = {});
+      const Xk = null !== (Ik = Fk.customAttributes) && void 0 !== Ik ? Ik : {};
+      var Tk, ik, yk;
+      "Gun" === (null === kk || void 0 === kk ? void 0 : kk.type) && (Xk.shotsLeft = null !== (Tk = null !== (ik = Xk.shotsLeft) && void 0 !== ik ? ik : null === (yk = Xk.gunStats) || void 0 === yk ? void 0 : yk.clipSize) && void 0 !== Tk ? Tk : kk.clipSize);
+      if (Xk.enchantmentTier && (Xk.enchantmentTier = Xk.enchantmentTier.toString()), Xk.enchantments)
+        for (const tk in Xk.enchantments) {
+          const kk = Xk.enchantments[tk];
+          if ("number" !== typeof kk) {
+            const Fk = parseInt(kk);
+            isNaN(Fk) || Fk < 0 ? Xk.enchantments[tk] = void 0 : Xk.enchantments[tk] = Fk > 1e9 ? 1e9 : Fk
           }
         }
-      if (QC.enchantmentData)
-        for (const WC in QC.enchantmentData) {
-          const CC = QC.enchantmentData[WC];
-          if (!CC) continue;
-          if ("object" !== typeof CC) {
-            QC.enchantmentData[WC] = void 0;
+      if (Xk.enchantmentData)
+        for (const tk in Xk.enchantmentData) {
+          const kk = Xk.enchantmentData[tk];
+          if (!kk) continue;
+          if ("object" !== typeof kk) {
+            Xk.enchantmentData[tk] = void 0;
             continue
           }
-          const zC = CC.icon,
-            ZC = CC.description;
-          var fC, oC, qC, FC;
-          if ("string" !== typeof zC) QC.enchantmentData[WC].icon = null !== (fC = null === zC || void 0 === zC || null === (oC = zC.toString) || void 0 === oC ? void 0 : oC.call(zC)) && void 0 !== fC ? fC : void 0;
-          if ("string" !== typeof ZC) QC.enchantmentData[WC].description = null !== (qC = null === ZC || void 0 === ZC || null === (FC = ZC.toString) || void 0 === FC ? void 0 : FC.call(ZC)) && void 0 !== qC ? qC : void 0
+          const Fk = kk.icon,
+            Ik = kk.description;
+          var lk, ak, qk, Lk;
+          if ("string" !== typeof Fk) Xk.enchantmentData[tk].icon = null !== (lk = null === Fk || void 0 === Fk || null === (ak = Fk.toString) || void 0 === ak ? void 0 : ak.call(Fk)) && void 0 !== lk ? lk : void 0;
+          if ("string" !== typeof Ik) Xk.enchantmentData[tk].description = null !== (qk = null === Ik || void 0 === Ik || null === (Lk = Ik.toString) || void 0 === Lk ? void 0 : Lk.call(Ik)) && void 0 !== qk ? qk : void 0
         }
-      return zC.customAttributes = QC, zC
+      return Fk.customAttributes = Xk, Fk
     }
-    ZC.d(zC, {
-      d: () => QC
+    Ik.d(Fk, {
+      b: () => Xk
     })
   },
-  38042: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => IC,
-      g: () => PC,
-      k: () => oC,
-      m: () => WC,
-      q: () => iC
+  38204: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => Vk,
+      d: () => Jk,
+      e: () => ak,
+      g: () => tk,
+      j: () => zk
     });
-    var QC = ZC(9194),
-      wC = ZC(9230),
-      bC = ZC(38047);
-    const nC = (0, QC.k)("Noticeboard"),
-      fC = (0, QC.k)("Standing Noticeboard|meta|rot4|lrud");
+    var Xk = Ik(9183),
+      Tk = Ik(9223),
+      ik = Ik(38209);
+    const yk = (0, Xk.j)("Noticeboard"),
+      lk = (0, Xk.j)("Standing Noticeboard|meta|rot4|lrud");
 
-    function oC(CC) {
-      return nC <= CC && CC <= fC
+    function ak(kk) {
+      return yk <= kk && kk <= lk
     }
-    const qC = new Uint8Array(fC - nC + 1);
-    for (let vC = nC; vC <= fC; vC++) qC[vC - nC] = (0, wC.k)(QC.g[vC].meta.metaStr);
-    const FC = 64,
-      WC = FC * FC,
-      [NC, MC, gC, SC] = [0, 1, 2, 3];
+    const qk = new Uint8Array(lk - yk + 1);
+    for (let Sk = yk; Sk <= lk; Sk++) qk[Sk - yk] = (0, Tk.r)(Xk.g[Sk].meta.metaStr);
+    const Lk = 64,
+      tk = Lk * Lk,
+      [Zk, jk, ek, wk] = [0, 1, 2, 3];
 
-    function pC(CC) {
-      var zC, ZC;
-      return "string" === typeof(null === CC || void 0 === CC || null === (zC = CC.persisted) || void 0 === zC || null === (ZC = zC.shared) || void 0 === ZC ? void 0 : ZC.text)
-    }
-
-    function PC(CC) {
-      return pC(CC) && "" !== CC.persisted.shared.text.trim()
+    function Hk(kk) {
+      var Fk, Ik;
+      return "string" === typeof(null === kk || void 0 === kk || null === (Fk = kk.persisted) || void 0 === Fk || null === (Ik = Fk.shared) || void 0 === Ik ? void 0 : Ik.text)
     }
 
-    function GC(CC, zC) {
-      let [ZC, , QC] = zC;
-      const [bC, , nC] = wC.q[CC][MC];
-      return ZC * bC + QC * nC
+    function Jk(kk) {
+      return Hk(kk) && "" !== kk.persisted.shared.text.trim()
     }
 
-    function RC(CC, zC, ZC) {
-      return ZC[1] - zC[1] || GC(CC, zC) - GC(CC, ZC)
+    function xk(kk, Fk) {
+      let [Ik, , Xk] = Fk;
+      const [ik, , yk] = Tk.z[kk][jk];
+      return Ik * ik + Xk * yk
     }
 
-    function AC(CC, zC, ZC, bC, fC) {
-      var oC;
-      let FC = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : CC(zC[0], zC[1], zC[2]);
-      if (!(qC[FC - nC] & 1 << ZC)) return null;
-      const [WC, NC, MC] = wC.q[fC][ZC], gC = [zC[0] + WC, zC[1] + NC, zC[2] + MC], SC = CC(gC[0], gC[1], gC[2]), pC = null === (oC = QC.g[SC]) || void 0 === oC ? void 0 : oC.meta;
-      return (null === pC || void 0 === pC ? void 0 : pC.rootId) === bC && pC.rot === fC && qC[SC - nC] & 1 << (1 ^ ZC) ? gC : null
+    function Pk(kk, Fk, Ik) {
+      return Ik[1] - Fk[1] || xk(kk, Fk) - xk(kk, Ik)
     }
 
-    function xC(CC, zC, ZC, bC) {
-      const nC = CC(zC, ZC, bC);
-      if (!oC(nC)) return null;
+    function Kk(kk, Fk, Ik, ik, lk) {
+      var ak;
+      let Lk = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : kk(Fk[0], Fk[1], Fk[2]);
+      if (!(qk[Lk - yk] & 1 << Ik)) return null;
+      const [tk, Zk, jk] = Tk.z[lk][Ik], ek = [Fk[0] + tk, Fk[1] + Zk, Fk[2] + jk], wk = kk(ek[0], ek[1], ek[2]), Hk = null === (ak = Xk.g[wk]) || void 0 === ak ? void 0 : ak.meta;
+      return (null === Hk || void 0 === Hk ? void 0 : Hk.rootId) === ik && Hk.rot === lk && qk[wk - yk] & 1 << (1 ^ Ik) ? ek : null
+    }
+
+    function Qk(kk, Fk, Ik, ik) {
+      const yk = kk(Fk, Ik, ik);
+      if (!ak(yk)) return null;
       const {
-        rootId: fC,
-        rot: qC
-      } = QC.g[nC].meta, WC = (zC, ZC) => {
-        let QC = zC,
-          wC = 1;
-        for (let bC = AC(CC, QC, ZC, fC, qC); bC && wC < FC; bC = AC(CC, QC, ZC, fC, qC)) QC = bC, wC++;
+        rootId: lk,
+        rot: qk
+      } = Xk.g[yk].meta, tk = (Fk, Ik) => {
+        let Xk = Fk,
+          Tk = 1;
+        for (let ik = Kk(kk, Xk, Ik, lk, qk); ik && Tk < Lk; ik = Kk(kk, Xk, Ik, lk, qk)) Xk = ik, Tk++;
         return {
-          end: QC,
-          cells: wC
+          end: Xk,
+          cells: Tk
         }
-      }, pC = WC(WC([zC, ZC, bC], NC).end, gC).end, PC = WC(pC, MC).cells, [GC, , RC] = wC.q[qC][MC];
-      let xC = 1;
-      CC: for (; xC < FC; xC++)
-        for (let zC = 0; zC < PC; zC++)
-          if (!AC(CC, [pC[0] + GC * zC, pC[1] - xC + 1, pC[2] + RC * zC], SC, fC, qC)) break CC;
+      }, Hk = tk(tk([Fk, Ik, ik], Zk).end, ek).end, Jk = tk(Hk, jk).cells, [xk, , Pk] = Tk.z[qk][jk];
+      let Qk = 1;
+      kk: for (; Qk < Lk; Qk++)
+        for (let Fk = 0; Fk < Jk; Fk++)
+          if (!Kk(kk, [Hk[0] + xk * Fk, Hk[1] - Qk + 1, Hk[2] + Pk * Fk], wk, lk, qk)) break kk;
       return {
-        anchor: pC,
-        rootId: fC,
-        rot: qC,
-        width: PC,
-        height: xC
+        anchor: Hk,
+        rootId: lk,
+        rot: qk,
+        width: Jk,
+        height: Qk
       }
     }
 
-    function JC(CC, zC) {
-      for (const ZC of function(CC) {
+    function sk(kk, Fk) {
+      for (const Ik of function(kk) {
           let {
-            anchor: zC,
-            rot: ZC,
-            width: QC,
-            height: bC
-          } = CC;
-          const [nC, , fC] = wC.q[ZC][MC], oC = [];
-          for (let wC = 0; wC < bC; wC++)
-            for (let CC = 0; CC < QC; CC++) oC.push([zC[0] + nC * CC, zC[1] - wC, zC[2] + fC * CC]);
-          return oC
-        }(CC))
-        if (pC(zC(ZC[0], ZC[1], ZC[2]))) return ZC;
+            anchor: Fk,
+            rot: Ik,
+            width: Xk,
+            height: ik
+          } = kk;
+          const [yk, , lk] = Tk.z[Ik][jk], ak = [];
+          for (let Tk = 0; Tk < ik; Tk++)
+            for (let kk = 0; kk < Xk; kk++) ak.push([Fk[0] + yk * kk, Fk[1] - Tk, Fk[2] + lk * kk]);
+          return ak
+        }(kk))
+        if (Hk(Fk(Ik[0], Ik[1], Ik[2]))) return Ik;
       return null
     }
 
-    function IC(CC, zC, ZC, wC, bC) {
-      const nC = CC(ZC, wC, bC);
-      if (!oC(nC)) return null;
+    function Vk(kk, Fk, Ik, Tk, ik) {
+      const yk = kk(Ik, Tk, ik);
+      if (!ak(yk)) return null;
       const {
-        rootId: fC,
-        rot: qC
-      } = QC.g[nC].meta, FC = [
-        [ZC, wC, bC]
-      ], NC = new Set([FC[0].join()]);
-      let MC = FC[0],
-        gC = null;
-      for (let QC = 0; QC < FC.length; QC++) {
-        const ZC = FC[QC];
-        if (RC(qC, ZC, MC) < 0 && (MC = ZC), pC(zC(ZC[0], ZC[1], ZC[2]))) {
-          const zC = xC(CC, ZC[0], ZC[1], ZC[2]);
-          (!gC || RC(qC, zC.anchor, gC.anchor) < 0) && (gC = zC)
+        rootId: lk,
+        rot: qk
+      } = Xk.g[yk].meta, Lk = [
+        [Ik, Tk, ik]
+      ], Zk = new Set([Lk[0].join()]);
+      let jk = Lk[0],
+        ek = null;
+      for (let Xk = 0; Xk < Lk.length; Xk++) {
+        const Ik = Lk[Xk];
+        if (Pk(qk, Ik, jk) < 0 && (jk = Ik), Hk(Fk(Ik[0], Ik[1], Ik[2]))) {
+          const Fk = Qk(kk, Ik[0], Ik[1], Ik[2]);
+          (!ek || Pk(qk, Fk.anchor, ek.anchor) < 0) && (ek = Fk)
         }
-        for (let zC = 0; zC < 4 && FC.length < WC; zC++) {
-          const QC = AC(CC, ZC, zC, fC, qC);
-          QC && !NC.has(QC.join()) && (NC.add(QC.join()), FC.push(QC))
+        for (let Fk = 0; Fk < 4 && Lk.length < tk; Fk++) {
+          const Xk = Kk(kk, Ik, Fk, lk, qk);
+          Xk && !Zk.has(Xk.join()) && (Zk.add(Xk.join()), Lk.push(Xk))
         }
       }
-      return gC ??= xC(CC, MC[0], MC[1], MC[2]), {
-        cells: FC,
-        topLeft: MC,
-        rect: gC,
-        textCell: JC(gC, zC)
+      return ek ??= Qk(kk, jk[0], jk[1], jk[2]), {
+        cells: Lk,
+        topLeft: jk,
+        rect: ek,
+        textCell: sk(ek, Fk)
       }
     }
 
-    function iC(CC, zC, ZC, nC, fC) {
-      if (null !== ZC && oC(ZC)) {
+    function zk(kk, Fk, Ik, yk, lk) {
+      if (null !== Ik && ak(Ik)) {
         const {
-          rootName: CC,
-          rot: zC
-        } = QC.g[ZC].meta;
-        if (wC.q[zC].some((CC => {
-            let [zC, ZC, QC] = CC;
-            return zC === nC[0] && ZC === nC[1] && QC === nC[2]
+          rootName: kk,
+          rot: Fk
+        } = Xk.g[Ik].meta;
+        if (Tk.z[Fk].some((kk => {
+            let [Fk, Ik, Xk] = kk;
+            return Fk === yk[0] && Ik === yk[1] && Xk === yk[2]
           }))) return {
-          root: CC,
-          rot: zC
+          root: kk,
+          rot: Fk
         }
       }
-      const [qC, FC] = wC.i[fC], WC = CC(zC[0] - qC, zC[1], zC[2] - FC);
+      const [qk, Lk] = Tk.m[lk], tk = kk(Fk[0] - qk, Fk[1], Fk[2] - Lk);
       return {
-        root: (0, bC.g)(WC) ? wC.w : wC.s,
-        rot: fC
+        root: (0, ik.f)(tk) ? Tk.F : Tk.C,
+        rot: lk
       }
     }
   },
-  38055: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => bC,
-      e: () => nC,
-      i: () => wC,
-      l: () => fC
+  38213: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => ik,
+      i: () => yk,
+      k: () => Tk,
+      l: () => lk
     });
-    var QC = ZC(330);
-    const wC = ["Snowball", "Snowball Launcher", "Pebble", "Reinforced Pebble", "Ball", "Reinforced Ball", "Mango", "Moonstone Orb", ...ZC(597).B.map((CC => `${CC} Spawn Orb`)), "Fireball", "RPG", "Obby RPG", "Super RPG", "Grenade Launcher", "Iceball", "Bouncy Bomb", "Coconut", "Splash Speed Potion", "Splash Speed Potion II", "Splash Defense Potion", "Splash Defense Potion II", "Splash Strength Potion", "Splash Strength Potion II", "Splash Invisibility Potion", "Splash Jump Potion", "Splash Jump Potion II", "Splash Knockback Potion", "Splash Knockback Potion II", "Splash Poison Potion", "Splash Poison Potion II", "Splash Slowness Potion", "Splash Slowness Potion II", "Splash Weakness Potion", "Splash Weakness Potion II", "Splash Milk Potion", "Splash Instant Damage Potion", "Splash Instant Damage Potion II", "Splash Regeneration Potion", "Splash Regeneration Potion II", "Splash Instant Healing Potion", "Splash Instant Healing Potion II", "Splash Haste Potion", "Splash Haste Potion II", "Splash Shield Potion", "Splash Shield Potion II", "Splash Double Jump Potion", "Splash Heat Resistance Potion", "Splash X-Ray Vision Potion", "Splash Mining Yield Potion", "Splash Mining Yield Potion II", "Splash Brain Rot Potion", "Yellow Paintball Gun", "White Paintball Gun", "Red Paintball Gun", "Purple Paintball Gun", "Pink Paintball Gun", "Orange Paintball Gun", "Magenta Paintball Gun", "Lime Paintball Gun", "Light Gray Paintball Gun", "Light Blue Paintball Gun", "Green Paintball Gun", "Gray Paintball Gun", "Cyan Paintball Gun", "Brown Paintball Gun", "Blue Paintball Gun", "Black Paintball Gun", "Yellow Heavy Paintball Gun", "White Heavy Paintball Gun", "Red Heavy Paintball Gun", "Purple Heavy Paintball Gun", "Pink Heavy Paintball Gun", "Orange Heavy Paintball Gun", "Magenta Heavy Paintball Gun", "Lime Heavy Paintball Gun", "Light Gray Heavy Paintball Gun", "Light Blue Heavy Paintball Gun", "Green Heavy Paintball Gun", "Gray Heavy Paintball Gun", "Cyan Heavy Paintball Gun", "Brown Heavy Paintball Gun", "Blue Heavy Paintball Gun", "Black Heavy Paintball Gun", "Toxin Ball", "Splash Aura XP Potion", "Splash Aura XP Potion II", "Firecracker", "Rainbow Firecracker", "White Firecracker", "Orange Firecracker", "Magenta Firecracker", "Light Blue Firecracker", "Yellow Firecracker", "Lime Firecracker", "Pink Firecracker", "Gray Firecracker", "Light Gray Firecracker", "Cyan Firecracker", "Purple Firecracker", "Blue Firecracker", "Brown Firecracker", "Green Firecracker", "Red Firecracker", "Black Firecracker", "Firecracker Pebble", "Rainbow Firecracker Pebble", "White Firecracker Pebble", "Orange Firecracker Pebble", "Magenta Firecracker Pebble", "Light Blue Firecracker Pebble", "Yellow Firecracker Pebble", "Lime Firecracker Pebble", "Pink Firecracker Pebble", "Gray Firecracker Pebble", "Light Gray Firecracker Pebble", "Cyan Firecracker Pebble", "Purple Firecracker Pebble", "Blue Firecracker Pebble", "Brown Firecracker Pebble", "Green Firecracker Pebble", "Red Firecracker Pebble", "Black Firecracker Pebble", "Blinding Pebble", "Poop", "Wood Boomerang", "Stone Boomerang", "Iron Boomerang", "Gold Boomerang", "Diamond Boomerang", "Moonstone Boomerang", ...QC.f, "67 Base Projectile", "67 Boosted Projectile", "Capitano Grenade", "Scatter Pellet", "Lucky Bomb", "Unlucky Bomb", "Swap Orb"],
-      bC = ["Obby RPG"];
+    var Xk = Ik(346);
+    const Tk = ["Snowball", "Snowball Launcher", "Pebble", "Reinforced Pebble", "Ball", "Reinforced Ball", "Mango", "Moonstone Orb", ...Ik(621).s.map((kk => `${kk} Spawn Orb`)), "Fireball", "RPG", "Obby RPG", "Super RPG", "Grenade Launcher", "Iceball", "Bouncy Bomb", "Coconut", "Splash Speed Potion", "Splash Speed Potion II", "Splash Defense Potion", "Splash Defense Potion II", "Splash Strength Potion", "Splash Strength Potion II", "Splash Invisibility Potion", "Splash Jump Potion", "Splash Jump Potion II", "Splash Knockback Potion", "Splash Knockback Potion II", "Splash Poison Potion", "Splash Poison Potion II", "Splash Slowness Potion", "Splash Slowness Potion II", "Splash Weakness Potion", "Splash Weakness Potion II", "Splash Milk Potion", "Splash Instant Damage Potion", "Splash Instant Damage Potion II", "Splash Regeneration Potion", "Splash Regeneration Potion II", "Splash Instant Healing Potion", "Splash Instant Healing Potion II", "Splash Haste Potion", "Splash Haste Potion II", "Splash Shield Potion", "Splash Shield Potion II", "Splash Double Jump Potion", "Splash Heat Resistance Potion", "Splash X-Ray Vision Potion", "Splash Mining Yield Potion", "Splash Mining Yield Potion II", "Splash Brain Rot Potion", "Yellow Paintball Gun", "White Paintball Gun", "Red Paintball Gun", "Purple Paintball Gun", "Pink Paintball Gun", "Orange Paintball Gun", "Magenta Paintball Gun", "Lime Paintball Gun", "Light Gray Paintball Gun", "Light Blue Paintball Gun", "Green Paintball Gun", "Gray Paintball Gun", "Cyan Paintball Gun", "Brown Paintball Gun", "Blue Paintball Gun", "Black Paintball Gun", "Yellow Heavy Paintball Gun", "White Heavy Paintball Gun", "Red Heavy Paintball Gun", "Purple Heavy Paintball Gun", "Pink Heavy Paintball Gun", "Orange Heavy Paintball Gun", "Magenta Heavy Paintball Gun", "Lime Heavy Paintball Gun", "Light Gray Heavy Paintball Gun", "Light Blue Heavy Paintball Gun", "Green Heavy Paintball Gun", "Gray Heavy Paintball Gun", "Cyan Heavy Paintball Gun", "Brown Heavy Paintball Gun", "Blue Heavy Paintball Gun", "Black Heavy Paintball Gun", "Toxin Ball", "Splash Aura XP Potion", "Splash Aura XP Potion II", "Firecracker", "Rainbow Firecracker", "White Firecracker", "Orange Firecracker", "Magenta Firecracker", "Light Blue Firecracker", "Yellow Firecracker", "Lime Firecracker", "Pink Firecracker", "Gray Firecracker", "Light Gray Firecracker", "Cyan Firecracker", "Purple Firecracker", "Blue Firecracker", "Brown Firecracker", "Green Firecracker", "Red Firecracker", "Black Firecracker", "Firecracker Pebble", "Rainbow Firecracker Pebble", "White Firecracker Pebble", "Orange Firecracker Pebble", "Magenta Firecracker Pebble", "Light Blue Firecracker Pebble", "Yellow Firecracker Pebble", "Lime Firecracker Pebble", "Pink Firecracker Pebble", "Gray Firecracker Pebble", "Light Gray Firecracker Pebble", "Cyan Firecracker Pebble", "Purple Firecracker Pebble", "Blue Firecracker Pebble", "Brown Firecracker Pebble", "Green Firecracker Pebble", "Red Firecracker Pebble", "Black Firecracker Pebble", "Blinding Pebble", "Poop", "Wood Boomerang", "Stone Boomerang", "Iron Boomerang", "Gold Boomerang", "Diamond Boomerang", "Moonstone Boomerang", ...Xk.k, "67 Base Projectile", "67 Boosted Projectile", "Capitano Grenade", "Scatter Pellet", "Lucky Bomb", "Unlucky Bomb", "Swap Orb"],
+      ik = ["Obby RPG"];
 
-    function nC(CC) {
-      const zC = CC.indexOf("|");
-      return -1 === zC ? {
-        item: CC,
+    function yk(kk) {
+      const Fk = kk.indexOf("|");
+      return -1 === Fk ? {
+        item: kk,
         clientPredictedThrower: null
       } : {
-        item: CC.slice(0, zC),
-        clientPredictedThrower: CC.slice(zC + 1)
+        item: kk.slice(0, Fk),
+        clientPredictedThrower: kk.slice(Fk + 1)
       }
     }
-    const fC = [...wC, "Arrow", "Arrow of Speed", "Arrow of Slowness", "Arrow of Poison", "Arrow of Weakness", "Arrow of Knockback", "Arrow of Strength", "Arrow of Defense", "Arrow of Invisibility", "Arrow of Jumping", "Arrow of Milk", "Arrow of Instant Damage", "Arrow of Regeneration", "Arrow of Instant Healing", "Arrow of Haste", "Arrow of Shield", "Arrow of Double Jump", "Arrow of Heat Resistance", "Arrow of X-Ray Vision", "Arrow of Mining Yield", "Arrow of Brain Rot", "Arrow of Aura XP", "Bullet"]
+    const lk = [...Tk, "Arrow", "Arrow of Speed", "Arrow of Slowness", "Arrow of Poison", "Arrow of Weakness", "Arrow of Knockback", "Arrow of Strength", "Arrow of Defense", "Arrow of Invisibility", "Arrow of Jumping", "Arrow of Milk", "Arrow of Instant Damage", "Arrow of Regeneration", "Arrow of Instant Healing", "Arrow of Haste", "Arrow of Shield", "Arrow of Double Jump", "Arrow of Heat Resistance", "Arrow of X-Ray Vision", "Arrow of Mining Yield", "Arrow of Brain Rot", "Arrow of Aura XP", "Bullet"]
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

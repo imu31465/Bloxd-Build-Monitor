@@ -1,46 +1,46 @@
 export const id = 194;
 export const ids = [194];
 export const modules = {
-  34040: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      ALL_DEV_TOOLS: () => nC,
-      coreDevTools: () => qC,
-      devTools: () => oC
+  34044: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      ALL_DEV_TOOLS: () => yk,
+      coreDevTools: () => qk,
+      devTools: () => ak
     });
-    var QC = ZC(615),
-      wC = ZC(1257),
-      bC = ZC(34046);
-    const nC = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function fC() {
+    var Xk = Ik(646),
+      Tk = Ik(1276),
+      ik = Ik(34048);
+    const yk = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function lk() {
       const {
-        noaDevTools: CC
-      } = await ZC.e(236).then((() => ZC(40899)));
-      return CC
+        noaDevTools: kk
+      } = await Ik.e(236).then((() => Ik(41079)));
+      return kk
     }
-    const oC = new class {
+    const ak = new class {
         constructor() {
-          this.loadHost = fC, this.tools = nC
+          this.loadHost = lk, this.tools = yk
         }
-        setHost(CC) {
-          this.tools = null === CC ? nC : CC.tools, this.loadHost = null === CC ? fC : async () => CC
+        setHost(kk) {
+          this.tools = null === kk ? yk : kk.tools, this.loadHost = null === kk ? lk : async () => kk
         }
-        supports(CC) {
-          return this.tools.has(CC)
+        supports(kk) {
+          return this.tools.has(kk)
         }
-        async downloadScene(CC, zC) {
-          const ZC = await this.loadHost();
-          await ZC.downloadScene(CC, zC)
+        async downloadScene(kk, Fk) {
+          const Ik = await this.loadHost();
+          await Ik.downloadScene(kk, Fk)
         }
-        async setAmbientLightIntensity(CC) {
-          const zC = await this.loadHost();
-          await zC.setAmbientLightIntensity(CC)
+        async setAmbientLightIntensity(kk) {
+          const Fk = await this.loadHost();
+          await Fk.setAmbientLightIntensity(kk)
         }
-        async capturePhoto(CC, zC, ZC) {
-          return (await this.loadHost()).capturePhoto(CC, zC, ZC)
+        async capturePhoto(kk, Fk, Ik) {
+          return (await this.loadHost()).capturePhoto(kk, Fk, Ik)
         }
       },
-      qC = {
-        tools: bC.c,
+      qk = {
+        tools: ik.c,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -51,10 +51,10 @@ export const modules = {
           throw new Error("No game is drawing yet")
         }
       };
-    QC.z && oC.setHost(qC), (0, wC.y)((() => {
-      oC.setHost(qC)
+    Xk.x && ak.setHost(qk), (0, Tk.B)((() => {
+      ak.setHost(qk)
     }))
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

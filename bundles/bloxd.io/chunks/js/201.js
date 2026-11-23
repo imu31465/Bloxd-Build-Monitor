@@ -1,192 +1,192 @@
 export const id = 201;
 export const ids = [201];
 export const modules = {
-  34214: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => wC,
-      g: () => bC
+  34248: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => Tk,
+      d: () => ik
     });
-    var QC = ZC(3242);
+    var Xk = Ik(3175);
 
-    function wC() {
+    function Tk() {
       if ("undefined" === typeof BroadcastChannel) return null;
-      const CC = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
+      const kk = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
       try {
-        const zC = new BroadcastChannel(QC.m);
-        zC.postMessage({
-          stored: CC
-        }), zC.close()
+        const Fk = new BroadcastChannel(Xk.j);
+        Fk.postMessage({
+          stored: kk
+        }), Fk.close()
       } catch {
         return null
       }
-      return CC
+      return kk
     }
 
-    function bC(CC) {
-      const zC = "object" === typeof CC && null !== CC ? CC.stored : null;
-      return "string" === typeof zC ? zC : null
+    function ik(kk) {
+      const Fk = "object" === typeof kk && null !== kk ? kk.stored : null;
+      return "string" === typeof Fk ? Fk : null
     }
   },
-  34210: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => nC,
-      i: () => wC,
-      k: () => bC
+  34245: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => yk,
+      f: () => Tk,
+      g: () => ik
     });
-    var QC = ZC(3242);
-    async function wC(CC, zC, ZC) {
-      let wC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
-      const bC = nC(await CC.getItem(QC.f, zC));
-      if (null === bC || wC()) return null;
-      const fC = await CC.getItem(QC.i, zC);
-      return wC() ? null : (await async function(CC) {
-        await Promise.all([CC.removeItem(QC.f), CC.removeItem(QC.i)])
-      }(CC).catch(ZC), {
-        pack: bC,
-        source: "string" === typeof fC ? fC : null
+    var Xk = Ik(3175);
+    async function Tk(kk, Fk, Ik) {
+      let Tk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
+      const ik = yk(await kk.getItem(Xk.f, Fk));
+      if (null === ik || Tk()) return null;
+      const lk = await kk.getItem(Xk.i, Fk);
+      return Tk() ? null : (await async function(kk) {
+        await Promise.all([kk.removeItem(Xk.f), kk.removeItem(Xk.i)])
+      }(kk).catch(Ik), {
+        pack: ik,
+        source: "string" === typeof lk ? lk : null
       })
     }
 
-    function bC(CC) {
-      return (0, QC.r)() ? Promise.resolve(null) : wC(CC, !1, (CC => {
-        console.error("Error removing temporary texture pack: ", CC)
-      }), QC.r)
+    function ik(kk) {
+      return (0, Xk.s)() ? Promise.resolve(null) : Tk(kk, !1, (kk => {
+        console.error("Error removing temporary texture pack: ", kk)
+      }), Xk.s)
     }
 
-    function nC(CC) {
-      if ("object" !== typeof CC || null === CC) return null;
-      const zC = CC.metaData;
-      return "object" !== typeof zC || null === zC || "string" !== typeof zC.id ? null : CC
+    function yk(kk) {
+      if ("object" !== typeof kk || null === kk) return null;
+      const Fk = kk.metaData;
+      return "object" !== typeof Fk || null === Fk || "string" !== typeof Fk.id ? null : kk
     }
   },
-  50739: (CC, zC, ZC) => {
-    function QC(CC) {
-      return null === CC.gameSource ? "player" : "customGame"
+  50988: (kk, Fk, Ik) => {
+    function Xk(kk) {
+      return null === kk.gameSource ? "player" : "customGame"
     }
-    ZC.d(zC, {
-      b: () => bC,
-      c: () => SC,
-      g: () => gC,
-      i: () => QC
+    Ik.d(Fk, {
+      c: () => ik,
+      f: () => wk,
+      g: () => ek,
+      h: () => Xk
     });
-    const wC = /^data:[\w.+/-]*;base64,[A-Za-z0-9+/]*={0,2}$/;
+    const Tk = /^data:[\w.+/-]*;base64,[A-Za-z0-9+/]*={0,2}$/;
 
-    function bC(CC) {
-      return "" === CC || "string" === typeof CC && wC.test(CC)
+    function ik(kk) {
+      return "" === kk || "string" === typeof kk && Tk.test(kk)
     }
 
-    function nC(CC) {
-      return "object" === typeof CC && null !== CC && ("earth" === CC.type || Object.entries(CC).every((CC => {
-        let [zC, ZC] = CC;
-        return "type" === zC || bC(ZC)
+    function yk(kk) {
+      return "object" === typeof kk && null !== kk && ("earth" === kk.type || Object.entries(kk).every((kk => {
+        let [Fk, Ik] = kk;
+        return "type" === Fk || ik(Ik)
       })))
     }
-    const fC = /(?:src|image|image-set|cross-fade)\(/i,
-      oC = /url\(\s*(?:"(?<doubleQuoted>[^"]*)"|'(?<singleQuoted>[^']*)'|(?<unquoted>[^"'()\s]*))\s*\)/gi,
-      qC = /url\(/gi,
-      FC = ["https://bloxd.invalid/", "http://bloxd.invalid/"],
-      WC = new Set([...FC.map((CC => new URL(CC).origin)), "https://fonts.gstatic.com"]),
-      NC = new Set(["https://i.imgur.com/MEcjBFQ.png"]);
+    const lk = /(?:src|image|image-set|cross-fade)\(/i,
+      ak = /url\(\s*(?:"(?<doubleQuoted>[^"]*)"|'(?<singleQuoted>[^']*)'|(?<unquoted>[^"'()\s]*))\s*\)/gi,
+      qk = /url\(/gi,
+      Lk = ["https://bloxd.invalid/", "http://bloxd.invalid/"],
+      tk = new Set([...Lk.map((kk => new URL(kk).origin)), "https://fonts.gstatic.com"]),
+      Zk = new Set(["https://i.imgur.com/MEcjBFQ.png"]);
 
-    function MC(CC) {
-      var zC, ZC;
-      if (CC.includes("\\") || fC.test(CC)) return !0;
-      const QC = [...CC.matchAll(oC)];
-      return QC.length !== (null !== (zC = null === (ZC = CC.match(qC)) || void 0 === ZC ? void 0 : ZC.length) && void 0 !== zC ? zC : 0) || !QC.every((CC => {
-        var zC, ZC, QC;
+    function jk(kk) {
+      var Fk, Ik;
+      if (kk.includes("\\") || lk.test(kk)) return !0;
+      const Xk = [...kk.matchAll(ak)];
+      return Xk.length !== (null !== (Fk = null === (Ik = kk.match(qk)) || void 0 === Ik ? void 0 : Ik.length) && void 0 !== Fk ? Fk : 0) || !Xk.every((kk => {
+        var Fk, Ik, Xk;
         let {
-          groups: wC
-        } = CC;
-        return function(CC) {
+          groups: Tk
+        } = kk;
+        return function(kk) {
           try {
-            return FC.every((zC => {
-              const ZC = new URL(CC, zC);
-              return "data:" === ZC.protocol || WC.has(ZC.origin) || NC.has(ZC.href)
+            return Lk.every((Fk => {
+              const Ik = new URL(kk, Fk);
+              return "data:" === Ik.protocol || tk.has(Ik.origin) || Zk.has(Ik.href)
             }))
           } catch {
             return !1
           }
-        }(null !== (zC = null !== (ZC = null !== (QC = null === wC || void 0 === wC ? void 0 : wC.doubleQuoted) && void 0 !== QC ? QC : null === wC || void 0 === wC ? void 0 : wC.singleQuoted) && void 0 !== ZC ? ZC : null === wC || void 0 === wC ? void 0 : wC.unquoted) && void 0 !== zC ? zC : "")
+        }(null !== (Fk = null !== (Ik = null !== (Xk = null === Tk || void 0 === Tk ? void 0 : Tk.doubleQuoted) && void 0 !== Xk ? Xk : null === Tk || void 0 === Tk ? void 0 : Tk.singleQuoted) && void 0 !== Ik ? Ik : null === Tk || void 0 === Tk ? void 0 : Tk.unquoted) && void 0 !== Fk ? Fk : "")
       }))
     }
 
-    function gC(CC) {
-      var zC, ZC, QC, wC, fC, oC, qC;
-      const FC = [...Object.values(null !== (zC = CC.textureOverrides) && void 0 !== zC ? zC : {}), ...Object.values(null !== (ZC = CC.modelOverrides) && void 0 !== ZC ? ZC : {})],
-        WC = [...Object.values(null !== (QC = null === (wC = CC.customCss) || void 0 === wC ? void 0 : wC.fontFaces) && void 0 !== QC ? QC : {}), ...Object.values(null !== (fC = null === (oC = CC.customCss) || void 0 === oC ? void 0 : oC.classStyles) && void 0 !== fC ? fC : {})].flatMap((CC => Object.values(null !== CC && void 0 !== CC ? CC : {})));
-      return !FC.every(bC) || !Object.values(null !== (qC = CC.skyBoxes) && void 0 !== qC ? qC : {}).every(nC) || WC.some((CC => "string" === typeof CC && MC(CC)))
+    function ek(kk) {
+      var Fk, Ik, Xk, Tk, lk, ak, qk;
+      const Lk = [...Object.values(null !== (Fk = kk.textureOverrides) && void 0 !== Fk ? Fk : {}), ...Object.values(null !== (Ik = kk.modelOverrides) && void 0 !== Ik ? Ik : {})],
+        tk = [...Object.values(null !== (Xk = null === (Tk = kk.customCss) || void 0 === Tk ? void 0 : Tk.fontFaces) && void 0 !== Xk ? Xk : {}), ...Object.values(null !== (lk = null === (ak = kk.customCss) || void 0 === ak ? void 0 : ak.classStyles) && void 0 !== lk ? lk : {})].flatMap((kk => Object.values(null !== kk && void 0 !== kk ? kk : {})));
+      return !Lk.every(ik) || !Object.values(null !== (qk = kk.skyBoxes) && void 0 !== qk ? qk : {}).every(yk) || tk.some((kk => "string" === typeof kk && jk(kk)))
     }
 
-    function SC(CC, zC) {
-      if (null === CC || "player" === zC || !gC(CC)) return CC;
-      const ZC = {
-        ...CC
+    function wk(kk, Fk) {
+      if (null === kk || "player" === Fk || !ek(kk)) return kk;
+      const Ik = {
+        ...kk
       };
-      return CC.textureOverrides && (ZC.textureOverrides = PC(CC.textureOverrides, bC, "texture")), CC.modelOverrides && (ZC.modelOverrides = PC(CC.modelOverrides, bC, "model")), CC.skyBoxes && (ZC.skyBoxes = PC(CC.skyBoxes, nC, "sky")), CC.customCss && (ZC.customCss = function(CC) {
-        const zC = CC => PC(CC, (CC => "string" === typeof CC && !MC(CC)), "CSS"),
+      return kk.textureOverrides && (Ik.textureOverrides = Jk(kk.textureOverrides, ik, "texture")), kk.modelOverrides && (Ik.modelOverrides = Jk(kk.modelOverrides, ik, "model")), kk.skyBoxes && (Ik.skyBoxes = Jk(kk.skyBoxes, yk, "sky")), kk.customCss && (Ik.customCss = function(kk) {
+        const Fk = kk => Jk(kk, (kk => "string" === typeof kk && !jk(kk)), "CSS"),
           {
-            fontFaces: ZC,
-            classStyles: QC
-          } = pC(CC) ? CC : {},
-          wC = {};
-        for (const [bC, nC] of Object.entries(pC(QC) ? QC : {})) wC[bC] = zC(nC);
+            fontFaces: Ik,
+            classStyles: Xk
+          } = Hk(kk) ? kk : {},
+          Tk = {};
+        for (const [ik, yk] of Object.entries(Hk(Xk) ? Xk : {})) Tk[ik] = Fk(yk);
         return {
-          fontFaces: (Array.isArray(ZC) ? ZC : []).map(zC),
-          classStyles: wC
+          fontFaces: (Array.isArray(Ik) ? Ik : []).map(Fk),
+          classStyles: Tk
         }
-      }(CC.customCss)), ZC
+      }(kk.customCss)), Ik
     }
 
-    function pC(CC) {
-      return "object" === typeof CC && null !== CC && !Array.isArray(CC)
+    function Hk(kk) {
+      return "object" === typeof kk && null !== kk && !Array.isArray(kk)
     }
 
-    function PC(CC, zC, ZC) {
-      const QC = Object.entries(pC(CC) ? CC : {}),
-        wC = QC.filter((CC => {
-          let [, ZC] = CC;
-          return !zC(ZC)
+    function Jk(kk, Fk, Ik) {
+      const Xk = Object.entries(Hk(kk) ? kk : {}),
+        Tk = Xk.filter((kk => {
+          let [, Ik] = kk;
+          return !Fk(Ik)
         }));
-      if (wC.length > 0) {
-        const CC = wC.map((CC => {
-          let [zC] = CC;
-          return zC
+      if (Tk.length > 0) {
+        const kk = Tk.map((kk => {
+          let [Fk] = kk;
+          return Fk
         }));
-        console.warn(`Ignoring a custom game texture pack's ${ZC} files that name another site: ${CC.join(", ")}`)
+        console.warn(`Ignoring a custom game texture pack's ${Ik} files that name another site: ${kk.join(", ")}`)
       }
-      return Object.fromEntries(QC.filter((CC => {
-        let [, ZC] = CC;
-        return zC(ZC)
+      return Object.fromEntries(Xk.filter((kk => {
+        let [, Ik] = kk;
+        return Fk(Ik)
       })))
     }
   },
-  50746: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => gC,
-      f: () => RC,
-      g: () => GC
+  50992: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => ek,
+      f: () => Pk,
+      j: () => xk
     });
-    var QC = ZC(970),
-      wC = ZC(2063),
-      bC = ZC(3229),
-      nC = ZC(3242),
-      fC = ZC(34214),
-      oC = ZC(34210),
-      qC = ZC(50739),
-      FC = ZC(40820),
-      WC = ZC(40798),
-      NC = ZC(5021);
-    const MC = {
+    var Xk = Ik(1018),
+      Tk = Ik(2071),
+      ik = Ik(3170),
+      yk = Ik(3175),
+      lk = Ik(34248),
+      ak = Ik(34245),
+      qk = Ik(50988),
+      Lk = Ik(41003),
+      tk = Ik(40978),
+      Zk = Ik(5071);
+    const jk = {
       pack: null,
       gameSource: null
     };
-    class gC {
-      constructor(CC) {
-        this.host = CC, this.ready = void 0, this.state = MC, this.playerPack = null, this.onGamePack = !1, this.confirmGamePack = null, this.skippedKey = null, this.ownAnnouncements = new Set, this.listeners = new Map, this.ownListeners = new Set, this.changes = 0, this.picks = 0, this.playerPicked = !1, this.ownChanges = 0, this.Sg = !1, (0, nC.o)(), this.ready = this.readStored()
+    class ek {
+      constructor(kk) {
+        this.host = kk, this.ready = void 0, this.state = jk, this.playerPack = null, this.onGamePack = !1, this.confirmGamePack = null, this.skippedKey = null, this.ownAnnouncements = new Set, this.listeners = new Map, this.ownListeners = new Set, this.changes = 0, this.picks = 0, this.playerPicked = !1, this.ownChanges = 0, this.ee = !1, (0, yk.k)(), this.ready = this.readStored()
       }
-      readyWithin(CC) {
-        return Promise.race([this.ready, new Promise((zC => {
-          setTimeout(zC, CC)
+      readyWithin(kk) {
+        return Promise.race([this.ready, new Promise((Fk => {
+          setTimeout(Fk, kk)
         }))])
       }
       current() {
@@ -198,102 +198,102 @@ export const modules = {
           gameSource: null
         }
       }
-      onPlayerPackChange(CC) {
-        return this.ownListeners.add(CC), () => {
-          this.ownListeners.delete(CC)
+      onPlayerPackChange(kk) {
+        return this.ownListeners.add(kk), () => {
+          this.ownListeners.delete(kk)
         }
       }
-      isUsingCustomGameTexturePack(CC) {
-        return (0, WC.f)(this.state, CC)
+      isUsingCustomGameTexturePack(kk) {
+        return (0, tk.g)(this.state, kk)
       }
-      setGamePackConfirm(CC) {
-        this.confirmGamePack = CC
+      setGamePackConfirm(kk) {
+        this.confirmGamePack = kk
       }
-      subscribe(CC) {
-        return this.listeners.set(CC, null), this.ready.then((() => {
-          this.deliver(CC)
+      subscribe(kk) {
+        return this.listeners.set(kk, null), this.ready.then((() => {
+          this.deliver(kk)
         })), () => {
-          this.listeners.delete(CC)
+          this.listeners.delete(kk)
         }
       }
-      async setPlayerPack(CC) {
-        const zC = pC(CC) ? null : CC;
-        this.picks++, this.playerPicked = !0, this.ownChanges++, this.setOwn(zC), this.change({
-          pack: zC,
+      async setPlayerPack(kk) {
+        const Fk = Hk(kk) ? null : kk;
+        this.picks++, this.playerPicked = !0, this.ownChanges++, this.setOwn(Fk), this.change({
+          pack: Fk,
           gameSource: null
         }, !1);
-        const ZC = await this.storePlayerPack(zC);
-        return ZC && this.announce(), ZC
+        const Ik = await this.storePlayerPack(Fk);
+        return Ik && this.announce(), Ik
       }
-      async packForGame(CC, zC, ZC) {
-        await this.readyWithin(Math.max(0, (null !== ZC && void 0 !== ZC ? ZC : performance.now() + FC.b) - performance.now()));
-        const wC = ++this.picks,
-          bC = (0, QC.i)(CC) ? (0, QC.m)(CC) : null;
-        if (null === bC) return void this.usePlayerPack();
-        let nC;
-        const fC = function(CC) {
-          let zC;
-          const ZC = new Promise(((ZC, QC) => {
-            zC = setTimeout((() => {
-              QC(new Error(`no answer in ${CC} ms`))
-            }), CC)
+      async packForGame(kk, Fk, Ik) {
+        await this.readyWithin(Math.max(0, (null !== Ik && void 0 !== Ik ? Ik : performance.now() + Lk.c) - performance.now()));
+        const Tk = ++this.picks,
+          ik = (0, Xk.j)(kk) ? (0, Xk.n)(kk) : null;
+        if (null === ik) return void this.usePlayerPack();
+        let yk;
+        const lk = function(kk) {
+          let Fk;
+          const Ik = new Promise(((Ik, Xk) => {
+            Fk = setTimeout((() => {
+              Xk(new Error(`no answer in ${kk} ms`))
+            }), kk)
           }));
-          return ZC.catch((() => {})), {
-            passed: ZC,
+          return Ik.catch((() => {})), {
+            passed: Ik,
             clear: () => {
-              clearTimeout(zC)
+              clearTimeout(Fk)
             }
           }
         }(2e4);
         try {
-          const CC = await Promise.race([zC.packKey(bC), fC.passed]);
-          if (null !== CC && this.onGamePack && this.state.gameSource === CC) return;
-          if (null !== CC && CC === this.skippedKey) return void(this.Sg || this.picks !== wC || this.usePlayerPack());
-          nC = null === CC ? null : await Promise.race([SC(bC, CC, zC), fC.passed])
-        } catch (WC) {
-          const CC = !this.Sg && this.picks === wC && this.holdsOtherGamePack(bC);
-          return this.host.warn(`the texture pack of ${bC} didn't load: ${CC?"the player's own shows":"the pack in play stays"}`, WC), void(CC && this.usePlayerPack())
+          const kk = await Promise.race([Fk.packKey(ik), lk.passed]);
+          if (null !== kk && this.onGamePack && this.state.gameSource === kk) return;
+          if (null !== kk && kk === this.skippedKey) return void(this.ee || this.picks !== Tk || this.usePlayerPack());
+          yk = null === kk ? null : await Promise.race([wk(ik, kk, Fk), lk.passed])
+        } catch (tk) {
+          const kk = !this.ee && this.picks === Tk && this.holdsOtherGamePack(ik);
+          return this.host.warn(`the texture pack of ${ik} didn't load: ${kk?"the player's own shows":"the pack in play stays"}`, tk), void(kk && this.usePlayerPack())
         } finally {
-          fC.clear()
+          lk.clear()
         }
-        if (this.Sg || this.picks !== wC) return;
-        null !== nC && (0, qC.g)(nC.pack) && (this.host.warn(`the texture pack of ${bC} names files on other sites: the player's own shows`, null), nC = null);
-        const oC = null === nC || await this.confirmed(nC.pack, bC) ? null : nC.key;
-        this.Sg || this.picks !== wC || (null !== oC && (this.skippedKey = oC, nC = null), null === nC ? this.usePlayerPack() : (this.onGamePack = !0, this.change({
-          pack: nC.pack,
-          gameSource: nC.key
+        if (this.ee || this.picks !== Tk) return;
+        null !== yk && (0, qk.g)(yk.pack) && (this.host.warn(`the texture pack of ${ik} names files on other sites: the player's own shows`, null), yk = null);
+        const ak = null === yk || await this.confirmed(yk.pack, ik) ? null : yk.key;
+        this.ee || this.picks !== Tk || (null !== ak && (this.skippedKey = ak, yk = null), null === yk ? this.usePlayerPack() : (this.onGamePack = !0, this.change({
+          pack: yk.pack,
+          gameSource: yk.key
         }, !0)))
       }
       endGamePack() {
         this.picks++, this.usePlayerPack()
       }
-      holdsOtherGamePack(CC) {
-        return this.onGamePack && "" !== this.state.gameSource && !this.isUsingCustomGameTexturePack(CC)
+      holdsOtherGamePack(kk) {
+        return this.onGamePack && "" !== this.state.gameSource && !this.isUsingCustomGameTexturePack(kk)
       }
-      async confirmed(CC, zC) {
-        const ZC = this.confirmGamePack;
-        if (null === ZC) return !0;
+      async confirmed(kk, Fk) {
+        const Ik = this.confirmGamePack;
+        if (null === Ik) return !0;
         try {
-          return await ZC(CC, zC)
-        } catch (QC) {
-          return this.host.warn(`the texture pack prompt of ${zC} failed: the pack is skipped`, QC), !1
+          return await Ik(kk, Fk)
+        } catch (Xk) {
+          return this.host.warn(`the texture pack prompt of ${Fk} failed: the pack is skipped`, Xk), !1
         }
       }
       async readPlayerPack() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        if (null !== CC && this.ownAnnouncements.delete(CC)) return;
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        if (null !== kk && this.ownAnnouncements.delete(kk)) return;
         await this.ready;
-        const zC = this.ownChanges;
-        let ZC;
+        const Fk = this.ownChanges;
+        let Ik;
         try {
-          ZC = await this.host.store.getItem(nC.b, !0)
-        } catch (wC) {
-          return void this.host.warn("the stored texture pack didn't read again: the pack in play stays", wC)
+          Ik = await this.host.store.getItem(yk.b, !0)
+        } catch (Tk) {
+          return void this.host.warn("the stored texture pack didn't read again: the pack in play stays", Tk)
         }
-        if (this.Sg || this.ownChanges !== zC) return;
-        const QC = PC(ZC);
-        (0, NC.b)(QC, this.playerPack) || (this.ownChanges++, this.setOwn(QC), this.onGamePack || this.change({
-          pack: QC,
+        if (this.ee || this.ownChanges !== Fk) return;
+        const Xk = Jk(Ik);
+        (0, Zk.e)(Xk, this.playerPack) || (this.ownChanges++, this.setOwn(Xk), this.onGamePack || this.change({
+          pack: Xk,
           gameSource: null
         }, !1))
       }
@@ -301,68 +301,68 @@ export const modules = {
         this.picks++
       }
       dispose() {
-        this.Sg = !0, this.listeners.clear()
+        this.ee = !0, this.listeners.clear()
       }
       async readStored() {
         const {
-          store: CC,
-          warn: zC
+          store: kk,
+          warn: Fk
         } = this.host;
-        await Promise.all([!1 === this.host.oneShot ? void 0 : (0, oC.i)(CC, !0, (CC => {
-          zC("the custom game's texture pack wasn't removed from storage", CC)
-        })).then((CC => {
-          this.takeOneShot(CC)
-        }), (CC => {
-          zC("the custom game's texture pack didn't read: the player's own shows", CC)
-        })), CC.getItem(nC.b, !0).then((CC => {
-          this.takeStoredOwn(CC)
-        }), (CC => {
-          zC("the stored texture pack didn't read: the default pack shows", CC), this.takeStoredOwn(null)
+        await Promise.all([!1 === this.host.oneShot ? void 0 : (0, ak.f)(kk, !0, (kk => {
+          Fk("the custom game's texture pack wasn't removed from storage", kk)
+        })).then((kk => {
+          this.takeOneShot(kk)
+        }), (kk => {
+          Fk("the custom game's texture pack didn't read: the player's own shows", kk)
+        })), kk.getItem(yk.b, !0).then((kk => {
+          this.takeStoredOwn(kk)
+        }), (kk => {
+          Fk("the stored texture pack didn't read: the default pack shows", kk), this.takeStoredOwn(null)
         }))]), this.update()
       }
-      takeOneShot(CC) {
-        var zC;
-        null === CC || this.Sg || this.changes > 0 || this.picks > 0 || ((0, qC.g)(CC.pack) ? this.host.warn("the custom game's texture pack names files on other sites: the player's own shows", null) : (this.onGamePack = !0, this.state = {
-          pack: CC.pack,
-          gameSource: null !== (zC = CC.source) && void 0 !== zC ? zC : ""
+      takeOneShot(kk) {
+        var Fk;
+        null === kk || this.ee || this.changes > 0 || this.picks > 0 || ((0, qk.g)(kk.pack) ? this.host.warn("the custom game's texture pack names files on other sites: the player's own shows", null) : (this.onGamePack = !0, this.state = {
+          pack: kk.pack,
+          gameSource: null !== (Fk = kk.source) && void 0 !== Fk ? Fk : ""
         }))
       }
-      takeStoredOwn(CC) {
-        if (this.playerPicked || this.Sg) return;
-        if (this.ownChanges++, this.setOwn(PC(CC)), this.onGamePack) return;
-        const zC = {
+      takeStoredOwn(kk) {
+        if (this.playerPicked || this.ee) return;
+        if (this.ownChanges++, this.setOwn(Jk(kk)), this.onGamePack) return;
+        const Fk = {
           pack: this.playerPack,
           gameSource: null
         };
-        0 === this.changes ? this.state = zC : this.change(zC, !1)
+        0 === this.changes ? this.state = Fk : this.change(Fk, !1)
       }
       async update() {
-        const CC = this.playerPack,
-          zC = null === CC || void 0 === CC ? void 0 : CC.metaData.id;
-        if (!CC || !zC || !this.host.fetchLatest || zC === wC.c || zC === wC.q.CUSTOM) return;
-        const ZC = wC.u[zC];
-        if (void 0 === ZC || CC.metaData.version >= ZC) return;
-        let QC;
+        const kk = this.playerPack,
+          Fk = null === kk || void 0 === kk ? void 0 : kk.metaData.id;
+        if (!kk || !Fk || !this.host.fetchLatest || Fk === Tk.b || Fk === Tk.l.CUSTOM) return;
+        const Ik = Tk.p[Fk];
+        if (void 0 === Ik || kk.metaData.version >= Ik) return;
+        let Xk;
         try {
-          QC = PC(await this.host.fetchLatest(zC))
-        } catch (bC) {
-          return void this.host.warn(`texture pack ${zC} didn't update to version ${ZC}`, bC)
+          Xk = Jk(await this.host.fetchLatest(Fk))
+        } catch (ik) {
+          return void this.host.warn(`texture pack ${Fk} didn't update to version ${Ik}`, ik)
         }
-        null === QC || this.Sg || this.playerPack !== CC || (this.ownChanges++, this.setOwn(QC), this.onGamePack || this.change({
-          pack: QC,
+        null === Xk || this.ee || this.playerPack !== kk || (this.ownChanges++, this.setOwn(Xk), this.onGamePack || this.change({
+          pack: Xk,
           gameSource: null
-        }, !1), await this.storePlayerPack(QC) && this.announce())
+        }, !1), await this.storePlayerPack(Xk) && this.announce())
       }
       announce() {
-        const CC = (0, fC.c)();
-        null !== CC && this.ownAnnouncements.add(CC)
+        const kk = (0, lk.b)();
+        null !== kk && this.ownAnnouncements.add(kk)
       }
-      setOwn(CC) {
-        this.playerPack = CC;
-        for (const ZC of [...this.ownListeners]) try {
-          ZC()
-        } catch (zC) {
-          this.host.warn("a texture pack listener threw", zC)
+      setOwn(kk) {
+        this.playerPack = kk;
+        for (const Ik of [...this.ownListeners]) try {
+          Ik()
+        } catch (Fk) {
+          this.host.warn("a texture pack listener threw", Fk)
         }
       }
       usePlayerPack() {
@@ -371,72 +371,72 @@ export const modules = {
           gameSource: null
         }, !1)
       }
-      async storePlayerPack(CC) {
+      async storePlayerPack(kk) {
         try {
-          return null === CC ? (await this.host.store.removeItem(nC.b), !0) : await this.host.store.setItem(nC.b, CC)
-        } catch (zC) {
-          return this.host.warn("the texture pack wasn't stored: it shows until the page reloads", zC), !1
+          return null === kk ? (await this.host.store.removeItem(yk.b), !0) : await this.host.store.setItem(yk.b, kk)
+        } catch (Fk) {
+          return this.host.warn("the texture pack wasn't stored: it shows until the page reloads", Fk), !1
         }
       }
-      change(CC, zC) {
-        if (!this.Sg) {
-          this.changes++, this.onGamePack = zC, this.state = CC;
-          for (const CC of [...this.listeners.keys()]) this.deliver(CC)
+      change(kk, Fk) {
+        if (!this.ee) {
+          this.changes++, this.onGamePack = Fk, this.state = kk;
+          for (const kk of [...this.listeners.keys()]) this.deliver(kk)
         }
       }
-      deliver(CC) {
-        if (!this.Sg && this.listeners.has(CC) && this.listeners.get(CC) !== this.state) {
-          this.listeners.set(CC, this.state);
+      deliver(kk) {
+        if (!this.ee && this.listeners.has(kk) && this.listeners.get(kk) !== this.state) {
+          this.listeners.set(kk, this.state);
           try {
-            CC(this.state)
-          } catch (zC) {
-            this.host.warn("a texture pack listener threw", zC)
+            kk(this.state)
+          } catch (Fk) {
+            this.host.warn("a texture pack listener threw", Fk)
           }
         }
       }
     }
-    async function SC(CC, zC, ZC) {
-      const QC = (0, oC.e)(await ZC.fetchPack(zC));
-      if (null !== QC) return {
-        pack: QC,
-        key: zC
+    async function wk(kk, Fk, Ik) {
+      const Xk = (0, ak.e)(await Ik.fetchPack(Fk));
+      if (null !== Xk) return {
+        pack: Xk,
+        key: Fk
       };
-      const wC = await ZC.packKey(CC);
-      if (null === wC) return null;
-      const bC = (0, oC.e)(await ZC.fetchPack(wC));
-      if (null === bC) throw new Error(`no texture pack at ${wC}`);
+      const Tk = await Ik.packKey(kk);
+      if (null === Tk) return null;
+      const ik = (0, ak.e)(await Ik.fetchPack(Tk));
+      if (null === ik) throw new Error(`no texture pack at ${Tk}`);
       return {
-        pack: bC,
-        key: wC
+        pack: ik,
+        key: Tk
       }
     }
 
-    function pC(CC) {
-      return null === CC || CC.metaData.id === wC.c
+    function Hk(kk) {
+      return null === kk || kk.metaData.id === Tk.b
     }
 
-    function PC(CC) {
-      const zC = (0, oC.e)(CC);
-      return pC(zC) ? null : zC
+    function Jk(kk) {
+      const Fk = (0, ak.e)(kk);
+      return Hk(Fk) ? null : Fk
     }
-    async function GC(CC) {
-      let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bC.d;
-      if (null === CC.pack) return null;
+    async function xk(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ik.d;
+      if (null === kk.pack) return null;
       const {
-        packAssets: QC
-      } = await Promise.all([ZC.e(203), ZC.e(44)]).then((() => ZC(61135)));
-      return QC(CC, zC)
+        packAssets: Xk
+      } = await Promise.all([Ik.e(203), Ik.e(44)]).then((() => Ik(61481)));
+      return Xk(kk, Fk)
     }
 
-    function RC(CC) {
-      const zC = (0, nC.t)();
-      return null === zC ? () => {} : (zC.onmessage = zC => {
-        CC.readPlayerPack((0, fC.g)(zC.data))
+    function Pk(kk) {
+      const Fk = (0, yk.u)();
+      return null === Fk ? () => {} : (Fk.onmessage = Fk => {
+        kk.readPlayerPack((0, lk.d)(Fk.data))
       }, () => {
-        zC.close()
+        Fk.close()
       })
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

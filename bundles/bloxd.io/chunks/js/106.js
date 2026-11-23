@@ -1,255 +1,255 @@
 export const id = 106;
 export const ids = [106];
 export const modules = {
-  36244: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => oC
+  36355: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => ak
     });
-    var QC = ZC(1002),
-      wC = ZC.n(QC),
-      bC = ZC(48),
-      nC = ZC(4515),
-      fC = ZC(1056);
+    var Xk = Ik(1055),
+      Tk = Ik.n(Xk),
+      ik = Ik(58),
+      yk = Ik(4570),
+      lk = Ik(1096);
 
-    function oC(CC) {
+    function ak(kk) {
       let {
-        locked: zC,
-        children: ZC
-      } = CC;
-      const QC = (0, bC.useRef)(null),
-        oC = (0, nC.b)(QC, "y");
-      return (0, fC.jsx)("div", {
-        ref: QC,
-        className: wC()("CreateCustomLobbyBody", {
-          CreateCustomLobbyBodyMoreAbove: oC.before,
-          CreateCustomLobbyBodyMoreBelow: oC.after
+        locked: Fk,
+        children: Ik
+      } = kk;
+      const Xk = (0, ik.useRef)(null),
+        ak = (0, yk.e)(Xk, "y");
+      return (0, lk.jsx)("div", {
+        ref: Xk,
+        className: Tk()("CreateCustomLobbyBody", {
+          CreateCustomLobbyBodyMoreAbove: ak.before,
+          CreateCustomLobbyBodyMoreBelow: ak.after
         }),
-        "data-pad-ignore": zC || void 0,
-        children: ZC
+        "data-pad-ignore": Fk || void 0,
+        children: Ik
       })
     }
   },
-  36314: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      showFirstWorldSetupPopup: () => SC
+  36428: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      showFirstWorldSetupPopup: () => wk
     });
-    ZC(4880), ZC(36227);
-    var QC = ZC(4562),
-      wC = ZC(48),
-      bC = ZC(4525),
-      nC = ZC(1143),
-      fC = ZC(1307),
-      oC = ZC(36244),
-      qC = ZC(4887),
-      FC = ZC(1388),
-      WC = ZC(3452),
-      NC = ZC(36241),
-      MC = ZC(4554),
-      gC = ZC(1056);
+    Ik(4936), Ik(36335);
+    var Xk = Ik(4612),
+      Tk = Ik(58),
+      ik = Ik(4584),
+      yk = Ik(1179),
+      lk = Ik(1324),
+      ak = Ik(36355),
+      qk = Ik(4938),
+      Lk = Ik(1406),
+      tk = Ik(3428),
+      Zk = Ik(36347),
+      jk = Ik(4610),
+      ek = Ik(1096);
 
-    function SC(CC) {
-      const zC = {
+    function wk(kk) {
+      const Fk = {
         requested: !1,
         closed: !1
       };
-      fC.NotificationProvider.showCustomPopup({
-        body: ZC => (0, gC.jsx)(pC, {
-          flow: zC,
-          close: ZC,
-          ...CC
+      lk.NotificationProvider.showCustomPopup({
+        body: Ik => (0, ek.jsx)(Hk, {
+          flow: Fk,
+          close: Ik,
+          ...kk
         }),
         middleScreenPopupClassName: "CreateCustomLobbyPopup",
         onClose: () => {
-          zC.closed = !0, zC.requested || (0, MC.f)()
+          Fk.closed = !0, Fk.requested || (0, jk.f)()
         }
       })
     }
 
-    function pC(CC) {
+    function Hk(kk) {
       let {
-        flow: zC,
-        close: ZC,
-        onCreating: fC,
-        onCreated: SC,
-        onFailedClosed: pC,
-        join: PC
-      } = CC;
+        flow: Fk,
+        close: Ik,
+        onCreating: lk,
+        onCreated: wk,
+        onFailedClosed: Hk,
+        join: Jk
+      } = kk;
       const {
-        t: GC
-      } = (0, nC.y)(), [RC, AC] = (0, wC.useState)(QC.x), [xC, JC] = (0, wC.useState)(!1), [IC, iC] = (0, wC.useState)(""), vC = (0, WC.e)();
-      (0, wC.useEffect)((() => {
-        (0, MC.m)()
+        t: xk
+      } = (0, yk.y)(), [Pk, Kk] = (0, Tk.useState)(Xk.q), [Qk, sk] = (0, Tk.useState)(!1), [Vk, zk] = (0, Tk.useState)(""), Sk = (0, tk.d)();
+      (0, Tk.useEffect)((() => {
+        (0, jk.o)()
       }), []);
-      const eC = CC => ({
-        isEnabled: () => RC.plugins[CC],
-        IK: zC => {
-          (0, MC.h)({
-            plugin: CC,
-            enabled: zC
-          }), AC({
-            ...RC,
+      const vk = kk => ({
+        isEnabled: () => Pk.plugins[kk],
+        Av: Fk => {
+          (0, jk.j)({
+            plugin: kk,
+            enabled: Fk
+          }), Kk({
+            ...Pk,
             plugins: {
-              ...RC.plugins,
-              [CC]: zC
+              ...Pk.plugins,
+              [kk]: Fk
             }
           })
         }
       });
-      return (0, gC.jsxs)("div", {
+      return (0, ek.jsxs)("div", {
         className: "CreateCustomLobby",
-        children: [(0, gC.jsx)("div", {
+        children: [(0, ek.jsx)("div", {
           className: "CreateCustomLobbyTitleContainer",
-          children: (0, gC.jsx)("div", {
+          children: (0, ek.jsx)("div", {
             className: "CreateCustomLobbyTitle",
-            children: GC("homePage:myWorld")
+            children: xk("homePage:myWorld")
           })
-        }), (0, gC.jsx)(oC.c, {
-          locked: xC,
-          children: (0, gC.jsxs)("div", {
+        }), (0, ek.jsx)(ak.d, {
+          locked: Qk,
+          children: (0, ek.jsxs)("div", {
             className: "CreateCustomLobbyFields",
-            children: [(0, gC.jsx)(NC.e, {
-              value: RC.defaultGamemode,
-              onChange: CC => {
-                (0, QC.B)(CC) && CC !== RC.defaultGamemode && ((0, MC.h)({
-                  defaultGamemode: CC
-                }), AC({
-                  ...RC,
-                  defaultGamemode: CC
+            children: [(0, ek.jsx)(Zk.e, {
+              value: Pk.defaultGamemode,
+              onChange: kk => {
+                (0, Xk.r)(kk) && kk !== Pk.defaultGamemode && ((0, jk.j)({
+                  defaultGamemode: kk
+                }), Kk({
+                  ...Pk,
+                  defaultGamemode: kk
                 }))
               },
               showAll: !1,
-              disabled: xC
-            }), (0, gC.jsx)(NC.h, {
-              mapTypes: QC.g,
-              value: RC.mapType,
-              onChange: CC => {
-                (0, QC.D)(CC) && CC !== RC.mapType && ((0, MC.h)({
-                  mapType: CC
-                }), AC({
-                  ...RC,
-                  mapType: CC
+              disabled: Qk
+            }), (0, ek.jsx)(Zk.g, {
+              mapTypes: Xk.h,
+              value: Pk.mapType,
+              onChange: kk => {
+                (0, Xk.u)(kk) && kk !== Pk.mapType && ((0, jk.j)({
+                  mapType: kk
+                }), Kk({
+                  ...Pk,
+                  mapType: kk
                 }))
               },
               showAll: !1,
-              disabled: xC
-            }), (0, gC.jsx)(qC.e, {
+              disabled: Qk
+            }), (0, ek.jsx)(qk.e, {
               callbacks: {
-                dayNight: eC("dayNight"),
-                fallDamage: eC("fallDamage"),
-                survivalGuns: eC("survivalGuns")
+                dayNight: vk("dayNight"),
+                fallDamage: vk("fallDamage"),
+                survivalGuns: vk("survivalGuns")
               },
-              disabled: xC,
+              disabled: Qk,
               advancedMode: !1
             })]
           })
-        }), (0, gC.jsxs)("div", {
+        }), (0, ek.jsxs)("div", {
           className: "CreateCustomLobbyFooter",
-          children: [(0, gC.jsx)(FC.o, {
+          children: [(0, ek.jsx)(Lk.m, {
             className: "CreateCustomLobbyButton",
             padDefaultFocus: !0,
-            loading: xC,
+            loading: Qk,
             onClick: () => {
-              zC.requested = !0, JC(!0), fC(!0), iC(""), (0, MC.l)(RC), bC.d.createPersonalWorld(RC).then((CC => {
-                fC(!1);
-                const QC = SC(CC);
-                !zC.closed && vC.current ? (ZC(), PC(CC)) : QC || (0, MC.f)()
-              }), (CC => {
-                if (console.error("Failed to create personal world:", CC), fC(!1), zC.requested = !1, zC.closed || !vC.current) return (0, MC.f)(), void pC(CC);
-                iC(CC.message), JC(!1)
+              Fk.requested = !0, sk(!0), lk(!0), zk(""), (0, jk.k)(Pk), ik.c.createPersonalWorld(Pk).then((kk => {
+                lk(!1);
+                const Xk = wk(kk);
+                !Fk.closed && Sk.current ? (Ik(), Jk(kk)) : Xk || (0, jk.f)()
+              }), (kk => {
+                if (console.error("Failed to create personal world:", kk), lk(!1), Fk.requested = !1, Fk.closed || !Sk.current) return (0, jk.f)(), void Hk(kk);
+                zk(kk.message), sk(!1)
               }))
             },
-            children: GC("general:play")
-          }), IC && (0, gC.jsx)("div", {
+            children: xk("general:play")
+          }), Vk && (0, ek.jsx)("div", {
             className: "CreateCustomLobbyError AnimFadeInScaleUp",
-            children: IC
+            children: Vk
           })]
         })]
       })
     }
   },
-  4887: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => qC
+  4938: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => qk
     });
-    var QC = ZC(1002),
-      wC = ZC.n(QC),
-      bC = ZC(4562),
-      nC = ZC(1143),
-      fC = ZC(1056);
-    const oC = [...bC.j, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
+    var Xk = Ik(1055),
+      Tk = Ik.n(Xk),
+      ik = Ik(4612),
+      yk = Ik(1179),
+      lk = Ik(1096);
+    const ak = [...ik.i, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
 
-    function qC(CC) {
+    function qk(kk) {
       const {
-        disabled: zC,
-        hideWrapper: ZC
-      } = CC, {
-        t: QC
-      } = (0, nC.y)(), qC = CC.advancedMode ? oC.map((zC => [zC, CC.callbacks[zC]])) : bC.j.map((zC => [zC, CC.callbacks[zC]])), WC = (0, fC.jsx)("div", {
-        className: wC()("PluginsGrid", {
-          SectionBody: !ZC
+        disabled: Fk,
+        hideWrapper: Ik
+      } = kk, {
+        t: Xk
+      } = (0, yk.y)(), qk = kk.advancedMode ? ak.map((Fk => [Fk, kk.callbacks[Fk]])) : ik.i.map((Fk => [Fk, kk.callbacks[Fk]])), tk = (0, lk.jsx)("div", {
+        className: Tk()("PluginsGrid", {
+          SectionBody: !Ik
         }),
-        children: qC.map((CC => {
-          let [ZC, QC] = CC;
-          return (0, fC.jsx)(FC, {
-            plugin: ZC,
-            callbacks: QC,
-            disabled: zC
-          }, ZC)
+        children: qk.map((kk => {
+          let [Ik, Xk] = kk;
+          return (0, lk.jsx)(Lk, {
+            plugin: Ik,
+            callbacks: Xk,
+            disabled: Fk
+          }, Ik)
         }))
       });
-      return ZC ? WC : (0, fC.jsxs)("div", {
+      return Ik ? tk : (0, lk.jsxs)("div", {
         className: "BloxdForm",
-        children: [(0, fC.jsx)("div", {
+        children: [(0, lk.jsx)("div", {
           className: "SectionTitle",
-          children: QC("worldBuilder:pluginsSection")
-        }), WC]
+          children: Xk("worldBuilder:pluginsSection")
+        }), tk]
       })
     }
 
-    function FC(CC) {
+    function Lk(kk) {
       let {
-        plugin: zC,
+        plugin: Fk,
         callbacks: {
-          isEnabled: ZC,
-          IK: QC
+          isEnabled: Ik,
+          Av: Xk
         },
-        disabled: bC
-      } = CC;
+        disabled: ik
+      } = kk;
       const {
-        t: oC
-      } = (0, nC.y)(), qC = ZC();
-      return (0, fC.jsxs)("div", {
-        className: wC()("PluginCard", {
-          PluginCardEnabled: qC,
-          PluginCardDisabledForm: bC
+        t: ak
+      } = (0, yk.y)(), qk = Ik();
+      return (0, lk.jsxs)("div", {
+        className: Tk()("PluginCard", {
+          PluginCardEnabled: qk,
+          PluginCardDisabledForm: ik
         }),
         "data-pad-focusable": !0,
-        "aria-disabled": bC || void 0,
+        "aria-disabled": ik || void 0,
         onClick: () => {
-          bC || QC(!qC)
+          ik || Xk(!qk)
         },
-        children: [(0, fC.jsx)("div", {
+        children: [(0, lk.jsx)("div", {
           className: "PluginCardIcon",
-          children: (0, fC.jsx)("img", {
-            src: `/textures/games/classic/customGames/${zC}.png`,
-            alt: zC
+          children: (0, lk.jsx)("img", {
+            src: `/textures/games/classic/customGames/${Fk}.png`,
+            alt: Fk
           })
-        }), (0, fC.jsxs)("div", {
+        }), (0, lk.jsxs)("div", {
           className: "PluginCardBody",
-          children: [(0, fC.jsx)("div", {
+          children: [(0, lk.jsx)("div", {
             className: "PluginCardTitle",
-            children: oC(WC[zC])
-          }), (0, fC.jsx)("div", {
+            children: ak(tk[Fk])
+          }), (0, lk.jsx)("div", {
             className: "PluginCardDescription",
-            children: oC(NC[zC])
+            children: ak(Zk[Fk])
           })]
-        }), (0, fC.jsx)("span", {
+        }), (0, lk.jsx)("span", {
           className: "PluginCardToggleLabel",
-          children: oC(qC ? "general:on" : "general:off")
+          children: ak(qk ? "general:on" : "general:off")
         })]
       })
     }
-    const WC = {
+    const tk = {
         fallDamage: "classic:enableFallDamage",
         tpRequests: "classic:enableTpRequests",
         spawnProtection: "classic:enableSpawnProtection",
@@ -258,7 +258,7 @@ export const modules = {
         survivalGuns: "classic:enableSurvivalGuns",
         dayNight: "classic:enableDayNight"
       },
-      NC = {
+      Zk = {
         fallDamage: "classic:enableFallDamageDescription",
         tpRequests: "classic:enableTpRequestsDescription",
         spawnProtection: "classic:enableSpawnProtectionDescription",
@@ -268,97 +268,97 @@ export const modules = {
         dayNight: "classic:enableDayNightDescription"
       }
   },
-  36241: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => qC,
-      h: () => FC
+  36347: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => qk,
+      g: () => Lk
     });
-    ZC(48);
-    var QC = ZC(1002),
-      wC = ZC.n(QC),
-      bC = ZC(4562),
-      nC = ZC(310),
-      fC = ZC(1143),
-      oC = ZC(1056);
+    Ik(58);
+    var Xk = Ik(1055),
+      Tk = Ik.n(Xk),
+      ik = Ik(4612),
+      yk = Ik(318),
+      lk = Ik(1179),
+      ak = Ik(1096);
 
-    function qC(CC) {
+    function qk(kk) {
       let {
-        value: zC,
-        onChange: ZC,
-        showAll: QC,
-        disabled: qC = !1
-      } = CC;
+        value: Fk,
+        onChange: Ik,
+        showAll: Xk,
+        disabled: qk = !1
+      } = kk;
       const {
-        t: FC
-      } = (0, fC.y)();
-      return (0, oC.jsxs)("div", {
-        className: wC()("BloxdForm GamemodeForm", {
-          BasicOptions: !QC
+        t: Lk
+      } = (0, lk.y)();
+      return (0, ak.jsxs)("div", {
+        className: Tk()("BloxdForm GamemodeForm", {
+          BasicOptions: !Xk
         }),
-        children: [(0, oC.jsx)("div", {
+        children: [(0, ak.jsx)("div", {
           className: "SectionTitle",
-          children: FC("classic:defaultGamemode")
-        }), (0, oC.jsx)("div", {
+          children: Lk("classic:defaultGamemode")
+        }), (0, ak.jsx)("div", {
           className: "SectionBody",
-          children: bC.H.map((CC => QC || (0, bC.B)(CC) ? (0, oC.jsx)("button", {
+          children: ik.x.map((kk => Xk || (0, ik.r)(kk) ? (0, ak.jsx)("button", {
             type: "button",
-            className: wC()("WorldGamemode", {
-              Selected: zC === CC
+            className: Tk()("WorldGamemode", {
+              Selected: Fk === kk
             }),
-            disabled: qC,
+            disabled: qk,
             onClick: () => {
-              ZC(CC)
+              Ik(kk)
             },
             style: {
-              "--background-image": `url(${nC.s[CC]})`
+              "--background-image": `url(${yk.x[kk]})`
             },
-            children: nC.q[CC]
-          }, CC) : null))
+            children: yk.t[kk]
+          }, kk) : null))
         })]
       })
     }
 
-    function FC(CC) {
+    function Lk(kk) {
       let {
-        mapTypes: zC,
-        value: ZC,
-        onChange: QC,
-        showAll: qC,
-        disabled: FC = !1,
-        children: WC
-      } = CC;
+        mapTypes: Fk,
+        value: Ik,
+        onChange: Xk,
+        showAll: qk,
+        disabled: Lk = !1,
+        children: tk
+      } = kk;
       const {
-        t: NC
-      } = (0, fC.y)();
-      return (0, oC.jsxs)("div", {
-        className: wC()("BloxdForm MapTypeForm", {
-          BasicOptions: !qC
+        t: Zk
+      } = (0, lk.y)();
+      return (0, ak.jsxs)("div", {
+        className: Tk()("BloxdForm MapTypeForm", {
+          BasicOptions: !qk
         }),
-        children: [(0, oC.jsx)("div", {
+        children: [(0, ak.jsx)("div", {
           className: "SectionTitle",
-          children: NC("customLobby:mapType")
-        }), (0, oC.jsx)("div", {
+          children: Zk("customLobby:mapType")
+        }), (0, ak.jsx)("div", {
           className: "SectionBody",
-          children: zC.map((CC => qC || (0, bC.D)(CC) ? (0, oC.jsx)("button", {
+          children: Fk.map((kk => qk || (0, ik.u)(kk) ? (0, ak.jsx)("button", {
             type: "button",
-            className: wC()("MapType", {
-              Selected: ZC === CC
+            className: Tk()("MapType", {
+              Selected: Ik === kk
             }),
-            disabled: FC,
+            disabled: Lk,
             onClick: () => {
-              QC(CC)
+              Xk(kk)
             },
             style: {
-              "--background-image": `url(${nC.k[CC]})`
+              "--background-image": `url(${yk.p[kk]})`
             },
-            children: nC.j[CC]
-          }, CC) : null))
-        }), WC]
+            children: yk.n[kk]
+          }, kk) : null))
+        }), tk]
       })
     }
   },
-  4880: () => {},
-  36227: () => {}
+  4936: () => {},
+  36335: () => {}
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

@@ -1,79 +1,79 @@
 export const id = 155;
 export const ids = [155];
 export const modules = {
-  8150: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      AditudeSdkAdaptor: () => nC
+  8124: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      AditudeSdkAdaptor: () => yk
     });
-    var QC = ZC(1269),
-      wC = ZC(1127);
-    const bC = {
+    var Xk = Ik(1295),
+      Tk = Ik(1173);
+    const ik = {
       video: "pb-slot-interstitial-video",
       rewarded: "pb-slot-rewarded-video"
     };
-    class nC extends QC.c {
+    class yk extends Xk.d {
       constructor() {
         super(), this.name = "aditude"
       }
       static async setup() {
         return window.tude = window.tude || {
           cmd: []
-        }, await (0, wC.e)("https://edge.aditude.io/site/bloxd-Jf9xJheMSn/bloxd-longform/bloxd.io/prod/load.js"), new nC
+        }, await (0, Tk.d)("https://edge.aditude.io/site/bloxd-Jf9xJheMSn/bloxd-longform/bloxd.io/prod/load.js"), new yk
       }
-      playVideoAd(CC, zC) {
-        this.playVideoOrRewarded("video", CC, CC)
+      playVideoAd(kk, Fk) {
+        this.playVideoOrRewarded("video", kk, kk)
       }
-      playRewarded(CC, zC) {
-        this.playVideoOrRewarded("rewarded", CC, zC)
+      playRewarded(kk, Fk) {
+        this.playVideoOrRewarded("rewarded", kk, Fk)
       }
-      renderBanner(CC) {
-        const zC = this.getBaseDivId(CC.adId, CC.width, CC.height);
+      renderBanner(kk) {
+        const Fk = this.getBaseDivId(kk.adId, kk.width, kk.height);
         window.tude.cmd.push((function() {
           window.tude.refreshAdsViaDivMappings([{
-            divId: CC.divId,
-            baseDivId: zC
+            divId: kk.divId,
+            baseDivId: Fk
           }])
         }))
       }
-      getBaseDivId(CC, zC, ZC) {
-        return `pb-slot-bloxdio-${zC}-${ZC}${CC>1?`-${CC}`:""}`
+      getBaseDivId(kk, Fk, Ik) {
+        return `pb-slot-bloxdio-${Fk}-${Ik}${kk>1?`-${kk}`:""}`
       }
-      playVideoOrRewarded(CC, zC, ZC) {
-        var QC;
-        let wC = !1;
-        const nC = () => {
-            document.getElementById("GenericVideoWrapper").style.display = "none", wC = !0
+      playVideoOrRewarded(kk, Fk, Ik) {
+        var Xk;
+        let Tk = !1;
+        const yk = () => {
+            document.getElementById("GenericVideoWrapper").style.display = "none", Tk = !0
           },
-          fC = (CC, zC) => {
-            console.error(`AD: Error while playing Aditude video ad: ${CC}:`, zC), nC(), ZC()
+          lk = (kk, Fk) => {
+            console.error(`AD: Error while playing Aditude video ad: ${kk}:`, Fk), yk(), Ik()
           };
-        if (console.log(`AD: Requesting Aditude ${CC} ad`), void 0 === (null === (QC = window.tude) || void 0 === QC ? void 0 : QC.requestInstreamPlayer)) return console.log(`AD: Aditude ad lib not loaded, no ${CC} ad playing`), void fC("Aditude ad lib not loaded", null);
+        if (console.log(`AD: Requesting Aditude ${kk} ad`), void 0 === (null === (Xk = window.tude) || void 0 === Xk ? void 0 : Xk.requestInstreamPlayer)) return console.log(`AD: Aditude ad lib not loaded, no ${kk} ad playing`), void lk("Aditude ad lib not loaded", null);
         document.getElementById("GenericVideoWrapper").style.display = "flex", document.getElementById("GenericVideoInner").classList.add("AditudeVideo"), window.tude.cmd.push((function() {
           console.log("AD: Inside Aditude window.tude.cmd.push");
           try {
             window.tude.requestInstreamPlayer({
-              code: bC[CC],
+              code: ik[kk],
               divId: "GenericVideoInner",
               mode: "adOnly"
-            }).then((ZC => {
-              console.log("AD: Inside Aditude window.tude.requestInstreamPlayer.then"), ZC.on("playerClose", ((ZC, QC) => {
-                console.log("AD: Inside Aditude player.on playerClose"), console.log(`AD: Successfully finished Aditude ${CC} ad`), nC(), zC()
-              })).on("adPrefetchError", ((CC, zC) => {
-                console.log("AD: Inside Aditude player.on adPrefetchError"), fC("Prefetch error", zC)
-              })).on("adError", ((CC, zC) => {
-                console.log("AD: Inside Aditude player.on adError"), fC("Generic error", zC)
+            }).then((Ik => {
+              console.log("AD: Inside Aditude window.tude.requestInstreamPlayer.then"), Ik.on("playerClose", ((Ik, Xk) => {
+                console.log("AD: Inside Aditude player.on playerClose"), console.log(`AD: Successfully finished Aditude ${kk} ad`), yk(), Fk()
+              })).on("adPrefetchError", ((kk, Fk) => {
+                console.log("AD: Inside Aditude player.on adPrefetchError"), lk("Prefetch error", Fk)
+              })).on("adError", ((kk, Fk) => {
+                console.log("AD: Inside Aditude player.on adError"), lk("Generic error", Fk)
               }));
-              const QC = CC => {
+              const Xk = kk => {
                 setTimeout((() => {
-                  wC || ZC.setVideoVolume(.5)
-                }), CC)
+                  Tk || Ik.setVideoVolume(.5)
+                }), kk)
               };
-              QC(500), QC(1e3), QC(1500), QC(2e3)
-            })).catch((CC => {
-              fC("Error occurred while requesting instream player", CC)
+              Xk(500), Xk(1e3), Xk(1500), Xk(2e3)
+            })).catch((kk => {
+              lk("Error occurred while requesting instream player", kk)
             }))
-          } catch (ZC) {
-            fC("Failed to request instream player", ZC)
+          } catch (Ik) {
+            lk("Failed to request instream player", Ik)
           }
         }))
       }
@@ -81,4 +81,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);

@@ -1,157 +1,157 @@
 export const id = 269;
 export const ids = [269];
 export const modules = {
-  40412: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      $: () => Vz,
-      $d: () => gz,
-      $e: () => BZ,
-      $f: () => cZ,
-      Ab: () => rC,
-      Ac: () => RC,
-      Ad: () => SC,
-      Be: () => ZQ,
-      Bf: () => hZ,
-      Cc: () => Fz,
-      Cg: () => NZ,
-      D: () => DC,
-      Dd: () => gC,
-      Eb: () => ZZ,
-      Ee: () => PZ,
-      Ef: () => eZ,
-      Eg: () => gZ,
-      Fd: () => bZ,
-      Gb: () => zZ,
-      Gc: () => qC,
-      H: () => yz,
-      He: () => xZ,
-      Hf: () => QQ,
-      Jd: () => nZ,
-      K: () => NC,
-      Kb: () => Mz,
-      Kc: () => Dz,
-      Kf: () => kZ,
-      L: () => wz,
-      Le: () => MZ,
-      Lf: () => CQ,
-      Mf: () => OZ,
-      N: () => hC,
-      Nd: () => JC,
-      Ob: () => fz,
-      Oc: () => TC,
-      Of: () => VZ,
-      Pe: () => yZ,
-      Pf: () => zQ,
-      Q: () => YC,
-      Qf: () => LZ,
-      R: () => KC,
-      Rb: () => wC,
-      Rc: () => jC,
-      Rd: () => EC,
-      S: () => az,
-      Sb: () => PC,
-      Te: () => DZ,
-      U: () => MC,
-      Uc: () => Lz,
-      Uf: () => JZ,
-      Vd: () => HC,
-      Ve: () => HZ,
-      W: () => tC,
-      Wb: () => Gz,
-      Wc: () => Qz,
-      We: () => lZ,
-      Wf: () => pZ,
-      Xc: () => Wz,
-      Xe: () => EZ,
-      Xf: () => UZ,
-      Yd: () => XC,
-      Z: () => bQ,
-      _b: () => BC,
-      _c: () => eC,
-      _d: () => lC,
-      ac: () => CZ,
-      b: () => bC,
-      cb: () => UC,
-      cd: () => qz,
-      ce: () => oC,
-      dc: () => dC,
-      df: () => mZ,
-      dg: () => uZ,
-      eb: () => Oz,
-      ec: () => kC,
-      f: () => nC,
-      fe: () => FC,
-      fg: () => RZ,
-      g: () => IC,
-      gd: () => oz,
-      ge: () => pz,
-      hb: () => kz,
-      hc: () => OC,
-      he: () => jz,
-      hf: () => rZ,
-      hg: () => SZ,
-      ie: () => sC,
-      j: () => cC,
-      kc: () => zz,
-      kd: () => Zz,
-      kf: () => dZ,
-      kg: () => XZ,
-      l: () => qZ,
-      lb: () => LC,
-      le: () => Nz,
-      mb: () => Bz,
-      me: () => Uz,
-      mf: () => aZ,
-      nc: () => Sz,
-      nd: () => vC,
-      ne: () => sz,
-      oc: () => yC,
-      od: () => AC,
-      oe: () => Cz,
-      of: () => TZ,
-      og: () => IZ,
-      p: () => fZ,
-      pf: () => sZ,
-      qb: () => uC,
-      qd: () => QC,
-      rc: () => mC,
-      rd: () => iC,
-      re: () => VC,
-      rf: () => wQ,
-      s: () => fC,
-      sg: () => AZ,
-      tb: () => QZ,
-      td: () => nz,
-      te: () => aC,
-      ue: () => xC,
-      uf: () => iZ,
-      ug: () => jZ,
-      vc: () => bz,
-      ve: () => WC,
-      w: () => Tz,
-      wf: () => KZ,
-      xb: () => wZ,
-      xc: () => GC,
-      xd: () => pC,
-      xe: () => oZ,
-      yf: () => vZ,
-      yg: () => GZ,
-      z: () => tz,
-      zf: () => YZ,
-      zg: () => tZ
+  40583: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      $: () => yX,
+      $e: () => cI,
+      $f: () => NI,
+      Ac: () => TF,
+      Ad: () => Rk,
+      Ae: () => eI,
+      Bb: () => eF,
+      Bd: () => wF,
+      Bf: () => vI,
+      C: () => dF,
+      D: () => Yk,
+      Dc: () => ZF,
+      De: () => gI,
+      Df: () => TX,
+      E: () => gF,
+      Ed: () => ak,
+      Fb: () => aF,
+      Fc: () => vk,
+      Ff: () => MI,
+      Gb: () => Tk,
+      H: () => Zk,
+      He: () => YI,
+      Hf: () => FX,
+      Id: () => Lk,
+      Jc: () => LF,
+      K: () => iF,
+      Kb: () => Jk,
+      Kd: () => JF,
+      Kf: () => DI,
+      Lb: () => PF,
+      Le: () => uI,
+      Lf: () => kX,
+      M: () => Ek,
+      Mc: () => qF,
+      Nd: () => AF,
+      Ob: () => rk,
+      Od: () => Wk,
+      Oe: () => RI,
+      Of: () => IX,
+      P: () => nk,
+      Pc: () => XF,
+      Pe: () => bI,
+      Pf: () => mI,
+      Rb: () => FI,
+      Rd: () => jF,
+      Sc: () => Sk,
+      Sf: () => VI,
+      T: () => Ok,
+      Tb: () => Gk,
+      Te: () => rI,
+      Ub: () => Mk,
+      V: () => BF,
+      Vd: () => hF,
+      Vf: () => JI,
+      W: () => jk,
+      Wb: () => Dk,
+      Wc: () => Kk,
+      Wf: () => hI,
+      X: () => dk,
+      Xb: () => IF,
+      Xe: () => pI,
+      Yc: () => Xk,
+      Zb: () => HF,
+      Zd: () => WF,
+      Zf: () => CI,
+      _c: () => zk,
+      ab: () => kI,
+      ag: () => KI,
+      bb: () => hk,
+      bc: () => gk,
+      be: () => FF,
+      bg: () => HI,
+      cc: () => pk,
+      cd: () => lF,
+      d: () => ik,
+      dc: () => yF,
+      df: () => GI,
+      eb: () => DF,
+      ee: () => kF,
+      eg: () => UI,
+      ff: () => BI,
+      gc: () => xk,
+      gd: () => Hk,
+      h: () => yk,
+      hb: () => MF,
+      he: () => Bk,
+      i: () => Vk,
+      id: () => wk,
+      if: () => fI,
+      ig: () => zI,
+      jb: () => mk,
+      jd: () => ek,
+      k: () => Ck,
+      kb: () => rF,
+      kc: () => Pk,
+      kf: () => WI,
+      kg: () => QI,
+      lc: () => tF,
+      le: () => Qk,
+      lg: () => AI,
+      md: () => yI,
+      me: () => tk,
+      n: () => LI,
+      nb: () => Nk,
+      nf: () => iX,
+      of: () => SI,
+      og: () => PI,
+      pc: () => qk,
+      pd: () => lI,
+      pe: () => qI,
+      pf: () => OI,
+      qb: () => TI,
+      qg: () => dI,
+      r: () => aI,
+      rc: () => YF,
+      rf: () => oI,
+      sd: () => sk,
+      tb: () => iI,
+      tc: () => fk,
+      td: () => bk,
+      te: () => XX,
+      tg: () => jI,
+      v: () => lk,
+      vb: () => ck,
+      vc: () => Ak,
+      vd: () => uk,
+      ve: () => xI,
+      vf: () => nI,
+      wb: () => XI,
+      wg: () => wI,
+      xb: () => II,
+      xd: () => Uk,
+      y: () => fF,
+      ye: () => sI,
+      zc: () => mF,
+      zf: () => EI
     });
-    const QC = -2147483648,
-      wC = 12,
-      bC = 12,
-      nC = 4095,
-      fC = {
+    const Xk = -2147483648,
+      Tk = 12,
+      ik = 12,
+      yk = 4095,
+      lk = {
         Lifeform: 1,
         Throwable: 2,
         Mesh: 3,
         Audio: 4,
         Item: 5
       },
-      oC = {
+      ak = {
         Alive: 1,
         Crouching: 2,
         OnGround: 4,
@@ -172,7 +172,7 @@ export const modules = {
         DropAhead: 131072,
         FreeCamMoves: 262144
       },
-      qC = {
+      qk = {
         None: 0,
         Entity: 1,
         Open: 2,
@@ -184,21 +184,21 @@ export const modules = {
         Feed: 8,
         Ride: 9
       },
-      FC = {
+      Lk = {
         Off: 0,
         Key: 1,
         Touch: 2
       },
-      WC = {
+      tk = {
         Alive: 16
       },
-      NC = 32,
-      MC = {
+      Zk = 32,
+      jk = {
         Stored: 1,
         Unloaded: 2,
         ResetAll: 4
       },
-      gC = {
+      ek = {
         opacity: 0,
         zIndex: 1,
         overlayColour: 2,
@@ -229,31 +229,31 @@ export const modules = {
         _protectionEnchantSum: 27,
         _receivingDamageMultiplier: 28
       },
-      SC = 4294967295,
-      pC = 0,
-      PC = 4294967295,
-      GC = 4,
-      RC = 123,
-      AC = -2147483648,
-      xC = {
+      wk = 4294967295,
+      Hk = 0,
+      Jk = 4294967295,
+      xk = 4,
+      Pk = 123,
+      Kk = -2147483648,
+      Qk = {
         Off: 0,
         All: 1,
         Filter: 2
       },
-      JC = 51,
-      IC = 5,
-      iC = 4294967295,
-      vC = 4294967295,
-      eC = 128,
-      hC = ["Workbench", "Furnace", "Artisan Bench", "Potion Table", "Salvaging Table", "Enchanting Table"],
-      KC = 16,
-      YC = 255,
-      dC = {
+      sk = 51,
+      Vk = 5,
+      zk = 4294967295,
+      Sk = 4294967295,
+      vk = 128,
+      Ek = ["Workbench", "Furnace", "Artisan Bench", "Potion Table", "Salvaging Table", "Enchanting Table"],
+      Ok = 16,
+      nk = 255,
+      Gk = {
         Off: 0,
         On: 1,
         Keep: 2
       },
-      mC = {
+      pk = {
         AltVeto: 1,
         AltAction: 2,
         Click: 3,
@@ -264,20 +264,20 @@ export const modules = {
         Create: 8,
         Director: 11
       },
-      HC = {
+      uk = {
         Hotbar: 256,
         Drop: 257
       },
-      EC = {
+      bk = {
         Down: 1,
         Next: 2,
         Stack: 4
       },
-      lC = {
+      Rk = {
         Rate: 0,
         Gyro: 1
       },
-      XC = {
+      Uk = {
         Active: 1,
         JumpHeld: 2,
         JumpPressed: 4,
@@ -288,24 +288,24 @@ export const modules = {
         Peek: 128,
         EndToggle: 256
       },
-      cC = {
+      Ck = {
         Prevent: 0,
         Allow: 1,
         PreventPlacement: 2
       },
-      uC = {
+      Nk = {
         None: 0,
         Pose: 1,
         FaceMovement: 2,
         FaceCamera: 3,
         FaceCursor: 4
       },
-      rC = {
+      ck = {
         LookPointed: 1,
         Held: 2
       },
-      sC = 3,
-      TC = {
+      Wk = 3,
+      fk = {
         Synced: 0,
         ChestOpened: 1,
         ChestClosed: 2,
@@ -316,7 +316,7 @@ export const modules = {
         NumberKey: 7,
         DropRequested: 8
       },
-      aC = {
+      Bk = {
         ToggleMenu: 0,
         EditBoard: 1,
         EditCodeBlock: 2,
@@ -337,82 +337,82 @@ export const modules = {
         EmoteWheelClose: 17,
         BlockMined: 18
       },
-      tC = {
+      dk = {
         Alt: 1,
         Up: 2,
         HasPos: 4,
         AttackOnly: 8
       },
-      DC = {
+      Yk = {
         Solid: 1,
         Fluid: 2,
         PlaceOver: 4
       },
-      jC = {
+      Ak = {
         Stackable: 1
       },
-      yC = {
+      gk = {
         granule: 1,
         wood: 2,
         rock: 3,
         cuttable: 4
       },
-      LC = {
+      mk = {
         Detail: 1,
         RoomForOne: 2
       },
-      UC = {
+      hk = {
         HaveIngredients: 1,
         Listed: 2
       },
-      BC = {
+      rk = {
         HasOpts: 1
       },
-      OC = {
+      Dk = {
         Flat: 0,
         Chevrons: 1,
         FurnaceFire: 2,
         FlatOpaque: 3,
         FlatOnTop: 4
       },
-      kC = {
+      Mk = {
         Up: 1,
         Down: 2
       },
-      VC = {
+      kF = {
         TwoD: 1,
         Loop: 2
       },
-      Cz = {
+      FF = {
         StopAfter: 1
       },
-      zz = {
+      IF = {
         Anchor: 1,
         Visible: 2,
         UvOffset: 4,
         Visibility: 8,
         Scale: 16
       },
-      Zz = {
+      XF = {
         Pose: 1,
         Visible: 2
       },
-      Qz = 255,
-      wz = 65535,
-      bz = 255,
-      nz = 65535,
-      fz = ["standing", "sitting", "zombie", "gliding", "driving", "sleeping", "riding"],
-      oz = ["", "Sheared", "Saddled", "Antlers", "skyblockHeldBoss"],
-      qz = ["Box", "BloxdBlock", "Person", "Leaderboard", "ParticleEmitter"],
-      Fz = {
+      TF = 255,
+      iF = 65535,
+      yF = 255,
+      lF = 65535,
+      aF = ["standing", "sitting", "zombie", "gliding", "driving", "sleeping", "riding"],
+      qF = ["", "Sheared", "Saddled", "Antlers", "skyblockHeldBoss"],
+      LF = ["Box", "BloxdBlock", "Person", "Leaderboard", "ParticleEmitter"],
+      tF = {
         Bytes: 16,
         Hidden: 2147483648,
         Max: 262144
       },
-      Wz = 4294967295,
-      Nz = 4294967295,
-      Mz = 255,
-      gz = {
+      ZF = 4294967295,
+      jF = 4294967295,
+      eF = 255,
+      wF = {
         PresetNone: 65535,
         HasBox: 1,
         Anchored: 1,
@@ -423,333 +423,333 @@ export const modules = {
         MaxKey: 1073741823,
         MaxLiveKeys: 256
       },
-      Sz = {
+      HF = {
         critical: 123
       },
-      pz = 4294967295,
-      Pz = {
+      JF = 4294967295,
+      xF = {
         BYTES: 4,
-        ZN: (CC, zC) => CC.getUint32(zC + 0, !0)
+        Dt: (kk, Fk) => kk.getUint32(Fk + 0, !0)
       },
-      Gz = {
+      PF = {
         BYTES: 12,
-        serverId: (CC, zC) => CC.getInt32(zC + 0, !0),
-        index: (CC, zC) => CC.getUint32(zC + 4, !0),
-        kind: (CC, zC) => CC.getUint16(zC + 8, !0)
+        serverId: (kk, Fk) => kk.getInt32(Fk + 0, !0),
+        index: (kk, Fk) => kk.getUint32(Fk + 4, !0),
+        kind: (kk, Fk) => kk.getUint16(Fk + 8, !0)
       },
-      Rz = {
+      KF = {
         BYTES: 20,
-        pos: (CC, zC, ZC) => CC.getInt32(zC + 0 + 4 * ZC, !0),
-        actual: (CC, zC) => CC.getUint32(zC + 12, !0),
-        dataLen: (CC, zC) => CC.getUint32(zC + 16, !0)
+        pos: (kk, Fk, Ik) => kk.getInt32(Fk + 0 + 4 * Ik, !0),
+        actual: (kk, Fk) => kk.getUint32(Fk + 12, !0),
+        dataLen: (kk, Fk) => kk.getUint32(Fk + 16, !0)
       },
-      Az = {
+      QF = {
         BYTES: 20,
-        what: (CC, zC) => CC.getUint8(zC + 0),
-        value: (CC, zC) => CC.getInt16(zC + 2, !0),
-        pos: (CC, zC, ZC) => CC.getInt32(zC + 4 + 4 * ZC, !0),
-        block: (CC, zC) => CC.getUint32(zC + 16, !0)
+        what: (kk, Fk) => kk.getUint8(Fk + 0),
+        value: (kk, Fk) => kk.getInt16(Fk + 2, !0),
+        pos: (kk, Fk, Ik) => kk.getInt32(Fk + 4 + 4 * Ik, !0),
+        block: (kk, Fk) => kk.getUint32(Fk + 16, !0)
       },
-      xz = {
+      sF = {
         BYTES: 4,
-        item: (CC, zC) => CC.getUint16(zC + 0, !0),
-        slot: (CC, zC) => CC.getUint8(zC + 2)
+        item: (kk, Fk) => kk.getUint16(Fk + 0, !0),
+        slot: (kk, Fk) => kk.getUint8(Fk + 2)
       },
-      Jz = {
+      VF = {
         BYTES: 16,
-        target: (CC, zC) => CC.getInt32(zC + 0, !0),
-        damage: (CC, zC) => CC.getFloat32(zC + 4, !0),
-        distance: (CC, zC) => CC.getFloat32(zC + 8, !0),
-        crit: (CC, zC) => CC.getUint8(zC + 12)
+        target: (kk, Fk) => kk.getInt32(Fk + 0, !0),
+        damage: (kk, Fk) => kk.getFloat32(Fk + 4, !0),
+        distance: (kk, Fk) => kk.getFloat32(Fk + 8, !0),
+        crit: (kk, Fk) => kk.getUint8(Fk + 12)
       },
-      Iz = {
+      zF = {
         BYTES: 4,
-        slot: (CC, zC) => CC.getUint16(zC + 0, !0)
+        slot: (kk, Fk) => kk.getUint16(Fk + 0, !0)
       },
-      iz = {
+      SF = {
         BYTES: 20,
-        what: (CC, zC) => CC.getUint8(zC + 0),
-        value: (CC, zC) => CC.getInt16(zC + 2, !0),
-        pos: (CC, zC, ZC) => CC.getInt32(zC + 4 + 4 * ZC, !0),
-        block: (CC, zC) => CC.getUint32(zC + 16, !0)
+        what: (kk, Fk) => kk.getUint8(Fk + 0),
+        value: (kk, Fk) => kk.getInt16(Fk + 2, !0),
+        pos: (kk, Fk, Ik) => kk.getInt32(Fk + 4 + 4 * Ik, !0),
+        block: (kk, Fk) => kk.getUint32(Fk + 16, !0)
       },
-      vz = {
+      oF = {
         BYTES: 12,
-        serverId: (CC, zC) => CC.getInt32(zC + 0, !0),
-        index: (CC, zC) => CC.getUint32(zC + 4, !0),
-        what: (CC, zC) => CC.getUint16(zC + 8, !0)
+        serverId: (kk, Fk) => kk.getInt32(Fk + 0, !0),
+        index: (kk, Fk) => kk.getUint32(Fk + 4, !0),
+        what: (kk, Fk) => kk.getUint16(Fk + 8, !0)
       },
-      ez = {
+      vF = {
         BYTES: 24,
-        cx: (CC, zC) => CC.getInt32(zC + 0, !0),
-        cy: (CC, zC) => CC.getInt32(zC + 4, !0),
-        cz: (CC, zC) => CC.getInt32(zC + 8, !0),
-        slot: (CC, zC) => CC.getUint32(zC + 12, !0),
-        generation: (CC, zC) => CC.getUint32(zC + 16, !0),
-        flags: (CC, zC) => CC.getUint32(zC + 20, !0)
+        cx: (kk, Fk) => kk.getInt32(Fk + 0, !0),
+        cy: (kk, Fk) => kk.getInt32(Fk + 4, !0),
+        cz: (kk, Fk) => kk.getInt32(Fk + 8, !0),
+        slot: (kk, Fk) => kk.getUint32(Fk + 12, !0),
+        generation: (kk, Fk) => kk.getUint32(Fk + 16, !0),
+        flags: (kk, Fk) => kk.getUint32(Fk + 20, !0)
       },
-      hz = {
+      EF = {
         BYTES: 44,
-        pos: (CC, zC, ZC) => CC.getFloat64(zC + 0 + 8 * ZC, !0),
-        sound: (CC, zC) => CC.getUint16(zC + 24, !0),
-        flags: (CC, zC) => CC.getUint16(zC + 26, !0),
-        handle: (CC, zC) => CC.getUint32(zC + 28, !0),
-        volume: (CC, zC) => CC.getFloat32(zC + 32, !0),
-        rate: (CC, zC) => CC.getFloat32(zC + 36, !0),
-        refDist: (CC, zC) => CC.getFloat32(zC + 40, !0)
+        pos: (kk, Fk, Ik) => kk.getFloat64(Fk + 0 + 8 * Ik, !0),
+        sound: (kk, Fk) => kk.getUint16(Fk + 24, !0),
+        flags: (kk, Fk) => kk.getUint16(Fk + 26, !0),
+        handle: (kk, Fk) => kk.getUint32(Fk + 28, !0),
+        volume: (kk, Fk) => kk.getFloat32(Fk + 32, !0),
+        rate: (kk, Fk) => kk.getFloat32(Fk + 36, !0),
+        refDist: (kk, Fk) => kk.getFloat32(Fk + 40, !0)
       },
-      Kz = {
+      OF = {
         BYTES: 28,
-        pos: (CC, zC, ZC) => CC.getFloat64(zC + 0 + 8 * ZC, !0),
-        handle: (CC, zC) => CC.getUint32(zC + 24, !0)
+        pos: (kk, Fk, Ik) => kk.getFloat64(Fk + 0 + 8 * Ik, !0),
+        handle: (kk, Fk) => kk.getUint32(Fk + 24, !0)
       },
-      Yz = {
+      nF = {
         BYTES: 16,
-        handle: (CC, zC) => CC.getUint32(zC + 0, !0),
-        volume: (CC, zC) => CC.getFloat32(zC + 4, !0),
-        rate: (CC, zC) => CC.getFloat32(zC + 8, !0),
-        refDist: (CC, zC) => CC.getFloat32(zC + 12, !0)
+        handle: (kk, Fk) => kk.getUint32(Fk + 0, !0),
+        volume: (kk, Fk) => kk.getFloat32(Fk + 4, !0),
+        rate: (kk, Fk) => kk.getFloat32(Fk + 8, !0),
+        refDist: (kk, Fk) => kk.getFloat32(Fk + 12, !0)
       },
-      dz = {
+      GF = {
         BYTES: 12,
-        handle: (CC, zC) => CC.getUint32(zC + 0, !0),
-        to: (CC, zC) => CC.getFloat32(zC + 4, !0),
-        ms: (CC, zC) => CC.getUint16(zC + 8, !0),
-        flags: (CC, zC) => CC.getUint16(zC + 10, !0)
+        handle: (kk, Fk) => kk.getUint32(Fk + 0, !0),
+        to: (kk, Fk) => kk.getFloat32(Fk + 4, !0),
+        ms: (kk, Fk) => kk.getUint16(Fk + 8, !0),
+        flags: (kk, Fk) => kk.getUint16(Fk + 10, !0)
       },
-      mz = {
+      pF = {
         BYTES: 4,
-        handle: (CC, zC) => CC.getUint32(zC + 0, !0)
+        handle: (kk, Fk) => kk.getUint32(Fk + 0, !0)
       },
-      Hz = {
+      uF = {
         BYTES: 8,
-        reason: (CC, zC) => CC.getUint8(zC + 0),
-        code: (CC, zC) => CC.getUint8(zC + 1),
-        version: (CC, zC) => CC.getUint32(zC + 4, !0)
+        reason: (kk, Fk) => kk.getUint8(Fk + 0),
+        code: (kk, Fk) => kk.getUint8(Fk + 1),
+        version: (kk, Fk) => kk.getUint32(Fk + 4, !0)
       },
-      Ez = {
+      bF = {
         BYTES: 4,
-        key: (CC, zC) => CC.getUint8(zC + 0),
-        tag: (CC, zC) => CC.getUint8(zC + 1)
+        key: (kk, Fk) => kk.getUint8(Fk + 0),
+        tag: (kk, Fk) => kk.getUint8(Fk + 1)
       },
-      lz = {
+      RF = {
         BYTES: 16,
-        save: (CC, zC) => CC.getUint32(zC + 0, !0),
-        index: (CC, zC) => CC.getUint32(zC + 4, !0),
-        ptr: (CC, zC) => CC.getUint32(zC + 8, !0),
-        len: (CC, zC) => CC.getUint32(zC + 12, !0)
+        save: (kk, Fk) => kk.getUint32(Fk + 0, !0),
+        index: (kk, Fk) => kk.getUint32(Fk + 4, !0),
+        ptr: (kk, Fk) => kk.getUint32(Fk + 8, !0),
+        len: (kk, Fk) => kk.getUint32(Fk + 12, !0)
       },
-      Xz = {
+      UF = {
         BYTES: 16,
-        save: (CC, zC) => CC.getUint32(zC + 0, !0),
-        kind: (CC, zC) => CC.getUint8(zC + 4),
-        parts: (CC, zC) => CC.getUint32(zC + 8, !0),
-        bytes: (CC, zC) => CC.getUint32(zC + 12, !0)
+        save: (kk, Fk) => kk.getUint32(Fk + 0, !0),
+        kind: (kk, Fk) => kk.getUint8(Fk + 4),
+        parts: (kk, Fk) => kk.getUint32(Fk + 8, !0),
+        bytes: (kk, Fk) => kk.getUint32(Fk + 12, !0)
       },
-      cz = {
+      CF = {
         BYTES: 4,
-        totalTicks: (CC, zC) => CC.getUint32(zC + 0, !0)
+        totalTicks: (kk, Fk) => kk.getUint32(Fk + 0, !0)
       },
-      uz = {
+      NF = {
         BYTES: 24,
-        what: (CC, zC) => CC.getUint8(zC + 0),
-        int: (CC, zC) => CC.getInt32(zC + 4, !0),
-        x: (CC, zC) => CC.getFloat64(zC + 8, !0),
-        y: (CC, zC) => CC.getFloat64(zC + 16, !0)
+        what: (kk, Fk) => kk.getUint8(Fk + 0),
+        int: (kk, Fk) => kk.getInt32(Fk + 4, !0),
+        x: (kk, Fk) => kk.getFloat64(Fk + 8, !0),
+        y: (kk, Fk) => kk.getFloat64(Fk + 16, !0)
       },
-      rz = {
+      cF = {
         BYTES: 8,
-        what: (CC, zC) => CC.getUint8(zC + 0),
-        kind: (CC, zC) => CC.getUint8(zC + 1),
-        save: (CC, zC) => CC.getUint32(zC + 4, !0)
+        what: (kk, Fk) => kk.getUint8(Fk + 0),
+        kind: (kk, Fk) => kk.getUint8(Fk + 1),
+        save: (kk, Fk) => kk.getUint32(Fk + 4, !0)
       },
-      sz = {
+      WF = {
         BYTES: 4,
-        cq: (CC, zC) => CC.getUint16(zC + 0, !0)
+        oq: (kk, Fk) => kk.getUint16(Fk + 0, !0)
       },
-      Tz = {
+      fF = {
         BYTES: 360,
-        eye: (CC, zC, ZC) => CC.getFloat64(zC + 0 + 8 * ZC, !0),
-        localPos: (CC, zC, ZC) => CC.getFloat64(zC + 24 + 8 * ZC, !0),
-        HCC: (CC, zC, ZC) => CC.getFloat64(zC + 48 + 8 * ZC, !0),
-        viewProj: (CC, zC, ZC) => CC.getFloat32(zC + 72 + 4 * ZC, !0),
-        origin: (CC, zC, ZC) => CC.getInt32(zC + 136 + 4 * ZC, !0),
-        heading: (CC, zC) => CC.getFloat32(zC + 148, !0),
-        pitch: (CC, zC) => CC.getFloat32(zC + 152, !0),
-        tanHalfFovX: (CC, zC) => CC.getFloat32(zC + 156, !0),
-        tanHalfFovY: (CC, zC) => CC.getFloat32(zC + 160, !0),
-        viewportCss: (CC, zC, ZC) => CC.getFloat32(zC + 164 + 4 * ZC, !0),
-        localVel: (CC, zC, ZC) => CC.getFloat32(zC + 172 + 4 * ZC, !0),
-        actionDir: (CC, zC, ZC) => CC.getFloat32(zC + 184 + 4 * ZC, !0),
-        localId: (CC, zC) => CC.getInt32(zC + 196, !0),
-        playerFlags: (CC, zC) => CC.getUint32(zC + 200, !0),
-        targetBlock: (CC, zC, ZC) => CC.getInt32(zC + 204 + 4 * ZC, !0),
-        targetAdjacent: (CC, zC, ZC) => CC.getInt32(zC + 216 + 4 * ZC, !0),
-        targetBlockId: (CC, zC) => CC.getUint32(zC + 228, !0),
-        targetNormal: (CC, zC, ZC) => CC.getInt8(zC + 232 + 1 * ZC),
-        targetFlags: (CC, zC) => CC.getUint8(zC + 235),
-        pickedEntity: (CC, zC) => CC.getInt32(zC + 236, !0),
-        breakingPos: (CC, zC, ZC) => CC.getInt32(zC + 240 + 4 * ZC, !0),
-        breakingProgress: (CC, zC) => CC.getFloat32(zC + 252, !0),
-        Hx: (CC, zC) => CC.getUint16(zC + 256, !0),
-        selectedSlot: (CC, zC) => CC.getUint8(zC + 258),
-        heldFlags: (CC, zC) => CC.getUint8(zC + 259),
-        heldAttrVersion: (CC, zC) => CC.getUint32(zC + 260, !0),
-        inventoryVersion: (CC, zC) => CC.getUint32(zC + 264, !0),
-        effectsVersion: (CC, zC) => CC.getUint32(zC + 268, !0),
-        entitiesVersion: (CC, zC) => CC.getUint32(zC + 272, !0),
-        entRenderPtr: (CC, zC) => CC.getUint32(zC + 276, !0),
-        entCapacity: (CC, zC) => CC.getUint32(zC + 280, !0),
-        frameMs: (CC, zC) => CC.getFloat32(zC + 284, !0),
-        fps: (CC, zC) => CC.getFloat32(zC + 288, !0),
-        entVisPtr: (CC, zC) => CC.getUint32(zC + 292, !0),
-        momentumFrac: (CC, zC) => CC.getFloat32(zC + 296, !0),
-        chunkSlotsPtr: (CC, zC) => CC.getUint32(zC + 300, !0),
-        chunkSlotsLen: (CC, zC) => CC.getUint32(zC + 304, !0),
-        walkThroughPtr: (CC, zC) => CC.getUint32(zC + 308, !0),
-        walkThroughLen: (CC, zC) => CC.getUint32(zC + 312, !0),
-        audioViewPtr: (CC, zC) => CC.getUint32(zC + 316, !0),
-        inventoryViewPtr: (CC, zC) => CC.getUint32(zC + 320, !0),
-        eventOverflowGen: (CC, zC) => CC.getUint32(zC + 324, !0),
-        eventOverflowMask: (CC, zC) => CC.getUint32(zC + 328, !0),
-        promptEntity: (CC, zC) => CC.getInt32(zC + 332, !0),
-        replayViewPtr: (CC, zC) => CC.getUint32(zC + 336, !0),
-        slotIcon: (CC, zC) => CC.getUint32(zC + 340, !0),
-        localDeaths: (CC, zC) => CC.getUint32(zC + 344, !0),
-        cameraFar: (CC, zC) => CC.getFloat32(zC + 348, !0),
-        gliderBoostFuel: (CC, zC) => CC.getUint32(zC + 352, !0),
-        interactLabel: (CC, zC) => CC.getUint16(zC + 356, !0),
-        interactIcon: (CC, zC) => CC.getUint16(zC + 358, !0)
+        eye: (kk, Fk, Ik) => kk.getFloat64(Fk + 0 + 8 * Ik, !0),
+        localPos: (kk, Fk, Ik) => kk.getFloat64(Fk + 24 + 8 * Ik, !0),
+        ckk: (kk, Fk, Ik) => kk.getFloat64(Fk + 48 + 8 * Ik, !0),
+        viewProj: (kk, Fk, Ik) => kk.getFloat32(Fk + 72 + 4 * Ik, !0),
+        origin: (kk, Fk, Ik) => kk.getInt32(Fk + 136 + 4 * Ik, !0),
+        heading: (kk, Fk) => kk.getFloat32(Fk + 148, !0),
+        pitch: (kk, Fk) => kk.getFloat32(Fk + 152, !0),
+        tanHalfFovX: (kk, Fk) => kk.getFloat32(Fk + 156, !0),
+        tanHalfFovY: (kk, Fk) => kk.getFloat32(Fk + 160, !0),
+        viewportCss: (kk, Fk, Ik) => kk.getFloat32(Fk + 164 + 4 * Ik, !0),
+        localVel: (kk, Fk, Ik) => kk.getFloat32(Fk + 172 + 4 * Ik, !0),
+        actionDir: (kk, Fk, Ik) => kk.getFloat32(Fk + 184 + 4 * Ik, !0),
+        localId: (kk, Fk) => kk.getInt32(Fk + 196, !0),
+        playerFlags: (kk, Fk) => kk.getUint32(Fk + 200, !0),
+        targetBlock: (kk, Fk, Ik) => kk.getInt32(Fk + 204 + 4 * Ik, !0),
+        targetAdjacent: (kk, Fk, Ik) => kk.getInt32(Fk + 216 + 4 * Ik, !0),
+        targetBlockId: (kk, Fk) => kk.getUint32(Fk + 228, !0),
+        targetNormal: (kk, Fk, Ik) => kk.getInt8(Fk + 232 + 1 * Ik),
+        targetFlags: (kk, Fk) => kk.getUint8(Fk + 235),
+        pickedEntity: (kk, Fk) => kk.getInt32(Fk + 236, !0),
+        breakingPos: (kk, Fk, Ik) => kk.getInt32(Fk + 240 + 4 * Ik, !0),
+        breakingProgress: (kk, Fk) => kk.getFloat32(Fk + 252, !0),
+        VK: (kk, Fk) => kk.getUint16(Fk + 256, !0),
+        selectedSlot: (kk, Fk) => kk.getUint8(Fk + 258),
+        heldFlags: (kk, Fk) => kk.getUint8(Fk + 259),
+        heldAttrVersion: (kk, Fk) => kk.getUint32(Fk + 260, !0),
+        inventoryVersion: (kk, Fk) => kk.getUint32(Fk + 264, !0),
+        effectsVersion: (kk, Fk) => kk.getUint32(Fk + 268, !0),
+        entitiesVersion: (kk, Fk) => kk.getUint32(Fk + 272, !0),
+        entRenderPtr: (kk, Fk) => kk.getUint32(Fk + 276, !0),
+        entCapacity: (kk, Fk) => kk.getUint32(Fk + 280, !0),
+        frameMs: (kk, Fk) => kk.getFloat32(Fk + 284, !0),
+        fps: (kk, Fk) => kk.getFloat32(Fk + 288, !0),
+        entVisPtr: (kk, Fk) => kk.getUint32(Fk + 292, !0),
+        momentumFrac: (kk, Fk) => kk.getFloat32(Fk + 296, !0),
+        chunkSlotsPtr: (kk, Fk) => kk.getUint32(Fk + 300, !0),
+        chunkSlotsLen: (kk, Fk) => kk.getUint32(Fk + 304, !0),
+        walkThroughPtr: (kk, Fk) => kk.getUint32(Fk + 308, !0),
+        walkThroughLen: (kk, Fk) => kk.getUint32(Fk + 312, !0),
+        audioViewPtr: (kk, Fk) => kk.getUint32(Fk + 316, !0),
+        inventoryViewPtr: (kk, Fk) => kk.getUint32(Fk + 320, !0),
+        eventOverflowGen: (kk, Fk) => kk.getUint32(Fk + 324, !0),
+        eventOverflowMask: (kk, Fk) => kk.getUint32(Fk + 328, !0),
+        promptEntity: (kk, Fk) => kk.getInt32(Fk + 332, !0),
+        replayViewPtr: (kk, Fk) => kk.getUint32(Fk + 336, !0),
+        slotIcon: (kk, Fk) => kk.getUint32(Fk + 340, !0),
+        localDeaths: (kk, Fk) => kk.getUint32(Fk + 344, !0),
+        cameraFar: (kk, Fk) => kk.getFloat32(Fk + 348, !0),
+        gliderBoostFuel: (kk, Fk) => kk.getUint32(Fk + 352, !0),
+        interactLabel: (kk, Fk) => kk.getUint16(Fk + 356, !0),
+        interactIcon: (kk, Fk) => kk.getUint16(Fk + 358, !0)
       },
-      az = {
+      BF = {
         BYTES: 16,
-        voxelsPtr: (CC, zC) => CC.getUint32(zC + 0, !0),
-        version: (CC, zC) => CC.getUint32(zC + 4, !0),
-        generation: (CC, zC) => CC.getUint32(zC + 8, !0),
-        vq: (CC, zC) => CC.getUint32(zC + 12, !0)
+        voxelsPtr: (kk, Fk) => kk.getUint32(Fk + 0, !0),
+        version: (kk, Fk) => kk.getUint32(Fk + 4, !0),
+        generation: (kk, Fk) => kk.getUint32(Fk + 8, !0),
+        eq: (kk, Fk) => kk.getUint32(Fk + 12, !0)
       },
-      tz = {
+      dF = {
         BYTES: 56,
-        listener: (CC, zC, ZC) => CC.getFloat64(zC + 0 + 8 * ZC, !0),
-        forward: (CC, zC, ZC) => CC.getFloat32(zC + 24 + 4 * ZC, !0),
-        up: (CC, zC, ZC) => CC.getFloat32(zC + 36 + 4 * ZC, !0),
-        dropped: (CC, zC) => CC.getUint32(zC + 48, !0),
-        unfollowed: (CC, zC) => CC.getUint32(zC + 52, !0)
+        listener: (kk, Fk, Ik) => kk.getFloat64(Fk + 0 + 8 * Ik, !0),
+        forward: (kk, Fk, Ik) => kk.getFloat32(Fk + 24 + 4 * Ik, !0),
+        up: (kk, Fk, Ik) => kk.getFloat32(Fk + 36 + 4 * Ik, !0),
+        dropped: (kk, Fk) => kk.getUint32(Fk + 48, !0),
+        unfollowed: (kk, Fk) => kk.getUint32(Fk + 52, !0)
       },
-      Dz = {
+      YF = {
         BYTES: 8,
-        item: (CC, zC) => CC.getUint16(zC + 0, !0),
-        amount: (CC, zC) => CC.getUint16(zC + 2, !0),
-        attrVersion: (CC, zC) => CC.getUint32(zC + 4, !0)
+        item: (kk, Fk) => kk.getUint16(Fk + 0, !0),
+        amount: (kk, Fk) => kk.getUint16(Fk + 2, !0),
+        attrVersion: (kk, Fk) => kk.getUint32(Fk + 4, !0)
       },
-      jz = {
+      AF = {
         BYTES: 76,
-        version: (CC, zC) => CC.getUint32(zC + 0, !0),
-        state: (CC, zC) => CC.getUint8(zC + 4),
-        cameraMode: (CC, zC) => CC.getUint8(zC + 5),
-        ZN: (CC, zC) => CC.getUint32(zC + 8, !0),
-        totalTicks: (CC, zC) => CC.getUint32(zC + 12, !0),
-        speed: (CC, zC) => CC.getFloat32(zC + 16, !0),
-        markIn: (CC, zC) => CC.getUint32(zC + 20, !0),
-        markOut: (CC, zC) => CC.getUint32(zC + 24, !0),
-        editVersion: (CC, zC) => CC.getUint32(zC + 28, !0),
-        drops: (CC, zC, ZC) => CC.getUint32(zC + 32 + 4 * ZC, !0)
+        version: (kk, Fk) => kk.getUint32(Fk + 0, !0),
+        state: (kk, Fk) => kk.getUint8(Fk + 4),
+        cameraMode: (kk, Fk) => kk.getUint8(Fk + 5),
+        Dt: (kk, Fk) => kk.getUint32(Fk + 8, !0),
+        totalTicks: (kk, Fk) => kk.getUint32(Fk + 12, !0),
+        speed: (kk, Fk) => kk.getFloat32(Fk + 16, !0),
+        markIn: (kk, Fk) => kk.getUint32(Fk + 20, !0),
+        markOut: (kk, Fk) => kk.getUint32(Fk + 24, !0),
+        editVersion: (kk, Fk) => kk.getUint32(Fk + 28, !0),
+        drops: (kk, Fk, Ik) => kk.getUint32(Fk + 32 + 4 * Ik, !0)
       },
-      yz = {
+      gF = {
         BYTES: 6,
-        flags: (CC, zC) => CC.getUint8(zC + 0),
-        harvestType: (CC, zC) => CC.getUint8(zC + 1),
-        harvestLevel: (CC, zC) => CC.getUint8(zC + 2),
-        attachedTop: (CC, zC) => CC.getUint16(zC + 4, !0)
+        flags: (kk, Fk) => kk.getUint8(Fk + 0),
+        harvestType: (kk, Fk) => kk.getUint8(Fk + 1),
+        harvestLevel: (kk, Fk) => kk.getUint8(Fk + 2),
+        attachedTop: (kk, Fk) => kk.getUint16(Fk + 4, !0)
       },
-      Lz = {
+      mF = {
         BYTES: 3,
-        flags: (CC, zC) => CC.getUint8(zC + 0),
-        harvests: (CC, zC) => CC.getUint8(zC + 1),
-        level: (CC, zC) => CC.getUint8(zC + 2)
+        flags: (kk, Fk) => kk.getUint8(Fk + 0),
+        harvests: (kk, Fk) => kk.getUint8(Fk + 1),
+        level: (kk, Fk) => kk.getUint8(Fk + 2)
       },
-      Uz = {
+      hF = {
         BYTES: 12,
-        item: (CC, zC) => CC.getUint32(zC + 0, !0),
-        amount: (CC, zC) => CC.getFloat64(zC + 4, !0)
+        item: (kk, Fk) => kk.getUint32(Fk + 0, !0),
+        amount: (kk, Fk) => kk.getFloat64(Fk + 4, !0)
       },
-      Bz = {
+      rF = {
         BYTES: 16,
-        recipes: (CC, zC) => CC.getUint32(zC + 0, !0),
-        ingredients: (CC, zC) => CC.getUint32(zC + 4, !0),
-        craftAllTimes: (CC, zC) => CC.getUint32(zC + 8, !0),
-        flags: (CC, zC) => CC.getUint32(zC + 12, !0)
+        recipes: (kk, Fk) => kk.getUint32(Fk + 0, !0),
+        ingredients: (kk, Fk) => kk.getUint32(Fk + 4, !0),
+        craftAllTimes: (kk, Fk) => kk.getUint32(Fk + 8, !0),
+        flags: (kk, Fk) => kk.getUint32(Fk + 12, !0)
       },
-      Oz = {
+      DF = {
         BYTES: 10,
-        item: (CC, zC) => CC.getUint16(zC + 0, !0),
-        recipe: (CC, zC) => CC.getUint16(zC + 2, !0),
-        produces: (CC, zC) => CC.getUint16(zC + 4, !0),
-        requires: (CC, zC) => CC.getUint16(zC + 6, !0),
-        flags: (CC, zC) => CC.getUint8(zC + 8)
+        item: (kk, Fk) => kk.getUint16(Fk + 0, !0),
+        recipe: (kk, Fk) => kk.getUint16(Fk + 2, !0),
+        produces: (kk, Fk) => kk.getUint16(Fk + 4, !0),
+        requires: (kk, Fk) => kk.getUint16(Fk + 6, !0),
+        flags: (kk, Fk) => kk.getUint8(Fk + 8)
       },
-      kz = {
+      MF = {
         BYTES: 4,
-        amount: (CC, zC) => CC.getUint16(zC + 0, !0),
-        items: (CC, zC) => CC.getUint16(zC + 2, !0)
+        amount: (kk, Fk) => kk.getUint16(Fk + 0, !0),
+        items: (kk, Fk) => kk.getUint16(Fk + 2, !0)
       },
-      Vz = {
+      kI = {
         BYTES: 8,
-        amount: (CC, zC) => CC.getUint32(zC + 0, !0),
-        item: (CC, zC) => CC.getUint16(zC + 4, !0),
-        from: (CC, zC) => CC.getUint16(zC + 6, !0)
+        amount: (kk, Fk) => kk.getUint32(Fk + 0, !0),
+        item: (kk, Fk) => kk.getUint16(Fk + 4, !0),
+        from: (kk, Fk) => kk.getUint16(Fk + 6, !0)
       },
-      CZ = {
+      FI = {
         BYTES: 16,
-        serverId: (CC, zC) => CC.getInt32(zC + 0, !0),
-        len: (CC, zC) => CC.getUint32(zC + 4, !0),
-        kind: (CC, zC) => CC.getUint16(zC + 8, !0),
-        variation: (CC, zC) => CC.getUint16(zC + 10, !0),
-        pose: (CC, zC) => CC.getUint8(zC + 12),
-        meta: (CC, zC) => CC.getUint8(zC + 13),
-        mesh: (CC, zC) => CC.getUint8(zC + 14),
-        flags: (CC, zC) => CC.getUint8(zC + 15)
+        serverId: (kk, Fk) => kk.getInt32(Fk + 0, !0),
+        len: (kk, Fk) => kk.getUint32(Fk + 4, !0),
+        kind: (kk, Fk) => kk.getUint16(Fk + 8, !0),
+        variation: (kk, Fk) => kk.getUint16(Fk + 10, !0),
+        pose: (kk, Fk) => kk.getUint8(Fk + 12),
+        meta: (kk, Fk) => kk.getUint8(Fk + 13),
+        mesh: (kk, Fk) => kk.getUint8(Fk + 14),
+        flags: (kk, Fk) => kk.getUint8(Fk + 15)
       },
-      zZ = {
+      II = {
         BYTES: 56,
-        terrainOpaque: (CC, zC) => CC.getUint32(zC + 0, !0),
-        terrainTransparent: (CC, zC) => CC.getUint32(zC + 4, !0),
-        terrainPack: (CC, zC) => CC.getUint32(zC + 8, !0),
-        earthSky: (CC, zC) => CC.getUint32(zC + 12, !0),
-        skyMeshes: (CC, zC) => CC.getUint32(zC + 16, !0),
-        regular: (CC, zC) => CC.getUint32(zC + 20, !0),
-        thin: (CC, zC) => CC.getUint32(zC + 24, !0),
-        line: (CC, zC) => CC.getUint32(zC + 28, !0),
-        text: (CC, zC) => CC.getUint32(zC + 32, !0),
-        particles: (CC, zC) => CC.getUint32(zC + 36, !0),
-        terrainParts: (CC, zC) => CC.getUint32(zC + 40, !0),
-        terrainCompiling: (CC, zC) => CC.getUint32(zC + 44, !0),
-        ringCopiesMax: (CC, zC) => CC.getUint32(zC + 48, !0),
-        ringBusyWrites: (CC, zC) => CC.getUint32(zC + 52, !0)
+        terrainOpaque: (kk, Fk) => kk.getUint32(Fk + 0, !0),
+        terrainTransparent: (kk, Fk) => kk.getUint32(Fk + 4, !0),
+        terrainPack: (kk, Fk) => kk.getUint32(Fk + 8, !0),
+        earthSky: (kk, Fk) => kk.getUint32(Fk + 12, !0),
+        skyMeshes: (kk, Fk) => kk.getUint32(Fk + 16, !0),
+        regular: (kk, Fk) => kk.getUint32(Fk + 20, !0),
+        thin: (kk, Fk) => kk.getUint32(Fk + 24, !0),
+        line: (kk, Fk) => kk.getUint32(Fk + 28, !0),
+        text: (kk, Fk) => kk.getUint32(Fk + 32, !0),
+        particles: (kk, Fk) => kk.getUint32(Fk + 36, !0),
+        terrainParts: (kk, Fk) => kk.getUint32(Fk + 40, !0),
+        terrainCompiling: (kk, Fk) => kk.getUint32(Fk + 44, !0),
+        ringCopiesMax: (kk, Fk) => kk.getUint32(Fk + 48, !0),
+        ringBusyWrites: (kk, Fk) => kk.getUint32(Fk + 52, !0)
       },
-      ZZ = {
+      XI = {
         BYTES: 16,
-        fov: (CC, zC) => CC.getFloat32(zC + 0, !0),
-        baseFov: (CC, zC) => CC.getFloat32(zC + 4, !0),
-        aspect: (CC, zC) => CC.getFloat32(zC + 8, !0),
-        bodyHeading: (CC, zC) => CC.getFloat32(zC + 12, !0)
+        fov: (kk, Fk) => kk.getFloat32(Fk + 0, !0),
+        baseFov: (kk, Fk) => kk.getFloat32(Fk + 4, !0),
+        aspect: (kk, Fk) => kk.getFloat32(Fk + 8, !0),
+        bodyHeading: (kk, Fk) => kk.getFloat32(Fk + 12, !0)
       },
-      QZ = {
+      TI = {
         BYTES: 32,
-        eye: (CC, zC, ZC) => CC.getFloat64(zC + 0 + 8 * ZC, !0),
-        heading: (CC, zC) => CC.getFloat32(zC + 24, !0),
-        pitch: (CC, zC) => CC.getFloat32(zC + 28, !0)
+        eye: (kk, Fk, Ik) => kk.getFloat64(Fk + 0 + 8 * Ik, !0),
+        heading: (kk, Fk) => kk.getFloat32(Fk + 24, !0),
+        pitch: (kk, Fk) => kk.getFloat32(Fk + 28, !0)
       },
-      wZ = {
+      iI = {
         BYTES: 40,
-        feet: (CC, zC, ZC) => CC.getFloat64(zC + 0 + 8 * ZC, !0),
-        eyeHeight: (CC, zC) => CC.getFloat32(zC + 24, !0),
-        heading: (CC, zC) => CC.getFloat32(zC + 28, !0),
-        headingIsDrawn: (CC, zC) => CC.getUint32(zC + 32, !0)
+        feet: (kk, Fk, Ik) => kk.getFloat64(Fk + 0 + 8 * Ik, !0),
+        eyeHeight: (kk, Fk) => kk.getFloat32(Fk + 24, !0),
+        heading: (kk, Fk) => kk.getFloat32(Fk + 28, !0),
+        headingIsDrawn: (kk, Fk) => kk.getUint32(Fk + 32, !0)
       },
-      bZ = 32,
-      nZ = 63,
-      fZ = {
+      yI = 32,
+      lI = 63,
+      aI = {
         TickEnd: 32,
         EntitySpawned: 33,
         EntityDespawned: 34,
@@ -777,64 +777,64 @@ export const modules = {
         RecorderEvent: 62
       };
 
-    function oZ(CC, zC, ZC, QC, wC) {
-      var bC, nC, fC, oC, qC, FC, WC, NC, MC, gC, SC, pC, PC, GC, RC, AC, xC, JC, IC, iC, vC, eC, hC, KC, YC;
-      switch (CC) {
+    function qI(kk, Fk, Ik, Xk, Tk) {
+      var ik, yk, lk, ak, qk, Lk, tk, Zk, jk, ek, wk, Hk, Jk, xk, Pk, Kk, Qk, sk, Vk, zk, Sk, vk, Ek, Ok, nk;
+      switch (kk) {
         case 32:
-          return 4 === QC && (null === (bC = wC.tickEnd) || void 0 === bC || bC.call(wC, Pz.ZN(zC, ZC)), !0);
+          return 4 === Xk && (null === (ik = Tk.tickEnd) || void 0 === ik || ik.call(Tk, xF.Dt(Fk, Ik)), !0);
         case 33:
-          return 12 === QC && (null === (nC = wC.entitySpawned) || void 0 === nC || nC.call(wC, Gz.serverId(zC, ZC), Gz.index(zC, ZC), Gz.kind(zC, ZC)), !0);
+          return 12 === Xk && (null === (yk = Tk.entitySpawned) || void 0 === yk || yk.call(Tk, PF.serverId(Fk, Ik), PF.index(Fk, Ik), PF.kind(Fk, Ik)), !0);
         case 34:
-          return 12 === QC && (null === (fC = wC.entityDespawned) || void 0 === fC || fC.call(wC, Gz.serverId(zC, ZC), Gz.index(zC, ZC), Gz.kind(zC, ZC)), !0);
+          return 12 === Xk && (null === (lk = Tk.entityDespawned) || void 0 === lk || lk.call(Tk, PF.serverId(Fk, Ik), PF.index(Fk, Ik), PF.kind(Fk, Ik)), !0);
         case 39:
-          return !(QC < 20) && (null === (oC = wC.changeBlockFail) || void 0 === oC || oC.call(wC, Rz.pos(zC, ZC, 0), Rz.pos(zC, ZC, 1), Rz.pos(zC, ZC, 2), Rz.actual(zC, ZC), Rz.dataLen(zC, ZC), ZC + 20, QC - 20), !0);
+          return !(Xk < 20) && (null === (ak = Tk.changeBlockFail) || void 0 === ak || ak.call(Tk, KF.pos(Fk, Ik, 0), KF.pos(Fk, Ik, 1), KF.pos(Fk, Ik, 2), KF.actual(Fk, Ik), KF.dataLen(Fk, Ik), Ik + 20, Xk - 20), !0);
         case 46:
-          return 0 === QC && (null === (qC = wC.changeBlockFailEnd) || void 0 === qC || qC.call(wC), !0);
+          return 0 === Xk && (null === (qk = Tk.changeBlockFailEnd) || void 0 === qk || qk.call(Tk), !0);
         case 48:
-          return 20 === QC && (null === (FC = wC.inventoryEvent) || void 0 === FC || FC.call(wC, Az.what(zC, ZC), Az.value(zC, ZC), Az.pos(zC, ZC, 0), Az.pos(zC, ZC, 1), Az.pos(zC, ZC, 2), Az.block(zC, ZC)), !0);
+          return 20 === Xk && (null === (Lk = Tk.inventoryEvent) || void 0 === Lk || Lk.call(Tk, QF.what(Fk, Ik), QF.value(Fk, Ik), QF.pos(Fk, Ik, 0), QF.pos(Fk, Ik, 1), QF.pos(Fk, Ik, 2), QF.block(Fk, Ik)), !0);
         case 49:
-          return 4 === QC && (null === (WC = wC.heldItemChanged) || void 0 === WC || WC.call(wC, xz.item(zC, ZC), xz.slot(zC, ZC)), !0);
+          return 4 === Xk && (null === (tk = Tk.heldItemChanged) || void 0 === tk || tk.call(Tk, sF.item(Fk, Ik), sF.slot(Fk, Ik)), !0);
         case 50:
-          return 16 === QC && (null === (NC = wC.shotDamage) || void 0 === NC || NC.call(wC, Jz.target(zC, ZC), Jz.damage(zC, ZC), Jz.distance(zC, ZC), Jz.crit(zC, ZC)), !0);
+          return 16 === Xk && (null === (Zk = Tk.shotDamage) || void 0 === Zk || Zk.call(Tk, VF.target(Fk, Ik), VF.damage(Fk, Ik), VF.distance(Fk, Ik), VF.crit(Fk, Ik)), !0);
         case 51:
-          return !(QC < 4) && (null === (MC = wC.enchantOffer) || void 0 === MC || MC.call(wC, Iz.slot(zC, ZC), ZC + 4, QC - 4), !0);
+          return !(Xk < 4) && (null === (jk = Tk.enchantOffer) || void 0 === jk || jk.call(Tk, zF.slot(Fk, Ik), Ik + 4, Xk - 4), !0);
         case 52:
-          return !(QC < 20) && (null === (gC = wC.uiEvent) || void 0 === gC || gC.call(wC, iz.what(zC, ZC), iz.value(zC, ZC), iz.pos(zC, ZC, 0), iz.pos(zC, ZC, 1), iz.pos(zC, ZC, 2), iz.block(zC, ZC), ZC + 20, QC - 20), !0);
+          return !(Xk < 20) && (null === (ek = Tk.uiEvent) || void 0 === ek || ek.call(Tk, SF.what(Fk, Ik), SF.value(Fk, Ik), SF.pos(Fk, Ik, 0), SF.pos(Fk, Ik, 1), SF.pos(Fk, Ik, 2), SF.block(Fk, Ik), Ik + 20, Xk - 20), !0);
         case 53:
-          return 12 === QC && (null === (SC = wC.entityInfoChanged) || void 0 === SC || SC.call(wC, vz.serverId(zC, ZC), vz.index(zC, ZC), vz.what(zC, ZC)), !0);
+          return 12 === Xk && (null === (wk = Tk.entityInfoChanged) || void 0 === wk || wk.call(Tk, oF.serverId(Fk, Ik), oF.index(Fk, Ik), oF.what(Fk, Ik)), !0);
         case 55:
-          return 24 === QC && (null === (pC = wC.chunkSlot) || void 0 === pC || pC.call(wC, ez.cx(zC, ZC), ez.cy(zC, ZC), ez.cz(zC, ZC), ez.slot(zC, ZC), ez.generation(zC, ZC), ez.flags(zC, ZC)), !0);
+          return 24 === Xk && (null === (Hk = Tk.chunkSlot) || void 0 === Hk || Hk.call(Tk, vF.cx(Fk, Ik), vF.cy(Fk, Ik), vF.cz(Fk, Ik), vF.slot(Fk, Ik), vF.generation(Fk, Ik), vF.flags(Fk, Ik)), !0);
         case 40:
-          return 44 === QC && (null === (PC = wC.playSound) || void 0 === PC || PC.call(wC, hz.pos(zC, ZC, 0), hz.pos(zC, ZC, 1), hz.pos(zC, ZC, 2), hz.sound(zC, ZC), hz.flags(zC, ZC), hz.handle(zC, ZC), hz.volume(zC, ZC), hz.rate(zC, ZC), hz.refDist(zC, ZC)), !0);
+          return 44 === Xk && (null === (Jk = Tk.playSound) || void 0 === Jk || Jk.call(Tk, EF.pos(Fk, Ik, 0), EF.pos(Fk, Ik, 1), EF.pos(Fk, Ik, 2), EF.sound(Fk, Ik), EF.flags(Fk, Ik), EF.handle(Fk, Ik), EF.volume(Fk, Ik), EF.rate(Fk, Ik), EF.refDist(Fk, Ik)), !0);
         case 41:
-          return 28 === QC && (null === (GC = wC.soundPos) || void 0 === GC || GC.call(wC, Kz.pos(zC, ZC, 0), Kz.pos(zC, ZC, 1), Kz.pos(zC, ZC, 2), Kz.handle(zC, ZC)), !0);
+          return 28 === Xk && (null === (xk = Tk.soundPos) || void 0 === xk || xk.call(Tk, OF.pos(Fk, Ik, 0), OF.pos(Fk, Ik, 1), OF.pos(Fk, Ik, 2), OF.handle(Fk, Ik)), !0);
         case 42:
-          return 16 === QC && (null === (RC = wC.soundSet) || void 0 === RC || RC.call(wC, Yz.handle(zC, ZC), Yz.volume(zC, ZC), Yz.rate(zC, ZC), Yz.refDist(zC, ZC)), !0);
+          return 16 === Xk && (null === (Pk = Tk.soundSet) || void 0 === Pk || Pk.call(Tk, nF.handle(Fk, Ik), nF.volume(Fk, Ik), nF.rate(Fk, Ik), nF.refDist(Fk, Ik)), !0);
         case 43:
-          return 12 === QC && (null === (AC = wC.soundFade) || void 0 === AC || AC.call(wC, dz.handle(zC, ZC), dz.to(zC, ZC), dz.ms(zC, ZC), dz.flags(zC, ZC)), !0);
+          return 12 === Xk && (null === (Kk = Tk.soundFade) || void 0 === Kk || Kk.call(Tk, GF.handle(Fk, Ik), GF.to(Fk, Ik), GF.ms(Fk, Ik), GF.flags(Fk, Ik)), !0);
         case 44:
-          return 4 === QC && (null === (xC = wC.soundStop) || void 0 === xC || xC.call(wC, mz.handle(zC, ZC)), !0);
+          return 4 === Xk && (null === (Qk = Tk.soundStop) || void 0 === Qk || Qk.call(Tk, pF.handle(Fk, Ik)), !0);
         case 45:
-          return 0 === QC && (null === (JC = wC.soundReset) || void 0 === JC || JC.call(wC), !0);
+          return 0 === Xk && (null === (sk = Tk.soundReset) || void 0 === sk || sk.call(Tk), !0);
         case 56:
-          return 8 === QC && (null === (IC = wC.replayFailed) || void 0 === IC || IC.call(wC, Hz.reason(zC, ZC), Hz.code(zC, ZC), Hz.version(zC, ZC)), !0);
+          return 8 === Xk && (null === (Vk = Tk.replayFailed) || void 0 === Vk || Vk.call(Tk, uF.reason(Fk, Ik), uF.code(Fk, Ik), uF.version(Fk, Ik)), !0);
         case 57:
-          return !(QC < 4) && (null === (iC = wC.replayOption) || void 0 === iC || iC.call(wC, Ez.key(zC, ZC), Ez.tag(zC, ZC), ZC + 4, QC - 4), !0);
+          return !(Xk < 4) && (null === (zk = Tk.replayOption) || void 0 === zk || zk.call(Tk, bF.key(Fk, Ik), bF.tag(Fk, Ik), Ik + 4, Xk - 4), !0);
         case 58:
-          return 16 === QC && (null === (vC = wC.replayFilePart) || void 0 === vC || vC.call(wC, lz.save(zC, ZC), lz.index(zC, ZC), lz.ptr(zC, ZC), lz.len(zC, ZC)), !0);
+          return 16 === Xk && (null === (Sk = Tk.replayFilePart) || void 0 === Sk || Sk.call(Tk, RF.save(Fk, Ik), RF.index(Fk, Ik), RF.ptr(Fk, Ik), RF.len(Fk, Ik)), !0);
         case 59:
-          return 16 === QC && (null === (eC = wC.replayFileReady) || void 0 === eC || eC.call(wC, Xz.save(zC, ZC), Xz.kind(zC, ZC), Xz.parts(zC, ZC), Xz.bytes(zC, ZC)), !0);
+          return 16 === Xk && (null === (vk = Tk.replayFileReady) || void 0 === vk || vk.call(Tk, UF.save(Fk, Ik), UF.kind(Fk, Ik), UF.parts(Fk, Ik), UF.bytes(Fk, Ik)), !0);
         case 60:
-          return !(QC < 4) && (null === (hC = wC.replayOpened) || void 0 === hC || hC.call(wC, cz.totalTicks(zC, ZC), ZC + 4, QC - 4), !0);
+          return !(Xk < 4) && (null === (Ek = Tk.replayOpened) || void 0 === Ek || Ek.call(Tk, CF.totalTicks(Fk, Ik), Ik + 4, Xk - 4), !0);
         case 61:
-          return !(QC < 24) && (null === (KC = wC.replayUiEvent) || void 0 === KC || KC.call(wC, uz.what(zC, ZC), uz.int(zC, ZC), uz.x(zC, ZC), uz.y(zC, ZC), ZC + 24, QC - 24), !0);
+          return !(Xk < 24) && (null === (Ok = Tk.replayUiEvent) || void 0 === Ok || Ok.call(Tk, NF.what(Fk, Ik), NF.int(Fk, Ik), NF.x(Fk, Ik), NF.y(Fk, Ik), Ik + 24, Xk - 24), !0);
         case 62:
-          return 8 === QC && (null === (YC = wC.recorderEvent) || void 0 === YC || YC.call(wC, rz.what(zC, ZC), rz.kind(zC, ZC), rz.save(zC, ZC)), !0);
+          return 8 === Xk && (null === (nk = Tk.recorderEvent) || void 0 === nk || nk.call(Tk, cF.what(Fk, Ik), cF.kind(Fk, Ik), cF.save(Fk, Ik)), !0);
         default:
           return !1
       }
     }
-    const qZ = {
+    const LI = {
       SetChunkAddDistance: 2,
       WatchEntityInfo: 66,
       EventResync: 67,
@@ -886,483 +886,483 @@ export const modules = {
       PressCustomButton: 578,
       PadMove: 579
     };
-    let FZ = new Uint8Array(0);
+    let tI = new Uint8Array(0);
 
-    function WZ(CC) {
-      return FZ.buffer !== CC.buffer && (FZ = new Uint8Array(CC.buffer)), FZ
+    function ZI(kk) {
+      return tI.buffer !== kk.buffer && (tI = new Uint8Array(kk.buffer)), tI
     }
 
-    function NZ(CC, zC, ZC) {
-      const QC = CC.RM(66, zC, 4);
-      if (QC < 0) return !1;
-      return CC.view.setUint8(QC + 0, ZC), !0
+    function jI(kk, Fk, Ik) {
+      const Xk = kk.Hj(66, Fk, 4);
+      if (Xk < 0) return !1;
+      return kk.view.setUint8(Xk + 0, Ik), !0
     }
 
-    function MZ(CC, zC, ZC) {
-      const QC = CC.RM(67, zC, 4);
-      if (QC < 0) return !1;
-      return CC.view.setUint32(QC + 0, ZC, !0), !0
+    function eI(kk, Fk, Ik) {
+      const Xk = kk.Hj(67, Fk, 4);
+      if (Xk < 0) return !1;
+      return kk.view.setUint32(Xk + 0, Ik, !0), !0
     }
 
-    function gZ(CC, zC, ZC) {
-      const QC = CC.RM(68, zC, 4);
-      if (QC < 0) return !1;
-      return CC.view.setUint8(QC + 0, ZC), !0
+    function wI(kk, Fk, Ik) {
+      const Xk = kk.Hj(68, Fk, 4);
+      if (Xk < 0) return !1;
+      return kk.view.setUint8(Xk + 0, Ik), !0
     }
 
-    function SZ(CC, zC, ZC, QC) {
-      const wC = CC.RM(69, zC, 4 + QC.length);
-      if (wC < 0) return !1;
-      const bC = CC.view;
-      return bC.setUint8(wC + 0, ZC), WZ(bC).set(QC, bC.byteOffset + wC + 4), !0
+    function HI(kk, Fk, Ik, Xk) {
+      const Tk = kk.Hj(69, Fk, 4 + Xk.length);
+      if (Tk < 0) return !1;
+      const ik = kk.view;
+      return ik.setUint8(Tk + 0, Ik), ZI(ik).set(Xk, ik.byteOffset + Tk + 4), !0
     }
 
-    function pZ(CC, zC, ZC, QC, wC) {
-      const bC = CC.RM(128, zC, 4 + wC.length);
-      if (bC < 0) return !1;
-      const nC = CC.view;
-      return nC.setUint8(bC + 0, ZC), nC.setUint16(bC + 2, QC, !0), WZ(nC).set(wC, nC.byteOffset + bC + 4), !0
+    function JI(kk, Fk, Ik, Xk, Tk) {
+      const ik = kk.Hj(128, Fk, 4 + Tk.length);
+      if (ik < 0) return !1;
+      const yk = kk.view;
+      return yk.setUint8(ik + 0, Ik), yk.setUint16(ik + 2, Xk, !0), ZI(yk).set(Tk, yk.byteOffset + ik + 4), !0
     }
 
-    function PZ(CC, zC, ZC) {
-      const QC = CC.RM(131, zC, 4);
-      if (QC < 0) return !1;
-      return CC.view.setInt32(QC + 0, ZC, !0), !0
+    function xI(kk, Fk, Ik) {
+      const Xk = kk.Hj(131, Fk, 4);
+      if (Xk < 0) return !1;
+      return kk.view.setInt32(Xk + 0, Ik, !0), !0
     }
 
-    function GZ(CC, zC, ZC) {
-      const QC = CC.RM(132, zC, 4);
-      if (QC < 0) return !1;
-      return CC.view.setUint32(QC + 0, ZC, !0), !0
+    function PI(kk, Fk, Ik) {
+      const Xk = kk.Hj(132, Fk, 4);
+      if (Xk < 0) return !1;
+      return kk.view.setUint32(Xk + 0, Ik, !0), !0
     }
 
-    function RZ(CC, zC, ZC) {
-      const QC = CC.RM(133, zC, 4);
-      if (QC < 0) return !1;
-      return CC.view.setUint32(QC + 0, ZC, !0), !0
+    function KI(kk, Fk, Ik) {
+      const Xk = kk.Hj(133, Fk, 4);
+      if (Xk < 0) return !1;
+      return kk.view.setUint32(Xk + 0, Ik, !0), !0
     }
 
-    function AZ(CC, zC, ZC) {
-      const QC = CC.RM(144, zC, 4);
-      if (QC < 0) return !1;
-      return CC.view.setUint8(QC + 0, ZC), !0
+    function QI(kk, Fk, Ik) {
+      const Xk = kk.Hj(144, Fk, 4);
+      if (Xk < 0) return !1;
+      return kk.view.setUint8(Xk + 0, Ik), !0
     }
 
-    function xZ(CC, zC, ZC, QC, wC) {
-      const bC = CC.RM(145, zC, 12);
-      if (bC < 0) return !1;
-      const nC = CC.view;
-      return nC.setInt32(bC + 0, ZC, !0), nC.setInt32(bC + 4, QC, !0), nC.setInt32(bC + 8, wC, !0), !0
+    function sI(kk, Fk, Ik, Xk, Tk) {
+      const ik = kk.Hj(145, Fk, 12);
+      if (ik < 0) return !1;
+      const yk = kk.view;
+      return yk.setInt32(ik + 0, Ik, !0), yk.setInt32(ik + 4, Xk, !0), yk.setInt32(ik + 8, Tk, !0), !0
     }
 
-    function JZ(CC, zC, ZC, QC) {
-      const wC = CC.RM(256, zC, 4 + QC.length);
-      if (wC < 0) return !1;
-      const bC = CC.view;
-      return bC.setUint16(wC + 0, ZC, !0), WZ(bC).set(QC, bC.byteOffset + wC + 4), !0
+    function VI(kk, Fk, Ik, Xk) {
+      const Tk = kk.Hj(256, Fk, 4 + Xk.length);
+      if (Tk < 0) return !1;
+      const ik = kk.view;
+      return ik.setUint16(Tk + 0, Ik, !0), ZI(ik).set(Xk, ik.byteOffset + Tk + 4), !0
     }
 
-    function IZ(CC, zC, ZC) {
-      const QC = CC.RM(258, zC, 4);
-      if (QC < 0) return !1;
-      return CC.view.setUint8(QC + 0, ZC), !0
+    function zI(kk, Fk, Ik) {
+      const Xk = kk.Hj(258, Fk, 4);
+      if (Xk < 0) return !1;
+      return kk.view.setUint8(Xk + 0, Ik), !0
     }
 
-    function iZ(CC, zC, ZC, QC, wC, bC, nC, fC, oC) {
-      const qC = CC.RM(320, zC, 48 + oC.length);
-      if (qC < 0) return !1;
-      const FC = CC.view;
-      FC.setUint32(qC + 0, ZC, !0), FC.setUint16(qC + 4, QC, !0), FC.setUint16(qC + 6, wC, !0), FC.setUint32(qC + 8, bC, !0);
-      for (let WC = 0; WC < 3; WC++) FC.setFloat64(qC + 12 + 8 * WC, nC[WC], !0);
-      for (let WC = 0; WC < 3; WC++) FC.setFloat32(qC + 36 + 4 * WC, fC[WC], !0);
-      return WZ(FC).set(oC, FC.byteOffset + qC + 48), !0
+    function SI(kk, Fk, Ik, Xk, Tk, ik, yk, lk, ak) {
+      const qk = kk.Hj(320, Fk, 48 + ak.length);
+      if (qk < 0) return !1;
+      const Lk = kk.view;
+      Lk.setUint32(qk + 0, Ik, !0), Lk.setUint16(qk + 4, Xk, !0), Lk.setUint16(qk + 6, Tk, !0), Lk.setUint32(qk + 8, ik, !0);
+      for (let tk = 0; tk < 3; tk++) Lk.setFloat64(qk + 12 + 8 * tk, yk[tk], !0);
+      for (let tk = 0; tk < 3; tk++) Lk.setFloat32(qk + 36 + 4 * tk, lk[tk], !0);
+      return ZI(Lk).set(ak, Lk.byteOffset + qk + 48), !0
     }
 
-    function vZ(CC, zC, ZC, QC, wC, bC, nC, fC, oC) {
-      const qC = CC.RM(321, zC, 48 + oC.length);
-      if (qC < 0) return !1;
-      const FC = CC.view;
-      FC.setUint32(qC + 0, ZC, !0), FC.setInt32(qC + 4, QC, !0), FC.setUint16(qC + 8, wC, !0), FC.setUint16(qC + 10, bC, !0);
-      for (let WC = 0; WC < 3; WC++) FC.setFloat64(qC + 12 + 8 * WC, nC[WC], !0);
-      for (let WC = 0; WC < 3; WC++) FC.setFloat32(qC + 36 + 4 * WC, fC[WC], !0);
-      return WZ(FC).set(oC, FC.byteOffset + qC + 48), !0
+    function oI(kk, Fk, Ik, Xk, Tk, ik, yk, lk, ak) {
+      const qk = kk.Hj(321, Fk, 48 + ak.length);
+      if (qk < 0) return !1;
+      const Lk = kk.view;
+      Lk.setUint32(qk + 0, Ik, !0), Lk.setInt32(qk + 4, Xk, !0), Lk.setUint16(qk + 8, Tk, !0), Lk.setUint16(qk + 10, ik, !0);
+      for (let tk = 0; tk < 3; tk++) Lk.setFloat64(qk + 12 + 8 * tk, yk[tk], !0);
+      for (let tk = 0; tk < 3; tk++) Lk.setFloat32(qk + 36 + 4 * tk, lk[tk], !0);
+      return ZI(Lk).set(ak, Lk.byteOffset + qk + 48), !0
     }
 
-    function eZ(CC, zC, ZC, QC, wC, bC, nC) {
-      const fC = CC.RM(322, zC, 44 + nC.length);
-      if (fC < 0) return !1;
-      const oC = CC.view;
-      oC.setUint32(fC + 0, ZC, !0), oC.setUint32(fC + 4, QC, !0);
-      for (let qC = 0; qC < 3; qC++) oC.setFloat64(fC + 8 + 8 * qC, wC[qC], !0);
-      for (let qC = 0; qC < 3; qC++) oC.setFloat32(fC + 32 + 4 * qC, bC[qC], !0);
-      return WZ(oC).set(nC, oC.byteOffset + fC + 44), !0
+    function vI(kk, Fk, Ik, Xk, Tk, ik, yk) {
+      const lk = kk.Hj(322, Fk, 44 + yk.length);
+      if (lk < 0) return !1;
+      const ak = kk.view;
+      ak.setUint32(lk + 0, Ik, !0), ak.setUint32(lk + 4, Xk, !0);
+      for (let qk = 0; qk < 3; qk++) ak.setFloat64(lk + 8 + 8 * qk, Tk[qk], !0);
+      for (let qk = 0; qk < 3; qk++) ak.setFloat32(lk + 32 + 4 * qk, ik[qk], !0);
+      return ZI(ak).set(yk, ak.byteOffset + lk + 44), !0
     }
 
-    function hZ(CC, zC, ZC) {
-      const QC = CC.RM(323, zC, 4);
-      if (QC < 0) return !1;
-      return CC.view.setUint32(QC + 0, ZC, !0), !0
+    function EI(kk, Fk, Ik) {
+      const Xk = kk.Hj(323, Fk, 4);
+      if (Xk < 0) return !1;
+      return kk.view.setUint32(Xk + 0, Ik, !0), !0
     }
 
-    function KZ(CC, zC, ZC, QC, wC, bC) {
-      const nC = CC.RM(324, zC, 32 + bC.length);
-      if (nC < 0) return !1;
-      const fC = CC.view;
-      fC.setUint32(nC + 0, ZC, !0), fC.setUint32(nC + 4, QC, !0);
-      for (let oC = 0; oC < 3; oC++) fC.setFloat64(nC + 8 + 8 * oC, wC[oC], !0);
-      return WZ(fC).set(bC, fC.byteOffset + nC + 32), !0
+    function OI(kk, Fk, Ik, Xk, Tk, ik) {
+      const yk = kk.Hj(324, Fk, 32 + ik.length);
+      if (yk < 0) return !1;
+      const lk = kk.view;
+      lk.setUint32(yk + 0, Ik, !0), lk.setUint32(yk + 4, Xk, !0);
+      for (let ak = 0; ak < 3; ak++) lk.setFloat64(yk + 8 + 8 * ak, Tk[ak], !0);
+      return ZI(lk).set(ik, lk.byteOffset + yk + 32), !0
     }
 
-    function YZ(CC, zC) {
-      return !(CC.RM(325, zC, 0) < 0)
+    function nI(kk, Fk) {
+      return !(kk.Hj(325, Fk, 0) < 0)
     }
 
-    function dZ(CC, zC, ZC, QC, wC, bC) {
-      const nC = CC.RM(384, zC, 16);
-      if (nC < 0) return !1;
-      const fC = CC.view;
-      return fC.setUint32(nC + 0, ZC, !0), fC.setUint32(nC + 4, QC, !0), fC.setFloat32(nC + 8, wC, !0), fC.setFloat32(nC + 12, bC, !0), !0
+    function GI(kk, Fk, Ik, Xk, Tk, ik) {
+      const yk = kk.Hj(384, Fk, 16);
+      if (yk < 0) return !1;
+      const lk = kk.view;
+      return lk.setUint32(yk + 0, Ik, !0), lk.setUint32(yk + 4, Xk, !0), lk.setFloat32(yk + 8, Tk, !0), lk.setFloat32(yk + 12, ik, !0), !0
     }
 
-    function mZ(CC, zC, ZC, QC, wC, bC, nC) {
-      const fC = CC.RM(385, zC, 36 + nC.length);
-      if (fC < 0) return !1;
-      const oC = CC.view;
-      oC.setUint32(fC + 0, ZC, !0), oC.setUint32(fC + 4, QC, !0);
-      for (let qC = 0; qC < 3; qC++) oC.setFloat64(fC + 8 + 8 * qC, wC[qC], !0);
-      return oC.setUint32(fC + 32, bC, !0), WZ(oC).set(nC, oC.byteOffset + fC + 36), !0
+    function pI(kk, Fk, Ik, Xk, Tk, ik, yk) {
+      const lk = kk.Hj(385, Fk, 36 + yk.length);
+      if (lk < 0) return !1;
+      const ak = kk.view;
+      ak.setUint32(lk + 0, Ik, !0), ak.setUint32(lk + 4, Xk, !0);
+      for (let qk = 0; qk < 3; qk++) ak.setFloat64(lk + 8 + 8 * qk, Tk[qk], !0);
+      return ak.setUint32(lk + 32, ik, !0), ZI(ak).set(yk, ak.byteOffset + lk + 36), !0
     }
 
-    function HZ(CC, zC, ZC, QC, wC, bC, nC, fC, oC) {
-      const qC = CC.RM(386, zC, 56 + oC.length);
-      if (qC < 0) return !1;
-      const FC = CC.view;
-      FC.setUint32(qC + 0, ZC, !0), FC.setUint8(qC + 4, QC);
-      for (let WC = 0; WC < 4; WC++) FC.setFloat32(qC + 8 + 4 * WC, wC[WC], !0);
-      for (let WC = 0; WC < 3; WC++) FC.setFloat64(qC + 24 + 8 * WC, bC[WC], !0);
-      return FC.setUint32(qC + 48, nC, !0), FC.setUint32(qC + 52, fC, !0), WZ(FC).set(oC, FC.byteOffset + qC + 56), !0
+    function uI(kk, Fk, Ik, Xk, Tk, ik, yk, lk, ak) {
+      const qk = kk.Hj(386, Fk, 56 + ak.length);
+      if (qk < 0) return !1;
+      const Lk = kk.view;
+      Lk.setUint32(qk + 0, Ik, !0), Lk.setUint8(qk + 4, Xk);
+      for (let tk = 0; tk < 4; tk++) Lk.setFloat32(qk + 8 + 4 * tk, Tk[tk], !0);
+      for (let tk = 0; tk < 3; tk++) Lk.setFloat64(qk + 24 + 8 * tk, ik[tk], !0);
+      return Lk.setUint32(qk + 48, yk, !0), Lk.setUint32(qk + 52, lk, !0), ZI(Lk).set(ak, Lk.byteOffset + qk + 56), !0
     }
 
-    function EZ(CC, zC, ZC, QC, wC, bC, nC, fC, oC) {
-      const qC = CC.RM(387, zC, 56);
-      if (qC < 0) return !1;
-      const FC = CC.view;
-      FC.setUint32(qC + 0, ZC, !0), FC.setUint16(qC + 4, QC, !0), FC.setUint8(qC + 6, wC);
-      for (let WC = 0; WC < 3; WC++) FC.setFloat64(qC + 8 + 8 * WC, bC[WC], !0);
-      for (let WC = 0; WC < 2; WC++) FC.setFloat32(qC + 32 + 4 * WC, nC[WC], !0);
-      FC.setFloat32(qC + 40, fC, !0);
-      for (let WC = 0; WC < 3; WC++) FC.setFloat32(qC + 44 + 4 * WC, oC[WC], !0);
+    function bI(kk, Fk, Ik, Xk, Tk, ik, yk, lk, ak) {
+      const qk = kk.Hj(387, Fk, 56);
+      if (qk < 0) return !1;
+      const Lk = kk.view;
+      Lk.setUint32(qk + 0, Ik, !0), Lk.setUint16(qk + 4, Xk, !0), Lk.setUint8(qk + 6, Tk);
+      for (let tk = 0; tk < 3; tk++) Lk.setFloat64(qk + 8 + 8 * tk, ik[tk], !0);
+      for (let tk = 0; tk < 2; tk++) Lk.setFloat32(qk + 32 + 4 * tk, yk[tk], !0);
+      Lk.setFloat32(qk + 40, lk, !0);
+      for (let tk = 0; tk < 3; tk++) Lk.setFloat32(qk + 44 + 4 * tk, ak[tk], !0);
       return !0
     }
 
-    function lZ(CC, zC, ZC) {
-      const QC = CC.RM(388, zC, 4);
-      if (QC < 0) return !1;
-      return CC.view.setUint32(QC + 0, ZC, !0), !0
+    function RI(kk, Fk, Ik) {
+      const Xk = kk.Hj(388, Fk, 4);
+      if (Xk < 0) return !1;
+      return kk.view.setUint32(Xk + 0, Ik, !0), !0
     }
 
-    function XZ(CC, zC, ZC, QC) {
-      const wC = CC.RM(389, zC, 8);
-      if (wC < 0) return !1;
-      const bC = CC.view;
-      return bC.setInt32(wC + 0, ZC, !0), bC.setFloat32(wC + 4, QC, !0), !0
+    function UI(kk, Fk, Ik, Xk) {
+      const Tk = kk.Hj(389, Fk, 8);
+      if (Tk < 0) return !1;
+      const ik = kk.view;
+      return ik.setInt32(Tk + 0, Ik, !0), ik.setFloat32(Tk + 4, Xk, !0), !0
     }
 
-    function cZ(CC, zC, ZC, QC) {
-      const wC = CC.RM(390, zC, 8);
-      if (wC < 0) return !1;
-      const bC = CC.view;
-      return bC.setInt32(wC + 0, ZC, !0), bC.setFloat32(wC + 4, QC, !0), !0
+    function CI(kk, Fk, Ik, Xk) {
+      const Tk = kk.Hj(390, Fk, 8);
+      if (Tk < 0) return !1;
+      const ik = kk.view;
+      return ik.setInt32(Tk + 0, Ik, !0), ik.setFloat32(Tk + 4, Xk, !0), !0
     }
 
-    function uZ(CC, zC, ZC, QC, wC, bC) {
-      const nC = CC.RM(391, zC, 12);
-      if (nC < 0) return !1;
-      const fC = CC.view;
-      return fC.setFloat32(nC + 0, ZC, !0), fC.setFloat32(nC + 4, QC, !0), fC.setUint8(nC + 8, wC), fC.setUint8(nC + 9, bC), !0
+    function NI(kk, Fk, Ik, Xk, Tk, ik) {
+      const yk = kk.Hj(391, Fk, 12);
+      if (yk < 0) return !1;
+      const lk = kk.view;
+      return lk.setFloat32(yk + 0, Ik, !0), lk.setFloat32(yk + 4, Xk, !0), lk.setUint8(yk + 8, Tk), lk.setUint8(yk + 9, ik), !0
     }
 
-    function rZ(CC, zC, ZC) {
-      const QC = CC.RM(392, zC, 4);
-      if (QC < 0) return !1;
-      return CC.view.setUint32(QC + 0, ZC, !0), !0
+    function cI(kk, Fk, Ik) {
+      const Xk = kk.Hj(392, Fk, 4);
+      if (Xk < 0) return !1;
+      return kk.view.setUint32(Xk + 0, Ik, !0), !0
     }
 
-    function sZ(CC, zC, ZC, QC, wC) {
-      const bC = CC.RM(393, zC, 12);
-      if (bC < 0) return !1;
-      const nC = CC.view;
-      return nC.setUint32(bC + 0, ZC, !0), nC.setUint16(bC + 4, QC, !0), nC.setFloat32(bC + 8, wC, !0), !0
+    function WI(kk, Fk, Ik, Xk, Tk) {
+      const ik = kk.Hj(393, Fk, 12);
+      if (ik < 0) return !1;
+      const yk = kk.view;
+      return yk.setUint32(ik + 0, Ik, !0), yk.setUint16(ik + 4, Xk, !0), yk.setFloat32(ik + 8, Tk, !0), !0
     }
 
-    function TZ(CC, zC, ZC, QC, wC, bC, nC) {
-      const fC = CC.RM(394, zC, 36);
-      if (fC < 0) return !1;
-      const oC = CC.view;
-      oC.setUint32(fC + 0, ZC, !0), oC.setUint16(fC + 4, QC, !0), oC.setUint8(fC + 6, wC);
-      for (let qC = 0; qC < 3; qC++) oC.setFloat64(fC + 8 + 8 * qC, bC[qC], !0);
-      return oC.setFloat32(fC + 32, nC, !0), !0
+    function fI(kk, Fk, Ik, Xk, Tk, ik, yk) {
+      const lk = kk.Hj(394, Fk, 36);
+      if (lk < 0) return !1;
+      const ak = kk.view;
+      ak.setUint32(lk + 0, Ik, !0), ak.setUint16(lk + 4, Xk, !0), ak.setUint8(lk + 6, Tk);
+      for (let qk = 0; qk < 3; qk++) ak.setFloat64(lk + 8 + 8 * qk, ik[qk], !0);
+      return ak.setFloat32(lk + 32, yk, !0), !0
     }
 
-    function aZ(CC, zC, ZC) {
-      const QC = CC.RM(398, zC, 4);
-      if (QC < 0) return !1;
-      return CC.view.setUint32(QC + 0, ZC, !0), !0
+    function BI(kk, Fk, Ik) {
+      const Xk = kk.Hj(398, Fk, 4);
+      if (Xk < 0) return !1;
+      return kk.view.setUint32(Xk + 0, Ik, !0), !0
     }
 
-    function tZ(CC, zC, ZC) {
-      const QC = CC.RM(448, zC, 4);
-      if (QC < 0) return !1;
-      return CC.view.setFloat32(QC + 0, ZC, !0), !0
+    function dI(kk, Fk, Ik) {
+      const Xk = kk.Hj(448, Fk, 4);
+      if (Xk < 0) return !1;
+      return kk.view.setFloat32(Xk + 0, Ik, !0), !0
     }
 
-    function DZ(CC, zC, ZC, QC) {
-      const wC = CC.RM(450, zC, 12);
-      if (wC < 0) return !1;
-      const bC = CC.view;
-      for (let nC = 0; nC < 2; nC++) bC.setFloat32(wC + 0 + 4 * nC, ZC[nC], !0);
-      return bC.setUint8(wC + 8, QC), !0
+    function YI(kk, Fk, Ik, Xk) {
+      const Tk = kk.Hj(450, Fk, 12);
+      if (Tk < 0) return !1;
+      const ik = kk.view;
+      for (let yk = 0; yk < 2; yk++) ik.setFloat32(Tk + 0 + 4 * yk, Ik[yk], !0);
+      return ik.setUint8(Tk + 8, Xk), !0
     }
 
-    function jZ(CC, zC, ZC, QC) {
-      const wC = CC.RM(452, zC, 8);
-      if (wC < 0) return !1;
-      const bC = CC.view;
-      return bC.setFloat32(wC + 0, ZC, !0), bC.setUint8(wC + 4, QC), !0
+    function AI(kk, Fk, Ik, Xk) {
+      const Tk = kk.Hj(452, Fk, 8);
+      if (Tk < 0) return !1;
+      const ik = kk.view;
+      return ik.setFloat32(Tk + 0, Ik, !0), ik.setUint8(Tk + 4, Xk), !0
     }
 
-    function yZ(CC, zC, ZC, QC, wC) {
-      const bC = CC.RM(454, zC, 4);
-      if (bC < 0) return !1;
-      const nC = CC.view;
-      return nC.setUint8(bC + 0, ZC), nC.setUint8(bC + 1, QC), nC.setUint8(bC + 2, wC), !0
+    function gI(kk, Fk, Ik, Xk, Tk) {
+      const ik = kk.Hj(454, Fk, 4);
+      if (ik < 0) return !1;
+      const yk = kk.view;
+      return yk.setUint8(ik + 0, Ik), yk.setUint8(ik + 1, Xk), yk.setUint8(ik + 2, Tk), !0
     }
 
-    function LZ(CC, zC, ZC, QC) {
-      const wC = CC.RM(455, zC, 40);
-      if (wC < 0) return !1;
-      const bC = CC.view;
-      for (let nC = 0; nC < 9; nC++) bC.setInt32(wC + 0 + 4 * nC, ZC[nC], !0);
-      return bC.setUint32(wC + 36, QC, !0), !0
+    function mI(kk, Fk, Ik, Xk) {
+      const Tk = kk.Hj(455, Fk, 40);
+      if (Tk < 0) return !1;
+      const ik = kk.view;
+      for (let yk = 0; yk < 9; yk++) ik.setInt32(Tk + 0 + 4 * yk, Ik[yk], !0);
+      return ik.setUint32(Tk + 36, Xk, !0), !0
     }
 
-    function UZ(CC, zC, ZC, QC) {
-      const wC = CC.RM(456, zC, 8);
-      if (wC < 0) return !1;
-      const bC = CC.view;
-      return bC.setFloat32(wC + 0, ZC, !0), bC.setUint8(wC + 4, QC), !0
+    function hI(kk, Fk, Ik, Xk) {
+      const Tk = kk.Hj(456, Fk, 8);
+      if (Tk < 0) return !1;
+      const ik = kk.view;
+      return ik.setFloat32(Tk + 0, Ik, !0), ik.setUint8(Tk + 4, Xk), !0
     }
 
-    function BZ(CC, zC, ZC, QC, wC) {
-      const bC = CC.RM(457, zC, 16);
-      if (bC < 0) return !1;
-      const nC = CC.view;
-      for (let fC = 0; fC < 3; fC++) nC.setInt32(bC + 0 + 4 * fC, ZC[fC], !0);
-      for (let fC = 0; fC < 3; fC++) nC.setInt8(bC + 12 + 1 * fC, QC[fC]);
-      return nC.setUint8(bC + 15, wC), !0
+    function rI(kk, Fk, Ik, Xk, Tk) {
+      const ik = kk.Hj(457, Fk, 16);
+      if (ik < 0) return !1;
+      const yk = kk.view;
+      for (let lk = 0; lk < 3; lk++) yk.setInt32(ik + 0 + 4 * lk, Ik[lk], !0);
+      for (let lk = 0; lk < 3; lk++) yk.setInt8(ik + 12 + 1 * lk, Xk[lk]);
+      return yk.setUint8(ik + 15, Tk), !0
     }
 
-    function OZ(CC, zC, ZC, QC) {
-      const wC = CC.RM(530, zC, 4 + QC.length);
-      if (wC < 0) return !1;
-      const bC = CC.view;
-      return bC.setUint8(wC + 0, ZC), WZ(bC).set(QC, bC.byteOffset + wC + 4), !0
+    function DI(kk, Fk, Ik, Xk) {
+      const Tk = kk.Hj(530, Fk, 4 + Xk.length);
+      if (Tk < 0) return !1;
+      const ik = kk.view;
+      return ik.setUint8(Tk + 0, Ik), ZI(ik).set(Xk, ik.byteOffset + Tk + 4), !0
     }
 
-    function kZ(CC, zC, ZC, QC, wC, bC) {
-      const nC = CC.RM(531, zC, 12 + bC.length);
-      if (nC < 0) return !1;
-      const fC = CC.view;
-      return fC.setFloat32(nC + 0, ZC, !0), fC.setFloat32(nC + 4, QC, !0), fC.setUint32(nC + 8, wC, !0), WZ(fC).set(bC, fC.byteOffset + nC + 12), !0
+    function MI(kk, Fk, Ik, Xk, Tk, ik) {
+      const yk = kk.Hj(531, Fk, 12 + ik.length);
+      if (yk < 0) return !1;
+      const lk = kk.view;
+      return lk.setFloat32(yk + 0, Ik, !0), lk.setFloat32(yk + 4, Xk, !0), lk.setUint32(yk + 8, Tk, !0), ZI(lk).set(ik, lk.byteOffset + yk + 12), !0
     }
 
-    function VZ(CC, zC, ZC, QC, wC, bC) {
-      const nC = CC.RM(532, zC, 12 + bC.length);
-      if (nC < 0) return !1;
-      const fC = CC.view;
-      return fC.setInt32(nC + 0, ZC, !0), fC.setInt32(nC + 4, QC, !0), fC.setUint32(nC + 8, wC, !0), WZ(fC).set(bC, fC.byteOffset + nC + 12), !0
+    function kX(kk, Fk, Ik, Xk, Tk, ik) {
+      const yk = kk.Hj(532, Fk, 12 + ik.length);
+      if (yk < 0) return !1;
+      const lk = kk.view;
+      return lk.setInt32(yk + 0, Ik, !0), lk.setInt32(yk + 4, Xk, !0), lk.setUint32(yk + 8, Tk, !0), ZI(lk).set(ik, lk.byteOffset + yk + 12), !0
     }
 
-    function CQ(CC, zC, ZC, QC, wC) {
-      const bC = CC.RM(533, zC, 8 + wC.length);
-      if (bC < 0) return !1;
-      const nC = CC.view;
-      return nC.setInt32(bC + 0, ZC, !0), nC.setInt32(bC + 4, QC, !0), WZ(nC).set(wC, nC.byteOffset + bC + 8), !0
+    function FX(kk, Fk, Ik, Xk, Tk) {
+      const ik = kk.Hj(533, Fk, 8 + Tk.length);
+      if (ik < 0) return !1;
+      const yk = kk.view;
+      return yk.setInt32(ik + 0, Ik, !0), yk.setInt32(ik + 4, Xk, !0), ZI(yk).set(Tk, yk.byteOffset + ik + 8), !0
     }
 
-    function zQ(CC, zC) {
-      return !(CC.RM(576, zC, 0) < 0)
+    function IX(kk, Fk) {
+      return !(kk.Hj(576, Fk, 0) < 0)
     }
 
-    function ZQ(CC, zC, ZC, QC, wC, bC) {
-      const nC = CC.RM(577, zC, 36 + bC.length);
-      if (nC < 0) return !1;
-      const fC = CC.view;
-      fC.setUint8(nC + 0, ZC);
-      for (let oC = 0; oC < 16; oC++) fC.setUint8(nC + 4 + 1 * oC, QC[oC]);
-      for (let oC = 0; oC < 16; oC++) fC.setUint8(nC + 20 + 1 * oC, wC[oC]);
-      return WZ(fC).set(bC, fC.byteOffset + nC + 36), !0
+    function XX(kk, Fk, Ik, Xk, Tk, ik) {
+      const yk = kk.Hj(577, Fk, 36 + ik.length);
+      if (yk < 0) return !1;
+      const lk = kk.view;
+      lk.setUint8(yk + 0, Ik);
+      for (let ak = 0; ak < 16; ak++) lk.setUint8(yk + 4 + 1 * ak, Xk[ak]);
+      for (let ak = 0; ak < 16; ak++) lk.setUint8(yk + 20 + 1 * ak, Tk[ak]);
+      return ZI(lk).set(ik, lk.byteOffset + yk + 36), !0
     }
 
-    function QQ(CC, zC, ZC, QC) {
-      const wC = CC.RM(578, zC, 4 + QC.length);
-      if (wC < 0) return !1;
-      const bC = CC.view;
-      return bC.setUint8(wC + 0, ZC), WZ(bC).set(QC, bC.byteOffset + wC + 4), !0
+    function TX(kk, Fk, Ik, Xk) {
+      const Tk = kk.Hj(578, Fk, 4 + Xk.length);
+      if (Tk < 0) return !1;
+      const ik = kk.view;
+      return ik.setUint8(Tk + 0, Ik), ZI(ik).set(Xk, ik.byteOffset + Tk + 4), !0
     }
 
-    function wQ(CC, zC, ZC, QC, wC, bC, nC, fC) {
-      const oC = CC.RM(579, zC, 36);
-      if (oC < 0) return !1;
-      const qC = CC.view;
-      return qC.setFloat64(oC + 0, ZC, !0), qC.setFloat64(oC + 8, QC, !0), qC.setFloat64(oC + 16, wC, !0), qC.setFloat64(oC + 24, bC, !0), qC.setUint16(oC + 32, nC, !0), qC.setUint8(oC + 34, fC), !0
+    function iX(kk, Fk, Ik, Xk, Tk, ik, yk, lk) {
+      const ak = kk.Hj(579, Fk, 36);
+      if (ak < 0) return !1;
+      const qk = kk.view;
+      return qk.setFloat64(ak + 0, Ik, !0), qk.setFloat64(ak + 8, Xk, !0), qk.setFloat64(ak + 16, Tk, !0), qk.setFloat64(ak + 24, ik, !0), qk.setUint16(ak + 32, yk, !0), qk.setUint8(ak + 34, lk), !0
     }
-    class bQ {
-      constructor(CC, zC) {
-        this.core = CC, this.afterCall = zC
+    class yX {
+      constructor(kk, Fk) {
+        this.core = kk, this.afterCall = Fk
       }
-      canModify(CC, zC, ZC) {
-        const QC = this.core.pbC(CC, zC, ZC);
-        return this.afterCall(), QC
+      canModify(kk, Fk, Ik) {
+        const Xk = this.core.Jik(kk, Fk, Ik);
+        return this.afterCall(), Xk
       }
-      terrainBlocked(CC, zC, ZC, QC, wC) {
-        const bC = this.core.fnC(CC, zC, ZC, QC, wC);
-        return this.afterCall(), bC
+      terrainBlocked(kk, Fk, Ik, Xk, Tk) {
+        const ik = this.core.tyk(kk, Fk, Ik, Xk, Tk);
+        return this.afterCall(), ik
       }
-      TY(CC, zC, ZC, QC) {
-        const wC = this.core.bM(CC, zC, ZC, QC);
-        return this.afterCall(), wC
+      lG(kk, Fk, Ik, Xk) {
+        const Tk = this.core.Ij(kk, Fk, Ik, Xk);
+        return this.afterCall(), Tk
       }
-      blockData(CC, zC, ZC) {
-        const QC = this.core.gbC(CC, zC, ZC);
-        return this.afterCall(), QC
+      blockData(kk, Fk, Ik) {
+        const Xk = this.core.wik(kk, Fk, Ik);
+        return this.afterCall(), Xk
       }
-      cameraSweep(CC, zC, ZC, QC, wC, bC, nC) {
-        const fC = this.core.MwC(CC, zC, ZC, QC, wC, bC, nC);
-        return this.afterCall(), fC
+      cameraSweep(kk, Fk, Ik, Xk, Tk, ik, yk) {
+        const lk = this.core.wTk(kk, Fk, Ik, Xk, Tk, ik, yk);
+        return this.afterCall(), lk
       }
-      hasServerTarget(CC) {
-        const zC = this.core.KbC(CC);
-        return this.afterCall(), zC
+      hasServerTarget(kk) {
+        const Fk = this.core.Oik(kk);
+        return this.afterCall(), Fk
       }
-      entityInteractable(CC) {
-        const zC = this.core.IbC(CC);
-        return this.afterCall(), zC
+      entityInteractable(kk) {
+        const Fk = this.core.zik(kk);
+        return this.afterCall(), Fk
       }
-      entityCrouching(CC) {
-        const zC = this.core.JbC(CC);
-        return this.afterCall(), zC
+      entityCrouching(kk) {
+        const Fk = this.core.Vik(kk);
+        return this.afterCall(), Fk
       }
-      predictServerPosition(CC, zC, ZC, QC) {
-        const wC = this.core.sbC(CC, zC, ZC, QC);
-        return this.afterCall(), wC
+      predictServerPosition(kk, Fk, Ik, Xk) {
+        const Tk = this.core.Wik(kk, Fk, Ik, Xk);
+        return this.afterCall(), Tk
       }
-      setOtherEntitySetting(CC, zC, ZC) {
-        const QC = this.core.GwC(CC, zC, ZC);
-        return this.afterCall(), QC
+      setOtherEntitySetting(kk, Fk, Ik) {
+        const Xk = this.core.KTk(kk, Fk, Ik);
+        return this.afterCall(), Xk
       }
-      entityInfoBatch(CC) {
-        const zC = this.core.xwC(CC);
-        return this.afterCall(), zC
+      entityInfoBatch(kk) {
+        const Fk = this.core.VTk(kk);
+        return this.afterCall(), Fk
       }
-      entityName(CC) {
-        const zC = this.core.ibC(CC);
-        return this.afterCall(), zC
+      entityName(kk) {
+        const Fk = this.core.Sik(kk);
+        return this.afterCall(), Fk
       }
-      hasEffect(CC, zC) {
-        const ZC = this.core.hbC(CC, zC);
-        return this.afterCall(), ZC
+      hasEffect(kk, Fk) {
+        const Ik = this.core.Eik(kk, Fk);
+        return this.afterCall(), Ik
       }
       scratchPtr() {
-        const CC = this.core.FwC();
-        return this.afterCall(), CC
+        const kk = this.core.ZTk();
+        return this.afterCall(), kk
       }
-      invSwap(CC, zC) {
-        const ZC = this.core.lbC(CC, zC);
-        return this.afterCall(), ZC
+      invSwap(kk, Fk) {
+        const Ik = this.core.Rik(kk, Fk);
+        return this.afterCall(), Ik
       }
-      invMove(CC, zC, ZC) {
-        const QC = this.core.mbC(CC, zC, ZC);
-        return this.afterCall(), QC
+      invMove(kk, Fk, Ik) {
+        const Xk = this.core.pik(kk, Fk, Ik);
+        return this.afterCall(), Xk
       }
-      invQuickMove(CC, zC, ZC, QC) {
-        const wC = this.core.HbC(CC, zC, ZC, QC);
-        return this.afterCall(), wC
+      invQuickMove(kk, Fk, Ik, Xk) {
+        const Tk = this.core.uik(kk, Fk, Ik, Xk);
+        return this.afterCall(), Tk
       }
-      invRemove(CC, zC, ZC) {
-        const QC = this.core.EbC(CC, zC, ZC);
-        return this.afterCall(), QC
+      invRemove(kk, Fk, Ik) {
+        const Xk = this.core.bik(kk, Fk, Ik);
+        return this.afterCall(), Xk
       }
-      invEnchant(CC, zC, ZC, QC, wC) {
-        const bC = this.core.dbC(CC, zC, ZC, QC, wC);
-        return this.afterCall(), bC
+      invEnchant(kk, Fk, Ik, Xk, Tk) {
+        const ik = this.core.Gik(kk, Fk, Ik, Xk, Tk);
+        return this.afterCall(), ik
       }
-      craft(CC, zC, ZC) {
-        const QC = this.core.craft(CC, zC, ZC);
-        return this.afterCall(), QC
+      craft(kk, Fk, Ik) {
+        const Xk = this.core.craft(kk, Fk, Ik);
+        return this.afterCall(), Xk
       }
-      salvage(CC, zC, ZC) {
-        const QC = this.core.salvage(CC, zC, ZC);
-        return this.afterCall(), QC
+      salvage(kk, Fk, Ik) {
+        const Xk = this.core.salvage(kk, Fk, Ik);
+        return this.afterCall(), Xk
       }
-      selectSlot(CC) {
-        const zC = this.core.DbC(CC);
-        return this.afterCall(), zC
+      selectSlot(kk) {
+        const Fk = this.core.Aik(kk);
+        return this.afterCall(), Fk
       }
       closeChest() {
-        const CC = this.core.PbC();
-        return this.afterCall(), CC
+        const kk = this.core.xik();
+        return this.afterCall(), kk
       }
-      itemAttributesBatch(CC) {
-        const zC = this.core.AwC(CC);
-        return this.afterCall(), zC
+      itemAttributesBatch(kk) {
+        const Fk = this.core.sTk(kk);
+        return this.afterCall(), Fk
       }
       itemNames() {
-        const CC = this.core.bK();
-        return this.afterCall(), CC
+        const kk = this.core.bS();
+        return this.afterCall(), kk
       }
       blockProps() {
-        const CC = this.core.SbC();
-        return this.afterCall(), CC
+        const kk = this.core.Hik();
+        return this.afterCall(), kk
       }
       itemProps() {
-        const CC = this.core.XbC();
-        return this.afterCall(), CC
+        const kk = this.core.Uik();
+        return this.afterCall(), kk
       }
-      salvageRecipe(CC) {
-        const zC = this.core.IwC(CC);
-        return this.afterCall(), zC
+      salvageRecipe(kk) {
+        const Fk = this.core.STk(kk);
+        return this.afterCall(), Fk
       }
-      craftingView(CC, zC, ZC) {
-        const QC = this.core.RwC(CC, zC, ZC);
-        return this.afterCall(), QC
+      craftingView(kk, Fk, Ik) {
+        const Xk = this.core.QTk(kk, Fk, Ik);
+        return this.afterCall(), Xk
       }
       directorView() {
-        const CC = this.core.NwC();
-        return this.afterCall(), CC
+        const kk = this.core.eTk();
+        return this.afterCall(), kk
       }
       directorDefaultPose() {
-        const CC = this.core.gwC();
-        return this.afterCall(), CC
+        const kk = this.core.HTk();
+        return this.afterCall(), kk
       }
-      directorEntity(CC) {
-        const zC = this.core.SwC(CC);
-        return this.afterCall(), zC
+      directorEntity(kk) {
+        const Fk = this.core.JTk(kk);
+        return this.afterCall(), Fk
       }
-      directorPose(CC, zC, ZC, QC, wC, bC) {
-        const nC = this.core.pwC(CC, zC, ZC, QC, wC, bC);
-        return this.afterCall(), nC
+      directorPose(kk, Fk, Ik, Xk, Tk, ik) {
+        const yk = this.core.xTk(kk, Fk, Ik, Xk, Tk, ik);
+        return this.afterCall(), yk
       }
-      passTimings(CC) {
-        const zC = this.core.rbC(CC);
-        return this.afterCall(), zC
+      passTimings(kk) {
+        const Fk = this.core.cik(kk);
+        return this.afterCall(), Fk
       }
       drawCensus() {
-        const CC = this.core.xbC();
-        return this.afterCall(), CC
+        const kk = this.core.sik();
+        return this.afterCall(), kk
       }
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const kk in modules) Object.freeze(modules[kk]);
